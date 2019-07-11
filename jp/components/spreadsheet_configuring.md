@@ -1,18 +1,19 @@
 ---
-title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | 構成 | Infragistics |
+title: Spreadsheet | Grid コントロール | Ignite UI for Angular | 構成 | Infragistics |
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 _language: ja
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Spreadsheet の構成
 
-`IgxSpreadsheet` を使用すると、セルの編集、グリッド線とヘッダーの表示、保護、ズームレベル、および Excel ワークシートに関連するその他のさまざまなプロパティを含むがこれらに限定されない、コントロールのさまざまな側面を設定できます。 
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) を使用すると、セルの編集、グリッド線とヘッダーの表示、保護、ズームレベル、および Excel ワークシートに関連するその他のさまざまなプロパティを含むがこれらに限定されない、コントロールのさまざまな側面を設定できます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -23,11 +24,11 @@ _language: ja
 
 ### セル編集の構成
 
-ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、`IgxSpreadsheet` コントロールに `Enter` キーを押すと現在アクティブなセルに隣接するセルに移動できます。
+ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールに `Enter` キーを押すと現在アクティブなセルに隣接するセルに移動できます。
 
-この Enter キーナビゲーションを有効にするために、IsEnterKeyNavigationEnabled プロパティを true に設定できます。false に設定すると、`Enter` キーを押してもアクティブ セルは変わりません。 
+この Enter キーナビゲーションを有効にするために、IsEnterKeyNavigationEnabled プロパティを true に設定できます。false に設定すると、`Enter` キーを押してもアクティブ セルは変わりません。
 
-`Enter` キーを押したときに移動する隣接セルの方向を、`EnterKeyNavigationDirection` プロパティを `Down`、`Up`、`Left` または `Right` に設定して構成することもできます。
+`Enter` キーを押したときに移動する隣接セルの方向を、[`enterKeyNavigationDirection`](/components/spreadsheet_configuring.html) プロパティを `Down`、`Up`、`Left` または `Right` に設定して構成することもできます。
 
 次のコードスニペットは上記のデモです。
 
@@ -37,91 +38,95 @@ _language: ja
 </igx-spreadsheet>
 ```
 
-```typescript
+```ts
+import { SpreadsheetEnterKeyNavigationDirection } from "igniteui-react-spreadsheet/ES5/SpreadsheetEnterKeyNavigationDirection";
+```
+
+```ts
 this.spreadsheet.isEnterKeyNavigationEnabled = true;
 this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDirection.Left;
 ```
 
 ### 数式バーの構成
 
-`IgxSpreadsheet` を使用すると、コントロールの `IsFormulaBarVisible` プロパティを設定して数式バーの表示/非表示を設定できます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) を使用すると、コントロールの [`isFormulaBarVisible`](/components/spreadsheet_configuring.html) プロパティを設定して数式バーの表示/非表示を設定できます。
 
-次のコードスニペットは上記のデモです。 
+次のコードスニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet isFormulaBarVisible=true></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.isFormulaBarVisible = true;
 ```
 
 ### ガイドラインの設定
 
-`IgxSpreadsheet` を使用すると、コントロールの `AreGridlinesVisible` プロパティを設定し目盛線, グリッド線の表示/非表示を設定できます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) を使用すると、コントロールの [`areGridlinesVisible`](/components/spreadsheet_configuring.html) プロパティを設定し目盛線, グリッド線の表示/非表示を設定できます。
 
-次のコードスニペットは上記のデモです。 
+次のコードスニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet areGridlinesVisible=true></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.areGridlinesVisible = true;
 ```
 
 ### ヘッダーの構成
 
-`IgxSpreadsheet` では、コントロールの `AreHeadersVisible` プロパティを設定することで、ヘッダーの表示設定を構成できます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) では、コントロールの [`areHeadersVisible`](/components/spreadsheet_configuring.html) プロパティを設定することで、ヘッダーの表示設定を構成できます。
 
-次のコードスニペットは上記のデモです。 
+次のコードスニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet areHeadersVisible=false></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.areHeadersVisible = false;
 ```
 
 ### ナビゲーションの構成
 
-`IgxSpreadsheet` コントロールは、コントロールが「終了モード」にあるかどうかを構成することによって、ワークシートのセル間のナビゲーションを構成できます。終了モードは、矢印キーを押すと、アクティブなセルが、押された矢印キーの方向に応じて、現在のセルからデータが隣接するセルの行または列の末尾に移動する機能です。この機能は、大量のデータ ブロックの終わりまですばやく移動するのに役立ちます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールは、コントロールが「終了モード」にあるかどうかを構成することによって、ワークシートのセル間のナビゲーションを構成できます。終了モードは、矢印キーを押すと、アクティブなセルが、押された矢印キーの方向に応じて、現在のセルからデータが隣接するセルの行または列の末尾に移動する機能です。この機能は、大量のデータ ブロックの終わりまですばやく移動するのに役立ちます。
 
-たとえば、終了モードになっているときに、100x100 の大きなデータブロックをクリックして右矢印キーを押すと、現在の行の右端に移動し、データのある一番右の列に移動します。この操作の後、`IgxSpreadsheet` は終了モードから飛び出します。
+たとえば、終了モードになっているときに、100x100 の大きなデータブロックをクリックして右矢印キーを押すと、現在の行の右端に移動し、データのある一番右の列に移動します。この操作の後、[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) は終了モードから飛び出します。
 
 ユーザーが End キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの IsInEndMode プロパティを設定することでプログラムで設定できます。
 
-以下のコードスニペットは、`IgxSpreadsheet` を終了モードで開始させる方法を示しています。
+以下のコードスニペットは、[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) を終了モードで開始させる方法を示しています。
 
 ```html
 <igx-spreadsheet isInEndMode=true></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.isInEndMode = true;
 ```
 
 ### 保護の設定
 
-`IgxSpreadsheet` は、ワークシートごとにブックを保護します。ワークシートの保護の設定は、ワークシートの Protect() メソッドを呼び出して保護し、`Unprotect()` メソッドを呼び出して保護解除することで設定できます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) は、ワークシートごとにブックを保護します。ワークシートの保護の設定は、ワークシートの Protect() メソッドを呼び出して保護し、`Unprotect()` メソッドを呼び出して保護解除することで設定できます。
 
-以下のコードは、`IgxSpreadsheet` コントロールの現在アクティブなワークシートの保護を有効または無効にすることができます。
+以下のコードは、[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールの現在アクティブなワークシートの保護を有効または無効にすることができます。
 
-```typescript
+```ts
 this.spreadsheet.activeWorksheet.protect();
 this.spreadsheet.activeWorksheet.unprotect();
 ```
 
 ### 選択の設定
 
-`IgxSpreadsheet` コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (`Shift` または `Ctrl`)  を押します。これは、スプレッドシートの `SelectionMode` プロパティを次のいずれかの値に設定することによって行われます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (`Shift` または `Ctrl`)  を押します。これは、スプレッドシートの [`selectionMode`](/components/spreadsheet_configuring.html) プロパティを次のいずれかの値に設定することによって行われます。
 
--   `AddToSelection`: マウスでドラッグしているときにCtrlキーを押す必要がなく、新しいセル範囲が `SpreadsheetSelection` オブジェクトの `CellRanges` コレクションに追加され、モードに入った後の最初の矢印キーナビゲーションで範囲が追加されます。Shift+F8 を押すとモードに入ります。
--   `ExtendSelection`: アクティブセルを表す `SpreadsheetSelection` オブジェクトの `CellRanges` コレクション内の選択範囲は、マウスを使用してセルを選択するかキーボードで移動すると更新されます。
+-   `AddToSelection`: マウスでドラッグしているときにCtrlキーを押す必要がなく、新しいセル範囲が [`SpreadsheetSelection`](/components/spreadsheet_configuring.html) オブジェクトの [`cellRanges`](/components/spreadsheet_configuring.html) コレクションに追加され、モードに入った後の最初の矢印キーナビゲーションで範囲が追加されます。Shift+F8 を押すとモードに入ります。
+-   `ExtendSelection`: アクティブセルを表す [`SpreadsheetSelection`](/components/spreadsheet_configuring.html) オブジェクトの [`cellRanges`](/components/spreadsheet_configuring.html) コレクション内の選択範囲は、マウスを使用してセルを選択するかキーボードで移動すると更新されます。
 -   `Normal`: 選択範囲は、マウスをドラッグしてセルまたはセル範囲を選択すると置き換えられます。同様に、キーボードで移動すると新しい選択範囲が作成されます。Ctrl キーを押したままマウスを使用することで新しい範囲を追加できます。また、Shift キーを押したままマウスでクリックする、あるいはキーボードで移動することでアクティブ セルを含む選択範囲を変更できます。
 
-上記の説明で述べた `SpreadsheetSelection` オブジェクトは、`IgxSpreadsheet` コントロールの `ActiveSelection` プロパティを使用して取得できます。
+上記の説明で述べた [`SpreadsheetSelection`](/components/spreadsheet_configuring.html) オブジェクトは、[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールの [`activeSelection`](/components/spreadsheet_configuring.html) プロパティを使用して取得できます。
 
 次のコードスニペットは、選択モードの設定を示しています。
 
@@ -129,29 +134,33 @@ this.spreadsheet.activeWorksheet.unprotect();
 <igx-spreadsheet selectionMode="ExtendSelection"></igx-spreadsheet>
 ```
 
-```typescript
+```ts
+import { SpreadsheetCellSelectionMode } from "igniteui-react-spreadsheet/ES5/SpreadsheetCellSelectionMode";
+```
+
+```ts
 this.spreadsheet.selectionMode = SpreadsheetCellSelectionMode.ExtendSelection;
 ```
 
-`IgxSpreadsheet` コントロールの選択は、プログラムで設定または取得することもできます。単一選択の場合は、`ActiveCell` プロパティを設定できます。複数選択は、`IgxSpreadsheet` コントロールの `ActiveSelection` プロパティによって返される `SpreadsheetSelection` オブジェクトを介して行われます。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールの選択は、プログラムで設定または取得することもできます。単一選択の場合は、[`activeCell`](/components/spreadsheet_configuring.html) プロパティを設定できます。複数選択は、[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールの [`activeSelection`](/components/spreadsheet_configuring.html) プロパティによって返される [`SpreadsheetSelection`](/components/spreadsheet_configuring.html) オブジェクトを介して行われます。
 
-`SpreadsheetSelection` オブジェクトには、新しい `SpreadsheetCellRange` オブジェクトの形式でスプレッドシートの選択範囲にプログラムでセルの範囲を追加できる `AddCellRange()` メソッドがあります。
+[`SpreadsheetSelection`](/components/spreadsheet_configuring.html) オブジェクトには、新しい [`SpreadsheetCellRange`](/components/spreadsheet_configuring.html) オブジェクトの形式でスプレッドシートの選択範囲にプログラムでセルの範囲を追加できる `AddCellRange()` メソッドがあります。
 
 次のコードスニペットは、スプレッドシートの選択範囲にセル範囲を追加する方法を示しています。
 
-```typescript
+```ts
 this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 5));
 ```
 
 ### タブバー領域の構成
 
-`IgxSpreadsheet` コントロールは、`TabBarWidth` プロパティと `TabBarVisibility` プロパティを介して、現在アクティブな `Workbook` の `WindowOptions` からタブバー領域の表示設定と幅の設定を使用します。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールは、`TabBarWidth` プロパティと `TabBarVisibility` プロパティを介して、現在アクティブな [`workbook`](/components/spreadsheet_configuring.html) の [`WindowOptions`](/components/spreadsheet_configuring.html) からタブバー領域の表示設定と幅の設定を使用します。
 
 タブバー領域は、ワークシート名をコントロール内のタブとして可視化する領域です。
 
 次のコードスニペットを使用して、タブバーの表示と幅を設定できます。
 
-```typescript
+```ts
 this.spreadsheet.workbook.windowOptions.tabBarVisible = false;
 
 this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
@@ -159,9 +168,9 @@ this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
 
 ### ズーム レベルの設定
 
-`IgxSpreadsheet` コントロールは、`ZoomLevel` プロパティを設定することによってズームインおよびズームアウトをサポートします。ズーム レベルは最大 400%、最小 10% です。
+[`IgxSpreadsheetComponent`](/components/spreadsheet_configuring.html) コントロールは、[`zoomLevel`](/components/spreadsheet_configuring.html) プロパティを設定することによってズームインおよびズームアウトをサポートします。ズーム レベルは最大 400%、最小 10% です。
 
-このプロパティを数値に設定すると、整数としてのパーセンテージが表されるため、`ZoomLevel` を 100 に設定することは、100% に設定することと同じです。
+このプロパティを数値に設定すると、整数としてのパーセンテージが表されるため、[`zoomLevel`](/components/spreadsheet_configuring.html) を 100 に設定することは、100% に設定することと同じです。
 
 次のコード スニペットは、スプレッドシートのズームレベルを設定する方法を示しています。
 
@@ -169,6 +178,6 @@ this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
 <igx-spreadsheet zoomLevel=200></igx-spreadsheet>
 ```
 
-```typescript
+```ts
 this.spreadsheet.zoomLevel = 200;
 ```

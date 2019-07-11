@@ -16,7 +16,7 @@
   href: grid/grid.md
   new: true
   items:
-    - name: ライブデータ/リアルタイムデモ
+    - name: ライブデータ/リアルタイム更新
       href: grid/live_data.md
       new: false
     - name: 仮想化とパフォーマンス
@@ -98,7 +98,7 @@
   href: treegrid/tree_grid.md
   new: true
   items:
-    - name: Live Data / Real-Time
+    - name: ライブデータ/リアルタイム更新
       href: grid/live_data.md
       new: false
     - name: 仮想化とパフォーマンス
@@ -253,7 +253,7 @@
     - name: 機能
       href: combo_features.md
       new: false
-    - name: リモートバインディング
+    - name: リモートバインド
       href: combo_remote.md
       new: true
     - name: テンプレート
@@ -269,9 +269,9 @@
      - name: アクティブ化
        href: spreadsheet_activation.md
        new: false
-     - name: Chart Adapter
-       href: spreadsheet_chart_adapter.md
-       new: true
+    # - name: チャート アダプター
+    #   href: spreadsheet_chart_adapter.md
+    #   new: true
      - name: クリップボード
        href: spreadsheet_clipboard.md
        new: false
@@ -328,9 +328,9 @@
       href: datachart_axis_types.md
       new: false
       items:
-        - name: Axis Annotations
-          href: datachart_axis_annotations.md
-          new: true
+        #- name: 軸の注釈
+        #  href: datachart_axis_annotations.md
+        #  new: true
         - name: 軸設定
           href: datachart_axis_settings.md
           new: false
@@ -404,9 +404,9 @@
     - name: ナビゲーション
       href: datachart_chart_navigation.md
       new: false
-    - name: Synchronization
-      href: datachart_chart_synchronization.md
-      new: true
+    #- name: 同期
+    #  href: datachart_chart_synchronization.md
+    #  new: true
     - name: タイトルとサブタイトル
       href: datachart_chart_titles.md
       new: false
@@ -425,16 +425,16 @@
     #- name: Series Error Bars
     #  href: datachart_series_errorbars.md
     #  new: true
-    - name: Value Overlay
-      href: datachart_series_value_overlay.md
-      new: true
+    #  - name: 値オーバーレイ
+    #    href: datachart_series_value_overlay.md
+    #    new: true
 - name: Financial Chart
   href: financialchart.md
   new: false
   items:
-    - name: リアルタイム データ
-      href: financialchart_binding_live_data.md
-      new: false
+    #- name: リアルタイム データ更新
+    #  href: financialchart_binding_live_data.md
+    #  new: false
     - name: 大規模なデータの処理
       href: financialchart_binding_large_data.md
       new: false
@@ -498,18 +498,18 @@
     - name: 複数データ ソースのバインド
       href: map_binding_multiple_data_sources.md
       new: false
-    - name: Displaying Bing Imagery
-      href: map_displaying_bing_imagery.md
-      new: true
-    - name: Displaying Esri Imagery
-      href: map_displaying_esri_imagery.md
-      new: true
-    - name: Displaying OSM Imagery
-      href: map_displaying_osm_imagery.md
-      new: true
-    - name: Navigating Map Content
-      href: map_navigating_map_content.md
-      new: true
+    #- name: Bing 画像の表示
+    #  href: map_displaying_bing_imagery.md
+    #  new: true
+    #- name: Esri 画像の表示
+    #  href: map_displaying_esri_imagery.md
+    #  new: true
+    #- name: OSM 画像の表示
+    #  href: map_displaying_osm_imagery.md
+    #  new: true
+    #- name: Map コンテンツのナビゲーション
+    #  href: map_navigating_map_content.md
+    #  new: true
     - name: 散布図 - エリア シリーズ
       href: map_geographic_scatter_area_series.md
       new: false

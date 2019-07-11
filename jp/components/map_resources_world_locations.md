@@ -1,7 +1,7 @@
 ---
 title: マップ | データ可視化ツール | Ignite UI for Angular | Data Utility | Infragistics
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
 _language: ja
 ---
 
@@ -11,7 +11,7 @@ _language: ja
 
 ### コード スニペット
 
-```typescript
+```ts
 export default class WorldLocations {
 
     private static locations: any[] = [];

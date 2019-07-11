@@ -13,11 +13,11 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"  data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
     </button>
 </div>
 
@@ -32,11 +32,11 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-`IgxPieChart` は、以下のモジュールが必要です。
+[`IgxPieChart`](/components/piechart.html) は、以下のモジュールが必要です。
 
-```typescript
+```ts
 // app.module.ts
-import { IgxPieChartModule } from 'igniteui-angular-charts/ES5/igx-pie-chart-module';
+import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
 
 @NgModule({
     imports: [
@@ -55,7 +55,7 @@ export class AppModule {}
 円チャート モジュールをインポートした後、チャートをデータにバインドします。
 円チャート コンポーネントを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
-```typescript
+```ts
 var data = [
             { MarketShare: 30, Company: "Google",    },
             { MarketShare: 30, Company: "Apple",     },
@@ -82,7 +82,7 @@ var data = [
 
 ### 凡例
 
-円チャートの隣に凡例を表示するには、ItemLegend を作成し、`legend` プロパティに割り当てます。`legendLabelMemberPath` は、各円スライスの凡例項目を表示するために使用するデータ モデルのプロパティを指定します。
+円チャートの隣に凡例を表示するには、ItemLegend を作成し、`Infragistics.Controls.Charts.Legend` プロパティに割り当てます。`legendLabelMemberPath` は、各円スライスの凡例項目を表示するために使用するデータ モデルのプロパティを指定します。
 
 また、凡例項目の外観をカスタマイズするために `legendItemTemplate` と `legendItemBadgeTemplate` プロパティ、多数のフォント プロパティを使用できます。
 
@@ -97,8 +97,8 @@ var data = [
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="pie-chart-legend-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="pie-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -125,8 +125,8 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
  </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="pie-chart-others-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="pie-chart-others-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -135,7 +135,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 
 ### 展開
 
-円チャート コントロールは個々の円スライスの選択と展開だけでなく、選択状態を変更しカスタム ロジックを実装することを可能にする `sliceClick` イベントをサポートします。
+円チャート コントロールは個々の円スライスの選択と展開だけでなく、選択状態を変更しカスタム ロジックを実装することを可能にする `SliceClick` イベントをサポートします。
 
 ```html
 <igx-pie-chart [dataSource]="data"
@@ -146,8 +146,8 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="pie-chart-explosion-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="pie-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -185,8 +185,8 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 </igx-pie-chart>
 ```
 
-<div class="sample-container" style="height: 320px">
-    <iframe id="pie-chart-selection-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 320px">
+    <iframe id="pie-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く

@@ -7,36 +7,34 @@ _language: ja
 
 ## テーブルの使用
 
-Infragistics Excel Engine の `WorksheetTable` 機能は、行列のデータを書式設定できます。ワークシート テーブルのデータは `Worksheet` の他の行や列のデータから個々に管理できます。
+Infragistics Excel Engine の [`WorksheetTable`](/components/excel_library_using_tables.html) 機能は、行列のデータを書式設定できます。ワークシート テーブルのデータは [`worksheet`](/components/excel_library_using_tables.html) の他の行や列のデータから個々に管理できます。
 
 <!--### Demo
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/working-with-tables' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>-->
 
 <div class="divider--half"></div>
 
 ### テーブルをワークシートに追加
 
-Infragistics Excel Engine のワークシート テーブルは `WorksheetTable` オブジェクトによって表され、ワー​​クシートの `tables` コレクションに追加されます。テーブルを追加するには、このコレクションの `add` メソッドを呼び出す必要があります。このメソッドでは、テーブルを追加する領域、テーブルにヘッダーを含めるかどうか、およびオプションで `WorksheetTableStyle` オブジェクトとしてテーブルのスタイルを指定できます。
+Infragistics Excel Engine のワークシート テーブルは [`WorksheetTable`](/components/excel_library_using_tables.html) オブジェクトによって表され、ワー​​クシートの `tables` コレクションに追加されます。テーブルを追加するには、このコレクションの `Add` メソッドを呼び出す必要があります。このメソッドでは、テーブルを追加する領域、テーブルにヘッダーを含めるかどうか、およびオプションで [`WorksheetTableStyle`](/components/excel_library_using_tables.html) オブジェクトとしてテーブルのスタイルを指定できます。
 
-以下のコード デモは、ヘッダーを含むテーブルを `Worksheet` の A1 to G10 (A1 to G1 が列ヘッダー) 領域に追加する方法を示します。
+以下のコード デモは、ヘッダーを含むテーブルを [`Worksheet`](/components/excel_library_using_tables.html) の A1 to G10 (A1 to G1 が列ヘッダー) 領域に追加する方法を示します。
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 
 worksheet.tables().add("A1:G10", true);
 ```
 
-テーブルを追加後 `WorksheetTable` で `insertColumns`、`insertDataRows`、`deleteColumns`、または `deleteDataRows` メソッドを呼び出して行列を追加または削除して変更できます。テーブルの `resize` メソッドを使用して新しいテーブル範囲を設定できます。
+テーブルを追加後 [`WorksheetTable`](/components/excel_library_using_tables.html) で `insertColumns`、`insertDataRows`、`deleteColumns`、または `deleteDataRows` メソッドを呼び出して行列を追加または削除して変更できます。テーブルの `resize` メソッドを使用して新しいテーブル範囲を設定できます。
 
 以下のコード スニペットは、3 つのメソッドの使用方法を示します。
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
@@ -59,25 +57,25 @@ table.resize("A1:G15");
 
 ### テーブルのフィルタリング
 
-`WorksheetTable` の列にフィルターを適用します。フィルターが列で適用されると、テーブルに適用したすべてのフィルター条件と一致する行を決定するために再評価されます。
+[`WorksheetTable`](/components/excel_library_using_tables.html) の列にフィルターを適用します。フィルターが列で適用されると、テーブルに適用したすべてのフィルター条件と一致する行を決定するために再評価されます。
 
 テーブルのデータを後で変更または行の `hidden` プロパティを変更した場合、フィルター条件は自動的に再評価されません。テーブルのフィルター条件は、テーブルの列フィルターが追加、削除、変更されたときか、`reapplyFilters` メソッドがテーブルに対して呼び出されたときに限り再適用されます。
 
-以下は、`WorksheetTable` の列で使用できるフィルター タイプです。
+以下は、[`WorksheetTable`](/components/excel_library_using_tables.html) の列で使用できるフィルター タイプです。
 
--   `AverageFilter` - このコードは、列のすべてのセルの平均値の上か下かに基づいてセルをフィルターする方法を示します。
--   `CustomFilter` - 1 つ以上のカスタム条件に基づいてセルをフィルターできます。
--   `DatePeriodFilter` - 年の特定の月または四半期の日付を含むセルのみが表示されます。
--   `FillFilter` - 特定の塗りつぶしを含むセルのみが表示されます。
--   `FixedValuesFilter` - 特定の表示値のみに一致するまたは日付/時間の特定のグループ内に分類されるセルが表示されます。
--   `FontColorFilter` - 特定のフォントの色を含むセルのみが表示されます。
--   `RelativeDateRangeFilter` - フィルターが適用されたときに、次の日または前の四半期のように日付の相対的な時間の範囲内で発生するかどうかに基づいて、日付値ををフィルターできます。
--   `TopOrBottomFilter` - このフィルターはトップまたはボトム N 値をフィルターします。このフィルターはトップまたはボトム N %値をフィルターします。
--   `YearToDateFilter` - 年の始まりとフィルターが適用される日付の間に発生する場合、日付値を含むYearToDateFilter-をフィルターできます。
+-   [`AverageFilter`](/components/excel_library_using_tables.html) - このコードは、列のすべてのセルの平均値の上か下かに基づいてセルをフィルターする方法を示します。
+-   [`CustomFilter`](/components/excel_library_using_tables.html) - 1 つ以上のカスタム条件に基づいてセルをフィルターできます。
+-   [`DatePeriodFilter`](/components/excel_library_using_tables.html) - 年の特定の月または四半期の日付を含むセルのみが表示されます。
+-   [`FillFilter`](/components/excel_library_using_tables.html) - 特定の塗りつぶしを含むセルのみが表示されます。
+-   [`FixedValuesFilter`](/components/excel_library_using_tables.html) - 特定の表示値のみに一致するまたは日付/時間の特定のグループ内に分類されるセルが表示されます。
+-   [`FontColorFilter`](/components/excel_library_using_tables.html) - 特定のフォントの色を含むセルのみが表示されます。
+-   [`RelativeDateRangeFilter`](/components/excel_library_using_tables.html) - フィルターが適用されたときに、次の日または前の四半期のように日付の相対的な時間の範囲内で発生するかどうかに基づいて、日付値ををフィルターできます。
+-   [`TopOrBottomFilter`](/components/excel_library_using_tables.html) - このフィルターはトップまたはボトム N 値をフィルターします。このフィルターはトップまたはボトム N %値をフィルターします。
+-   [`YearToDateFilter`](/components/excel_library_using_tables.html) - 年の始まりとフィルターが適用される日付の間に発生する場合、日付値を含むYearToDateFilter-をフィルターできます。
 
-以下のコード スニペットは、`WorksheetTable` の最初の列に平均を超えるフィルターを適用する方法を示します。
+以下のコード スニペットは、[`WorksheetTable`](/components/excel_library_using_tables.html) の最初の列に平均を超えるフィルターを適用する方法を示します。
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
@@ -91,20 +89,20 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 
 テーブルのデータが後で変更される場合、並べ替え条件は自動的に再評価されません。テーブルの並べ替え条件は、並べ替え条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがテーブルで呼び出されるときに限り再適用されます。並べ替え条件が再評価されると、表示されたセルのみが並べ替えられます。非表示行のすべてのセルは適切に維持されます。
 
-テーブル列から並べ替え条件へアクセスする以外に `WorksheetTable` の `sortSettings` プロパティの `sortConditions` コレクションからも公開されます。これは、列/並べ替え条件のペアの順番に並べられたコレクションです。このコレクション内の順序は並べ替えの優先順位です。
+テーブル列から並べ替え条件へアクセスする以外に [`WorksheetTable`](/components/excel_library_using_tables.html) の `sortSettings` プロパティの `sortConditions` コレクションからも公開されます。これは、列/並べ替え条件のペアの順番に並べられたコレクションです。このコレクション内の順序は並べ替えの優先順位です。
 
 列に設定可能な並べ替え条件タイプは次のとおりです。
 
--   `OrderedSortCondition` - セル値に基づいてセルを昇順または降順に並べ替えます。
--   `CustomListSortCondition` - テキストまたは表示値に基づいて定義された順序でセルを並べ替えます。この並べ替え方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。
--   `FillSortCondition` - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルを並べ替えます。
--   `FontColorSortCondition` - フォントが特定の色であるかどうかによってセルを並べ替えます。
+-   [`OrderedSortCondition`](/components/excel_library_using_tables.html) - セル値に基づいてセルを昇順または降順に並べ替えます。
+-   [`CustomListSortCondition`](/components/excel_library_using_tables.html) - テキストまたは表示値に基づいて定義された順序でセルを並べ替えます。この並べ替え方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。
+-   [`FillSortCondition`](/components/excel_library_using_tables.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルを並べ替えます。
+-   [`FontColorSortCondition`](/components/excel_library_using_tables.html) - フォントが特定の色であるかどうかによってセルを並べ替えます。
 
 また WorksheetTable の `sortSettings` の `caseSensitive` プロパティは、文字列が大文字と小文字を区別して並べ替えできるかどうかを開発者が設定できます。
 
-以下のコード スニペットは、`WorksheetTable` に `OrderedSortCondition` を適用する方法です。
+以下のコード スニペットは、[`WorksheetTable`](/components/excel_library_using_tables.html) に [`OrderedSortCondition`](/components/excel_library_using_tables.html) を適用する方法です。
 
-```typescript
+```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = this.workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);

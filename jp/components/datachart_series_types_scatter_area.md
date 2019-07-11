@@ -7,12 +7,12 @@ _language: ja
 
 ## 散布図 - エリア シリーズ
 
-このトピックは、コード例を示して `IgxDataChart` コントロールで `ScatterAreaSeries` を使用する方法を説明します。このシリーズは、各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。`ScatterAreaSeries` は `ScatterContourSeries` と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
+このトピックは、コード例を示して [`IgxDataChart`](/components/datachart_series_types_scatter_area.html) コントロールで [`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) を使用する方法を説明します。このシリーズは、各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの表面を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) は [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_area.html) と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-type-area-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-type-area-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -23,19 +23,19 @@ _language: ja
 
 ### 軸の要件
 
-`IgxDataChart` コントロールにはさまざまな種類の軸がありますが、`ScatterAreaSeries` では `IgxNumericYAxisComponent` と `IgxNumericYAxisComponent` のみ使用できます。
+[`IgxDataChart`](/components/datachart_series_types_scatter_area.html) コントロールにはさまざまな種類の軸がありますが、[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) では [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_area.html) と [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_area.html) のみ使用できます。
 
 ### データの要件
 
-`ScatterAreaSeries` には以下のデータ要件があります。
+[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、そして `ColorMemberPath` プロパティにマップされる 3 つの数値データ列を含める必要があります。
+-   すべてのデータ項目には、`XMemberPath`、`YMemberPath`、そして [`colorMemberPath`](/components/datachart_series_types_scatter_area.html) プロパティにマップされる 3 つの数値データ列を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_scatter.md) を使用できます。
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterData.create() }
 ```
 
@@ -43,7 +43,7 @@ this.state = { dataSource: SampleScatterData.create() }
 
 散布エリア シリーズは以下のモジュールを要求します。
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -52,7 +52,7 @@ import { IgxScatterAreaSeries } from "igniteui-angular-charts/ES5/igx-scatter-ar
 import { IgxCustomPaletteColorScale } from "igniteui-angular-charts/ES5/igx-custom-palette-color-scale";
 import { ColorScaleInterpolationMode } from "igniteui-angular-charts/ES5/ColorScaleInterpolationMode";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -71,37 +71,38 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、`ScatterAreaSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-x-axis name="xAxis" />
-    <igx-numeric-y-axis name="yAxis" />
+    <igx-numeric-x-axis name="xAxis"></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis"></igx-numeric-y-axis>
     <igx-scatter-area-series
-     name="series1"
-     xAxisName="xAxis"
-     yAxisName="yAxis"
-     xMemberPath="X"
-     yMemberPath="Y"
-     colorMemberPath="Z" />
+        name="series1"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        xMemberPath="X"
+        yMemberPath="Y"
+        colorMemberPath="Z">
+    </igx-scatter-area-series>
  </igx-data-chart>
 ```
 
 ### カラー スケール
 
-`ScatterAreaSeries` の `ColorScale` プロパティを使用して、ポイントの値を解決し、シリーズの面を塗りつぶします。色は、ピクセル単位の三角ラスタライザーを三角測量データに適用することによって、サーフェスの図形の周りをなめらかに補間します。サーフェスの描画がピクセル単位であるため、カラー スケールはブラシではなく色を使用します。
+[`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) の [`colorScale`](/components/datachart_series_types_scatter_area.html) プロパティを使用して、ポイントの値を解決し、シリーズの面を塗りつぶします。色は、ピクセル単位の三角ラスタライザーを三角測量データに適用することによって、サーフェスの図形の周りをなめらかに補間します。サーフェスの描画がピクセル単位であるため、カラー スケールはブラシではなく色を使用します。
 
-提供されている `CustomPaletteColorScale` クラスはほとんどの色付けのニーズを満たすはずですが、`ColorScale` 抽象クラスから継承して独自の色付けのロジックを指定することができます。
+提供されている [`IgxCustomPaletteColorScaleComponent`](/components/datachart_series_types_scatter_area.html) クラスはほとんどの色付けのニーズを満たすはずですが、[`IgxColorScaleComponent`](/components/datachart_series_types_scatter_area.html) 抽象クラスから継承して独自の色付けのロジックを指定することができます。
 
-以下の表は `ScatterAreaSeries` の面のカラ―リングに影響する `CustomPaletteColorScale` プロパティをリストします。
+以下の表は [`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_area.html) の面のカラ―リングに影響する [`IgxCustomPaletteColorScaleComponent`](/components/datachart_series_types_scatter_area.html) プロパティをリストします。
 
--   `Palette` は、選択する、または補間する色のコレクションを設定します。
--   `InterpolationMode` は、パレットから色を取得するメソッドを設定します。
--   `MaximumValue` は、色を割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
--   `MinimumValue` は、色を割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
+-   [`palette`](/components/datachart_series_types_scatter_area.html) は、選択する、または補間する色のコレクションを設定します。
+-   [`interpolationMode`](/components/datachart_series_types_scatter_area.html) は、パレットから色を取得するメソッドを設定します。
+-   [`maximumValue`](/components/datachart_series_types_scatter_area.html) は、色を割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
+-   [`minimumValue`](/components/datachart_series_types_scatter_area.html) は、色を割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
 
 ### その他のリソース
 

@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[カテゴリ シリーズ](datachart_series_types_category.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleCategoryData {
 
     public static create(): any[] {

@@ -79,8 +79,8 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 
 <div class="divider--half"></div>
 
-* [Tree Grid overview](tree_grid.md)
-* [Tree Grid Virtualization and Performance](virtualization.md)
+* [Tree Grid 概要](tree_grid.md)
+* [Tree Grid 可視化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
