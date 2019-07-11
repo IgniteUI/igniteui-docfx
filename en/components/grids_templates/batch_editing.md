@@ -30,7 +30,7 @@ Below is a detailed example of how is Batch Editing enabled for the igxGrid comp
 @@if (igxName === 'IgxTreeGrid') {
 The Batch Editing feature of the IgxTreeGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). You may find an overview of what is the `HierarchicalTransactionService` and how is it implemented in the ["igxBaseTransaction, igxTransaction and igxHierarchical transaction explained"](../transaction-how-to.md) topic.
 
-elow is a detailed example of how is Batch Editing enabled for the IgxTreeGrid component.
+Below is a detailed example of how is Batch Editing enabled for the IgxTreeGrid component.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 The Batch Editing feature of the IgxHierarchicalGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). You may find an overview of what is the `HierarchicalTransactionService` and how is it implemented in the ["igxBaseTransaction, igxTransaction and igxHierarchical transaction explained"](../transaction-how-to.md) topic.
