@@ -33,4 +33,4 @@ Dundee,42.5236,-76.9775,New York,NY,Yates,579,1650
 
 ### コード スニペット
 
-次のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`](/components/map_binding_geographic_csv_files.html) を、ロードされた CSV ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
+次のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`](map_binding_geographic_csv_files.md) を、ロードされた CSV ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。

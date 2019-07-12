@@ -32,7 +32,7 @@ Angular Spreadsheet は、スプレッドシート データの視覚化と編�
 
 ### 必要なモジュール
 
-[`IgxSpreadsheetComponent`](/components/spreadsheet_overview.html) は、以下のモジュールが必要です。
+[`IgxSpreadsheetComponent`](spreadsheet_overview.md) は、以下のモジュールが必要です。
 
 ```ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";

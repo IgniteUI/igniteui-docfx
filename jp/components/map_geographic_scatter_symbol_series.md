@@ -7,7 +7,7 @@ _language: ja
 
 ## 散布図 - 記号シリーズの使用
 
-地図コンポーネントの [`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) を使用して、地理的コンテキストでポイントまたはマーカーを使用して地理空間データを表示します。地理的シリーズのこのタイプは、都市、空港、地震または興味のあるポイントなどの地理的位置のコレクションを描画するためにしばしば使用されます。
+地図コンポーネントの [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) を使用して、地理的コンテキストでポイントまたはマーカーを使用して地理空間データを表示します。地理的シリーズのこのタイプは、都市、空港、地震または興味のあるポイントなどの地理的位置のコレクションを描画するためにしばしば使用されます。
 
 ### デモ
 
@@ -23,11 +23,11 @@ _language: ja
 
 ### データ要件
 
-マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目は、地理的位置（経度と緯度）を保存する 2 つの数値データ列を持つ必要があります。これらのデータ列は、[`latitudeMemberPath`](/components/map_geographic_scatter_symbol_series.html) と [`longitudeMemberPath`](/components/map_geographic_scatter_symbol_series.html) プロパティにマップされます。[`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) は、これらのマップされたデータ列の値を使用して、地理マップコンポーネントにシンボル要素をプロットします。
+マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目は、地理的位置（経度と緯度）を保存する 2 つの数値データ列を持つ必要があります。これらのデータ列は、[`latitudeMemberPath`](map_geographic_scatter_symbol_series.md) と [`longitudeMemberPath`](map_geographic_scatter_symbol_series.md) プロパティにマップされます。[`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) は、これらのマップされたデータ列の値を使用して、地理マップコンポーネントにシンボル要素をプロットします。
 
 ### コード スニペット
 
-以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicSymbolSeriesComponent`](/components/map_geographic_scatter_symbol_series.html) をバインドする方法を示します。
+以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) をバインドする方法を示します。
 
 <!-- Angular -->
 

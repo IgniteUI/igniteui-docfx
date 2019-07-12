@@ -7,7 +7,7 @@ _language: ja
 
 ## ツールチップ
 
-[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールは、2 つのツールチップ 「レイヤー」 と共にツールチップを表示できます。これらのツールチップを使用すると、チャート内の各シリーズに関するコンテキスト情報を確認するのに役立ちます。
+[`IgxDataChart`](datachart_series_tooltips.md) コントロールは、2 つのツールチップ 「レイヤー」 と共にツールチップを表示できます。これらのツールチップを使用すると、チャート内の各シリーズに関するコンテキスト情報を確認するのに役立ちます。
 
 ### デモ
 
@@ -21,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールでツールチップ レイヤーを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
+[`IgxDataChart`](datachart_series_tooltips.md) コントロールでツールチップ レイヤーを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
 
 ```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -31,9 +31,9 @@ IgxDataChartInteractivityModule.register();
 
 ### デフォルト ツールチップ
 
-[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルトのツールチップには、シリーズのタイトル、データ値、軸の値など、ホバーされている特定のシリーズ項目に関連するすべての情報が表示されます。これらもシリーズの外観に合わせてスタイル設定されています。
+[`IgxDataChart`](datachart_series_tooltips.md) コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルトのツールチップには、シリーズのタイトル、データ値、軸の値など、ホバーされている特定のシリーズ項目に関連するすべての情報が表示されます。これらもシリーズの外観に合わせてスタイル設定されています。
 
-次のコードスニペットは、[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールで既定のツールチップを有効にする方法を示しています。
+次のコードスニペットは、[`IgxDataChart`](datachart_series_tooltips.md) コントロールで既定のツールチップを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -56,9 +56,9 @@ IgxDataChartInteractivityModule.register();
 
 ### カテゴリ ツールチップ レイヤー
 
-CategoryToolTipLayer は、カテゴリ軸を使用する [`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールのシリーズ用にグループ化されたヒントを表示します。グループ化されたツールチップは現在、[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールの上部に表示されています。
+CategoryToolTipLayer は、カテゴリ軸を使用する [`IgxDataChart`](datachart_series_tooltips.md) コントロールのシリーズ用にグループ化されたヒントを表示します。グループ化されたツールチップは現在、[`IgxDataChart`](datachart_series_tooltips.md) コントロールの上部に表示されています。
 
-次のコードスニペットは、[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
+次のコードスニペットは、[`IgxDataChart`](datachart_series_tooltips.md) コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -83,9 +83,9 @@ CategoryToolTipLayer は、カテゴリ軸を使用する [`IgxDataChart`](/comp
 
 ### 項目ツールチップ レイヤー
 
-itemToolTipLayer は、特定のシリーズにマウスがホバーする場合に [`IgxDataChart`](/components/datachart_series_tooltips.html) コントロール上のすべてのシリーズに関するヒントを個別に表示します。ツールチップスタイルは、ツールチップを表示しているシリーズから継承されます。
+itemToolTipLayer は、特定のシリーズにマウスがホバーする場合に [`IgxDataChart`](datachart_series_tooltips.md) コントロール上のすべてのシリーズに関するヒントを個別に表示します。ツールチップスタイルは、ツールチップを表示しているシリーズから継承されます。
 
-次のコードスニペットは、[`IgxDataChart`](/components/datachart_series_tooltips.html) コントロールに項目ツールチップ レイヤーを追加する方法を示しています。
+次のコードスニペットは、[`IgxDataChart`](datachart_series_tooltips.md) コントロールに項目ツールチップ レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart

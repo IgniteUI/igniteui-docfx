@@ -81,7 +81,7 @@ export class AppModule {}
 
 注: Excel ライブラリ モジュールをインポートした後、ワークブックを読み込みます。
 
-[`Workbook`](/components/excel_library.html) オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
+[`Workbook`](excel_library.md) オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
 
 ```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";

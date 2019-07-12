@@ -7,7 +7,7 @@ _language: ja
 
 ## タイトルとサブタイトル
 
-[`IgxDataChartComponent`](/components/datachart_chart_titles.html) コントロールの `title` と `subtitle` の機能は、チャート コントロールの一番上のセクションに情報を追加できます。チャートにタイトルまたはサブタイトルを追加すると、チャートの内容は自動的にサイズ変更され、指定したタイトルとサブタイトルの情報が表示されます。
+[`IgxDataChartComponent`](datachart_chart_titles.md) コントロールの `title` と `subtitle` の機能は、チャート コントロールの一番上のセクションに情報を追加できます。チャートにタイトルまたはサブタイトルを追加すると、チャートの内容は自動的にサイズ変更され、指定したタイトルとサブタイトルの情報が表示されます。
 
 ### デモ
 

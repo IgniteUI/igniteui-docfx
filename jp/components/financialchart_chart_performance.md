@@ -7,7 +7,7 @@ _language: ja
 
 ## パフォーマンス
 
-[`IgxFinancialChart`](/components/financialchart_chart_performance.html) コントロールは多数のデータ ポイントの描画で高いパフォーマンスを実現します。以下のデモは 20 年間のデータをバインドし、ローソク足チャートで 1 日間隔の在庫価格を示します。
+[`IgxFinancialChart`](financialchart_chart_performance.md) コントロールは多数のデータ ポイントの描画で高いパフォーマンスを実現します。以下のデモは 20 年間のデータをバインドし、ローソク足チャートで 1 日間隔の在庫価格を示します。
 
 ### デモ
 
@@ -57,11 +57,11 @@ export class AppComponent {
 
 ### チャート タイプ
 
-[`ChartType`](/components/financialchart_chart_performance.html) オプションの設定はチャート パフォーマンスに影響します。
+[`ChartType`](financialchart_chart_performance.md) オプションの設定はチャート パフォーマンスに影響します。
 
--   [`line`](/components/financialchart_chart_performance.html) - 簡単に描画できるチャート タイプです。大量のデータ ポイントの描画や複数のデータ ソースをプロットする場合に使用することをお勧めします。
--   [`IgxColumnComponent`](/components/financialchart_chart_performance.html) - `Line` チャート タイプより描画が複雑です。単一の数値を持つデータ項目を描画する場合の使用することをお勧めします。
--   `Bar` - [`IgxColumnComponent`](/components/financialchart_chart_performance.html) チャート タイプより描画が複雑です。OHLC 数値を持つデータ項目を描画する場合に使用することをお勧めします。
+-   [`line`](financialchart_chart_performance.md) - 簡単に描画できるチャート タイプです。大量のデータ ポイントの描画や複数のデータ ソースをプロットする場合に使用することをお勧めします。
+-   [`IgxColumnComponent`](financialchart_chart_performance.md) - `Line` チャート タイプより描画が複雑です。単一の数値を持つデータ項目を描画する場合の使用することをお勧めします。
+-   `Bar` - [`IgxColumnComponent`](financialchart_chart_performance.md) チャート タイプより描画が複雑です。OHLC 数値を持つデータ項目を描画する場合に使用することをお勧めします。
 -   `Candle` - `Bar` チャート タイプより描画が複雑です。OHLC 数値を持つデータ項目を描画する場合にも推薦されます。
 
 ### ボリューム タイプ
@@ -70,7 +70,7 @@ export class AppComponent {
 
 -   `Line` - 描画する一番安いボリューム タイプです。データ ポイントの大量を描画するか、複数のデータ ソースをプロットする場合に使用することをお勧めします。
 -   `area` - `Line` ボリューム タイプより描画に手間がかかります。
--   [`IgxColumnComponent`](/components/financialchart_chart_performance.html) - `area` ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの在庫の出来高データを描画する場合に使用することをお勧めします。
+-   [`IgxColumnComponent`](financialchart_chart_performance.md) - `area` ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの在庫の出来高データを描画する場合に使用することをお勧めします。
 
 ### マーカー タイプ
 

@@ -7,7 +7,7 @@ _language: ja
 
 ## Esri ユーティリティ
 
-[`IgxGeographicMapComponent`](/components/map_resources_esri.html) で Esri Maps が提供する [`ArcGISOnlineMapImagery`](/components/map_resources_esri.html) を使用する際に役立つユーティリティの実装方法について示します。
+[`IgxGeographicMapComponent`](map_resources_esri.md) で Esri Maps が提供する [`ArcGISOnlineMapImagery`](map_resources_esri.md) を使用する際に役立つユーティリティの実装方法について示します。
 
 ### コード スニペット
 

@@ -8,7 +8,7 @@ _language: ja
 
 ## Esri Maps から地理的画像を表示
 
-[`ArcGISOnlineMapImagery`](/components/map_displaying_esri_imagery.html) は、Esri によって作成された無料の地理的画像マッピング サービスです。世界の地理的画像タイルの 40 スタイル以上を提供します。この地理的画像サービスは、<a href="http://www.bing.com/maps" target="blank"> www.bing.com/maps</a> Web サイトから直接アクセスできます。
+[`ArcGISOnlineMapImagery`](map_displaying_esri_imagery.md) は、Esri によって作成された無料の地理的画像マッピング サービスです。世界の地理的画像タイルの 40 スタイル以上を提供します。この地理的画像サービスは、<a href="http://www.bing.com/maps" target="blank"> www.bing.com/maps</a> Web サイトから直接アクセスできます。
 
 ### デモ
 

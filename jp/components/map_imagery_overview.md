@@ -30,17 +30,17 @@ _language: ja
 
 | 画像クラス                                                                                       | 説明                                                                                                                              |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [`GeographicMapImagery`](/components/map_imagery_overview.html) | サポートされている地理的画像タイルのすべてのタイプを表示するすべての画像クラスの基本コントロールを表します。このクラスは、Map Quest マッピング サービスなどの他の地理的画像ソースから地理的画像タイルのサポートを実装する目的のために拡張できます。 |
-| [`OpenStreetMapImagery`](/components/map_imagery_overview.html) | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
+| [`GeographicMapImagery`](map_imagery_overview.md) | サポートされている地理的画像タイルのすべてのタイプを表示するすべての画像クラスの基本コントロールを表します。このクラスは、Map Quest マッピング サービスなどの他の地理的画像ソースから地理的画像タイルのサポートを実装する目的のために拡張できます。 |
+| [`OpenStreetMapImagery`](map_imagery_overview.md) | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
 
 <!-- |`BingMapsMapImagery`|Represents the multi-scale imagery control for displaying geographic imagery tiles from the Bing Maps service.| -->
 
-デフォルトでは、`BackgroundContent` プロパティは [`OpenStreetMapImagery`](/components/map_imagery_overview.html) オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
+デフォルトでは、`BackgroundContent` プロパティは [`OpenStreetMapImagery`](map_imagery_overview.md) オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
 
-さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、[`GeographicMapImagery`](/components/map_imagery_overview.html) クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
+さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、[`GeographicMapImagery`](map_imagery_overview.md) クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
 
 マップ コンポーネントでは、マップの背景コンテンツは常にすべての地理的シリーズの背後にレンダリングされます。つまり、地理的画像タイルは常に最初にレンダリングされ、マップ コンポーネントの Series プロパティ内の地理的シリーズは地理的画像タイルの上にレンダリングされます。地理的画像タイルはマップ ビューにすばやく埋め込まれるため、これは、マップ コンポーネントの同じプロット領域に複数の地理的シリーズを表示する場合に特に重要です。
 
 ### コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](/components/map_imagery_overview.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](map_imagery_overview.md) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

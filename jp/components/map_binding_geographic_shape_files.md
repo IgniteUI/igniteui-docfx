@@ -40,9 +40,9 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 ### シェープファイルをバインド
 
-Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`ShapefileRecord`](/components/map_binding_geographic_shape_files.html) オブジェクトのリストを含むため、このような配列の例です。
+Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`ShapefileRecord`](map_binding_geographic_shape_files.md) オブジェクトのリストを含むため、このような配列の例です。
 
-[`ShapefileRecord`](/components/map_binding_geographic_shape_files.html) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
+[`ShapefileRecord`](map_binding_geographic_shape_files.md) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
 
 | プロパティ      | 説明                                                                                                                                                                                                                                                                      |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,4 +55,4 @@ Map コンポーネントでは、Geographic Series は、シェイプ ファイ
 ### コード スニペット
 
 このコード例は、シェープ ファイルが `ShapeDataSource` を使用して読み込まれたことを前提としています。
-次のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`](/components/map_binding_geographic_shape_files.html) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`](/components/map_binding_geographic_shape_files.html) オブジェクトの `Points` プロパティをマップします。
+次のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`](map_binding_geographic_shape_files.md) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`](map_binding_geographic_shape_files.md) オブジェクトの `Points` プロパティをマップします。

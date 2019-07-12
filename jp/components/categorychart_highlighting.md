@@ -7,7 +7,7 @@ _language: ja
 
 ## ハイライト
 
-このトピックでは、[`IgxCategoryChart`](/components/categorychart_highlighting.html) のハイライト機能について説明します。
+このトピックでは、[`IgxCategoryChart`](categorychart_highlighting.md) のハイライト機能について説明します。
 
 ### デモ
 

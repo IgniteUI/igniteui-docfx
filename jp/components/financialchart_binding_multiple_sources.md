@@ -7,7 +7,7 @@ _language: ja
 
 ## 複数データ ソースへバインド
 
-[`IgxFinancialChart`](/components/financialchart_binding_multiple_sources.html) コントロールは、以下のように複数のデータ ソースへバインドできます。
+[`IgxFinancialChart`](financialchart_binding_multiple_sources.md) コントロールは、以下のように複数のデータ ソースへバインドできます。
 
 ### デモ
 

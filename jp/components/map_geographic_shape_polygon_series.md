@@ -7,7 +7,7 @@ _language: ja
 
 ## 図形ポリゴン シリーズの使用
 
-地理的コンテキストで形状ポリゴンを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polygon_series.html) を使用します。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
+地理的コンテキストで形状ポリゴンを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polygon_series.md) を使用します。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
 
 ### デモ
 
@@ -21,15 +21,15 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polygon_series.html) は、地理的データがポリラインの代わりに多角形で描画されることを除いて、[`IgxGeographicPolylineSeriesComponent`](/components/map_geographic_shape_polygon_series.html) とほどんど同様に機能します。
+[`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polygon_series.md) は、地理的データがポリラインの代わりに多角形で描画されることを除いて、[`IgxGeographicPolylineSeriesComponent`](map_geographic_shape_polygon_series.md) とほどんど同様に機能します。
 
 ### データ要件
 
-マップコントロールの他の種類の地理的シリーズと同様に、[`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polygon_series.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、`ShapeMemberPath` プロパティにマップされます。[`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polygon_series.html) は、マップされたデータ列の点を使用してマップコントロールにポリゴンをプロットします。
+マップコントロールの他の種類の地理的シリーズと同様に、[`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polygon_series.md) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、`ShapeMemberPath` プロパティにマップされます。[`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polygon_series.md) は、マップされたデータ列の点を使用してマップコントロールにポリゴンをプロットします。
 
 ### コード スニペット
 
-次のコードは、`ShapeDataSource` を使用してシェープファイルからロードされた世界の国々のシェイプに [`IgxGeographicShapeSeriesComponent`](/components/map_geographic_shape_polygon_series.html) をバインドする方法を示しています。
+次のコードは、`ShapeDataSource` を使用してシェープファイルからロードされた世界の国々のシェイプに [`IgxGeographicShapeSeriesComponent`](map_geographic_shape_polygon_series.md) をバインドする方法を示しています。
 
 <!-- Angular -->
 

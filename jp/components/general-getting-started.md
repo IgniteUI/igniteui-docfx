@@ -51,6 +51,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **npm install --save igniteui-angular-gauges igniteui-angular-core**
 -   **npm install --save igniteui-angular-grids igniteui-angular-core**
 -   **npm install --save igniteui-angular-maps igniteui-angular-core**
+-   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
 
 また
 
@@ -59,6 +60,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **yarn add igniteui-angular-gauges igniteui-angular-core**
 -   **yarn add igniteui-angular-grids igniteui-angular-core**
 -   **yarn add igniteui-angular-maps igniteui-angular-core**
+-   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
 最後に、次のコマンドでアプリケーションをビルドして起動することができます。
 
@@ -76,6 +78,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **npm install --save igniteui-angular-gauges igniteui-angular-core**
 -   **npm install --save igniteui-angular-grids igniteui-angular-core**
 -   **npm install --save igniteui-angular-maps igniteui-angular-core**
+-   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
 
 また
 
@@ -84,6 +87,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **yarn add igniteui-angular-gauges igniteui-angular-core**
 -   **yarn add igniteui-angular-grids igniteui-angular-core**
 -   **yarn add igniteui-angular-maps igniteui-angular-core**
+-   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
 これにより、Ignite UI for Angular のパッケージが、それらのすべての依存関係、フォントのインポート、および既存のプロジェクトへのスタイル参照と共に自動的にインストールされます。
 

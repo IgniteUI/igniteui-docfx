@@ -7,7 +7,7 @@ _language: ja
 
 ## マーカー
 
-[`IgxDataChart`](/components/datachart_series_markers.html) コントロールのプロット領域では、マーカーはデータポイントの位置に表示される視覚的要素です。マーカーは、値が主グリッド線と副グリッド線の間にある場合でも、データポイントを容易に識別できるできるようユーザーをサポートします。
+[`IgxDataChart`](datachart_series_markers.md) コントロールのプロット領域では、マーカーはデータポイントの位置に表示される視覚的要素です。マーカーは、値が主グリッド線と副グリッド線の間にある場合でも、データポイントを容易に識別できるできるようユーザーをサポートします。
 
 ### デモ
 
@@ -36,7 +36,7 @@ _language: ja
 
 ### マーカー プロパティ
 
-上記のシリーズは、[`MarkerType`](/components/datachart_series_markers.html) プロパティを使用して変更可能な 12 種類のマーカーをサポートしています。また、`MarkerBrush` と `MarkerOutline` プロパティをそれぞれ使用して、塗りつぶしと線を変更することもできます。
+上記のシリーズは、[`MarkerType`](datachart_series_markers.md) プロパティを使用して変更可能な 12 種類のマーカーをサポートしています。また、`MarkerBrush` と `MarkerOutline` プロパティをそれぞれ使用して、塗りつぶしと線を変更することもできます。
 
 以下のこのコードスニペットは、マーカーの形状と外観を変更する方法を示しています。
 

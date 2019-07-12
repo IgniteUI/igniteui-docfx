@@ -7,7 +7,7 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、[`IgxFinancialChart`](/components/financialchart_chart_annotations.html) の注釈について説明します。
+このトピックでは、[`IgxFinancialChart`](financialchart_chart_annotations.md) の注釈について説明します。
 
 ### デモ
 

@@ -7,7 +7,7 @@ _language: ja
 
 ## チャート タイプの選択
 
-[`IgxFinancialChart`](/components/financialchart_chart_display_types.html) コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+[`IgxFinancialChart`](financialchart_chart_display_types.md) コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 ### デモ
 
@@ -68,7 +68,7 @@ Financial Chart コントロールは、チャートで表示されるラベル�
 
 ### 軸モード
 
-[`IgxFinancialChart`](/components/financialchart_chart_display_types.html) コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
+[`IgxFinancialChart`](financialchart_chart_display_types.md) コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
 
 -   Time - このモードはデータのギャップを X 軸にスペースを用いて描画します。つまり、週末または休日に株取引がないことを示します。
 -   Ordinal - このモードはデータがない日付領域を縮小します。これがデフォルト値です。

@@ -7,7 +7,7 @@ _language: ja
 
 ## 地理的位置と JSON ファイルのバインド
 
-[`IgxGeographicMap`](/components/map_binding_geographic_json_files.html) は、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
+[`IgxGeographicMap`](map_binding_geographic_json_files.md) は、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
 
 ### デモ
 
@@ -36,4 +36,4 @@ JSON ファイルからのデータの例:
 
 ### コード スニペット
 
-次のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`](/components/map_binding_geographic_json_files.html) を、ロードされた JSON ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
+次のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`](map_binding_geographic_json_files.md) を、ロードされた JSON ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
