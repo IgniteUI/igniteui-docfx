@@ -129,7 +129,9 @@ This will apply our custom themes to **all** instances of Drop Downs and to **al
 
 In order to better explain how the theme is applied to the drop-down and its items, we need to first take some time to explain how Angular's [ViewEncapsulation](https://angular.io/guide/component-styles#view-encapsulation) works. `ViewEncapsulation` takes care of our styles being scoped to a certain part (component) of our application. As stated in the official Angular documentation, we can define what `ViewEncapsulation` is used by our component. For this example, we'll discuss the default one - `ViewEncapsulation.Emulated`.
 
-If we want our themes to affect only the elements under our example component, we need to properly scope the styles. The first thing we can do is move them to our example component's `scss` file, `overlay-styling.component.scss`.
+If we want our themes to affect only the elements under our example component, we need to properly scope the styles.
+The first thing we can do is move all of the styles defined in the previous steps (including the [import statement](#including-styles)) to our component's `style` file, `overlay-styling.component.scss`.
+
 If we just move the `@include` statements in our component's style file, both of our drop-down's are styled with our custom theme - the `igx-drop-down-items` are *initialized* in our component's template and, even though they are placed under the document's `body` tag (by default), our component's scoped styles still apply to them.
 
 ### Managing Overlay Outlet
