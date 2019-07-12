@@ -7,7 +7,7 @@ _language: kr
 
 ## 탐색
 
-`IgxDataChart` 제어에서는 탐색이 기본적으로 비활성화되어 있습니다. 활성화로 설정되면 프로그래밍 방식 또는 UI를 통해 차트를 확대/축소하고 이동할 수 있습니다.
+[`IgxDataChart`](datachart_chart_navigation.md) 제어에서는 탐색이 기본적으로 비활성화되어 있습니다. 활성화로 설정되면 프로그래밍 방식 또는 UI를 통해 차트를 확대/축소하고 이동할 수 있습니다.
 
 ### 데모
 
@@ -23,7 +23,7 @@ _language: kr
 
 차트에서 탐색을 사용하려면 상호 작용 모듈을 가져와 등록해야 합니다. 다음 코드를 사용하여 이 작업을 실행할 수 있습니다:
 
-```typescript
+```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
 IgxDataChartInteractivityModule.register();
@@ -49,7 +49,7 @@ UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 �
 
 ### 마우스 및 키보드를 사용한 차트 탐색
 
-`IgxDataChart` 제어의 탐색은 마우스나 키보드가 활성화된 상태에서 실행됩니다. 다음 조작은 기본적으로 다음의 마우스 또는 키보드 조작을 사용하여 호출할 수 있습니다:
+[`IgxDataChart`](datachart_chart_navigation.md) 제어의 탐색은 마우스나 키보드가 활성화된 상태에서 실행됩니다. 다음 조작은 기본적으로 다음의 마우스 또는 키보드 조작을 사용하여 호출할 수 있습니다:
 
 -   `Panning`: 키보드의 화살표 키를 사용하거나 Shift 키를 누른 상태에서 마우스로 클릭하고 드래그합니다.
 -   `Zoom In`: 키보드의 PageUp 키를 사용하거나 마우스 휠을 위로 회전시킵니다.
@@ -110,7 +110,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 
 ### 코드를 통한 차트 탐색
 
-`IgxDataChart` 제어는 차트에서 확대/축소 또는 이동 조작이 발생할 때마다 업데이트되는 여러 탐색 속성을 제공합니다. 이러한 각 속성을 설정하여 차트를 프로그래밍 방식으로 확대/축소 또는 이동할 수도 있습니다. 다음은 이러한 속성 목록입니다:
+[`IgxDataChart`](datachart_chart_navigation.md) 제어는 차트에서 확대/축소 또는 이동 조작이 발생할 때마다 업데이트되는 여러 탐색 속성을 제공합니다. 이러한 각 속성을 설정하여 차트를 프로그래밍 방식으로 확대/축소 또는 이동할 수도 있습니다. 다음은 이러한 속성 목록입니다:
 
 -   `WindowPositionHorizontal`: 차트에 표시되는 콘텐츠 뷰 직사각형의 X부분을 나타내는 수치 값입니다.
 -   `WindowPositionVertical`: 차트에 표시되는 콘텐츠 뷰 직사각형의 Y부분을 나타내는 수치 값입니다.
@@ -118,9 +118,9 @@ The following code snippet demonstrates how to enable the overview plus detail p
 -   `WindowScaleHorizontal`: 차트에 표시되는 콘텐츠 뷰 직사각형의 너비 부분을 나타내는 수치 값입니다.
 -   `WindowScaleVertical`: 차트에 표시되는 콘텐츠 뷰 직사각형의 높이 부분을 나타내는 수치 값입니다.
 
-다음의 코드 조각은 `IgxDataChart` 제어의 뷰를 프로그래밍 방식으로 변경하는 방법을 보여줍니다. 다음은 `IgxDataChart` 제어를 나타내는 "chart"라는 변수가 있다고 가정한 경우입니다:
+다음의 코드 조각은 [`IgxDataChart`](datachart_chart_navigation.md) 제어의 뷰를 프로그래밍 방식으로 변경하는 방법을 보여줍니다. 다음은 [`IgxDataChart`](datachart_chart_navigation.md) 제어를 나타내는 "chart"라는 변수가 있다고 가정한 경우입니다:
 
-```typescript
+```ts
 // Zoom in by a factor of 0.05
 this.chart.windowScaleVertical -= 0.05;
 this.chart.windowScaleHorizontal -= 0.05;

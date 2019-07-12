@@ -3,6 +3,7 @@ title: Bullet Graph Component - Angular | Ignite UI for Angular
 _description: The Bullet Graph Component in Ignite UI for Angular allows for a linear and concise view of measures compared against a scale.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular data grid Bullet graph component example, Angular bullet graph
 _language: kr
+mentionedTypes: ['XamBulletGraph']
 ---
 
 ## Bullet Graph
@@ -37,12 +38,12 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxBulletGraph` requires the following modules:
+The [`IgxBulletGraphComponent`](bulletgraph.md) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
-import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igr-bullet-graph";
+import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igx-bullet-graph";
 
 @NgModule({
     imports: [
@@ -245,7 +246,7 @@ The backing element represents background and border of the bullet graph control
 
 ### Scale
 
-The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using [`isScaleInverted`](bulletgraph.md) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-bullet-graph

@@ -7,7 +7,7 @@ _language: kr
 
 ## 스택 시리즈
 
-이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 스택 시리즈에 대해 설명합니다. 스택 시리즈는 데이터를 가져 와서 가로 라인(예: `IgxColumnSeriesComponent`) 또는 세로 라인(예: `BarSeries`)을 따라 늘어나는 데이터 점 컬렉션으로 렌더링하는 차트 시리즈의 가장 간단하고 일반적인 형태의 그룹입니다.
+이 항목에서는 [`IgxDataChart`](datachart_series_types_stacked.md) 제어에서 다양한 유형의 스택 시리즈에 대해 설명합니다. 스택 시리즈는 데이터를 가져 와서 가로 라인(예: [`IgxColumnSeriesComponent`](datachart_series_types_stacked.md)) 또는 세로 라인(예: [`IgxBarSeriesComponent`](datachart_series_types_stacked.md))을 따라 늘어나는 데이터 점 컬렉션으로 렌더링하는 차트 시리즈의 가장 간단하고 일반적인 형태의 그룹입니다.
 
 ### 데모
 
@@ -21,45 +21,45 @@ _language: kr
 
 <div class="divider--half"></div>
 
-스택된 각 시리즈에는　`StackedFragmentSeries` 요소를 배치할 수 있는 자체 `IgxSeriesComponent` 컬렉션이 있습니다. 이러한 프라그먼트는 차트의 실제 렌더링을 구성하며 `ValueMemberPath`를 허용하는 요소입니다.
+스택된 각 시리즈에는　[`IgxStackedFragmentSeriesComponent`](datachart_series_types_stacked.md) 요소를 배치할 수 있는 자체 `Infragistics.Controls.Charts.Series` 컬렉션이 있습니다. 이러한 프라그먼트는 차트의 실제 렌더링을 구성하며 `ValueMemberPath`를 허용하는 요소입니다.
 
 ### 스택 시리즈의 유형
 
 다음 표에는 모든 유형의 카테고리 시리즈와 그 설명이 표시되어 있습니다.
 
-| Series Name                  | Description                                                                                                                                                                                                                               |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `StackedAreaSeries`          | 이 시리즈 유형은 선의 아래 영역이 채워져 겹쳐지도록 하여 선분(`StackedFragmentSeries`)으로 연결된 점 집합을 사용하여 렌더링됩니다.컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다. 각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다.모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                      |
-| `StackedBarSeries`           | 서로 옆에 이산 데이터를 누적된 바에 표시합니다.카테고리는 세로로 정렬되고 값은 가로로 누적됩니다. 이 시리즈는 일반적으로 시간 경과에 따른 데이터 시리즈의 변경을 표시하거나 여러 항목을 비교할 때 사용합니다.                                                                                                                     |
-| `StackedColumnSeries`        | 서로 위에 이산 데이터를 누적된 열에 표시합니다.카테고리는 가로로 정렬되고 값은 세로로 누적됩니다. 이 시리즈는 일반적으로 시간 경과에 따른 데이터 시리즈의 변경을 표시하거나 여러 항목을 비교할 때 사용합니다.                                                                                                                     |
-| `StackedLineSeries`          | 이 시리즈 유형은 서로 위에 누적된 선분 (`StackedFragmentSeries`) 으로 연결된 점 집합을 사용하여 렌더링됩니다. 컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다. 각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다. 모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                               |
-| `StackedSplineAreaSeries`    | 이 시리즈 유형은 스플라인 아래 영역이 채워져 겹쳐지도록 하여 스플라인 세그먼트의 부드러운 곡선 (`StackedFragmentSeries`) 으로 연결된 점 집합을 사용하여 렌더링됩니다.컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다. 각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다. 모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다. |
-| `StackedSplineSeries`        | 이 시리즈 유형은 서로 위에 누적된 스플라인 세그먼트의 부드러운 곡선 (`StackedFragmentSeries`) 으로 연결된 점 집합을 사용하여 렌더링됩니다.컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다.각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다. 모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                 |
-| `Stacked100AreaSeries`       | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 `StackedAreaSeries` 와 동일합니다.데이터를 직접 표시하는 대신에 `Stacked100AreaSeries` 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                                                                                                   |
-| `Stacked100BarSeries`        | 이 시리즈는 `StackedBarSeries` 유형과 동일하지만 데이터를 직접 표시하는 대신에 카테고리의 모든 값의 퍼센트로 데이터를 표시하는 기능이 추가되었습니다.                                                                                                                                              |
-| `Stacked100ColumnSeries`     | 이 시리즈는 `StackedColumnSeries` 유형과 동일하지만 데이터를 직접 표시하는 대신에 카테고리의 모든 값의 퍼센트로 데이터를 표시하는 기능이 추가되었습니다.                                                                                                                                           |
-| `Stacked100LineSeries`       | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 `StackedLineSeries` 와 동일합니다. 데이터를 직접 표시하는 대신에 `Stacked100AreaSeries` 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                                                                                                  |
-| `Stacked100SplineAreaSeries` | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 `StackedSplineAreaSeries` 와 동일합니다. 데이터를 직접 표시하는 대신에 `Stacked100SplineAreaSeries` 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                                                                                      |
-| `Stacked100SplineSeries`     | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 `StackedSplineSeries` 와 동일합니다. 데이터를 직접 표시하는 대신에 `Stacked100SplineSeries` 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                                                                                              |
+| Series Name                                                                                                                     | Description                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxStackedAreaSeriesComponent`](datachart_series_types_stacked.md)                   | 이 시리즈 유형은 선의 아래 영역이 채워져 겹쳐지도록 하여 선분([`IgxStackedFragmentSeriesComponent`](datachart_series_types_stacked.md))으로 연결된 점 집합을 사용하여 렌더링됩니다.컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다. 각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다.모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                                      |
+| [`IgxStackedBarSeriesComponent`](datachart_series_types_stacked.md)                     | 서로 옆에 이산 데이터를 누적된 바에 표시합니다.카테고리는 세로로 정렬되고 값은 가로로 누적됩니다. 이 시리즈는 일반적으로 시간 경과에 따른 데이터 시리즈의 변경을 표시하거나 여러 항목을 비교할 때 사용합니다.                                                                                                                                                                                                                                   |
+| [`IgxStackedColumnSeriesComponent`](datachart_series_types_stacked.md)               | 서로 위에 이산 데이터를 누적된 열에 표시합니다.카테고리는 가로로 정렬되고 값은 세로로 누적됩니다. 이 시리즈는 일반적으로 시간 경과에 따른 데이터 시리즈의 변경을 표시하거나 여러 항목을 비교할 때 사용합니다.                                                                                                                                                                                                                                   |
+| [`IgxStackedLineSeriesComponent`](datachart_series_types_stacked.md)                   | 이 시리즈 유형은 서로 위에 누적된 선분 ([`IgxStackedFragmentSeriesComponent`](datachart_series_types_stacked.md)) 으로 연결된 점 집합을 사용하여 렌더링됩니다. 컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다. 각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다. 모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                                               |
+| [`IgxStackedSplineAreaSeriesComponent`](datachart_series_types_stacked.md)       | 이 시리즈 유형은 스플라인 아래 영역이 채워져 겹쳐지도록 하여 스플라인 세그먼트의 부드러운 곡선 ([`IgxStackedFragmentSeriesComponent`](datachart_series_types_stacked.md)) 으로 연결된 점 집합을 사용하여 렌더링됩니다.컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다. 각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다. 모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                 |
+| [`IgxStackedSplineSeriesComponent`](datachart_series_types_stacked.md)               | 이 시리즈 유형은 서로 위에 누적된 스플라인 세그먼트의 부드러운 곡선 ([`IgxStackedFragmentSeriesComponent`](datachart_series_types_stacked.md)) 으로 연결된 점 집합을 사용하여 렌더링됩니다.컬렉션의 각 누적 프래그먼트는 각 스택의 하나의 시각적 요소를 나타냅니다.각 스택은 양수 값 및 음수 값을 모두 포함할 수 있습니다. 모든 양수 값은 y축의 양수 쪽에 그룹화되고, 모든 음수 값은 y축의 음수 쪽에 그룹화됩니다.                                 |
+| [`IgxStacked100AreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100areaseriescomponent.html)             | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 [`IgxStackedAreaSeriesComponent`](datachart_series_types_stacked.md) 와 동일합니다.데이터를 직접 표시하는 대신에 [`IgxStacked100AreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100areaseriescomponent.html) 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                          |
+| [`IgxStacked100BarSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100barseriescomponent.html)               | 이 시리즈는 [`IgxStackedBarSeriesComponent`](datachart_series_types_stacked.md) 유형과 동일하지만 데이터를 직접 표시하는 대신에 카테고리의 모든 값의 퍼센트로 데이터를 표시하는 기능이 추가되었습니다.                                                                                                                                                                   |
+| [`IgxStacked100ColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100columnseriescomponent.html)         | 이 시리즈는 [`IgxStackedColumnSeriesComponent`](datachart_series_types_stacked.md) 유형과 동일하지만 데이터를 직접 표시하는 대신에 카테고리의 모든 값의 퍼센트로 데이터를 표시하는 기능이 추가되었습니다.                                                                                                                                                             |
+| [`IgxStacked100LineSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100lineseriescomponent.html)             | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 [`IgxStackedLineSeriesComponent`](datachart_series_types_stacked.md) 와 동일합니다. 데이터를 직접 표시하는 대신에 [`IgxStacked100AreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100areaseriescomponent.html) 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                         |
+| [`IgxStacked100SplineAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100splineareaseriescomponent.html) | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 [`IgxStackedSplineAreaSeriesComponent`](datachart_series_types_stacked.md) 와 동일합니다. 데이터를 직접 표시하는 대신에 [`IgxStacked100SplineAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100splineareaseriescomponent.html) 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다. |
+| [`IgxStacked100SplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100splineseriescomponent.html)         | 이 시리즈는 y축 값을 처리하는 것을 제외한 모든 점에서 [`IgxStackedSplineSeriesComponent`](datachart_series_types_stacked.md) 와 동일합니다. 데이터를 직접 표시하는 대신에 [`IgxStacked100SplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100splineseriescomponent.html) 는 데이터 점의 모든 값의 합계의 퍼센트로 데이터를 표시합니다.                 |
 
 ### 필요한 축
 
-`IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 스택 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
+[`IgxDataChart`](datachart_series_types_stacked.md) 제어는 다양한 유형의 축을 제공하지만 스택 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| 시리즈 유형                       | YAxis 유형                   | XAxis 유형                                                                             |
-| ---------------------------- | -------------------------- | ------------------------------------------------------------------------------------ |
-| `StackedAreaSeries`          | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
-| `StackedBarSeries`           | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedColumnSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedLineSeries`          | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedSplineAreaSeries`    | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `StackedSplineSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100AreaSeries`       | `CategoryYAxis`            | `IgxNumericXAxisComponent`                                                           |
-| `Stacked100BarSeries`        | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100ColumnSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100LineSeries`       | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100SplineAreaSeries` | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
-| `Stacked100SplineSeries`     | `IgxNumericYAxisComponent` | `IgxCategoryXAxisComponent`, `IgxOrdinalTimeXAxisComponent`, `IgxTimeXAxisComponent` |
+| 시리즈 유형                                                                                                                          | YAxis 유형                                                                                              | XAxis 유형                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxStackedAreaSeriesComponent`](datachart_series_types_stacked.md)                   | [`IgxCategoryYAxisComponent`](datachart_series_types_stacked.md) | [`IgxNumericXAxisComponent`](datachart_series_types_stacked.md)                                                                                                                                                                                                               |
+| [`IgxStackedBarSeriesComponent`](datachart_series_types_stacked.md)                     | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStackedColumnSeriesComponent`](datachart_series_types_stacked.md)               | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStackedLineSeriesComponent`](datachart_series_types_stacked.md)                   | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStackedSplineAreaSeriesComponent`](datachart_series_types_stacked.md)       | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStackedSplineSeriesComponent`](datachart_series_types_stacked.md)               | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStacked100AreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100areaseriescomponent.html)             | [`IgxCategoryYAxisComponent`](datachart_series_types_stacked.md) | [`IgxNumericXAxisComponent`](datachart_series_types_stacked.md)                                                                                                                                                                                                               |
+| [`IgxStacked100BarSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100barseriescomponent.html)               | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStacked100ColumnSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100columnseriescomponent.html)         | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStacked100LineSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100lineseriescomponent.html)             | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStacked100SplineAreaSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100splineareaseriescomponent.html) | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
+| [`IgxStacked100SplineSeriesComponent`](/angular-apis/typescript/latest/classes/igxstacked100splineseriescomponent.html)         | [`IgxNumericYAxisComponent`](datachart_series_types_stacked.md)   | [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md), [`IgxOrdinalTimeXAxisComponent`](datachart_series_types_stacked.md), [`IgxTimeXAxisComponent`](datachart_series_types_stacked.md) |
 
 ### 필요한 데이터
 
@@ -67,14 +67,14 @@ _language: kr
 
 -   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
 -   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 스택 시리즈를 렌더링하지 않습니다.
--   모든 데이터 항목에는 카테고리 축(예: `IgxCategoryXAxisComponent`)의 `Label` 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
--   모든 데이터 항목에는스택 시리즈의  `시리즈` 컬렉션에 추가할 `StackedFragmentSeries`의　`ValueMemberPath` 속성을 사용하여 매핑해야 하는 숫자 데이터 열이 적어도 하나 이상 포함되어야 합니다.
+-   모든 데이터 항목에는 카테고리 축(예: [`IgxCategoryXAxisComponent`](datachart_series_types_stacked.md))의 `Label` 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
+-   모든 데이터 항목에는스택 시리즈의  `시리즈` 컬렉션에 추가할 [`IgxStackedFragmentSeriesComponent`](datachart_series_types_stacked.md)의　[`valueMemberPath`](datachart_series_types_stacked.md) 속성을 사용하여 매핑해야 하는 숫자 데이터 열이 적어도 하나 이상 포함되어야 합니다.
 
 ### 필요한 모듈
 
 스택 시리즈에는 다음과 같은 모듈이 필요합니다:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
 import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axis";
@@ -95,9 +95,9 @@ import { IgxStacked100SplineAreaSeries } from "igniteui-angular-charts/ES5/igx-s
 import { IgxStacked100SplineSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-spline-series";
 import { IgxStacked100SplineAreaSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-spline-area-series";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
-import { IgxDataChartCoreModule } from 'igniteui-angular-charts/ES5/igx-data-chart-core--module';
-import { IgxDataChartCategoryModule } from 'igniteui-angular-charts/ES5/igx-data-chart-category--module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
 import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-chart-stacked-module";
 
 @NgModule({
@@ -114,7 +114,7 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 
 ### 코드 예제 - 스택 열 시리즈
 
-이 코드는 `StackedColumnSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다. 또한, 위의 코드를 사용하여 `StackedColumnSeries`를 렌더링할 카테고리 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다.
+이 코드는 [`IgxStackedColumnSeriesComponent`](datachart_series_types_stacked.md)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다. 또한, 위의 코드를 사용하여 [`IgxStackedColumnSeriesComponent`](datachart_series_types_stacked.md)를 렌더링할 카테고리 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
@@ -134,7 +134,7 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 
 ### 코드 예제 - 스택 바 시리즈
 
- `StackedBarSeries`는 `CategoryYAxis` 및 `IgxNumericXAxisComponent`를 사용한다는 점에서 다른 유형의 축을 필요로 하기 때문에 `StackedColumnSeries`를 다른 시리즈 이름으로 대체할 수 있다는 규칙에서 예외입니다. 이 코드는 `StackedBarSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
+ [`IgxStackedBarSeriesComponent`](datachart_series_types_stacked.md)는 [`IgxCategoryYAxisComponent`](datachart_series_types_stacked.md) 및 [`IgxNumericXAxisComponent`](datachart_series_types_stacked.md)를 사용한다는 점에서 다른 유형의 축을 필요로 하기 때문에 [`IgxStackedColumnSeriesComponent`](datachart_series_types_stacked.md)를 다른 시리즈 이름으로 대체할 수 있다는 규칙에서 예외입니다. 이 코드는 [`IgxStackedBarSeriesComponent`](datachart_series_types_stacked.md)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">

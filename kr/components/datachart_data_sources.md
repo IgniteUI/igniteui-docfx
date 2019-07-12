@@ -7,7 +7,7 @@ _language: kr
 
 ## 데이터 소스
 
-`IgxDataChart` 제어에서 모든 시리즈를 올바르게 렌더링하려면 특정 수치와 데이터 열 유형이 필요합니다. 이 항목에서는 각 시리즈 그룹에 데이터 소스를 구현하는 방법에 대한 예제를 표시합니다.
+[`IgxDataChart`](datachart_data_sources.md) 제어에서 모든 시리즈를 올바르게 렌더링하려면 특정 수치와 데이터 열 유형이 필요합니다. 이 항목에서는 각 시리즈 그룹에 데이터 소스를 구현하는 방법에 대한 예제를 표시합니다.
 
 -   [카테고리 시리즈](datachart_series_types_category.md)의 [SampleCategoryData](datachart_data_sources_category.md)
 -   [금융 시리즈](datachart_series_types_financial.md)의 [SampleFinancialData](datachart_data_sources_financial.md)
