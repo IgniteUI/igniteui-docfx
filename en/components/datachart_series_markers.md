@@ -2,7 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Markers
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamDataChart', 'Series', 'MarkerSeries']
+mentionedTypes: ['XamDataChart', 'MarkerSeries']
 ---
 
 ## Markers
@@ -36,7 +36,7 @@ Most of data chart series support markers and they are listed below:
 
 ### Marker Properties
 
-Above series support 12 shapes of markers that you can change using the [`markerType`](/angular-apis/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) property.  Also, you can change fill and stroke using [`markerBrush`](/angular-apis/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) and [`markerOutline`](/angular-apis/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) properties respectively.
+Above series support 12 shapes of markers that you can change using the [`markerType`](datachart_series_markers.md) property.  Also, you can change fill and stroke using [`markerBrush`](datachart_series_markers.md) and [`markerOutline`](datachart_series_markers.md) properties respectively.
 
 This code snippet below demonstrate how to change shape and appearance of markers.
 

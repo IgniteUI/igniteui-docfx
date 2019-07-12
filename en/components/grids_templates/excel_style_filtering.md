@@ -1,28 +1,12 @@
-@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Excel Style Filtering
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Data Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
+title: Angular Grid Excel Style Filtering | Ignite UI for Angular | infragistics
+_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
+_keywords: excel like filter, igniteui for angular, infragistics
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid Excel Style Filtering
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Table, Angular Tree Grid component, Angular Data Table component, Angular Tree Grid control, Angular Data Table control, Angular Tree Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Tree Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid Excel Style Filtering
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Table, Angular Hierarchical Grid component, Angular Data Table component, Angular Hierarchical Grid control, Angular Data Table control, Angular Hierarchical Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Filtering, Hierarchical Grid Filtering, Data Table Filtering, Excel, Excel Style Filtering
----
-}
 
 ### @@igComponent Excel Style Filtering
 
-The @@igComponent component in Ignite UI for Angular provides filter UI similar to the one in excel.
+The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
 
 #### Demo
 
@@ -58,7 +42,7 @@ The @@igComponent component in Ignite UI for Angular provides filter UI similar 
 
 ###Usage
 
-To turn on the excel style filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) should be set to `excelStyleFilter`.
+To turn on the grid excel filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) should be set to `excelStyleFilter`.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -81,9 +65,9 @@ To turn on the excel style filtering, two inputs should be set. The [`allowFilte
 
 ###Interaction
 
-In order to open the filter menu for a particular column, the filter icon in the header should be clicked. If the column can be sorted, pinned, moved or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
+In order to open the filter menu for a particular column, the angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
 
-If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items create filter expressions with `equals` operator and the logic operator between each expression is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button. 
+If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between each expression is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button. 
 
 To apply a filter with different expressions, you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button, which can clear the filter.
 

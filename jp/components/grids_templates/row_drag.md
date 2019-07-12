@@ -125,9 +125,9 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 ```
 }
 
-You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event. If set to true, the dragged row will animate back to its' original position when dropped over a non-droppable area.
+[`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) イベントの animation パラメーターを使用して、ドロップできない領域に行がドロップされたときにアニメーションを有効にできます。true に設定されている場合、ドラッグされた行は、ドロップできない領域の上にドロップされると元の位置に戻ります。
 
-You may enable animation like this:
+以下はアニメーションを有効にする方法です。
 
 ```typescript
 export class @@igxNameRowDragComponent {

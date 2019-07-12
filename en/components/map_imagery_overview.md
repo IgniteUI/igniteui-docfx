@@ -2,6 +2,7 @@
 title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Imagery | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamGeographicMap']
 ---
 
 ## Geographic Imagery
@@ -27,19 +28,19 @@ The map component's `BackgroundContent` property is used to display all supporte
 
 The following table summarizes imagery classes provided by the map component.
 
-| Imagery Class          | Description                                                                                                                                                                                                                                                                                |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `GeographicMapImagery` | Represents the base control for all imagery classes that display all types of supported geographic imagery tiles. This class can be extended for the purpose of implementing support for geographic imagery tiles from other geographic imagery sources such as Map Quest mapping service. |
-| `OpenStreetMapImagery` | Represents the multi-scale imagery control for displaying geographic imagery tiles from the Open Street Maps service.                                                                                                                                                                      |
+| Imagery Class                                                                               | Description                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`GeographicMapImagery`](map_imagery_overview.md) | Represents the base control for all imagery classes that display all types of supported geographic imagery tiles. This class can be extended for the purpose of implementing support for geographic imagery tiles from other geographic imagery sources such as Map Quest mapping service. |
+| [`OpenStreetMapImagery`](map_imagery_overview.md) | Represents the multi-scale imagery control for displaying geographic imagery tiles from the Open Street Maps service.                                                                                                                                                                      |
 
 <!-- |`BingMapsMapImagery`|Represents the multi-scale imagery control for displaying geographic imagery tiles from the Bing Maps service.| -->
 
-By default, the `BackgroundContent` property is set to `OpenStreetMapImagery` object and the map component displays geographic imagery tiles from the Open Street Maps service. In order to display different types of geographic imagery tiles, the map component must be re-configured.
+By default, the `BackgroundContent` property is set to [`OpenStreetMapImagery`](map_imagery_overview.md) object and the map component displays geographic imagery tiles from the Open Street Maps service. In order to display different types of geographic imagery tiles, the map component must be re-configured.
 
-In addition, the `BackgroundContent` property can be set to any object that inherits the class. However, only objects that inherit the `GeographicMapImagery` class will allow panning and zooming of the map background content.
+In addition, the `BackgroundContent` property can be set to any object that inherits the class. However, only objects that inherit the [`GeographicMapImagery`](map_imagery_overview.md) class will allow panning and zooming of the map background content.
 
-In the map component, map background content is always rendered behind all geographic series. In other words, geographic imagery tiles are always rendered first and any geographic series in the map component's `IgxSeriesComponent` property is rendered on top of the geographic imagery tiles. This is especially important when displaying multiple geographic series in the same plot area of the map component because geographic imagery tiles can quickly get buried in the map view.
+In the map component, map background content is always rendered behind all geographic series. In other words, geographic imagery tiles are always rendered first and any geographic series in the map component's `Infragistics.Controls.Charts.Series` property is rendered on top of the geographic imagery tiles. This is especially important when displaying multiple geographic series in the same plot area of the map component because geographic imagery tiles can quickly get buried in the map view.
 
 ### Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the `OpenStreetMapImagery` object which provides geographic imagery tile from the Open Street Maps.
+This code example explicitly sets `BackgroundContent` of the map component to the [`OpenStreetMapImagery`](map_imagery_overview.md) object which provides geographic imagery tile from the Open Street Maps.

@@ -7,12 +7,12 @@ _language: ja
 
 ## 散布図 - マーカーシリーズ
 
-このトピックでは、`IgxDataChart` コントロールのさまざまな種類の散布マーカーシリーズについて説明します。散布マーカー シリーズは、デカルト座標系 (x、y) を使用して各データ項目のマーカーをプロットする一連のシリーズです。
+このトピックでは、[`IgxDataChart`](datachart_series_types_scatter_marker.md) コントロールのさまざまな種類の散布マーカーシリーズについて説明します。散布マーカー シリーズは、デカルト座標系 (x、y) を使用して各データ項目のマーカーをプロットする一連のシリーズです。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -25,21 +25,21 @@ _language: ja
 
 以下の表は、すべてのタイプの散布マーカー シリーズとその説明をまとめたものです。
 
-| シリーズ名                 | 説明                                                              |
-| --------------------- | --------------------------------------------------------------- |
-| `ScatterSeries`       | `XMemberPath` および `YMemberPath` プロパティにマップされたデータポイントのマーカーを表示します。 |
-| `ScatterLineSeries`   | マーカーに加えて、各データ ポイント間に直線を表示します。                                   |
-| `ScatterSplineSeries` | マーカーに加えて、各データ ポイント間を補間する滑らかな線を表示します。                            |
+| シリーズ名                                                                                                             | 説明                                                              |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | `XMemberPath` および `YMemberPath` プロパティにマップされたデータポイントのマーカーを表示します。 |
+| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | マーカーに加えて、各データ ポイント間に直線を表示します。                                   |
+| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | マーカーに加えて、各データ ポイント間を補間する滑らかな線を表示します。                            |
 
 ### 軸の要件
 
-`IgxDataChart` コントロールはさまざまな軸タイプを提供しますが、散布マーカー シリーズで使用できるのは以下のタイプの軸のみです。
+[`IgxDataChart`](datachart_series_types_scatter_marker.md) コントロールはさまざまな軸タイプを提供しますが、散布マーカー シリーズで使用できるのは以下のタイプの軸のみです。
 
-| シリーズ タイプ              | YAxis タイプ                  | XAxis タイプ                  |
-| --------------------- | -------------------------- | -------------------------- |
-| `ScatterSeries`       | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `ScatterLineSeries`   | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `ScatterSplineSeries` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| シリーズ タイプ                                                                                                          | YAxis タイプ                                                                                           | XAxis タイプ                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
 
 ### データの要件
 
@@ -51,7 +51,7 @@ _language: ja
 
 上記データ要件を満たすデータソースとして [SamplePolarData](datachart_data_sources_stats.md) を使用できます。
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
@@ -59,7 +59,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 散布マーカー シリーズは以下のモジュールが必要です。
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -69,7 +69,7 @@ import { IgxScatterLineSeries } from "igniteui-angular-charts/ES5/igx-scatter-li
 import { IgxScatterSplineSeries } from "igniteui-angular-charts/ES5/igx-scatter-spline-series";
 import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -88,25 +88,26 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、`ScatterSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
     [dataSource]="dataSource"
     width="700px"
     height="500px">
-    <igx-numeric-x-axis name="xAxis" isLogarithmic="true"/>
-    <igx-numeric-y-axis name="yAxis" isLogarithmic="true"/>
+    <igx-numeric-x-axis name="xAxis" isLogarithmic="true"></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis" isLogarithmic="true"></igx-numeric-y-axis>
     <igx-scatter-series
-     name="series1"
-     xAxisName="xAxis"
-     yAxisName="yAxis"
-     xMemberPath="Population"
-     yMemberPath="GdpTotal" />
+        name="series1"
+        xAxisName="xAxis"
+        yAxisName="yAxis"
+        xMemberPath="Population"
+        yMemberPath="GdpTotal">
+    </igx-scatter-series>
  </igx-data-chart>
 ```
 
-`ScatterSeries` を置き換えることで `ScatterLineSeries` または `ScatterSplineSeries` を作成するために上記のコードを使用することもできます。
+[`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md) を置き換えることで [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md) または [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) を作成するために上記のコードを使用することもできます。
 
 ### シリーズの外観
 
@@ -119,7 +120,8 @@ export class AppModule { /* ... */ }
  markerType="Square"
  markerBrush="White"
  markerOutline="Blue"
- thickness="2" />
+ thickness="2">
+</igx-scatter-series>
 ```
 
 ### その他のリソース

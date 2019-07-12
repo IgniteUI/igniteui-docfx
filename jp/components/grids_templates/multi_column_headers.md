@@ -1,31 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Column グループ コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: 複数列ヘッダーは、共通ヘッダーの下に配置して列をグループ化できます。各 列グループは、その他のグループや列を組み合わせて表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, 複数列ヘッダー, 遅延複数列ヘッダー, Grid 複数列ヘッダー, Angular Grid 複数列ヘッダー, Angular Data Table 複数列ヘッダー
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column グループ コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: 複数列ヘッダーは、共通ヘッダーの下に配置して列をグループ化できます。各 列グループは、その他のグループや列を組み合わせて表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Multi Column Headers, Deferred Multi Column Headers, Tree Grid Multi Column Headers, Angular Tree Grid Multi Column Headers, Angular Tree Table Multi Column Headers
+title: Angular 複数列ヘッダー | Ignite UI for Angular の | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column グループ コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: 複数列ヘッダーは、共通ヘッダーの下に配置して列をグループ化できます。各 列グループは、その他のグループや列を組み合わせて表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント Suite, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Multi Column Headers, Deferred Multi Column Headers, Hierarchical Grid Multi Column Headers, Angular Hierarchical Grid Multi Column Headers, Angular Hierarchical Table Multi Column Headers
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: 列ヘッダー, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-### 複数列ヘッダー
+### @@igComponent 複数列ヘッダーの概要
 
-[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、列ヘッダーの下に行を配置した行のグループ化が可能な `複数列ヘッダー`をサポートします。それぞれの`列グループ`は、その他のグループや列と組み合わせて表示できます。
+[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
 #### デモ
 

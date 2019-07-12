@@ -7,12 +7,12 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、`IgxCategoryChart` の注釈やインタラクションについて説明します。
+このトピックでは、[`IgxCategoryChart`](categorychart_annotation_layers.md) の注釈やインタラクションについて説明します。
 
 ### デモ
 
-<div class="sample-container" style="height: 550px">
-    <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="category-chart-annotations-iframe" src='{environment:demosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-annotations-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示

@@ -20,6 +20,6 @@ TODO
 
 The following code demonstrates how to use ... TODO
 
-```typescript
+```ts
 TODO
 ```

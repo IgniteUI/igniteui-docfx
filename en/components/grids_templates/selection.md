@@ -1,31 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells. With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Angular Grid Row Selection, Angular Data Table Row Selection, Angular Row Selection, Angular Grid Selection, Data Grid Row Selection, Data Table Row Selection, Grid Selection
+title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells.  With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Angular Tree Grid Row Selection, Angular Tree Table Row Selection, Angular Row Selection, Angular Tree Grid Selection, Tree Grid Row Selection, Tree Table Row Selection, Tree Grid Selection
+title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Grid Selection - Native Angular | Ignite UI for Angular
-_description: Single and multi-cell selection is available within the Grid. Multi-cell selection enables range selection of cells.  With the Row Selection component in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row, allowing the row to be either selected or deselected and enabling the user to select multiple rows of data.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Angular Hierarchical Grid Row Selection, Angular Hierarchical Table Row Selection, Angular Row Selection, Angular Hierarchical Grid Selection, Hierarchical Grid Row Selection, Hierarchical Table Row Selection, Hierarchical Grid Selection
+title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+_keywords: data select, igniteui for angular, infragistics
 ---
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### @@igComponent Multi-cell selection
+### @@igComponent Мulti-cell Selection and Row Selection
 
-Multi-cell selection enables range selection of cells in the @@igComponent. Variety of multi-cell selection capabilities are available:
-- By `Mouse drag` - Rectangular selection of cells would be performed.
+Multi-cell selection enables range data selection in the @@igComponent. Variety of multi-cell selection capabilities are available:
+- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
 - By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
 - Instant multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
 - Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
@@ -338,6 +338,103 @@ public selection = true;
 }
 
 **Note:** Cell selection will trigger [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) and not [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange).
+
+### Styling
+
+The theme engine exposes properties that allows us to style the range of selected cells.
+
+#### Import theme
+
+To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+#### Define colors
+
+Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+```scss
+    $text-color: igx-contrast-color($default-palette, 'primary', 900);
+    $background-color: igx-color($default-palette, "primary", 900);
+    $border-yellow: #f2c43c;
+```
+
+#### Create custom theme
+ 
+Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+
+```scss
+$custom-grid-theme: igx-grid-theme(
+    $cell-selected-text-color: $text-color,
+    $cell-active-border-color: $border-yellow,
+    $cell-selected-background: $background-color
+);
+```
+
+#### Apply theme
+
+Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
+
+```scss
+    @include igx-grid($custom-grid-theme);
+```
+
+ >[!NOTE]
+ >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
+ > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
+
+ ```scss
+    :host { 
+        ::ng-deep {
+            @include igx-grid($custom-grid-theme);
+        }
+    }
+```
+
+
+With the custom theme applied, the selected grid cells are highlighted with our selected colors:
+
+@@if (igxName === 'IgxGrid'){
+#### Demo
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+#### Demo
+<div class="sample-container loading" style="height:620px">
+    <iframe id="hierarchical-grid-multi-cell-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
+
+@@if (igxName === 'IgxTreeGrid'){
+#### Demo
+<div class="sample-container loading" style="height:620px">
+    <iframe id="tree-grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-tree-grid-multi-cell-selection-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
 
 ### Code Snippets
 

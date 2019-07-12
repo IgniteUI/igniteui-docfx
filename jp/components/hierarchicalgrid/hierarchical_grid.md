@@ -1,11 +1,13 @@
 ﻿---
-title: Hierarchical Grid コンポーネント
-_description: Ignite UI for Angular Hierarchical Grid コントロールは、タッチ レスポンシブが有効なデータ リッチな階層グリッドです。
-_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Grid コントロール, Angular 高パフォーマンス Hierarchical Grid, Hierarchical Grid
+title: Angular Hierarchical データグリッド | Material Table | Ignite UI for Angular | Infragistics
+_description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
+_keywords: Angular データ グリッド, igniteui for angular, infragistics
 _language: ja
 ---
+
 ## 階層グリッド
-<p class="highlight">Ignite UI for Angular Hierarchical Grid は、階層形式のデータの表示や編集ができます。フィルタリング、並べ替え、ページング、テンプレート、列ピン固定、列移動、列非表示などの機能が含まれます。Hierarchical Grid は、Data Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に子グリッドを表示する機能を拡張しました。</p>
+
+<p class="highlight">Angular Hierarchical Data Grid の Ignite UI を使用して階層データを表示および操作します。Angular Material テーブルのフィルタリング、ソート、ページング、テンプレート、移動可能な列、およびデータを編集および更新する機能を備えているため、Angular Material テーブルまたはマテリアル UI グリッドになります。上記のすべてが機能豊かなマテリアル UI グリッドを実現します。Hierarchical Grid は、Data Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に子グリッドを表示する機能を拡張しました。</p>
 
 ### デモ
 

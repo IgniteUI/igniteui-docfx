@@ -14,10 +14,10 @@ Ignite UI for Angular 파이형 차트 컴포넌트는 원형 영역을 섹션�
 ### 데모
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="pie-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -32,9 +32,9 @@ Ignite UI for Angular 파이형 차트 컴포넌트는 원형 영역을 섹션�
 
 ### 필요한 모듈
 
-`IgxPieChart`에는 다음 모듈이 필요합니다:
+[`IgxPieChart`](piechart.md)에는 다음 모듈이 필요합니다:
 
-```typescript
+```ts
 // app.module.ts
 
 import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
@@ -56,7 +56,7 @@ export class AppModule {}
 파이형 차트 모듈을 불러오기 한 후 다음 단계는 데이터에 바인딩합니다.
 파이형 차트를 작성하려면 먼저 데이터를 바인딩해야 합니다. 다음의 코드 조작은 간단한 데이터 소스를 작성하는 방법을 보여줍니다.
 
-```typescript
+```ts
 var data = [
     { MarketShare: 30, Company: "Google",    },
     { MarketShare: 30, Company: "Apple",     },
@@ -81,7 +81,7 @@ var data = [
 
 ### 범례
 
-파이형 차트 컴포넌트 옆에 범례를 표시하려면 ItemLegend를 생성하여 `legend` 속성에 할당해야 합니다. 그런 다음 `legendLabelMemberPath`를 사용하여 각 파이 조각의 범례에 표시할 데이터 모델 속성을 지정합니다.
+파이형 차트 컴포넌트 옆에 범례를 표시하려면 ItemLegend를 생성하여 `Infragistics.Controls.Charts.Legend` 속성에 할당해야 합니다. 그런 다음 `legendLabelMemberPath`를 사용하여 각 파이 조각의 범례에 표시할 데이터 모델 속성을 지정합니다.
 
 또한, `legendItemTemplate` 및 `legendItemBadgeTemplate` 속성과 ItemLegend의 다양한 폰트 속성을 사용하여 범례 항목의 모양을 추가로 사용자 정의화할 수 있습니다.
 
@@ -138,7 +138,7 @@ var data = [
 
 ### 전개
 
-파이형 차트 컴포넌트는 개별 파이 조각의 전개뿐만 아니라 선택 상태를 수정하고 사용자 논리를 구현할 수 있는 `sliceClick` 이벤트를 지원합니다
+파이형 차트 컴포넌트는 개별 파이 조각의 전개뿐만 아니라 선택 상태를 수정하고 사용자 논리를 구현할 수 있는 `SliceClick` 이벤트를 지원합니다
 
 ```html
 <igx-pie-chart [dataSource]="data"

@@ -9,7 +9,7 @@ _language: kr
 
 이 항목에서는 [금융 시리즈](datachart_series_types_financial.md)의 데이터 소스를 구현하는 방법에 대한 예제를 제공합니다
 
-```typescript
+```ts
 export class SampleFinancialData {
 
     public static create(): any[] {

@@ -1,8 +1,9 @@
 ---
-title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | 概要 | Infragistics |
+title: Spreadsheet | Grid コントロール | Ignite UI for Angular | 概要 | Infragistics |
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 _language: ja
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Angular Spreadsheet
@@ -11,8 +12,8 @@ Angular Spreadsheet は、スプレッドシート データの視覚化と編�
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -31,9 +32,9 @@ Angular Spreadsheet は、スプレッドシート データの視覚化と編�
 
 ### 必要なモジュール
 
-`IgxSpreadsheet` は、以下のモジュールが必要です。
+[`IgxSpreadsheetComponent`](spreadsheet_overview.md) は、以下のモジュールが必要です。
 
-```typescript
+```ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 import { IgxSpreadsheetModule } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-module";
 

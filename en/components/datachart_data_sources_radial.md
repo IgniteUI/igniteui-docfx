@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 This topic provides an example on how to implement data source for [Radial Series](datachart_series_types_radial.md)
 
-```typescript
+```ts
 export class SampleRadialData {
 
     public static create(): any[] {

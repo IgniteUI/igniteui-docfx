@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart', 'PolarLineSeries']
 ---
 
 ## Polar Series
@@ -26,25 +27,25 @@ Polar series draw attention to uneven intervals or clusters of data. They are of
 
 The Data Chart supports the following types of polar series:
 
-| Series Name                         | Description                                                                                                                                                      |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IgxPolarAreaSeriesComponent`       | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates            |
-| `IgxPolarSplineAreaSeriesComponent` | Displays a filled polygon enclosed by a collection of smooth/interpolated lines connecting data points which are located at the polar (angle/radius) coordinates |
-| `IgxPolarSplineSeriesComponent`     | Displays a collection of smooth/interpolated lines connecting data points which are located at the polar (angle/radius) coordinates                              |
-| `IgxPolarScatterSeriesComponent`    | Displays a collection of markers representing data points which are located at the polar (angle/radius) coordinates                                              |
-| `IgxPolarLineSeriesComponent`       | Displays a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates                                         |
+| Series Name                                                                                                           | Description                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxPolarAreaSeriesComponent`](datachart_series_types_polar.md)             | Displays a filled polygon enclosed by a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates            |
+| [`IgxPolarSplineAreaSeriesComponent`](datachart_series_types_polar.md) | Displays a filled polygon enclosed by a collection of smooth/interpolated lines connecting data points which are located at the polar (angle/radius) coordinates |
+| [`IgxPolarSplineSeriesComponent`](datachart_series_types_polar.md)         | Displays a collection of smooth/interpolated lines connecting data points which are located at the polar (angle/radius) coordinates                              |
+| [`IgxPolarScatterSeriesComponent`](datachart_series_types_polar.md)       | Displays a collection of markers representing data points which are located at the polar (angle/radius) coordinates                                              |
+| [`IgxPolarLineSeriesComponent`](datachart_series_types_polar.md)             | Displays a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates                                         |
 
 ### Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with polar series.
 
-| Series Type                         | Radius Axis Type                | Angle Axis Type                |
-| ----------------------------------- | ------------------------------- | ------------------------------ |
-| `IgxPolarAreaSeriesComponent`       | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
-| `IgxPolarSplineAreaSeriesComponent` | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
-| `IgxPolarSplineSeriesComponent`     | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
-| `IgxPolarScatterSeriesComponent`    | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
-| `IgxPolarLineSeriesComponent`       | `IgxNumericRadiusAxisComponent` | `IgxNumericAngleAxisComponent` |
+| Series Type                                                                                                           | Radius Axis Type                                                                                              | Angle Axis Type                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [`IgxPolarAreaSeriesComponent`](datachart_series_types_polar.md)             | [`IgxNumericRadiusAxisComponent`](datachart_series_types_polar.md) | [`IgxNumericAngleAxisComponent`](datachart_series_types_polar.md) |
+| [`IgxPolarSplineAreaSeriesComponent`](datachart_series_types_polar.md) | [`IgxNumericRadiusAxisComponent`](datachart_series_types_polar.md) | [`IgxNumericAngleAxisComponent`](datachart_series_types_polar.md) |
+| [`IgxPolarSplineSeriesComponent`](datachart_series_types_polar.md)         | [`IgxNumericRadiusAxisComponent`](datachart_series_types_polar.md) | [`IgxNumericAngleAxisComponent`](datachart_series_types_polar.md) |
+| [`IgxPolarScatterSeriesComponent`](datachart_series_types_polar.md)       | [`IgxNumericRadiusAxisComponent`](datachart_series_types_polar.md) | [`IgxNumericAngleAxisComponent`](datachart_series_types_polar.md) |
+| [`IgxPolarLineSeriesComponent`](datachart_series_types_polar.md)             | [`IgxNumericRadiusAxisComponent`](datachart_series_types_polar.md) | [`IgxNumericAngleAxisComponent`](datachart_series_types_polar.md) |
 
 ### Required Data
 
@@ -52,13 +53,13 @@ Polar series have the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the polar series.
--   All data items must contain at least two numeric data columns which should be mapped using the `AngleMemberPath` and `RadiusMemberPath` properties of polar series (e.g. `IgxPolarAreaSeriesComponent`)
+-   All data items must contain at least two numeric data columns which should be mapped using the [`angleMemberPath`](datachart_series_types_polar.md) and [`radiusMemberPath`](datachart_series_types_polar.md) properties of polar series (e.g. [`IgxPolarAreaSeriesComponent`](datachart_series_types_polar.md))
 
-In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis (`IgxNumericAngleAxisComponent`) and the concentric rings that surround the pole are gridlines of the radius axis (`IgxNumericRadiusAxisComponent`)
+In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis ([`IgxNumericAngleAxisComponent`](datachart_series_types_polar.md)) and the concentric rings that surround the pole are gridlines of the radius axis ([`IgxNumericRadiusAxisComponent`](datachart_series_types_polar.md))
 
 You can use the [SamplePolarData](datachart_data_sources_polar.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SamplePolarData.create() }
 ```
 
@@ -66,7 +67,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 In order to use polar series, you need to import the following modules in your app during load:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericAngleAxis } from "igniteui-angular-charts/ES5/igx-numeric-angle-axis";
 import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
@@ -97,10 +98,10 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with `IgxPolarLineSeriesComponent` and bind it to the data source.
+This code demonstrates how to create an instance of data chart with [`IgxPolarLineSeriesComponent`](datachart_series_types_polar.md) and bind it to the data source.
 
 ```html
- <igx-data-chart
+<igx-data-chart
     [dataSource]="dataSource"
     width="700px"
     height="500px">
@@ -113,10 +114,10 @@ This code demonstrates how to create an instance of data chart with `IgxPolarLin
         radiusAxisName="radiusAxis"
         angleAxisName="angleAxis">
     </igx-polar-line-series>
- </igx-data-chart>
+</igx-data-chart>
 ```
 
-Note that you can also use above code to create other type of polar series by replacing `IgxPolarLineSeriesComponent` with name of polar series that you want to render.
+Note that you can also use above code to create other type of polar series by replacing [`IgxPolarLineSeriesComponent`](datachart_series_types_polar.md) with name of polar series that you want to render.
 
 ### Additional Resources
 

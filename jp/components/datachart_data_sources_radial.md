@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[ラジアル シリーズ](datachart_series_types_radial.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleRadialData {
 
     public static create(): any[] {

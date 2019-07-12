@@ -1,31 +1,13 @@
-﻿@@if (igxName === 'IgxGrid') {
----
-title: Grid 行編集 - ネイティブ Angular|Ignite UI for Angular
-_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular High Performance Data Table, Data Grid Row Editing, Data Table Row Editing
+﻿---
+title: Tree Grid 行編集 | UI Grid | Ignite UI for Angular | Infragistics
+_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+_keywords: row editing, igniteui for angular, infragistics
 _language: ja
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid 行編集 - ネイティブ Angular|Ignite UI for Angular
-_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Tree Grid Row 編集, Tree Table
-_language: ja
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid 行編集 - ネイティブ Angular|Ignite UI for Angular
-_description: 行編集 - グリッド データソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント,  Angular Hierarchical Grid, Angular Hierarchical  Table, Angular Hierarchical  Grid コンポーネント, Angular Hierarchical Table コントロール, Angular Hierarchical  Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical  Grid, Angular 高パフォーマンス Hierarchical Table, Hierarchical Grid Row 編集, Hierarchical Table Row 編集
-_language: ja
----
-}
 
-### @@igComponent 行編集
+### @@igComponent の行編集と使用方法
 
-行編集 - @@igComponent のデータソースに変更をサブミットする前に行の複数セルを一度に変更することが可能です。新しいトランザクション プロバイダーの保留中の変更を利用できます。
+行編集では、一度にすべての変更を送信する前に行内の複数のセルを更新できます。Angular CRUD の一部としてのグリッド行編集は、UI グリッド内で行単位で行われます。新しいトランザクション プロバイダーの保留中の変更を利用できます。
 
 
 #### デモ

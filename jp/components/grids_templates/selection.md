@@ -1,24 +1,24 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid 選択 - ネイティブ Angular |Ignite UI for Angular
-_description: グリッド内で単一セルと複数セルの選択が可能です。マルチセル選択はセルの範囲選択を可能にします。Ignite UI for Angular 行選択は、行内のすべての列の前に描画されるチェックボックス列にあるチェックボックスで行を選択/選択解除でき、データを含む複数の行を選択/選択解除できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Angular Grid Row Selection, Angular Data Table Row Selection, Angular Row Selection, Angular Grid Selection, Data Grid Row Selection, Data Table Row Selection, Grid Selection
+title: Angular Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Grid 選択 - ネイティブ Angular |Ignite UI for Angular
-_description: グリッド内で単一セルと複数セルの選択が可能です。マルチセル選択はセルの範囲選択を可能にします。Ignite UI for Angular 行選択は、行内のすべての列の前に描画されるチェックボックス列にあるチェックボックスで行を選択/選択解除でき、データを含む複数の行を選択/選択解除できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table,  Angular Tree Grid Row Selection, Angular Tree Table Row Selection, Angular Row Selection, Angular Tree Grid Selection, Tree Grid Row Selection, Tree Table Row Selection, Tree Grid Selection
+title: Angular Tree Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Grid 選択 - ネイティブ Angular |Ignite UI for Angular
-_description: グリッド内で単一セルと複数セルの選択が可能です。マルチセル選択はセルの範囲選択を可能にします。Ignite UI for Angular 行選択は、行内のすべての列の前に描画されるチェックボックス列にあるチェックボックスで行を選択/選択解除でき、データを含む複数の行を選択/選択解除できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Angular Hierarchical Grid Row Selection, Angular Hierarchical Table Row Selection, Angular Row Selection, Angular Hierarchical Grid Selection, Hierarchical Grid Row Selection, Hierarchical Table Row Selection, Hierarchical Grid Selection
+title: Angular Hierarchical Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -26,10 +26,10 @@ _language: ja
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### @@igComponent マルチセル選択
+### @@ igComponent  - 複数セル選択と行選択
 
-マルチセル選択は @@ igComponent のセルの範囲選択を可能にします。さまざまなマルチセル選択機能が利用可能です。
-- `マウス ドラッグ` - マウス ドラッグ - セルが長方形に選択されます。
+複数セル選択は @@igComponent のセルの範囲選択を可能にします。さまざまな複数セル選択の機能が含まれます。
+- `マウス ドラッグ` - セルの長方形データ選択。
 - `Ctrl キー` 押下 + マウス ドラッグ - 複数の範囲が選択されます。他の既存のセル選択は保持されます。
 - Shift キーを使用して複数セルの選択をインスタンス化します。Shift キーを押しながら、単一セルを選択して別の単一セルを選択します。2 つのセル間のセル範囲が選択されます。`Shift キー`を押しながら他の 2 番目のセルを選択すると、最初に選択したセルの位置 (開始点) に基づいてセル選択範囲が更新されます。
 - `Shift キー`を押しながら`矢印キー`を使用してキーボードで複数セルを選択します。マルチセル選択範囲は、フォーカスされたセルに基づいて作成されます。
@@ -342,6 +342,103 @@ public selection = true;
 }
 
 **注:** セル選択は [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) をトリガーしますが [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) はトリガーしません。
+
+### Styling
+
+The theme engine exposes properties that allows us to style the range of selected cells.
+
+#### Import theme
+
+To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+#### Define colors
+
+Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+```scss
+    $text-color: igx-contrast-color($default-palette, 'primary', 900);
+    $background-color: igx-color($default-palette, "primary", 900);
+    $border-yellow: #f2c43c;
+```
+
+#### Create custom theme
+ 
+Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+
+```scss
+$custom-grid-theme: igx-grid-theme(
+    $cell-selected-text-color: $text-color,
+    $cell-active-border-color: $border-yellow,
+    $cell-selected-background: $background-color
+);
+```
+
+#### Apply theme
+
+Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
+
+```scss
+    @include igx-grid($custom-grid-theme);
+```
+
+ >[!NOTE]
+ >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
+ > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
+
+ ```scss
+    :host { 
+        ::ng-deep {
+            @include igx-grid($custom-grid-theme);
+        }
+    }
+```
+
+
+With the custom theme applied, the selected grid cells are highlighted with our selected colors:
+
+@@if (igxName === 'IgxGrid'){
+#### Demo
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+#### Demo
+<div class="sample-container loading" style="height:620px">
+    <iframe id="hierarchical-grid-multi-cell-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
+
+
+@@if (igxName === 'IgxTreeGrid'){
+#### Demo
+<div class="sample-container loading" style="height:620px">
+    <iframe id="tree-grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>  
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-tree-grid-multi-cell-selection-style-iframe" 
+        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
 
 ### コード スニペット
 

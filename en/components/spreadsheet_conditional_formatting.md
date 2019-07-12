@@ -1,12 +1,21 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Conditional Formatting | Infragistics |
+title: Spreadsheet | Grid Controls | Ignite UI for Angular | Conditional Formatting | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Spreadsheet Conditional Formatting
 
 The Angular Spreadsheet component allows you conditionally format the cells of a worksheet. This allows you to highlight different pieces of your data based on a condition.
+
+### Demo
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="live-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-conditional-formatting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ### Conditional Formatting Overview
 
@@ -16,31 +25,33 @@ Many of the conditional formats that you can add to your worksheet have a `CellF
 
 When a conditional format is created and a `CellFormat` applied, there is a subset of properties that are currently supported by the worksheet cell. The properties that are currently honored off of the `CellFormat` are `Fill`, `Border` properties, `FormatString`, and some `Font` properties such as strikethrough, underline, italic, bold, and color. Many of these can be seen from the code snippet below.
 
-There are a few conditional formats that do not have a `CellFormat` property, as their visualization on the cells behaves differently. These conditional formats are the `DataBarConditionalFormat`, `ColorScaleConditionalFormat`, and `IconSetConditionalFormat`.
+There are a few conditional formats that do not have a `CellFormat` property, as their visualization on the cells behaves differently. These conditional formats are the [`DataBarConditionalFormat`](spreadsheet_conditional_formatting.md), [`ColorScaleConditionalFormat`](spreadsheet_conditional_formatting.md), and [`IconSetConditionalFormat`](spreadsheet_conditional_formatting.md).
 
 When loading a pre-existing workbook from Excel, the formats will be preserved when that workbook is loaded. The same is true for when you save the workbook out to an Excel file.
 
-The following lists the supported conditional formats in the `IgxSpreadsheet` control:
+The following lists the supported conditional formats in the [`IgxSpreadsheetComponent`](spreadsheet_conditional_formatting.md) control:
 
--   `AverageConditionalFormat`: Added using the `AddAverageCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is above or below the average or standard deviation for the associated range.
--   `BlanksConditionalFormat`: Added using the `AddBlanksCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is not set.
--   `ColorScaleConditionalFormat`: Added using the `AddColorScaleCondition` method, this conditional format exposes properties which control the coloring of a worksheet cell based on the cell’s value as relative to minimum, midpoint, and maximum threshold values.
--   `DataBarConditionalFormat`: Added using the `AddDataBarCondition` method, this conditional format exposes properties which display data bars in a worksheet cell based on the cell’s value as relative to the associated range of values.
--   `DateTimeConditionalFormat`: Added using the `AddDateTimeCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s date value falls within a given range of time.
--   `DuplicateConditionalFormat`: Added using the `AddDuplicateCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique or duplicated across the associated range.
--   `ErrorsConditionalFormat`: Added using the `AddErrorsCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is valid.
--   `FormulaConditionalFormat`: Added using the `AddFormulaCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value meets the criteria defined by a formula.
--   `IconSetConditionalFormat`: Added using the `AddIconSetCondition` method, this conditional format exposes properties which display icons in a worksheet cell based on the cell’s value as relative to threshold values.
--   `NoBlanksConditionalFormat`: Added using the `AddNoBlanksCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is set.
--   `NoErrorsConditionalFormat`: Added using the `AddNoErrorsCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is valid.
--   `OperatorConditionalFormat`: Added using the `AddOperatorCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value meets the criteria defined by a logical operator.
--   `RankConditionalFormat`: Added using the `AddRankCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is within the top of bottom rank of values across the associated range.
--   `TextOperatorConditionalFormat`: Added using the `AddTextCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s text value meets the criteria defined by a string and a `FormatConditionTextOperator` value as placed in the `AddTextCondition` method’s parameters.
--   `UniqueConditionalFormat`: Added using the `AddUniqueCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique across the associated range. 
+-   [`AverageConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddAverageCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is above or below the average or standard deviation for the associated range.
+-   [`BlanksConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddBlanksCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is not set.
+-   [`ColorScaleConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddColorScaleCondition` method, this conditional format exposes properties which control the coloring of a worksheet cell based on the cell’s value as relative to minimum, midpoint, and maximum threshold values.
+-   [`DataBarConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddDataBarCondition` method, this conditional format exposes properties which display data bars in a worksheet cell based on the cell’s value as relative to the associated range of values.
+-   [`DateTimeConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddDateTimeCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s date value falls within a given range of time.
+-   [`DuplicateConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddDuplicateCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique or duplicated across the associated range.
+-   [`ErrorsConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddErrorsCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is valid.
+-   [`FormulaConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddFormulaCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value meets the criteria defined by a formula.
+-   [`IconSetConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddIconSetCondition` method, this conditional format exposes properties which display icons in a worksheet cell based on the cell’s value as relative to threshold values.
+-   [`NoBlanksConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddNoBlanksCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is set.
+-   [`NoErrorsConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddNoErrorsCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value is valid.
+-   [`OperatorConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddOperatorCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether the cell’s value meets the criteria defined by a logical operator.
+-   [`RankConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddRankCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is within the top of bottom rank of values across the associated range.
+-   [`TextOperatorConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddTextCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s text value meets the criteria defined by a string and a [`FormatConditionTextOperator`](spreadsheet_conditional_formatting.md) value as placed in the `AddTextCondition` method’s parameters.
+-   [`UniqueConditionalFormat`](spreadsheet_conditional_formatting.md): Added using the `AddUniqueCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique across the associated range.
 
 ### Dependencies
 
-In order to add conditional formatting to the `IgxSpreadsheet` control, you will need to import the following dependencies:
+In order to add conditional formatting to the [`IgxSpreadsheetComponent`](spreadsheet_conditional_formatting.md) control, you will need to import the following dependencies:
+
+<!-- Angular -->
 
 ```ts
 import { CellFill} from "igniteui-angular-excel/ES5/CellFill";
@@ -55,24 +66,11 @@ import { FormatConditionTopBottom} from "igniteui-angular-excel/ES5/FormatCondit
 import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/WorkbookColorInfo";
 ```
 
-```ts
-import { CellFill} from "igniteui-react-excel/ES5/CellFill";
-import { Color } from "igniteui-react-core/ES5/Color";
-import { ColorScaleType} from "igniteui-react-excel/ES5/ColorScaleType";
-import { FormatConditionAboveBelow } from "igniteui-react-excel/ES5/FormatConditionAboveBelow";
-import { FormatConditionIconSet } from "igniteui-react-excel/ES5/FormatConditionIconSet";
-import { FormatConditionOperator } from "igniteui-react-excel/ES5/FormatConditionOperator";
-import { FormatConditionTextOperator } from "igniteui-react-excel/ES5/FormatConditionTextOperator";
-import { FormatConditionTimePeriod } from "igniteui-react-excel/ES5/FormatConditionTimePeriod";
-import { FormatConditionTopBottom} from "igniteui-react-excel/ES5/FormatConditionTopBottom";
-import { WorkbookColorInfo } from "igniteui-react-excel/ES5/WorkbookColorInfo";
-```
-
 ### Code Snippet
 
-The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the `IgxSpreadsheet` control:
+The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the [`IgxSpreadsheetComponent`](spreadsheet_conditional_formatting.md) control:
 
-```typescript
+```ts
 let sheet = this.spreadsheet.activeWorksheet;
 
 let red = new Color();
@@ -85,7 +83,7 @@ let green = new Color();
 green.colorString = "#00ff00";
 
 let gray = new Color();
-gray.colorString = "#d3d3d3";    
+gray.colorString = "#d3d3d3";
 
 let avgFormat = sheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 avgFormat.cellFormat.font.colorInfo = new WorkbookColorInfo(red);

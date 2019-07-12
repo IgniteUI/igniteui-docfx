@@ -1,30 +1,13 @@
-@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Toolbar コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Grid Toolbar コンポーネントは、IgxGrid 機能 UI コントロールを一元管理できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Angular Data Grid Toolbar, Angular Data Table Toolbar, Grid Toolbar, Angular Grid Toolbar, Angular Table Toolbar, excel エクスポート, grid column hiding chooser, grid column pinning chooser, data table column hiding, data table column ピン固定
+title: Angular Grid ツール バー | Material Table | Ignite UI for Angular | infragistics 
+_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+_keywords: Angular ツール バー, igniteui for angular, infragistics
 _language: ja
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Tree Grid Toolbar コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Tree Grid Toolbar コンポーネントは、IgxTreeGrid 機能 UI コントロールを一元管理できます。
-_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web widgets, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Angular Tree Grid Toolbar, Angular Tree Table Toolbar, Tree Grid Toolbar, Angular Tree Grid Toolbar, Angular Tree Table Toolbar, excel エクスポート, tree grid column hiding chooser, tree grid column pinning chooser, tree table column hiding, tree table column pinning
-_language: ja
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Hierarchical Grid Toolbar コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Angular Hierarchical Grid Toolbar コンポーネントは、IgxHierarchicalGrid 機能 UI コントロールを一元管理できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント Suite, Native Angular コントロール, Native Angular コンポーネント Library, ネイティブ Angular コンポーネント, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Angular Hierarchical Grid Toolbar, Angular Hierarchical Table Toolbar, Hierarchical Grid Toolbar, excel エクスポート, hierarchical grid column hiding chooser, hierarchical grid column pinning chooser, hierarchical table column hiding, hierarchical table column pinning
-_language: ja
----
-}
-### @@igComponent ツールバー
 
-Ignite UI for Angular の @@igComponent は、**UI** 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。ツールバーは @@igComponent の一番上に配置され @@igComponent の水平サイズに一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポートなど) をホストします。
+### UI 操作のための @@igComponent ツールバー コンテナ
+
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポート、Angular イベントなど) をホストします。
 
 #### デモ
 

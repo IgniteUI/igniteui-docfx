@@ -23,7 +23,7 @@ _language: kr
 
 ### 코드 예제
 
-이 코드는 2개의 `IgxNumericYAxisComponent`가 왼쪽/오른쪽에 배치되고, 2개의 `IgxCategoryXAxisComponent`가 서로 쌓이는 데이터 차트를 생성하는 방법을 보여 줍니다.
+이 코드는 2개의 [`IgxNumericYAxisComponent`](datachart_axis_locations.md)가 왼쪽/오른쪽에 배치되고, 2개의 [`IgxCategoryXAxisComponent`](datachart_axis_locations.md)가 서로 쌓이는 데이터 차트를 생성하는 방법을 보여 줍니다.
 
 ```html
  <igx-data-chart

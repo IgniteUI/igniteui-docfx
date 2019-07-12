@@ -605,17 +605,6 @@ public ngOnInit() {
 </div>
 <div class="divider--half"></div>
 
-### 更新ライブデモ
-
-ライブデータにバインドした `igxGrid` のサンプルです。 
-
-<div class="sample-container loading" style="height:915px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
-</div>
-
 ## 既知の問題と制限
 
 |制限|説明|

@@ -112,6 +112,28 @@ public ngOnInit() {
     </button>
 </div>
 
+### サーバーサイド レンダリング時の注意
+
+> Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
+<br/>
+`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。)　
+<br/>
+これを避けるためには、以下の順序に従って下さい。
+<ol>
+<li>
+`xmlhttprequest` のインストール:
+```cmd
+npm i xmlhttprequest
+```
+</li>
+<li>
+`Server.ts` ファイル以外に追加するファイル:  
+``` typescript
+(global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+```
+</li>
+</ol>
+
 ### 6.2.0 の重大な変更
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
 

@@ -16,6 +16,9 @@
   href: grid/grid.md
   new: true
   items:
+    - name: ライブデータ/リアルタイム更新
+      href: grid/live_data.md
+      new: false
     - name: 仮想化とパフォーマンス
       href: grid/virtualization.md
       new: false
@@ -95,6 +98,9 @@
   href: treegrid/tree_grid.md
   new: true
   items:
+    - name: ライブデータ/リアルタイム更新
+      href: grid/live_data.md
+      new: false
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
       new: false
@@ -247,7 +253,7 @@
     - name: 機能
       href: combo_features.md
       new: false
-    - name: リモートバインディング
+    - name: リモートバインド
       href: combo_remote.md
       new: true
     - name: テンプレート
@@ -262,31 +268,35 @@
   items:
      - name: アクティブ化
        href: spreadsheet_activation.md
-       new: true
+       new: false
+    # - name: チャート アダプター
+    #   href: spreadsheet_chart_adapter.md
+    #   new: true
      - name: クリップボード
        href: spreadsheet_clipboard.md
-       new: true
+       new: false
      - name: 条件付き書式
        href: spreadsheet_conditional_formatting.md
-       new: true
+       new: false
      - name: Spreadsheet の構成
        href: spreadsheet_configuring.md
-       new: true
+       new: false
      - name: コマンド
        href: spreadsheet_commands.md
-       new: true
+       new: false
      - name: データ検証
        href: spreadsheet_data_validation.md
-       new: true
+       new: false
      - name: ハイパーリンク
        href: spreadsheet_hyperlinks.md
-       new: true  
+       new: false  
 - name: チャート
   header: true  
 - name: Category Chart
   href: categorychart.md
+  new: false
   items:
-    - name: 注釈
+    - name: 注釈とオーバーレイ
       href: categorychart_annotation_layers.md
       new: false
     - name: 軸オプション
@@ -312,135 +322,139 @@
       new: false
 - name: Data Chart
   href: datachart.md
-  new: true
+  new: false
   items:
-    - name: Axis
+    - name: 軸
       href: datachart_axis_types.md
-      new: true
+      new: false
       items:
-        - name: 軸の設定
+        #- name: 軸の注釈
+        #  href: datachart_axis_annotations.md
+        #  new: true
+        - name: 軸設定
           href: datachart_axis_settings.md
-          new: true
+          new: false
         # - name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
         # - name: 軸の位置
         # href: datachart_axis_locations.md
         # new: true
-        - name: 軸の共有
+        - name: 軸共有
           href: datachart_axis_sharing.md
-          new: true
-    - name: Series
+          new: false
+    - name: シリーズ
       href: datachart_series_types.md
-      new: true
+      new: false
       items:
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: カテゴリシリーズ 
+        - name: カテゴリ シリーズ
           href: datachart_series_types_category.md
-          new: true
-        - name: ファイナンシャル シリーズ 
+          new: false
+        - name: ファイナンシャル シリーズ
           href: datachart_series_types_financial.md
-          new: true
-        - name: 極座標シリーズ 
+          new: false
+        - name: 極座標シリーズ
           href: datachart_series_types_polar.md
-          new: true
-        - name: ラジアルシリーズ 
+          new: false
+        - name: ラジアル シリーズ
           href: datachart_series_types_radial.md
-          new: true
-        - name: エリア シリーズ 
+          new: false
+        - name: エリア シリーズ
           href: datachart_series_types_range.md
-          new: true
-        - name: 散布図 - エリア シリーズ 
+          new: false
+        - name: 散布図 - エリア シリーズ
           href: datachart_series_types_scatter_area.md
-          new: true
+          new: false
         - name: 散布図 - 等高線シリーズ
           href: datachart_series_types_scatter_contour.md
-          new: true
-        - name: 散布図 - バブル シリーズ 
+          new: false
+        - name: 散布図 - バブル シリーズ
           href: datachart_series_types_scatter_bubble.md
-          new: true
+          new: false
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
-        - name: 散布図 - マーカー シリーズ
+        - name: 散布図 - マーカーシリーズ
           href: datachart_series_types_scatter_marker.md
-          new: true
+          new: false
         - name: 散布図 - 図形シリーズ
           href: datachart_series_types_shape.md
-          new: true
+          new: false
         - name: 積層シリーズ
           href: datachart_series_types_stacked.md
-          new: true
+          new: false
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
     - name: 注釈
       href: datachart_series_annotations.md
-      new: true
+      new: false
     - name: ハイライト
       href: datachart_series_highlighting.md
-      new: true
+      new: false
     - name: 凡例
       href: datachart_chart_legends.md
-      new: true
+      new: false
     - name: マーカー
       href: datachart_series_markers.md
-      new: true
+      new: false
     - name: ナビゲーション
       href: datachart_chart_navigation.md
-      new: true
-    #- name: Synchronization
+      new: false
+    #- name: 同期
     #  href: datachart_chart_synchronization.md
     #  new: true
-    - name: タイトル/サブタイトル
+    - name: タイトルとサブタイトル
       href: datachart_chart_titles.md
-      new: true
+      new: false
     - name: ツールチップ
       href: datachart_series_tooltips.md
-      new: true
+      new: false
     - name: トレンドライン
       href: datachart_series_trendlines.md
-      new: true
+      new: false
     - name: データソース
       href: datachart_data_sources.md
-      new: true 
+      new: false
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
     #- name: Series Error Bars
     #  href: datachart_series_errorbars.md
     #  new: true
-    #- name: Value Overlay
-    #  href: datachart_series_value_overlay.md
-    #  new: true   
+    #  - name: 値オーバーレイ
+    #    href: datachart_series_value_overlay.md
+    #    new: true
 - name: Financial Chart
   href: financialchart.md
+  new: false
   items:
-    - name: 注釈とオーバーレイ
-      href: financialchart_annotation_layers.md
-      new: false
-    - name: チャート タイプの選択
-      href: financialchart_explore_chart_types.md
-      new: false
-    - name: リアルタイム データ
-      href: financialchart_real_time_data.md
-      new: false
+    #- name: リアルタイム データ更新
+    #  href: financialchart_binding_live_data.md
+    #  new: false
     - name: 大規模なデータの処理
-      href: financialchart_high_volume_data.md
-      new: false
-    - name: パフォーマンス
-      href: financialchart_performance.md
+      href: financialchart_binding_large_data.md
       new: false
     - name: 複数データ ソースへのバインド
-      href: financialchart_binding_to_multiple_data.md
+      href: financialchart_binding_multiple_sources.md
       new: false
-    - name: ペイン
-      href: financialchart_panes.md
+    - name: 注釈とオーバーレイ
+      href: financialchart_chart_annotations.md
       new: false
     - name: 構成オプション
-      href: financialchart_configuration_options.md
+      href: financialchart_chart_configuration.md
+      new: false
+    - name: チャート タイプの選択
+      href: financialchart_chart_display_types.md
+      new: false
+    - name: パフォーマンス
+      href: financialchart_chart_performance.md
+      new: false
+    - name: ペイン
+      href: financialchart_chart_panes.md
       new: false
     - name: カスタム インジケーター
       href: financialchart_custom_indicators.md
@@ -450,12 +464,91 @@
       new: false
     - name: ツールチップ テンプレート
       href: financialchart_tooltip_templates.md
+      new: false
 - name: Doughnut Chart
   href: doughnutchart.md
   new: false
 - name: Pie Chart
   href: piechart.md
   new: false
+- name: Sparkline
+  href: sparkline.md
+  new: true
+- name: Maps
+  header: true
+- name: Map
+  href: map_overview.md
+  new: false
+  items:
+    - name: CSV ファイルのバインド
+      href: map_binding_geographic_csv_files.md
+      new: false
+    - name: JSON ファイルのバインド
+      href: map_binding_geographic_json_files.md
+      new: false
+    - name: データ モデルのバインド
+      href: map_binding_geographic_data_models.md
+      new: false
+    - name: シェープファイルのバインド
+      href: map_binding_geographic_shape_files.md
+      new: false
+    - name: 複数シェープファイルのバインド
+      href: map_binding_multiple_shapes_files.md
+      new: false
+    - name: 複数データ ソースのバインド
+      href: map_binding_multiple_data_sources.md
+      new: false
+    #- name: Bing 画像の表示
+    #  href: map_displaying_bing_imagery.md
+    #  new: true
+    #- name: Esri 画像の表示
+    #  href: map_displaying_esri_imagery.md
+    #  new: true
+    #- name: OSM 画像の表示
+    #  href: map_displaying_osm_imagery.md
+    #  new: true
+    #- name: Map コンテンツのナビゲーション
+    #  href: map_navigating_map_content.md
+    #  new: true
+    - name: 散布図 - エリア シリーズ
+      href: map_geographic_scatter_area_series.md
+      new: false
+    - name: 散布図 - 等高線シリーズ
+      href: map_geographic_scatter_contour_series.md
+      new: false
+    - name: 散布図 - 密度シリーズ
+      href: map_geographic_scatter_density_series.md
+      new: false
+    - name: 散布図 - 比例シリーズ
+      href: map_geographic_scatter_proportional_series.md
+      new: false
+    - name: 散布図 - 記号シリーズ
+      href: map_geographic_scatter_symbol_series.md
+      new: false
+    - name: 図形ポリゴン シリーズ
+      href: map_geographic_shape_polygon_series.md
+      new: false
+    - name: 図形ポリライン シリーズ
+      href: map_geographic_shape_polyline_series.md
+      new: false
+    - name: ワールド コネクション
+      href: map_resources_world_connections.md
+      new: false
+    - name: ワールド ロケーション
+      href: map_resources_world_locations.md
+      new: false
+    - name: ワールド ユーティリティ
+      href: map_resources_world_util.md
+      new: false
+    # - name: Binding Data
+    #   href: map_binding_data_overview.md
+    #   new: true
+    #   items:
+    # TODO
+    # - name: Geographic Series
+    #   href: map_geographic_series_overview.md
+    #   new: true
+    #   items:
 - name: フレームワーク
   header: true
 - name: Excel Library
@@ -474,13 +567,13 @@
     - name: ワークシートの使用
       href: excel_library_using_worksheets.md
       new: false
-    - name: チャートの使用
+    - name: チャートでの作業
       href: excel_library_working_with_charts.md
       new: false
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
     #   new: true
-    - name: スパークラインの使用
+    - name: スパークラインでの作業
       href: excel_library_working_with_sparklines.md
       new: false
 - name: ゲージ

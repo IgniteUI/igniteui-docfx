@@ -23,7 +23,7 @@ In the Angular data chart component, navigation is disabled by default. Once ena
 
 In order to use navigation in the data chart, you need to import and register the interactivity module. This can be done by using the following code:
 
-```typescript
+```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
 IgxDataChartInteractivityModule.register();
@@ -31,9 +31,9 @@ IgxDataChartInteractivityModule.register();
 
 ### Data Chart UI Navigation Overview
 
-In order to allow navigation in the UI, you need to set either the [`isHorizontalZoomEnabled`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) and/or the [`isVerticalZoomEnabled`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the data chart by rolling a mouse wheel over it.
+In order to allow navigation in the UI, you need to set either the [`isHorizontalZoomEnabled`](datachart_chart_navigation.md) and/or the [`isVerticalZoomEnabled`](datachart_chart_navigation.md) properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the data chart by rolling a mouse wheel over it.
 
-It is also possible to zoom or pan simply by clicking the buttons on the mouse or using touch. The `DefaultInteraction` property of the data chart determines what happens on mouse click or touch events. This property defaults to `DragZoom` and when set to this with zooming enabled, clicking and dragging will place a preview rectangle over the plot area that will become the zoomed area of the chart. This `DefaultInteraction` property can also be set to either `DragPan` to allow panning or `None` to prevent these operations.
+It is also possible to zoom or pan simply by clicking the buttons on the mouse or using touch. The [`defaultInteraction`](datachart_chart_navigation.md) property of the data chart determines what happens on mouse click or touch events. This property defaults to `DragZoom` and when set to this with zooming enabled, clicking and dragging will place a preview rectangle over the plot area that will become the zoomed area of the chart. This [`defaultInteraction`](datachart_chart_navigation.md) property can also be set to either `DragPan` to allow panning or `None` to prevent these operations.
 
 The following code snippet demonstrates how you can enable base UI navigation in the Angular data chart component:
 
@@ -55,9 +55,9 @@ Navigation in the Angular data chart component can happen with either the mouse 
 -   `Zoom In`: Using the PageUp key on keyboard or rolling the mouse wheel up.
 -   `Zoom Out`: Using the PageDown key on keyboard or rolling the mouse wheel down.
 -   `Fit to Chart Plot Area`: Home key on the keyboard. There is no mouse operation for this.
--   `Area Zoom`: Click and drag mouse within the plot area with the `DefaultInteraction` property set to its default, `DragZoom`.
+-   `Area Zoom`: Click and drag mouse within the plot area with the [`defaultInteraction`](datachart_chart_navigation.md) property set to its default, `DragZoom`.
 
-The zoom and pan operations can also be enabled by using modifier keys by setting the `DragModifier` and `PanModifier` properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be enabled:
+The zoom and pan operations can also be enabled by using modifier keys by setting the [`dragModifier`](datachart_chart_navigation.md) and [`panModifier`](datachart_chart_navigation.md) properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be enabled:
 
 -   Shift
 -   Alt
@@ -112,15 +112,15 @@ The following code snippet demonstrates how to enable the overview plus detail p
 
 The Angular data chart component provides several navigation properties that are updated each time a zoom or pan operation happens in the data chart. You can also set each of these properties to zoom or pan the data chart programmatically. The following is a list of these properties:
 
--   `WindowPositionHorizontal`: A numeric value describing the X portion of the content view rectangle displayed by the data chart.
--   `WindowPositionVertical`: A numeric value describing the Y portion of the content view rectangle displayed by the data chart.
--   `WindowRect`: An `IgRect` object representing a rectangle that represents the portion of the chart that is currently in view. For example, a `WindowRect` of "0, 0, 1, 1" would be the entirety of the data chart.
--   [`windowScaleHorizontal`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): A numeric value describing the width portion of the content view rectangle displayed by the data chart.
--   [`windowScaleVertical`](/angular-apis/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): A numeric value describing the height portion of the content view rectangle displayed by the data chart.
+-   [`windowPositionHorizontal`](datachart_chart_navigation.md): A numeric value describing the X portion of the content view rectangle displayed by the data chart.
+-   [`windowPositionVertical`](datachart_chart_navigation.md): A numeric value describing the Y portion of the content view rectangle displayed by the data chart.
+-   [`windowRect`](datachart_chart_navigation.md): An `IgRect` object representing a rectangle that represents the portion of the chart that is currently in view. For example, a [`windowRect`](datachart_chart_navigation.md) of "0, 0, 1, 1" would be the entirety of the data chart.
+-   [`windowScaleHorizontal`](datachart_chart_navigation.md): A numeric value describing the width portion of the content view rectangle displayed by the data chart.
+-   [`windowScaleVertical`](datachart_chart_navigation.md): A numeric value describing the height portion of the content view rectangle displayed by the data chart.
 
 The following code snippets show how to modify the view of the Angular data chart component programmatically. The following assumes you have a variable named "chart" to represent the Angular data chart component:
 
-```typescript
+```ts
 // Zoom in by a factor of 0.05
 this.chart.windowScaleVertical -= 0.05;
 this.chart.windowScaleHorizontal -= 0.05;

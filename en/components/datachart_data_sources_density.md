@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'PolarBase']
 
 This topic provides an example on how to implement data source for [Scatter HD Series](datachart_series_types_polar.md)
 
-```typescript
+```ts
 export class SampleDensityData {
 
     public static create(): any[] {

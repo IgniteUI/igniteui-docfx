@@ -1,28 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid フィルタリング
-_description: Ignite UI for Angular Data Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, フィルタリング, Data Grid フィルタリング, Data Table フィルタリング
+title: Angular フィルター | Angular Grid フィルタリング | Ignite UI for Angular | Infragistics
+_description: Angular フィルターの使用は、便利な使い方が優れているが、角度グリッド フィルターが便利です。
+_keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Grid フィルタリング
-_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブなデータ グリッドです。階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネントs スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid control, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンスe Tree Table, フィルタリング, Tree Grid フィルタリング, Tree Table フィルタリング
+title: Angular フィルター | Angular Tree Grid フィルタリング | Ignite UI for Angular | Infragistics
+_description: 角度フィルターの使用を開始するには、便利な使い方が優れているが、角度グリッド フィルターが便利です。
+_keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid フィルタリング
-_description: Ignite UI for Angular Hierarchical Grid コントロールは、タッチ レスポンシブなデータ グリッドです。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネントs スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンスe Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, フィルタリング, Hierarchical Grid フィルタリング, Hierarchical Table フィルタリング
+title: Angular フィルター | Angular Hierarchical Grid フィルタリング | Ignite UI for Angular | Infragistics
+_description: 角度フィルターの使用を開始するには、便利な使い方が優れているが、角度グリッド フィルターが便利です。
+_keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent フィルタリング
+### @@igComponent のフィルタリング概要
 
- Ignite UI for Angular の @@igComponent コンポーネントは、グリッドにバインドされるデータ コンテナーにフィルタリング API を提供します。
+Angular グリッド フィルタリングを使用すると、指定した基準を満たすレコードのみの表示が可能です。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
 #### デモ
 

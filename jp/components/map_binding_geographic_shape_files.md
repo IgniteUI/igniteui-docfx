@@ -1,7 +1,7 @@
 ---
 title: マップ | データ可視化ツール | Ignite UI for Angular | 地理図形ファイル | Infragistics
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープファイルからロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, マップ,
 _language: ja
 ---
 
@@ -11,8 +11,8 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 ### デモ
 
-<div class="sample-container" style="height: 400px">
-    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-polylines-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示
@@ -40,9 +40,9 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 ### シェープファイルをバインド
 
-Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は `ShapefileRecord` オブジェクトのリストを含むため、このような配列の例です。
+Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`ShapefileRecord`](map_binding_geographic_shape_files.md) オブジェクトのリストを含むため、このような配列の例です。
 
-`ShapefileRecord` クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
+[`ShapefileRecord`](map_binding_geographic_shape_files.md) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
 
 | プロパティ      | 説明                                                                                                                                                                                                                                                                      |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,4 +55,4 @@ Map コンポーネントでは、Geographic Series は、シェイプ ファイ
 ### コード スニペット
 
 このコード例は、シェープ ファイルが `ShapeDataSource` を使用して読み込まれたことを前提としています。
-次のコードは、マップ コンポーネント内の `GeographicPolylineSeries` を `ShapeDataSource` にバインドし、すべての `ShapefileRecord` オブジェクトの `Points` プロパティをマップします。
+次のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`](map_binding_geographic_shape_files.md) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`](map_binding_geographic_shape_files.md) オブジェクトの `Points` プロパティをマップします。

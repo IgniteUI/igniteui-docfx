@@ -11,8 +11,8 @@ _language: ja
 
 ### デモ
 
-<div class="sample-container" style="height: 450px">
-    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -23,7 +23,7 @@ _language: ja
 
 ### コード例
 
-このコードは、左右に配置される 2 つの `IgxNumericYAxisComponent` と、互いに積み重ねられる2つの `IgxCategoryXAxisComponent` を使用してデータチャートを作成する方法を示します。
+このコードは、左右に配置される 2 つの [`IgxNumericYAxisComponent`](datachart_axis_locations.md) と、互いに積み重ねられる2つの [`IgxCategoryXAxisComponent`](datachart_axis_locations.md) を使用してデータチャートを作成する方法を示します。
 
 ```html
  <igx-data-chart

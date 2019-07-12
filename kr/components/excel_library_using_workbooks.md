@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 ## Using Workbooks
 
-The Infragistics Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application. 
+The Infragistics Excel Engine enables you to save data to and load data from Microsoft® Excel®. You can create workbooks and worksheets, input data, and export the data to Excel using the library’s various classes. The Infragistics Excel Engine makes it easy to export the data in your application as an Excel spreadsheet as well as import data from Excel into your application.
 
 ### Demo
 
@@ -18,19 +18,19 @@ The Infragistics Excel Engine enables you to save data to and load data from Mic
 
 ### Change Default Font
 
-First create a new instance of `IWorkbookFont`. Next, add the new font to the `styles` collection of the `Workbook`. This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
+First create a new instance of [`IWorkbookFont`](excel_library_using_workbooks.md). Next, add the new font to the `styles` collection of the [`Workbook`](excel_library_using_workbooks.md). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
 
-```typescript
+```ts
 var workbook = new Workbook();
 var font: IWorkbookFont;
 font = workbook.styles().normalStyle.styleFormat.font;
 font.name = "Times New Roman";
-font.height = 16 * 20;   
+font.height = 16 * 20;
 ```
 
 ### Setting Workbook Properties
 
-Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the `Workbook` object’s `documentProperties` property. The available properties are:
+Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the [`Workbook`](excel_library_using_workbooks.md) object’s `documentProperties` property. The available properties are:
 
 -   `author`
 
@@ -52,7 +52,7 @@ Microsoft Excel® document properties provide information to help organize and k
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
-```typescript
+```ts
 var workbook = new Workbook();
 workbook.documentProperties.title = "Expense Report";
 workbook.documentProperties.status = "Complete";
@@ -66,13 +66,13 @@ The protection is not enforced via the Infragistics Excel Engine's object model.
 
 Protection is applied to a workbook by invoking its `protect` method.
 
-When a `Workbook` is protected without a password, the end user may unprotect the `Workbook` in Excel without having to supply a password. To programatically unprotect a `Workbook`, one may use the `unprotect` method.
+When a [`Workbook`](excel_library_using_workbooks.md) is protected without a password, the end user may unprotect the [`Workbook`](excel_library_using_workbooks.md) in Excel without having to supply a password. To programatically unprotect a [`Workbook`](excel_library_using_workbooks.md), one may use the `unprotect` method.
 
-When a `Workbook` is protected, the values of the properties of the `WorkbookProtection` instance from this `Workbook`'s `protection` property indicate the disabled operations.
+When a [`Workbook`](excel_library_using_workbooks.md) is protected, the values of the properties of the [`WorkbookProtection`](excel_library_using_workbooks.md) instance from this [`Workbook`](excel_library_using_workbooks.md)'s `protection` property indicate the disabled operations.
 
-If `isProtected` is already true, the `protect` method will be ignored.
+If [`isProtected`](excel_library_using_workbooks.md) is already true, the `protect` method will be ignored.
 
-```typescript
+```ts
 var workbook = new Workbook();
 workbook.protect(false, false);
 ```
@@ -81,7 +81,7 @@ workbook.protect(false, false);
 
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
 
-```typescript
+```ts
 var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
@@ -90,7 +90,7 @@ var protect = workbook.isProtected;
 
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
 
-```typescript
+```ts
 var workbook = new Workbook();
 var protection = workbook.protection;
 ```

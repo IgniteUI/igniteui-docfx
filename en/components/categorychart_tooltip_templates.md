@@ -1,8 +1,8 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Tooltip Templates | Infragistics 
+title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Tooltip Templates | Infragistics
 _description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics 
-mentionedTypes: ['CategoryChart']
+_keywords: category chart, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamCategoryChart']
 ---
 
 ## Tooltip Templates
@@ -34,7 +34,7 @@ The tooltip content is customized by creating a template for the tooltip as demo
       <span> Hyrdo :{{item.Hydro | number}}<br/></span>
     </div>
 </ng-template>
-    
+
 <div class="chart">
     <igx-category-chart height="100%" width="100%"
         [dataSource]="data" chartTitle="Energy Production"

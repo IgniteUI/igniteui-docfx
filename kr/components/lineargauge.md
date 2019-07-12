@@ -34,9 +34,9 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxLinearGauge` requires the following modules:
+The [`IgxLinearGauge`](lineargauge.md) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
 import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
@@ -51,7 +51,7 @@ import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
 export class AppModule {}
 ```
 
-```typescript
+```ts
 import { IgrLinearGaugeModule } from "igniteui-react-gauges/ES5/igr-linear-gauge-module";
 import { IgxLinearGauge } from "ignite-react-gauges/ES5/igx-linear-gauge";
 
@@ -245,7 +245,7 @@ The backing element represents background and border of the bullet graph control
 
 ### Scale
 
-The scale is a visual element that highlights the full range of values in the gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using `IsScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge

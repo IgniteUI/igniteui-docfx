@@ -1,32 +1,32 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: 条件付きセルのスタイル設定 - ネイティブ Angular | Ignite UI for Angular
-_description: 条件付きセル スタイル機能は、カスタム条件に基づいて列のセル スタイル設定が可能です。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, セルのスタイル設定, 条件付き書式, 条件付きセルのスタイル設定, Angular グリッド条件付き列のスタイル設定, Angular Data Table 条件付き列のスタイル設定, Angular 条件付きセルのスタイル設定
+title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+_keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 条件付きセルのスタイル設定 - ネイティブ Angular | Ignite UI for Angular
-_description: 条件付きセル スタイル機能は、カスタム条件に基づいて列のセル スタイル設定が可能です。
-_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント Suite, ネイティブ Angular Controls, ネイティブ Angular コンポーネント Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid control, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Tree Grid Conditional Column Styling, Angular Tree Table Conditional Column Styling, Angular Conditional Cell Styling
+title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+_keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 条件付きセルのスタイル設定 - ネイティブ Angular | Ignite UI for Angular
-_description: 条件付きセル スタイル機能は、カスタム条件に基づいて列のセル スタイル設定が可能です。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Cell Styling, Conditional Formatting, Conditional Cell Styling, Angular Hierarchical Grid Conditional Column Styling, Angular Hierarchical Table Conditional Column スタイリング, Angular Conditional Cell スタイリング
+title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+_keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-### 条件付きセルのスタイル設定
-Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいた**条件付きセルのスタイル設定**をサポートします。
+### @@igxName 条件付きセルのスタイル設定
+Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいた**条件付きセル**のスタイル設定をサポートします。
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) をキーと値のペアを含むオブジェクト リテラルに設定します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) をキーと値のペアを含むオブジェクト リテラルに設定します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
 
 #### デモ
 

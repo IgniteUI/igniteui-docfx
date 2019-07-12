@@ -1,29 +1,31 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Column Hiding コンポーネント – ネイティブ Angular |Ignite UI for Angular
-_description: Ignite UI for Angular 列非表示機能を使用すると、データ グリッドの定義済み UI で列を非表示/表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, grid column hiding, column hiding, angular grid column hiding, angular data table column hiding, angular column hiding
+title: Angular Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
+_keywords: column hiding, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Hiding コンポーネント – ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular 列非表示機能を使用すると Tree Grid の定義済み UI で列を非表示/表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Native Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, tree grid column hiding, column hiding, angular tree grid column hiding, angular tree table column hiding, angular column hiding
+title: Angular Tree Grid Column Hiding |Ignite UI for Angular |Infragistics
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
+_keywords: column hiding, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Hiding コンポーネント – ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular 列非表示機能を使用すると、Hierarchical グリッドの定義済み UI で列を非表示/表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント Suite, Native Angular コントロール, Native Angular コンポーネント Library, ネイティブ Angular コンポーネント, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, hierarchical grid column hiding, column hiding, angular hierarchical grid column hiding, angular hierarchical table column hiding, angular column hiding
+title: Angular Hierarchical Grid Column Hiding |Ignite UI for Angular |Infragistics
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
+_keywords: column hiding, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
-
 ### グリッドの列非表示
 
-Ignite UI for Angular @@igComponent の [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)は、UI で列の表示/非表示オプションをサポートします。@@igComponent のビルトインの列非表示 UI は、@@igComponent のツールバーで使用できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
+Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) は、ユーザーが UI を介して直接、または Angle コンポーネントを使用した列の非表示が可能です。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
 #### デモ
 
@@ -59,7 +61,7 @@ Ignite UI for Angular @@igComponent の [`IgxColumnHidingComponent`]({environmen
 
 }
 
-### @@igComponent setup
+### @@igComponent の設定
 @@igComponent を作成してからデータをバインドします。列でフィルタリングと並べ替えも有効にします。
 
 @@if (igxName === 'IgxGrid') {
@@ -228,7 +230,7 @@ public ngAfterViewInit() {
 
 列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
-このトピックのはじめにあるコードの結果は [Column Hiding Demo](#demo) セクションで確認できます。
+このトピックのはじめにあるコードの結果は、[列非表示のデモ](#demo)セクションで確認できます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### カスタム列の非表示 UI
