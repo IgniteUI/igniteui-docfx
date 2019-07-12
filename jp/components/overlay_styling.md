@@ -74,7 +74,7 @@ export class OverlayStylingComponent {
 
 ### Including Styles
 
-In order to use the [IgniteUI Theming Library](theme/index.md), we must first import the theme `index` file in our global styles:
+In order to use the [IgniteUI Theming Library](themes/index.md), we must first import the theme `index` file in our global styles:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -194,6 +194,7 @@ The result of applying the above styles can be seen in the below demo:
 <div class="divider--half"></div>
 
 ## Additional Resources
+* [IgniteUI for Angular - Theme Library](themes/index.md)
 * [Overlay Main Topic](overlay_main.md)
 * [Position strategies](overlay_position.md)
 * [Scroll strategies](overlay_scroll.md)
