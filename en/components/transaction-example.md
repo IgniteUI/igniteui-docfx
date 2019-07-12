@@ -14,15 +14,22 @@ In this topic we will use `igxList` component to demonstrate how to enable trans
 
 In our html template, below the list component, we add a form with five buttons:
 
-`
-<form #buttonsForm class="options">
-    <button igxButton (click)="onCommit($event)">Commit Transaction</button>
-    <button #add igxButton (click)="onAdd($event)" class="add">Add New Row</button>
-    <button #edit igxButton (click)="onEdit($event)" class="edit">Edit Second Row</button>
-    <button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
-    <button #delete igxButton (click)="onDelete($event)">Delete First Row</button>
-</form>
-`
+```
+<div class="buttons">
+    <button igxButton (click)="onCommit($event)">Commit Transactions</button>
+</div>
+<div class="options-wrap">
+    <div class="buttons">
+        <form #buttonsForm class="options">
+            <button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add New Row</button>
+            <button #edit igxButton (click)="onEdit($event)" class="edit">Edit Second Row</button>
+            <button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
+            <button #delete igxButton (click)="onDelete($event)"
+                [disabled]="deleteDisabled || wishlist.length === 0">Delete First Row</button>
+        </form>
+    </div>
+</div>
+```
 
 The `add` button adds a new item at the top of the list. The `edit` button changes the value of the second item. The `delete` button removes the first item and the `clear` button clears the transaction log.
 
