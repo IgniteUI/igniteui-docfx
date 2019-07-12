@@ -18,7 +18,7 @@ We want the overlay to be `modal: true` for both of them and have a different ba
 For this example, we define our `OverlayStylingComponent`, including the following in the template:
 
 ```html
-<!-- overlay-styling.component.ts -->
+<!-- overlay-styling.component.html -->
 <button igxButton [igxToggleAction]="customDropDown" [overlaySettings]="{ modal: true }"
     [igxDropDownItemNavigation]="customDropDown">
     Custom
