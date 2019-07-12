@@ -292,32 +292,30 @@ Also, make sure to add a router-outlet for rendering the view components' output
 
 ```html
 <!-- tabs-routing.component.html -->
-<router-outlet></router-outlet>
-
 <igx-tabs>
-
   <igx-tab-item label="Tab 1" icon="dashboard"
-		routerLink="view1"
-		routerLinkActive #rla1="routerLinkActive"
-		[isSelected]="rla1.isActive">
-	</igx-tab-item>
+    routerLink="view1"
+    routerLinkActive #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive">
+  </igx-tab-item>
 
-	<igx-tab-item label="Tab 2" icon="check_circle_outline"
-		routerLink="view2"
-		routerLinkActive #rla2="routerLinkActive"
-		[isSelected]="rla2.isActive">
-	</igx-tab-item>
+  <igx-tab-item label="Tab 2" icon="check_circle_outline"
+    routerLink="view2"
+    routerLinkActive #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive">
+  </igx-tab-item>
 
-	<igx-tab-item label="Tab 3" icon="radio_button_checked"
-		routerLink="view3"
-		routerLinkActive #rla3="routerLinkActive"
-		[isSelected]="rla3.isActive">
-	</igx-tab-item>
-
+  <igx-tab-item label="Tab 3" icon="radio_button_checked"
+    routerLink="view3"
+    routerLinkActive #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive">
+  </igx-tab-item>
 </igx-tabs>
+
+<router-outlet></router-outlet>
 ```
 
-The above code creates a Tabs component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links became active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
+The above code creates a Tabs component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
 
 Here is the result of above sample code:
 
