@@ -487,14 +487,14 @@ On the other side, in order to prevent our custom theme to leak to other compone
 ```
 
 > [!NOTE]
-> The [**IgxDropDown**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) component uses [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html) to hold and display the `igx-drop-down-items` list container. As the overlay is not displayed under the `igx-drop-down` but by default attached to the document body directly, if the styles are scoped they will not be applied to the `igx-drop-down` container. This requires the use of `outlet` to manually set the `overlay`to be attached to an element inside our component, so that our scoped theme properly affects it. For details check: [`IgxOverlay styling guide`](overlay_styling.md).
+> The [**IgxDropDown**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-drop-down-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
 
 #### Demo
 <div class="sample-container loading" style="height:350px">
-    <iframe id="dropdown-sample-6-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-6' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider--half"></div>

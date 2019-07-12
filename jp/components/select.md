@@ -362,6 +362,7 @@ Since `igx-select` extends `igx-drop-down`, it also makes good use of its existi
 On top of that, `IgxSelect` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxSelect` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
 
 ### Code snippets
+We are going to use the following:
 ```scss
 // in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -402,14 +403,14 @@ $custom-select-theme: igx-drop-down-theme(
 ```
 
 > [!NOTE]
-> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html) to hold and display the `igx-select-items` list container. As the overlay is not displayed under the `igx-select` but by default attached to the document body directly, if the styles are scoped they will not be applied to the `igx-select` container. This requires the use of `outlet` to manually set the `overlay`to be attached to an element inside the custom theme defined scoped area. For details check: [`IgxOverlay styling guide`](overlay_styling.md).
+> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
 
 #### Demo
 <div class="sample-container loading" style="height:450px">
-    <iframe id="select-sample-5-iframe" src='{environment:demosBaseUrl}/data-entries/select-sample-5' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider--half"></div>
