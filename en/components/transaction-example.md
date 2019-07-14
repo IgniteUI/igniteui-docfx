@@ -12,30 +12,56 @@ When working with the Ignite Ui for Angular grid components, you may use the `ig
 
 In this topic we will use `igxList` component to demonstrate how to enable transactions.
 
-In our html template, below the list component, we add a form with five buttons:
+In our html template, we define an igxList component:
 
 ```
-<div class="buttons">
-    <button igxButton (click)="onCommit($event)">Commit Transactions</button>
-</div>
-<div class="options-wrap">
-    <div class="buttons">
-        <form #buttonsForm class="options">
-            <button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add New Row</button>
-            <button #edit igxButton (click)="onEdit($event)" class="edit">Edit Second Row</button>
-            <button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
-            <button #delete igxButton (click)="onDelete($event)"
-                [disabled]="deleteDisabled || wishlist.length === 0">Delete First Row</button>
-        </form>
-    </div>
-</div>
+<igx-list>
+    <igx-list-item [isHeader]="true">Wishlist</igx-list-item>
+    <ng-template ngFor [ngForOf]="this.wishlist" let-item>
+        <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">
+            <p igxListLineTitle>{{item.name}}</p>
+            <p igxListLineSubTitle>Costs: {{item.price}}</p>
+        </igx-list-item>
+    </ng-template>
+</igx-list>
 ```
 
-The `add` button adds a new item at the top of the list. The `edit` button changes the value of the second item. The `delete` button removes the first item and the `clear` button clears the transaction log.
+Below the list component, we add a form with five buttons:
+
+```
+ <button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add
+    New</button>
+<button #edit igxButton (click)="onEdit($event)" class="edit"
+    [disabled]="editDisabled || wishlist.length < 2">Edit
+    Second</button>
+<button #delete igxButton (click)="onDelete($event)"
+    [disabled]="deleteDisabled || wishlist.length === 0">Delete
+    First</button>
+<button igxButton (click)="onCommit($event)">Commit Transactions</button>
+<button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
+```
+
+The `add` button adds a new item. The `edit` button changes the value of the second item. The `delete` button removes the first item and the `clear` button clears the transaction log.
+
+We will show the pending transactions inside a chips area:
+
+```
+<igx-chips-area>
+    <ng-template ngFor let-transaction [ngForOf]="this.transactions.getTransactionLog()">
+        <igx-chip>
+            <div class="chip-content">
+                <igx-icon>{{setIcon(transaction)}}</igx-icon>
+                <span class="chip-text">{{transaction.newValue.name}} -
+                    {{transaction.newValue.price}}</span>
+            </div>
+        </igx-chip>
+    </ng-template>
+</igx-chips-area>
+```
 
 In our `ts` file, we should import `igxTransactionService` from the `igniteui-angular` library:
 
-`import { IgxButtonDirective, IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";`
+`import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";`
 
 Our class constructor should look like this:
 
@@ -43,21 +69,33 @@ Our class constructor should look like this:
 
 When we click the `add` button, we add a new transaction to the Transaction log, providing the `id`, the `TransactionType` and the `newValue` properties: 
 
-`this._transactions.add({ id: 2, type: TransactionType.ADD, newValue: employee });`
+```
+const item: IItem = { id: 4, name: "Yacht", price: "A lot!" };
+this.transactions.add({ id: 4, type: TransactionType.ADD, newValue: item });
+```
 
-At this moment, our transaction is added to the transaction log, we see the new item is added to the list that we are manipulating but the change is still not committed. The data source is not changed yet. We may do additional changes to the list and commit them at once when we are ready.
+At this moment, our transaction is added to the transaction log, we see the new chip is added to the chips area but the change is still not committed. The data source is not changed yet. We may do additional changes to the list and commit them at once when we are ready.
 
-To update an existing item, we will add a transaction of type `UPDATE` to the Transaction log. In our example. we change the second item of the list:
+To update an existing item, we will add a transaction of type `UPDATE` to the Transaction log. In our example, we change only the price of the second item in the list:
 
-`this._transactions.add({ id: 3, type: TransactionType.UPDATE, newValue: { position: newPosition } }, this.employee[1]);`
+```
+const newPrice = "54$";
+this.transactions.add({
+    id: 2, type: TransactionType.UPDATE, newValue: { name: "Apple", price: newPrice }
+}, this.wishlist[1]);
+```
 
 By clicking the `delete` button we will remove the first item in the list - a transaction of type `DELETE` will be added to the Transaction log.
 
-`this._transactions.add({ id: 1, type: TransactionType.DELETE, newValue: { position: this.position } }, this.employee[0]);`
+```
+ this.transactions.add({
+    id: 1, type: TransactionType.DELETE, newValue: { name: this.name, price: this.price }
+}, this.wishlist[0]);
+```
 
 Once we are done with all our changes, we may commit them all at once using the `commit` method of the `igxTransactionService`. It applies all transactions over the provided data:
 
-`this._transactions.commit(this.employee);`
+`this.transactions.commit(this.wishlist);`
 
 At any point of our interaction with the list, we may clear the Transaction log, using the `clear` method.
 
