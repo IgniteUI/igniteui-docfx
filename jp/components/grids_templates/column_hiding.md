@@ -464,7 +464,7 @@ As seen, the `igx-column-hiding-theme` only controls colors for the column hidin
 $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
-In this example we only changed the text-color of the flat buttons and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
+In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme: 
 
@@ -558,7 +558,7 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-grid-column-hiding: $custom-column-hiding-schema,
+    igx-column-hiding: $custom-column-hiding-schema,
     igx-button: $custom-button-schema
 ));
 
