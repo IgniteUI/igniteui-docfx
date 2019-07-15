@@ -10,7 +10,7 @@ You may get advantage of the Transaction Service when using any component that n
 
 When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the `igxTransactionService` and implement similar behavior. 
 
-In this topic we will use `igxList` component to demonstrate how to enable transactions.
+In this topic we will use `igxList` component to demonstrate how to enable transactions.We will demonstrate how to add transactions, how to transform the data through a pipe and how to visually update the view in order to let the user see the changes that are about to be committed. 
 
 In our html template, we define an igxList component:
 
@@ -58,6 +58,56 @@ We will show the pending transactions inside a chips area:
     </ng-template>
 </igx-chips-area>
 ```
+
+We will also add a list that will represent the current state of our data. It will show how the data looks before the pending transactions are committed:
+
+```
+<igx-list>
+    <igx-list-item [isHeader]="true">Wishlist (with transactions)</igx-list-item>
+    <ng-template ngFor [ngForOf]="this.wishlist | transactionBasePipe" let-item>
+        <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">
+            <p [ngStyle]="{'color': applyColor(item)}" igxListLineTitle>{{item.name}}</p>
+            <p [ngStyle]="{'color': applyColor(item)}" igxListLineSubTitle>Costs: {{item.price}}</p>
+        </igx-list-item>
+    </ng-template>
+</igx-list>
+```
+
+As you see, we use a pipe named `transactionBasePipe` to transform the transactions. Here is how the pipe looks like:
+
+```
+@Pipe({
+    name: "transactionBasePipe",
+    pure: false
+})
+export class TransactionBasePipe implements PipeTransform {
+    constructor(public transactions: IgxTransactionService<Transaction, State>) { }
+
+     public transform(data: IItem[]) {
+        const _data = [...data];
+        const states = this.transactions.getAggregatedChanges(false);
+        for (const state of states) {
+            switch (state.type) {
+                case TransactionType.ADD:
+                    _data.push(state.newValue);
+                    break;
+                // we do not directly operate on records, we just style them
+                // it will be deleted once it's committed
+                case TransactionType.DELETE:
+                    break;
+                case TransactionType.UPDATE:
+                    const record = _data.find(r => r.id === state.id);
+                    Object.assign(record, state.newValue);
+                    break;
+            }
+        }
+
+         return _data;
+    }
+}
+```
+
+We should not forget to add the pipe to `@NgModule` inside `services.module.ts` file.
 
 In our `ts` file, we should import `igxTransactionService` from the `igniteui-angular` library:
 
@@ -132,3 +182,24 @@ public getColor(transaction: Transaction): string {
     }
 }
 ```
+
+If we look at the code of the chips, representing the pending transactions, we will see we are setting an icon like this:
+`<igx-icon>{{setIcon(transaction)}}</igx-icon>`
+Let us see how the `setIcon` function is defined in our example:
+
+```
+public setIcon(transaction: Transaction): string {
+    switch (transaction.type) {
+        case TransactionType.ADD:
+            return "check";
+        case TransactionType.DELETE:
+            return "delete";
+        case TransactionType.UPDATE:
+            return "edit";
+        default:
+            return null;
+    }
+}
+```
+
+You may examine the example and see how all these work together to provide smooth user experience, allowing for reviewing and committing many changes at once.
