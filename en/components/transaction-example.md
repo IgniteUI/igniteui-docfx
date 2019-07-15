@@ -100,3 +100,35 @@ Once we are done with all our changes, we may commit them all at once using the 
 At any point of our interaction with the list, we may clear the Transaction log, using the `clear` method.
 
 `this._transactions.clear();`
+
+For a better user experience, we will provide visual clues of what item is added, edited or deleted in the list. We will color the newly added record green, the record that is to be removed in red and th updated record in blue:
+
+```
+public applyColor(item?: IItem): string {
+    const states = this.transactions.getAggregatedChanges(true);
+    for (const transaction of states) {
+        if (item && transaction.newValue.id === item.id) {
+            return this.getColor(transaction);
+        }
+    }
+
+    return null;
+}
+```
+
+The `getColor` function looks like this:
+
+```
+public getColor(transaction: Transaction): string {
+    switch (transaction.type) {
+        case TransactionType.ADD:
+            return "green";
+        case TransactionType.DELETE:
+            return "red";
+        case TransactionType.UPDATE:
+            return "blue";
+        default:
+            return null;
+    }
+}
+```
