@@ -18,27 +18,27 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 |list                             |<code>ig add list newList</code>                          | [IgxList](../../list.md) with search and filtering logic.        |
 |combo                            |<code>ig add combo newCombo</code>                        | [IgxCombo](../../combo.md) with custom [templating](../../combo_templates.md).           |
 |<b>Charts</b>      |                                                                                               |
-|category chart     | <code>ig add category-chart newCategoryChart</code><details>Basic category chart with chart type selector.</details>| 
-|financial chart    | <code>ig add financial-chart newFinancialChart</code><details>Basic financial chart with automatic toolbar and type selection.</details>|                
+|category chart     | <code>ig add category-chart newCategoryChart</code>| Basic [category chart](../../categorychart.md) with chart type selector.| 
+|financial chart    | <code>ig add financial-chart newFinancialChart</code>| Basic [financial chart](../../financialchart.md) with automatic toolbar and type selection.|                
 |<b>Gauges</b>|                                                                                                     |
-|bullet graph       |<code>ig add bullet-graph newBulletGraph</code><details>IgxBulletGraph with different animations.</details>|
-|linear gauge       |<code>ig add linear-gauge newLinearGauge</code><details>IgxLinearGauge with different animations.</details>|
-|radial gauge       |<code>ig add radial-gauge newRadialGauge</code><details>IgxRadialGauge with different animations.</details>|
+|bullet graph       |<code>ig add bullet-graph newBulletGraph</code>| [IgxBulletGraph](../../bulletgraph.md) with different animations.|
+|linear gauge       |<code>ig add linear-gauge newLinearGauge</code>| [IgxLinearGauge](../../lineargauge.md) with different animations.|
+|radial gauge       |<code>ig add radial-gauge newRadialGauge</code>| [IgxRadialGauge](../../radialgauge.md) with different animations.|
 |<b>Layouts</b>     |                                                                                               |
-|carousel           | <code>ig add carousel newCarousel</code><details>Basic IgxCarousel.</details>                 |
-|tabs               | <code>ig add tabs newTabs</code><details>Basic IgxTabs.</details>                             |
-|bottom-nav         | <code>ig add bottom-nav newBottomNav</code><details>Three item bottom-nav template.</details> |          
+|carousel           | <code>ig add carousel newCarousel</code>| [IgxCarousel](../../carousel.md) cycling through a series of images.                 |
+|tabs               | <code>ig add tabs newTabs</code>| [IgxTabs](../../tabs.md) component that includes three customazed tab-groups.                             |
+|bottom-nav         | <code>ig add bottom-nav newBottomNav</code>| Three item bottom [navbar](../../navbar.md) template. |          
 |<b>Data Entry & Display</b>|   
-|chip               | <code>ig add chip newChip</code><details>Basic IgxChip.</details>                             |
-|dropdown           | <code>ig add dropdown newDropDown</code><details>Basic IgxDropDown.</details>                 |  
-|select (v4.1.0)    | <code>ig add select newSelect</code><details>Basic IgxSelect.</details>|       
-|select (v4.1.0)    | <code>ig add select-groups newGroupsSelect</code><details>Select With Groups.</details>       |       
-|select (v4.1.0)    | <code>ig add select-in-form newFormSelect</code><details>IgxSelect in a form.</details>       |                                                                           
-|input group        | <code>ig add input-group newInputGroup</code><details>Basic IgxInputGroup form view.</details>|            
+|chip               | <code>ig add chip newChip</code>| [IgxChip](../../chip.md) components inside igx-chips-area.                             |
+|dropdown           | <code>ig add dropdown newDropDown</code>| Basic [IgxDropDown](../../drop_down.md) that displays a list of items.                 |  
+|select (v4.1.0)    | <code>ig add select newSelect</code>| Simple [IgxSelect](../../select.md) that displays a list of items..|       
+|select (v4.1.0)    | <code>ig add select-groups newGroupsSelect</code>|[IgxSelect](../../select.md) displaying grouped items.       |       
+|select (v4.1.0)    | <code>ig add select-in-form newFormSelect</code>| [IgxSelect](../../select.md) component usage in a form.       |
+|input group        | <code>ig add input-group newInputGroup</code>| Form view created with [IgxInputGroup](../../input_group.md).|            
 |<b>Interactions</b>|   
-|dialog             | <code>ig add dialog newDialog</code><details>Basic IgxDialog.</details>                       | 
-|tooltip            | <code>ig add tooltip newTooltip</code><details>A fully customizable tooltip.</details>        |
+|dialog             | <code>ig add dialog newDialog</code>| Sample of the [IgxDialog](../../dialog.md) used as a standart confirmation dialog.                       | 
+|tooltip            | <code>ig add tooltip newTooltip</code>| Basic tooltip created with the [IgxTooltip](../../tooltip.md).        |
 |<b>Scheduling</b>  |                                                                                               |
-|date-picker        | <code>ig add date-picker newDatePicker</code><details>Basic IgxDatePicker.</details>          |
-|time-picker        | <code>ig add time-picker newTimePicker</code><details>Basic IgxTimePicker.</details>          |
-|calendar           | <code>ig add calendar newCalendar</code><details>IgxCalendar with single selection.</details> |
+|date-picker        | <code>ig add date-picker newDatePicker</code>| Basic [IgxDatePicker](../../date_picker.md) with one-way data binding.          |
+|time-picker        | <code>ig add time-picker newTimePicker</code>| Basic [IgxTimePicker](../../time_picker.md) with initial value set and one-way data binding.           |
+|calendar           | <code>ig add calendar newCalendar</code>| [IgxCalendar](../../calendar.md) with single selection. |
