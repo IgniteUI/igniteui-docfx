@@ -351,7 +351,7 @@ Despite the primary usage of the Bottom Navigation component is to define panels
 
 When defining tab items you have the ability to apply directives on them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the Bottom Navigation component to switch between three components in a single router-outlet.
 
-To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need.
+To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
 
 ```typescript
 // bottomnav-routing.component.ts
@@ -385,34 +385,7 @@ export class BottomNavRoutingView3Component {
 }
 ```
 
-The next step is to import these components in your `app.module.ts` file: 
-
-```typescript
-// app.module.ts
-import {
-    BottomNavRoutingComponent,
-    BottomNavRoutingView1Component,
-    BottomNavRoutingView2Component,
-    BottomNavRoutingView3Component } from './bottomnav-routing.component';
-import { AppRoutingModule } from "./app-routing.module";
-
-...
-
-@NgModule({
-    declarations: [
-        BottomNavRoutingComponent,
-        BottomNavRoutingView1Component,
-        BottomNavRoutingView2Component,
-        BottomNavRoutingView3Component
-    ],
-    imports: [
-        AppRoutingModule
-    ]
-})
-export class AppModule { }
-```
-
-Also do not forget to create the appropriate navigation mappings in the `app-routing.module.ts` file:
+The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
 // app-routing.module.ts
@@ -478,7 +451,7 @@ Also, make sure to add a router-outlet for rendering the view components' output
 
 The above code creates a BottomNavigation component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
 
-Here is the result of above sample code:
+The described approach above is used by the following sample to demonstrate routing using the BottomNavigation component:
 
 <div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
     <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>

@@ -190,7 +190,7 @@ Despite the primary usage of the Tabs component is to define groups with content
 
 When defining tab items you have the ability to apply directives on them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the Tabs component to switch between three components in a single router-outlet.
 
-To start we need a main component hosting the Tabs component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need.
+To start we need a main component hosting the Tabs component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
 
 ```typescript
 // tabs-routing.component.ts
@@ -224,34 +224,7 @@ export class TabsRoutingView3Component {
 }
 ```
 
-The next step is to import these components in your `app.module.ts` file: 
-
-```typescript
-// app.module.ts
-import {
-    TabsRoutingComponent,
-    TabsRoutingView1Component,
-    TabsRoutingView2Component,
-    TabsRoutingView3Component } from './tabs-routing.component';
-import { AppRoutingModule } from "./app-routing.module";
-
-...
-
-@NgModule({
-    declarations: [
-        TabsRoutingComponent,
-        TabsRoutingView1Component,
-        TabsRoutingView2Component,
-        TabsRoutingView3Component
-    ],
-    imports: [
-        AppRoutingModule
-    ]
-})
-export class AppModule { }
-```
-
-Also do not forget to create the appropriate navigation mappings in the `app-routing.module.ts` file:
+The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
 // app-routing.module.ts
@@ -317,7 +290,7 @@ Also, make sure to add a router-outlet for rendering the view components' output
 
 The above code creates a Tabs component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
 
-Here is the result of above sample code:
+The described approach above is used by the following sample to demonstrate routing using the Tabs component:
 
 <div class="sample-container loading" style="height: 500px; width: 500px;">
     <iframe id="tabs-sample-6-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
