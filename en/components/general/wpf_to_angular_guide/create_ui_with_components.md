@@ -68,7 +68,7 @@ p {
 Once we save that and open up the browser, we should see that the styling in the CSS file has been applied to our sample component.
 
 ## Additional Resources
-* [Desktop to Web: Create your UI with Angular components](https://www.youtube.com/watch?v=z1SZUezpRXY&t=487s)
+* [Desktop to Web: Create your UI with Angular components](https://www.youtube.com/watch?v=z1SZUezpRXY&t)
 * [Angular Introduction to Components](https://angular.io/guide/architecture-components)
 
 <div class="divider--half"></div>
