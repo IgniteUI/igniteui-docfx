@@ -259,7 +259,7 @@ public date: Date = new Date(Date.now());
 <div class="divider--half"></div>
 
 #### カスタム ボタン アクション
-`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの 'Today’ と ‘Cancel’ ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの `Today` と `Cancel` ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
 以下の例では、年と月のカレンダー ビューに切り替えるための 2 つのカスタム アクション ボタンが含まれています。
 
