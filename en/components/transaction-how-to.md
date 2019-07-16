@@ -8,15 +8,15 @@ _keywords: Ignite UI for Angular, transaction
 
 ### Transaction, State, Transaction Log
 
-The Transaction is the main building block of the Transaction service. The Transaction is actually every operation that you execute on the data. The `Transaction` interface defines three properties: `id`, `newValue` and `type`.
+The Transaction is the main building block of the [Transaction service]({environment:angularApiUrl}/classes/igxtransactionservice.html). The Transaction is actually every operation that you execute on the data. The [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interface defines three properties: `id`, `newValue` and `type`.
 
-The `id` of the Transaction should be unique per data record and defines the record that this transaction is affecting. The `type` may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The `newValue` contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the `newValue` would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the `newValue` will contain the value of the deleted record. 
+The `id` of the Transaction should be unique per data record and defines the record that this transaction is affecting. The [`type`]({environment:angularApiUrl}/enums/transactiontype.html) may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The `newValue` contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the `newValue` would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the `newValue` will contain the value of the deleted record. 
 
 You may see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-example.md) topic.
 
-Every time you add a Transaction, it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated `State`. The `State` consists of unique records and every record may be of one of the supported transaction types, mentioned above.
+Every time you add a Transaction, it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated [`State`]({environment:angularApiUrl}/interfaces/state.html). The `State` consists of unique records and every record may be of one of the supported transaction types, mentioned above.
 
-While adding transactions you may turn on pending transactions by calling `startPending`. All subsequent transactions will be accumulated in single transaction until you call `endPending`. If you pass `true` to `endPending` all accumulated transactions will be added as a single transaction in the transaction log and in the undo stack.
+While adding transactions you may turn on pending transactions by calling [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending). All subsequent transactions will be accumulated in single transaction until you call [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending). If you pass `true` to `endPending` all accumulated transactions will be added as a single transaction in the transaction log and in the undo stack.
 
 ### Using igxBaseTransaction
 
