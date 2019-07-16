@@ -64,7 +64,7 @@ $unnecessary: (igx-avatar, igx-badge);
 
 ### Light と Dark テーマ
 
-`Igx-theme` mixin に加えグローバル テーマ mixins を追加しました。*__light__* and *__dark__* テーマのブート ストラップにグローバル テーマ mixins が含まれます。これらの mixins は `igx-light-theme` と `igx-dark-theme` です。
+`Igx-theme` mixin に加えグローバル テーマ mixins を追加しました。*__light__* および *__dark__* テーマのブート ストラップにグローバル テーマ mixins が含まれます。これらの mixins は `igx-light-theme` と `igx-dark-theme` です。
 
 以下は light と dark テーマを作成する方法を示すショーケースです。
 
