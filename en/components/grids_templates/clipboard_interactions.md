@@ -13,7 +13,7 @@ _keywords: copy data, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Grid Clipboard Interactions
+### @@igComponent Clipboard Interactions
 Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
 
 #### Demo
@@ -58,7 +58,8 @@ Copy behavior is working with the default interaction defined by the browser and
 > In order to `copy` cells in IE 11, you can use the keyboard selection. Hold the `shift key` in order to make a multi-cell selection, press `Ctrl + C` in order to copy.
 
 - The copy behavior is disabled while the grid is in edit mode.
-- The current version of this feature covers only the `copy` from grid behavior. Later on we plan to expose `paste` within grid behavior, for now you can use a custom paste handler for that purpose, have a look at our `Paste from Excel topic`.
+- The current version of this feature covers only the `copy` from grid behavior. Later on we plan to expose `paste` within grid behavior.
+@@if (igxName === 'IgxGrid') { You can use a custom paste handler in order to configure `paste` behavior, have a look at our [Paste from Excel topic](paste_excel.md). }
 
 ### API Usage
 We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) @Input property, which handles the following options:

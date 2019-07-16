@@ -36,6 +36,8 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
+Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) Output.
+
 <div class="sample-container loading" style="height:550px">
     <iframe id="tree-grid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-sorting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -45,6 +47,8 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) Output.
+
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
