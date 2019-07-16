@@ -105,6 +105,7 @@ As an example, the following template would make the group rows summary more ver
 </ng-template>
 ```
 
+
 #### Keyboard Navigation
 
 The grouping UI supports the following keyboard interactions:
@@ -119,6 +120,19 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>SPACE</kbd> - changes the sorting direction
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
+
+### GroupBy with Paging
+
+It is possible to use paging within a grouped by columns. That would happen with the [`paging`] directive set to true on the grid. The result of the grouping pipe is sent to the paging one so that all group records participate in the paging process and are part of the total page size for each page.
+
+#### Demo
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### Known Limitations
 
