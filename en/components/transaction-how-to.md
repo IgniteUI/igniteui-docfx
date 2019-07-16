@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, transaction
 
 The Transaction is the main building block of the Transaction service. The Transaction is actually every operation that you execute on the data. The `Transaction` interface defines three properties: `id`, `newValue` and `type`.
 
-The `id` of the Transaction should be unique and defines the record that this transaction is affecting. The `type` may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The `newValue` contains the value of the new record in case you are adding an `ADD` transaction. If you are editing an existing record, the `newValue` would contain the changes only. If you are deleting a record, the `newValue` will contain the value of the deleted record. 
+The `id` of the Transaction should be unique per data record and defines the record that this transaction is affecting. The `type` may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The `newValue` contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the `newValue` would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the `newValue` will contain the value of the deleted record. 
 
 You may see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-example.md) topic.
 
