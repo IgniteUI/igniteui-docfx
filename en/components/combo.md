@@ -106,6 +106,83 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 
 - `ArrowUp` focus will be moved back to the last list item or if list is empty will be moved to the search input.
 
+## Styling
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-combo** appearance. 
+Since `igx-combo` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
+On top of that, `IgxCombo` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxCombo` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
+
+### Code snippets
+We are going to use the following:
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+$my-primary-color: #ffffff;
+$my-secondary-color: #7344df;
+
+$my-color-palette: igx-palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color
+);
+
+$my-light-purple: igx-color($my-color-palette, "secondary", 100);
+$my-medium-purple: igx-color($my-color-palette, "secondary", 300);
+$my-medium-plus-purple: igx-color($my-color-palette, "secondary", 400);
+$my-dark-purple: igx-color($my-color-palette, "secondary", 600);
+
+$custom-drop-down-theme: igx-drop-down-theme(
+    $palette: $my-color-palette,
+    $background-color: $my-light-purple,
+    $item-text-color: $my-primary-color,
+    $header-text-color: $my-dark-purple,
+
+    $selected-item-background: $my-medium-plus-purple,
+    $selected-item-text-color: $my-primary-color,
+    $selected-hover-item-background: $my-medium-plus-purple,
+    $selected-hover-item-text-color: $my-primary-color,
+    $selected-focus-item-background: $my-medium-plus-purple,
+    $selected-focus-item-text-color: $my-primary-color,
+
+    $focused-item-background: $my-medium-purple,
+    $focused-item-text-color: $my-primary-color,
+
+    $hover-item-background: $my-primary-color,
+    $hover-item-text-color: $my-dark-purple
+);
+
+// igx-combo-theme exposes several parameters on top of the igx-drop-down-theme.
+// change $search-separator-border-color to one matching better our purple theme
+$custom-combo-theme: igx-combo-theme(
+    $search-separator-border-color: $my-dark-purple
+);
+```
+
+### Applying
+All that's left is to properly scope our newly created themes. Here we will assume you want to style a particular `IgxCombo` so the other components of this type in your application will not be affected by the custom themes. For details regarding applying theme globally or scoped, you can refer to [igx-drop-down styling guide](drop_down.md#applying)
+
+```
+// Pass our custom-drop-down-theme and custom-combo-theme to respectively `igx-drop-down` and igx-combo mixins.
+:host {
+   ::ng-deep {
+           @include igx-drop-down($custom-drop-down-theme);
+           @include igx-combo($custom-combo-theme);
+   }
+}
+```
+
+> [!NOTE]
+> The [**IgxCombo**]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-combo-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
+
+### Demo
+<div class="sample-container loading" style="height:450px">
+    <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 ## API
 <div class="divider--half"></div>
 

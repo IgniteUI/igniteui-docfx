@@ -394,6 +394,110 @@ export class InputDropDownComponent {
 </igx-drop-down>
 ```
 
+### Styling
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-drop-down** appearance. We are going to create and style an `igx-drop-down` component to choose an RPG 'Hero Class' from. 
+
+#### Import theme
+First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+#### Define palette & colors
+After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom igx-drop-down styling in conjunction with our own color [palette](themes/palette.md) where we can specify our two main colors to be used by the component.
+Fist define a custom palette and pass our main colors:
+```scss
+$my-primary-color: #ffffff;
+$my-secondary-color: #7344df;
+
+$my-color-palette: igx-palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color
+);
+```
+
+Now we can specify some more colors to style our component. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on the primary & secondary colors defined. Lets say we are going for some different shades of purple.
+```scss
+$my-light-purple: igx-color($my-color-palette, "secondary", 100);
+$my-medium-purple: igx-color($my-color-palette, "secondary", 300);
+$my-medium-plus-purple: igx-color($my-color-palette, "secondary", 400);
+$my-dark-purple: igx-color($my-color-palette, "secondary", 600);
+);
+```
+
+In order to see our custom palette and colors applied, we need to pass these to a theme function.
+So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our cool colors to a number of predefined `igx-drop-down-theme parameters` . Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like:
+```scss
+$custom-drop-down-theme: igx-drop-down-theme(
+    $background-color: $my-light-purple,
+    $item-text-color: $my-primary-color,
+    $header-text-color: $my-dark-purple,
+
+    $selected-item-background: $my-medium-plus-purple,
+    $selected-item-text-color: $my-primary-color,
+    $selected-hover-item-background: $my-medium-plus-purple,
+    $selected-hover-item-text-color: $my-primary-color,
+    $selected-focus-item-background: $my-medium-plus-purple,
+    $selected-focus-item-text-color: $my-primary-color,
+
+    $focused-item-background: $my-medium-purple,
+    $focused-item-text-color: $my-primary-color,
+
+    $hover-item-background: $my-primary-color,
+    $hover-item-text-color: $my-dark-purple
+);
+```
+As in this particular sample we are going to use a button to toggle the `igx-drop-down`, we can go a bit further and style it as well. So we go a bit outside the `igx-drop-down` topic and to complement the overall drop-down theme styling we will create a custom button theme passing it our color palette like: 
+```scss
+$custom-button-theme: igx-button-theme(
+    $palette: $my-color-palette
+);
+
+```
+
+#### Applying
+All that's left is to properly scope our newly created themes.
+
+##### Globally
+In case you want this newly created `igx-drop-down` theme to be applied [`globally`](themes/component-themes.md#creating-themes) in your app (to all of the components of this type, keep in mind we are actually extending igx-drop-down-theme), all that is needed is to include the theme in your app root style file. The same applies for our custom button theme:
+```scss
+// in root app.scss
+// Pass our drop-down theme to the `igx-drop-down` mixin
+    @include igx-drop-down($custom-drop-down-theme);
+// Pass our button theme to the `igx-button` mixin
+    @include igx-button($custom-button-theme);
+
+```
+##### Scoped
+There may be a case where you want a particular `igx-drop-down` be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+
+On the other side, in order to prevent our custom theme to leak to other component descendants, be sure to include the `:host` selector before `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-drop-down($custom-drop-down-theme);
+        @include igx-button($custom-button-theme);
+    }
+}
+```
+
+> [!NOTE]
+> The [**IgxDropDown**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-drop-down-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
+
+#### Demo
+<div class="sample-container loading" style="height:350px">
+    <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 <div class="divider--half"></div>
 
 ### API まとめ
