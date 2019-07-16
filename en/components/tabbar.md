@@ -480,7 +480,7 @@ The above code creates a BottomNavigation component with three tab items. All ta
 
 Here is the result of above sample code:
 
-<div class="sample-container loading" style="height: 400px; width: 600px; border: 1px solid gray;">
+<div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
     <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>

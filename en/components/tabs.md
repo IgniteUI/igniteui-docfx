@@ -319,7 +319,7 @@ The above code creates a Tabs component with three tab items. All tab items are 
 
 Here is the result of above sample code:
 
-<div class="sample-container loading" style="height: 400px; width: 600px;">
+<div class="sample-container loading" style="height: 500px; width: 500px;">
     <iframe id="tabs-sample-6-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
