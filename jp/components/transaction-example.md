@@ -8,20 +8,9 @@ _keywords: Ignite UI for Angular, transaction
 
 You may get advantage of the Transaction Service when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
 
-When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the `igxTransactionService` and implement similar behavior.
+When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the `igxTransactionService` and implement similar behavior. 
 
-#### Demo
-
-In this topic we will use `igxList` component to demonstrate how to enable transactions.We will demonstrate how to add transactions, how to transform the data through a pipe and how to visually update the view in order to let the user see the changes that are about to be committed.
-
-<div class="sample-container loading" style="height:650px">
-    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction/transaction-base' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
+In this topic we will use `igxList` component to demonstrate how to enable transactions.We will demonstrate how to add transactions, how to transform the data through a pipe and how to visually update the view in order to let the user see the changes that are about to be committed. 
 
 In our html template, we define an igxList component:
 
