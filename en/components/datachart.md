@@ -2,7 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamDataChart']
+mentionedTypes: ['XamDataChart', 'SeriesType']
 ---
 
 ## Data Chart
@@ -68,24 +68,24 @@ The Angular data chart component supports over 65 types of series including [Cat
 
 The Angular data chart component supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.   Refer to the [Series](datachart_series_types.md) and [Axis](datachart_axis_types.md) topics, for more information on how to use these types of axis.
 
-| Axis Type          | Supported Series Types                                                                                                                                                                                                                                                            |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | only [`IgxBarSeriesComponent`](datachart.md) in [Category Series](datachart_series_types_category.md) group                                                                                                                 |
-| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](datachart.md))       |
-| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](datachart.md))       |
-| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`IgxBarSeriesComponent`](datachart.md))       |
-| PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md)  |
-| NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md)  |
-| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and [`IgxBarSeriesComponent`](datachart.md) in [Category Series](datachart_series_types_category.md) group |
-| NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                               |
-| NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                         |
-| CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                            |
+| Axis Type          | Supported Series Types                                                                                                                                                                                                                                                           |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CategoryYAxis      | only [`bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) in [Category Series](datachart_series_types_category.md) group                                                                                                                    |
+| CategoryXAxis      | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar))          |
+| TimeXAxis          | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar))          |
+| OrdinalTimeXAxis   | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md),  [Category Series](datachart_series_types_category.md) (except [`bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar))          |
+| PercentChangeYAxis | all [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md), [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md) |
+| NumericYAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), [Financial Series](datachart_series_types_financial.md), [Range Series](datachart_series_types_range.md), [Category Series](datachart_series_types_category.md) |
+| NumericXAxis       | all [Scatter Series](datachart_series_types_scatter_bubble.md), [Shape Series](datachart_series_types_shape.md), and [`bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) in [Category Series](datachart_series_types_category.md) group    |
+| NumericAngleAxis   | all [Polar Series](datachart_series_types_polar.md)                                                                                                                                                                                                                              |
+| NumericRadiusAxis  | all [Polar Series](datachart_series_types_polar.md) and [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                        |
+| CategoryAngleAxis  | all  [Radial Series](datachart_series_types_radial.md)                                                                                                                                                                                                                           |
 
 ### Usage
 
 Now that the data chart modules are imported, next step is to bind chart to data. All series require specific number and type of data columns to render correctly and you can find a data source for each type of series in the [Data Sources](datachart_data_sources.md) topic.
 
-The following code snippet demonstrates how to create scatter [`IgxBubbleSeriesComponent`](datachart.md) and bind it to [SampleScatterStats](datachart_data_sources_stats.md) data.
+The following code snippet demonstrates how to create scatter [`bubble`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) and bind it to [SampleScatterStats](datachart_data_sources_stats.md) data.
 
 > [!NOTE]
 >
