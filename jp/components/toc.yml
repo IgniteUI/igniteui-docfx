@@ -94,7 +94,7 @@
     - name: 複数行レイアウト
       href: grid/multi_row_layout.md
       new: true
-    - name: Clipboard Interactions
+    - name: クリップボード操作
       href: grid/clipboard_interactions.md
       new: true
 - name: Tree Grid
@@ -176,7 +176,7 @@
     - name: キーボードナビゲーション
       href: treegrid/keyboard_navigation.md
       new: true
-    - name: Clipboard Interactions
+    - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: true
 - name: Hierarchical Grid

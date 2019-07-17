@@ -1,22 +1,24 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Copy Data | Ignite UI for Angular | Infragistics 
-_description: Use the data select behavior in order to copy data and export selected from the Grid into Excel file. The angular data grid has a rich set of helpful angular events
-_keywords: copy data, igniteui for angular, infragistics
+title: Angular Grid データ コピー|Ignite UI for Angular |Infragistics 
+_description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
+_keywords: copy data, igniteui for angular, infragistics, コピー,
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid Copy Data | Ignite UI for Angular | Infragistics 
-_description: Use the data select behavior in order to copy data and export selected from the Grid into Excel file. The angular data grid has a rich set of helpful angular events
-_keywords: copy data, igniteui for angular, infragistics
+title: Angular Grid データ コピー|Ignite UI for Angular |Infragistics 
+_description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
+_keywords: copy data, igniteui for angular, infragistics, コピー,
+_language: ja
 ---
 }
 
-### @@igComponent Clipboard Interactions
-Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
+### @@igComponent クリップボードの操作
+クリップボードへのコピー操作が @@igComponent で可能になりました。この機能は、現在の複数セル データ選択を通して Angular Data Grid のデータをすばやくコピーするための簡単でカスタマイズ可能な方法を提供します。システム クリップボードの動作により、ユーザーは @@igComponent から Excel または他の外部プログラムにデータをコピーできます。
 
-#### Demo
+#### デモ
 
 
 @@if (igxName === 'IgxGrid') {
@@ -24,7 +26,7 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
     <iframe id="grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -33,62 +35,61 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
     <iframe id="tree-grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
-### Functionality
-Copy behavior is working with the default interaction defined by the browser and operating system. Thus for the copy and paste behaviors, these are:
+### 機能
+コピー動作は、ブラウザーとオペレーティング システムで定義されているデフォルトのインタラクションで動作します。以下は、コピー＆ペースト動作の場合です。
 
-- Windows/Unix based
-  - <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>Ins</kbd> as a keyboard shortcut
-  - <kbd>Ctrl</kbd> + <kbd>V</kbd> / <kbd>Shift</kbd> + <kbd>Ins</kbd> as a keyboard shortcut
-  - Copy action through the browser menu
+- Windows または Unix 
+  - キーボード ショートカット: <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>Ins</kbd>
+  - キーボード ショートカット: <kbd>Ctrl</kbd> + <kbd>V</kbd> / <kbd>Shift</kbd> + <kbd>Ins</kbd>
+  - ブラウザー メニューからのコピー操作
 - macOS
-  - <kbd>⌘ Cmd</kbd> + <kbd>C</kbd> as a keyboard shortcut
-  - <kbd>⌘ Cmd</kbd> + <kbd>V</kbd> as a keyboard shortcut
-  - Copy action through the browser menu
+  - キーボード ショートカット: <kbd>⌘ Cmd</kbd> + <kbd>C</kbd>
+  - キーボード ショートカット: <kbd>⌘ Cmd</kbd> + <kbd>V</kbd>
+  - ブラウザー メニューからのコピー操作
 
 
-### Limitations
-- Both the **cut** and **copy** events are not natively supported in Internet Explorer. The exception is the
-**paste** event (IE 11) which is emitted but does not expose the `clipboardData` property in the event. 
+### 制限
+- カットとコピーの両方のイベントは、Internet Explorer では本来サポートされていません。例外は発生される ** paste ** イベント（IE 11）ですが、イベントの `clipboardData` プロパティを公開していません。
 > [!NOTE] 
-> In order to `copy` cells in IE 11, you can use the keyboard selection. Hold the `shift key` in order to make a multi-cell selection, press `Ctrl + C` in order to copy.
+> IE 11のセルを`コピー`するためには、キーボード選択を使用できます。複数セルを選択するには `Shift キー` を押しながらコピーするには `Ctrl + C` を押します。
 
-- The copy behavior is disabled while the grid is in edit mode.
-- The current version of this feature covers only the `copy` from grid behavior. Later on we plan to expose `paste` within grid behavior.
-@@if (igxName === 'IgxGrid') { You can use a custom paste handler in order to configure `paste` behavior, have a look at our [Paste from Excel topic](paste_excel.md). }
+- グリッドが編集モードの間、コピー動作は無効になります。
+- この機能の現在のバージョンは、グリッドからのコピー動作のみをカバーします。今後、グリッドの動作内で`貼り付け`を公開する予定です。
+@@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excelから貼り付け](paste_excel.md) トピックをご覧ください 。}
 
-### API Usage
-We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) @Input property, which handles the following options:
-- [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) Enables/disables copying of selected cells.
-- [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) Include the associated headers when copying.
-- [`copyFormatters`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyFormatters) Apply any existing column formatters to the copied data.
-- [`separator`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.separator) The string separator to use the for formatting the data in the clipboard. Default is `/t`
+### API の使用
+次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) プロパティを公開します。
+- [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) は選択したセルのコピーを有効または無効にします。
+- [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) は、コピー時に関連付けられているヘッダーを含めます。
+- [`copyFormatters`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyFormatters) は、既存の列フォーマッタをコピーしたデータに適用します。
+- [`separator`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.separator) クリップボードのデータのフォーマットに使用する文字列の区切り文字。デフォルトは `/t` です。
 
 > [!NOTE] 
-> Excel can automatically detect text that is separated by tabs (tab-delimited `/t`) and properly paste the data into separate columns. When the paste format doesn't work, and everything you paste appears in a single column, then Excel's delimiter is set to another character, or your text is using spaces instead of tabs.
+> Excel は、タブで区切られたテキスト (タブ区切り `/t`) を自動的に検出し、データを別々の列に正しく貼り付けることができます。貼り付け形式が機能せず、貼り付けたものがすべて 1 列に表示される場合は、Excel の区切り文字が別の文字に設定されている、またはテキストがタブではなくスペースを使用しています。
 
-- [`onGridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) Emitted when a copy operation is executed. Fired only if copy behavior is enabled through the [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions)
+- [`onGridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) コピー操作が実行されたときに発生します。[`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) を使用してコピー動作が有効になっている場合のみ発生します。
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Summaries](summaries.md)
-* [Column Pinning](column_pinning.md)
-* [Selection](selection.md)
-* [Virtualization and Performance](virtualization.md)
-* [Multi-column headers](multi_column_headers.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [ソート](sorting.md)
+* [集計](summaries.md)
+* [集計](summaries.md)
+* [列のピン固定](column_pinning.md)
+* [選択](selection.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [複数列ヘッダー](multi_column_headers.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
