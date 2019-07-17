@@ -420,7 +420,7 @@ $my-color-palette: igx-palette(
 );
 ```
 In order to see our custom palette and colors applied, we need to pass these to a theme function.
-So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our cool colors to a number of predefined `igx-drop-down-theme parameters` . Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on it. Lets say we are going for some different shades of purple.
+So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our cool colors to a number of predefined `igx-drop-down-theme` parameters. Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to make use of the previously created [palette](themes/palette.md) and base our new colors on it. Lets say we are going for some different shades of purple.
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
     $background-color: igx-color($my-color-palette, "secondary", 100),
