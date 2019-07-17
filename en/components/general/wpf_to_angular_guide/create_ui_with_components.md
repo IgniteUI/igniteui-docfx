@@ -23,9 +23,14 @@ Let's start at the bottom of the typescript file. First we can see that we have 
 
 Next let’s move up a few lines in the typescript file and look at this little weird syntax with the little @ symbol and then Component. This is actually called a decorator. Now, this decorator is telling Angular how we're going to treat this class that we're exporting. In this case, we're going to treat it as a component and because we're treating it as a component, we have to provide some information in this decorator. Before we get to the information, let's first pay some attention to the very top line of the typescript file - `import { Component } from '@angular/core'`. You can think of this as a using statement. Essentially, we are importing the objects that are required for this component to function. In this case, we are importing the `Component` from the `@angular/core` module, so we can actually use the decorator for this component. That is extremely similar to a using statement inside of the code behind of our user control. We use `using` statements inside of C# to locate and use objects within our class that are required for the user control to function.
 
-Now, let's hop back inside of this component decorator. The first line here on line 4 is called a selector. The selector helps us determine how we're going to define these elements in html. This selector is called `app-root`, so if we go ahead and open up the index.html, we could see within the body an element called `app-root`. That element is using the selector defined in the component decorator to define an instance of this component. Next, on line 5, we have what's called a template URL. This is pointing to a file called `app.component.html` - the html file that represents the visual rendering of this component. This is extremely similar to the `Sample.xaml` file of the user control in WPF, where the xaml is the markup that represents how this control is going to render. Next, if we go to line 6, where we see the style URLs, this is pointing to a CSS file. This file represents the styling information of the component. So if we open up the `app.component.css` file, we can see that there's no styling information in here, but we can think of the CSS file as a direct mapping to a resource dictionary. The resource dictionary in XAML will contain all the styling information for the user control or elements within the user control, so that it renders according to our design. That is the exact same thing that you would do in CSS.
+Now, let's hop back inside of the component decorator.
+ - The first line, here on line 4, is called a selector. The selector helps us determine how we're going to define these elements in html. This selector is called `app-root`, so if we go ahead and open up the index.html, we could see within the body an element called `app-root`. That element is using the selector defined in the component decorator to define an instance of this component.
+ - Next, on line 5, we have what's called a template URL. This is pointing to a file called `app.component.html` - the html file that represents the visual rendering of this component. This is extremely similar to the `Sample.xaml` file of the user control in WPF, where the xaml is the markup that represents how this control is going to render.
+ - Next, if we go to line 6, where we see the style URLs, this is pointing to a CSS file. This file represents the styling information of the component. So if we open up the `app.component.css` file, we can see that there's no styling information in here, but we can think of the CSS file as a direct mapping to a resource dictionary. The resource dictionary in XAML will contain all the styling information for the user control or elements within the user control, so that it renders according to our design. That is the exact same thing that you would do in CSS.
 
-Now that we've seen just how similar an Angular component is to a WPF user control, let's create a new component and add it to our application. If you're a desktop developer, in WPF when you want to add a new user control, you simply right click in your project and say Add > User Control. Well, of course if you try to do the same thing in Visual Studio Code, you do not have that option. You only have new file, new folder. That means we have to hop into our terminal and use the Angular CLI to generate our component. So let's toggle a terminal by typing `Control + Backtick`. In the terminal we just type NG G for generate, C for component, and then provide a name for our component, e.g. `sample`.
+### Generate a component
+
+Now that we've seen just how similar an Angular component is to a WPF user control, let's create a new component and add it to our application. If you're a desktop developer, in WPF when you want to add a new user control, you simply right click in your project and say **Add > User Control**. Well, of course if you try to do the same thing in Visual Studio Code, you do not have that option. You only have new file, new folder. That means we have to hop into our terminal and use the Angular CLI to generate our component. So let's toggle a terminal by typing `Control + Backtick`. In the terminal we just type **NG G** for generate, **C** for component, and then provide a name for our component, e.g. `sample`.
 
 ```cmd
 ng g c sample
@@ -41,7 +46,7 @@ Now, let's look at the `sample` folder which contains our newly created componen
 
 So let's go back to our `sample.component.ts` file. It looks very similar to the `app.component.ts` file we covered above. In this case we have our import statement where we're importing our component. We have our component decorator where we are defining our selector as `app-sample`. We have our template URL as `sample.component.html` and we have our style URL  `sample.component.css`.
 
-Let's go ahead and open up the html file where we can see a paragraph stating 'sample works!'. We want to see this when we start the application so let's go to the app.component.html. We will delete most of the initial markup except for the title, and just add `<app-sample></app-sample>`.
+Let's go ahead and open up the html file where we can see a paragraph stating `sample works!`. We want to see this when we start the application so let's go to the app.component.html. We will delete most of the initial markup except for the title, and just add `<app-sample></app-sample>`.
 ```html
 <div style="text-align:center">
   <h1>
@@ -50,8 +55,11 @@ Let's go ahead and open up the html file where we can see a paragraph stating 's
   <app-sample></app-sample>
 </div>
 ```
-If we now save it and type `npm start` in the terminal, it will compile and build our application and launch it inside the browser.
-If all went well, our application should be running in the browser. We have `welcome to demo-app` - the markup from the app component and then `sample works!`. This is the markup from our sample component that we just added.
+
+### Run the application
+
+If we now save and type `npm start` in the terminal, it will compile and build our application and launch it inside the browser.
+If all went well, our application should be running in the browser. We have `welcome to app` - the markup from the app component and then `sample works!`. This is the markup from our sample component that we just added.
 Let's now change our sample component a little by changing the text to 'This sample works very well!'.
 ```html
 <p>
@@ -59,7 +67,7 @@ Let's now change our sample component a little by changing the text to 'This sam
 </p>
 ```
 Once we save and check the browser, we will see that we are indeed editing the html that is responsible for rendering the sample component.
-If we want to style our component, we need to look at our style URL. So let's open up our sample.component.css file and make the paragraph tag color red.
+If we want to style our component, we need to look at our style URL. So let's open up our `sample.component.css` file and make the paragraph tag color red.
 ```css
 p {
     color: red;
