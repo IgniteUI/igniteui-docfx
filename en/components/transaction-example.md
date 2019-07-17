@@ -15,7 +15,7 @@ When working with the Ignite Ui for Angular grid components, you may use the [`i
 In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to demonstrate how to enable transactions. We will demonstrate how to add transactions, how to transform the data through a [pipe](https://angular.io/guide/pipes) and how to visually update the view in order to let the user see the changes that are about to be committed.
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction/transaction-base' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -40,14 +40,9 @@ In our html template, we define an [`igxList`]({environment:angularApiUrl}/class
 Below the list component, we add a form with five buttons:
 
 ```
- <button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add
-    New</button>
-<button #edit igxButton (click)="onEdit($event)" class="edit"
-    [disabled]="editDisabled || wishlist.length < 2">Edit
-    Second</button>
-<button #delete igxButton (click)="onDelete($event)"
-    [disabled]="deleteDisabled || wishlist.length === 0">Delete
-    First</button>
+<button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add New</button>
+<button #edit igxButton (click)="onEdit($event)" class="edit" [disabled]="editDisabled || wishlist.length < 2">Edit Second</button>
+<button #delete igxButton (click)="onDelete($event)" [disabled]="deleteDisabled || wishlist.length === 0">Delete First</button>
 <button igxButton (click)="onCommit($event)">Commit Transactions</button>
 <button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
 ```
@@ -122,11 +117,15 @@ We should not forget to add the pipe to `@NgModule` inside `services.module.ts` 
 
 In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library:
 
-`import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";`
+```
+import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
+```
 
 Our class constructor should look like this:
 
-`constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }`
+```
+constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }
+```
 
 When we click the `add` button, we add a new transaction to the Transaction log, providing the `id`, the `TransactionType` and the `newValue` properties: 
 
@@ -156,11 +155,15 @@ By clicking the `delete` button we will remove the first item in the list - a tr
 
 Once we are done with all our changes, we may commit them all at once using the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method of the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). It applies all transactions over the provided data:
 
-`this.transactions.commit(this.wishlist);`
+```
+this.transactions.commit(this.wishlist);
+```
 
 At any point of our interaction with the list, we may clear the Transaction log, using the [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) method.
 
-`this._transactions.clear();`
+```
+this._transactions.clear();
+```
 
 For a better user experience, we will provide visual clues of what item is added, edited or deleted in the list. We will color the newly added record green, the record that is to be removed in red and the updated record in blue:
 

@@ -6,13 +6,24 @@ _keywords: Ignite UI for Angular, transaction
 
 ## How to use the Transaction service
 
-You may get advantage of the Transaction Service when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
+You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
 
-When working with the Ignite Ui for Angular grid components, you may use the `igxTransactionService` and `igxHierarchicalTransactionService` that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the `igxTransactionService` and implement similar behavior. 
+When working with the Ignite Ui for Angular grid components, you may use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and implement similar behavior.
 
-In this topic we will use `igxList` component to demonstrate how to enable transactions.We will demonstrate how to add transactions, how to transform the data through a pipe and how to visually update the view in order to let the user see the changes that are about to be committed. 
+#### Demo
 
-In our html template, we define an igxList component:
+In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to demonstrate how to enable transactions. We will demonstrate how to add transactions, how to transform the data through a [pipe](https://angular.io/guide/pipes) and how to visually update the view in order to let the user see the changes that are about to be committed.
+
+<div class="sample-container loading" style="height:650px">
+    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+In our html template, we define an [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component:
 
 ```
 <igx-list>
@@ -29,14 +40,9 @@ In our html template, we define an igxList component:
 Below the list component, we add a form with five buttons:
 
 ```
- <button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add
-    New</button>
-<button #edit igxButton (click)="onEdit($event)" class="edit"
-    [disabled]="editDisabled || wishlist.length < 2">Edit
-    Second</button>
-<button #delete igxButton (click)="onDelete($event)"
-    [disabled]="deleteDisabled || wishlist.length === 0">Delete
-    First</button>
+<button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add New</button>
+<button #edit igxButton (click)="onEdit($event)" class="edit" [disabled]="editDisabled || wishlist.length < 2">Edit Second</button>
+<button #delete igxButton (click)="onDelete($event)" [disabled]="deleteDisabled || wishlist.length === 0">Delete First</button>
 <button igxButton (click)="onCommit($event)">Commit Transactions</button>
 <button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
 ```
@@ -109,13 +115,17 @@ export class TransactionBasePipe implements PipeTransform {
 
 We should not forget to add the pipe to `@NgModule` inside `services.module.ts` file.
 
-In our `ts` file, we should import `igxTransactionService` from the `igniteui-angular` library:
+In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library:
 
-`import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";`
+```
+import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
+```
 
 Our class constructor should look like this:
 
-`constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }`
+```
+constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }
+```
 
 When we click the `add` button, we add a new transaction to the Transaction log, providing the `id`, the `TransactionType` and the `newValue` properties: 
 
@@ -143,15 +153,19 @@ By clicking the `delete` button we will remove the first item in the list - a tr
 }, this.wishlist[0]);
 ```
 
-Once we are done with all our changes, we may commit them all at once using the `commit` method of the `igxTransactionService`. It applies all transactions over the provided data:
+Once we are done with all our changes, we may commit them all at once using the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method of the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). It applies all transactions over the provided data:
 
-`this.transactions.commit(this.wishlist);`
+```
+this.transactions.commit(this.wishlist);
+```
 
-At any point of our interaction with the list, we may clear the Transaction log, using the `clear` method.
+At any point of our interaction with the list, we may clear the Transaction log, using the [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) method.
 
-`this._transactions.clear();`
+```
+this._transactions.clear();
+```
 
-For a better user experience, we will provide visual clues of what item is added, edited or deleted in the list. We will color the newly added record green, the record that is to be removed in red and th updated record in blue:
+For a better user experience, we will provide visual clues of what item is added, edited or deleted in the list. We will color the newly added record green, the record that is to be removed in red and the updated record in blue:
 
 ```
 public applyColor(item?: IItem): string {
