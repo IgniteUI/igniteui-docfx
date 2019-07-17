@@ -1,5 +1,5 @@
 ---
-title: Layout in Web
+title: Layout Elements
 _description: Learn how to arrange elements on the page similar to the most popular panels in WPF.
 _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Layout, Container, Panel
 ---
