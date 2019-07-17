@@ -302,20 +302,82 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 ### Styling
 
-Using the [IgniteUI theme engine](../themes/index.md), we can greatly alter the row-editing overlay. 
-In the below steps, we'll go through the process of changing the look of our row-editing banner by passing custom templates for with the `igxRowEditActions` and `igxRowEditText` directives and making use of the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme), [`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme).
+Using the [Ignite UI Theme Library](../themes/index.md), we can greatly alter the Row Editing overlay. 
+The Row Editing overlay is a composite element - its UI is comprised of a couple of other components:
+    - [`igx-banner`](../banner.md) in order to render its contents
+    - [`igx-button`](../button.md)s are rendered in the default banner (for the `Done` and `Discard`) buttons
 
-#### Passing custom templates
+In the below example, we will make use of those two components' styling options, ([button styling](../button.md#styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
+We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](editing.md#styling).
 
-The first thing we can do is pass our custom buttons and banner text in the component's template:
+#### Import theme
+
+The easiest way to style the Row Editing banner is to define styles in our `app`'s global style file (typically `styles.scss`).
+The first thing we need to do is import the `themes/index` file - this gives us access to all the powerful tools of the **Ignite UI Theme Library**:
+
+```scss
+// in styles.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Once we've imported the themes file, we can create our custom themes and apply them globally, affecting **out entire application**.
+
+#### Define the theme
+
+We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) that will affect our Row Editing's background:
+
+```scss
+    $banner-theme: igx-banner-theme(
+        $banner-background: igx-color($default-palette, "primary", 100),
+        $banner-message-color: igx-contrast($default-palette, "primary", 100),
+        $banner-border-color: igx-color($default-palette, "second", 800)
+    );
+```
+
+Here we are using the [`$default-palette`]({environment:sassApiUrl}/index.html#variable-default-palette) in conjuction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) for generating our colors. Both are exposed by the theme library.
+
+#### Include the theme
+
+All we have to do now is apply the theme with a sass `@include` statement. We pass our newly defined `$banner-theme` through the [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner):
+
+```scss
+@include igx-banner($banner-theme); 
+```
+
+This will apply our custom banner theme to the Row Editing's overlay. However, since we defined these in the global styles file, these styles will also apply to **all** banners in our application.
+
+#### Component styles
+
+Since the Row Editing overlay makes use of a lot of other components' themes, styling the overlay via the global styles is not ideal, as it can affect parts of our application that we **do not** want to style.
+
+The best way to go around that is to make use of Angular's [`ViewEncapsulation`](../themes/component-themes.md#view-encapsulation) and move the styles (including the [`theme/index` import](#import-theme)) to the component containing our @@igSelector.
+
+Since the grid renders a lot of custom content inside of its view, a simple sass `@include` statement will not properly apply our styles - we need to penetrate the grid's `ViewEncapsulation` using `::ng-deep`:
+
+```scss
+// custom.component.scss
+
+:host {
+    ::ng-deep {
+        @include igx-banner($banner-theme);
+    }
+}
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+>[!NOTE]
+>We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component
+
+With the above syntax, our custom banner theme properly applies to the grid's Row Editing overlay
+
+#### Custom Templates
+
+To further customize our Row Editing overlay, we can pass a custom template so we can style the `Done` and `Discard` buttons:
 
 ```html
 <!-- in component.html -->
 <@@igSelector>
-    ...
-    <ng-template igxRowEditText let-rowChangesCount>
-        <span class="changes"> Changes: {{rowChangesCount}}</span>
-    </ng-template>
     ...
     <ng-template igxRowEditActions let-endRowEdit>
         <span class="custom-failure">
@@ -333,73 +395,13 @@ The first thing we can do is pass our custom buttons and banner text in the comp
 </@@igSelector>
 ```
 
-With this quick adjustment, our buttons will now be **X** and **✔** instead of **Dismiss** and **Done**. 
-Now that we've added the custom templates, it's time for the theme engine to do some heavy lifting.
-
-#### Import theme
-
-In order for us to use the funcitons exposed by the theme engine, we need to import the `index` file in our style file: 
+After we've defined our custom button, we can make use of the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel` - one green, one red - to better highlight their funcitonality:
 
 ```scss
-// in component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
-
-#### Define colors
-
-After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) and [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) functions to define some color variables:
-```scss
-$banner-color: igx-color($default-palette, "primary", 400);
-$editing-color: igx-contrast-color($default-palette, "primary", 200);
-$success: igx-color($default-palette, "success", 500);
-$failure: igx-color($default-palette, "error", 500);
-```
-All of the colors are based off of the [`$default-palette`]({environment:sassApiUrl}/index.html#variable-default-palette) - the default palette exposed by the igx-theme.
-
-We'll use the colors as follows:
-    - `$banner-color` - this will be the color we will use for the background of the row-editing overlay
-    - `$editing-color` - we'll use this to change the background on the edited cell
-    - `$success`, `$failure` - we'll generate a palette out of these and use it to style the buttons in the banner
-
-#### Define palette & themes
-
-Next, we can define our custom palette (for the buttons) and our custom themes which we would like to use. (You can learn more about palettes [here](../themes/palette.md))
-
-To define the palette, we make use of the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function:
-
-```scss
+// custom.component.scss
 $my-success-error-palette: igx-palette($primary: $success, $secondary: $failure);
-```
+...
 
-In order to style the cell's background color, all we have to do is define a theme that extends the `igx-grid-theme` and change the property of `cell-editing-backgroud`:
-```scss
-$custom-grid: igx-grid-theme(
-    $cell-editing-background: $editing-color
-);
-```
-
-This changes the background of the cell, but not the input *inside of* the cell. For that, we'll have to use `igx-input-group-theme` function:
-```scss
-$input-group: igx-input-group-theme(
-  $filled-text-color: $editing-color,
-  $focused-text-color: $editing-color,
-  $idle-text-color: $editing-color
-);
-```
-
-Our custom grid and input-group themes will take care of the editing parts in the grid.
-Now, all that's left is to define two more themes to style the row-editing overlay. The overlay itself is composed of a banner (the background-part) and the custom text and buttons we passed.
-To style the banner, we'll create a custom banner theme and scope it to the overlay container:
-```scss
-$banner-theme: igx-banner-theme(
-    $banner-background: igx-color($default-palette, "primary", 100),
-    $banner-message-color: igx-contrast($default-palette, "primary", 100),
-    $banner-border-color: igx-color($default-palette, "second", 800)
-);
-```
-
-For the buttons, we'll need to create two themes - since we want the buttons to be different from one another and to have either a red or green highlight (for `dismiss` and `done`, resp.):
-```scss
 $button-theme-success: igx-button-theme(
     $icon-color: igx-contrast($my-success-error-palette, "primary", 200),
     $icon-hover-color: igx-contrast($my-success-error-palette, "primary", 600),
@@ -408,54 +410,18 @@ $button-theme-success: igx-button-theme(
     $icon-hover-background: igx-color($my-success-error-palette, "primary", 600),
     $icon-focus-background: igx-color($my-success-error-palette, "primary", 300)
 );
-$button-theme-failure: igx-button-theme(
-    $icon-color: igx-contrast($my-success-error-palette, "secondary", 200),
-    $icon-hover-color: igx-contrast($my-success-error-palette, "secondary", 600),
-    $icon-focus-color: igx-contrast($my-success-error-palette, "secondary", 300),
-    $icon-background: igx-color($my-success-error-palette, "secondary", 200),
-    $icon-hover-background: igx-color($my-success-error-palette, "secondary", 600),
-    $icon-focus-background: igx-color($my-success-error-palette, "secondary", 300)
-);
-```
 
-To define the two themes, we use the custom palette we created earlier, since the `igx-palette` function conveniently creates color shades for us to use!
-
-#### Apply the themes
-
-All that's left is to properly scope our newly created themes to our component.
-For the buttons, we can use our class selector that we added earlier, in the [templates](#passing-custom-templates) section
-
-```scss
-.custom-failure {
-    @include igx-button($button-theme-failure);
-  }
-
+...
 .custom-success {
     @include igx-button($button-theme-success);
   }
 ```
 
-As for input, grid and banner themes, we pass them under the context of our sample component:
-```scss
-.sample-wrapper {
-    @include igx-grid($custom-grid);
-    @include igx-input-group($input-group);
-    @include igx-banner($banner-theme);
-}
-```
->[!NOTE]
- >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`:
- ```scss
-    ::ng-deep {
-        .sample-wrapper {
-            @include igx-grid($custom-grid);
-            @include igx-input-group($input-group);
-            @include igx-banner($banner-theme);
-        }
-    }
-```
+We scope our `@include` statement in `.custom-success` so that it is only applied to the `Done` button. We then do the same with a custom `$button-theme-error`, which we scope to the `Cancel` button.
 
 #### Demo
+
+After styling the banner and buttons, we also define a custom style for [the cell in edit mode](editing.md#styling). The result of all the combined styles can be seen below:
 
 @@if (igxName === 'IgxGrid'){
 <div class="sample-container loading" style="height:560px">
