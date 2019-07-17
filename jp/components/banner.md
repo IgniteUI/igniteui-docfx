@@ -238,6 +238,80 @@ export class MyBannerComponent {
 > [!NOTE]
 > 上記が適用されるとオープニング イベントが常にキャンセルされるため、Banner が開くことはありません。
 
+### Styling
+Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-banner** appearance. We are going to build upon the above animations sample and modify the `igx-banner` component to have more distinguished messages. Since `igx-banner` includes `igx-button`, you can directly refer to the [igx-button styling guide](button.md#styling) for details, specific to styling the buttons themself.
+
+#### Import theme
+First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+#### Define palette & colors
+After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom `igx-banner` styling in conjunction with our own color [palette](themes/palette.md) where we can specify our two main colors to be used by the component as well as the message color.
+Fist define a custom palette and pass our main colors:
+```scss
+$my-primary-color:#fde71d;
+$my-secondary-color: #DCDCDC;
+$my-info-color: #ff0000;
+
+$my-color-palette: igx-palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color,
+    $info: $my-info-color
+);
+```
+
+In order to see our custom palette and colors applied, we need to pass these to a theme function.
+So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our colors to a number of predefined `igx-banner-theme parameters` . Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on the colors defined.
+```scss
+$custom-banner-theme: igx-banner-theme(
+    $palette: $my-color-palette,
+    $banner-message-color: igx-color($my-color-palette, "info"),
+    $banner-illustration-color: igx-color($my-color-palette, "secondary", 900),
+    $banner-background: igx-color($my-color-palette, "secondary", 300)
+);
+```
+
+#### Applying
+All that's left is to properly scope our newly created theme.
+
+##### Globally
+In case you want this newly created `igx-banner` theme to be applied [`globally`](themes/component-themes.md#creating-themes) in your app, all that is needed is to include the theme in your app root style file:
+```scss
+// in root app.scss
+// Pass our banner theme to the `igx-banner` mixin
+    @include igx-banner($custom-banner-theme);
+```
+##### Scoped
+There may be a case where you want a particular `igx-banner` be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+
+On the other side, in order to prevent our custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-banner($custom-banner-theme);
+    }
+}
+```
+
+#### Styling Demo
+
+<div class="sample-container loading" style="height: 530px">
+    <iframe id="banner-styling-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-styling" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 ## API リファレンス
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
