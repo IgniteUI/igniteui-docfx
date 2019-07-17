@@ -123,7 +123,9 @@ The grouping UI supports the following keyboard interactions:
 
 ### GroupBy with Paging
 
-It is possible to use paging within a grouped by columns. That would happen with the [`paging`] directive set to true on the grid. The result of the grouping pipe is sent to the paging one so that all group records participate in the paging process and are part of the total page size for each page.
+It is possible to use [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) within a grouped by columns. That would happen with the [`paging`] directive set to true on the grid. The result of the grouping pipe is sent to the paging one so that all group records participate in the paging process and are part of the total page size for each page.  
+Groups that span multiple pages are split between them. The group summary information is consistent for the whole group but the header itself is not created for each page.  
+Expanding and collapsing groups would change the paging state as it alerts the total amount of items particpating in paging.
 
 #### Demo
 
