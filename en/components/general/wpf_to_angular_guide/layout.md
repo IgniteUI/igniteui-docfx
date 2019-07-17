@@ -51,7 +51,7 @@ The default value of the [`flex-direction`](https://www.w3schools.com/cssref/css
 
 ### WrapPanel
 
-The [`WarpPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering happens sequentially from top to bottom or right to left, depending on the value of the Orientation property. Let us add several buttons in a WrapPanel and see how they look like in WPF:
+The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering happens sequentially from top to bottom or right to left, depending on the value of the Orientation property. Let us add several buttons in a WrapPanel and see how they look like in WPF:
 
 ```xml
 <WrapPanel>

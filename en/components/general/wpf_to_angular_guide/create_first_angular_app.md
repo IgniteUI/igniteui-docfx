@@ -63,7 +63,7 @@ Unfortunately, here the similarities end. Let us look at some of the other gener
 
 ### Run the application
 
-Now we are ready to run the application, but in Visual Studio Code you cannot just press F5. We are going to open the Visual Studio Code Terminal by clicking in the menu on Terminal -> New Terminal or by pressing Ctrl + Shift + `. In order to run the application, you should execute the following command:
+Now we are ready to run the application, but in Visual Studio Code you cannot just press F5. We are going to open the Visual Studio Code Terminal by clicking in the menu on Terminal -> New Terminal or by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd>. In order to run the application, you should execute the following command:
 
 ```cmd
 ng serve

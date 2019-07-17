@@ -6,6 +6,8 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Responding to Events
 
+### Binding to User Input Events
+
 Every app you have probably ever written had to respond to some type of user interaction one way or another. The most common way to do that is with some type of event system. WPF provides routed and CLR events and commands while In Angular there are DOM events.
 
 Here is a simple example how you respond to a click event of a button in WPF:
@@ -77,7 +79,7 @@ onInputKeyup(message) {
 }
 ```
 
-## Responding to Events of a Component
+### Responding to Events of a Component
 
 In WPF, when you create your own custom controls, often you need to extend or modify some base events like this:
 
