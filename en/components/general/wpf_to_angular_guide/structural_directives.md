@@ -13,12 +13,12 @@ Manipulating your view in an Angular application /adding and removing elements/,
 Now, let’s explore each of these directives, starting with the `ngIf`. This directive allows us to show or hide elements based on a boolean condition. We will start by creating a "div" element with an "h2" tag containing a name.
 ```html
 <div>
-    <h2>John</h2>
+  <h2>John</h2>
 </div>
 ```
 If we save this our browser will render the name John. However, let’s say we have some type of boolean expression that we want to base the condition of the visibility of this "h2" tag on. For example, we are going to add a property called "isFirstName" and set it to false. In order to tell our div to be rendered when isFirstName equals true, we should use the following syntax *ngIf = "isFirstName".
 ```typescript
-  public isFirstName = false;
+public isFirstName = false;
 ```
 ``` html
 <div *ngIf="isFirstName">
@@ -44,8 +44,8 @@ public Sample()
   <Label Visibility="{Binding Path=IsFirstName, Converter={StaticResource VisibleIfTrueConverter}}">John</Label>
 </Grid>
 ```
-A lot easier and more straightforward it is in Angular.
-However, in this case, if "isFirstName" is false we want to provide a last name instead. To do that we're going to take advantage of the "else" clause of the `ngIf` directive. Let's start by creating an `ng-template` defining an "h2" tag which contains the last name. Now, an `ng-template` is simply a placeholder that allows us to define content that is not part of the DOM, but can be added via code such as using the `ngIf` directive. But, in order to use this in the directive, we need to give it a template reference variable name such as "lastname". Now that we have named our `ng-template`, let's go into our `ngIf` directive, add "; else lastname" and save this. Because "isFirstName" is false for saying else use the lastname, we are using the template with the last name.
+In Angular, it is a lot easier and more straightforward.
+However, in this case, if "isFirstName" is false we want to provide a last name instead. To do that we're going to take advantage of the "else" clause of the `ngIf` directive. Let's start by creating an `ng-template` defining an "h2" tag which contains the last name. Now, an `ng-template` is simply a placeholder that allows us to define content that is not part of the DOM, but can be added via code such as using the `ngIf` directive. But, in order to use this in the directive, we need to give it a template reference variable name such as "lastname". Now that we have named our `ng-template`, let's go into our `ngIf` directive, add "**; else lastname**" and save this. Because "isFirstName" is false for saying **else use the lastname**, we are using the template with the last name.
 
 ```html
 <div *ngIf="isFirstName; else lastname">
@@ -55,7 +55,7 @@ However, in this case, if "isFirstName" is false we want to provide a last name 
   <h2>Doe</h2>
 </ng-template>
 ```
-Now, another way we can write this is we can say "isFirstName; then firstname; else lastname". So in order to do that, we need to create another template called "firstname".
+Now, another way we can write this is we can say "**isFirstName; then firstname; else lastname**". So in order to do that, we need to create another template called "firstname".
 
 ```html
 <div *ngIf="isFirstName; then firstname; else lastname">
@@ -95,7 +95,7 @@ In this case, if we are looking for Lambo, we don't have the Lambo option, so we
 
 Next up is the `ngFor` directive. This directive allows us to iterate through a collection of objects and add a template for each item in that collection. Let's start by adding a collection of objects in our typescript file. We are going to call this an array of makes and add Chevy, Ford, GMC and Dodge. Next we will create a "div" and for each "div" we're going to create an "h2" tag that lists out the name of that make. To do that we are going to use the `ngFor` directive - the syntax for that `*ngFor="let make of makes"`. That provides us the ability to now use interpolation to use the "make" property that is defined via the "let make" portion of the expression and print that out in the "h2" tag.
 ```typescript
-  makes = ["Chevy", "Ford", "GMC", "Dodge"];
+makes = ["Chevy", "Ford", "GMC", "Dodge"];
 ```
 ```html
 <div *ngFor="let make of makes">
