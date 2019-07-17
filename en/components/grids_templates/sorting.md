@@ -124,6 +124,127 @@ You can provide @@igComponent's remote sorting by subscribing to [`onDataPreLoad
 <div class="divider--half"></div>
 }
 
+### Styling
+
+To get started with sorting styling, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+// custom-grid-paging-style.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$sorted-header-icon-color` parameter.
+
+```scss
+$custom-theme: igx-grid-theme(
+    $sorted-header-icon-color: blue
+);
+```
+The last step is to **include** the component mixins: 
+
+```scss
+ @include igx-grid($custom-theme);
+```
+
+>[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+ ```scss
+:host {
+  ::ng-deep {
+    @include igx-grid($custom-theme);
+  }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$primary-color: #09f;
+$secondary-color: #e41c77;
+
+$light-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid):  
+
+```scss
+// Extending the light grid schema
+$custom-grid-schema: extend($_light-grid,
+    (
+        sorted-header-icon-color: igx-color($light-palette, 'secondary', 500),
+        sortable-header-icon-hover-color: blue
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, 
+    (
+        igx-grid: $custom-grid-schema
+    )
+);
+
+// Defining our custom theme with the global light schema
+$custom-theme: igx-grid-theme(
+  $palette: $light-palette,
+  $schema: $my-custom-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+@@if (igxName === 'IgxGrid') {
+#### Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-styling' width="100%" height="100%" 
+        seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+#### Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="tree-grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+#### Demo
+
+<div class="sample-container loading" style="height:510px">
+    <iframe id="hierarchical-grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
