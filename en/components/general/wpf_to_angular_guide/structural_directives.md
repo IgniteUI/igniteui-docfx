@@ -36,7 +36,7 @@ public Sample()
       this.IsFirstName = true;
   }
 ```
-```html
+```xml
 <UserControl.Resources>
   <BooleanToVisibilityConverter x:Key="VisibleIfTrueConverter" />
 </UserControl.Resources>
