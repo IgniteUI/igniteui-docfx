@@ -181,75 +181,75 @@
       new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: true
+  new: false
   items:
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
-      new: true
+      new: false
     - name: Load on Demand
       href: hierarchicalgrid/load_on_demand.md
-      new: true
+      new: false
     - name: Editing
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
     - name: Row Editing
       href: hierarchicalgrid/row_editing.md
-      new: true
+      new: false
     - name: Row Drag
       href: hierarchicalgrid/row_drag.md
-      new: true
+      new: false
     - name: Batch Editing
       href: hierarchicalgrid/batch_editing.md
-      new: true
+      new: false
     - name: Paging
       href: hierarchicalgrid/paging.md
-      new: true
+      new: false
     - name: Filtering
       href: hierarchicalgrid/filtering.md
-      new: true
+      new: false
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
       new: false
     - name: Sorting
       href: hierarchicalgrid/sorting.md
-      new: true
+      new: false
     - name: Summaries
       href: hierarchicalgrid/summaries.md
-      new: true
+      new: false
     - name: Column Moving
       href: hierarchicalgrid/column_moving.md
-      new: true
+      new: false
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
-      new: true
+      new: false
     - name: Column Resizing
       href: hierarchicalgrid/column_resizing.md
-      new: true
+      new: false
     - name: Column Hiding
       href: hierarchicalgrid/column_hiding.md
-      new: true
+      new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
     # Not yet fully implemented for igxHGrid
     # - name: Searching
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: Toolbar
       href: hierarchicalgrid/toolbar.md
-      new: true
+      new: false
     - name: Multi Column Headers
       href: hierarchicalgrid/multi_column_headers.md
-      new: true
+      new: false
     - name: Display Density
       href: hierarchicalgrid/display_density.md
-      new: true
+      new: false
     # - name: Conditional Cell Styling
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
-      new: true
+      new: false
 - name: List View
   href: list.md
 - name: Combo

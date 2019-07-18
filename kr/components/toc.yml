@@ -39,7 +39,7 @@
       new: false
     - name: Excel 스타일 필터링
       href: grid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 정렬
       href: grid/sorting.md
       new: false
@@ -100,7 +100,7 @@
       new: false
     - name: 로드 온디맨드
       href: treegrid/load_on_demand.md
-      new: true
+      new: false
     - name: 편집
       href: treegrid/editing.md
       new: false
@@ -109,7 +109,7 @@
       new: false
     - name: Row Drag
       href: treegrid/row_drag.md
-      new: true
+      new: false
     - name: 트랜잭션
       href: treegrid/batch_editing.md
       new: false
@@ -121,7 +121,7 @@
       new: false
     - name: Excel 스타일 필터링
       href: treegrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 정렬
       href: treegrid/sorting.md
       new: false
@@ -142,10 +142,10 @@
       new: false
     - name: 행 선택
       href: treegrid/selection.md
-      new: true
+      new: false
     - name: 검색
       href: treegrid/search.md
-      new: true
+      new: false
     - name: 도구 모음
       href: treegrid/toolbar.md
       new: false
@@ -169,69 +169,69 @@
     # new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: true
+  new: false
   items:
     - name: 가상화 및 성능
       href: hierarchicalgrid/virtualization.md
-      new: true
+      new: false
     - name: 로드 온디맨드
       href: hierarchicalgrid/load_on_demand.md
-      new: true
+      new: false
     - name: 편집
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
     - name: 행 편집
       href: hierarchicalgrid/row_editing.md
-      new: true
+      new: false
     - name: Row Drag
       href: hierarchicalgrid/row_drag.md
-      new: true
+      new: false
     - name: 트랜잭션
       href: hierarchicalgrid/batch_editing.md
-      new: true
+      new: false
     - name: 페이징
       href: hierarchicalgrid/paging.md
-      new: true
+      new: false
     - name: 필터링
       href: hierarchicalgrid/filtering.md
-      new: true
+      new: false
     - name: Excel 스타일 필터링
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 정렬
       href: hierarchicalgrid/sorting.md
-      new: true
+      new: false
     - name: 요약
       href: hierarchicalgrid/summaries.md
-      new: true
+      new: false
     - name: 열 이동
       href: hierarchicalgrid/column_moving.md
-      new: true
+      new: false
     - name: 열 핀 고정
       href: hierarchicalgrid/column_pinning.md
-      new: true
+      new: false
     - name: 크기 조정
       href: hierarchicalgrid/column_resizing.md
-      new: true
+      new: false
     - name: 숨기기
       href: hierarchicalgrid/column_hiding.md
-      new: true
+      new: false
     - name: 행 선택
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       # Not yet fully implemented for igxHGrid
     # - name: 검색
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: 도구 모음
       href: hierarchicalgrid/toolbar.md
-      new: true
+      new: false
     - name: 복수 열 헤더
       href: hierarchicalgrid/multi_column_headers.md
-      new: true
+      new: false
     - name: 표시 밀도
       href: hierarchicalgrid/display_density.md
-      new: true
+      new: false
     # - name: 조건부 셀 스타일
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
@@ -283,7 +283,7 @@
       new: false
     - name: Hyperlinks
       href: spreadsheet_hyperlinks.md
-      new: false      
+      new: false
 - name: Charts
   header: true
 - name: Category Chart
@@ -347,25 +347,25 @@
         - name: 카테고리 시리즈
           href: datachart_series_types_category.md
           new: false
-        - name: 금융 시리즈 
+        - name: 금융 시리즈
           href: datachart_series_types_financial.md
           new: false
         - name: 폴라 시리즈
           href: datachart_series_types_polar.md
           new: false
-        - name: 레이디얼 시리즈 
+        - name: 레이디얼 시리즈
           href: datachart_series_types_radial.md
           new: false
         - name: 범위 시리즈
           href: datachart_series_types_range.md
           new: false
-        - name: 분산 영역 시리즈 
+        - name: 분산 영역 시리즈
           href: datachart_series_types_scatter_area.md
           new: false
-        - name: 분산 등고선 시리즈 
+        - name: 분산 등고선 시리즈
           href: datachart_series_types_scatter_contour.md
           new: false
-        - name: 분산 버블 시리즈 
+        - name: 분산 버블 시리즈
           href: datachart_series_types_scatter_bubble.md
           new: false
         # - name: Scatter HD Series
@@ -437,7 +437,7 @@
       new: false
     - name: 주석 및 오버레이
       href: financialchart_chart_annotations.md
-      new: false    
+      new: false
     - name: 컨피규레이터 옵션
       href: financialchart_chart_configuration.md
       new: false

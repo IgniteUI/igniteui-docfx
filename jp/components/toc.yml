@@ -181,75 +181,75 @@
       new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: true
+  new: false
   items:
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
-      new: true
+      new: false
     - name: ロードオンデマンド
       href: hierarchicalgrid/load_on_demand.md
-      new: true
+      new: false
     - name: 編集
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
     - name: 行編集
       href: hierarchicalgrid/row_editing.md
-      new: true
+      new: false
     - name: 行ドラッグ
       href: hierarchicalgrid/row_drag.md
-      new: true
+      new: false
     - name: 一括編集
       href: hierarchicalgrid/batch_editing.md
-      new: true
+      new: false
     - name: ページング
       href: hierarchicalgrid/paging.md
-      new: true
+      new: false
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
-      new: true
+      new: false
     - name: Excel フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
       new: false
     - name: 並べ替え
       href: hierarchicalgrid/sorting.md
-      new: true
+      new: false
     - name: 集計
       href: hierarchicalgrid/summaries.md
-      new: true
+      new: false
     - name: 列移動
       href: hierarchicalgrid/column_moving.md
-      new: true
+      new: false
     - name: 列のピン固定
       href: hierarchicalgrid/column_pinning.md
-      new: true
+      new: false
     - name: 列のサイズ変更
       href: hierarchicalgrid/column_resizing.md
-      new: true
+      new: false
     - name: 列の非表示
       href: hierarchicalgrid/column_hiding.md
-      new: true
+      new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
     # Not yet fully implemented for igxHGrid
     # - name: 検索
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: ツールバー
       href: hierarchicalgrid/toolbar.md
-      new: true
+      new: false
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi_column_headers.md
-      new: true
+      new: false
     - name: 表示密度
       href: hierarchicalgrid/display_density.md
-      new: true
+      new: false
     # - name: 条件付きセルのスタイル設定
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
-      new: true
+      new: false
 - name: List View
   href: list.md
 - name: Combo
