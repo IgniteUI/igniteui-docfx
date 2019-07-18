@@ -755,3 +755,13 @@
 - name: Localization
   href: localization.md
   new: false
+- name: Transaction Service
+  href: transaction.md
+  new: true
+  items:
+    - name: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
+      href: transaction-how-to.md
+      new: true
+    - name: How to use the Transaction service
+      href: transaction-example.md
+      new: true
