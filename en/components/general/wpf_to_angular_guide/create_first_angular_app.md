@@ -6,6 +6,10 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
 
 ## Create your first Angular app
 
+### Prerequisites
+
+In order to start writing Angular applications, you need to install Node.js and npm package manager. Node.js is JavaScript runtime environment that executes JavaScript code outside of a browser. In order to get the Node.js, go to [nodejs.org](https://nodejs.org). The npm is a package manager similar to the NuGet package manager for .NET. It is installed with Node.js by default. You will also need an IDE. One of the best environments for developing Angular applications is Visual Studio Code. It is free, open source and runs on every platform. You can get it from [code.visualstudio.com](https://code.visualstudio.com/).
+
 ### Create new project
 
 If you are a WPF developer, creating new projects inside of Visual Studio is pretty straight forward. You would just click File -> New Project, select the project type, give it a name and press OK. Since you are going into the Angular world, you want to create a new project inside Visual Studio Code. However, there is no new project option here and that's because Visual Studio Code is file based and not project based. In order to create a new Angular application, we are going to use the command prompt.
