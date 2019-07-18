@@ -326,8 +326,12 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 #### Demo
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-style">
-</iframe></div>
+    <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" onload="onSampleIframeContentLoaded(this);">
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### API リファレンス
 <div class="divider--half"></div>
