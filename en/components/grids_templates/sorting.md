@@ -126,10 +126,9 @@ You can provide @@igComponent's remote sorting by subscribing to [`onDataPreLoad
 
 ### Styling
 
-To get started with sorting styling, we need to import the `index` file, where all the theme functions and component mixins live:
+To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-// custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
@@ -137,7 +136,7 @@ Following the simplest approach, we create a new theme that extends the [`igx-gr
 
 ```scss
 $custom-theme: igx-grid-theme(
-    $sorted-header-icon-color: blue
+    $sorted-header-icon-color: #51f942
 );
 ```
 The last step is to **include** the component mixins: 
@@ -164,13 +163,13 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 `igx-palette` generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
-$primary-color: #09f;
-$secondary-color: #e41c77;
+$primary: $black-color,
+$secondary: $green-color
 
-$light-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
+$custom-palette: igx-palette($primary: $black-color, $secondary: $green-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
@@ -185,13 +184,13 @@ Extend one of the two predefined schemas, that are provided for every component,
 // Extending the light grid schema
 $custom-grid-schema: extend($_light-grid,
     (
-        sorted-header-icon-color: igx-color($light-palette, 'secondary', 500),
-        sortable-header-icon-hover-color: blue
+        sorted-header-icon-color: (igx-color:('secondary', 700)),
+        sortable-header-icon-hover-color: (igx-color:('primary', 300))
     )
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 // Extending the global light-schema
@@ -201,7 +200,7 @@ $my-custom-schema: extend($light-schema,
     )
 );
 
-// Defining our custom theme with the global light schema
+// Defining our custom theme with the custom schema
 $custom-theme: igx-grid-theme(
   $palette: $light-palette,
   $schema: $my-custom-schema
