@@ -94,7 +94,7 @@ We will now create a simple `input` of type text and bind the `isDisabled` prope
 <input type="text" disabled="{{ isDisabled }}">
 ```
 The expected result is that the `input` should be enabled, but it's disabled. This is because the `interpolation` returns a string, but the input's disabled property is of boolean type and it requires a boolean value.
-In order for this to work correctly, Angular provides `property binding`. It's syntax is a bit different.
+In order for this to work correctly, Angular provides `property binding`. Its syntax is a bit different.
 
 ### Property Binding
 
