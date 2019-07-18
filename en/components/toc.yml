@@ -42,7 +42,7 @@
       new: false
     - name: Excel Style Filtering
       href: grid/excel_style_filtering.md
-      new: true
+      new: false
     - name: Sorting
       href: grid/sorting.md
       new: false
@@ -109,7 +109,7 @@
       new: false
     - name: Load On Demand
       href: treegrid/load_on_demand.md
-      new: true
+      new: false
     - name: Editing
       href: treegrid/editing.md
       new: false
@@ -118,7 +118,7 @@
       new: false
     - name: Row Drag
       href: treegrid/row_drag.md
-      new: true
+      new: false
     - name: Batch Editing
       href: treegrid/batch_editing.md
       new: false
@@ -130,7 +130,7 @@
       new: false
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: Sorting
       href: treegrid/sorting.md
       new: false
@@ -151,10 +151,10 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: true
+      new: false
     - name: Searching
       href: treegrid/search.md
-      new: true
+      new: false
     - name: Toolbar
       href: treegrid/toolbar.md
       new: false
@@ -175,7 +175,7 @@
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard_navigation.md
-      new: true
+      new: false
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: true
@@ -209,7 +209,7 @@
       new: true
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       new: true
@@ -452,7 +452,7 @@
       new: false
     - name: Chart Configuration
       href: financialchart_chart_configuration.md
-      new: false          
+      new: false
     - name: Chart Display Types
       href: financialchart_chart_display_types.md
       new: false

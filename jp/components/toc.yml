@@ -42,7 +42,7 @@
       new: false
     - name: Excel フィルタリング
       href: grid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: grid/sorting.md
       new: false
@@ -109,7 +109,7 @@
       new: false
     - name: ロードオンデマンド
       href: treegrid/load_on_demand.md
-      new: true
+      new: false
     - name: 編集
       href: treegrid/editing.md
       new: false
@@ -118,7 +118,7 @@
       new: false
     - name: 行ドラッグ
       href: treegrid/row_drag.md
-      new: true
+      new: false
     - name: 一括編集
       href: treegrid/batch_editing.md
       new: false
@@ -130,7 +130,7 @@
       new: false
     - name: Excel フィルタリング
       href: treegrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: treegrid/sorting.md
       new: false
@@ -151,10 +151,10 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: true
+      new: false
     - name: 検索
       href: treegrid/search.md
-      new: true
+      new: false
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
@@ -170,12 +170,12 @@
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional_cell_styling.md
       new: false
-    - name: 集計 
+    - name: 集計
       href: treegrid/aggregations.md
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard_navigation.md
-      new: true
+      new: false
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: true
@@ -209,7 +209,7 @@
       new: true
     - name: Excel フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: hierarchicalgrid/sorting.md
       new: true
@@ -295,9 +295,9 @@
        new: false
      - name: ハイパーリンク
        href: spreadsheet_hyperlinks.md
-       new: false  
+       new: false
 - name: チャート
-  header: true  
+  header: true
 - name: Category Chart
   href: categorychart.md
   new: false
