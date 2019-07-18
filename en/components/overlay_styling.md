@@ -14,7 +14,7 @@ To show the content above other elements, the service moves it into a special ou
 
 ## Styling Overlay Components
 
-In the most common use case - defining a global theme for our app [globally](themes/global-theme.md) - styles are generally unaffected by the overlay outlets. For examples, let's take a look at a Drop Down, [styled](drop_down.md#styling) by a global [`igx-drop-down-theme` function]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme):
+In the most common use case - defining a theme for our app [globally](themes/global-theme.md) - styles are generally unaffected by the overlay outlets. For examples, let's take a look at a Drop Down, [styled](drop_down.md#styling) by a global [`igx-drop-down-theme` function]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme):
 
 ```html
 <!-- in overlay-styling.component.html -->
@@ -56,7 +56,7 @@ However, most of the Ignite UI for Angular components create their own content b
 
 ### Scoped Component Styles
 
-When scoping styles for elements that are displayed in the overlay, we need to specify to the position of the overlay outlet in the DOM. CSS rules that are scoped require a specific hierarchical structure of our elements - we need to make sure the overlay content is displayed in the correct context of the styles we want to apply.
+When scoping styles for elements that are displayed in the overlay, we need to specify to the position of the overlay `outlet` in the DOM. CSS rules that are scoped require a specific hierarchical structure of our elements - we need to make sure the overlay content is displayed in the correct context of the styles we want to apply.
 
 For example, let's take the `igx-combo` - its item [styles](combo.md#styling) make use of the `igx-drop-down` theme, because the combo defines its content inside of its own view. For a custom theme to affect them, when using `ViewEncapsulation.Emulated`, we need to penetrate the encapsulation with `::ng-deep`, scoping our styles so they don't bleed to our whole app:
 
@@ -114,7 +114,7 @@ $my-overlay-theme: igx-overlay-theme(
 @include igx-overlay($my-overlay-theme);
 ```
 
-Now **all** modal overlays will have a purple tint to they background.
+Now **all** modal overlays will have a purple tint to their background.
 
 ### Scoped Overlay Styles
 
