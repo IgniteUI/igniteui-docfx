@@ -6,7 +6,7 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
 
 ## Structural Directives in Angular
 
-As WPF developers, anytime we want to add or remove an element from the visual tree we have to jump into some code-behind and write some C# or we can use a combination of binding and a visibility converter, which again requires some custom logic and static resources. That is somewhat OK and we have always done it in WPF, but Angular makes it so much easier.
+As WPF developers, anytime we want to add or remove an element from the visual tree we have to jump into some code-behind and write some C# or we can use a combination of binding and a visibility converter, which again requires some custom logic and static resources. That is OK and we have always done it in WPF, but Angular makes it so much easier.
 Manipulating your view in an Angular application /adding and removing elements/, is achieved with the so-called "structural directives". In this topic, we are going to demonstrate the following three directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
 
 ### `ngIf` Directive
@@ -16,7 +16,7 @@ Now, let’s explore each of these directives, starting with the `ngIf`. This di
   <h2>John</h2>
 </div>
 ```
-If we save this our browser will render the name John. However, let’s say we have some type of boolean expression that we want to base the condition of the visibility of this "h2" tag on. For example, we are going to add a property called "isFirstName" and set it to false. In order to tell our div to be rendered when isFirstName equals true, we should use the following syntax *ngIf = "isFirstName".
+If we save this, our browser will render the name John. However, let’s say we have some type of boolean expression that we want to base the condition of the visibility of this "h2" tag on. For example, we are going to add a property called "isFirstName" and set it to false. In order to tell our div to be rendered when isFirstName equals true, we should use the following syntax *ngIf = "isFirstName".
 ```typescript
 public isFirstName = false;
 ```
@@ -25,7 +25,7 @@ public isFirstName = false;
   <h2>John</h2>
 </div>
 ```
-Once we save the files and because isFirstName is false, we will see that the name is no longer rendered on the browser. However, if we were to update this to be true, save that value so the condition resolves as true then the "John" first name will be rendered in the browser. If we set this first name back to false and we'll notice that the first name is no longer rendered in our browser, instead it's empty. That's the default behavior of the if statement - if the expression is true we render the provided template otherwise it's empty.
+Once we save the files and because isFirstName is false, we will see that the name is no longer rendered in the browser. However, if we were to update this to be true, save that value so the condition resolves as true then the "John" first name will be rendered in the browser. If we set this first name back to false and we'll notice that the first name is no longer rendered in our browser, instead it's empty. That's the default behavior of the if statement - if the expression is true we render the provided template otherwise it's empty.
 If we were to achieve the same behavior with WPF, we would need to use a visibility converter. The code would look similar to the following:
 ```cs
 public bool IsFirstName { get; set; }
@@ -67,7 +67,7 @@ Now, another way we can write this is we can say "**isFirstName; then firstname;
   <h2>Doe</h2>
 </ng-template>
 ```
-If we change "isFirstName" to true the first name will be rendered in the browser. And one final tip on using the `ngIf` directive is that the expression is not limited to a single property - you can actually use multiple properties and/or functions as long as the expression as a whole returns a boolean result. For example we can even use logical operators such as " && isValid || getIsValidName()".
+If we change "isFirstName" to true, the first name will be rendered in the browser. And one final tip on using the `ngIf` directive is that the expression is not limited to a single property - you can actually use multiple properties and/or functions as long as the expression as a whole returns a boolean result. For example we can even use logical operators such as " && isValid || getIsValidName()".
 
 ### `ngSwitch` Directive
 The next directive we will discuss is the `ngSwitch` directive. This allows us to compare one expression to multiple expressions to decide which templates to add or remove.
@@ -84,7 +84,7 @@ make = "Chevy";
   <h2 *ngSwitchCase="'GMC'">GMC</h2>
 </div>
 ```
-Once we save that we are only going to see the Chevy option rendered in the browser because the value of our "make" property is set to "Chevy". If we change it, to say "GMC", and save that, only the GMC option will be rendered in the browser. Now, what happens if we add an option that is not available, say the "Lambo". Nothing would be rendered because that did not match any of our conditions. When we normally use a switch statement inside of C#, we have not only the case but also default value. The same is available in Angular – we can add another option with the "Not Found" text and mark it with the `*ngSwitchDefault` which will act as the default value if none of the other values are found.
+Once we save that, we are only going to see the Chevy option rendered in the browser because the value of our "make" property is set to "Chevy". If we change it, to say "GMC", and save that, only the GMC option will be rendered in the browser. Now, what happens if we add an option that is not available, say the "Lambo". Nothing would be rendered because that did not match any of our conditions. When we normally use a switch statement inside of C#, we have not only the case but also default value. The same is available in Angular – we can add another option with the "Not Found" text and mark it with the `*ngSwitchDefault` which will act as the default value if none of the other values are found.
 
 ```html
 <h2 *ngSwitchDefault>Not Found</h2>
@@ -93,7 +93,7 @@ In this case, if we are looking for Lambo, we don't have the Lambo option, so we
 
 ### `ngFor` Directive
 
-Next up is the `ngFor` directive. This directive allows us to iterate through a collection of objects and add a template for each item in that collection. Let's start by adding a collection of objects in our typescript file. We are going to call this an array of makes and add Chevy, Ford, GMC and Dodge. Next we will create a "div" and for each "div" we're going to create an "h2" tag that lists out the name of that make. To do that we are going to use the `ngFor` directive - the syntax for that `*ngFor="let make of makes"`. That provides us the ability to now use interpolation to use the "make" property that is defined via the "let make" portion of the expression and print that out in the "h2" tag.
+Next up is the `ngFor` directive. This directive allows us to iterate through a collection of objects and add a template for each item in that collection. Let's start by adding a collection of objects in our typescript file. We are going to call this an array of makes and add Chevy, Ford, GMC and Dodge. Next we will create a "div" and for each "div" we're going to create an "h2" tag that lists out the name of that make. To do that we are going to use the `ngFor` directive - the syntax for that `*ngFor="let make of makes"`. That provides us the ability to use interpolation to use the "make" property that is defined via the "let make" portion of the expression and print that out in the "h2" tag.
 ```typescript
 makes = ["Chevy", "Ford", "GMC", "Dodge"];
 ```
