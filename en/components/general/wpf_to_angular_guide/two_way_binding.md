@@ -6,9 +6,9 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Two-way data binding in Angular
 
-In the previous topic we discussed the [one-way binding](one_way_binding.md) in Angular, and how easy it was to use it. The one-way binding updates the view with data coming from the component class. Like in WPF, we can do the opposite operation - update the component class from the view. In that case we need to use a two-way binding and we will demonstrate its power and how easy it is to use it.
+In the previous topic we discussed the [one-way binding](one_way_binding.md) in Angular, and how easy it was to use. The one-way binding updates the view with data coming from the component class. Like in WPF, we can do the opposite operation - update the component class from the view. In that case we need to use a two-way binding and we will demonstrate its power and how easy it is to use.
 
-Essentially the one-way binding is taking a state from our component class and displaying it in our view. Let's look at this code:
+Essentially, the one-way binding is taking a state from our component class and displaying it in our view. Let's look at this code:
 ```html
 <input #myTitle (keyup)="keyup(myTitle.value)">
 <h2>{{ text }}</h2>
@@ -23,7 +23,7 @@ keyup(value) {
 }
 ...
 ```
-Here we are simply using an `interpolation` to bind the text property to the HTML. This will display the value of the text propperty in the UI. The `input` element handles the user interaction and updates the underlying `text` property through the UI by using the [event binding](angular_events.md). Essentially, the input does the opposite of the one-way binding, it takes the information from the UI and updates the property in the component class. The method which is hooked up to the input's keyup event updates the text property each time the event occurs. Once the text property value is changed by the event method, that change is reflected in the UI by the one-way binding and the `interpolation` of the h2 element. So if the user types something into the input element, that will immediately update the h2 text - this behavior is basically a simulation of a two-way binding. The same can also be achieved in WPF by using a one-way binding and a keyup event handler, but the two-way binding is way more convenient to use.
+Here we are simply using an `interpolation` to bind the text property to the HTML. This will display the value of the text property in the UI. The `input` element handles the user interaction and updates the underlying `text` property through the UI by using the [event binding](angular_events.md). Essentially, the input does the opposite of the one-way binding, it takes the information from the UI and updates the property in the component class. The method which is hooked up to the input's keyup event updates the text property each time the event occurs. Once the text property value is changed by the event method, that change is reflected in the UI by the one-way binding and the `interpolation` of the h2 element. So if the user types something into the input element, that will immediately update the h2 text - this behavior is basically a simulation of a two-way binding. The same can also be achieved in WPF by using a one-way binding and a keyup event handler, but the two-way binding is way more convenient to use.
 
 ### Two-way binding
 
