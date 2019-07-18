@@ -30,5 +30,6 @@ A more detailed overview of the opportunities that the [`Transaction Service`]({
 ### Additional Resources
 <div class="divider--half"></div>
 
+* [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [igxBaseTransaction, igxTransaction and igxHierarchical transaction explained](transaction-how-to.md)
 * [How to use the Transaction service](transaction-example.md)
