@@ -27,13 +27,13 @@
       new: false
     - name: Row Editing
       href: grid/row_editing.md
-      new: true
+      new: false
     - name: Row Drag
       href: grid/row_drag.md
-      new: true
+      new: false
     - name: Batch Editing
       href: grid/batch_editing.md
-      new: true
+      new: false
     - name: Paging
       href: grid/paging.md
       new: false
@@ -66,7 +66,7 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: true
+      new: false
     - name: Searching
       href: grid/search.md
       new: false
@@ -90,10 +90,10 @@
       new: false
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
-      new: true
+      new: false
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
-      new: true
+      new: false
     - name: Clipboard Interactions
       href: grid/clipboard_interactions.md
       new: true
@@ -682,7 +682,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
-  new: true
+  new: false
 - name: Overlay
   href: overlay_main.md
   new: true

@@ -27,13 +27,13 @@
       new: false
     - name: 行編集
       href: grid/row_editing.md
-      new: true
+      new: false
     - name: 行ドラッグ
       href: grid/row_drag.md
-      new: true
+      new: false
     - name: 一括編集
       href: grid/batch_editing.md
-      new: true
+      new: false
     - name: ページング
       href: grid/paging.md
       new: false
@@ -66,7 +66,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
     - name: 検索
       href: grid/search.md
       new: false
@@ -90,10 +90,10 @@
       new: false
     - name: キーボードナビゲーション
       href: grid/keyboard_navigation.md
-      new: true
+      new: false
     - name: 複数行レイアウト
       href: grid/multi_row_layout.md
-      new: true
+      new: false
     - name: クリップボード操作
       href: grid/clipboard_interactions.md
       new: true
@@ -688,7 +688,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
-  new: true
+  new: false
 - name: Overlay
   href: overlay_main.md
   new: true

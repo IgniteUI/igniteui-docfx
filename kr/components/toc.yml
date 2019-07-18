@@ -14,7 +14,7 @@
   header: true
 - name: Data Grid
   href: grid/grid.md
-  new: true
+  new: false
   items:
     - name: 가상화 및 성능
       href: grid/virtualization.md
@@ -24,13 +24,13 @@
       new: false
     - name: 행 편집
       href: grid/row_editing.md
-      new: true
+      new: false
     - name: Row Drag
       href: grid/row_drag.md
-      new: true
+      new: false
     - name: 트랜잭션
       href: grid/batch_editing.md
-      new: true
+      new: false
     - name: 페이징
       href: grid/paging.md
       new: false
@@ -63,7 +63,7 @@
       new: false
     - name: 행 선택
       href: grid/selection.md
-      new: true
+      new: false
     - name: 검색
       href: grid/search.md
       new: false
@@ -676,7 +676,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
-  new: true
+  new: false
 - name: Overlay
   href: overlay_main.md
   new: true
