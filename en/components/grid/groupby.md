@@ -106,6 +106,24 @@ As an example, the following template would make the group rows summary more ver
 ```
 
 
+### Group By with Paging
+
+All group rows (along with the data rows) participate in the paging process and are part of the total page size for each page. Paging accounts only for expanded (visible) rows. Any expand or collapse operation will force Paging to recalculate pages count.
+Group that span multiple pages is split between them. The group row is visible only on one page and is not repeated on consequent pages. The group row summary information is consistent for the whole group and is not affected by the Paging.
+
+#### Demo
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Group By with Summaries
+
+Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic.
+
 #### Keyboard Navigation
 
 The grouping UI supports the following keyboard interactions:
@@ -120,21 +138,6 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>SPACE</kbd> - changes the sorting direction
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
-
-### GroupBy with Paging
-
-It is possible to use [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) within a grouped by columns. That would happen with the [`paging`] directive set to true on the grid. The result of the grouping pipe is sent to the paging one so that all group records participate in the paging process and are part of the total page size for each page.  
-Groups that span multiple pages are split between them. The group summary information is consistent for the whole group but the header itself is not created for each page.  
-Expanding and collapsing groups would change the paging state as it alerts the total amount of items particpating in paging.
-
-#### Demo
-
-<div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 
 ### Known Limitations
 
