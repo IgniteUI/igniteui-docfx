@@ -6,7 +6,7 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Layout Elements
 
-In WPF, in order to layout the elements in your application, you need to put them inside a [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8). The panel is a container element that controls the arrangement of its child elements. In Angular, in order to layout the elements on the page you have to use CSS. Let us go through some of the most popular panels in WPF and see how we can achieve similar layout with CSS.
+In WPF, in order to layout the elements in your application, you need to put them inside a [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8). The panel is a container element that controls the arrangement of its child elements. In Angular, in order to layout the elements on the page, you have to use CSS. Let us go through some of the most popular panels in WPF and see how we can achieve similar layout with CSS.
 
 ### StackPanel
 
@@ -24,7 +24,7 @@ The [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.co
 
 <img src="../../../images/general/wpf_stackpanel.png" />
 
-If we want to achieve similar layout in Angular, we may use CSS Flexbox layout. The Flexible Box Layout Module is a powerful mechanism which allows designing flexible responsive layout structure. In order to use the Flexbox layout, we have to define a container which has its [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property set to `flex`. Also in order to stack the items vertically we have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`.
+If we want to achieve similar layout in Angular, we may use CSS Flexbox layout. The Flexible Box Layout Module is a powerful mechanism which allows designing a flexible responsive layout structure. In order to use the Flexbox layout, we have to define a container which has its [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property set to `flex`. Also in order to stack the items vertically, we have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`.
 
 ```html
 <div class="flex-container">

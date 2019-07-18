@@ -6,7 +6,7 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Transforming Data With Angular Pipes
 
-In WPF in order to transform data from one value to another you are going to use [IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8). To transform data in an Angular application, we are going to use a [Pipe](https://angular.io/api/core/Pipe). The pipe is very similar to the WPF converter. It takes data as an input and then transforms that data into a desired output for display.
+In WPF in order to transform data from one value to another, you are going to use [IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8). To transform data in an Angular application, we are going to use a [Pipe](https://angular.io/api/core/Pipe). The pipe is very similar to the WPF converter. It takes data as an input and then transforms that data into a desired output for display.
 
 Angular provides a number of predefined pipes for the most common data transformations. For example, if you want a header text to appear in upper case, you could use the [UpperCasePipe](https://angular.io/api/common/UpperCasePipe). Using a pipe is very simple. After your expression, provide a pipe operator `|` followed by the pipe name.
 
@@ -14,13 +14,13 @@ Angular provides a number of predefined pipes for the most common data transform
 <h2>{{ header | uppercase }}</h2>
 ```
 
-What is really great about pipes in Angular compared to a WPF converter is that you can actually use more than one pipe at a time. So for example you can use a [DatePipe](https://angular.io/api/common/DatePipe) and [UpperCasePipe](https://angular.io/api/common/UpperCasePipe) in order to format the date to a user-friendly format and make it uppercase:
+What is really great about the pipes in Angular compared to a WPF converter is that you can actually use more than one pipe at a time. So, for example you can use a [DatePipe](https://angular.io/api/common/DatePipe) and [UpperCasePipe](https://angular.io/api/common/UpperCasePipe) in order to format the date to a user-friendly format and make it uppercase:
 
 ```html
 <h2>{{ birthday | date | uppercase }}</h2>
 ```
 
-Besides that, we also have the option to provide parameters to the pipe. For example the [DatePipe](https://angular.io/api/common/DatePipe) has parameters like format, time zone and locale.
+Besides that, we also have the option to provide parameters to the pipe. For example, the [DatePipe](https://angular.io/api/common/DatePipe) has parameters like format, time zone and locale.
 
 ```html
 <h2>{{ birthday | date:"MM/dd/yy" }}</h2>
@@ -58,7 +58,7 @@ public class ReplaceConverter : IValueConverter
 </Grid>
 ```
 
-In order to do the same in Angular we have to define a class that implements the [PipeTransform](https://angular.io/api/core/PipeTransform) interface and has the [@Pipe](https://angular.io/api/core/Pipe) decorator.
+In order to do the same in Angular, we have to define a class that implements the [PipeTransform](https://angular.io/api/core/PipeTransform) interface and has the [@Pipe](https://angular.io/api/core/Pipe) decorator.
 
 ```typescript
 import { Pipe, PipeTransform } from '@angular/core';
