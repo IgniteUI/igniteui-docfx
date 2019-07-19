@@ -112,7 +112,7 @@ export class MyExampleComponent {
 <div class="divider--half"></div>
 
 ## Custom Overlay Settings
-The Combo allows users to change the way the list of items is shown. This can be done by defining custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the Combo's [`overlaySettings` Input]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings):
+The Combo allows users to change the way the list of items is shown. This can be done by defining custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the Combo's [`overlaySettings`]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) Input:
 
 ```typescript
 // custom.component.ts
