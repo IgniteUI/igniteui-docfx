@@ -1,28 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular 複数列ヘッダー | Ignite UI for Angular の | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
-_keywords: column headers, ignite ui for angular, infragistics
+title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
+_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+_keywords: 列ヘッダー, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
-### @@igComponent Multi Column Headers Overview
+### @@igComponent 複数列ヘッダーの概要
 
-[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
+[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
 #### デモ
 
@@ -189,6 +192,78 @@ _keywords: column headers, ignite ui for angular, infragistics
     ...
 </igx-hierarchical-grid>
 ```
+}
+
+### Multi Column Header Template
+
+Each of the column groups of the grid can be templated separately. The column group expects `ng-template` tag decorated with the `igxHeader` directive.
+The `ng-template` is provided with the column group object as a context.
+
+```html
+...
+<igx-column-group header="General Information">
+    <ng-template igxHeader let-columnGroup>
+        {{ columnGroup.header | uppercase }}
+    </ng-template>
+    ...
+</igx-column-group>
+...
+```
+
+If you want to re-use a single template for several column groups, you could set the [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headertemplate) property of the column group like this:
+
+```html
+<ng-template #columnGroupHeaderTemplate let-columnGroup>
+    {{ columnGroup.header | uppercase }}
+</ng-template>
+
+...
+<igx-column-group header="General Information" [headerTemplate]="columnGroupHeaderTemplate">
+    ...
+</igx-column-group>
+<igx-column-group header="Address Information" [headerTemplate]="columnGroupHeaderTemplate">
+    ...
+</igx-column-group>
+...
+```
+
+> [!NOTE]
+> If a header is retemplated and the corresponding column group is movable, you have to set the **draggable** attribute to **false** on the templated elements, so that you can handle any of the events that are applied!
+
+```html
+<ng-template igxHeader>
+    <igx-icon [attr.draggable]="false" (click)="onClick()"></igx-icon>
+</ng-template>
+```
+
+The following sample demonstrates how to implement collapsible column groups using header templates.
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/grid/multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="hierarchical-grid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 ### API リファレンス

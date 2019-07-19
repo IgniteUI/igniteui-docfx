@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart']
 
 ## Title and Subtitle
 
-The `Title` and `Subtitle` feature of the Angular data chart component allows you to add information to the top section of the data chart. When adding a title or subtitle to the data chart, the content of the data chart automatically resizes allowing for the title and subtitle information that you provide.
+The [`chartTitle`](datachart_chart_titles.md) and [`subtitle`](datachart_chart_titles.md) feature of the Angular data chart component allows you to add information to the top section of the data chart. When adding a title or subtitle to the data chart, the content of the data chart automatically resizes allowing for the title and subtitle information that you provide.
 
 ### Demo
 

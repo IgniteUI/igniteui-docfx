@@ -9,6 +9,34 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+- name: WPF to Angular guide
+  href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
+  new: true
+  items:
+    - name: Create your first Angular app
+      href: general/wpf_to_angular_guide/create_first_angular_app.md
+      new: false
+    - name: Create your UI with Angular components
+      href: general/wpf_to_angular_guide/create_ui_with_components.md
+      new: false
+    - name: One-Way Binding
+      href: general/wpf_to_angular_guide/one_way_binding.md
+      new: false
+    - name: Angular Events
+      href: general/wpf_to_angular_guide/angular_events.md
+      new: false
+    - name: Two-Way Binding
+      href: general/wpf_to_angular_guide/two_way_binding.md
+      new: false
+    - name: Transforming Data with Angular Pipes
+      href: general/wpf_to_angular_guide/angular_pipes.md
+      new: false
+    - name: Structural Directives in Angular
+      href: general/wpf_to_angular_guide/structural_directives.md
+      new: false
+    - name: Layout Elements
+      href: general/wpf_to_angular_guide/layout.md
+      new: false
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
@@ -94,6 +122,9 @@
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: true
+    - name: Clipboard Interactions
+      href: grid/clipboard_interactions.md
+      new: true
     - name: Sizing
       href: grid/sizing.md
       new: true
@@ -175,6 +206,9 @@
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard_navigation.md
+      new: true
+    - name: Clipboard Interactions
+      href: treegrid/clipboard_interactions.md
       new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
@@ -271,29 +305,33 @@
   items:
     - name: Activation
       href: spreadsheet_activation.md
+      new: false
+    - name: Chart Adapter
+      href: spreadsheet_chart_adapter.md
       new: true
     - name: Clipboard
       href: spreadsheet_clipboard.md
-      new: true
+      new: false
     - name: Conditional Formatting
       href: spreadsheet_conditional_formatting.md
-      new: true
+      new: false
     - name: Configuring Spreadsheet
       href: spreadsheet_configuring.md
-      new: true
+      new: false
     - name: Commands
       href: spreadsheet_commands.md
-      new: true
+      new: false
     - name: Data Validation
       href: spreadsheet_data_validation.md
-      new: true
+      new: false
     - name: Hyperlinks
       href: spreadsheet_hyperlinks.md
-      new: true
+      new: false
 - name: Charts
   header: true
 - name: Category Chart
   href: categorychart.md
+  new: false
   items:
     - name: Annotations
       href: categorychart_annotation_layers.md
@@ -321,100 +359,103 @@
       new: false
 - name: Data Chart
   href: datachart.md
-  new: true
+  new: false
   items:
     - name: Axis
       href: datachart_axis_types.md
-      new: true
+      new: false
       items:
+        - name: Axis Annotations
+          href: datachart_axis_annotations.md
+          new: true
         - name: Axis Settings
           href: datachart_axis_settings.md
-          new: true
+          new: false
         #- name: Axis Scales
         #  href: datachart_axis_scales.md
         #  new: true
         # - name: Axis Locations
         #  href: datachart_axis_locations.md
-        #  new: true
+        #  new: false
         - name: Axis Sharing
           href: datachart_axis_sharing.md
-          new: true
+          new: false
     - name: Series
       href: datachart_series_types.md
-      new: true
+      new: false
       items:
       #  - name: Requirements
       #    href: datachart_series_requirements.md
       #    new: true
-        - name: Category Series 
+        - name: Category Series
           href: datachart_series_types_category.md
-          new: true
-        - name: Financial Series 
+          new: false
+        - name: Financial Series
           href: datachart_series_types_financial.md
-          new: true
-        - name: Polar Series 
+          new: false
+        - name: Polar Series
           href: datachart_series_types_polar.md
-          new: true
-        - name: Radial Series 
+          new: false
+        - name: Radial Series
           href: datachart_series_types_radial.md
-          new: true
-        - name: Range Series 
+          new: false
+        - name: Range Series
           href: datachart_series_types_range.md
-          new: true
-        - name: Scatter Area Series 
+          new: false
+        - name: Scatter Area Series
           href: datachart_series_types_scatter_area.md
-          new: true
-        - name: Scatter Contour Series 
+          new: false
+        - name: Scatter Contour Series
           href: datachart_series_types_scatter_contour.md
-          new: true
-        - name: Scatter Bubble Series 
+          new: false
+        - name: Scatter Bubble Series
           href: datachart_series_types_scatter_bubble.md
-          new: true
+          new: false
         # - name: Scatter HD Series
         #  href: datachart_series_types_scatter_hd.md
         #  new: true
         - name: Scatter Marker Series
           href: datachart_series_types_scatter_marker.md
-          new: true
+          new: false
         - name: Scatter Shape Series
           href: datachart_series_types_shape.md
-          new: true        
+          new: false
         - name: Stacked Series
           href: datachart_series_types_stacked.md
-          new: true
+          new: false
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
     - name: Annotations
       href: datachart_series_annotations.md
-      new: true
+      new: false
     - name: Highlighting
       href: datachart_series_highlighting.md
-      new: true
+      new: false
     - name: Legend
       href: datachart_chart_legends.md
-      new: true
+      new: false
     - name: Markers
       href: datachart_series_markers.md
-      new: true
+      new: false
     - name: Navigation
       href: datachart_chart_navigation.md
-      new: true
+      new: false
     - name: Synchronization
       href: datachart_chart_synchronization.md
       new: true
     - name: Title and Subtitle
       href: datachart_chart_titles.md
-      new: true
+      new: false
     - name: Tooltips
       href: datachart_series_tooltips.md
-      new: true
+      new: false
     - name: Trendlines
       href: datachart_series_trendlines.md
-      new: true
+      new: false
     - name: Data Sources
       href: datachart_data_sources.md
-      new: true 
+      new: false
     #- name: Data Triangulation
     #  href: datachart_data_triangulation.md
     #  new: true
@@ -423,33 +464,34 @@
     #  new: true
     - name: Value Overlay
       href: datachart_series_value_overlay.md
-      new: true        
+      new: true
 - name: Financial Chart
   href: financialchart.md
+  new: false
   items:
-    - name: Annotations
-      href: financialchart_annotation_layers.md
+    - name: Binding Real-Time Data
+      href: financialchart_binding_live_data.md
       new: false
-    - name: Explore Chart Types
-      href: financialchart_explore_chart_types.md
+    - name: Binding High Volume Data
+      href: financialchart_binding_large_data.md
       new: false
-    - name: Real Time Data
-      href: financialchart_real_time_data.md
+    - name: Binding Multiple Data Sources
+      href: financialchart_binding_multiple_sources.md
       new: false
-    - name: High Volume Data
-      href: financialchart_high_volume_data.md
+    - name: Chart Annotations
+      href: financialchart_chart_annotations.md
       new: false
-    - name: Performance
-      href: financialchart_performance.md
+    - name: Chart Configuration
+      href: financialchart_chart_configuration.md
+      new: false          
+    - name: Chart Display Types
+      href: financialchart_chart_display_types.md
       new: false
-    - name: Binding to Multiple Data Sources
-      href: financialchart_binding_to_multiple_data.md
+    - name: Chart Performance
+      href: financialchart_chart_performance.md
       new: false
-    - name: Panes
-      href: financialchart_panes.md
-      new: false
-    - name: Configuration Options
-      href: financialchart_configuration_options.md
+    - name: Chart Panes
+      href: financialchart_chart_panes.md
       new: false
     - name: Custom Indicators
       href: financialchart_custom_indicators.md
@@ -459,12 +501,85 @@
       new: false
     - name: Tooltip Templates
       href: financialchart_tooltip_templates.md
+      new: false
 - name: Doughnut Chart
   href: doughnutchart.md
   new: false
 - name: Pie Chart
   href: piechart.md
   new: false
+- name: Sparkline
+  href: sparkline.md
+  new: true
+- name: Maps
+  header: true
+- name: Map
+  href: map_overview.md
+  new: false
+  items:
+    - name: Binding CSV File
+      href: map_binding_geographic_csv_files.md
+      new: false
+    - name: Binding JSON File
+      href: map_binding_geographic_json_files.md
+      new: false
+    - name: Binding Data Model
+      href: map_binding_geographic_data_models.md
+      new: false
+    - name: Binding Shape File
+      href: map_binding_geographic_shape_files.md
+      new: false
+    - name: Binding Multiple Shapes
+      href: map_binding_multiple_shapes_files.md
+      new: false
+    - name: Binding Multiple Sources
+      href: map_binding_multiple_data_sources.md
+      new: false
+    - name: Displaying Bing Imagery
+      href: map_displaying_bing_imagery.md
+      new: true
+    - name: Displaying Esri Imagery
+      href: map_displaying_esri_imagery.md
+      new: true
+    - name: Displaying Heat Tiles Imagery
+      href: map_displaying_heat_imagery.md
+      new: true
+    - name: Displaying OSM Imagery
+      href: map_displaying_osm_imagery.md
+      new: true
+    - name: Navigating Map Content
+      href: map_navigating_map_content.md
+      new: true
+    - name: Scatter Area Series
+      href: map_geographic_scatter_area_series.md
+      new: false
+    - name: Scatter Contour Series
+      href: map_geographic_scatter_contour_series.md
+      new: false
+    - name: Scatter Density Series
+      href: map_geographic_scatter_density_series.md
+      new: false
+    - name: Scatter Proportional Series
+      href: map_geographic_scatter_proportional_series.md
+      new: false
+    - name: Scatter Symbol Series
+      href: map_geographic_scatter_symbol_series.md
+      new: false
+    - name: Shape Polygon Series
+      href: map_geographic_shape_polygon_series.md
+      new: false
+    - name: Shape Polyline Series
+      href: map_geographic_shape_polyline_series.md
+      new: false
+    - name: World Connections
+      href: map_resources_world_connections.md
+      new: false
+    - name: World Locations
+      href: map_resources_world_locations.md
+      new: false
+    - name: World Utility
+      href: map_resources_world_util.md
+      new: false
 - name: Frameworks
   header: true
 - name: Excel Library
@@ -504,63 +619,6 @@
 - name: Radial Gauge
   href: radialgauge.md
   new: false
-- name: Sparkline
-  href: sparkline.md
-  new: true
-- name: Maps
-  header: true
-- name: Map
-  href: map_overview.md
-  new: true
-  items:
-    - name: Binding CSV File
-      href: map_binding_geographic_csv_files.md
-      new: true
-    - name: Binding JSON File
-      href: map_binding_geographic_json_files.md
-      new: true
-    - name: Binding Data Model
-      href: map_binding_geographic_data_models.md
-      new: true
-    - name: Binding Shape File
-      href: map_binding_geographic_shape_files.md
-      new: true
-    - name: Binding Multiple Shapes
-      href: map_binding_multiple_shapes_files.md
-      new: true
-    - name: Binding Multiple Sources
-      href: map_binding_multiple_data_sources.md
-      new: true
-    - name: Scatter Area Series
-      href: map_geographic_scatter_area_series.md
-      new: true
-    - name: Scatter Contour Series
-      href: map_geographic_scatter_contour_series.md
-      new: true
-    - name: Scatter Density Series
-      href: map_geographic_scatter_density_series.md
-      new: true
-    - name: Scatter Proportional Series
-      href: map_geographic_scatter_proportional_series.md
-      new: true
-    - name: Scatter Symbol Series
-      href: map_geographic_scatter_symbol_series.md
-      new: true
-    - name: Shape Polygon Series
-      href: map_geographic_shape_polygon_series.md
-      new: true
-    - name: Shape Polyline Series
-      href: map_geographic_shape_polyline_series.md
-      new: true
-    - name: World Connections
-      href: map_resources_world_connections.md
-      new: true
-    - name: World Locations
-      href: map_resources_world_locations.md
-      new: true
-    - name: World Utility
-      href: map_resources_world_util.md
-      new: true
 - name: Styling & Themes
   header: true
 - name: Themes
@@ -666,9 +724,15 @@
   - name: Scrolling Strategies
     href: overlay_scroll.md
     new: false
+  - name: Styling
+    href: overlay_styling.md
+    new: true
 - name: Drag and Drop
   href: drag_drop.md
   new: false
+- name: Zoom Slider
+  new: true
+  href: zoomslider_overview.md
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -725,3 +789,13 @@
 - name: Localization
   href: localization.md
   new: false
+- name: Transaction Service
+  href: transaction.md
+  new: true
+  items:
+    - name: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
+      href: transaction-how-to.md
+      new: true
+    - name: How to use the Transaction service
+      href: transaction-example.md
+      new: true

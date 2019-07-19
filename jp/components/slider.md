@@ -1,4 +1,4 @@
----
+﻿---
 title: Slider コンポーネント
 _description: Ignite UI for Angular Slider コントロールは、ブラウザー間で統一したエクスペリエンスおよび値選択の入力機能を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Slider コンポーネント, Angular Slider コントロール
@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Slider を初期化する前に、[**IgxSliderModule**]({environment:angularApiUrl}/classes/igxslidermodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Slider を初期化する前に、**IgxSliderModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -41,11 +41,11 @@ export class AppModule {}
 
 #### 連続スライダー
 > [!WARNING]
-> `isContinuous` property has been deprecated, [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) should be used instead.
+> `isContinuous` プロパティは非推奨になりました。代わりに [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) を使用してください。
 
 簡易な連続スライダーを使用します。最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) プロパティを true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。また、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "volume" プロパティにバインドします。
 
-> [!NOTE]
+> 注:
 > 連続スライダーは、現在の値に目盛りおよびバブル ラベルを表示しません。
 
 ```html
@@ -223,18 +223,18 @@ public updatePriceRange(event) {
 
 <div class="divider"></div>
 
-#### Labels mode
-We've seen only numbers in the thumbs so far, although there is another approach that you could use in order to present information - by using an array of primitive values.
+#### ラベル モード
+ここまでで目盛りでのみ数値を表示しましたが、基本的な値の配列を使用することで、情報を提示するために使用できる別の方法があります。
 >[!NOTE]
-> Your array of primitive values should contains at least two values, otherwise `labelsView` won't be enabled.
+> 初期値の配列には少なくとも 2 つの値を含める必要があり、含めない場合は labelsView が有効になりません。
 
-Once we have the definition that corresponds to the preceding rule, we are ready to give it to the `labels` **input** property, which would handle our data by spreading it equally over the `track`. Now, label values represent every primitive value we've defined in our collection. They could be accessed at any time through the API by requesting either [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) or [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel).
+このルールに対応する定義ができたら、`ラベル`の入力プロパティに渡す準備ができました。これは、データをトラック全体に均等に分散させることによって処理します。ラベル値は、コレクション内で定義したすべての初期値を表します。それらは、[lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) または [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel) のいずれかを要求することによって、API を通じていつでもアクセスできます。
 
 >[!NOTE]
-> Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
+> [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。 
 
-Another important factor is the way that the `slider` handles the update process when `labelsView` is enabled.
-It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
+もう 1 つの重要な要素は、`labelsView` が有効になっているときに`スライダー`が更新プロセスを処理する方法です。
+これは単にコレクションのインデックスで動作します。それぞれ、`value`、`lowerBound` および `upperBound` プロパティがフォロー/設定することでトラックを制御することを意味します (`インデックス`)。
 
 ```html
 <!--sample.component.html-->
@@ -258,14 +258,14 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
     <iframe id="slide-sample-6-final-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-6-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-6-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-As we see from the sample above, setting `boundaries` is still a valid operation. Addressing [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound), limits the range you can slide through.
+上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) に対応すると、スライドできる範囲が制限されます。
 
-#### lables templating
-During the showcase above, we've intentionally shown how we can provide our custom `label` template, by using both  [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) directives. Intuitively we can assume that [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) corresponds to the  [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) to the [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel). <br>
-The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitly a reference to the `value` **input** property and explicitly a reference to the `labels` **input** if `labelsView` is enabled.
+#### ラベルのテンプレート化
+上記では、igxSliderThumbFrom ディレクティブと igxSliderThumbTo ディレクティブの両方を使用して、カスタム ラベル テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
+ここでの[コンテキスト]({environment:angularApiUrl}/classes/igxslidercomponent.html#context)は、暗黙的に `value` input プロパティへの参照を、そして `labelsView` が有効な場合は明示的にラベル入力への参照を与えます。
 
 ```html
   <ng-template igxSliderThumbFrom let-value let-labels="labels">

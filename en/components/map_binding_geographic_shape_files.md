@@ -2,11 +2,12 @@
 title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Shape Files | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files. View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamGeographicMap']
 ---
 
 ## Binding Shape Files with Geo-spatial Data
 
-The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-spatial data (points/locations, polylines, polygons) from shape files and converts it to a collection of `ShapefileRecord` objects.
+The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-spatial data (points/locations, polylines, polygons) from shape files and converts it to a collection of [`ShapefileRecord`](map_binding_geographic_shape_files.md) objects.
 
 ### Demo
 
@@ -31,7 +32,7 @@ The following table explains properties of the `ShapeDataSource` class for loadi
 
 <!-- Both of the source properties for shape files are of Uri type. This means that shape files can be embedded resources in the application assembly and on the internet (via http). Refer to the previous section for more information on this process. The rules for resolving Uri objects are equivalent to any standard Uri property, for example the BitmapImage.UriSource property. -->
 
-When both source properties are set to non-null values, then the `ShapeDataSource` object’s ImportAsync method is invoked which in return performs fetching and reading the shape files and finally doing the conversion. After this operation is complete, the `ShapeDataSource` is populated with `ShapefileRecord` objects and the `ImportCompleted` event is raised in order to notify about completed process of loading and converting geo-spatial data from shape files.
+When both source properties are set to non-null values, then the `ShapeDataSource` object’s ImportAsync method is invoked which in return performs fetching and reading the shape files and finally doing the conversion. After this operation is complete, the `ShapeDataSource` is populated with [`ShapefileRecord`](map_binding_geographic_shape_files.md) objects and the `ImportCompleted` event is raised in order to notify about completed process of loading and converting geo-spatial data from shape files.
 
 ### Loading Shapefiles
 
@@ -50,9 +51,9 @@ sds.dataBind();
 
 ### Binding Shapefiles
 
-In the map component, Geographic Series are used for displaying geo-spatial data that is loaded from shape files. All types of Geographic Series have an `ItemsSource` property which can be bound to an array of objects. The `ShapeDataSource` is an example such array because it contains a list of `ShapefileRecord` objects.
+In the map component, Geographic Series are used for displaying geo-spatial data that is loaded from shape files. All types of Geographic Series have an `ItemsSource` property which can be bound to an array of objects. The `ShapeDataSource` is an example such array because it contains a list of [`ShapefileRecord`](map_binding_geographic_shape_files.md) objects.
 
-The `ShapefileRecord` class provides properties for storing geo-spatial data, listed in the following table.
+The [`ShapefileRecord`](map_binding_geographic_shape_files.md) class provides properties for storing geo-spatial data, listed in the following table.
 
 | Property   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,4 +66,86 @@ This data structure is suitable for use in most Geographic Series as long as app
 ### Code Snippet
 
 This code example assumes that shape files were loaded using the `ShapeDataSource`.
-The following code binds `IgxGeographicPolylineSeriesComponent` in the map component to the `ShapeDataSource` and maps the `Points` property of all `ShapefileRecord` objects.
+The following code binds [`IgxGeographicPolylineSeriesComponent`](map_binding_geographic_shape_files.md) in the map component to the `ShapeDataSource` and maps the `Points` property of all [`ShapefileRecord`](map_binding_geographic_shape_files.md) objects.
+
+```html
+<div className="sampleRoot" >
+    <igx-geographic-map #map
+        width="700px"
+        height="500px"
+        zoomable="true" >
+    </igx-geographic-map>
+</div>
+
+<ng-template let-series="series" let-item="item" #template>
+            <div>
+                <span>
+                Airline: {{item.name}}
+                </span>
+                <br />
+                <span>
+                Length: {{item.distance}} miles
+                </span>
+            </div>
+</ng-template>
+```
+
+```ts
+import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicPolylineSeriesComponent
+} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+
+@Component({
+  selector: "app-map-binding-shape-files",
+  styleUrls: ["./map-binding-shape-files.component.scss"],
+  templateUrl: "./map-binding-shape-files.component.html"
+})
+export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
+
+    @ViewChild ("map")
+    public map: IgxGeographicMapComponent;
+
+    @ViewChild("template")
+    public tooltipTemplate: TemplateRef<object>;
+    constructor() { }
+
+    public ngAfterViewInit() {
+    // loading a shapefile with geographic polygons
+    const sds = new ShapeDataSource();
+    sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+    sds.shapefileSource = "assets/Shapes/WorldCableRoutes.shp";
+    sds.databaseSource  = "assets/Shapes/WorldCableRoutes.dbf";
+    sds.dataBind();
+    }
+    public onDataLoaded(sds: ShapeDataSource, e: any) {
+        const shapeRecords = sds.getPointData();
+        const geoPolylines: any[] = [];
+        // parsing shapefile data and creating geo-polygons
+        for (const record of shapeRecords) {
+            // using field/column names from .DBF file
+            const route = {
+                capacity: record.fieldValues.CapacityG,
+                distance: record.fieldValues.DistanceKM,
+                isActive: record.fieldValues.NotLive !== 0,
+                isOverLand: record.fieldValues.OverLand === 0,
+                name: record.fieldValues.Name,
+                points: record.points,
+                service: record.fieldValues.InService
+            };
+            geoPolylines.push(route);
+        }
+
+        const geoSeries = new IgxGeographicPolylineSeriesComponent();
+        geoSeries.dataSource = geoPolylines;
+        geoSeries.shapeMemberPath = "points";
+        geoSeries.shapeFilterResolution = 0.0;
+        geoSeries.shapeStrokeThickness = 3;
+        geoSeries.shapeStroke = "rgb(82, 82, 82, 0.4)";
+        geoSeries.tooltipTemplate = this.tooltipTemplate;
+
+        this.map.series.add(geoSeries);
+        }
+}
+```

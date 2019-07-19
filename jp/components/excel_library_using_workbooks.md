@@ -7,27 +7,25 @@ _language: ja
 
 ## ワークブックを使用した Excel ライブラリ
 
-Infragistics Excel エンジンは、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。 
+Infragistics Excel エンジンは、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" 
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' 
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
-</div> 
+</div>
 
 <div class="divider--half"></div>
 
 ### 既定のフォントを変更
 
-`IWorkbookFont` の新しいインスタンスを作成します。workbook.styles.apply メソッドでワークブックの Style コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
+[`IWorkbookFont`](excel_library_using_workbooks.md) の新しいインスタンスを作成します。workbook.styles.apply メソッドでワークブックの Style コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
 
-```typescript
+```ts
 var workbook = new Workbook();
 var normalFont: IWorkbookFont;
 normalFont.name = "Times New Roman";
@@ -36,7 +34,7 @@ normalFont.height = 16 * 20;
 
 ### ワークブック プロパティの設定
 
-Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。`Workbook` オブジェクトの `DocumentProperties` プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
+Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](excel_library_using_workbooks.md) オブジェクトの [`documentProperties`](excel_library_using_workbooks.md) プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
 
 -   author
 
@@ -58,7 +56,7 @@ Microsoft® Excel® ドキュメント プロパティは、ドキュメント�
 
 以下のコードは、ワークブックを作成し、Title および Status ドキュメント プロパティを設定する方法を示します。
 
-```typescript
+```ts
 var workbook = new Workbook();
 workbook.documentProperties.title = "Expense Report";
 workbook.documentProperties.status = "Complete";

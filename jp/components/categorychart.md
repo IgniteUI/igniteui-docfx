@@ -1,19 +1,19 @@
 ---
 title: Category Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular
-mentionedTypes: ['CategoryChart', 'CategoryChartType']
 _description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
 _keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
 _language: ja
+mentionedTypes: ['XamCategoryChart', 'CategoryChartType']
 ---
 
-## カテゴリー チャート
+## カテゴリ チャート
 
-`IgxCategoryChart` は、カテゴリ データの可視化を容易にするチャート コンポーネントです。このコントロールにより、データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
+[`IgxCategoryChart`](categorychart.md) は、カテゴリ データの可視化を容易にするチャート コンポーネントです。このコントロールにより、データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="category-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
@@ -24,19 +24,19 @@ _language: ja
 
  ユーザーがデータのコレクョンまたはコレクション グループにバインドしてデータを指定するプロパティを設定後、あとの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なシリーズ タイプを自動的に選択します。
 
-スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば、`chartType` プロパティが `Auto` に設定される場合、コントロールは小さいデータ セットのために柱状チャートを使用し、より大きいデータ セットのために折れ線チャートを使用します。
+スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば、[`ChartType`](categorychart.md) プロパティが [`Auto`](categorychart.md) に設定される場合、コントロールは小さいデータ セットのために柱状チャートを使用し、より大きいデータ セットのために折れ線チャートを使用します。
 
-ただし、`chartType` を明示的に以下に設定してチャート タイプを指定することもできます。
+ただし、[`ChartType`](categorychart.md) を明示的に以下に設定してチャート タイプを指定することもできます。
 
--   `Line`
--   `Area`
--   `Column`
--   `Point`
--   `Spline`
--   `SplineArea`
--   `StepArea`
--   `StepLine`
--   `Waterfall`
+-   [`line`](categorychart.md)
+-   [`area`](categorychart.md)
+-   [`Column`](categorychart.md)
+-   [`Point`](categorychart.md)
+-   [`Spline`](categorychart.md)
+-   [`SplineArea`](categorychart.md)
+-   [`StepArea`](categorychart.md)
+-   [`StepLine`](categorychart.md)
+-   [`waterfall`](categorychart.md)
 
 その他のカテゴリ チャート コントロールの直感的な動作の例として、明示的にラベルを設定する必要がないことがあります。カテゴリ チャートは、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用します。
 
@@ -49,11 +49,11 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-`IgxCategoryChart` は、以下のモジュールが必要です。
+[`IgxCategoryChart`](categorychart.md) は、以下のモジュールが必要です。
 
-```typescript
+```ts
 // app.module.ts
-import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category-chart-module';
+import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
 
 @NgModule({
     imports: [
@@ -65,7 +65,7 @@ import { IgxCategoryChartModule } from 'igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに `IgxCategoryChartCoreModule` や `IgxLineSeriesDynamicModule` など問題のシリーズの動的モジュールをロードして除外します。`chartType` が `Auto` の場合、読み込んだシリーズ型が選択されます。
+カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに [`IgxCategoryChartCoreModule`](categorychart.md) や [`IgxLineSeriesDynamicModule`](categorychart.md) など問題のシリーズの動的モジュールをロードして除外します。[`ChartType`](categorychart.md) が [`Auto`](categorychart.md) の場合、読み込んだシリーズ型が選択されます。
 
 <div class="divider--half"></div>
 
@@ -73,9 +73,9 @@ export class AppModule {}
 
 カテゴリ チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-`IgxCategoryChartComponent` コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+[`IgxCategoryChartComponent`](categorychart.md) コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
-```typescript
+```ts
 var data = [
  { "CountryName": "China", "Pop1995": 1216, "Pop2005": 1297, "Pop2015": 1361, "Pop2025": 1394 },
  { "CountryName": "India", "Pop1995": 920, "Pop2005": 1090, "Pop2015": 1251, "Pop2025": 1396 },
@@ -98,7 +98,7 @@ var data = [
 
 ### チャート タイプ
 
-表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、`chartType` プロパティを設定します。
+表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、[`chartType`](categorychart.md) プロパティを設定します。
 以下は、カテゴリ チャートでサポートされるすべてのタイプです。
 
 <!-- > [!NOTE]

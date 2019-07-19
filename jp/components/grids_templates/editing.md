@@ -1,28 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Editing | Data Manipulation | Ignite UI for Angular | Infragistics
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and angular crud by using the Ignite UI Angular grid editing
+title: Angular Grid 編集|データの変更|Ignite UI for Angular |Infragistics
+_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。 
 _keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and angular crud by using the Ignite UI Angular tree grid editing
+title: Angular TreeGrid 編集|データの変更|Ignite UI for Angular
+_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and angular crud by using the Ignite UI Angular hierarchical grid editing
+title: Angular HierarchicalGrid 編集|データの変更|Ignite UI for Angular
+_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent cell editing and edit templates
+### @@igComponent セル編集とセル テンプレート
 
-Ignite UI for Angular @@igComponent component provides a great data manipulation capabilities and powerful API for Angular CRUD operations. By default the @@igComponent is using `in cell` editing and different editors will be shown based on the data type of the column, thanks to the default cell editing template. In addition you can define your own custom templates for update data actions and to override the default behavior for committing and discarding any changes.
+Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のための優れたデータ操作機能と強力な API を提供します。デフォルトで @@igComponent はセル編集を使用し、デフォルトのセル編集テンプレートによって、列のデータ型に基づいてさまざまなエディターが表示されます。さらに、データ更新アクション用の独自のカスタム テンプレートを定義したり、変更をコミット/破棄したりするためのデフォルトの動作をオーバーライドすることもできます。
 
 #### デモ
 
@@ -286,6 +286,109 @@ row.delete();
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
 
+<div class="divider--half"></div>
+
+### Styling
+
+The @@igxName allows for its cells to be styled through the [IgniteUI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+
+In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
+
+In order to use the [Ignite UI Theming Library](themes/index.md), we must first import the theme `index` file in our global styles:
+
+#### Importing style library
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+...
+```
+Now we can make use of all of the functions exposed by the IgniteUI theme engine.
+
+#### Defining a palette
+
+After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](themes/palettes.md):
+
+```scss
+$white: #fff;
+$blue: #4567bb;
+
+$color-palette: igx-palette($primary: $white, $secondary: $blue);
+```
+
+#### Defining themes
+
+We can now define the theme using our palette. The cells are styled by the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme), so we can use that to generate a theme for our @@igxName:
+
+```scss
+$custom-grid-theme: igx-grid-theme(
+    $cell-editing-background: $blue,
+    $cell-edited-value-color: $white,
+    $cell-active-border-color: $white,
+    $edit-mode-color: igx-color($color-palette, "secondary", 200)
+);
+```
+
+#### Applying the theme
+
+The easiest way to apply our theme is with a `sass` `@include` statemenet in the global styles file:
+
+```scss
+@include igx-grid($custom-grid-theme); 
+```
+
+This way, the theme will apply to **all** grids in our application. If we wish to apply this custom styling only to a specific component, we need to scope the theme.
+
+#### Scoped component theme
+
+In order for the custom theme do affect only our specific component, we can move all of the styles we just defined from the global styles file to our custom component's style file (including the [import](#importing-style-library) of the `index` file).
+
+This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation), our styles will be applied only to our custom component.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
+
+```scss
+:host {
+    ::ng-deep {
+            @include igx-grid($custom-grid-theme); 
+        }
+    }
+}
+```
+
+#### Styling Demo
+
+In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling)
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-editing-style-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:950px">
+    <iframe id="treegrid-editing-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:660px">
+    <iframe id="hierarchical-grid-editing-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
 <div class="divider--half"></div>
 
 ### API リファレンス

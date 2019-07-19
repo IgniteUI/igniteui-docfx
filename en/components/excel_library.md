@@ -1,7 +1,8 @@
 ---
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application. 
+_description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Workbook']
 ---
 
 ## Excel Library
@@ -27,7 +28,7 @@ When installing the excel package, the core package must also be installed.
 
 The excel library requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 
@@ -78,9 +79,9 @@ The following is a list of the supported versions of Excel.\*\*
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save `Workbook` objects, you can utilize the save method of the actual `Workbook` object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a `Workbook`:
+In order to load and save [`Workbook`](excel_library.md) objects, you can utilize the save method of the actual [`Workbook`](excel_library.md) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](excel_library.md):
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
@@ -98,7 +99,7 @@ Due to the size of the Excel Library, it's recommended to disable the source map
 
 Modify `angular.json` by setting the `vendorSourceMap` option under architect => build => options and under serve => options:
 
-```typescript
+```ts
 ...
     "architect": {
         "build": {

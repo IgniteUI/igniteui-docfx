@@ -1,13 +1,13 @@
 ﻿---
-title: グループ化機能 - ネイティブ  Angular | Ignite UI for Angular
-_description: Ignite UI for Angular グループ化機能は、特定の列の共通の値に基づいてデータをグループ化します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Data Grid コンポーネント, Angular Data Grid コントロール, Angular Grid コンポーネント, Angular Grid コントロール, Angular 高パフォーマンス Grid, group by, groupby, グループ化, 列グループ化
+title: Angular Grid Group By |Column Group |Ignite UI for Angular |infragistics
+_description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
+_keywords: angular group by, igniteui for angular, infragistics
 _language: ja
 ---
 
 ### グリッドのグループ化
 
-[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、列グループ値に基づいて階層グループのデータ レコードを可視化できる列グループをサポートします。グループは展開または縮小でき、グループの順序は UI または API で変更できます。
+Angular Material テーブルまたは UI グリッドの Group by 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。
 
 
 #### デモ
@@ -22,7 +22,7 @@ _language: ja
 
 #### 初期のグループ化状態
 
-グリッドの初期のグループ化状態を設定するには、式の配列をグリッドの [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティに設定します。
+グリッドの [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティに式の配列を割り当てることによって、グリッドの初期グループ化を定義することができます。
 
 ```typescript
 public ngOnInit() {
@@ -54,7 +54,7 @@ public ngOnInit() {
 }
 ```
 
-ランタイムの式は [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティから取得または設定できます。既存の式を追加または変更する必要がある場合、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) の単一または配列 の [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) メソッドを使用してください。
+ランタイムの式は [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティの取得または設定できます。既存の式を追加または変更する必要がある場合、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) の単一または配列の [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) メソッドを使用してください。
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });

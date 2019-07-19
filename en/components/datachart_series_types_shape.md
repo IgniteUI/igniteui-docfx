@@ -2,11 +2,13 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Shape
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries','ScatterPolylineSeries']
+
 ---
 
 ## Scatter Shape Series
 
-This topic explains various types of shape series in the Angular data chart component. Scatter shape series is a group of chart series that take array of shapes (array or arrays of X/Y coordinates) and render them as collection of polygons (`IgxScatterPolygonSeriesComponent`)  or polylines (`IgxScatterPolylineSeriesComponent`) in Cartesian (x, y) coordinate system.
+This topic explains various types of shape series in the Angular data chart component. Scatter shape series is a group of chart series that take array of shapes (array or arrays of X/Y coordinates) and render them as collection of polygons ([`IgxScatterPolygonSeriesComponent`](datachart_series_types_shape.md))  or polylines ([`IgxScatterPolylineSeriesComponent`](datachart_series_types_shape.md)) in Cartesian (x, y) coordinate system.
 
 Scatter shape series are often used highlight regions in scientific data or they can be used to plot diagrams, blueprints, or even floor plan of buildings.
 
@@ -26,19 +28,19 @@ Scatter shape series are often used highlight regions in scientific data or they
 
 The following table lists all types of shape series and their descriptions:
 
-| Series Name                         | Description                                                                                                                                        |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IgxScatterPolygonSeriesComponent`  | Displays a polygon for each of shape mapped to `ShapeMemberPath` property. It is useful for rendering shapes such as a country boarders.           |
-| `IgxScatterPolylineSeriesComponent` | Displays a polyline for each of shape mapped to `ShapeMemberPath` property. It is useful for rendering disconnected lines such as a network graph. |
+| Series Name                                                                                                           | Description                                                                                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxScatterPolygonSeriesComponent`](datachart_series_types_shape.md)   | Displays a polygon for each of shape mapped to [`shapeMemberPath`](datachart_series_types_shape.md) property. It is useful for rendering shapes such as a country boarders.           |
+| [`IgxScatterPolylineSeriesComponent`](datachart_series_types_shape.md) | Displays a polyline for each of shape mapped to [`shapeMemberPath`](datachart_series_types_shape.md) property. It is useful for rendering disconnected lines such as a network graph. |
 
 ### Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with scatter shape series.
 
-| Series Type                         | YAxis Type                 | XAxis Type                 |
-| ----------------------------------- | -------------------------- | -------------------------- |
-| `IgxScatterPolygonSeriesComponent`  | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `IgxScatterPolylineSeriesComponent` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| Series Type                                                                                                           | YAxis Type                                                                                          | XAxis Type                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`IgxScatterPolygonSeriesComponent`](datachart_series_types_shape.md)   | [`IgxNumericYAxisComponent`](datachart_series_types_shape.md) | [`IgxNumericXAxisComponent`](datachart_series_types_shape.md) |
+| [`IgxScatterPolylineSeriesComponent`](datachart_series_types_shape.md) | [`IgxNumericYAxisComponent`](datachart_series_types_shape.md) | [`IgxNumericXAxisComponent`](datachart_series_types_shape.md) |
 
 ### Required Data
 
@@ -46,11 +48,11 @@ Scatter shape series have the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain at one shape data column (array or arrays of X/Y coordinates) which should be mapped to the `ShapeMemberPath` property of scatter shape series (e.g. `IgxScatterPolygonSeriesComponent`)
+-   All data items must contain at one shape data column (array or arrays of X/Y coordinates) which should be mapped to the [`shapeMemberPath`](datachart_series_types_shape.md) property of scatter shape series (e.g. [`IgxScatterPolygonSeriesComponent`](datachart_series_types_shape.md))
 
 You can use the [SampleShapeData](datachart_data_sources_shape.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleShapeData.create() }
 ```
 
@@ -58,7 +60,7 @@ this.state = { dataSource: SampleShapeData.create() }
 
 The scatter polygon series requires the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -104,7 +106,7 @@ This code demonstrates how to create an instance of data chart with `ShapeColumn
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create `IgxScatterPolygonSeriesComponent` by replacing `IgxScatterPolylineSeriesComponent`.
+Note that you can also use above code to create [`IgxScatterPolygonSeriesComponent`](datachart_series_types_shape.md) by replacing [`IgxScatterPolylineSeriesComponent`](datachart_series_types_shape.md).
 
 ### Additional Resources
 

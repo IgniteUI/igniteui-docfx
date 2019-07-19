@@ -10,7 +10,7 @@ The resource topic provides implementation of utility that helps with generating
 
 ### Code Snippet
 
-```typescript
+```ts
 export default class WorldUtils {
 
     // calculate geo-paths between two locations using great circle formula

@@ -1,32 +1,30 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Column Resizing コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular 遅延の列のイズ変更を使用すると、ドラッグ操作が実行中に、一時のサイズ変更インジケーターが表示されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, 列のサイズ変更, 遅延列サイズ変更, グリッド列のサイズ変更, Angular Grid 列のサイズ変更, Angular Data Table 列のサイズ変更
+title: Angular Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: Angular Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+_keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Resizing コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular 遅延の列のイズ変更を使用すると、ドラッグ操作が実行中に、一時のサイズ変更インジケーターが表示されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Column Resizing, Deferred Column Reszing, Tree Grid Column Resizing, Angular Tree Grid Column Resizing, Angular Tree Table Column Resizing
-_language: ja
+title: Angular Tree Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: Angular Tree Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+_keywords: grid column resizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Resizing コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular 遅延の列のイズ変更を使用すると、ドラッグ操作が実行中に、一時のサイズ変更インジケーターが表示されます。
-_keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント Suite, ネイティブ Angular Controls, ネイティブ Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table control, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Column Resizing, Deferred Column Reszing, Hierarchical Grid Column Resizing, Angular Hierarchical Grid Column Resizing, Angular Hierarchical Table Column Resizing
-_language: ja
+title: Angular Hierarchical Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: Angular Hierarchical Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+_keywords: grid column resizing, igniteui for angular, infragistics
 ---
 }
 
 
 ### @@igComponent 列サイズ変更
 
-列サイズ変更の遅延では、ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると新しい列サイズが適用されます。
+グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
 
 #### @@igComponent 列サイズ変更のデモ
 
@@ -169,15 +167,16 @@ column.autosize();
 ピン固定列もサイズ変更できます。ただし、ピン固定される列のコンテナーが @@igComponent 全体の幅の 80% より大きくできないため、サイズ変更が制限されます。
 ピン固定列の自動サイズ調整で、新しい幅がピン固定列コンテナーが @@igComponent 全体の幅の 80% より大きい場合、自動サイズ調整操作は無視されます。これは、ピン固定されていない列を常にユーザーに表示して利用可能にするためです。
 
-### Styling
-To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
+### スタイル設定
+@@igComponent 列のサイズ変更行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
 // grid-resize-line-styling-sample.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-The simplest approach to achieve this is to create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
+最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、
+`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
 
 ``` scss
 $custom-grid-theme: igx-grid-theme(
@@ -186,7 +185,7 @@ $custom-grid-theme: igx-grid-theme(
 
 ```
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -196,10 +195,10 @@ $custom-grid-theme: igx-grid-theme(
 }
 ```
 
-#### Defining a color palette
-Instead of hard-coding the color values, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+#### カラーパレットの定義
+上記のように色の値をハードコーディングする代わりに、[`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the specified primary and secondary color:
+`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $primary-color: #0288D1;
@@ -208,7 +207,7 @@ $secondary-color: #BDBDBD;
 $custom-theme-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
 ```
 
-And then, with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color), we can easily retrieve the color from the palette. 
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
 $custom-grid-theme: igx-grid-theme(
@@ -218,12 +217,12 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please, refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
 
-#### Using Schemas
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+#### スキーマの使用
+テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend the predefined schema provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
+すべてのコンポーネントに提供されている定義済みスキーマ、(ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) スキーマを拡張します。
 
 ```scss
 // Extending the light grid schema
@@ -242,7 +241,7 @@ $light-grid-schema: extend($_light-grid,
 );
 ```
 
-In order to apply our custom schema, we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global light-schema
@@ -256,16 +255,16 @@ $custom-grid-theme: igx-grid-theme(
     $schema: $custom-light-grid-schema
 );
 ```
-Don't forget to include the theme in the same way as it was demonstrated above.
+テーマを上記と同じ方法で含めることに注意してください。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-resizing-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-resizing-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-resizing-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -274,7 +273,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
     <iframe id="treegrid-column-resizing-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-resizing-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-resizing-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -284,7 +283,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 </div>
 <div class="divider--half"></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }

@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[散布バブル シリーズ](datachart_series_types_scatter_bubble.md)と [Scatter Marker シリーズ](datachart_series_types_scatter_marker.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleScatterStats {
 
     public static countries: Country[];

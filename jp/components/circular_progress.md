@@ -22,7 +22,7 @@ _language: ja
 
 Circular Progress Indicator はプロセスの進行状況を表示します。
 
-Ignite UI for Angular Circular Progress を初期化する前に、[**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Circular Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts

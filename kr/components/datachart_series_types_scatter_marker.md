@@ -7,7 +7,7 @@ _language: kr
 
 ## 분산 마커 시리즈
 
-이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 분산 마커 시리즈에 대해 설명합니다. 분산 마커 시리즈는 데카르트(x, y) 좌표계를 사용하여 각 데이터 항목의 마커를 플롯하는 시리즈 그룹입니다.
+이 항목에서는 [`IgxDataChart`](datachart_series_types_scatter_marker.md) 제어에서 다양한 유형의 분산 마커 시리즈에 대해 설명합니다. 분산 마커 시리즈는 데카르트(x, y) 좌표계를 사용하여 각 데이터 항목의 마커를 플롯하는 시리즈 그룹입니다.
 
 ### 데모
 
@@ -25,21 +25,21 @@ _language: kr
 
 다음 표에는 모든 유형의 분산 마커 시리즈와 그 설명이 표시되어 있습니다.
 
-| 시리즈 이름                | 설명                                                                 |
-| --------------------- | ------------------------------------------------------------------ |
-| `ScatterSeries`       | ```XMemberPath`` 와``` \`YMemberPath`` 속성에 매핑 된 데이터 포인트의 표식을 표시합니다. |
-| `ScatterLineSeries`   | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                                    |
-| `ScatterSplineSeries` | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                           |
+| 시리즈 이름                                                                                                            | 설명                                                                 |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | ```XMemberPath`` 와``` \`YMemberPath`` 속성에 매핑 된 데이터 포인트의 표식을 표시합니다. |
+| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                                    |
+| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                           |
 
 ### 필요한 축
 
-`IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 분산 마커 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
+[`IgxDataChart`](datachart_series_types_scatter_marker.md) 제어는 다양한 유형의 축을 제공하지만 분산 마커 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| 시리즈 유형                | YAxis 유형                   | XAxis 유형                   |
-| --------------------- | -------------------------- | -------------------------- |
-| `ScatterSeries`       | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `ScatterLineSeries`   | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
-| `ScatterSplineSeries` | `IgxNumericYAxisComponent` | `IgxNumericXAxisComponent` |
+| 시리즈 유형                                                                                                            | YAxis 유형                                                                                            | XAxis 유형                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
 
 ### 필요한 데이터
 
@@ -51,7 +51,7 @@ _language: kr
 
 [SampleScatterStats](datachart_data_sources_stats.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
@@ -59,7 +59,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 분산 마커 시리즈에는 다음과 같은 모듈이 필요합니다:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -69,7 +69,7 @@ import { IgxScatterLineSeries } from "igniteui-angular-charts/ES5/igx-scatter-li
 import { IgxScatterSplineSeries } from "igniteui-angular-charts/ES5/igx-scatter-spline-series";
 import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -88,7 +88,7 @@ export class AppModule { /* ... */ }
 
 ### 코드 예제
 
-이 코드는 `ScatterSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
+이 코드는 [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -107,7 +107,7 @@ export class AppModule { /* ... */ }
  </igx-data-chart>
 ```
 
-위의 코드를 사용하면 `ScatterSeries`를 대체하여 `ScatterLineSeries` 또는 `ScatterSplineSeries`를 생성할 수도 있습니다.
+위의 코드를 사용하면 [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)를 대체하여 [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md) 또는 [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md)를 생성할 수도 있습니다.
 
 ### 시리즈 외관
 

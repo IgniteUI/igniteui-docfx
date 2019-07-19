@@ -10,7 +10,7 @@ The resource topic provides implementation of data utility for generating locati
 
 ### Code Snippet
 
-```typescript
+```ts
 import WorldLocations from "./WorldLocations";
 import WorldUtils from "./WorldUtils"
 

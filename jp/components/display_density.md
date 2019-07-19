@@ -1,22 +1,22 @@
 ---
-title: 密度の表示 | Ignite UI for Angular 
-_description: Ignite UI for Angular は、アプリケーションまたはコンポーネント レベルで density プロパティの表示を設定できます。 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, density, display density
+title: 表示密度|Ignite UI for Angular 
+_description: Ignite UI for Angular は、アプリケーションまたはコンポーネント レベルで density プロパティの表示を設定できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular Components, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, density, 表示密度
 _language: ja
 ---
 
-## 密度の表示
+## 表示密度
 
-密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular は、
+密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、事前に定義された一連のオプション (comfortable,, compact, cosy) を提供します。
 
 [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) インジェクション トークンを使用し、アプリケーションやコンポーネントの表示密度を設定できます。 
 
-### 密度表示のデモ
+### 表示密度のデモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
     <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -50,7 +50,7 @@ providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayD
 
 * [DisplayDensity]({environment:angularApiUrl}/enums/displaydensity.html)
 * [DisplayDensityBase]({environment:angularApiUrl}/classes/displaydensitybase.html)
-* [IDisplayDensity]({environment:angularApiUrl}/interfaces/idisplaydensity.html)
+* [IDisplayDensityOptions]({environment:angularApiUrl}/interfaces/idisplaydensityoptions.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)
 
 ### その他のリソース

@@ -1,16 +1,17 @@
----
-title: Excel からの貼り付け - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel から貼り付け, Angular Excel からの貼り付け
+﻿---
+title: Excel からの貼り付け|選択したデータのエクスポート|Ignite UI for Angular |infragistics 
+_description: API を使用して最小限のコードで Excel からのデータ貼り付けや選択したグリッド データを簡単にエクスポートできます。
+_keywords: export selected, igniteui for angular, infragistics
 _language: ja
 ---
 
-### Excel からの貼り付け
+### Excel からのグリッドの貼り付け
 
 Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 
 #### Excel からデータを貼り付けるデモ
 
-このサンプルでは、Excel から [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の貼り付けを実装する方法を紹介します。
+このサンプルでは、Excel から [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の貼り付けを実装する方法を紹介します。
 サンプルは、Excel スプレッドシートを開いて行をコピーし、キーボード (Ctrl + V、Shift + Insert、Command + V) を使用してグリッドに貼り付けます。
 
 上部に2 つのオプションとドロップダウン ボタンがあります。
@@ -226,7 +227,7 @@ export class PasteHandler {
 
 <div class="divider--half"></div>
 
-* [Excel Exporter](export_excel.md)
+* [Excel エクスポーター](export_excel.md) - Excel エクスポーター サービスを使用して、IgxGrid から Excel にデータをエクスポートします。選択したデータのみを IgxGrid からエクスポートするオプションもあります。エクスポート機能は、IgxExcelExporterService クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式はフィルタリングや並べ替えなどの機能が使用でき、IgxExcelExporterService の export メソッドを呼び出して最初の引数として IgxGrid コンポーネントを渡します。
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

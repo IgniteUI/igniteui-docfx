@@ -181,210 +181,122 @@ If changing the tabs' labels and icons is not enough, you can also create your o
 </igx-tabs>
 ```
 
-### Using Tabs and Routing
+### Integration With Router Outlet Container
 
-The following examples demonstrate sample usage of the tabs component and basic routing scenarios. You can learn more about Angular Routing & Navigation <a href="https://angular.io/guide/router" target="_blank">here</a>. 
+Despite the primary usage of the Tabs component is to define groups with content, there may be cases in which you may need to define tab items only.
 
-#### Using igxTab, routerLink Directives and Single router-outlet
+> [!NOTE]
+> Keep in mind that the tab items definition mode does not support any content in the tabs - the component renders a tab items' strip only. The component also does not support mixing of tab item definitions and group definitions at the same time.
 
-In order to implement basic routing with [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html), you can re-template the igx-tabs item header using the [`igxTab`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) directive and provide links via `routerLink` in `ng-template`. Views are switched and displayed after a single `router-outlet` placed outside the tabs component. Note that `ng-template` content overides the default tabs headers style.
+When defining tab items you have the ability to apply directives on them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the Tabs component to switch between three components in a single router-outlet.
 
-```html
-<!-- tabs-sample-1.component.html -->
-<igx-tabs #tabs1>
-  <igx-tabs-group *ngFor="let routerLink of routerLinks">
-    <ng-template igxTab>
-      {{routerLink.label}}
-      <a routerLink="{{routerLink.link}}"></a>
-    </ng-template>
-  </igx-tabs-group>
-</igx-tabs>
-
-<div>
-  <router-outlet></router-outlet>
-</div>
-```
+To start we need a main component hosting the Tabs component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
 
 ```typescript
-// tabs-sample-1.component.ts
-this.routerLinks = [
-  {
-    label: 'View 1',
-    link: '/view1',
-    index: 0
-  }, 
-  {
-    label: 'View 2',
-    link: '/view2',
-    index: 1
-  },
-  {
-    label: 'View 3',
-    link: '/view3',
-    index: 2
-  },
-];
-```
-Declare all needed route definitions that map URL path to a specific component. All available child components with their URL paths are listed in a separate routing module named tabs.routing.module.ts which is imported in the main routing module named app.routing.module.ts. Configure the router via the RouterModule.forChild method.
+// tabs-routing.component.ts
+import { Component } from "@angular/core";
 
-```typescript
-// tabs.routing.module.ts
-const routes: Routes = [
-    // simple links
-    { path: 'view1', component: View1Component },
-    { path: 'view2', component: View2Component },
-    { path: 'view3', component: View3Component },
-    { path: '', redirectTo: 'view1', pathMatch: 'full' }
-];
-
-@NgModule({
-    imports: [
-        RouterModule.forChild(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
+@Component({
+    selector: "app-tabs-routing",
+    styleUrls: ["tabs-routing.component.scss"],
+    templateUrl: "tabs-routing.component.html"
 })
-export class TabsRoutingModule { }
+export class TabsRoutingComponent {
+    constructor() { }
+}
+
+@Component({
+    template: "<h3>Tab 1 Content</h3>"
+})
+export class TabsRoutingView1Component {
+}
+
+@Component({
+    template: "<h3>Tab 2 Content</h3>"
+})
+export class TabsRoutingView2Component {
+}
+
+@Component({
+    template: "<h3>Tab 3 Content</h3>"
+})
+export class TabsRoutingView3Component {
+}
 ```
-Configure the main router using RouterModule.forRoot method.
+
+The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
-// app.routing.module.ts
-const routes: Routes = [
-  {
-    path: 'tabs',
-    component: TabsSample1Component
-  },
-  { path: '', redirectTo: '/tabs', pathMatch: 'full' }
+// app-routing.module.ts
+import {
+    TabsRoutingComponent,
+    TabsRoutingView1Component,
+    TabsRoutingView2Component,
+    TabsRoutingView3Component } from './tabs-routing.component';
+
+...
+
+const appRoutes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/tabs-routing'
+    },
+    {
+        path: 'tabs-routing',
+        component: TabsRoutingComponent,
+        children: [
+            { path: 'view1', component: TabsRoutingView1Component },
+            { path: 'view2', component: TabsRoutingView2Component },
+            { path: 'view3', component: TabsRoutingView3Component },
+        ]
+    }
 ];
 
 @NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
+    exports: [RouterModule],
+    imports: [RouterModule.forRoot(appRoutes)]
 })
 export class AppRoutingModule { }
 ```
 
-In order to handle the back/forward browser buttons in this particular case, add the following code in ngOnInit and use the [`IgxTabsGroupComponent`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html) [`select`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#select) method to activate the relevant tabs group.
-
-```typescript
-// tabs-sample-1.component.ts
-constructor(private router: Router) {}
-
-public ngOnInit() {
-  // Initial view loaded
-  this.router.navigate(['view1']);
-
-  // Handle the back/forward browser buttons
-  this._navigationEndSubscription = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((args) => {
-  const index = this.routerLinks.indexOf(this.routerLinks.find(tab => tab.link === this.router.url));
-  (this.tabs.groups.filter(item => item.index === index)[0] as IgxTabsGroupComponent).select();
-  });
-}
-```
-
-<div class="sample-container loading">
-    <iframe id="tabs-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-4' seamless="" frameBorder="0" style="display: none" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-#### Using Separate router-outlet as Tabs Content
-In order to render views inside the [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) content, use named router outlets. In this case, implement [`onTabItemSelected`]({environment:angularApiUrl}/classes/igxtabscomponent.html#ontabitemselected) event handler to navigate and render the specified view.
+Now that we have all navigation routes setup, we need to declare the Tabs component and configure it for routing.
+Also, make sure to add a router-outlet for rendering the view components' output.
 
 ```html
-<!-- tabs-sample-1.component.html -->
-<!-- router-outlet inside the tabs items content -->
-<igx-tabs #tabs1 (onTabItemSelected)="navigate($event)">
-  <igx-tabs-group label="Product1" name="product1">
-    <router-outlet name="product1"></router-outlet>
-  </igx-tabs-group>
-  <igx-tabs-group label="Product2" name="product2">
-    <router-outlet name="product2"></router-outlet>
-  </igx-tabs-group>
-  <igx-tabs-group label="Product3" name="product3">
-    <router-outlet name="product3"></router-outlet>
-  </igx-tabs-group>
+<!-- tabs-routing.component.html -->
+<igx-tabs>
+  <igx-tab-item label="Tab 1" icon="dashboard"
+    routerLink="view1"
+    routerLinkActive #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive">
+  </igx-tab-item>
+
+  <igx-tab-item label="Tab 2" icon="check_circle_outline"
+    routerLink="view2"
+    routerLinkActive #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive">
+  </igx-tab-item>
+
+  <igx-tab-item label="Tab 3" icon="radio_button_checked"
+    routerLink="view3"
+    routerLinkActive #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive">
+  </igx-tab-item>
 </igx-tabs>
+
+<router-outlet></router-outlet>
 ```
 
-```typescript
-// tabs-sample-1.component.ts
-public navigate(eventArgs) {
-    const selectedIndex = eventArgs.group.index;
-    switch(selectedIndex) {
-      case 0: {
-        this.router.navigate(['/productDetails',
-          {
-            outlets:
-            {
-              product1: ['product1']
-            }
-          }
-        ]);
-        break;
-    }
-    case 1: {
-      this.router.navigate(['/productDetails',
-        {
-          outlets:
-          {
-            product2: ['product2']
-          }
-        }
-      ]);
-      break;
-    }
-    case 2: {
-      this.router.navigate(['/productDetails',
-          {
-            outlets:
-            {
-              product3: ['product3']
-            }
-          }
-        ]);
-        break;
-      }
-    }
-  }
-```
-Declare all needed route definitions that map URL path to a specific component:
+The above code creates a Tabs component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
 
-```typescript
-// tabs.routing.module.ts
-const routes: Routes = [
-  {
-    // children outlets
-    path: 'productDetails',
-    children: [
-      { path: 'product1', component: View1Component, outlet: 'product1' },
-      { path: 'product2', component: View2Component, outlet: 'product2' },
-      { path: 'product3', component: View3Component, outlet: 'product3' },
-      { path: '', redirectTo: 'product1', pathMatch: 'full' }
-    ]
-  },
-  {
-    path: '',
-    redirectTo: '/productDetails',
-    pathMatch: 'full'
-  }
-];
-...
-```
+The described approach above is used by the following sample to demonstrate routing using the Tabs component:
 
-<div class="sample-container loading">
-    <iframe id="tabs-sample-5-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-5' seamless="" frameBorder="0" style="display: none" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 500px; width: 500px;">
+    <iframe id="tabs-sample-6-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-6-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 

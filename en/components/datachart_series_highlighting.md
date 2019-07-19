@@ -2,6 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Highlighting
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart']
 ---
 
 ## Highlighting
@@ -22,7 +23,7 @@ The Angular data chart component allows you to highlight the plotted series in t
 
 In order to enable highlighting in the Angular data chart component, you need to import and register the interactivity module. This can be done using the following code:
 
-```typescript
+```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-data-chart-annotation-module";
 

@@ -1,7 +1,8 @@
 ---
 title: Linear Gauge | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the linear gauge component to visualize data with a simple and concise view. Learn about the configurable elements, dependencies and code snippets.
-_keywords: linear gauge, Ignite UI for Angular, infragistics, infragistics.com
+_keywords: linear gauge, Ignite UI for Angular, infragistics
+mentionedTypes: ['XamLinearGauge']
 ---
 
 ## Linear Gauge
@@ -33,9 +34,9 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The `IgxLinearGauge` requires the following modules:
+The [`IgxLinearGauge`](lineargauge.md) requires the following modules:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
 import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
@@ -235,7 +236,7 @@ The backing element represents background and border of the linear gauge compone
 
 ### Scale
 
-The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using `isScaleInverted` property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`](lineargauge.md) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge

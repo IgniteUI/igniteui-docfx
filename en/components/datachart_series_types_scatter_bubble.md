@@ -2,11 +2,13 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Bubble
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamDataChart','BubbleSeries']
+
 ---
 
 ## Scatter Bubble Series
 
-This topic explains, with code examples, how to use scatter `IgxBubbleSeriesComponent` in the Angular data chart component. This series
+This topic explains, with code examples, how to use scatter [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md) in the Angular data chart component. This series
 is similar to [Scatter Marker Series](datachart_series_types_scatter_marker.md) which use the Cartesian (x, y) coordinate system to plot data. This series displays the data as a collection of scaled bubbles, each having a pair of numeric X/Y values that determines its location and 3rd value that determines its size.
 
 ### Demo
@@ -23,19 +25,19 @@ is similar to [Scatter Marker Series](datachart_series_types_scatter_marker.md) 
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only `IgxNumericYAxisComponent`and `IgxNumericYAxisComponent` can be used with `IgxBubbleSeriesComponent`.
+The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](datachart_series_types_scatter_bubble.md) and [`IgxNumericYAxisComponent`](datachart_series_types_scatter_bubble.md) can be used with [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md).
 
 ### Required Data
 
-The `IgxBubbleSeriesComponent` has the following data requirements:
+The [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md) has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the `XMemberPath`, `YMemberPath`, and [`radiusMemberPath`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) properties
+-   All data items must contain 3 numeric data columns which should be mapped to the [`xMemberPath`](datachart_series_types_scatter_bubble.md), [`yMemberPath`](datachart_series_types_scatter_bubble.md), and [`radiusMemberPath`](datachart_series_types_scatter_bubble.md) properties
 
 You can use the [SampleScatterStats](datachart_data_sources_stats.md) as data source which meets above data requirements.
 
-```typescript
+```ts
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
@@ -43,7 +45,7 @@ this.state = { dataSource: SampleScatterStats.getCountries() }
 
 The scatter bubble series requires the following modules:
 
-```typescript
+```ts
 // axis' modules:
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
@@ -74,7 +76,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with `IgxBubbleSeriesComponent` and bind it to the data source.
+This code demonstrates how to create an instance of data chart with [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -97,7 +99,7 @@ This code demonstrates how to create an instance of data chart with `IgxBubbleSe
 
 ### Bubble Shapes
 
-You can customize appearance of `IgxBubbleSeriesComponent` using the [Markers](datachart_series_markers.md) properties as well as to change shape of bubbles to one of predefined shapes, for example:
+You can customize appearance of [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md) using the [Markers](datachart_series_markers.md) properties as well as to change shape of bubbles to one of predefined shapes, for example:
 
 ```html
 <igx-bubble-series
@@ -108,7 +110,7 @@ You can customize appearance of `IgxBubbleSeriesComponent` using the [Markers](d
 </igx-bubble-series>
 ```
 
-```typescript
+```ts
 const series1 = new IgxBubbleSeries({ name: "series1" });
 series1.markerType = MarkerType.Square;
 series1.markerBrush = "White";
@@ -117,9 +119,9 @@ series1.markerOutline = "Blue";
 
 ### Bubble Radius Scale
 
-The [`radiusScale`](/angular-apis/typescript/latest/classes/igxbubbleseriescomponent.html#radiusscale) is an optional feature of `IgxBubbleSeriesComponent` that determines the sizes of bubbles. This feature is implemented through the`IgxSizeScaleComponent` object. When the radius scale is set, the smallest bubble will be equal to [`minimumValue`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue), the largest bubble will be equal to [`maximumValue`](/angular-apis/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue), and all the remaining bubbles will be scaled accordingly. The size scale can be either linear or logarithmic. When the radius scale is not set, each bubble’s size is equal to the value of data column mapped to `RadiusMemberPath` property
+The [`radiusScale`](datachart_series_types_scatter_bubble.md) is an optional feature of [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md) that determines the sizes of bubbles. This feature is implemented through the[`IgxSizeScaleComponent`](datachart_series_types_scatter_bubble.md) object. When the radius scale is set, the smallest bubble will be equal to [`minimumValue`](datachart_series_types_scatter_bubble.md), the largest bubble will be equal to [`maximumValue`](datachart_series_types_scatter_bubble.md), and all the remaining bubbles will be scaled accordingly. The size scale can be either linear or logarithmic. When the radius scale is not set, each bubble’s size is equal to the value of data column mapped to [`radiusMemberPath`](datachart_series_types_scatter_bubble.md) property
 
-```typescript
+```ts
 const sizeScale = new IgxSizeScale({});
 sizeScale.minimumValue = 10;
 sizeScale.maximumValue = 60;
@@ -130,12 +132,12 @@ series1.radiusScale = sizeScale;
 
 ### Bubble Fill Scale
 
-The `FillScale` is an optional feature which determines the color pattern within a single `IgxBubbleSeriesComponent`. This series supports the following fill scales:
+The [`fillScale`](datachart_series_types_scatter_bubble.md) is an optional feature which determines the color pattern within a single [`IgxBubbleSeriesComponent`](datachart_series_types_scatter_bubble.md). This series supports the following fill scales:
 
--   `IgxValueBrushScaleComponent` uses a set of values from data column mapped to `FillMemberPath` property to determine an interpolated brush for bubbles. Also, it can have user-specified [`minimumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#minimumvalue) and [`maximumValue`](/angular-apis/typescript/latest/classes/igxvaluebrushscalecomponent.html#maximumvalue). When a range is set on this scale, bubbles with values that fall outside the range do not get a brush from the `Brushes` collection and are not colored.
--   `IgxCustomPaletteBrushScaleComponent` uses the index of a bubble marker to select a brush from the `Brushes` collection. When the [`brushSelectionMode`](/angular-apis/typescript/latest/classes/igxcustompalettebrushscalecomponent.html#brushselectionmode) property is set to the `Select` enumerable value, the bubbles are colored sequentially and it is set to `Interpolate`, the brush is interpolated based on the bubble’s index and the number of brushes in the collection.
+-   [`IgxValueBrushScaleComponent`](datachart_series_types_scatter_bubble.md) uses a set of values from data column mapped to [`fillMemberPath`](datachart_series_types_scatter_bubble.md) property to determine an interpolated brush for bubbles. Also, it can have user-specified [`minimumValue`](datachart_series_types_scatter_bubble.md) and [`maximumValue`](datachart_series_types_scatter_bubble.md). When a range is set on this scale, bubbles with values that fall outside the range do not get a brush from the [`brushes`](datachart_series_types_scatter_bubble.md) collection and are not colored.
+-   [`IgxCustomPaletteBrushScaleComponent`](datachart_series_types_scatter_bubble.md) uses the index of a bubble marker to select a brush from the [`brushes`](datachart_series_types_scatter_bubble.md) collection. When the [`brushSelectionMode`](datachart_series_types_scatter_bubble.md) property is set to the `Select` enumerable value, the bubbles are colored sequentially and it is set to `Interpolate`, the brush is interpolated based on the bubble’s index and the number of brushes in the collection.
 
-```typescript
+```ts
 const brushScale = new IgxValueBrushScale({});
 brushScale.brushes = ["#ffffff", "#b56ffc"];
 brushScale.minimumValue = 10;

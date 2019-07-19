@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 레이디얼 시리즈
+## Radial Series
 
-이 항목에서는 `IgxDataChart` 제어에서 다양한 유형의 레이디얼 시리즈에 대해 설명합니다. 레이디얼 시리즈는 [카테고리 시리즈](datachart_series_types_category.md)처럼 가로 라인에 따라 늘어나는 것이 아니라 데이터를 원형으로 감싼 데이터 점 컬렉션으로 데이터를 렌더링하는 시리즈의 그룹입니다. 레이디얼 시리즈는 차트 범위의 최소값에서 최대값까지 카테고리 목록을 매핑하고 [카테고리 시리즈](datachart_series_types_category.md)의 동일한 카테고리 그룹화 메커니즘을 지원합니다.
+이 항목에서는 [`IgxDataChart`](datachart_series_types_radial.md) 제어에서 다양한 유형의 레이디얼 시리즈에 대해 설명합니다. 레이디얼 시리즈는 [카테고리 시리즈](datachart_series_types_category.md)처럼 가로 라인에 따라 늘어나는 것이 아니라 데이터를 원형으로 감싼 데이터 점 컬렉션으로 데이터를 렌더링하는 시리즈의 그룹입니다. 레이디얼 시리즈는 차트 범위의 최소값에서 최대값까지 카테고리 목록을 매핑하고 [카테고리 시리즈](datachart_series_types_category.md)의 동일한 카테고리 그룹화 메커니즘을 지원합니다.
 
 ### 데모
 
@@ -25,24 +25,24 @@ _language: kr
 
 다음 표에는 모든 유형의 레이디얼 시리즈와 그 설명이 표시되어 있습니다.
 
-| 시리즈 이름                   | 설명                                                                  |
-| ------------------------ | ------------------------------------------------------------------- |
-| `RadialAreaSeries`       | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합으로 둘러싸여 채워진 폴리곤을 표시합니다.         |
-| `RadialSplineAreaSeries` | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 매끄럽고/보간된 선 집합으로 둘러싸여 채워진 폴리곤을 표시합니다. |
-| `RadialSplineSeries`     | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 매끄럽고/보간된 선 집합을 표시합니다.                |
-| `RadialScatterSeries`    | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 나타내는 마커 집합을 표시합니다.                        |
-| `RadialLineSeries`       | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합을 표시합니다.                        |
+| 시리즈 이름                                                                                                      | 설명                                                                  |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md) | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합으로 둘러싸여 채워진 폴리곤을 표시합니다.         |
+| `RadialSplineAreaSeries`                                                                                    | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 매끄럽고/보간된 선 집합으로 둘러싸여 채워진 폴리곤을 표시합니다. |
+| `RadialSplineSeries`                                                                                        | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 매끄럽고/보간된 선 집합을 표시합니다.                |
+| `RadialScatterSeries`                                                                                       | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 나타내는 마커 집합을 표시합니다.                        |
+| [`IgxRadialLineSeriesComponent`](datachart_series_types_radial.md) | 레이디얼(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합을 표시합니다.                        |
 
 ### 필요한 축
 
-`IgxDataChart` 제어는 다양한 유형의 축을 제공하지만 레이디얼 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
+[`IgxDataChart`](datachart_series_types_radial.md) 제어는 다양한 유형의 축을 제공하지만 레이디얼 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| 시리즈 유형               | Radius Axis 유형                  | Angle Axis 유형                   |
-| -------------------- | ------------------------------- | ------------------------------- |
-| `RadialAreaSeries`   | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
-| `RadialPieSeries`    | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
-| `RadialColumnSeries` | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
-| `RadialLineSeries`   | `IgxNumericRadiusAxisComponent` | `IgxCategoryAngleAxisComponent` |
+| 시리즈 유형                                                                                                          | Radius Axis 유형                                                                                                | Angle Axis 유형                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md)     | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
+| [`IgxRadialPieSeriesComponent`](datachart_series_types_radial.md)       | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
+| [`IgxRadialColumnSeriesComponent`](datachart_series_types_radial.md) | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
+| [`IgxRadialLineSeriesComponent`](datachart_series_types_radial.md)     | [`IgxNumericRadiusAxisComponent`](datachart_series_types_radial.md) | [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md) |
 
 ### 필요한 데이터
 
@@ -50,12 +50,12 @@ _language: kr
 
 -   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
 -   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 레이디얼 시리즈를 렌더링하지 않습니다.
--   모든 데이터 항목에는 카테고리 축(예: `IgxCategoryAngleAxisComponent`)의 `Label` 속성에 매핑해야 하는 하나 이상의 라벨 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
--   모든 데이터 항목에는 카테고리 시리즈(예: `RadialAreaSeries`)의 `ValueMemberPath` 속성을 사용하여 매핑하는 숫자 데이터 열이 하나 이상 있어야 합니다
+-   모든 데이터 항목에는 카테고리 축(예: [`IgxCategoryAngleAxisComponent`](datachart_series_types_radial.md))의 `Label` 속성에 매핑해야 하는 하나 이상의 라벨 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
+-   모든 데이터 항목에는 카테고리 시리즈(예: [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md))의 `ValueMemberPath` 속성을 사용하여 매핑하는 숫자 데이터 열이 하나 이상 있어야 합니다
 
 [SampleRadialData](datachart_data_sources_radial.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
-```typescript
+```ts
 this.state = { dataSource: SampleRadialData.create() }
 ```
 
@@ -65,7 +65,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 레이디얼 시리즈를 사용하려면 로딩하는 동안 앱에 다음 모듈을 불러와야 합니다.
 
-```typescript
+```ts
 // axis' modules:
 import { IgxCategoryAngleAxis } from "igniteui-angular-charts/ES5/igx-category-angle-axis";
 import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
@@ -75,7 +75,7 @@ import { IgxRadialLineSeries } from "igniteui-angular-charts/ES5/igx-radial-line
 import { IgxRadialPieSeries } from "igniteui-angular-charts/ES5/igx-radial-pie-series";
 import { IgxRadialColumnSeries } from "igniteui-angular-charts/ES5/igx-radial-column-series";
 // data chart's modules:
-import { IgxDataChartModule } from 'igniteui-angular-charts/ES5/igx-data-chart-module';
+import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartRadialCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-core-module";
 import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-module";
@@ -94,7 +94,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 
 ### 코드 예제
 
-이 코드는 `RadialAreaSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
+이 코드는 [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -112,7 +112,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
  </igx-data-chart>
 ```
 
-또한, 위의 코드를 사용하여 `RadialAreaSeries`를 렌더링할 레이디얼 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다.
+또한, 위의 코드를 사용하여 [`IgxRadialAreaSeriesComponent`](datachart_series_types_radial.md)를 렌더링할 레이디얼 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다.
 
 ### 추가 리소스
 

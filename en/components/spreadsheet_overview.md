@@ -1,7 +1,8 @@
 ---
-title: Angular Spreadsheet | Grid Controls | Ignite UI for Angular | Overview | Infragistics |
+title: Spreadsheet | Grid Controls | Ignite UI for Angular | Overview | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+mentionedTypes: ['Spreadsheet']
 ---
 
 ## Angular Spreadsheet
@@ -26,7 +27,7 @@ When installing the spreadsheet package, the core and excel package must also be
 
 ### Required Modules
 
-The `IgxSpreadsheet` requires the following modules:
+The [`IgxSpreadsheetComponent`](spreadsheet_overview.md) requires the following modules:
 
 ```ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";

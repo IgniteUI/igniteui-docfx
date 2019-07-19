@@ -1,27 +1,27 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI Angular Material table in order to lock column or change column order with rich and easy to use API
+title: Angular Grid 列固定|Lock Column |Ignite UI for Angular |Infragistics
+_description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
 _keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI Angular Material table in order to lock column or change column order with rich and easy to use API
+title: Angular Tree Grid 列固定|Lock Column |Ignite UI for Angular |Infragistics
+_description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
 _keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI Angular Material table in order to lock column or change column order with rich and easy to use API
+title: Angular Hierarchical Tree Grid 列固定|Lock Column |Ignite UI for Angular |Infragistics
+_description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
 _keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 
-### @@igComponent Column Pinning 
-A column or multiple columns can be pinned to the left-hand side of the Angular UI Grid. **Column Pinning** in Ignite UI for Angular allows the users to lock column in a particular column order, this will allow us to see it while horizontally scrolling the @@igComponent.
+### @@igComponent 列ピン固定 
+単一または複数の列を Angular UI グリッドの左端にピン固定できます。Ignite UI for Angular の**列固定**は、ユーザーが特定の列順序で列をロックすることを可能にし、@@igComponent で水平スクロール時にロックされた列が常に表示されます。
 
 #### デモ
 
@@ -53,7 +53,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 </div>
 }
 
-#### Column Pinning API
+#### 列固定 API
 
 ピン固定領域の幅が @@igComponent より大きくならない限り各列をピン固定できます。列のピン固定は [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の pinned 入力によって制御されます。ピン固定列は常に @@igComponent の左側に描画され、@@igComponent 本体のピン固定されていない列の水平スクロールで固定されます。
 

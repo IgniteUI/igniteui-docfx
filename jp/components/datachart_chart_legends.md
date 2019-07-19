@@ -7,12 +7,12 @@ _language: ja
 
 ## 凡例
 
-凡例は、エンドユーザーが `IgxDataChart` コントロールにプロットされたデータに関連するコンテキスト情報を使用してチャートシリーズのビジュアルを識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのチャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、チャートはデフォルトで凡例なしで表示できます。
+凡例は、エンドユーザーが [`IgxDataChart`](datachart_chart_legends.md) コントロールにプロットされたデータに関連するコンテキスト情報を使用してチャートシリーズのビジュアルを識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのチャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、チャートはデフォルトで凡例なしで表示できます。
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="data-chart-legends-iframe" src='{environment:demosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="data-chart-legends-iframe" src='{environment:demosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-legends-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
@@ -23,11 +23,11 @@ _language: ja
 
 ### 凡例概要
 
-デフォルトでは、`IgxDataChart` はチャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、`IgxLegend` オブジェクトをアプリケーションに追加してから、それをチャートの `IgxLegendComponent` プロパティに設定する必要があります。
+デフォルトでは、[`IgxDataChart`](datachart_chart_legends.md) はチャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、`IgxLegend` オブジェクトをアプリケーションに追加してから、それをチャートの `Infragistics.Controls.Charts.Legend` プロパティに設定する必要があります。
 
 さらに、各シリーズオブジェクトの `Title` プロパティを設定しないと、凡例にデフォルトのシリーズタイトルが使用されます。
 
-次のコードスニペットは、`IgxDataChart` コントロールで凡例を使用する方法を示しています。
+次のコードスニペットは、[`IgxDataChart`](datachart_chart_legends.md) コントロールで凡例を使用する方法を示しています。
 
 ```html
 <div>
@@ -49,7 +49,7 @@ _language: ja
 </div>
 ```
 
-```typescript
+```ts
 @ViewChild("legend")
 public legend : IgxLegendComponent;
 ```

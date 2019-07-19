@@ -1,29 +1,32 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
-### @@igxName Conditional Cell Styling
-The @@igxName component in Ignite UI for Angular provides **conditional styling of cells** based on custom rules.
+### @@igxName 条件付きセルのスタイル設定
+Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいた**条件付きセル**のスタイル設定をサポートします。
 
-This can be achieved by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) をキーと値のペアを含むオブジェクト リテラルに設定します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
 
 #### デモ
 
