@@ -11,10 +11,8 @@ Infragistics Excel ライブラリは、Workbook、Worksheet、Cell、Formula �
 
 ### デモ
 
-<div class="sample-container" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe"
-	src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks'
-	width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
@@ -34,7 +32,7 @@ excel パッケージをインストールするときに core パッケージ�
 
 excel ライブラリは、以下のモジュールが必要です。
 
-```typescript
+```ts
 // app.module.ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 
@@ -83,9 +81,9 @@ export class AppModule {}
 
 注: Excel ライブラリ モジュールをインポートした後、ワークブックを読み込みます。
 
-`Workbook` オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
+[`Workbook`](excel_library.md) オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
@@ -103,7 +101,7 @@ Excel Library のサイズに因り、ソースマップの生成を無効にす
 
 `Angular.json` の変更:
 
-```typescript
+```ts
 ...
     "architect": {
         "build": {

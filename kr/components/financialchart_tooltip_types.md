@@ -7,7 +7,7 @@ _language: kr
 
 ## 도구 설명 유형
 
-이 항목에서는 `IgxFinancialChart`에서 사용할 수 있는 도구 설명 유형에 대한 개념 정보를 제공합니다.
+이 항목에서는 [`IgxFinancialChart`](financialchart_tooltip_types.md)에서 사용할 수 있는 도구 설명 유형에 대한 개념 정보를 제공합니다.
 
 ### 데모
 

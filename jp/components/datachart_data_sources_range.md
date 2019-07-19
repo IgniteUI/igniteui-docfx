@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[エリア シリーズ](datachart_series_types_range.md) のデータソースを実装する方法の例を示します。
 
-```typescript
+```ts
 export class SampleRangeData {
 
     public static create(): any[] {

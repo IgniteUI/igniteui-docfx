@@ -1,28 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
-_description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
-_keywords: angular grid summaries, igniteui for angular, infragistics
+title: Angular Grid 集計|グループ フッター | Ignite UI for Angular | Infragistics
+_description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
+_keywords: Angular Grid 集計, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
-_description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
-_keywords: angular grid summaries, ignite ui for angular, infragistics
+title: Angular Tree Grid 集計|グループ フッター | Ignite UI for Angular | Infragistics
+_description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
+_keywords: Angular Hierarchical Grid 集計
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
-_description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for angular Material UI
-_keywords: angular grid summaries, ignite ui for angular, infragistics
+title: Angular Hierarchical Grid 集計|グループ フッター | Ignite UI for Angular | Infragistics
+_description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
+_keywords: Angular Hierarchical Grid 集計
 ---
 }
 
-### @@igComponent Summaries Overview
+### @@igComponent の集計概要
 
-The Angular UI grid in Ignite UI for Angular has a **summaries** feature that functions on a per-column level as group footer. Angular grid summaries is powerful feature which enables the user to see column information in a separate container with a predefined set of default summary items, depending on the type of data within the column or by implementing a custom angular template in the @@igComponent.
+Ignite UI for Angular の Angular UI グリッドには、グループ フッターとして列レベルで集計できる機能があります。Angular グリッド集計は、列内のデータ タイプに応じて、あるいは @@igComponent にカスタム Angular テンプレートを実装することによって、定義済みのデフォルト集計項目を使用して別のコンテナの列情報を表示できます。
 
 #### デモ
 
@@ -358,7 +358,7 @@ export class HGridSummarySampleComponent implements OnInit {
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
+* [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

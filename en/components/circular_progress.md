@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
  Circular Progress Indicator can be used to show a user that he is in a process.
-To get started with the Ignite UI for Angular Circular Progress,  we should first import the [**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Circular Progress,  we should first import the **IgxProgressBarModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 

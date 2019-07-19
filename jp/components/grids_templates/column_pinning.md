@@ -53,7 +53,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 </div>
 }
 
-#### Column Pinning API
+#### 列固定 API
 
 ピン固定領域の幅が @@igComponent より大きくならない限り各列をピン固定できます。列のピン固定は [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の pinned 入力によって制御されます。ピン固定列は常に @@igComponent の左側に描画され、@@igComponent 本体のピン固定されていない列の水平スクロールで固定されます。
 

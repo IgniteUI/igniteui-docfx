@@ -8,8 +8,8 @@ mentionedTypes: ['XamDataChart','ScatterContourSeries']
 
 ## Scatter Contour Series
 
-This topic explains, with code examples, how to use  [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) in the Angular data chart component. This series
-draws colored contour lines based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) works a lot like the [`IgxScatterAreaSeriesComponent`](/components/datachart_series_types_scatter_contour.html) except that it represents data as contour lines colored using a fill scale and the scatter area series represents data as a surface interpolated using a color scale.
+This topic explains, with code examples, how to use  [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md) in the Angular data chart component. This series
+draws colored contour lines based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md) works a lot like the [`IgxScatterAreaSeriesComponent`](datachart_series_types_scatter_contour.md) except that it represents data as contour lines colored using a fill scale and the scatter area series represents data as a surface interpolated using a color scale.
 
 ### Demo
 
@@ -25,15 +25,15 @@ draws colored contour lines based on a triangulation of X and Y data with a nume
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_contour.html) and [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_contour.html) can be used with [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html).
+The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`](datachart_series_types_scatter_contour.md) and [`IgxNumericYAxisComponent`](datachart_series_types_scatter_contour.md) can be used with [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md).
 
 ### Required Data
 
-The [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) has the following data requirements:
+The [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md) has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 3 numeric data columns which should be mapped to the [`xMemberPath`](/components/datachart_series_types_scatter_contour.html), [`yMemberPath`](/components/datachart_series_types_scatter_contour.html), and [`valueMemberPath`](/components/datachart_series_types_scatter_contour.html) properties.
+-   All data items must contain 3 numeric data columns which should be mapped to the [`xMemberPath`](datachart_series_types_scatter_contour.md), [`yMemberPath`](datachart_series_types_scatter_contour.md), and [`valueMemberPath`](datachart_series_types_scatter_contour.md) properties.
 
 You can use the [SampleScatterData](datachart_data_sources_scatter.md) as data source which meets above data requirements.
 
@@ -73,7 +73,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with  [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) and bind it to the data source.
+This code demonstrates how to create an instance of data chart with  [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -95,19 +95,19 @@ This code demonstrates how to create an instance of data chart with  [`IgxScatte
 
 ### Contour Fill Scale
 
-Use the [`fillScale`](/components/datachart_series_types_scatter_contour.html) property of the[`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) to resolve fill brushes of the contour lines.
+Use the [`fillScale`](datachart_series_types_scatter_contour.md) property of the[`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md) to resolve fill brushes of the contour lines.
 
-The provided [`IgxValueBrushScaleComponent`](/components/datachart_series_types_scatter_contour.html) class should satisfy most coloring needs, but you can inherit from this class and provide your own coloring logic. The following table lists properties of the [`IgxValueBrushScaleComponent`](/components/datachart_series_types_scatter_contour.html) affecting the surface coloring of the [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html):
+The provided [`IgxValueBrushScaleComponent`](datachart_series_types_scatter_contour.md) class should satisfy most coloring needs, but you can inherit from this class and provide your own coloring logic. The following table lists properties of the [`IgxValueBrushScaleComponent`](datachart_series_types_scatter_contour.md) affecting the surface coloring of the [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md):
 
--   [`brushes`](/components/datachart_series_types_scatter_contour.html) sets the collection of brushes for filling contours.
+-   [`brushes`](datachart_series_types_scatter_contour.md) sets the collection of brushes for filling contours.
 -   `MaximumValue` sets the highest value to assign a brush. Any given value greater than this value will be Transparent.
 -   `MinimumValue` sets the lowest value to assign a brush. Any given value less than this value will be Transparent.
 
 ### Contour Value Resolver
 
-The [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html) renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the [`valueMemberPath`](/components/datachart_series_types_scatter_contour.html) property. If you desire more or fewer contours, you can assign the [`IgxLinearContourValueResolverComponent`](/components/datachart_series_types_scatter_contour.html) with a number of contours to the [`valueResolver`](/components/datachart_series_types_scatter_contour.html) property of the [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html).
+The [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md) renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the [`valueMemberPath`](datachart_series_types_scatter_contour.md) property. If you desire more or fewer contours, you can assign the [`IgxLinearContourValueResolverComponent`](datachart_series_types_scatter_contour.md) with a number of contours to the [`valueResolver`](datachart_series_types_scatter_contour.md) property of the [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md).
 
-The following code shows how to configure the number of contour lines in the [`IgxScatterContourSeriesComponent`](/components/datachart_series_types_scatter_contour.html).
+The following code shows how to configure the number of contour lines in the [`IgxScatterContourSeriesComponent`](datachart_series_types_scatter_contour.md).
 
 ### Additional Resources
 

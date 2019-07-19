@@ -27,9 +27,9 @@ The following table lists all types of scatter marker series and their descripti
 
 | Series Name                                                                                                       | Description                                                                            |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html)             | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
-| [`IgxScatterLineSeriesComponent`](/components/datachart_series_types_scatter_marker.html)     | Displays a straight line between each data point in addition to a marker.              |
-| [`IgxScatterSplineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) | Displays smooth line interpolated between each data point in addition to a marker.     |
+| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
+| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | Displays a straight line between each data point in addition to a marker.              |
+| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | Displays smooth line interpolated between each data point in addition to a marker.     |
 
 ### Required Axes
 
@@ -37,9 +37,9 @@ The Angular data chart component provides various types of axes but only the fol
 
 | Series Type                                                                                                       | YAxis Type                                                                                          | XAxis Type                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html)             | [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_scatter_marker.html) |
-| [`IgxScatterLineSeriesComponent`](/components/datachart_series_types_scatter_marker.html)     | [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_scatter_marker.html) |
-| [`IgxScatterSplineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericYAxisComponent`](/components/datachart_series_types_scatter_marker.html) | [`IgxNumericXAxisComponent`](/components/datachart_series_types_scatter_marker.html) |
+| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
 
 ### Required Data
 
@@ -88,7 +88,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with [`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html) and bind it to the data source.
+This code demonstrates how to create an instance of data chart with [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md) and bind it to the data source.
 
 ```html
  <igx-data-chart
@@ -107,7 +107,7 @@ This code demonstrates how to create an instance of data chart with [`IgxScatter
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create [`IgxScatterLineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) or [`IgxScatterSplineSeriesComponent`](/components/datachart_series_types_scatter_marker.html) by replacing [`IgxScatterSeriesComponent`](/components/datachart_series_types_scatter_marker.html).
+Note that you can also use above code to create [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md) or [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) by replacing [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md).
 
 ### Series Appearance
 

@@ -342,6 +342,125 @@ And don't forget to include the following CSS definitions in order for the appli
 
 You can see the result of the code above at the beginning of this article in the [Bottom Navigation Demo](#bottom-navigation-demo) section.
 
+#### Integration With Router Outlet Container
+
+Despite the primary usage of the Bottom Navigation component is to define panels with content, there may be cases in which you may need to define tab items only.
+
+> [!NOTE]
+> Keep in mind that the tab items definition mode does not support any content in the tabs - the component renders a tab items' strip only. The component also does not support mixing of tab item definitions and panel definitions at the same time.
+
+When defining tab items you have the ability to apply directives on them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the Bottom Navigation component to switch between three components in a single router-outlet.
+
+To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
+
+```typescript
+// bottomnav-routing.component.ts
+import { Component } from "@angular/core";
+
+@Component({
+    selector: "app-bottomnav-routing",
+    styleUrls: ["bottomnav-routing.component.scss"],
+    templateUrl: "bottomnav-routing.component.html"
+})
+export class BottomNavRoutingComponent {
+    constructor() { }
+}
+
+@Component({
+    template: "<h3>Tab 1 Content</h3>"
+})
+export class BottomNavRoutingView1Component {
+}
+
+@Component({
+    template: "<h3>Tab 2 Content</h3>"
+})
+export class BottomNavRoutingView2Component {
+}
+
+@Component({
+    template: "<h3>Tab 3 Content</h3>"
+})
+export class BottomNavRoutingView3Component {
+}
+```
+
+The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
+
+```typescript
+// app-routing.module.ts
+import {
+    BottomNavRoutingComponent,
+    BottomNavRoutingView1Component,
+    BottomNavRoutingView2Component,
+    BottomNavRoutingView3Component } from './bottomnav-routing.component';
+
+...
+
+const appRoutes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/bottomnav-routing'
+    },
+    {
+        path: 'bottomnav-routing',
+        component: BottomNavRoutingComponent,
+        children: [
+            { path: 'view1', component: BottomNavRoutingView1Component },
+            { path: 'view2', component: BottomNavRoutingView2Component },
+            { path: 'view3', component: BottomNavRoutingView3Component },
+        ]
+    }
+];
+
+@NgModule({
+    exports: [RouterModule],
+    imports: [RouterModule.forRoot(appRoutes)]
+})
+export class AppRoutingModule { }
+```
+
+Now that we have all navigation routes setup, we need to declare the BottomNavigation component and configure it for routing.
+Also, make sure to add a router-outlet for rendering the view components' output.
+
+```html
+<!-- bottomnav-routing.component.html -->
+<router-outlet></router-outlet>
+
+<igx-bottom-nav>
+  <igx-tab label="Tab 1" icon="dashboard"
+    routerLink="view1"
+    routerLinkActive #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive">
+  </igx-tab>
+
+  <igx-tab label="Tab 2" icon="check_circle_outline"
+    routerLink="view2"
+    routerLinkActive #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive">
+  </igx-tab>
+
+  <igx-tab label="Tab 3" icon="radio_button_checked"
+    routerLink="view3"
+    routerLinkActive #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive">
+  </igx-tab>
+</igx-bottom-nav>
+```
+
+The above code creates a BottomNavigation component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
+
+The described approach above is used by the following sample to demonstrate routing using the BottomNavigation component:
+
+<div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
+    <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### API References
 <div class="divider--half"></div>
 

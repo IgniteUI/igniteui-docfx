@@ -1,28 +1,31 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Hiding | Ignite UI for Angular | Infragistics
-_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
+title: Angular Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Hiding | Ignite UI for Angular | Infragistics
-_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
+title: Angular Tree Grid Column Hiding |Ignite UI for Angular |Infragistics
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Hiding | Ignite UI for Angular | Infragistics
-_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
+title: Angular Hierarchical Grid Column Hiding |Ignite UI for Angular |Infragistics
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
 ### グリッドの列非表示
 
-The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html), which allows users to perform column hiding directly through the **UI** or by using the angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
+Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) は、ユーザーが UI を介して直接、または Angle コンポーネントを使用した列の非表示が可能です。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
 #### デモ
 
@@ -58,7 +61,7 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 
 }
 
-### @@igComponent setup
+### @@igComponent の設定
 @@igComponent を作成してからデータをバインドします。列でフィルタリングと並べ替えも有効にします。
 
 @@if (igxName === 'IgxGrid') {
@@ -227,7 +230,7 @@ public ngAfterViewInit() {
 
 列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
-このトピックのはじめにあるコードの結果は [Column Hiding Demo](#demo) セクションで確認できます。
+このトピックのはじめにあるコードの結果は、[列非表示のデモ](#demo)セクションで確認できます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### カスタム列の非表示 UI
@@ -437,6 +440,176 @@ export class AppModule {}
 <div class="divider--half"></div>
 }
 }
+
+### Styling
+
+To get started with styling the column hiding component, we need to import the index file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+By using the simplest approach, we create a new theme that extends the [`igx-column-hiding-theme`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme) and accepts the `$title-color` and the `$background-color` parameters.
+
+```scss
+$custom-column-hiding-theme: igx-column-hiding-theme(
+    $background-color: steelblue,
+    $title-color: gold
+);
+```
+
+As seen, the `igx-column-hiding-theme` only controls colors for the column hiding container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
+
+```scss
+$custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
+```
+
+In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
+
+The last step is to **include** the component mixins, each with its respective theme: 
+
+```scss
+@include igx-column-hiding($custom-column-hiding-theme);
+.igx-column-hiding {
+    @include igx-button($custom-button);
+}
+```
+
+>[!NOTE]
+>We scope the **igx-button** mixin within `.igx-column-hiding`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-column-hiding($custom-column-hiding-theme);
+        .igx-column-hiding {
+            @include igx-button($custom-button);
+        }
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: gold;
+$blue-color: steelblue;
+
+$custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$custom-column-hiding-theme: igx-column-hiding-theme(
+    $palette: $custom-palette,
+    $title-color: igx-color($custom-palette, "secondary", 400),
+    $background-color: igx-color($custom-palette, "primary", 200)
+);
+
+$custom-button: igx-button-theme(
+    $palette: $custom-palette,
+    $flat-text-color: igx-color($custom-palette, "secondary", 400),
+    $disabled-color: black
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+```scss
+// Extending the dark column hiding schema
+$custom-column-hiding-schema: extend($_dark-column-hiding,
+    (
+        title-color:(
+            igx-color: ("secondary", 400)
+        ),
+        background-color:(
+            igx-color: ("primary", 200)
+        )
+    )
+);
+// Extending the dark button schema
+$custom-button-schema: extend($_dark-button,
+    (           
+        flat-text-color:(
+            igx-color:("secondary", 500)
+        ),
+        disabled-color:(
+            igx-color:("primary", 700)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-column-hiding: $custom-column-hiding-schema,
+    igx-button: $custom-button-schema
+));
+
+// Defining column-hiding-theme with the global dark schema
+$custom-column-hiding-theme: igx-column-hiding-theme(
+  $palette: $custom-palette,
+  $schema: $custom-dark-schema
+);
+
+// Defining button-theme with the global dark schema
+$custom-button: igx-button-theme(
+  $palette: $custom-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-column-hiding-toolbar-style-iframe" src='{environment:demosBaseUrl}/grid/grid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-column-hiding-toolbar-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:570px">
+    <iframe id="hierarchicalgrid-column-hiding-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
 ### API リファレンス
 
 @@if (igxName !== 'IgxHierarchicalGrid') {

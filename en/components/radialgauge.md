@@ -34,7 +34,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxRadialGauge`](/components/radialgauge.html) requires the following modules:
+The [`IgxRadialGauge`](radialgauge.md) requires the following modules:
 
 ```ts
 // app.module.ts
@@ -231,7 +231,7 @@ Radial gauge needles are visual elements used to signify a gauge set value. Need
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties.
 
-You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`](/components/radialgauge.html) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
+You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`](radialgauge.md) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
 
 ```html
 <igx-radial-gauge

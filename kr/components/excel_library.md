@@ -23,9 +23,9 @@ When installing the excel package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel**
 
-The Excel Library is exported as an `NgModule`, you need to import the `IgxExcelModule` inside your `AppModule`:
+The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`](excel_library.md) inside your `AppModule`:
 
-```typescript
+```ts
 // app.module.ts
 import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
 
@@ -74,9 +74,9 @@ The following is a list of the supported versions of Excel.\*\*
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save `Workbook` objects, you can utilize the save method of the actual `Workbook` object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a `Workbook`:
+In order to load and save [`Workbook`](excel_library.md) objects, you can utilize the save method of the actual [`Workbook`](excel_library.md) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](excel_library.md):
 
-```typescript
+```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
@@ -94,7 +94,7 @@ Due to the size of the Excel Library, it's recommended to disable the source map
 
 Modify `angular.json` by setting the `vendorSourceMap` option under architect => build => options and under serve => options:
 
-```typescript
+```ts
 ...
     "architect": {
         "build": {

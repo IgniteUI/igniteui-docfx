@@ -1,28 +1,31 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Filter | Angular Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+title: Angular フィルター | Angular Grid フィルタリング | Ignite UI for Angular | Infragistics
+_description: Angular フィルターの使用は、便利な使い方が優れているが、角度グリッド フィルターが便利です。
 _keywords: angular filter, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Filter | Angular Tree Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+title: Angular フィルター | Angular Tree Grid フィルタリング | Ignite UI for Angular | Infragistics
+_description: 角度フィルターの使用を開始するには、便利な使い方が優れているが、角度グリッド フィルターが便利です。
 _keywords: angular filter, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Filter | Angular Hierarchical Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+title: Angular フィルター | Angular Hierarchical Grid フィルタリング | Ignite UI for Angular | Infragistics
+_description: 角度フィルターの使用を開始するには、便利な使い方が優れているが、角度グリッド フィルターが便利です。
 _keywords: angular filter, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
-### @@igComponent Filtering Overview
+### @@igComponent のフィルタリング概要
 
-Angular grid filtering enables you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
+Angular グリッド フィルタリングを使用すると、指定した基準を満たすレコードのみの表示が可能です。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
 #### デモ
 

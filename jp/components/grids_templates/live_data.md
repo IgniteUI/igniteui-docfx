@@ -4,6 +4,7 @@
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
 _keywords: angular data grid, agular grid updates, angular live data
+_language: ja
 ---
 }
 
@@ -12,6 +13,7 @@ _keywords: angular data grid, agular grid updates, angular live data
 title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
 _keywords: angular data grid, agular grid updates, angular live data
+_language: ja
 ---
 }
 
@@ -23,7 +25,7 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 ## API リファレンス
@@ -87,3 +89,5 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 
 * [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+
+}

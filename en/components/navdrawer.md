@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
-To started with all needed dependencies you can use the [`IgxNavigationDrawerModule`]({environment:angularApiUrl}/classes/igxnavigationdrawermodule.html) and import it in your application IgxNavigationDrawerModule } from 'igniteui { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
+To started with all needed dependencies you can use the `IgxNavigationDrawerModule` and import it in your application IgxNavigationDrawerModule } from 'igniteui { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 ```
 @NgModule({
     imports: [

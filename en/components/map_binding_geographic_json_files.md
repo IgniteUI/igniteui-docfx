@@ -36,7 +36,7 @@ Here is an example of data from JSON file:
 
 ### Code Snippet
 
-The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`](/components/map_binding_geographic_json_files.html) in the map component to an array of objects created from loaded JSON file with geographic locations:
+The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`](map_binding_geographic_json_files.md) in the map component to an array of objects created from loaded JSON file with geographic locations:
 
 ```html
 <div className="sampleRoot" >

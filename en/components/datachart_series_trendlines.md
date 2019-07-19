@@ -22,7 +22,7 @@ The Angular data chart component has support for trendlines, which help to ident
 
 <div class="divider--half"></div>
 
-Trendlines in the Angular data chart component are not on by default. In order to set them, you can set the [`trendLineType`](/components/datachart_series_trendlines.html) property on the corresponding series that you wish the trendline to show up on. You can modify multiple appearance properties of the trendline such as its brush, period, thickness, and dash array.
+Trendlines in the Angular data chart component are not on by default. In order to set them, you can set the [`trendLineType`](datachart_series_trendlines.md) property on the corresponding series that you wish the trendline to show up on. You can modify multiple appearance properties of the trendline such as its brush, period, thickness, and dash array.
 
 Trendlines are supported on all series except for stacked and range series. Below is a list of trendlines that can be used with the series of the data chart:
 

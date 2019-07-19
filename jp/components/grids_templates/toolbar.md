@@ -1,13 +1,13 @@
 ---
-title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
-_description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
-_keywords: angular toolbar, igniteui for angular, infragistics
+title: Angular Grid ツール バー | Material Table | Ignite UI for Angular | infragistics 
+_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+_keywords: Angular ツール バー, igniteui for angular, infragistics
 _language: ja
 ---
 
-### @@igComponent Toolbar container for UI operations
+### UI 操作のための @@igComponent ツールバー コンテナ
 
-The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc and supports Angular events.
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポート、Angular イベントなど) をホストします。
 
 #### デモ
 
@@ -289,6 +289,158 @@ public toolbarExportingHandler(args) {
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+</div>
+<div class="divider"></div>
+}
+
+### Styling
+
+To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
+
+```scss
+// custom-grid-paging-style.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color`, `$title-text-color`, `$button-background`, `$button-text-color`, `$button-hover-background` and the `$button-hover-text-color` parameters.
+
+```scss
+$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
+    $background-color: #292826,
+    $title-text-color: #FFCD0F,
+    $button-background: #FFCD0F,
+    $button-text-color: #292826,
+    $button-hover-background: #404040,
+    $button-hover-text-color: #FFCD0F
+);
+```
+
+As seen, the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) only controls colors for the toolbar container and the buttons inside of it by taking advantage of the respective parameters for the button (e.g. `$button-background`). (Buttons outside the toolbar will not be affected.)
+
+The last step is to **include** the newly created theme.
+
+```scss
+@include igx-grid-toolbar($dark-grid-toolbar-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid-toolbar($dark-grid-toolbar-theme);
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
+    $background-color: igx-color($dark-palette, "primary", 200),
+    $title-text-color: igx-color($dark-palette, "secondary", 400),
+    $button-background: igx-color($dark-palette, "secondary", 400),
+    $button-text-color: igx-color($dark-palette, "primary", 400),
+    $button-hover-background: igx-color($dark-palette, "primary", 400),
+    $button-hover-text-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) schema: 
+
+```scss
+ Extending the dark toolbar schema
+$dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
+    (
+        background-color:(
+            igx-color: ("primary", 200)
+        ),
+        title-text-color:(
+            igx-color: ("secondary", 400)
+        ),
+        button-background:(
+            igx-color: ("secondary", 400)
+        ),
+        button-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        button-hover-background:(
+            igx-color: ("primary", 400)
+        ),
+        button-hover-text-color:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-grid-toolbar: $dark-grid-toolbar-schema
+));
+
+// Defining grid-toolbar-theme with the global dark schema
+$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:420px">
+    <iframe id="grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:420px">
+    <iframe id="treegrid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="hierarchical-grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider"></div>
 }

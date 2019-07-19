@@ -354,6 +354,62 @@ export class MyClass implements OnInit {
 ```
 - We should mention that if you pass the custom settings both as an argument in the `open` function as well as into the template, `igx-select` will use the ones provided *in the `open` function*. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
 
+## Styling
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-select** appearance. 
+Since `igx-select` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
+On top of that, `IgxSelect` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxSelect` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
+
+### Code snippets
+We are going to use the following:
+```scss
+// in component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+$my-primary-color:#FFC314;
+$my-secondary-color: #7344df;
+$my-info-color: #ffffff;
+
+$my-color-palette: igx-palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color,
+    $info: $my-info-color
+);
+
+$custom-select-theme: igx-drop-down-theme(
+    $background-color: igx-color($my-color-palette, "secondary", 100),
+    $header-text-color: igx-color($my-color-palette, "secondary", 600),
+    $item-text-color: igx-color($my-info-color, "info"),
+
+    $selected-item-background: igx-color($my-color-palette, "secondary", 400),
+    $selected-item-text-color: igx-color($my-color-palette, "info"),
+    $selected-hover-item-background: igx-color($my-color-palette, "secondary", 400),
+    $selected-hover-item-text-color: igx-color($my-color-palette, "info"),
+    $selected-focus-item-background: igx-color($my-color-palette, "secondary", 400),
+    $selected-focus-item-text-color: igx-color($my-color-palette, "info"),
+
+    $focused-item-background: igx-color($my-color-palette, "secondary", 300),
+    $focused-item-text-color: igx-color($my-color-palette, "info"),
+
+    $hover-item-background: igx-color($my-color-palette, "info"),
+    $hover-item-text-color: igx-color($my-color-palette, "secondary", 600)
+);
+
+// Pass our custom-select-theme to the `igx-drop-down` mixin
+    @include igx-drop-down($custom-select-theme);
+```
+
+> [!NOTE]
+> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
+
+#### Demo
+<div class="sample-container loading" style="height:450px">
+    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 ## API Reference 
 [**IgxSelectComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
 [**IgxSelectItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
