@@ -37,16 +37,18 @@ To use the geographic map component, you need to first install these packages:
 
 ### Required Modules
 
-The [`IgxGeographicMap`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmap.html) requires the following modules:
+The [`IgxGeographicMap`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmap.html) requires the following modules, however the Ig$DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
 
 ```ts
 // app.module.ts
-import {IgxGeographicMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
+import { IgxGeographicMapModule } from "igniteui-angular-maps/ES5/igx-map-module";
+import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
 @NgModule({
     imports: [
         // ...
         IgxGeographicMapModule,
+		IgxDataChartInteractivityModule
         // ...
     ]
 })
