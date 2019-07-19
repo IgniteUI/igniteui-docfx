@@ -183,7 +183,7 @@ chunkLoading(evt) {
     });
 }
 ```
-## Local Variables
+### Local Variables
 The virtual For Directive has some helper local variables into it's context, and namely `even`, `odd`, `first` and `last`. They are used to distinguish the current element based on it's position within the whole group of elements.  
 To use these local variables into a template, one has to declare the desired variable into the ng-template instance.
 ```html
