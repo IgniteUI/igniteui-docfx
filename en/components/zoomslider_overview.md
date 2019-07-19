@@ -11,7 +11,7 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="zoomslider-overview-iframe" src='{environment:demosBaseUrl}/zoomslider/zoomslider-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="zoomslider-overview-iframe" src='{environment:demosBaseUrl}/charts/zoomslider-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="zoomslider-overview" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -36,7 +36,7 @@ Feature	Description
 
     All mouse user interactions are redundantly supported through touch and most of them – through the keyboard. For details, see User Interactions and Usability.
 
--   Touch support	
+-   Touch support
 
     On touch-enabled devices, users can enjoy the full ZoomSlider functionality. All mouse interactions are supported in touch environment.
 
@@ -44,13 +44,13 @@ Feature	Description
 
     The ZoomSlider control supports igDataChart control out-of the box.
 
--   Extensibility	
+-   Extensibility
 
-    The ZoomSlider control supports DataChart control out-of the box. 
+    The ZoomSlider control supports DataChart control out-of the box.
 
--   Configurable zoom-range window	
+-   Configurable zoom-range window
 
-    The initial zoom-range window width and position, as well as its minimum size, are configurable. 
+    The initial zoom-range window width and position, as well as its minimum size, are configurable.
 
 ### Dependencies
 
@@ -61,7 +61,7 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxZoomSliderComponent`](zoomslider_overview.md) requires the following modules:
+The [`IgxZoomSliderComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
 
 ```ts
 import { IgxZoomSliderModule } from "igniteui-angular-charts/ES5/igx-zoom-slider-module";
@@ -82,7 +82,7 @@ export class AppModule {}
 The following code demonstrates how to setup the ZoomSlider.
 
 ```html
-<igx-zoom-slider  
+<igx-zoom-slider
   width="100%"
   height="150px">
 </igx-zoom-slider>
