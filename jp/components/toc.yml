@@ -9,6 +9,34 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+- name: WPF to Angular guide
+  href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
+  new: true
+  items:
+    - name: Create your first Angular app
+      href: general/wpf_to_angular_guide/create_first_angular_app.md
+      new: false
+    - name: Create your UI with Angular components
+      href: general/wpf_to_angular_guide/create_ui_with_components.md
+      new: false
+    - name: One-Way Binding
+      href: general/wpf_to_angular_guide/one_way_binding.md
+      new: false
+    - name: Angular Events
+      href: general/wpf_to_angular_guide/angular_events.md
+      new: false
+    - name: Two-Way Binding
+      href: general/wpf_to_angular_guide/two_way_binding.md
+      new: false
+    - name: Transforming Data with Angular Pipes
+      href: general/wpf_to_angular_guide/angular_pipes.md
+      new: false
+    - name: Structural Directives in Angular
+      href: general/wpf_to_angular_guide/structural_directives.md
+      new: false
+    - name: Layout Elements
+      href: general/wpf_to_angular_guide/layout.md
+      new: false
 - name: グリッドとリスト
   href: grids_and_lists.md
   header: true
