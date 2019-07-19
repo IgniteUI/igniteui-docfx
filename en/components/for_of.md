@@ -183,6 +183,20 @@ chunkLoading(evt) {
     });
 }
 ```
+## Local Variables
+The virtual For Directive has some helper local variables into it's context, and namely `even`, `odd`, `first` and `last`. They are used to distinguish the current element based on it's position within the whole group of elements.  
+To use these local variables into a template, one has to declare the desired variable into the ng-template instance.
+```html
+<ng-template igxFor let-item 
+    [igxForOf]="data" 
+    [igxForScrollOrientation]="'vertical'"
+    let-even="even">
+    <div [ngClass]="{even: even}">
+   
+    </div>
+</ng-template>
+```
+Into the example above, an `even` class would be assigned to every even div element from the group.
 ## API References
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
