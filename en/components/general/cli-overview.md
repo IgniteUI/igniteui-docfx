@@ -13,10 +13,10 @@ Install [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) using the np
 ```cmd
 npm install -g igniteui-cli 
 ```
-Once the installation process is finished, you can start the tooln using either guided experience or specific commands.
+Once the installation process is finished, you can start the tool using either guided experience or specific commands.
 
 #### Using guided experience
-The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI [`Step-by-Step Guide`](step-by-step-guide.md), which creates a configured app that can be up and running with the ease of a single command. 
+The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI [`Step-by-Step Guide`](cli/step-by-step-guide.md), which creates a configured app that can be up and running with the ease of a single command. 
 ```cmd
 ig
 ```
@@ -43,13 +43,13 @@ After running these commands, your new project will be built, served and automat
 
 ### Scaffolding
 
-The Ignite UI CLI provides multiple templates of the Ignite UI components that can be added to your project using either the [add](ig-add.md) command or the [`Step-by-Step Guide`](step-by-step-guide.md).
+The Ignite UI CLI provides multiple templates of the Ignite UI components that can be added to your project using either the [add](cli/ig-add.md) command or the [`Step-by-Step Guide`](cli/step-by-step-guide.md).
 
 Here are the main steps to create a new Ignite UI for Angular project with an igxGrid control:
 
 #### Create new project
 
-To create new Ignite UI for Angular project run the [new](ig-new.md) command.
+To create new Ignite UI for Angular project run the [new](cli/ig-new.md) command.
 
 When running the command you should provide a name for your project. This name is used also as the name of the output directory for the application. In our case this is *newAngularProject*.
 
@@ -66,7 +66,7 @@ When creating an Angular project, you can also choose its type. To initiate an a
 | side-nav      | Project structure with side navigation drawer |
 | side-nav-auth | Side navigation project extended with user authentication module |
 <br>
-[Angular Authentication Project Template](auth-template.md) topic provides a step-by-step guide to creating a project with the side-nav-auth template.
+[Angular Authentication Project Template](cli/auth-template.md) topic provides a step-by-step guide to creating a project with the side-nav-auth template.
 
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
@@ -74,14 +74,14 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 
 #### Add template
 
-To add one of the Ugnite UI control templates run the [add](ig-add.md) command from within the project folder.
+To add one of the Ignite UI control templates run the [add](cli/ig-add.md) command from within the project folder.
 
 ```cmd
 cd newAngularProject
 ig add grid newGrid
 ```
 
-To get a list of all the available [component templates](cli-templates.md) execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
+To get a list of all the available [component templates](cli/ig-add.md#templates) execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
 
 #### Run the application
 
@@ -96,8 +96,8 @@ A full list of the available Ignite UI CLI commands and their usage (like passin
 
 | Command | Alias | Description |
 | --- | --- | --- |
-| [ig new](ig-new.md) | | Create a new  Angular, jQuery or React application. The application will be configured to use Ignite UI for Angular, Ignite UI for React or Ignite UI for JavaScript controls. 
-| [ig add](ig-add.md) | | Adds a template by its ID and provided name to an existing project
+| [ig new](cli/ig-new.md) | | Create a new  Angular, jQuery or React application. The application will be configured to use Ignite UI for Angular, Ignite UI for React or Ignite UI for JavaScript controls. 
+| [ig add](cli/ig-add.md) | | Adds a template by its ID and provided name to an existing project
 | [ig start (wiki)](https://github.com/IgniteUI/igniteui-cli/wiki/start)  | | Builds the application, starts a web server and opens the application in the default browser.
 | [ig build (wiki)](https://github.com/IgniteUI/igniteui-cli/wiki/build) | | Builds the application into an output directory
 | [ig generate (wiki)](https://github.com/IgniteUI/igniteui-cli/wiki/generate) | g | Generates a new custom template for supported frameworks and project types

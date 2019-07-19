@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 
 `ig add [template] [name]` adds a template by the templateID and name provided.
 
-The `add` command is supported only on existing project created with the Ignite UI CLI. You cannot use the `add` command before creating a project uisng the `new` command or using the step by step guide which is invoked by the `ig` command. 
+The `add` command is supported only on existing project created with the Ignite UI CLI. You cannot use the `add` command before creating a project using the `new` command or using the step by step guide which is invoked by the `ig` command. 
 The quickstart projects do not support the `add` command, meaning that you cannot add more components than the predefined ones for the given project.
 
 ## Arguments
@@ -50,7 +50,7 @@ The following table describes the Ignite UI Angular components that can be gener
 |radial gauge       |<code>ig add radial-gauge newRadialGauge</code><details>IgxRadialGauge with different animations.</details>| [IgxRadialGauge](../../radialgauge.md) with different animations.|
 |<b>Layouts</b>     |                                                                                               | 
 |carousel           | <code>ig add carousel newCarousel</code><details>Basic IgxCarousel.</details>                 | [IgxCarousel](../../carousel.md) cycling through a series of images.                 |
-|tabs               | <code>ig add tabs newTabs</code><details>Basic IgxTabs.</details>                             | [IgxTabs](../../tabs.md) component that includes three customazed tab-groups.                             |
+|tabs               | <code>ig add tabs newTabs</code><details>Basic IgxTabs.</details>                             | [IgxTabs](../../tabs.md) component that includes three customized tab-groups.                             |
 |bottom-nav         | <code>ig add bottom-nav newBottomNav</code><details>Three item bottom-nav template.</details> | Three item bottom [navbar](../../navbar.md) template. |
 |<b>Data Entry & Display</b>|   
 |chip               | <code>ig add chip newChip</code><details>Basic IgxChip.</details>                             | [IgxChip](../../chip.md) components inside igx-chips-area.                             |
@@ -60,7 +60,7 @@ The following table describes the Ignite UI Angular components that can be gener
 |select (v4.1.0)    | <code>ig add select-in-form newFormSelect</code><details>IgxSelect in a form.</details>       | [IgxSelect](../../select.md) component usage in a form.       |                                                                   
 |input group        | <code>ig add input-group newInputGroup</code><details>Basic IgxInputGroup form view.</details>| Form view created with [IgxInputGroup](../../input_group.md).| 
 |<b>Interactions</b>|   
-|dialog             | <code>ig add dialog newDialog</code><details>Basic IgxDialog.</details>                       | Sample of the [IgxDialog](../../dialog.md) used as a standart confirmation dialog.                       | 
+|dialog             | <code>ig add dialog newDialog</code><details>Basic IgxDialog.</details>                       | Sample of the [IgxDialog](../../dialog.md) used as a standard confirmation dialog.                       | 
 |tooltip            | <code>ig add tooltip newTooltip</code><details>A fully customizable tooltip.</details>        | Basic tooltip created with the [IgxTooltip](../../tooltip.md).        |
 |<b>Scheduling</b>  |                                                                                               |
 |date-picker        | <code>ig add date-picker newDatePicker</code><details>Basic IgxDatePicker.</details>          | Basic [IgxDatePicker](../../date_picker.md) with one-way data binding.          |

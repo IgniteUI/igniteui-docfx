@@ -1,6 +1,6 @@
 ---
 title: Step-by-Step Guide
-_description: The Step-by-Stem Guide contains aguided experience through the Ignite UI CLI options.
+_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
