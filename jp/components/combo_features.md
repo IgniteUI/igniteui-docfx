@@ -112,6 +112,37 @@ export class MyExampleComponent {
 
 <div class="divider--half"></div>
 
+## Custom Overlay Settings
+The Combo allows users to change the way the list of items is shown. This can be done by defining custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the Combo's [`overlaySettings` Input]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings):
+
+```typescript
+// custom.component.ts
+export class CustomOverlayCombo {
+    ...
+    public customSettings: OverlaySettings = {
+        positionStrategy: new GlobalPositionStrategy({ openAnimation: scaleInCenter, closeAnimation: scaleOutCenter }),
+        modal: true,
+        closeOnOutsideClick: true,
+    };
+}
+```
+
+```html
+<!-- custom.component.html -->
+<igx-combo [data]="items" [overlaySettings]="customSettings"></igx-combo>
+```
+
+For example, with the above settings, the Combo's list will display centered, using [GlobalPositionStrategy](overlay_position.md#global):
+
+<div class="sample-container loading" style="height: 440px;">
+    <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 ## フィルタリング
 コンボのフィルタリングがデフォルトで有効になります。以下のコードで無効にできます。
 
