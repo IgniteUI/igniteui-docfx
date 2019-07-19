@@ -99,7 +99,7 @@ First, in order for us to use the functions exposed by the theme engine, we need
 
 #### Define palette
 We are going to use our own color [palette](themes/palette.md) where we can specify our two main theme colors. Additionally we are going to set several of the exposed by the [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) parameters namely `$border-radius`, `$label-color` and `$empty-color`.
-Fist define a custom palette:
+First define a custom palette:
 ```scss
 // in styles.scss
 $my-primary-color: #f5e492;
@@ -112,7 +112,7 @@ $my-color-palette: igx-palette(
 ```
 
 In order to see our custom palette applied, we need to pass it to a theme function.
-So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our tree more specific parameters as well. Let's say we have decided modifying these will be more than sufficient to make our component look the way we like. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on the colors defined.
+So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our three more specific parameters as well. Let's say we have decided modifying these will be more than sufficient to make our component look the way we like:
 ```scss
 // in styles.scss
 $custom-checkbox-theme: igx-checkbox-theme(
@@ -135,7 +135,7 @@ In case you want this newly created `igx-checkbox` theme to be applied [`globall
 ```
 
 ##### Scoped
-There may be a case where you want a particular `igx-checkbox` be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc. Additionally all of the above steps need to be moved from styles.scss to the component.scss file.
+There may be a case where you want a particular `igx-checkbox` be styled differently than the others in the app. This will require to use Angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc. Additionally, all of the above styles we specify in styles.scss need to be defined in the component.scss file instead.
 
  >[!NOTE]
  >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
