@@ -41,12 +41,12 @@ The [`IgxGeographicMap`](/products/ignite-ui-angular/api/docs/typescript/latest/
 
 ```ts
 // app.module.ts
-import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
+import {IgxGeographicMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
 
 @NgModule({
     imports: [
         // ...
-        IgxMapModule,
+        IgxGeographicMapModule,
         // ...
     ]
 })
@@ -90,26 +90,4 @@ Now that the map module is imported, next step is to create geographic map. The 
         zoomable="true" >
     </igx-geographic-map>
   </div>
-
-<ng-template let-series="series" let-item="item" #template>
-        <div>
-            <div *ngIf="item.org;then hasOrg; else notOrg" ></div>
-            <span [style.color]="series.brush">
-                {{item.name}}
-            </span>
-            <span>
-                {{item.pop}} M
-            </span>
-        </div>
-        <ng-template #hasOrg>
-            <span>
-                {{item.org}}
-            </span>
-            <br />
-        </ng-template>
-         <ng-template #notOrg>
-            <span>
-            </span>
-         </ng-template>
-    </ng-template>
 ```
