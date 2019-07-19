@@ -114,7 +114,7 @@ public processData() {
 ***참고:*** 첫 번째 [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize)는 항상 0이며 특정 애플리케이션애플리케이션 시나리오에 따라 결정해야 합니다.
 
 ### 원격 정렬/필터링 가상화
-원격 정렬 및 필터링을 제공하려면 [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDocigx.html#onfilteringdone) 출력에 서브스크라이브해야 하므로 받은 인수를 기반으로 적절한 요청을 하고 공개 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성 [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount)를 설정해야 합니다.
+원격 정렬 및 필터링을 제공하려면 [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 출력에 서브스크라이브해야 하므로 받은 인수를 기반으로 적절한 요청을 하고 공개 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성 [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount)를 설정해야 합니다.
 
 원격 데이터를 요청할 때 필터링 작업은 대소문자를 구분합니다.
 
