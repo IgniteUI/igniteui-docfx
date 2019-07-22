@@ -10,7 +10,7 @@ Ignite UI CLI provides support of multiple versions of a project (called project
 
 When creating Ignite UI for Angular project with the Ignite UI CLI you can select a template with an basic implementation of a client-side authentication module that require as little additional setup as possible to jump-start apps with user management.
 
-## Authentication Project Template
+### Create Authentication Project
 You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
 
 ![](../../../images/general/cli-igx-side-auth.png)
