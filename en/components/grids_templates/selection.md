@@ -1,4 +1,4 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
@@ -400,7 +400,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 #### Demo
 
 <div class="sample-container loading" style="height:620px">
-    <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+    <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -412,7 +412,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 @@if (igxName === 'IgxHierarchicalGrid'){
 #### Demo
 <div class="sample-container loading" style="height:620px">
-    <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+    <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -426,7 +426,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 @@if (igxName === 'IgxTreeGrid'){
 #### Demo
 <div class="sample-container loading" style="height:620px">
-    <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+    <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>

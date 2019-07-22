@@ -578,7 +578,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-column-hiding-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-style' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+    <iframe id="grid-column-hiding-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -588,7 +588,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-column-hiding-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+    <iframe id="treegrid-column-hiding-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -598,7 +598,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:570px">
-    <iframe id="hierarchicalgrid-column-hiding-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+    <iframe id="hierarchicalgrid-column-hiding-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
