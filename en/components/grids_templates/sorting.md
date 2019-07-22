@@ -163,13 +163,19 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 `igx-palette` generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
-$primary: $black-color,
-$secondary: $green-color
+$black-color: #292826;
+$green-color: #51f942;
 
 $custom-palette: igx-palette($primary: $black-color, $secondary: $green-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+
+```scss
+$custom-theme: igx-grid-theme(
+    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 700)
+);
+```
 
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
