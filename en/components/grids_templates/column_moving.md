@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
 _description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures.
@@ -256,7 +256,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
-    <iframe id="column-moving-styled-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-moving-styled-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="column-moving-styled-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-moving-styled-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -267,7 +267,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:650px">
-    <iframe id="treegrid-column-moving-styled-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-column-moving-styled-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -278,7 +278,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:660px">
-    <iframe id="hierarchical-grid-column-moving-styled-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-column-moving-styled-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
