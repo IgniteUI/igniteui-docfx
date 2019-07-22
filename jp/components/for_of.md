@@ -193,8 +193,8 @@ chunkLoading(evt) {
 
 ### Local Variables
 
-The `igxFor` directive has some helper local variables into it's context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection.
-The following code snippet demonstrates how to use the local variable into an `ng-template`.
+The `igxFor` directive includes the following helper properties in its context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection.
+The following code snippet demonstrates how to use the `even` property in an `ng-template`.
 
 ```html
 <ng-template igxFor let-item 
