@@ -220,7 +220,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-styling' width="100%" height="100%" 
-        seamless frameBorder="0" class="lazyload"></iframe>
+        seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
