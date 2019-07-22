@@ -430,7 +430,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 </div>
 <br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-tree-grid-multi-cell-selection-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" 
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>

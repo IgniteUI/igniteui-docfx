@@ -489,6 +489,13 @@ $custom-button-theme: igx-button-theme(
 ```
 
 }
+
+@@if (igxName === 'IgxGrid') {
+### Paging with Group By
+
+Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
+}
+
 ### API 참조
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)

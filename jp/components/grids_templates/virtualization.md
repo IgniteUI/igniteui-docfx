@@ -111,7 +111,7 @@ public processData() {
 ***注:*** 最初の  [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
 ### リモートの並べ替え/フィルタリングの仮想化
-リモート並べ替えとフィルタリングは、[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDocigx.html#onfilteringdone) アウトプットにサブスクライブする必要があるため、引数に基づいて適切に要求し、。[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`] を設定します。
+リモート並べ替えとフィルタリングは、[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) アウトプットにサブスクライブする必要があるため、引数に基づいて適切に要求し、。[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`] を設定します。
 
 リモートデータを要求する際にフィルタリング処理で大文字と小文字を区別することに注意してください。
 

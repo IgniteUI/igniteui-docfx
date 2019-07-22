@@ -592,6 +592,12 @@ $custom-button-theme: igx-button-theme(
 ```
 }
 
+@@if (igxName === 'IgxGrid') {
+### Paging with Group By
+
+Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
+}
+
 ### Styling
 
 To get started with styling the paginator, we need to import the `index` file, where all the theme functions and component mixins live:

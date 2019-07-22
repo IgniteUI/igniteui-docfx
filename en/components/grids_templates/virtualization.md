@@ -111,7 +111,7 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 ***Note:*** The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
 
 ### Remote Sorting/Filtering Virtualization
-To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDocigx.html#onfilteringdone) outputs so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) outputs so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
 
 Note that when requesting remote data, filtering operation is case-sensitive.
 

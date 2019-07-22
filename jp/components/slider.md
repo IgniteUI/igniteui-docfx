@@ -23,7 +23,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Slider を初期化する前に、[**IgxSliderModule**]({environment:angularApiUrl}/classes/igxslidermodule.html) を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Slider を初期化する前に、**IgxSliderModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
