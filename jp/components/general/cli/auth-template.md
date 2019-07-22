@@ -13,7 +13,7 @@ When creating Ignite UI for Angular project with the Ignite UI CLI you can selec
 ## Authentication Project Template
 You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
 
-![](../../../images/cli-igx-side-auth.png)
+![](../../../images/general/cli-igx-side-auth.png)
 
 Or though the new command:
 
@@ -24,11 +24,11 @@ ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 ### Description
 This template builds upon the Side Navigation default and adds a profile page and a login section to the app's nav bar that will display a login button or an avatar of the logged in user:
 
-![](../../../images/igx-side-auth-login-bar.png)
+![](../../../images/general/igx-side-auth-login-bar.png)
 
 The login bar also integrates dialogs to sign in or up:
 
-![](../../../images/igx-side-auth-login-dialogs.png)
+![](../../../images/general/igx-side-auth-login-dialogs.png)
 
 The project also supports various [external authentication providers](#add-a-third-party-social-provider). 
 
@@ -97,7 +97,7 @@ export class AppModule {
 ```
 This will automatically enable the respective button in the login dialog:
 
-![](assets/igx-side-auth-login-google.png)
+![](../../../images/general/igx-side-auth-login-google.png)
 
 You can do the same with [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) following this guide:
 
@@ -110,7 +110,7 @@ https://developers.facebook.com/docs/apps/#register
 
 As you enable providers, all buttons will become active:
 
-![](assets/igx-side-auth-login-social.png)
+![](../../../images/general/igx-side-auth-login-social.png)
 
 #### Provider details
 
