@@ -410,7 +410,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxGrid'){
 <div class="sample-container loading" style="height:560px">
-    <iframe id="grid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-row-edit-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="grid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -421,7 +421,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 <div class="sample-container loading" style="height:560px">
-    <iframe id="hierarchical-grid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="hierarchical-grid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -434,7 +434,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxTreeGrid'){
 <div class="sample-container loading" style="height:560px">
-    <iframe id="treegrid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="treegrid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
