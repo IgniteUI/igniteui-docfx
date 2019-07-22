@@ -13,15 +13,12 @@
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
       new: false
-    - name: Create new project
-      href: general/cli/ig-new.md
-      new: false
-    - name: Add components
-      href: general/cli/ig-add.md
+    - name: Components Templates
+      href: general/cli/components-templates.md
       new: false
     - name: Authentication Project Template
       href: general/cli/auth-template.md
-      new: false    
+      new: false
 - name: WPF to Angular guide
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true

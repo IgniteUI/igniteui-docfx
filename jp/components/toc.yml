@@ -13,17 +13,11 @@
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
       new: false
-    - name: Ignite UI for Angular templates
-      href: general/cli/cli-templates.md
+    - name: Components Templates
+      href: general/cli/components-templates.md
       new: false
-    - name: Angular Authentication Project Template
+    - name: Authentication Project Template
       href: general/cli/auth-template.md
-      new: false    
-    - name: ig new 
-      href: general/cli/ig-new.md
-      new: false
-    - name: ig add 
-      href: general/cli/ig-add.md
       new: false
 - name: グリッドとリスト
   href: grids_and_lists.md

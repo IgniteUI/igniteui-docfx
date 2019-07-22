@@ -46,7 +46,7 @@ This mode can be activated either after completing project creation or by runnin
 ig add
 ``` 
 
-In case you select to add a new control, you will be provided with a [list of the available controls](ig-add.md#templates), grouped in categories.
+In case you select to add a new control, you will be provided with a [list of the available controls](components-templates.md), grouped in categories.
 You can select a control using the arrow keys to navigate through the list and for some controls (`IgxGrid`, for example) you will be provided with a list of available features to enable.
 
 

@@ -1,6 +1,6 @@
 ---
 title: Step-by-Step Guide
-_description: The Step-by-Stem Guide contains aguided experience through the Ignite UI CLI options.
+_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
@@ -24,7 +24,7 @@ This will activate the step by step mode and you will be asked a series of quest
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
-    <p 
+</div>
 
 > **Note** Step by step mode relies on `Inquirer.js`, see [supported terminals](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)
 
@@ -37,7 +37,7 @@ You will be asked for an input (like for providing a name for your application) 
 You may skip options via the ENTER key and in such case the default values will be set for those options.
 
 
-After you provide name, framework and a theme for your application, your new project's structure will be generated, git repository will be initialized and the project will be committed. Then you will be asked if you want to complete the process or to add a new Ignite UI view to your application:
+After you provide name, framework and a theme for your application, your new project's structure will be generated, git repository will be initialized and the project will be committed. Then you will be asked if you want to complete the process or to add a new view to your application:
 
 ## Add view
 
@@ -46,16 +46,16 @@ This mode can be activated either after completing project creation or by runnin
 ig add
 ``` 
 
-In case you select to add a new control, you will be provided with a [list of the available controls](ig-add.md#Ignite UI for Angular templates), grouped in categories.
-You can select a control using the arrow keys to navigate through the list and for some controls (igGrid, for example) you will be provided with a list of available features to enable.
+In case you select to add a new control, you will be provided with a [list of the available controls](components-templates.md), grouped in categories.
+You can select a control using the arrow keys to navigate through the list and for some controls (`IgxGrid`, for example) you will be provided with a list of available features to enable.
 
 
-For example, if you select to add a grid control to your application and select the "grid-editing" template, "Updating" will be enabled by default, and you will be able to select to enable "Sorting", "Paging" and "Filtering".
+For example, if you select to add a Grid control to your application and select the "Multi Column Headers"(`grid-multi-column-headers`) template, you will be able to select additional features like "Sorting", "Filtering", "Resizing", "Column Pinning" and others.
 You can enable and disable features using the arrow keys and the Space key to toggle the selection.
 
 
 After adding a control to your application, you will be asked weather you want to complete the process or to proceed with adding more controls.
 
 
-In case you select to complete the process, the `build` command will be executed automatically, the required packages will be installed and finally - the application will be served and opened in your default browser.
-You can always add Ignite UI controls to your application at latter moment.
+When you select to complete the process, the required packages will be installed and the application will be served and opened in your default browser.
+You can always add more Ignite UI for Angular view to your application at latter moment.
