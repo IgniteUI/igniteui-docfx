@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
 _description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
@@ -240,7 +240,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/grid/multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-multi-column-header-template-iframe" data-src='{environment:demosBaseUrl}/grid/multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -249,7 +249,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:550px">
-    <iframe id="treegrid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-multi-column-header-template-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -258,7 +258,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:550px">
-    <iframe id="hierarchical-grid-multi-column-header-template-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-multi-column-header-template-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>

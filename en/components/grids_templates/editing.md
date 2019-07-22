@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Editing | Data Manipulation | Ignite UI for Angular | Infragistics
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular grid editing
@@ -364,7 +364,7 @@ In addition to the steps above, we can also style the controls that are used for
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-editing-style-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -373,7 +373,7 @@ In addition to the steps above, we can also style the controls that are used for
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:950px">
-    <iframe id="treegrid-editing-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-editing-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -382,7 +382,7 @@ In addition to the steps above, we can also style the controls that are used for
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:660px">
-    <iframe id="hierarchical-grid-editing-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>

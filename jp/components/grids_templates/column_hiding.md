@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 列サイズ変更|Ignite UI for Angular |Infragistics
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
@@ -421,7 +421,7 @@ export class AppModule {}
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="grid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -431,7 +431,7 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="treegrid-column-hiding-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -581,7 +581,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-column-hiding-toolbar-style-iframe" src='{environment:demosBaseUrl}/grid/grid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-column-hiding-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -591,7 +591,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-column-hiding-toolbar-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-column-hiding-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -601,7 +601,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:570px">
-    <iframe id="hierarchicalgrid-column-hiding-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchicalgrid-column-hiding-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>

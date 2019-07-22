@@ -768,7 +768,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 #### Demo
 
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-grid-paging-style-iframe" src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -780,7 +780,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid'){
 #### Demo
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-hGrid-paging-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -794,7 +794,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid'){
 #### Demo
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-treegrid-paging-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>

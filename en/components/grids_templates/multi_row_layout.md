@@ -106,7 +106,7 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 #### Demo
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-mrl-custom-navigation-iframe" src='{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-mrl-custom-navigation-iframe" data-src='{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -128,7 +128,7 @@ Sometimes when configuring a column layout it might be a challenge to calculate 
 By default we have set the same columns as our previous sample, but it can be cleared and configured to match your desired configuration.
 
 <div class="sample-container loading" style="height:500px">
-    <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-multi-row-layout-configuration-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 
 ### API References

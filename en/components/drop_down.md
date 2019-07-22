@@ -483,7 +483,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
 
 #### Demo
 <div class="sample-container loading" style="height:350px">
-    <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

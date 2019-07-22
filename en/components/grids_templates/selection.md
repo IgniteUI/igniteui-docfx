@@ -192,7 +192,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-selection-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -201,7 +201,7 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:710px">
-    <iframe id="hierarchical-grid-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-selection-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -400,7 +400,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 #### Demo
 
 <div class="sample-container loading" style="height:620px">
-    <iframe id="grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -412,7 +412,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 @@if (igxName === 'IgxHierarchicalGrid'){
 #### Demo
 <div class="sample-container loading" style="height:620px">
-    <iframe id="hierarchical-grid-multi-cell-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -426,7 +426,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 @@if (igxName === 'IgxTreeGrid'){
 #### Demo
 <div class="sample-container loading" style="height:620px">
-    <iframe id="tree-grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -579,7 +579,7 @@ The template we are going to use to combine the grid with the context menu:
  The result is:
 
 <div class="sample-container loading" style="height:600px">
-    <iframe class="lazyload" id="grid-context-menu-iframe" src='{environment:demosBaseUrl}/grid/grid-contextmenu-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
+    <iframe class="lazyload" id="grid-context-menu-iframe" data-src='{environment:demosBaseUrl}/grid/grid-contextmenu-sample' width="100%" height="100%" seamless frameborder="0"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

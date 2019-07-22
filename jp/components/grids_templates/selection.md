@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 複数セル選択 | Ignite UI for Angular | infragistics 
 _description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
@@ -196,7 +196,7 @@ Ignite UI for Angular の行選択には、行内のその他すべての列の�
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-selection-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
@@ -205,7 +205,7 @@ Ignite UI for Angular の行選択には、行内のその他すべての列の�
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:710px">
-    <iframe id="hierarchical-grid-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-selection-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
@@ -404,7 +404,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 #### Demo
 
 <div class="sample-container loading" style="height:620px">
-    <iframe id="grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -416,7 +416,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 @@if (igxName === 'IgxHierarchicalGrid'){
 #### Demo
 <div class="sample-container loading" style="height:620px">
-    <iframe id="hierarchical-grid-multi-cell-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -430,7 +430,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 @@if (igxName === 'IgxTreeGrid'){
 #### Demo
 <div class="sample-container loading" style="height:620px">
-    <iframe id="tree-grid-multi-cell-selection-style-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>

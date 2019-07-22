@@ -1,4 +1,4 @@
-﻿---
+---
 title: Angular Grid 改ページ | テンプレート | Ignite UI for Angular | Infragistics
 _description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular pagination, igniteui for angular, infragistics
@@ -770,7 +770,7 @@ $dark-button: igx-button-theme(
 #### デモ
 
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-grid-paging-style-iframe" src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -783,7 +783,7 @@ $dark-button: igx-button-theme(
 #### デモ
 
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-hGrid-paging-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>  
 <div>
@@ -797,7 +797,7 @@ $dark-button: igx-button-theme(
 #### デモ
 
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-treegrid-paging-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>  
 <div>
