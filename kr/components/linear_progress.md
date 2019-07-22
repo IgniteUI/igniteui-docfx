@@ -19,7 +19,7 @@ _language: kr
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular Linear Progress, we should first import the [**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Linear Progress, we should first import the **IgxProgressBarModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 

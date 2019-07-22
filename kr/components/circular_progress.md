@@ -20,7 +20,7 @@ _language: kr
 
 ### Usage
  Circular Progress Indicator can be used to show a user that he is in a process.
-To get started with the Ignite UI for Angular Circular Progress,  we should first import import the [**IgxProgressBarModule**]({environment:angularApiUrl}/classes/igxprogressbarmodule.html) in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Circular Progress,  we should first import import the **IgxProgressBarModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 

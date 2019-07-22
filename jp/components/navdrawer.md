@@ -22,7 +22,7 @@ _language: ja
 
 ### 依存関係
 
-必要となるすべての依存関係を含むために [`IgxNavigationDrawerModule`]({environment:angularApiUrl}/classes/igxnavigationdrawermodule.html) を使用してアプリケーションの `AppModule` にインポートします。
+必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用してアプリケーションの `AppModule` にインポートします。
 
 ```typescript
 import { IgxNavigationDrawerModule } from 'igniteui-angular';
@@ -239,7 +239,7 @@ Navigation Drawer のコンテンツをテンプレートに設定します。�
 <!-- ... -->
 ```
 
-ディレクティブはメイン [`IgxNavigationDrawerModule`]({environment:angularApiUrl}/classes/igxnavigationdrawermodule.html) からエクスポートされ、`IgxNavDrawerItemDirective` として個別にエクスポートされます。
+ディレクティブはメイン `IgxNavigationDrawerModule` からエクスポートされ、`IgxNavDrawerItemDirective` として個別にエクスポートされます。
 
 <div class="divider--half"></div>
 

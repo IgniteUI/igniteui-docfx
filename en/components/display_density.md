@@ -49,7 +49,7 @@ To set the display density explicitly for a control, use the [`displayDensity`](
 
 * [DisplayDensity]({environment:angularApiUrl}/enums/displaydensity.html)
 * [DisplayDensityBase]({environment:angularApiUrl}/classes/displaydensitybase.html)
-* [IDisplayDensity]({environment:angularApiUrl}/interfaces/idisplaydensity.html)
+* [IDisplayDensityOptions]({environment:angularApiUrl}/interfaces/idisplaydensityoptions.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)
 
 ### Additional Resources

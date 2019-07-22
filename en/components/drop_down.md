@@ -405,47 +405,39 @@ First, in order for us to use the functions exposed by the theme engine, we need
 ```
 
 #### Define palette & colors
-After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom igx-drop-down styling in conjunction with our own color [palette](themes/palette.md) where we can specify our two main colors to be used by the component.
+After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom igx-drop-down styling in conjunction with our own color [palette](themes/palette.md) where we can specify our main colors to be used by the component.
 Fist define a custom palette and pass our main colors:
 ```scss
-$my-primary-color: #ffffff;
+$my-primary-color:#FFC314;
 $my-secondary-color: #7344df;
+$my-info-color: #ffffff;
 
 $my-color-palette: igx-palette(
     $primary: $my-primary-color,
-    $secondary: $my-secondary-color
+    $secondary: $my-secondary-color,
+    $info: $my-info-color
 );
 ```
-
-Now we can specify some more colors to style our component. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on the primary & secondary colors defined. Lets say we are going for some different shades of purple.
-```scss
-$my-light-purple: igx-color($my-color-palette, "secondary", 100);
-$my-medium-purple: igx-color($my-color-palette, "secondary", 300);
-$my-medium-plus-purple: igx-color($my-color-palette, "secondary", 400);
-$my-dark-purple: igx-color($my-color-palette, "secondary", 600);
-);
-```
-
 In order to see our custom palette and colors applied, we need to pass these to a theme function.
-So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our cool colors to a number of predefined `igx-drop-down-theme parameters` . Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like:
+So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our cool colors to a number of predefined `igx-drop-down-theme` parameters. Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to make use of the previously created [palette](themes/palette.md) and base our new colors on it. Lets say we are going for some different shades of purple.
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
-    $background-color: $my-light-purple,
-    $item-text-color: $my-primary-color,
-    $header-text-color: $my-dark-purple,
+    $background-color: igx-color($my-color-palette, "secondary", 100),
+    $header-text-color: igx-color($my-color-palette, "secondary", 600),
+    $item-text-color: igx-color($my-info-color, "info"),
 
-    $selected-item-background: $my-medium-plus-purple,
-    $selected-item-text-color: $my-primary-color,
-    $selected-hover-item-background: $my-medium-plus-purple,
-    $selected-hover-item-text-color: $my-primary-color,
-    $selected-focus-item-background: $my-medium-plus-purple,
-    $selected-focus-item-text-color: $my-primary-color,
+    $selected-item-background: igx-color($my-color-palette, "secondary", 400),
+    $selected-item-text-color: igx-color($my-color-palette, "info"),
+    $selected-hover-item-background: igx-color($my-color-palette, "secondary", 400),
+    $selected-hover-item-text-color: igx-color($my-color-palette, "info"),
+    $selected-focus-item-background: igx-color($my-color-palette, "secondary", 400),
+    $selected-focus-item-text-color: igx-color($my-color-palette, "info"),
 
-    $focused-item-background: $my-medium-purple,
-    $focused-item-text-color: $my-primary-color,
+    $focused-item-background: igx-color($my-color-palette, "secondary", 300),
+    $focused-item-text-color: igx-color($my-color-palette, "info"),
 
-    $hover-item-background: $my-primary-color,
-    $hover-item-text-color: $my-dark-purple
+    $hover-item-background: igx-color($my-color-palette, "info"),
+    $hover-item-text-color: igx-color($my-color-palette, "secondary", 600)
 );
 ```
 As in this particular sample we are going to use a button to toggle the `igx-drop-down`, we can go a bit further and style it as well. So we go a bit outside the `igx-drop-down` topic and to complement the overall drop-down theme styling we will create a custom button theme passing it our color palette like: 
