@@ -202,7 +202,7 @@ $my-custom-schema: extend($light-schema,
 
 // Defining our custom theme with the custom schema
 $custom-theme: igx-grid-theme(
-  $palette: $light-palette,
+  $palette: $custom-palette,
   $schema: $my-custom-schema
 );
 ```
