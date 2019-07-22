@@ -761,3 +761,13 @@
 - name: ローカライゼーション
   href: localization.md
   new: false
+- name: Transaction Service
+  href: transaction.md
+  new: true
+  items:
+    - name: Transaction Service class hierarchy
+      href: transaction-classes.md
+      new: true
+    - name: How to use the Transaction Service
+      href: transaction-how-to-use.md
+      new: true

@@ -790,9 +790,9 @@
   href: transaction.md
   new: true
   items:
-    - name: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
-      href: transaction-how-to.md
+    - name: Transaction Service class hierarchy
+      href: transaction-classes.md
       new: true
-    - name: How to use the Transaction service
-      href: transaction-example.md
+    - name: How to use the Transaction Service
+      href: transaction-how-to-use.md
       new: true
