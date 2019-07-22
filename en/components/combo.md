@@ -155,7 +155,7 @@ $custom-combo-theme: igx-combo-theme(
 ### Applying
 All that's left is to properly scope our newly created themes. Here we will assume you want to style a particular `IgxCombo` so the other components of this type in your application will not be affected by the custom themes. For details regarding applying theme globally or scoped, you can refer to [igx-drop-down styling guide](drop_down.md#applying)
 
-```
+```scss
 // Pass our custom-drop-down-theme and custom-combo-theme to respectively `igx-drop-down` and igx-combo mixins.
 :host {
    ::ng-deep {
