@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component in Ignite UI for Angular provides a button group functionality with horizontal/vertical alignment and single/multiple selection along with toggling. The igx-buttongroup component makes use of the [igxButton directive.](button.md)
 
 ### Button Group Demo
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 450px">
     <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
 <div>
@@ -215,6 +215,140 @@ public ngOnInit() {
 </iframe></div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Styling
+
+To get started with styling the button group, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme) and accepts some parameters that style the button group's items in their different states.
+
+```scss
+$dark-button-group: igx-button-group-theme(
+    $item-text-color: #FFCD0F,
+    $item-background: #292826,
+    $item-hover-text-color: #292826,
+    $item-hover-background: #FFCD0F,
+    $item-selected-text-color: #292826,
+    $item-selected-background: #FFCD0F,
+    $disabled-text-color: gray,
+    $disabled-background-color: lightgray
+);
+```
+
+As seen, the `igx-button-group-theme` exposes some useful parameters for basic styling of its items. Additionally, if we want to drill deeper and change some button specific parameters, we will have to create a new theme that extends the `igx-button-theme` and scope it under the respective button group's class.
+
+The last step is to **include** the component's theme.
+
+```scss
+@include igx-button-group($dark-button-group);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-button-group($dark-button-group);
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$dark-button-group: igx-button-group-theme(
+    $palette: $dark-palette,
+    $item-text-color: igx-color($dark-palette, "secondary", 500),
+    $item-background: igx-color($dark-palette, "primary", 500),
+    $item-hover-text-color: igx-color($dark-palette, "primary", 500),
+    $item-hover-background: igx-color($dark-palette, "secondary", 500),
+    $item-selected-text-color: igx-color($dark-palette, "primary", 500),
+    $item-selected-background: igx-color($dark-palette, "secondary", 500),
+    $disabled-text-color: gray,
+    $disabled-background-color: lightgray
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-button-group`]({environment:sassApiUrl}/index.html#variable-_dark-button-group) schema:
+
+```scss
+// Extending the dark button group schema
+$dark-button-group-schema: extend($_dark-button-group,
+    (
+        item-text-color:(
+            igx-color:("secondary", 500)
+        ),
+        item-background:(
+            igx-color:("primary", 500)
+        ),
+        item-hover-text-color:(
+            igx-color:("primary", 500)
+        ),
+        item-hover-background:(
+            igx-color:("secondary", 500)
+        ),
+        item-selected-text-color:(
+            igx-color:("primary", 500)
+        ),
+        item-selected-background:(
+            igx-color:("secondary", 500)
+        ),
+        disabled-text-color: gray,
+        disabled-background-color: lightgray
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-button-group: $dark-button-group-schema
+));
+
+// Defining dark-button-group-theme with the global dark schema
+$dark-button-group: igx-button-group-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="buttonGroup-style-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-style" class="lazyload no-theming">
+</iframe></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### API References
