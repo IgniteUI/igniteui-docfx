@@ -9,6 +9,16 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+  items:
+    - name: Step-by-Step Guide
+      href: general/cli/step-by-step-guide.md
+      new: false
+    - name: Components Templates
+      href: general/cli/components-templates.md
+      new: false
+    - name: Authentication Project Template
+      href: general/cli/auth-template.md
+      new: false
 - name: WPF to Angular guide
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
@@ -36,7 +46,6 @@
       new: false
     - name: Layout Elements
       href: general/wpf_to_angular_guide/layout.md
-      new: false
 - name: グリッドとリスト
   href: grids_and_lists.md
   header: true
@@ -55,13 +64,13 @@
       new: false
     - name: 行編集
       href: grid/row_editing.md
-      new: true
+      new: false
     - name: 行ドラッグ
       href: grid/row_drag.md
-      new: true
+      new: false
     - name: 一括編集
       href: grid/batch_editing.md
-      new: true
+      new: false
     - name: ページング
       href: grid/paging.md
       new: false
@@ -70,7 +79,7 @@
       new: false
     - name: Excel フィルタリング
       href: grid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: grid/sorting.md
       new: false
@@ -94,7 +103,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
     - name: 検索
       href: grid/search.md
       new: false
@@ -118,10 +127,10 @@
       new: false
     - name: キーボードナビゲーション
       href: grid/keyboard_navigation.md
-      new: true
+      new: false
     - name: 複数行レイアウト
       href: grid/multi_row_layout.md
-      new: true
+      new: false
     - name: クリップボード操作
       href: grid/clipboard_interactions.md
       new: true
@@ -137,7 +146,7 @@
       new: false
     - name: ロードオンデマンド
       href: treegrid/load_on_demand.md
-      new: true
+      new: false
     - name: 編集
       href: treegrid/editing.md
       new: false
@@ -146,7 +155,7 @@
       new: false
     - name: 行ドラッグ
       href: treegrid/row_drag.md
-      new: true
+      new: false
     - name: 一括編集
       href: treegrid/batch_editing.md
       new: false
@@ -158,7 +167,7 @@
       new: false
     - name: Excel フィルタリング
       href: treegrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: treegrid/sorting.md
       new: false
@@ -179,10 +188,10 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: true
+      new: false
     - name: 検索
       href: treegrid/search.md
-      new: true
+      new: false
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
@@ -198,86 +207,86 @@
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional_cell_styling.md
       new: false
-    - name: 集計 
+    - name: 集計
       href: treegrid/aggregations.md
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard_navigation.md
-      new: true
+      new: false
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: true
+  new: false
   items:
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
-      new: true
+      new: false
     - name: ロードオンデマンド
       href: hierarchicalgrid/load_on_demand.md
-      new: true
+      new: false
     - name: 編集
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
     - name: 行編集
       href: hierarchicalgrid/row_editing.md
-      new: true
+      new: false
     - name: 行ドラッグ
       href: hierarchicalgrid/row_drag.md
-      new: true
+      new: false
     - name: 一括編集
       href: hierarchicalgrid/batch_editing.md
-      new: true
+      new: false
     - name: ページング
       href: hierarchicalgrid/paging.md
-      new: true
+      new: false
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
-      new: true
+      new: false
     - name: Excel フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: 並べ替え
       href: hierarchicalgrid/sorting.md
-      new: true
+      new: false
     - name: 集計
       href: hierarchicalgrid/summaries.md
-      new: true
+      new: false
     - name: 列移動
       href: hierarchicalgrid/column_moving.md
-      new: true
+      new: false
     - name: 列のピン固定
       href: hierarchicalgrid/column_pinning.md
-      new: true
+      new: false
     - name: 列のサイズ変更
       href: hierarchicalgrid/column_resizing.md
-      new: true
+      new: false
     - name: 列の非表示
       href: hierarchicalgrid/column_hiding.md
-      new: true
+      new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
     # Not yet fully implemented for igxHGrid
     # - name: 検索
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: ツールバー
       href: hierarchicalgrid/toolbar.md
-      new: true
+      new: false
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi_column_headers.md
-      new: true
+      new: false
     - name: 表示密度
       href: hierarchicalgrid/display_density.md
-      new: true
+      new: false
     # - name: 条件付きセルのスタイル設定
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
-      new: true
+      new: false
 - name: List View
   href: list.md
 - name: Combo
@@ -323,9 +332,9 @@
        new: false
      - name: ハイパーリンク
        href: spreadsheet_hyperlinks.md
-       new: false  
+       new: false
 - name: チャート
-  header: true  
+  header: true
 - name: Category Chart
   href: categorychart.md
   new: false
@@ -716,7 +725,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
-  new: true
+  new: false
 - name: Overlay
   href: overlay_main.md
   new: true
@@ -789,3 +798,13 @@
 - name: ローカライゼーション
   href: localization.md
   new: false
+- name: Transaction Service
+  href: transaction.md
+  new: true
+  items:
+    - name: Transaction Service class hierarchy
+      href: transaction-classes.md
+      new: true
+    - name: How to use the Transaction Service
+      href: transaction-how-to-use.md
+      new: true

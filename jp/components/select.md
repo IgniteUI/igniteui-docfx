@@ -1,4 +1,4 @@
-﻿---
+---
 title: IgxSelect - ネイティブ Angular | Ignite UI for Angular
 _description: igxSelect は、単一項目の選択ができるドロップダウン リストの入力を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular IgxSelect コンポーネント, IgxSelect
@@ -404,7 +404,7 @@ $custom-select-theme: igx-drop-down-theme(
 
 #### Demo
 <div class="sample-container loading" style="height:450px">
-    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

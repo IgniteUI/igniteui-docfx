@@ -1,7 +1,7 @@
 ---
 title: How to use the Transaction service
 _description: 
-_keywords: Ignite UI for Angular, transaction
+_keywords: Ignite UI for Angular, transaction, how to
 ---
 
 ## How to use the Transaction service

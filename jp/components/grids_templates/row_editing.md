@@ -1,4 +1,4 @@
-﻿---
+---
 title: Tree Grid 行編集 | UI Grid | Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
 _keywords: row editing, igniteui for angular, infragistics
@@ -327,10 +327,9 @@ Once we've imported the themes file, we can create custom themes.
 We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) that will affect our Row Editing background:
 
 ```scss
-    $banner-theme: igx-banner-theme(
-        $banner-background: igx-color($default-palette, "primary", 100),
-        $banner-message-color: igx-contrast($default-palette, "primary", 100),
-        $banner-border-color: igx-color($default-palette, "second", 800)
+    $banner-theme: igx-banner-theme( 
+        $banner-background: $my-light-gray,
+        $banner-message-color: igx-color($my-banner-palette, "secondary", 600)
     );
 ```
 
@@ -375,17 +374,15 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 <@@igSelector>
     ...
     <ng-template igxRowEditActions let-endRowEdit>
-        <span class="custom-failure">
-            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
-                <igx-icon>clear</igx-icon>
-            </button>
-        </span>
-        <span class="custom-success">
-            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
-                <igx-icon>check</igx-icon>
-            </button>
-        </span>
-    </ng-template>
+            <div class="custom-buttons">
+                <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
+                    <igx-icon>clear</igx-icon>
+                </button>
+                <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
+                    <igx-icon>check</igx-icon>
+                </button>
+            </div>
+        </ng-template>
     ...
 </@@igSelector>
 ```
@@ -394,21 +391,15 @@ After we've defined our custom button, we can make use of the [`igx-button-theme
 
 ```scss
 // custom.component.scss
-$my-success-error-palette: igx-palette($primary: $success, $secondary: $failure);
 ...
 
-$button-theme-success: igx-button-theme(
-    $icon-color: igx-contrast($my-success-error-palette, "primary", 200),
-    $icon-hover-color: igx-contrast($my-success-error-palette, "primary", 600),
-    $icon-focus-color: igx-contrast($my-success-error-palette, "primary", 300),
-    $icon-background: igx-color($my-success-error-palette, "primary", 200),
-    $icon-hover-background: igx-color($my-success-error-palette, "primary", 600),
-    $icon-focus-background: igx-color($my-success-error-palette, "primary", 300)
+$button-theme: igx-button-theme(
+  $palette: $purple-palette
 );
 
 ...
-.custom-success {
-    @include igx-button($button-theme-success);
+.custom-buttons {
+    @include igx-button($button-theme);
   }
 ```
 
@@ -420,7 +411,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxGrid'){
 <div class="sample-container loading" style="height:560px">
-    <iframe id="grid-row-edit-style-iframe" src='{environment:demosBaseUrl}/grid/grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="grid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -431,7 +422,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 <div class="sample-container loading" style="height:560px">
-    <iframe id="hierarchical-grid-row-edit-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="hierarchical-grid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
@@ -444,7 +435,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxTreeGrid'){
 <div class="sample-container loading" style="height:560px">
-    <iframe id="treegrid-row-edit-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="treegrid-row-edit-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>

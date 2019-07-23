@@ -1,10 +1,10 @@
 ---
-title: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
+title: Transaction Service class hierarchy
 _description: 
-_keywords: Ignite UI for Angular, transaction
+_keywords: Ignite UI for Angular, transaction, igxBaseTransaction, igxTransaction and igxHierarchical transaction
 ---
 
-## igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
+## Transaction Service class hierarchy
 
 ### Transaction, State, Transaction Log
 
