@@ -290,11 +290,11 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 
 ### Styling
 
-The @@igxName allows for its cells to be styled through the [IgniteUI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
 In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
 
-In order to use the [Ignite UI Theming Library](themes/index.md), we must first import the theme `index` file in our global styles:
+In order to use the [Ignite UI Theming Library](../themes/component-themes.md), we must first import the theme `index` file in our global styles:
 
 #### Importing style library
 
@@ -302,11 +302,11 @@ In order to use the [Ignite UI Theming Library](themes/index.md), we must first 
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 ```
-Now we can make use of all of the functions exposed by the IgniteUI theme engine.
+Now we can make use of all of the functions exposed by the Ignite UI for Angular theme engine.
 
 #### Defining a palette
 
-After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](themes/palettes.md):
+After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palettes.md):
 
 ```scss
 $white: #fff;
@@ -330,7 +330,7 @@ $custom-grid-theme: igx-grid-theme(
 
 #### Applying the theme
 
-The easiest way to apply our theme is with a `sass` `@include` statemenet in the global styles file:
+The easiest way to apply our theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
 @include igx-grid($custom-grid-theme); 

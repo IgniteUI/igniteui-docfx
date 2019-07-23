@@ -12,7 +12,7 @@ The Transaction is the main building block of the [Transaction service]({environ
 
 The [`id`]({environment:angularApiUrl}/enums/transactiontype.html#id) of the Transaction should be unique per data record and defines the record that this transaction is affecting. The [`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) will contain the value of the deleted record. 
 
-You may see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-example.md) topic.
+You may see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-how-to-use.md) topic.
 
 Every time you add a Transaction, it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated [`State`]({environment:angularApiUrl}/interfaces/state.html). The [`State`]({environment:angularApiUrl}/interfaces/state.html) consists of unique records and every record may be of one of the supported transaction types, mentioned above.
 
