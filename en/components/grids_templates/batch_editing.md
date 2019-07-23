@@ -23,7 +23,7 @@ _keywords: angular crud, ignite ui for angular, infragistics
 ### @@igComponent Batch Editing and Transactions
 
 @@if (igxName === 'IgxGrid') {
-The Batch Editing feature of the igxGrid is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). You may find an overview of what is the `TransactionService` and how is it implemented in the ["igxBaseTransaction, igxTransaction and igxHierarchical transaction explained"](../transaction-explained.md) topic.
+The Batch Editing feature of the igxGrid is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service`](../transaction.md) topic to see an overview of the service and details how is it implemented.
 
 Below is a detailed example of how is Batch Editing enabled for the igxGrid component.
 }
