@@ -198,7 +198,7 @@ Date Picker の入力グループをカスタマイズできます。そのた�
 
 | メンバー | 説明 | 
 | ------------- |:-------------:| 
-| `openDialog` | 日付の選択 ダイアログを開くために使用できるメソッド。 |
+| [`openDialog`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#opendialog) | 日付の選択 ダイアログを開くために使用できるメソッド。 |
 | [`disabled`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disabled) | デートピッカーの無効状態を制御します。 |
 | [`disabledDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disableddates) | 無効な日付を含みます。 |
 | [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) | デートピッカーが読み取り専用モード時に書式設定付きの値を含みます。 |

@@ -193,7 +193,7 @@ The Date Picker's input group look can be customized. To do that, we need to dec
 
 | Members | Description | 
 | ------------- |:-------------:| 
-| `openDialog` | Method that can be used to open the date picker dialog |
+| [`openDialog`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#opendialog) | Method that can be used to open the date picker dialog |
 | [`disabled`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disabled) | Controls date picker disabled state |
 | [`disabledDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#disableddates) | Contains disabled dates |
 | [`displayData`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaydata) | Contains the formatted value when date picker is in dialog mode |
