@@ -323,16 +323,19 @@ Once we've imported the themes file, we can create custom themes.
 
 #### Define the theme
 
-We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) that will affect our Row Editing background:
+We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
 
 ```scss
+    $my-light-gray: #e3e3e3;
+    $my-banner-palette: $purple-palette;
+
     $banner-theme: igx-banner-theme( 
         $banner-background: $my-light-gray,
         $banner-message-color: igx-color($my-banner-palette, "secondary", 600)
     );
 ```
 
-Here we are using the [`$default-palette`]({environment:sassApiUrl}/index.html#variable-default-palette) in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) for generating our colors. Both are exposed by the theme library.
+Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) for generating our colors.
 
 #### Include the theme
 
@@ -386,7 +389,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom button, we can make use of the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel` - one green, one red - to better highlight their functionality:
+After we've defined our custom buttons, we can make use of the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
@@ -402,7 +405,7 @@ $button-theme: igx-button-theme(
   }
 ```
 
-We scope our `@include` statement in `.custom-success` so that it is only applied to the `Done` button. We then do the same with a custom `$button-theme-error`, which we scope to the `Cancel` button.
+We scope our `@include` statement in `.custom-buttons` so that it is only applied to the `Done`and `Cancel` buttons.
 
 #### Demo
 
