@@ -32,7 +32,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 
 ### Usage
 
-The following code snippet shows how you can execute commands related to the clipboard in the [`IgxSpreadsheetComponent`](spreadsheet_clipboard.md) control:
+The following code snippet shows how you can execute commands related to the clipboard in the [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control:
 
 ```ts
 public cut(): void {
