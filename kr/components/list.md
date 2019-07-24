@@ -582,6 +582,12 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 <div class="divider"></div>
 
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+| Scroll position of components that use igxForOf is not preserved |When switching the context for an element that uses igxForOf, the scrollbar position won't be preserved, even though the data position would be. That inconsistency would occur when the content is created and after that the DOM nodes get changed. In such scenarios, the nodes are detached from the DOM and then added in a different place. That's why they will not keep their scroll state, but ever since the component is not destroyed/recreated, it will still have its internal state. Some possible workarounds could be: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an ngIf, that'd follow it's state (the tab gets selected => attaching nodes to the DOM tree, the tab gets disselected => removing nodes from the tree).</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually.</li></ul>
+
 ### API References
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
