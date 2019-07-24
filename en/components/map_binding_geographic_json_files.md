@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Binding JSON Files with Geographic Locations
 
-With `GeographicMap`, you can plot geographic data loaded from various file types. For example, you can load geographic locations from JavaScript Object Notation (JSON) file.
+With the Ignite UI for Angular map, you can plot geographic data loaded from various file types. For example, you can load geographic locations from JavaScript Object Notation (JSON) file.
 
 ### Demo
 

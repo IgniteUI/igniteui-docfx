@@ -28,7 +28,7 @@ When using a numeric X or Y axis, the [`valueMemberPath`](/products/ignite-ui-an
 
 When using the value overlay with a numeric angle axis, it will appear as a line from the center of the chart and when using a numeric radius axis, it will appear as a circle.
 
-[`IgxValueOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html) appearance properties are inherited from `Infragistics.Controls.Charts.Series` and so [`brush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
+[`IgxValueOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html) appearance properties are inherited from [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) and so [`brush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
 
 ### Code Example - Value Overlay
 

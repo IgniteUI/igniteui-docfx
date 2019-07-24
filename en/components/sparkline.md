@@ -220,3 +220,34 @@ In order to plot the unknown values, you can set the [`unknownValuePlotting`](/p
 </div>
 
 <div class="divider--half"></div>
+
+### Sparkline in Data Grid
+
+You can embed the Ignite UI for Angular sparkline component in a template column of data grid or other components that support templates. The following code example shows how to do this:
+
+```html
+<igx-grid #grid1 [data]="data | async"
+[height]="'500px'" width="100%" [autoGenerate]='false' >
+    <!-- ... -->
+    <igx-column [field]="'OrderHistory'" [width]="'160px'" header="Order History" >
+        <ng-template igxCell let-val>
+            <igx-sparkline height="50px" width="150px"
+            [dataSource]="val"
+            valueMemberPath="Sold"
+            displayType="Line"
+            lineThickness="2"
+            brush="rgb(21, 190, 6)"  >
+            </igx-sparkline>
+        </ng-template>
+    </igx-column>
+    <!-- ... -->
+</igx-grid>
+```
+
+<div class="sample-container loading" style="height: 530px">
+    <iframe id="sparkline-grid-iframe" src='{environment:demosBaseUrl}/charts/sparkline-grid' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-grid-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    </button>
+</div>

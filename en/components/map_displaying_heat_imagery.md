@@ -2,7 +2,7 @@
 title: Map | Data Visualization Tools | Ignite UI for Angular | Heat Imagery Maps | Infragistics
 _description: The Map allows you to display heat imagery maps. View the demo and usage for more information.
 _keywords: map, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 ---
 
 ## Displaying Heat Imagery

@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Binding Multiple Data Sources
 
-In the `GeographicMap`, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of airports, the [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting flights between airports, and 2nd [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting gridlines of major geographic coordinates.
+In the Ignite UI for Angular map, you can add multiple geographic series objects to overlay custom data sources with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of airports, the [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting flights between airports, and 2nd [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting gridlines of major geographic coordinates.
 
 ### Demo
 
@@ -31,7 +31,7 @@ You can use geographic series in this or other combinations to plot desired data
 
 ### Creating Data Sources
 
-Create data sources for all geographic series that you want to display in the `GeographicMap`. For example, you can the use [WorldConnections](map_resources_world_connections.md) script.
+Create data sources for all geographic series that you want to display in the Ignite UI for Angular map. For example, you can the use [WorldConnections](map_resources_world_connections.md) script.
 
 ```html
 <div className="sampleRoot" >
@@ -81,7 +81,7 @@ Create data sources for all geographic series that you want to display in the `G
 
 ### Overlaying Flights
 
-Create first [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with flight connections between major airports and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create first [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with flight connections between major airports and add it to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
 
 ```html
 <igx-geographic-polyline-series  #polylineSeries
@@ -95,7 +95,7 @@ Create first [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angula
 
 ### Overlaying Gridlines
 
-Create second [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with geographic gridlines and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create second [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with geographic gridlines and add it to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
 
 ```html
   <igx-geographic-polyline-series  #polylineSeries
@@ -108,7 +108,7 @@ Create second [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angul
     </igx-geographic-polyline-series>
 ```
 
-Create [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with geographic gridlines and add it to `Infragistics.Controls.Charts.Series` collection of the geographic `GeographicMap`.
+Create [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with geographic gridlines and add it to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the geographic Ignite UI for Angular map.
 
 ```html
 <igx-geographic-symbol-series  #symbolSeries

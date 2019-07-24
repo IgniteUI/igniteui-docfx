@@ -1,12 +1,12 @@
 ---
 title: ZoomSlider | Data Visualization Tools | Ignite UI for Angular | Data Binding | Infragistics
-_description: Use the zoombar within the data chart to easily display a subset of data. It is displayed with two handles representing minimum and maximum values.
+_description: Use the ZoomSlider within the data chart to easily display a subset of data. It is displayed with two handles representing minimum and maximum values.
 mentionedTypes: ['ZoomSlider, XamDataChart']
 ---
 
 ### Zoom Slider
 
-The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart.
+The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart or CategoryChart.
 
 ### Demo
 
@@ -22,35 +22,14 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
 
 ### Usage
 
-Feature	Description
-
--   Scrollbar navigation
-
-    Users can change scale and scroll through ranges of data using the built-in capabilities of the ZoomSlider scrollbar.
-
--   Panning and zooming
-
-    Users can adjust the display scale by dragging the edges of the thumb pad to either make the current display cover a larger range (zoom out) or a smaller range (zoom in).
-
--   Multiple user interaction options
-
-    All mouse user interactions are redundantly supported through touch and most of them – through the keyboard. For details, see User Interactions and Usability.
-
--   Touch support
-
-    On touch-enabled devices, users can enjoy the full ZoomSlider functionality. All mouse interactions are supported in touch environment.
-
--   Out-of-the box integration with other controls
-
-    The ZoomSlider control supports igDataChart control out-of the box.
-
--   Extensibility
-
-    The ZoomSlider control supports DataChart control out-of the box.
-
--   Configurable zoom-range window
-
-    The initial zoom-range window width and position, as well as its minimum size, are configurable.
+| Feature Name                      | Description                                                                                                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scrollbar navigation              | Users can change scale and scroll through ranges of data using the built-in capabilities of the ZoomSlider scrollbar.                                                      |
+| Panning and zooming               | Users can adjust the display scale by dragging the edges of the thumb pad to either make the current display cover a larger range (zoom out) or a smaller range (zoom in). |
+| Multiple user interaction options | All mouse user interactions are redundantly supported through touch and most of them – through the keyboard. For details, see User Interactions and Usability.             |
+| Touch support                     | On touch-enabled devices, users can enjoy the full ZoomSlider functionality. All mouse interactions are supported in touch environment.                                    |
+| Extensibility                     | The ZoomSlider control supports DataChart control out-of the box.                                                                                                          |
+| Configurable zoom-range window    | The initial zoom-range window width and position, as well as its minimum size, are configurable.                                                                           |
 
 ### Dependencies
 
