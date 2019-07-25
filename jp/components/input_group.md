@@ -172,7 +172,7 @@ In order to style the border, we need to penetrate Angular's `Emulated` view enc
 // input-group-style.component.scss
 :host {
     ::ng-deep {
-        @include igx-input-group($input-group);
+ @include igx-input-group($input-group-theme);
     }
 }
 ```

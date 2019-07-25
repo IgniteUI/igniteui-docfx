@@ -169,7 +169,7 @@ All that's left is to properly scope our newly created themes. Here we will assu
 > The [**IgxCombo**]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-combo-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
 
 ### Demo
-<div class="sample-container loading" style="height:450px">
+<div class="sample-container loading" style="height:410px">
     <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
