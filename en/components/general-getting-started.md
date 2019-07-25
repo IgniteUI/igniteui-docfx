@@ -52,6 +52,7 @@ Next, you need to open the **my-app-name** folder in **VS Code** app and install
 -   **npm install --save igniteui-angular-gauges igniteui-angular-core**
 -   **npm install --save igniteui-angular-grids igniteui-angular-core**
 -   **npm install --save igniteui-angular-maps igniteui-angular-core**
+-   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
 
 Or
 
@@ -60,6 +61,7 @@ Or
 -   **yarn add igniteui-angular-gauges igniteui-angular-core**
 -   **yarn add igniteui-angular-grids igniteui-angular-core**
 -   **yarn add igniteui-angular-maps igniteui-angular-core**
+-   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
 Lastly, you can build for production or start your application with these commands:
 
@@ -77,6 +79,7 @@ What if you want to use Ignite UI for Angular in an existing Angular CLI project
 -   **npm install --save igniteui-angular-gauges igniteui-angular-core**
 -   **npm install --save igniteui-angular-grids igniteui-angular-core**
 -   **npm install --save igniteui-angular-maps igniteui-angular-core**
+-   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
 
 Or
 
@@ -85,6 +88,7 @@ Or
 -   **yarn add igniteui-angular-gauges igniteui-angular-core**
 -   **yarn add igniteui-angular-grids igniteui-angular-core**
 -   **yarn add igniteui-angular-maps igniteui-angular-core**
+-   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
 This will automatically install packages for Ignite UI for Angular, along with all of their dependencies, font imports and styles references to the existing project.
 
@@ -94,7 +98,7 @@ First we have to import the required modules of the components we want to use. W
 
 ### Using Components
 
-We are now ready to use the `GeographicMap` component in our markup! Let's go ahead and define it:
+We are now ready to use the Ignite UI for Angular map component in our markup! Let's go ahead and define it:
 
 ### Running Application
 
