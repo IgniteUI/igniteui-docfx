@@ -6,6 +6,8 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Responding to Events
 
+> [!Video https://www.youtube.com/embed/V1Futz4W400]
+
 ### Binding to User Input Events
 
 Every app you have probably ever written had to respond to some type of user interaction one way or another. The most common way to do that is with some type of event system. WPF provides routed and CLR events and commands while In Angular there are DOM events.

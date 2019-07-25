@@ -6,6 +6,8 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Create your UI with Angular components
 
+> [!Video https://www.youtube.com/embed/z1SZUezpRXY]
+
 As desktop developers, one of our primary responsibilities is to display a UI to the end user. In WPF, we use XAML and C# via a user control or a Window. Well obviously user controls in Windows do not exist in Angular. So what are our options? What do we use in Angular to display our UI?
 
 Creating a UI in Angular is very similar to how we would create one in WPF. We normally use user controls, represented by the UserControl class. A `UserControl` groups markup and code into a reusable container, allowing the same interface and functionality to be used in several different places. This user control will have a .xaml file for the UI markup and a C# file for the logic, and then it may even have a resource dictionary, which would contain any type of styling information for this user control. While in Angular, we use what's called a `Component`. A component has an html file, which is used for any UI markup. It has a typescript file, which is used for its properties and logic, and then it uses a CSS file for all its styling information. Let's go ahead and see just how similar these two are.

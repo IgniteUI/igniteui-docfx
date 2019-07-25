@@ -6,6 +6,8 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## One-way data binding in Angular
 
+> [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
+
 One of the most powerful and widely used features in WPF is data binding. It makes developers' life much easier, by synchronizing the business logic with the view and vice versa, without having to write a single extra line of code. Without the power of it, WPF would just be a better-looking WindowsForms.
 Luckily, Angular supports data binding! There are two types of data binding - one-way binding and two-way binding.
 

@@ -6,6 +6,8 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Two-way data binding in Angular
 
+> [!Video https://www.youtube.com/embed/MrjTTDEj7cA]
+
 In the previous topic we discussed the [one-way binding](one_way_binding.md) in Angular, and how easy it was to use it. The one-way binding updates the view with data coming from the component class. Like in WPF, we can do the opposite operation - update the component class from the view. In that case we need to use a two-way binding and we will demonstrate its power and how easy it is to use it.
 
 Essentially, the one-way binding is taking a state from our component class and displaying it in our view. Let's look at this code:

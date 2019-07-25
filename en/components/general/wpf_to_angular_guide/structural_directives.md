@@ -6,6 +6,8 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
 
 ## Structural Directives in Angular
 
+> [!Video https://www.youtube.com/embed/vQe7R78Od8k]
+
 As WPF developers, anytime we want to add or remove an element from the visual tree we have to jump into some code-behind and write some C# or we can use a combination of binding and a visibility converter, which again requires some custom logic and static resources. That is OK and we have always done it in WPF, but Angular makes it so much easier.
 Manipulating your view in an Angular application /adding and removing elements/, is achieved with the so-called "structural directives". In this topic, we are going to demonstrate the following three directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
 
