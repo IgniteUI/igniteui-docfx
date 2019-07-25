@@ -210,6 +210,9 @@
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: true
+    - name: Sizing
+      href: treegrid/sizing.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -280,6 +283,9 @@
     #   new: true
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
+      new: true
+    - name: Sizing
+      href: hierarchicalgrid/sizing.md
       new: true
 - name: List View
   href: list.md
