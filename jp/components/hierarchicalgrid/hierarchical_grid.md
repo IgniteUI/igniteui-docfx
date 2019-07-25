@@ -237,6 +237,7 @@ export class RemoteLoDService {
 |--- |--- |
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
 |Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
+| Scroll position of components that use igxForOf is not preserved |When changing the context of an element, that uses igxForOf, the scrollbar position would not be preserved, even though the data position would be. That inconsistency occurs when the content is created and after that the DOM nodes get changed. In such a case, the nodes are getting detached from the DOM and then reattached again in a different place. That's why they will not keep their scroll state, but ever since the component is not destroyed/recreated, it will still have its internal state. Some possible workarounds are: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an ngIf, that'd follow it's state (the tab gets selected => attaching nodes to the DOM tree, the tab gets disselected => removing nodes from the tree).</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually.</li></ul>
 
 ### CRUD 操作
 
