@@ -258,7 +258,7 @@ Then in your template file you can iterate over these objects and access their p
 
 Another way to do it would be to simply pass in a collection of the items that we want to display to the [*ngForOf*](https://angular.io/api/common/NgForOf) directive:
 ```html
-<igx-select [(ngModel)]="selected">
+<igx-select [(ngModel)]="selected" required>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -273,8 +273,11 @@ export class MyClass {
 ```
 
 You may also notice that in the above sample we have a *prefix* on the input field, this is because `igx-select` supports both prefixes and suffixes. You can read more about them [*here*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html).
-- The items' list default exapansion panel arrow uses `IgxSuffix` and it can be changed by the user.
+- The items' list default expansion panel arrow uses `IgxSuffix` and it can be changed by the user.
 - If more than one `IgxSuffix` is used, the expansion arrow will be displayed always last.
+
+### Using required attribute
+There may be cases when you want to validate the user input and in particular make sure there is a selection made. In order to use the `igxSelect` along with the `required` validation attribute, it is needed to include the `igxSelect` in a [*Form*](https://angular.io/guide/form-validation) OR use [*NgModel*](https://angular.io/api/forms/NgModel) outside of a `Form` for binding. Please note, in order to see the `required` asterisk `*` as well, there has to be a label set. You can refer to the above [Select In A Form](#select-in-a-form) sample for details.
 
 ### Select With Custom Overlay Settings
 With `igx-select` you are not bound to use any of the [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) that we provide, instead you may create settings of your own and pass them to it.
@@ -422,8 +425,8 @@ $custom-select-theme: igx-drop-down-theme(
 [**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
 
 ## Additional Resources
-[**NgModel**](https://angular.io/api/forms/NgModel)  
-[**ViewChild**](https://angular.io/api/core/ViewChild)  
+[**NgModel**](https://angular.io/api/forms/NgModel)
+[**ViewChild**](https://angular.io/api/core/ViewChild)
 [**ngForOf**](https://angular.io/api/common/NgForOf)
 
 Our community is active and always welcoming to new ideas.
