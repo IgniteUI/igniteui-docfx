@@ -13,8 +13,8 @@
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
       new: false
-    - name: Components Templates
-      href: general/cli/components-templates.md
+    - name: Templates
+      href: general/cli/templates.md
       new: false
     - name: Authentication Project Template
       href: general/cli/auth-template.md

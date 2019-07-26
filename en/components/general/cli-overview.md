@@ -57,7 +57,7 @@ The new application is created in a directory with the same name (`newAngularPro
 | ---           | ---                  |
 | empty-project | Project structure with routing and a home page |
 | side-nav      | Project structure with side navigation drawer |
-| side-nav-auth | Side navigation project extended with user authentication module. <br> [Angular Authentication Project Template](cli/auth-template.md) topic provides a step-by-step guide to creating a project with the side-nav-auth template. |
+| side-nav-auth | Side navigation project extended with user authentication module. <br> [Angular Authentication Project Template](cli/auth-template.md) topic provides a detailed information on creating a project with the side-nav-auth template. |
 
 Additionally, you can specify **arguments** to control the theme or skip packages install:
 
@@ -134,14 +134,14 @@ Additionally, you can specify **arguments** to control the theme or skip package
 
 #### Add template
 
-`ig add [template] [name]` adds a template by ID from the available [component templates](cli/components-templates.md) with the name provided.
+`ig add [template] [name]` adds a template by ID from the available [templates](cli/templates.md) with the name provided.
 
 ```cmd
 cd newAngularProject
 ig add grid newGrid
 ```
 
-The `add` command is supported only on existing project created with the Ignite UI CLI. To get a list of all the available [component templates](cli/components-templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
+The `add` command is supported only on existing project created with the Ignite UI CLI. To get a list of all the available [templates](cli/templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
 
 Additionally, you can specify **arguments** to control the theme or skip packages install:
 
