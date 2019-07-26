@@ -137,19 +137,6 @@ Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html
 
 When the `height` input is set to percentages the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size based on the parent element height. If the parent element has its `height` set in pixels or percentages, the grid will size relative to the size of the parent.
 
-* If we set the parent element height to `800px` and the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to `100%` height this means that the grid will be sized to 100 percentages of `800px`.
-
-    <img src="../../images/grid_sizing/height-percent-100-parent-800px-v2.jpg" style="width: 80%"/>
-
-* If the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` is set to a number bigger than `100%` and the parent element has height, for the parent to render scrollbar it again needs to have `overflow` set to `auto` or `scroll`. Otherwise the grid will be fully visibly and size relative to the parent size.
-
-    <img src="../../images/grid_sizing/height-percent-130p-parent-noscroll-v2.jpg" style="width: 80%"/>
-    <img src="../../images/grid_sizing/height-percent-130p-parent-scroll-v2.jpg" style="width: 80%"/>
-
-* If we want the grid to be sized to `100%` from the browser window we would need to set both `body` and parent grid element heights to `100%`. In this case, the parent element can be sized and the grid will size accordingly if the browser is resized.
-
-    <img src="../../images/grid_sizing/height-percent-100-parent-100-v2.jpg" style="width: 80%"/>
-
 When the parent element does not have defined height, the browser does not assign height to it initially and sizes it based on its children and their size. That is why there is no way for the grid to know what base height to use in order to apply percentage sizing based on it. For this reason, it will render a maximum of 10 rows and if they are more rows, a vertical scrollbar will be rendered. Otherwise, the grid will fit to number of rendered rows. We will look in this scenario in more detail in the next examples.
 
 Let's have `width` set to `1200px` and the parent element not having any size applied to it:
@@ -162,6 +149,19 @@ Let's have `width` set to `1200px` and the parent element not having any size ap
 * If there are more than 10 rows a vertical scrollbar will be rendered for the rest of the rows and only 10 rows can be visible at any time. In the next example only the row number is increased to 14.
 
     <img src="../../images/grid_sizing/height-undefined-14rows-v2.jpg" style="width: 80%"/>
+
+* If we set the parent element height to `800px` and the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to `100%` height this means that the grid will be sized to 100 percentages of `800px`.
+
+    <img src="../../images/grid_sizing/height-percent-100-parent-800px-v2.jpg" style="width: 80%"/>
+
+* If the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` is set to a number bigger than `100%` and the parent element has height, for the parent to render scrollbar it again needs to have `overflow` set to `auto` or `scroll`. Otherwise the grid will be fully visibly and size relative to the parent size.
+
+    <img src="../../images/grid_sizing/height-percent-130p-parent-noscroll-v2.jpg" style="width: 80%"/>
+    <img src="../../images/grid_sizing/height-percent-130p-parent-scroll-v2.jpg" style="width: 80%"/>
+
+* If we want the grid to be sized to `100%` from the browser window we would need to set both `body` and parent grid element heights to `100%`. In this case, the parent element can be sized and the grid will size accordingly if the browser is resized.
+
+    <img src="../../images/grid_sizing/height-percent-100-parent-100-v2.jpg" style="width: 80%"/>
 
 
 ### Column Sizing
