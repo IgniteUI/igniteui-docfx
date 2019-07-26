@@ -12,7 +12,7 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 <div class="divider--half"></div>
 
 ### Expansion Panel Demo
-<div class="sample-container loading" style="height: 400px;">
+<div class="sample-container loading" style="height: 450px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -92,7 +92,7 @@ The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpans
 The css classes `.igx-expansion-panel__header` and `.igx-expansion-panel__body` are also exposed for styling the header and body.
 
 You can see the results below:
-<div class="sample-container loading" style="height: 400px;">
+<div class="sample-container loading" style="height: 450px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" class="lazyload"></iframe>
 </div>
 <div>
@@ -240,7 +240,7 @@ export class ExpansionPanelComponent {
 ```
 ### Summary
 After applying all of the changes to our initial component, here is the final result:
-<div class="sample-container loading" style="height: 500px;">
+<div class="sample-container loading" style="height: 550px;">
     <iframe id="expansion-sample-3-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
 </div>
 <div>

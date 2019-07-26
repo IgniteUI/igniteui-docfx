@@ -105,6 +105,25 @@ As an example, the following template would make the group rows summary more ver
 </ng-template>
 ```
 
+
+### Group By with Paging
+
+Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process. Any expand or collapse operation forces Paging to recalculate the page count and adjust the page index if necessary.
+Groups that span multiple pages are split between them. The group row is visible only on the page it starts on and is not repeated on subsequent pages. Summary information for group rows is calculated based on the whole group and is unaffected by Paging.
+
+#### Demo
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Group By with Summaries
+
+Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic.
+
 #### Keyboard Navigation
 
 The grouping UI supports the following keyboard interactions:

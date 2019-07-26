@@ -190,6 +190,24 @@ chunkLoading(evt) {
     });
 }
 ```
+
+### Local Variables
+
+The `igxFor` directive includes the following helper properties in its context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection.
+The following code snippet demonstrates how to use the `even` property in an `ng-template`.
+
+```html
+<ng-template igxFor let-item 
+    [igxForOf]="data" 
+    [igxForScrollOrientation]="'vertical'"
+    let-isEven="even">
+    <div [ngClass]="{even: isEven}">
+   
+    </div>
+</ng-template>
+```
+In the example above, an `even` class is assigned to every even div element.
+
 ## API リファレンス
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)

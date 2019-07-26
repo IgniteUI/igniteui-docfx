@@ -14,10 +14,10 @@ This control is used for representing categorical data. It is most effective whe
 ### Demo
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-data-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="pie-chart-data-sample-iframe" src='{environment:demosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-data-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -32,7 +32,7 @@ When installing the charts package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxPieChart`](piechart.md) requires the following modules:
+The [`IgxPieChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechart.html) requires the following modules:
 
 ```ts
 // app.module.ts

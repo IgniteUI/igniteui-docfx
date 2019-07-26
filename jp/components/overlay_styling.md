@@ -52,7 +52,7 @@ For example, we can define the above styles in our custom component's style file
 
 When using `ViewEncapsulation.Emulated` (the default), styles will be generated the same way as with the app `styles.scss`, with Angular appending a specific attribute selector to each rule. The same attribute is applied to elements initialized **inside** of our custom component's view  - including the `igx-drop-down-item`s. This means the generated styles will still match all elements on the page, based on the attribute, including the ones in the overlay outlet.
 
-However, most of the Ignite UI for Angular components create their own content based on options and/or bound data (e.g. [`igx-combo`](combo.md), [`igx-grid`](grids/grid.md) and more). That requires us to break through the emulated encapsulation using `::ng-deep`, which we in turn have to scope to prevent the styles from affecting our whole app.
+However, most of the Ignite UI for Angular components create their own content based on options and/or bound data (e.g. [`igx-combo`](combo.md), [`igx-grid`](grid/grid.md) and more). That requires us to break through the emulated encapsulation using `::ng-deep`, which we in turn have to scope to prevent the styles from affecting our whole app.
 
 ### Scoped Component Styles
 

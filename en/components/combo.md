@@ -110,6 +110,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-combo** appearance. 
 Since `igx-combo` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
 On top of that, `IgxCombo` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxCombo` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
+`IgxCheckbox` is yet another related component. For details check [`igx-checkbox styling guide`](checkbox.md#styling).
 
 ### Code snippets
 We are going to use the following:
@@ -155,7 +156,7 @@ $custom-combo-theme: igx-combo-theme(
 ### Applying
 All that's left is to properly scope our newly created themes. Here we will assume you want to style a particular `IgxCombo` so the other components of this type in your application will not be affected by the custom themes. For details regarding applying theme globally or scoped, you can refer to [igx-drop-down styling guide](drop_down.md#applying)
 
-```
+```scss
 // Pass our custom-drop-down-theme and custom-combo-theme to respectively `igx-drop-down` and igx-combo mixins.
 :host {
    ::ng-deep {
@@ -169,8 +170,8 @@ All that's left is to properly scope our newly created themes. Here we will assu
 > The [**IgxCombo**]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-combo-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
 
 ### Demo
-<div class="sample-container loading" style="height:450px">
-    <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:410px">
+    <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

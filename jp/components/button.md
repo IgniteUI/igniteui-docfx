@@ -198,6 +198,141 @@ And the final result:
 </div>
 <div class="divider--half"></div>
 
+### Styling
+
+To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$raised-text-color` and the `$raised-background` parameters with their respective hover parameters and the focus parameters.
+
+```scss
+$dark-button: igx-button-theme(
+    $raised-text-color: #FFCD0F, 
+    $raised-hover-text-color: #292826, 
+    $raised-background: #292826,
+    $raised-hover-background: #FFCD0F,
+    $raised-focus-text-color: #292826,
+    $raised-focus-background: #FFCD0F,
+    $raised-border-radius: 10px,
+    $disabled-color: #16130C
+);
+```
+
+In the theme from above, we have obviously provided parameter values only for the **raised buttons** and in order to implement this for any other type of button, the approach is analogical - we simply have to target the parameters that are specific for the button type we wish to style.
+If we take a look at the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme), we will notice the vast amount of parameters that are available to us in order to style any type of button!
+
+The last step is to **include** the button theme in our application:
+
+```scss
+@include igx-button($dark-button);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-button($dark-button);
+    }
+}
+```
+
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$dark-button: igx-button-theme(
+    $palette: $dark-palette,
+    $raised-text-color: igx-color($dark-palette, "secondary", 700),
+    $raised-hover-text-color: igx-color($dark-palette, "primary", 500),
+    $raised-background:  igx-color($dark-palette, "primary", 500),
+    $raised-hover-background: igx-color($dark-palette, "secondary", 500),
+    $raised-focus-text-color: igx-color($dark-palette, "primary", 500),
+    $raised-focus-background: igx-color($dark-palette, "secondary", 500),
+    $disabled-color: #16130C
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
+
+```scss
+// Extending the dark button schema
+$dark-button-schema: extend($_dark-button,
+    (
+        raised-text-color:(
+            igx-color:("secondary", 700)
+        ),
+        raised-hover-text-color:(
+            igx-color:("primary", 500)
+        ),
+        raised-background:(
+            igx-color:("primary", 500)
+        ),
+        raised-hover-background:(
+            igx-color:("secondary", 500)
+        ),
+        raised-focus-text-color:(
+            igx-color:("primary", 500)
+        ),
+        raised-focus-background:(
+            igx-color:("secondary", 500)
+        ),
+        disabled-color: #16130C
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-button: $dark-button-schema
+));
+
+// Defining button-theme with the global dark schema
+$dark-button: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" class="lazyload no-theming">
+</iframe></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API リファレンス
 <div class="divider--half"></div>
 

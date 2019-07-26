@@ -171,7 +171,7 @@ In order to style the border, we need to penetrate Angular's `Emulated` view enc
 // input-group-style.component.scss
 :host {
     ::ng-deep {
-        @include igx-input-group($input-group);
+ @include igx-input-group($input-group-theme);
     }
 }
 ```
@@ -184,7 +184,7 @@ In order to style the border, we need to penetrate Angular's `Emulated` view enc
 The result of the applied styles can be seen in the below demo:
 
 <div class="sample-container loading" style="height:240px">
-    <iframe id="input-group-style-iframe" src='{environment:demosBaseUrl}/data-entries/input-group-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="input-group-style-iframe" src='{environment:demosBaseUrl}/data-entries/input-group-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>

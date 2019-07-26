@@ -9,6 +9,16 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+  items:
+    - name: Step-by-Step Guide
+      href: general/cli/step-by-step-guide.md
+      new: false
+    - name: Components Templates
+      href: general/cli/components-templates.md
+      new: false
+    - name: Authentication Project Template
+      href: general/cli/auth-template.md
+      new: false
 - name: WPF to Angular guide
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
@@ -55,13 +65,13 @@
       new: false
     - name: Row Editing
       href: grid/row_editing.md
-      new: true
+      new: false
     - name: Row Drag
       href: grid/row_drag.md
-      new: true
+      new: false
     - name: Batch Editing
       href: grid/batch_editing.md
-      new: true
+      new: false
     - name: Paging
       href: grid/paging.md
       new: false
@@ -70,7 +80,7 @@
       new: false
     - name: Excel Style Filtering
       href: grid/excel_style_filtering.md
-      new: true
+      new: false
     - name: Sorting
       href: grid/sorting.md
       new: false
@@ -94,7 +104,7 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: true
+      new: false
     - name: Searching
       href: grid/search.md
       new: false
@@ -118,10 +128,10 @@
       new: false
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
-      new: true
+      new: false
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
-      new: true
+      new: false
     - name: Clipboard Interactions
       href: grid/clipboard_interactions.md
       new: true
@@ -140,7 +150,7 @@
       new: false
     - name: Load On Demand
       href: treegrid/load_on_demand.md
-      new: true
+      new: false
     - name: Editing
       href: treegrid/editing.md
       new: false
@@ -149,7 +159,7 @@
       new: false
     - name: Row Drag
       href: treegrid/row_drag.md
-      new: true
+      new: false
     - name: Batch Editing
       href: treegrid/batch_editing.md
       new: false
@@ -161,7 +171,7 @@
       new: false
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: Sorting
       href: treegrid/sorting.md
       new: false
@@ -182,10 +192,10 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: true
+      new: false
     - name: Searching
       href: treegrid/search.md
-      new: true
+      new: false
     - name: Toolbar
       href: treegrid/toolbar.md
       new: false
@@ -206,7 +216,7 @@
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard_navigation.md
-      new: true
+      new: false
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: true
@@ -215,75 +225,75 @@
       new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: true
+  new: false
   items:
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
-      new: true
+      new: false
     - name: Load on Demand
       href: hierarchicalgrid/load_on_demand.md
-      new: true
+      new: false
     - name: Editing
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
     - name: Row Editing
       href: hierarchicalgrid/row_editing.md
-      new: true
+      new: false
     - name: Row Drag
       href: hierarchicalgrid/row_drag.md
-      new: true
+      new: false
     - name: Batch Editing
       href: hierarchicalgrid/batch_editing.md
-      new: true
+      new: false
     - name: Paging
       href: hierarchicalgrid/paging.md
-      new: true
+      new: false
     - name: Filtering
       href: hierarchicalgrid/filtering.md
-      new: true
+      new: false
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      new: false
     - name: Sorting
       href: hierarchicalgrid/sorting.md
-      new: true
+      new: false
     - name: Summaries
       href: hierarchicalgrid/summaries.md
-      new: true
+      new: false
     - name: Column Moving
       href: hierarchicalgrid/column_moving.md
-      new: true
+      new: false
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
-      new: true
+      new: false
     - name: Column Resizing
       href: hierarchicalgrid/column_resizing.md
-      new: true
+      new: false
     - name: Column Hiding
       href: hierarchicalgrid/column_hiding.md
-      new: true
+      new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
     # Not yet fully implemented for igxHGrid
     # - name: Searching
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: Toolbar
       href: hierarchicalgrid/toolbar.md
-      new: true
+      new: false
     - name: Multi Column Headers
       href: hierarchicalgrid/multi_column_headers.md
-      new: true
+      new: false
     - name: Display Density
       href: hierarchicalgrid/display_density.md
-      new: true
+      new: false
     # - name: Conditional Cell Styling
     #   href: hierarchicalgrid/conditional_cell_styling.md
     #   new: true
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
-      new: true
+      new: false
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: true
@@ -489,7 +499,7 @@
       new: false
     - name: Chart Configuration
       href: financialchart_chart_configuration.md
-      new: false          
+      new: false
     - name: Chart Display Types
       href: financialchart_chart_display_types.md
       new: false
@@ -719,7 +729,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
-  new: true
+  new: false
 - name: Overlay
   href: overlay_main.md
   new: true
@@ -799,9 +809,9 @@
   href: transaction.md
   new: true
   items:
-    - name: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
-      href: transaction-how-to.md
+    - name: Transaction Service class hierarchy
+      href: transaction-classes.md
       new: true
-    - name: How to use the Transaction service
-      href: transaction-example.md
+    - name: How to use the Transaction Service
+      href: transaction-how-to-use.md
       new: true
