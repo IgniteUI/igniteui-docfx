@@ -21,7 +21,7 @@ The `IgxSelectComponent` allows you to select a single item from a drop-down lis
 ## Usage
 ### Basic
 To get started with `igx-select` you first need to import the `IgxSelectModule`:
-```ts
+```typescript
 // app.module.ts
 
 ...
@@ -35,28 +35,70 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-In your class you need to have a collection of the items that you want to display when the drop-down opens:
-```ts
+Then all that is needed is to declaratively define an `igxSelect` and several items.
+```HTML
+<igx-select>
+    <igx-select-item value="Orange">Orange</igx-select-item>
+    <igx-select-item value="Apple">Apple</igx-select-item>
+    <igx-select-item value="Banana">Banana</igx-select-item>
+</igx-select>
+```
+
+Alternatively, another way to do it would be to simply pass in a collection of the items that we want to display using [*ngForOf*](https://angular.io/api/common/NgForOf) directive.
+First, specify a collection of the items that you want to display when the drop-down opens:
+```typescript
 public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ```
 
 Then in your template you need to bind it with said items like so:
-```html
-<igx-select>
+```HTML
+<igx-select [(ngModel)]="selected">
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
 </igx-select>
 ```
+Additionally, we are binding via `ngModel`, so there is initial `igxSelect` value set;
+
 Notice that we use an `IgxSelectItemComponent` to display the items that `igx-select` operates on. The `IgxSelectItemComponent` extends the [*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) with additional functionality that is specific to the `igx-select-item`.
 
-### Hint Label Prefix and Suffix
-You may have noticed, the `igxSelect` component uses [igx-input-group](input_group.md). This means you can use all of it's related directives.
+### Label Prefix and Suffix
+You may have noticed, the `igxSelect` component uses [igx-input-group](input_group.md). This means you can use of it's related directives. Here we are going to utilize `igxLabel`, `igx-prefix` and `igx-suffix`.
 
-<!-- TODO:  Specific sample on how to use Hint Label Prefix and Suffix -->
+```HTML
+    <igx-select [(ngModel)]="selected">
+        <label igxLabel>Pick a fruit</label>
+        <igx-prefix>
+            <igx-icon color="green" style="width:48px; height:32px;">BIO</igx-icon>
+        </igx-prefix>
+        <igx-suffix>
+            <igx-icon (click)="clearSelection($event)">{{ selected ? 'clear' : null }}</igx-icon>
+        </igx-suffix>
+        <igx-select-item *ngFor="let item of items" [value]="item">
+            {{item}}
+        </igx-select-item>
+    </igx-select>
+```
+
+<div class="sample-container loading" style="height: 350px;">
+    <iframe id="select-input-directives-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-input-directives" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 > [!NOTE]
-  Items' list expand arrow is an actual `IgxSuffix`. It can be customized using a template. If more than one `IgxSuffix` is used, the expand arrow will be displayed always last.
+  Currently due to a limitation [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive can not be used in `igxSelect` component.
+
+  > [!NOTE]
+  Items' list toggle arrow is an actual `IgxSuffix`. If more than one `IgxSuffix` is used, the toggle arrow will be displayed always last.
+
+### Templating toggle button
+Default arrow can be replaced using a template with the help of [`igxSelectToggleIcon`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) directive. For example:
+```HTML
+        <ng-template igxSelectToggleIcon let-collapsed>
+          <igx-icon>{{ collapsed ? 'add_circle' : 'add_circle_outline'}}</igx-icon>
+        </ng-template>
+```
 
 ## Features
 ### IgxSelect Actions
@@ -114,7 +156,7 @@ Since `igx-select` extends `igx-drop-down`, it also makes good use of its events
 - Emitted when the drop-down is fully opened.
 
 You can make use of the `onOpened` event like so:
-```html
+```HTML
 <igx-select (onOpened)="handleOpened($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
 </igx-select>
@@ -123,12 +165,12 @@ You can make use of the `onOpened` event like so:
 #### Opening/Closing events
 - Emitted on:
     - input click
-    - select expand/collapse button click (app scenario)
+    - select toggle button click (app scenario)
 - Triggered on key interaction
 
  The `onOpening` and `onClosing` events are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**. They can also be canceled by setting the `cancel` property to `true` in the event handler function.
 
-```html
+```HTML
 <igx-select (onOpening)="handleOpening($event)" (onClosing)="handleClosing($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
 </igx-select>
@@ -141,7 +183,7 @@ You can make use of the `onOpened` event like so:
 - Emitted when setting the value property.
 - Emitted when setting an item's `selected` property.
 
-```html
+```HTML
 <igx-select (onSelection)="handleSelection($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
     <igx-select-item [value]="Pear">Pear</igx-select-item>
@@ -152,14 +194,14 @@ You can make use of the `onOpened` event like so:
 - Emitted on clicking outside of the component, when the drop-down is fully closed.
 
 You can make use of the `onClosed` event like so:
-```html
+```HTML
 <igx-select (onClosed)="handleClosed($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
 </igx-select>
 ```
 
 You put all your *handler* functions inside of your *class*:
-```ts
+```typescript
 export class MyClass {
     /* --- */
     private handleOpening(event: CancelableEventArgs): void {
@@ -189,14 +231,14 @@ export class MyClass {
 It extends the [*ConnectedPositioningStrategy*]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) and allows `igx-select` to position its drop-down list in different ways, relative to the input field. This means that the drop-down will always position itself so that the text in the input is matched by the selected item's text.
 
 In the following example we are defining custom overlay settings using the `SelectPositioningStrategy` so you first have to import it alongside the [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html):
-```ts
+```typescript
 import { SelectPositioningStrategy, OverlaySettings } from 'igniteui-angular';
 ```
 
 From there you have to initialize an [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) object and pass in the `SelectPositioningStrategy`. And finally in the positioning strategy's constructor you pass in a [*ViewChild*](https://angular.io/api/core/ViewChild) that references the `IgxSelectComponent` from your template.
 
 All of it looks like this:
-```ts
+```typescript
 @ViewChild(IgxSelectComponent)
 public igxSelect: IgxSelectComponent;
 
@@ -222,7 +264,7 @@ Another thing worth mentioning is that `igx-select` uses the `SelectPositioningS
 Thanks to the fact that `igx-select` extends `igx-drop-down` it also has a built-in support for *groups*. 
 
 In order to make use of this functionality you need to change the data that will be passed to `igx-select`, which in this case should look something like this:
-```ts
+```typescript
 public items: any[] = [
     { type: "Fruits", fruits: [ "Apple", "Orange", "Banana" ] },
     { type: "Vegetables", vegetables: [ "Cucumber", "Potato", "Pepper" ] }
@@ -232,7 +274,7 @@ public items: any[] = [
 You would notice that now we pass in objects that have certain properties, such as `type` and `fruits`. This is because the `IgxSelectItemComponent` has functionality that allows it to receive specific styling inside the drop-down list. This functionality comes inherited from the [*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 
 Then in your template file you can iterate over these objects and access their properties accordingly:
-```html
+```HTML
 <igx-select>
     <igx-select-item-group *ngFor="let item of items" [label]="item.type">
         <igx-select-item *ngFor="let fruit of item.fruits" 
@@ -257,16 +299,8 @@ Then in your template file you can iterate over these objects and access their p
 
 `igx-select` can also be put inside of a `form` element and in order to do that, you first have to create the template for your control and add the items that it will be displaying:
 
-```html
-<igx-select [(ngModel)]="selected">
-    <igx-select-item value="Orange">Orange</igx-select-item>
-    <igx-select-item value="Apple">Apple</igx-select-item>
-    <igx-select-item value="Banana">Banana</igx-select-item>
-</igx-select>
-```
 
-Another way to do it would be to simply pass in a collection of the items that we want to display to the [*ngForOf*](https://angular.io/api/common/NgForOf) directive:
-```html
+```HTML
 <igx-select [(ngModel)]="selected" required>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
@@ -275,7 +309,7 @@ Another way to do it would be to simply pass in a collection of the items that w
 ```
 
 Since we are using two-way binding, your class should look something like this:
-```ts
+```typescript
 export class MyClass {
   public selected: string = "Apple";
 }
@@ -297,7 +331,7 @@ With `igx-select` you are not bound to use any of the [*OverlaySettings*]({envir
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 To do this you first define your template like so:
-```html
+```HTML
 <igx-select [overlaySettings]="customOverlaySettings">
     <igx-select-item *ngFor="let item of items">
         {{item}}
@@ -307,7 +341,7 @@ To do this you first define your template like so:
 - Where the `overlaySettings` property is bound to your custom settings.
 
 Inside of your class you would have something along the lines of:
-```ts
+```typescript
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
     public igxSelect: IgxSelectComponent;
@@ -340,7 +374,7 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 > Note that you can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the `igx-select`'s open function.  
 
 With your tempalte looking like this:
-```html
+```HTML
 <igx-select>
     <igx-select-item *ngFor="let item of items">
         {{item}}
@@ -350,7 +384,7 @@ With your tempalte looking like this:
 <button (click)="onClick($event)"></button>
 ```
 Your class should look something like this:
-```ts
+```typescript
 export class MyClass implements OnInit {
     /* -- */
     private otherCustomOverlaySettings: OverlaySettings = {
