@@ -402,7 +402,7 @@ $my-calendar-theme: igx-calendar-theme(
 The last step is to **include** the component mixins: 
 
 ```scss
- @include igx-grid($custom-theme);
+ @include igx-calendar($my-calendar-theme);
 ```
 
 >[!NOTE]
