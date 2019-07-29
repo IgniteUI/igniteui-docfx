@@ -411,7 +411,7 @@ The last step is to **include** the component mixins:
  ```scss
 :host {
   ::ng-deep {
-    @include igx-grid($custom-theme);
+    @include igx-calendar($my-calendar-theme);
   }
 }
 ```
