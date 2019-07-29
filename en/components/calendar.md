@@ -396,7 +396,7 @@ $my-calendar-theme: igx-calendar-theme(
   $month-current-text-color: #2dabe8,
   $month-hover-text-color: #2dabe8,
   $picker-text-color: #2dabe8,
-  $picker-text-hover-color: #000000,
+  $picker-text-hover-color: #000000
 );
 ```
 The last step is to **include** the component mixins: 
