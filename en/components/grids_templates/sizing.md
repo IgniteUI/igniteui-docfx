@@ -232,7 +232,7 @@ Because the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html
 
 The `width` for the children does not behave much different than the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) itself, since each child grid is instance of [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) as well.
 
-The only difference is that the user cannot change the parent element of the child grid. That's why when the `width` is set to percentages, the `100%` width allocated for the child is smaller than the parent grid `width`. This is so that it is easier to distinguish when expanded th. The following image displays the default child grid sizes, since it defaults to `100%` width.
+The only difference is that the user cannot change the parent element of the child grid. That's why when the `width` is set to percentages, the `100%` width allocated for the child is smaller than the parent grid `width`. This is so that it is easier to distinguish when it is expanded. The following image displays the default child grid sizes, since it defaults to `100%` width.
 
 <img src="../../images/grid_sizing/hgrid-width-percentages-v2.jpg" style="width: 80%"/>
 
@@ -240,7 +240,7 @@ The only difference is that the user cannot change the parent element of the chi
 
 The `height` of each child in the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) behaves also similarly to the `height` of the root level grid.
 
-The difference is that for the child grid, when `height` is set to percentages it behaves as if the parent element has unspecified height. This means that in this scenario, the grid will render maximum of 10 rows. When the number of rows in the data is less than 10, the grid will size the view area to fit all the rows. If the data has more rows, a vertical scrollbar will be rendered and the view area will be sized to 10 rows height.
+The difference is that for the child grid, when `height` is set to percentages, it behaves as if the parent element has unset height. This means that in this scenario, the grid will render maximum of 10 rows. When the number of rows in the data is less than 10, the grid will size the view area to fit all the rows. If the data has more rows, a vertical scrollbar will be rendered and the view area will be sized to 10 rows height.
 
 <img src="../../images/grid_sizing/hgrid-height-percentages-v2.jpg" style="width: 80%"/>
 
