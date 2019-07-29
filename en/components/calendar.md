@@ -428,7 +428,7 @@ $light-gray-color: #fdfdfd;
 
 $my-custom-palette: igx-palette(
     $primary: $blue-color,
-    $secondary: $light-gray-color,
+    $secondary: $light-gray-color
 );
 ```
 
