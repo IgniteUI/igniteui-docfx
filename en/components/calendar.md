@@ -436,7 +436,20 @@ And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-col
 
 ```scss
 $my-calendar-theme: igx-calendar-theme(
-    $header-background: igx-color($my-custom-palette, "primary", 500),
+  $header-background: igx-color($my-custom-palette, "primary", 500),
+  $content-background: igx-color($my-custom-palette, "secondary", 500),
+  $header-text-color: igx-color($my-custom-palette, "secondary", 50),
+  $date-current-text-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-arrow-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-arrow-hover-color: igx-color($my-custom-palette, "grays", 900),
+  $year-current-text-color: igx-color($my-custom-palette, "primary", 50),
+  $year-hover-text-color: igx-color($my-custom-palette, "primary", 50),
+  $month-current-text-color: igx-color($my-custom-palette, "primary", 50),
+  $month-hover-text-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-text-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-text-hover-color: igx-color($my-custom-palette, "grays", 900),
+  $date-selected-background: igx-color($my-custom-palette, "primary", 500),
+  $date-selected-text-color: igx-color($my-custom-palette, "secondary", 500)
 );
 ```
 
