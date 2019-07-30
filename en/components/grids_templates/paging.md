@@ -652,7 +652,7 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 
 #### Demo
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <br/>
 <div>
