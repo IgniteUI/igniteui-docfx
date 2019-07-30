@@ -324,8 +324,9 @@ export class MyClass {
 }
 ```
 
-### Using required attribute
-There may be cases when you want to validate the user input and in particular make sure there is a selection made. In order to use the `igxSelect` along with the `required` validation attribute, it is needed to include the `igxSelect` in a [*Form*](https://angular.io/guide/form-validation) OR use [*NgModel*](https://angular.io/api/forms/NgModel) outside of a `Form` for binding. You can refer to the above [Select In A Form](#select-in-a-form) stackblitz sample for details. 
+### Use with @angular/forms
+`igxSelect` support all of the form directives from the core FormsModule [*NgModel*](https://angular.io/api/forms/NgModel) and [*ReactiveFormsModule*](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). 
+You can refer to the above [Select In A Form](#select-in-a-form) stackblitz sample for details on using the `required` attribute. 
 
 > [!NOTE]
 In order to see the `required` asterisk `*` as well, there has to be a label set.
