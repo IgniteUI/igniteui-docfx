@@ -38,7 +38,7 @@ Now that we've seen just how similar an Angular component is to a WPF user contr
 ng g c sample
 ```
 
-When the command completes, you'll notice a number of things have happened. First, we have a new folder with the name we given to our component. We also have four new files - an html file, a SPEC file, a typescript file, and a CSS file. We also made an update to the `app.module.ts` file.
+When the command completes, you'll notice a number of things have happened. First, we have a new folder with the same name we have given to our component. We also have four new files - an html file, a SPEC file, a typescript file, and a CSS file. We also made an update to the `app.module.ts` file.
 
 <img src="../../../images/general/sample_component.png" />
 

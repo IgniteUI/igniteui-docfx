@@ -70,7 +70,7 @@ onInputKeyup(event, message) {
 }
 ```
 
-Surprisngly, in Angular, there is an even easier way to do that. You could bind to the `keyup.enter` pseudo-event. Using this approach, the event handler will be called only when the user presses Enter.
+Surprisingly, in Angular, there is an even easier way to do that. You could bind to the `keyup.enter` pseudo-event. Using this approach, the event handler will be called only when the user presses Enter.
 
 ```html
 <input #messageInput (keyup.enter)="onInputKeyup(messageInput.value)">
