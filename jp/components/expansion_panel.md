@@ -12,7 +12,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 展開パネルデモ
-<div class="sample-container loading" style="height: 400px;">
+<div class="sample-container loading" style="height: 450px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -92,7 +92,7 @@ export class AppModule {}
 css クラスの `.igx-expansion-panel__ ヘッダーと `.igx-expansion-panel__body` は、ヘッダーとボディのスタイル設定を公開します。
 
 以下は結果です。
-<div class="sample-container loading" style="height: 400px;">
+<div class="sample-container loading" style="height: 450px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" class="lazyload"></iframe>
 </div>
 <div>
@@ -240,7 +240,7 @@ export class ExpansionPanelComponent {
 ```
 ### まとめ
 以下は、すべての変更を初期コンポーネントに適用後の最終的な結果です。
-<div class="sample-container loading" style="height: 500px;">
+<div class="sample-container loading" style="height: 550px;">
     <iframe id="expansion-sample-3-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
 </div>
 <div>

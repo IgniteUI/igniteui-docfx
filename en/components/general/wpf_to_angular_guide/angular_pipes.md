@@ -6,7 +6,9 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Transforming Data With Angular Pipes
 
-In WPF in order to transform data from one value to another, you are going to use [IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8). To transform data in an Angular application, we are going to use a [Pipe](https://angular.io/api/core/Pipe). The pipe is very similar to the WPF converter. It takes data as an input and then transforms that data into a desired output for display.
+> [!Video https://www.youtube.com/embed/Gmz5kio50FE]
+
+In WPF in order to transform data from one value to another, you are going to use an [IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8). To transform data in an Angular application, we are going to use a [Pipe](https://angular.io/api/core/Pipe). The pipe is very similar to the WPF converter. It takes data as an input and then transforms that data into a desired output for display.
 
 Angular provides a number of predefined pipes for the most common data transformations. For example, if you want a header text to appear in upper case, you could use the [UpperCasePipe](https://angular.io/api/common/UpperCasePipe). Using a pipe is very simple. After your expression, provide a pipe operator `|` followed by the pipe name.
 
@@ -28,7 +30,7 @@ Besides that, we also have the option to provide parameters to the pipe. For exa
 
 ## Create Your Own Pipe
 
-Besides using the predefined pipes, Angular allows you to define your own pipes. Let us take a look at the implementation of a WPF converter that replaces a string with another one.
+Besides using the predefined pipes, Angular allows you to define your own pipes. Let's take a look at the implementation of a WPF converter that replaces a string with another one.
 
 ```csharp
 public class ReplaceConverter : IValueConverter
