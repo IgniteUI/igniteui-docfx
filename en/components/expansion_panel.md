@@ -521,7 +521,6 @@ You can see the results below:
 </div>
 
 ## Weather Forecast Sample
-
 The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`](card.md) and [`IgxIcon`](icon.md) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days weather conditions.
 
 ```typescript
@@ -611,7 +610,6 @@ export const data = {
     //...
   ]
 };
-
 ```
 
 You can see the results below:
@@ -620,6 +618,84 @@ You can see the results below:
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+## Styling
+Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-expansion-panel** appearance. We are going to style a simplified version of the above [animations sample](#using-specific-animation) and modify it to have more fancy appearance.
+
+### Import theme
+First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+
+```scss
+// in styles.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+### Define palette & colors
+After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom `igx-expansion-panel` styling in conjunction with our own color [palette](themes/palette.md) where we can specify our two main colors to be used by the component as well as an info color.
+Fist define a custom palette and pass our main colors:
+```scss
+// in styles.scss
+$my-primary-color:#72da67;
+$my-secondary-color: #7344df81;
+$my-info-color:rgba(0, 0, 0, 0.54)
+
+$my-color-palette: igx-palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color,
+    $info: $my-info-color
+);
+```
+
+In order to see our custom palette and colors applied, we need to pass these to a theme function.
+So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our colors to a number of predefined `igx-expansion-panel-theme parameters` . Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on the colors defined.
+```scss
+// in styles.scss
+$custom-panel-theme: igx-expansion-panel-theme(
+    $palette: $my-color-palette,
+    $header-background: igx-color($my-color-palette, "primary", 200),
+    $header-focus-background: igx-color($my-color-palette, "primary", 300),
+    $header-title-color: igx-color($my-color-palette, "info"),
+    $header-icon-color: igx-color($my-color-palette, "info"),
+    $body-background: igx-color($my-color-palette, "secondary", 100),
+    $border-radius: 0.35em
+);
+```
+
+### Applying
+All that's left is to properly scope our newly created theme.
+
+#### Globally
+In case you want this newly created `igx-expansion-panel` theme to be applied [`globally`](themes/component-themes.md#creating-themes) in your app, all that is needed is to include the theme in your app root style file:
+```scss
+// in styles.scss
+// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
+@include igx-expansion-panel($custom-panel-theme);
+```
+#### Scoped
+There may be a case where you want a particular `igx-expansion-panel` be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc. Additionally all of the above steps need to be moved from `styles.scss` to the `component.scss` file.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+ On the other side, in order to prevent our custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+
+```scss
+// in component.scss
+:host {
+    ::ng-deep {
+        // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
+        @include igx-expansion-panel($custom-panel-theme);
+    }
+}
+```
+### Styling Demo
+
+You can see the styled sample below:
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="expansion-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ## API Reference
