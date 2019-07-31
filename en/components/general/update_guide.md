@@ -45,8 +45,8 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
 ### From 8.0.x to 8.1.x
-* The `igx-paginator` component is introduced and is used as a standalone component as well is used in the grid components.
-Have in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that some CSS rules (like `display: flex`) were removed and now you might need to add them manually.
+* The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
+Keep in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that the template is no longer applied under a paging-specific container with CSS rules to center content, so you might need to add them manually.
 The style should be something similar to:
 
 ```
