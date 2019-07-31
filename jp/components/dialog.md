@@ -154,6 +154,148 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
+### Styling
+
+To get started with styling the dialog window, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts the `$background`, `$title-color`, `$message-color`, `$border-radius` and `$shadow` parameters.
+
+```scss
+$color-1: rgb(119, 119, 119);
+$color-2: #1c83e4;
+$color-3: rgb(16, 4, 51);
+
+$elevations-color: igx-elevations($color-1 , $color-2, $color-3);
+
+$my-dialog-theme: igx-dialog-theme(
+    $background: #000000,
+    $title-color: #1c83e4,
+    $message-color: #ffffff,
+    $border-radius: .3,
+    $shadow: igx-elevation($elevations-color, 14)
+);
+```
+
+> [!NOTE]
+> As we see the `$shadow` parameter accepts `igx-elevation`, which is of type box-shadow. In order to learn more about various options for IgniteUI Shadows, you can take a look at this [link](shadows.md).
+
+> [!NOTE]
+> In order to style any additional components that are used as part of the dialog window's content (such as [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and placed under the dialog window's scope only (so it does not affect the rest of the application).
+
+Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+
+```html
+<div igxOverlayOutlet>
+    <igx-dialog #dialog1>
+        <!-- .... -->
+    </igx-dialog>
+</div>
+```
+
+> [!NOTE]
+> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+
+The last step is to **include** the component mixins: 
+
+```scss
+@include igx-dialog($my-dialog-theme);
+```
+
+>[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+ ```scss
+:host {
+  ::ng-deep {
+    @include igx-dialog($my-dialog-theme);
+  }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$black-color: #000000;
+$light-blue-color: #1c83e4;
+$white-color: #ffffff;
+
+$custom-palette: igx-palette(
+    $primary: $black-color,
+    $secondary: $light-blue-color,
+    $info: $white-color
+);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+
+```scss
+$my-dialog-theme: igx-dialog-theme(
+    $background: igx-color($custom-palette, "primary", 500),
+    $title-color: igx-color($custom-palette, "secondary", 500),
+    $message-color: igx-color($custom-palette, "info", 500),
+    $border-radius: .3,
+    $shadow: igx-elevation($elevations-color, 14)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-dialog`]({environment:sassApiUrl}/index.html#variable-_light-dialog):  
+
+```scss
+// Extending the light dialog schema
+$custom-dialog-schema: extend($_light-dialog,
+    (
+        background: igx-color($custom-palette, "primary", 500),
+        title-color: igx-color($custom-palette, "secondary", 500),
+        message-color: igx-color($custom-palette, "info", 500),
+        border-radius: .3,
+        shadow: igx-elevation($elevations-color, 14)
+    )
+);
+```
+
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, 
+    (
+        igx-dialog: $custom-dialog-schema
+    )
+);
+
+// Defining our custom theme with the custom schema
+$my-dialog-theme: igx-dialog-theme(
+  $palette: $custom-palette,
+  $schema: $my-custom-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+<div class="sample-container loading" style="height:300px">
+    <iframe id="dialog-styling-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API まとめ
 <div class="divider--half"></div>
 
