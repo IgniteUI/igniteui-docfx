@@ -49,13 +49,15 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 Keep in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that the template is no longer applied under a paging-specific container with CSS rules to center content, so you might need to add them manually.
 The style should be something similar to:
 
-```
+```html
 <igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
 </igx-grid>
 <ng-template #pager>
     <div class="pagination-container"></div>
 </ng-template>
+```
 
+```css
 .pagination-container {
 	display: flex;
 	justify-content: center;
