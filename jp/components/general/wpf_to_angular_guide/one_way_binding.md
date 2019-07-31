@@ -6,21 +6,24 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## One-way data binding in Angular
 
-One of the most powerful and widely used features in WPF is data binding. It makes developers' life much easier, by synchronizing the business logic with the view and vice versa, without having to write a single extra line of code. Without the power of it, WPF would just be a better-looking WindowsForms.
+> [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
+
+One of the most powerful and widely used features in WPF is data binding. It makes a developers' life much easier, by synchronizing the business logic with the view and vice versa, without having to write a single extra line of code. Without the power of it, WPF would just be a better-looking WindowsForms.
 Luckily, Angular supports data binding! There are two types of data binding - one-way binding and two-way binding.
 
 ### One-way data binding
 
-Data binding in Angular is super easy, and unlike in WPF we don't have to worry about a data context or a view model. All we have to worry about is an HTML file and a typescript file. With any data binding, the first thing you need are properties to bind to. So let's add a property called `text` into the component class, and set its value.
+Data binding in Angular is super easy, and unlike in WPF we don't have to worry about a data context, a view model, or `INotifyPropertyChanged` (INPC). All we have to worry about is an HTML file and a typescript file. With any data binding, the first thing you need are properties to bind to. So let's add a property called `text` into the component class, and set its value.
 In WPF, we need to set the DataContext and bind the property in XAML:
 ```csharp
 public class IgniteUIClass
 {
-  public IgniteUIClass()
-  { this.Text = "IgniteUI for Angular"; }
+  public string Text  { get; set; }
   
-  public string Text
-  { get; set; }
+  public IgniteUIClass()
+  { 
+    this.Text = "IgniteUI for Angular";
+  }
 }
 ...
 public MainWindow()
@@ -35,6 +38,7 @@ public MainWindow()
 In Angular, we are directly binding a DOM property to component's property:
 ```typescript
 export class SampleComponent implements OnInit {
+
   text = 'IgniteUI for Angular';
 
   constructor() { }
@@ -51,8 +55,11 @@ In the code from above, we simply display some text in the HTML by using a bindi
 ```html
 <h2 innerHTML="{{ text }}"></h2>
 ```
-There are two important things about `interpolation`. First, everything inside the curly braces is rendered as a `string`.
-Second, everything inside the curly braces is referred to as a `template expression`. This allows us to do more complex things, such as concatenation. For example, let's concatenate some text with the value of the `text` property:
+There are two important things about `interpolation`. 
+- First, everything inside the curly braces is rendered as a `string`.
+- Second, everything inside the curly braces is referred to as a `template expression`. This allows us to do more complex things, such as concatenation.
+
+For example, let's concatenate some text with the value of the `text` property:
 ```html
 <h2>{{"Welcome to " + text }}</h2>
 ```
@@ -94,14 +101,16 @@ We will now create a simple `input` of type text and bind the `isDisabled` prope
 <input type="text" disabled="{{ isDisabled }}">
 ```
 The expected result is that the `input` should be enabled, but it's disabled. This is because the `interpolation` returns a string, but the input's disabled property is of boolean type and it requires a boolean value.
-In order for this to work correctly, Angular provides `property binding`. Its syntax is a bit different.
+In order for this to work correctly, Angular provides `property binding`. 
 
 ### Property Binding
+
+The syntax for a property binding is a bit different than that of interpolation. With property binding, the property name is wrapped into square brackets, and its value does not contain curly braces - just the name of the property that it is bound to.  
 
 ```html
 <input type="text" [disabled]="isDisabled">
 ```
-The actual property name is wrapped into square brackets, and its value does not contain curly braces - just the name of the property that it is bound to. Now, the input's `disabled` property is bound to a boolean result, **not** a string. The `isDisabled` value is false and running the app would display the input as enabled.
+By using property binding, the input's `disabled` property is bound to a boolean result, **not** a string. The `isDisabled` value is false and running the app would display the input as enabled.
 
 > [!NOTE]
 > It is very important to remember that when a binding relies on the data type result, then a `property binding` should be used! If the binding simply relies on a string value, then `interpolation` should be used.

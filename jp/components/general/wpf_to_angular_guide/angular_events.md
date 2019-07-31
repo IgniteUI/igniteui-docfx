@@ -6,9 +6,11 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular,
 
 ## Responding to Events
 
+> [!Video https://www.youtube.com/embed/V1Futz4W400]
+
 ### Binding to User Input Events
 
-Every app you have probably ever written had to respond to some type of user interaction one way or another. The most common way to do that is with some type of event system. WPF provides routed and CLR events and commands while In Angular there are DOM events.
+Every app you have probably ever written had to respond to some type of user interaction one way or another. The most common way to do that is with some type of event system. WPF provides routed events, CLR events, and commands. While in Angular, there are DOM events.
 
 Here is a simple example how you respond to a click event of a button in WPF:
 
@@ -32,7 +34,7 @@ onClicked() {
 }
 ```
 
-In WPF we are used to getting information about the event, such as the sender or any event arguments. In Angular we can use the `$event` variable. This variable will provide information about the event that was invoked.
+In WPF we are used to getting information about the event, such as the sender and the event arguments. In Angular we can use the `$event` variable. This variable will provide information about the event that was invoked.
 
 ```html
 <button (click)="onClicked($event)">Click Me</button>
@@ -55,7 +57,7 @@ onClicked(message) {
 }
 ```
 
-Let us say that we want to print the value of an input on pressing Enter. You could do that in Angular like this:
+Let's say that we want to print the value of an input on pressing Enter. You could do that in Angular like this:
 
 ```html
 <input #messageInput (keyup)="onInputKeyup($event, messageInput.value)">
@@ -68,7 +70,7 @@ onInputKeyup(event, message) {
 }
 ```
 
-However, in Angular there is an easier way to do that, you could bind to the `keyup.enter` pseudo-event. Using this approach, the event handler will be called only when the user presses Enter.
+Surprisingly, in Angular, there is an even easier way to do that. You could bind to the `keyup.enter` pseudo-event. Using this approach, the event handler will be called only when the user presses Enter.
 
 ```html
 <input #messageInput (keyup.enter)="onInputKeyup(messageInput.value)">
@@ -94,7 +96,7 @@ public class MyControl : Control
 }
 ```
 
-In Angular, you achieve similar result using the [HostListener](https://angular.io/api/core/HostListener) decorator.
+In Angular, you achieve a similar result using the [HostListener](https://angular.io/api/core/HostListener) decorator.
 
 ```typescript
 @Component({
@@ -112,7 +114,7 @@ export class MyComponent {
 
 ## Create Your Own Events
 
-Sometimes you need to define your own events. In WPF you could define either CLR or routed events. Let us take a look at a simple example of a CLR event in WPF:
+Sometimes you need to define your own events. In WPF you could define either CLR or routed events. Let's take a look at a simple example of a CLR event in WPF:
 
 ```csharp
 public event EventHandler<TaskEventArgs> TaskCompleted;
