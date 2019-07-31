@@ -382,6 +382,246 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 }
 <div class="divider--half"></div>
 
+### Styling
+
+To get started with styling the filtering row, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+// custom-grid-paging-style.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$filtering-row-text-color`, `$filtering-row-background`, `$filtering-header-text-color` and the `$filtering-header-background` parameters.
+
+```scss
+$custom-grid: igx-grid-theme(
+    $filtering-row-text-color: #292826,
+    $filtering-row-background: #FFCD0F,
+    $filtering-header-text-color: #292826,
+    $filtering-header-background: #FFCD0F
+);
+```
+
+As seen, the `igx-grid-theme` only controls colors for the filtering row and the respective column header that is being filtered. We obviously have a lot more components inside the filtering row, such as an input group, chips, buttons and others. In order to style them, we need to create a separate theme for each one, so let's create a new input group theme and a new button theme:
+
+```scss
+$dark-input-group: igx-input-group-theme(
+    $box-background: #292826,
+    $idle-text-color: #FFCD0F,
+    $focused-text-color: #FFCD0F,
+    $filled-text-color: #FFCD0F
+);
+
+$dark-button: igx-button-theme(
+    $flat-background: #FFCD0F,
+    $flat-text-color: #292826,
+    $flat-hover-background: #292826,
+    $flat-hover-text-color: #FFCD0F
+);
+```
+
+In this example we only changed some of the parameters for the input group and the button, but the the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provide way more parameters to control their respective styling.
+
+The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
+
+```scss
+@include igx-grid($custom-grid);
+.igx-grid__filtering-row {
+    @include igx-button($dark-button);
+    @include igx-input-group($dark-input-group);
+
+    .igx-input-group__input::placeholder {
+        color: #FFCD0F;
+    }
+}
+```
+
+>[!NOTE]
+>We scope the **igx-button** and the **igx-input-group** mixins within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-grid($custom-grid);
+        .igx-grid__filtering-row {
+            @include igx-button($dark-button);
+            @include igx-input-group($dark-input-group);
+
+            .igx-input-group__input::placeholder {
+                color: #FFCD0F;
+            }
+        }
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$custom-grid: igx-grid-theme(
+    $filtering-row-text-color: igx-color($dark-palette, "primary", 400),
+    $filtering-row-background: igx-color($dark-palette, "secondary", 400),
+    $filtering-header-text-color: igx-color($dark-palette, "primary", 400),
+    $filtering-header-background: igx-color($dark-palette, "secondary", 400)
+);
+
+$dark-input-group: igx-input-group-theme(
+    $box-background: igx-color($dark-palette, "primary", 400),
+    $idle-text-color: igx-color($dark-palette, "secondary", 400),
+    $focused-text-color: igx-color($dark-palette, "secondary", 400),
+    $filled-text-color: igx-color($dark-palette, "secondary", 400)
+);
+
+$dark-button: igx-button-theme(
+    $flat-background: igx-color($dark-palette, "secondary", 400),
+    $flat-text-color: igx-color($dark-palette, "primary", 400),
+    $flat-hover-background: igx-color($dark-palette, "primary", 400),
+    $flat-hover-text-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group) and [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button) schemas: 
+
+```scss
+// Extending the light grid schema
+$custom-grid-schema: extend($_light-grid,
+    (
+        filtering-row-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        filtering-row-background:(
+            igx-color: ("secondary", 400)
+        ),
+        filtering-header-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        filtering-header-background:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+
+// Extending the light input group schema
+$custom-input-group-schema: extend($_light-input-group,
+    (
+        box-background:(
+            igx-color: ("primary", 400)
+        ),
+        idle-text-color:(
+            igx-color: ("secondary", 400)
+        ),
+        focused-text-color:(
+            igx-color: ("secondary", 400)
+        ),
+        filled-text-color:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+
+// Extending the light button schema
+$custom-button-schema: extend($_light-button,
+    (
+        flat-background:(
+            igx-color: ("secondary", 400)
+        ),
+        flat-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        flat-hover-background:(
+            igx-color: ("primary", 400)
+        ),
+        flat-hover-text-color:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$custom-light-schema: extend($light-schema,(
+    igx-grid: $custom-grid-schema,
+    igx-input-group: $custom-input-group-schema,
+    igx-button: $custom-button-schema
+));
+
+// Defining grid-theme with the global light schema
+$custom-grid: igx-grid-theme(
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
+);
+
+// Defining button-theme with the global light schema
+$custom-button: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
+);
+
+// Defining input-group-theme with the global light schema
+$custom-button: igx-input-group-theme(
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-filtering-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:500px">
+    <iframe id="treegrid-filtering-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+   <div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-filtering-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### API References
 <div class="divider--half"></div>
 
