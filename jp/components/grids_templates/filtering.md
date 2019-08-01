@@ -391,7 +391,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 To get started with styling the filtering row, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-// custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
