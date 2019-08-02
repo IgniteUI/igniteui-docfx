@@ -14,7 +14,7 @@
       href: general/cli/step-by-step-guide.md
       new: false
     - name: Templates
-      href: general/cli/templates.md
+      href: general/cli/component-templates.md
       new: false
     - name: Authentication Project Template
       href: general/cli/auth-template.md
