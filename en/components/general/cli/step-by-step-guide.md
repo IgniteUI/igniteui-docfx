@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 ---
 
 ## Step-by-Step Guide
-If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you to create and setup your new application, as well as update project previously created with the [Ignite UI CLI](cli-overview.md).
+If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you to create and setup your new application, as well as update project previously created with the [Ignite UI CLI](../cli-overview.md).
 
 To start the guide, simply run the `ig` command:
 
@@ -40,7 +40,7 @@ Then you will be guided to choose one of the available project templates. You ca
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
 
-The next step is to choose a theme for your application. If you select the default option a pre-compiled CSS file (`igniteui-angular.css`) with the default Ignite UI for Angular theme is included in your project's `angular.json`. The custom option generates code for a color palette and theme with our [our Theming API.](../../themes.md) in the `app/styles.scss`.
+The next step is to choose a theme for your application. If you select the default option a pre-compiled CSS file (`igniteui-angular.css`) with the default Ignite UI for Angular theme is included in your project's `angular.json`. The custom option generates code for a color palette and theme with our [our Theming API](../../themes.md) in the `app/styles.scss`.
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 
@@ -58,7 +58,7 @@ ig add
 ```
 
 
-In case you choose to add a new control, you will be provided with a [list of the available templates](cli/component-templates.md#component-templates), grouped in categories.
+In case you choose to add a new control, you will be provided with a [list of the available templates](component-templates.md#component-templates), grouped in categories.
 
 ![](../../../images/general/ig-step-by-step-template-group.png)
 
@@ -68,7 +68,7 @@ For some templates, like `Custom Grid`, for example you will be provided with a 
 
 ![](../../../images/general/ig-step-by-step-component-features.png)
 
-If you choose to add a scenario to your application you will also get a list of the available [scenario templates](cli/component-templates.md#scenario-templates):
+If you choose to add a scenario to your application you will also get a list of the available [scenario templates](component-templates.md#scenario-templates):
 
 ![](../../../images/general/ig-step-by-step-scenario-templates.png)
 
