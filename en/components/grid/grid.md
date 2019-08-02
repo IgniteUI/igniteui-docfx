@@ -88,6 +88,9 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
 
+
+#### Defining columns
+
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
 ```html
@@ -105,6 +108,8 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Each of the columns of the grid can be templated separately. The column expects `ng-template` tags decorated with one of the grid module directives.
 
+#### Header template
+
 `igxHeader` targets the column header providing as a context the column object itself.
 
 ```html
@@ -116,6 +121,8 @@ Each of the columns of the grid can be templated separately. The column expects 
 </igx-column>
 ...
 ```
+
+#### Cell template
 
 `igxCell` applies the provided template to all cells in the column. The context object provided in the template consists of the cell value provided implicitly and the cell object itself. It can be used to define a template where the cells can grow according to their content, as in the below example.
 
@@ -148,6 +155,8 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
+#### Cell editing template
+
 The column also accepts one last template that will be used when a cell is in edit mode. As with the other column templates, the provided context object is again the cell value and the cell object itself. Of course in order to make the edit-mode template accessible to end users, you need
 to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property of the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) to `true`.
 
@@ -157,12 +166,14 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
         <label for="price">
             Enter the new price tag
         </label>
-        <input name="price" type="number" [ngModel]="cell.value" (ngModelChange)="cell.update(convertToNumber($event))" />
+        <input name="price" type="number" [ngModel]="cell.editValue" (ngModelChange)="cell.update(convertToNumber($event))" />
     </ng-template>
 </igx-column>
 ```
 
 Make sure to check the API for the [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) in order to get accustomed with the provided properties you can use in your templates.
+
+#### Column template API
 
 Each of the column templates can be changed programmatically at any point through the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) object itself. For example in the code below, we have declared two templates for our user data. In our TypeScript code we'll get references to the templates themselves and then based on some condition we will render the appropriate template for the column in our application.
 

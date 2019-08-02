@@ -55,6 +55,10 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 }
 <div class="divider--half"></div>
 
+#### Cell Editing
+
+##### Editing through UI
+
 In order to be able to enter edit mode for specific cell, you should first set the column to be [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable). If you want to use a data type specific *edit templates*, you should specify the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
 
  - For `string` data type, default template is using [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -81,6 +85,8 @@ You can exit edit mode and **commit** the changes in one of the following ways:
 
 > [!NOTE]
 > The cell remains in edit mode when you scroll vertically or horizontally or click outside the @@igComponent. This is valid for both cell editing and row editing.
+
+##### Editing through API
 
 You can also modify the cell value through the @@igxName API but only if primary key is defined:
 
@@ -151,6 +157,22 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ...
 ```
 }
+
+#### Cell Editing Templates
+
+If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). In order to use a custom cell editing template for a column, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
+
+```html
+<igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
+    <ng-template igxCellEditor let-cell="cell">
+        <input type="number" [(ngModel)]="cell.editValue" />
+    </ng-template>
+</igx-column>
+```
+
+> [!NOTE]
+> The cell editing template directive (`igxCellEditor`) is very different from the [cell template(`igxCell`)](grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
+ 
 
 @@if (igxName === 'IgxGrid') {
 If you want to define a custom template which will be applied when the cell is in edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
