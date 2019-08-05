@@ -248,6 +248,11 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 <custom-component #reference></custom-component>
 ```
 
+## Known Limitations
+|Limitation|Description|
+|--- |--- |
+| Scroll position of a directive that uses the Virtual For-directive would not be preserved |When closing a toggle that uses igxForOf and then reopening it, the scrollbar position wouldn't be preserved, even though the data position would be. reason is that igxGrid uses igxForOf directive internally, which cannot identify the detaching and re-attaching of the DOM elements from the DOM tree and thus cannot update the scrollbar thumb position. Some possible workarounds could be: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an ngIf, that'd follow it's state (the tab gets selected => attaching nodes to the DOM tree, the tab gets disselected => removing nodes from the tree).</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually.</li></ul>
+
 ## API Summary
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behavior.
