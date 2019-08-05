@@ -373,6 +373,147 @@ When an year inside the decade view is focused, use:
 
 <div class="divider--half"></div>
 
+### Styling
+
+To get started with styling the calendar, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and accepts the `$header-background` `$content-background`, `$header-text-color`, `$date-current-text-color`, `$picker-arrow-color`, `$picker-arrow-hover-color`,`$year-current-text-color`, `$year-hover-text-color`, `$month-current-text-color`, `$month-hover-text-color`, `$picker-text-color` and the `$picker-text-hover-color` parameters.
+
+```scss
+$my-calendar-theme: igx-calendar-theme(
+  $header-background: #345779,
+  $content-background: #fdfdfd,
+  $header-text-color: #ffffff,
+  $date-current-text-color: #2dabe8,
+  $picker-arrow-color: #2dabe8,
+  $picker-arrow-hover-color: #000000,
+  $year-current-text-color: #2dabe8,
+  $year-hover-text-color: #2dabe8,
+  $month-current-text-color: #2dabe8,
+  $month-hover-text-color: #2dabe8,
+  $picker-text-color: #2dabe8,
+  $picker-text-hover-color: #000000
+);
+```
+The last step is to **include** the component mixins: 
+
+```scss
+ @include igx-calendar($my-calendar-theme);
+```
+
+>[!NOTE]
+ >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+ ```scss
+:host {
+  ::ng-deep {
+    @include igx-calendar($my-calendar-theme);
+  }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$blue-color: #345779;
+$light-gray-color: #fdfdfd;
+
+$my-custom-palette: igx-palette(
+    $primary: $blue-color,
+    $secondary: $light-gray-color
+);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+
+```scss
+$my-calendar-theme: igx-calendar-theme(
+  $header-background: igx-color($my-custom-palette, "primary", 500),
+  $content-background: igx-color($my-custom-palette, "secondary", 500),
+  $header-text-color: igx-color($my-custom-palette, "secondary", 50),
+  $date-current-text-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-arrow-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-arrow-hover-color: igx-color($my-custom-palette, "grays", 900),
+  $year-current-text-color: igx-color($my-custom-palette, "primary", 50),
+  $year-hover-text-color: igx-color($my-custom-palette, "primary", 50),
+  $month-current-text-color: igx-color($my-custom-palette, "primary", 50),
+  $month-hover-text-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-text-color: igx-color($my-custom-palette, "primary", 50),
+  $picker-text-hover-color: igx-color($my-custom-palette, "grays", 900),
+  $date-selected-background: igx-color($my-custom-palette, "primary", 500),
+  $date-selected-text-color: igx-color($my-custom-palette, "secondary", 500)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](./themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](./themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-calendar`]({environment:sassApiUrl}/index.html#variable-_light-calendar):  
+
+```scss
+// Extending the light calendar schema
+$custom-calendar-schema: extend($_light-calendar,
+    (
+        header-background: (igx-color: ('primary', 500)),
+        content-background: (igx-color: ('secondary', 500)),
+        header-text-color: (igx-color: ('secondary', 50)),
+        date-current-text-color: (igx-color: ('primary', 50)),
+        picker-arrow-color: (igx-color: ('primary', 50)),
+        picker-arrow-hover-color: (igx-color: ('grays', 900)),
+        year-current-text-color: (igx-color: ('primary', 50)),
+        year-hover-text-color: (igx-color: ('primary', 50)),
+        month-current-text-color: (igx-color: ('primary', 50)),
+        month-hover-text-color: (igx-color: ('primary', 50)),
+        picker-text-color: (igx-color: ('primary', 50)),
+        picker-text-hover-color: (igx-color: ('grays', 900)),
+        date-selected-background: (igx-color: ('primary', 500)),
+        date-selected-text-color: (igx-color: ('secondary', 500))
+    )
+);
+```
+
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, 
+    (
+        igx-calendar: $custom-calendar-schema
+    )
+);
+
+// Defining our custom theme with the custom schema
+$my-calendar-theme: igx-calendar-theme(
+  $palette: $my-custom-palette,
+  $schema: $my-custom-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="calendar-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-styling-sample' width="100%" height="100%" 
+        seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### API References
 <div class="divider--half"></div>
 

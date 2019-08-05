@@ -44,6 +44,27 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+### From 8.0.x to 8.1.x
+* The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
+Keep in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that the template is no longer applied under a paging-specific container with CSS rules to center content, so you might need to add them manually.
+The style should be something similar to:
+
+```html
+<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+</igx-grid>
+<ng-template #pager>
+    <div class="pagination-container"></div>
+</ng-template>
+```
+
+```css
+.pagination-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+```
+
 ### From 7.3.x to 8.0.x
 * While updating, if you face the following error `Package "@angular/compiler-cli" has an incompatible peer dependency to "typescript" (requires ">=3.1.1 <3.3", would install "3.4.5").`, you should update `@angular/core` package first. This is related to this known [Angular CLI issue](https://github.com/angular/angular-cli/issues/13095)
 * While updating the `igniteui-angular` package, if you see the following error `Package "igniteui-angular" has an incompatible peer dependency to "web-animations-js" (requires "^2.3.1", would install "2.3.2-pr208")`, you should update using `ng update igniteui-angular --force`. This could happen if you update `@angular/core` and `@angular/cli` before updating `igniteui-angular`.

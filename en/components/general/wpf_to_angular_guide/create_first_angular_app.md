@@ -6,9 +6,11 @@ _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
 
 ## Create your first Angular app
 
+> [!Video https://www.youtube.com/embed/dhjrAPPad54]
+
 ### Prerequisites
 
-In order to start writing Angular applications, you need to install Node.js and npm package manager. Node.js is JavaScript runtime environment that executes JavaScript code outside of a browser. In order to get the Node.js, go to [nodejs.org](https://nodejs.org). The npm is a package manager similar to the NuGet package manager for .NET. It is installed with Node.js by default. You will also need an IDE. One of the best environments for developing Angular applications is Visual Studio Code. It is free, open source and runs on every platform. You can get it from [code.visualstudio.com](https://code.visualstudio.com/).
+In order to start writing Angular applications, you need to install Node.js and the npm package manager. Node.js is a JavaScript runtime environment that executes JavaScript code outside of a browser. In order to get Node.js, go to [nodejs.org](https://nodejs.org). NPM is a package manager similar to the NuGet package manager for .NET. It is installed with Node.js by default. You will also need an IDE. One of the best environments for developing Angular applications is Visual Studio Code. It is free, open source, and runs on every platform. You can get it from [code.visualstudio.com](https://code.visualstudio.com/).
 
 ### Create new project
 
@@ -39,7 +41,7 @@ This is going to launch a new instance of Visual Studio Code that contains your 
 
 ### Project structure
 
-Let us go ahead and take a look at each of these files and see how they relate to a WPF application. The best way to do that is to compare each project side by side. On the left we have our WPF app. On the right we have our Angular app.
+Let's go ahead and take a look at each of these files and see how they relate to a WPF application. The best way to do that is to compare each project side by side. On the left we have our WPF app. On the right we have our Angular app.
 
 <img src="../../../images/general/WPF_project_structure.png" />
 <img src="../../../images/general/Angular_project_structure.png" />
@@ -54,7 +56,7 @@ The `main.ts` file is similar to the `App.xaml.cs` file since it is something li
 
 In WPF we have a `packages.config` file which defines all our dependencies to nuget packages while Angular has a `package.json` file which contains the dependencies that your application requires to run. The `package.json` file contains also a section for scripts that you can run in the console when you are testing, starting or building your application.
 
-Let us take a look at the `References` folder. In WPF we have a `References` node in our solution that shows all the references that are added to this project. In an Angular application that is actually going to be the `nodes_module` folder. Coming from WPF, you may be surprised how many dependencies an Angular project has. These are populated by using `npm`.
+Let's take a look at the `References` folder. In WPF we have a `References` node in our solution that shows all the references that are added to this project. In an Angular application that is actually going to be the `nodes_module` folder. Coming from WPF, you may be surprised how many dependencies an Angular project has. These are populated by using `npm`.
 
 Unfortunately, here the similarities end. Let us look at some of the other generated files and folders:
 - `e2e` - stands for end-to-end testing and contains integration tests or tests with real-world scenarios like a login process.
