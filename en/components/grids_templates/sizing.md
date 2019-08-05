@@ -40,6 +40,10 @@ If the `width` input does not have value assigned, its default value is `100%` a
 
 The grid's `width` can accepts value of `null`, which when set, renders all columns in the DOM. The grid sizes accordingly so there is no grid horizontal scrollbar since column virtualization is not applied.
 
+* If there are 6 columns and none of them has width defined, the grid will have `width` of `816px`, because each column by default have assigned `width` of `136px` in this scenario. Same will happen if the columns have `width` in percentages. If vertical scrollbar is rendered or there are features that render additional columns their width will be added also.
+
+    <img src="../../images/grid_sizing/columns-default-gridWidth-null-v2.jpg" style="width: 80%"/>
+
 * If there are 6 columns with column width set to `200px` they will fit in our window and all will be visible:
 
     <img src="../../images/grid_sizing/width-null-no-scroll-v2.jpg" style="width: 80%"/>
@@ -174,6 +178,10 @@ By default when a column doesn't have a specified width it will try to autosize,
 
 When the grid is resized in these scenarios, the column width is also updated to reflect the changes, so it fills any new empty space available.
 
+* If a column does not have specified `width` and the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) has `width` set to `null`, it will be sized to the minimum of `136px`. This means that for a grid with `width` `null` and 6 columns that don't have width, each column will be sized to `136px`.
+
+    <img src="../../images/grid_sizing/columns-default-gridWidth-null-v2.jpg" style="width: 80%"/>
+
 * When there are multiple autosized columns they will divide the available space between each other equally. This means that if we have 6 columns and there is empty area of `1200px`, each will size to `200px`.
 
     <img src="../../images/grid_sizing/columns-default-all-row-selectors-v2.jpg" style="width: 80%"/>
@@ -221,6 +229,10 @@ When columns have set `width` in percentages, their size is calculated relativel
 * If the combined width exceeds `100%` in order for the user to be able to see the columns out of view, a horizontal scrollbar is rendered.
 
     <img src="../../images/grid_sizing/columns-percent-bigger-100p-v2.jpg" style="width: 80%"/>
+
+* If columns are set in percentages and the grid `width` is set to `null`, it would apply`width` of `136px` to each column. That is because the columns cannot be sized relatively to the grid, since it doesn't have `width` itself and relies on its content to be sized when its `width` is `null`. In the following example all 6 columns have `width` set to `50%`:
+
+    <img src="../../images/grid_sizing/columns-percent-gridWidth-null-v2.jpg" style="width: 80%"/>
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
