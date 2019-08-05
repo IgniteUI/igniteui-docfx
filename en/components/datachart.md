@@ -96,11 +96,11 @@ The following code snippet demonstrates how to create scatter [`bubble`](/produc
                  width="700px"
                  height="500px">
     <igx-numeric-x-axis name="xAxis" isLogarithmic="true" ></igx-numeric-x-axis>
-    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" ></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" ></igx-numeric-y-axis>
     <igx-bubble-series
         name="series1"
-        xAxisName="xAxis"
-        yAxisName="yAxis"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
         xMemberPath="Population"
         yMemberPath="GdpTotal"
         radiusMemberPath="GdpPerCapita"
