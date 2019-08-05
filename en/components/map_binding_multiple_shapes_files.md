@@ -204,11 +204,11 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         const geoLocations: any[] = [];
         // parsing shapefile data and creating geo-locations
         for (const record of sds.getPointData()) {
-            const pop = record.fieldValues.POPULATION;
+            const pop = record.fieldValues["POPULATION"];
             if (pop > 0) {
                 // each shapefile record has just one point
                 const location = {
-                    city: record.fieldValues.NAME,
+                    city: record.fieldValues["NAME"],
                     latitude: record.points[0][0].y,
                     longitude: record.points[0][0].x,
                     population: pop
@@ -226,13 +226,13 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         for (const record of sds.getPointData()) {
             // using field/column names from .DBF file
             const route = {
-                capacity: record.fieldValues.CapacityG,
-                distance: record.fieldValues.DistanceKM,
-                isActive: record.fieldValues.NotLive !== 0,
-                isOverLand: record.fieldValues.OverLand === 0,
-                name: record.fieldValues.Name,
+                capacity: record.fieldValues["CapacityG"],
+                distance: record.fieldValues["DistanceKM"],
+                isActive: record.fieldValues["NotLive"] !== 0,
+                isOverLand: record.fieldValues["OverLand"] === 0,
+                name: record.fieldValues["Name"],
                 points: record.points,
-                service: record.fieldValues.InService
+                service: record.fieldValues["InService"]
             };
             geoPolylines.push(route);
         }
@@ -250,10 +250,10 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         sds.getPointData().forEach((record) => {
             // using field/column names from .DBF file
             const country = {
-                gdp: record.fieldValues.GDP,
-                name: record.fieldValues.NAME,
+                gdp: record.fieldValues["GDP"],
+                name: record.fieldValues["NAME"],
                 points: record.points,
-                population: record.fieldValues.POPULATION
+                population: record.fieldValues["POPULATION"]
             };
             geoPolygons.push(country);
         });
