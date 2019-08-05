@@ -45,7 +45,7 @@ Then all that is needed is to define an `igxSelect` and several items.
 </igx-select>
 ```
 
-Alternatively, another way to do it would be to simply pass in a collection of the items that we want to display using [*ngForOf*](https://angular.io/api/common/NgForOf) directive.
+Alternatively, another way to do it would be to simply pass in a collection of the items that we want to display using [ngForOf](https://angular.io/api/common/NgForOf) directive.
 First, specify a collection of the items that you want to display when the drop-down opens:
 ```typescript
 public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
@@ -59,12 +59,12 @@ Then in your template you need to bind it with said items like so:
     </igx-select-item>
 </igx-select>
 ```
-Additionally, we are binding via `ngModel` so there is initial `igxSelect` value set.
+Additionally, the above sample illustrates two-way data-binding via `ngModel`. This the reason for the initial `igxSelect` value set.
 
 We use an `IgxSelectItemComponent` to display the items that `igx-select` operates on. The `IgxSelectItemComponent` extends the [*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) with additional functionality that is specific to the `igx-select-item`.
 
 ### Label Prefix and Suffix
-You may have noticed, the `igxSelect` component uses [igx-input-group](input_group.md). This means you can use of it's related directives. Here we are going to utilize `igxLabel`, `igx-prefix` and `igx-suffix`.
+The `igxSelect` component uses the [igx-input-group](input_group.md). This means you can make use of its related directives. Here we are going to utilize `igxLabel`, `igx-prefix` and `igx-suffix`.
 
 ```html
 <igx-select [(ngModel)]="selected">
@@ -72,8 +72,8 @@ You may have noticed, the `igxSelect` component uses [igx-input-group](input_gro
     <igx-prefix>
         <igx-icon color="green" style="width:48px; height:32px;">BIO</igx-icon>
     </igx-prefix>
-    <igx-suffix>
-        <igx-icon (click)="clearSelection($event)">{{ selected ? 'clear' : null }}</igx-icon>
+    <igx-suffix *ngIf="selected">
+        <igx-icon (click)="clearSelection($event)">clear</igx-icon>
     </igx-suffix>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
@@ -88,7 +88,7 @@ You may have noticed, the `igxSelect` component uses [igx-input-group](input_gro
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 > [!NOTE]
-If no specific `placeholder` is specified for the `igxSelect` component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
+If no `placeholder` is specified for the `igxSelect` component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
 > [!NOTE]
 Currently due to a limitation [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive can not be used in `igxSelect` component.
@@ -320,12 +320,12 @@ Since we are using two-way binding, your class should look something like this:
 ```typescript
 export class MyClass {
     public fruits: string[] = ["Orange", "Apple", "Banana", "Mango"];
-    public selected: string = "Apple";;
+    public selected: string = "Apple";
 }
 ```
 
 ### Use with @angular/forms
-`igxSelect` support all of the form directives from the core FormsModule [*NgModel*](https://angular.io/api/forms/NgModel) and [*ReactiveFormsModule*](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). 
+`igxSelect` support all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). 
 You can refer to the above [Select In A Form](#select-in-a-form) stackblitz sample for details on using the `required` attribute. 
 
 > [!NOTE]
