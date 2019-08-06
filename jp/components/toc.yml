@@ -9,16 +9,16 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
-  items:
-    - name: Step-by-Step Guide
-      href: general/cli/step-by-step-guide.md
-      new: false
-    - name: Templates
-      href: general/cli/component-templates.md
-      new: false
-    - name: Authentication Project Template
-      href: general/cli/auth-template.md
-      new: false
+  # items:
+  #   - name: Step-by-Step Guide
+  #     href: general/cli/step-by-step-guide.md
+  #     new: false
+  #   - name: Templates
+  #     href: general/cli/component-templates.md
+  #     new: false
+  #   - name: Authentication Project Template
+  #     href: general/cli/auth-template.md
+  #     new: false
 - name: グリッドとリスト
   href: grids_and_lists.md
   header: true

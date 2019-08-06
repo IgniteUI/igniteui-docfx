@@ -112,6 +112,7 @@ export class MyExampleComponent {
 
 <div class="divider--half"></div>
 
+@@if (false) { <!-- remove after translation -->
 ## Custom Overlay Settings
 The Combo allows users to change the way the list of items is shown. This can be done by defining custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the Combo's [`overlaySettings`]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) Input:
 
@@ -142,6 +143,7 @@ For example, with the above settings, the Combo's list will display centered, us
 </div>
 
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ## フィルタリング
 コンボのフィルタリングがデフォルトで有効になります。以下のコードで無効にできます。

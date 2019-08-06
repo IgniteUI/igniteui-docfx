@@ -106,6 +106,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 - `ArrowUp` はフォーカスを以前のリスト項目に移動します。リストが空の場合、フォーカスを検索入力に移動します。
 
+@@if (false) { <!-- remove after translation -->
 ## Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-combo** appearance. 
 Since `igx-combo` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
@@ -177,6 +178,7 @@ All that's left is to properly scope our newly created themes. Here we will assu
 </div>
 
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ## API
 
