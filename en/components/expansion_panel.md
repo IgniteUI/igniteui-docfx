@@ -275,7 +275,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 All that's left is to properly scope our newly created theme.
 
 #### Globally
-In case you want this newly created `igx-expansion-panel theme` to be applied [`globally`](themes/component-themes.md#creating-themes) in your app, all that is needed is to include the theme in your app root style file:
+In case you want this newly created `igx-expansion-panel theme` to be applied [`globally`](themes/component-themes.md#creating-themes) in your app, all that is needed is to include the theme in your app root style file and pass it to the [igx-expansion-panel mixin]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel):
 ```scss
 // in styles.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
