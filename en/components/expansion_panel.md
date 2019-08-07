@@ -230,9 +230,6 @@ We can also override the default icon that is used in the control by passing con
 ```
 Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
 
->[!NOTE]
->The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) exposes the [`.igx-expansion-panel`]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) class which can be used to style the component.
-
 ### Import theme
 Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-expansion-panel** appearance. Now we are going to style a simplified version of the above [animations sample](#using-specific-animation) and modify it to have а custom appearance.
 
