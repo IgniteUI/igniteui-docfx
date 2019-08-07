@@ -219,6 +219,7 @@ public ngOnInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 To get started with styling the button group, we need to import the `index` file, where all the theme functions and component mixins live:
@@ -352,6 +353,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+} <!-- remove after translation -->
 
 ### API リファレンス
 <div class="divider--half"></div>

@@ -180,7 +180,7 @@ export class AppModule {}
     </igx-tabs-group>
 </igx-tabs>
 ```
-
+@@if (false) { <!-- remove after translation -->
 ### Integration With Router Outlet Container
 
 Despite the primary usage of the Tabs component is to define groups with content, there may be cases in which you may need to define tab items only.
@@ -299,6 +299,7 @@ The described approach above is used by the following sample to demonstrate rout
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-6-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+} <!-- remove after translation -->
 
 ### API リファレンス
 <div class="divider"></div>

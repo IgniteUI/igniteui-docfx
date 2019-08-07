@@ -393,7 +393,7 @@ export class InputDropDownComponent {
     </igx-drop-down-item>
 </igx-drop-down>
 ```
-
+@@if (false) { <!-- remove after translation -->
 ### Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-drop-down** appearance. We are going to create and style an `igx-drop-down` component to choose an RPG 'Hero Class' from. 
 
@@ -491,6 +491,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
 </div>
 
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ### API まとめ
 

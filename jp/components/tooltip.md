@@ -326,6 +326,7 @@ export class AppModule {}
 > [!NOTE]
 > [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
 
+@@if (false) { <!-- remove after translation -->
 ### Styles
 
 To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
@@ -448,6 +449,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ### ユーザー補助
 

@@ -92,6 +92,7 @@ statusChanged()
 <iframe data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-checkbox** appearance.
 
@@ -166,6 +167,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
 </div>
 
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ### API リファレンス
 <div class="divider--half"></div>

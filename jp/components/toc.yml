@@ -709,9 +709,9 @@
   - name: スクロールストラテジ
     href: overlay_scroll.md
     new: false
-  - name: Styling
-    href: overlay_styling.md
-    new: true
+  # - name: Styling
+  #   href: overlay_styling.md
+  #   new: true
 - name: Drag and Drop
   href: drag_drop.md
   new: false
@@ -771,13 +771,13 @@
 - name: ローカライゼーション
   href: localization.md
   new: false
-- name: Transaction Service
-  href: transaction.md
-  new: true
-  items:
-    - name: Transaction Service class hierarchy
-      href: transaction-classes.md
-      new: true
-    - name: How to use the Transaction Service
-      href: transaction-how-to-use.md
-      new: true
+# - name: Transaction Service
+#   href: transaction.md
+#   new: true
+#   items:
+#     - name: Transaction Service class hierarchy
+#       href: transaction-classes.md
+#       new: true
+#     - name: How to use the Transaction Service
+#       href: transaction-how-to-use.md
+#       new: true

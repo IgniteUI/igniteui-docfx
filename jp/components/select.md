@@ -356,6 +356,7 @@ export class MyClass implements OnInit {
 ```
 - `open` 関数で引数として、同様にテンプレートへカスタム設定を渡した場合、`open` 関数の引数を使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
+@@if (false) { <!-- remove after translation -->
 ## Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-select** appearance. 
 Since `igx-select` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
@@ -411,6 +412,7 @@ $custom-select-theme: igx-drop-down-theme(
 </div>
 
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ## API リファレンス
 [**IgxSelectComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  

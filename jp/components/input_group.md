@@ -97,6 +97,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 The Input Group component makes use of the [Ignite UI Theming Library](themes/index.md) and has a large array of properties that are exposes by its [igx-input-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme).
@@ -192,6 +193,7 @@ The result of the applied styles can be seen in the below demo:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+} <!-- remove after translation -->
 
 ### API リファレンス
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
