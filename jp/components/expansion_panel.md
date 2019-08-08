@@ -158,7 +158,7 @@ export class ExpansionPanelComponent {
 [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、簡単にカスタマイズできます。
 コントロールのトグル状態のデフォルト アイコンをテンプレート化できます。このアイコンの位置は、ヘッダーの開始または終了に設定可能です。非表示にすることもできます。
 
-ヘッダー アイコンの位置設定は、[`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header` でできます。アイコンの配置に使用可能なオプションは、**left**、**right**、**none** です。次のコード サンプルは、コンポーネントのボタンを右側に設定する方法です。
+ヘッダー アイコンの位置設定は、`igx-expansion-panel-header` の [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) の入力でできます。アイコンの配置に使用可能なオプションは、**left**、**right**、**none** です。次のコード サンプルは、コンポーネントのボタンを右側に設定する方法です。
 
 ```html
 <!-- in expansion-component.component.html -->
