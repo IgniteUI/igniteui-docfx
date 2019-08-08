@@ -238,8 +238,8 @@ export class MyBannerComponent {
 > [!NOTE]
 > 上記が適用されるとオープニング イベントが常にキャンセルされるため、Banner が開くことはありません。
 
-@@if (false) { <!-- remove after translation -->
-###Styling
+
+<!-- ###Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-banner** appearance. We are going to build upon the [animations sample](#animation-demo) and modify the `igx-banner` component to have more distinguished messages. Since `igx-banner` includes `igx-button`, you can directly refer to the [igx-button styling guide](button.md#styling) for details, specific to styling the buttons themselves.
 
 ### Import theme
@@ -332,8 +332,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-<div class="divider--half"></div>
-} <!-- remove after translation -->
+<div class="divider--half"></div> -->
 
 ## API リファレンス
 
