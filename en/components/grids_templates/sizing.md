@@ -24,7 +24,7 @@ _keywords:  sizing, igniteui for angular, infragistics
 
 There are many different ways to size the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) in order to accommodate a lot of scenarios that the users can have. While some are straight forward, others might be more complex and that is why we will take each one and look into them in more depth. We will go through setting `width` and `height` separately since there are some differences e.g. when using percentages for each.
 
-When it comes to border and padding size for the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html), they are taken into its width/height size calculations or also know as Border box sizing. It is applied in all scenarios.
+When it comes to border and padding size for the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html), they are taken into its width/height size calculations or also known as [Border box](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) sizing. It is applied in all scenarios.
 
 > [!Note]
 > If the Border box sizing is overridden by the user we cannot guarantee that the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size correctly.
