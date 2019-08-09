@@ -171,7 +171,10 @@ If you want to provide a custom template which will be applied when a cell is in
 ```
 
 > [!NOTE]
-> The cell editing template directive (`igxCellEditor`) is very different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
+> Any changes to made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in the cell editing template, when exiting/committing, will trigger the appropriate [editing event](#editing-events) and changes to the [transaction state](batch-editing.md) (if transactions are enabled).
+
+> [!NOTE]
+> The cell editing template directive (`igxCellEditor`) is different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
 
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).

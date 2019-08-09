@@ -155,6 +155,10 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
+When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value correctly passed the grid's [editing event cycle](editing.md#editing-events). In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api), so editing events and [transaction](batch_editing.md) changes are properly handled. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls. 
+
+If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **bypass** the internal value handling of the grid. When dealing with cell editing with a custom template, it is highly advised to use the cell's **cell editing template**.
+
 #### Cell editing template
 
 The column also accepts one last template that will be used when a cell is in edit mode. As with the other column templates, the provided context object is again the cell value and the cell object itself. Of course in order to make the edit-mode template accessible to end users, you need
