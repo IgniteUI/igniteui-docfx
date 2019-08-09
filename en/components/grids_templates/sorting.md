@@ -132,11 +132,12 @@ To get started with styling the sorting behavior, we need to import the `index` 
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$sorted-header-icon-color` parameter.
+Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$sorted-header-icon-color` and `sortable-header-icon-hover-color` parameters.
 
 ```scss
 $custom-theme: igx-grid-theme(
-    $sorted-header-icon-color: #51f942
+    $sorted-header-icon-color: #ffb06a,
+    $sortable-header-icon-hover-color: black
 );
 ```
 The last step is to **include** the component mixins: 
@@ -150,9 +151,9 @@ The last step is to **include** the component mixins:
 
  ```scss
 :host {
-  ::ng-deep {
-    @include igx-grid($custom-theme);
-  }
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
 }
 ```
 
@@ -163,17 +164,18 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 `igx-palette` generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
-$black-color: #292826;
-$green-color: #51f942;
+$black-color: black;
+$orange-color: #ffb06a;
 
-$custom-palette: igx-palette($primary: $black-color, $secondary: $green-color);
+$custom-palette: igx-palette($primary: $black-color, $secondary: $orange-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $custom-theme: igx-grid-theme(
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 700)
+    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: igx-color($custom-palette, "primary", 500)
 );
 ```
 
@@ -190,8 +192,8 @@ Extend one of the two predefined schemas, that are provided for every component,
 // Extending the light grid schema
 $custom-grid-schema: extend($_light-grid,
     (
-        sorted-header-icon-color: (igx-color:('secondary', 700)),
-        sortable-header-icon-hover-color: (igx-color:('primary', 300))
+        sorted-header-icon-color: (igx-color:('secondary', 500)),
+        sortable-header-icon-hover-color: (igx-color:('primary', 500))
     )
 );
 ```
