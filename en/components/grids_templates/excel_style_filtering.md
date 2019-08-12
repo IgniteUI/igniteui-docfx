@@ -337,6 +337,347 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 
 <div class="divider--half"></div>
 
+###Styling
+
+To get started with styling the filtering row, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+The excel style filtering dialogs takes its background color from the grid's theme, using the `filtering-row-background` parameter. So in order to change the background we need to create a custom theme:
+
+```scss
+$custom-grid: igx-grid-theme(
+    $filtering-row-background: #FFCD0F
+);
+```
+
+We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, list and even a drop-down. In order to style them, we need to create a separate theme for each one:
+
+```scss
+$dark-button: igx-button-theme(
+    $flat-background: #FFCD0F,
+    $flat-text-color: #292826,
+    $flat-hover-background: #292826,
+    $flat-hover-text-color: #FFCD0F,
+
+    $raised-background: #FFCD0F,
+    $raised-text-color: #292826,
+    $raised-hover-background: #292826,
+    $raised-hover-text-color: #FFCD0F
+);
+
+$dark-input-group: igx-input-group-theme(
+    $box-background: #292826,
+    $idle-text-color: #FFCD0F,
+    $focused-text-color: #FFCD0F,
+    $filled-text-color: #FFCD0F
+);
+
+$custom-list: igx-list-theme(
+    $background: #FFCD0F
+);
+
+$custom-checkbox: igx-checkbox-theme(
+    $empty-color: #292826,
+    $fill-color: #292826,
+    $tick-color: #FFCD0F,
+    $label-color: #292826
+);
+
+$custom-drop-down: igx-drop-down-theme(
+    $background-color: #FFCD0F,
+    $item-text-color: #292826,
+    $hover-item-background: #292826,
+    $hover-item-text-color: #FFCD0F
+);
+```
+
+In this example we only changed some of the parameters for the listed components, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme), [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme), [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme), [`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) themes provide way more parameters to control their respective styling.
+
+The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
+
+```scss
+@include igx-drop-down($custom-drop-down);
+@include igx-grid($custom-grid);
+.igx-excel-filter {
+    @include igx-button($dark-button);
+    @include igx-input-group($dark-input-group);
+    @include igx-list($custom-list);
+    @include igx-checkbox($custom-checkbox);
+    .igx-input-group__input::placeholder {
+        color: #FFCD0F;
+    }
+}
+```
+
+>[!NOTE]
+>We scope most of the components' mixins within `.igx-excel-filter`, so that these custom themes will affect only components nested in the excel filtering dialog. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
+
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-drop-down($custom-drop-down);
+        @include igx-grid($custom-grid);
+        .igx-excel-filter {
+            @include igx-button($dark-button);
+            @include igx-input-group($dark-input-group);
+            @include igx-list($custom-list);
+            @include igx-checkbox($custom-checkbox);
+            .igx-input-group__input::placeholder {
+                color: #FFCD0F;
+            }
+        }
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$custom-grid: igx-grid-theme(
+    $filtering-row-background: #FFCD0F
+);
+
+$dark-button: igx-button-theme(
+    $flat-background: igx-color($dark-palette, "secondary", 400),
+    $flat-text-color: igx-color($dark-palette, "primary", 400),
+    $flat-hover-background: igx-color($dark-palette, "primary", 400),
+    $flat-hover-text-color: igx-color($dark-palette, "secondary", 400),
+
+    $raised-background: igx-color($dark-palette, "secondary", 400),
+    $raised-text-color: igx-color($dark-palette, "primary", 400),
+    $raised-hover-background: igx-color($dark-palette, "primary", 400),
+    $raised-hover-text-color: igx-color($dark-palette, "secondary", 400)
+);
+
+$dark-input-group: igx-input-group-theme(
+    $box-background: igx-color($dark-palette, "primary", 400),
+    $idle-text-color: igx-color($dark-palette, "secondary", 400),
+    $focused-text-color: igx-color($dark-palette, "secondary", 400),
+    $filled-text-color: igx-color($dark-palette, "secondary", 400)
+);
+
+$custom-list: igx-list-theme(
+    $background: igx-color($dark-palette, "secondary", 400)
+);
+
+$custom-checkbox: igx-checkbox-theme(
+    $empty-color: igx-color($dark-palette, "primary", 400),
+    $fill-color: igx-color($dark-palette, "primary", 400),
+    $tick-color: igx-color($dark-palette, "secondary", 400),
+    $label-color: igx-color($dark-palette, "primary", 400)
+);
+
+$custom-drop-down: igx-drop-down-theme(
+    $background-color: igx-color($dark-palette, "secondary", 400),
+    $item-text-color: igx-color($dark-palette, "primary", 400),
+    $hover-item-background: igx-color($dark-palette, "primary", 400),
+    $hover-item-text-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list), [`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
+
+```scss
+$custom-grid-schema: extend($_light-grid,
+    (
+        filtering-row-background:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+
+$custom-button-schema: extend($_light-button,
+    (
+        flat-background:(
+            igx-color: ("secondary", 400)
+        ),
+        flat-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        flat-hover-background:(
+            igx-color: ("primary", 400)
+        ),
+        flat-hover-text-color:(
+            igx-color: ("secondary", 400)
+        ),
+
+        raised-background:(
+            igx-color: ("secondary", 400)
+        ),
+        raised-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        raised-hover-background:(
+            igx-color: ("primary", 400)
+        ),
+        raised-hover-text-color:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+
+$custom-input-group-schema: extend($_light-input-group,
+    (
+        box-background:(
+            igx-color: ("primary", 400)
+        ),
+        idle-text-color:(
+            igx-color: ("secondary", 400)
+        ),
+        focused-text-color:(
+            igx-color: ("secondary", 400)
+        ),
+        filled-text-color:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+
+$custom-list-schema: extend($_light-list,
+    (
+        background:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+
+$custom-checkbox-schema: extend($_light-checkbox,
+    (
+        empty-color:(
+            igx-color: ("primary", 400)
+        ),
+        fill-color:(
+            igx-color: ("primary", 400)
+        ),
+        tick-color:(
+            igx-color: ("secondary", 400)
+        ),
+        label-color:(
+            igx-color: ("primary", 400)
+        )
+    )
+);
+
+$custom-drop-down-schema: extend($_light-drop-down,
+    (
+        background-color:(
+            igx-color: ("secondary", 400)
+        ),
+        item-text-color:(
+            igx-color: ("primary", 400)
+        ),
+        hover-item-background:(
+            igx-color: ("primary", 400)
+        ),
+        hover-item-text-color:(
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+$custom-light-schema: extend($light-schema,(
+    igx-grid: $custom-grid-schema,
+    igx-button: $custom-button-schema,
+    igx-input-group: $custom-input-group-schema,
+    igx-list: $custom-list-schema,
+    igx-checkbox: $custom-checkbox-schema,
+    igx-drop-down: $custom-drop-down-schema
+));
+
+$custom-grid: igx-grid-theme(
+    $palette: $dark-palette,
+    $schema: $custom-light-schema
+);
+
+$custom-button: igx-button-theme(
+    $palette: $dark-palette,
+    $schema: $custom-light-schema
+);
+
+$custom-input-group: igx-input-group-theme(
+    $palette: $dark-palette,
+    $schema: $custom-light-schema
+);
+
+$custom-list: igx-list-theme(
+    $palette: $dark-palette,
+    $schema: $custom-light-schema
+);
+
+$custom-checkbox: igx-checkbox-theme(
+    $palette: $dark-palette,
+    $schema: $custom-light-schema
+);
+
+$custom-drop-down: igx-drop-down-theme(
+    $palette: $dark-palette,
+    $schema: $custom-light-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:950px">
+    <iframe id="grid-excel-style-filtering-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:950px">
+    <iframe id="treegrid-excel-style-filtering-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:950px">
+    <iframe id="hierarchical-grid-excel-style-filtering-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+<div class="divider--half"></div>
+
 ### API References
 <div class="divider--half"></div>
 
