@@ -231,7 +231,7 @@ We can also override the default icon that is used in the control by passing con
 Our component will now render "Show More" when the panel is collapsed and "Collapse" once it's fully expanded.
 
 ### Import theme
-Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-expansion-panel** appearance. Now we are going to style a simplified version of the above [animations sample](#using-specific-animation) and modify it to have а custom appearance.
+Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-expansion-panel** appearance. Now we are going to customize it in a more robust manner.
 
 First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
@@ -300,7 +300,7 @@ There may be a case where you want a particular `igx-expansion-panel` to be styl
 ### Styling Demo
 
 You can see the styled sample below:
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 300px;">
     <iframe id="expansion-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
