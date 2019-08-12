@@ -339,13 +339,13 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 
 ###Styling
 
-To get started with styling the filtering row, we need to import the `index` file, where all the theme functions and component mixins live:
+To get started with styling the Excel Style Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The excel style filtering dialogs takes its background color from the grid's theme, using the `filtering-row-background` parameter. So in order to change the background we need to create a custom theme:
+The excel style filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
 
 ```scss
 $custom-grid: igx-grid-theme(
@@ -353,7 +353,7 @@ $custom-grid: igx-grid-theme(
 );
 ```
 
-We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, list and even a drop-down. In order to style them, we need to create a separate theme for each one:
+We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, a list and even a drop-down. In order to style them, we need to create a separate theme for each one:
 
 ```scss
 $dark-button: igx-button-theme(
@@ -413,7 +413,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We scope most of the components' mixins within `.igx-excel-filter`, so that these custom themes will affect only components nested in the excel filtering dialog. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
+>We scope most of the components' mixins within `.igx-excel-filter`, so that these custom themes will affect only components nested in the excel style filtering dialog. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
