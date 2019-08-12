@@ -605,6 +605,10 @@ public ngOnInit() {
 </div>
 <div class="divider--half"></div>
 
+### Sizing
+
+See the [Grid Sizing](sizing.md) topic.
+
 ## Known Limitations
 
 |Limitation|Description|
@@ -629,6 +633,7 @@ public ngOnInit() {
 ## Additional Resources
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)

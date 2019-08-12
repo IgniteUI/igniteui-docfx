@@ -237,6 +237,9 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
+### Sizing
+
+See the [Grid Sizing](sizing.md) topic.
 
 ## 既知の問題と制限
 
@@ -266,6 +269,7 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [データ グリッド](../grid/grid.md)
 * [行編集](row_editing.md)
 
