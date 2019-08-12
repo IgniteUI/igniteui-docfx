@@ -469,6 +469,9 @@ public ngOnInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 
+### Sizing
+See the [Grid Sizing](sizing.md) topic.
+
 ## 알려진 제한 사항
 
 |제한 사항|설명|
@@ -493,6 +496,7 @@ public ngOnInit() {
 ## 추가 리소스
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [가상화 및 성능](virtualization.md)
 * [페이징](paging.md)
 * [필터링](filtering.md)
