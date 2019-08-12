@@ -359,9 +359,11 @@ export class HierarchicalGridBatchEditingSampleComponent {
 ```
 }
 
+@@if (false) { <!-- remove after translation -->
 @@if (igxName === 'IgxTreeGrid') {
 Deleting a parent node in the grid has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) property of the grid. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
 }
+} <!-- remove after translation -->
 
 > [!NOTE]
 > [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを無効にすると @@igComponent を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。

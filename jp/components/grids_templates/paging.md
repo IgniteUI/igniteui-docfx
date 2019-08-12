@@ -592,11 +592,13 @@ $custom-button-theme: igx-button-theme(
 ```
 }
 
+@@if (false) { <!-- remove after translation -->
 @@if (igxName === 'IgxGrid') {
 ### Paging with Group By
 
 Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
 }
+} <!-- remove after translation -->
 
 ### スタイル設定
 

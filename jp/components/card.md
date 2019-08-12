@@ -103,7 +103,7 @@ export class AppModule {}
 
 上記の例では、カード ヘッダーのタイトルと字幕の横にアイコンが表示されます。
 
-カード ヘッダーに置かれた `igx-avatar` または `igx-card-media` の存在も自動的に検出され、カードのサムネイルのように表示されます。So you can do:
+カード ヘッダーに置かれた `igx-avatar` または `igx-card-media` の存在も自動的に検出され、カードのサムネイルのように表示されますので次のことができます:
 
 ```html
 <igx-card-header>
@@ -116,7 +116,7 @@ export class AppModule {}
 </igx-card-header>
 ```
 
-or, even this:
+また、これもできます:
 
 ```html
 <igx-card-header>
