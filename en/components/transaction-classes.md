@@ -1,7 +1,7 @@
 ---
-title: Transaction Service class hierarchy
-_description: 
-_keywords: Ignite UI for Angular, transaction, igxBaseTransaction, igxTransaction and igxHierarchical transaction
+title: Batch Editing | Transaction Service | Ignite UI for Angular | Infragistics
+_description: Learn about the hierarchy of the Transaction Service class, that allows implementing batch editing when executing Angular CRUD operations on your components.
+_keywords: batch editing, igniteui for angular, infragistics
 ---
 
 ## Transaction Service class hierarchy
