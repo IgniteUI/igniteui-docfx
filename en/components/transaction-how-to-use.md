@@ -53,7 +53,7 @@ export class TransactionBaseComponent { }
 
 #### Inject Transaction Service in component
 
-In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library and other transaction classes like [`State`]({environment:angularApiUrl}/classes/state.html), [`Transaction`]({environment:angularApiUrl}/classes/transaction.html), [`TransactionType`]({environment:angularApiUrl}/classes/TransactionType.html), which will be needed by our application:
+In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library, as well as the [`State`]({environment:angularApiUrl}/interfaces/state.html) and [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interfaces and the [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum, which will be needed by our application:
 
 ```typescript
 import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
@@ -67,7 +67,7 @@ constructor(private _transactions: IgxTransactionService<Transaction, State>) { 
 
 ### Define igxList
 
-In our html template, we define an [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component with edit, delete and add actions, which modify the list and its items:
+In our html template, we define an [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component with **edit**, **delete** and **add** actions, which modify the list and its items:
 
 ```html
 <igx-list>
@@ -134,12 +134,12 @@ export class TransactionBasePipe implements PipeTransform {
 
 #### Define edit functionality
 
-The second list item is containing a edit button, which is updating item's data.
+The second list item contains an edit button, which updates the item's data.
 ```html
 <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-When button is pressed, then inside the event handler 'UPDATE' transaction is created: 
+When the button is pressed, inside the `onEdit` event handler, an 'UPDATE' transaction is created: 
 
 ```typescript
 public onEdit(): void {
@@ -156,7 +156,7 @@ public onEdit(): void {
 }
 ```
 
-In addition there is function that checks item for unsaved editing:
+Additionally, there is a function that checks items for unsaved edits:
 
 ```typescript
 public isEdited(id): boolean {
@@ -167,14 +167,14 @@ public isEdited(id): boolean {
 
 #### Define delete functionality
 
-The third list item is containing a delete button, which is deleting item's data.
+The third list item contains a delete button, which deletes the item's data.
 
 ```html
 <igx-icon igxListAction (click)="onDelete()" *ngIf="item.id === 2 && !isDeleted(item.id)">delete</igx-icon>
 ```
 
 
-When button is pressed, then inside the event handler 'DELETE' transaction is created: 
+When the button is pressed, inside `onDelete` event handler, a 'DELETE' transaction is created: 
 
 ```typescript
 public onDelete(): void {
@@ -190,7 +190,7 @@ public onDelete(): void {
 }
 ```
 
-In addition there is function that checks item for unsaved deletion:
+In addition, there is a function that checks items for unsaved deletion:
 
 ```typescript
 public isDeleted(id): boolean {
@@ -201,13 +201,13 @@ public isDeleted(id): boolean {
 
 #### Define add functionality
 
-At the end of the list ADD button is added, which adds new item to the list.
+At the end of the list an ADD button is added, which adds a new item to the list.
 
 ```html
 <button igxButton (click)="onAdd()" [disabled]="itemAdded(4)">Add New</button>```
 ```
 
-When button is pressed, then inside the event handler 'ADD' transaction is created: 
+When the button is pressed, inside the `onAdd` event handler, an 'ADD' transaction is created: 
 
 ```typescript
 public onAdd(): void {
@@ -220,7 +220,7 @@ public onAdd(): void {
 }
 ```
 
-In addition there is function that checks item for unsaved addition:
+In addition, there is a function that checks items for unsaved addition:
 
 ```typescript
 public itemAdded(id: number): boolean {
@@ -251,7 +251,7 @@ public getTransactionLog(): any[] {
 }
 ```
 
-We will also add representation of the current state of our list. It will show how the data looks before the pending transactions are committed:
+We will also add a representation of the current state of our list. It will show how the data looks before the pending transactions are committed:
 
 ```html
 <div>
