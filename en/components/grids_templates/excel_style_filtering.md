@@ -401,7 +401,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 @include igx-drop-down($custom-drop-down);
 @include igx-grid($custom-grid);
-.igx-excel-filter {
+.igx-excel-filter, .igx-excel-filter__secondary {
     @include igx-button($dark-button);
     @include igx-input-group($dark-input-group);
     @include igx-list($custom-list);
@@ -413,7 +413,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We scope most of the components' mixins within `.igx-excel-filter`, so that these custom themes will affect only components nested in the excel style filtering dialog. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
+>We scope most of the components' mixins within `.igx-excel-filter` and `.igx-excel-filter__secondary`, so that these custom themes will affect only components nested in the excel style filtering dialog and all of its sub-dialogs. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
