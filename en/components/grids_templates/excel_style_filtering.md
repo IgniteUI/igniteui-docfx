@@ -423,7 +423,7 @@ The last step is to **include** the component mixins, each with its respective t
     ::ng-deep {
         @include igx-drop-down($custom-drop-down);
         @include igx-grid($custom-grid);
-        .igx-excel-filter {
+        .igx-excel-filter, .igx-excel-filter__secondary {
             @include igx-button($dark-button);
             @include igx-input-group($dark-input-group);
             @include igx-list($custom-list);
