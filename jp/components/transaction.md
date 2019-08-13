@@ -33,3 +33,8 @@ A more detailed overview of the opportunities that the [`Transaction Service`]({
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [igxBaseTransaction, igxTransaction and igxHierarchical transaction explained](transaction-classes.md)
 * [How to use the Transaction service](transaction-how-to-use.md)
+* [Grid Batch Editing](grid/batch_editing.md)
+* [Tree Grid Batch Editing](treegrid/batch_editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)
+

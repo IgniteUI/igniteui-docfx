@@ -69,3 +69,13 @@ In your application, you may want to handle the scenario where the user tries to
 You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) with Batch Editing are implemented in the following topics:
 * [Tree Grid Batch Editing](treegrid/batch_editing.md)
 * [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+* [Transaction Service](transaction.md)
+* [How to use the Transaction service](transaction-how-to-use.md)
+* [Grid Batch Editing](grid/batch_editing.md)
+* [Tree Grid Batch Editing](treegrid/batch_editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
