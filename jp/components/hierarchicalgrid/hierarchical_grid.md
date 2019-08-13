@@ -231,12 +231,9 @@ export class RemoteLoDService {
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-### 既知の問題と制限
+### Sizing
 
-|制限|説明|
-|--- |--- |
-|グループ化|グループ化機能は、階層グリッドでサポートされません。|
-|Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
+See the [Grid Sizing](sizing.md) topic.
 
 ### CRUD 操作
 
@@ -244,6 +241,13 @@ export class RemoteLoDService {
 > フラットな Data Grid と行アイランドの各インスタンスの重要な違いは、同じトランザクション サービス インスタンスがあり、同じトランザクション ログを蓄積する点です。CRUD 機能を有効にするには、`IgxHierarchicalTransactionServiceFactory` を注入する必要があります。
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|グループ化|グループ化機能は、階層グリッドでサポートされません。|
+|Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
 ## API リファレンス
 
@@ -258,6 +262,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 ### その他のリソース
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

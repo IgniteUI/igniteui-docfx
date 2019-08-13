@@ -300,6 +300,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </ng-template>
  ```
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can greatly alter the Row Editing overlay. 
@@ -373,7 +374,7 @@ With the above syntax, our custom banner theme properly applies to the grid's Ro
 To further customize our Row Editing overlay, we can pass a custom template so we can style the `Done` and `Cancel` buttons separately:
 
 ```html
-<!-- in component.html -->
+<!-- in component.html
 <@@igSelector>
     ...
     <ng-template igxRowEditActions let-endRowEdit>
@@ -447,6 +448,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
     </button>
 </div>
 }
+} <!-- remove after translation -->
 
 ### API リファレンス
 

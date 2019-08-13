@@ -121,16 +121,16 @@ let data = [
  </igx-financial-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Binding Multiple Sources](financialchart_binding_multiple_sources.md)
--   [Binding High Volume Data](financialchart_binding_large_data.md)
--   [Binding Real-Time Data](financialchart_binding_live_data.md)
--   [Chart Annotations](financialchart_chart_annotations.md)
--   [Chart Configuration](financialchart_chart_configuration.md)
--   [Chart Display Types](financialchart_chart_display_types.md)
--   [Chart Panes](financialchart_chart_panes.md)
--   [Chart Performance](financialchart_chart_performance.md)
+-   [複数ソースのバインド](financialchart_binding_multiple_sources.md)
+-   [大規模データのバインド](financialchart_binding_large_data.md)
+-   [リアルタイムにデータをバインド](financialchart_binding_live_data.md)
+-   [チャートの注釈](financialchart_chart_annotations.md)
+-   [チャートの構成](financialchart_chart_configuration.md)
+-   [チャートの表示タイプ](financialchart_chart_display_types.md)
+-   [チャート ペイン](financialchart_chart_panes.md)
+-   [チャートのパフォーマンス](financialchart_chart_performance.md)
     <!-- - [Custom Indicators](financialchart_custom_indicators.md) -->
     <!-- - [Tooltip Templates](financialchart_tooltip_templates.md) -->
     <!-- - [Tooltip Types](financialchart_tooltip_types.md) -->

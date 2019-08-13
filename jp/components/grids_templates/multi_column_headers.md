@@ -194,6 +194,7 @@ _language: ja
 ```
 }
 
+@@if (false) { <!-- remove after translation -->
 ### Multi Column Header Template
 
 Each of the column groups of the grid can be templated separately. The column group expects `ng-template` tag decorated with the `igxHeader` directive.
@@ -265,6 +266,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
+} <!-- remove after translation -->
 
 ### API リファレンス
 <div class="divider--half"></div>
