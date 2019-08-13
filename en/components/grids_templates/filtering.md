@@ -419,7 +419,7 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In this example we only changed some of the parameters for the input group and the button, but the the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the input group and the button, but the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
 
@@ -583,7 +583,7 @@ $custom-button: igx-button-theme(
 );
 
 // Defining input-group-theme with the global light schema
-$custom-button: igx-input-group-theme(
+$custom-input-group: igx-input-group-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
