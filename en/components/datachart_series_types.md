@@ -13,59 +13,59 @@ In addition to these series, you can add [Series Annotations](datachart_series_a
 
 The following list shows all types of the series in each of their groups. Click on a name of a series to navigate to a help topic that provides details on how to use a given series in the Angular data chart component.
 
-#### Category Series
+#### Category Charts
 
--   [AreaSeries](datachart_series_types_category.md)
--   [BarSeries](datachart_series_types_category.md)
--   [ColumnSeries](datachart_series_types_category.md)
--   [LineSeries](datachart_series_types_category.md)
--   [PointSeries](datachart_series_types_category.md)
--   [SplineSeries](datachart_series_types_category.md)
--   [SplineAreaSeries](datachart_series_types_category.md)
--   [StepAreaSeries](datachart_series_types_category.md)
--   [StepLineSeries](datachart_series_types_category.md)
--   [WaterfallSeries](datachart_series_types_category.md)
+-   [Area Chart](datachart_series_types_category.md)
+-   [Bar Chart](datachart_series_types_category.md)
+-   [Column Chart](datachart_series_types_category.md)
+-   [Line Chart](datachart_series_types_category.md)
+-   [Point Chart](datachart_series_types_category.md)
+-   [Spline Chart](datachart_series_types_category.md)
+-   [Spline Area Chart](datachart_series_types_category.md)
+-   [Step Area Chart](datachart_series_types_category.md)
+-   [Step Line Chart](datachart_series_types_category.md)
+-   [Waterfall Chart](datachart_series_types_category.md)
 
-#### Polar Series
+#### Polar Charts
 
--   [PolarAreaSeries](datachart_series_types_polar.md)
--   [PolarLineSeries](datachart_series_types_polar.md)
--   [PolarScatterSeries](datachart_series_types_polar.md)
--   [PolarSplineSeries](datachart_series_types_polar.md)
--   [PolarSplineAreaSeries](datachart_series_types_polar.md)
+-   [Polar Area Chart](datachart_series_types_polar.md)
+-   [Polar Line Chart](datachart_series_types_polar.md)
+-   [Polar Scatter Chart](datachart_series_types_polar.md)
+-   [Polar Spline Chart](datachart_series_types_polar.md)
+-   [Polar Spline Area Chart](datachart_series_types_polar.md)
 
-#### Radial Series
+#### Radial Charts
 
--   [RadialAreaSeries](datachart_series_types_radial.md)
--   [RadialLineSeries](datachart_series_types_radial.md)
--   [RadialColumnSeries](datachart_series_types_radial.md)
--   [RadialPieSeries](datachart_series_types_radial.md)
+-   [Radial Area Chart](datachart_series_types_radial.md)
+-   [Radial Line Chart](datachart_series_types_radial.md)
+-   [Radial Column Chart](datachart_series_types_radial.md)
+-   [Radial Pie Chart](datachart_series_types_radial.md)
 
-#### Range Series
+#### Range Charts
 
--   [RangeAreaSeries](datachart_series_types_range.md)
--   [RangeColumnSeries](datachart_series_types_range.md)
+-   [Range Area Chart](datachart_series_types_range.md)
+-   [Range Column Chart](datachart_series_types_range.md)
 
-#### Scatter Series
+#### Scatter Charts
 
--   [Scatter Area Series](datachart_series_types_scatter_area.md)
--   [Scatter Bubble Series](datachart_series_types_scatter_bubble.md)
--   [Scatter Contour Series](datachart_series_types_scatter_contour.md)
--   [Scatter Marker Series](datachart_series_types_scatter_marker.md)
--   [Scatter Line Series](datachart_series_types_scatter_marker.md)
--   [Scatter Spline Series](datachart_series_types_scatter_marker.md)
--   [Scatter Polygon Series](datachart_series_types_shape.md)
--   [Scatter Polyline Series](datachart_series_types_shape.md)
+-   [Scatter Area Chart](datachart_series_types_scatter_area.md)
+-   [Scatter Bubble Chart](datachart_series_types_scatter_bubble.md)
+-   [Scatter Contour Chart](datachart_series_types_scatter_contour.md)
+-   [Scatter Marker Chart](datachart_series_types_scatter_marker.md)
+-   [Scatter Line Chart](datachart_series_types_scatter_marker.md)
+-   [Scatter Spline Chart](datachart_series_types_scatter_marker.md)
+-   [Scatter Polygon Chart](datachart_series_types_shape.md)
+-   [Scatter Polyline Chart](datachart_series_types_shape.md)
 
-#### Financial Series
+#### Financial Charts
 
--   [FinancialPriceSeries (OHLC)](datachart_series_types_financial.md)
--   [FinancialPriceSeries (Candlestick)](datachart_series_types_financial.md)
+-   [Financial OHLC Chart](datachart_series_types_financial_ohlc.md)
+-   [Financial Candlestick Chart](datachart_series_types_financial_candlestick.md)
 
 #### Financial Overlays
 
--   [BollingerBandsOverlay](datachart_series_types_financial.md)
--   [PriceChannelOverlay](datachart_series_types_financial.md)
+-   [Bollinger Bands Overlay](datachart_series_types_financial.md)
+-   [Price Channel Overlay](datachart_series_types_financial.md)
 
 #### Financial Indicators
 

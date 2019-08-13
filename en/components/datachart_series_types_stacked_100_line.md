@@ -1,6 +1,6 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked 100 Line Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a stacked 100 line chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','Stacked100LineSeries']
 namespace: Infragistics.Controls.Charts
@@ -8,7 +8,7 @@ namespace: Infragistics.Controls.Charts
 
 ## Stacked 100 Line Chart
 
-[`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) belongs to a group of category series and it is rendered using a collection of points connected by line segments ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis. The [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) is identical to the [`IgxStackedLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedlineseriescomponent.html) in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) presents the data in terms of percent of the sum of all values in a data point.
+The Ignite UI for Angular stacked 100 line chart belongs to a group of category charts and is rendered using a collection of points connected by line segments ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis. The Angular stacked 100 line chart is identical to the Angular stacked line chart in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) presents the data in terms of percent of the sum of all values in a data point.
 
 ### Demo
 
@@ -44,7 +44,7 @@ The [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/ty
 
 ### Required Modules
 
-The [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) requires the following modules:
+Creation of the [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -70,9 +70,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked 100 Line Series
+### Code Example - Stacked 100 Line Chart
 
-This code demonstrates how to create an instance of data chart with [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) and bind it to the data source. Note that you can also use above code to create other type of category series by replacing [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) with name of series that you want to render.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">

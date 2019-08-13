@@ -1,6 +1,6 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a stacked area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','StackedAreaSeries']
 namespace: Infragistics.Controls.Charts
@@ -8,7 +8,7 @@ namespace: Infragistics.Controls.Charts
 
 ## Stacked Area Chart
 
-[`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) belongs to a group of category series and it is rendered using a collection of points connected by line segments ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) with the area below the line filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.
+The Ignite UI for Angular stacked area chart belongs to a group of category charts and is rendered using a collection of points connected by line segments ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) with the area below the line filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.
 
 ### Demo
 
@@ -44,7 +44,7 @@ The [`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/types
 
 ### Required Modules
 
-The [`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) requires the following modules:
+Creation of the [`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -70,9 +70,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Area Series
+### Code Example - Stacked Area Chart
 
-This code demonstrates how to create an instance of data chart with [`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) and bind it to the data source. Note that you can also use above code to create other type of category series by replacing [`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) with name of series that you want to render.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStackedAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
