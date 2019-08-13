@@ -261,7 +261,6 @@ We will also add representation of the current state of our list. It will show h
     </div>
 </div>
 ```
-Get transactions, merge with wishlist data for display purposes
 
 ### Commit pending transactions
 
