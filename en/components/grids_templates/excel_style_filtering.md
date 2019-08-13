@@ -346,6 +346,10 @@ The list items inside the Excel Style Filtering dialog represent the unique valu
 
 The developer can manually generate the necessary unique column values based on the information, that is provided by the **column** and the **filteringExpressionsTree** arguments and then invoke the **done** callback.
 
+> [!NOTE]
+> When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
+
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
     ...
@@ -361,10 +365,6 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
-> [!NOTE]
-> When the `uniqueColumnValuesStrategy` input is provided, the default unique values generating process in the excel style filtering will not be used.
-
-@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
@@ -383,13 +383,43 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 </div> -->
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- <div class="sample-container loading" style="height:900px">
-    <iframe id="hierarchical-grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+```html
+<igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'Artist'" [data]="data" [filterMode]="'excelStyleFilter'"
+                       [uniqueColumnValuesStrategy]="singersColumnValuesStrategy">
+    ...
+    <igx-row-island [primaryKey]="'Album'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
+                    [uniqueColumnValuesStrategy]="albumsColumnValuesStrategy">
+        ...
+    </igx-row-island>
+</igx-hierarchical-grid>
+```
+
+```typescript
+public singersColumnValuesStrategy = (column: IgxColumnComponent,
+                                      columnExprTree: IFilteringExpressionsTree,
+                                      done: (uniqueValues: any[]) => void) => {
+// Get specific column data for the singers.
+this.remoteValuesService.getColumnData(
+    null, "Singers", column, columnExprTree, uniqueValues => done(uniqueValues));
+}
+
+public albumsColumnValuesStrategy = (column: IgxColumnComponent,
+                                     columnExprTree: IFilteringExpressionsTree,
+                                     done: (uniqueValues: any[]) => void) => {
+// Get specific column data for the albums of a specific singer.
+const parentRowId = (column.grid as any).foreignKey;
+this.remoteValuesService.getColumnData(
+    parentRowId, "Albums", column, columnExprTree, uniqueValues => done(uniqueValues));
+}
+```
+
+<div class="sample-container loading" style="height:800px">
+    <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div> -->
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-esf-load-on-demand-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 In order to provide a custom loading template for the excel style filtering, we can use the `igxExcelStyleLoading` directive:
