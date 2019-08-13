@@ -6,7 +6,8 @@ _keywords: angular accordion, igniteui for angular, infragistics
 
 ## Expansion Panel
 <p class="highlight">
-The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. When collapsed, the expandable displays a summary of its content. The collapsed material expansion panel can be toggled using mouse click, or keyboard interactions to display the body completely, containing any additional necessary content.
+
+The [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. When collapsed, the expandable displays a summary of its content. The collapsed material expansion panel can be toggled using mouse click, or keyboard interactions to display the body completely, containing any additional necessary content.
 </p>
 <div class="divider--half"></div>
 
