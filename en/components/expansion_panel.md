@@ -1,12 +1,12 @@
 ---
-title: Expansion Panel
-_description: Provides an easily configurable component with two states - collapsed and expanded.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Collapsible component, IgxExpansionPanel, Ignite UI Expansion Panel
+title: Angular Panel | Expandable | Ignite UI for Angular | Infragistics
+_description: Use an Angular accordion/material expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded.
+_keywords: angular accordion, igniteui for angular, infragistics
 ---
 
 ## Expansion Panel
 <p class="highlight">
-The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions to display the body completely, containing any additional necessary content.
+The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. When collapsed, the expandable displays a summary of its content. The collapsed material expansion panel can be toggled using mouse click, or keyboard interactions to display the body completely, containing any additional necessary content.
 </p>
 <div class="divider--half"></div>
 
@@ -40,7 +40,7 @@ We can now start using `igx-expansion-panel` in the markup. The expansion panel 
 - `igx-expansion-panel` - the component host - stores header and body
     - `igx-expansion-panel-header` - stores the component header. This is always visible. Stores title and description as well as any additional content
         - `igx-expansion-panel-title` - stores the component title. Has default styling. The title will always appear first in the header content (after icon if `iconPosition === 'left'`). Used in aria labels.
-        - `igx-expansion-panel-description` - stores the component description. Can be used to provide a short summary. The description will always appear after the title (if title is set).
+        - `igx-expansion-panel-description` - stores the component description. It can be used to provide a short summary. The description will always appear after the title (if the title is set).
     - `igx-expansion-panel-body` - stores the component body. This part of the component is only visible when the panel is expanded.
 
 In the below example, we can create a small collapsible component that hold a bit of information about the hummingbird:
@@ -62,7 +62,7 @@ In the below example, we can create a small collapsible component that hold a bi
             Indeed, the smallest extant bird species is a hummingbird, the 5 cm (2.0 in) bee hummingbird weighing less
             than 2.0 g (0.07 oz).
         </p>
-        <a href="https://en.wikipedia.org/wiki/Hummingbird" target="_blank">Read more</a>
+        <a href="https://en.wikipedia.org/wiki/Hummingbird" target="_blank" rel="nofollow" title="Hummingbird">Read more</a>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
 
@@ -165,7 +165,7 @@ Once imported, we can use the avatar in the markup:
             hummingbird,
             the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
         </p>
-        <a [href]="readMore" target="_blank">Read more</a>
+        <a [href]="readMore" target="_blank" rel="nofollow" title="Hummingbird">Read more</a>
 </igx-expansion-panel-body>
 ...
 ```
@@ -186,7 +186,7 @@ After applying all of the changes to our initial component, here is the final re
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-The `IgxExpansionPanel` control allows all sort of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.md), charts and even other expansion panels!
+The `IgxExpansionPanel` control allows all sorts of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.md), charts and even other expansion panels!
 
 ## Styling
 The Expansion Panel comes without specific borders or paddings defined for the body content. You can either manually set the Expansion Panel body element's padding or wrap the Expansion Panel body in an `igxCard` . You can refer to the [Weather Forecast Sample](#weather-forecast-sample) for the latter.
@@ -195,7 +195,7 @@ The Expansion Panel comes without specific borders or paddings defined for the b
 The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html).
 The default icon for the toggle state of the control can be templated. The position of this icon is also configurable - either the start or end of the header. It can also be hidden.
 
-Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header`. The posible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
+Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header`. The possible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -241,7 +241,7 @@ First, in order for us to use the functions exposed by the theme engine, we need
 ```
 
 ### Define palette & colors
-After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom `igx-expansion-panel` styling in conjunction with our own color [palette](themes/palette.md) where we can specify our main colors to be used by the component.
+After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom `igx-expansion-panel` styling in conjunction with our color [palette](themes/palette.md) where we can specify our main colors to be used by the component.
 Fist we define a custom palette and pass our main colors:
 ```scss
 // in styles.scss
@@ -256,7 +256,7 @@ $my-color-palette: igx-palette(
 );
 ```
 
-In order to see our custom palette and colors applied, we need to pass these to a theme function.
+To see our custom palette and colors applied, we need to pass these to a theme function.
 So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our colors to a number of predefined `igx-expansion-panel-theme` parameters . Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to take use of the previously created [palette](themes/palette.md) and base our new colors on the colors defined.
 ```scss
 // in styles.scss
@@ -282,7 +282,7 @@ In case you want this newly created `igx-expansion-panel theme` to be applied [`
 @include igx-expansion-panel($custom-panel-theme);
 ```
 #### Scoped
-There may be a case where you want a particular `igx-expansion-panel` to be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc. Additionally all of the above steps need to be moved from `styles.scss` to the `component.scss` file.
+There may be a case where you want a particular `igx-expansion-panel` to be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc. Additionally, all of the above steps need to be moved from `styles.scss` to the `component.scss` file.
 
  >[!NOTE]
  >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
@@ -403,7 +403,7 @@ You can see the results below:
 </div>
 
 ### Multiple panel scenario
-In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
+In the following example, we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample, the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
 
 ```typescript
 // in expansion-panel.component.ts
@@ -580,7 +580,7 @@ You can see the results below:
 </div>
 
 ## Weather Forecast Sample
-The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`](card.md) and [`IgxIcon`](icon.md) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days weather conditions.
+The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`](card.md) and [`IgxIcon`](icon.md) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days' weather conditions.
 
 ```typescript
 // in weather-forecast.component.ts
