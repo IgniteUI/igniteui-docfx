@@ -1,7 +1,7 @@
 ---
-title: Transaction Service
-_description: 
-_keywords: Ignite UI for Angular, transaction
+title: Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
+_description: Start using Ignite UI Angular transaction service to easily implement batch editing and perform Angular CRUD operations on your components.
+_keywords: batch editing, igniteui for angular, infragistics
 ---
 
 
@@ -18,18 +18,22 @@ The [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionse
 
 Every time you execute an operation ([**transaction**]({environment:angularApiUrl}/interfaces/transaction.html)), it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated **state** that consists only of add/update/delete operations for unique records. This is based on a [`State`]({environment:angularApiUrl}/interfaces/state.html) interface which has three properties: `recordRef`, `type` and `value`.
 
-We have built three classes on top of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) that provide the user with the ability to commit all the changes he has made, or the changes he has made to a given record, at once. Those classes are [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html), [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html).
+We have built three classes on top of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) that provide users with the ability to commit all changes they have made, or only changes made to a specific record, at once. Those classes are [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html), [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html).
 
-The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are fully integrated in our [igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html), [igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) and [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) components. You may find detailed examples of using those components with transactions enabled in the following topics:
+The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are fully integrated with our [igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html), [igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) and [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) components. You can find detailed examples of using those components with transactions enabled in the following topics:
 * [igxGrid Batch Editing and Transactions](grid/batch_editing.md)
 * [igxHierarchicalGrid Batch Editing and Transactions](hierarchicalgrid/batch_editing.md)
 * [igxTreeGrid Batch Editing and Transactions](treegrid/batch_editing.md)
 
-A more detailed overview of the opportunities that the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) provides may be found in our ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)
+A more detailed overview of the opportunities that the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) provides can be found in our ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)
 
 ### Additional Resources
 <div class="divider--half"></div>
 
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
-* [igxBaseTransaction, igxTransaction and igxHierarchical transaction explained](transaction-classes.md)
+* [Transaction Service class hierarchy](transaction-classes.md)
 * [How to use the Transaction service](transaction-how-to-use.md)
+* [Grid Batch Editing](grid/batch_editing.md)
+* [Tree Grid Batch Editing](treegrid/batch_editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)
