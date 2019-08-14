@@ -231,9 +231,9 @@ export class RemoteLoDService {
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-### Sizing
+<!-- ### Sizing
 
-See the [Grid Sizing](sizing.md) topic.
+See the [Grid Sizing](sizing.md) topic. -->
 
 ### CRUD 操作
 

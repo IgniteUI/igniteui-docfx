@@ -237,9 +237,9 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
-### Sizing
+<!-- ### Sizing
 
-See the [Grid Sizing](sizing.md) topic.
+See the [Grid Sizing](sizing.md) topic. -->
 
 ## 既知の問題と制限
 

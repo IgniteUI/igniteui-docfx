@@ -288,8 +288,9 @@ row.delete();
 
 <div class="divider--half"></div>
 
-@@if (false) { <!-- remove after translation -->
-### Styling
+
+
+<!-- ### Styling
 
 The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
@@ -390,9 +391,7 @@ In addition to the steps above, we can also style the controls that are used for
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
-<div class="divider--half"></div>
-
-} <!-- remove after translation -->
+<div class="divider--half"></div> -->
 
 ### API リファレンス
 
