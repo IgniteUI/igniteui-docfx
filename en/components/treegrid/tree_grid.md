@@ -236,6 +236,10 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
+### Sizing
+
+See the [Grid Sizing](sizing.md) topic.
+
 ## Known Limitations
 
 |Limitation|Description|
@@ -264,6 +268,7 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [Data Grid](../grid/grid.md)
 * [Row Editing](row_editing.md)
 

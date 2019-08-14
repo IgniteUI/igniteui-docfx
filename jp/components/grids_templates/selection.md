@@ -343,6 +343,7 @@ public selection = true;
 
 **注:** セル選択は [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) をトリガーしますが [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) はトリガーしません。
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 The theme engine exposes properties that allows us to style the range of selected cells.
@@ -439,6 +440,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
     </button>
 </div>
 }
+} <!-- remove after translation -->
 
 ### コード スニペット
 

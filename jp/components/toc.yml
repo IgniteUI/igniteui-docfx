@@ -9,16 +9,16 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
-  items:
-    - name: Step-by-Step Guide
-      href: general/cli/step-by-step-guide.md
-      new: false
-    - name: Components Templates
-      href: general/cli/components-templates.md
-      new: false
-    - name: Authentication Project Template
-      href: general/cli/auth-template.md
-      new: false
+  # items:
+  #   - name: Step-by-Step Guide
+  #     href: general/cli/step-by-step-guide.md
+  #     new: false
+  #   - name: Templates
+  #     href: general/cli/component-templates.md
+  #     new: false
+  #   - name: Authentication Project Template
+  #     href: general/cli/auth-template.md
+  #     new: false
 - name: WPF to Angular guide
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
@@ -134,6 +134,9 @@
     - name: クリップボード操作
       href: grid/clipboard_interactions.md
       new: true
+    - name: Sizing
+      href: grid/sizing.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -216,6 +219,9 @@
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: true
+    - name: Sizing
+      href: treegrid/sizing.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: false
@@ -287,6 +293,9 @@
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+    - name: Sizing
+      href: hierarchicalgrid/sizing.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -736,9 +745,9 @@
   - name: スクロールストラテジ
     href: overlay_scroll.md
     new: false
-  - name: Styling
-    href: overlay_styling.md
-    new: true
+  # - name: Styling
+  #   href: overlay_styling.md
+  #   new: true
 - name: Drag and Drop
   href: drag_drop.md
   new: false
@@ -798,13 +807,13 @@
 - name: ローカライゼーション
   href: localization.md
   new: false
-- name: Transaction Service
-  href: transaction.md
-  new: true
-  items:
-    - name: Transaction Service class hierarchy
-      href: transaction-classes.md
-      new: true
-    - name: How to use the Transaction Service
-      href: transaction-how-to-use.md
-      new: true
+# - name: Transaction Service
+#   href: transaction.md
+#   new: true
+#   items:
+#     - name: Transaction Service class hierarchy
+#       href: transaction-classes.md
+#       new: true
+#     - name: How to use the Transaction Service
+#       href: transaction-how-to-use.md
+#       new: true

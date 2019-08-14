@@ -269,6 +269,10 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
+### Sizing
+
+See the [Grid Sizing](sizing.md) topic.
+
 ## 알려진 제한 사항
 
 |제한 사항|설명|
@@ -297,6 +301,7 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [데이터 그리드](../grid/grid.md)
 * [행 편집](row_editing.md)
 

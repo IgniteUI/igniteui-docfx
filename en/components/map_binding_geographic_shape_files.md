@@ -126,13 +126,13 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
         for (const record of shapeRecords) {
             // using field/column names from .DBF file
             const route = {
-                capacity: record.fieldValues.CapacityG,
-                distance: record.fieldValues.DistanceKM,
-                isActive: record.fieldValues.NotLive !== 0,
-                isOverLand: record.fieldValues.OverLand === 0,
-                name: record.fieldValues.Name,
+                capacity: record.fieldValues["CapacityG"],
+                distance: record.fieldValues["DistanceKM"],
+                isActive: record.fieldValues["NotLive"] !== 0,
+                isOverLand: record.fieldValues["OverLand"] === 0,
+                name: record.fieldValues["Name"],
                 points: record.points,
-                service: record.fieldValues.InService
+                service: record.fieldValues["InService"]
             };
             geoPolylines.push(route);
         }

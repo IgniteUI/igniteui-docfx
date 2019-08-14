@@ -218,6 +218,11 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 </div>
 }
 
+### Known Limitations
+|Limitation|Description|
+|--- |--- |
+| Navigating inside grid with scrollable parent container. | If the grid is positioned inside a scrollable parent container and the user navigates inside the grid, it will not scroll the parent container if there are cells out of view.|
+
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)

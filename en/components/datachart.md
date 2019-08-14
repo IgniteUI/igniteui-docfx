@@ -40,11 +40,11 @@ import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-cha
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
 // scatter series elements:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
-import { IgxBubbleSeries } from "igniteui-angular-charts/ES5/igx-bubble-series";
-import { IgxSizeScale } from "igniteui-angular-charts/ES5/igx-size-scale";
-import { IgxValueBrushScale } from "igniteui-angular-charts/ES5/igx-value-brush-scale";
+import { IgxBubbleSeriesComponent } from "igniteui-angular-charts/ES5/igx-bubble-series-component";
+import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxSizeScaleComponent } from "igniteui-angular-charts/ES5/igx-size-scale-component";
+import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
 
 @NgModule({
     imports: [
@@ -96,11 +96,11 @@ The following code snippet demonstrates how to create scatter [`bubble`](/produc
                  width="700px"
                  height="500px">
     <igx-numeric-x-axis name="xAxis" isLogarithmic="true" ></igx-numeric-x-axis>
-    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" ></igx-numeric-x-axis>
+    <igx-numeric-y-axis name="yAxis" isLogarithmic="true" ></igx-numeric-y-axis>
     <igx-bubble-series
         name="series1"
-        xAxisName="xAxis"
-        yAxisName="yAxis"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
         xMemberPath="Population"
         yMemberPath="GdpTotal"
         radiusMemberPath="GdpPerCapita"

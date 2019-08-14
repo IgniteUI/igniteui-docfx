@@ -393,8 +393,7 @@ export class InputDropDownComponent {
     </igx-drop-down-item>
 </igx-drop-down>
 ```
-
-### Styling
+<!-- ### Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-drop-down** appearance. We are going to create and style an `igx-drop-down` component to choose an RPG 'Hero Class' from. 
 
 #### Import theme
@@ -488,7 +487,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+</div> -->
 
 <div class="divider--half"></div>
 
