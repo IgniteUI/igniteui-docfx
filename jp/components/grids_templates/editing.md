@@ -288,14 +288,13 @@ row.delete();
 
 <div class="divider--half"></div>
 
-@@if (false) { <!-- remove after translation -->
-### Styling
+<!-- ### Styling
 
 The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
 In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
 
-In order to use the [Ignite UI Theming Library](../themes/index.md), we must first import the theme `index` file in our global styles:
+In order to use the [Ignite UI Theming Library](../themes/component-themes.md), we must first import the theme `index` file in our global styles:
 
 #### Importing style library
 
@@ -307,7 +306,7 @@ Now we can make use of all of the functions exposed by the Ignite UI for Angular
 
 #### Defining a palette
 
-After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palettes.md):
+After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palette.md):
 
 ```scss
 $white: #fff;
@@ -365,7 +364,7 @@ In addition to the steps above, we can also style the controls that are used for
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -374,7 +373,7 @@ In addition to the steps above, we can also style the controls that are used for
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:950px">
-    <iframe id="treegrid-editing-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="treegrid-editing-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -383,7 +382,7 @@ In addition to the steps above, we can also style the controls that are used for
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:660px">
-    <iframe id="hierarchical-grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="hierarchical-grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -391,8 +390,7 @@ In addition to the steps above, we can also style the controls that are used for
 </div>
 }
 <div class="divider--half"></div>
-
-} <!-- remove after translation -->
+ -->
 
 ### API リファレンス
 

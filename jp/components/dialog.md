@@ -20,7 +20,7 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Dialog Window を初期化する前に、[**IgxDialogModule**] を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Dialog Window を初期化する前に、**IgxDialogModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
