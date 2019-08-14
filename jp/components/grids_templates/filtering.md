@@ -587,7 +587,7 @@ $custom-button: igx-button-theme(
 );
 
 // Defining input-group-theme with the global light schema
-$custom-button: igx-input-group-theme(
+$custom-input-group: igx-input-group-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

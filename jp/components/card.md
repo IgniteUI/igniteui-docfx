@@ -288,8 +288,121 @@ export class AppModule {}
 </igx-card-actions>
 ```
 
-#### 概要
-このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。最後に他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能性を向上しました。カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
+### Styling
+To get started with styling the card, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+Following the simplest approach, we create a new theme that extends the [`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) and accepts some parameters that style the card's items:
+
+```scss
+$colorful-card: igx-card-theme(
+    $background: #FD6BD93A,
+    $header-text-color: #F2F607,
+    $subtitle-text-color: #FA2509,
+    $content-text-color: #0A41F7
+);
+```
+As seen, the `igx-card-theme` exposes some useful parameters for basic styling of its items. 
+
+The last step is to **include** the component's theme.
+
+```scss
+ @include igx-card($colorful-card);
+```
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-card($colorful-card);
+    }
+}
+```
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #E7EB0B;
+$red-color: #F00B1E;
+$colorful-palette: igx-palette($primary: $red-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$colorful-card: igx-card-theme(
+    $palette: $colorful-palette,
+    $background: igx-color($colorful-palette, "secondary", 100),
+    $header-text-color: igx-color($colorful-palette, "primary", 200),
+    $subtitle-text-color: igx-color($colorful-palette, "primary", 500),
+    $content-text-color: igx-color($colorful-palette, "primary", 700)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-card`]({environment:sassApiUrl}/index.html#variable-_dark-card) schema:
+
+```scss
+// Extending the dark-card schema
+$dark-card-schema: extend($_dark-card,
+    (
+        background:(
+            igx-color:("secondary", 100)
+        ),
+        header-text-color:(
+            igx-color:("primary", 500)
+        ),
+        subtitle-text-color:(
+            igx-color:("primary", 500)
+        ),
+        content-text-color:(
+            igx-color:("primary", 700)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-card: $dark-card-schema
+));
+
+// Defining the dark-card theme with the global dark schema
+$dark-card: igx-card-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height: 486px">
+    <iframe id="card-style-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-styling-sample" class="lazyload no-theming">
+</iframe></div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### Summary
+In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
+The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
 ### API と スタイル リファレンス
 
