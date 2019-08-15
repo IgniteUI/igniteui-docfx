@@ -362,7 +362,7 @@ export class CalendarSample7Component {
 * `Enter` はフォーカスされている日を選択します。
 <div class="divider--half"></div>
 
-### Styling
+<!-- ### Styling
 
 To get started with styling the calendar, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -501,7 +501,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+</div> -->
 
 ### API
 <div class="divider--half"></div>

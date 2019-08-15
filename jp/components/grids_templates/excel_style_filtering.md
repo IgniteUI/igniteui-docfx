@@ -451,7 +451,7 @@ In order to provide a custom loading template for the excel style filtering, we 
 
 <div class="divider--half"></div>
 
-### Styling
+<!-- ###Styling
 
 To get started with styling the Excel Style Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -790,7 +790,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 
-<div class="divider--half"></div>
+<div class="divider--half"></div> -->
 
 ### API リファレンス
 <div class="divider--half"></div>
