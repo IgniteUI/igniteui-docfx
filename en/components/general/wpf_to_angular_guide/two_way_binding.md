@@ -1,14 +1,14 @@
 ---
-title: Two-way data binding
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, two-way, binding
+title: Two-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
+_description: Learn how to create two-way data binding in Angular when migrating from WPF to Angular.
+_keywords: data binding, ignite ui for angular, infragistics
 ---
 
 ## Two-way data binding in Angular
 
 > [!Video https://www.youtube.com/embed/MrjTTDEj7cA]
 
-In a previous topic, we discussed the [one-way binding](one_way_binding.md) in Angular, and how easy it was to use it. The one-way binding updates the view with data coming from the component class. Like in WPF, we can do the opposite operation - update the component class from the view. In that case we need to use a two-way binding. Let's see just how easy that is to do.
+The two-way data binding in Angular is used to display information to the end user and allows the end user to make changes to the underlying data using the UI. This makes a two-ways connection between the view (the template) and the component class.
 
 A one-way binding is taking the state from our component class and displaying it in our view. Let's look at this code:
 ```html
