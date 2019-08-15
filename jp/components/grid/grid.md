@@ -605,8 +605,8 @@ public ngOnInit() {
 </div>
 <div class="divider--half"></div>
 
-### Sizing
-See the [Grid Sizing](sizing.md) topic.
+<!-- ### Sizing
+See the [Grid Sizing](sizing.md) topic. -->
 
 ## 既知の問題と制限
 

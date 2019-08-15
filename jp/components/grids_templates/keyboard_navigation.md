@@ -224,10 +224,10 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 </div>
 }
 
-### Known Limitations
+<!-- ### Known Limitations
 |Limitation|Description|
 |--- |--- |
-| Navigating inside grid with scrollable parent container. | If the grid is positioned inside a scrollable parent container and the user navigates inside the grid, it will not scroll the parent container if there are cells out of view.|
+| Navigating inside grid with scrollable parent container. | If the grid is positioned inside a scrollable parent container and the user navigates inside the grid, it will not scroll the parent container if there are cells out of view.| -->
 
 ### API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
