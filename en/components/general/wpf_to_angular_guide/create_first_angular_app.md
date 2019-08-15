@@ -1,12 +1,14 @@
 ---
-title: Create your first Angular app
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+title: Create your first Angular application  | IgniteUI for Angular | Infragistics
+_description: Learn how to create an Angular application when migrating from WPF to Angular.
+_keywords: angular application, ignite ui for angular, infragistics
 ---
 
-## Create your first Angular app
+## Create your first Angular application
 
 > [!Video https://www.youtube.com/embed/dhjrAPPad54]
+
+This topic will help you to start creating Angular applications especially if you are a WPF developer.
 
 ### Prerequisites
 

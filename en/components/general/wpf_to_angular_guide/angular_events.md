@@ -1,16 +1,14 @@
 ---
-title: Angular Events
-_description: Learn how to respond to events in Angular and implement your own events.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Events, Event Binding
+title: Handling Events in Angular | IgniteUI for Angular | Infragistics
+_description: Learn how to handle events in Angular when migrating from WPF to Angular.
+_keywords: event handling, ignite ui for angular, infragistics
 ---
 
-## Responding to Events
+## Handling Events in Angular
 
 > [!Video https://www.youtube.com/embed/V1Futz4W400]
 
-### Binding to User Input Events
-
-Every app you have probably ever written had to respond to some type of user interaction one way or another. The most common way to do that is with some type of event system. WPF provides routed events, CLR events, and commands. While in Angular, there are DOM events.
+The Angular events are emitted as a response to a user interaction. When an Angular event is emitted this triggers the logic contained in the event handler. WPF provides routed events, CLR events, and commands. While in Angular, there are DOM events.
 
 Here is a simple example how you respond to a click event of a button in WPF:
 
