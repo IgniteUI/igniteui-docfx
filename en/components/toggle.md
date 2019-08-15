@@ -251,9 +251,7 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 ## Known Limitations
 |Limitation|Description|
 |--- |--- |
-| `igxToggle` won't preserve its scroll position if put in projected container like `<ng-content>` |When closing a toggle that uses `igxForOf` and then reopening it, the scrollbar position won't be preserved, even though the data position would be. The reason for that behavior is that the `igxToggle` directive uses `igxForOf` directive internally, which cannot identify the detaching and re-attaching of the DOM elements from the DOM tree and thus cannot update the scrollbar thumb position. Some possible workarounds could be: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an `ngIf`, that'd follow it's state (the tab gets selected => attaching nodes to the DOM tree, the tab gets disselected => removing nodes from the tree).</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually. For example using [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).</li></ul>
-
-
+| Scroll position of a directive that uses the Virtual For-directive would not be preserved |When closing a toggle that uses igxForOf and then reopening it, the scrollbar position wouldn't be preserved, even though the data position would be. reason is that igxGrid uses igxForOf directive internally, which cannot identify the detaching and re-attaching of the DOM elements from the DOM tree and thus cannot update the scrollbar thumb position. Some possible workarounds could be: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an ngIf, that'd follow it's state (the tab gets selected => attaching nodes to the DOM tree, the tab gets disselected => removing nodes from the tree).</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually.</li></ul>
 
 ## API Summary
 
