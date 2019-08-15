@@ -632,7 +632,7 @@ See the [Grid Sizing](sizing.md) topic. -->
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
+<!-- * [Grid Sizing](sizing.md) -->
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

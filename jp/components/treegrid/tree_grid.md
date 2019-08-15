@@ -269,7 +269,7 @@ See the [Grid Sizing](sizing.md) topic. -->
 
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
+<!-- * [Grid Sizing](sizing.md) -->
 * [データ グリッド](../grid/grid.md)
 * [行編集](row_editing.md)
 

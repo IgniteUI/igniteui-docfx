@@ -262,7 +262,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
+<!-- * [Grid Sizing](sizing.md) -->
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
