@@ -247,6 +247,9 @@ Calling CRUD API methods should still be done through each separate grid instanc
 |Group By|Group By feature is not supported by the hierarchical grid.|
 |Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
 
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+
 ## API References
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)

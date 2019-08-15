@@ -249,6 +249,9 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
 |Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+
 ## API リファレンス
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)

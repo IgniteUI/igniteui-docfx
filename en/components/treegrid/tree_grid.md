@@ -247,6 +247,8 @@ See the [Grid Sizing](sizing.md) topic.
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
 
+> [!NOTE]
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
