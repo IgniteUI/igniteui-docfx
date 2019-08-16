@@ -621,6 +621,9 @@ See the [Grid Sizing](sizing.md) topic.
 | Columns have a minimum allowed column width. Depending on the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) option, they are as follows: <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity). This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
 | Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
 
+> [!NOTE]
+> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+
 <div class="divider--half"></div>
 
 ## API References

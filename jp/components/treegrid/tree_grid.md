@@ -248,6 +248,8 @@ See the [Grid Sizing](sizing.md) topic. -->
 |ツリー セルのテンプレート化|ツリーセルをテンプレート化する場合、セルの境界外にスパンするコンテンツはオーバレイに配置しない限り表示されません。|
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
+> [!NOTE]
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 

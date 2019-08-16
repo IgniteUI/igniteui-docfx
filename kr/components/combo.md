@@ -120,6 +120,9 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 - Backspace works in disabled combo in IE
 - Combo is not having input for sizing its height. In the future [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)  will expose an option that allows custom sizing and then [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
+> [!NOTE]
+> `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxCombo`. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
+
 ### Additional Resources
 <div class="divider--half"></div>
 
