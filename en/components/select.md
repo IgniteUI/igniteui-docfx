@@ -15,11 +15,10 @@ The [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) al
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 >[!WARNING]
->To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](general/getting_started.html) topic.
+>To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](general/getting_started.md) topic.
 
 
 ## Usage
-### Basic
 To get started with `igx-select` you first need to import the `IgxSelectModule`:
 ```typescript
 // app.module.ts
@@ -35,7 +34,7 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then all that is needed is to define an `igxSelect` and several items.
+Then all that is needed is to define an `<igx-select>` and several items. We use an [`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that `igx-select` operates on.
 ```html
 <!-- define items declaratively -->
 <igx-select>
@@ -45,13 +44,12 @@ Then all that is needed is to define an `igxSelect` and several items.
 </igx-select>
 ```
 
-Alternatively, another way to do it would be to simply pass in a collection of the items that we want to display using [ngForOf](https://angular.io/api/common/NgForOf) directive.
-First, specify a collection of the items that you want to display when the drop-down opens:
+Another way to do it would be to use a collection of the items that we want to display with the [ngForOf](https://angular.io/api/common/NgForOf) directive:
+
 ```typescript
 public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ```
 
-Then in your template you need to bind it with said items like so:
 ```html
 <igx-select [(ngModel)]="selected">
     <igx-select-item *ngFor="let item of items" [value]="item">
@@ -59,12 +57,16 @@ Then in your template you need to bind it with said items like so:
     </igx-select-item>
 </igx-select>
 ```
-Additionally, the above sample illustrates two-way data-binding via `ngModel`. This the reason for the initial `igxSelect` value set.
+Additionally, the above sample illustrates two-way data-binding via `ngModel`. What is more, you can use the Select component in [`Angular Forms`](#select-in-angular-forms) .
 
-We use an `IgxSelectItemComponent` to display the items that `igx-select` operates on. The `IgxSelectItemComponent` extends the [*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) with additional functionality that is specific to the `igx-select-item`.
 
-### Label Prefix and Suffix
-The `igxSelect` component uses [igx-input-group](input_group.md). This means you can make use of its related directives. Here we are going to utilize `igxLabel`, `igx-prefix` and `igx-suffix`.
+
+### Label, Prefix and Suffix
+The Select supports the following directives applicable to the [Input Group](input_group.md):
+
+- `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
+- `igx-prefix`/`igxPrefix`
+- `igx-suffix`/`igxSuffix` - Note the built-in toggle button suffix will always be displayed last.
 
 ```html
 <igx-select [(ngModel)]="selected">
@@ -88,16 +90,10 @@ The `igxSelect` component uses [igx-input-group](input_group.md). This means you
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 > [!NOTE]
-If no `placeholder` is specified for the `igxSelect` component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
-
-> [!NOTE]
-Currently due to a limitation [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive can not be used in the `igxSelect` component.
-
-> [!NOTE]
-Items' list toggle arrow is an actual `IgxSuffix`. If more than one `IgxSuffix` is used, the toggle arrow will be displayed always last.
+If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
 ### Templating toggle button
-The default arrow can be replaced using a template with the help of [`igxSelectToggleIcon`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) directive. For example:
+The default arrow can be replaced using a template with the help of [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) directive. For example:
 ```html
 <ng-template igxSelectToggleIcon let-collapsed>
     <igx-icon>{{ collapsed ? 'add_circle' : 'add_circle_outline'}}</igx-icon>
@@ -244,11 +240,11 @@ From there you have to initialize an [*OverlaySettings*]({environment:angularApi
 All of it looks like this:
 ```typescript
 @ViewChild(IgxSelectComponent)
-public igxSelect: IgxSelectComponent;
+public select: IgxSelectComponent;
 
 public customOverlaySettings: OverlaySettings = {
     positionStrategy: new SelectPositioningStrategy(
-        this.igxSelect
+        this.select
     ),
     scrollStrategy: new AbsoluteScrollStrategy()
 };
@@ -256,7 +252,7 @@ public customOverlaySettings: OverlaySettings = {
 As you can see there is also a `scrollStrategy` property that is present in the `customOverlaySettings` object. This ensures that the scrolling functionality of the drop-down works as expected. The scroll will appear every time the total height of all items in the list exceeds the drop-down's height.
 
 Another thing worth mentioning is that `igx-select` uses the `SelectPositioningStrategy` by default.
-> You can pass a variety of positioning strategies to the *positionStrategy* property, you can find them [*here*]({environment:angularApiUrl}/latest/interfaces/ipositionstrategy.html). 
+> You can pass a [variety of positioning strategies]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) to the `positionStrategy` property.
 
 ### Select With Groups
 <div class="sample-container loading" style="height: 470px;">
@@ -294,24 +290,17 @@ Then in your template file you can iterate over these objects and access their p
 </igx-select>
 ```
 
-### Select In A Form
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="select-form-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-form" class="lazyload"></iframe>
-</div>
+### Select In Angular Forms
+The `Select` component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). 
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-form-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-
-`igx-select` can also be used inside of a `form` element:
-
-
+Template-driven form example:
 ```html
 <form>
     <igx-select [(ngModel)]="selected" required>
-        ...
+        <label igxLabel>Pick a fruit</label>
         <igx-select-item *ngFor="let fruit of fruits" [value]="fruit">
             {{item}}
         </igx-select-item>
-        ...
     </igx-select>
 </form>
 ```
@@ -324,9 +313,11 @@ export class MyClass {
 }
 ```
 
-### Use with @angular/forms
-`igxSelect` support all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). 
-You can refer to the above [Select In A Form](#select-in-a-form) stackblitz sample for details on using the `required` attribute. 
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="select-form-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-form" class="lazyload"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-form-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 > [!NOTE]
 In order to see the `required` asterisk `*` as well, there has to be a label set.
@@ -354,7 +345,7 @@ Inside of your class, you would have something along the lines of:
 ```typescript
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
-    public igxSelect: IgxSelectComponent;
+    public select: IgxSelectComponent;
     public items: string[] = ["Orange", "Apple", "Banana", "Mango", "Tomato"];
     public customOverlaySettings: OverlaySettings;
 
@@ -364,7 +355,7 @@ export class MyClass implements OnInit {
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
             openAnimation: scaleInTop,
-            target: this.igxSelect.inputGroup.element.nativeElement,
+            target: this.select.inputGroup.element.nativeElement,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
@@ -402,7 +393,7 @@ export class MyClass implements OnInit {
         scrollStrategy: new AbsoluteScrollStrategy()
     }
     onClick(event: MouseEvent): void {
-        this.igxSelect.open(this.otherCustomOverlaySettings)
+        this.select.open(this.otherCustomOverlaySettings)
     }
     /* -- */
 }
