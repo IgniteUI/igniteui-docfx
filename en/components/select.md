@@ -1,11 +1,11 @@
 ---
 title: Angular Select | Material Select | IgniteUI for Angular | Infragistics
-_description: Learn to configure an Angular select. The Material select provides an input with angular dropdown list allowing single item selection of the angular combobox.
+_description: Learn how to configure an Angular select. The Material select provides an input with Angular dropdown list allowing single item selection of the angular combobox.
 _keywords:  angular select, igniteui for angular, infragistics
 ---
 
 ## Select
-The [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows you to select a single item from an angular dropdown list by using the mouse or the keyboard to quickly navigate through the material select items. By using the angular select you can also iterate selection through all items based on the input of a specific character or multiple characters.
+The Ignite UI for Angular Select component allows a single item selection from a dropdown list of items with specialized positioning. This Material based form control offers quick items list navigation, including selection based on a single or multiple characters match. 
 
 ## Simple Select Demo
 <div class="sample-container loading" style="height: 430px;">
@@ -19,7 +19,7 @@ The [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) al
 
 
 ## Usage
-To get started with `igx-select` you first need to import the `IgxSelectModule`:
+To get started with the Select component you first need to import the `IgxSelectModule`:
 ```typescript
 // app.module.ts
 
@@ -57,7 +57,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
     </igx-select-item>
 </igx-select>
 ```
-Additionally, the above sample illustrates two-way data-binding via `ngModel`. What is more, you can use the Select component in [`Angular Forms`](#select-in-angular-forms) .
+Additionally, the above sample illustrates two-way data-binding via `ngModel`. What is more, you can use the Select component in [`Angular Forms`](#select-in-angular-forms).
 
 
 
@@ -93,15 +93,19 @@ The Select supports the following directives applicable to the [Input Group](inp
 If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
 ### Templating toggle button
-The default arrow can be replaced using a template with the help of [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) directive. For example:
+The default arrow can be replaced by a nested template marked with the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
 ```html
-<ng-template igxSelectToggleIcon let-collapsed>
-    <igx-icon>{{ collapsed ? 'add_circle' : 'add_circle_outline'}}</igx-icon>
-</ng-template>
+<igx-select #select>
+    ...
+    <ng-template igxSelectToggleIcon let-collapsed>
+        <igx-icon>{{ collapsed ? 'add_circle' : 'add_circle_outline'}}</igx-icon>
+    </ng-template>
+    ...
+<igx-select>
 ```
 
 ## Features
-### IgxSelect Actions
+### Select Actions
 #### Open
 Focusing with the keyboard on `igx-select` will not cause it to open.
 With focus set on `igx-select` you can use `Space`, `Enter` or `ALT + Up/Down Arrow` keys to open it.
@@ -291,7 +295,7 @@ Then in your template file you can iterate over these objects and access their p
 ```
 
 ### Select In Angular Forms
-The `Select` component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). 
+The `Select` component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
 Template-driven form example:
 ```html
