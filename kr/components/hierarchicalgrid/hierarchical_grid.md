@@ -258,12 +258,9 @@ export class RemoteLoDService {
 
 <img class="responsive-img" src="../../images/unfold_less_icon_screenshot.jpg" srcset="../../images/unfold_less_icon_screenshoto@2x.jpg 2x" />
 
-### 알려진 제한 사항
+### Sizing
 
-|제한 사항|설명|
-|--- |--- |
-|Group By|Group By 기능은 계층 적 그리드에서 지원되지 않습니다.|
-|Export to Excel|Export to Excel 는 현재 계층 적 그리드에서 지원되지 않지만 Ignite UI for Angular의 차후 버전에서 사용할 수 있습니다.|
+See the [Grid Sizing](sizing.md) topic.
 
 ### CRUD 조작
 
@@ -271,6 +268,16 @@ export class RemoteLoDService {
 > 플랫 데이터 그리드와 특정 행 아일랜드의 각 인스턴스과의 중요한 차이점은 동일한 트랜잭션 서비스 인스턴스를 가지며 동일한 트랜잭션 로그를 누적한다는 것입니다. CRUD 기능을 활성화하려면 `IgxHierarchicalTransactionServiceFactory`를 인젝트해야 합니다.
 
 CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행해야 합니다.
+
+### 알려진 제한 사항
+
+|제한 사항|설명|
+|--- |--- |
+|Group By|Group By 기능은 계층 적 그리드에서 지원되지 않습니다.|
+|Export to Excel|Export to Excel 는 현재 계층 적 그리드에서 지원되지 않지만 Ignite UI for Angular의 차후 버전에서 사용할 수 있습니다.|
+
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 ## API 참조
 
@@ -285,6 +292,7 @@ CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행�
 ### 추가 리소스
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [가상화 및 성능](virtualization.md)
 * [페이징](paging.md)
 * [필터링](filtering.md)

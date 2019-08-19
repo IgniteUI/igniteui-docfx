@@ -2,7 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 ---
 
 ## Financial Chart
@@ -12,10 +12,10 @@ The Angular financial chart component is a charting component that makes it easy
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-overview-sample-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -25,15 +25,15 @@ Once the user binds the data, the chart offers multiple ways in which the data c
 
 The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.
 
-You can explicitly specify the chart type by setting the [`ChartType`](financialchart.md) property to one of the following options:
+You can explicitly specify the chart type by setting the [`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to one of the following options:
 
-| Property                                                                                | Description                                                                                                                                                                                                                                        |
-| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Bar`                                                                                   | Specifies the bar series with markers at each data point                                                                                                                                                                                           |
-| `Candle`                                                                                | Specifies the candle series                                                                                                                                                                                                                        |
-| [`IgxColumnComponent`](financialchart.md) | Specifies the column series                                                                                                                                                                                                                        |
-| `Line`                                                                                  | Specifies the line series                                                                                                                                                                                                                          |
-| `auto`                                                                                  | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest `Bar` for data items with Open, High, Low, Close columns. |
+| Property                                                                                                | Description                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`Bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar)       | Specifies the bar series with markers at each data point                                                                                                                                                                                                                                                                                       |
+| [`Candle`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) | Specifies the candle series                                                                                                                                                                                                                                                                                                                    |
+| [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) | Specifies the column series                                                                                                                                                                                                                                                                                                                    |
+| [`line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line)              | Specifies the line series                                                                                                                                                                                                                                                                                                                      |
+| [`Auto`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#auto)     | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest [`Bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) for data items with Open, High, Low, Close columns. |
 
 Refer to the [Financial Chart Panes](financialchart_chart_panes.md) topics for  information on other chart panes.
 
@@ -74,7 +74,7 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an [`IgxFinancialChart`](financialchart.md) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an [`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```ts
 let data = [
@@ -107,7 +107,7 @@ The following code demonstrates how to bind the financial chart to the above dat
 A toolbar is displayed at the top of the financial chart. This allows your end users to change various details about the data being displayed, and also displays different panes. The toolbar consists of the following selectors:
 
 -   Indicator Type Selector - Allows users to select multiple types of financial indicators. These indicators are displayed below the price pane in their own panes because they do not share the same Y-Axis scale with the prices or other indicators.
--   Overlay Type Selector - Allows users to select different types of financial overlays. These overlays are displayed together with the financial prices series because they share the same y-axis scale. There are two types of overlays the `BollingerBands` and `PriceChannel`.
+-   Overlay Type Selector - Allows users to select different types of financial overlays. These overlays are displayed together with the financial prices series because they share the same y-axis scale. There are two types of overlays the [`BollingerBands`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#bollingerbands) and [`PriceChannel`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#pricechannel).
 -   Trendline Type Selector - Allows users to select different types of trendlines. The trendline is displayed in a trendline layer over the price pane and the volume pane.
 -   Date Range Selector - Allows users to select different range presets to view the data. Note that some buttons will not be functional if your data range is less 1 year.
 -   Chart Type Selector - Allows users to select chart types for the financial chart. These are displayed in the price pane.

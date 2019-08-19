@@ -110,6 +110,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-combo** appearance. 
 Since `igx-combo` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
 On top of that, `IgxCombo` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxCombo` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
+`IgxCheckbox` is yet another related component. For details check [`igx-checkbox styling guide`](checkbox.md#styling).
 
 ### Code snippets
 We are going to use the following:
@@ -169,7 +170,7 @@ All that's left is to properly scope our newly created themes. Here we will assu
 > The [**IgxCombo**]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-combo-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
 
 ### Demo
-<div class="sample-container loading" style="height:450px">
+<div class="sample-container loading" style="height:410px">
     <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
@@ -190,6 +191,9 @@ All that's left is to properly scope our newly created themes. Here we will assu
 - Combo input that displays the selected items is not editable, however due to a browser specifics in IE and FireFox the cursor is visible
 - Backspace works in disabled combo in IE
 - Combo is not having input for sizing its height. In the future [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)  will expose an option that allows custom sizing and then [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
+
+> [!NOTE]
+> `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxCombo`. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
 
 ### Additional Resources
 <div class="divider--half"></div>

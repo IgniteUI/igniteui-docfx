@@ -188,7 +188,7 @@ public selectDensity(event) {
 }
 ```
 
-And the final result:
+結果は以下のようになります:
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
@@ -198,7 +198,7 @@ And the final result:
 </div>
 <div class="divider--half"></div>
 
-### Styling
+<!-- ### Styling
 
 To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -231,7 +231,7 @@ The last step is to **include** the button theme in our application:
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -271,11 +271,11 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
 
 #### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
 
@@ -331,7 +331,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
+<div class="divider--half"></div> -->
 
 ### API リファレンス
 <div class="divider--half"></div>

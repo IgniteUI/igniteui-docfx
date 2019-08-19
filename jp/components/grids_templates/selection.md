@@ -213,6 +213,20 @@ Ignite UI for Angular の行選択には、行内のその他すべての列の�
 <div class="divider--half"></div>
 }
 
+@@if (igxName === 'IgxGrid') {
+### Selection Based Summaries
+
+This sample demonstrates the usage of multiple selection along with custom summary functions. 
+Change the selection to see summaries of the currently selected range.
+
+<div class="sample-container loading" style="height: 560px;">
+    <iframe id="grid-selection-custom-summaries" data-src='{environment:demosBaseUrl}/grid/grid-selection-custom-summaries' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### 設定
 
 #### 単一選択
@@ -343,6 +357,7 @@ public selection = true;
 
 **注:** セル選択は [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) をトリガーしますが [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) はトリガーしません。
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 The theme engine exposes properties that allows us to style the range of selected cells.
@@ -439,6 +454,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
     </button>
 </div>
 }
+} <!-- remove after translation -->
 
 ### コード スニペット
 

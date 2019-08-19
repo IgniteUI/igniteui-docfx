@@ -293,6 +293,7 @@ public toolbarExportingHandler(args) {
 <div class="divider"></div>
 }
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
@@ -444,6 +445,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <div class="divider"></div>
 }
+} <!-- remove after translation -->
 
 ### API リファレンス
 
