@@ -139,6 +139,19 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
+### Styling
+
+To begin the customization of the predefined group by feature layout, one needs to import the 'index' file, where all styling functions and mixins are located.  
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-groupby-styling" src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Known Limitations
 
 |Limitation|Description|
