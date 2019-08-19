@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Radial Pie Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a radial pie chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialPieSeries']
 ---
 
 ## Radial Pie Chart
 
-[`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) uses pie slices that extend from the center of chart towards locations of data points. The [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) take concepts of categorizing multiple series of data points and wrapping them around on a circle rather than stretching data points along a horizontal line.
+The Ignite UI for Angular radial pie chart belongs to a group of radial charts and uses pie slices that extend from the center of chart towards locations of data points. The [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) take concepts of categorizing multiple series of data points and wrapping them around on a circle rather than stretching data points along a horizontal line.
 
 ### Demo
 
@@ -45,9 +45,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use radial series, you need to import the following modules in your app during load:
+Creation of the [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -75,7 +73,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart
@@ -92,8 +90,6 @@ This code demonstrates how to create an instance of data chart with [`IgxRadialP
     </igx-radial-pie-series>
  </igx-data-chart>
 ```
-
-Note that you can also use above code to create other type of radial series by replacing [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) with name of radial series that you want to render.
 
 ### Additional Resources
 

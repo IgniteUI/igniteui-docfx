@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create an area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Category Area Chart
+## Area Chart
 
-[`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) belongs to a group of category series and is rendered using a collection of points connected by line segments with the area below the line filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) is identical to the [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) in all aspects except that line connecting data points do not have spline interpolation and smoothing for improved presentation of data.
+The Ignite UI for Angular area chart belongs to a group of category charts and is rendered using a collection of points connected by line segments with the area below the line filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The Angular area chart is identical to the Angular spline area chart in all aspects except that line connecting data points do not have spline interpolation and smoothing for improved presentation of data.
 
 ### Demo
 
@@ -32,7 +32,7 @@ The Angular data chart component provides various types of axes but only the fol
 
 ### Required Data
 
-[`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) have the following data requirements:
+The [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html).
@@ -47,7 +47,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### Required Modules
 
-The category series require the following modules:
+Creation of the [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -55,14 +55,6 @@ import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axi
 import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
 // series' modules:
 import { IgxAreaSeries } from "igniteui-angular-charts/ES5/igx-area-series";
-import { IgxColumnSeries } from "igniteui-angular-charts/ES5/igx-column-series";
-import { IgxLineSeries } from "igniteui-angular-charts/ES5/igx-line-series";
-import { IgxPointSeries } from "igniteui-angular-charts/ES5/igx-point-series";
-import { IgxSplineSeries } from "igniteui-angular-charts/ES5/igx-spline-series";
-import { IgxSplineAreaSeries } from "igniteui-angular-charts/ES5/igx-spline-area-series";
-import { IgxStepAreaSeries } from "igniteui-angular-charts/ES5/igx-step-area-series";
-import { IgxStepLineSeries } from "igniteui-angular-charts/ES5/igx-step-line-series";
-import { IgxWaterfallSeries } from "igniteui-angular-charts/ES5/igx-waterfall-series";
 // data chart's modules:
 import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
@@ -81,7 +73,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### Code Example - Area Series
 
-This code demonstrates how to create an instance of data chart with [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart
