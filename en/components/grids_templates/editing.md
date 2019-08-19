@@ -306,7 +306,7 @@ Now we can make use of all of the functions exposed by the Ignite UI for Angular
 
 #### Defining a palette
 
-After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palettes.md):
+After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palette.md):
 
 ```scss
 $white: #fff;
