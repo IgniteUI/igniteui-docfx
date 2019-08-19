@@ -7,7 +7,7 @@ _language: ja
 
 ## 階層グリッド
 
-<p class="highlight">The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Hierarchical Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed. Displaying of hierarchical data has never been more easy and beautiful thanks to the Material Table based UI Grid.</p>
+<p class="highlight">The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 
 ### デモ
 

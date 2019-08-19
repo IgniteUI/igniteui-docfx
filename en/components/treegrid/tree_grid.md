@@ -6,7 +6,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 
 ## Data Tree Grid Overview and Configuration
 
-<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been more easy and beautiful thanks to the Material Table based UI Tree Grid.</p>
+<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
 
 ### Demo
 
