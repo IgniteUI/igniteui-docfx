@@ -1,12 +1,12 @@
 ---
-title: Data Grid Component
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
+title: Angular Data Grid | Material Table | Ignite UI for Angular | Infragistics
+_description: Learn how to use Ignite UI angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events 
+_keywords: angular data grid, igniteui for angular, infragistics
 ---
 
-## Data Grid
+## Data Grid Overview and Configuration
 
-<p class="highlight">Display and manipulate tabular data with the Ignite UI for Angular Data Grid. Quickly bind your data with very little coding or configuration. Features include filtering, sorting, paging, templates, movable columns, and the ability to edit and update data. User actions are easy to understand and can be controlled programmatically.</p>
+<p class="highlight">The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 
 ### Demo
 

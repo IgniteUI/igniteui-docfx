@@ -7,7 +7,7 @@ _language: ja
 
 ## データ ツリー グリッド
 
-<p class="highlight">Ignite UI for Angular Data Tree Grid を使用して階層データを表示および操作します。最小限のコードと構成でデータをすばやくバインドできます。Angular イベントを使用してユーザーの操作に応答する際の動作をカスタマイズします。Angular Material テーブルのフィルタリング、ソート、ページング、テンプレート、移動可能な列、およびデータを編集および更新する機能を備えているため、Angular Material テーブルまたはマテリアル UI グリッドになります。</p>
+<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
 
 ### デモ
 
