@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Radial Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a radial area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialAreaSeries']
 ---
 
 ## Radial Area Chart
 
-[`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) has a shape of a filled polygon that is bound by a collection of straight lines connecting data points. The [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) uses the same concepts of data plotting as the [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line.
+The Ignite UI for Angular radial area chart belongs to a group of radial charts and has a shape of a filled polygon that is bound by a collection of straight lines connecting data points. The [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) uses the same concepts of data plotting as the [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line.
 
 ### Demo
 
@@ -45,9 +45,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use radial series, you need to import the following modules in your app during load:
+Creation of the [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -76,9 +74,9 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 })
 ```
 
-### Code Example
+### Code Example - Radial Area Series
 
-This code demonstrates how to create an instance of data chart with [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart
@@ -95,8 +93,6 @@ This code demonstrates how to create an instance of data chart with [`IgxRadialA
     </igx-radial-area-series>
  </igx-data-chart>
 ```
-
-Note that you can also use above code to create other type of radial series by replacing [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) with name of radial series that you want to render.
 
 ### Additional Resources
 

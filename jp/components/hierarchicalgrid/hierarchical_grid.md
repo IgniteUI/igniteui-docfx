@@ -231,9 +231,9 @@ export class RemoteLoDService {
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-### Sizing
+<!-- ### Sizing
 
-See the [Grid Sizing](sizing.md) topic.
+See the [Grid Sizing](sizing.md) topic. -->
 
 ### CRUD 操作
 
@@ -249,6 +249,9 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
 |Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+
 ## API リファレンス
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
@@ -262,7 +265,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
+<!-- * [Grid Sizing](sizing.md) -->
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

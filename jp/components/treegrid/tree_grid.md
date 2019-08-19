@@ -237,9 +237,9 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
-### Sizing
+<!-- ### Sizing
 
-See the [Grid Sizing](sizing.md) topic.
+See the [Grid Sizing](sizing.md) topic. -->
 
 ## 既知の問題と制限
 
@@ -248,6 +248,8 @@ See the [Grid Sizing](sizing.md) topic.
 |ツリー セルのテンプレート化|ツリーセルをテンプレート化する場合、セルの境界外にスパンするコンテンツはオーバレイに配置しない限り表示されません。|
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
+> [!NOTE]
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
@@ -269,7 +271,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
+<!-- * [Grid Sizing](sizing.md) -->
 * [データ グリッド](../grid/grid.md)
 * [行編集](row_editing.md)
 

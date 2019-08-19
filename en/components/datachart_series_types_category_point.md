@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Point Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a point chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Category Point Chart
+## Point Chart
 
-The [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) is one of the chart types in the Angular data chart's family of category series. It is designed to render the data as points or markers on the chart. The numeric values correspond to y-axis, and the x-axis is used for displaying the labels.
+The Ignite UI for Angular point chart belongs to the group of category charts. It is designed to render the data as points or markers on the chart. The numeric values correspond to y-axis, and the x-axis is used for displaying the labels.
 
 The Angular data chart supports single or multiple point series objects to be rendered, meaning one collection or more than one collection of data.
 
@@ -34,7 +34,7 @@ The Angular data chart component provides various types of axes but only the fol
 
 ### Required Data
 
-[`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) have the following data requirements:
+The [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html).
@@ -49,7 +49,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### Required Modules
 
-The category series require the following modules:
+Creation of the [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -73,9 +73,9 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example - Area Series
+### Code Example - Point Series
 
-This code demonstrates how to create an instance of data chart with [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

@@ -389,8 +389,8 @@ In addition to the steps above, we can also style the controls that are used for
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
+
 <div class="divider--half"></div>
- -->
 
 ### API リファレンス
 

@@ -1,6 +1,6 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked 100 Bar Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a stacked 100 bar chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','Stacked100BarSeries']
 namespace: Infragistics.Controls.Charts
@@ -8,7 +8,7 @@ namespace: Infragistics.Controls.Charts
 
 ## Stacked 100 Bar Chart
 
-[`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) belongs to a group of category series and it is rendered using a collection of rectangles ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked next to each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the x-axis, and all negative values are grouped on the negative side of the x-axis. The [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) is identical to the [`IgxStackedBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html) in all aspects except in their treatment of the values on x-axis. Instead of presenting a direct representation of the data, the [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) presents the data in terms of percent of the sum of all values in a data point. In addition, the [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) uses the same concepts of data plotting as Stacked 100-Column Series but data points are stacked along horizontal line (x-axis) rather than along vertical line (y-axis). In other words, the [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) is rendered like the [`IgxStacked100ColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100columnseriescomponent.html) but with 90 degrees clockwise rotation.
+The Ignite UI for Angular stacked 100 bar chart belongs to a group of category charts and is rendered using a collection of rectangles ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked next to each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the x-axis, and all negative values are grouped on the negative side of the x-axis. The Angular stacked 100 bar chart is identical to the Angular stacked bar chart in all aspects except in their treatment of the values on x-axis. Instead of presenting a direct representation of the data, the stacked 100 bar chart presents the data in terms of percent of the sum of all values in a data point. In addition, the [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) uses the same concepts of data plotting as [`IgxStacked100ColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100columnseriescomponent.html) but data points are stacked along horizontal line (x-axis) rather than along vertical line (y-axis). In other words, the stacked 100 bar chart is rendered like the stacked 100 column chart but with 90 degrees clockwise rotation.
 
 ### Demo
 
@@ -42,7 +42,7 @@ The [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typ
 
 ### Required Modules
 
-The [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) requires the following modules:
+Creation of the [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -68,9 +68,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked 100 Bar Series
+### Code Example - Stacked 100 Bar Chart
 
- The [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) is an exception to the rule that you can replace [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) with any series name because it requires different types of axes in that it uses a [`IgxCategoryYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html) and [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html). This code demonstrates how to create an instance of the data chart with a [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">

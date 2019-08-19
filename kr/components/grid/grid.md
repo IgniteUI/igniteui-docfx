@@ -484,6 +484,9 @@ See the [Grid Sizing](sizing.md) topic.
 | 열에는 허용 가능한 최소 열 너비가 있습니다. [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) 옵션에 따라 다음과 같이 표시됩니다: <br/> “소”: 24px <br/> “중”: 32px <br/> “대”: 48px| 허용된 최소 너비보다 작게 설정된 경우, 렌더링된 요소에 영향을 주지 않습니다. 해당 [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)의 최소 허용 너비로 렌더링합니다. 수평 가상화는 예기치 않은 동작이 발생할 수 있으므로 지원되지 않습니다.
 | 행 높이는 현재 뷰에 렌더링되지 않은 셀의 높이에 영향을 받지 않습니다. | 가상화로 인해 뷰에 없는 사용자 템플릿(셀 높이를 변경한)을 가진 열은 행 높이에 영향을 주지 않습니다. 행 높이는 관련된 열이 뷰에서 스크롤되는 동안에만 영향을 받습니다.
 
+> [!NOTE]
+> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+
 <div class="divider--half"></div>
 
 ## API 참조

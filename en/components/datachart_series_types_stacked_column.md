@@ -1,6 +1,6 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked Column Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a stacked column chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','StackedColumnSeries']
 namespace: Infragistics.Controls.Charts
@@ -8,7 +8,7 @@ namespace: Infragistics.Controls.Charts
 
 ## Stacked Column Chart
 
-[`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) belongs to a group of category series and it is rendered using a collection of rectangles ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis. [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) uses the same concepts of data plotting as [`IgxStackedBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html) but data points are stacked along vertical line (y-axis) rather than along horizontal line (x-axis). In other words, the [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) is rendered like the [`IgxStackedBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html) but with 90 degrees counter-clockwise rotation.
+The Ignite UI for Angular stacked column chart belongs to a group of category charts and is rendered using a collection of rectangles ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis. [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) uses the same concepts of data plotting as [`IgxStackedBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html) but data points are stacked along vertical line (y-axis) rather than along horizontal line (x-axis). In other words, the stacked column chart is rendered like the stacked bar chart but with 90 degrees counter-clockwise rotation.
 
 ### Demo
 
@@ -44,7 +44,7 @@ The [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typ
 
 ### Required Modules
 
-The [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) requires the following modules:
+Creation of the [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -70,9 +70,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Column Series
+### Code Example - Stacked Column Chart
 
-This code demonstrates how to create an instance of data chart with [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) and bind it to the data source. Note that you can also use above code to create other type of category series by replacing [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) with name of series that you want to render.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStackedColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">

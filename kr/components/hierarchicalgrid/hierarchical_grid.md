@@ -276,6 +276,9 @@ CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행�
 |Group By|Group By 기능은 계층 적 그리드에서 지원되지 않습니다.|
 |Export to Excel|Export to Excel 는 현재 계층 적 그리드에서 지원되지 않지만 Ignite UI for Angular의 차후 버전에서 사용할 수 있습니다.|
 
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+
 ## API 참조
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
