@@ -358,7 +358,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 #### Demo
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="snackbar-style-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-style" class="lazyload"></iframe>
+    <iframe id="snackbar-style-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-style" class="lazyload no-theming"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
