@@ -72,7 +72,7 @@ The Select supports the following directives applicable to the [Input Group](inp
 <igx-select [(ngModel)]="selected">
     <label igxLabel>Pick a fruit</label>
     <igx-prefix>
-        <igx-icon color="green" style="width:48px; height:32px;">BIO</igx-icon>
+        <span class="bio-prefix">BIO</span>
     </igx-prefix>
     <igx-suffix *ngIf="selected">
         <igx-icon (click)="clearSelection($event)">clear</igx-icon>
