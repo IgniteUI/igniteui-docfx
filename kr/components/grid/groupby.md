@@ -142,7 +142,7 @@ Integration between Group By and Summaries is described in the [Summaries](summa
 
 ### Styling
 #### Basic theming
-To begin the customization of the predefined group by feature layout, one needs to import the 'index' file, where all styling functions and mixins are located.  
+To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
@@ -167,7 +167,7 @@ After providing the function with the required parameters, one has to **include*
 ```
 
 >[!NOTE]
- > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated ViewEncapsulated is the default one. 
+ > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one. 
 
 ```scss
 :host {
@@ -178,7 +178,7 @@ After providing the function with the required parameters, one has to **include*
 ```
 
 #### Defining a color palette
-In the above described approach, we hardcoded the color values. Instead, we could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -190,7 +190,7 @@ $custom-palette: igx-palette(
   $secondary: $blue-color
 );
 ```
-After that, using `igx-color`, we could easily obtain a color from the newly generated palette.   
+After that, using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
 ```scss
 $custom-theme: igx-grid-theme(
     $group-row-background: igx-color($custom-palette, "secondary", 100),
@@ -205,7 +205,7 @@ $custom-theme: igx-grid-theme(
 );
 ```
 #### Using schemas
-One could easily go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+One could go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -220,7 +220,7 @@ $custom-grid-schema: extend($_light-grid,(
     expand-icon-hover-color: (igx-color:('primary', 400))
 ));
 ```
-To apply the custom schema, we have to **extend** one of the `light`, or `dark` globals. The whole process is actually supplying a component with a custom schema and adding it to the respctive component theme afterwards.   
+In order for the custom schema to be applied, either `light`, or `dark` global has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respctive component theme afterwards.   
 ```scss
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
