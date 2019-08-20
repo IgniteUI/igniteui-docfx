@@ -140,7 +140,7 @@ The grouping UI supports the following keyboard interactions:
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
 ### Styling
-
+#### Basic theming
 To begin the customization of the predefined group by feature layout, one needs to import the 'index' file, where all styling functions and mixins are located.  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
@@ -182,37 +182,37 @@ In the above described approach, we hardcoded the color values. Instead, we coul
 
 ```scss
 $black-color: #292826;
-$green-color: #51f942;
+$blue-color: #2184c7;
 
 $custom-palette: igx-palette(
-    $primary: $black-color,
-    $secondary: $green-color
-)
+  $primary: $black-color,
+  $secondary: $blue-color
+);
 ```
 After that, using `igx-color`, we could easily obtain a color from the newly generated palette.   
 ```scss
 $custom-theme: igx-grid-theme(
-    $group-row-background: igx-color($custom-palette, "secondary", 700),
+    $group-row-background: igx-color($custom-palette, "secondary", 100),
     $group-row-selected-background: igx-color($custom-palette, "primary", 400),
     $group-label-column-name-text: igx-color($custom-palette, "primary", 600),
     $group-label-icon: igx-color($custom-palette, "primary", 600),
-    $group-label-text: igx-color($custom-palette, "secondary", 400),
+    $group-label-text: igx-color($custom-palette, "secondary", 700),
     $group-count-background: igx-color($custom-palette, "primary", 600),
     $group-count-text-color: igx-color($custom-palette, "secondary", 400),
     $expand-icon-color: igx-color($custom-palette, "primary", 600),
-    $expand-icon-hover-color: igx-color($custom-palette, "primary", 400)
-)
+    $expand-icon-hover-color: igx-color($custom-palette, "primary", 300)
+);
 ```
 #### Using schemas
 One could easily go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
 ```scss
-$custom-grid-schema: extend($_light-grid, (
-    group-row-background: (igx-color:('secondary', 700)),
+$custom-grid-schema: extend($_light-grid,(
+    group-row-background: (igx-color:('secondary', 100)),
     group-row-selected-background: (igx-color:('primary', 400)),
     group-label-column-name-text: (igx-color:('primary', 600)),
     group-label-icon: (igx-color:('primary', 600)),
-    group-label-text: (igx-color:('secondary', 400)),
+    group-label-text: (igx-color:('secondary', 700)),
     group-count-background: (igx-color:('primary', 600)),
     group-count-text-color: (igx-color:('secondary', 400)),
     expand-icon-color: (igx-color:('primary', 600)),
@@ -230,8 +230,9 @@ $custom-theme: igx-grid-theme(
     $schema: $my-custom-schema
 );
 ```
-
+   
 #### Demo   
+
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-styling" src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
