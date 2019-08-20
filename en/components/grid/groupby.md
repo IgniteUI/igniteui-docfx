@@ -145,6 +145,93 @@ To begin the customization of the predefined group by feature layout, one needs 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+```scss
+$custom-theme: igx-grid-theme(
+    $group-row-background: #CCC,
+    $group-row-selected-background: #bdbdbd,
+    $group-label-column-name-text: #000,
+    $group-label-icon: #0383d9,
+    $group-label-text: #2b2b2b,
+    $group-count-background: #09F,
+    $group-count-text-color: #000,
+    $expand-icon-color: #09F,
+    $expand-icon-hover-color: #0383d9
+);
+```
+
+After providing the function with the required parameters, one has to **include** the component mixins.  
+```scss
+@include igx-grid($custom-theme);
+```
+
+>[!NOTE]
+ > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated ViewEncapsulated is the default one. 
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```
+
+#### Defining a color palette
+In the above described approach, we hardcoded the color values. Instead, we could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+```scss
+$black-color: #292826;
+$green-color: #51f942;
+
+$custom-palette: igx-palette(
+    $primary: $black-color,
+    $secondary: $green-color
+)
+```
+After that, using `igx-color`, we could easily obtain a color from the newly generated palette.   
+```scss
+$custom-theme: igx-grid-theme(
+    $group-row-background: igx-color($custom-palette, "secondary", 700),
+    $group-row-selected-background: igx-color($custom-palette, "primary", 400),
+    $group-label-column-name-text: igx-color($custom-palette, "primary", 600),
+    $group-label-icon: igx-color($custom-palette, "primary", 600),
+    $group-label-text: igx-color($custom-palette, "secondary", 400),
+    $group-count-background: igx-color($custom-palette, "primary", 600),
+    $group-count-text-color: igx-color($custom-palette, "secondary", 400),
+    $expand-icon-color: igx-color($custom-palette, "primary", 600),
+    $expand-icon-hover-color: igx-color($custom-palette, "primary", 400)
+)
+```
+#### Using schemas
+One could easily go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
+```scss
+$custom-grid-schema: extend($_light-grid, (
+    group-row-background: (igx-color:('secondary', 700)),
+    group-row-selected-background: (igx-color:('primary', 400)),
+    group-label-column-name-text: (igx-color:('primary', 600)),
+    group-label-icon: (igx-color:('primary', 600)),
+    group-label-text: (igx-color:('secondary', 400)),
+    group-count-background: (igx-color:('primary', 600)),
+    group-count-text-color: (igx-color:('secondary', 400)),
+    expand-icon-color: (igx-color:('primary', 600)),
+    expand-icon-hover-color: (igx-color:('primary', 400))
+));
+```
+To apply the custom schema, we have to **extend** one of the `light`, or `dark` globals. The whole process is actually supplying a component with a custom schema and adding it to the respctive component theme afterwards.   
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### Demo   
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-styling" src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
