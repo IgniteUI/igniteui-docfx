@@ -155,9 +155,11 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
-When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value correctly passed the grid's [editing event cycle](editing.md#editing-events). In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api), so editing events and [transaction](batch_editing.md) changes are properly handled. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls. 
+When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch_editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls. 
 
-If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **bypass** the internal value handling of the grid. When dealing with cell editing with a custom template, it is highly advised to use the cell's **cell editing template**.
+If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **not** be properly updated in the grid's underlying data source. When dealing with cell editing with a custom template, it is strongly advised to use the cell's **cell editing template**.
+
+When properly implemented, the cell editing template also ensures that the cell's `editValue` will correctly pass through the grid [editing event cycle](editing.md#editing-events).
 
 #### Cell editing template
 
@@ -170,7 +172,7 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
         <label for="price">
             Enter the new price tag
         </label>
-        <input name="price" type="number" [ngModel]="cell.editValue" (ngModelChange)="cell.update(convertToNumber($event))" />
+        <input name="price" type="number" [(ngModel)]="cell.editValue" />
     </ng-template>
 </igx-column>
 ```

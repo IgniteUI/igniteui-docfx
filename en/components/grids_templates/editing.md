@@ -160,7 +160,7 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 
 #### Cell Editing Templates
 
-If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). In order to use a custom cell editing template for a column, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
+If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
 
 ```html
 <igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
@@ -171,7 +171,7 @@ If you want to provide a custom template which will be applied when a cell is in
 ```
 
 > [!NOTE]
-> Any changes to made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in the cell editing template, when exiting/committing, will trigger the appropriate [editing event](#editing-events) and changes to the [transaction state](batch-editing.md) (if transactions are enabled).
+> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 
 > [!NOTE]
 > The cell editing template directive (`igxCellEditor`) is different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
@@ -330,7 +330,7 @@ All of the above events can be cancelled. For example, if `onCellEditEnter` is c
 
 #### Editing Events - Configuration
 Using the grid's editing events we can alter how the user interacts with the grid.
-In the below example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll display a custom error message (using [`IgxToast`](../toast.md). We'll also cancel the editing event (by setting `event.cancel = true`), so the user has to specify a valid value before continuing with the editing.
+In the below example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll display a custom error message using [`IgxToast`](../toast.md). We'll also cancel the editing event (by setting `event.cancel = true`), so the user has to specify a valid value before continuing with the editing.
 
 The first thing we need to is bind to the grid's event:
 
@@ -340,23 +340,7 @@ The first thing we need to is bind to the grid's event:
 ...
 </@@igSelector>
 ```
-@@if (igxName === 'IgxTreeGrid') {
-When binding to the row islands' events in a hierarchical grid, we have to use the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) event and subscribe to the created grid's `onCellEdit` event:
-```html
-    <igx-row-island (onGridCreated)="handleCreate($event)">
-    ...
-    </igx-row-island>
-```
-```typescript
-    export class MyHGridEventsComponent {
-        ...
-        public handleCreate(event: IGridCreatedEventArgs) {
-        event.grid.onCellEdit.pipe(takeUntil(this.destroy$)).subscribe((e) => this.handleCellEdit(e, event.grid));
-        }
-    }
 
-```
-}
 The `onCellEdit` emits whenever **any** cell's value is about to be committed. In our `handleCellEdit` definition, we need to make sure that we check for our specific column before taking any action:
 
 @@if (igxName === 'IgxGrid') {
@@ -437,7 +421,7 @@ Since we're passing the grid as a second argument in the `handleCellEdit` calls,
 
 #### Editing Events - Demo
 
-The result of the above validation being applied to our @@igSelector can be seen in the below demo:
+The result of the above validation being applied to our `@@igSelector` can be seen in the below demo:
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-editing-events-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-events' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
