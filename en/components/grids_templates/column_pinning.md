@@ -256,6 +256,48 @@ This section will provide you with hints what to do if you are having trouble wi
 
 <div class="divider--half"></div>
 
+@@if (igxName === 'IgxGrid') {
+### Styling   
+
+To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+
+```scss
+$custom-theme: igx-grid-theme(
+    $pinned-border-width: 5px,
+    $pinned-border-style: double,
+    $pinned-border-color: #000280
+);
+```
+
+After providing the function with the required parameters, one has to **include** the component mixins.  
+```scss
+@include igx-grid($custom-theme);
+```
+
+ >[!NOTE]
+ > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one.  
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-pinning-styling" src='{environment:demosBaseUrl}/grid/grid-pinning-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
