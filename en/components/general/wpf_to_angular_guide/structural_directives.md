@@ -8,7 +8,7 @@ _keywords: angular directives, ignite ui for angular, infragistics
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 
-When it comes to control the appearance of the visual tree elements’ appearance in WPF, the most common way is to use binding and visibility converter, which requires some extra logic and static resources. Angular also has a similar technique, which changes the appearance or behavior of a DOM element - the Angular directives. One of the Angular `directives` type is a `structural directives` – then change the DOM layout by adding or removing DOM elements.
+When it comes to control the appearance of the visual tree elements’ appearance in WPF, the most common way is to use binding and visibility converter, which requires some extra logic and static resources. Angular also has a similar technique, which changes the appearance or behavior of a DOM element - the Angular directives. One of the Angular `directives` type is the `structural directives` – they change the DOM layout by adding or removing DOM elements.
 
 In this topic, we are going to demonstrate the following three structural directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
 
