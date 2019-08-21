@@ -130,6 +130,98 @@ _language: ja
     <iframe id="grid-multi-row-layout-configuration-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
+### Styling
+To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: #ff0000,
+	$cell-selected-background: #6f6f6f,
+	$row-hover-background: #979696,
+	$row-selected-background: #8d8d8d,
+	$header-background: #494949,
+	$header-text-color: #ffffff
+);
+```
+
+After providing the function with the required parameters, one has to **include** the component mixins.  
+```scss
+@include igx-grid($custom-theme);
+```
+
+ >[!NOTE]
+  > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one.  
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```   
+#### Defining a color palette
+In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+```scss
+$black-color: #292826;
+$red-color: #c72121;
+
+$custom-palette: igx-palette(
+  $primary: $black-color,
+  $secondary: $red-color
+);
+```
+After that, using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 100),
+    $cell-selected-background: igx-color($custom-palette, "primary", 400),
+    $row-hover-background: igx-color($custom-palette, "primary", 600),
+    $row-selected-background: igx-color($custom-palette, "primary", 600),
+    $header-background: igx-color($custom-palette, "secondary", 700),
+    $header-text-color: igx-color($custom-palette, "primary", 600)
+);
+```
+#### Using schemas
+One could go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    cell-active-border-color: (igx-color:('secondary', 100)),
+    cell-selected-background: (igx-color:('primary', 400)),
+    cell-selected-text-color: (igx-color:('primary', 100)),
+    row-hover-background: (igx-color:('secondary', 600)),
+    row-selected-background: (igx-color:('primary', 600)),
+    header-background: (igx-color:('secondary', 700)),
+    header-text-color: (igx-color:('primary', 600))
+));
+
+```
+In order for the custom schema to be applied, either `light`, or `dark` global has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respctive component theme afterwards.   
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```   
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-multi-row-layout-styling" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
  ### API リファレンス	
 <div class="divider--half"></div>	
 
