@@ -4,9 +4,9 @@ _description: Learn how to use Ignite UI for Angular data grid, based on Angular
 _keywords: angular data grid, igniteui for angular, infragistics
 ---
 
-## Hierarchical Grid
+## Hierarchical Data Grid Overview and Configuration
 
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Hierarchical Data Grid. Features include the must have for any Angular Material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate Angular Material table or material UI grid. All of the above making it the ultimate material UI grid. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
+<p class="highlight">The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 
 ### Demo
 
@@ -229,12 +229,9 @@ The Hierarchical Grid allows the users to conveniently collapse all its currentl
 
 <img class="responsive-img" src="../../images/unfold_less_icon_screenshot.jpg" srcset="../../images/unfold_less_icon_screenshoto@2x.jpg 2x" />
 
-### Known Limitations
+### Sizing
 
-|Limitation|Description|
-|--- |--- |
-|Group By|Group By feature is not supported by the hierarchical grid.|
-|Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
+See the [Grid Sizing](sizing.md) topic.
 
 ### CRUD operations
 
@@ -242,6 +239,16 @@ The Hierarchical Grid allows the users to conveniently collapse all its currentl
 > An important difference from the flat Data Grid is that each instance for a given row island has the same transaction service instance and accumulates the same transaction log. In order to enable the CRUD functionality users should inject the `IgxHierarchicalTransactionServiceFactory`.
 
 Calling CRUD API methods should still be done through each separate grid instance.
+
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Group By|Group By feature is not supported by the hierarchical grid.|
+|Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
+
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 ## API References
 
@@ -256,6 +263,7 @@ Calling CRUD API methods should still be done through each separate grid instanc
 ### Additional Resources
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)

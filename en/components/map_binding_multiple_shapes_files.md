@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Binding and Overlaying Multiple Shape Files
 
-In the `GeographicMap`, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_shapes_files.md) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_shapes_files.md) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`](map_binding_multiple_shapes_files.md) for plotting shapes of countries.
+In the Ignite UI for Angular map, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) for plotting shapes of countries.
 
 ### Demo
 
@@ -23,9 +23,9 @@ In the `GeographicMap`, you can add multiple geographic series objects to overla
 
 This topic takes you step-by-step towards displaying multiple geographic series in the map component. All geographic series plot following geo-spatial data loaded from shape files using the `ShapeDataSource` class. Refer to the [Binding Shape Files](map_binding_geographic_shape_files.md) topic for more information about `ShapeDataSource` object.
 
--   [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_shapes_files.md) – displays locations of major cities
--   [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_shapes_files.md) – displays routes between major ports
--   [`IgxGeographicShapeSeriesComponent`](map_binding_multiple_shapes_files.md) – displays shapes of countries of the world
+-   [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – displays locations of major cities
+-   [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – displays routes between major ports
+-   [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) – displays shapes of countries of the world
 
 You can use geographic series in this or other combinations to plot desired data.
 
@@ -122,15 +122,15 @@ sdsLocations.dataBind();
 
 ### Overlaying Shape Polygons
 
-Create [`IgxGeographicShapeSeriesComponent`](map_binding_multiple_shapes_files.md) object with shapes of countries of the world and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) object with shapes of countries of the world and add it to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
 
 ### Overlaying Shape Polyline
 
-Create [`IgxGeographicPolylineSeriesComponent`](map_binding_multiple_shapes_files.md) object with routes between major ports and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with routes between major ports and add it to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
 
 ### Overlaying Shape Points
 
-Create [`IgxGeographicSymbolSeriesComponent`](map_binding_multiple_shapes_files.md) object with locations of major cities and add it to `Infragistics.Controls.Charts.Series` collection of the `GeographicMap`.
+Create [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with locations of major cities and add it to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
 
 Also, you might want to hide geographic imagery from the map background content if your shape files provided sufficient geographic context (e.g. shape of countries) for your application.
 
@@ -204,11 +204,11 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         const geoLocations: any[] = [];
         // parsing shapefile data and creating geo-locations
         for (const record of sds.getPointData()) {
-            const pop = record.fieldValues.POPULATION;
+            const pop = record.fieldValues["POPULATION"];
             if (pop > 0) {
                 // each shapefile record has just one point
                 const location = {
-                    city: record.fieldValues.NAME,
+                    city: record.fieldValues["NAME"],
                     latitude: record.points[0][0].y,
                     longitude: record.points[0][0].x,
                     population: pop
@@ -226,13 +226,13 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         for (const record of sds.getPointData()) {
             // using field/column names from .DBF file
             const route = {
-                capacity: record.fieldValues.CapacityG,
-                distance: record.fieldValues.DistanceKM,
-                isActive: record.fieldValues.NotLive !== 0,
-                isOverLand: record.fieldValues.OverLand === 0,
-                name: record.fieldValues.Name,
+                capacity: record.fieldValues["CapacityG"],
+                distance: record.fieldValues["DistanceKM"],
+                isActive: record.fieldValues["NotLive"] !== 0,
+                isOverLand: record.fieldValues["OverLand"] === 0,
+                name: record.fieldValues["Name"],
                 points: record.points,
-                service: record.fieldValues.InService
+                service: record.fieldValues["InService"]
             };
             geoPolylines.push(route);
         }
@@ -250,10 +250,10 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         sds.getPointData().forEach((record) => {
             // using field/column names from .DBF file
             const country = {
-                gdp: record.fieldValues.GDP,
-                name: record.fieldValues.NAME,
+                gdp: record.fieldValues["GDP"],
+                name: record.fieldValues["NAME"],
                 points: record.points,
-                population: record.fieldValues.POPULATION
+                population: record.fieldValues["POPULATION"]
             };
             geoPolygons.push(country);
         });

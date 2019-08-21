@@ -1,11 +1,11 @@
 ---
-title: IgxSelect - Native Angular | Ignite UI for Angular
-_description: The igxSelect provides an input with drop-down list allowing selection of a single item.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular IgxSelect Component, IgxSelect
+title: Angular Select | Material Select | IgniteUI for Angular | Infragistics
+_description: Learn how to configure an Angular select. The Material select provides an input with Angular dropdown list allowing single item selection of the angular combobox.
+_keywords:  angular select, igniteui for angular, infragistics
 ---
 
 ## Select
-The `IgxSelectComponent` allows you to select a single item from a drop-down list by using the mouse or the keyboard to quickly navigate through them. By using `igx-select` you can also iterate selection through all items based on the input of a specific character or multiple characters.
+The Ignite UI for Angular Select component allows a single item selection from a dropdown list of items with specialized positioning. This Material based form control offers quick items list navigation, including selection based on a single or multiple characters match. 
 
 ## Simple Select Demo
 <div class="sample-container loading" style="height: 430px;">
@@ -15,12 +15,12 @@ The `IgxSelectComponent` allows you to select a single item from a drop-down lis
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 >[!WARNING]
->To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html) topic.
+>To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](general/getting_started.md) topic.
 
 
 ## Usage
-To get started with `igx-select` you first need to import the `IgxSelectModule`:
-```ts
+To get started with the Select component you first need to import the `IgxSelectModule`:
+```typescript
 // app.module.ts
 
 ...
@@ -34,23 +34,81 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-In your class you need to have a collection of the items that you want to display when the drop-down opens:
-```ts
+Then all that is needed is to define an `<igx-select>` and several items. We use an [`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that `igx-select` operates on.
+```html
+<!-- define items declaratively -->
+<igx-select>
+    <label igxLabel>Simple Select</label>
+    <igx-select-item value="Orange">Orange</igx-select-item>
+    <igx-select-item value="Apple">Apple</igx-select-item>
+    <igx-select-item value="Banana">Banana</igx-select-item>
+    <igx-select-item value="Mango">Mango</igx-select-item>
+</igx-select>
+```
+
+Another way to do it would be to use a collection of the items that we want to display with the [ngForOf](https://angular.io/api/common/NgForOf) directive:
+
+```typescript
 public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ```
 
-Then in your template you need to bind it with said items like so:
 ```html
-<igx-select>
+<igx-select [(ngModel)]="selected">
+    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
 </igx-select>
 ```
-Notice that we use an `IgxSelectItemComponent` to display the items that `igx-select` operates on. The `IgxSelectItemComponent` extends the [*IgxDropDownItemComponent*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html) with additional functionality that is specific to the `igx-select-item`.
+Additionally, the above sample illustrates two-way data-binding via `ngModel`. What is more, you can use the Select component in [`Angular Forms`](#select-in-angular-forms).
+
+
+
+### Label, Prefix and Suffix
+The Select supports the following directives applicable to the [Input Group](input_group.md):
+
+- `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
+- `igx-prefix`/`igxPrefix`
+- `igx-suffix`/`igxSuffix` - Note the built-in toggle button suffix will always be displayed last.
+
+```html
+<igx-select [(ngModel)]="selected">
+    <label igxLabel>Pick a fruit</label>
+    <igx-prefix>
+        <span class="bio-prefix">BIO</span>
+    </igx-prefix>
+    <igx-suffix *ngIf="selected">
+        <igx-icon (click)="clearSelection($event)">clear</igx-icon>
+    </igx-suffix>
+    <igx-select-item *ngFor="let item of items" [value]="item">
+        {{item}}
+    </igx-select-item>
+</igx-select>
+```
+
+<div class="sample-container loading" style="height: 350px;">
+    <iframe id="select-input-directives-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-input-directives" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+
+> [!NOTE]
+If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
+
+### Templating toggle button
+The default arrow can be replaced by a nested template marked with the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
+```html
+<igx-select #select>
+    ...
+    <ng-template igxSelectToggleIcon let-collapsed>
+        <igx-icon>{{ collapsed ? 'add_circle' : 'add_circle_outline'}}</igx-icon>
+    </ng-template>
+    ...
+<igx-select>
+```
 
 ## Features
-### IgxSelect Actions
+### Select Actions
 #### Open
 Focusing with the keyboard on `igx-select` will not cause it to open.
 With focus set on `igx-select` you can use `Space`, `Enter` or `ALT + Up/Down Arrow` keys to open it.
@@ -74,7 +132,7 @@ When the `igx-drop-down` is opened, you can close it by doing one of the followi
 - When the drop-down list is opened, navigation with `Up/Down Arrow` keys starts from the selected item, if any. Otherwise, it starts from the first item in the list.
 - When the drop-down list is closed you can cycle between its items using the `Up/Down Arrow` keys.
 - When the drop-down list is closed you can also navigate through all items that begin with a specific character, it works the same as if it was opened.
-- When the drop-down list is closed you can also navigate to a *specific* item by rapidly typing in its first few characters. The behaviour is the same as when the drop-down is opened.
+- When the drop-down list is closed you can also navigate to a *specific* item by rapidly typing in its first few characters. The behavior is the same as when the drop-down is opened.
 - When the drop-down is closed character key navigation is also case insensitive.
 - When the drop-down is closed character key navigation does not change selection when pressing characters that have no matching item(s).
 
@@ -96,7 +154,7 @@ An item from the drop-down list can be selected by:
 - When there are items with duplicated values, the first one gets selected.
 
 >[!NOTE]
-> `igx-select` supports *single* selection of items only.
+> `igx-select` supports a *single* selection of items only.
 
 ### Event emitting
 Since `igx-select` extends `igx-drop-down`, it also makes good use of its events which include:
@@ -114,7 +172,7 @@ You can make use of the `onOpened` event like so:
 #### Opening/Closing events
 - Emitted on:
     - input click
-    - select expand/collapse button click (app scenario)
+    - select toggle button click (app scenario)
 - Triggered on key interaction
 
  The `onOpening` and `onClosing` events are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**. They can also be canceled by setting the `cancel` property to `true` in the event handler function.
@@ -150,7 +208,7 @@ You can make use of the `onClosed` event like so:
 ```
 
 You put all your *handler* functions inside of your *class*:
-```ts
+```typescript
 export class MyClass {
     /* --- */
     private handleOpening(event: CancelableEventArgs): void {
@@ -177,23 +235,23 @@ export class MyClass {
 
 ### Positioning Strategy
 `igx-select` has its own positioning strategy called the `SelectPositioningStrategy`.
-It extends the [*ConnectedPositioningStrategy*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html) and allows `igx-select` to position its drop-down list in different ways, relative to the input field. This means that the drop-down will always position itself so that the text in the input is matched by the selected item's text.
+It extends the [*ConnectedPositioningStrategy*]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) and allows `igx-select` to position its drop-down list in different ways, relative to the input field. This means that the drop-down will always position itself so that the text in the input is matched by the selected item's text.
 
-In the following example we are defining custom overlay settings using the `SelectPositioningStrategy` so you first have to import it alongside the [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html):
-```ts
+In the following example we are defining custom overlay settings using the `SelectPositioningStrategy` so you first have to import it alongside the [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html):
+```typescript
 import { SelectPositioningStrategy, OverlaySettings } from 'igniteui-angular';
 ```
 
-From there you have to initialize an [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object and pass in the `SelectPositioningStrategy`. And finally in the positioning strategy's constructor you pass in a [*ViewChild*](https://angular.io/api/core/ViewChild) that references the `IgxSelectComponent` from your template.
+From there you have to initialize an [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) object and pass in the `SelectPositioningStrategy`. And finally, in the positioning strategy's constructor, you pass in a [*ViewChild*](https://angular.io/api/core/ViewChild) that references the `IgxSelectComponent` from your template.
 
 All of it looks like this:
-```ts
+```typescript
 @ViewChild(IgxSelectComponent)
-public igxSelect: IgxSelectComponent;
+public select: IgxSelectComponent;
 
 public customOverlaySettings: OverlaySettings = {
     positionStrategy: new SelectPositioningStrategy(
-        this.igxSelect
+        this.select
     ),
     scrollStrategy: new AbsoluteScrollStrategy()
 };
@@ -201,26 +259,26 @@ public customOverlaySettings: OverlaySettings = {
 As you can see there is also a `scrollStrategy` property that is present in the `customOverlaySettings` object. This ensures that the scrolling functionality of the drop-down works as expected. The scroll will appear every time the total height of all items in the list exceeds the drop-down's height.
 
 Another thing worth mentioning is that `igx-select` uses the `SelectPositioningStrategy` by default.
-> You can pass a variety of positioning strategies to the *positionStrategy* property, you can find them [*here*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ipositionstrategy.html). 
+> You can pass a [variety of positioning strategies]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) to the `positionStrategy` property.
 
 ### Select With Groups
-<div class="sample-container loading" style="height: 450px;">
+<div class="sample-container loading" style="height: 470px;">
     <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
 </div>
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
-Thanks to the fact that `igx-select` extends `igx-drop-down` it also has a built-in support for *groups*. 
+Thanks to the fact that `igx-select` extends `igx-drop-down` it also has built-in support for *groups*. 
 
 In order to make use of this functionality you need to change the data that will be passed to `igx-select`, which in this case should look something like this:
-```ts
+```typescript
 public items: any[] = [
     { type: "Fruits", fruits: [ "Apple", "Orange", "Banana" ] },
     { type: "Vegetables", vegetables: [ "Cucumber", "Potato", "Pepper" ] }
 ];
 ```
 
-You would notice that now we pass in objects that have certain properties, such as `type` and `fruits`. This is because the `IgxSelectItemComponent` has functionality that allows it to receive specific styling inside the drop-down list. This functionality comes inherited from the [*IgxDropDownItemComponent*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html).
+You would notice that now we pass in objects that have certain properties, such as `type` and `fruits`. This is because the `IgxSelectItemComponent` has functionality that allows it to receive specific styling inside the drop-down list. This functionality comes inherited from the [*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 
 Then in your template file you can iterate over these objects and access their properties accordingly:
 ```html
@@ -239,45 +297,40 @@ Then in your template file you can iterate over these objects and access their p
 </igx-select>
 ```
 
-### Select In A Form
-<div class="sample-container loading" style="height: 450px;">
-    <iframe id="select-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-3" class="lazyload"></iframe>
-</div>
+### Select In Angular Forms
+The `Select` component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-
-`igx-select` can also be put inside of a `form` element and in order to do that, you first have to create the template for your control and add the items that it will be displaying:
-
+Template-driven form example:
 ```html
-<igx-select [(ngModel)]="selected">
-    <igx-select-item value="Orange">Orange</igx-select-item>
-    <igx-select-item value="Apple">Apple</igx-select-item>
-    <igx-select-item value="Banana">Banana</igx-select-item>
-</igx-select>
-```
-
-Another way to do it would be to simply pass in a collection of the items that we want to display to the [*ngForOf*](https://angular.io/api/common/NgForOf) directive:
-```html
-<igx-select [(ngModel)]="selected">
-    <igx-select-item *ngFor="let item of items" [value]="item">
-        {{item}}
-    </igx-select-item>
-</igx-select>
+<form>
+    <igx-select [(ngModel)]="selected" required>
+        <label igxLabel>Pick a fruit</label>
+        <igx-select-item *ngFor="let fruit of fruits" [value]="fruit">
+            {{item}}
+        </igx-select-item>
+    </igx-select>
+</form>
 ```
 
 Since we are using two-way binding, your class should look something like this:
-```ts
+```typescript
 export class MyClass {
-  public selected: string = "Apple";
+    public fruits: string[] = ["Orange", "Apple", "Banana", "Mango"];
+    public selected: string = "Apple";
 }
 ```
 
-You may also notice that in the above sample we have a *prefix* on the input field, this is because `igx-select` supports both prefixes and suffixes. You can read more about them [*here*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html).
-- The items' list default exapansion panel arrow uses `IgxSuffix` and it can be changed by the user.
-- If more than one `IgxSuffix` is used, the expansion arrow will be displayed always last.
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="select-form-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-form" class="lazyload"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-form-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+
+> [!NOTE]
+In order to see the `required` asterisk `*` as well, there has to be a label set.
 
 ### Select With Custom Overlay Settings
-With `igx-select` you are not bound to use any of the [*OverlaySettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) that we provide, instead you may create settings of your own and pass them to it.
+With `igx-select` you are not bound to use any of the [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) that we provide, instead you may create settings of your own and pass them to it.
 
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
@@ -295,11 +348,11 @@ To do this you first define your template like so:
 ```
 - Where the `overlaySettings` property is bound to your custom settings.
 
-Inside of your class you would have something along the lines of:
-```ts
+Inside of your class, you would have something along the lines of:
+```typescript
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
-    public igxSelect: IgxSelectComponent;
+    public select: IgxSelectComponent;
     public items: string[] = ["Orange", "Apple", "Banana", "Mango", "Tomato"];
     public customOverlaySettings: OverlaySettings;
 
@@ -309,7 +362,7 @@ export class MyClass implements OnInit {
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
             openAnimation: scaleInTop,
-            target: this.igxSelect.inputGroup.element.nativeElement,
+            target: this.select.inputGroup.element.nativeElement,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
@@ -322,13 +375,13 @@ export class MyClass implements OnInit {
     }
 }
 ```
-You can see that we create a [*PositionSettings*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html) object that is directly passed to our [*ConnectedPositioningStrategy*](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html), it is not required to do it, but since we want to define a custom positioning, we use them to override the strategy's default settings.
+You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/interfaces/positionsettings.html) object that is directly passed to our [*ConnectedPositioningStrategy*]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html), it is not required to do it, but since we want to define a custom positioning, we use them to override the strategy's default settings.
 
 - You can set all settings inside of the [*ngOnInit*](https://angular.io/api/core/OnInit) hook and this will automatically affect your template upon the component's generation.
 
-> Note that you can also pass in a customized [OverlaySettings](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) object to the `igx-select`'s open function.  
+> Note that you can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the `igx-select`'s open function.  
 
-With your tempalte looking like this:
+With your template looking like this:
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items">
@@ -339,7 +392,7 @@ With your tempalte looking like this:
 <button (click)="onClick($event)"></button>
 ```
 Your class should look something like this:
-```ts
+```typescript
 export class MyClass implements OnInit {
     /* -- */
     private otherCustomOverlaySettings: OverlaySettings = {
@@ -347,7 +400,7 @@ export class MyClass implements OnInit {
         scrollStrategy: new AbsoluteScrollStrategy()
     }
     onClick(event: MouseEvent): void {
-        this.igxSelect.open(this.otherCustomOverlaySettings)
+        this.select.open(this.otherCustomOverlaySettings)
     }
     /* -- */
 }
@@ -398,11 +451,11 @@ $custom-select-theme: igx-drop-down-theme(
 ```
 
 > [!NOTE]
-> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
+> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay_styling.md).
 
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:450px">
-    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -411,19 +464,19 @@ $custom-select-theme: igx-drop-down-theme(
 <div class="divider--half"></div>
 
 ## API Reference 
-[**IgxSelectComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
-[**IgxSelectItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectitemcomponent.html)  
-[**IgxDropDownComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdowncomponent.html)  
-[**IgxDropDownItemComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxdropdownitemcomponent.html)  
-[**OverlaySettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)  
-[**ConnectedPositioningStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/connectedpositioningstrategy.html)  
-[**GlobalPositionStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/globalpositionstrategy.html#constructor)  
-[**AbsoluteScrollStrategy**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/absolutescrollstrategy.html)  
-[**PositionSettings**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/positionsettings.html)
+[**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+[**IgxSelectItemComponent**]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
+[**IgxDropDownComponent**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
+[**IgxDropDownItemComponent**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
+[**OverlaySettings**]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
+[**ConnectedPositioningStrategy**]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
+[**GlobalPositionStrategy**]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
+[**AbsoluteScrollStrategy**]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
+[**PositionSettings**]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## Additional Resources
-[**NgModel**](https://angular.io/api/forms/NgModel)  
-[**ViewChild**](https://angular.io/api/core/ViewChild)  
+[**NgModel**](https://angular.io/api/forms/NgModel)
+[**ViewChild**](https://angular.io/api/core/ViewChild)
 [**ngForOf**](https://angular.io/api/common/NgForOf)
 
 Our community is active and always welcoming to new ideas.

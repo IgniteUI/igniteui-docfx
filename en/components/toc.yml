@@ -9,6 +9,16 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+  items:
+    - name: Step-by-Step Guide
+      href: general/cli/step-by-step-guide.md
+      new: false
+    - name: Templates
+      href: general/cli/component-templates.md
+      new: false
+    - name: Authentication Project Template
+      href: general/cli/auth-template.md
+      new: false
 - name: WPF to Angular guide
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
@@ -125,6 +135,9 @@
     - name: Clipboard Interactions
       href: grid/clipboard_interactions.md
       new: true
+    - name: Sizing
+      href: grid/sizing.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -207,6 +220,9 @@
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: true
+    - name: Sizing
+      href: treegrid/sizing.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: false
@@ -278,6 +294,9 @@
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+    - name: Sizing
+      href: hierarchicalgrid/sizing.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -790,9 +809,9 @@
   href: transaction.md
   new: true
   items:
-    - name: igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
-      href: transaction-how-to.md
+    - name: Transaction Service class hierarchy
+      href: transaction-classes.md
       new: true
-    - name: How to use the Transaction service
-      href: transaction-example.md
+    - name: How to use the Transaction Service
+      href: transaction-how-to-use.md
       new: true

@@ -23,17 +23,17 @@ _keywords: angular crud, ignite ui for angular, infragistics
 ### @@igComponent Batch Editing and Transactions
 
 @@if (igxName === 'IgxGrid') {
-The Batch Editing feature of the igxGrid is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). You may find an overview of what is the `TransactionService` and how is it implemented in the ["igxBaseTransaction, igxTransaction and igxHierarchical transaction explained"](../transaction-explained.md) topic.
+The Batch Editing feature of the igxGrid is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the igxTransactionService and details how it is implemented.
 
 Below is a detailed example of how is Batch Editing enabled for the igxGrid component.
 }
 @@if (igxName === 'IgxTreeGrid') {
-The Batch Editing feature of the IgxTreeGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). You may find an overview of what is the `HierarchicalTransactionService` and how is it implemented in the ["igxBaseTransaction, igxTransaction and igxHierarchical transaction explained"](../transaction-how-to.md) topic.
+The Batch Editing feature of the IgxTreeGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the igxHierarchicalTransactionService and details how it is implemented.
 
 Below is a detailed example of how is Batch Editing enabled for the IgxTreeGrid component.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-The Batch Editing feature of the IgxHierarchicalGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). You may find an overview of what is the `HierarchicalTransactionService` and how is it implemented in the ["igxBaseTransaction, igxTransaction and igxHierarchical transaction explained"](../transaction-how-to.md) topic.
+The Batch Editing feature of the IgxHierarchicalGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the igxHierarchicalTransactionService and details how it is implemented.
 
 In order to use the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) with [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory). 
 

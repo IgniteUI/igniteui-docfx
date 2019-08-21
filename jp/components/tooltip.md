@@ -326,7 +326,16 @@ export class AppModule {}
 > [!NOTE]
 > [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
 
-### Styles
+### ユーザー補助
+
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id)  プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
+
+以下の状況では十分な注意が必要です。
+- ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
+- ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
+- ターゲット要素はフォーカスできません。
+
+<!-- ### Styles
 
 To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -367,7 +376,7 @@ The last step is to **include** the component theme in our application.
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -402,7 +411,7 @@ $dark-tooltip: igx-tooltip-theme(
 
 #### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-tooltip`]({environment:sassApiUrl}/index.html#variable-_dark-tooltip) schema:
 
@@ -447,16 +456,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
-
-### ユーザー補助
-
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id)  プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
-
-以下の状況では十分な注意が必要です。
-- ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
-- ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
-- ターゲット要素はフォーカスできません。
+<div class="divider--half"></div> -->
 
 ### API リファレンス
 

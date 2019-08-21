@@ -24,10 +24,10 @@ This topic provides conceptual information about the tooltip types available on 
 
 The category chart component can be configured to display Tooltips in the following ways:
 
-1.  [`Default`](categorychart_tooltip_types.md) tooltips will display a tooltip for a single item when the pointer is positioned over it.
-2.  [`Item`](categorychart_tooltip_types.md) tooltips will display a tooltip for each data item in the category that the pointer is positioned over.
-3.  [`Category`](categorychart_tooltip_types.md) tooltips will display a grouped tooltip for all data points in the category that the pointer is positioned over.
-4.  [`None`](categorychart_tooltip_types.md) will prevent tooltips from displaying.
+1.  [`Default`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#default) tooltips will display a tooltip for a single item when the pointer is positioned over it.
+2.  [`Item`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#item) tooltips will display a tooltip for each data item in the category that the pointer is positioned over.
+3.  [`Category`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#category) tooltips will display a grouped tooltip for all data points in the category that the pointer is positioned over.
+4.  [`None`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#none) will prevent tooltips from displaying.
 
 ```html
 <igx-category-chart

@@ -107,11 +107,10 @@ export interface IGroupByRecord {
     <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
 </ng-template>
 ```
+<!-- ### Group By with Paging
 
-### Group By with Paging
-
-All group rows (along with the data rows) participate in the paging process and are part of the total page size for each page. Paging accounts only for expanded (visible) rows. Any expand or collapse operation will force Paging to recalculate pages count.
-Group that span multiple pages is split between them. The group row is visible only on one page and is not repeated on consequent pages. The group row summary information is consistent for the whole group and is not affected by the Paging.
+Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process. Any expand or collapse operation forces Paging to recalculate the page count and adjust the page index if necessary.
+Groups that span multiple pages are split between them. The group row is visible only on the page it starts on and is not repeated on subsequent pages. Summary information for group rows is calculated based on the whole group and is unaffected by Paging.
 
 #### Demo
 
@@ -124,7 +123,7 @@ Group that span multiple pages is split between them. The group row is visible o
 
 ### Group By with Summaries
 
-Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic.
+Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic. -->
 
 #### キーボード ナビゲーション
 

@@ -9,6 +9,43 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
+  # items:
+  #   - name: Step-by-Step Guide
+  #     href: general/cli/step-by-step-guide.md
+  #     new: false
+  #   - name: Templates
+  #     href: general/cli/component-templates.md
+  #     new: false
+  #   - name: Authentication Project Template
+  #     href: general/cli/auth-template.md
+  #     new: false
+- name: WPF to Angular guide
+  href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
+  new: true
+  items:
+    - name: Create your first Angular app
+      href: general/wpf_to_angular_guide/create_first_angular_app.md
+      new: false
+    - name: Create your UI with Angular components
+      href: general/wpf_to_angular_guide/create_ui_with_components.md
+      new: false
+    - name: One-Way Binding
+      href: general/wpf_to_angular_guide/one_way_binding.md
+      new: false
+    - name: Angular Events
+      href: general/wpf_to_angular_guide/angular_events.md
+      new: false
+    - name: Two-Way Binding
+      href: general/wpf_to_angular_guide/two_way_binding.md
+      new: false
+    - name: Transforming Data with Angular Pipes
+      href: general/wpf_to_angular_guide/angular_pipes.md
+      new: false
+    - name: Structural Directives in Angular
+      href: general/wpf_to_angular_guide/structural_directives.md
+      new: false
+    - name: Layout Elements
+      href: general/wpf_to_angular_guide/layout.md
 - name: グリッドとリスト
   href: grids_and_lists.md
   header: true
@@ -97,6 +134,9 @@
     - name: クリップボード操作
       href: grid/clipboard_interactions.md
       new: true
+    # - name: Sizing
+    #   href: grid/sizing.md
+    #   new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -179,6 +219,9 @@
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: true
+    # - name: Sizing
+    #   href: treegrid/sizing.md
+    #   new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: false
@@ -250,6 +293,9 @@
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+    # - name: Sizing
+    #   href: hierarchicalgrid/sizing.md
+    #   new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -699,9 +745,9 @@
   - name: スクロールストラテジ
     href: overlay_scroll.md
     new: false
-  - name: Styling
-    href: overlay_styling.md
-    new: true
+  # - name: Styling
+  #   href: overlay_styling.md
+  #   new: true
 - name: Drag and Drop
   href: drag_drop.md
   new: false
@@ -761,3 +807,13 @@
 - name: ローカライゼーション
   href: localization.md
   new: false
+# - name: Transaction Service
+#   href: transaction.md
+#   new: true
+#   items:
+#     - name: Transaction Service class hierarchy
+#       href: transaction-classes.md
+#       new: true
+#     - name: How to use the Transaction Service
+#       href: transaction-how-to-use.md
+#       new: true

@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## @@igComponent Keyboard Navigation
 
-Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behaviour is performed.
+Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behavior is performed.
 
 ### Key combinations
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -100,7 +100,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 - Double click on a cell from number column type and after the cell is in edit mode, change the value to `7` and press `tab key`. Prompt message will be shown.
 - Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
 
-> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+> Note: Keep in mind that the default `Enter key` action is overridden and in order to enter edit mode you can use `F2 key` instead.
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -165,7 +165,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 - Double click on a `number type` cell and after the cell is in edit mode, change the value to negative number (e.g. -1) and press `tab key`. Prompt message will be shown.
 - Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
 
-> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+> Note: Keep in mind that the default `Enter key` action is overridden and in order to enter edit mode you can use `F2 key` instead.
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="hgrid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -208,7 +208,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 - Double click on a cell from `Age` column and after the cell is in edit mode, change the value to `17` and press `tab key`. Prompt message will be shown.
 - Select a cell and press `Enter key` a couple of times. Column based navigation will be applied.
 
-> Note: Keep in mind that the default `Enter key` action is overriden and in order to enter edit mode you can use `F2 key` instead.
+> Note: Keep in mind that the default `Enter key` action is overridden and in order to enter edit mode you can use `F2 key` instead.
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="tree-grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -217,6 +217,12 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
+
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+| Navigating inside grid with scrollable parent container. | If the grid is positioned inside a scrollable parent container and the user navigates inside the grid, it will not scroll the parent container if there are cells out of view.|
 
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

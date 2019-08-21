@@ -293,6 +293,7 @@ public toolbarExportingHandler(args) {
 <div class="divider"></div>
 }
 
+@@if (false) { <!-- remove after translation -->
 ### Styling
 
 To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
@@ -416,7 +417,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -426,7 +427,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:420px">
-    <iframe id="treegrid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="treegrid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -436,7 +437,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:530px">
-    <iframe id="hierarchical-grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="hierarchical-grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -444,6 +445,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <div class="divider"></div>
 }
+} <!-- remove after translation -->
 
 ### API リファレンス
 

@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 編集|データの変更|Ignite UI for Angular |Infragistics
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。 
@@ -57,7 +57,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 #### Cell Editing
 
-##### Editing through UI
+<!-- ##### Editing through UI -->
 
 編集モードに入るには、データ型固有の*編集テンプレート*を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
@@ -86,7 +86,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 > [!NOTE]
 > セルは、垂直/水平方向へのスクロールや @@igComponent 以外をクリックした場合も編集モードのままです。セル編集と行編集両方で有効です。
 
-##### Editing through API
+<!-- ##### Editing through API -->
 
 プライマリキーが定義されている場合のみ IgxGrid API でもセル値を変更することができます。
 
@@ -157,7 +157,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ...
 ```
 }
-
+<!-- 
 #### Cell Editing Templates
 If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
 ```html
@@ -171,7 +171,7 @@ If you want to provide a custom template which will be applied when a cell is in
 > Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 > [!NOTE]
 > The cell editing template directive (`igxCellEditor`) is different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
-For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration). -->
 
 ### CRUD 操作
 
@@ -305,7 +305,7 @@ row.delete();
 
 <div class="divider--half"></div>
 
-### Editing Events
+<!-- ### Editing Events
 
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and **Cell Editing** life cycle - when starting, committing or canceling editing.
 The events can be broken down as follows:
@@ -435,11 +435,11 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 ### Styling
 
-The @@igxName allows for its cells to be styled through the [IgniteUI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
 In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
 
-In order to use the [Ignite UI Theming Library](themes/index.md), we must first import the theme `index` file in our global styles:
+In order to use the [Ignite UI Theming Library](../themes/component-themes.md), we must first import the theme `index` file in our global styles:
 
 #### Importing style library
 
@@ -447,11 +447,11 @@ In order to use the [Ignite UI Theming Library](themes/index.md), we must first 
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 ```
-Now we can make use of all of the functions exposed by the IgniteUI theme engine.
+Now we can make use of all of the functions exposed by the Ignite UI for Angular theme engine.
 
 #### Defining a palette
 
-After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](themes/palettes.md):
+After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palette.md):
 
 ```scss
 $white: #fff;
@@ -475,7 +475,7 @@ $custom-grid-theme: igx-grid-theme(
 
 #### Applying the theme
 
-The easiest way to apply our theme is with a `sass` `@include` statemenet in the global styles file:
+The easiest way to apply our theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
 @include igx-grid($custom-grid-theme); 
@@ -509,7 +509,7 @@ In addition to the steps above, we can also style the controls that are used for
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
-    <iframe id="grid-editing-style-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -518,7 +518,7 @@ In addition to the steps above, we can also style the controls that are used for
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:950px">
-    <iframe id="treegrid-editing-style-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-editing-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
@@ -527,14 +527,16 @@ In addition to the steps above, we can also style the controls that are used for
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:660px">
-    <iframe id="hierarchical-grid-editing-style-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-editing-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
+
 <div class="divider--half"></div>
+-->
 
 ### API リファレンス
 
