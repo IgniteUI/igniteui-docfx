@@ -319,18 +319,18 @@ The events can be broken down as follows:
 
 | Event | Description | Arguments | Cancellable |
 |-------|-------------|-----------|-------------|
-| [`onCellEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelleditenter) | Fires when a cell **enters edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditenter) | If `[rowEditing]` is enabled, fires when a row **enters edit mode** (after `onCellEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) | Fires when a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEditCancel`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelleditcancel) | Fires when a cell exits edit mode **without committing** its value (e.g. by pressing `Escape`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrowedit) | Fires when a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditCancel`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onroweditcancel) | Fires when a row exits edit mode **without committing** its values (e.g. by clicking the `Cancel` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | Fires when a cell **enters edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | If `[rowEditing]` is enabled, fires when a row **enters edit mode** (after `onCellEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | Fires when a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | Fires when a cell exits edit mode **without committing** its value (e.g. by pressing `Escape`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | Fires when a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | Fires when a row exits edit mode **without committing** its values (e.g. by clicking the `Cancel` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 
 All of the above events can be cancelled. For example, if `onCellEditEnter` is cancelled, the cell will never enter edit mode.
 
-#### Cell validation via edit event cancelling
+#### Cell validation on edit event
 Using the grid's editing events we can alter how the user interacts with the grid.
-In the below example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll display a custom error message using [`IgxToast`](../toast.md). We'll also cancel the editing event (by setting `event.cancel = true`), so the user has to specify a valid value before continuing with the editing.
+In this example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll prevent it from reaching the data source by cancelling the event (`event.cancel = true`). We'll also display a custom error message using [`IgxToast`](../toast.md).
 
 The first thing we need to is bind to the grid's event:
 
@@ -391,9 +391,9 @@ export class MyTreeGridEventsComponent {
     }
 }
 ```
-Here, we are validating two columns. If the user tries to set an invalid value for an employee's **Age** (below 18) or their hire date (a future date), the editing will be cancelled (the value will not be submitted) and a toast with an error message will be displayed.
+Here, we are validating two columns. If the user tries to set an invalid value for an employee's **Age** (below 18) or their **Hire Date** (a future date), the editing will be cancelled (the value will not be submitted) and a toast with an error message will be displayed.
 }
-@@if (igxName === igxName === 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class MyHGridEventsComponent {
     ...
