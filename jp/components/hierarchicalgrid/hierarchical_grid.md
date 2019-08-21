@@ -1,5 +1,5 @@
 ﻿---
-title: Angular Hierarchical データグリッド | Material Table | Ignite UI for Angular | Infragistics
+title: Angular 階層データグリッド |マテリアル テーブル|Ignite UI for Angular |Infragistics
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
 _keywords: Angular データ グリッド, igniteui for angular, infragistics
 _language: ja
@@ -7,7 +7,7 @@ _language: ja
 
 ## 階層グリッド
 
-<p class="highlight">The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
+<p class="highlight">Ignite UI for Angular 階層データ グリッド は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、並べ替え、ページング、テンプレート、列移動などの豊富な機能を提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。マテリアル テーブル ベースの UI グリッドにより、階層データの表示がさらに簡単できれいになりました。</p>
 
 ### デモ
 
@@ -231,9 +231,9 @@ export class RemoteLoDService {
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-<!-- ### Sizing
+サイズ変更
 
-See the [Grid Sizing](sizing.md) topic. -->
+詳細については、[Grid Sizing](sizing.md) トピックをご覧ください。
 
 ### CRUD 操作
 
@@ -250,7 +250,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 |Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
 > [!NOTE]
-> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf Known Issues](../for_of.html#known-limitations) の既知の問題のセクションを参照してください。
 
 ## API リファレンス
 
@@ -265,7 +265,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 ### その他のリソース
 <div class="divider--half"></div>
 
-<!-- * [Grid Sizing](sizing.md) -->
+* [グリッド サイズ変更](sizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
