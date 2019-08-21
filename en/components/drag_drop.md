@@ -36,18 +36,72 @@ The [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) direc
 
 By default a drag operation starts when the end user swipes at least 5 px in any direction. Otherwise the interaction is considered as a click and the [`dragClicked`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragclicked) event is emitted.
 
-When dragging occurs a drag ghost element is spawned and moves along with the mouse cursor or touch interaction. The original element is still present, but it can be hidden automatically when dragging starts with the [`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) input.
+When dragging occurs a drag ghost element is spawned and moves along with the mouse cursor or touch interaction. The original element is still present, but it can be hidden automatically when dragging starts with the [`renderGhost`]({environment:angularApiUrl}/classes/igxdragdirective.html#renderGhost) input set to `false`.
 
 The dragging can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property of the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) event to `true`. This will cancel the default dragging logic.
 
-After the user releases the mouse/touch the drag ghost element is removed from the DOM and if the [`hideBaseOnDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html#hidebaseondrag) is enabled it will make the original element visible again and the [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) event will be emitted. If the [`animateOnRelease`]({environment:angularApiUrl}/classes/igxdragdirective.html#animateonrelease) input is set to `true` all this will execute after the default animation of the drag ghost is finished which consist of returning it from the last dragged position to the position of the original element. Then the drag ghost will be removed and the [`returnMoveEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#returnmoveend) event will be emitted.
+After the user releases the mouse/touch the drag ghost element is removed from the DOM and if the [`renderGhost`]({environment:angularApiUrl}/classes/igxdragdirective.html#renderghost) is enabled it will make the original element visible again and the [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) event will be emitted. If you want to animate the drop you should manually call the [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) method. Then the drag ghost will be removed and the [`transitioned`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) event will be emitted.
 
 #### Usage
 ```html
-<div igxDrag [hideBaseOnDrag]="true" [animateOnRelease]="true" *ngFor="let elem of draggableElems" >
+<ul>
+    <li *ngFor="let folder of folders" igxDrop>
+        <igx-icon fontSet="material">{{folder.icon}}</igx-icon> 
+        <span class="folder-title">{{folder.text}}</span>
+    </li>
+</ul>
+<ng-template #customGhost>
+    <div class="dragGhost">
+        <igx-icon fontSet="material">email</igx-icon> 
+        Moving {{ draggedElements }} item{{ (draggedElements > 1 ? 's' : '')}}
+    </div>
+</ng-template>
+```
+
+#### Customizing The Ghost Element
+
+The ghost element by default is a copy of the base element the `igxDrag` is used on. It can be customized by providing a template reference to the [`ghostTemplate`](environment:angularApiUrl}/classes/igxdragdirective.html#ghostTemplate) input directly.
+
+#### Usage
+```html
+<div igxDrag [renderGhost]="true" *ngFor="let elem of draggableElems" >
     <span [style.margin]="'auto'">{{elem.label}}</span>
 </div>
 ```
+
+#### Dragging Using a Handle
+
+The user can specify an element that is a child of the `igxDrag` by which to drag since by default the whole element is used to perform that action. It can be done using the `igxDragHandle` directive and can be applied to multiple elements inside the `igxDrag`.
+
+When multiple channels are applied to an `igxDrag` and one of them matches one of applied channels to an `igxDrop`, then all events and applied behaviors would be executed when that element is dropped.
+
+#### Demo
+
+Drag the dialog using the handle.
+
+<div class="sample-container loading" style="height:325px">
+    <iframe id="drag-dialog-sample-iframe" src='{environment:demosBaseUrl}/interactions/drag-dialog-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="drag-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Animations
+
+By default when an element is being dragged there are no animations applied.
+
+The user can apply transition animation to the `igxDrag` any time, but it is advised to use it when dragging ends or the element is not currently dragged. This can be achieved using the `transitionToOrigin` and the `transitionTo` methods.
+
+The `transitionToOrigin` method as the name suggest animates the currently dragged element or its ghost to the start position where the dragging began. The `transitionTo` method animates the element to a specific location relative to the page (i.e. `pageX` and `pageY`) or to the position of a specified element. If the element is not being currently dragged it will animate anyway or create ghost and animate it to the desired position.
+
+Both function have arguments that the user can set to customize the transition animation and set duration, timing function or delay. If specific start location is set it will animate the element starting from there.
+
+When the transition animation ends if a ghost is created it will be removed and the `igxDrag` directive will return to its initial state or if no ghost is created it will keep its position. In both cases then the `transitioned` event will be triggered depending on how long the animation lasts. If no animation is applied it will triggered instantly.
+
+If the user want to have other types of animations that involve element transformations he can do that like any other element either using the Angular Animations or straight CSS Animations to either the base `igxDrag` element or its ghost. If he wants to apply them to the ghost he would need to define a custom ghost and apply animations to that element.
+
 
 ### Drop Directive
 
@@ -82,6 +136,61 @@ public onElemDrop(event: IgxDropEventArgs) {
     event.drag.dropFinished(); 
 }
 ````
+
+#### Linking Drag to Drop Element
+Using the `dragChannel` and `dropChannel` input on respectively igxDrag and `igxDrop` directives the user can link different elements to interact only between each other. For example if an `igxDrag` element needs to be constrained so it can be dropped on specific `igxDrop` element and not all available this can easily be achieved by assigning them same channel.
+
+#### Example
+
+```html
+<div igxDrag [dragChannel]="['Mammals', 'Land']"> Human </div>
+<div igxDrag [dragChannel]="['Mammals', 'Water']"> Dolphin </div>
+<div igxDrag [dragChannel]="['Insects', 'Air']"> Butterfly </div>
+<div igxDrag [dragChannel]="['Insects', 'Land']"> Ant </div>
+
+<div igxDrop [dropChannel]="['Mammals']"> Mammals </div>
+<div igxDrop [dropChannel]="['Insects']"> Insects </div>
+<div igxDrop [dropChannel]="['Land']"> Land </div>
+```
+
+#### Demo
+
+Drag the dialog using the handle.
+
+<div class="sample-container loading" style="height:325px">
+    <iframe id="email-sample-iframe" src='{environment:demosBaseUrl}/interactions/email-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="email-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Drop Strategies
+
+The `igxDrop` comes with 4 drop strategies which are defined in the enum `IgxDropStrategy` and has the following values - `Default`, `Append`, `Prepend`, `Insert`:
+
+* The `Default` strategy does not perform any action when an element is dropped onto an IgxDrop element and is implemented as a class named `IgxDefaultDropStrategy`.
+
+* As the names suggest the first `Append` strategy inserts the dropped element as a last child  and is implemented as a class named `IgxAppendDropStrategy`. 
+
+* The `Prepend` strategy inserts the dropped element as first child and is implemented as a class named `IgxPrependDropStrategy`.
+
+* The `Insert` strategy inserts the dragged element at the dropped position. If there is a child under the element when it was dropped, the `igxDrag` instanced element will be inserted at that child's index. It is implemented as a class named `IgxInsertDropStrategy`
+
+The way a strategy can be applied is by setting the `dropStrategy` input to one of the listed classes above. The value provided has to be e type and not an instance, since the `igxDrop` has to create the instance itself.
+
+#### Example
+
+TypeScript:
+```typescript
+public insertStrategy = IgxInsertDropStrategy;
+```
+
+HTML:
+```html
+<div igxDrop [dropStrategy]="insertStrategy"></div>
+```
 
 #### Advanced Configuration
 One element can have both [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) and [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directives applied, but then it is recommended to use custom logic when another element is being dropped on to it by canceling the [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) event of the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive.
