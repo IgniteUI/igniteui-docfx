@@ -397,9 +397,9 @@ Here, we are validating two columns. If the user tries to set an invalid value f
 ```typescript
 export class MyHGridEventsComponent {
     ...
-    public handleCellEdit(event: IGridEditEventArgs, grid: IgxGridBaseComponent) {
+    public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
-        const column = grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
         if (column.field === "Debut") {
             if (event.newValue > today.getFullYear()) {
                 this.toast.message = "The debut date must be in the past!";
