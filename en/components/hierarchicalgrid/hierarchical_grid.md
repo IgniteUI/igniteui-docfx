@@ -242,13 +242,13 @@ Calling CRUD API methods should still be done through each separate grid instanc
 
 ### Styling  
 
-To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+To begin the customization of the predefined hierarchical grid layout, one needs to import the `index` file, where all styling functions and mixins are located.   
 
  ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required for the customization.   
 
 ```scss
 $custom-theme: igx-grid-theme(
