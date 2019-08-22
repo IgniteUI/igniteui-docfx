@@ -153,15 +153,19 @@ To begin the customization of the predefined group by feature layout, one needs 
 One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
 ```scss
 $custom-theme: igx-grid-theme(
-    $group-row-background: #CCC,
-    $group-row-selected-background: #bdbdbd,
-    $group-label-column-name-text: #000,
-    $group-label-icon: #0383d9,
-    $group-label-text: #2b2b2b,
-    $group-count-background: #09F,
+    $group-row-background: #494949,
+    $group-row-selected-background: #383838,
+    $group-label-column-name-text: #f8f8f8,
+    $group-label-icon: #FFCD0F,
+    $group-label-text: #f8f8f8,
+    $group-count-background: #FFCD0F,
     $group-count-text-color: #000,
-    $expand-icon-color: #09F,
-    $expand-icon-hover-color: #0383d9
+    $expand-icon-color: #FFCD0F,
+    $expand-icon-hover-color: rgb(223, 181, 13),
+    $cell-active-border-color: #FFCD0F,
+    $row-selected-background: #fff6d3,
+    $row-selected-text-color: #000,
+    $drop-indicator-color: #FFCD0F
 );
 ```
 
@@ -171,11 +175,11 @@ In the approach, that was described above, the color values were hardcoded. Inst
 
 ```scss
 $black-color: #292826;
-$blue-color: #2184c7;
+$yellow-color: #FFCD0F;
 
 $custom-palette: igx-palette(
   $primary: $black-color,
-  $secondary: $blue-color
+  $secondary: $yellow-color
 );
 ```
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
