@@ -259,13 +259,13 @@ This section will provide you with hints what to do if you are having trouble wi
 @@if (igxName === 'IgxGrid') {
 ### Styling   
 
-To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+To begin the customization of the predefined column pinning layout, one needs to import the `index` file, where all styling functions and mixins are located.   
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the feature as desired.   
 
 ```scss
 $custom-theme: igx-grid-theme(
