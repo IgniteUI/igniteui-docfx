@@ -186,15 +186,16 @@ After a custom palette has been generated, the `igx-color` function can be used 
 After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
 ```scss
 $custom-theme: igx-grid-theme(
-    $group-row-background: igx-color($custom-palette, "secondary", 100),
+    $group-row-background: igx-color($custom-palette, "primary", 300),
     $group-row-selected-background: igx-color($custom-palette, "primary", 400),
-    $group-label-column-name-text: igx-color($custom-palette, "primary", 600),
-    $group-label-icon: igx-color($custom-palette, "primary", 600),
-    $group-label-text: igx-color($custom-palette, "secondary", 700),
-    $group-count-background: igx-color($custom-palette, "primary", 600),
-    $group-count-text-color: igx-color($custom-palette, "secondary", 400),
-    $expand-icon-color: igx-color($custom-palette, "primary", 600),
-    $expand-icon-hover-color: igx-color($custom-palette, "primary", 300)
+    $group-label-column-name-text: igx-contrast-color($custom-palette, "primary", 500),
+    $group-label-icon: igx-color($custom-palette, "secondary", 600),
+    $group-label-text: igx-contrast-color($custom-palette, "primary", 500),
+    $group-count-background: igx-color($custom-palette, "secondary", 600),
+    $group-count-text-color: igx-color($custom-palette, "primary", 400),
+    $expand-icon-color: igx-color($custom-palette, "secondary", 600),
+    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 300),
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 600)
 );
 ```
 #### Defining custom schemas
@@ -244,13 +245,12 @@ After providing the function with the required parameters, one has to **include*
    
 #### Demo   
 
-<div class="sample-container loading" style="height:575px">
+<div class="sample-container loading" style="height:570px">
     <iframe id="grid-sample-groupby-styling" src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-
 
 ### 既知の問題と制限
 
