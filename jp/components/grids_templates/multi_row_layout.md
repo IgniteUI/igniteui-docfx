@@ -229,7 +229,7 @@ After providing the function with the required parameters, one has to **include*
     }
 }
 ```   
-<div class="sample-container loading" style="height:605px">
+<div class="sample-container loading" style="height:755px">
     <iframe id="grid-multi-row-layout-styling" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
