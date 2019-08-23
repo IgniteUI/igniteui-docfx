@@ -1,23 +1,23 @@
----
-title: Step-by-Step Guide
-_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
+﻿-->
+title: ステップバイステップ ガイド
+_description: ステップバイステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Step-by-Step Guide
-If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you to create and setup your new application, as well as update project previously created with the [Ignite UI CLI](cli-overview.md).
+## ステップバイステップ ガイド
+利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に Ignite UI CLI で以前作成したプロジェクトを更新できます。
 
-To start the guide, simply run the `ig` command:
+ガイドを開始するには、ig コマンドを実行します。
 
 ```bash
 ig
 ```
-or
+または
 ```bash
 ig new
 ```
 
-This will activate the step by step mode and you will be asked a series of questions to help you create your new project.
+これにより、ステップバイステップ モードがアクティブになり、新しいプロジェクトの作成に役立つ一連の質問が表示されます。
 
 <div style="display:inline-block;">
     <a style="background: url(../../../images/general/buildCLIapp.gif); display:flex; justify-content:center; min-width:540px; min-height:315px;"
@@ -26,52 +26,52 @@ This will activate the step by step mode and you will be asked a series of quest
     </a>
 </div>
 
-> **Note** Step by step mode relies on `Inquirer.js`, see [supported terminals](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)
+> **注** ステップバイステップ モードは Inquirer.js に依存しています。サポートされている端末を参照してください。
 
 
 
-## Create new project
+## 新しいプロジェクトの作成
 
-First you will be prompted to enter a name for your application:
+最初に、アプリケーションの名前を入力します。
 
 ![](../../../images/general/ig-step-by-step-new-project-name.png)
 
-Then you will be guided to choose one of the available project templates. You can create an empty project, project with side navigation or [authentication project](auth-template.md) with basic authentication module. Navigate through the available options using the arrow keys and press ENTER to confirm the selection:
+次に、利用可能なプロジェクト テンプレートのいずれかを選択します。空のプロジェクト、サイド ナビゲーションのあるプロジェクト、または基本認証モジュールのある[認証プロジェクト](auth-template.md)を作成できます。矢印キーを使用して使用可能なオプションをナビゲートし、ENTER を押して選択を確認します。
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
 
-The next step is to choose a theme for your application. If you select the default option a pre-compiled CSS file (`igniteui-angular.css`) with the default Ignite UI for Angular theme is included in your project's `angular.json`. The custom option generates code for a color palette and theme with our [our Theming API.](../../themes.md) in the `app/styles.scss`.
+次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、 Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (igniteui-angular.css) がプロジェクトの angular.json に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 
-After completing the above steps the application structure will be generated, git repository will be initialized and the project will be committed. Then you will be asked if you want to complete the process or to add a new view to your application:
+上記の手順を完了すると、アプリケーション構造が生成され、git リポジトリが初期化され、プロジェクトがコミットされます。次に、プロセスを完了するか、アプリケーションに新しいビューを追加するかのプロンプトが表示されます。
 
 ![](../../../images/general/ig-step-by-step-new-project-action.png)
 
-## Add view
+## ビューの追加
 
-Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project.
+Ignite UI CLI は、プロジェクトに追加できる複数のコンポーネント テンプレート、およびより詳細なシナリオ テンプレートをサポートしています。
 
-This mode can be activated either after completing project creation or by running the `add` command inside an existing project:
+このモードは、プロジェクトの作成が完了した後、または既存のプロジェクト内で add コマンドを実行することでアクティブにできます。
 ```bash	
 ig add
 ```
 
 
-In case you choose to add a new control, you will be provided with a [list of the available templates](cli/component-templates.md#component-templates), grouped in categories.
+新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#component-templates)のリストが提供されます。
 
 ![](../../../images/general/ig-step-by-step-template-group.png)
 
-Use the arrow keys to navigate through the options and ENTER to choose the selected one.
+矢印キーを使用してオプションをナビゲートし、ENTER を使用して選択したオプションを選択します。
 
-For some templates, like `Custom Grid`, for example you will be provided with a list of options that you might enable. Options can be toggled with the SPACE key:
+たとえば、カスタムグリッドなどの一部のテンプレートでは、有効にできるオプションのリストが提供されます。オプションは、スペース キーで切り替えることができます。
 
 ![](../../../images/general/ig-step-by-step-component-features.png)
 
-If you choose to add a scenario to your application you will also get a list of the available [scenario templates](cli/component-templates.md#scenario-templates):
+アプリケーションにシナリオを追加することを選択した場合、使用可能な[シナリオ テンプレート](component-templates.md#scenario-templates)のリストも取得できます。
 
 ![](../../../images/general/ig-step-by-step-scenario-templates.png)
 
-After adding a template to your application, you will be asked weather you want to complete the process or to proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
+アプリケーションにテンプレートを追加した後、プロセスを完了するかコントロールの追加を続行するかどうかを選択します。プロセスの完了を選択すると、必要なパッケージが (プロジェクト作成時に) インストールされ、アプリケーションがデフォルトのブラウザーで開かれます。
 
-You can always add more Ignite UI for Angular views to your application at latter moment using the `add` command.
+`add` コマンドを使用して、後からいつでも、Angular ビューの Ignite UI をアプリケーションに追加できます。
