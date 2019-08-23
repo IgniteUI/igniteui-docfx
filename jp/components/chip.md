@@ -194,28 +194,91 @@ public chipsOrderChanged(event) {
 
   - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
 
-
 ### Styling
-To begin the customization of the predefined chip layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+The IgxChip allows custom stylization through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
 
+ #### Importing global theme
+To begin styling of the predefined chip layout, one needs to import the `index` file, where all styling functions and mixins are located.  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
-```
+```   
 
+#### Defining custom theme
 One can easily create a new theme, that extends the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) and accepts the parameters, required to customize the group by as desired.   
+   
 
 ```scss
 $custom-theme: igx-chip-theme(
-  $background: #7c7373,
-  $text-color: #e2e2e2,
-  $hover-text-color: #f2f2f2,
-  $selected-background: #a94f44,
-  $selected-border-color: #a94f44,
-  $hover-selected-background: #94443a,
-  $focus-selected-background: #803a31
+    $background: #494949,
+    $text-color: #e2e2e2,
+    $hover-text-color: #f2f2f2,
+    $selected-background: #ffcd0f,
+    $selected-border-color: #ffcd0f,
+    $hover-selected-background: #ebbf11,
+    $focus-selected-background: #ffcd0f,
+    $border-radius: 5px
+);
+```   
+
+#### Defining a custom color palette
+In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+```scss
+$black-color: #494949;
+$yellow-color: #ffcd0f;
+
+$custom-palette: igx-palette(
+    $primary: $black-color,
+    $secondary: $yellow-color
+);
+```   
+
+After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+
+```scss
+$custom-theme: igx-chip-theme(
+    $background: igx-color($custom-palette, "primary", 500),
+    $text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $hover-text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $selected-background: igx-color($custom-palette, "secondary", 500),
+    $selected-border-color: igx-color($custom-palette, "secondary", 500),
+    $hover-selected-background: igx-color($custom-palette, "secondary", 600),
+    $focus-selected-background: igx-color($custom-palette, "secondary", 500),
+    $border-radius: 5px
 );
 ```
 
+#### Defining custom schemas
+One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_chip`.   
+
+```scss
+$custom-chip-schema: extend($_light-chip, (
+    background: (igx-color("primary", 500)),
+    text-color: (igx-contrast-color("primary", 500)),
+    hover-text-color: (igx-contrast-color("primary", 500)),
+    selected-background: (igx-color("secondary", 500)),
+    selected-border-color: (igx-color("secondary", 500)),
+    hover-selected-background: (igx-color("secondary", 600)),
+    focus-selected-background: (igx-color("secondary", 500)),
+    border-radius: 5px
+));
+```   
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+
+```scss
+$my-custom-schema: extend($light-schema, (
+    igx-chip: $custom-chip-schema
+));
+
+$custom-theme: igx-chip-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### Applying the custom theme
 After providing the function with the required parameters, one has to **include** the component mixins.  
 ```scss
 @include igx-chip($custom-theme);
@@ -231,56 +294,7 @@ After providing the function with the required parameters, one has to **include*
     }
 }
 ```   
-#### Defining a color palette
-In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
-
-```scss
-$primary-color: #a94f44;
-$secondary-color: #7c7373;
-
-$custom-palette: igx-palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
-);
-```
-After that, using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
-```scss
-$custom-theme: igx-chip-theme(
-  $background: igx-color($custom-palette, "secondary", 500),
-  $text-color: igx-contrast-color($custom-palette, "secondary", 500),
-  $hover-text-color: igx-contrast-color($custom-palette, "secondary", 600),
-  $selected-background: igx-color($custom-palette, "primary", 500),
-  $selected-border-color: igx-color($custom-palette, "primary", 500),
-  $hover-selected-background: igx-color($custom-palette, "primary", 600),
-  $focus-selected-background: igx-color($custom-palette, "primary", 700)
-);
-```
-#### Using schemas
-One could go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_chip`.   
-```scss
-$custom-chip-schema: extend($_light-chip, (
-  background: (igx-color("secondary", 500)),
-  text-color: (igx-contrast-color("secondary", 500)),
-  hover-text-color: (igx-contrast-color("secondary", 600)),
-  selected-background: (igx-color("primary", 500)),
-  selected-border-color: (igx-color("primary", 500)),
-  hover-selected-background: (igx-color("primary", 600)),
-  focus-selected-background: (igx-color("primary", 700))
-));
-```
-In order for the custom schema to be applied, either `light`, or `dark` global has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respctive component theme afterwards.   
-```scss
-$my-custom-schema: extend($light-schema, (
-  igx-chip: $custom-chip-schema
-));
-
-$custom-theme: igx-chip-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```   
+   
 <div class="sample-container loading" style="height:650px">
     <iframe id="chip-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
