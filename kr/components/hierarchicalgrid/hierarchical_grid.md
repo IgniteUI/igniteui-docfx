@@ -279,32 +279,95 @@ CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행�
 > [!NOTE]
 > `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
-### Styling  
+### Styling
+The igxHierarchicalGrid can be stylized through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.        
 
-To begin the customization of the predefined hierarchical grid layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+#### Importing global theme   
+To begin the styling of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.   
 
- ```scss
+```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required for the customization.     
+#### Defining custom theme
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
 
 
 ```scss
 $custom-theme: igx-grid-theme(
-  $cell-active-border-color: #ff0000,
+  $cell-active-border-color: #ffcd0f,
   $cell-selected-background: #6f6f6f,
-  $row-hover-background: #979696,
+  $row-hover-background: #f8e495,
   $row-selected-background: #8d8d8d,
   $header-background: #494949,
   $header-text-color: #fff,
-  $expand-icon-color: #ff0000,
-  $expand-icon-hover-color: #ac0000,
-  $resize-line-color: #ff0000,
-  $row-highlight: #ffcc00
+  $expand-icon-color: #ffcd0f,
+  $expand-icon-hover-color: #e0b710,
+  $resize-line-color: #ffcd0f,
+  $row-highlight: #ffcd0f
+);
+```   
+
+#### Defining a custom color palette
+In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+ ```scss
+$black-color: #494949;
+$yellow-color: #FFCD0F;
+ 
+$custom-palette: igx-palette(
+  $primary: $black-color,
+  $secondary: $yellow-color
 );
 ```
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
+After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
+    $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
+    $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
+    $row-selected-background: (igx-color($custom-palette, "primary", 100)),
+    $header-background: (igx-color($custom-palette, "primary", 500)),
+    $header-text-color: (igx-contrast-color($custom-palette, "primary", 500)),
+    $expand-icon-color: (igx-color($custom-palette, "secondary", 500)),
+    $expand-icon-hover-color: (igx-color($custom-palette, "secondary", 600)),
+    $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
+    $row-highlight: (igx-color($custom-palette, "secondary", 500))
+);
+```   
 
+#### Defining custom schemas
+One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    cell-active-border-color: (igx-color:('secondary', 500)),
+    cell-selected-background: (igx-color:('primary', 300)),
+    row-hover-background: (igx-color:('secondary', 100)),
+    row-selected-background: (igx-color:('primary', 100)),
+    header-background: (igx-color:('primary', 500)),
+    header-text-color: (igx-contrast-color:('primary', 500)),
+    expand-icon-color: (igx-color:('secondary', 500)),
+    expand-icon-hover-color: (igx-color:('secondary', 600)),
+    resize-line-color: (igx-color:('secondary', 500)),
+    row-highlight: (igx-color:('secondary', 500))
+));
+```
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```   
+
+#### Applying the custom theme
 After providing the function with the required parameters, one has to **include** the component mixins.   
 
 ```scss
@@ -323,71 +386,7 @@ After providing the function with the required parameters, one has to **include*
 }
 ```   
 
-#### Defining a color palette
-In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
-
-```scss
-$black-color: #000000;
-$red-color: #ff0000;
-
-$custom-palette: igx-palette(
-  $primary: $black-color,
-  $secondary: $red-color
-);
-```
-
-After that, using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
-
-```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
-    $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
-    $row-hover-background: (igx-color($custom-palette, "primary", 100)),
-    $row-selected-background: (igx-color($custom-palette, "primary", 200)),
-    $header-background: (igx-color($custom-palette, "primary", 400)),
-    $header-text-color: (igx-contrast($custom-palette, "primary", 500)),
-    $expand-icon-color: (igx-color($custom-palette, "secondary", 500)),
-    $expand-icon-hover-color: (igx-color($custom-palette, "secondary", 600)),
-    $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
-    $row-highlight: (igx-color($custom-palette, "secondary", 100))
-);
-```
-
-#### Using schemas
-One could go further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
-
-```scss
-$custom-grid-schema: extend($_dark-grid, (
-    cell-active-border-color: (igx-color:('secondary', 500)),
-    cell-selected-background: (igx-color:('primary', 300)),
-    row-hover-background: (igx-color:('primary', 100)),
-    row-selected-background: (igx-color:('primary', 200)),
-    header-background: (igx-color:('primary', 400)),
-    header-text-color: (igx-contrast-color:('primary', 100)),
-    expand-icon-color: (igx-color:('secondary', 500)),
-    expand-icon-hover-color: (igx-color:('secondary', 600)),
-    resize-line-color: (igx-color:('secondary', 500)),
-    row-highlight: (igx-color:('secondary', 500)),
-    content-text-color: (igx-contrast-color:('primary', 300))
-));
-```
-
-In order for the custom schema to be applied, either `light`, or `dark` global has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respctive component theme afterwards.   
-
-```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
-
-$custom-theme: igx-grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```   
-
-<div class="sample-container loading" style="height:605px">
+<div class="sample-container loading" style="height:505px">
     <iframe id="hierarchical-grid-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
