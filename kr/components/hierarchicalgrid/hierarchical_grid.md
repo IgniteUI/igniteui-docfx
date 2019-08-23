@@ -290,7 +290,7 @@ To begin the styling of the predefined group by feature layout, one needs to imp
 ```
 
 #### Defining custom theme
-One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.   
 
 
 ```scss
@@ -321,8 +321,7 @@ $custom-palette: igx-palette(
   $secondary: $yellow-color
 );
 ```
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
-After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
 ```scss
 $custom-theme: igx-grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
@@ -386,6 +385,7 @@ After providing the function with the required parameters, one has to **include*
 }
 ```   
 
+#### Demo
 <div class="sample-container loading" style="height:505px">
     <iframe id="hierarchical-grid-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
