@@ -90,8 +90,8 @@ $custom-palette: igx-palette(
 );
 ```   
 
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
-After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+
 
 ```scss
 $custom-theme: igx-grid-theme(
@@ -102,7 +102,7 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-The `$custom-theme` contains the same properties as the first one, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its' primary and secondary colors, with a given color variant.   
+The `$custom-theme` contains the same properties as the first one, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its primary and secondary colors, with a given color variant.   
 
 #### Defining custom schemas
 One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
@@ -148,193 +148,6 @@ After providing the function with the required parameters, one has to **include*
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-}
-
-#### 列固定 API
-
-ピン固定領域の幅が @@igComponent より大きくならない限り各列をピン固定できます。列のピン固定は [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の pinned 入力によって制御されます。ピン固定列は常に @@igComponent の左側に描画され、@@igComponent 本体のピン固定されていない列の水平スクロールで固定されます。
-
-
-@@if (igxName === 'IgxGrid') {
-```html
-<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)">
-    <igx-column [field]="Name" [pinned]="true"></igx-column>
-    <igx-column [field]="AthleteNumber"></igx-column>
-    <igx-column [field]="TrackProgress"></igx-column>
-</igx-grid>
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
-    <igx-column [field]="Name" [pinned]="true"></igx-column>
-    <igx-column [field]="Title"></igx-column>
-    <igx-column [field]="ID"></igx-column>
-</igx-tree-grid>
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
-        <igx-column #artist field="Artist" [width]="'180px'">
-            <ng-template igxHeader>
-                <div class="title-inner">
-                    <span style="float:left">Artist</span>
-                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(artist)"></igx-icon>
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column #photo field="Photo">
-                <ng-template igxHeader>
-                        <div class="title-inner">
-                            <span style="float:left">Photo</span>
-                            <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(photo)"></igx-icon>
-                        </div>
-                    </ng-template>
-            <ng-template igxCell let-cell="cell">
-                <div class="cell__inner_2">
-                    <img [src]="cell.value" class="photo" />
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column #debut field="Debut">
-            <ng-template igxHeader>
-                <div class="title-inner">
-                    <span style="float:left">Debut</span>
-                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(debut)"></igx-icon>
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column #grammynominations field="Grammy Nominations" [width]="'200px'">
-            <ng-template igxHeader>
-                <div class="title-inner">
-                    <span style="float:left">Grammy Nominations</span>
-                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(grammynominations)"></igx-icon>
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column #grammyawards field="Grammy Awards" [width]="'180px'">
-            <ng-template igxHeader>
-                <div class="title-inner">
-                    <span style="float:left">Grammy Awards</span>
-                    <igx-icon class="pin-icon" fontSet="fas" name="fa-thumbtack" (click)="toggleColumn(grammyawards)"></igx-icon>
-                </div>
-            </ng-template>
-        </igx-column>
-```
-}
-
-[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の @@igComponent の [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) または [`unpinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpincolumn) メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
-
-@@if (igxName === 'IgxGrid') {
-```typescript
-this.grid.pinColumn("AthleteNumber");
-this.grid.unpinColumn("Name");
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```typescript
-this.treeGrid.pinColumn("Title");
-this.treeGrid.unpinColumn("Name");
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```typescript
-this.hierarchicalGrid.pinColumn("Artist");
-this.hierarchicalGrid.unpinColumn("Debut");
-```
-}
-
-両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因として列がすでにそのステートになっていることがあります。[`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) は、@@igComponent よりピン固定領域が大きいか同じサイズの場合に失敗します。以下はその例です。
-
-@@if (igxName === 'IgxGrid') {
-```html
-<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
-    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
-    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
-</igx-grid>
-```
-
-```typescript
-var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
-```
-
-`AthleteNumber` 列をピン固定すると、ピン固定領域が @@igComponent の幅より大きくなります。
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid #treeGrid [data]="data" [width]="300px" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
-    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
-    <igx-column [field]="Title" [width]="200px"></igx-column>
-</igx-tree-grid>
-```
-
-```typescript
-var succeed = this.treeGrid.pinColumn("Title"); // pinning fails and succeed will be false
-```
-
-`Title` 列をピン固定すると、ピン固定領域が @@igComponent の幅より大きくなります。
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'800px'" #hierarchicalGrid>
-    <igx-column [field]="Artist" [width]="200px" [pinned]="true"></igx-column>
-    <igx-column [field]="Debut" [width]="200px"></igx-column>
-</igx-tree-grid>
-```
-
-```typescript
-var succeed = this.hierarchicalGrid.pinColumn("Artist"); // pinning fails and succeed will be false
-```
-
-`Artist` 列をピン固定すると、ピン固定領域が @@igComponent の幅より大きくなります。
-}
-
-列をピン固定すると、一番右に配置されたピン固定列の右にピン固定されます。ピン固定列の順序を変更するには、[`onColumnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnpinning) イベントでイベント引数の [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
-
-@@if (igxName === 'IgxGrid') {
-```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
-```
-
-```typescript
-public columnPinning(event) {
-    if (event.column.field === "Name") {
-        event.insertAtIndex = 0;
-    }
-}
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-tree-grid>
-```
-
-```typescript
-public columnPinning(event) {
-    if (event.column.field === "Name") {
-        event.insertAtIndex = 0;
-    }
-}
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'800px'" 
-        (onColumnPinning)="columnPinning($event) #hierarchicalGrid></igx-hierarchical-grid> 
-```
-
-```typescript
-public columnPinning(event) {
-    if (event.column.field === "Artist") {
-        event.insertAtIndex = 0;
-    }
-}
-```
 }
 
 ### ピン固定の制限

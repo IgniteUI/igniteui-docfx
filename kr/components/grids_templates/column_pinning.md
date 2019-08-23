@@ -293,8 +293,8 @@ $custom-palette: igx-palette(
 );
 ```   
 
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
-After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+
 
 ```scss
 $custom-theme: igx-grid-theme(
@@ -305,7 +305,7 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-The `$custom-theme` contains the same properties as the first one, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its' primary and secondary colors, with a given color variant.   
+The `$custom-theme` contains the same properties as the first one, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its primary and secondary colors, with a given color variant.   
 
 #### Defining custom schemas
 One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
