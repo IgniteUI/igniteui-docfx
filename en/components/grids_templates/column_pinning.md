@@ -259,22 +259,77 @@ This section will provide you with hints what to do if you are having trouble wi
 @@if (igxName === 'IgxGrid') {
 ### Styling   
 
-To begin the customization of the predefined column pinning layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+The IgxGrid allows custom stylization through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.        
 
+#### Importing global theme
+To begin styling of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
+#### Defining custom theme
 One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the feature as desired.   
 
 ```scss
 $custom-theme: igx-grid-theme(
     $pinned-border-width: 5px,
     $pinned-border-style: double,
-    $pinned-border-color: #000280
+    $pinned-border-color: #FFCD0F,
+    $cell-active-border-color: #FFCD0F
+);
+```    
+
+#### Defining a custom color palette
+In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+ ```scss
+$primary-color: #292826;
+$secondary-color: #ffcd0f;
+
+$custom-palette: igx-palette(
+  $primary: $primary-color,
+  $secondary: $secondary-color
+);
+```   
+
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
+After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+
+```scss
+$custom-theme: igx-grid-theme(
+    $pinned-border-width: 5px,
+    $pinned-border-style: double,
+    $pinned-border-color: igx-color($custom-palette, "secondary", 500),
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 500)
+);
+```   
+
+The `$custom-theme` contains the same properties as the first one, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its' primary and secondary colors, with a given color variant.   
+
+#### Defining custom schemas
+One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    pinned-border-width: 5px,
+    pinned-border-style: double,
+    pinned-border-color: (igx-color:("secondary", 500)),
+    cell-active-border-color: (igx-color:("secondary", 500))
+));
+```   
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.     
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
 );
 ```
 
+#### Aplying the custom theme
 After providing the function with the required parameters, one has to **include** the component mixins.  
 ```scss
 @include igx-grid($custom-theme);
@@ -290,7 +345,7 @@ After providing the function with the required parameters, one has to **include*
     }
 }
 ```
-<div class="sample-container loading" style="height:605px">
+<div class="sample-container loading" style="height:506px">
     <iframe id="grid-pinning-styling" src='{environment:demosBaseUrl}/grid/grid-pinning-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
