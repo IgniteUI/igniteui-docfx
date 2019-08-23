@@ -104,7 +104,14 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: grid/row_selection.md
+          new: true
+        - name: Cell selection
+          href: grid/cell_selection.md
+          new: true
     - name: Searching
       href: grid/search.md
       new: false
