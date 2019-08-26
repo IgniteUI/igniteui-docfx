@@ -45,17 +45,16 @@ ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 
 ### 構成の要件
 
-このプロジェクトは、REST APIサービスを使用する単一ページアプリ用にセットアップされているため、`AuthenticationService` を使用してリクエストを次の URL に送信します。
+このプロジェクトは、REST API サービスを使用する単一ページアプリ用にセットアップされているため、`AuthenticationService` を使用してリクエストを次の URL に送信します。
 - `/login` - ユーザー名とパスワードでログインします。
 - `/register` - ユーザー情報で登録します。
 - `/extlogin` - 外部ソースからユーザー情報を渡します。
 
-すべてのエンドポイントは JSON Wen Token (JWT) を返すことが期待されています。
- or an error state with message. 
+すべてのエンドポイントは、JSON Wen Token（JWT） またはメッセージとともにエラー状態を返す必要があります。
 
 > **注:**デモンストレーションの目的で、プロジェクトには要求をインターセプトする `services/fake-backend.service.ts` があります。`authentication.module.ts` の `BackendProvider` は、本番環境では使用しないでください。開発の開始時に、プロバイダーとファイルの両方を削除する必要があります。
 
-他の認証モデルと同様に、JWT-s を使用するにはセキュリティ上の考慮事項が必要です。特に、REST API から受信したトークンはクライアントに保存されます。開発中にアプリをシームレスにリロードするために、ユーザー データはブラウザーのローカル ストレージに保存されますが、XSS 攻撃に対しては潜在的に脆弱になる可能性があります。
+他の認証モデル同様、JWT-s を使用する際にはセキュリティを考慮する必要があります。特に、REST API から受信したトークンはクライアントに保存されます。開発中にアプリをシームレスにリロードするために、ユーザー データはブラウザーのローカル ストレージに保存されますが、XSS 攻撃に対しては潜在的に脆弱になる可能性があります。
 
 > **注:**実稼働前にローカル ストレージを無効にします。アプリの要件でトークンを保護するための代替ルートが許可されている場合、またはトークンを保護するための代替ルートをとる場合にのみ、トークンをメモリに保持することを検討してください。クッキーを使用する (CSRF 保護を検討する) ことも代替手段ですが、トークン署名または追加の「指紋」を強化されたクッキーに分割する方法もあります。
 
@@ -83,7 +82,7 @@ Google アカウントのサインインなどで取得する必要がある場�
 
 - https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (more detailed version)
 
-プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。When creating the Google OAuth 2.0 client ID for development you can provide `http://localhost:4200/redirect-google` as the redirect URI.詳細については、[リダイレクト URL](#provider-details) をご覧ください。
+プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。開発用の Google OAuth 2.0 クライアント ID を作成するとき、リダイレクト URI として `http://localhost:4200/redirect-google` を指定できます。詳細については、[リダイレクト URL](#provider-details) をご覧ください。
 
 Id (`123456789.apps.googleusercontent.com`) を取得したら、以下のようにプロジェクトの Google プロバイダーを有効にできます。
 ```ts
@@ -125,6 +124,6 @@ https://developers.facebook.com/docs/apps/#register
 
 アプリがホストされる場所で URL を決定します。たとえば、デフォルトで最初のアプリ実行時は `http://localhost:4200` になります。
 
-\* OpenID Connect functionality implemented using https://github.com/damienbod/angular-auth-oidc-client
+\* https://github.com/damienbod/angular-auth-oidc-client を使用して実装された OpenID Connect 機能
 
-\** Facebook Connect functionality implemented using Facebook JS SDK
+\** Facebook JS SDK を使用して実装された Facebook Connect 機能

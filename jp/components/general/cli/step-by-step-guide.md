@@ -1,4 +1,4 @@
-﻿-->
+﻿---
 title: ステップバイステップ ガイド
 _description: ステップバイステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
@@ -26,7 +26,7 @@ ig new
     </a>
 </div>
 
-> **注** ステップバイステップ モードは Inquirer.js に依存しています。サポートされている端末を参照してください。
+> **注** ステップバイステップ モードは Inquirer.js に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals) を参照してください。
 
 
 
