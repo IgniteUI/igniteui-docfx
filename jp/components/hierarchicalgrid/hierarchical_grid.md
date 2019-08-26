@@ -256,7 +256,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 The igxHierarchicalGrid can be stylized through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.        
 
 #### Importing global theme   
-To begin the styling of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+To begin the styling of the predefined hierarchical grid layout, one needs to import the `index` file, where all styling functions and mixins are located.   
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
