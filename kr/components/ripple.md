@@ -105,6 +105,95 @@ for other browsers.
 > [!NOTE]
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
 
+### Styling
+The IgxRipple allows custom stylization through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
+
+#### Importing global theme
+To begin styling of the predefined ripple layout, one needs to import the `index` file, where all styling functions and mixins are located.  
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```   
+
+#### Defining custom theme
+One can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.   
+   
+
+```scss
+$custom-theme: igx-ripple-theme(
+  $color: #FFCD0F
+);
+```   
+
+#### Defining a custom color palette
+In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+```scss
+$black-color: #494949;
+$yellow-color: #ffcd0f;
+
+$custom-palette: igx-palette(
+    $primary: $black-color,
+    $secondary: $yellow-color
+);
+```   
+
+After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+
+```scss
+$custom-theme: igx-ripple-theme(
+    $color: igx-color($custom-palette, "secondary", 500)
+);
+```
+
+#### Defining custom schemas
+One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_dark_ripple`.   
+
+```scss
+$custom-ripple-schema: extend($_dark-ripple, (
+    color: (igx-color("secondary", 500))
+));
+```   
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+
+```scss
+$my-custom-schema: extend($dark-schema, (
+    igx-ripple: $custom-ripple-schema
+));
+
+$custom-theme: igx-ripple-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### Applying the custom theme
+After providing the function with the required parameters, one has to **include** the component mixins.  
+```scss
+@include igx-ripple($custom-theme);
+```
+
+ >[!NOTE]
+  > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one.  
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-ripple($custom-theme);
+    }
+}
+```   
+
+#### Demo
+<div class="sample-container loading" style="height:300px">
+    <iframe id="ripple-styling-sample-iframe" src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### API References
 <div class="divider--half"></div>
 
