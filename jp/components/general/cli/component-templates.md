@@ -54,7 +54,6 @@ _language: ja
 |awesome-grid        | <code>ig add awesome-grid newAwesomeGrid</code><details>カスタムセルテンプレートを含む IgxGrid。</details>          | セル テンプレートを含み、コントロールをセルに埋め込める [IgxGrid](../../grid/grid.md)。          |
 |crm-grid        | <code>ig add crm-grid newCrmGrid</code><details>カスタム検索実装を含む IgxGrid。</details>          | カスタム検索実装を含む [IgxGrid](../../grid/grid.md)。           |
 |fintech-grid        | <code>ig add fintech-grid newFinTechGrid</code><details>毎秒数千のライブ更新が可能な IgxGrid。</details>          | [IgxGrid](../../grid/live_data.md) 1 秒あたり数千の更新を処理するライブ更新デモ。           |
-|fintech-tree-grid        | <code>ig add fintech-tree-grid newFinTechTreeGrid</code><details>毎秒数千のライブ更新が可能な IgxGrid </details>          | [IgxTreeGrid](../../treegrid/live_data.md) 
-1 秒あたり数千の更新を処理するライブ更新デモ。          |
+|fintech-tree-grid        | <code>ig add fintech-tree-grid newFinTechTreeGrid</code><details>毎秒数千のライブ更新が可能な IgxGrid </details>          | [IgxTreeGrid](../../treegrid/live_data.md) 1 秒あたり数千の更新を処理するライブ更新デモ。          |
 |login           | <code>ig add login newLogin</code><details>IgxInputGroup で作成された登録およびログインフォーム。</details> | [IgxInputGroup](../../input_group.md) で作成された登録およびログインフォーム。          |
 |weather-forecast           | <code>ig add weather-forecast newWeatherForecast</code><details>テンプレートを含む igxExpansionPanel.</details> | テンプレートは [IgxExpansionPanel](../../expansion_panel.md) を使用して、毎日の天気予報の詳細を表示します。          |

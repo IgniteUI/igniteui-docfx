@@ -80,7 +80,7 @@ export class AppModule {
 Google アカウントのサインインなどで取得する必要がある場合は、以下のプロバイダー固有のガイドに従ってください。
 - https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials
 
-- https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (more detailed version)
+- https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (詳細バージョン)
 
 プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。開発用の Google OAuth 2.0 クライアント ID を作成するとき、リダイレクト URI として `http://localhost:4200/redirect-google` を指定できます。詳細については、[リダイレクト URL](#provider-details) をご覧ください。
 
