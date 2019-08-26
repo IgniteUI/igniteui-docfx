@@ -140,7 +140,7 @@ The grouping UI supports the following keyboard interactions:
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
 ### Styling
-The IgxGrid allows stylization of its' cells through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.  
+The IgxGrid allows stylization of its cells through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.  
 
 #### Importing global theme
 To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.  
@@ -180,8 +180,7 @@ $custom-palette: igx-palette(
   $secondary: $yellow-color
 );
 ```
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors of the 
-After that using `igx-color`, a color from the newly generated color palette is easy to be obtained.   
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
 ```scss
 $custom-theme: igx-grid-theme(
     $group-row-background: igx-color($custom-palette, "primary", 300),
