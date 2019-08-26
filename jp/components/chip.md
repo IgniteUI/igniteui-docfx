@@ -204,7 +204,7 @@ To begin styling of the predefined chip layout, one needs to import the `index` 
 ```   
 
 #### Defining custom theme
-One can easily create a new theme, that extends the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) and accepts the parameters, required to customize the group by as desired.   
+One can easily create a new theme, that extends the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) and accepts the parameters, required to customize the chip as desired.   
    
 
 ```scss
