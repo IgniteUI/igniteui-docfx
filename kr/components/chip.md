@@ -295,6 +295,7 @@ After providing the function with the required parameters, one has to **include*
 }
 ```   
    
+#### Demo   
 <div class="sample-container loading" style="height:650px">
     <iframe id="chip-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
