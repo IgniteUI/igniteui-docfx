@@ -1,22 +1,25 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 編集|データの変更|Ignite UI for Angular |Infragistics
+title: Angular Grid 編集|データの変更|Ignite UI for Angular|Infragistics
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。 
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular TreeGrid 編集|データの変更|Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular HierarchicalGrid 編集|データの変更|Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
+_language: ja
 ---
 }
 
@@ -55,11 +58,11 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 }
 <div class="divider--half"></div>
 
-#### Cell Editing
+#### セルの編集
 
-<!-- ##### Editing through UI -->
+##### UI を介した編集
 
-編集モードに入るには、データ型固有の*編集テンプレート*を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
+特定のセルで編集モードに入るには、最初に列を [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) に設定する必要があります。データ型固有の編集テンプレートを使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
  - `string` データ型ではデフォルトのテンプレートは [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
  - `number` データ型のデフォルト テンプレートは **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"** を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が **0** に設定されます。
@@ -86,7 +89,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 > [!NOTE]
 > セルは、垂直/水平方向へのスクロールや @@igComponent 以外をクリックした場合も編集モードのままです。セル編集と行編集両方で有効です。
 
-<!-- ##### Editing through API -->
+##### API を介した編集
 
 プライマリキーが定義されている場合のみ IgxGrid API でもセル値を変更することができます。
 
@@ -117,7 +120,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ...
 ```
 }
-以外を更新したい場合
+更新するセルが @@igComponent の表示コンテナ外にある場合、新しい値は送信されないことに注意してください。
 
 セルを更新するその他の方法として [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) メソッドで直接更新する方法があります。
 
@@ -157,9 +160,11 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ...
 ```
 }
-<!-- 
-#### Cell Editing Templates
-If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
+
+#### セル編集テンプレート
+
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html) を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります。
+
 ```html
 <igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
     <ng-template igxCellEditor let-cell="cell">
@@ -167,11 +172,15 @@ If you want to provide a custom template which will be applied when a cell is in
     </ng-template>
 </igx-column>
 ```
+
 > [!NOTE]
-> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[編集イベント](#editing-events)をトリガーし、[トランザクション状態](batch-editing.md)に適用されます (トランザクションが有効な場合)。
+
 > [!NOTE]
-> The cell editing template directive (`igxCellEditor`) is different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
-For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration). -->
+> セル編集テンプレート ディレクティブ (`igxCellEditor`) は、[セル テンプレート(`igxCell`)](../grid/grid.md#cell-template) とは異なります。前者は、**編集モード**の列のセルの表示方法を処理し、編集されたセルの**編集値**を制御します。後者は、**編集モード外**での列のセルの表示方法を制御します。
+
+
+列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#columns-configuration)のドキュメントを参照してください。
 
 ### CRUD 操作
 
@@ -305,30 +314,38 @@ row.delete();
 
 <div class="divider--half"></div>
 
-<!-- ### Editing Events
+### 編集イベント
 
-The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and **Cell Editing** life cycle - when starting, committing or canceling editing.
-The events can be broken down as follows:
-| Event | Description | Arguments | Cancellable |
+グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row_editing.md)および**セルの編集**のライフサイクル-編集の開始、コミット、またはキャンセル時に発生します。
+
+イベントは次のように分類できます。
+
+| イベント | 説明 | 引数 | キャンセル可能 |
 |-------|-------------|-----------|-------------|
-| [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | Fires when a cell **enters edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | If `[rowEditing]` is enabled, fires when a row **enters edit mode** (after `onCellEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | Fires when a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | Fires when a cell exits edit mode **without committing** its value (e.g. by pressing `Escape`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | Fires when a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | Fires when a row exits edit mode **without committing** its values (e.g. by clicking the `Cancel` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-All of the above events can be cancelled. For example, if `onCellEditEnter` is cancelled, the cell will never enter edit mode.
-#### Cell validation on edit event
-Using the grid's editing events we can alter how the user interacts with the grid.
-In this example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll prevent it from reaching the data source by cancelling the event (`event.cancel = true`). We'll also display a custom error message using [`IgxToast`](../toast.md).
-The first thing we need to is bind to the grid's event:
+| [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | セルが**編集モードに入る**と発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | `[rowEditing]` が有効な場合、行が**編集モードに入る**と起動します (`onCellEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | true |
+| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | セルの値が**確定**されたときに発生します (Enter の押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | セルがその値を**コミットせず**に編集モードを終了すると起動します (`Esc` キーの押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | 編集モードの値の行が**コミット**されたときに発生します (行編集オーバーレイの`完了`ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | 行が値を**コミットせず**に編集モードを終了するときに発生します (行編集オーバーレイの`キャンセル`ボタンをクリックなど) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+
+上記のイベントはすべてキャンセルできます。たとえば、`onCellEditEnter` がキャンセルされた場合、セルは編集モードになりません。
+
+#### 編集イベントでのセル検証
+グリッドの編集イベントを使用して、ユーザーがグリッドを操作する方法を変更できます。
+この例では、[`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md)　を使用してカスタム エラーメッセージを表示します。
+
+最初に必要なことは、グリッドのイベントにバインドすることです。
+
 ```html
 <@@igSelector (onCellEdit)="handleCellEdit($event)"
 ...>
 ...
 </@@igSelector>
 ```
-The `onCellEdit` emits whenever **any** cell's value is about to be committed. In our `handleCellEdit` definition, we need to make sure that we check for our specific column before taking any action:
+
+`onCellEdit` は、セルの値がコミットされる直前に発生します。`handleCellEdit` の定義では、アクションを実行する前に特定の列を確認する必要があります。
+
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class MyGridEventsComponent {
@@ -349,7 +366,7 @@ export class MyGridEventsComponent {
     }
 }
 ```
-If the value entered in a cell under the **Ordered** column is larger than the available amount (the value under **Units in Stock**), the editing will be cancelled and a toast with an error message will be displayed.
+**注文済み**列の下のセルに入力された値が使用可能量 (**在庫数**の値) よりも大きい場合、編集はキャンセルされ、エラー メッセージ付きのトーストが表示されます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
@@ -377,15 +394,15 @@ export class MyTreeGridEventsComponent {
     }
 }
 ```
-Here, we are validating two columns. If the user tries to set an invalid value for an employee's **Age** (below 18) or their **Hire Date** (a future date), the editing will be cancelled (the value will not be submitted) and a toast with an error message will be displayed.
+ここでは、2 つの列を検証しています。ユーザーが従業員の**年齢** (18歳未満) または雇用日 (将来の日付) に無効な値を設定しようとすると、編集がキャンセルされ (値は送信されません)、エラー メッセージ付きのトースターが表示されます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class MyHGridEventsComponent {
     ...
-    public handleCellEdit(event: IGridEditEventArgs, grid: IgxGridBaseComponent) {
+    public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
-        const column = grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
         if (column.field === "Debut") {
             if (event.newValue > today.getFullYear()) {
                 this.toast.message = "The debut date must be in the past!";
@@ -402,16 +419,17 @@ export class MyHGridEventsComponent {
     }
 }
 ```
-Since we're passing the grid as a second argument in the `handleCellEdit` calls, we're using the passed grid's columns to find to which column the cell belongs. With the above validation in place, when a user tries to change an artist's **Debut** year or an album's **Launch Date**, the grid will not allow any dates that are greater than today.
+`handleCellEdit` 呼び出しの 2 番目の引数としてグリッドを渡すため、渡されたグリッドの列を使用して、セルが属する列を見つけます。上記の検証が行われている場合、ユーザーがアーティストの**デビュー**年またはアルバムの**発売日**を変更しようとした際に、グリッドは今日よりも後の日付を許可しません。
 }
-The result of the above validation being applied to our `@@igSelector` can be seen in the below demo:
+
+以下は、上記の検証が `@@igSelector` に適用された結果のデモです。
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-editing-events-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-events' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -420,7 +438,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -429,29 +447,30 @@ The result of the above validation being applied to our `@@igSelector` can be se
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
 
-### Styling
 
-The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+### スタイル設定
 
-In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
+@@ igxName で [Ignite UI for Angular Theme Library](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
-In order to use the [Ignite UI Theming Library](../themes/component-themes.md), we must first import the theme `index` file in our global styles:
+以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
-#### Importing style library
+[Ignite UI Theming ライブラリ](../themes/component-themes.md)を使用するには、まずグローバル スタイルでテーマ インデックス ファイルをインポートする必要があります。
+
+#### スタイル ライブラリのインポート
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 ```
-Now we can make use of all of the functions exposed by the Ignite UI for Angular theme engine.
+以上で Ignite UI for Angular テーマ エンジンによって公開されているすべての機能を使用できます。
 
-#### Defining a palette
+#### パレットの定義
 
-After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palette.md):
+インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palette.md) でパレットを作成しましょう。
 
 ```scss
 $white: #fff;
@@ -460,9 +479,9 @@ $blue: #4567bb;
 $color-palette: igx-palette($primary: $white, $secondary: $blue);
 ```
 
-#### Defining themes
+#### テーマの定義
 
-We can now define the theme using our palette. The cells are styled by the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme), so we can use that to generate a theme for our @@igxName:
+これで、パレットを使用してテーマを定義できます。セルは [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
 ```scss
 $custom-grid-theme: igx-grid-theme(
@@ -473,26 +492,26 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Applying the theme
+#### テーマを適用
 
-The easiest way to apply our theme is with a `sass` `@include` statement in the global styles file:
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
 @include igx-grid($custom-grid-theme); 
 ```
 
-This way, the theme will apply to **all** grids in our application. If we wish to apply this custom styling only to a specific component, we need to scope the theme.
+これにより、テーマはアプリケーションの**すべて**のグリッドに適用されます。このカスタム スタイルを特定のコンポーネントにのみ適用する場合は、テーマのスコープを設定する必要があります。
 
-#### Scoped component theme
+#### スコープ コンポーネント テーマ
 
-In order for the custom theme do affect only our specific component, we can move all of the styles we just defined from the global styles file to our custom component's style file (including the [import](#importing-style-library) of the `index` file).
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#importing-style-library) を含む)。
 
-This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation), our styles will be applied only to our custom component.
+このように、Angular の [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  >[!NOTE]
- >We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
+ >ステートメントがコンポーネント外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
 ```scss
 :host {
@@ -503,9 +522,9 @@ This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Com
 }
 ```
 
-#### Styling Demo
+#### デモのスタイル設定
 
-In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling)
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling))。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -513,7 +532,7 @@ In addition to the steps above, we can also style the controls that are used for
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -522,7 +541,7 @@ In addition to the steps above, we can also style the controls that are used for
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -531,12 +550,10 @@ In addition to the steps above, we can also style the controls that are used for
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
-
 <div class="divider--half"></div>
--->
 
 ### API リファレンス
 
