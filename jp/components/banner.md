@@ -16,7 +16,7 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
     <iframe id="banner-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
@@ -54,7 +54,7 @@ Banner コンポーネントを表示するには、[`open()`]({environment:angu
 <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
-Bannerは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。Bannerは、閉じるための最小限のユーザー操作 (1-2 クリックなど) を要求する非侵入型コンテンツ表示します。
+Banner は、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。Banner は、閉じるための最小限のユーザー操作 (1-2 クリックなど) を要求する非侵入型コンテンツ表示します。
 
 #### ベーシック Banner デモ
 
@@ -62,7 +62,7 @@ Bannerは、要素がページ テンプレートに挿入された場所にそ�
     <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### Banner のテンプレート化
@@ -71,7 +71,7 @@ Bannerは、要素がページ テンプレートに挿入された場所にそ�
 
 #### Banner メッセージの変更
 
-`igx-banner` タグに渡されるコンテンツを変更してBannerに表示されるメッセージを変更できます。以下は、’Connection' Bannerのコンテンツを変更してより多くの情報を提供します。
+`igx-banner` タグに渡されるコンテンツを変更して Banner に表示されるメッセージを変更できます。以下は、’Connection' Banner のコンテンツを変更してより多くの情報を提供します。
 
 ```html
     <!--banner.component.html-->
@@ -174,14 +174,14 @@ export class MyBannerComponent implements OnInit, OnDestroy {
     <iframe id="banner-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントは、[`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) にカスタム オープンの設定とアニメーションのクローズを許容する `Input` プロパティを公開します。カスタム アニメーションは、ユーザー定義または [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) から渡すことができます。Bannerで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。
+Banner コンポーネントは、[`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) にカスタム オープンの設定とアニメーションのクローズを許容する `Input` プロパティを公開します。カスタム アニメーションは、ユーザー定義または [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) から渡すことができます。Banner で使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。
 
-スライドインするためにBannerが使用するアニメーションを変更します。
+スライドインするために Banner が使用するアニメーションを変更します。
 
 ```html
 <!--banner.component.html-->
@@ -215,7 +215,7 @@ export class MyBannerComponent {
 </div>
 
 ### イベントにバインド
-Banner コンポーネントは状態の変更時にイベントを発生します。[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) と [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) と [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) はBannerが閉じるときにエミットされます。*Ing* イベント (`onOpening`, `onClosing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`onOpening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
+Banner コンポーネントは状態の変更時にイベントを発生します。[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) と [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) と [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) は Banner が閉じるときにエミットされます。*Ing* イベント (`onOpening`, `onClosing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`onOpening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
 
@@ -329,7 +329,7 @@ $custom-button-theme: igx-button-theme(
     <iframe id="banner-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 <div class="divider--half"></div>
