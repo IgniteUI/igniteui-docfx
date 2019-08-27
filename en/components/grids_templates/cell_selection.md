@@ -20,9 +20,12 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
+### Cell selection
+In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) there is now tree supported modes for cell selection, and you can easily switch between them by changing **cellSelection** property. You can disable cell selection, you can *select only one cell within the grid* or have the opportunity to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
+
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### @@igComponent Мulti-cell Selection
+#### @@igComponent Мulti-cell Selection
 
 The Multi-cell selection feature enables rich data select capabilities in the @@igComponent based on Material UI Grid. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods.
 How to select cells:
@@ -32,7 +35,7 @@ How to select cells:
 - Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
 - Keyboard multi-cell selection by using the `Ctrl + Arrow keys` and `Ctrl + Home/End` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
 - Clicking with the `Left Mouse key` while holding `Ctrl key` will add single cell ranges into the selected cells collection.
-- Continuous multiple cell selection is available, by clicking with the mouse and dragging. 
+- Continuous multiple cell selection is available, by clicking with the mouse and dragging.
 
 #### Demo
 
@@ -57,6 +60,15 @@ How to select cells:
 <div class="divider--half"></div>
 }
 
+#### Single selection
+
+When you set the **[cellSelection]="'single'"**, this allows you to have only one selected cell in the grid at a time. Also in the mode mouse drag will not work and instead of selecting a cell, this will make default text selection.
+
+**Note** When single cell is selected *`onSelection`* event is emitted, no matter if the selection mode is *`single`* or *`multiple`*. But in multi-cell selection mode when you select a range of cells *`onRangeSelection`* event is emitted.
+
+#### None selection
+If you want to disable cell selection you can just set **[cellSelection]="'single'"** property. In this mode when you click over the cell or try to navigate with keyboard only activation style is applied over the cell bu default, which is lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
+
 @@if (igxName !== 'IgxHierarchicalGrid') {
 #### Keyboard navigation interactions
 
@@ -74,7 +86,7 @@ How to select cells:
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> to select all cells from the focused cell till the first-most cell in the grid
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> to select all cells from the focused cell till the last-most cell in the grid
 
-> [!NOTE] 
+> [!NOTE]
 > Continuous scroll is possible only within Grid's body.
 
 ### Api usage
@@ -82,7 +94,7 @@ Below are the methods that you can use in order to select ranges, clear selectio
 
 ##### Select range
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value. 
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value.
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -94,7 +106,7 @@ this.grid1.selectRange(range);
 
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > Select range is additive operation. It will not clear your previous selection.
 
 ##### Clear cell selection
@@ -113,7 +125,7 @@ expectedData = [
     { ParentID: 147 }
 ];
 ```
-		
+
 2. If three cells from one column are selected:
 ```
 expectedData = [
@@ -158,7 +170,7 @@ expectedData = [
 ];
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return the selected cell data.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 
@@ -187,7 +199,7 @@ To get started with styling the selection, we need to import the `index` file, w
 ```scss
 // in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 #### Define colors
 
@@ -199,7 +211,7 @@ Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl
 ```
 
 #### Create custom theme
- 
+
 Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
 
 ```scss
@@ -223,7 +235,7 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
  > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
 
  ```scss
-    :host { 
+    :host {
         ::ng-deep {
             @include igx-grid($custom-grid-theme);
         }
@@ -251,9 +263,9 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>  
+<br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe"
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
@@ -265,9 +277,9 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 <div class="sample-container loading" style="height:620px">
     <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>  
+<br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe"
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>

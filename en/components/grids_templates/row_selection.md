@@ -22,7 +22,7 @@ _keywords: data select, igniteui for angular, infragistics
 
 ### @@igComponent Row Selection
 
-With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row. When a user clicks on the checkbox, the row will either become selected or deselected, enabling the user to select multiple rows of data.
+With row selection in Ignite UI for Angular, there is row selector column that precedes all other columns within the row. When a user clicks on the row selector, the row will either become selected or deselected, enabling the user to select multiple rows of data.
 
 #### Demo
 
@@ -55,14 +55,15 @@ With row selection in Ignite UI for Angular, there is a checkbox that precedes a
 }
 
 ### Setup
+In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** expose the following tree modes: **none**, **single** and **multiple**. Below we will take a look in each of them in more details.
 
 #### None Selection
 
-In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) by default row selection is disabled *([rowSelection]="'none'")*. So you can **not** select or deselect row through interaction with @@igComponent UI, the only way to complete these actions is to use the provided API methods like.
+In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) by default row selection is disabled, otherwise *([rowSelection]="'none'")*. So you can **not** select or deselect row through interaction with @@igComponent UI, the only way to complete these actions is to use the provided API methods.
 
 #### Single Selection
 
-Single row selection can be now easily setup using the @@igComponent's `rowSelection` property, which accept *GridSelectionMode* enumeration. As you probably guess, the only thing you need to do is to set `[rowSelection] = '"single"'` property. This gives you the opportunity to **select only one row within a grid**. When row is selected or deselected **onRowSelectionChange** event is emitted. This event gives you information about the new selection, old selection, the rows that has been added and removed from the old selection. Also the event is cancellable, so this allows you to prevent selection.
+Single row selection can be now easily setup, the only thing you need to do, is to set `[rowSelection] = '"single"'` property. This gives you the opportunity to **select only one row within a grid**. You can select a row by click over some cell or pressing *space* key when you focus a cell of the row, and of course you can select a row by clicking on row selector column. When row is selected or deselected **onRowSelectionChange** event is emitted. This event gives you information about the new selection, old selection, the rows that has been added and removed from the old selection. Also the event is cancellable, so this allows you to prevent selection.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -123,7 +124,7 @@ public handleRowSelection(event) {
 
 #### Multiple Selection
 
-To enable multiple row selection in [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) you just need to set [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multiple`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering. The row also can be selected when you click over some cell. If you have selected one row and click over some other holding *shift* key, this will select the whole range of rows. In this selection mode when you click over single row, the previos selected rows are deselected. If you *click* and hold *ctrl* key, the row will be selected and the previos selection will be preserved.
+To enable multiple row selection in [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multiple`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering. The row also can be selected when you click over some cell or press *space* key when cell is focused. If you have selected one row and click over some other holding *shift* key, this will select the whole range of rows. In this selection mode when you click over single row, the previous selected rows are deselected. If you *click* and hold *ctrl* key, the row will be selected and the previous selection will be preserved.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -171,18 +172,17 @@ public selection = true;
 ```
 }
 
+**Notes**
 @@if (igxName !== 'IgxTreeGrid') {
-**Note:** In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
+* In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
 }
-
-**Note:** If filtering is in place, [`selectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectallrows) and [`deselectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectallrows) select/deselect all *filtered* rows.
-
 @@if (igxName !== 'IgxTreeGrid') {
-**Note:** When @@igComponent has remote virtualization then clicking the header checkbox will select/deselect all records that are currently in the grid. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the @@igComponent on demand, it is a limitation that the newly loaded rows are not selected.
+* When @@igComponent has remote virtualization then clicking the header checkbox will select/deselect all records that are currently in the grid. When new data is loaded in the @@igComponent on demand newly added rows will not be selected and it is a limitation, so you should handle that behaviour by yourself and you can select this rows by using the provided API methods.
 }
-
-**Note:** Row selection will trigger [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) event.
-**Note:** When row selection is enabled row selectors are displayed, but if you don't want to show them, you can set `[hideRowSelectors] = true`.
+* Row selection will trigger [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) event.
+* When row selection is enabled row selectors are displayed, but if you don't want to show them, you can set `[hideRowSelectors] = true`.
+* If filtering is in place, [`selectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectallrows) and [`deselectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectallrows) will select/deselect all *filtered* rows by default, but if you call them with parameter *false*: `selectAllRows(false)` and `deselectAllRows(false)` this will select/deselect all data rows in the grid.
+* When you switch between rowSelection modes runtime, this will clear prevoius row selection state.
 
 
 ### Code Snippets
