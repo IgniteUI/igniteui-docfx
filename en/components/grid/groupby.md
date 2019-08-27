@@ -200,7 +200,7 @@ $custom-palette: igx-palette(
 );
 ```
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors. 
-After that using `igx-color`, a color from the newly generated color palette is easily obtained.   
+  
 ```scss
 $custom-theme: igx-grid-theme(
     $group-row-background: igx-color($custom-palette, "primary", 300),
