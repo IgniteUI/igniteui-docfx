@@ -218,7 +218,7 @@ After providing the function with the required parameters you have to **include*
 ```    
 
 #### Demo
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:320px">
     <iframe id="icon-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
