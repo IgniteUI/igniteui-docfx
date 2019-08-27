@@ -141,17 +141,27 @@ Integration between Group By and Summaries is described in the [Summaries](summa
    - 칩의 개별 요소를 포커스할 수 있으며 <kbd>ENTER</kbd> 키를 사용하여 상호 작용할 수 있습니다.
 
 ### Styling
-The IgxGrid allows stylization of its cells through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.  
+
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+
+In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
 #### Importing global theme
-To begin the customization of the predefined group by feature layout, one needs to import the `index` file, where all styling functions and mixins are located.  
+
+To begin the customization of the Group By feature, you need to import the `index` file, where all styling functions and mixins are located.
+
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
+
 #### Defining custom theme
-One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the group by as desired.   
+
+Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme), because it's used in the Group By feature.
+
 ```scss
+
 $custom-theme: igx-grid-theme(
+    /* Group By properties that affect styling */
     $group-row-background: #494949,
     $group-row-selected-background: #383838,
     $group-label-column-name-text: #f8f8f8,
@@ -165,11 +175,20 @@ $custom-theme: igx-grid-theme(
     $row-selected-background: #fff6d3,
     $row-selected-text-color: #000,
     $drop-indicator-color: #FFCD0F
+    /* add other features properties here... */
+);
+
+/* Chip theme will style the chips in the Group By area */
+$custom-chips-theme: igx-chip-theme(
+    $background: #494949,
+    $text-color: #f8f8f8,
+    $hover-text-color: #e7e7e7
 );
 ```
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+
+In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -181,7 +200,8 @@ $custom-palette: igx-palette(
   $secondary: $yellow-color
 );
 ```
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors. 
+After that using `igx-color`, a color from the newly generated color palette is easily obtained.   
 ```scss
 $custom-theme: igx-grid-theme(
     $group-row-background: igx-color($custom-palette, "primary", 300),
@@ -195,10 +215,16 @@ $custom-theme: igx-grid-theme(
     $expand-icon-hover-color: igx-color($custom-palette, "secondary", 300),
     $cell-active-border-color: igx-color($custom-palette, "secondary", 600)
 );
+
+$custom-chips-theme: igx-chip-theme(
+    $background: igx-color($custom-palette, "primary", 300),
+    $text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $hover-text-color: igx-contrast-color($custom-palette, "primary", 600)
+);
 ```
 #### Defining custom schemas
-One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme. 
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
     group-row-background: (igx-color:('secondary', 100)),
@@ -225,22 +251,33 @@ $custom-theme: igx-grid-theme(
 ```
 
 #### Applying the custom theme
-After providing the function with the required parameters, one has to **include** the component mixins.  
+
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 ```scss
 @include igx-grid($custom-theme);
+@include igx-chip($custom-chips-theme);
 ```
 
->[!NOTE]
- > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one. 
+#### Scoped component theme
+
+In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
 ```scss
 :host {
     ::ng-deep {
         @include igx-grid($custom-theme);
+        @include igx-chip($custom-chips-theme);
     }
 }
 ```
-   
+
 #### Demo   
 
 <div class="sample-container loading" style="height:570px">
