@@ -193,6 +193,9 @@ All that's left is to properly scope our newly created themes. Here we will assu
 - IE で無効なコンボで BackSpace キーが使用できる問題。
 - Combo は高さのサイズ変更のための入力はありません。 [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)  は、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
+> [!NOTE]
+> `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxCombo`. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
+
 ## その他のリソース
 
 <div class="divider--half"></div>

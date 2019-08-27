@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar Line Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a polar line chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'PolarLineSeries']
 ---
 
 ## Polar Line Chart
 
-[`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) is rendered using a collection of straight lines connecting data points. The [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) can be plotted in the same data chart and they can be overlaid on each other to show differences and similarities between data sets.
+The Ignite UI for Angular polar area chart belongs to a group of polar charts and is rendered using a collection of straight lines connecting data points. The [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) can be plotted in the same data chart and they can be overlaid on each other to show differences and similarities between data sets.
 
 ### Demo
 
@@ -30,7 +30,7 @@ The Angular data chart component provides various types of axes but only the fol
 
 ### Required Data
 
-Usage of the [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) has the following data requirements:
+The [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html).
@@ -46,7 +46,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 ### Required Modules
 
-In order to use the [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html), you need to import the following modules in your app during load:
+Creation of the [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -73,9 +73,9 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 })
 ```
 
-### Code Example
+### Code Example - Polar Line Series
 
-This code demonstrates how to create an instance of data chart with [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart
@@ -93,8 +93,6 @@ This code demonstrates how to create an instance of data chart with [`IgxPolarLi
     </igx-polar-line-series>
 </igx-data-chart>
 ```
-
-Note that you can also use above code to create other type of polar series by replacing [`IgxPolarLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) with name of polar series that you want to render.
 
 ### Additional Resources
 

@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Spline Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a spline area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Category Spline Area Chart
+## Spline Area Chart
 
-[`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) belongs to a group of category series and it is rendered using a collection of points connected by smooth curves of spline with the area below the spline filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) is identical to the [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) in all aspects except that line connecting data points has spline interpolation and smoothing for improved presentation of data.
+The Ignite UI for Angular spline area chart belongs to a group of category charts and it is rendered using a collection of points connected by smooth curves of spline with the area below the spline filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The Angular spline area chart is identical to the Angular area chart in all aspects except that line connecting data points has spline interpolation and smoothing for improved presentation of data.
 
 ### Demo
 
@@ -32,7 +32,7 @@ The Angular data chart component provides various types of axes but only the fol
 
 ### Required Data
 
-[`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) have the following data requirements:
+The [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
@@ -47,7 +47,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### Required Modules
 
-The category series require the following modules:
+Creation of the [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -71,9 +71,9 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example - Area Series
+### Code Example - Spline Area Series
 
-This code demonstrates how to create an instance of data chart with [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

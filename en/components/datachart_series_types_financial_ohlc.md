@@ -5,11 +5,9 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 ---
 
-## Financial Series
+## Financial OHLC Chart
 
-<!-- This topic explains various types of financial series in the Angular data chart component. Financial series is a group of the simplest and most common form of data chart series that take financial data such as stock prices and render it as collection of OHLC bars or candlesticks along a horizontal line (e.g. `FinancialPriceSeries`). -->
-
-TODO TODO TODO
+The Ignite UI for Angular financial price chart in `OHLC` display mode is used to plot stock prices, and show the stock’s High, Low, Open, and Close prices for each day. Each data point is plotted as a vertical line with horizontal perpendicular lines on both the left and right side. The vertical line indicates the span between high and low values of an investment. The top of the vertical line indicates the highest price during a session and the bottom of the vertical line indicates the lowest price during a session. The horizontal lines indicate the span between the opening and closing values of an investment. The horizontal line on the left-hand side of the vertical line indicates the opening value of a session. The horizontal line on the right-hand side of the vertical line indicates the closing value of a session.
 
 ### Demo
 

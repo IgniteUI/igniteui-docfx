@@ -1,13 +1,13 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar Spline Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a polar spline area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'PolarSplineAreaSeries']
 ---
 
 ## Polar Spline Area Chart
 
-[`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) has a shape of a filled region enclosed by a collection of spline lines connecting data points which are located at the polar (angle/radius) coordinates. The [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) can be plotted in the same data chart and they can be overlaid on each other to show the differences and similarities between data sets.
+The Ignite UI for Angular polar spline area chart belongs to a group of polar charts and has a shape of a filled region enclosed by a collection of spline lines connecting data points which are located at the polar (angle/radius) coordinates. The [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) can be plotted in the same data chart and they can be overlaid on each other to show the differences and similarities between data sets.
 
 ### Demo
 
@@ -30,7 +30,7 @@ The Angular data chart component provides various types of axes but only the fol
 
 ### Required Data
 
-Usage of the [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) has the following data requirements:
+The [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html).
@@ -46,7 +46,7 @@ this.state = { dataSource: SamplePolarData.create() }
 
 ### Required Modules
 
-In order to use the [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html), you need to import the following modules in your app during load:
+Creation of the [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -73,9 +73,9 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 })
 ```
 
-### Code Example
+### Code Example - Polar Spline Area Chart
 
-This code demonstrates how to create an instance of data chart with [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart
@@ -93,8 +93,6 @@ This code demonstrates how to create an instance of data chart with [`IgxPolarSp
     </igx-polar-spline-area-series>
 </igx-data-chart>
 ```
-
-Note that you can also use above code to create other type of polar series by replacing [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) with name of polar series that you want to render.
 
 ### Additional Resources
 

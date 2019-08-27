@@ -43,6 +43,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 次にテンプレートでバインドします。
 ```html
 <igx-select>
+    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
