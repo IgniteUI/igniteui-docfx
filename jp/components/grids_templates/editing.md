@@ -163,7 +163,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 #### セル編集テンプレート
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html) を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります。
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html) を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります。
 
 ```html
 <igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
