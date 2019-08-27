@@ -7,7 +7,7 @@ _language: ja
 
 ## 認証プロジェクト テンプレート
 
-Ignite UI CLI は、[`新しい`コマンド](../cli-overview.md#commands)またはステップバイステップモードを使用するときに選択するプロジェクト (プロジェクトテンプレート) の複数のバージョンのサポートを提供します。
+Ignite UI CLI は、[`new` コマンド](../cli-overview.md#commands)またはステップバイステップモードを使用するときに選択するプロジェクト (プロジェクトテンプレート) の複数のバージョンのサポートを提供します。
 
 Ignite UI CLI を使用して Angular プロジェクト用の Ignite UI を作成する場合に、ユーザー管理でアプリを開始するために追加セットアップをできるだけ必要としないクライアント側認証モジュールの基本的な実装を含むテンプレートを選択できます。
 
@@ -80,7 +80,7 @@ export class AppModule {
 Google アカウントのサインインなどで取得する必要がある場合は、以下のプロバイダー固有のガイドに従ってください。
 - https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials
 
-- https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (詳細バージョン)
+- https://support.google.com/cloud/answer/6158849?hl=ja&ref_topic=6262490 (詳細バージョン)
 
 プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。開発用の Google OAuth 2.0 クライアント ID を作成するとき、リダイレクト URI として `http://localhost:4200/redirect-google` を指定できます。詳細については、[リダイレクト URL](#provider-details) をご覧ください。
 
@@ -101,7 +101,7 @@ export class AppModule {
 
 このガイドに従って [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
 
-https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-register-an-app
+https://docs.microsoft.com/ja-jp/azure/active-directory/develop/quickstart-register-app
 
 Facebook:
 
