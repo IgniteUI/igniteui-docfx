@@ -465,7 +465,9 @@ $custom-button-theme: igx-button-theme(
 特定の `igx-drop-down` のスタイルをアプリ内の他のものとは異なるようにする場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+ >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要があります。
+
+ 
 
 一方、カスタム テーマが他のコンポーネントの子孫に影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 

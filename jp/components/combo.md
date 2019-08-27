@@ -108,7 +108,7 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 ## スタイル設定
 [Ignite UI for Angular テーマ ](themes/index.md)を使用して、**igx-combo** の外観を変更できます。 
-`Igx-combo` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-downスタイリング ガイド](drop_down.md#styling)をご覧ください。
+`Igx-combo` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。
 さらに、`IgxCombo` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxCombo` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) スタイル ガイドを参照できます。また `IgxCheckbox` も関連コンポーネントです。詳細については、[`igx-checkbox styling guide`](checkbox.md#styling) を確認してください。
 
 ### コード スニペット
