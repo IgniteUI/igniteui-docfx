@@ -109,13 +109,13 @@ for other browsers.
 The IgxRipple allows custom stylization through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
 
 #### Importing global theme
-To begin styling of the predefined ripple layout, one needs to import the `index` file, where all styling functions and mixins are located.  
+To begin styling of the predefined ripple layout, you need to import the `index` file, where all styling functions and mixins are located.  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```   
 
 #### Defining custom theme
-One can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.   
+You can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.   
    
 
 ```scss
@@ -125,7 +125,7 @@ $custom-theme: igx-ripple-theme(
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Instead, a greater flexibility could be achieved, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -147,7 +147,7 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### Defining custom schemas
-One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+You could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_dark_ripple`.   
 
 ```scss
@@ -169,7 +169,7 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### Applying the custom theme
-After providing the function with the required parameters, one has to **include** the component mixins.  
+After providing the function with the required parameters you have to **include** the component mixins.  
 ```scss
 @include igx-ripple($custom-theme);
 ```
@@ -183,10 +183,13 @@ After providing the function with the required parameters, one has to **include*
         @include igx-ripple($custom-theme);
     }
 }
-```   
+```    
+
+>[!NOTE]
+  > A color that is set using the `igxRiple` directive, would take prevalance from the one, set within a custom theme.  
 
 #### Demo
-<div class="sample-container loading" style="height:300px">
+<div class="sample-container loading" style="height:700px">
     <iframe id="ripple-styling-sample-iframe" src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
