@@ -280,7 +280,7 @@ export class MyClass {
 - `IgxSuffix` が使用されると、拡張矢印が常に最後に表示されます。
 
 ### カスタム オーバーレイ設定の選択
-`Igx-select` では[OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
+`Igx-select` では [OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
 
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
@@ -429,5 +429,5 @@ $custom-select-theme: igx-drop-down-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
