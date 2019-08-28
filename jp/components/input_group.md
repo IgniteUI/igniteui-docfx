@@ -99,7 +99,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 
 ### スタイル設定
 
-入力グループ コンポーネントは、[Ignite UI Theming ライブラリ](themes/index.md) を使用し、igx-input-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) によって公開されるプロパティの大きな配列を持っています。
+入力グループ コンポーネントは、[Ignite UI Theming ライブラリ](themes/index.md) を使用し、[igx-input-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) によって公開されるプロパティの大きな配列を持っています。
 以下の手順では、入力のラベル、境界線、テキスト、および背景のスタイル設定を行います。 
 
 #### スタイルを含む
@@ -110,7 +110,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-これで、カスタム [palette](themes/palette.md)の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
+これで、カスタム [palette](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
 
 #### カラーパレットの定義
 

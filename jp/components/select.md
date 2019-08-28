@@ -103,7 +103,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ### イベントの発生
 `Igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
 
-#### Opend イベント
+#### Opened イベント
 - 現在ドロップ ダウンが展開されているかどうかを指定します。
 
 `onOpened` イベントを使用できます。
@@ -280,7 +280,7 @@ export class MyClass {
 - `IgxSuffix` が使用されると、拡張矢印が常に最後に表示されます。
 
 ### カスタム オーバーレイ設定の選択
-`Igx-select` では[OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
+`Igx-select` では [OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
 
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
@@ -358,7 +358,7 @@ export class MyClass implements OnInit {
 - `open` 関数で引数として、同様にテンプレートへカスタム設定を渡した場合、`open` 関数の引数を使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
 ## スタイル設定
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-select** appearance. 
+[Ignite UI for Angular Theming](themes/index.md) を使用して、 **igx-select** の外観を変更できます。
 `igx-select` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。
 さらに、`igx-select` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `igx-select` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) スタイル ガイドを参照できます。
 
@@ -431,5 +431,5 @@ $custom-select-theme: igx-drop-down-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
