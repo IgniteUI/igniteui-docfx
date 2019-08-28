@@ -15,13 +15,13 @@ _language: ja
 
 各タイプのトランザクションを追加する方法の例は、[トランザクションサービスの使用方法](transaction-how-to-use.md)のトピックで見ることができます。
 
-操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集約された `State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。  [`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
+操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集約された [`State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。  [`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
 
 トランザクションを追加する際、[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出して、保留中のトランザクションをオンにすることができます。[`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) を呼び出すまで、後続のトランザクションはすべて単一のトランザクションに蓄積されます。`true` を [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) に渡すと、蓄積されたすべてのトランザクションがトランザクションログと取り消しスタックに単一のトランザクションとして追加されます。
 
 ### igxBaseTransaction の使用
 
-グリッド モジュールは、トランザクション サービス (igxBaseTransactionService]（{environment：angularApiUrl} /classes/igxbasetransactionservice.html) の非常に基本的な実装を提供し、行編集機能を可能にする保留中のセッション機能のみを提供します。[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) と [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) は、行編集で複数のセルごとの操作を 1 つの変更にまとめることができます。  つまり、1 つのレコードの複数のセルを編集すると、1 つのトランザクションが作成され、行編集イベントのみを処理できます。
+グリッド モジュールは、トランザクション サービス ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) の非常に基本的な実装を提供し、行編集機能を可能にする保留中のセッション機能のみを提供します。[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) と [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) は、行編集で複数のセルごとの操作を 1 つの変更にまとめることができます。  つまり、1 つのレコードの複数のセルを編集すると、1 つのトランザクションが作成され、行編集イベントのみを処理できます。
 
 蓄積された状態が部分的なオブジェクトであるため、サービスを使用して、どのセルが編集されたかを確認し、その周りに UI を構築することもできます。
 
@@ -35,7 +35,7 @@ _language: ja
 ### igxTransactionService および igxHierarchicalTransactionService に関する一般情報
 
 
-`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、*access*、*manipulate* (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を*破棄またはコミット*するための API を公開します。
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、*access*、*manipulate* (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を*破棄またはコミット*するための API を公開します。
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、セル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。
 行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出してトランザクションサービスを保留状態に設定します。編集された各セルは、保留中のトランザクションログに追加されますが、メイントランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
