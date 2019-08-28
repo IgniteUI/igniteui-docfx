@@ -181,7 +181,7 @@ ig start
 ```
 
 #### 利用可能なコマンド
-使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)ページにあります。
+使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)にあります。
 
 | コマンド | エイリアス | 説明 |
 | --- | --- | --- |

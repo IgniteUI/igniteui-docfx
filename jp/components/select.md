@@ -103,7 +103,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ### イベントの発生
 `Igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
 
-#### Opend イベント
+#### Opened イベント
 - 現在ドロップ ダウンが展開されているかどうかを指定します。
 
 `onOpened` イベントを使用できます。
