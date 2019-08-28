@@ -67,7 +67,7 @@ When you set the **[cellSelection]="'single'"**, this allows you to have only on
 **Note** When single cell is selected *`onSelection`* event is emitted, no matter if the selection mode is *`single`* or *`multiple`*. But in multi-cell selection mode when you select a range of cells *`onRangeSelection`* event is emitted.
 
 #### None selection
-If you want to disable cell selection you can just set **[cellSelection]="'single'"** property. In this mode when you click over the cell or try to navigate with keyboard only activation style is applied over the cell bu default, which is lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
+If you want to disable cell selection you can just set **[cellSelection]="'none'"** property. In this mode when you click over the cell or try to navigate with keyboard, the cell is **not selected** only activation style is applied and is lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 #### Keyboard navigation interactions
