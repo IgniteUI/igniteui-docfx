@@ -154,7 +154,7 @@ ig add grid newGrid
     <code>--module</code> (alias: <code>-m</code>)
   </p>
   <p>
-    <i>note: module argument is applicable only in Angular projects.</i>
+    注: module 引数は、Angular プロジェクトでのみ適用できます。
   </p> 
   <p>
     新しいコンポーネントを登録するモジュールの、 /src/app/ folder を基準とした module.ts ファイルのパス。
