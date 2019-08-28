@@ -1,27 +1,27 @@
-﻿---
-title: Input Groups コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Input Groups は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
-_language: ja
+---
+title: Input Groups Component - Native Angular | Ignite UI for Angular
+_description: The Input Groups component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 ---
 
 ## Input Group
 
-Ignite UI for Angular Input Group は、簡単に使用できるデータ入力フォームを作成できます。データ入力を簡素化し、入力コントロールには検証やエラーの処理機能も提供します。
+Input groups in the Ignite UI for Angular controls allow developers to create easy-to-use and aesthetic forms. The user experiences simplicity with inputting data, and the inputs also provide mitigation for handling validation and errors.
 
-### Input Group デモ
+### Input Group Demo
 <div class="sample-container loading" style="height:800px">
-<iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-6' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-6' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
-Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
+### Usage
+The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design
+[**guidelines**](https://material.io/guidelines/components/text-fields.html).
 
-テンプレート駆動フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **FormsModule** をインポートします。
+To get started import all modules for Ignite UI components and the **FormsModule** in order to have working Template Driven Form:
 
 ```typescript
 // app.module.ts
@@ -38,14 +38,15 @@ import { FormsModule } from "@angular/forms";
 export class AppModule {}
 ```
 
+
 > [!NOTE]
-> [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、`igxLabel`、`igx-prefix`、`igx-suffix`、または [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用するには、`<igx-input-group>` コンテナにラップする必要があります。
+> To use any of the directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), `igxLabel`, `igx-prefix`, `igx-suffix` or [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), you have to wrap them in an `<igx-input-group>` container.
 
-#### Label および Input
-`igxLabel` および [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
+#### Label & Input
+You can read about the `igxLabel` and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
 
-#### Prefix と Suffix
-Ignite UI for Angular Prefix または Suffix を使用して入力にプレフィックスまたはサフィックスを追加できます。両方のディレクティブに HTML 要素、文字列、またはその他のコンポーネントを含むことができます。文字列 **prefix** (`+359`) および [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`) を持つ新しい入力フィールドを追加します。
+#### Prefix & Suffix
+If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Both directives can contain html elements, strings, icons or even other components. Let's add a new input field with string **prefix** (`+359`) and [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`):
 
 ```html
 <igx-input-group>
@@ -58,15 +59,14 @@ Ignite UI for Angular Prefix または Suffix を使用して入力にプレフ�
 </igx-input-group>
 ```
 
-以下は結果です。
-
+Here is how the sample looks:
 <div class="sample-container loading" style="height:100px">
-<iframe id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe class="lazyload" id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-#### Hint
-Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テキストを提供します。ヒントは入力の開始または終了に配置できます。[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) の位置は [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) プロパティを使用して設定します。以下は phone 入力にヒントを追加します。
+#### Hints
+Ignite UI for Angular Hint provides a helper text placed below the input. The hint can be placed at the start or at the end of the input. The position of the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) can be set using the [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) property. Let's add a hint to our phone input:
 
 ```html
 <igx-input-group>
@@ -80,41 +80,40 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 </igx-input-group>
 ```
 
-ヒントを追加した phone フィールドは以下のようになります。
-
+This is how the phone field with hint looks:
 <div class="sample-container loading" style="height:110px">
-<iframe id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe class="lazyload" id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div class="divider--half"></div>
 
-#### スタイル設定
-入力にスタイルを適用するには、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用します。現在 line (デフォルト)、box、border、および search のスタイル設定をサポートします。スタイル設定の結果:
+#### Styling
+Our inputs could be styled differently by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
 
 <div class="sample-container loading" style="height:520px">
-<iframe id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### スタイル設定
+### Styling
 
-入力グループ コンポーネントは、[Ignite UI Theming ライブラリ](themes/index.md) を使用し、igx-input-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) によって公開されるプロパティの大きな配列を持っています。
-以下の手順では、入力のラベル、境界線、テキスト、および背景のスタイル設定を行います。 
+The Input Group component makes use of the [Ignite UI Theming Library](themes/index.md) and has a large array of properties that are exposes by its [igx-input-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme).
+In the steps below, we'll take a look at styling the input's label, borders, text and background. 
 
-#### スタイルを含む
+#### Include styles
 
-はじめにスタイルファイルに `index` ファイルを含めます。
+The first thing we need to do is include the `index` file in our style file:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-これで、カスタム [palette](themes/palette.md)の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
+We can now begin constructing our custom [palette](themes/palette.md) and use it to generate a [theme](themes/component-themes.md) for our input.
 
-#### カラーパレットの定義
+#### Defining a color palette
 
-ハードコーディングされた色の代わりに [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) を作成し、提供される色範囲を使用してカスタム [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を作成します。
+Instead of hardcoded colors, we'll create an [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and then use the color ranges it provides to generate our custom [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color)
 
 ```scss
 $purple: #9E379F;
@@ -129,11 +128,11 @@ $background-color: #91CEFB27;
 ```
 
 >[!NOTE]
->`Igx-color` と ` igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](themes/palette.md) のトピックを参照してください。
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
 
-#### テーマの定義
+#### Defining a theme
 
-適切な色を選択後、入力用のテーマを生成します。テーマの生成は、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を呼び出し、変更するパラメーターを渡します。
+Now that we've chosen the appropriate colors, we need to generate a theme for our input. We do this by calling [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and passing the parameters which we'd like to change:
 
 ```scss
 $input-group-theme: igx-input-group-theme(
@@ -149,24 +148,24 @@ $input-group-theme: igx-input-group-theme(
 );
 ```
 
-入力グループのテキストの色と、表示される下の境界線を変更するように指定しました。あとは、テーマを含めるだけです。
+We've specified that we'd like the text color of our Input Group to change, as well as the bottom border that's displayed. All we have to do now is include the theme.
 
-#### テーマを含む
+#### Including the theme
 
-テーマを含める最も簡単な方法は、グローバル スタイル ファイルの SASS `@include` ステートメントで [`igx-input-group` mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group) を使用する方法です。
+The easiest way to include our theme is to just use the [`igx-input-group` mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group) with the SASS `@include` statement in our global styles file:
 
 ```scss
 @include igx-input-group($input-group-theme);
 
 ```
 
-#### スタイルのスコーピング
+#### Scoping styles
 
-グローバル スタイル ファイル (デフォルトでは styles.scss) に igx-input-group ミックスインを含めると、カスタム テーマはアプリケーションのすべての入力グループに影響します。入力グループ要素の*特定のサブセット*のみにカスタム スタイルを適用する場合は、それに応じてテーマをスコープする必要があります。
+If we include the `igx-input-group` mixin in our global styles files (`styles.scss` by default), the custom theme will affect **all** Input Groups in our application. In case we want to apply our custom styling only to a *specific subset* of Input Group elements, we have to scope our theme accordingly.
 
-例のコンテキストで続けると、サンプル コンポーネントの下の `igx-input-group` 要素にのみ適用するようにテーマをスコープできます。これを行うには、カスタム スタイルをコンポーネントのスタイル ファイル (`input-group-style.component.scss`) に移動します。ただし、[include 手順](#including-the-theme)に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、Angular の `View カプセル化`によるものです。コンポーネントは `エミュレートされた` ビューのカプセル化 (デフォルト) を使用しているため、`@include` ステートメントのスタイルは、コンポーネントのテンプレートのみにスコープされます。`Input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。ただし、入力の下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの影響を**受けません**。
+Continuing in the context of the example, we can scope our theme to only apply on the `igx-input-group` elements under our example component. We can do this by moving our custom styles to our component's style file (`input-group-style.component.scss`). However, if we just leave the include statement, as shown in the [include step](#including-the-theme), our styles will not properly apply - while our text color has properly changed, the bottom border and the background remain the same. This is because of Angular's `View Encapsulation`. Since our component is using `Emulated` view encapsulation (the default one), our styles from the `@include` statement are scoped only for our component's template. The `input` and `label` elements are part of that view, so their styles are applied correctly. However, the bottom border of the `input` is generated by the `igx-input-group` component and is **not** affected by the styles of our component.
 
-境界線のスタイルを設定するには、コンポーネントの scss ファイルで `::ng-deep` セレクターを使用して、Angular の`エミュレート`されたビューのカプセル化をペネトレーションする必要があります。`::ng-deep` を使用する場合、スタイルを `:host` セレクターでスコープし、これらのスタイルがコンポーネントの下の要素にのみ適用されるようにする必要があります。
+In order to style the border, we need to penetrate Angular's `Emulated` view encapsulation, using `::ng-deep` selector in our component's scss file. When using `::ng-deep`, we need to make sure that we scope the styles with a `:host` selector to make sure that these styles will apply only to elements under our component:
 
 ```scss
 // input-group-style.component.scss
@@ -178,39 +177,37 @@ $input-group-theme: igx-input-group-theme(
 ```
 
  >[!NOTE]
- > コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
+ > If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep`. To make sure the theme **does not** affect Input Groups in *other components* in our app, we scope the `::ng-deep` statement under `:host`
 
-#### デモ
+#### Demo
 
-以下は、スタイルを適用した結果のデモです。
+The result of the applied styles can be seen in the below demo:
 
 <div class="sample-container loading" style="height:240px">
     <iframe id="input-group-style-iframe" src='{environment:demosBaseUrl}/data-entries/input-group-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+### API References
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-### その他のリソース
-関連トピック:
+### Additional Resources
+Related topics:
 
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [ラベルと入力](label_input.md)
-* [コンボ](combo.md)
-* [選択](select.md)
-* [表示密度](display_density.md)
+* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Label & Input](label_input.md)
+* [Combo](combo.md)
+* [Select](select.md)
+* [Display Density](display_density.md)
 
-<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
 
-コミュニティに参加して新しいアイデアをご提案ください。
-
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
