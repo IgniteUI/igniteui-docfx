@@ -27,14 +27,14 @@ _language: ja
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) はサイズ変更する方法が多数あり、ユーザーのさまざまな状況に対応できます。方法は簡単なものから複雑なものまでさまざまです。それぞれを取り上げて、より詳しく説明します。パーセンテージを使用する場合など、いくつかの違いがあるため、`width` と `height` は別々に設定します。
 
-[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の境界線とパディングのサイズに関しては、幅/高さのサイズ計算、または[ボーダー ボックス](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)のサイジングとも呼ばれます。すべてのシナリオに適用されます。
+[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の境界線とパディングのサイズに関しては、幅/高さのサイズ計算、または[ボーダー ボックス](https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing)のサイジングとも呼ばれます。すべてのシナリオに適用されます。
 
 > [!Note]
 > ユーザーがボーダー ボックスのサイズ変更をオーバーライドした場合に正しい [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) になるかどうかは保証できません。
 
 ### 幅
 
-入力幅に値が割り当てられていない場合のデフォルト値は `100%` で、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は使用可能なスペースを埋めようとします。`Percentages` セクションで、グリッドがグリッドにどのように反応するかを確認できます。
+入力`幅`に値が割り当てられていない場合のデフォルト値は `100%` で、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は使用可能なスペースを埋めようとします。`Percentages` セクションで、グリッドがグリッドにどのように反応するかを確認できます。
 
 > [!Note]
 > [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 自体の幅スタイルを手動で設定すると、予期しない動作が生じます。
@@ -56,7 +56,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/width-null-scroll-v2.jpg" style="width: 80%"/>
 
-* グリッドに並べ替えの親要素があり、オーバーフロー セットがない場合、すべての列が表示されます。それ以外の場合、親要素にオーバーフロー `オート`または`スクロール`がある場合、その親要素のスクロールバーはネイティブにレンダリングされます。次の例では、視覚化を容易にするために親の高さが大きくなっています。
+* グリッドに並べ替えの親要素があり、overflow セットがない場合、すべての列が表示されます。それ以外の場合、親要素に overflow `auto` または `scroll` がある場合、その親要素のスクロールバーはネイティブにレンダリングされます。次の例では、視覚化を容易にするために親の高さが大きくなっています。
 
     <img src="../../images/grid_sizing/width-null-parent-scroll-v2.jpg" style="width: 80%"/>
 
@@ -71,7 +71,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/width-cols-scrollbar-v2.jpg" style="width: 80%"/>
 
-* グリッドに親要素が場合は、スクロールバーをレンダリングするかどうかは親のスタイルに依存します。グリッド自体に関連する他のすべてはまだ保持されます。親要素の幅がグリッドの幅よりも小さく、オーバーフロースタイルが`オート` または `スクロール`に設定されている場合、スクロールバーはネイティブにレンダリングされます。たとえば、親の幅が `1000px` に設定されていて、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅` がまだ `1200px` である場合、以下の図のようになります。
+* グリッドに親要素が場合は、スクロールバーをレンダリングするかどうかは親のスタイルに依存します。グリッド自体に関連する他のすべてはまだ保持されます。親要素の幅がグリッドの幅よりも小さく、overflow スタイルが `auto` または `scroll` に設定されている場合、スクロールバーはネイティブにレンダリングされます。たとえば、親の幅が `1000px` に設定されていて、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅` がまだ `1200px` である場合、以下の図のようになります。
 
     <img src="../../images/grid_sizing/width-cols-scroll-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/width-cols-scroll-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -113,7 +113,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/height-null-24rows-v2.jpg" style="width: 80%"/>
 
-* 親要素に定義された`高さ`がある場合、グリッドに影響は受けずにすべての行を描画します。親の `高さ` が `650px` であると仮定します。オーバーフローが`オート`または`スクロール`に設定されている場合、グリッドは影響を受けずに垂直スクロールバーがレンダリングされます。
+* 親要素に定義された`高さ`がある場合、グリッドに影響は受けずにすべての行を描画します。親の `高さ` が `650px` であると仮定します。`overflow` が `auto` または `scroll` に設定されている場合、グリッドは影響を受けずに垂直スクロールバーがレンダリングされます。
 
     <img src="../../images/grid_sizing/height-null-24rows-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/height-null-24rows-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -133,7 +133,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/height-500px-14rows-v2.jpg" style="width: 80%"/>
 
-* 高さが定義された親要素がある場合、`auto` または `scroll` に設定されたオーバーフローがない限り、グリッドは完全に表示されます。それ以外の場合は、スクロールバーがレンダリングされます。
+* 高さが定義された親要素がある場合、`auto` または `scroll` に設定された `overflow` がない限り、グリッドは完全に表示されます。それ以外の場合は、スクロールバーがレンダリングされます。
 
     <img src="../../images/grid_sizing/height-700px-14rows-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/height-700px-14rows-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -161,7 +161,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/height-percent-100-parent-800px-v2.jpg" style="width: 80%"/>
 
-* [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`高さ`を `100%` より大きい数値に設定し、親要素に高さを設定した場合、親がスクロールバーをレンダリングするには、オーバーフローを`オート`または`スクロール`に設定する必要があります。そうでない場合、グリッドは完全に表示され、親のサイズに相対的なサイズになります。
+* [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`高さ`を `100%` より大きい数値に設定し、親要素に高さを設定した場合、親がスクロールバーをレンダリングするには、`overflow` を `auto` または `scroll` に設定する必要があります。そうでない場合、グリッドは完全に表示され、親のサイズに相対的なサイズになります。
 
     <img src="../../images/grid_sizing/height-percent-130p-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/height-percent-130p-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -208,11 +208,11 @@ _language: ja
 
 列の幅をピクセル単位で設定した場合、手動でサイズを変更しない限り、列はそのサイズで固定されます。列の結合された幅は静的であるため、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅`より小さくすることも、それを超えることもできます。
 
-* すべての列の幅の合計が[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも小さい場合、グリッド内には列を埋めることができない空の領域があります。これは、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で予期される動作です。次の例では、列の幅は `150px` ピクセルです。
+* すべての列の幅の合計が [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも小さい場合、グリッド内には列を埋めることができない空の領域があります。これは、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で予期される動作です。次の例では、列の幅は `150px` ピクセルです。
 
     <img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
-* すべての列の合計`幅`が実際の[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `の幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、列の幅が `300px` で、グリッドの幅は `1200px` です。 
+* すべての列の合計`幅`が実際の [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `の幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、列の幅が `300px` で、グリッドの幅は `1200px` です。 
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
@@ -233,7 +233,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/columns-percent-bigger-100p-v2.jpg" style="width: 80%"/>
 
-* 列がパーセントで設定され、グリッド`幅`が `null` に設定されている場合、`136px` の`幅`が各列に適用されます。これは、列自体の幅がなく、`幅`が`null`の場合にコンテンツのサイズ変更に依存するため、列グリッドに対して相対的にサイズ変更できないためです。次の例では、6 列すべての`幅`が `50%` に設定されています。
+* 列がパーセントで設定され、グリッド`幅`が `null` に設定されている場合、`136px` の`幅`が各列に適用されます。これは、列自体の幅がなく、`幅`が `null` の場合にコンテンツのサイズ変更に依存するため、列グリッドに対して相対的にサイズ変更できないためです。次の例では、6 列すべての`幅`が `50%` に設定されています。
 
     <img src="../../images/grid_sizing/columns-percent-gridWidth-null-v2.jpg" style="width: 80%"/>
 
@@ -277,5 +277,5 @@ _language: ja
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [**Ignite UI for Angular GitHub (英語) **](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [**Ignite UI for Angular GitHub (英語) **](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
