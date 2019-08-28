@@ -212,7 +212,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
-* すべての列の合計`幅`が実際の[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `の幅`よりも大きい場合、水平スクロールバーがレンダリングされます。In the next example the columns have width of `300px` and grid has width if `1200px`, which means that the columns have excess of 
+* すべての列の合計`幅`が実際の[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `の幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、列の幅が `300px` で、グリッドの幅は `1200px` です。 
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
