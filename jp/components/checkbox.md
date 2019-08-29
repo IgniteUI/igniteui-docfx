@@ -143,7 +143,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 特定の `igx-checkbox` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、styles.scss で指定する上記のスタイルはすべて、代わりに component.scss ファイルで定義する必要があります。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+ >コンポーネントが [`Emulated`](/themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
