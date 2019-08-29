@@ -1,4 +1,4 @@
----
+﻿---
 title: Bottom Navigation コンポーネント
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール
@@ -342,16 +342,16 @@ public contactsList: object[] = [{
 このトピックの [Bottom Navigation デモ](#bottom-navigation-デモ) セクションで結果を確認できます。
 
 
-#### Integration With Router Outlet Container
+#### ルーター アウトレット コンテナとの統合
 
-Despite the primary usage of the Bottom Navigation component is to define panels with content, there may be cases in which you may need to define tab items only.
+Bottom Navigation コンポーネントの主な用途はコンテンツを含むパネルの定義ですが、タブ項目のみを定義する必要がある場合があります。
 
 > [!NOTE]
-> Keep in mind that the tab items definition mode does not support any content in the tabs - the component renders a tab items' strip only. The component also does not support mixing of tab item definitions and panel definitions at the same time.
+> タブ項目定義モードはタブのコンテンツをサポートしていないことに注意してください。コンポーネントはタブ項目のストリップのみをレンダリングします。また、このコンポーネントでタブ項目定義とパネル定義を混合することはサポートされません。
 
-When defining tab items you have the ability to apply directives on them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the Bottom Navigation component to switch between three components in a single router-outlet.
+タブ項目を定義する際にディレクティブを適用することができます。たとえば、この機能を使用して、Angular Router を使用してビュー間のナビゲーションを実現できます。次の例は、Bottom Navigation コンポーネントを構成して、単一のルーターアウトレットで 3 つのコンポーネントを切り替える方法を示しています。
 
-To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
+まず、Bottom Navigation コンポーネントをホストするメインコンポーネントと、デモ用のコンテンツを含む 3 つのビュー コンポーネントが必要です。コードスニペットを簡素化するために、ビューコンポーネントに短いテンプレートがありますが、必要に応じてそれらをより識別しやすくしてください。また、これらのビューコンポーネントを `app.module.ts` ファイルにインポートします。
 
 ```typescript
 // bottomnav-routing.component.ts
@@ -385,7 +385,7 @@ export class BottomNavRoutingView3Component {
 }
 ```
 
-The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
+次のステップでは、`app-routing.module.ts` ファイルに適切なナビゲーション マッピングを作成します。
 
 ```typescript
 // app-routing.module.ts
@@ -421,8 +421,8 @@ const appRoutes = [
 export class AppRoutingModule { }
 ```
 
-Now that we have all navigation routes setup, we need to declare the BottomNavigation component and configure it for routing.
-Also, make sure to add a router-outlet for rendering the view components' output.
+すべてのナビゲーション ルートがセットアップされたので、BottomNavigation コンポーネントを宣言し、ルーティング用に構成する必要があります。
+また、ビュー コンポーネントの出力をレンダリングするためのルーター アウトレットを必ず追加してください。
 
 ```html
 <!-- bottomnav-routing.component.html -->
@@ -449,16 +449,16 @@ Also, make sure to add a router-outlet for rendering the view components' output
 </igx-bottom-nav>
 ```
 
-The above code creates a BottomNavigation component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
+上記のコードは、3 つのタブ項目を持つ BottomNavigation コンポーネントを作成します。すべてのタブ項目には、ナビゲーションに使用されるルーティング リンクを指定するために使用される `RouterLink` ディレクティブが適用されています。これらのリンクのいずれかがアクティブになると、RouterLinkActive ディレクティブの isActive プロパティにバインドされるため、対応するタブ項目の isSelected プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
 
-The described approach above is used by the following sample to demonstrate routing using the BottomNavigation component:
+上記のアプローチは、BottomNavigation コンポーネントを使用したルーティングを示すために、次のサンプルで使用されています。
 
 <div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
     <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### API リファレンス
