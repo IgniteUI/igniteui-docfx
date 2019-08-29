@@ -1,71 +1,84 @@
+﻿---
+title: 一括編集 | トランザクション サービス | Ignite UI for Angular | Infragistics
+_description: コンポーネントで Angular CRUD 操作を実行するときにバッチ編集を実装できるトランザクション サービスクラスの階層について学びます。
+_keywords: batch editing, igniteui for angular, infragistics, 一括編集,
+_language: ja
 ---
-title: Transaction Service class hierarchy
-_description: 
-_keywords: Ignite UI for Angular, transaction, igxBaseTransaction, igxTransaction and igxHierarchical transaction explained
----
 
-## Transaction Service class hierarchy
+## トランザクション サービス クラス階層
 
-### Transaction, State, Transaction Log
+### トランザクション、状態、トランザクション ログ
 
-The Transaction is the main building block of the [Transaction service]({environment:angularApiUrl}/classes/igxtransactionservice.html). The Transaction is actually every operation that you execute on the data. The [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interface defines three properties: [`id`]({environment:angularApiUrl}/enums/transactiontype.html#id), [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) and [`type`]({environment:angularApiUrl}/enums/transactiontype.html#type).
+トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェースは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type) を定義します。
 
-The [`id`]({environment:angularApiUrl}/enums/transactiontype.html#id) of the Transaction should be unique per data record and defines the record that this transaction is affecting. The [`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the [`newValue`]({environment:angularApiUrl}/enums/transactiontype.html#newValue) will contain the value of the deleted record. 
+トランザクションの [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) はデータレコードごとに一意である必要があり、このトランザクションが影響するレコードを定義します。[`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) は、実行する操作に応じて、`ADD`、`DELETE`、`UPDATE` の 3 つのトランザクションタイプのいずれかになります。[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には、`ADD` トランザクションを追加する場合の新しいレコードの値が含まれます。既存のレコードを更新する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には変更のみが含まれます。同じ ID の `UPDATE` タイプのトランザクションが複数あるレコードを削除する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には削除されたレコードの値が含まれます。 
 
-You may see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-how-to-use.md) topic.
+各タイプのトランザクションを追加する方法の例は、[トランザクションサービスの使用方法](transaction-how-to-use.md)のトピックで見ることができます。
 
-Every time you add a Transaction, it is added to the transaction log and undo stack. All the changes in the transaction log are then accumulated per record. From that point, the service maintains an aggregated [`State`]({environment:angularApiUrl}/interfaces/state.html). The [`State`]({environment:angularApiUrl}/interfaces/state.html) consists of unique records and every record may be of one of the supported transaction types, mentioned above.
+操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集約された [`State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。  [`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
 
-While adding transactions you may turn on pending transactions by calling [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending). All subsequent transactions will be accumulated in single transaction until you call [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending). If you pass `true` to [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) all accumulated transactions will be added as a single transaction in the transaction log and in the undo stack.
+トランザクションを追加する際、[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出して、保留中のトランザクションをオンにすることができます。[`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) を呼び出すまで、後続のトランザクションはすべて単一のトランザクションに蓄積されます。`true` を [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) に渡すと、蓄積されたすべてのトランザクションがトランザクションログと取り消しスタックに単一のトランザクションとして追加されます。
 
-### Using igxBaseTransaction
+### igxBaseTransaction の使用
 
-Our grid module provides a very basic implementation of the Transaction service ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) with just pending session functionality allowing for Row Editing feature. By using [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) and [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) Row editing can combine multiple per-cell operations into a single change. This means editing multiple cells of a single record creates a single transaction and you can handle just the row edit event.
+グリッド モジュールは、トランザクション サービス ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) の非常に基本的な実装を提供し、行編集機能を可能にする保留中のセッション機能のみを提供します。[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) と [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) は、行編集で複数のセルごとの操作を 1 つの変更にまとめることができます。  つまり、1 つのレコードの複数のセルを編集すると、1 つのトランザクションが作成され、行編集イベントのみを処理できます。
 
-With the accumulated state being a partial object, we can also use the service to check which cell has been edited and build UI around that.
+蓄積された状態が部分的なオブジェクトであるため、サービスを使用して、どのセルが編集されたかを確認し、その周りに UI を構築することもできます。
 
-The [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) has no undo stack so it does not provide undo/redo functionality.
+[`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) には元に戻すスタックがないため、元に戻す/やり直しの機能は提供されません。
 
-A detailed example of how you may use [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) to enable Row Editing is provided in the following topics:
-* [Grid Row Editing](grid/row_editing.md)
-* [Tree Grid Row Editing](treegrid/row_editing.md)
-* [Hierarchical Grid Row Editing](hierarchicalgrid/row_editing.md)
+以下のトピックには、行編集を有効にするために [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を使用する方法の詳細な例が含まれます。
+* [グリッドの行編集テンプレート](grid/row_editing.md)
+* [Tree Grid 行編集](treegrid/row_editing.md)
+* [Hierarchical Grid 行編集](hierarchicalgrid/row_editing.md)
 
-### General information on igxTransactionService and igxHierarchicalTransactionService
+### igxTransactionService および igxHierarchicalTransactionService に関する一般情報
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are injectable middlewares, that implement the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to access, manipulate changes (undo and redo) and discard or commit all changes or a single change to the data.
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) work with both cell editing and row editing. The transaction for the cell edit is added when the cell exits edit mode. When row editing starts the grid set transaction service in pending state by calling [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending). Each edited cell is added to the pending transaction log and is not added to the main transaction log. When the row exits edit mode all the changes are added to the main transaction log and to the undo log as a single transaction.
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、*access*、*manipulate* (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を*破棄またはコミット*するための API を公開します。
 
-In both cases (cell editing and row editing) the state of the grid edits consist of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once or per id. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、セル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。
+行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出してトランザクションサービスを保留状態に設定します。編集された各セルは、保留中のトランザクションログに追加されますが、メイントランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
 
-### Using igxTransactionService
+いずれのケース (セル編集と行編集) も、グリッド編集の状態は、更新、追加、削除されたすべての行とその最後の状態で構成されます。これらは、後で一度に、または ID ごとに検査、操作、および送信できます。編集モードに応じて、個々のセルまたは行の変更が収集され、データ行/レコードごとに蓄積されます。
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) extends [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html).
+### igxTransactionService の使用
 
-You need to define the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) as a provider for the igxGrid or for some of its parent components in order to have Batch Editing feature enabled.
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を拡張します。
 
-The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) provides an undo stack so you may get advantage of the undo/redo functionality. The Undo stack is actually an array that contains array of transactions. When using the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html), you may check the [`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) accessor in order to understand if there are any transactions in the Undo stack. If it does - you may use the [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) method to remove the last transaction and [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) to apply the last undone transaction.
+バッチ編集機能を有効にするには、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を igxGrid またはその親コン​​ポーネントのプロバイダーとして定義します。
 
-You may find a detailed example of how igxGrid with Batch Editing is implemented in the following topic:
-* [Grid Batch Editing](grid/batch_editing.md)
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) には元に戻すスタックが含まれ、元に戻す/やり直し機能を利用できます。Undo スタックは、実際にはトランザクションの配列を含む配列です。[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 使用時に、元に戻すスタックにトランザクションがある場合は、[`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) アクセサーを確認できます。ある場合 [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) メソッドを使用して最後のトランザクションを削除し、[`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) で最後に元に戻したトランザクションを適用します。
 
-### Using igxHierarchicalTransactionService
+以下のトピックで、バッチ編集を使用した igxGrid の実装方法の詳細な例を見つけることができます。
+* [Grid 一括編集](grid/batch_editing.md)
 
-[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) extends [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html).
+### igxHierarchicalTransactionService の使用
 
-The [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is designed to handle the relations between parents and children in [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) and [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) so that a new record will be added to the place you expect when adding an `ADD` transaction. And when you delete a parent record, its' children will be promoted to the higher level of hierarchy, or will be deleted with their parent, based on the data type and the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#cascadeondelete) property of the grid.
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を拡張します。
 
-If you want to achieve Batch Editing using the [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) or the [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), you need to define the [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) as a provider for the grid or for some of its parent components.
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) および [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)  の親と子の間の関係を処理するように設計されているため、ADD トランザクションを追加するときに予想される場所に新しいレコードが追加されます。また、親レコードを削除すると、その子はデータ型とグリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#cascadeondelete) プロパティに基づいて、上位レベルの階層に昇格されるか、親とともに削除されます。
 
-In your application, you may want to handle the scenario where the user tries to add a child record to a parent record that is already deleted and is waiting for the transaction to be committed. The Transaction Service will not allow adding a record to a parent that is to be deleted and an error message will be shown in the Console. However, you may check if a parent is to be deleted and implement your own alert to the user using the following code:
-```
+[`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) または [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用してバッチ編集を実現する場合は、[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) をグリッドまたはその親コン​​ポーネントの一部のプロバイダーとして定義する必要があります。
+
+アプリケーションでは、ユーザーが既に削除された親レコードに子レコードを追加しようとし、トランザクションがコミットされるのを待っている状態を処理することができます。トランザクションサービスでは、削除する親にレコードを追加することはできず、コンソールにエラーメッセージが表示されます。ただし、親を削除するかどうかを確認し、以下のコードを使用してユーザーに独自のアラートを実装できます。
+```typescript
     const state = this.transactions.getState(parentRecordID);
     if (state && state.type === TransactionType.DELETE) {
         // Implement your logic here
     }
 ```
 
-You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) with Batch Editing are implemented in the following topics:
-* [Tree Grid Batch Editing](treegrid/batch_editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+以下は、[`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) でバッチ編集を実装する方法の詳細な例を含むトピックです。
+* [Tree Grid 一括編集](treegrid/batch_editing.md)
+* [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)
+
+### その他のリソース
+<div class="divider--half"></div>
+
+* [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+* [トランザクション サービス](transaction.md)
+* [トランザクション サービスの使用方法](transaction-how-to-use.md)
+* [Grid 一括編集](grid/batch_editing.md)
+* [Tree Grid 一括編集](treegrid/batch_editing.md)
+* [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)

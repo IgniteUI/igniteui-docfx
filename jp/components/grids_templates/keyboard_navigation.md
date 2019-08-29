@@ -30,7 +30,7 @@ _language: ja
 ### キー コンビネーション
 @@if (igxName === 'IgxHierarchicalGrid') {
  - `上矢印` - 1 つ上のセル、必要に応じてグリッド上階層へ移動 (ラッピングなし);
- - `下矢印` - 1 つ下のセル、必要に応じてグリッド下階層へ移動 (ラッピングなし);}@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+ - `下矢印` - 1 つ下のセル、必要に応じてグリッド下階層へ移動 (ラッピングなし);}@@if (igxName === 'IgxGrid' ||igxName === 'IgxTreeGrid') {
  - `上矢印` - 1 つ上のセルへ移動 (ラッピングなし);
  - `下矢印` - 1 つ下のセルへ移動 (ラッピングなし);}
  - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし);
@@ -50,7 +50,7 @@ _language: ja
  - `Esc` - 編集モードを終了する;
  - `Tab` - フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。次の行がグループ行の場合、行全体がフォーカスされます。データ行の場合、最初のセルにフォーカスを移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから`CANCEL`、`DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します。
  - `Shift + Tab` - 行の前のセルへフォーカスを順番に移動し、最初のセルの次に前の行へフォーカスを移動します。前の行がグループ行の場合、行全体をフォーカスします。データ行の場合、最後のセルをフォーカスします。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから `CANCEL` および `DONE` ボタン、`DONE` から編集可能な一番左のセルへ移動します;
- - `Space` - 行が選択可能な場合、スペースキーを押下すると行選択をトリガーします。;@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
+ - `Space` - 行が選択可能な場合、スペースキーを押下すると行選択をトリガーします。;@@if (igxName === 'IgxGrid' ||igxName === 'IgxHierarchicalGrid') {
  - GroupRow で `Alt + 左矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します。
  - GroupRow で `Alt + 右矢印` - 行が展開されていない場合はグループ行コンテンツを展開します。}
  - マウス `ホイール` - フォーカス要素をぼかします。
@@ -223,6 +223,11 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 </div>
 }
+
+既知の問題
+|制限|説明|
+|--- |--- |
+|スクロール可能な親コンテナを使用してグリッド内を移動します。|グリッドがスクロール可能な親コンテナ内に配置され、ユーザーがグリッド内をナビゲートする際にビュー範囲外にセルがある場合、親コンテナーはスクロールしません。|
 
 ### API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

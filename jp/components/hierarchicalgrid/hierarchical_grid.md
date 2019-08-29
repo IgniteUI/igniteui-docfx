@@ -1,5 +1,5 @@
 ﻿---
-title: Angular Hierarchical データグリッド | Material Table | Ignite UI for Angular | Infragistics
+title: Angular 階層データグリッド |マテリアル テーブル|Ignite UI for Angular |Infragistics
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
 _keywords: Angular データ グリッド, igniteui for angular, infragistics
 _language: ja
@@ -7,7 +7,7 @@ _language: ja
 
 ## 階層グリッド
 
-<p class="highlight">Angular Hierarchical Data Grid の Ignite UI を使用して階層データを表示および操作します。Angular Material テーブルのフィルタリング、ソート、ページング、テンプレート、移動可能な列、およびデータを編集および更新する機能を備えているため、Angular Material テーブルまたはマテリアル UI グリッドになります。上記のすべてが機能豊かなマテリアル UI グリッドを実現します。Hierarchical Grid は、Data Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に子グリッドを表示する機能を拡張しました。</p>
+<p class="highlight">Ignite UI for Angular 階層データ グリッド は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、並べ替え、ページング、テンプレート、列移動などの豊富な機能を提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。マテリアル テーブル ベースの UI グリッドにより、階層データの表示がさらに簡単できれいになりました。</p>
 
 ### デモ
 
@@ -231,12 +231,9 @@ export class RemoteLoDService {
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-### 既知の問題と制限
+サイズ変更
 
-|制限|説明|
-|--- |--- |
-|グループ化|グループ化機能は、階層グリッドでサポートされません。|
-|Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
+詳細については、[Grid Sizing](sizing.md) トピックをご覧ください。
 
 ### CRUD 操作
 
@@ -244,6 +241,142 @@ export class RemoteLoDService {
 > フラットな Data Grid と行アイランドの各インスタンスの重要な違いは、同じトランザクション サービス インスタンスがあり、同じトランザクション ログを蓄積する点です。CRUD 機能を有効にするには、`IgxHierarchicalTransactionServiceFactory` を注入する必要があります。
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|グループ化|グループ化機能は、階層グリッドでサポートされません。|
+|Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
+
+> [!NOTE]
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf Known Issues](../for_of.html#known-limitations) の既知の問題のセクションを参照してください。
+
+### Styling
+The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+
+In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.     
+
+#### Importing global theme   
+To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located. 
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+
+#### Defining custom theme
+Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.
+
+ >[!NOTE]
+ >There is no specific `sass` hierarchical grid function.
+
+
+```scss
+$custom-theme: igx-grid-theme(
+  $cell-active-border-color: #ffcd0f,
+  $cell-selected-background: #6f6f6f,
+  $row-hover-background: #f8e495,
+  $row-selected-background: #8d8d8d,
+  $header-background: #494949,
+  $header-text-color: #fff,
+  $expand-icon-color: #ffcd0f,
+  $expand-icon-hover-color: #e0b710,
+  $resize-line-color: #ffcd0f,
+  $row-highlight: #ffcd0f
+);
+```   
+
+#### Defining a custom color palette
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+ ```scss
+$black-color: #494949;
+$yellow-color: #FFCD0F;
+ 
+$custom-palette: igx-palette(
+  $primary: $black-color,
+  $secondary: $yellow-color
+);
+```
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
+    $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
+    $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
+    $row-selected-background: (igx-color($custom-palette, "primary", 100)),
+    $header-background: (igx-color($custom-palette, "primary", 500)),
+    $header-text-color: (igx-contrast-color($custom-palette, "primary", 500)),
+    $expand-icon-color: (igx-color($custom-palette, "secondary", 500)),
+    $expand-icon-hover-color: (igx-color($custom-palette, "secondary", 600)),
+    $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
+    $row-highlight: (igx-color($custom-palette, "secondary", 500))
+);
+```   
+
+#### Defining custom schemas
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we will use `$_light_grid`.
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    cell-active-border-color: (igx-color:('secondary', 500)),
+    cell-selected-background: (igx-color:('primary', 300)),
+    row-hover-background: (igx-color:('secondary', 100)),
+    row-selected-background: (igx-color:('primary', 100)),
+    header-background: (igx-color:('primary', 500)),
+    header-text-color: (igx-contrast-color:('primary', 500)),
+    expand-icon-color: (igx-color:('secondary', 500)),
+    expand-icon-hover-color: (igx-color:('secondary', 600)),
+    resize-line-color: (igx-color:('secondary', 500)),
+    row-highlight: (igx-color:('secondary', 500))
+));
+```
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```   
+
+#### Applying the custom theme
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
+
+```scss
+@include igx-grid($custom-theme);
+```
+
+#### Scoped component theme
+
+In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```   
+
+#### Demo
+<div class="sample-container loading" style="height:505px">
+    <iframe id="hierarchical-grid-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## API リファレンス
 
@@ -258,6 +391,7 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 ### その他のリソース
 <div class="divider--half"></div>
 
+<!-- * [グリッド サイズ変更](sizing.md) -->
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

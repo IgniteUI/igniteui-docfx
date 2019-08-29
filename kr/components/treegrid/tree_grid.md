@@ -269,6 +269,10 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
+### Sizing
+
+See the [Grid Sizing](sizing.md) topic.
+
 ## 알려진 제한 사항
 
 |제한 사항|설명|
@@ -276,6 +280,8 @@ export class MyComponent implements OnInit {
 |템플리트 트리 셀|트리 셀을 템플릿으로 만들 때 셀의 경계 외부에있는 내용은 오버레이에 배치되지 않으면 표시되지 않습니다.|
 |Group By|Group By 기능은 트리 그리드에 고유하기 때문에 지원되지 않습니다.|
 
+> [!NOTE]
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
@@ -297,6 +303,7 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
+* [Grid Sizing](sizing.md)
 * [데이터 그리드](../grid/grid.md)
 * [행 편집](row_editing.md)
 

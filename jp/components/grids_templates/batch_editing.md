@@ -1,8 +1,9 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 一括編集 |アンギュラー JS|Ignite UI for Angular |Infragistics
-_description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。
+title: Angular Grid 一括編集 | Angular CRUD | Ignite UI for Angular | Infragistics
+_description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基になるデータに影響を与えずにデータを操作できます。
 _keywords: angular crud, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -10,6 +11,7 @@ _keywords: angular crud, ignite ui for angular, infragistics
 title: Angular Tree Grid 一括編集|Angular CRUD |Ignite UI for Angular |Infragistics
 _description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。
 _keywords: angular crud, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,27 +19,28 @@ _keywords: angular crud, ignite ui for angular, infragistics
 title: Angular HierarchicalGrid Grid 一括編集|Angular CRUD |Ignite UI for Angular |Infragistics
 _description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。
 _keywords: angular crud, ignite ui for angular, infragistics
+_language: ja
 ---
 }
 
 ### @@igComponent 一括編集とトランザクション
 
-@@if (igxName !== 'IgxTreeGrid') {
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。プロバイダーは Angular CRUD およびデータ操作 (元に戻す/やり直し) のための API を公開しています。また、グリッド一括集機能を使用してすべての変更を破棄またはコミットすることもできます。
+@@if (igxName === 'IgxGrid') {
+igxGrid の一括編集機能は、[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxTransactionService の概要と実装方法の詳細を確認してください。
 
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) はセル編集と行編集の両方で動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
+以下は、igxGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
 @@if (igxName === 'IgxTreeGrid') {
-[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用する注入可能なミドルウェアです。プロバイダーは Angular CRUD およびデータ操作 (元に戻す/やり直し) のための API を公開しています。また、グリッド一括集機能を使用してすべての変更を破棄またはコミットすることもできます。
+IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxHierarchicalTransactionService の概要と実装方法の詳細を確認してください。
 
-[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) はセル編集と行編集の両方で動作します。行編集の終了時に行トランザクションが追加された場合、セル編集のトランザクションはセルが編集モードを終了したときに追加されます。グリッド編集のステートは、すべての行を編集済み、追加済み、削除済み、そして最後のステートで構成されます。これらは後でインスペクト、操作、サブミットを一度に行います。個々のセルまたは行の変更を集めて、編集モードに基づいてデータ行/レコードごとに蓄積します。
-
-一括編集では、複数レコードの**追加/更新/削除**してすべての変更を一度にコミットすることが可能です。変更がコミットされる前は各編集済みのレコードのビジュアル表示があり、エンドユーザーは更新済みと削除済みの項目を確認できます。更にコミット前の変更を管理する基に**戻す/やり直し**機能を公開します。
-
-一括編集機能を使用するには igniteui-angular から [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) をインポートする必要があります。トランザクションは、適用された変更をトランザクション ログとして蓄積し、各変更済みの行とその状態を保持するプロバイダーです。
+以下は、IgxTreeGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされて [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。
+IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxHierarchicalTransactionService の概要と実装方法の詳細を確認してください。
+
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされると [`'IgxHierarchicalTransactionServiceFactory'`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。 
+
+以下は、IgxHierarchicalGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
 
 #### デモ
@@ -360,10 +363,10 @@ export class HierarchicalGridBatchEditingSampleComponent {
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-Deleting a parent node in the grid has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) property of the grid. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
+グリッド内の親ノードの削除にはいくつかの特徴があります。階層データを使用している場合、親を削除すると子も削除されます。フラットデータを使用している場合、グリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) プロパティを使用して必要な動作を設定できます。このプロパティは、親が削除されたときに子レコードを削除するかどうかを示します (デフォルトでは true に設定されています)。
 }
 
-> [!NOTE]
+> 注:
 > [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを無効にすると @@igComponent を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
 ### API リファレンス

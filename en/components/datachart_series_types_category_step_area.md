@@ -1,21 +1,21 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Step Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a step area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Category Step Area Chart
+## Step Area Chart
 
-[`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) belongs to a group of category series and it is rendered using a collection of points connected by continuous vertical and horizontal lines with the area below lines filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items. The [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) is identical to the [`IgxStepLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html) in all aspects except that the area below the step lines is filled in.
+The Ignite UI for Angular step area chart belongs to a group of category charts and it is rendered using a collection of points connected by continuous vertical and horizontal lines with the area below lines filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items. The Angular step area chart is identical to the Angular step line chart in all aspects except that the area below the step lines is filled in.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-category-step-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-step-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -32,7 +32,7 @@ The Angular data chart component provides various types of axes but only the fol
 
 ### Required Data
 
-[`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) have the following data requirements:
+The [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html).
@@ -47,7 +47,7 @@ this.state = { dataSource: SampleCategoryData.create() }
 
 ### Required Modules
 
-The category series require the following modules:
+Creation of the [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -71,9 +71,9 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example - Area Series
+### Code Example - Step Area Series
 
-This code demonstrates how to create an instance of data chart with [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStepAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

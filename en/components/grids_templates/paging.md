@@ -28,7 +28,7 @@ Angular pagination in the @@igComponent is configurable via the [`paging`]({envi
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:560px">
+<div class="sample-container loading" style="height:580px">
     <iframe id="hierarchical-grid-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -38,20 +38,20 @@ Angular pagination in the @@igComponent is configurable via the [`paging`]({envi
 <div class="divider--half"></div>
 }
 
-
-Paging is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property controls the visible records per page. Let’s update our @@igComponent to enable paging:
+The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property controls the visible records per page. Let’s update our @@igComponent to enable paging:
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy">
+<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
 </@@igSelector>
 ```
 
+### Pagination Templating
 The paging area supports templating by the user, if a template reference is passed to the @@igComponent during initialization. The example below is a template where the pagination is controlled through an input.
 
 ```html
 <ng-template #myTemplate let-grid>
     Current page: {{ @@igObjectRef.page }}
-    <input type="number" [ngModel]="grid.page" (onModelChange)="@@igObjectRef.paginate($event)" />
+    <input type="number" [(ngModel)]="grid.page" />
     Total pages: {{ @@igObjectRef.totalPages }}
 </ng-template>
 
@@ -182,24 +182,39 @@ We also need to take care of the disabling and enabling of the pager buttons.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<ng-template #customPager>
-    <div class="igx-grid-paginator__pager" style="justify-content: center">
-        <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon fontSet="material">first_page</igx-icon>
-        </button>
-        <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon fontSet="material">chevron_left</igx-icon>
-        </button>
-        <span>{{ page + 1 }} of {{totalPages}}</span>
-        <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
-            <igx-icon fontSet="material">chevron_right</igx-icon>
-        </button>
-        <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon fontSet="material">last_page</igx-icon>
-        </button>
-        <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
-            <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 25, 50, 100, 500]">{{ val }}</option>
-        </select>
+<ng-template #customPager let-api>
+    <div class="igx-grid__footer">
+        <div class="igx-grid-paginator">
+            <div class="igx-grid-paginator__select">
+                <label class="igx-grid-paginator__label">Items per page</label>
+                <div class="igx-grid-paginator__select-input">
+                    <igx-select [(ngModel)]="perPage" type="border">
+                        <igx-select-item *ngFor=" let item of [5, 10, 15, 25, 50, 100, 500]" [value]="item">
+                            {{item}}
+                        </igx-select-item>
+                    </igx-select>
+                </div>
+            </div>
+            <div class="igx-grid-paginator__pager">
+                <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">first_page</igx-icon>
+                </button>
+                <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">chevron_left</igx-icon>
+                </button>
+                <span>{{ page + 1 }} of {{totalPages}}</span>
+                <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true"
+                        igxButton="icon">
+                    <igx-icon fontSet="material">chevron_right</igx-icon>
+                </button>
+                <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">last_page</igx-icon>
+                </button>
+            </div>
+        </div>
     </div>
 </ng-template>
 ```
@@ -256,24 +271,38 @@ public ngAfterViewInit() {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <ng-template #customPager let-api>
-    <div class="igx-grid-paginator__pager" style="justify-content: center">
-        <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon fontSet="material">first_page</igx-icon>
-        </button>
-        <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon fontSet="material">chevron_left</igx-icon>
-        </button>
-        <span>{{ page + 1 }} of {{totalPages}}</span>
-        <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
-            <igx-icon fontSet="material">chevron_right</igx-icon>
-        </button>
-        <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
-            igxRippleCentered="true">
-            <igx-icon fontSet="material">last_page</igx-icon>
-        </button>
-        <select style="margin-left: 1rem;" (change)="parseToInt($event.target.value);">
-            <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 20]">{{ val }}</option>
-        </select>
+    <div class="igx-grid__footer">
+        <div class="igx-grid-paginator">
+            <div class="igx-grid-paginator__select">
+                <label class="igx-grid-paginator__label">Items per page</label>
+                <div class="igx-grid-paginator__select-input">
+                    <igx-select [(ngModel)]="perPage" type="border">
+                        <igx-select-item *ngFor=" let item of [5, 10, 15, 25, 50, 100, 500]" [value]="item">
+                            {{item}}
+                        </igx-select-item>
+                    </igx-select>
+                </div>
+            </div>
+            <div class="igx-grid-paginator__pager">
+                <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">first_page</igx-icon>
+                </button>
+                <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">chevron_left</igx-icon>
+                </button>
+                <span>{{ page + 1 }} of {{totalPages}}</span>
+                <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true"
+                        igxButton="icon">
+                    <igx-icon fontSet="material">chevron_right</igx-icon>
+                </button>
+                <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">last_page</igx-icon>
+                </button>
+            </div>
+        </div>
     </div>
 </ng-template>
 ```
@@ -357,25 +386,38 @@ public buttonDeselection(page: number, totalPages: number) {
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <ng-template #customPager let-api>
-    <div class="igx-grid-paginator__pager" style="justify-content: center">
-        <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
-            igxRippleCentered="true">
-            <igx-icon fontSet="material">first_page</igx-icon>
-        </button>
-        <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon fontSet="material">chevron_left</igx-icon>
-        </button>
-        <span>{{ page + 1 }} of {{totalPages}}</span>
-        <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
-            <igx-icon fontSet="material">chevron_right</igx-icon>
-        </button>
-        <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
-            igxRippleCentered="true">
-            <igx-icon fontSet="material">last_page</igx-icon>
-        </button>
-        <select style="margin-left: 1rem;" (change)="perPage = parseToInt($event.target.value);">
-            <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 12, 25, 50]">{{ val }}</option>
-        </select>
+    <div class="igx-grid__footer">
+        <div class="igx-grid-paginator">
+            <div class="igx-grid-paginator__select">
+                <label class="igx-grid-paginator__label">Items per page</label>
+                <div class="igx-grid-paginator__select-input">
+                    <igx-select [(ngModel)]="perPage" type="border">
+                        <igx-select-item *ngFor=" let item of [5, 10, 15, 25, 50, 100, 500]" [value]="item">
+                            {{item}}
+                        </igx-select-item>
+                    </igx-select>
+                </div>
+            </div>
+            <div class="igx-grid-paginator__pager">
+                <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">first_page</igx-icon>
+                </button>
+                <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">chevron_left</igx-icon>
+                </button>
+                <span>{{ page + 1 }} of {{totalPages}}</span>
+                <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true"
+                        igxButton="icon">
+                    <igx-icon fontSet="material">chevron_right</igx-icon>
+                </button>
+                <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+                        igxRippleCentered="true">
+                    <igx-icon fontSet="material">last_page</igx-icon>
+                </button>
+            </div>
+        </div>
     </div>
 </ng-template>
 ```
@@ -479,19 +521,24 @@ This is absolutely enough if we want an up and running sample. But we can extend
 
 ```html
 <ng-template #secCustomPager let-api>
-    <div class="igx-grid-paginator__pager" style="justify-content: center">
-        <button [disabled]="firstPage" (click)="previousPage()" igxButton="flat" igxButtonColor="#09f">
-            PREV
-        </button>
-        <span *ngIf="shouldShowFirstPage" (click)="paginate(0, false)"><a class="pageNavLinks" [routerLink]=''>{{1}}</a> ...</span>
-        <span *ngFor="let item of pages" (click)="paginate(item, false)">
-            <a class="pageNavLinks {{activePage(item)}}" [routerLink]=''>{{item + 1}}</a>
-        </span>
-        <span *ngIf="shouldShowLastPage" (click)="paginate(totalPages - 1, false)">... <a class="pageNavLinks" [routerLink]=''>{{ totalPages }}</a>
-        </span>
-        <button [disabled]="lastPage" (click)="nextPage()"  igxButton="flat" igxButtonColor="#09f">
-            NEXT
-        </button>
+    <div class="igx-grid__footer">
+        <div id="numberPager" class="igx-grid-paginator" style="justify-content: center;">
+            <button [disabled]="firstPage" (click)="previousPage()" igxButton="flat">
+                PREV
+            </button>
+            <span *ngIf="shouldShowFirstPage" (click)="paginate(0, false)">
+                <a class="pageNavLinks" [routerLink]=''>{{1}}</a> <span class="pageNavLinks">...</span>
+            </span>
+            <span *ngFor="let item of pages" (click)="paginate(item, false)">
+                <a class="pageNavLinks {{activePage(item)}}" [routerLink]=''>{{item + 1}}</a>
+            </span>
+            <span *ngIf="shouldShowLastPage" (click)="paginate(totalPages - 1, false)">
+                <span class="pageNavLinks">...</span> <a class="pageNavLinks" [routerLink]=''>{{ totalPages }}</a>
+            </span>
+            <button [disabled]="lastPage" (click)="nextPage()" igxButton="flat">
+                NEXT
+            </button>
+        </div>
     </div>
 </ng-template>
 ```
@@ -514,8 +561,7 @@ public setNumberOfPagingItems(currentPage, totalPages) {
 And finally we need to add a button which allows the user to change the pager template at run time:
 
 ```html
-<button (click)="changeTemplate()" class='changeBtn' igxButton="flat"
-    igxButtonColor="#09f" igxButtonBackground="#dadada">Change Paging Template</button>
+<button (click)="changeTemplate()" igxButton="flat">Change Paging Template</button>
 ```
 
 ```typescript
@@ -536,7 +582,7 @@ After all the changes above, the following result will be achieved.
 
 #### Demo
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:620px">
     <iframe id="grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -545,7 +591,7 @@ After all the changes above, the following result will be achieved.
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:560px">
+<div class="sample-container loading" style="height:580px">
     <iframe id="hierarchical-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -566,37 +612,54 @@ After all the changes above, the following result will be achieved.
 }
 
 @@if (igxName === 'IgxGrid') {
-If you want your sample to look exactly like this one, do not forget to apply the custom paging theme:
-
-```css
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
-@include igx-core();
-@include igx-theme($default-palette, $legacy-support: true);
-
-
-$custom-paginator-theme: igx-grid-paginator-theme(
-    $text-color: #09f
-);
-$custom-button-theme: igx-button-theme(
-    $icon-color: #09f,
-    $icon-hover-color: #dadada,
-    $icon-focus-color:rgb(0, 119, 255),
-    $icon-focus-background: #aeaeae
-);
-
-.customPager {
-    @include igx-grid-paginator($custom-paginator-theme);
-    @include igx-button($custom-button-theme);
-}
-```
-}
-
-@@if (igxName === 'IgxGrid') {
 ### Paging with Group By
 
 Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
 }
+
+### Paginator Component
+A new component `igx-paginator` is introduced with 8.1.0 release. This component replaces the current pager and can be used as a standalone component as well.
+The `igx-paginator` exposes a couple of input properties that enable further customization of the paging.
+
+| Input           |      Description                           | 
+|-----------------|:------------------------------------------:|
+| displayDensity  | Sets the display density of the paginator. |
+| dropdownEnabled | Sets the enabled state to the drop-down. |
+| dropdownHidden  | Sets the hidden state to the drop-down. |
+| page            | Sets the current page. |
+| pagerEnabled    | Sets the enabled state to the pager. |
+| pagerHidden     | Sets the hidden state to the pager. |
+| perPage         | Sets the number of visible items per page. |
+| selectLabel     | Sets the text before the select component. Default is 'Items per page' |
+| selectOptions   | Sets custom options for items per page. |
+| totalRecords    | Sets the total records count. |
+
+#### Usage
+The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+...
+</igx-grid>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden" [selectLabel]="'Records per page:'"
+            [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
+    </igx-paginator>
+</ng-template>
+```
+
+#### Demo
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
 
 ### Styling
 
@@ -630,7 +693,7 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more paramaters to control the button style.
+In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme: 
 
@@ -671,7 +734,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette. 
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(

@@ -1,219 +1,294 @@
 ---
-title: How to use the Transaction service
-_description: 
-_keywords: Ignite UI for Angular, transaction
+title: 一括編集 | Angular Crud | Ignite UI for Angular | Infragistics
+_description: トランザクション サービスを使用して、Ignite UI Angular コンポーネントの一括編集を構成し、それらに対して CRUD 操作を実行する方法。
+_keywords:  batch editing, igniteui for angular, infragistics, 一括編集,
+_language: ja
 ---
 
-## How to use the Transaction service
+## トランザクション サービスの使用方法
 
-You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
+データソースの状態を保持し、一度に多くのトランザクションをコミットする必要があるコンポーネントを使用する場合、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) を利用できます。 
 
-When working with the Ignite Ui for Angular grid components, you may use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and implement similar behavior.
+Ignite UI for Angular グリッドコンポーネントの [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、グリッドと統合して、追加設定なしに一括編集機能が使用できます。ただし、その他の Ignite UI for Angular またはカスタムコンポーネントでトランザクションを使用する必要がある場合は、再度 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を使用して、同様の動作を実装できます。
 
-#### Demo
+#### デモ
 
-In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to demonstrate how to enable transactions. We will demonstrate how to add transactions, how to transform the data through a [pipe](https://angular.io/guide/pipes) and how to visually update the view in order to let the user see the changes that are about to be committed.
+このトピックでは、[`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントを使用して、トランザクションを有効にする方法を示します。トランザクションを追加する方法、[pipe](https://angular.io/guide/pipes) を介してデータを変換する方法、およびコミットされようとしている変更をユーザーに表示するするためにビューを視覚的に更新する方法を示します。
 
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-In our html template, we define an [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component:
+### トランザクション サービスを含む
 
+#### トランザクション サービスをプロジェクトに含む
+
+アプリケーションに `IgxTransactionService` を含めるには、2 つのオプションがあります。最初の方法は、上記のデモで行われているように、アプリケーションの `AppModule` または他の親モジュールに追加することです。
+
+```typescript
+@NgModule({
+    ...
+    providers: [
+        IgxTransactionService
+    ]
+})
+export class AppModule { }
 ```
+
+もう 1 つのオプションは、トランザクション サービスが使用されるコンポーネントで提供することです。
+
+```typescript
+@Component({
+    selector: "transaction-base",
+    styleUrls: ["./transaction-base.component.scss"],
+    templateUrl: "transaction-base.component.html",
+    providers: [IgxTransactionService]
+})
+export class TransactionBaseComponent { }
+```
+
+#### コンポーネントにトランザクション サービスを注入する
+
+`ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enumをインポートする必要があります。
+
+```typescript
+import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
+```
+
+次にトランザクション サービスをコンストラクターにインポートします。
+
+```typescript
+constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }
+```
+
+### igxList の定義
+
+html テンプレートで [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントに **edit**、**delete**、および **add** 処理を定義して、リストとそのアイテムを変更します。
+
+```html
 <igx-list>
     <igx-list-item [isHeader]="true">Wishlist</igx-list-item>
-    <ng-template ngFor [ngForOf]="this.wishlist" let-item>
-        <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">
-            <p igxListLineTitle>{{item.name}}</p>
-            <p igxListLineSubTitle>Costs: {{item.price}}</p>
-        </igx-list-item>
-    </ng-template>
+    <igx-list-item *ngFor="let item of this.wishlist | transactionBasePipe"
+        [ngClass]="{ deleted: isDeleted(item.id), edited: isEdited(item.id) }">
+        <p igxListLineTitle>{{item.name}}</p>
+        <p igxListLineSubTitle>Costs: {{item.price}}</p>
+        <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
+        <igx-icon igxListAction (click)="onDelete()" *ngIf="item.id === 2 && !isDeleted(item.id)">delete</igx-icon>
+    </igx-list-item>
+    <button igxButton (click)="onAdd()" [disabled]="itemAdded(4)">Add New</button>
 </igx-list>
 ```
 
-Below the list component, we add a form with five buttons:
+### 保留中の変更のパイプ
 
-```
-<button #add igxButton (click)="onAdd($event)" [disabled]="addDisabled" class="add">Add New</button>
-<button #edit igxButton (click)="onEdit($event)" class="edit" [disabled]="editDisabled || wishlist.length < 2">Edit Second</button>
-<button #delete igxButton (click)="onDelete($event)" [disabled]="deleteDisabled || wishlist.length === 0">Delete First</button>
-<button igxButton (click)="onCommit($event)">Commit Transactions</button>
-<button #clear igxButton (click)="onClear($event)" class="clear">Clear Transactions</button>
-```
+上記のリスト コンポーネントは、`transactionBasePipe` を使用して、元のデータに影響を与えることなく、ウィッシュ リスト内のアイテムへの変更を表示します。パイプは以下のようになります。
 
-The `add` button adds a new item. The `edit` button changes the value of the second item. The `delete` button removes the first item and the `clear` button clears the transaction log.
-
-We will show the pending transactions inside a chips area:
-
-```
-<igx-chips-area>
-    <ng-template ngFor let-transaction [ngForOf]="this.transactions.getTransactionLog()">
-        <igx-chip>
-            <div class="chip-content">
-                <igx-icon>{{setIcon(transaction)}}</igx-icon>
-                <span class="chip-text">{{transaction.newValue.name}} -
-                    {{transaction.newValue.price}}</span>
-            </div>
-        </igx-chip>
-    </ng-template>
-</igx-chips-area>
-```
-
-We will also add a list that will represent the current state of our data. It will show how the data looks before the pending transactions are committed:
-
-```
-<igx-list>
-    <igx-list-item [isHeader]="true">Wishlist (with transactions)</igx-list-item>
-    <ng-template ngFor [ngForOf]="this.wishlist | transactionBasePipe" let-item>
-        <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">
-            <p [ngStyle]="{'color': applyColor(item)}" igxListLineTitle>{{item.name}}</p>
-            <p [ngStyle]="{'color': applyColor(item)}" igxListLineSubTitle>Costs: {{item.price}}</p>
-        </igx-list-item>
-    </ng-template>
-</igx-list>
-```
-
-As you see, we use a pipe named `transactionBasePipe` to transform the transactions. Here is how the pipe looks like:
-
-```
+```typescript
 @Pipe({
     name: "transactionBasePipe",
     pure: false
 })
 export class TransactionBasePipe implements PipeTransform {
+    /**
+     * @param transactions Injected Transaction Service.
+     */
     constructor(public transactions: IgxTransactionService<Transaction, State>) { }
 
-     public transform(data: IItem[]) {
+    public transform(data: WishlistItem[]) {
+        // the pipe should NOT operate on the original dataset
+        // we create a copy of the original data and then use it for visualization only
         const _data = [...data];
-        const states = this.transactions.getAggregatedChanges(false);
-        for (const state of states) {
+        const pendingStates = this.transactions.getAggregatedChanges(false);
+
+        for (const state of pendingStates) {
             switch (state.type) {
                 case TransactionType.ADD:
+                    // push the newValue property of the current `ADD` state
                     _data.push(state.newValue);
                     break;
-                // we do not directly operate on records, we just style them
-                // it will be deleted once it's committed
                 case TransactionType.DELETE:
+                    // pipe doesn't delete items because the demo displays them with a different style
+                    // the record will be deleted once the state is committed
                     break;
                 case TransactionType.UPDATE:
-                    const record = _data.find(r => r.id === state.id);
-                    Object.assign(record, state.newValue);
+                    const index = _data.findIndex(x => x.id === state.id);
+                    // merge changes with the item into a new object
+                    // to avoid modifying the original data item
+                    _data[index] = Object.assign({}, _data[index], state.newValue);
                     break;
+                default:
+                    return _data;
             }
         }
 
-         return _data;
+        return _data;
     }
 }
 ```
 
-We should not forget to add the pipe to `@NgModule` inside `services.module.ts` file.
+### 編集、削除、機能の追加
 
-In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library:
+#### 編集機能の定義
 
-```
-import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
-```
-
-Our class constructor should look like this:
-
-```
-constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }
+2 番目のリスト アイテムには、アイテムのデータを更新する編集ボタンが含まれています。
+```html
+<igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-When we click the `add` button, we add a new transaction to the Transaction log, providing the `id`, the `TransactionType` and the `newValue` properties: 
+`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE’ トランザクションが作成されます。 
 
-```
-const item: IItem = { id: 4, name: "Yacht", price: "A lot!" };
-this.transactions.add({ id: 4, type: TransactionType.ADD, newValue: item });
-```
-
-At this moment, our transaction is added to the transaction log, we see the new chip is added to the chips area but the change is still not committed. The data source is not changed yet. We may do additional changes to the list and commit them at once when we are ready.
-
-To update an existing item, we will add a transaction of type `UPDATE` to the Transaction log. In our example, we change only the price of the second item in the list:
-
-```
-const newPrice = "54$";
-this.transactions.add({
-    id: 2, type: TransactionType.UPDATE, newValue: { name: "Apple", price: newPrice }
-}, this.wishlist[1]);
-```
-
-By clicking the `delete` button we will remove the first item in the list - a transaction of type `DELETE` will be added to the Transaction log.
-
-```
- this.transactions.add({
-    id: 1, type: TransactionType.DELETE, newValue: { name: this.name, price: this.price }
-}, this.wishlist[0]);
-```
-
-Once we are done with all our changes, we may commit them all at once using the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method of the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). It applies all transactions over the provided data:
-
-```
-this.transactions.commit(this.wishlist);
-```
-
-At any point of our interaction with the list, we may clear the Transaction log, using the [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) method.
-
-```
-this._transactions.clear();
-```
-
-For a better user experience, we will provide visual clues of what item is added, edited or deleted in the list. We will color the newly added record green, the record that is to be removed in red and the updated record in blue:
-
-```
-public applyColor(item?: IItem): string {
-    const states = this.transactions.getAggregatedChanges(true);
-    for (const transaction of states) {
-        if (item && transaction.newValue.id === item.id) {
-            return this.getColor(transaction);
-        }
-    }
-
-    return null;
+```typescript
+public onEdit(): void {
+    const newPrice = "$999";
+    // there can be multiple `UPDATE` transactions for the same item `id`
+    // the `newValue` property should hold only the changed properties
+    const editTransaction: Transaction = {
+        id: this.wishlist[0].id,
+        type: TransactionType.UPDATE,
+        newValue: { price: newPrice }
+    };
+    // provide the first wishlist item as a `recordRef` argument
+    this.transactions.add(editTransaction, this.wishlist[0]);
 }
 ```
 
-The `getColor` function looks like this:
+さらに、未保存の編集のアイテムをチェックする機能があります。
 
-```
-public getColor(transaction: Transaction): string {
-    switch (transaction.type) {
-        case TransactionType.ADD:
-            return "green";
-        case TransactionType.DELETE:
-            return "red";
-        case TransactionType.UPDATE:
-            return "blue";
-        default:
-            return null;
-    }
+```typescript
+public isEdited(id): boolean {
+    const state = this.transactions.getState(id);
+    return state && state.type === TransactionType.UPDATE;
 }
 ```
 
-If we look at the code of the chips, representing the pending transactions, we will see we are setting an icon like this:
-`<igx-icon>{{setIcon(transaction)}}</igx-icon>`
-Let us see how the `setIcon` function is defined in our example:
+#### 削除機能の定義
 
+3 番目のリスト アイテムには、アイテムのデータを削除する削除ボタンが含まれています。
+
+```html
+<igx-icon igxListAction (click)="onDelete()" *ngIf="item.id === 2 && !isDeleted(item.id)">delete</igx-icon>
 ```
-public setIcon(transaction: Transaction): string {
-    switch (transaction.type) {
-        case TransactionType.ADD:
-            return "check";
-        case TransactionType.DELETE:
-            return "delete";
-        case TransactionType.UPDATE:
-            return "edit";
-        default:
-            return null;
-    }
+
+
+`onDelete` イベント ハンドラー内でボタンが押されると、「DELETE」トランザクションが作成されます。 
+
+```typescript
+public onDelete(): void {
+    // after a `DELETE` transaction, no further changes should be made for the same `id`
+    // the `newValue` property should be set to `null` since we do not change any values,
+    const deleteTransaction: Transaction = {
+        id: this.wishlist[1].id,
+        type: TransactionType.DELETE,
+        newValue: null
+    };
+    // provide the second wishlist item as a `recordRef` argument
+    this.transactions.add(deleteTransaction, this.wishlist[1]);
 }
 ```
 
-You may examine the example and see how all these work together to provide smooth user experience, allowing for reviewing and committing many changes at once.
+さらに、保存されていない削除のアイテムをチェックする機能があります。
+
+```typescript
+public isDeleted(id): boolean {
+    const state = this.transactions.getState(id);
+    return state && state.type === TransactionType.DELETE;
+}
+```
+
+#### 追加機能の定義
+
+リストの最後に [追加] ボタンが追加され、リストに新しいアイテムが追加されます。
+
+```html
+<button igxButton (click)="onAdd()" [disabled]="itemAdded(4)">Add New</button>```
+```
+
+`onAdd` イベント ハンドラー内でボタンが押されると、'ADD' トランザクションが作成されます。
+
+```typescript
+public onAdd(): void {
+    // it must have a unique 'id' property
+    const item: WishlistItem = { id: 4, name: "Yacht", price: "A lot!" };
+
+    // in an `ADD` transaction you do not need to provide a `recordRef` argument,
+    // since there is nothing to refer to yet
+    this.transactions.add({ id: 4, type: TransactionType.ADD, newValue: item });
+}
+```
+
+さらに、保存されていない追加項目をチェックする機能があります。
+
+```typescript
+public itemAdded(id: number): boolean {
+    const found = this.transactions.getState(id) || this.wishlist.find(x => x.id === 4);
+    return !!found;
+}
+```
+
+### トランザクション ログ
+
+デモでは、ログ内の保留中のトランザクションを示します。
+
+```html
+<div>
+    <h5>Transaction Log</h5>
+    <div *ngFor="let transaction of this.getTransactionLog()">
+        {{transaction.type.toUpperCase()}} -> {{transaction.name}} Costs: {{transaction.price}}
+    </div>
+</div>
+```
+
+```typescript
+public getTransactionLog(): any[] {
+    return this.transactions.getTransactionLog().map(transaction => {
+        const item = this.wishlist.find(x => x.id === transaction.id);
+        return Object.assign({ type: transaction.type }, item, transaction.newValue);
+    });
+}
+```
+
+リストの現在の状態の表現も追加します。保留中のトランザクションがコミットされる前のデータの様子を示します。
+
+```html
+<div>
+    <h5>Data Items</h5>
+    <div *ngFor="let item of this.wishlist">
+        <div>{{item.name}} - {{item.price}}</div>
+    </div>
+</div>
+```
+
+### 保留されたトランザクションをコミット
+
+すべての変更が完了したら、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) の [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドを使用して、一度にすべてをコミットできます。指定されたデータにすべてのトランザクションを適用します。
+
+```html
+<button igxButton="raised" (click)="onCommit()" [disabled]="this.getTransactionLog().length === 0">Commit Transactions</button>
+```
+
+```typescript
+public onCommit(): void {
+    // the `commit` function expects the original data array as its parameter
+    this.transactions.commit(this.wishlist);
+}
+
+```
+
+### 保留されたトランザクションのクリア
+
+リストとのやり取りのどの時点でも、[`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) メソッドを使用して、トランザクション ログをクリアできます。
+
+```html
+<button igxButton="raised" (click)="onClear()" [disabled]="this.getTransactionLog().length === 0">Clear Transactions</button>
+```
+
+```typescript
+public onClear(): void {
+    this.transactions.clear();
+}
+
