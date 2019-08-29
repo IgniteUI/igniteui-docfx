@@ -9,42 +9,42 @@
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
-  # items:
-  #   - name: Step-by-Step Guide
-  #     href: general/cli/step-by-step-guide.md
-  #     new: false
-  #   - name: Templates
-  #     href: general/cli/component-templates.md
-  #     new: false
-  #   - name: Authentication Project Template
-  #     href: general/cli/auth-template.md
-  #     new: false
-- name: WPF to Angular guide
+  items:
+    - name: ステップバイステップガイド
+      href: general/cli/step-by-step-guide.md
+      new: false
+    - name: テンプレート
+      href: general/cli/component-templates.md
+      new: false
+    - name: プロジェクト テンプレートの認証
+      href: general/cli/auth-template.md
+      new: false
+- name: WPF vs Angular 比較ガイド
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
   items:
-    - name: Create your first Angular app
+    - name: はじめての Angular アプリを作成
       href: general/wpf_to_angular_guide/create_first_angular_app.md
       new: false
-    - name: Create your UI with Angular components
+    - name: Angular コンポーネントを使用した UI の作成
       href: general/wpf_to_angular_guide/create_ui_with_components.md
       new: false
-    - name: One-Way Binding
+    - name: One-Way バインディング
       href: general/wpf_to_angular_guide/one_way_binding.md
       new: false
-    - name: Angular Events
+    - name: Angular イベント
       href: general/wpf_to_angular_guide/angular_events.md
       new: false
-    - name: Two-Way Binding
+    - name: Two-Way バインディング
       href: general/wpf_to_angular_guide/two_way_binding.md
       new: false
-    - name: Transforming Data with Angular Pipes
+    - name: Angular パイプでデータを変換
       href: general/wpf_to_angular_guide/angular_pipes.md
       new: false
-    - name: Structural Directives in Angular
+    - name: Angular の構造ディレクティブ
       href: general/wpf_to_angular_guide/structural_directives.md
       new: false
-    - name: Layout Elements
+    - name: レイアウト要素
       href: general/wpf_to_angular_guide/layout.md
 - name: グリッドとリスト
   href: grids_and_lists.md

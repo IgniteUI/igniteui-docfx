@@ -69,7 +69,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 `igx-select`には直感的なキーボードナビゲーションがあり、マウスを使わずに簡単に項目を選択できます。
 
 - ドロップダウン リストが開いているときの移動先に残っている項目がある場合は、`上矢印/下矢印`で項目を移動できます。更に `Home` または `End` を押すとリストの最初と最後の項目に移動します。 
-- ドロップダウン リストが開いたときに対応するキーを押して特定の文字で始まる各項目に移動できます。大文字小文字を区別して一致するすべての項目間をフォーカスします￥。
+- ドロップダウン リストが開いたときに対応するキーを押して特定の文字で始まる各項目に移動できます。大文字小文字を区別して一致するすべての項目間をフォーカスします。
 - ドロップダウン リストを開いたときに、必要な項目の最初の数文字を入力してすばやく特定の項目に移動できます。
     - 入力スピードが関係することに注意してください。
 - ドロップダウン リストが開いているときは、`Home` と `End` のキーを使用して項目を移動できます。
@@ -358,9 +358,8 @@ export class MyClass implements OnInit {
 - `open` 関数で引数として、同様にテンプレートへカスタム設定を渡した場合、`open` 関数の引数を使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
 ## スタイル設定
-[Ignite UI for Angular Theming](themes/index.md) を使用して、 **igx-select** の外観を変更できます。
-`igx-select` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。
-さらに、`igx-select` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `igx-select` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) スタイル ガイドを参照できます。
+[Ignite UI for Angular Theming](themes/index.md) は、**igx-select** の外観を変更できます。`igx-select` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。さらに、`igx-select` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `igx-select` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) をご覧ください。
+
 
 ### コード スニペット
 以下を使用します。
@@ -431,5 +430,5 @@ $custom-select-theme: igx-drop-down-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
