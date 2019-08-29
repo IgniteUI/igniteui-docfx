@@ -74,7 +74,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
     - 入力スピードが関係することに注意してください。
 - ドロップダウン リストが開いているときは、`Home` と `End` のキーを使用して項目を移動できます。
 - ドロップダウン リストが開いている場合、`上矢印/下矢印`キーによる移動は選択した項目から開始されます。そうでない場合は、リストの最初の項目から開始します。
-- ドロップダウンリストがクローズいているときは、`上矢印/下矢印`のキーで項目間を循環できます。
+- ドロップダウン リストがクローズいているときは、`上矢印/下矢印`のキーで項目間を循環できます。
 - ドロップダウン リストが閉じたときに、特定の項目で始まるすべての項目へ移動することもできます。ドロップダウン リストが開いている場合も同様に動作します。
 - ドロップダウン リストを閉じたときに、最初の数文字を入力してすばやく特定の項目に移動できます。ドロップダウンが開いたときと動作は同じです。
 - ドロップダウンが閉じたときに文字キーの移動でも大文字と小文字を区別しません。
@@ -103,7 +103,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ### イベントの発生
 `Igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
 
-#### Opend イベント
+#### Opened イベント
 - 現在ドロップ ダウンが展開されているかどうかを指定します。
 
 `onOpened` イベントを使用できます。
@@ -280,7 +280,7 @@ export class MyClass {
 - `IgxSuffix` が使用されると、拡張矢印が常に最後に表示されます。
 
 ### カスタム オーバーレイ設定の選択
-`Igx-select` では[OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html)のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
+`Igx-select` では [OverlaySettings](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/interfaces/overlaysettings.html) のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
 
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
@@ -357,13 +357,13 @@ export class MyClass implements OnInit {
 ```
 - `open` 関数で引数として、同様にテンプレートへカスタム設定を渡した場合、`open` 関数の引数を使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
-<!-- ## Styling
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-select** appearance. 
-Since `igx-select` extends `igx-drop-down`, it also makes good use of its existing `igx-drop-down` styling, so you can directly refer to the [igx-drop-down styling guide](drop_down.md#styling) for details.
-On top of that, `IgxSelect` includes an `IgxInputGroup` as well, so any styling to the input-group will affect the `IgxSelect` component. You can refer to [igx-input-group styling guide](input_group.md#styling) for details.
+## スタイル設定
+[Ignite UI for Angular Theming](themes/index.md) を使用して、 **igx-select** の外観を変更できます。
+`igx-select` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。
+さらに、`igx-select` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `igx-select` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) スタイル ガイドを参照できます。
 
-### Code snippets
-We are going to use the following:
+### コード スニペット
+以下を使用します。
 ```scss
 // in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -401,17 +401,17 @@ $custom-select-theme: igx-drop-down-theme(
 ```
 
 > [!NOTE]
-> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
+> [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネントは、[IgxOverlay](overlay_main.md) を使用して、`igx-select-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイリング ガイド`](overlay_styling.md)を確認してください。
 
-### Demo
+### デモ
 <div class="sample-container loading" style="height:450px">
     <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ## API リファレンス
 [**IgxSelectComponent**](https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  
@@ -431,5 +431,5 @@ $custom-select-theme: igx-drop-down-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
