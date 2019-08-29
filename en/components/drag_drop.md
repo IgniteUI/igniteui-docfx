@@ -71,7 +71,7 @@ The ghost element by default is a copy of the base element the `igxDrag` is used
 
 #### Dragging Using a Handle
 
-The user can specify an element that is a child of the `igxDrag` by which to drag since by default the whole element is used to perform that action. It can be done using the `igxDragHandle` directive and can be applied to multiple elements inside the `igxDrag`.
+You can specify an element that is a child of the `igxDrag` by which to drag since by default the whole element is used to perform that action. It can be done using the `igxDragHandle` directive and can be applied to multiple elements inside the `igxDrag`.
 
 When multiple channels are applied to an `igxDrag` and one of them matches one of applied channels to an `igxDrop`, then all events and applied behaviors would be executed when that element is dropped.
 
@@ -102,6 +102,18 @@ When the transition animation ends if a ghost is created it will be removed and 
 
 If the user want to have other types of animations that involve element transformations he can do that like any other element either using the Angular Animations or straight CSS Animations to either the base `igxDrag` element or its ghost. If he wants to apply them to the ghost he would need to define a custom ghost and apply animations to that element.
 
+#### Demo
+
+Reorder items in the list using the drag handle. While dragging a list item other list items will re-order with animation. 
+
+<div class="sample-container loading" style="height:380px">
+    <iframe id="list-reorder-sample-iframe" src='{environment:demosBaseUrl}/interactions/list-reorder-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Drop Directive
 
@@ -155,7 +167,7 @@ Using the `dragChannel` and `dropChannel` input on respectively igxDrag and `igx
 
 #### Demo
 
-Drag the dialog using the handle.
+Drag e-mails on the right into the folders on the left.
 
 <div class="sample-container loading" style="height:325px">
     <iframe id="email-sample-iframe" src='{environment:demosBaseUrl}/interactions/email-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -216,6 +228,18 @@ public onAreaLeave() {
 //...
 ````
 
+#### Demo
+
+Drag items around the kanban board.
+
+<div class="sample-container loading" style="height:700px">
+    <iframe id="kanban-sample-iframe" src='{environment:demosBaseUrl}/interactions/kanban-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="kanban-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### API
 * [IgxDragDirective]({environment:angularApiUrl}/classes/igxdragdirective.html)
