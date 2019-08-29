@@ -38,9 +38,11 @@ Then all that is needed is to define an `<igx-select>` and several items. We use
 ```html
 <!-- define items declaratively -->
 <igx-select>
+    <label igxLabel>Simple Select</label>
     <igx-select-item value="Orange">Orange</igx-select-item>
     <igx-select-item value="Apple">Apple</igx-select-item>
     <igx-select-item value="Banana">Banana</igx-select-item>
+    <igx-select-item value="Mango">Mango</igx-select-item>
 </igx-select>
 ```
 
@@ -52,6 +54,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 
 ```html
 <igx-select [(ngModel)]="selected">
+    <label igxLabel>Simple Select</label>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>

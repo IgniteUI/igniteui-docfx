@@ -55,6 +55,10 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 }
 <div class="divider--half"></div>
 
+#### Cell Editing
+
+##### Editing through UI
+
 In order to be able to enter edit mode for specific cell, you should first set the column to be [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable). If you want to use a data type specific *edit templates*, you should specify the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
 
  - For `string` data type, default template is using [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -81,6 +85,8 @@ You can exit edit mode and **commit** the changes in one of the following ways:
 
 > [!NOTE]
 > The cell remains in edit mode when you scroll vertically or horizontally or click outside the @@igComponent. This is valid for both cell editing and row editing.
+
+##### Editing through API
 
 You can also modify the cell value through the @@igxName API but only if primary key is defined:
 
@@ -152,9 +158,26 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```
 }
 
-@@if (igxName === 'IgxGrid') {
-If you want to define a custom template which will be applied when the cell is in edit mode, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
-}
+#### Cell Editing Templates
+
+If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
+
+```html
+<igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
+    <ng-template igxCellEditor let-cell="cell">
+        <input type="number" [(ngModel)]="cell.editValue" />
+    </ng-template>
+</igx-column>
+```
+
+> [!NOTE]
+> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
+
+> [!NOTE]
+> The cell editing template directive (`igxCellEditor`) is different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
+
+
+For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
 
 ### CRUD operations
 
@@ -287,6 +310,144 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 ```
 
 <div class="divider--half"></div>
+
+### Editing Events
+
+The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and **Cell Editing** life cycle - when starting, committing or canceling editing.
+
+The events can be broken down as follows:
+
+| Event | Description | Arguments | Cancellable |
+|-------|-------------|-----------|-------------|
+| [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | Fires when a cell **enters edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | If `[rowEditing]` is enabled, fires when a row **enters edit mode** (after `onCellEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | Fires when a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | Fires when a cell exits edit mode **without committing** its value (e.g. by pressing `Escape`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | Fires when a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | Fires when a row exits edit mode **without committing** its values (e.g. by clicking the `Cancel` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+
+All of the above events can be cancelled. For example, if `onCellEditEnter` is cancelled, the cell will never enter edit mode.
+
+#### Cell validation on edit event
+Using the grid's editing events we can alter how the user interacts with the grid.
+In this example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll prevent it from reaching the data source by cancelling the event (`event.cancel = true`). We'll also display a custom error message using [`IgxToast`](../toast.md).
+
+The first thing we need to is bind to the grid's event:
+
+```html
+<@@igSelector (onCellEdit)="handleCellEdit($event)"
+...>
+...
+</@@igSelector>
+```
+
+The `onCellEdit` emits whenever **any** cell's value is about to be committed. In our `handleCellEdit` definition, we need to make sure that we check for our specific column before taking any action:
+
+@@if (igxName === 'IgxGrid') {
+```typescript
+export class MyGridEventsComponent {
+    ...
+    public handleCellEdit(event: IGridEditEventArgs): void {
+        const column = this.grid.columnList.find(e => e.index === event.cellID.columnID);
+        if (column.header === "Ordered") {
+            const rowData = this.grid.data
+            .find(entry => entry[this.grid.primaryKey] === event.cellID.rowID);
+            if (!rowData) {
+                return;
+            }
+            if (event.newValue > rowData.UnitsInStock) {
+                event.cancel = true;
+                this.toast.show();
+            }
+        }
+    }
+}
+```
+If the value entered in a cell under the **Ordered** column is larger than the available amount (the value under **Units in Stock**), the editing will be cancelled and a toast with an error message will be displayed.
+}
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+export class MyTreeGridEventsComponent {
+    ...
+    public handleCellEdit(event: IGridEditEventArgs): void {
+        const row = this.data.find(e => e[this.grid.primaryKey] === event.cellID.rowID);
+        if (!row) {
+            return;
+        }
+        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        if (column.field === "Age") {
+            if (event.newValue < 18) {
+                event.cancel = true;
+                this.toast.message = "Employees must be at least 18 years old!";
+                this.toast.show();
+            }
+        } else if (column.field === "HireDate") {
+            if (event.newValue > new Date().getTime()) {
+                event.cancel = true;
+                this.toast.message = "The employee hire date must be in the past!";
+                this.toast.show();
+            }
+        }
+    }
+}
+```
+Here, we are validating two columns. If the user tries to set an invalid value for an employee's **Age** (below 18) or their **Hire Date** (a future date), the editing will be cancelled (the value will not be submitted) and a toast with an error message will be displayed.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+export class MyHGridEventsComponent {
+    ...
+    public handleCellEdit(event: IGridEditEventArgs) {
+        const today = new Date();
+        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        if (column.field === "Debut") {
+            if (event.newValue > today.getFullYear()) {
+                this.toast.message = "The debut date must be in the past!";
+                this.toast.show();
+                event.cancel = true;
+            }
+        } else if (column.field === "LaunchDate") {
+            if (event.newValue > new Date()) {
+                this.toast.message = "The launch date must be in the past!";
+                this.toast.show();
+                event.cancel = true;
+            }
+        }
+    }
+}
+```
+Since we're passing the grid as a second argument in the `handleCellEdit` calls, we're using the passed grid's columns to find to which column the cell belongs. With the above validation in place, when a user tries to change an artist's **Debut** year or an album's **Launch Date**, the grid will not allow any dates that are greater than today.
+}
+
+The result of the above validation being applied to our `@@igSelector` can be seen in the below demo:
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-editing-events-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-events' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="treegrid-editing-events-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-editing-events' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-editing-events-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 
 ### Styling
 
