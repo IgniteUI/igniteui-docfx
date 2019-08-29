@@ -501,7 +501,7 @@ This way, the theme will apply to **all** grids in our application. If we wish t
 
 #### Scoped component theme
 
-In order for the custom theme do affect only our specific component, we can move all of the styles we just defined from the global styles file to our custom component's style file (including the [import](#importing-style-library) of the `index` file).
+In order for the custom theme to affect only specific component only our specific component, we can move all of the styles we just defined from the global styles file to our custom component's style file (including the [import](#importing-style-library) of the `index` file).
 
 This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation), our styles will be applied only to our custom component.
 
