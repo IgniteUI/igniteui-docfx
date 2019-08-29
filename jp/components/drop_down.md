@@ -393,20 +393,20 @@ export class InputDropDownComponent {
     </igx-drop-down-item>
 </igx-drop-down>
 ```
-<!-- ### Styling
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the **igx-drop-down** appearance. We are going to create and style an `igx-drop-down` component to choose an RPG 'Hero Class' from. 
+### スタイル設定
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx--combo** の外観を変更できます。RPG 'Hero Class' を選択するために、`igx-drop-down` コンポーネントを作成およびスタイル設定します。 
 
-#### Import theme
-First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+#### テーマのインポート
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
 ```scss
 // in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-#### Define palette & colors
-After we've imported the `index` file we can go ahead and use the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) function to define some color variables we would like to use in our custom theme. We are going to use these for our custom igx-drop-down styling in conjunction with our own color [palette](themes/palette.md) where we can specify our main colors to be used by the component.
-Fist define a custom palette and pass our main colors:
+#### パレットと色の定義
+インデックス ファイルをインポート後、 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用するメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、カスタムigxドロップダウン スタイルにこれらを使用します。
+最初にカスタム パレットを定義し、メイン カラーを渡します。
 ```scss
 $my-primary-color:#FFC314;
 $my-secondary-color: #7344df;
@@ -418,8 +418,8 @@ $my-color-palette: igx-palette(
     $info: $my-info-color
 );
 ```
-In order to see our custom palette and colors applied, we need to pass these to a theme function.
-So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our cool colors to a number of predefined `igx-drop-down-theme` parameters. Let's say we have decided modifying these specific parameters will be more than sufficient to make our component look the way we like. It is really convenient to make use of the previously created [palette](themes/palette.md) and base our new colors on it. Lets say we are going for some different shades of purple.
+カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
+次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの多数の `igx-drop-down-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成したパレットを使用して、新しい色をその[パレット](themes/palette.md)に基づいて作成すると非常に便利です。紫色のいくつかの異なる色合いを使用します。
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
     $background-color: igx-color($my-color-palette, "secondary", 100),
@@ -440,7 +440,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
     $hover-item-text-color: igx-color($my-color-palette, "secondary", 600)
 );
 ```
-As in this particular sample we are going to use a button to toggle the `igx-drop-down`, we can go a bit further and style it as well. So we go a bit outside the `igx-drop-down` topic and to complement the overall drop-down theme styling we will create a custom button theme passing it our color palette like: 
+この特定のサンプルのように、ボタンを使用して `igx-drop-down` を切り替えますが、さらにスタイルを設定することもできます。したがって、`igx-drop-down` トピック外でドロップダウンテーマの全体的なスタイルを補完するために、次のようなカラーパレットを渡すカスタムボタンテーマを作成します。 
 ```scss
 $custom-button-theme: igx-button-theme(
     $palette: $my-color-palette
@@ -448,11 +448,11 @@ $custom-button-theme: igx-button-theme(
 
 ```
 
-#### Applying
-All that's left is to properly scope our newly created themes.
+#### 適用
+あとは新しく作成したテーマを適切にスコープするだけです。
 
-##### Globally
-In case you want this newly created `igx-drop-down` theme to be applied [`globally`](themes/component-themes.md#creating-themes) in your app (to all of the components of this type, keep in mind we are actually extending igx-drop-down-theme), all that is needed is to include the theme in your app root style file. The same applies for our custom button theme:
+##### グローバル
+この新しく作成された `igx-drop-down` テーマをアプリで[`グローバル`](themes/component-themes.md#creating-themes)に適用したい場合 (このタイプのすべてのコンポーネントに、実際に igx-drop-down-theme を拡張していることに注意してください)、必要なすべてテーマをアプリのルート スタイルファイルに含めてください。同じことがカスタム ボタン テーマにも当てはまります。
 ```scss
 // in root app.scss
 // Pass our drop-down theme to the `igx-drop-down` mixin
@@ -461,13 +461,15 @@ In case you want this newly created `igx-drop-down` theme to be applied [`global
     @include igx-button($custom-button-theme);
 
 ```
-##### Scoped
-There may be a case where you want a particular `igx-drop-down` be styled differently than the others in the app. This will require to use angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc.
+##### スコープ
+特定の `igx-drop-down` のスタイルをアプリ内の他のものとは異なるようにする場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
+ >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要があります。
 
-On the other side, in order to prevent our custom theme to leak to other component descendants, be sure to include the `:host` selector before `::ng-deep`:
+ 
+
+一方、カスタム テーマが他のコンポーネントの子孫に影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -479,9 +481,9 @@ On the other side, in order to prevent our custom theme to leak to other compone
 ```
 
 > [!NOTE]
-> The [**IgxDropDown**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) component uses [IgxOverlay](overlay_main.md) to hold and display the `igx-drop-down-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [`IgxOverlay styling guide`](overlay_styling.md).
+> [**IgxDropDown**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay_main.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイリング ガイド`](overlay_styling.md)を確認してください。
 
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:350px">
     <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>

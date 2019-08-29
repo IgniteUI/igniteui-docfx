@@ -360,6 +360,7 @@ export class MyClass implements OnInit {
 ## スタイル設定
 [Ignite UI for Angular Theming](themes/index.md) は、**igx-select** の外観を変更できます。`igx-select` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。さらに、`igx-select` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `igx-select` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) をご覧ください。
 
+
 ### コード スニペット
 以下を使用します。
 ```scss
