@@ -1,10 +1,10 @@
 ---
-title: Create your UI with an Angular component | IgniteUI for Angular | Infragistics
-_description: Learn how to create user interface using an Angular component when migrating from WPF to Angular.
+title: Create User Interface with an Angular component | IgniteUI for Angular | Infragistics
+_description: Learn how to create user interface using an Angular component when you migrate from WPF to Angular.
 _keywords: angular component, ignite ui for angular, infragistics
 ---
 
-## Create your UI with an Angular component
+## Create User Interface with an Angular component
 
 > [!Video https://www.youtube.com/embed/z1SZUezpRXY]
 
