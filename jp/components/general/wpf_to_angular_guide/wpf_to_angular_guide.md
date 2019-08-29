@@ -1,12 +1,12 @@
 ---
-title: WPF to Angular guide
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+title: WPF to Angular tutorial | IgniteUI for Angular | Infragistics
+_description: Learn how to switch from Angular to WPF, by comparing both frameworks. Get familiar with some similarities like binding, events and components.
+_keywords: angular tutorial, igniteui for angular, infragistics
 ---
 
-## WPF to Angular guide
+## WPF to Angular tutorial
 
-If you are a WPF developer, this guide will help you to learn Angular by comparing the similarities and differences between the two platforms. The guide is divided into the following topics:
+WPF to Angular tutorial is the first step that you should take in order to make a smooth transition from a `desktop` to `web` framework transition. The tutorial targets WPF developers, who make their first steps to web development and it examines some differences and similarities of both frameworks - applications structure, data binding, events, components, etc. The guide is divided into the following topics:
 - [Create your first Angular application](create_first_angular_app.md)
 - [Create your UI with Angular components](create_ui_with_components.md)
 - [One-way data binding in Angular](one_way_binding.md)
