@@ -276,10 +276,10 @@ Following the simplest approach, we create a new theme that extends the [`igx-gr
 ```scss
 $custom-theme: igx-grid-theme(
     $header-background: #e0f3ff,
-    $header-text-color: black,
+    $header-text-color: #e41c77,
     $header-border-width: 1px,
-    $header-border-style: default,
-    $header-border-color: black
+    $header-border-style: solid,
+    $header-border-color: rgba(0, 0, 0, 0.08)
 );
 ```
 The last step is to **include** the component mixins: 
@@ -307,9 +307,9 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 
 ```scss
 $light-blue-color: #e0f3ff;
-$black-color: #000000;
+$deep-pink-color: #e41c77;
 
-$custom-palette: igx-palette($primary: $light-blue-color, $secondary: $black-color);
+$custom-palette: igx-palette($primary: $light-blue-color, $deep-pink-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
@@ -319,8 +319,8 @@ $custom-theme: igx-grid-theme(
     $header-background: igx-color($custom-palette, "primary", 500),
     $header-text-color: igx-color($custom-palette, "secondary", 500),
     $header-border-width: 1px,
-    $header-border-style: default,
-    $header-border-color: igx-color($custom-palette, "secondary", 500)
+    $header-border-style: solid,
+    $header-border-color: igx-color($custom-palette, "grays", 200)
 );
 ```
 
@@ -340,8 +340,8 @@ $custom-grid-schema: extend($_light-grid,
         header-background: (igx-color:('primary', 500)),
         header-text-color: (igx-color:('secondary', 500)),
         header-border-width: 1px,
-        header-border-style: default,
-        header-border-color: (igx-color:('secondary', 500))
+        header-border-style: solid,
+        header-border-color: (igx-color:('grays', 200))
     )
 );
 ```
