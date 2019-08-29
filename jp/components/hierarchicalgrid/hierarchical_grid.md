@@ -253,17 +253,22 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 > `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf Known Issues](../for_of.html#known-limitations) の既知の問題のセクションを参照してください。
 
 ### Styling
-The igxHierarchicalGrid can be stylized through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the grid.        
+The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+
+In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.     
 
 #### Importing global theme   
-To begin the styling of the predefined hierarchical grid layout, one needs to import the `index` file, where all styling functions and mixins are located.   
+To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located. 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
 #### Defining custom theme
-One can easily create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.   
+Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.
+
+ >[!NOTE]
+ >There is no specific `sass` hierarchical grid function.
 
 
 ```scss
@@ -282,7 +287,7 @@ $custom-theme: igx-grid-theme(
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Instead, one could achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
  ```scss
@@ -311,8 +316,8 @@ $custom-theme: igx-grid-theme(
 ```   
 
 #### Defining custom schemas
-One could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_light_grid`.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we will use `$_light_grid`.
 ```scss
 $custom-grid-schema: extend($_light-grid,(
     cell-active-border-color: (igx-color:('secondary', 500)),
@@ -340,15 +345,22 @@ $custom-theme: igx-grid-theme(
 ```   
 
 #### Applying the custom theme
-After providing the function with the required parameters, one has to **include** the component mixins.   
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
 
 ```scss
 @include igx-grid($custom-theme);
 ```
 
->[!NOTE]
- > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one.  
+#### Scoped component theme
 
+In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
 ```scss
 :host {
