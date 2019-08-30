@@ -112,7 +112,7 @@ public ngOnInit() {
 </div>
 
 ### Styling
-The IgxIcon allows custom stylization through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme) exposes a property that allows customization of the color of the component.        
+The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme) exposes a property that allows customization of the color of the component.
 
 #### Importing global theme
 To begin styling of the predefined icon layout, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -126,13 +126,13 @@ You can easily create a new theme, that extends the [`igx-icon-theme`]({environm
 
 ```scss
 $custom-theme: igx-icon-theme(
-  $color: rgb(223, 181, 13),
+  $color: #ffcd0f,
   $disabled-color: #494949
 );
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Instead, a greater flexibility could be achieved, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -155,8 +155,8 @@ $custom-theme: igx-icon-theme(
 ```
 
 #### Defining custom schemas
-You could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_dark_icon`.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_icon`.   
 
 ```scss
 $custom-icon-schema: extend($_dark-icon, (
@@ -178,13 +178,21 @@ $custom-theme: igx-icon-theme(
 ```
 
 #### Applying the custom theme
-After providing the function with the required parameters you have to **include** the component mixins.  
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 ```scss
 @include igx-icon($custom-theme);
 ```
 
+#### Scoped component theme
+
+In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+
  >[!NOTE]
-  > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one.  
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
 ```scss
 :host {
