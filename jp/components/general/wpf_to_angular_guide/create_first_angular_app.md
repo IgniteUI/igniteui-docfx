@@ -1,93 +1,94 @@
----
-title: Create your first Angular app
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
+﻿---
+title: はじめての Angular アプリを作成
+_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
 _keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+_language: ja
 ---
 
-## Create your first Angular app
+## はじめての Angular アプリを作成
 
 > [!Video https://www.youtube.com/embed/dhjrAPPad54]
 
-### Prerequisites
+### 前提条件
 
-In order to start writing Angular applications, you need to install Node.js and the npm package manager. Node.js is a JavaScript runtime environment that executes JavaScript code outside of a browser. In order to get Node.js, go to [nodejs.org](https://nodejs.org). NPM is a package manager similar to the NuGet package manager for .NET. It is installed with Node.js by default. You will also need an IDE. One of the best environments for developing Angular applications is Visual Studio Code. It is free, open source, and runs on every platform. You can get it from [code.visualstudio.com](https://code.visualstudio.com/).
+Angular アプリケーションの作成を開始するには、Node.js と npm パッケージ マネージャーをインストールする必要があります。Node.js は、ブラウザーの外部で JavaScript コードを実行する JavaScript ランタイム環境です。Node.js を取得するには、[nodejs.org](https://nodejs.org) にアクセスします。NPM は、.NET 用の NuGet パッケージマネージャーに似たパッケージ マネージャーです。デフォルトで Node.js とともにインストールされます。IDE も必要です。Angular アプリケーションの開発に最適な環境の 1 つは、Visual Studio Code です。無料のオープンソースであり、すべてのプラットフォームで実行できます。[code.visualstudio.com](https://code.visualstudio.com/) から取得できます。
 
-### Create new project
+### 新しいプロジェクトの作成
 
-If you are a WPF developer, creating new projects inside of Visual Studio is pretty straight forward. You would just click File -> New Project, select the project type, give it a name and press OK. Since you are going into the Angular world, you want to create a new project inside Visual Studio Code. However, there is no new project option here and that's because Visual Studio Code is file based and not project based. In order to create a new Angular application, we are going to use the command prompt.
+WPF 開発の経験がある場合は、Visual Studio 内で新しいプロジェクトを作成するのは簡単です。[ファイル]　-> [新しいプロジェクト] をクリックし、プロジェクトの種類を選択して名前を付け、[OK] をクリックします。Angular で作業を開始するには、Visual Studio Code で新しいプロジェクトを作成します。ただし、ここには新しいプロジェクト オプションはありません。これは、Visual Studio Code がプロジェクトベースではなくファイル ベースであるためです。新しい Angular アプリケーションを作成するために、コマンド プロンプトを使用します。
 
-First you will need to install the [Angular CLI](https://cli.angular.io/).
+最初に、[Angular CLI](https://cli.angular.io/) をインストールする必要があります。
 
 ```cmd
 npm install -g @angular/cli
 ```
 
-Then navigate in the command prompt to the folder where you want your application to be created and execute the following command:
+次に、コマンド プロンプトで、アプリケーションを作成するフォルダーに移動し、次のコマンドを実行します。
 
 ```cmd
 ng new demo-app
 ```
 
-We are going to be prompted "Would we like to add Angular routing?". For this demo we will choose NO. Next, we are asked which stylesheet format would we like to use. We are going to stick with the basic CSS for now. It takes a few minutes, but eventually the process will complete and your new application will be created on the disk. 
+「Angular ルーティングを追加しますか?」というプロンプトが表示されます。このデモでは、NO を選択します。次に、使用するスタイル シートの形式を決めます。ここでは、基本的な CSS を使用します。数分かかりますが、最終的にプロセスが完了し、新しいアプリケーションがディスク上に作成されます。 
 
-Now we have to change directories to the demo-app folder that was just created and execute a command to open Visual Studio Code.
+次に、作成した demo-app フォルダーにディレクトリを変更し、Visual Studio Code を開くコマンドを実行する必要があります。
 
 ```cmd
 cd demo-app
 code .
 ```
 
-This is going to launch a new instance of Visual Studio Code that contains your Angular application. Now this is the part that is probably the most overwhelming to desktop developers trying to learn Angular - the folder structure.
+これにより、Angular アプリケーションを含む Visual Studio Code の新しいインスタンスが起動します。これは、Angular を学んでいるデスクトップ開発者にとって最も複雑な部分、フォルダー構造です。
 
-### Project structure
+### プロジェクト構造
 
-Let's go ahead and take a look at each of these files and see how they relate to a WPF application. The best way to do that is to compare each project side by side. On the left we have our WPF app. On the right we have our Angular app.
+次にこれらの各ファイルを見て、それらが WPF アプリケーションとどのように関連しているかを見てみましょう。最良の方法は、各プロジェクトを並べて比較することです。左側は、WPF アプリです。右側は、 Angular アプリです。
 
 <img src="../../../images/general/WPF_project_structure.png" />
 <img src="../../../images/general/Angular_project_structure.png" />
 
-It is important to keep in mind that an Angular application is a single page application (SPA) which means there is only one page in the entire app, and that is your `index.html`. The `index.html` file could be compared to the `App.xaml` of the WPF application. They are both global and everything you put there will show up on every single page of your application. The `index.html` file contains a section `<app-root></app-root>` which is similar to the `StartupUri` of the `App.xaml` file and specifies the first page we want to show when the app launches.
+Angular アプリケーションは単一ページアプリケーション (SPA) であり、アプリ全体に 1 ページしかないこと、つまり index.html であることを覚えておくことが重要です。`Index.html` ファイルは、WPFアプリケーションの `App.xaml` と比較できます。これらは両方ともグローバルであり、すべてアプリケーションのすべてのページに表示されます。`index.html` ファイルには、App.xaml ファイルの StartupUri に似たセクション `<app-root></app-root>` が含まれており、アプリの起動時に表示する最初のページを指定します。
 
-What happens technically is when you navigate to the `index.html`, the `main.ts` JavaScript file invokes which loads the `AppModule`. An Angular application is made up of modules and components. By default, you get a root module and a root component and those are going to be located under the `app` folder. when the `main.ts` file invokes, we're going to bootstrap the `AppModule`, which is in the `app.module.ts` file in the `app` folder.
+`index.html` に移動すると、`main.ts` JavaScript ファイルが呼び出され、`AppModule` がロードされます。Angular　アプリケーションは、モジュールとコンポーネントで構成されています。デフォルトでは、ルート モジュールとルート コンポーネントを取得し、それらはアプリ フォルダーの下に配置されます。 main.ts ファイルが呼び出されたら、app フォルダーの app.module.ts ファイルにある AppModule をブート ストラップします。
 
-The app module then bootstraps its own `AppComponent`. The `AppComponent` is defined in the `app.component.ts` file and its selector is set to `app-root`. The `AppComponent` has its html template defined in the `app.component.html` file. Basically the `<app-root></app-root>` section in the `index.html` page will visualize the content of the `app.component.html` file.
+その後、アプリ モジュールは独自の `AppComponent` をブートストラップします。`AppComponent` は `app.component.ts` ファイルで定義され、そのセレクターは `app-root` に設定されます。`AppComponent` のhtmlテンプレートは `app.component.html` ファイルで定義されています。基本的に、`index.html` ページの `<app-root></app-root>` セクションは、`app.component.html` ファイルのコンテンツを視覚化します。
 
-The `main.ts` file is similar to the `App.xaml.cs` file since it is something like a code behind. The `app.component.html`, which is the default component shown when the application runs, is very similar to the `MainWindow.xaml` in WPF.
+`main.ts` ファイルは、コードビハインドのようなものであるため、`App.xaml.cs` ファイルに似ています。`App.component.html` は、アプリケーションの実行時に表示されるデフォルトのコンポーネントであり、WPF の `MainWindow.xaml` に非常に似ています。
 
-In WPF we have a `packages.config` file which defines all our dependencies to nuget packages while Angular has a `package.json` file which contains the dependencies that your application requires to run. The `package.json` file contains also a section for scripts that you can run in the console when you are testing, starting or building your application.
+WPF には、nuget パッケージへのすべての依存関係を定義する `packages.config` ファイルがあり、Angular には、アプリケーションの実行に必要な依存関係を含む `package.json` ファイルがあります。`package.json` ファイルには、アプリケーションをテスト、起動、またはビルドする際にコンソールで実行できるスクリプトのセクションも含まれています。
 
-Let's take a look at the `References` folder. In WPF we have a `References` node in our solution that shows all the references that are added to this project. In an Angular application that is actually going to be the `nodes_module` folder. Coming from WPF, you may be surprised how many dependencies an Angular project has. These are populated by using `npm`.
+次に `References` フォルダーを確認します。WPF では、このプロジェクトに追加されたすべての参照を表示する`参照`ノードがソリューションにあります。`nodes_module` フォルダーになる Angular アプリケーションの場合。WPF と比較すると Angular プロジェクトの依存関係がとても多いです。これらは、`npm` を使用して読み込まれます。
 
-Unfortunately, here the similarities end. Let us look at some of the other generated files and folders:
-- `e2e` - stands for end-to-end testing and contains integration tests or tests with real-world scenarios like a login process.
-- `src` - most of the application's code is located here.
-- `assets` - contains your images or any other assets.
-- `environment` - contains information about your build environments.
-- `favicon.ico` - the icon that appears in the browser when you are at your site.
-- `karma.conf.js` - contains configuration for the unit tests.
-- `style.css` - stylesheet with styles that are global for your application, it is similar to a resource dictionary defined in `App.xaml` in WPF.
+以上が 2 つのプラットフォームの類似点となります。生成された他のファイルとフォルダーのいくつかを見てみましょう。
+- `e2e` - エンドツーエンド テストの略で、統合テストまたはログイン プロセスなどの実際のシナリオとのテストが含まれます。
+- `src-` - アプリケーションのほとんどのコードはここにあります。
+- `assets` - アセット-画像またはその他のアセットが含まれます。
+- `environment` - ビルド環境に関する情報が含まれています。
+- `favicon.ico` - サイトにいるときにブラウザに表示されるアイコン。
+- `karma.conf.js` - 単体テストの構成が含まれています。
+- `style.css` - アプリケーションのグローバルなスタイルを含むスタイルシート。WPF の App.xaml で定義されているリソース ディクショナリに似ています。
 
-### Run the application
+### アプリケーションの実行
 
-Now we are ready to run the application, but in Visual Studio Code you cannot just press F5. We are going to open the Visual Studio Code Terminal by clicking in the menu on Terminal -> New Terminal or by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd>. In order to run the application, you should execute the following command:
+れで、アプリケーションを実行する準備ができましたが、Visual Studio Code では、F5 キーを押すことはできません。ターミナル -> 新しいターミナルのメニューをクリック、または <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> 押して、Visual Studio Code ターミナルを開きます。アプリケーションを実行するには、次のコマンドを実行する必要があります。
 
 ```cmd
 ng serve
 ```
 
-After the application is started, you can open it in the browser on the following URL http://localhost:4200/. If you want your app to open automatically in the browser, you should use the following command:
+アプリケーションが起動したら、ブラウザで URL http://localhost:4200/ を入力して開くことができます。アプリをブラウザーで自動的に開くようにするには、次のコマンドを使用する必要があります。
 
 ```cmd
 ng serve -o
 ```
 
-In this case `-o` stands for open. Another way to start the application is by using the npm commands:
+この場合、`-o` は open を表します。または npm コマンドを使用してアプリケーションを起動する方法もあります。
 
 ```cmd
 npm start
 ```
 
-You could find those scripts defined in the `package.json` file and modify the `start` command by adding the `-o` option:
+`package.json` ファイルで定義されているスクリプトを見つけ、`-o` オプションを追加して `start` コマンドを変更できます。
 
 ```json
   "scripts": {
@@ -95,16 +96,16 @@ You could find those scripts defined in the `package.json` file and modify the `
     "start": "ng serve -o",
 ```
 
-Your first Angular application should look like this:
+作成した Angular アプリケーションは以下のようになります。
 
 <img src="../../../images/general/First_angular_app.png" />
 
-## Additional Resources
-* [Desktop to Web: Create your first Angular App](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
-* [Angular Application Shell](https://angular.io/tutorial/toh-pt0)
+## その他のリソース
+* [デスクトップから Web: [はじめての Angular アプリを作成](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [Angular アプリケーション シェル](https://angular.io/tutorial/toh-pt0)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular** フォーラム) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
