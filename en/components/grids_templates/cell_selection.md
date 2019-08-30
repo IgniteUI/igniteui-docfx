@@ -23,6 +23,26 @@ _keywords: data select, igniteui for angular, infragistics
 ### Cell selection
 In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) there is now tree supported modes for cell selection, and you can easily switch between them by changing **cellSelection** property. You can disable cell selection, you can *select only one cell within the grid* or have the opportunity to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
 
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="treegrid-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
 #### @@igComponent Мulti-cell Selection
@@ -38,8 +58,6 @@ How to select cells:
 - Continuous multiple cell selection is available, by clicking with the mouse and dragging.
 
 #### Demo
-
-}
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -59,7 +77,7 @@ How to select cells:
 </div>
 <div class="divider--half"></div>
 }
-
+}
 #### Single selection
 
 When you set the **[cellSelection]="'single'"**, this allows you to have only one selected cell in the grid at a time. Also in the mode mouse drag will not work and instead of selecting a cell, this will make default text selection.

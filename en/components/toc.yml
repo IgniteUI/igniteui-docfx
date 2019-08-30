@@ -202,10 +202,10 @@
       new: true
       items:
         - name: Row selection
-          href: grid/row_selection.md
+          href: treegrid/row_selection.md
           new: true
         - name: Cell selection
-          href: grid/cell_selection.md
+          href: treegrid/cell_selection.md
           new: true
     - name: Searching
       href: treegrid/search.md
@@ -291,7 +291,7 @@
       new: true
       items:
         - name: Row selection
-          href: grid/row_selection.md
+          href: hierarchicalgrid/row_selection.md
           new: true
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
