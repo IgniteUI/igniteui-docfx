@@ -115,17 +115,16 @@ export class AppModule {}
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
 ### Styling
-The IgxRipple allows custom stylization through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
+The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
 
 #### Importing global theme
-To begin styling of the predefined ripple layout, you need to import the `index` file, where all styling functions and mixins are located.  
+To begin styling of the predefined ripple color, you need to import the `index` file, where all styling functions and mixins are located.  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```   
 
 #### Defining custom theme
-You can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.   
-   
+You can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
 $custom-theme: igx-ripple-theme(
@@ -134,7 +133,7 @@ $custom-theme: igx-ripple-theme(
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Instead, a greater flexibility could be achieved, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color value was hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -156,8 +155,8 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### Defining custom schemas
-You could go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `_dark_ripple`.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_ripple`.   
 
 ```scss
 $custom-ripple-schema: extend($_dark-ripple, (
@@ -178,13 +177,21 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### Applying the custom theme
-After providing the function with the required parameters you have to **include** the component mixins.  
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 ```scss
 @include igx-ripple($custom-theme);
 ```
 
+#### Scoped component theme
+
+In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+
  >[!NOTE]
-  > If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. Note that the Emulated value of the ViewEncapsulation is the default one.  
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
 ```scss
 :host {
@@ -195,7 +202,7 @@ After providing the function with the required parameters you have to **include*
 ```    
 
 >[!NOTE]
-  > A color that is set using the `igxRiple` directive, would take prevalance from the one, set within a custom theme.  
+  > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
 
 #### Demo
 <div class="sample-container loading" style="height:700px">
