@@ -1,20 +1,21 @@
----
-title: Overlay Styling
-_description: A detailed walkthrough that explains how to properly apply and scope styles to elements that are displayed using the IgniteUI for Angular Overlay Service.
+﻿---
+title: オーバーレイ スタイリング
+_description: IgniteUI for Angular Overlay Service は、表示される要素にスタイルを適切に適用およびスコープする方法についての詳細なチュートリアル。
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_language: ja
 ---
 
-## Overlay Styling
+## オーバーレイ スタイリング
 <p class="highlight">
 
-[`IgxOverlayService`](overlay_main.md) is used to display content above some content or the whole page. A lot of Ignite UI for Angular components make use of the overlay - [Drop Down](drop_down.md), [Combo](combo.md), [Date Picker](date_picker.md) and more - so it is important to understand how the overlay displays content.
-To show the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#scoped-component-styles).
+IgxOverlayService は、コンテンツまたはページ全体の上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントのの多くは、ドロップダウン、コンボ、日付ピッカーなどのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
+他の要素上にコンテンツを表示するために、サービスは特別なアウトレット コンテナにへ移動します  (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープ](#scoped-component-styles)されたスタイルに影響を与える可能性があります。
 </p>
 <div class="divider--half"></div>
 
-## Styling Overlay Components
+## オーバーレイ コンポーネントのスタイル設定
 
-In the most common use case - defining a theme for our app [globally](themes/global-theme.md) - styles are generally unaffected by the overlay outlets. For examples, let's take a look at a Drop Down, [styled](drop_down.md#styling) by a global [`igx-drop-down-theme` function]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme):
+最も一般的な使用例 - アプリのテーマを[グローバル](themes/global-theme.md)に定義する - では、スタイルは通常オーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-drop-down-theme` 関数でスタイル設定されたドロップダウンを見てみましょう。
 
 ```html
 <!-- in overlay-styling.component.html -->
@@ -37,11 +38,11 @@ $my-drop-down-theme: igx-drop-down-theme(
 @include igx-drop-down($my-drop-down-theme);
 ```
 
-The global styles are not generated under a scoped rule and are not affected by any encapsulation, and thus can match any element on the page, including `igx-drop-down-item` the service moved to the overlay outlet.
+グローバル スタイルはスコープされたルール下では生成されず、カプセル化の影響も受けないため、サービスがオーバーレイ アウトレットに移動した `igx-drop-down-item` など、ページ上の任意の要素と一致できます。
 
-Alternatively, to limit the style only to our custom component's view, we can sometimes use [`ViewEncapsulation`](themes/component-themes.md#view-encapsulation) without additional considerations for the overlay. This applies to components that display mostly templated content like the Drop Down above or the [`igxToggle`]() directive.
+あるいは、カスタム コンポーネントのビューのみにスタイルを制限するために、オーバーレイを追加考慮せずに [`ViewEncapsulation`](themes/component-themes.md#view-encapsulation) を使用することもできます。これは、上記のドロップダウンや [`igxToggle`]() ディレクティブなど、ほとんどテンプレート化されたコンテンツを表示するコンポーネントに適用されます。
 
-For example, we can define the above styles in our custom component's style file, `overlay-styling.component.scss`.
+たとえば、カスタム コンポーネントのスタイル ファイル `overlay-styling.component.scss` で上記のスタイルを定義できます。
 
 ```scss
 // in overlay-styling.component.scss
@@ -50,15 +51,15 @@ For example, we can define the above styles in our custom component's style file
 @include igx-drop-down($my-drop-down-theme);
 ```
 
-When using `ViewEncapsulation.Emulated` (the default), styles will be generated the same way as with the app `styles.scss`, with Angular appending a specific attribute selector to each rule. The same attribute is applied to elements initialized **inside** of our custom component's view  - including the `igx-drop-down-item`s. This means the generated styles will still match all elements on the page, based on the attribute, including the ones in the overlay outlet.
+`ViewEncapsulation.Emulated` (デフォルト) を使用する場合、スタイルはアプリの `styles.scss` と同じ方法で生成され、Angular は各ルールに特定の属性セレクターを追加します。同じ属性が、`igx-drop-down-item` を含むカスタム コンポーネントのビュー**内**で初期化された要素に適用されます。つまり、生成されたスタイルは、オーバーレイ アウトレットの要素も含めて、属性に基づいてページ上のすべての要素と一致します。
 
-However, most of the Ignite UI for Angular components create their own content based on options and/or bound data (e.g. [`igx-combo`](combo.md), [`igx-grid`](grid/grid.md) and more). That requires us to break through the emulated encapsulation using `::ng-deep`, which we in turn have to scope to prevent the styles from affecting our whole app.
+ただし、Angular コンポーネントの Ignite UI のほとんどは、オプションやバインドされたデータ ([`igx-combo`](combo.md), [`igx-grid`](grid/grid.md) など) に基づいて独自のコンテンツを作成します。`::ng-deep` を使用してエミュレートされたカプセル化を突破する必要があり、スタイルがアプリ全体に影響を与えないようにスコープを設定する必要があります。
 
-### Scoped Component Styles
+### スコープ コンポーネント スタイル
 
-When scoping styles for elements that are displayed in the overlay, we need to specify to the position of the overlay `outlet` in the DOM. CSS rules that are scoped require a specific hierarchical structure of our elements - we need to make sure the overlay content is displayed in the correct context of the styles we want to apply.
+オーバーレイに表示される要素のスタイルをスコーピングする際に DOMのオーバーレイ `アウトレット`の位置を指定する必要があります。スコープが設定された CSS ルールには、要素の特定の階層構造が必要です - オーバーレイ コンテンツが、適用するスタイルの正しいコンテキストで表示されることを確認してください。
 
-For example, let's take the `igx-combo` - its item [styles](combo.md#styling) make use of the `igx-drop-down` theme, because the combo defines its content inside of its own view. For a custom theme to affect them, when using `ViewEncapsulation.Emulated`, we need to penetrate the encapsulation with `::ng-deep`, scoping our styles so they don't bleed to our whole app:
+たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目[スタイル](combo.md#styling)は igx-drop-down テーマを使用します。カスタム テーマがそれらに影響を与えるには、`ViewEncapsulation.Emulated` を使用するときに、`::ng-deep` でカプセル化をペネトレーションし、アプリ全体ににじまないようにスタイルをスコープする必要があります。
 
 ```scss
 // in overlay-styling.component.scss
@@ -68,9 +69,9 @@ For example, let's take the `igx-combo` - its item [styles](combo.md#styling) ma
     }
 }
 ```
-The items in our combo's list **are not** descendants of our component `host` - they are currently being displayed in the default overlay outlet, at the end of the `document` body. Changing this is done by making use of the [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) property in the `overlaySettings`. The `outlet` controls where the overlay container should be rendered.
+コンボのリスト内項目は、コンポーネント ホストの子孫では**ありません**。現在、`ドキュメント`本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。これを変更するには、`overlaySettings` のアウトレット[`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`アウトレット`は、オーバーレイ コンテナをレンダリングする場所を制御します。
 
-Here, we can pass a reference to the element where we'd like our container to be:
+以下でコンテナを配置する要素への参照を渡すことができます。
 
 ```html
 <igx-combo [data]="items" valueKey="name" displayKey="name" [overlaySettings]="{ outlet: element }">
@@ -85,23 +86,24 @@ export class OverlayStylingComponent {
 }
 ```
 
-Now, the combo's list of items is properly rendered **inside** of our component's host, which means that our custom theme will take effect:
+コンボのアイテムのリストがコンポーネントのホスト**内**に適切にレンダリングされます。つまり、カスタムテーマが有効になります。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-styling-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-## Styling Overlay
+## オーバーレイのスタイル設定
 
-Now that we've covered how `ViewEncapsulation` works together with the overlay's `outlet` property, we can take a look at how we can style the overlay wrapper itself.
-The [`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) exposes a single property - `$background-color` - which affects the color of the backdrop when the overlay is set to `modal: true`.
 
-### Global Styles
+`ViewEncapsulation` がオーバーレイのアウトレット プロパティとどのように連携するかを説明しました。次にオーバーレイ ラッパー自体のスタイルを設定する方法を示します。
+[`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
 
-The easiest way to style the overlay modal is to include the theme in our app's global styles:
+### グローバル スタイル
+
+オーバーレイ モーダルをスタイル設定する最も簡単な方法は、アプリのグローバル スタイルにテーマを含める方法です。
 
 ```scss
 //  styles.scss
@@ -114,12 +116,12 @@ $my-overlay-theme: igx-overlay-theme(
 @include igx-overlay($my-overlay-theme);
 ```
 
-Now **all** modal overlays will have a purple tint to thier background.
+これで、**すべて**のモーダル オーバーレイの背景が紫色になります。
 
-### Scoped Overlay Styles
+### スコープ オーバーレイ スタイル
 
-On the off chance we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#scoped-component-styles).
-When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay_main.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, `z-index` and viewport issues, we recommend using outlets for modal overlays only in higher level components:
+特定のコンポーネントの下に**のみ**特定の背景をオーバーレイに表示したい場合は、[テーマをスコープ](#scoped-component-styles)できます。
+モーダル オーバーレイをスコープする場合、オーバーレイ アウトレットを移動する必要がありますが、これにはいくつかの[制限](overlay_main.md#assumptions-and-limitations)があります。オーバーフロークリッピング、`z-index`、およびビューポートの問題のリスクを最小限に抑えるために、より高いレベルのコンポーネントでのみモーダルオーバーレイのアウトレットを使用することをお勧めします。
 
 ```scss
 //  styles.scss
@@ -130,8 +132,8 @@ When scoping a modal overlay, you need to move the overlay outlet, which has som
 ```
 
 >[!NOTE]
-> If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep`. This is because the overlay wrapper is created dynamically by the overlay service is **not** part of the component's view.
-> To make sure the theme **does not** affect elements in *other components* in our app, we scope the `::ng-deep` statement under `:host`:
+> コンポーネントが[``エミュレート](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。これは、オーバーレイ ラッパーがコンポーネントのビューの一部**ではない**オーバーレイ サービスによって動的に作成されるためです。
+> テーマがアプリの他のコンポーネントの要素に影響を**与えない**ように、`:host` の下の `::ng-deep` ステートメントをスコープします。
 
 ```scss
 // in overlay-styling.component.scss
@@ -144,7 +146,7 @@ When scoping a modal overlay, you need to move the overlay outlet, which has som
 }
 ```
 
-## Additional Resources
-* [IgniteUI for Angular - Theme Library](themes/index.md)
+## その他のリソース
+* [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [Overlay Main Topic](overlay_main.md)
+* [オーバーレイ メイン トピック](overlay_main.md)
