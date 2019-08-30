@@ -47,9 +47,9 @@ code .
 <img src="../../../images/general/WPF_project_structure.png" />
 <img src="../../../images/general/Angular_project_structure.png" />
 
-Angular アプリケーションは単一ページアプリケーション (SPA) であり、アプリ全体に 1 ページしかないこと、つまり index.html であることを覚えておくことが重要です。`Index.html` ファイルは、WPFアプリケーションの `App.xaml` と比較できます。これらは両方ともグローバルであり、すべてアプリケーションのすべてのページに表示されます。`index.html` ファイルには、App.xaml ファイルの StartupUri に似たセクション `<app-root></app-root>` が含まれており、アプリの起動時に表示する最初のページを指定します。
+Angular アプリケーションは単一ページアプリケーション (SPA) であり、アプリ全体に 1 ページしかないこと、つまり index.html であることを覚えておくことが重要です。`Index.html` ファイルは、WPFアプリケーションの `App.xaml` と比較できます。これらは両方ともグローバルであり、すべてアプリケーションのすべてのページに表示されます。`index.html` ファイルには、`App.xaml` ファイルの `StartupUri` に似たセクション `<app-root></app-root>` が含まれており、アプリの起動時に表示する最初のページを指定します。
 
-`index.html` に移動すると、`main.ts` JavaScript ファイルが呼び出され、`AppModule` がロードされます。Angular　アプリケーションは、モジュールとコンポーネントで構成されています。デフォルトでは、ルート モジュールとルート コンポーネントを取得し、それらはアプリ フォルダーの下に配置されます。 main.ts ファイルが呼び出されたら、app フォルダーの app.module.ts ファイルにある AppModule をブート ストラップします。
+`index.html` に移動すると、`main.ts` JavaScript ファイルが呼び出され、`AppModule` がロードされます。Angular　アプリケーションは、モジュールとコンポーネントで構成されています。デフォルトでは、ルート モジュールとルート コンポーネントを取得し、それらはアプリ フォルダーの下に配置されます。 `main.ts` ファイルが呼び出されたら、`app` フォルダーの `app.module.ts` ファイルにある AppModule をブート ストラップします。
 
 その後、アプリ モジュールは独自の `AppComponent` をブートストラップします。`AppComponent` は `app.component.ts` ファイルで定義され、そのセレクターは `app-root` に設定されます。`AppComponent` のhtmlテンプレートは `app.component.html` ファイルで定義されています。基本的に、`index.html` ページの `<app-root></app-root>` セクションは、`app.component.html` ファイルのコンテンツを視覚化します。
 
@@ -66,7 +66,7 @@ WPF には、nuget パッケージへのすべての依存関係を定義する 
 - `environment` - ビルド環境に関する情報が含まれています。
 - `favicon.ico` - サイトにいるときにブラウザに表示されるアイコン。
 - `karma.conf.js` - 単体テストの構成が含まれています。
-- `style.css` - アプリケーションのグローバルなスタイルを含むスタイルシート。WPF の App.xaml で定義されているリソース ディクショナリに似ています。
+- `style.css` - アプリケーションのグローバルなスタイルを含むスタイルシート。WPF の `App.xaml` で定義されているリソース ディクショナリに似ています。
 
 ### アプリケーションの実行
 
@@ -101,11 +101,11 @@ npm start
 <img src="../../../images/general/First_angular_app.png" />
 
 ## その他のリソース
-* [デスクトップから Web: [はじめての Angular アプリを作成](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [デスクトップから Web: はじめての Angular アプリを作成](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
 * [Angular アプリケーション シェル](https://angular.io/tutorial/toh-pt0)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular** フォーラム) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

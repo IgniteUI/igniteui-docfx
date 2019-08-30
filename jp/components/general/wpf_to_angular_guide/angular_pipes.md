@@ -9,7 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/Gmz5kio50FE]
 
-WPF では、データをある値から別の値に変換するために、[IValueConverter] を使用します。(https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8).Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
+WPF では、データをある値から別の値に変換するために、[IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8) を使用します。Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
 
 Angular は、最も一般的なデータ変換用に事前定義された多数のパイプを提供します。たとえば、ヘッダー テキストを大文字で表示する場合は、[UpperCasePipe](https://angular.io/api/common/UpperCasePipe) を使用できます。パイプの使用はとても簡単です。式の後に、パイプ演算子`|`とその後にパイプ名を提供します。
 
@@ -84,7 +84,7 @@ export class ReplacePipe implements PipeTransform {
 > コンポーネントの html テンプレートでパイプを使用できるようにするには、モジュール宣言にパイプを追加する必要があります。
 
 > [!NOTE]
-> Angular パイプと WPF コンバーターの重要な違いは、Angular パイプは [ConvertBack](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) メソッドを持つ WPF コンバーターとは異なり、一方向のバインディングに対してのみ機能することです。
+> Angular パイプと WPF コンバーターの重要な違いは、Angular パイプは [ConvertBack](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) メソッドを持つ WPF コンバーターとは異なり、一方向のバインディングに対してのみ機能することです。
 
 ## その他のリソース
 * [
@@ -95,5 +95,5 @@ export class ReplacePipe implements PipeTransform {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular** フォーラム) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
