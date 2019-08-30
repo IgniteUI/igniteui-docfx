@@ -356,13 +356,13 @@ Following the simplest approach, we create a new theme that extends the [`igx-gr
 
 ```scss
 $custom-theme: igx-grid-summary-theme(
-    $background-color: #3d7bbe,
-    $focus-background-color: #3972ae,
-    $label-color: #00ff2d,
+    $background-color: #e0f3ff,
+    $focus-background-color: rgba( #94d1f7, .3 ),
+    $label-color: #e41c77,
     $result-color: black,
     $pinned-border-width: 2px,
     $pinned-border-style: dotted,
-    $pinned-border-color: #00ff2d
+    $pinned-border-color: #e41c77
 );
 ```
 The last step is to **include** the component mixins: 
