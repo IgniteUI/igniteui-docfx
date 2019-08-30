@@ -1,4 +1,4 @@
----
+﻿---
 title: Bottom Navigation コンポーネント
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール
@@ -340,6 +340,126 @@ public contactsList: object[] = [{
 ```
 
 このトピックの [Bottom Navigation デモ](#bottom-navigation-デモ) セクションで結果を確認できます。
+
+
+#### ルーター アウトレット コンテナとの統合
+
+Bottom Navigation コンポーネントの主な用途はコンテンツを含むパネルの定義ですが、タブ項目のみを定義する必要がある場合があります。
+
+> [!NOTE]
+> タブ項目定義モードはタブのコンテンツをサポートしていないことに注意してください。コンポーネントはタブ項目のストリップのみをレンダリングします。また、このコンポーネントでタブ項目定義とパネル定義を混合することはサポートされません。
+
+タブ項目を定義する際にディレクティブを適用することができます。たとえば、この機能を使用して、Angular Router を使用してビュー間のナビゲーションを実現できます。次の例は、Bottom Navigation コンポーネントを構成して、単一のルーターアウトレットで 3 つのコンポーネントを切り替える方法を示しています。
+
+まず、Bottom Navigation コンポーネントをホストするメインコンポーネントと、デモ用のコンテンツを含む 3 つのビュー コンポーネントが必要です。コードスニペットを簡素化するために、ビューコンポーネントに短いテンプレートがありますが、必要に応じてそれらをより識別しやすくしてください。また、これらのビューコンポーネントを `app.module.ts` ファイルにインポートします。
+
+```typescript
+// bottomnav-routing.component.ts
+import { Component } from "@angular/core";
+
+@Component({
+    selector: "app-bottomnav-routing",
+    styleUrls: ["bottomnav-routing.component.scss"],
+    templateUrl: "bottomnav-routing.component.html"
+})
+export class BottomNavRoutingComponent {
+    constructor() { }
+}
+
+@Component({
+    template: "<h3>Tab 1 Content</h3>"
+})
+export class BottomNavRoutingView1Component {
+}
+
+@Component({
+    template: "<h3>Tab 2 Content</h3>"
+})
+export class BottomNavRoutingView2Component {
+}
+
+@Component({
+    template: "<h3>Tab 3 Content</h3>"
+})
+export class BottomNavRoutingView3Component {
+}
+```
+
+次のステップでは、`app-routing.module.ts` ファイルに適切なナビゲーション マッピングを作成します。
+
+```typescript
+// app-routing.module.ts
+import {
+    BottomNavRoutingComponent,
+    BottomNavRoutingView1Component,
+    BottomNavRoutingView2Component,
+    BottomNavRoutingView3Component } from './bottomnav-routing.component';
+
+...
+
+const appRoutes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/bottomnav-routing'
+    },
+    {
+        path: 'bottomnav-routing',
+        component: BottomNavRoutingComponent,
+        children: [
+            { path: 'view1', component: BottomNavRoutingView1Component },
+            { path: 'view2', component: BottomNavRoutingView2Component },
+            { path: 'view3', component: BottomNavRoutingView3Component },
+        ]
+    }
+];
+
+@NgModule({
+    exports: [RouterModule],
+    imports: [RouterModule.forRoot(appRoutes)]
+})
+export class AppRoutingModule { }
+```
+
+すべてのナビゲーション ルートがセットアップされたので、BottomNavigation コンポーネントを宣言し、ルーティング用に構成する必要があります。
+また、ビュー コンポーネントの出力をレンダリングするためのルーター アウトレットを必ず追加してください。
+
+```html
+<!-- bottomnav-routing.component.html -->
+<router-outlet></router-outlet>
+
+<igx-bottom-nav>
+  <igx-tab label="Tab 1" icon="dashboard"
+    routerLink="view1"
+    routerLinkActive #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive">
+  </igx-tab>
+
+  <igx-tab label="Tab 2" icon="check_circle_outline"
+    routerLink="view2"
+    routerLinkActive #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive">
+  </igx-tab>
+
+  <igx-tab label="Tab 3" icon="radio_button_checked"
+    routerLink="view3"
+    routerLinkActive #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive">
+  </igx-tab>
+</igx-bottom-nav>
+```
+
+上記のコードは、3 つのタブ項目を持つ BottomNavigation コンポーネントを作成します。すべてのタブ項目には、ナビゲーションに使用されるルーティング リンクを指定するために使用される `RouterLink` ディレクティブが適用されています。これらのリンクのいずれかがアクティブになると、RouterLinkActive ディレクティブの isActive プロパティにバインドされるため、対応するタブ項目の isSelected プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
+
+上記のアプローチは、BottomNavigation コンポーネントを使用したルーティングを示すために、次のサンプルで使用されています。
+
+<div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
+    <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
 
 ### API リファレンス
 <div class="divider--half"></div>

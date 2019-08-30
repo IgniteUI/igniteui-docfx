@@ -1,69 +1,69 @@
----
-title: Authentication Project Template
-_description: Angular Authentication Project Template guide.
+﻿---
+title: 認証プロジェクト テンプレート
+_description: Angular 認証プロジェクト テンプレート ガイド
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_language: ja
 ---
 
-## Authentication Project Template
+## 認証プロジェクト テンプレート
 
-Ignite UI CLI provides support of multiple versions of a project (called project templates) to choose from when using either the [`new` command](../cli-overview.md#commands) or the [Step by step mode](step-by-step-guide.md).
+Ignite UI CLI は、[`new` コマンド](../cli-overview.md#commands)またはステップバイステップモードを使用するときに選択するプロジェクト (プロジェクトテンプレート) の複数のバージョンのサポートを提供します。
 
-When creating Ignite UI for Angular project with the Ignite UI CLI you can select a template with an basic implementation of a client-side authentication module that require as little additional setup as possible to jump-start apps with user management.
+Ignite UI CLI を使用して Angular プロジェクト用の Ignite UI を作成する場合に、ユーザー管理でアプリを開始するために追加セットアップをできるだけ必要としないクライアント側認証モジュールの基本的な実装を含むテンプレートを選択できます。
 
-### Create Authentication Project
-You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
+### 認証プロジェクトの作成
+'Ignite UI for Angular' プロジェクト タイプを選択した後、ステップバイステップの手順を実行する際に認証プロジェクトを選択できます。
 
 ![](../../../images/general/cli-igx-side-auth.png)
 
-Or though the new command:
+または新しいコマンドを使用します。
 
 ```bash
 ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 ```
 
-### Description
-This template builds upon the Side Navigation default and adds a profile page and a login section to the app's nav bar that will display a login button or an avatar of the logged in user:
+### 説明
+このテンプレートはサイドナビゲーションのデフォルトに基づいて作成され、ログイン ページまたはログインユーザーのアバターを表示するプロファイル ページとログイン セクションをアプリのナビゲーションバーに追加します。
 
 ![](../../../images/general/igx-side-auth-login-bar.png)
 
-The login bar also integrates dialogs to sign in or up:
+ログインバーは、サインインまたはサインアップするためのダイアログも統合されます。
 
 ![](../../../images/general/igx-side-auth-login-dialogs.png)
 
-The project also supports various [external authentication providers](#add-a-third-party-social-provider). 
+このプロジェクトは、さまざまな[外部認証プロバイダー](#add-a-third-party-social-provider)もサポートしています。 
 
-### In code
-Everything related to user management is under the `src/app/authentication` folder. Notable exports include:
+### コード
+ユーザー管理に関連するすべてのアイテムは、`src/app/authentication`フォルダー下にあります。以下は、注目すべきエクスポートです。
 
-- `AuthenticationModule` in `authentication.module.ts` exports all components and services to the main app module.
-- `auth.guard.ts` exports an `AuthGuard` you can apply to routes
-- `authentication-routing.module.ts` sets up login-related routes
-- `UserService` in `services/user.service.ts` keeps the current user state
-- `AuthenticationService` in `services/authentication.service.ts` is used to communicate with the backend API
-- `ExternalAuthService` in `services/external-auth.service.ts` handles providers for third-party logins
+- `authentication.module.ts` の `AuthenticationModule` は、すべてのコンポーネントとサービスをメイン アプリモジュールにエクスポートします。
+- `auth.guard.ts` は、ルートに適用できる `AuthGuard` をエクスポートします
+- `authentication-routing.module.ts` は、ログイン関連のルートを設定します。
+- `services/user.service.ts` の `UserService` は現在のユーザー状態を保持します。
+- `services/authentication.service.ts` の `AuthenticationService` は、バックエンド API との通信に使用されます。
+- `Services/external-auth.service.ts` の `ExternalAuthService` は、サードパーティ ログインのプロバイダーを処理します。
 
-### Required configuration
+### 構成の要件
 
-The project is setup for a single page app with REST API services, so the `AuthenticationService` is used to send requests to the following URLs:
-- `/login` - login with username and password
-- `/register` - register with user details
-- `/extlogin` - passes along user info from external source
+このプロジェクトは、REST API サービスを使用する単一ページアプリ用にセットアップされているため、`AuthenticationService` を使用してリクエストを次の URL に送信します。
+- `/login` - ユーザー名とパスワードでログインします。
+- `/register` - ユーザー情報で登録します。
+- `/extlogin` - 外部ソースからユーザー情報を渡します。
 
-All endpoints are expected to return an JSON Wen Token(JWT)
- or an error state with message. 
+すべてのエンドポイントは、JSON Wen Token（JWT） またはメッセージとともにエラー状態を返す必要があります。
 
-> **Note:** For demonstration purposes the project has a `services/fake-backend.service.ts` that intercepts requests . The `BackendProvider` in `authentication.module.ts` should **not** be used in production. Both the provider and the file should be removed when development starts.
+> **注:**デモンストレーションの目的で、プロジェクトには要求をインターセプトする `services/fake-backend.service.ts` があります。`authentication.module.ts` の `BackendProvider` は、本番環境では使用しないでください。開発の開始時に、プロバイダーとファイルの両方を削除する必要があります。
 
-As with any authentication model, using JWT-s requires security considerations. Particularly, the tokens received from the REST API are stored on the client. For seamless app reloads during development, the user data is stored in the browser local storage, which is potentially vulnerable to XSS attacks.
+他の認証モデル同様、JWT-s を使用する際にはセキュリティを考慮する必要があります。特に、REST API から受信したトークンはクライアントに保存されます。開発中にアプリをシームレスにリロードするために、ユーザー データはブラウザーのローカル ストレージに保存されますが、XSS 攻撃に対しては潜在的に脆弱になる可能性があります。
 
-> **Note:** Disable the local storage before production. Consider keeping tokens in memory only if the app requirements allow or take alternative route to protect them. Using cookies (consider CSRF protection) is an alternative, also splitting the token signature or an additional 'fingerprint' in a hardened cookie.
+> **注:**実稼働前にローカル ストレージを無効にします。アプリの要件でトークンを保護するための代替ルートが許可されている場合、またはトークンを保護するための代替ルートをとる場合にのみ、トークンをメモリに保持することを検討してください。クッキーを使用する (CSRF 保護を検討する) ことも代替手段ですが、トークン署名または追加の「指紋」を強化されたクッキーに分割する方法もあります。
 
-As usual, always evaluate security aspects and adjust accordingly, the project structure provided is merely a starting point.
+常にセキュリティ面を評価し、状況に応じて調整します。提供されるプロジェクト構造は単なる出発点です。
 
 
-### Add a third-party (social) provider
+### サードパーティ (ソーシャル) プロバイダーを追加する
 
-Your project's main module `src/app/app.module.ts` should be generated with the external authentication service injected and commented out initialization similar to:
+プロジェクトのメイン モジュール `src/app/app.module.ts` は、外部認証サービスを挿入して生成し、次のような初期化をコメントアウトします。
 
 ```ts
 // in app.module.ts
@@ -76,15 +76,15 @@ export class AppModule {
 }
 ```
 
-To enable user login with a specific third-party provider all that is required is to un-comment the specific line and replace the `` with your app's client ID.
-If you need to obtain one, for example for Google Account sign in, follow the provider-specific guide at:
+特定のサードパーティ プロバイダーでユーザー ログインを有効にするには、特定の行のコメントを解除して、アプリのクライアント ID に置き換えます。
+Google アカウントのサインインなどで取得する必要がある場合は、以下のプロバイダー固有のガイドに従ってください。
 - https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials
 
-- https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (more detailed version)
+- https://support.google.com/cloud/answer/6158849?hl=ja&ref_topic=6262490 (詳細バージョン)
 
-Keep in mind, redirect URLs and allowed domain origins should be configured per provider to match the project. When creating the Google OAuth 2.0 client ID for development you can provide `http://localhost:4200/redirect-google` as the redirect URI. See [redirect URLs](#provider-details) for details.
+プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。開発用の Google OAuth 2.0 クライアント ID を作成するとき、リダイレクト URI として `http://localhost:4200/redirect-google` を指定できます。詳細については、[リダイレクト URL](#provider-details) をご覧ください。
 
-Once you have your ID (for example `123456789.apps.googleusercontent.com`) you can enable the Google provider for the project like so:
+Id (`123456789.apps.googleusercontent.com`) を取得したら、以下のようにプロジェクトの Google プロバイダーを有効にできます。
 ```ts
 // in app.module.ts
 export class AppModule {
@@ -95,35 +95,35 @@ export class AppModule {
   }
 }
 ```
-This will automatically enable the respective button in the login dialog:
+これにより、ログイン ダイアログの各ボタンが自動的に有効になります。
 
 ![](../../../images/general/igx-side-auth-login-google.png)
 
-You can do the same with [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) following this guide:
+このガイドに従って [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
 
-https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-register-an-app
+https://docs.microsoft.com/ja-jp/azure/active-directory/develop/quickstart-register-app
 
-And for Facebook:
+Facebook:
 
 https://developers.facebook.com/docs/apps/#register
 
 
-As you enable providers, all buttons will become active:
+プロバイダーを有効にすると、すべてのボタンがアクティブになります。
 
 ![](../../../images/general/igx-side-auth-login-social.png)
 
-#### Provider details
+#### プロバイダーの詳細
 
-Here are the default providers the project template comes with:
+以下は、プロジェクト テンプレートに付属するデフォルト プロバイダーです。
 
-| Provider | Uses | Redirect URL |
+| プロバイダー | 使用 | URL のリダイレクト |
 |---|---|---|
 | Google | OpenID Connect* | `<app root>/redirect-google` |
 | Microsoft | OpenID Connect* | `<app root>/redirect-microsoft` |
 | Facebook | Facebook Connect** | `<app root>/redirect-facebook` |
 
-Where the app is hosted will determine the root URL, for example by default on the first app run that will be `http://localhost:4200`.
+アプリがホストされる場所で URL を決定します。たとえば、デフォルトで最初のアプリ実行時は `http://localhost:4200` になります。
 
-\* OpenID Connect functionality implemented using https://github.com/damienbod/angular-auth-oidc-client
+\* https://github.com/damienbod/angular-auth-oidc-client を使用して実装された OpenID Connect 機能
 
-\** Facebook Connect functionality implemented using Facebook JS SDK
+\** Facebook JS SDK を使用して実装された Facebook Connect 機能
