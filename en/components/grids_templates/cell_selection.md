@@ -24,7 +24,7 @@ _keywords: data select, igniteui for angular, infragistics
 
 ### @@igComponent Мulti-cell Selection
 
-The Multi-cell selection feature enables rich data select capabilities in the @@igComponent based on Material UI Grid. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods.
+The Multi-cell selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods.
 How to select cells:
 - By `Mouse drag` - Rectangular data selectoion of cells would be performed.
 - By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.

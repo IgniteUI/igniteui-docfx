@@ -22,16 +22,16 @@ _keywords: data select, igniteui for angular, infragistics
 
 ### @@igComponent Selection Overview
 
-IgniteUI for Angular @@igComponent component provides two different selection modes - `Row selection` and `Cell selection`. The default selection mode of the grid is Multi-cell selection, in order to change/enable selection mode you can use `rowSelection` and `cellSelection` properties.
+IgniteUI for Angular @@igComponent component provides two different selection modes - `Row selection` and `Cell selection`. The default selection mode of the grid is Multi-cell selection, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) properties.
 
-Property `rowSelection` enables you to specify the following options:
+Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
 - single - Selection of only one row within the @@igComponent would be available
 - multi - multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused
 
 > Go to [Row selection topic](row_selection.md) for more information.
 
-Property `cellSelection` enables you to specify the following options:
+Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) enables you to specify the following options:
 - none - Cell selection would be disabled for the @@igComponent
 - single - Selection of only one cell within the @@igComponent would be available.
 - multi - Currently, this is the default state of the selection in the @@igComponent. Multi-cell selection is available by mouse dragging over the cells, after a left button mouse clicked continuously.
