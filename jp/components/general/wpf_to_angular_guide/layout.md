@@ -7,12 +7,12 @@ _language: ja
 
 ## レイアウト要素
 
-WPFでは、アプリケーション内の要素をレイアウトするには、それらをパネル内に配置する必要があります]（https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view = netframework-4.8）。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ上の要素をレイアウトするために CSSを使用してください。以下は、WPF で最も一般的なパネル、そして CSS で同様のレイアウトを実現する方法です。
+WPFでは、アプリケーション内の要素をレイアウトするには、それらを [`パネル`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ上の要素をレイアウトするために CSSを使用してください。以下は、WPF で最も一般的なパネル、そして CSS で同様のレイアウトを実現する方法です。
 
 ### StackPanel
 
 
- [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) は、子要素を水平方向または垂直方向に配置できる単一行に配置します。StackPanel にボタンを追加して、WPF でどのように見えるかを見てみましょう。
+ [`StackPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) は、子要素を水平方向または垂直方向に配置できる単一行に配置します。StackPanel にボタンを追加して、WPF でどのように見えるかを見てみましょう。
 
 ```xml
 <StackPanel>
@@ -26,7 +26,7 @@ WPFでは、アプリケーション内の要素をレイアウトするには�
 
 <img src="../../../images/general/wpf_stackpanel.png" />
 
-Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを flex に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを column に設定する必要があります。
+Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを column に設定する必要があります。
 
 ```html
 <div class="flex-container">
@@ -53,7 +53,7 @@ Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイ
 
 ### WrapPanel
 
-[`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) は、子要素を左から右へ順番に配置し、コンテンツを含むボックスの端の次の行に分割します。その後の順序は、Orientation プロパティの値に応じて、上から下または右から左に順番に発生します。以下は、WrapPanel にボタンを追加し、WPF でどのように見えるかを示します。
+[`WrapPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) は、子要素を左から右へ順番に配置し、コンテンツを含むボックスの端の次の行に分割します。その後の順序は、Orientation プロパティの値に応じて、上から下または右から左に順番に発生します。以下は、WrapPanel にボタンを追加し、WPF でどのように見えるかを示します。
 
 ```xml
 <WrapPanel>
@@ -112,7 +112,7 @@ Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-d
 
 ### Grid
 
-[`Grid`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.grid?view=netframework-4.8) は、列と行で構成される柔軟なグリッド領域を定義します。以下は、グリッドにボタンを追加し、WPF でどのように見えるかを示します。
+[`Grid`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.grid?view=netframework-4.8) は、列と行で構成される柔軟なグリッド領域を定義します。以下は、グリッドにボタンを追加し、WPF でどのように見えるかを示します。
 
 ```xml
 <Grid>
