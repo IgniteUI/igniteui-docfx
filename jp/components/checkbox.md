@@ -1,4 +1,4 @@
----
+﻿---
 title: Checkbox コンポーネント
 _description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Checkbox コンポーネント, Angular Checkbox コントロール
@@ -6,7 +6,6 @@ _language: ja
 ---
 
 ## Checkbox
-
 <p class="highlight">Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。</p>
 <div class="divider"></div>
 
@@ -92,20 +91,20 @@ statusChanged()
 <iframe data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
-<!-- ### Styling
-Using the [Ignite UI for Angular Theming](themes/index.md), we can alter the **igx-checkbox** appearance.
+### スタイル設定
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-checkbox** の外観を変更できます。
 
-#### Import theme
-First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+#### テーマのインポート
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
 ```scss
 // in styles.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-#### Define palette
-We are going to use our own color [palette](themes/palette.md) where we can specify our two main theme colors. Additionally we are going to set several of the exposed by the [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) parameters namely `$border-radius`, `$label-color` and `$empty-color`.
-First define a custom palette:
+#### パレットの定義
+2 つのメイン テーマ カラーを指定できる独自のカラー [パレット](themes/palette.md)を使用します。さらに、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) パラメーターで公開されるいくつかのパラメーター、つまり `$border-radius`、`$label-color`、`$empty-color` を設定します。
+最初にカスタム パレットを定義します。
 ```scss
 // in styles.scss
 $my-primary-color: #f5e492;
@@ -117,8 +116,8 @@ $my-color-palette: igx-palette(
 );
 ```
 
-In order to see our custom palette applied, we need to pass it to a theme function.
-So in one bold move we will [`create a custom theme`](themes/component-themes.md#creating-themes) and pass our three more specific parameters as well. Let's say we have decided modifying these will be more than sufficient to make our component look the way we like:
+カスタム パレットが適用されていることを確認するには、テーマ関数に渡す必要があります。
+そのため、1 つの大胆な動きで[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、さらに 3 つの特定のパラメーターも渡します。これらを変更するだけで、コンポーネントを思いどおりに見せるには十分すぎると判断したとします。
 ```scss
 // in styles.scss
 $custom-checkbox-theme: igx-checkbox-theme(
@@ -129,23 +128,23 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-#### Applying
-All that's left is to properly scope our newly created theme.
+#### 適用
+あとは新しく作成したテーマを適切にスコープするだけです。
 
-##### Globally
-In case you want this newly created `igx-checkbox` theme to be applied [`globally`](themes/component-themes.md#creating-themes) in your app, all that is needed is to include the theme in your app root style file:
+##### グローバル
+アプリに新しく作成した `igx-checkbox` を[`グローバル`](themes/component-themes.md#creating-themes)に適用する場合、アプリのルート スタイル ファイルにテーマを含めるだけです。
 ```scss
 // in styles.scss
 // Pass our checkbox theme to the `igx-checkbox` mixin
     @include igx-checkbox($custom-checkbox-theme);
 ```
 
-##### Scoped
-There may be a case where you want a particular `igx-checkbox` be styled differently than the others in the app. This will require to use Angular specific pseudo-class selectors like `:host`, `::ng-deep`, etc. Additionally, all of the above styles we specify in styles.scss need to be defined in the component.scss file instead.
+##### スコープ
+特定の `igx-checkbox` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、styles.scss で指定する上記のスタイルはすべて、代わりに component.scss ファイルで定義する必要があります。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
-On the other side, in order to prevent our custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+ >コンポーネントが [`Emulated`](/themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 // in component.scss
@@ -156,7 +155,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
     }
 }
 ```
-#### Styling Demo
+#### デモのスタイル設定
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="checkbox-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" class="lazyload no-theming"></iframe>
@@ -165,7 +164,7 @@ On the other side, in order to prevent our custom theme to leak to other compone
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ### API リファレンス
 <div class="divider--half"></div>
