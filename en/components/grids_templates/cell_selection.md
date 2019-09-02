@@ -20,8 +20,8 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Мulti-cell Selection
-The Multi-cell selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
+### @@igComponent Selection
+The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -47,7 +47,6 @@ The Multi-cell selection feature enables rich data select capabilities in the Ma
 
 #### @@igComponent Мultiple-cell Selection
 
-The Multi-cell selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods.
 How to select cells:
 - By `Mouse drag` - Rectangular data selectoion of cells would be performed.
 - By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
