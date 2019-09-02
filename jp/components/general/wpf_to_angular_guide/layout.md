@@ -1,16 +1,18 @@
 ---
-title: Layout Elements
-_description: Learn how to arrange elements on the page similar to the most popular panels in WPF.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Layout, Container, Panel
+title: レイアウト要素
+_description: WPF で最も一般的なパネルに似た要素をページ上に配置する方法を学びます。
+_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Layout, Container, パネル
+_language: ja
 ---
 
-## Layout Elements
+## レイアウト要素
 
-In WPF, in order to layout the elements in your application, you need to put them inside a [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8). The panel is a container element that controls the arrangement of its child elements. In Angular, in order to layout the elements on the page, you have to use CSS. Let us go through some of the most popular panels in WPF and see how we can achieve similar layout with CSS.
+WPFでは、アプリケーション内の要素をレイアウトするには、それらをパネル内に配置する必要があります]（https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view = netframework-4.8）。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ上の要素をレイアウトするために CSSを使用してください。以下は、WPF で最も一般的なパネル、そして CSS で同様のレイアウトを実現する方法です。
 
 ### StackPanel
 
-The [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) arranges its child elements into a single line that can be oriented horizontally or vertically. Let us add several buttons in a StackPanel and see how they look like in WPF:
+
+ [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) は、子要素を水平方向または垂直方向に配置できる単一行に配置します。StackPanel にボタンを追加して、WPF でどのように見えるかを見てみましょう。
 
 ```xml
 <StackPanel>
@@ -24,7 +26,7 @@ The [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.co
 
 <img src="../../../images/general/wpf_stackpanel.png" />
 
-If we want to achieve similar layout in Angular, we may use CSS Flexbox layout. The Flexible Box Layout Module is a powerful mechanism which allows designing a flexible responsive layout structure. In order to use the Flexbox layout, we have to define a container which has its [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property set to `flex`. Also in order to stack the items vertically, we have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`.
+Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを flex に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを column に設定する必要があります。
 
 ```html
 <div class="flex-container">
@@ -43,15 +45,15 @@ If we want to achieve similar layout in Angular, we may use CSS Flexbox layout. 
 }
 ```
 
-Here is the final result in the browser:
+ブラウザでの最終結果は次のとおりです。
 
 <img src="../../../images/general/angular_stackpanel.png" />
 
-The default value of the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property is `row`, which is equivalent to a StackPanel with Horizontal orientation in WPF. The flexbox also supports `row-reverse` and `column-reverse` directions which stack the items right to left and bottom to top respectively.
+[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティのデフォルト値は `row` です。これは、WPF の水平方向の StackPanel と同等です。フレックス ボックスは、アイテムを右から左、下から上にそれぞれ積み重ねる `row-reverse` と `column-reverse` 方向もサポートしています。
 
 ### WrapPanel
 
-The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering happens sequentially from top to bottom or right to left, depending on the value of the Orientation property. Let us add several buttons in a WrapPanel and see how they look like in WPF:
+[`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) は、子要素を左から右へ順番に配置し、コンテンツを含むボックスの端の次の行に分割します。その後の順序は、Orientation プロパティの値に応じて、上から下または右から左に順番に発生します。以下は、WrapPanel にボタンを追加し、WPF でどのように見えるかを示します。
 
 ```xml
 <WrapPanel>
@@ -70,7 +72,7 @@ The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.con
 
 <img src="../../../images/general/wpf_wrappanel.png" />
 
-In order to achieve similar result in Angular, we will use the Flexbox layout again. As in the case with StackPanel, we have to set the [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property to `flex`, but we also have to set the [`flex-wrap`](https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp) property to `wrap`.
+Angular で同様の結果を得るために、Flexbox レイアウトを再び使用します。StackPanelの場合と同様に、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定する必要がありますが、[`flex-wrap`](https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp) プロパティを `wrap` に設定する必要もあります。
 
 ```html
 <div class="flex-container">
@@ -93,11 +95,11 @@ button {
 }
 ```
 
-Here is the final result in the browser:
+以下は、ブラウザーでの最終結果です。
 
 <img src="../../../images/general/angular_wrappanel.png" />
 
-If you want to achieve a result similar to a WrapPanel with Orientation="Vertical", you have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`. The [`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) property is a shorthand property for setting both the `flex-direction` and `flex-wrap` properties. 
+Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。[`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) プロパティは、`flex-direction` プロパティと `flex-wrap` プロパティの両方を設定するための略記プロパティです。 
 
 ```css
 .flex-container {
@@ -106,11 +108,11 @@ If you want to achieve a result similar to a WrapPanel with Orientation="Vertica
 }
 ```
 
-The flexbox supports some more CSS properties for aligning the items. You can learn more about them in this [tutorial](https://www.w3schools.com/css/css3_flexbox.asp).
+フレックス ボックスは、アイテムを配置するための CSS プロパティをさらにサポートしています。詳細については、[チュートリアル](https://www.w3schools.com/css/css3_flexbox.asp)をご覧ください。
 
 ### Grid
 
-The [`Grid`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.grid?view=netframework-4.8) defines a flexible grid area consisting of columns and rows. Let us add several buttons in a Grid and see how they look like in WPF:
+[`Grid`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.grid?view=netframework-4.8) は、列と行で構成される柔軟なグリッド領域を定義します。以下は、グリッドにボタンを追加し、WPF でどのように見えるかを示します。
 
 ```xml
 <Grid>
@@ -137,7 +139,7 @@ The [`Grid`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls
 
 <img src="../../../images/general/wpf_grid.png" />
 
-In Angular, we could use the CSS Grid Layout Module, which offers a grid-based layout system, with rows and columns. In order to use the Grid layout, we have to define a container which has its [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property set to `grid` or `inline-grid`.
+Angular では、CSS グリッド レイアウト モジュールを使用できます。CSS グリッド レイアウト モジュールは、行と列を持つグリッド ベースのレイアウト システムを提供します。グリッド レイアウトを使用するには、`grid` または `inline-grid` に設定された [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを持つコンテナを定義します。
 
 ```html
 <div class="grid-container">
@@ -158,9 +160,9 @@ In Angular, we could use the CSS Grid Layout Module, which offers a grid-based l
 ```
 
 > [!NOTE]
-> The CSS Grid Layout is [not supported](https://caniuse.com/#feat=css-grid) in older browsers like Internet Explorer 11.
+> CSS グリッドレイアウトは、Internet Explorer 11 などの古いブラウザーではサポートされていません。
 
-Now let us define the columns of the grid using the [`grid-template-columns`](https://www.w3schools.com/cssref/pr_grid-template-columns.asp) property.
+次に、[`grid-template-columns`](https://www.w3schools.com/cssref/pr_grid-template-columns.asp) プロパティを使用してグリッドの列を定義します。
 
 ```css
 .grid-container {
@@ -169,7 +171,7 @@ Now let us define the columns of the grid using the [`grid-template-columns`](ht
 }
 ```
 
-We have defined three columns with width `auto`, which means they would have the same width. If you want to distribute the available space proportionally similar to the star sizing in WPF, you could use the flex sizing unit `fr` in CSS. The following code snippet defines two columns, the first one would receive one times the available space, while the second one would receive two times the available space:
+width `auto` を使用して 3 つの列を定義すると、同じ幅になります。WPF のスターサイズ設定に比例して利用可能なスペースを分配する場合は、CSS のフレックスサイズ設定ユニット `fr` を使用できます。次のコード スニペットは 2 つの列を定義します。最初の列は使用可能なスペースの 1 倍を受け取り、2 番目の列は使用可能なスペースの 2 倍を受け取ります。
 
 ```css
 .grid-container {
@@ -178,7 +180,7 @@ We have defined three columns with width `auto`, which means they would have the
 }
 ```
 
-Now we will add the rows with height of 50px each using the [`grid-template-rows`](https://www.w3schools.com/cssref/pr_grid-template-columns.asp) property.
+次に、[`grid-template-rows`](https://www.w3schools.com/cssref/pr_grid-template-columns.asp) プロパティを使用して、高さ 50px の行を追加します。
 
 ```css
 .grid-container {
@@ -188,13 +190,13 @@ Now we will add the rows with height of 50px each using the [`grid-template-rows
 }
 ```
 
-If we open the application now it looks like this:
+アプリケーションを開くと、以下のようになります。
 
 <img src="../../../images/general/angular_grid.png" />
 
-You could see one important difference between the WPF and CSS grids. In WPF the default value of Grid.Row and Grid.Column is 0, while the CSS grid layout automatically assigns the next available row and column to its children.
+WPF グリッドと CSS グリッドの重要な違いが 1 つあります。WPF では、Grid.Row および Grid.Column のデフォルト値は 0 ですが、CSS グリッド レイアウトは、次に使用可能な行と列をその子に自動的に割り当てます。
 
-Now let us apply the column and row spans to the first and seventh buttons. We will use the [`grid-row`](https://www.w3schools.com/cssref/pr_grid-row.asp) and [`grid-column`](https://www.w3schools.com/cssref/pr_grid-column.asp) properties for that purpose.
+次に、列と行のスパンを最初と 7 番目のボタンに適用します。ここでは、[`grid-row`](https://www.w3schools.com/cssref/pr_grid-row.asp) と [`grid-column`](https://www.w3schools.com/cssref/pr_grid-column.asp) プロパティを使用します。
 
 ```css
 .button1 {
@@ -207,9 +209,9 @@ Now let us apply the column and row spans to the first and seventh buttons. We w
 }
 ```
 
-First we specify the start row/column, then after the `/` symbol, we could specify either the end row/column or how many rows/columns the item should span. Unlike WPF, the CSS grid column numbering is not zero-based and the first row/column is 1.
+最初に開始行/列を指定し、次に `/` 記号の後に、終了行/列、または項目がまたがる行/列の数を指定できます。WPF とは異なり、CSS グリッドの列番号は 0 から始まり、最初の行/列は 1 です。
 
-Here is the full CSS and the final result in the browser:
+以下は、完全な CSS とブラウザーでの最終結果です。
 
 ```css
 .grid-container {
@@ -230,16 +232,16 @@ Here is the full CSS and the final result in the browser:
 
 <img src="../../../images/general/angular_grid_span.png" />
 
-The `grid-row` and `grid-column` properties are shorthand properties for the [`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp), [`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp), [`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp) and [`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) properties. You could learn more about the CSS Grid container and item properties in the tutorials in the **Additional Resources** section.
+`grid-row` および `grid-column` プロパティは、[`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp)、[`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp)、[`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp)、[`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) プロパティの略記プロパティです。CSS グリッド コンテナと項目プロパティの詳細については、**その他のリソース**セクションのチュートリアルをご覧ください。
 
-## Additional Resources
+## その他のリソース
 * [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
-* [CSS Grid Intro](https://www.w3schools.com/css/css_grid.asp)
-* [CSS Grid Container](https://www.w3schools.com/css/css_grid_container.asp)
+* [CSS Grid 概要](https://www.w3schools.com/css/css_grid.asp)
+* [CSS Grid コンテナ](https://www.w3schools.com/css/css_grid_container.asp)
 * [CSS Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
