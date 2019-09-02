@@ -199,7 +199,14 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: treegrid/row_selection.md
+          new: true
+        - name: Cell selection
+          href: treegrid/cell_selection.md
+          new: true
     - name: Searching
       href: treegrid/search.md
       new: false
@@ -281,7 +288,15 @@
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: hierarchicalgrid/row_selection.md
+          new: true
+        # Not yet fully implemented for igxHGrid
+        # - name: Cell selection
+        #  href: grid/cell_selection.md
+        #  new: true
     # Not yet fully implemented for igxHGrid
     # - name: Searching
     #   href: hierarchicalgrid/search.md
