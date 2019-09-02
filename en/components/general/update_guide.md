@@ -47,7 +47,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ### From 8.1.x to 8.2.x
 
 * IgxDrag
-    * Since `hideBaseOnDrag` and `visible` inputs are being deprecated, in order to achieve the same functionality in your application, you can use any way of hiding the base element that Angular provides. One example is setting the `visibility` style to `none`, since it will only make in invisible and keep its space that it takes in the DOM:
+    * Since `hideBaseOnDrag` and `visible` inputs are being deprecated, in order to achieve the same functionality in your application, you can use any way of hiding the base element that Angular provides. One example is setting the `visibility` style to `hidden`, since it will only make in invisible and keep its space that it takes in the DOM:
 
         ```html
         <div igxDrag [ngStyle]="{ 'visibility': targetDragged ? 'hidden' : 'visible' }"
@@ -68,10 +68,10 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         }
         ```
 
-    * Since `animateOnRelease` and `dropFinished()` are also being deprecated, any `dropFinished()` method usage should be replaced with `transitionToOrigin()`. Otherwise you would need to call `transitionToOrigin()` depending on when you would want the dragged element to transition back to its original location. Not that  if the dragged element DOM position is changed, then its original location will also change based on that.
+    * Since `animateOnRelease` and `dropFinished()` are also being deprecated, any `dropFinished()` method usage should be replaced with `transitionToOrigin()`. Otherwise you would need to call `transitionToOrigin()` depending on when you would want the dragged element to transition back to its original location. Note that  if the dragged element DOM position is changed, then its original location will also change based on that.
 
 * IgxDrop
-    * Due to the default drop strategy provided with the `IxgDrop` directive is no longer applied by default, in order to continue having the same behavior,you need to set the new input `dropStrategy` to be the provided `IgxAppendDropStrategy` implementation.
+    * Due to the default drop strategy provided with the `IxgDrop` directive is no longer applied by default, in order to continue having the same behavior, you need to set the new input `dropStrategy` to be the provided `IgxAppendDropStrategy` implementation.
 
         ```html
         <div igxDrop [dropStrategy]="appendStrategy"></div>
