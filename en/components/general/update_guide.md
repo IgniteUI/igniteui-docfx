@@ -44,6 +44,13 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+### From 8.1.x to 8.2.x
+* The way that the [`igx-comb`](../combo.md) handles selection and data binding is changed.
+ - If the combo's [`valueKey`] input is defined, the control will look for that specific property in the passed array of data items when performing selection.
+**All** selection events are handled with the value of the data items' `valueKey` property.
+ - If the combo **does not** have a `valueKey` defined, **all** selection events are handled with **equality (===)**.
+You can read more about setting up the combo in the control's [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo_features.md#selection).
+
 ### From 8.0.x to 8.1.x
 * The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
 Keep in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that the template is no longer applied under a paging-specific container with CSS rules to center content, so you might need to add them manually.
