@@ -20,8 +20,8 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-### Cell selection
-In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) there is now tree supported modes for cell selection, and you can easily switch between them by changing **cellSelection** property. You can disable cell selection, you can *select only one cell within the grid* or have the opportunity to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
+### @@igComponent Мulti-cell Selection
+The Multi-cell selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -45,7 +45,7 @@ In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) th
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-#### @@igComponent Мulti-cell Selection
+#### @@igComponent Мultiple-cell Selection
 
 The Multi-cell selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of multi-cell events and single select actions are available thanks to the powerful API and easy to use methods.
 How to select cells:
@@ -78,14 +78,15 @@ How to select cells:
 <div class="divider--half"></div>
 }
 }
-#### Single selection
 
-When you set the **[cellSelection]="'single'"**, this allows you to have only one selected cell in the grid at a time. Also in the mode mouse drag will not work and instead of selecting a cell, this will make default text selection.
+#### @@igComponent Single Selection
 
-**Note** When single cell is selected *`onSelection`* event is emitted, no matter if the selection mode is *`single`* or *`multiple`*. But in multi-cell selection mode when you select a range of cells *`onRangeSelection`* event is emitted.
+When you set the `[cellSelection]="'single'"`, this allows you to have only one selected cell in the grid at a time. Also the mode `mouse drag` will not work and instead of selecting a cell, this will make default text selection.
 
-#### None selection
-If you want to disable cell selection you can just set **[cellSelection]="'none'"** property. In this mode when you click over the cell or try to navigate with keyboard, the cell is **not selected** only activation style is applied and is lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
+> When single cell is selected [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event is emitted, no matter if the `selection mode` is `single` or `multiple`. In multi-cell selection mode when you select a range of cells [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) event is emitted.
+
+#### @@igComponent None selection
+If you want to disable cell selection you can just set `[cellSelection]="'none'"` property. In this mode when you click over the cell or try to navigate with keyboard, the cell is **not selected**, only the `activation style` is applied and it is going to be lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 #### Keyboard navigation interactions
@@ -110,7 +111,7 @@ If you want to disable cell selection you can just set **[cellSelection]="'none'
 ### Api usage
 Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
 
-##### Select range
+#### Select range
 
 [`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value.
 
@@ -127,11 +128,11 @@ this.grid1.selectRange(range);
 > [!NOTE]
 > Select range is additive operation. It will not clear your previous selection.
 
-##### Clear cell selection
+#### Clear cell selection
 
 [`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) will clear the current cell selection.
 
-##### Get selected data
+#### Get selected data
 
 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return array of the selected data in format depending on the selection. Examples below:
 

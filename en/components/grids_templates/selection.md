@@ -22,7 +22,7 @@ _keywords: data select, igniteui for angular, infragistics
 
 ### @@igComponent Selection Overview
 
-IgniteUI for Angular @@igComponent component provides two different selection modes - `Row selection` and `Cell selection`. The default selection mode of the grid is Multi-cell selection, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) properties.
+IgniteUI for Angular @@igComponent component provides two different selection modes - [Row selection](row_selection.md) and [Cell selection](cell_selection.md). The default selection mode of the grid is Multi-cell selection, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) properties.
 
 Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
