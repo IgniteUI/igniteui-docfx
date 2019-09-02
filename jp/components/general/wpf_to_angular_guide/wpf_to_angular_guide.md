@@ -1,24 +1,25 @@
----
-title: WPF to Angular tutorial | IgniteUI for Angular | Infragistics
-_description: Learn how to switch from Angular to WPF, by comparing both frameworks. Get familiar with some similarities like binding, events and components.
-_keywords: angular tutorial, igniteui for angular, infragistics
+﻿---
+title: WPF vs Angular 比較ガイド
+_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
+_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+_language: ja
 ---
 
-## WPF to Angular tutorial
+## WPF vs Angular 比較ガイド
 
-WPF to Angular tutorial is the first step that you should take in order to make a smooth transition from a `desktop` to `web` framework transition. The tutorial targets WPF developers, who make their first steps to web development and it examines some differences and similarities of both frameworks - applications structure, data binding, events, components, etc. The guide is divided into the following topics:
-- [Create your first Angular application](create_first_angular_app.md)
-- [Create your UI with Angular components](create_ui_with_components.md)
-- [One-way data binding in Angular](one_way_binding.md)
-- [Angular Events](angular_events.md)
-- [Two-way data binding in Angular](two_way_binding.md)
-- [Transforming Data with Angular Pipes](angular_pipes.md)
-- [Structural Directives in Angular](structural_directives.md)
-- [Layout Elements](layout.md)
+このガイドは、2 つのプラットフォームの類似点と相違点を比較して、WPF 開発者にわかりやすく Angular について説明します。このガイドは、以下の各トピックがあります。
+- [はじめての Angular アプリを作成](create_first_angular_app.md)
+- [Angular コンポーネントを使用した UI の作成](create_ui_with_components.md)
+- [One-Way バインディング](one_way_binding.md)
+- [Angular イベント](angular_events.md)
+- [Two-way バインディング](two_way_binding.md)
+- [Angular パイプでデータを変換](angular_pipes.md)
+- [Angular の構造ディレクティブ](structural_directives.md)
+- [レイアウト要素](layout.md)
 
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
