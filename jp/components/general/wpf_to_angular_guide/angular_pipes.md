@@ -1,36 +1,37 @@
----
+﻿---
 title: Angular Pipes
-_description: Learn how to transform data in Angular similar to converters in WPF.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Pipe, Converter
+_description: WPF のコンバーターと同様に、Angular でデータを変換する方法を学びます。
+_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Pipe, コンバーター
+_language: ja
 ---
 
-## Transforming Data With Angular Pipes
+## Angular パイプでデータを変換
 
 > [!Video https://www.youtube.com/embed/Gmz5kio50FE]
 
-In WPF in order to transform data from one value to another, you are going to use an [IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8). To transform data in an Angular application, we are going to use a [Pipe](https://angular.io/api/core/Pipe). The pipe is very similar to the WPF converter. It takes data as an input and then transforms that data into a desired output for display.
+WPF では、データをある値から別の値に変換するために、[IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8) を使用します。Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
 
-Angular provides a number of predefined pipes for the most common data transformations. For example, if you want a header text to appear in upper case, you could use the [UpperCasePipe](https://angular.io/api/common/UpperCasePipe). Using a pipe is very simple. After your expression, provide a pipe operator `|` followed by the pipe name.
+Angular は、最も一般的なデータ変換用に事前定義された多数のパイプを提供します。たとえば、ヘッダー テキストを大文字で表示する場合は、[UpperCasePipe](https://angular.io/api/common/UpperCasePipe) を使用できます。パイプの使用はとても簡単です。式の後に、パイプ演算子`|`とその後にパイプ名を提供します。
 
 ```html
 <h2>{{ header | uppercase }}</h2>
 ```
 
-What is really great about the pipes in Angular compared to a WPF converter is that you can actually use more than one pipe at a time. So, for example you can use a [DatePipe](https://angular.io/api/common/DatePipe) and [UpperCasePipe](https://angular.io/api/common/UpperCasePipe) in order to format the date to a user-friendly format and make it uppercase:
+WPF コンバーターと比較した場合の Angular のパイプの利点は、一度に複数のパイプを使用できることです。たとえば、[DatePipe](https://angular.io/api/common/DatePipe) と [UpperCasePipe](https://angular.io/api/common/UpperCasePipe) を使用して、日付を使いやすい形式にフォーマットし、大文字にすることができます。
 
 ```html
 <h2>{{ birthday | date | uppercase }}</h2>
 ```
 
-Besides that, we also have the option to provide parameters to the pipe. For example, the [DatePipe](https://angular.io/api/common/DatePipe) has parameters like format, time zone and locale.
+更に、パイプにパラメーターを提供するオプションもあります。たとえば、[DatePipe](https://angular.io/api/common/DatePipe) には、形式、タイムゾーン、ロケールなどのパラメーターがあります。
 
 ```html
 <h2>{{ birthday | date:"MM/dd/yy" }}</h2>
 ```
 
-## Create Your Own Pipe
+## パイプの作成
 
-Besides using the predefined pipes, Angular allows you to define your own pipes. Let's take a look at the implementation of a WPF converter that replaces a string with another one.
+事前定義されたパイプを使用する以外に、Angular では独自のパイプを定義できます。以下は、文字列を別の文字列に置き換える WPF コンバーターの実装です。
 
 ```csharp
 public class ReplaceConverter : IValueConverter
@@ -60,7 +61,7 @@ public class ReplaceConverter : IValueConverter
 </Grid>
 ```
 
-In order to do the same in Angular, we have to define a class that implements the [PipeTransform](https://angular.io/api/core/PipeTransform) interface and has the [@Pipe](https://angular.io/api/core/Pipe) decorator.
+Angular で同じことを行うには、[PipeTransform](https://angular.io/api/core/PipeTransform) インターフェイスを実装し、[@Pipe](https://angular.io/api/core/Pipe) デコレータを持つクラスを定義する必要があります。
 
 ```typescript
 import { Pipe, PipeTransform } from '@angular/core';
@@ -80,18 +81,19 @@ export class ReplacePipe implements PipeTransform {
 <span>{{ name | replace:" ":"-" }}</span>
 ```
 > [!NOTE]
-> Note that in order to be able to use the pipe in the component's html template, you have to add it to the module declarations.
+> コンポーネントの html テンプレートでパイプを使用できるようにするには、モジュール宣言にパイプを追加する必要があります。
 
 > [!NOTE]
-> An important difference between the Angular pipe and the WPF converter is that the Angular pipe works only for one-way binding unlike the WPF converter which has [ConvertBack](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) method.
+> Angular パイプと WPF コンバーターの重要な違いは、Angular パイプは [ConvertBack](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) メソッドを持つ WPF コンバーターとは異なり、一方向のバインディングに対してのみ機能することです。
 
-## Additional Resources
-* [Desktop to Web: Transforming Data with Angular Pipes](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
-* [Angular Pipes](https://angular.io/guide/pipes)
-* [List of Predefined Angular Pipes](https://angular.io/api?type=pipe)
+## その他のリソース
+* [
+デスクトップから Web: Angular パイプを使用したデータの変換](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
+* [Angular パイプ](https://angular.io/guide/pipes)
+* [事前定義された Angular パイプのリスト](https://angular.io/api?type=pipe)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
