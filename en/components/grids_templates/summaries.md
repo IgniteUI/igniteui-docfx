@@ -356,13 +356,13 @@ Following the simplest approach, we create a new theme that extends the [`igx-gr
 
 ```scss
 $custom-theme: igx-grid-summary-theme(
-    $background-color: #3d7bbe,
-    $focus-background-color: #3972ae,
-    $label-color: #00ff2d,
+    $background-color: #e0f3ff,
+    $focus-background-color: rgba( #94d1f7, .3 ),
+    $label-color: #e41c77,
     $result-color: black,
     $pinned-border-width: 2px,
     $pinned-border-style: dotted,
-    $pinned-border-color: #00ff2d
+    $pinned-border-color: #e41c77
 );
 ```
 The last step is to **include** the component mixins: 
@@ -467,7 +467,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid') {
 #### Demo
 
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:710px">
     <iframe id="treegrid-summary-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
@@ -478,7 +478,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid') {
 #### Demo
 
-<div class="sample-container loading" style="height:600px">
+<div class="sample-container loading" style="height:710px">
     <iframe id="hierarchical-grid-summary-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
