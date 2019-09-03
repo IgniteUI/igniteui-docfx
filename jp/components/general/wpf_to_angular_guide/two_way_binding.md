@@ -1,16 +1,17 @@
----
-title: Two-way data binding
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, two-way, binding
+﻿---
+title: 双方向データ バインディング
+_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
+_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, 双方向, バインディング
+_language: ja
 ---
 
-## Two-way data binding in Angular
+## 双方向バインディング
 
 > [!Video https://www.youtube.com/embed/MrjTTDEj7cA]
 
-In a previous topic, we discussed the [one-way binding](one_way_binding.md) in Angular, and how easy it was to use it. The one-way binding updates the view with data coming from the component class. Like in WPF, we can do the opposite operation - update the component class from the view. In that case we need to use a two-way binding. Let's see just how easy that is to do.
+前のトピックで、Angular の[一方向バインディング](one_way_binding.md)と簡単な使用方法について説明しました。一方向バインディングは、コンポーネント クラスからのデータでビューを更新します。WPF の場合と同様に、反対の操作を実行してビューからコンポーネント クラスを更新します。この場合、双方向バインディングを使用する必要がありますが、 その簡単な方法を示します。
 
-A one-way binding is taking the state from our component class and displaying it in our view. Let's look at this code:
+一方向バインディングは、コンポーネント クラスから状態を取得し、ビューに表示します。このコードを見てみましょう。
 ```html
 <input #myTitle (keyup)="keyup(myTitle.value)">
 <h2>{{ text }}</h2>
@@ -25,25 +26,25 @@ keyup(value) {
 }
 ...
 ```
-Here we are simply using `interpolation` to bind the text property to the HTML. This will display the value of the text property in the UI. The `input` element handles the user interaction and updates the underlying `text` property through the UI by using the [event binding](angular_events.md). Essentially, the input does the opposite of the one-way binding, it takes the information from the UI and updates the property in the component class. The method which is hooked up to the input's keyup event updates the text property each time the event occurs. Once the text property value is changed by the event method, that change is reflected in the UI by the one-way binding using `interpolation` of the h2 element. So if the user types something into the input element, that will immediately update the h2 text - this behavior is basically a simulation of a two-way binding. The same can also be achieved in WPF by using a one-way binding and a keyup event handler, but the two-way binding is way more convenient to use.
+ここでは、`補間`を使用してテキスト プロパティを HTML にバインドしています。これにより、UI にテキスト プロパティの値が表示されます。`Input` 要素は、ユーザー インタラクションを処理し、イベント バインディングによって UI を介して基になる`テキスト` プロパティを更新します。基本的に、入力は一方向バインディングの反対を行い、UI から情報を取得して、コンポーネント クラスのプロパティを更新します。入力のキーアップ イベントにフックされるメソッドは、イベントが発生するたびにテキスト プロパティを更新します。イベント メソッドによってテキスト プロパティ値が変更されると、その変更は h2 要素の`補間`を使用した一方向バインディングによって UI に反映されます。したがって、ユーザーが入力要素に何かを入力すると、すぐに h2 テキストが更新されます。この動作は、基本的に双方向バインディングのシミュレーションです。同じことは、一方向バインディングとキー アップイベント ハンドラーを使用して WPF でも実現できますが、双方向バインディングを使用する方が便利です。
 
-### Two-way binding
+### 双方向バインディング
 
-Fortunately, we can implement the logic of the sample from above in a much easier way and this is where the two-way binding steps in!
+上記のサンプルのロジックをはるかに簡単な方法で実装することができます。以下は双方向バインディングの手順です。
 
-The direction of a two-way binding is not just **component class to UI**, but **UI to component class** as well. To achieve this, we are going to use a [directive](https://angular.io/api/core/Directive) called [`ngModel`](https://angular.io/api/forms/NgModel). Let's update the sample from above with the `ngModel` directive. The syntax for that is - an open bracket followed by an open parenthesis, and of course the corresponding closing parenthesis and bracket. This is called a **banana in the box**, so let's see it in action!
+双方向バインディングの方向は、**コンポーネントクラスから UI** だけでなく、**UI からコンポーネント クラス**でもあります。これを実現するために、[`ngModel`](https://angular.io/api/forms/NgModel) と呼ばれる[ディレクティブ](https://angular.io/api/core/Directive)を使用します。上記のサンプルを `ngModel` ディレクティブで更新しましょう。そのための構文は、開き括弧とそれに続く開き括弧、次に対応する閉じ括弧と括弧。これは**箱の中のバナナ**と呼ばれるものですが、実際に試してみましょう。
 ```html
 <input [(ngModel)]="text">
 <h2>{{ text }}</h2>
 ```
-And the equivalent bindings in WPF would be:
+そして、WPF の同様のバインディングは以下のようになります。
 ```xml
 <TextBox Text="{Binding Path=Text, Mode=TwoWay}"></TextBox>
 <TextBlock Text="{Binding Path=Text, Mode=OneWay}"></TextBlock>
 ```
-The Angular binding is a matter of syntax, and in WPF it is more like a setup - in particular the value of `Binding.Mode`.
+Angular バインディングは構文の問題であり、WPF ではセットアップに似ています。特に `Binding.Mode` の値です。
 
-If we run this code, an error would occur in the console - saying that the `ngModel` is an unknown property of the input element. This is due to the fact, that in order to use the `ngModel` directive, it's necessary to import the [`FormsModule`](https://angular.io/api/forms/FormsModule). It needs to be imported into the `app.module.ts` file:
+このコードを実行すると、コンソールでエラーが発生します。`ngModel` lは入力要素の不明なプロパティであるということです。ここでは、ngModel ディレクティブを使用するために [`FormsModule`](https://angular.io/api/forms/FormsModule) をインポートする必要があります。`app.module.ts` ファイルにインポートする必要があります。
 ```typescript
 import { FormsModule } from '@angular/forms';
 ...
@@ -54,22 +55,22 @@ import { FormsModule } from '@angular/forms';
   ]
 ...
 ``` 
-If we run the sample, the initial input's value would be equal to **default value**, which is the `text` property's value. Since the input is editable, changing its value will reflect over the h2 element immediately. So typing into the input updates the `text` property, and then the h2 element displays that value via the `interpolation`.
+サンプルを実行すると、初期入力の値は**デフォルト値**、つまり`テキスト` プロパティの値に等しくなります。入力は編集可能であるため、その値を変更するとすぐに h2 要素に反映されます。そのため、入力に入力すると `text` プロパティが更新され、h2 要素は`補間`によってその値を表示します。
 
-Another equivalent way to achieve this is:
+その他の同様な方法として以下もあります。
 ```html
 <input [ngModel]="text" (ngModelChange)="text = $event">
 ```
-This is actually similar to the first sample, which used a property binding and an event binding.
+これは実際には、プロパティ バインディングとイベント バインディングを使用した最初のサンプルに似ています。
 
 
-## Additional Resources
-* [Desktop to Web: Desktop to Web: Angular Two-Way Binding with ngModel](https://www.youtube.com/watch?v=MrjTTDEj7cA&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
-* [One-way binding in Angular](one_way_binding.md)
+## その他のリソース
+* [デスクトップから Web: デスクトップから Web: ngModel を使用した Angular 双方向バインディング](https://www.youtube.com/watch?v=MrjTTDEj7cA&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [Angular 一方向バインディング](one_way_binding.md)
 * [Angular NgModel](https://angular.io/api/forms/NgModel)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
