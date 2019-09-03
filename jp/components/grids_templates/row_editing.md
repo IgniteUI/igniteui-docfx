@@ -1,7 +1,7 @@
 ---
-title: Tree Grid 行編集 | UI Grid | Ignite UI for Angular | Infragistics
+title: Tree Grid 並べ替え | UI Grid | Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
-_keywords: row editing, igniteui for angular, infragistics
+_keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 
@@ -300,32 +300,31 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </ng-template>
  ```
 
-@@if (false) { <!-- remove after translation -->
-### Styling
+### スタイル設定
 
-Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can greatly alter the Row Editing overlay. 
-The Row Editing overlay is a composite element - its UI is comprised of a couple of other components:
-    - [`igx-banner`](../banner.md) in order to render its contents
-    - [`igx-button`](../button.md)s are rendered in the default template (for the `Done` and `Cancel` buttons).
+[Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、行編集オーバーレイを大幅に変更できます。 
+行編集オーバーレイは複合要素です。UI は、他の 2 つのコンポーネントで構成されています。
+    - コンテンツをレンダリングするための [`igx-banner`](../banner.md)
+    - [`Igx-button`](../button.md) はデフォルトのテンプレートでレンダリングされます (`完了`ボタンと`キャンセル`ボタンの場合)。
 
-In the below example, we will make use of those two components' styling options, ([button styling](../button.md#styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
-We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](editing.md#styling).
+以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#styling) & [バナー スタイル](../banner.md#styling)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
+次に、現在のセルのエディターと背景をより明確にするためにスタイルを設定します。セル スタイリングの詳細については、[こちら](editing.md#styling)をご覧ください。
 
-#### Import theme
+#### テーマのインポート
 
-The easiest way to style the Row Editing banner is to define styles in our `app`'s global style file (typically `styles.scss`).
-The first thing we need to do is import the `themes/index` file - this gives us access to all the powerful tools of the Ignite UI for Angular Sass framework:
+行編集バナーのスタイルを設定する最も簡単な方法は、`アプリ`のグローバル スタイル ファイル (通常 `styles.scss`) でスタイルを定義することです。
+はじめに`テーマ/インデックス`ファイルをインポートすることにより、Ignite UI for Angular Sass フレームワークの強力なツールへアクセスできるようになります。
 
 ```scss
 // in styles.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Once we've imported the themes file, we can create custom themes.
+テーマ ファイルをインポートしたら、カスタム テーマを作成できます。
 
-#### Define the theme
+#### テーマの定義
 
-We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
+行編集の背景にカスタムの [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
     $my-light-gray: #e3e3e3;
@@ -337,25 +336,25 @@ We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#
     );
 ```
 
-Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) for generating our colors.
+ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) (テーマ ライブラリによって公開) と共に使用しています。
 
-#### Include the theme
+#### テーマを含む
 
-All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner):
+次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner) で渡します。
 
 ```scss
 @include igx-banner($banner-theme); 
 ```
 
-This will apply our custom banner theme to the Row Editing overlay. However, since we defined these in the global styles file, these styles will also apply to **all** banners in our application.
+これにより、カスタム バナー テーマが行編集オーバーレイに適用されます。ただし、グローバル スタイル ファイルで定義したため、これらのスタイルはアプリケーションのすべてのバナーにも適用されます。
 
-#### Component styles
+#### コンポーネント スタイル
 
-Since the Row Editing overlay makes use of a lot of other components' themes, styling it via the global styles can affect other parts of our application (e.g. banners, buttons, etc.). The best way to prevent that is to scope our banner theme. We can define our styles (including the [`theme/index` import](#import-theme)) in the component containing our @@igSelector.
+行編集オーバーレイは他の多くのコンポーネントのテーマを利用するため、グローバル スタイルでスタイル設定するとアプリケーションの他の部分 (バナー、ボタンなど) に影響を与える可能性があります。回避策としては、バナー テーマのスコープがあります。@@igSelector を含むコンポーネントでスタイル ([`テーマ/インデックス`インポート](#import-theme)を含む) を定義できます。
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
->We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
+>コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+>ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
 ```scss
 // custom.component.scss
@@ -367,14 +366,14 @@ Since the Row Editing overlay makes use of a lot of other components' themes, st
 }
 ```
 
-With the above syntax, our custom banner theme properly applies to the grid's Row Editing overlay.
+上記の構文で、カスタム バナー テーマはグリッドの行編集オーバーレイに適切に適用されます。
 
-#### Custom Templates
+#### カスタム テンプレート
 
-To further customize our Row Editing overlay, we can pass a custom template so we can style the `Done` and `Cancel` buttons separately:
+行編集オーバーレイをさらにカスタマイズするには、`完了`ボタンと`キャンセル`ボタンを別々にスタイル設定できるようにカスタム テンプレートを渡します。
 
 ```html
-<!-- in component.html
+<!-- in component.html -->
 <@@igSelector>
     ...
     <ng-template igxRowEditActions let-endRowEdit>
@@ -391,7 +390,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+カスタム ボタンを定義した後は、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#styling)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
@@ -407,11 +406,11 @@ $button-theme: igx-button-theme(
   }
 ```
 
-We scope our `@include` statement in `.custom-buttons` so that it is only applied to the `Done`and `Cancel` buttons.
+`@Include` ステートメントを `.custom-buttons` でスコープ設定して、`完了`ボタンと`キャンセル`ボタンにのみ適用されるようにします。
 
-#### Demo
+#### デモ
 
-After styling the banner and buttons, we also define a custom style for [the cell in edit mode](editing.md#styling). The result of all the combined styles can be seen below:
+バナーとボタンのスタイルを設定後、[編集モードのセル](editing.md#styling)のカスタム スタイルも定義します。以下は、すべてのスタイルを組み合わせた結果です。
 
 @@if (igxName === 'IgxGrid'){
 <div class="sample-container loading" style="height:560px">
@@ -419,7 +418,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -431,7 +430,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
     </button>
 </div>
 }
@@ -444,11 +443,10 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
     </button>
 </div>
 }
-} <!-- remove after translation -->
 
 ### API リファレンス
 
