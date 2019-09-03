@@ -300,7 +300,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </ng-template>
  ```
 
-### Styling
+### スタイル設定
 
 [Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、行編集オーバーレイを大幅に変更できます。 
 行編集オーバーレイは複合要素です。UI は、他の 2 つのコンポーネントで構成されています。
