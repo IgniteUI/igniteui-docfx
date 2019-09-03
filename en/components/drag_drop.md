@@ -237,7 +237,7 @@ Drag e-mails on the right into the folders on the left.
 
 ### Advanced Configuration
 
-Since both `igxGrad` and `igxDrop` combined can be used in many different and complex application scenarios, the following example demonstrates how they can be used in an Kanban board. 
+Since both `igxDrag` and `igxDrop` combined can be used in many different and complex application scenarios, the following example demonstrates how they can be used in an Kanban board. 
 
 The user could reorder the cards in each column. It is done by setting each card also a drop area, so we can detect when another card has entered its area and switch them around at runtime, to provide better user experience.
 
