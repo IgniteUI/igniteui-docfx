@@ -84,6 +84,9 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     * Any use of interfaces `IgxDropEnterEventArgs` and `IgxDropLeaveEventArgs` should be replaced with `IDragBaseEventArgs`.
     * Also any use of the  `IgxDropEventArgs` interface should be replaced with `IDropDroppedEventArgs`.
 
+* IgxRowDragDirective 
+    * `IRowDragStartEventArgs` and `IRowDragEndEventArgs` have arguments' names changed in order to be more clear to what they relate to. `owner` argument is renamed to `dragDirective`. `context` argument is renamed to `owner`.
+
 
 ### From 8.0.x to 8.1.x
 * The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
