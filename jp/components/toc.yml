@@ -103,7 +103,14 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: grid/row_selection.md
+          new: true
+        - name: Cell selection
+          href: grid/cell_selection.md
+          new: true
     - name: 検索
       href: grid/search.md
       new: false
