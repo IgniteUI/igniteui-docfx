@@ -24,11 +24,11 @@ Drag and drop icon to reposition it.
 
 When an element inside your Angular application needs to be dragged from one place to another on the page, the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive is designed to help achieve this behavior. In combination with the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive, the placing of the dragged element can be done as well, so you can have fully interactive application.
 
-#### Dragging fundamentals
+#### Dragging Fundamentals
 
 A drag operation starts when the end user swipes at least 5px in any direction. This is customizable and can be changed using the [`dragTolerance`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragtolerance) input. Otherwise the interaction is considered as a click and a `dragClick` event is triggered.
 
-When the dragging starts, the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) event is triggered. To the prevent any actual movement to occur, the event can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property to `true`.
+When the dragging starts, the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) event is triggered. To prevent any actual movement to occur, the event can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property to `true`.
 
 Before any actual movement is about to be performed, the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event is also triggered, containing the last and next position of the pointer. It is triggered every time a movement is detected while dragging an element around. 
 
@@ -123,7 +123,7 @@ The `transitionToOrigin` method, as the name suggests, animates the currently dr
 
 Both functions have arguments that you can set to customize the transition animation and set duration, timing function or delay. If specific start location is set it will animate the element starting from there.
 
-When the transition animation ends, if a ghost is created, it will be removed and the `igxDrag` directive will return to its initial state. If no ghost is created, it will keep its position. In both cases then the [`transitioned`](environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) event will be triggered, depending on how long the animation lasts. If no animation is applied, it will be triggered instantly.
+When the transition animation ends, if a ghost is created, it will be removed and the `igxDrag` directive will return to its initial state. If no ghost is created, it will keep its position. In both cases, then the [`transitioned`](environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) event will be triggered, depending on how long the animation lasts. If no animation is applied, it will be triggered instantly.
 
 You can have other types of animations that involve element transformations. That can be done like any other element either using the Angular Animations or straight CSS Animations to either the base `igxDrag` element or its ghost. If you want to apply them to the ghost, you would need to define a custom ghost and apply animations to its element.
 
@@ -204,7 +204,7 @@ public onDropped(event) {
 }
 ```
 
-If you would like to implement your own drop logic, we advise bind to the `dropped` event and execute your logic there or extend the `IgxDefaultDropStrategy` class.
+If you would like to implement your own drop logic, we advise binding to the `dropped` event and execute your logic there or extend the `IgxDefaultDropStrategy` class.
 
 #### Linking Drag to Drop Element
 Using the [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragchannel) and [`dropChannel`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropchannel) input on respectively `igxDrag` and `igxDrop` directives, you can link different elements to interact only between each other. For example, if an `igxDrag` element needs to be constrained so it can be dropped on specific `igxDrop` element and not all available, this can easily be achieved by assigning them the same channel.
@@ -235,7 +235,13 @@ Drag e-mails on the right into the folders on the left.
 </div>
 <div class="divider--half"></div>
 
-### Advanced configuration
+### Advanced Configuration
+
+Since both `igxGrad` and `igxDrop` combined can be used in many different and complex application scenarios, the following example demonstrates how they can be used in an Kanban board. 
+
+The user could reorder the cards in each column. It is done by setting each card also a drop area, so we can detect when another card has entered its area and switch them around at runtime, to provide better user experience.
+
+It won't be Kanban board without also the ability to switch cards between columns. A card can be directly moved from one column to another column at a specific position. It is achieved here with a dummy object, so it would create a visual area where the card will be position if released. The dummy object is removed once the dragging of a card ends or exits another column.
 
 #### Demo
 
