@@ -60,7 +60,7 @@ To add alert, in the template of our email component we can add the following co
 </div>
 <div class="divider--half"></div>
 
-####Standard Dialog
+#### Standard Dialog
 
 To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
@@ -85,7 +85,7 @@ To add standard dialog, in the template of our file manager component we can add
 </div>
 <div class="divider--half"></div>
 
-####Custom Dialog
+#### Custom Dialog
 
 To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title),[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), [`closeOnOutsideSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#closeonoutsideselect) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) event.
 Also we can add two groups of label and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
@@ -154,6 +154,74 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+#### Configure different Position and Animation Settings
+
+There are two ways to change the position at which the `igxDialog` will be shown:
+
+- Use [`open`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#open) method and pass a valid [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). Example:
+
+```typescript
+public positionSettingsOnOpen: PositionSettings = {
+    horizontalDirection: HorizontalAlignment.Right,
+    verticalDirection: VerticalAlignment.Middle,
+    horizontalStartPoint: HorizontalAlignment.Right,
+    verticalStartPoint: VerticalAlignment.Middle,
+};
+
+public overlaySettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(this.positionSettingsOnOpen),
+    scrollStrategy: new NoOpScrollStrategy(),
+    modal: false,
+    closeOnOutsideClick: true
+};
+
+....
+
+
+public openDialog() {
+    this.alert.open(this.overlaySettings);
+}
+....
+
+this.dialog.open(overlaySettings)
+
+```
+
+- Use `positionSettings` @input. Example:
+
+```html
+<igx-dialog #alert title="Notification" [positionSettings]="positionSettings" >
+</igx-dialog>
+```
+
+```typescript
+public positionSettings: PositionSettings = {
+    openAnimation: useAnimation(slideInTop, { params: { duration: '2000ms' } }),
+    closeAnimation: useAnimation(slideOutBottom, { params: { duration: '2000ms'} }),
+    horizontalDirection: HorizontalAlignment.Left,
+    verticalDirection: VerticalAlignment.Middle,
+    horizontalStartPoint: HorizontalAlignment.Left,
+    verticalStartPoint: VerticalAlignment.Middle,
+    minSize: { height: 100, width: 100 }
+};
+```
+
+> [!Note] The same approach should be used for the animation settings, use `openAnimation` and `closeAnimation` to define animation params like duration etc. 
+
+`params` object example:
+
+```typescript
+params: {
+    delay: '0s',
+    duration: '350ms',
+    easing: EaseOut.quad,
+    endOpacity: 1,
+    fromPosition: 'translateX(-500px)',
+    startOpacity: 0,
+    toPosition: 'translateY(0)'
+}
+```
 
 ### Styling
 
