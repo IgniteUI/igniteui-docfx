@@ -144,17 +144,7 @@ Reorder items in the list using the drag handle. While dragging a list item othe
 
 When an element that is being dragged using the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive needs to be placed in an area, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) can be used to achieve this behavior. It provides events that you can use to determine if an element is entering the boundaries of the element it is applied to and if it is being released inside it.
 
-The [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive can be applied to any DOM element just like the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive. 
-
-TypeScript:
-```typescript
-public insertStrategy = IgxInsertDropStrategy;
-```
-
-HTML:
-```html
-<div igxDrop [dropStrategy]="insertStrategy"></div>
-```
+The [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive can be applied to any DOM element just like the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive.
 
 By default, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive doesn't apply any logic for modifying the dragged element position in the DOM. That's why you need to specify a [`dropStrategy`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropstrategy) or apply custom logic. Drop strategies are discussed in the next section.
 
