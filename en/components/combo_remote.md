@@ -37,8 +37,10 @@ import { HttpClientModule } from "@angular/common/http";
 export class AppModule {}
 ```
 
+#### Define Remote Service
+
 When binding combo to remote data we need to have available service that will load data on demand from a server. The code below defines a simple service that has a `getData()` method, which receives combo's current state information and returns a data as an observable. What the combo exposes is a `virtualizationState` property that gives current state of the combo - first index and the number of items that needs to be loaded.
-The service, should inform the combo for the total items that are on the server - a value that needs to be set to the `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) property, in order to show properly the scroll size.
+The service should inform the combo for the total items that are on the server - a value that needs to be set to the `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) property, in order to show properly the scroll size.
 
 ```typescript
 // remote.service.ts
@@ -62,6 +64,8 @@ export class RemoteService {
         // Use combo current virtualization state and search text to build URL and request the new data.
     }
 ```
+
+#### Binding Combo to Remote Service
 
 When the data is returned from the service as an observable, then we can set it to the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) using the [`async`](https://angular.io/api/common/AsyncPipe) pipe:
 
@@ -126,10 +130,18 @@ export class ComboRemoteComponent implements OnInit {
     }
 }
 ```
+> [!Note]
+> Anytime new data is loaded, we update `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) property, in order to have proper size of the list's scroll bar. In that case the service returns total size using the property `@odata.count`.
 
-> Note: Anytime new data is loaded, we update `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) property, in order to have proper size of the list's scroll bar. In that case the service returns total size using the property `@odata.count`.
+> [!Note]
+> Service needs to be included as a provider.
 
-> Note: Service needs to be included as a provider.
+#### Handling Selection
+When using a combo bound to remote data, loaded in chunks, dealing with a more complex data type (e.g. objects), it is necessary to define a `valueKey`. As stated in the [selection topic](../combo_features.md#selection), when no `valueKey` is specified, the combo will try to handle selection by **equality (===)**. Since the objects that will be marked as selected will **not be the same** as the object that are continuously loaded, the selection will fail.
+When binding the combo to remote data, make sure to specify a `valueKey`, representing a property that is unique to each item.
+
+When the combo is bound to remote data, setting value/selected items through API will selection methods will only take into account the items that are **loaded in the current chunk**. If you set an initial value, make sure those specific items are loaded before selecting.
+
 
 ## Additional Resources
 <div class="divider--half"></div>
