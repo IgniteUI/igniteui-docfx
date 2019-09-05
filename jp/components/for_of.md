@@ -7,7 +7,7 @@ _language: ja
 
 ## 仮想スクロール ディレクティブ
 
-Ignite UI for Angular では、大規模なデータをテンプレート化するために `ngForOf`　の代わりに [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) を使用することができます。[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナーを作成して、データの小さい部分を描画します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) で使用され、仮想化された [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を作成するために使用できます
+Ignite UI for Angular では、大規模なデータをテンプレート化するために `ngForOf`　の代わりに [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) を使用することができます。[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナ ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナを作成して、データの小さい部分を描画します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) で使用され、仮想化された [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を作成するために使用できます。
 
 
 ### デモ
@@ -84,7 +84,7 @@ export class AppModule {}
 </table>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナーで関連するディメンション (垂直の場合は `height` で、水平の場合は `width`) を設定し、`overflow: hidden` および `position: relative` の CSS ルールを適用する必要があります。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナで関連するディメンション (垂直の場合は `height` で、水平の場合は `width`) を設定し、`overflow: hidden` および `position: relative` の CSS ルールを適用する必要があります。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
 #### 水平仮想化および垂直仮想化
 
@@ -191,10 +191,10 @@ chunkLoading(evt) {
 }
 ```
 
-<!-- ### Local Variables
+### ローカル変数
 
-The `igxFor` directive includes the following helper properties in its context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection.
-The following code snippet demonstrates how to use the `even` property in an `ng-template`.
+`igxFor` ディレクティブのコンテキストには、`even`、`odd`、`first`、`last` のヘルパー プロパティが含まれています。これらは、コレクション内の現在の要素の位置を識別するために使用されます。
+次のコードスニペットは、`ng-template` で `even` プロパティを使用する方法を示しています。
 
 ```html
 <ng-template igxFor let-item 
@@ -206,13 +206,13 @@ The following code snippet demonstrates how to use the `even` property in an `ng
     </div>
 </ng-template>
 ```
-In the example above, an `even` class is assigned to every even div element. -->
+上記の例では、`even` クラスがすべての even div 要素に割り当てられています。
 
-<!-- ## Known Limitations
+## 既知の問題と制限
 
-|Limitation|Description|
+|制限|説明|
 |--- |--- |
-| Scroll position of components that use `igxForOf` is not preserved in projected container | When a component that uses `igxForOf` directive is in a `<ng-content>`, or other projected container, its scrollbar position won't be preserved, even though the data position would be. That's because the DOM elements are detached and later re-attached to the DOM tree and as a result, losing the scrollbar scroll position. The affected controls that use `igxForOf` internally are: `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`, `igxCombo`. <br/>Some possible workarounds are: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an `ngIf`. The component will be destroyed and then re-created, losing all internal states;</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually, for example using `MutationObserver`</li></ul> -->
+| `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOMノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば MutationObserver を使用して、手動でスクロール位置をリセットします。`</li></ul>
 
 ## API リファレンス
 
