@@ -140,8 +140,7 @@ export class ComboRemoteComponent implements OnInit {
 When using a combo bound to remote data, loaded in chunks, dealing with a more complex data type (e.g. objects), it is necessary to define a `valueKey`. As stated in the [selection topic](../combo_features.md#selection), when no `valueKey` is specified, the combo will try to handle selection by **equality (===)**. Since the objects that will be marked as selected will **not be the same** as the object that are continuously loaded, the selection will fail.
 When binding the combo to remote data, make sure to specify a `valueKey`, representing a property that is unique to each item.
 
-When the combo is bound to remote data, setting value/selected items through API will selection methods will only take into account the items that are **loaded in the current chunk**. If you set an initial value, make sure those specific items are loaded before selecting.
-
+When the combo is bound to remote data, setting value/selected items through API will only take into account the items that are **loaded in the current chunk**. If you set an initial value, make sure those specific items are loaded before selecting.
 
 ## Additional Resources
 <div class="divider--half"></div>

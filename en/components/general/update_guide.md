@@ -90,7 +90,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     **All** selection events are handled with the value of the data items' `valueKey` property.
 
     - If the combo **does not** have a `valueKey` defined, **all** selection events are handled with **equality (===)**.
-    You can read more about setting up the combo in the control's [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo_features.md#selection).
+    You can read more about setting up the combo in the control's [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection).
 
 ### From 8.0.x to 8.1.x
 * The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
