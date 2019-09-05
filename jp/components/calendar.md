@@ -362,6 +362,19 @@ export class CalendarSample7Component {
 * `Enter` はフォーカスされている日を選択します。
 <div class="divider--half"></div>
 
+
+### Multi View Calendar
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, though the months are displayed in a flex container horizontally.  Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar support all three types of selection, and `multi` and `range` selection modes work across views. Keyboard navigation moves to next/previous months when those are in view.
+
+Result:
+
+<div class="sample-container loading" style="height: 540px">
+    <iframe id="multiview-calendar" data-src='{environment:demosBaseUrl}/scheduling/multiview-calendar' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+</div>
+
 <!-- ### Styling
 
 To get started with styling the calendar, we need to import the `index` file, where all the theme functions and component mixins live:
