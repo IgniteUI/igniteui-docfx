@@ -97,7 +97,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプルの Product Name’ と 'Discontinued’ 列で 4 つすべての機能が有効です。 'Quantity Per Unit’で 4 機能すべてが無効、’Unit Price’ で並べ替えと移動のみ有効、'Order Date’ でピン固定と非表示のみ有効です。  
+以下のサンプルの 'Product Name' と 'Discontinued' 列で 4 つすべての機能が有効です。 'Quantity Per Unit' で 4 機能すべてが無効、'Unit Price' で並べ替えと移動のみ有効、'Order Date' でピン固定と非表示のみ有効です。  
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -555,7 +555,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します:
 
 ```scss
 $yellow-color: #FFCD0F;

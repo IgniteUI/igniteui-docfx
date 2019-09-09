@@ -363,7 +363,7 @@ $custom-theme: igx-grid-theme(
 
 #### カスタム カラー パレットの定義
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
 
  ```scss
 $primary-color: #292826;
