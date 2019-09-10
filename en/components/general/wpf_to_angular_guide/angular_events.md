@@ -1,6 +1,6 @@
 ---
 title: Handling Angular Events | IgniteUI for Angular | Infragistics
-_description: Learn how Angular events handing works when you migrate from WPF to Angular.
+_description: Learn how Angular events handling works when you migrate from WPF to Angular.
 _keywords: angular events, ignite ui for angular, infragistics
 ---
 
