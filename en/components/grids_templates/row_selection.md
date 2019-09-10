@@ -259,11 +259,173 @@ public getSelectedRows(args) {
 ```
 
 ### Row selectors templating
+You can template header and row selectors in the `@@igSelector` and also access their contexts which provide useful functionality for different scenarios.
 
-#### Row Numbering Demo
+#### igxRowSelector
+With the `igxRowSelector` directive you can bind to the `@@igSelector` row context and access the following members:
 
+##### index
+Can be used to access the indices of data records for related rows:
+```html
+<ng-template igxRowSelector let-rowContext>
+    {{rowContext.index}}
+</ng-template>
+```
+
+##### rowID
+Can be used to get a reference of an `@@igSelector` row. This is useful when you implement a `click` handler on the row selector element:
+<ng-template igxRowSelector let-rowContext>
+    <igx-checkbox (click)="onSelectorClick($event, rowContext.rowID)"></igx-checkbox>
+</ng-template>
+
+> By default, the `@@igSelector` will handle all row selection when the `click` is registered on the row itself or on the row selector's container. Handling `click` events on the selector should be implemented by the developer.
+
+##### selected
+A boolean property which shows whether the current row is selected or not.
+```html
+<ng-template igxRowSelector let-rowContext>
+    <igx-switch [checked]="rowContext.selected"></igx-switch>
+</ng-template>
+```
+In the above example we are using an `igx-switch` and we bind the `rowContext.selected` property to the switch's `checked` property. By doing so, we ensure that every time we select the row, the switch will also update its state and will be either selected or deselected, depending on the current state of the row.
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+##### select
+A method which allows you to set the state of a single row to **selected**.
+```html
+<ng-template igxRowSelector let-rowContext>
+    <igx-switch
+        [checked]="rowContext.selected"
+        (click)="rowContext.select()">
+    </igx-switch>
+</ng-template>
+```
+
+##### deselect
+A method which allows you to set the state of a single row to **not selected**.
+```html
+<ng-template igxRowSelector let-rowContext>
+    <igx-switch
+        [checked]="rowContext.selected"
+        (click)="rowContext.deselect()">
+    </igx-switch>
+</ng-template>
+```
+
+> The `select` and `deselect` methods are exposed in the row context of an `@@igSelector` to make it easier for a developer to implement a click handler on the row selector.
+}
+
+#### igxHeadSelector 
+With the `igxHeadSelector` directive you can bind to the `@@igSelector` header context and access the following members:
+
+##### selectedCount
+```html
+<ng-template igxHeadSelector let-headContext>
+    {{ headContext.selectedCount }}
+</ng-template>
+```
+
+##### totalCount
+```html
+<ng-template igxHeadSelector let-headContext>
+    {{ headContext.totalCount  }}
+</ng-template>
+```
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+##### selectAll
+A method which sets the states of all rows in an `@@igSelector` to **selected**
+```html
+<ng-template igxHeadSelector let-headContext>
+    <igx-switch (click)="headContext.selectAll()"></igx-switch>
+</ng-template>
+```
+##### deselectAll
+A method which sets the states of all rows in an `@@igSelector` to **not selected**
+```html
+<ng-template igxHeadSelector let-headContext>
+    <igx-switch (click)="headContext.deselectAll()"></igx-switch>
+</ng-template>
+```
+
+> The `selectAll` and `deselectAll` methods are exposed in the header context of an `@@igSelector` to make it easier for a developer to implement a `click` handler on the header selector.
+}
+
+In the following example we demonstrate how easy it is to set up custom header and row selectors in the `@@igSelector`:
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:700px">
+```html
+<igx-grid #grid [data]="gridData" [primaryKey]="'ProductID'" [rowSelection]="'multiple'">
+    <igx-column field="ProductID"></igx-column>
+    <igx-column field="ProductName"></igx-column>
+    <igx-column field="UnitsInStock"></igx-column>
+    <ng-template igxHeadSelector let-headContext>
+        <igx-checkbox
+            [checked]="headContext.selectedCount === headContext.totalCount"
+            [indeterminate]="headContext.selectedCount > 0 && headContext.selectedCount !== headContext.totalCount">
+        </igx-checkbox>
+    </ng-template>
+    <ng-template igxRowSelector let-rowContext>
+        <igx-switch [checked]="rowContext.selected"></igx-switch>
+    </ng-template>
+</igx-grid>
+```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #tGrid [data]="tGridData" 
+    [primaryKey]="'ProductID'" childDataKey="Products">
+    <igx-column field="ProductID"></igx-column>
+    <igx-column field="ProductName"></igx-column>
+    <igx-column field="UnitsInStock"></igx-column>
+</igx-tree-grid>
+    <ng-template igxHeadSelector let-headContext>
+    <igx-checkbox
+        [checked]="headContext.selectedCount === headContext.totalCount"
+        [indeterminate]="headContext.selectedCount > 0 && headContext.selectedCount !== headContext.totalCount">
+    </igx-checkbox>
+</ng-template>
+<ng-template igxRowSelector let-rowContext>
+    <igx-switch [checked]="rowContext.selected"></igx-switch>
+</ng-template>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #hGrid [data]="hGridData" [primaryKey]="'ProductID'">
+    <igx-column field="ProductID"></igx-column>
+    <igx-column field="ProductName"></igx-column>
+    <igx-column field="UnitsInStock"></igx-column>
+
+    <ng-template igxHeadSelector let-headContext>
+        <igx-checkbox
+            [checked]="headContext.selectedCount === headContext.totalCount"
+            [indeterminate]="headContext.selectedCount > 0 && headContext.selectedCount !== headContext.totalCount">
+        </igx-checkbox>
+    </ng-template>
+    <ng-template igxRowSelector let-rowContext>
+        <igx-switch [checked]="rowContext.selected"></igx-switch>
+    </ng-template>
+
+    <igx-row-island [key]="'ProductInfo'">
+        <igx-column field="Variation"></igx-column>
+        <igx-column field="Details"></igx-column>
+
+        <ng-template igxHeadSelector let-childHeadContext>
+            <!-- header template goes here -->
+        </ng-template>
+        <ng-template igxRowSelector let-childRowContext>
+            <!-- row template goes here -->
+        </ng-template>
+    </igx-row-island>
+</igx-hierarchical-grid>
+```
+> Each hierarchy level in an `@@igSelector` can have its own row and header templating.
+}
+#### Row Numbering Demo
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-selection-template-numbering-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-numbering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -272,7 +434,7 @@ public getSelectedRows(args) {
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="tree-grid-selection-template-numbers-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -281,7 +443,7 @@ public getSelectedRows(args) {
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:710px">
+<div class="sample-container loading" style="height:610px">
     <iframe id="hierarchical-grid-selection-template-numbers-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -290,10 +452,9 @@ public getSelectedRows(args) {
 <div class="divider--half"></div>
 }
 
-#### Excel Demo
-
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:700px">
+#### Excel Demo
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-selection-template-excel-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-excel' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -305,7 +466,7 @@ public getSelectedRows(args) {
 #### Conditional Selection Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="grid-conditional-row-selectors-iframe" src='{environment:demosBaseUrl}/grid/grid-conditional-row-selectors' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -314,7 +475,7 @@ public getSelectedRows(args) {
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:550px">
     <iframe id="treegrid-conditional-row-selectors-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -323,7 +484,7 @@ public getSelectedRows(args) {
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:710px">
+<div class="sample-container loading" style="height:630px">
     <iframe id="hierarchical-grid-conditional-row-selectors-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
