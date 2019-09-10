@@ -1,7 +1,7 @@
 ﻿---
-title: 一方向データ バインディング
-_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, 一方向, バインディング
+title: One-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
+_description: Learn how to create one-way data binding in Angular when you migrate from WPF to Angular.
+_keywords: data binding, ignite ui for angular, infragistics
 _language: ja
 ---
 
@@ -9,10 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
 
-WPF で最も強力で広く使用されている機能の 1 つは、データ バインディングです。これにより、ビジネス ロジックとビューの同期や非同期が最小限のコードで可能なため、開発者の負荷を大幅に軽減できます。この機能なしでは、WPF は見栄えの良い WindowsForms のようなものです。 
-Angular ではデータ バインディングをサポートしており、一方向バインディングと双方向バインディングの 2 種類をサポートします。
-
-### 一方向データ バインディング
+The one-way data binding in Angular is used to display information to the end user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF.
 
 Angular のデータ バインディングは非常に簡単で、WPF とは異なり、データ コンテキスト、ビューモデル、または `INotifyPropertyChanged` (INPC) の定義は必要ありません。必要なのは、HTML ファイルと typescript ファイルのみです。データ バインディングでは、最初にバインドするプロパティが必要です。それでは、`text` というプロパティをコンポーネント クラスに追加し、その値を設定しましょう。
 WPF では、DataContext を設定し、XAML でプロパティをバインドします。

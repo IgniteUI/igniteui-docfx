@@ -8,7 +8,7 @@ _keywords: transform data, ignite ui for angular, infragistics
 
 > [!Video https://www.youtube.com/embed/Gmz5kio50FE]
 
-You can use the Angular pipes to transform data from one value to another. This technic is similar to WPF converts.
+You can use the Angular pipes to transform data from one value to another. This technic is similar to WPF converters.
 
 In WPF in order to transform data from one value to another, you are going to use an [IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8). To transform data in an Angular application, we are going to use a [Pipe](https://angular.io/api/core/Pipe). The pipe is very similar to the WPF converter. It takes data as an input and then transforms that data into a desired output for display.
 

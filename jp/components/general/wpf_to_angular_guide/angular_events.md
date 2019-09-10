@@ -1,17 +1,15 @@
 ﻿---
-title: Angular イベント
-_description: Angular のイベントに応答し、独自のイベントを実装する方法を学びます。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, イベント, Event バインディング
+title: Handling Angular Events | IgniteUI for Angular | Infragistics
+_description: Learn how Angular events handling works when you migrate from WPF to Angular.
+_keywords: angular events, ignite ui for angular, infragistics
 _language: ja
 ---
 
-## イベントに応答
+## Handling Angular Events
 
 > [!Video https://www.youtube.com/embed/V1Futz4W400]
 
-### ユーザー入力イベントにバインド
-
-おそらくこれまでに作成したすべてのアプリは、何らかのタイプのユーザー インタラクションに何らかの形で応答する必要がありました。応答で最も一般的な方法は、イベント システムを使用することです。WPF は、ルーティング イベント、CLR イベント、およびコマンドを提供します。Angular では、DOM イベントがあります。
+The Angular events are emitted as a response to user interactions. When an Angular event is emitted, its event handling logic is executed. WPF provides routed events, CLR events, and commands. While in Angular, there are DOM events.
 
 WPF でボタンのクリックイベントに応答する簡単な例を次に示します。
 
