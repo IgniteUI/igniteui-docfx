@@ -361,7 +361,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 #### Demo
 <div class="sample-container loading" style="height:505px">
-    <iframe id="hierarchical-grid-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
