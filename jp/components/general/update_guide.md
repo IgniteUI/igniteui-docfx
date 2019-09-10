@@ -45,6 +45,68 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+### From 8.1.x to 8.2.x
+
+* IgxDrag
+    * Since `hideBaseOnDrag` and `visible` inputs are being deprecated, in order to achieve the same functionality in your application, you can use any way of hiding the base element that Angular provides. One example is setting the `visibility` style to `hidden`, since it will only make in invisible and keep its space that it takes in the DOM:
+
+        ```html
+        <div igxDrag [ngStyle]="{ 'visibility': targetDragged ? 'hidden' : 'visible' }"
+            (dragStart)="onDragStarted($event)" (dragEnd)="onDragEnded($event)">
+            Drag me!
+        </div>
+        ```
+
+        ```typescript
+        public targetDragged = false;
+
+        public onDragStarted(event) {
+            this.targetDragged = true;
+        }
+
+        public onDragEnded(event) {
+            this.targetDragged = false;
+        }
+        ```
+
+    * Since `animateOnRelease` and `dropFinished()` are also being deprecated, any `dropFinished()` method usage should be replaced with `transitionToOrigin()`. Otherwise you would need to call `transitionToOrigin()` depending on when you would want the dragged element to transition back to its original location. Note that  if the dragged element DOM position is changed, then its original location will also change based on that.
+
+* IgxDrop
+    * Due to the default drop strategy provided with the `IxgDrop` directive is no longer applied by default, in order to continue having the same behavior, you need to set the new input `dropStrategy` to be the provided `IgxAppendDropStrategy` implementation.
+
+        ```html
+        <div igxDrop [dropStrategy]="appendStrategy"></div>
+        ```
+        ```typescript
+        import { IgxAppendDropStrategy } from 'igniteui-angular';
+
+        public appendStrategy = IgxAppendDropStrategy;
+        ```
+    * Any use of interfaces `IgxDropEnterEventArgs` and `IgxDropLeaveEventArgs` should be replaced with `IDragBaseEventArgs`.
+    * Also any use of the  `IgxDropEventArgs` interface should be replaced with `IDropDroppedEventArgs`.
+
+
+### From 8.0.x to 8.1.x
+* The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
+Keep in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that the template is no longer applied under a paging-specific container with CSS rules to center content, so you might need to add them manually.
+The style should be something similar to:
+
+```html
+<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+</igx-grid>
+<ng-template #pager>
+    <div class="pagination-container"></div>
+</ng-template>
+```
+
+```css
+.pagination-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+```
+
 ### 7.3.x から 8.0.x の場合:
 * アップデート中に以下のエラーが発生した場合、`パッケージ "@angular/compiler-cli" は "typescript" と互換性のないピア依存関係を持っているため (">=3.1.1 <3.3" が必要で、"3.4.5" をインストールします。)`、最初に `@angular/core` パッケージを更新する必要があります。このエラーは [Angular CLI](https://github.com/angular/angular-cli/issues/13095) の既知の問題に関連しています
 * `igniteui-angular` パッケージの更新中に次のエラーが表示された場合、`パッケージ "igniteui-angular"は "web-animations-js"と互換性のないピア依存関係を持っているため ("^2.3.1" が必要で、 "2.3.2-pr208"をインストールします。)`、`ng update igniteui-angular --force` を使用して更新する必要があります。これは、`igniteui-angular` を更新する前に `@angular/core` と `@angular/cli` を更新した場合に発生する場合があります。

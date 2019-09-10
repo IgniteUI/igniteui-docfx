@@ -4,9 +4,9 @@ _description: Learn how to use Ignite UI for Angular data grid, based on Angular
 _keywords: angular data grid, igniteui for angular, infragistics
 ---
 
-## Data Tree Grid
+## Data Tree Grid Overview and Configuration
 
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Data Tree Grid. Quickly bind your data with very little coding or configuration. Customize its behavior by responding to any user action using angular events. Features include the must have for any Angular Material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate Angular Material table or material UI grid.</p>
+<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
 
 ### Demo
 
@@ -247,6 +247,8 @@ See the [Grid Sizing](sizing.md) topic.
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
 
+> [!NOTE]
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 

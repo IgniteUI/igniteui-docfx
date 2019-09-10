@@ -1,6 +1,6 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked Spline Area Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a stacked spline area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','StackedSplineAreaSeries']
 namespace: Infragistics.Controls.Charts
@@ -8,15 +8,15 @@ namespace: Infragistics.Controls.Charts
 
 ## Stacked Spline Area Chart
 
-[`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) belongs to a group of category series and it is rendered using a collection of points connected by smooth curves of spline segments ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) with the area below the spline filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.
+The Ignite UI for Angular stacked spline area chart belongs to a group of category charts and is rendered using a collection of points connected by smooth curves of spline segments ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) with the area below the spline filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-stacked-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -44,7 +44,7 @@ The [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs
 
 ### Required Modules
 
-The [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) requires the following modules:
+Creation of the [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -70,9 +70,9 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Spline Area Series
+### Code Example - Stacked Spline Area Chart
 
-This code demonstrates how to create an instance of data chart with [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) and bind it to the data source. Note that you can also use above code to create other type of category series by replacing [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) with name of series that you want to render.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">

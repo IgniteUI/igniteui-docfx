@@ -1,21 +1,21 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Radial Line Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a radial line chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialLineSeries']
 ---
 
 ## Radial Line Chart
 
-[`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) is rendered using a collection of straight lines connecting data points. The [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) uses the same concepts of data plotting as the [`IgxLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html), but wraps data points around a circle rather than stretching them along a horizontal line.
+The Ignite UI for Angular radial line chart belongs to a group of radial charts and is rendered using a collection of straight lines connecting data points. The [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) uses the same concepts of data plotting as the [`IgxLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html), but wraps data points around a circle rather than stretching them along a horizontal line.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-radial-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-radial-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -45,9 +45,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 ### Required Modules
 
-<!-- Angular -->
-
-In order to use radial series, you need to import the following modules in your app during load:
+Creation of the [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -73,9 +71,9 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 })
 ```
 
-### Code Example
+### Code Example - Radial Line Chart
 
-This code demonstrates how to create an instance of data chart with [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart
@@ -92,8 +90,6 @@ This code demonstrates how to create an instance of data chart with [`IgxRadialL
     </igx-radial-line-series>
  </igx-data-chart>
 ```
-
-Note that you can also use above code to create other type of radial series by replacing [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) with name of radial series that you want to render.
 
 ### Additional Resources
 

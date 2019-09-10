@@ -241,7 +241,6 @@ The last step is to **include** the button theme in our application:
 }
 ```
 
-
 #### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.

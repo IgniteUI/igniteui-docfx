@@ -1,21 +1,21 @@
 ---
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Range Column Chart
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
+_description: Create a range column chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
 ## Range Column Chart
 
-[`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) belongs to a group of category series and it is rendered using two lines with the area between the lines filled in. This type of series emphasizes the amount of change between low values and high values in the same data point over a period of time or compares multiple items. Range values are represented on the y-axis and categories are displayed on the x-axis. The [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) is identical to the [`IgxRangeAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangeareaseriescomponent.html) in all aspects except that the ranges are represented as filled area rather than a set of vertical columns.
+The Ignite UI for Angular range column chart belongs to a group of range charts and is rendered using two lines with the area between the lines filled in. This type of series emphasizes the amount of change between low values and high values in the same data point over a period of time or compares multiple items. Range values are represented on the y-axis and categories are displayed on the x-axis. The [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) is identical to the [`IgxRangeAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangeareaseriescomponent.html) in all aspects except that the ranges are represented as filled area rather than a set of vertical columns.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-range-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-range-column-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-range-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-range-column-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-range-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-range-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -47,7 +47,7 @@ this.state = { dataSource: SampleRangeData.create() }
 
 ### Required Modules
 
-In order to use [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html), you need to import the following modules in your app during load:
+Creation of the [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) requires the following modules:
 
 ```ts
 // in app.module.ts file
@@ -73,9 +73,9 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example
+### Code Example - Range Column Series
 
-This code demonstrates how to create an instance of data chart with [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

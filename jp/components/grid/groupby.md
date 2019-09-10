@@ -1,14 +1,13 @@
 ﻿---
-title: Angular Grid Group By |Column Group |Ignite UI for Angular |infragistics
+title: 階層グリッド - グループ化|Column Group|Ignite UI for Angular|infragistics
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
-_keywords: angular group by, igniteui for angular, infragistics
+_keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
----
 
+---
 ### グリッドのグループ化
 
 Angular Material テーブルまたは UI グリッドの Group by 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。
-
 
 #### デモ
 
@@ -107,23 +106,24 @@ export interface IGroupByRecord {
     <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
 </ng-template>
 ```
-<!-- ### Group By with Paging
+### ページングによるグループ化
 
-Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process. Any expand or collapse operation forces Paging to recalculate the page count and adjust the page index if necessary.
-Groups that span multiple pages are split between them. The group row is visible only on the page it starts on and is not repeated on subsequent pages. Summary information for group rows is calculated based on the whole group and is unaffected by Paging.
+グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。展開または折りたたみ操作を行うと、ページングでページ数が再計算され、必要に応じてページ インデックスが調整されます。
+複数のページにまたがるグループは、ページ間で分割されます。グループ行は、開始ページでのみ表示され、後続のページでは繰り返されません。グループ行の要約情報はグループ全体に基づいて計算され、ページングの影響を受けません。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### Group By with Summaries
+### 集計でグループ化
 
-Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic. -->
+グループ化と要約の統合については、[集計](summaries.html#summaries-with-group-by)トピックで説明しています。
+
 
 #### キーボード ナビゲーション
 
@@ -140,6 +140,153 @@ Integration between Group By and Summaries is described in the [Summaries](summa
    - <kbd>SPACE</kbd> - 並べ替えの方向を変更します。
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
+
+### スタイル設定
+
+igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+
+以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
+
+#### グローバル テーマのインポート
+
+グループ化機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+
+#### カスタム テーマの定義
+
+次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。Group By 機能で使用されるため、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) を拡張する必要もあります。
+
+```scss
+
+$custom-theme: igx-grid-theme(
+    /* Group By properties that affect styling */
+    $group-row-background: #494949,
+    $group-row-selected-background: #383838,
+    $group-label-column-name-text: #f8f8f8,
+    $group-label-icon: #FFCD0F,
+    $group-label-text: #f8f8f8,
+    $group-count-background: #FFCD0F,
+    $group-count-text-color: #000,
+    $expand-icon-color: #FFCD0F,
+    $expand-icon-hover-color: rgb(223, 181, 13),
+    $cell-active-border-color: #FFCD0F,
+    $row-selected-background: #fff6d3,
+    $row-selected-text-color: #000,
+    $drop-indicator-color: #FFCD0F
+    /* add other features properties here... */
+);
+
+/* Chip theme will style the chips in the Group By area */
+$custom-chips-theme: igx-chip-theme(
+    $background: #494949,
+    $text-color: #f8f8f8,
+    $hover-text-color: #e7e7e7
+);
+```
+
+#### カスタム カラー パレットの定義
+
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
+
+```scss
+$black-color: #292826;
+$yellow-color: #FFCD0F;
+
+$custom-palette: igx-palette(
+  $primary: $black-color,
+  $secondary: $yellow-color
+);
+```
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。 
+
+```scss
+$custom-theme: igx-grid-theme(
+    $group-row-background: igx-color($custom-palette, "primary", 300),
+    $group-row-selected-background: igx-color($custom-palette, "primary", 400),
+    $group-label-column-name-text: igx-contrast-color($custom-palette, "primary", 500),
+    $group-label-icon: igx-color($custom-palette, "secondary", 600),
+    $group-label-text: igx-contrast-color($custom-palette, "primary", 500),
+    $group-count-background: igx-color($custom-palette, "secondary", 600),
+    $group-count-text-color: igx-color($custom-palette, "primary", 400),
+    $expand-icon-color: igx-color($custom-palette, "secondary", 600),
+    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 300),
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 600)
+);
+
+$custom-chips-theme: igx-chip-theme(
+    $background: igx-color($custom-palette, "primary", 300),
+    $text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $hover-text-color: igx-contrast-color($custom-palette, "primary", 600)
+);
+```
+#### カスタム スキーマの定義
+さらに進んで、[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。 
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    group-row-background: (igx-color:('secondary', 100)),
+    group-row-selected-background: (igx-color:('primary', 400)),
+    group-label-column-name-text: (igx-color:('primary', 600)),
+    group-label-icon: (igx-color:('primary', 600)),
+    group-label-text: (igx-color:('secondary', 700)),
+    group-count-background: (igx-color:('primary', 600)),
+    group-count-text-color: (igx-color:('secondary', 400)),
+    expand-icon-color: (igx-color:('primary', 600)),
+    expand-icon-hover-color: (igx-color:('primary', 400))
+));
+```
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### カスタム テーマの適用
+
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
+```scss
+@include igx-grid($custom-theme);
+@include igx-chip($custom-chips-theme);
+```
+
+#### スコープ コンポーネント テーマ
+
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (インデックス ファイルのインポートを含む)。
+
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
+
+ >[!NOTE]
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >[!NOTE]
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+        @include igx-chip($custom-chips-theme);
+    }
+}
+```
+
+#### デモ   
+
+<div class="sample-container loading" style="height:570px">
+    <iframe id="grid-sample-groupby-styling" src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+</div>
 
 ### 既知の問題と制限
 

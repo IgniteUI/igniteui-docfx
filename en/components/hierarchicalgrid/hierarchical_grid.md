@@ -4,9 +4,9 @@ _description: Learn how to use Ignite UI for Angular data grid, based on Angular
 _keywords: angular data grid, igniteui for angular, infragistics
 ---
 
-## Hierarchical Grid
+## Hierarchical Data Grid Overview and Configuration
 
-<p class="highlight">Display and manipulate hierarchical data with the Ignite UI for Angular Hierarchical Data Grid. Features include the must have for any Angular Material table filtering, sorting, paging, templates, movable columns, and the ability to edit and update data, making it the ultimate Angular Material table or material UI grid. All of the above making it the ultimate material UI grid. The Hierarchical Grid builds upon the Data Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the according child grid, when more detailed information is needed.</p>
+<p class="highlight">The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 
 ### Demo
 
@@ -240,12 +240,142 @@ See the [Grid Sizing](sizing.md) topic.
 
 Calling CRUD API methods should still be done through each separate grid instance.
 
+### Styling
+
+The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+
+In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.     
+
+#### Importing global theme   
+To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located. 
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+
+#### Defining custom theme
+Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.
+
+ >[!NOTE]
+ >There is no specific `sass` hierarchical grid function.
+
+
+```scss
+$custom-theme: igx-grid-theme(
+  $cell-active-border-color: #ffcd0f,
+  $cell-selected-background: #6f6f6f,
+  $row-hover-background: #f8e495,
+  $row-selected-background: #8d8d8d,
+  $header-background: #494949,
+  $header-text-color: #fff,
+  $expand-icon-color: #ffcd0f,
+  $expand-icon-hover-color: #e0b710,
+  $resize-line-color: #ffcd0f,
+  $row-highlight: #ffcd0f
+);
+```   
+
+#### Defining a custom color palette
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+
+ ```scss
+$black-color: #494949;
+$yellow-color: #FFCD0F;
+ 
+$custom-palette: igx-palette(
+  $primary: $black-color,
+  $secondary: $yellow-color
+);
+```
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
+    $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
+    $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
+    $row-selected-background: (igx-color($custom-palette, "primary", 100)),
+    $header-background: (igx-color($custom-palette, "primary", 500)),
+    $header-text-color: (igx-contrast-color($custom-palette, "primary", 500)),
+    $expand-icon-color: (igx-color($custom-palette, "secondary", 500)),
+    $expand-icon-hover-color: (igx-color($custom-palette, "secondary", 600)),
+    $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
+    $row-highlight: (igx-color($custom-palette, "secondary", 500))
+);
+```   
+
+#### Defining custom schemas
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we will use `$_light_grid`.
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    cell-active-border-color: (igx-color:('secondary', 500)),
+    cell-selected-background: (igx-color:('primary', 300)),
+    row-hover-background: (igx-color:('secondary', 100)),
+    row-selected-background: (igx-color:('primary', 100)),
+    header-background: (igx-color:('primary', 500)),
+    header-text-color: (igx-contrast-color:('primary', 500)),
+    expand-icon-color: (igx-color:('secondary', 500)),
+    expand-icon-hover-color: (igx-color:('secondary', 600)),
+    resize-line-color: (igx-color:('secondary', 500)),
+    row-highlight: (igx-color:('secondary', 500))
+));
+```
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```   
+
+#### Applying the custom theme
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
+
+```scss
+@include igx-grid($custom-theme);
+```
+
+#### Scoped component theme
+
+In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```   
+
+#### Demo
+<div class="sample-container loading" style="height:505px">
+    <iframe id="hierarchical-grid-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Known Limitations
 
 |Limitation|Description|
 |--- |--- |
 |Group By|Group By feature is not supported by the hierarchical grid.|
 |Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
+
+> [!NOTE]
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 ## API References
 
