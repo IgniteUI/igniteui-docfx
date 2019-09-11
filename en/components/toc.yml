@@ -767,7 +767,7 @@
     new: true
 - name: Drag and Drop
   href: drag_drop.md
-  new: false
+  new: true
 - name: Zoom Slider
   new: true
   href: zoomslider_overview.md
