@@ -35,7 +35,7 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に `<igx-select>` といくつかのアイテムを定義します。[`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して igx-select を実行する項目を表示することに注意してください。
+次に `<igx-select>` といくつかのアイテムを定義します。[`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して `igx-select` を実行する項目を表示することに注意してください。
 ```html
 <!-- define items declaratively -->
 <igx-select>
@@ -65,7 +65,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 
 
 
-### Label, Prefix and Suffix
+### ラベル、プレフィックス、サフィックス
 Select は、[入力グループ](input_group.md)に適用可能な次のディレクティブをサポートしています。
 
 - `igxLabel` - Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
@@ -160,7 +160,7 @@ Selectコンポーネントに[`プレースホルダー`]({environment:angularA
 ### イベント発生
 `igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
 
-#### Opend イベント
+#### Opened イベント
 - 現在ドロップ ダウンが展開されているかどうかを指定します。
 
 `onOpened` イベントを使用できます。
@@ -331,7 +331,7 @@ export class MyClass {
 `必要`なアスタリスク`*`も表示する場合は、ラベルセットが必要です。
 
 ### カスタム オーバーレイ設定の選択
-`igx-select` では[*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html)のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
+`igx-select` では [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
 
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>

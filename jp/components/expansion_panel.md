@@ -21,7 +21,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-## Usage
+## 使用方法
 ### 作業の開始
 [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用するには、**app.module** に **IgxExpansionPanelModule** をインポートする必要があります。
 ```typescript
