@@ -1,7 +1,7 @@
 ﻿---
 title: Angular 階層データグリッド |マテリアル テーブル|Ignite UI for Angular |Infragistics
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: Angular データ グリッド, igniteui for angular, infragistics
+_keywords: Angular データ グリッド, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -252,23 +252,24 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 > [!NOTE]
 > `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf Known Issues](../for_of.html#known-limitations) の既知の問題のセクションを参照してください。
 
-### Styling
-The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+### スタイル設定
 
-In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.     
+igxHierarchicalGrid を使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
-#### Importing global theme   
-To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located. 
+以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
+
+#### グローバル テーマのインポート   
+階層グリッドのカスタマイズは、すべてのスタイリング機能と mixins が配置されている `index` ファイルをインポートする必要があります。 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### Defining custom theme
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.
+#### カスタム テーマの定義
+次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
  >[!NOTE]
- >There is no specific `sass` hierarchical grid function.
+ >特定の `sass` 階層グリッド機能はありません。
 
 
 ```scss
@@ -286,9 +287,9 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-#### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+#### カスタム カラー パレットの定義
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
 
  ```scss
 $black-color: #494949;
@@ -299,7 +300,7 @@ $custom-palette: igx-palette(
   $secondary: $yellow-color
 );
 ```
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
 ```scss
 $custom-theme: igx-grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
@@ -315,9 +316,9 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-#### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we will use `$_light_grid`.
+#### カスタム スキーマの定義
+さらに進んで、[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
 ```scss
 $custom-grid-schema: extend($_light-grid,(
     cell-active-border-color: (igx-color:('secondary', 500)),
@@ -332,7 +333,7 @@ $custom-grid-schema: extend($_light-grid,(
     row-highlight: (igx-color:('secondary', 500))
 ));
 ```
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
 ```scss
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
@@ -344,23 +345,23 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-#### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
+#### カスタム テーマの適用
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
 
 ```scss
 @include igx-grid($custom-theme);
 ```
 
-#### Scoped component theme
+#### スコープ コンポーネント テーマ
 
-In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
 
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
  >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
 ```scss
 :host {
@@ -370,20 +371,30 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 }
 ```   
 
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:505px">
     <iframe id="hierarchical-grid-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+|グループ化|グループ化機能は、階層グリッドでサポートされません。|
+|Excel エクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
+
+> [!NOTE]
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf Known Issues](../for_of.html#known-limitations) の既知の問題のセクションを参照してください。
 
 ## API リファレンス
 
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
@@ -391,7 +402,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ### その他のリソース
 <div class="divider--half"></div>
 
-<!-- * [グリッド サイズ変更](sizing.md) -->
+* [グリッド サイズ変更](sizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
