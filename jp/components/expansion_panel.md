@@ -277,7 +277,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 #### グローバル
-この新しく作成された `igx-expansion-panel テーマ`をアプリにグローバルに適用する場合、必要なのは、アプリのルート スタイル ファイルにテーマを含め、[igx-expansion-panel mixin]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) に渡すだけです。
+この新しく作成された `igx-expansion-panel テーマ`をアプリに [`グローバル`](themes/component-themes.md#creating-themes) に適用する場合、必要なのは、アプリのルート スタイル ファイルにテーマを含め、[igx-expansion-panel mixin]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) に渡すだけです。
 ```scss
 // in styles.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
@@ -352,7 +352,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-ビルトイン アニメーション スイートの [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
+[**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/index.html#animations) の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
 
 サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します。
 `[animationSettings] = "animationSettingsCustom"`

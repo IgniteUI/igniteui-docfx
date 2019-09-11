@@ -35,7 +35,7 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に `<igx-select>` といくつかのアイテムを定義することだけです。IgxSelectItemComponent を使用して igx-select を実行する項目を表示することに注意してください。
+次に `<igx-select>` といくつかのアイテムを定義します。[`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して igx-select を実行する項目を表示することに注意してください。
 ```html
 <!-- define items declaratively -->
 <igx-select>
@@ -123,7 +123,7 @@ Selectコンポーネントに[`プレースホルダー`]({environment:angularA
 - ドロップダウン ボタン上でマウスを左クリック、またはドロップダウン以外を左クリックしてドロップダウンを閉じることもできます。
 
 ### キーボード ナビゲーション
-`igx-select` has intuitive keyboard navigation that makes it easy to select items without having to touch the mouse.
+`igx-select` には直感的なキーボード ナビゲーションがあり、マウスを使用せずに簡単に項目を選択できます。
 
 - ドロップダウン リストが開いているときの移動先に残っている項目がある場合は、`上矢印/下矢印`キーで項目を移動できます。更に `Home` または `End` を押すとリストの最初と最後の項目に移動します。
 - ドロップダウン リストが開いたときに対応するキーを押して特定の文字で始まる各項目に移動できます。大文字小文字を区別して一致するすべての項目間をフォーカスします￥。
