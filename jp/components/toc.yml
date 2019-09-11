@@ -757,7 +757,7 @@
     new: true
 - name: Drag and Drop
   href: drag_drop.md
-  new: false
+  new: true
 - name: メニュー
   header: true
 - name: Navigation Drawer

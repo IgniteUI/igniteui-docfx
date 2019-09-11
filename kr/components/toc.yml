@@ -698,7 +698,7 @@
     new: false
 - name: Drag and Drop
   href: drag_drop.md
-  new: false
+  new: true
 - name: Menus
   header: true
 - name: Navigation Drawer
