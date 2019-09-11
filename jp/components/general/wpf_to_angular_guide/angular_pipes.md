@@ -1,13 +1,15 @@
 ﻿---
-title: Angular Pipes
-_description: WPF のコンバーターと同様に、Angular でデータを変換する方法を学びます。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Pipe, コンバーター
+title: Transform Data with Angular Pipes | IgniteUI for Angular | Infragistics
+_description: Learn how to transform data using Angular pipes which is similar to WPF converters.
+_keywords: transform data, ignite ui for angular, infragistics
 _language: ja
 ---
 
-## Angular パイプでデータを変換
+## Transform Data with Angular Pipes
 
 > [!Video https://www.youtube.com/embed/Gmz5kio50FE]
+
+You can use the Angular pipes to transform data from one value to another. This technic is similar to WPF converters.
 
 WPF では、データをある値から別の値に変換するために、[IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8) を使用します。Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
 
