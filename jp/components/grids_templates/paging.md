@@ -1,5 +1,5 @@
----
-title: Angular Grid 改ページ | テンプレート | Ignite UI for Angular | Infragistics
+﻿---
+title: Angular Grid ソート|テンプレート |Ignite UI for Angular |Infragistics
 _description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular pagination, igniteui for angular, infragistics
 _language: ja
@@ -40,13 +40,13 @@ _language: ja
 }
 
 
-Paging は機能が有効かどうかを制御する Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
+[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) は機能が有効かどうかを制御する Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
 </@@igSelector>
 ```
-### Pagination Templating
+### ページング テンプレート
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
@@ -588,7 +588,7 @@ public changeTemplate() {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -597,7 +597,7 @@ public changeTemplate() {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -607,36 +607,36 @@ public changeTemplate() {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxGrid') {
-### Paging with Group By
+### グループ化によるページング
 
-Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
+ページングとグループ化の統合については、[グループ化](groupby.html#group-by-with-paging)のトピックで説明しています。
 }
 
-### Paginator Component
-A new component `igx-paginator` is introduced with 8.1.0 release. This component replaces the current pager and can be used as a standalone component as well.
-The `igx-paginator` exposes a couple of input properties that enable further customization of the paging.
+### ページネータ コンポーネント
+8.1.0 リリースでは、新しいコンポーネント `igx-paginator` が導入されました。このコンポーネントは、現在のページャーを置き換え、スタンドアロン コンポーネントとしても使用できます。
+`igx-paginator` は、ページングを詳細なカスタマイズが可能な入力プロパティを公開します。
 
-| Input           |      Description                           | 
+| 入力           |      説明                           | 
 |-----------------|:------------------------------------------:|
-| displayDensity  | Sets the display density of the paginator. |
-| dropdownEnabled | Sets the enabled state to the drop-down. |
-| dropdownHidden  | Sets the hidden state to the drop-down. |
-| page            | Sets the current page. |
-| pagerEnabled    | Sets the enabled state to the pager. |
-| pagerHidden     | Sets the hidden state to the pager. |
-| perPage         | Sets the number of visible items per page. |
-| selectLabel     | Sets the text before the select component. Default is 'Items per page' |
-| selectOptions   | Sets custom options for items per page. |
-| totalRecords    | Sets the total records count. |
+| displayDensity  | 改ページの表示密度を設定します。 |
+| dropdownEnabled | 有効状態をドロップダウンに設定します。 |
+| dropdownHidden  | 非表示状態をドロップダウンに設定します。 |
+| page            | 現在のページを設定します。 |
+| pagerEnabled    | 有効状態をページャーに設定します。 |
+| pagerHidden     | 非表示状態をページャーに設定します。 |
+| perPage         | ページごとに表示される項目数を設定します。 |
+| selectLabel     | 選択コンポーネントの前にテキストを設定します。デフォルトは'ページごとの項目'です。 |
+| selectOptions   | ページごとの項目のカスタム オプションを設定します。 |
+| totalRecords    | 合計レコード数を設定します。 |
 
-#### Usage
-The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+#### 使用方法
+以下の例では、`igx-paginator` コンポーネントは `igx-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
 
 ```html
 <igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
@@ -651,27 +651,27 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 </ng-template>
 ```
 
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 <div class="divider--half"></div>
 
 ### スタイル設定
 
-ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在するインデックス ファイルをインポートする必要があります。
+ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在するイ`ンデックス` ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法で igx-grid-paginator-theme を拡張し`$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
+最も簡単な方法で [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) を拡張し`$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -805,7 +805,7 @@ $dark-button-schema: extend($_dark-button,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加する方法です。
+カスタム スキーマを適用するには、グローバル ([`軽量`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`暗色`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加する方法です。
 
 ```scss
 // Extending the global dark-schema
@@ -852,7 +852,7 @@ $dark-button: igx-button-theme(
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
     </button>
 </div>
 }
@@ -866,7 +866,7 @@ $dark-button: igx-button-theme(
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
     </button>
 </div>
 }
