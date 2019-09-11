@@ -169,7 +169,7 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
 * When you switch between row selection modes at runtime, this will clear the previous row selection state.
 
 
-### Api usage
+### API usage
 
 #### Select rows programmatically
 
@@ -219,7 +219,7 @@ When there is some change in the row selection **`onRowSelectionChange`** event 
 - `newSelection` - array of row ids that match the new state of the row selection.
 - `added` - array of row ids that are currently added to the selection.
 - `removed` - array of row ids that are currently removed according old selection state.
-- `event` - the original event that triggers row selection change.
+- `event` - the original event that triggered row selection change.
 - `cancel` -  allows you the prevent the row selection change.
 @@if (igxName === 'IgxHierarchicalGrid') {
 - `owner` - if the event is triggered from a child grid, this will give you a reference to the component, from which the event is emitted.
@@ -242,11 +242,11 @@ public handleRowSelectionChange(args) {
 ```
 
 #### Select all rows
-Another useful API method that [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides is `selectAll(onlyFilteredData)`. By default this method will select all data rows, but if filtering is applied, it will select only the rows that match the filter criteria. But if you call the method with *false* parameter `selectAll(false)` will always select all data in the grid, no matter whether filtering is applied.
+Another useful API method that [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides is `selectAll(onlyFilteredData)`. By default this method will select all data rows, but if filtering is applied, it will select only the rows that match the filter criteria. But if you call the method with *false* parameter, `selectAll(false)` will always select all data in the grid, even if filtering is applied.
 > **Note** Keep in mind that `selectAll()` will not select the rows that are deleted.
 
 #### Deselect all rows
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides `deselectAll(onlyFilteredData)` method, which by default will deselect all data rows, but if filtering is applied will deselect only the rows that match the filter criteria. But if you call the method with *false* parameter `deselectAll(false)`, it will always clear the row selection state no matter whether filtering is applied.
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides `deselectAll(onlyFilteredData)` method, which by default will deselect all data rows, but if filtering is applied will deselect only the rows that match the filter criteria. But if you call the method with *false* parameter, `deselectAll(false)` will always clear all row selection state even if filtering is applied.
 
 #### How to get selected rows
 If you need to see which rows are currently selected, you can get their row ids with the `selectedRows()` method.
@@ -258,74 +258,76 @@ public getSelectedRows(args) {
 }
 ```
 
-### Row selectors templating
+### Row selectors templates
 You can template header and row selectors in the `@@igSelector` and also access their contexts which provide useful functionality for different scenarios.
 
-#### igxRowSelector
-With the `igxRowSelector` directive you can bind to the `@@igSelector` row context and access the following members:
+#### Row [Selector] template
+> By default, the `@@igSelector` will handle all row selection when the `click` is registered on the row itself or on the row selector's container. Handling `click` events on the selector should be implemented by the developer.
 
-##### index
-Can be used to access the indices of data records for related rows:
+Using the `igxRowSelector` directive in an `ng-template` within an `@@igSelector` allows you to access the implicitly provided context value which has the following members:
+
+The `index` property can be used to access the indices of data records for related rows:
 ```html
 <ng-template igxRowSelector let-rowContext>
-    {{rowContext.index}}
+    {{ rowContext.index }}
 </ng-template>
 ```
 
-##### rowID
-Can be used to get a reference of an `@@igSelector` row. This is useful when you implement a `click` handler on the row selector element:
+The `rowID` property can be used to get a reference of an `@@igSelector` row. This is useful when you implement a `click` handler on the row selector element:
+```html
 <ng-template igxRowSelector let-rowContext>
     <igx-checkbox (click)="onSelectorClick($event, rowContext.rowID)"></igx-checkbox>
 </ng-template>
+```
 
-> By default, the `@@igSelector` will handle all row selection when the `click` is registered on the row itself or on the row selector's container. Handling `click` events on the selector should be implemented by the developer.
-
-##### selected
-A boolean property which shows whether the current row is selected or not.
+The `selected`  property shows whether the current row is selected or not.
 ```html
 <ng-template igxRowSelector let-rowContext>
-    <igx-switch [checked]="rowContext.selected"></igx-switch>
+    <igx-checkbox 
+        [checked]="rowContext.selected"
+        [readonly]="true"
+    ></igx-checkbox>
 </ng-template>
 ```
 In the above example we are using an `igx-switch` and we bind the `rowContext.selected` property to the switch's `checked` property. By doing so, we ensure that every time we select the row, the switch will also update its state and will be either selected or deselected, depending on the current state of the row.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-##### select
-A method which allows you to set the state of a single row to **selected**.
+The `select` method allows you to set the state of a single row to **selected**.
 ```html
 <ng-template igxRowSelector let-rowContext>
-    <igx-switch
+    <igx-checkbox
+        [readonly]="true"
         [checked]="rowContext.selected"
         (click)="rowContext.select()">
-    </igx-switch>
+    </igx-checkbox>
 </ng-template>
 ```
 
-##### deselect
-A method which allows you to set the state of a single row to **not selected**.
+The `deselect` method allows you to set the state of a single row to **not selected**.
 ```html
 <ng-template igxRowSelector let-rowContext>
-    <igx-switch
+    <igx-checkbox
+        [readonly]="true"
         [checked]="rowContext.selected"
         (click)="rowContext.deselect()">
-    </igx-switch>
+    </igx-checkbox>
 </ng-template>
 ```
 
 > The `select` and `deselect` methods are exposed in the row context of an `@@igSelector` to make it easier for a developer to implement a click handler on the row selector.
 }
 
-#### igxHeadSelector 
-With the `igxHeadSelector` directive you can bind to the `@@igSelector` header context and access the following members:
+#### Head [Selector] template 
+Using the `igxHeadSelector` directive in an `ng-template` within an `@@igSelector` allows you to access the implicitly provided context value which has the following members:
 
-##### selectedCount
+The `selectedCount` property shows you how many rows are currently selected.
 ```html
 <ng-template igxHeadSelector let-headContext>
     {{ headContext.selectedCount }}
 </ng-template>
 ```
 
-##### totalCount
+The `totalCount` property shows you how many rows there are in the `@@igSelector` in total.
 ```html
 <ng-template igxHeadSelector let-headContext>
     {{ headContext.totalCount  }}
@@ -334,17 +336,24 @@ With the `igxHeadSelector` directive you can bind to the `@@igSelector` header c
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ##### selectAll
-A method which sets the states of all rows in an `@@igSelector` to **selected**
+The `selectAll` method sets the states of all rows in an `@@igSelector` to **selected**
 ```html
 <ng-template igxHeadSelector let-headContext>
-    <igx-switch (click)="headContext.selectAll()"></igx-switch>
+    <igx-checkbox 
+        [readonly]="true"
+        (click)="headContext.selectAll()">
+    </igx-checkbox>
 </ng-template>
 ```
+
 ##### deselectAll
-A method which sets the states of all rows in an `@@igSelector` to **not selected**
+The `deselectAll` method sets the states of all rows in an `@@igSelector` to **not selected**
 ```html
 <ng-template igxHeadSelector let-headContext>
-    <igx-switch (click)="headContext.deselectAll()"></igx-switch>
+    <igx-checkbox
+        [readonly]="true"
+        (click)="headContext.deselectAll()">
+    </igx-checkbox>
 </ng-template>
 ```
 
