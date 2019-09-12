@@ -115,10 +115,10 @@ export class AppModule {}
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
 ### スタイル設定
-igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-リップル-theme) は、リップルののカラーカスタマイズできるさまざまなプロパティを公開します。        
+igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。リップルの [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) は、エフェクトの色をカスタマイズできるプロパティを公開します。        
 
 #### グローバル テーマのインポート
-グループ化機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。  
+事前定義されたリップルカラーのスタイリングを開始するには、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```   
@@ -134,7 +134,7 @@ $custom-theme: igx-ripple-theme(
 
 #### カスタム カラー パレットの定義
 上記の方法では、色の値はハードコードされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $black-color: #494949;
@@ -155,7 +155,7 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### カスタム スキーマの定義
-さらに進んで、[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_dark_ripple` を使用します。   
 
 ```scss
@@ -189,9 +189,9 @@ $custom-theme: igx-ripple-theme(
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
 ```scss
 :host {
@@ -210,7 +210,7 @@ $custom-theme: igx-ripple-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 ### API リファレンス
