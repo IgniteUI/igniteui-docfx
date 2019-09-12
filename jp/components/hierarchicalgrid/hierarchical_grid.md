@@ -21,7 +21,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 依存関係
-Hierarchical Grid が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxTreeGridModule_ をインポートする必要があります。
+Hierarchical Grid が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -241,16 +241,6 @@ export class RemoteLoDService {
 > フラットな Data Grid と行アイランドの各インスタンスの重要な違いは、同じトランザクション サービス インスタンスがあり、同じトランザクション ログを蓄積する点です。CRUD 機能を有効にするには、`IgxHierarchicalTransactionServiceFactory` を注入する必要があります。
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
-
-### 既知の問題と制限
-
-|制限|説明|
-|--- |--- |
-|グループ化|グループ化機能は、階層グリッドでサポートされません。|
-|Excel へエクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
-
-> [!NOTE]
-> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf Known Issues](../for_of.html#known-limitations) の既知の問題のセクションを参照してください。
 
 ### スタイル設定
 
