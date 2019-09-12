@@ -114,8 +114,7 @@ export class SampleComponent implements OnInit {
 > バインディングがデータ型の結果に依存する場合、`プロパティ バインディング`を使用する必要があることに注意してください。バインディングが単に文字列値に依存している場合は、`補間`を使用する必要があります。
 
 ## その他のリソース
-* [デスクトップから Web: 
- Angular 補間とプロパティバインディングによる一方向データバインディング](https://www.youtube.com/watch?v=fP7iVhFNTOk&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [デスクトップから Web: Angular 補間とプロパティバインディングによる一方向データバインディング](https://www.youtube.com/watch?v=fP7iVhFNTOk&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
 * [双方向バインディング](two_way_binding.md)
 * [Angular データの表示](https://angular.io/guide/displaying-data#displaying-data)
 

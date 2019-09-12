@@ -38,7 +38,7 @@ export class AppModule {}
 
 #### 警告
 
-通知を追加するには、メール コンポーネントのテンプレートで、以下のコードを追加すると通知ダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。
+通知を追加するには、メール コンポーネントのテンプレートで、以下のコードを追加すると通知ダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、 [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。
 
 ```html
 <!--email.component.html-->
@@ -61,8 +61,8 @@ export class AppModule {}
 
 #### 標準ダイアログ
 
-規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message) を設定する必要があります。 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) と [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理する必要があります。
+規格のダイアログを追加するには、ファイル マネージャー コンポーネントのテンプレートで、以下のコードを追加すると規格のダイアログが作成されます。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message) を設定する必要があります。 
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) と [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理する必要があります。
 
 ```html
 <!--file-manager.component.html-->
@@ -156,7 +156,7 @@ export class AppModule {}
 
 #### さまざまな位置とアニメーション設定を構成する
 
-igxDialog が表示される位置を変更するには、2 つの方法があります。
+`igxDialog` が表示される位置を変更するには、2 つの方法があります。
 
 - 
 [`open`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#open) メソッドを使用して、有効な [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を渡します。例:
@@ -207,7 +207,7 @@ public positionSettings: PositionSettings = {
 };
 ```
 
-> [!Note] 同じアプローチをアニメーション設定に使用する必要があります。openAnimation` と `closeAnimation` を使用して、期間などのアニメーション パラメーターを定義します。
+> [!Note] 同じアプローチをアニメーション設定に使用する必要があります。`openAnimation` と `closeAnimation` を使用して、期間などのアニメーション パラメーターを定義します。
 
 `params` object example:
 
@@ -287,7 +287,7 @@ $my-dialog-theme: igx-dialog-theme(
 
 #### カラーパレットの定義
 
-上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
@@ -377,5 +377,6 @@ $my-dialog-theme: igx-dialog-theme(
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
-* Ignite UI for Angular [フォーラム](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) (英語) 
-* Ignite UI for Angular [GitHub](https://github.com/IgniteUI/igniteui-angular) (英語) 
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
