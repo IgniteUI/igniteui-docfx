@@ -1,16 +1,16 @@
 ---
-title: Structural Directives in Angular
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+title: Angular Directives | IgniteUI for Angular | Infragistics
+_description: Configure Angular components appearance based on custom conditions, simply by using the Angular structural directives.
+_keywords: angular directives, ignite ui for angular, infragistics
 ---
 
-## Structural Directives in Angular
+## Angular Structural Directives
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 
-As WPF developers, anytime we want to add or remove an element from the visual tree we have to jump into some code-behind and write some C# or we can use a combination of binding and a visibility converter, which again requires some custom logic and static resources. That's the way we have always done it in WPF, but Angular makes it so much easier.
+When it comes to control the appearance of the visual tree elements’ appearance in WPF, the most common way is to use binding and visibility converter, which requires some extra logic and static resources. Angular also has a similar technique, which changes the appearance or behavior of a DOM element - the Angular directives. One of the Angular `directives` type is the `structural directives` – they change the DOM layout by adding or removing DOM elements.
 
-Manipulating your view in an Angular application, adding and removing elements, is achieved with the so-called "structural directives". In this topic, we are going to demonstrate the following three directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
+In this topic, we are going to demonstrate the following three structural directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
 
 ### `ngIf` Directive
 Let’s explore each of these directives, starting with the `ngIf`. This directive allows us to show or hide elements based on a boolean condition. We will start by creating a "div" element with an "h2" tag containing a name.
