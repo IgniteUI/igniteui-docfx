@@ -1,13 +1,13 @@
 ﻿---
-title: WPF vs Angular 比較ガイド
-_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+title: WPF to Angular tutorial | IgniteUI for Angular | Infragistics
+_description: Learn how to switch from Angular to WPF, by comparing both frameworks. Get familiar with some similarities like binding, events and components.
+_keywords: angular tutorial, igniteui for angular, infragistics
 _language: ja
 ---
 
-## WPF vs Angular 比較ガイド
+## WPF to Angular tutorial
 
-このガイドは、2 つのプラットフォームの類似点と相違点を比較して、WPF 開発者にわかりやすく Angular について説明します。このガイドは、以下の各トピックがあります。
+WPF to Angular tutorial is the first step that you should take in order to make a smooth transition from a `desktop` to `web` framework transition. The tutorial targets WPF developers, who make their first steps to web development and it examines some differences and similarities of both frameworks - applications structure, data binding, events, components, etc. The guide is divided into the following topics:
 - [はじめての Angular アプリを作成](create_first_angular_app.md)
 - [Angular コンポーネントを使用した UI の作成](create_ui_with_components.md)
 - [One-Way バインディング](one_way_binding.md)
