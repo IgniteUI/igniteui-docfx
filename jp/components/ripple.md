@@ -114,17 +114,17 @@ export class AppModule {}
 > [!NOTE]
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
-### Styling
-The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
+### スタイル設定
+igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-リップル-theme) は、リップルののカラーカスタマイズできるさまざまなプロパティを公開します。        
 
-#### Importing global theme
-To begin styling of the predefined ripple color, you need to import the `index` file, where all styling functions and mixins are located.  
+#### グローバル テーマのインポート
+グループ化機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```   
 
-#### Defining custom theme
-You can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
+#### カスタム テーマの定義
+次に、[`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-theme: igx-ripple-theme(
@@ -132,8 +132,8 @@ $custom-theme: igx-ripple-theme(
 );
 ```   
 
-#### Defining a custom color palette
-In the approach, that was described above, the color value was hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+#### カスタム カラー パレットの定義
+上記の方法では、色の値はハードコードされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -146,7 +146,7 @@ $custom-palette: igx-palette(
 );
 ```   
 
-After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
 
 ```scss
 $custom-theme: igx-ripple-theme(
@@ -154,16 +154,16 @@ $custom-theme: igx-ripple-theme(
 );
 ```
 
-#### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_ripple`.   
+#### カスタム スキーマの定義
+さらに進んで、[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_dark_ripple` を使用します。   
 
 ```scss
 $custom-ripple-schema: extend($_dark-ripple, (
     color: (igx-color("secondary", 500))
 ));
 ```   
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
 
 ```scss
 $my-custom-schema: extend($dark-schema, (
@@ -176,17 +176,17 @@ $custom-theme: igx-ripple-theme(
 );
 ```
 
-#### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
+#### カスタム テーマの適用
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 ```scss
 @include igx-ripple($custom-theme);
 ```
 
-#### Scoped component theme
+#### スコープ コンポーネント テーマ
 
-In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
 
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
  >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
@@ -202,9 +202,9 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```    
 
 >[!NOTE]
-  > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
+  > `igxRiple` ディレクティブを使用して設定される色は、カスタム テーマ内で設定される色よりも優先されます。  
 
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:700px">
     <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
