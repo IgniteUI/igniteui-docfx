@@ -1,17 +1,17 @@
 ---
-title: Angular の構造ディレクティブ
-_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+title: Angular Directives | IgniteUI for Angular | Infragistics
+_description: Configure Angular components appearance based on custom conditions, simply by using the Angular structural directives.
+_keywords: angular directives, ignite ui for angular, infragistics
 _language: ja
 ---
 
-## Angular の構造ディレクティブ
+## Angular Structural Directives
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 
-WPF 開発者として、ビジュアル ツリーから要素を追加または削除するには、コード ビハインドにジャンプして C# を記述するか、バインディングと表示コンバーターの組み合わせを使用でき、カスタムロジックと静的リソースが必要となります。これは WPF で常に行ってきた方法ですが、Angular を使用すると非常に簡単になります。
+When it comes to control the appearance of the visual tree elements’ appearance in WPF, the most common way is to use binding and visibility converter, which requires some extra logic and static resources. Angular also has a similar technique, which changes the appearance or behavior of a DOM element - the Angular directives. One of the Angular `directives` type is the `structural directives` – they change the DOM layout by adding or removing DOM elements.
 
-Angular アプリケーションでのビューの操作、要素の追加と削除は、いわゆる「構造ディレクティブ」で実行可能です。このトピックでは、次の 3 つのディレクティブ - `ngIf`、`ngSwitch`、`ngFor` を示します。名前からわかるように、これらはそれぞれ C# 構造と比較できます。`ngIf` は "if-else" C# コード ブロックと同じものであり、`ngSwitch` はC＃switch-caseステートメントと同じものであり、最後に、`ngFor` は C# "for-loop" とまったく同じものです。
+In this topic, we are going to demonstrate the following three structural directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
 
 ### `ngIf` ディレクティブ
 それぞれのディレクティブを `ngIf` から開始します。このディレクティブにより、ブール条件に基づいて要素を表示または非表示にすることができます。まず、名前を含む　"h2" タグを持つ "div" 要素を作成します。

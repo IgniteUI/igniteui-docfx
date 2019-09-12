@@ -1,13 +1,13 @@
 ---
-title: レイアウト要素
-_description: WPF で最も一般的なパネルに似た要素をページ上に配置する方法を学びます。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, Layout, Container, パネル
+title: Page Layout | IgniteUI for Angular | Infragistics
+_description: Learn how to customize the page layout of your Angular application.
+_keywords: page layout, ignite ui for angular, infragistics
 _language: ja
 ---
 
-## レイアウト要素
+## Page Layout
 
-WPFでは、アプリケーション内の要素をレイアウトするには、それらを [`パネル`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ上の要素をレイアウトするために CSSを使用してください。以下は、WPF で最も一般的なパネル、そして CSS で同様のレイアウトを実現する方法です。
+In WPF, in order to layout the elements in your application, you need to put them inside a [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8). The panel is a container element that controls the arrangement of its child elements. In Angular, in order to customize the page layout and its child elements, you have to use CSS. Let us go through some of the most popular panels in WPF and see how we can achieve similar layout with CSS.
 
 ### StackPanel
 
