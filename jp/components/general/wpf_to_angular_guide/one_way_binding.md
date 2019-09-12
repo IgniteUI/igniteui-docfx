@@ -1,7 +1,7 @@
 ﻿---
 title: One-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
-_description: Learn how to create one-way data binding in Angular when you migrate from WPF to Angular.
-_keywords: data binding, ignite ui for angular, infragistics
+_description: WPF から Angular に移行するときに、Angular で一方向のデータバインディングを作成する方法を説明します。
+_keywords: data binding, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -9,7 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
 
-The one-way data binding in Angular is used to display information to the end user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF.
+Angular の一方向データ バインディングは、WPF の一方向バインディング同様、基になるデータの変更ごとに自動的に同期を維持する情報をエンドユーザーに表示するために使用されます。
 
 Angular のデータ バインディングは非常に簡単で、WPF とは異なり、データ コンテキスト、ビューモデル、または `INotifyPropertyChanged` (INPC) の定義は必要ありません。必要なのは、HTML ファイルと typescript ファイルのみです。データ バインディングでは、最初にバインドするプロパティが必要です。それでは、`text` というプロパティをコンポーネント クラスに追加し、その値を設定しましょう。
 WPF では、DataContext を設定し、XAML でプロパティをバインドします。

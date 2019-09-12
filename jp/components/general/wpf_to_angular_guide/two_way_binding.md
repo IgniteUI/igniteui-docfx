@@ -1,7 +1,7 @@
 ﻿---
-title: Two-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
-_description: Learn how to create two-way data binding in Angular when you migrate from WPF to Angular.
-_keywords: data binding, ignite ui for angular, infragistics
+title: 双方向バインディング | IgniteUI for Angular | Infragistics
+_description: WPF から Angular へ移行時に Angular で双方向のデータバインディングを作成する方法を説明します。
+_keywords: data binding, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -9,7 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/MrjTTDEj7cA]
 
-The two-way data binding in Angular is used to display information to the end user and allows the end user to make changes to the underlying data using the UI. This makes a two-ways connection between the view (the template) and the component class. This is similar to the two-way binding in WPF.
+Angular の双方向データ バインディングは、エンドユーザーに情報を表示するために使用され、エンドユーザーは UI を使用して基になるデータを変更できます。これにより、WPF の一方向バインディング同様、ビュー (テンプレート) とコンポーネントクラスの間に双方向の接続が確立されます。
 
 一方向バインディングは、コンポーネント クラスから状態を取得し、ビューに表示します。このコードを見てみましょう。
 ```html
