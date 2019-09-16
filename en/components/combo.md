@@ -63,15 +63,12 @@ export class ComboDemo implements OnInit {
 
 Our combo is now bound to the array of cities.
 
-## Data value and display properties
+### Data value and display properties
 
-With the above configuration, since the combo is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two inputs - [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey)
- - `valueKey` specifies which property of the data entries is stored for the combo's value. If `valueKey` is omitted, the combo value will use references to the data selected entries (e.g. the selection will be an array of entries from `combo.data`).
- - `displayKey` specifies which property is used for the items' text. If no value is specified for `displayKey`, the combo will use the specified `valueKey` (if any). 
- When dealing with a data of a complex type (i.e. `object`s), you need to specify a `displayKey`.
+With the above configuration, since the combo is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey)
 
-> [!Note]
-> When the data source is comprised of a simple type (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`.
+ - `valueKey`: **Optional. Recommended for object arrays.** Specifies which property of the data entries is stored for the combo's selection. If `valueKey` is omitted, the combo value will use references to the data entries (i.e. the selection will be an array of entries from `combo.data`).
+ - `displayKey`: **Required for object arrays.** Specifies which property is used for the items' text. If no value is specified for `displayKey`, the combo will use the specified `valueKey` (if any). 
 
 In our case, we want the combo to *display* the `name` of each city and, for the combo *value*, store the `id` of each city. We do this by providing these properties to the combo's `displayKey` and `valueKey`, respectively:
 
@@ -79,11 +76,14 @@ In our case, we want the combo to *display* the `name` of each city and, for the
 <igx-combo [data]="cities" displayKey="name" valueKey="id">
 ```
 
-The combo is now bound to the data and will display a list of items when initialized. Users can mark items as selected via mouse and keyboard interactions, causing the combo to visually update to reflect the current selection (displaying the selected items in its input and highlighting them as selected in the list).
+The combo is now bound to the data and will display a list of items when initialized. Users can mark items as selected via mouse and keyboard interactions, causing the combo to visually update to reflect the current selection (displaying the selected items in its input and highlighting them as selected in the list). The combo selection can be accessed either through [two-way binding](#two-way-binding) or through the [selection API](#selection). 
+
+> [!Note]
+> When the data source is comprised of a simple type (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`.
 
 ### Two-Way Binding
 
-The combo fully supports two way data binding with `[(ngModel)]` as well use in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. We can pass an array of items of the same type as the ones in the combo's selection and any time either changes, the other is updated accordingly.
+The combo fully supports two way data binding with `[(ngModel)]` as well use in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. We can pass an array of items of the same type as the ones in the combo's selection ([based on `valueKey`](#data-value-and-display-properties)) and any time either changes, the other is updated accordingly.
 
 For example, if we follow up with the configurations from the earlier examples:
 
@@ -98,7 +98,7 @@ export class MyCombo {
 ```
 With this setup, the cities *Sofia* and *London* will initially be selected. Any further changes in the combo's selection will be reflected in the `selectedCities` array.
 
-Two-way binding can also be achieved [without a specified `valueKey`](#data-value-and-display-properties).
+Two-way binding can also be achieved without a specified `valueKey`.
 For example, if `valueKey` is omitted, the bound model will be the following:
 
 ```typescript
@@ -111,7 +111,7 @@ export class MyCombo {
 ### Selection
 The combo exposes API that allows getting and manipulating the current selection state of the control. 
 
-One way to get the combo's selection is via the [`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) method. It returns an array of values which correspond to the selected items, depending on the [specified `valueKey` (if any)](#data-value-and-display-properties).
+One way to get the combo's selection is via the [`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) method. It returns an array of values which correspond to the selected items, depending on the [specified `valueKey`](#data-value-and-display-properties) (if any).
 
 In our *cities* example, `selectedItems` will return an array of the selected cities' `id`s:
 
@@ -145,7 +145,7 @@ When clicking the button, the cities *London* and *Sofia* will be added to the c
 
 The combo also fires an event every time its selection changes - [`onSelectionChange()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange). The emitted event arguments, [`IComboSelectionChangeEventArgs`]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection, what items were added and removed. The event can also be cancelled, preventing it from updating the selection with the new array of items.
 
-Binding to the event can be done through the proper `Ouptut` on the `igx-combo` tag:
+Binding to the event can be done through the proper `@Output` on the `igx-combo` tag:
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id" (onSelectionChange)="handleCityChange($event)">
 ```
@@ -167,7 +167,7 @@ export class MyExampleCombo {
 
 ### Usage Demo
 
-In the demo below, you can see all of the steps in action:
+In the demo below, you can see a side-by-side comparison of the different ways a combo can be bound to data:
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="combo-binding-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-binding" onload="onSampleIframeContentLoaded(this);"></iframe>
