@@ -104,7 +104,7 @@ public chipRemoved(event) {
 
 ![Dragging](../images/chip/dragging.gif)
 
-チップの位置を変更するためにユーザーによってドラッグできます。移動/ドラグ機能はデフォルトで無効ですが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要があります。
+ユーザーはドラッグしてチップの位置を変更できます。移動/ドラッグ機能はデフォルトで無効ですが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要がありますが、チップが別のチップの上にドラッグされて置き換わる場合に新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
 
 ```html
 <igx-chips-area (onReorder)="chipsOrderChanged($event)">
