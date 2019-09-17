@@ -19,7 +19,7 @@
     - name: プロジェクト テンプレートの認証
       href: general/cli/auth-template.md
       new: false
-- name: WPF vs Angular 比較ガイド
+- name: WPF-Angular比較ガイド
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
   items:
@@ -29,13 +29,13 @@
     - name: Angular コンポーネントを使用した UI の作成
       href: general/wpf_to_angular_guide/create_ui_with_components.md
       new: false
-    - name: One-Way バインディング
+    - name: 一方向バインディング
       href: general/wpf_to_angular_guide/one_way_binding.md
       new: false
     - name: Angular イベント
       href: general/wpf_to_angular_guide/angular_events.md
       new: false
-    - name: Two-Way バインディング
+    - name: 双方向バインディング
       href: general/wpf_to_angular_guide/two_way_binding.md
       new: false
     - name: Angular パイプでデータを変換
@@ -757,7 +757,7 @@
     new: true
 - name: Drag and Drop
   href: drag_drop.md
-  new: false
+  new: true
 - name: メニュー
   header: true
 - name: Navigation Drawer

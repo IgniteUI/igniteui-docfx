@@ -1,15 +1,15 @@
 ﻿---
-title: Angular コンポーネントを使用した UI の作成
-_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, UserControl, コンポーネント
+title: Create User Interface with an Angular component | IgniteUI for Angular | Infragistics
+_description: Learn how to create user interface using an Angular component when you migrate from WPF to Angular.
+_keywords: angular component, ignite ui for angular, infragistics
 _language: ja
 ---
 
-## Angular コンポーネントを使用した UI の作成
+### Create User Interface with an Angular component
 
 > [!Video https://www.youtube.com/embed/z1SZUezpRXY]
 
-デスクトップ開発の主要な作業の 1 つとしてエンドユーザーへの UI 表示があります。WPF では、ユーザー コントロールまたはウィンドウを介して XAML と C# を使用します。もちろん、Angular にはユーザー コントロールや Windows は存在しません。以下に UI を表示するために Angular で使用できるオプションを示します。
+When it comes to creating user interface in an Angular application you can use an Angular component to facilitate the process.
 
 Angularで UI を作成する方法は、WPF で UI を作成する方法と非常に似ています。通常、UserControl クラスで表されるユーザー コントロールを使用します。`UserControl` は、マークアップとコードを再利用可能なコンテナにグループ化し、複数の異なる場所で同じインターフェイスと機能を使用できるようにします。このユーザー コントロールには、UI マークアップ用の .xaml ファイルとロジック用の C# ファイルがあります。さらに、このユーザー コントロール用の任意のタイプのスタイリング情報を含むリソース ディクショナリがあります。Angular では、`Component` と呼ばれるものを使用します。コンポーネントには、UI マークアップに使用される html ファイルがあります。プロパティとロジックに使用される typescript ファイルがあり、すべてのスタイル情報に CSS ファイルを使用します。以下は比較ですが類似点が多くあります。
 

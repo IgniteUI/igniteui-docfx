@@ -87,6 +87,43 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 * IgxRowDragDirective 
     * `IRowDragStartEventArgs` and `IRowDragEndEventArgs` have arguments' names changed in order to be more clear to what they relate to. `owner` argument is renamed to `dragDirective`. `context` argument is renamed to `owner`.
 
+* IgxCombo
+    * The way that the [`igx-combo`](../combo.md) handles selection and data binding is changed.
+
+    - If the combo's [`valueKey`] input is defined, the control will look for that specific property in the passed array of data items when performing selection.
+    **All** selection events are handled with the value of the data items' `valueKey` property.
+    All combos that have `valueKey` specified should have their selection/two-way binding consist only of the values for the object property specified in the input:
+    ```html
+    <igx-combo [data]="cities" valueKey="id" displayKey="name"></igx-combo>
+    ```
+    ```typescript
+    export class MyExampleCombo {
+        public data: { name: string, id: string }[] = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01' }, ...];
+        ...
+        selectFavorites() {
+            // Selection is handled with the data entries' id properties
+            this.combo.selectItems(['UK01', 'BG01']);
+        }
+    }
+    ```
+
+    - If the combo **does not** have a `valueKey` defined, **all** selection events are handled with **equality (===)**.
+    All combos that **do not** have a `valueKey` specified should have their selection/two-way binding handled with **references** to their data items:
+    ```html
+    <igx-combo [data]="cities" displayKey="name"></igx-combo>
+    ```
+    ```typescript
+    export class MyExampleCombo {
+        public data: { name: string, id: string }[] = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01' }, ...];
+        ...
+        selectFavorites() {
+            // Selection is handled with references to the data entries
+            this.combo.selectItems([this.data[0], this.data[1]]);
+        }
+    }
+    ```
+
+    You can read more about setting up the combo in the [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection).
 
 ### From 8.0.x to 8.1.x
 * The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.

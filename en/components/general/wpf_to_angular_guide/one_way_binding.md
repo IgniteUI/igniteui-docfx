@@ -1,17 +1,14 @@
 ---
-title: One-way data binding
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular, One-way, binding
+title: One-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
+_description: Learn how to create one-way data binding in Angular when you migrate from WPF to Angular.
+_keywords: data binding, ignite ui for angular, infragistics
 ---
 
 ## One-way data binding in Angular
 
 > [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
 
-One of the most powerful and widely used features in WPF is data binding. It makes a developers' life much easier, by synchronizing the business logic with the view and vice versa, without having to write a single extra line of code. Without the power of it, WPF would just be a better-looking WindowsForms.
-Luckily, Angular supports data binding! There are two types of data binding - one-way binding and two-way binding.
-
-### One-way data binding
+The one-way data binding in Angular is used to display information to the end user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF.
 
 Data binding in Angular is super easy, and unlike in WPF we don't have to worry about a data context, a view model, or `INotifyPropertyChanged` (INPC). All we have to worry about is an HTML file and a typescript file. With any data binding, the first thing you need are properties to bind to. So let's add a property called `text` into the component class, and set its value.
 In WPF, we need to set the DataContext and bind the property in XAML:

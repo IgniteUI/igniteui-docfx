@@ -227,7 +227,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 #### Demo
 <div class="sample-container loading" style="height:320px">
-    <iframe id="icon-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>

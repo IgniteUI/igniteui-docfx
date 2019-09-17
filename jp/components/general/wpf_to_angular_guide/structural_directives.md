@@ -1,17 +1,17 @@
----
-title: Angular の構造ディレクティブ
-_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+﻿---
+title: Angular ディレクティブ | IgniteUI for Angular | Infragistics
+_description: Angular 構造ディレクティブを使用して、カスタム条件に基づいて Angular コンポーネントの外観を設定します。
+_keywords: angular ディレクティブ, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Angular の構造ディレクティブ
+## Angular 構造ディレクティブ
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 
-WPF 開発者として、ビジュアル ツリーから要素を追加または削除するには、コード ビハインドにジャンプして C# を記述するか、バインディングと表示コンバーターの組み合わせを使用でき、カスタムロジックと静的リソースが必要となります。これは WPF で常に行ってきた方法ですが、Angular を使用すると非常に簡単になります。
+WPF でのビジュアル ツリー要素の外観を制御する場合、最も一般的な方法は、バインディングと可視コンバーターを使用することです。これには、追加のロジックと静的リソースが必要です。Angular にも同様のテクニックがあり、DOM 要素 (Angularディレクティブ) の外観や動作を変更します。Angular `ディレクティブ` タイプの 1 つは`構造ディレクティブ`です。DOM 要素を追加または削除することで DOM レイアウトを変更します。
 
-Angular アプリケーションでのビューの操作、要素の追加と削除は、いわゆる「構造ディレクティブ」で実行可能です。このトピックでは、次の 3 つのディレクティブ - `ngIf`、`ngSwitch`、`ngFor` を示します。名前からわかるように、これらはそれぞれ C# 構造と比較できます。`ngIf` は "if-else" C# コード ブロックと同じものであり、`ngSwitch` はC＃switch-caseステートメントと同じものであり、最後に、`ngFor` は C# "for-loop" とまったく同じものです。
+このトピックでは、3 つの構造ディレクティブ (`ngIf`、`ngSwitch`、`ngFor`) を示します。名前からわかるように、これらはそれぞれ C# 構造と比較できます。`ngIf` は "if-else" C# コード ブロックと同じものであり、`ngSwitch` はC＃switch-caseステートメントと同じものであり、最後に、`ngFor` は C# "for-loop" とまったく同じものです。
 
 ### `ngIf` ディレクティブ
 それぞれのディレクティブを `ngIf` から開始します。このディレクティブにより、ブール条件に基づいて要素を表示または非表示にすることができます。まず、名前を含む　"h2" タグを持つ "div" 要素を作成します。

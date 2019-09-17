@@ -1,13 +1,15 @@
 ﻿---
-title: はじめての Angular アプリを作成
-_description: WPF vs Angular 比較ガイドは、WPF から Angular への切り替えについてのさまざまな情報を提供します。
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+title: Create an Angular application | IgniteUI for Angular | Infragistics
+_description: Learn how to create an Angular application when you migrate from WPF to Angular.
+_keywords: angular application, ignite ui for angular, infragistics
 _language: ja
 ---
 
-## はじめての Angular アプリを作成
+## Create an Angular application
 
 > [!Video https://www.youtube.com/embed/dhjrAPPad54]
+
+Learn how to start creating an Angular application when you migrate from WPF to Angular.
 
 ### 前提条件
 

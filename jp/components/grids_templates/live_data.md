@@ -1,4 +1,4 @@
-
+﻿
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
@@ -18,7 +18,7 @@ _language: ja
 }
 
 ### 更新のライブデモ
-Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。以下は、1 秒間に何千もの更新を処理する @@igComponent のサンプルです。
+Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@ igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -51,8 +51,8 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
 }
 
 @@if (igxName === 'IgxTreeGrid') {
