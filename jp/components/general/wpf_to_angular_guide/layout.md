@@ -7,7 +7,7 @@ _language: ja
 
 ## ページ レイアウト
 
-WPF では、アプリケーション内で要素をレイアウトするには、要素を [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ レイアウトとその子要素をカスタマイズするには、CSS を使用する必要があります。WPF で最も一般的なパネルを示し、CSS で同様のレイアウトを実現する方法を説明します。
+WPF では、アプリケーション内で要素をレイアウトするには、要素を [`Panel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ レイアウトとその子要素をカスタマイズするには、CSS を使用する必要があります。WPF で最も一般的なパネルを示し、CSS で同様のレイアウトを実現する方法を説明します。
 
 ### StackPanel
 
@@ -26,7 +26,7 @@ WPF では、アプリケーション内で要素をレイアウトするには�
 
 <img src="../../../images/general/wpf_stackpanel.png" />
 
-Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを column に設定する必要があります。
+Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。
 
 ```html
 <div class="flex-container">
@@ -160,7 +160,7 @@ Angular では、CSS グリッド レイアウト モジュールを使用でき
 ```
 
 > [!NOTE]
-> CSS グリッドレイアウトは、Internet Explorer 11 などの古いブラウザーではサポートされていません。
+> CSS グリッドレイアウトは、Internet Explorer 11 などの古いブラウザーでは[サポートされていません](https://caniuse.com/#feat=css-grid)。
 
 次に、[`grid-template-columns`](https://www.w3schools.com/cssref/pr_grid-template-columns.asp) プロパティを使用してグリッドの列を定義します。
 
