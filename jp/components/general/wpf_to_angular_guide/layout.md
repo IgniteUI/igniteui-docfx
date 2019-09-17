@@ -1,18 +1,18 @@
----
-title: Page Layout | IgniteUI for Angular | Infragistics
-_description: Learn how to customize the page layout of your Angular application.
-_keywords: page layout, ignite ui for angular, infragistics
+﻿---
+title: ページ レイアウト | IgniteUI for Angular | Infragistics
+_description: Angular アプリケーションのページ レイアウトをカスタマイズする方法を説明します。
+_keywords: ページ レイアウト, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Page Layout
+## ページ レイアウト
 
-In WPF, in order to layout the elements in your application, you need to put them inside a [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8). The panel is a container element that controls the arrangement of its child elements. In Angular, in order to customize the page layout and its child elements, you have to use CSS. Let us go through some of the most popular panels in WPF and see how we can achieve similar layout with CSS.
+WPF では、アプリケーション内で要素をレイアウトするには、要素を [`Panel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ レイアウトとその子要素をカスタマイズするには、CSS を使用する必要があります。WPF で最も一般的なパネルを示し、CSS で同様のレイアウトを実現する方法を説明します。
 
 ### StackPanel
 
 
- [`StackPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) は、子要素を水平方向または垂直方向に配置できる単一行に配置します。StackPanel にボタンを追加して、WPF でどのように見えるかを見てみましょう。
+ [`StackPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) は、子要素を水平方向または垂直方向に配置できる単一行に配置します。StackPanel にボタンを追加して、WPF でどのように表示されるかを確認します。
 
 ```xml
 <StackPanel>
@@ -26,7 +26,7 @@ In WPF, in order to layout the elements in your application, you need to put the
 
 <img src="../../../images/general/wpf_stackpanel.png" />
 
-Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを column に設定する必要があります。
+Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。
 
 ```html
 <div class="flex-container">
@@ -53,7 +53,7 @@ Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイ
 
 ### WrapPanel
 
-[`WrapPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) は、子要素を左から右へ順番に配置し、コンテンツを含むボックスの端の次の行に分割します。その後の順序は、Orientation プロパティの値に応じて、上から下または右から左に順番に発生します。以下は、WrapPanel にボタンを追加し、WPF でどのように見えるかを示します。
+[`WrapPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.wrappanel?view=netframework-4.8) は、子要素を左から右へ順番に配置し、コンテンツを含むボックスの端の次の行に分割します。その後の順序は、Orientation プロパティの値に応じて、上から下または右から左に順番に発生します。以下は、WrapPanel にボタンを追加し、WPF でどのように表示されるかを確認します。
 
 ```xml
 <WrapPanel>
@@ -112,7 +112,7 @@ Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-d
 
 ### Grid
 
-[`Grid`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.grid?view=netframework-4.8) は、列と行で構成される柔軟なグリッド領域を定義します。以下は、グリッドにボタンを追加し、WPF でどのように見えるかを示します。
+[`Grid`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.grid?view=netframework-4.8) は、列と行で構成される柔軟なグリッド領域を定義します。以下は、グリッドにボタンを追加し、WPF でどのように表示されるかを確認します。
 
 ```xml
 <Grid>
@@ -160,7 +160,7 @@ Angular では、CSS グリッド レイアウト モジュールを使用でき
 ```
 
 > [!NOTE]
-> CSS グリッドレイアウトは、Internet Explorer 11 などの古いブラウザーではサポートされていません。
+> CSS グリッドレイアウトは、Internet Explorer 11 などの古いブラウザーでは[サポートされていません](https://caniuse.com/#feat=css-grid)。
 
 次に、[`grid-template-columns`](https://www.w3schools.com/cssref/pr_grid-template-columns.asp) プロパティを使用してグリッドの列を定義します。
 
