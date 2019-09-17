@@ -171,7 +171,7 @@ Take a look at this example:
 
 ```html
 <igx-card type="outlined" [horizontal]="horizontal">
-    <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
+    <div class="h-sample-column">
         <igx-card-header>
             <h5 igxCardHeaderTitle>{{card.title}}</h5>
             <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
@@ -195,7 +195,22 @@ Take a look at this example:
 </igx-card>
 ```
 
-We are using the `igxLayout` and `igxFlex` supporting directives to bundle the `igx-card-header` and `igx-card-content` together, keeping them aligned vertically, while other sections in the card align horizontally. 
+We are using the `.h-sample-column` class to bundle the `igx-card-header` and `igx-card-content` together, keeping them aligned vertically, while other sections in the card align horizontally. 
+
+The styles that `.h-sample-column` class applies are:
+
+```scss
+.h-sample-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 0%;
+
+    igx-card-header {
+        padding-bottom: 0;
+    }
+}
+```
 
 Notice how the buttons in the `igx-card-actions` have now switched to a `vertical` layout. The `igx-card-actions` has an `inverse` layout relationship with its parent. So whenever the card's `horizontal` attribute is set to `true` the actions `vertical` property will be set to `true` and vice versa.
 

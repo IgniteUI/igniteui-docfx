@@ -172,7 +172,7 @@ export class AppModule {}
 
 ```html
 <igx-card type="outlined" [horizontal]="horizontal">
-    <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
+    <div class="h-sample-column">
         <igx-card-header>
             <h5 igxCardHeaderTitle>{{card.title}}</h5>
             <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
@@ -196,7 +196,21 @@ export class AppModule {}
 </igx-card>
 ```
 
-`igxLayout` と `igxFlex` のサポートディレクティブを使用して、`igx-card-header` と `igx-card-content` を縦に並べ、カード内の他のセクションは横に並べます。 
+We are using the `.h-sample-column` class to bundle the `igx-card-header` and `igx-card-content` together, keeping them aligned vertically, while other sections in the card align horizontally. 
+
+The styles that `.h-sample-column` class applies are:
+
+```scss
+.h-sample-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 0%;
+    igx-card-header {
+        padding-bottom: 0;
+    }
+}
+```
 
 `igx-card-actions` のボタンが`垂直`のレイアウトに切り替わりました。`igx-card-actions` は、その親と`逆`のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
 
