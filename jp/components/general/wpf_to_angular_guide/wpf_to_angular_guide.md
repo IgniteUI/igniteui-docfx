@@ -1,13 +1,13 @@
 ﻿---
-title: WPF to Angular tutorial | IgniteUI for Angular | Infragistics
-_description: Learn how to switch from Angular to WPF, by comparing both frameworks. Get familiar with some similarities like binding, events and components.
-_keywords: angular tutorial, igniteui for angular, infragistics
+title: WPF から Angular へ移行チュートリアル | IgniteUI for Angular | Infragistics
+_description: Angular から WPF に切り替える方法を両フレームワークを比較しながら説明します。バインディング、イベント、コンポーネントなどの類似点を確認します。
+_keywords: Angular ツール チュートリアル, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-## WPF to Angular tutorial
+## WPF から Angular への移行チュートリアル
 
-WPF to Angular tutorial is the first step that you should take in order to make a smooth transition from a `desktop` to `web` framework transition. The tutorial targets WPF developers, who make their first steps to web development and it examines some differences and similarities of both frameworks - applications structure, data binding, events, components, etc. The guide is divided into the following topics:
+WPF から Angular への移行チュートリアルは、デスクトップから Web フレームワークへのスムーズな移行を行うための最初のステップです。このチュートリアルは、Web 開発の第一歩を踏み出す WPF 開発者を対象としており、アプリケーション構造、データバインディング、イベント、コンポーネントなど、両方のフレームワークの相違点と類似点を検証します。ガイドは以下のトピックで構成されています。
 - [はじめての Angular アプリを作成](create_first_angular_app.md)
 - [Angular コンポーネントを使用した UI の作成](create_ui_with_components.md)
 - [One-Way バインディング](one_way_binding.md)
