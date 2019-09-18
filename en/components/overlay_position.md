@@ -29,15 +29,12 @@ import {
 } from 'igniteui-angular';
 ```
 
-Then you should tell overlay which position strategy to use. The position strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called:
+Then you should tell overlay which position strategy to use. The position strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called. In the example bellow we are changing the default `GlobalPositionStrategy` with `ConnectedPositionStrategy`:
 
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
-        positionStrategy: new ConnectedPositioningStrategy(), // Passes the positioning strategy
-        scrollStrategy: new AbsoluteScrollStrategy(),
-        modal: true,
-        closeOnOutsideClick: true
+        positionStrategy: new ConnectedPositioningStrategy() // Passes the positioning strategy
     }
     const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
@@ -49,7 +46,7 @@ Then you should tell overlay which position strategy to use. The position strate
 
 ### Creating position strategy with predefined position settings
 
-In the example bellow we are creating new `PositionSettings`. Using this settings we force the overlay to show the content starting from the bottom left point of the provided `target` - the buttonElement. The direction in which the content will be shown is set to the bottom right. Then we are creating a new `ConnectedPositionStrategy` and passing the `PositionSettings`.
+Each position strategy has its own positions settings. This settings determine how the content will be shown. In the example bellow we are creating new `PositionSettings`. Using this settings we force the overlay to show the content starting from the bottom left point of the provided `target` - the buttonElement. The direction in which the content will be shown is set to the bottom right. Then we are creating a new `ConnectedPositionStrategy` and passing the `PositionSettings`.
 
 ```typescript
 const positionSettings: PositionSettings = {
@@ -73,8 +70,6 @@ strategy.position(contentWrapper, size);
 You can also change the position strategy used by the overlay by overriding the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
 
 ```typescript
-    // overlaySettings is an existing object of type OverlaySettings
-    // to override the position strategy
     const positionStrategy = new AutoPositionStrategy();
     overlay.show(overlayId, { positionStrategy }); 
 ```
@@ -89,7 +84,6 @@ To change the position settings of an already existing strategy is using, overri
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
-    // to override the position setting of an existing PositionStrategy
     Object.assign(overlaySettings.positionStrategy.settings, {
         target: dummyHTMLElement,
         horizontalStartPoint: HorizontalAlignment.Left,
