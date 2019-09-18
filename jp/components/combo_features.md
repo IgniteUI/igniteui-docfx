@@ -7,7 +7,7 @@ _language: ja
 
 ## コンボ機能
 <p class="highlight">
-Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
+Combo コントロールは、データと値のバインディング、**[カスタム値](combo_features.md#カスタム値)**、**[フィルタリング](combo_features.md#フィルタリング)**、**[グループ化](combo_features.md#グループ化)**など複数の機能を公開します。 
 </p>
 <div class="divider"></div>
 

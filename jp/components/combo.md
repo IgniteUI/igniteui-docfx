@@ -76,14 +76,14 @@ export class ComboDemo implements OnInit {
 <igx-combo [data]="cities" displayKey="name" valueKey="id">
 ```
 
-これでコンボがデータにバインドされ、初期化されると項目のリストが表示されます。ユーザーは、マウスとキーボードの操作を介して項目を選択済みとしてマークし、コンボを視覚的に更新して現在の選択を反映します (入力で選択した項目を表示し、リストで選択した項目を強調表示します)。コンボ選択には、[双方向バインディング](#two-way-binding)または[選択 API](#selection)を使用してアクセスできます。 
+これでコンボがデータにバインドされ、初期化されると項目のリストが表示されます。ユーザーは、マウスとキーボードの操作を介して項目を選択済みとしてマークし、コンボを視覚的に更新して現在の選択を反映します (入力で選択した項目を表示し、リストで選択した項目を強調表示します)。コンボ選択には、[双方向バインディング](#two-way-バインディング)または[選択 API](#選択) を使用してアクセスできます。 
 
 > [!Note]
 > データソースが単純なタイプ (`string[]`、`number[]` など）で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
 
 ### Two-Way バインディング
 
-このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey に基づく`](#data-value-and-display-properties)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
+このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey` に基づく](#data-value-and-display-properties)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
 
 上記例の構成に従った場合:
 
@@ -111,7 +111,7 @@ export class MyCombo {
 ### 選択
 このコンボは、コントロールの現在の選択状態を取得および操作できる API を公開します。 
 
-コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。指定された `valueKey`](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
+コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。[指定された `valueKey`](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
 
 cities の例では、`selectedItems` は選択された都市の `id` の配列を返します。
 
@@ -223,8 +223,8 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 ## スタイル設定
 [Ignite UI for Angular テーマ ](themes/index.md)を使用して、**igx-combo** の外観を変更できます。 
 
-`Igx-combo` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#styling)をご覧ください。
-さらに、`IgxCombo` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxCombo` コンポーネントに影響します。詳細については、[igx-input-group スタイリング ガイド](input_group.md#styling) を参照できます。また `IgxCheckbox` も関連コンポーネントです。詳細については、[`igx-checkbox スタイリング ガイド`](checkbox.md#styling) を確認してください。
+`Igx-combo` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#スタイル設定)をご覧ください。
+さらに、`IgxCombo` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxCombo` コンポーネントに影響します。詳細については、[igx-input-group スタイリング ガイド](input_group.md#スタイル設定) を参照できます。また `IgxCheckbox` も関連コンポーネントです。詳細については、[`igx-checkbox スタイリング ガイド`](checkbox.md#スタイル設定) を確認してください。
 
 ### コード スニペット
 以下を使用します。
@@ -297,8 +297,8 @@ $custom-combo-theme: igx-combo-theme(
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## 既知の問題
 
