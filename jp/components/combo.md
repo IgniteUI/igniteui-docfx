@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Combo
+# Combo
 <p class="highlight">
 [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を組み合わせたコンポーネントです。<br />
 Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
@@ -16,7 +16,7 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
 </p>
 <div class="divider"></div>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -28,7 +28,7 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
 > [!WARNING]
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。詳細については、[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) トピックをご確認ください。
 
-### 使用方法
+## 使用方法
 [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、リストから項目の検索および選択が可能です。コンボは、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。Ignite UI for Angular Combo で作業を開始する前に `IgxComboModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
@@ -45,24 +45,138 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にテンプレートで [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をデータにバインドし、`localData` データソースのエントリに対応する [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) を定義します。
-
-```html
-<igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
-```
+次に、テンプレートで [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をいくつかのデータにバインドします。
 
 ```typescript
-import { localData } from "./local-data";
-
 export class ComboDemo implements OnInit {
-    public lData: any[];
+    public cities: { name: string, id: string }[] = [];
 
     public ngOnInit() {
-        this.lData = localData;
+        this.cities = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01'}, ...];
     }
 }
 ```
-> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、代わりに [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
+
+```html
+<igx-combo [data]="cities"></igx-combo>
+```
+
+これで、コンボの city の配列にバインドされました。
+
+### データ値と表示プロパティ
+
+上記の構成では、コンボは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、`@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) の 2 つの `@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) プロパティを公開します。
+
+ - `valueKey`: **Optional.オブジェクト配列に推奨。**コンボの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボ値はデータ エントリへの参照を使用します (選択は `combo.data` からのエントリの配列になります)。
+ - `displayKey`: **オブジェクト配列に必須。**アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボは指定された `valueKey` (存在する場合) を使用します。 
+
+この例では、コンボに各都市の`名前`を表示し、コンボ値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボの`displayKey` と `valueKey` にそれぞれ提供します。
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id">
+```
+
+これでコンボがデータにバインドされ、初期化されると項目のリストが表示されます。ユーザーは、マウスとキーボードの操作を介して項目を選択済みとしてマークし、コンボを視覚的に更新して現在の選択を反映します (入力で選択した項目を表示し、リストで選択した項目を強調表示します)。コンボ選択には、[双方向バインディング](#two-way-binding)または[選択 API](#selection)を使用してアクセスできます。 
+
+> [!Note]
+> データソースが単純なタイプ (`string[]`、`number[]` など）で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
+
+### Two-Way バインディング
+
+このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey に基づく`](#data-value-and-display-properties)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
+
+上記例の構成に従った場合:
+
+```html
+<igx-combo [data]="cities" [(ngModel)]="selectedCities" displayKey="name" valueKey="id"></igx-combo>
+```
+```typescript
+export class MyCombo {
+    public cities: { name: string, id: string }[] = [{ name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
+    public selectedCities: string[] = ["BG01", "UK01"];
+}
+```
+この設定では、cities の Sofia と London があらかじめ選択済みになります。コンボの選択におけるそれ以上の変更は、`selectedCities` 配列に反映されます。
+
+`valueKey` を指定しない場合も双方向バインディングを設定できます。
+たとえば、`valueKey` を省略すると、バインドされたモデルは次のようになります。
+
+```typescript
+export class MyCombo {
+    public cities: { name: string, id: string }[] = [{ name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
+    public selectedCities: { name: string, id: string }[] = [this.cities[0], this.cities[1]];
+}
+```
+
+### 選択
+このコンボは、コントロールの現在の選択状態を取得および操作できる API を公開します。 
+
+コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。指定された `valueKey`](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
+
+cities の例では、`selectedItems` は選択された都市の `id` の配列を返します。
+
+```typescript
+export class MyCombo {
+    ...
+    public selectedItems: string[] = this.combo.selectedItems();
+}
+```
+
+選択 API を使用すると、ユーザーがコントロールと対話することなく、コンボの選択された項目をボタンクリック、Observable 変更への応答などで変更することもできます。
+
+たとえば、cities の例をもう一度見て、combo の [`selectItems`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectitems) メソッドを使用して、一連の cities を選択するボタンを実装する方法を見てみましょう。
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>
+<button igxButton (click)="selectFavorites()">Select Favorites</button>
+```
+```typescript
+export class MyExampleCombo {
+    @ViewChild(IgxComboComponent, { read: IgxComboComponent, static: true })
+    public combo: IgxComboComponent;
+    ...
+    selectFavorites(): void {
+        this.combo.selectItems(['UK01', 'BG01']);
+    }
+}
+```
+
+ボタンをクリックすると、都市 London と Sofia がコンボの選択に追加されます。
+
+また、コンボは、選択が変更されるたびにイベントを発生させます - [`onSelectionChange()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange)。発行されたイベント引数 [`IComboSelectionChangeEventArgs`]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html) には、変更前の選択、現在の選択、追加および削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
+
+イベントへのバインドは、`igx-combo` タグの適切な `@Output` を介して実行できます。
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id" (onSelectionChange)="handleCityChange($event)">
+```
+たとえば、選択したすべての cities の統計をページに表示できます。その選択に対して都市が追加または削除された場合、統計ビジュアライゼーションに都市を適切に追加/削除するハンドラーを起動できます。
+
+```typescript
+export class MyExampleCombo {
+    ...
+    handleCityChange(event: IComboSelectionChangeEventArgs): void {
+        for (const item of event.added) {
+            this.addToVisualization(item);
+        }
+        for (const item of event.removed) {
+            this.removeFromVisualization(item);
+        }
+    }
+}
+```
+
+### デモ
+
+以下のデモでは、コンボをデータにバインドするさまざまな方法を並べて比較できます。
+
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="combo-binding-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-binding" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-binding-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+<div class="divider--half"></div>
 
 ## 機能
 Combo コンポーネントは以下の機能を公開します。
