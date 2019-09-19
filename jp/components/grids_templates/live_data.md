@@ -30,7 +30,7 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)

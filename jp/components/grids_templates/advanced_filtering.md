@@ -76,7 +76,7 @@ _language: ja
 ```
 }
 
-高度なフィルタリングは、[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) 入力プロパティに保存される `FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を生成します。[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) プロパティを使用して、高度なフィルタリングの初期状態を設定できます。
+高度なフィルタリングは、[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) 入力プロパティに保存される [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を生成します。[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) プロパティを使用して、高度なフィルタリングの初期状態を設定できます。
 
 ```typescript
 ngAfterViewInit(): void {
@@ -246,7 +246,7 @@ igx-advanced-filtering-dialog {
 
 #### カラーパレットの定義
 
-上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
@@ -436,12 +436,12 @@ $custom-drop-down: igx-drop-down-theme(
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
+* [@@igComponent 概要](@@igMainTopic.md)
 * [フィルタリング](filtering.md)
 * [Excel スタイル フィルタリング](excel_style_filtering.md)
 * [仮想化とパフォーマンス](virtualization.md)
@@ -456,5 +456,5 @@ $custom-drop-down: igx-drop-down-theme(
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* Ignite UI for Angular [フォーラム](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) (英語)
-* Ignite UI for Angular [GitHub](https://github.com/IgniteUI/igniteui-angular) (英語)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -58,11 +58,11 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 }
 
 ### 設定
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。GridSelectionMode は、**none**、**single**、**multiple** のツリーモードを公開します。以下で、それぞれについて詳しく説明します。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、**none**、**single**、**multiple** のツリーモードを公開します。以下で、それぞれについて詳しく説明します。
 
 #### None 選択
 
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) では、デフォルトで行選択が無効になります。それ以外の場合 ([rowSelection]="'none'")。したがって、@@igComponent UI とのインタラクションを通じて行を選択または選択解除することはできませんが、選択/選択解除する唯一の方法は、提供された API メソッドを使用することです。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) では、デフォルトで行選択が無効になります。それ以外の場合 ([rowSelection]="'none'")。したがって、@@igComponent UI とのインタラクションを通じて行を選択または選択解除することは**できません**が、選択/選択解除する唯一の方法は、提供された API メソッドを使用することです。
 
 #### 単一選択
 
@@ -221,7 +221,7 @@ public handleRowSelection(event) {
 - `oldSelection` - 行選択の前の状態を含む行 ID の配列。
 - `newSelection` - 行選択の新しい状態に一致する行 ID の列。
 - `added` - 現在選択に追加されている行 ID の配列。
-- `remove` - 古い選択状態に従って現在削除されている行 ID の配列。
+- `removed` - 古い選択状態に従って現在削除されている行 ID の配列。
 - `event` - 行選択の変更をトリガーする元のイベント。
 - `cancel` - 行選択の変更を防ぐことができます。
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -245,7 +245,7 @@ public handleRowSelectionChange(args) {
 ```
 
 #### 全行の選択
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) が提供するもう 1 つの便利な API メソッドが `selectAll(onlyFilteredData)` です。このメソッドはデフォルトですべてのデータ行を選択しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみが選択されます。ただし、false パラメーターを指定してメソッドを呼び出すと、`、selectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータを選択します。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) が提供するもう 1 つの便利な API メソッドが `selectAll(onlyFilteredData)` です。このメソッドはデフォルトですべてのデータ行を選択しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみが選択されます。ただし、false パラメーターを指定してメソッドを呼び出すと、`selectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータを選択します。
 > **注**: `selectAll()` は削除された行を選択しないことに注意してください。
 
 #### 全行の選択解除
@@ -265,12 +265,12 @@ public getSelectedRows(args) {
 ### 行セレクター テンプレート
 @@igComponent でヘッダーおよび行セレクターをテンプレート化し、さまざまなシナリオに役立つ機能を提供するコンテキストにアクセスすることもできます。
 
-デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`onRowSelectionChange` イベント](#row-selection-event) を使用して実行する必要があります。基本機能をオーバーライドする`click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
+デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`onRowSelectionChange` イベント](#行選択イベント) を使用して実行する必要があります。基本機能をオーバーライドする `click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
 
 #### 行テンプレート
 カスタム行セレクター テンプレートを作成するには、`@@igSelector` 内で` igxRowSelector` ディレクティブを使用して `<ng-template>` を宣言します。テンプレートから、行の状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
 
-選択されたプロパティは、現在の行が選択されているかどうかを示しますが、インデックス プロパティを使用して行インデックスにアクセスできます。
+`選択された`プロパティは、現在の行が選択されているかどうかを示しますが、`インデックス` プロパティを使用して行インデックスにアクセスできます。
 ```html
 <ng-template igxRowSelector let-rowContext>
     {{ rowContext.index }}
@@ -287,7 +287,7 @@ public getSelectedRows(args) {
     <igx-checkbox (click)="onSelectorClick($event, rowContext.rowID)"></igx-checkbox>
 </ng-template>
 ```
-上の例では、`igx-checkbox` を使用しており、`rowContext.selected` をその `checked` プロパティにバインドしています。[`行番号のデモ`](#row-numbering-demo)で実際にこれをご覧ください。
+上の例では、`igx-checkbox` を使用しており、`rowContext.selected` をその `checked` プロパティにバインドしています。[`行番号のデモ`](#行の番号付けデモ)で実際にこれをご覧ください。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
@@ -458,5 +458,5 @@ public getSelectedRows(args) {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* Ignite UI for Angular [フォーラム](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) (英語)
-* Ignite UI for Angular [GitHub](https://github.com/IgniteUI/igniteui-angular) (英語)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

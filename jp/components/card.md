@@ -130,7 +130,7 @@ export class AppModule {}
 ```
 
 #### カードのアウトライン
-カードには `type` 属性があり、`デフォルト` (省略した場合は自動的に設定) または`アウトライン`に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
+カードには `type` 属性があり、`default` (省略した場合は自動的に設定) または `outlined` に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
 
 以下はアウトラインを使用したカードの例です。
 
@@ -314,7 +314,7 @@ $colorful-card: igx-card-theme(
  @include igx-card($colorful-card);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -325,7 +325,7 @@ $colorful-card: igx-card-theme(
 ```
 #### カラーパレットの定義
 
-上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
@@ -348,7 +348,7 @@ $colorful-card: igx-card-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](themes/palette.md) のトピックを参照してください。
 
 #### スキーマの使用
 
