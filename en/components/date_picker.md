@@ -99,7 +99,7 @@ To enable the buttons in a template, use the [`cancelButtonLabel`]({environment:
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
-date#### Setting Multi View mode
+#### Setting Multi View mode
 Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months in the calendar is set. To hide the days that do not belong to the current month, use the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays).
 
 Here you can see the buttons:
