@@ -364,7 +364,7 @@ export class CalendarSample7Component {
 
 
 ### Multi View Calendar
-Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, though the months are displayed in a flex container horizontally.  Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar support all three types of selection, and `multi` and `range` selection modes work across views. Keyboard navigation moves to next/previous months when those are in view.
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, and the months are displayed in a flex container horizontally. Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar supports all three types of selection, and `multi` and `range` selection modes work across views. Keyboard navigation moves to next/previous months when those are in view.
 
 Result:
 

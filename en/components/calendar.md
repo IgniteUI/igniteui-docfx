@@ -343,8 +343,8 @@ When the [**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcompon
 - <kbd>PageDown</kbd> key to move to the next month,
 - <kbd>Shift</kbd> + <kbd>PageUp</kbd> keys to move to the previous year,
 - <kbd>Shift</kbd> + <kbd>PageDown</kbd> keys to move to the next year,
-- <kbd>Home</kbd> key to focus the first day of the current month that is into view,
-- <kbd>End</kbd> key to focus the last day of the current month that is into view,
+- <kbd>Home</kbd> key to focus the first day of the current month  or first month in view
+- <kbd>End</kbd> key to focus the last day of the current month or last month in view
 - <kbd>Tab</kbd> key to navigate through the subheader buttons;
 
 When `prev` or `next` month buttons (in the subheader) are focused, use:
@@ -359,6 +359,7 @@ When `year` button (in the subheader) is focused, use:
 When a day inside the current month is focused, use:
 - Arrow keys to navigate through the days,
 - Arrow keys to navigate to previous/next month as well,
+- Navigating next from last day in current month or previous from first day in current month, will move focus to next/previos month that is in view.
 - <kbd>Enter</kbd> key to select the currently focused day.
 
 When a month inside the months view is focused, use:
@@ -375,7 +376,7 @@ When an year inside the decade view is focused, use:
 
 
 ### Multi View Calendar
-Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, though the months are displayed in a flex container horizontally.  Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar support all three types of selection, and `multi` and `range` selection modes work across views. Keyboard navigation moves to next/previous months when those are in view.
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, and the months are displayed in a flex container horizontally. Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar supports all three types of selection, and `multi` and `range` selection modes work across views. Keyboard navigation moves to next/previous months when those are in view.
 
 Result:
 
