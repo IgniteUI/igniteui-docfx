@@ -5,7 +5,7 @@ _description: Explanation and example about the Overlay Service's IPositionStrat
 
 # Position strategies
 
-Position strategies determine where to display the content in the provided IgxOverlayService. By default the content is shown in the middle of the screen.
+Position strategies determine where to display the content in the provided `IgxOverlayService`. By default, the content is shown in the middle of the screen.
 
 ## Demo
 
@@ -21,7 +21,7 @@ Position strategies determine where to display the content in the provided IgxOv
 
 ### Basic usage
 
-Position strategies allows you to display content in the overlay in many ways. To start using different position strategies you should first include the necessary dependencies like this
+Position strategies allow you to display content, in the overlay, in many ways. To start using different position strategies you should first include the necessary dependencies like this:
 
 ```typescript
 import {
@@ -33,12 +33,12 @@ import {
 } from 'igniteui-angular';
 ```
 
-Then you should tell overlay which position strategy to use. The position strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called. In the example bellow we are changing the default `GlobalPositionStrategy` with `ConnectedPositionStrategy`:
+Then you should tell the overlay which position strategy to use. The position strategy is passed in as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called. In the example bellow we are changing the default `GlobalPositionStrategy` with `ConnectedPositionStrategy`:
 
 ```typescript
-    // Initializing and using overlay settings
+    // Initialize and use overlay settings
     const overlaySettings: OverlaySettings = {
-        // Passes the positioning strategy
+        // Pass in the positioning strategy
         positionStrategy: new ConnectedPositioningStrategy({
             // Set the target where content should be shown
             target: this.buttonElement.nativeElement
@@ -58,7 +58,7 @@ Then you should tell overlay which position strategy to use. The position strate
 
 ### Creating position strategy with predefined position settings
 
-Each position strategy has its own positions settings. This settings determine how the content will be shown. In the example bellow we are creating new `PositionSettings`. Using this settings we force the overlay to show the content starting from the bottom left point of the provided `target` - the buttonElement. The direction in which the content will be shown is set to the bottom right. Then we are creating a new `ConnectedPositionStrategy` and passing the `PositionSettings`.
+Each position strategy has its own position settings. This setting determines how the content will be shown. In the example bellow we are creating a new `PositionSettings` object. Using it we force the overlay to show the content starting from the bottom left point of the provided `target` - the `buttonElement`. The direction in which the content will be shown is set to bottom right. Then we create a new `ConnectedPositionStrategy` and pass in the `PositionSettings`.
 
 ```typescript
 const positionSettings: PositionSettings = {
@@ -71,9 +71,9 @@ const positionSettings: PositionSettings = {
 
 const strategy = new ConnectedPositioningStrategy(positionSettings);
 
-// Initializing and using overlay settings
+// Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
-    // Passes the positioning strategy
+    // Pass in the positioning strategy
     positionStrategy: strategy
 };
 this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySettings);
@@ -87,13 +87,13 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
 </div>
 <div class="divider--half"></div>
 
-### Changing existing position strategy
+### Changing an existing position strategy
 
-You can also change the position strategy used by the overlay by overriding the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
+You can also change the position strategy, used by the overlay, by overriding the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object that is passed in to the overlay:
 
 ```typescript
-    const positionStrategy = new AutoPositionStrategy();
-    overlay.show(overlayId, { positionStrategy }); 
+    const myPositionStrategy = new AutoPositionStrategy();
+    overlay.show(overlayId, { positionStrategy: myPositionStrategy }); 
 ```
 
 <div class="sample-container loading" style="height: 500px">
@@ -106,7 +106,7 @@ You can also change the position strategy used by the overlay by overriding the 
 
 ### Changing existing position settings
 
-To change the position settings of an already existing strategy is using, override any of the settings of that strategy:
+To change the position settings of an already existing strategy, override any of the settings of that strategy:
 ```typescript
     // overlaySettings is an existing object of type OverlaySettings
     // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
@@ -145,13 +145,13 @@ There are five position strategies:
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-4. **Auto** - Positions the element the same way as the **Connected** positioning strategy. It also calculates a different starting point in case the element goes partially out of the view port. The **Auto** strategy will initially try to show the element as the **Connected** strategy does. If the element goes out of the view port **Auto** will flip the starting point and the direction, i.e. if the direction is 'bottom', it will switch it to 'top' and so on. After the flipping, if the element is still of the view port, **Auto** will use the initial directions and the starting point to push the element into the view port. For example - if the element goes out of the right side of the view port by 50px, **Auto** will push it with 50px to the left. Afterwards if the element is partially out of the view port, then its height or width were greater than the view port's, **Auto** will align the element's left/top edge with the view port's left/top edge. Defaults to:
+4. **Auto** - Positions the element the same way as the **Connected** positioning strategy. It also calculates a different starting point in case the element goes partially out of the view port. The **Auto** strategy will initially try to show the element as the **Connected** strategy does. If the element goes out of the view port **Auto** will flip the starting point and the direction, i.e. if the direction is 'bottom', it will switch it to 'top' and so on. After the flipping, if the element is still out of the view port, **Auto** will use the initial directions and the starting point, to push the element into the view port. For example - if the element goes out of the right side of the view port, by 50px, **Auto** will push it by 50px to the left. Afterwards, if the element is partially out of the view port, then its height or width were greater than the view port's, **Auto** will align the element's left/top edge with the view port's left/top edge. Defaults to:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-5. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) to prevent resizing if it would put the element dimensions below a certain threshold. Defaults to:
+5. **Elastic** - Positions the element as in **Connected** positioning strategy and re-sizes the element to fit inside of the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) to prevent resizing if it would put the element's dimensions below a certain threshold. Defaults to:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
@@ -161,7 +161,7 @@ There are five position strategies:
 > [!NOTE]
 > Will not try to resize the element if the strategy is using  HorizontalDirection = Center / VerticalDirection = Middle.
 > [!NOTE]
-> The overlay element **will be** resized, but the positioning strategy **does not** handle `overflow`. For example, if the element needs to have `overflow-y` when resized, incorporate the appropriate style to provide that. 
+> The overlay element **will be** resized, but the positioning strategy **does not** handle `overflow`. For example, if the element needs to have `overflow-y` when resized, incorporate the appropriate style to provide that.
 
 ## API References
 
