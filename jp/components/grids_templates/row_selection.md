@@ -1,37 +1,40 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Row Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Grid Row Selection | Ignite UI for Angular | インフラジスティックス 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Row Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Tree Grid Row 選択 | Ignite UI for Angular | インフラジスティックス 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Row Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
-_keywords: data select, igniteui for angular, infragistics
+title: Angular 階層 Grid Row 選択 | Ignite UI for Angular | インフラジスティックス 
+_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+_keywords: データ選択, igniteui for angular, インフラジスティックス
+_language: ja
 ---
 }
 
-### @@igComponent Row Selection
+### @@igComponent 行選択
 
-With row selection in Ignite UI for Angular, there is row selector column that precedes all other columns within the row. When a user clicks on the row selector, the row will either become selected or deselected, enabling the user to select multiple rows of data.
+Ignite UI for Angular の行選択では、行内の他のすべての列に先行する行セレクター列があります。行選択ボックスをクリックすると、行の選択や選択解除、複数行にわたるデータの選択が可能になります。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -40,7 +43,7 @@ With row selection in Ignite UI for Angular, there is row selector column that p
     <iframe id="treegrid-selection-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -49,21 +52,21 @@ With row selection in Ignite UI for Angular, there is row selector column that p
     <iframe id="hierarchical-grid-selection-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
-### Setup
-In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** expose the following tree modes: **none**, **single** and **multiple**. Below we will take a look in each of them in more details.
+### 設定
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。GridSelectionMode は、**none**、**single**、**multiple** のツリーモードを公開します。以下で、それぞれについて詳しく説明します。
 
-#### None Selection
+#### None 選択
 
-In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) by default row selection is disabled, otherwise *([rowSelection]="'none'")*. So you can **not** select or deselect row through interaction with @@igComponent UI, the only way to complete these actions is to use the provided API methods.
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) では、デフォルトで行選択が無効になります。それ以外の場合 ([rowSelection]="'none'")。したがって、@@igComponent UI とのインタラクションを通じて行を選択または選択解除することはできませんが、選択/選択解除する唯一の方法は、提供された API メソッドを使用することです。
 
-#### Single Selection
+#### 単一選択
 
-Single row selection can be now easily setup, the only thing you need to do, is to set `[rowSelection] = '"single"'` property. This gives you the opportunity to **select only one row within a grid**. You can select a row by click over some cell or pressing *space* key when you focus a cell of the row, and of course you can select a row by clicking on row selector field. When row is selected or deselected **onRowSelectionChange** event is emitted.
+単一行の選択は、`[rowSelection] = '"single"'` プロパティの設定のみで簡単に設定できるようになりました。これにより、**グリッド内の 1 行のみを選択できます**。行のセルにフォーカスするときにセルをクリックするかスペースキーを押すと行を選択できます。もちろん、行セレクターフィールドをクリックして行を選択できます。行が選択または選択解除されると、**onRowSelectionChange** イベントが生成されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -78,7 +81,7 @@ Single row selection can be now easily setup, the only thing you need to do, is 
 /* selectionExample.component.ts */
 
 public handleRowSelection(args) {
-    if (args.added.lenght && args.added[0] === 3) {
+    if (args.added.length && args.added[0] === 3) {
         args.cancel = true;
     }
 }
@@ -97,7 +100,7 @@ public handleRowSelection(args) {
 /* selectionExample.component.ts */
 
 public handleRowSelection(event) {
-    if (args.added.lenght && args.added[0] === 3) {
+    if (args.added.length && args.added[0] === 3) {
         args.cancel = true;
     }
 }
@@ -122,9 +125,9 @@ public handleRowSelection(event) {
 ```
 }
 
-#### Multiple Selection
+#### 複数選択
 
-To enable multiple row selection in [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multiple`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering. The row also can be selected when you click over some cell or press *space* key when cell is focused. If you have selected one row and click over some other holding *shift* key, this will select the whole range of rows. In this selection mode when you click over single row, the previous selected rows are deselected. If you *click* and hold *ctrl* key, the row will be selected and the previous selection will be preserved.
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で複数行選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multiple` に設定します。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用して複数行を選択できます。選択はスクロール、ページング、および並べ替えとフィルター、などのデータ操作で保持されます。行を選択するには、セルをクリックするか、セルにフォーカスがあるときにスペースキーを押します。1 つの行を選択し、Shift キーを押しながら別の行をクリックすると、行の範囲全体が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。Ctrl キーを押しながらクリックすると、行が切り替わり、前の選択が保持されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -157,23 +160,23 @@ To enable multiple row selection in [`@@igSelector`]({environment:angularApiUrl}
 ```
 }
 
-**Notes**
+**注**
 @@if (igxName !== 'IgxTreeGrid') {
-* In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
+* 行選択およびセル選択を正しく実行するには、@@igComponent にリモート仮想化がある場合、[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を設定します。
 }
 @@if (igxName !== 'IgxTreeGrid') {
-* When @@igComponent has remote virtualization then clicking the header checkbox will select/deselect all records that are currently in the grid. When new data is loaded in the @@igComponent on demand newly added rows will not be selected and it is a limitation, so you should handle that behaviour by yourself and you can select this rows by using the provided API methods.
+* @@igComponent でリモート仮想化を使用した場合、ヘッダーのチェックボックスをクリックすると、現在グリッドにあるすべてのレコードが選択/選択解除されます。新しいデータがオンデマンドで @@igComponent にロードされると、新、しく追加された行は選択されない制限があるため、これらの行を選択するには API メソッドを使用して動作を処理する必要があります。
 }
-* Row selection will trigger [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) event. This event gives you information about the *new selection*, *old selection*, the rows that has been *added* and *removed* from the old selection. Also the event is *cancellable*, so this allows you to prevent selection.
-* When row selection is enabled row selectors are displayed, but if you don't want to show them, you can set `[hideRowSelectors] = true`.
-* When you switch between row selection modes runtime, this will clear prevoius row selection state.
+* 行を選択すると、[`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) イベントがトリガーされます。このイベントは、新しい選択、古い選択、古い選択に対して追加および削除された行に関する情報を提供します。また、イベントはキャンセル可能であるため、選択を防ぐことができます。
+* 行選択が有効になっている場合、行セレクターが表示されますが、表示しない場合は、`[hideRowSelectors] = true` に設定できます。
+* 行選択モードのランタイムを切り替えると、優先行選択状態がクリアされます。
 
 
-### Api usage
+### API の使用
 
-#### Select rows programmatically
+#### コードで行を選択
 
-The below code example can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)); Also as a second parametar of this method you can pass a boolean property, which correspond to whether the previous row selection will be cleared or not. By default the previous selection will be preserved.
+以下は、単一または複数の行を同時に選択できるコード例です ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を介して)。また、このメソッドの2番目のパラメータとして、前の行の選択がクリアされるかどうかに対応するブールプロパティを渡すことができます。デフォルトでは、前の選択が保持されます。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
@@ -198,10 +201,10 @@ The below code example can be used to select one or multiple rows simultaneously
 ```
 }
 
-This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the @@igComponent selection.
+1、2、および 5 の ID を持つデータ エントリに対応する行を @@igComponent の選択に追加します。
 
-#### Deselect rows
-If you need to deselect row programmatically, you can use `deselectRows(rowIds: [])` method.
+#### 行選択の解除
+プログラムで行を選択解除する必要がある場合は、`deselectRows(rowIds: [])` を使用できます。
 
 ```html
 <!-- selectionExample.component.html -->
@@ -213,16 +216,16 @@ If you need to deselect row programmatically, you can use `deselectRows(rowIds: 
 <button (click)="this.@@igObjectRef.deselectRows([1,2,5])">Deselect 1,2 and 5</button>
 ```
 
-#### Row selection event
-When there is some change in the row selection **`onRowSelectionChange`** event is emitted. **`onRowSelectionChange`** expose the following arguments:
-- `oldSelection`  - array of row ids that contains the previous state of the row selection.
-- `newSelection` - array of row ids that match the new state of the row selection.
-- `added` - array of row ids that are currently added to the selection.
-- `removed` - array of row ids that are currently removed according old selection state.
-- `event` - the original event that trigger row selection change.
-- `cancel` -  allows you the prevent the row selection change.
+#### 行選択イベント
+行選択に何らかの変更があると、**`onRowSelectionChange`** イベントが発生します。 **`onRowSelectionChange`** は次の引数を公開します。
+- `oldSelection` - 行選択の前の状態を含む行 ID の配列。
+- `newSelection` - 行選択の新しい状態に一致する行 ID の列。
+- `added` - 現在選択に追加されている行 ID の配列。
+- `remove` - 古い選択状態に従って現在削除されている行 ID の配列。
+- `event` - 行選択の変更をトリガーする元のイベント。
+- `cancel` - 行選択の変更を防ぐことができます。
 @@if (igxName === 'IgxHierarchicalGrid') {
-- `owner` - if the event is triggered from child grid, this will give you reference to the component, from which the event is emitted.
+- `owner` - イベントが子グリッドからトリガーされる場合、これにより、イベントの発行元であるコンポーネントへの参照が提供されます。
 }
 
 ```html
@@ -241,15 +244,15 @@ public handleRowSelectionChange(args) {
 
 ```
 
-#### Select all rows
-Another usefull API method that [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides is `selectAll(onlyFilteredData)`. This method by default will select all data rows, but if filtering is applied will select only the rows that match the filter criteria. But if you call the method with *false* parameter `selectAll(false)` will always select all data in the grid, no matter whether filtering is applied.
-> **Note** Keep in mind that `selectAll()` will not select the rows that are deleted.
+#### 全行の選択
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) が提供するもう 1 つの便利な API メソッドが `selectAll(onlyFilteredData)` です。このメソッドはデフォルトですべてのデータ行を選択しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみが選択されます。ただし、false パラメーターを指定してメソッドを呼び出すと、`、selectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータを選択します。
+> **注**: `selectAll()` は削除された行を選択しないことに注意してください。
 
-#### Delect all rows
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides `deselectAll(onlyFilteredData)` method, which by default will deselect all data rows, but if filtering is applied will deselect only the rows that match the filter criteria. But if you call the method with *false* parameter `deselectAll(false)` will always clear row selection state no matter whether filtering is applied.
+#### 全行の選択解除
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、デフォルトですべてのデータ行の選択を解除する `deselectAll(onlyFilteredData)` メソッドを提供しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみを選択解除します。ただし、false パラメーターを指定してメソッドを呼び出すと、`deselectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータをクリアします。
 
-#### How to get selected rows
-If you need to see which rows are currently selected, you can get their row ids with `selectedRows()` method.
+#### 選択した行を取得する方法
+現在選択されている行を確認する必要がある場合は、`selectedRows()` メソッドを使用して行 ID を取得できます。
 
 ```typescript
 
@@ -258,34 +261,202 @@ public getSelectedRows(args) {
 }
 ```
 
-### Styling Guidelines TODO
 
-The theme engine exposes properties that allows us to style ...
+### 行セレクター テンプレート
+@@igComponent でヘッダーおよび行セレクターをテンプレート化し、さまざまなシナリオに役立つ機能を提供するコンテキストにアクセスすることもできます。
 
-### API References
+デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`onRowSelectionChange` イベント](#row-selection-event) を使用して実行する必要があります。基本機能をオーバーライドする`click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
+
+#### 行テンプレート
+カスタム行セレクター テンプレートを作成するには、`@@igSelector` 内で` igxRowSelector` ディレクティブを使用して `<ng-template>` を宣言します。テンプレートから、行の状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
+
+選択されたプロパティは、現在の行が選択されているかどうかを示しますが、インデックス プロパティを使用して行インデックスにアクセスできます。
+```html
+<ng-template igxRowSelector let-rowContext>
+    {{ rowContext.index }}
+    <igx-checkbox 
+        [checked]="rowContext.selected"
+        [readonly]="true"
+    ></igx-checkbox>
+</ng-template>
+```
+
+`rowID` プロパティを使用して、`@@igSelector` 行の参照を取得できます。行セレクター要素に `click` ハンドラーを実装する場合に便利です。
+```html
+<ng-template igxRowSelector let-rowContext>
+    <igx-checkbox (click)="onSelectorClick($event, rowContext.rowID)"></igx-checkbox>
+</ng-template>
+```
+上の例では、`igx-checkbox` を使用しており、`rowContext.selected` をその `checked` プロパティにバインドしています。[`行番号のデモ`](#row-numbering-demo)で実際にこれをご覧ください。
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+`rowContext.select()` および `rowContext.deselect()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
+}
+
+#### ヘッダー テンプレート 
+@@igComponent 内でカスタムヘッダーセレクターテンプレートを作成するには、`igxHeadSelector` ディレクティブで `<ng-template>` を宣言します。テンプレートから、ヘッダーの状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
+
+`selectedCount` プロパティは現在選択されている行数を示し、`totalCount` は@@igComponent に合計の行数を示します。
+```html
+<ng-template igxHeadSelector let-headContext>
+    {{ headContext.selectedCount }} / {{ headContext.totalCount  }}
+</ng-template>
+```
+
+`selectedCount` と `totalCount` プロパティを使用して、ヘッド セレクターをチェックするか部分的にチェックする (不確定) かを決定できます。
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+    <!-- ... -->
+    <ng-template igxHeadSelector let-headContext>
+        <igx-checkbox
+            [checked]=" headContext.selectedCount > 0 && headContext.selectedCount === headContext.totalCount"
+            [indeterminate]="headContext.selectedCount > 0 && headContext.selectedCount !== headContext.totalCount">
+        </igx-checkbox>
+    </ng-template>
+</igx-grid>
+```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #tGrid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
+    <!-- ... -->
+    <ng-template igxHeadSelector let-headContext>
+        <igx-checkbox
+            [checked]="headContext.selectedCount > 0 && headContext.selectedCount === headContext.totalCount"
+            [indeterminate]="headContext.selectedCount > 0 && headContext.selectedCount !== headContext.totalCount">
+        </igx-checkbox>
+    </ng-template>
+</igx-tree-grid>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #hGrid [data]="hGridData" primaryKey="ProductID">
+    <ng-template igxHeadSelector let-headContext>
+        <igx-checkbox
+            [checked]="headContext.selectedCount > 0 && headContext.selectedCount === headContext.totalCount"
+            [indeterminate]="headContext.selectedCount > 0 && headContext.selectedCount !== headContext.totalCount">
+        </igx-checkbox>
+    </ng-template>
+
+    <igx-row-island [key]="'ProductInfo'">
+        <ng-template igxHeadSelector let-childHeadContext>
+            <!-- header template goes here -->
+        </ng-template>
+        <ng-template igxRowSelector let-childRowContext>
+            <!-- row template goes here -->
+        </ng-template>
+    </igx-row-island>
+</igx-hierarchical-grid>
+```
+`@@igSelector` の各階層レベルには、独自の行とヘッダーのテンプレートを設定できます。
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+`headContext.selectAll()` と `headContext.deselectAll()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
+}
+
+#### 行の番号付けデモ
+このデモでは、カスタム ヘッダーと行セレクターの使用方法を示します。後者は、`rowContext.index` を使用して行番号と、`rowContext.selected` にバインドされた `igx-checkbox` を表示します。
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-selection-template-numbering-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-numbering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-numbering-iframe" data-demos-base-url="{environment:demosBaseUrl}/grid/grid-selection-template-numbering">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="tree-grid-selection-template-numbers-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:610px">
+    <iframe id="hierarchical-grid-selection-template-numbers-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxGrid') {
+#### Excel スタイル行セレクターのデモ
+このデモは、カスタム テンプレートを使用して Excel ライクなヘッダーおよび行セレクターを示します。
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-selection-template-excel-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-excel' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-excel-iframe" data-demos-base-url="{environment:demosBaseUrl}/grid/grid-selection-template-excel">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+#### 条件付き選択のデモ
+このデモでは、`onRowSelectionChange` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-conditional-row-selectors-iframe" src='{environment:demosBaseUrl}/grid/grid-conditional-row-selectors' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-conditional-row-selectors-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:630px">
+    <iframe id="hierarchical-grid-conditional-row-selectors-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+### API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Selection](selection.md)
-* [Cell selection](cell_selection.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Virtualization and Performance](virtualization.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [選択](selection.md)
+* [セル選択](cell_selection.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [並び替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列ピン固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
+* [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* Ignite UI for Angular [フォーラム](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) (英語)
+* Ignite UI for Angular [GitHub](https://github.com/IgniteUI/igniteui-angular) (英語)
