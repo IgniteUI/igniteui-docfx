@@ -58,15 +58,15 @@ Then you should tell the overlay which position strategy to use. The position st
 
 ### Creating position strategy with predefined position settings
 
-Each position strategy has its own position settings. This setting determines how the content will be shown. In the example bellow we are creating a new `PositionSettings` object. Using it we force the overlay to show the content starting from the bottom left point of the provided `target` - the `buttonElement`. The direction in which the content will be shown is set to bottom right. Then we create a new `ConnectedPositionStrategy` and pass in the `PositionSettings`.
+Each position strategy has its own position settings. This setting determines how the content will be shown. In the example bellow we are creating a new `PositionSettings` object. Using it we force the overlay to show the content starting from the top left point of the provided `target` - the `buttonElement`. The direction in which the content will be shown is set to top right. Then we create a new `ConnectedPositionStrategy` and pass in the `PositionSettings`.
 
 ```typescript
 const positionSettings: PositionSettings = {
     target: buttonElement.nativeElement,
-    horizontalDirection: HorizontalAlignment.Right,
-    verticalDirection: VerticalAlignment.Bottom,
-    horizontalStartPoint: HorizontalAlignment.Left,
-    verticalStartPoint: VerticalAlignment.Bottom
+    horizontalDirection: HorizontalAlignment.Left,
+    verticalDirection: VerticalAlignment.Top,
+    horizontalStartPoint: HorizontalAlignment.Right,
+    verticalStartPoint: VerticalAlignment.Top
 };
 
 const strategy = new ConnectedPositioningStrategy(positionSettings);
