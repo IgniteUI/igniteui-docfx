@@ -10,8 +10,12 @@ Position strategies determine where to display the content in the provided IgxOv
 ## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ## Usage
 
@@ -34,15 +38,23 @@ Then you should tell overlay which position strategy to use. The position strate
 ```typescript
     // Initializing and using overlay settings
     const overlaySettings: OverlaySettings = {
-        positionStrategy: new ConnectedPositioningStrategy() // Passes the positioning strategy
-    }
+        // Passes the positioning strategy
+        positionStrategy: new ConnectedPositioningStrategy({
+            // Set the target where content should be shown
+            target: this.buttonElement.nativeElement
+        })
+    };
     const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
 <div class="divider"></div>
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Creating position strategy with predefined position settings
 
@@ -58,12 +70,22 @@ const positionSettings: PositionSettings = {
 };
 
 const strategy = new ConnectedPositioningStrategy(positionSettings);
-strategy.position(contentWrapper, size);
+
+// Initializing and using overlay settings
+const overlaySettings: OverlaySettings = {
+    // Passes the positioning strategy
+    positionStrategy: strategy
+};
+this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySettings);
 ```
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Changing existing position strategy
 
@@ -75,8 +97,12 @@ You can also change the position strategy used by the overlay by overriding the 
 ```
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Changing existing position settings
 
@@ -93,10 +119,6 @@ To change the position settings of an already existing strategy is using, overri
     // and will align itself to the left
     overlay.show(overlayId, overlaySettings);
 ```
-
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
 
 ## Position strategies
 
