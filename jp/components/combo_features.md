@@ -7,7 +7,7 @@ _language: ja
 
 ## コンボ機能
 <p class="highlight">
-Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
+Combo コントロールは、データと値のバインディング、**[カスタム値](combo_features.md#カスタム値)**、**[フィルタリング](combo_features.md#フィルタリング)**、**[グループ化](combo_features.md#グループ化)**など複数の機能を公開します。 
 </p>
 <div class="divider"></div>
 
@@ -42,7 +42,7 @@ export class AppModule {}
  デモでは、[igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
-    <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
+      <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
         [filterable]="filterable"
         [disabled]="disabled">
@@ -73,7 +73,7 @@ export class AppModule {}
 ローカル データソースへバインドする [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用は、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) を定義します。
 
 ```html
-<igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
+<igx-combo [data]="lData" valueKey="ProductID" displayKey="ProductName"></igx-combo>
 ```
 
 ```typescript
@@ -88,27 +88,41 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが項目テキストとして使用されます。
+> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが代わりに使用されます。
 
 
 詳細については、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を[リモートデータにバインド](combo_remote.md)を参照してください。
 
-## 値バインディング
+<div class="divider--half"></div>
 
-双方データ バインディングは、以下のように `ngModel` を使用します。 
-
-```html
-<igx-combo #combo [data]="data" [(ngModel)]="values"></igx-combo>
-```
+## カスタム オーバーレイ設定
+Combo では、ユーザーが項目リストの表示方法を変更できます。これを行うには、カスタム [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を定義し、それらを Combo の [`overlaySettings`]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) 入力に渡します。
 
 ```typescript
-export class MyExampleComponent {
+// custom.component.ts
+export class CustomOverlayCombo {
     ...
-    public data: ExampleType[] = ...;
-    ...
-    public values: ExampleType[] = ...;
+    public customSettings: OverlaySettings = {
+        positionStrategy: new GlobalPositionStrategy({ openAnimation: scaleInCenter, closeAnimation: scaleOutCenter }),
+        modal: true,
+        closeOnOutsideClick: true,
+    };
 }
 ```
+
+```html
+<!-- custom.component.html -->
+<igx-combo [data]="items" [overlaySettings]="customSettings"></igx-combo>
+```
+
+たとえば、上記の設定では、[GlobalPositionStrategy](overlay_position.md#global) を使用して、コンボのリストが中央に表示されます。
+
+<div class="sample-container loading" style="height: 440px;">
+    <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
 
 <div class="divider--half"></div>
 

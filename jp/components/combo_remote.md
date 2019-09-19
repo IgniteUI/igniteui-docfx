@@ -38,6 +38,8 @@ import { HttpClientModule } from "@angular/common/http";
 export class AppModule {}
 ```
 
+#### リモート サービスの定義
+
 コンボをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボの状態を受け取り、observable としてデータを返します。コンボは `virtualizationState` プロパティを公開し、コンボの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。
 サービスはコンボにサーバーにあるすべての項目を通知します。スクロールサイズを表示するために `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティに設定する必要のある値です。
 
@@ -63,6 +65,8 @@ export class RemoteService {
         // Use combo current virtualization state and search text to build URL and request the new data.
     }
 ```
+
+#### コンボをリモート サービスへバインド
 
 データがサービスから observable として返されると [`async`](https://angular.io/api/common/AsyncPipe) パイプを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) に設定します。
 
@@ -128,13 +132,22 @@ export class ComboRemoteComponent implements OnInit {
 }
 ```
 
+> [!Note]
 > 注: 新しいデータが読み込まれた際にスクロールバーが適切なサイズになるよう `totalItemCount` [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティを更新します。その際サービスは `@odata.count` プロパティを使用して合計サイズを返します。
 
-> 注: サービスはプロバイダーとして含まれる必要があります。
+> [!Note]
+> サービスはプロバイダーとして含む必要があります。
+
+#### 選択の処理
+より複雑なデータ型 (オブジェクトなど) を扱うチャンクでロードされたリモート データにバインドされたコンボを使用する場合、`valueKey` を定義する必要があります。[選択トピック](combo.md#選択)で述べたように、`valueKey` が指定されていない場合、コンボは選択を **equality (===)** で処理しようとします。選択済みとしてマークされるオブジェクトは、継続的にロードされるオブジェクトと**同じではない**ため、選択は失敗します。
+コンボをリモートデータにバインドするときは、各項目に固有のプロパティを表す `valueKey` を指定してください。
+
+コンボがリモートデータにバインドされている場合、APIを介して値/選択項目を設定すると、**現在のチャンクにロード**された項目のみが考慮されます。初期値を設定する場合は、選択する前にそれらの特定の項目がロードされていることを確認してください。
 
 ## その他のリソース
 <div class="divider--half"></div>
 
+* [コンボの使用](combo.md)
 * [コンボ機能](combo_features.md)
 * [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
