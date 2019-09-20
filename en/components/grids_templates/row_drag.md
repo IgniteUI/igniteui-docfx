@@ -15,7 +15,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Hierarchical Grid Row Drag
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
+_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Row Drag, Row Dragging, Hierarchical Grid Row Drag, Hierarchical Table Row Drag
 ---
 }
@@ -97,8 +97,8 @@ Then, in our template, we define a drop-area using the directive's selector:
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```html
-<div class="drop-area" igxDrop (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)"
-(onDrop)="onDropAllowed($event)">
+<div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)"
+(dropped)="onDropAllowed($event)">
     <igx-icon>delete</igx-icon>
     <div>Drag a row here to delete it</div>
 </div>
@@ -108,7 +108,7 @@ Then, in our template, we define a drop-area using the directive's selector:
 In this case, our drop-area will be a whole second grid where we'll drop the rows.
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
-    (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)" (onDrop)="onDropAllowed($event)" [primaryKey]="'ID'">
+    (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)" (dropped)="onDropAllowed($event)" [primaryKey]="'ID'">
     ...
 </igx-grid>
 ```
@@ -138,19 +138,19 @@ export class @@igxNameRowDragComponent {
 
 #### Drop Area Event Handlers
 
-Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter), [`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave) and [`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) events in our component's `.ts` file.
+Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter), [`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave) and [`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) events in our component's `.ts` file.
 
-First, let's take a look at our `onEnter` and `onLeave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area that allows them to drop the row:
+First, let's take a look at our `enter` and `leave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area that allows them to drop the row:
 
 ```typescript
 export class @@igxNameRowDragComponent {
     ...
     public onEnterAllowed(args) {
-        this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
+        this.changeGhostIcon(args.drag.ghostElement, DragIcon.ALLOW);
     }
 
     public onLeaveAllowed(args) {
-        this.changeGhostIcon(args.drag.dragGhost, DragIcon.DEFAULT);
+        this.changeGhostIcon(args.drag.ghostElement, DragIcon.DEFAULT);
     }
 
     private changeGhostIcon(ghost, icon: string) {
@@ -188,8 +188,7 @@ Next, we have to define what should happen when the user actually *drops* the ro
 ```typescript
 export class @@igxNameRowDragComponent {
     ...
-    public onDropAllowed(args: IgxDropEventArgs) {
-        args.cancel = true;
+    public onDropAllowed(args: IDropDroppedEventArgs) {
         const draggedRow: @@igxNameGridRowComponent = args.dragData;
         draggedRow.delete();
     }
@@ -197,9 +196,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-Once the row is dropped, we just do the following:
-- cancel the event
-- call the row's [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) method
+Once the row is dropped, we just call the row's [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) method
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -209,7 +206,6 @@ export class @@igxNameRowDragComponent {
     @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
     ... 
     public onDropAllowed(args) {
-        args.cancel = true;
         this.targetGrid.addRow(args.dragData.rowData);
         this.sourceGrid.deleteRow(args.dragData.rowID);
     }
@@ -218,13 +214,12 @@ export class @@igxNameRowDragComponent {
 ```
 
 We define a refenrece to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
-- cancel the event
 - add a row to the `targetGrid` that contains the data of the row being dropped
 - remove the dragged row from the `sourceGrid`
 }
 
 > [!NOTE]
-> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you need to clone the data you need, if you want to distinguish it from the one in the source grid.
+> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you must clone the data you need, if you want to distinguish it from the one in the source grid.
 
 #### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
@@ -365,9 +360,8 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 
 ### Limitations
 
-There are a couple of things that need to be considered when using the `rowDraggable` directive:
-> [!NOTE]
-> When handling the row-drop event, the `eventArgs.cancel` should be set to **`true`** in order to prevent leftover elements from the row drag ghost from being visible 
+Currently, there are no known limitations for the `rowDraggable` directive.
+
 
 ### API References
 

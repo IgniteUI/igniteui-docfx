@@ -84,6 +84,22 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     * Any use of interfaces `IgxDropEnterEventArgs` and `IgxDropLeaveEventArgs` should be replaced with `IDragBaseEventArgs`.
     * Also any use of the  `IgxDropEventArgs` interface should be replaced with `IDropDroppedEventArgs`.
 
+* IgxRowDragDirective 
+    * `IRowDragStartEventArgs` and `IRowDragEndEventArgs` have argument's name changed in order to be more clear to what it relates to. `owner` argument is renamed to `dragDirective`.
+    The `owner` argument now provides a reference to the owner component. If your code was like:
+        ```typescript
+        public dragStart(event) {
+            const directive = event.owner;
+        }
+        ```
+        From version 8.2.x it should be updated to:
+        ```typescript
+        public dragStart(event) {
+            const directive = event.dragDirective;
+            const grid = event.owner;
+        }
+        ```
+
 * IgxCombo
     * The way that the [`igx-combo`](../combo.md) handles selection and data binding is changed.
 
