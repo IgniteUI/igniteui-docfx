@@ -33,7 +33,7 @@ import {
 } from 'igniteui-angular';
 ```
 
-Then you should tell the overlay which position strategy to use. The position strategy is passed in as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called. In the example bellow we are changing the default `GlobalPositionStrategy` with `ConnectedPositionStrategy`:
+Then specify the position strategy to be used by the overlay. The position strategy is passed in as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called. In the example bellow we are changing the default `GlobalPositionStrategy` with `ConnectedPositionStrategy`:
 
 ```typescript
     // Initialize and use overlay settings
