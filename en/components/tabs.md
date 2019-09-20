@@ -300,6 +300,147 @@ The described approach above is used by the following sample to demonstrate rout
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+### Styles
+
+To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) and accepts various parameters that allow us to style the tab groups.
+
+```scss
+$dark-tabs: igx-tabs-theme(
+    $item-text-color: #F4D45C,
+    $item-background: #292826,
+    $item-hover-background: #F4D45C,
+    $item-hover-color: #292826,
+    $item-active-color: #F4D45C,
+    $item-active-icon-color: #F4D45C,
+    $indicator-color: #F4D45C,
+    $tab-ripple-color: #F4D45C
+);
+```
+
+If we take a look at the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme), we will notice that there are even more parameters available to us in order to style our tabs component!
+
+> [!NOTE]
+> In order to style any additional components that are used as part of a tab group's content, an additional theme should be created that is specific to the respective component.
+
+The last step is to **include** the component theme in our application.
+
+```scss
+@include igx-tabs($dark-tabs);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-tabs($dark-tabs);
+    }
+}
+```
+
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #F4D45C;
+$black-color: #292826;
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$dark-tabs: igx-tabs-theme(
+    $palette: $dark-palette,
+    $item-text-color: igx-color($dark-palette, "secondary", 400),
+    $item-background: igx-color($dark-palette, "primary", 400),
+    $item-hover-background: igx-color($dark-palette, "secondary", 400),
+    $item-hover-color: igx-color($dark-palette, "primary", 400),
+    $item-active-color: igx-color($dark-palette, "secondary", 400),
+    $item-active-icon-color: igx-color($dark-palette, "secondary", 400),
+    $indicator-color: igx-color($dark-palette, "secondary", 400),
+    $tab-ripple-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-tabs`]({environment:sassApiUrl}/index.html#variable-_dark-tabs) schema:
+
+```scss
+// Extending the dark tabs schema
+$dark-tabs-schema: extend($_dark-tabs,
+    (
+        item-text-color: (
+            igx-color: ("secondary", 400)
+        ),
+        item-background: (
+            igx-color: ("primary", 400)
+        ),
+        item-hover-background: (
+            igx-color: ("secondary", 400)
+        ),
+        item-hover-color: (
+            igx-color: ("primary", 400)
+        ),
+        item-active-color: (
+            igx-color: ("secondary", 400)
+        ),
+        item-active-icon-color: (
+            igx-color: ("secondary", 400)
+        ),
+        indicator-color: (
+            igx-color: ("secondary", 400)
+        ), 
+        tab-ripple-color: (
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-tabs: $dark-tabs-schema
+));
+
+// Defining tabs-theme with the global dark schema
+$dark-tabs: igx-tabs-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height: 400px; width: 600px;">
+    <iframe id="tabs-style-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-style-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 ### API References
 <div class="divider"></div>
 
