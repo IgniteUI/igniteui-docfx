@@ -21,7 +21,7 @@ Position strategies determine where to display the content in the provided `IgxO
 
 ### Basic usage
 
-Position strategies allow you to display content, in the overlay, in many ways. To start using different position strategies you should first include the necessary dependencies like this:
+Position strategies allow you to display content, in the overlay, in a large number of available combinations. To start using different position strategies you should first include the necessary dependencies for each strategy used like this:
 
 ```typescript
 import {
