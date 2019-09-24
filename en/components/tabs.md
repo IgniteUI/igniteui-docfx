@@ -302,7 +302,7 @@ The described approach above is used by the following sample to demonstrate rout
 
 ### Styles
 
-To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
+To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
