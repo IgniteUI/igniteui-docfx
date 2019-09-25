@@ -1,7 +1,7 @@
 ﻿---
-title: Two-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
-_description: Learn how to create two-way data binding in Angular when you migrate from WPF to Angular.
-_keywords: data binding, ignite ui for angular, infragistics
+title: 双方向バインディング | IgniteUI for Angular | Infragistics
+_description: WPF から Angular へ移行時に Angular で双方向のデータバインディングを作成する方法を説明します。
+_keywords: data binding, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -9,7 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/MrjTTDEj7cA]
 
-The two-way data binding in Angular is used to display information to the end user and allows the end user to make changes to the underlying data using the UI. This makes a two-ways connection between the view (the template) and the component class. This is similar to the two-way binding in WPF.
+Angular の双方向データ バインディングは、エンドユーザーに情報を表示するために使用され、エンドユーザーは UI を使用して基になるデータを変更できます。これにより、WPF の一方向バインディング同様、ビュー (テンプレート) とコンポーネントクラスの間に双方向の接続が確立されます。
 
 一方向バインディングは、コンポーネント クラスから状態を取得し、ビューに表示します。このコードを見てみましょう。
 ```html
@@ -26,7 +26,7 @@ keyup(value) {
 }
 ...
 ```
-ここでは、`補間`を使用してテキスト プロパティを HTML にバインドしています。これにより、UI にテキスト プロパティの値が表示されます。`Input` 要素は、ユーザー インタラクションを処理し、イベント バインディングによって UI を介して基になる`テキスト` プロパティを更新します。基本的に、入力は一方向バインディングの反対を行い、UI から情報を取得して、コンポーネント クラスのプロパティを更新します。入力のキーアップ イベントにフックされるメソッドは、イベントが発生するたびにテキスト プロパティを更新します。イベント メソッドによってテキスト プロパティ値が変更されると、その変更は h2 要素の`補間`を使用した一方向バインディングによって UI に反映されます。したがって、ユーザーが入力要素に何かを入力すると、すぐに h2 テキストが更新されます。この動作は、基本的に双方向バインディングのシミュレーションです。同じことは、一方向バインディングとキー アップイベント ハンドラーを使用して WPF でも実現できますが、双方向バインディングを使用する方が便利です。
+ここでは、`補間`を使用してテキスト プロパティを HTML にバインドしています。これにより、UI にテキスト プロパティの値が表示されます。`Input` 要素は、ユーザー インタラクションを処理し、イベント バインディングによって UI を介して基になる `text` プロパティを更新します。基本的に、入力は一方向バインディングの反対を行い、UI から情報を取得して、コンポーネント クラスのプロパティを更新します。入力のキーアップ イベントにフックされるメソッドは、イベントが発生するたびにテキスト プロパティを更新します。イベント メソッドによってテキスト プロパティ値が変更されると、その変更は h2 要素の`補間`を使用した一方向バインディングによって UI に反映されます。したがって、ユーザーが入力要素に何かを入力すると、すぐに h2 テキストが更新されます。この動作は、基本的に双方向バインディングのシミュレーションです。同じことは、一方向バインディングとキー アップイベント ハンドラーを使用して WPF でも実現できますが、双方向バインディングを使用する方が便利です。
 
 ### 双方向バインディング
 
@@ -55,7 +55,7 @@ import { FormsModule } from '@angular/forms';
   ]
 ...
 ``` 
-サンプルを実行すると、初期入力の値は**デフォルト値**、つまり`テキスト` プロパティの値に等しくなります。入力は編集可能であるため、その値を変更するとすぐに h2 要素に反映されます。そのため、入力に入力すると `text` プロパティが更新され、h2 要素は`補間`によってその値を表示します。
+サンプルを実行すると、初期入力の値は**デフォルト値**、つまり `text` プロパティの値に等しくなります。入力は編集可能であるため、その値を変更するとすぐに h2 要素に反映されます。そのため、入力に入力すると `text` プロパティが更新され、h2 要素は`補間`によってその値を表示します。
 
 その他の同様な方法として以下もあります。
 ```html
