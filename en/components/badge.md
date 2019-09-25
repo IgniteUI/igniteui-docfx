@@ -224,7 +224,7 @@ To get started with styling the badges, we need to import the `index` file, wher
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) and accepts the ` $icon-color`, `$text-color`, `$border-radius`, `$disable-border`, `$disable-shadow` and the `$shadow` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) and accepts the ` $icon-color`, `$text-color`, `$border-radius`, `$disable-border` and the `$shadow` parameters.
 
 ```scss
 $color-1: #3d5770;
@@ -238,7 +238,6 @@ $custom-theme: igx-badge-theme(
     $text-color: black,
     $border-radius: 20px,
     $disable-border: true,
-    $disable-shadow: false,
     $shadow: igx-elevation($elevations-color, 5)
 );
 ```
@@ -287,7 +286,6 @@ $custom-theme: igx-badge-theme(
     $text-color: igx-color($custom-palette, "secondary", 500),
     $border-radius: 20px,
     $disable-border: true,
-    $disable-shadow: false,
     $shadow: igx-elevation($elevations-color, 5)
 );
 ```
@@ -327,18 +325,17 @@ $my-custom-schema: extend($light-schema,
 $custom-theme: igx-badge-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema,
-  $disable-shadow: false,
   $elevations: $elevations-color
 );
 ```
 >[!NOTE]
->Please note that in case the `$disable-shadow` property is not set to false the `elevation` property of the schema is not going to be taken under consideration. When `elevation` is set to a value different than 0 there are two possible scenarios for applying the shadow: <br>1) `$elevations` property of the theme is set: custom shadow is applied with `elevation` equal to the one set in the schema.<br>2) `$elevations` property of the theme is not set: the default shadow is applied with `elevation` equal to the one set in the schema.
+> When `elevation` is set to a value different than 0 there are two possible scenarios for applying the shadow: <br>1) `$elevations` property of the theme is set => custom shadow is applied with `elevation` equal to the one set in the schema.<br>2) `$elevations` property of the theme is not set => the default shadow is applied with `elevation` equal to the one set in the schema.
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
 #### Demo
 
-<div class="sample-container loading" style="height:280px">
+<div class="sample-container loading" style="height:340px">
     <iframe id="badge-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-styling-sample' width="100%" height="100%" 
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
