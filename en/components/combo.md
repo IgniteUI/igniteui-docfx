@@ -4,7 +4,7 @@ _description: The igx-combo provides a powerful input, combining features of the
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
 ---
 
-## Combo
+# Combo
 <p class="highlight">
 
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) components.<br />
@@ -16,7 +16,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 </p>
 <div class="divider"></div>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -28,7 +28,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 > [!WARNING]
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
-### Usage
+## Usage
 The [IgxComboComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) allows you to search and select items from the list. The combo uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. To get started with the Ignite UI for Angular Combo, let's first import the `IgxComboModule` in our **app.module.ts** file:
 
 ```typescript
@@ -45,24 +45,138 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then in the template bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data and define [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) corresponding to entities from the `localData` data source:
-
-```html
-<igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
-```
+Then in the template bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data.
 
 ```typescript
-import { localData } from "./local-data";
-
 export class ComboDemo implements OnInit {
-    public lData: any[];
+    public cities: { name: string, id: string }[] = [];
 
     public ngOnInit() {
-        this.lData = localData;
+        this.cities = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01'}, ...];
     }
 }
 ```
-> Note: If [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) entity will instead be used as item text.
+
+```html
+<igx-combo [data]="cities"></igx-combo>
+```
+
+Our combo is now bound to the array of cities.
+
+### Data value and display properties
+
+With the above configuration, since the combo is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey)
+
+ - `valueKey`: **Optional. Recommended for object arrays.** Specifies which property of the data entries is stored for the combo's selection. If `valueKey` is omitted, the combo value will use references to the data entries (i.e. the selection will be an array of entries from `combo.data`).
+ - `displayKey`: **Required for object arrays.** Specifies which property is used for the items' text. If no value is specified for `displayKey`, the combo will use the specified `valueKey` (if any). 
+
+In our case, we want the combo to *display* the `name` of each city and, for the combo *value*, store the `id` of each city. We do this by providing these properties to the combo's `displayKey` and `valueKey`, respectively:
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id">
+```
+
+The combo is now bound to the data and will display a list of items when initialized. Users can mark items as selected via mouse and keyboard interactions, causing the combo to visually update to reflect the current selection (displaying the selected items in its input and highlighting them as selected in the list). The combo selection can be accessed either through [two-way binding](#two-way-binding) or through the [selection API](#selection). 
+
+> [!Note]
+> When the data source is comprised of a simple type (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`.
+
+### Two-Way Binding
+
+The combo fully supports two way data binding with `[(ngModel)]` as well use in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. We can pass an array of items of the same type as the ones in the combo's selection ([based on `valueKey`](#data-value-and-display-properties)) and any time either changes, the other is updated accordingly.
+
+For example, if we follow up with the configurations from the earlier examples:
+
+```html
+<igx-combo [data]="cities" [(ngModel)]="selectedCities" displayKey="name" valueKey="id"></igx-combo>
+```
+```typescript
+export class MyCombo {
+    public cities: { name: string, id: string }[] = [{ name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
+    public selectedCities: string[] = ["BG01", "UK01"];
+}
+```
+With this setup, the cities *Sofia* and *London* will initially be selected. Any further changes in the combo's selection will be reflected in the `selectedCities` array.
+
+Two-way binding can also be achieved without a specified `valueKey`.
+For example, if `valueKey` is omitted, the bound model will be the following:
+
+```typescript
+export class MyCombo {
+    public cities: { name: string, id: string }[] = [{ name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
+    public selectedCities: { name: string, id: string }[] = [this.cities[0], this.cities[1]];
+}
+```
+
+### Selection
+The combo exposes API that allows getting and manipulating the current selection state of the control. 
+
+One way to get the combo's selection is via the [`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) method. It returns an array of values which correspond to the selected items, depending on the [specified `valueKey`](#data-value-and-display-properties) (if any).
+
+In our *cities* example, `selectedItems` will return an array of the selected cities' `id`s:
+
+```typescript
+export class MyCombo {
+    ...
+    public selectedItems: string[] = this.combo.selectedItems();
+}
+```
+
+Using the selection API, you can also change the combo's selected items without having the user interact with the control - via a button click, as a response to an Observable changing, etc.
+
+For example, let's revisit the *cities* example and see how we can implement a button that selects a set of cities, using the combo's [`selectItems`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectitems) method:
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>
+<button igxButton (click)="selectFavorites()">Select Favorites</button>
+```
+```typescript
+export class MyExampleCombo {
+    @ViewChild(IgxComboComponent, { read: IgxComboComponent, static: true })
+    public combo: IgxComboComponent;
+    ...
+    selectFavorites(): void {
+        this.combo.selectItems(['UK01', 'BG01']);
+    }
+}
+```
+
+When clicking the button, the cities *London* and *Sofia* will be added to the combo's selection.
+
+The combo also fires an event every time its selection changes - [`onSelectionChange()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange). The emitted event arguments, [`IComboSelectionChangeEventArgs`]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection, what items were added and removed. The event can also be cancelled, preventing it from updating the selection with the new array of items.
+
+Binding to the event can be done through the proper `@Output` on the `igx-combo` tag:
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id" (onSelectionChange)="handleCityChange($event)">
+```
+For example, a page could be displaying a statistic for all selected cities. If a cities is added or removed from that selection, we can fire a handler that properly adds/removes the city to the statistic visualization:
+
+```typescript
+export class MyExampleCombo {
+    ...
+    handleCityChange(event: IComboSelectionChangeEventArgs): void {
+        for (const item of event.added) {
+            this.addToVisualization(item);
+        }
+        for (const item of event.removed) {
+            this.removeFromVisualization(item);
+        }
+    }
+}
+```
+
+### Usage Demo
+
+In the demo below, you can see a side-by-side comparison of the different ways a combo can be bound to data:
+
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="combo-binding-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-binding" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-binding-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
 
 ## Features
 Combo control exposes the following features:

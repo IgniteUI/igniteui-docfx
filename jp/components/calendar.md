@@ -360,7 +360,24 @@ export class CalendarSample7Component {
 
 * 矢印キーは日を移動します。
 * `Enter` はフォーカスされている日を選択します。
+
+>[!NOTE]
+ >Following version 8.2.0, keyboard navigation will not focus days that are outside of current month, but will rather change the month in view.
+
 <div class="divider--half"></div>
+
+
+### Multi View Calendar
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarbase.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, and the months are displayed in a flex container horizontally. Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar supports all three types of selection. Keyboard navigation moves to next/previous months when those are in view.
+
+Result:
+
+<div class="sample-container loading" style="height: 540px">
+    <iframe id="multiview-calendar" data-src='{environment:demosBaseUrl}/scheduling/multiview-calendar' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="multiview-calendar" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
+</div>
 
 <!-- ### Styling
 
