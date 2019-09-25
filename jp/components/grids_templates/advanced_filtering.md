@@ -1,14 +1,15 @@
+﻿---
+title: Angular Grid フィルタリング | Ignite UI for Angular | インフラジスティックス
+_description: Angular Material テーブルでデータの高度なフィルターを設定する方法。グリッドの高度なフィルタリングがより使いやすくなりました。
+_keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
+_language: ja
 ---
-title: Angular Grid Advanced Filtering | Ignite UI for Angular | infragistics
-_description: Learn how to configure advanced filter of data with the Angular Material table. The grid advanced filtering is more convenient and engaging than ever.
-_keywords: advanced filter, igniteui for angular, infragistics
----
 
-### @@igComponent Advanced Filtering
+### @@igComponent 高度なフィルタリング
 
-The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent.
+高度なフィルタリングは、@@igComponent のような任意の Angular Material テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -16,7 +17,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -25,7 +26,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -34,27 +35,27 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
 <div class="divider--half"></div>
 
-###Interaction
+###インタラクション
 
-In order to open the advanced filtering dialog, the **Advanced Filtering** button in the grid toolbar should be clicked. If no advanced filter is applied, you should start with creating a group of filtering conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). After that, you can add filtering conditions or sub-groups. 
+高度なフィルタリングダイアログを開くには、グリッドツールバーの**高度なフィルタリング**ボタンをクリックする必要があります。高度なフィルターが適用されていない場合、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) でリンクされたフィルター条件のグループの作成から開始する必要があります。その後、フィルタリング条件またはサブグループを追加できます。 
 
-In order to add a filtering condition, you have to select any of the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) columns, an operand based on the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) and a value if the operand is not unary. Once the condition is committed, a chip with the condition information appears. By hovering or clicking the chip, you have the options to modify it or add another condition or group right after it.
+フィルター条件を追加するには、[`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) 列のいずれか、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) に基づくオペランド、およびオペランドが単項でない場合の値を選択する必要があります。条件が確定すると、条件情報を含むチップが表示されます。チップをホバーまたはクリックすると、チップを変更したり、その直後に別の条件やグループを追加したりできます。
 
-If you select more than one filtering condition chip, a context menu appears with options to create a group or delete the filters. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
+複数のフィルター条件チップを選択すると、グループを作成したりフィルターを削除したりするためのオプションを含むコンテキストメニューが表示されます。選択した条件でグループを作成することを選択した場合、一番上に選択した条件が配置された場所に新しく作成されたグループが表示されます。
 
-In order to select a group, you can also click on its vertical line, which is colored based on the the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its filtering logic, ungroup or delete it.
+グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、フィルタリング ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
 
-In order to filter the data once you are ready with creating the filtering conditions and groups, you should click the **Apply** button. If you have modified the advanced filter, but you don't want to preserve the changes, you should click the **Cancel** button. You could also clear the advanced filter by clicking the **Clear Filter** button.
+フィルタリング条件とグループを作成する準備後にデータをフィルタリングするには、**[適用]** ボタンをクリックします。拡張フィルターを変更後、変更を保存したくない場合は、**[キャンセル]** ボタンをクリックします。**[フィルターのクリア]** ボタンをクリックして、高度なフィルターをクリアすることもできます。
 
-###Usage
+###使用方法
 
-To enable the advanced filtering, the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties should be set to `true`.
+高度なフィルタリングを有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを true に設定します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -75,7 +76,7 @@ To enable the advanced filtering, the [`showToolbar`]({environment:angularApiUrl
 ```
 }
 
-The advanced filtering generates a [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) which is stored in the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) input property. You could use the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) property to set an initial state of the advanced filtering.
+高度なフィルタリングは、[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) 入力プロパティに保存される [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を生成します。[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedfilteringexpressionstree) プロパティを使用して、高度なフィルタリングの初期状態を設定できます。
 
 ```typescript
 ngAfterViewInit(): void {
@@ -105,20 +106,20 @@ ngAfterViewInit(): void {
 }
 ```
 
-In case you don't want to show the @@igComponent toolbar, you could use the [`openAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#openadvancedfilteringdialog) and [`closeAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#closeadvancedfilteringdialog) methods to open and close the advanced filtering dialog programmatically.
+@@igComponent ツールバーを表示したくない場合は、[`openAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#openadvancedfilteringdialog) および [`closeAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#closeadvancedfilteringdialog) メソッドを使用して、高度なフィルタリング ダイアログをコーディングを使用して開いたり閉じたりできます。
 
 >[!NOTE]
->You can enable both the [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) and the advanced filtering user interfaces in the @@igComponent. Both filtering user interfaces will work independently of one another. The final filtered result in the @@igComponent is the intersection between the results of the two filters.
+>@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルターの結果の共通部分です。
 
-### Styling
+### スタイル設定
 
-To get started with styling the Advanced Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
+高度なフィルタリング ダイアログのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The advanced filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
+Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
 $custom-grid: igx-grid-theme(
@@ -126,7 +127,7 @@ $custom-grid: igx-grid-theme(
 );
 ```
 
-Since we have other components inside the advanced filtering dialog, such as buttons, chips, dropdowns and inputs, we need to create a separate theme for each one:
+ボタン、チップ、ドロップダウン、入力など、高度なフィルタリング ダイアログ内に他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
 $custom-button: igx-button-theme(
@@ -155,9 +156,9 @@ $custom-drop-down: igx-drop-down-theme(
 );
 ```
 
-In this example we only changed some of the parameters for the listed components, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme), [`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme), [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme), [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) themes provide way more parameters to control their respective styling.
+この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme)、[`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) テーマは、それぞれのスタイルを制御するために多数のパラメーターを提供します。
 
-The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the advanced filtering dialog.
+最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。また、高度なフィルタリング ダイアログ内の他の要素のスタイルを追加します。
 
 ```scss
 @include igx-grid($custom-grid);
@@ -197,10 +198,10 @@ igx-advanced-filtering-dialog {
 ```
 
 >[!NOTE]
->We scope most of the components' mixins within `igx-advanced-filtering-dialog`, so that these custom themes will affect only components nested in the advanced filtering dialog. Otherwise, other buttons, chips, inputs and dropdowns in the application would be affected too.
+>カスタム テーマが高度なフィルタリング ダイアログにネストされたコンポーネントのみに影響するように、コンポーネントのほとんどの mixins を`igx-advanced-filtering-dialog` 内にスコープします。そうでない場合、アプリケーション内の他のボタン、チップ、入力、ドロップダウンも影響を受けます。
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -243,18 +244,18 @@ igx-advanced-filtering-dialog {
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 $dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
 ```
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
 $custom-grid: igx-grid-theme(
@@ -288,13 +289,13 @@ $custom-drop-down: igx-drop-down-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`Palettes`](../themes/palette.md) のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group), [`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
+すべてのコンポーネントに提供される 2 つの定義済みスキーマのいずれかを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group)、[`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) です。
 
 ```scss
 $grid-dark-palette: igx-palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
@@ -353,7 +354,7 @@ $custom-drop-down-schema: extend($_light-drop-down,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 $custom-light-schema: extend($light-schema,(
@@ -396,9 +397,9 @@ $custom-drop-down: igx-drop-down-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+テーマを上記と同じ方法で含めることに注意してください。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -406,7 +407,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -415,7 +416,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -424,36 +425,36 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
 <div class="divider--half"></div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Filtering](filtering.md)
-* [Excel Style Filtering](excel_style_filtering.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [フィルタリング](filtering.md)
+* [Excel スタイル フィルタリング](excel_style_filtering.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [並び替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
