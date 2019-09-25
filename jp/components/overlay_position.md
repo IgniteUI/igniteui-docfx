@@ -152,7 +152,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-5. **Elastic** - **接続された**ポジション ストラテジのように要素を配置し、要素が部分的に見えなくなった場合にビューポートの内側に収まるように要素のサイズを変更します (幅や高さを再計算します)。[`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) に渡すと、要素のサイズが特定のしきい値を下回る場合にサイズ変更を防ぐことができます。デフォルト値:
+5. **Elastic** - **接続された**ポジション ストラテジのように要素を配置し、要素が部分的に見えなくなった場合にビューポートの内側に収まるように要素のサイズを変更します (幅や高さを再計算します)。[`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) に渡すと、要素のサイズが特定のしきい値を下回る場合のサイズ変更を防止できます。デフォルト値:
 
     | ターゲット          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
