@@ -172,7 +172,7 @@ export class AppModule {}
 
 ```html
 <igx-card type="outlined" [horizontal]="horizontal">
-	    <div class="h-sample-column">
+    <div class="h-sample-column">
         <igx-card-header>
             <h5 igxCardHeaderTitle>{{card.title}}</h5>
             <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>

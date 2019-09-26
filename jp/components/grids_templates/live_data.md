@@ -18,6 +18,7 @@ _language: ja
 }
 
 ### 更新のライブデモ
+
 Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
 
 @@if (igxName === 'IgxGrid') {

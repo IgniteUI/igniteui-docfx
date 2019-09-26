@@ -17,7 +17,6 @@ WPF から Angular への移行チュートリアルは、`デスクトップ`�
 - [Angular の構造ディレクティブ](structural_directives.md)
 - [レイアウト要素](layout.md)
 
-
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
