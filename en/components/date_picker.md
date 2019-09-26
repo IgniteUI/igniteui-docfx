@@ -99,6 +99,9 @@ To enable the buttons in a template, use the [`cancelButtonLabel`]({environment:
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
+#### Setting Multi View mode
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) input the number of displayed months in the calendar is set. To hide the days that do not belong to the current month, use the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays).
+
 Here you can see the buttons:
 <div class="sample-container loading" style="height: 680px;">
     <iframe id="date-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>
@@ -206,6 +209,8 @@ The Date Picker's input group look can be customized. To do that, we need to dec
 | [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) | Contains the date picker mode |
 | [`specialDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#specialDates) | Contains special dates |
 | [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) | Contains the real value |
+| [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) | Sets the number of months displayed |
+| [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) | Hide the days that do not belong to the current month |
 
 You could use those by declaring a variables in the ng-template element.
 

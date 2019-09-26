@@ -1,7 +1,7 @@
 ---
-title: Angular Grid Excel スタイル フィルタリング | Ignite UI for Angular の | infragistics
+title: Angular Grid Excel スタイル フィルタリング |Ignite UI for Angular の |infragistics
 _description: Angular Material テーブルでデータ フィルターのように Excel を設定する方法を学びます。グリッド Excel フィルタリングがより使いやすくなりました。
-_keywords: Excel ライクなフィルター, igniteui for angular, infragistics
+_keywords: Excel ライクなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -97,7 +97,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプルの Product Name’ と 'Discontinued’ 列で 4 つすべての機能が有効です。 'Quantity Per Unit’で 4 機能すべてが無効、’Unit Price’ で並べ替えと移動のみ有効、'Order Date’ でピン固定と非表示のみ有効です。  
+以下のサンプルの 'Product Name' と 'Discontinued' 列で 4 つすべての機能が有効です。 'Quantity Per Unit' で 4 機能すべてが無効、'Unit Price' で並べ替えと移動のみ有効、'Order Date' でピン固定と非表示のみ有効です。  
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -209,10 +209,10 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
-    <ng-template igxExcelStyleSortingTemplate>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHidingTemplate>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMovingTemplate>Moving Template</ng-template>
-    <ng-template igxExcelStylePinningTemplate>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
+    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
+    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
+    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
     </igx-column>
     <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
@@ -231,10 +231,10 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true" 
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
-    <ng-template igxExcelStyleSortingTemplate>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHidingTemplate>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMovingTemplate>Moving Template</ng-template>
-    <ng-template igxExcelStylePinningTemplate>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
+    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
+    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
+    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
     <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
@@ -262,10 +262,10 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
-    <ng-template igxExcelStyleSortingTemplate>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHidingTemplate>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMovingTemplate>Moving Template</ng-template>
-    <ng-template igxExcelStylePinningTemplate>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
+    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
+    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
+    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
     <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
@@ -279,10 +279,10 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
     <igx-column field="Grammy Awards" [filterable]='true' [dataType]="'number'"></igx-column>
 
     <igx-row-island [key]="'Albums'" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter">
-        <ng-template igxExcelStyleSortingTemplate>Sorting Template</ng-template>
-        <ng-template igxExcelStyleHidingTemplate>Hiding Template</ng-template>
-        <ng-template igxExcelStyleMovingTemplate>Moving Template</ng-template>
-        <ng-template igxExcelStylePinningTemplate>Pinning Template</ng-template>
+        <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
+        <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
+        <ng-template igxExcelStyleMoving>Moving Template</ng-template>
+        <ng-template igxExcelStylePinning>Pinning Template</ng-template>
         <igx-column field="Album" [filterable]='true'></igx-column>
         <igx-column field="Launch Date" [filterable]='true' [dataType]="'date'"></igx-column>
         <igx-column field="Billboard Review" [filterable]='true' [dataType]="'number'"></igx-column>
@@ -338,15 +338,129 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-<!-- ###Styling
+### 一意の列値ストラテジ
 
-To get started with styling the Excel Style Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
+Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
+- **column**  - フィルタリング式ツリー。各列に基づいて削減されます。
+- **filteringExpressionsTree** - フィルタリング式ツリー。各列に基づいて削減されます。
+- **done** - 
+サーバーから取得されたときに、新しく生成された列値で呼び出されるコールバック。
+
+開発者は、**列**と **filteringExpressionsTree** 引数によって提供される情報に基づいて、必要な一意の列値を手動で生成し、**done** コールバックを呼び出すことができます。
+
+> [!NOTE]
+> [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力が提供される場合、Excel スタイル フィルタリングでプロセスを生成するデフォルトの一意の値は使用されません。
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid #grid1 [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
+    ...
+</igx-grid>
+```
+
+```typescript
+public columnValuesStrategy = (column: IgxColumnComponent,
+                               columnExprTree: IFilteringExpressionsTree,
+                               done: (uniqueValues: any[]) => void) => {
+    // Get specific column data.
+    this.remoteValuesService.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
+}
+```
+
+<div class="sample-container loading" style="height:800px">
+    <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
+    ...
+</igx-tree-grid>
+```
+
+```typescript
+public columnValuesStrategy = (column: IgxColumnComponent,
+                               columnExprTree: IFilteringExpressionsTree,
+                               done: (uniqueValues: any[]) => void) => {
+    // Get specific column data.
+    this.remoteValuesService.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
+}
+```
+
+<div class="sample-container loading" style="height:800px">
+    <iframe id="tree-grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'Artist'" [data]="data" [filterMode]="'excelStyleFilter'"
+                       [uniqueColumnValuesStrategy]="singersColumnValuesStrategy">
+    ...
+    <igx-row-island [primaryKey]="'Album'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
+                    [uniqueColumnValuesStrategy]="albumsColumnValuesStrategy">
+        ...
+    </igx-row-island>
+</igx-hierarchical-grid>
+```
+
+```typescript
+public singersColumnValuesStrategy = (column: IgxColumnComponent,
+                                      columnExprTree: IFilteringExpressionsTree,
+                                      done: (uniqueValues: any[]) => void) => {
+// Get specific column data for the singers.
+this.remoteValuesService.getColumnData(
+    null, "Singers", column, columnExprTree, uniqueValues => done(uniqueValues));
+}
+
+public albumsColumnValuesStrategy = (column: IgxColumnComponent,
+                                     columnExprTree: IFilteringExpressionsTree,
+                                     done: (uniqueValues: any[]) => void) => {
+// Get specific column data for the albums of a specific singer.
+const parentRowId = (column.grid as any).foreignKey;
+this.remoteValuesService.getColumnData(
+    parentRowId, "Albums", column, columnExprTree, uniqueValues => done(uniqueValues));
+}
+```
+
+<div class="sample-container loading" style="height:800px">
+    <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-esf-load-on-demand-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+}
+
+Excel スタイル フィルタリングのカスタム ロード テンプレートを提供するには、`igxExcelStyleLoading` ディレクティブを使用できます。
+
+```html
+<@@igSelector [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
+    ...
+    <ng-template igxExcelStyleLoading>
+        Loading ...
+    </ng-template>
+</@@igSelector>
+```
+
+<div class="divider--half"></div>
+
+### スタイル設定
+
+ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The excel style filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
+Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
 $custom-grid: igx-grid-theme(
@@ -354,7 +468,7 @@ $custom-grid: igx-grid-theme(
 );
 ```
 
-We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, a list and even a drop-down. In order to style them, we need to create a separate theme for each one:
+ボタン、チェックボックス、リスト、さらにはドロップダウンなど、フィルタリング ダイアログのような Excel 内には明らかに多くのコンポーネントがあります。スタイルを設定するには、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
 $dark-button: igx-button-theme(
@@ -395,9 +509,9 @@ $custom-drop-down: igx-drop-down-theme(
 );
 ```
 
-In this example we only changed some of the parameters for the listed components, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme), [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme), [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme), [`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) themes provide way more parameters to control their respective styling.
+この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme)、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)、[`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
-The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
+最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
 @include igx-drop-down($custom-drop-down);
@@ -414,10 +528,10 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We scope most of the components' mixins within `.igx-excel-filter` and `.igx-excel-filter__secondary`, so that these custom themes will affect only components nested in the excel style filtering dialog and all of its sub-dialogs. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
+>`.igx-excel-filter` と `.igx-excel-filter__secondary` 内のほとんどのコンポーネントのミックスインをスコープするため、これらのカスタムテーマは、Excel スタイル フィルタリング ダイアログとそのすべてのサブダイアログにネストされたコンポーネントのみに影響します。そうでない場合、他のボタン、チェックボックス、入力グループ、およびリストも影響を受けます。
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
 
 ```scss
 :host {
@@ -437,11 +551,11 @@ The last step is to **include** the component mixins, each with its respective t
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します:
 
 ```scss
 $yellow-color: #FFCD0F;
@@ -449,7 +563,7 @@ $black-color: #292826;
 
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
 $custom-grid: igx-grid-theme(
@@ -495,13 +609,13 @@ $custom-drop-down: igx-drop-down-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list), [`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
+すべてのコンポーネント (この場合は[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list)、[`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down)) に提供される 2 つの定義済みスキーマのいずれかを拡張します。
 
 ```scss
 $custom-grid-schema: extend($_light-grid,
@@ -602,7 +716,7 @@ $custom-drop-down-schema: extend($_light-drop-down,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`軽量`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`暗色`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 $custom-light-schema: extend($light-schema,(
@@ -645,9 +759,9 @@ $custom-drop-down: igx-drop-down-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+テーマを上記と同じ方法で含めることに注意してください。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">
@@ -655,7 +769,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -664,7 +778,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -673,18 +787,18 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-excel-style-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

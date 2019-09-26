@@ -123,6 +123,113 @@ export class AppModule {}
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 入力に値を提供する場合、この値は [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value)入力より大きい値に定義します。それ以外の場合、**進行状況の更新に渡す値を取得する更新は一度のみとなります。
 <div class="divider--half"></div>
 
+### Styling
+
+To get started with styling the circular progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) and accepts the `$base-circle-color`, `$progress-circle-color` and `$text-color` parameters.
+
+```scss
+$custom-theme: igx-progress-circular-theme(
+    $base-circle-color: lightgray,
+    $progress-circle-color: rgb(32, 192, 17),
+    $text-color: lightgray
+);
+```
+The last step is to **include** the component mixins: 
+
+```scss
+ @include igx-progress-circular($custom-theme);
+```
+
+>[!NOTE]
+ >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+ ```scss
+:host {
+  ::ng-deep {
+    @include igx-progress-circular($custom-theme);
+  }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$gray-color: lightgray;
+$green-color: rgb(32, 192, 17);
+
+$custom-palette: igx-palette($primary: $gray-color, $secondary: $green-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+
+```scss
+$custom-theme: igx-progress-circular-theme(
+    $base-circle-color: igx-color($custom-palette, "primary", 500),
+    $progress-circle-color: igx-color($custom-palette, "secondary", 500),
+    $text-color: igx-color($custom-palette, "primary", 500)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](./themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](./themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-progress-circular`]({environment:sassApiUrl}/index.html#variable-_light-progress-circular):  
+
+```scss
+// Extending the light progress circular schema
+$custom-progress-schema: extend($_light-progress-circular,
+    (
+        base-circle-color: (igx-color:('primary', 500)),
+        progress-circle-color: (igx-color:('secondary', 500)),
+        text-color: (igx-color:('primary', 500))
+    )
+);
+```
+
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, 
+    (
+        igx-circular-bar: $custom-progress-schema
+    )
+);
+
+// Defining our custom theme with the custom schema
+$custom-theme: igx-progress-circular-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height:350px">
+    <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 
+        seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### API
 <div class="divider--half"></div>
 

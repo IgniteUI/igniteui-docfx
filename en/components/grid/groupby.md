@@ -259,7 +259,7 @@ The easiest way to apply your theme is with a `sass` `@include` statement in the
 
 #### Scoped component theme
 
-In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
 
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
 
@@ -280,7 +280,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 #### Demo   
 
 <div class="sample-container loading" style="height:570px">
-    <iframe id="grid-sample-groupby-styling" src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-groupby-styling" data-src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

@@ -12,7 +12,7 @@ Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/ignite
 
 Ignite UI for Angular パッケージは `ng update` Schematics で自動バージョン マイグレーションをサポートします。これにより、すべての可能性のある重大な変更 (セレクターの名前、クラス、@Input/Output プロパティの変更) をマイグレーションを試みます。ただし、マイグレーションできない変更がある場合もあります。通常これらの変更はタイプ スクリプト アプリケーション ロジックに関連しており、[詳細](#additional-manual-changes)は以下をご確認ください。
 
-最初に [**`ng update`**](https://angular.io/cli/update) コマンドを実行して
+はじめに [**`ng update`**](https://angular.io/cli/update) コマンドを実行してアプリケーションとパッケージに使用できるアップデートをチェックします。
 ```cmd
 ng update
 ```
@@ -24,7 +24,7 @@ ng update
 ```cmd
 ng update igniteui-angular
 ```
-`Igniteui-angular` の更新時は、@angular/core`, `@angular/cli` and `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`Igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
@@ -44,6 +44,105 @@ ng update @angular/cli
 自動的にアップデートできない変更もあります。以下の変更はバージョンごとにセクションが分かれています。アッププデートが必要な場合は、現在のバージョンから開始してそれ以降のアップデートを適用しjます。
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
+
+### 8.1.x から 8.2.x の場合:
+
+* IgxDrag
+    * `hideBaseOnDrag` と `visible` 入力は非推奨のため、アプリケーションで同じ機能を実現するために、Angular が提供する基本要素を非表示にする任意の方法を使用できます。1 つの例として、可視性スタイルの非表示設定があります。これは、非表示にして DOM で使用するスペースを保持するためです。
+
+        ```html
+        <div igxDrag [ngStyle]="{ 'visibility': targetDragged ? 'hidden' : 'visible' }"
+            (dragStart)="onDragStarted($event)" (dragEnd)="onDragEnded($event)">
+            Drag me!
+        </div>
+        ```
+
+        ```typescript
+        public targetDragged = false;
+
+        public onDragStarted(event) {
+            this.targetDragged = true;
+        }
+
+        public onDragEnded(event) {
+            this.targetDragged = false;
+        }
+        ```
+
+    * `animateOnRelease` と `dropFinished()` も非推奨のため、`dropFinished()` メソッドの使用は `transitionToOrigin()` に置き換える必要があります。それ以外の場合は、ドラッグした要素を元の位置に戻すタイミングに応じて、`transitionToOrigin()` を呼び出す必要があります。ドラッグされた要素の DOM の位置が変更されると、元の場所もそれに基づいて変更されることに注意してください。
+
+* IgxDrop
+    * `IxgDrop` ディレクティブで提供されるデフォルトのドロップ戦略はデフォルトでは適用されなくなったため、同じ動作を継続するには、新しい入力 `dropStrategy` を提供された `IgxAppendDropStrategy` 実装に設定する必要があります。
+
+        ```html
+        <div igxDrop [dropStrategy]="appendStrategy"></div>
+        ```
+        ```typescript
+        import { IgxAppendDropStrategy } from 'igniteui-angular';
+
+        public appendStrategy = IgxAppendDropStrategy;
+        ```
+    * インターフェイス `IgxDropEnterEventArgs` と `IgxDropLeaveEventArgs` を使用する場合は、`IDragBaseEventArgs` に置き換える必要があります。
+    * また、`IgxDropEventArgs` インターフェイスの使用はすべて、用する場合は、`IDropDroppedEventArgs` に置き換える必要があります。
+
+* IgxCombo
+    * [`igx-combo`](../combo.md) が選択とデータバインディングを処理する方法が変更されました。
+
+    - コンボの [`valueKey`] 入力が定義されている場合、コントロールは選択を実行するときに、渡されたデータ項目の配列でその特定のプロパティを探します。
+    **すべて**の選択イベントは、データ項目の `valueKey` プロパティの値で処理されます。
+    `valueKey` が指定されているすべてのコンボには、入力で指定されたオブジェクト プロパティの値のみで構成される選択/双方向バインディングが必要です。
+    ```html
+    <igx-combo [data]="cities" valueKey="id" displayKey="name"></igx-combo>
+    ```
+    ```typescript
+    export class MyExampleCombo {
+        public data: { name: string, id: string }[] = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01' }, ...];
+        ...
+        selectFavorites() {
+            // Selection is handled with the data entries' id properties
+            this.combo.selectItems(['UK01', 'BG01']);
+        }
+    }
+    ```
+
+    - コンボに `valueKey` が定義されて**いない**場合、**すべて**の選択イベントは **equality (===)** で処理されます。
+    `valueKey` が指定されて**いない**すべてのコンボでは、データ項目への**参照**で選択/双方向バインディングを処理する必要があります。
+    ```html
+    <igx-combo [data]="cities" displayKey="name"></igx-combo>
+    ```
+    ```typescript
+    export class MyExampleCombo {
+        public data: { name: string, id: string }[] = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01' }, ...];
+        ...
+        selectFavorites() {
+            // Selection is handled with references to the data entries
+            this.combo.selectItems([this.data[0], this.data[1]]);
+        }
+    }
+    ```
+
+    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#selection)をご覧ください。
+
+### 8.0.x から 8.1.x の場合:
+* `igx-paginator` コンポーネントはスタンドアロン コンポーネントとして導入され、Grid コンポーネントでも使用されます。
+`paginationTemplate` を設定している場合は、CSS を変更してページネーションを正しく表示する必要がある場合があることに注意してください。これは、コンテンツをセンタリングするための CSS ルールを持つページング固有のコンテナの下にテンプレートが適用されなくなったため、手動で追加する必要がある場合があるためです。
+以下はスタイルの例です。
+
+```html
+<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+</igx-grid>
+<ng-template #pager>
+    <div class="pagination-container"></div>
+</ng-template>
+```
+
+```css
+.pagination-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+```
 
 ### 7.3.x から 8.0.x の場合:
 * アップデート中に以下のエラーが発生した場合、`パッケージ "@angular/compiler-cli" は "typescript" と互換性のないピア依存関係を持っているため (">=3.1.1 <3.3" が必要で、"3.4.5" をインストールします。)`、最初に `@angular/core` パッケージを更新する必要があります。このエラーは [Angular CLI](https://github.com/angular/angular-cli/issues/13095) の既知の問題に関連しています

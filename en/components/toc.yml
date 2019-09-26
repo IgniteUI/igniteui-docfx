@@ -81,6 +81,9 @@
     - name: Excel Style Filtering
       href: grid/excel_style_filtering.md
       new: false
+    - name: Advanced Filtering
+      href: grid/advanced_filtering.md
+      new: true
     - name: Sorting
       href: grid/sorting.md
       new: false
@@ -104,7 +107,14 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: grid/row_selection.md
+          new: true
+        - name: Cell selection
+          href: grid/cell_selection.md
+          new: true
     - name: Searching
       href: grid/search.md
       new: false
@@ -172,6 +182,9 @@
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
       new: false
+    - name: Advanced Filtering
+      href: treegrid/advanced_filtering.md
+      new: true
     - name: Sorting
       href: treegrid/sorting.md
       new: false
@@ -192,7 +205,14 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: treegrid/row_selection.md
+          new: true
+        - name: Cell selection
+          href: treegrid/cell_selection.md
+          new: true
     - name: Searching
       href: treegrid/search.md
       new: false
@@ -254,6 +274,9 @@
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
       new: false
+    - name: Advanced Filtering
+      href: hierarchicalgrid/advanced_filtering.md
+      new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       new: false
@@ -274,7 +297,15 @@
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
+      items:
+        - name: Row selection
+          href: hierarchicalgrid/row_selection.md
+          new: true
+        # Not yet fully implemented for igxHGrid
+        # - name: Cell selection
+        #  href: grid/cell_selection.md
+        #  new: true
     # Not yet fully implemented for igxHGrid
     # - name: Searching
     #   href: hierarchicalgrid/search.md
@@ -745,7 +776,7 @@
     new: true
 - name: Drag and Drop
   href: drag_drop.md
-  new: false
+  new: true
 - name: Zoom Slider
   new: true
   href: zoomslider_overview.md

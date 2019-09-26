@@ -1,25 +1,26 @@
----
-title: Structural Directives in Angular
-_description: WPF to Angular guide topics help you switch from WPF to Angular.
-_keywords: WPF, Windows Presentation Foundation, Angular, Ignite UI for Angular
+﻿---
+title: Angular ディレクティブ | IgniteUI for Angular | Infragistics
+_description: Angular 構造ディレクティブを使用して、カスタム条件に基づいて Angular コンポーネントの外観を設定します。
+_keywords: angular ディレクティブ, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 
-## Structural Directives in Angular
+## Angular 構造ディレクティブ
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 
-As WPF developers, anytime we want to add or remove an element from the visual tree we have to jump into some code-behind and write some C# or we can use a combination of binding and a visibility converter, which again requires some custom logic and static resources. That's the way we have always done it in WPF, but Angular makes it so much easier.
+WPF でのビジュアル ツリー要素の外観を制御する場合、最も一般的な方法は、バインディングと可視コンバーターを使用することです。これには、追加のロジックと静的リソースが必要です。Angular にも同様のテクニックがあり、DOM 要素 (Angularディレクティブ) の外観や動作を変更します。Angular `ディレクティブ` タイプの 1 つは`構造ディレクティブ`です。DOM 要素を追加または削除することで DOM レイアウトを変更します。
 
-Manipulating your view in an Angular application, adding and removing elements, is achieved with the so-called "structural directives". In this topic, we are going to demonstrate the following three directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
+このトピックでは、3 つの構造ディレクティブ (`ngIf`、`ngSwitch`、`ngFor`) を示します。名前からわかるように、これらはそれぞれ C# 構造と比較できます。`ngIf` は "if-else" C# コード ブロックと同じものであり、`ngSwitch` はC＃switch-caseステートメントと同じものであり、最後に、`ngFor` は C# "for-loop" とまったく同じものです。
 
-### `ngIf` Directive
-Let’s explore each of these directives, starting with the `ngIf`. This directive allows us to show or hide elements based on a boolean condition. We will start by creating a "div" element with an "h2" tag containing a name.
+### `ngIf` ディレクティブ
+それぞれのディレクティブを `ngIf` から開始します。このディレクティブにより、ブール条件に基づいて要素を表示または非表示にすることができます。まず、名前を含む　"h2" タグを持つ "div" 要素を作成します。
 ```html
 <div>
   <h2>John</h2>
 </div>
 ```
-If we save this, our browser will render the name John. However, let’s say we have some type of boolean expression that we want to base the condition of the visibility of this "h2" tag on. For example, we are going to add a property called "isFirstName" and set it to false. In order to tell our div to be rendered when isFirstName equals true, we should use the following syntax `*ngIf = "isFirstName"`.
+これを保存すると、ブラウザーは John という名前をレンダリングします。ただし、この "h2" タグの可視性の条件を基にしたいブール型の式があるとします。たとえば、「isFirstName」というプロパティを追加して、false に設定します。isFirstName が true に等しいときに div がレンダリングされるようにするには、次の構文 `*ngIf = "isFirstName"` を使用する必要があります。
 ```typescript
 public isFirstName = false;
 ```
@@ -28,9 +29,9 @@ public isFirstName = false;
   <h2>John</h2>
 </div>
 ```
-Once we save the files, and because isFirstName is false, we will see that the name is no longer rendered in the browser. However, if we were to update isFirstName to be true, the "John" first name will be rendered in the browser. If we set isFirstName back to false, we'll notice that the first name is no longer rendered in our browser, instead it's empty. That's the default behavior of the `ngif` statement - if the expression is true we render the provided template otherwise it's empty.
+ファイルを保存すると、isFirstName が false であるため、名前がブラウザーに表示されなくなっていることがわかります。ただし、isFirstName を更新して true にすると、「John」という名がブラウザーに表示されます。isFirstName を false に戻すと、ブラウザーで名が表示されなくなり、空になります。これが `ngif` ステートメントのデフォルトの動作です-式が true の場合、提供されたテンプレートをレンダリングします。それ以外の場合は空です。
 
-If we were to achieve the same behavior with WPF, we would need to use a visibility converter. The code would look similar to the following:
+WPF で同じ動作を実現する場合、可視性コンバーターを使用する必要があります。以下の画像にような結果になります。
 ```cs
 public bool IsFirstName { get; set; }
 public Sample()
@@ -48,9 +49,9 @@ public Sample()
   <Label Visibility="{Binding Path=IsFirstName, Converter={StaticResource VisibleIfTrueConverter}}">John</Label>
 </Grid>
 ```
-In Angular, it is a lot easier and more straightforward. 
+Angular では、非常に簡単でわかりやすいです。 
 
-Let's create a requirement that states if the `isFirstName` property is false we want to provide a last name instead. To do that we're going to take advantage of the "else" clause of the `ngIf` directive. Let's start by creating an `ng-template` defining an "h2" tag which contains the last name. An `ng-template` is simply a placeholder that allows us to define content that is not part of the DOM, but can be added via code such as using the `ngIf` directive. But, in order to use this in the directive, we need to give it a template reference variable name such as "lastname". Now that we have named our `ng-template`, let's go into our `ngIf` directive, add "**; else lastname**" and save this. Because "isFirstName" is false, we are saying **else use the lastname**, which means are using the template with the last name.
+`isFirstName` プロパティが false の場合、代わりに姓を提供する要件を作成しましょう。そのために、`ngIf` ディレクティブの "else" 句を利用します。姓を含む "h2" タグを定義する `ng-template` を作成することから始めましょう。`ng-template` は、DOM の一部ではないコンテンツを定義できるようにする単なるプレースホルダーですが、`ngIf` ディレクティブを使用するなどのコードを介して追加できます。ただし、ディレクティブでこれを使用するには、"lastname" などのテンプレート参照変数名を指定する必要があります。`ng-template` に名前を付けたので、`ngIf` ディレクティブに進み、**; else lastname** を追加して保存します。「isFirstName」は false であるため、**姓を使用する**と言います。これは、姓を持つテンプレートを使用することを意味します。
 
 ```html
 <div *ngIf="isFirstName; else lastname">
@@ -60,7 +61,7 @@ Let's create a requirement that states if the `isFirstName` property is false we
   <h2>Doe</h2>
 </ng-template>
 ```
-Now, another way we can write this is we can say "**isFirstName; then firstname; else lastname**". So in order to do that, we need to create another template called "firstname".
+これを記述する別の方法は、**isFirstName; then firstname; else lastname** です。そのためには、"firstname" という別のテンプレートを作成する必要があります。
 
 ```html
 <div *ngIf="isFirstName; then firstname; else lastname">
@@ -72,11 +73,11 @@ Now, another way we can write this is we can say "**isFirstName; then firstname;
   <h2>Doe</h2>
 </ng-template>
 ```
-If we change "isFirstName" to true, the first name will be rendered in the browser. And one final tip on using the `ngIf` directive is that the expression is not limited to a single property - you can actually use multiple properties and/or functions as long as the expression as a whole returns a boolean result. For example we can even use logical operators such as `" && isValid || getIsValidName()"`.
+"isFirstName" を true に変更すると、ブラウザーに名が表示されます。`ngIf` ディレクティブの使用に関する最後のヒントは、式が単一のプロパティに限定されないことです。式が全体としてブール値の結果を返す限り、実際には複数のプロパティや関数を使用できます。たとえば、 `" && isValid || getIsValidName()"` などの論理演算子を使用することもできます .
 
-### `ngSwitch` Directive
-The next directive we will discuss is the `ngSwitch` directive. This allows us to compare one expression to multiple expressions to decide which templates to add or remove.
-Let’s say we have "h2" elements that represent makes of cars – Chevy, Ford and GMC. We would like to display only one of these items based on a value of a "make" property which we have defined in our typescript file with a default value of "Chevy". To achieve this we need to use the `ngSwitch` directive with the following syntax `[ngSwitch] = expression` where expression is our "make" property. Adding this to the "div" element wrapping the "h2" tags is not enough. Like in WPF, we need to add some "case" statements to each "h2" element. The syntax for that is `*ngSwitchCase = expression`. In this case, we are comparing directly against text, so we will add single quotes around the value which means that the final result would be `*ngSwitchCase = "'Chevy'"` /similar for the other two values/.
+### `ngSwitch` ディレクティブ
+次に説明するディレクティブは、`ngSwitch` ディレクティブです。これにより、1 つの式を複数の式と比較して、追加または削除するテンプレートを決定できます。
+シェビー、フォード、GMC といった自動車のメーカーを表す "h2" 要素があるとします。typescript ファイルでデフォルト値 "Chevy" を定義した "make" プロパティの値に基づいて、これらの項目の 1 つだけを表示したいと思います。これを実現するには、次の構文 `[ngSwitch] = expression` で `ngSwitch` ディレクティブを使用する必要があります。ここで、expression は "make" プロパティです。"h2" タグをラップする "div" 要素にこれを追加するだけでは不十分です。WPF の場合と同様に、各 "h2" 要素にいくつかの  "case" ステートメントを追加する必要があります。そのための構文は `*ngSwitchCase = expression` です。この場合、テキストと直接比較するため、値を単一引用符で囲みます。これは、最終結果が `*ngSwitchCase = "'Chevy'"` /他の2つの値/と同様であることを意味します。
 
 ```typescript
 make = "Chevy";
@@ -89,16 +90,16 @@ make = "Chevy";
   <h2 *ngSwitchCase="'GMC'">GMC</h2>
 </div>
 ```
-Once we save that, we are only going to see the Chevy option rendered in the browser because the value of our "make" property is set to "Chevy". If we change it, to say "GMC", and save that, only the GMC option will be rendered in the browser. Now, what happens if we add an option that is not available, say the "Lambo". Nothing would be rendered because that did not match any of our conditions. When we normally use a switch statement inside of C#, we have not only the case but also default value. The same is available in Angular – we can add another option with the "Not Found" text and mark it with the `*ngSwitchDefault` which will act as the default value if none of the other values are found.
+これを保存すると "make" プロパティの値が "Chevy" に設定されているため、ブラウザに表示されるのは "Chevy" オプションのみです。"GMC" へ変更して保存すると、GMC オプションのみがブラウザーにレンダリングされます。たとえば利用できないオプションの "Lambo" を追加すると、条件に一致しないため何もレンダリングされません。  通常、C# 内で switch ステートメントを使用する場合、case だけでなくデフォルト値もあります。同じことが Angular でも利用可能です。「Not Found」テキストを含む別のオプションを追加し、他の値が見つからない場合にデフォルト値として機能する `*ngSwitchDefault` でマークすることができます。
 
 ```html
 <h2 *ngSwitchDefault>Not Found</h2>
 ```
-In this case, if we are looking for Lambo, we don't have the Lambo option, so we switch to the default case which is “Not found”, and “Not found” is rendered in our browser. One thing we need to point out is that these are expressions so we can use even a function as long as it returns a result that matches the expression we are passing in. Pretty simple!
+この場合、Lambo を探している場合は Lambo オプションがないため、デフォルトのケース “Not found” に切り替え、“Not found” がブラウザーにレンダリングされます。重要点の 1 つとして、これらが式であるため、渡す式に一致する結果が返される限り、関数を使用できることです。
 
-### `ngFor` Directive
+### `ngFor` ディレクティブ
 
-Next up is the `ngFor` directive. This directive allows us to iterate through a collection of objects and add a template for each item in that collection. Let's start by adding a collection of objects in our typescript file. We are going to call this an array of makes and add Chevy, Ford, GMC and Dodge. Next we will create a "div" and for each "div" we're going to create an "h2" tag that lists out the name of that make. To do that we are going to use the `ngFor` directive - the syntax for that `*ngFor="let make of makes"`. That provides us the ability to use interpolation to use the "make" property that is defined via the "let make" portion of the expression and print that out in the "h2" tag.
+次は `ngFor` ディレクティブです。このディレクティブにより、オブジェクトのコレクションを反復処理し、そのコレクション内の各アイテムにテンプレートを追加できます。はじめに typescript ファイルにオブジェクトのコレクションを追加します。これをメーカーの配列と呼び、シェビー、フォード、GMC、ダッジを追加します。次に、"div" を作成し、"div" ごとに、その make の名前をリストする "h2" タグを作成します。そのために、`ngFor` ディレクティブ (`*ngFor="let make of makes"` の構文) を使用します。これにより、補間を使用して、式の "let make" 部分で定義された "make" プロパティを使用し、"h2" タグに出力することができます。
 ```typescript
 makes = ["Chevy", "Ford", "GMC", "Dodge"];
 ```
@@ -107,43 +108,43 @@ makes = ["Chevy", "Ford", "GMC", "Dodge"];
   <h2>{{ make }}</h2>
 </div>
 ```
-If all went well, we should see that for each item in that array we are using an h2 tag to represent that in the browser. In addition, the `ngFor` directive provides a few helper items that allow us to get more information about that collection such as:
--	"index as i" - allows us to determine what the index of each item is
+正しく設定された場合、その配列内の各項目に対してブラウザーで表すために h2 タグを使用していることがわかります。さらに、`ngFor` ディレクティブは、次のようなそのコレクションに関する詳細情報を取得できるいくつかのヘルパー アイテムを提供します。
+-	"index as i" - 各項目のインデックスを決定。
 
 ```html
 <div *ngFor="let make of makes; index as i">
   <h2>{{ i }} - {{ make }}</h2>
 </div>
 ```
--	"first as f" - allows us to get whether the item is the first one in the collection
+-	"first as f" - 項目がコレクションの最初のものかどうかを取得。
 
 ```html
 <div *ngFor="let make of makes; first as f">
   <h2>{{ f }} - {{ make }}</h2>
 </div>
 ```
--	"last as l" - you can also get the last row or the last item in the collection
+-	"last as l" - コレクションの最後の行または最後のアイテムを取得。
 
 ```html
 <div *ngFor="let make of makes; last as l">
   <h2>{{ l }} - {{ make }}</h2>
 </div>
 ```
--	"odd as o" or "even as e" - allow us to determine if the item in the collection is in an odd position or an even position
+-	"odd as o" または "even as e" - コレクション内のアイテムが奇数位置にあるか偶数位置にあるかを判別できます。
 
 ```html
 <div *ngFor="let make of makes; odd as o">
   <h2>{{ o }} - {{ make }}</h2>
 </div>
 ```
-That's how easy it is to add and remove elements to your view in your angular application - just use a structural directive and you are done.
+このように構造ディレクティブを使用して Angular アプリケーションでビューに要素を簡単に追加したり削除したりできます。
 
-## Additional Resources
-* [Desktop to Web: Structural Directives in Angular](https://www.youtube.com/watch?v=vQe7R78Od8k&t)
-* [Angular Structural Directives](https://angular.io/guide/structural-directives)
+## その他のリソース
+* [デスクトップから Web: Angular の構造ディレクティブ](https://www.youtube.com/watch?v=vQe7R78Od8k&t)
+* [Angular 構造ディレクティブ](https://angular.io/guide/structural-directives)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

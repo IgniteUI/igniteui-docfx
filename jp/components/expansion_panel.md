@@ -1,28 +1,29 @@
 ---
-title: 展開パネル
-_description: 2 つのステート (縮小と展開) をサポートする簡単に構成できるコンポーネントです。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ,, Angular 縮小可能なコンポーネント, IgxExpansionPanel, Ignite UI  展開パネル
+title: Angular Panel |Expandable |Ignite UI for Angular |Infragistics
+_description: Angular アコーディオン/マテリアル拡張パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
+_keywords: angular accordion, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
 ## 展開パネル
 <p class="highlight">
-[`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は軽量なコンポーネントで 2 つのステート (縮小と展開) で描画できます。縮小時はパネルでコンテンツの短い概要を表示します。縮小パネルはマウスクリックで切り替えできます。またはキーボード インタラクションで必要なコンテンツを含むボディを完全に表示します。
+
+[igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、Angular アコーディオンの軽量なコンポーネントで、2 つの状態 (折りたたみまたは展開) でレンダリングできます。折りたたむと、展開にはコンテンツの概要が表示されます。折りたたまれたマテリアル拡張パネルは、マウス クリックまたはキーボード操作を使用して切り替えることができ、必要な追加コンテンツを含むボディ全体を表示できます。
 </p>
 <div class="divider--half"></div>
 
-### 展開パネルデモ
+### 展開パネル デモ
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ## 使用方法
 ### 作業の開始
-[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用する場合、**IgxExpansionPanelModule** を **app.module** にインポートする必要があります。
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用するには、**app.module** に **IgxExpansionPanelModule** をインポートする必要があります。
 ```typescript
 // app.module.ts
 
@@ -37,11 +38,11 @@ import { IgxExpansionPanelModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にマークアップの `Igx-expansion-panel` を使用します。展開パネルは以下のようにシンプルな構造です。
-- `Igx-expansion-panel` - ヘッダーとボディを格納するコンポーネント ホスト。
-    - `igx-expansion-panel-header` - コンポーネントヘッダーを格納。常に表示されます。タイトルと説明、追加のコンテンツを保存します。
-        - `igx-expansion-panel-title` - コンポーネントのタイトルを保存します。デフォルトスタイルを持つ。タイトルは常に最初にヘッダー コンテンツに表示されます (`iconPosition === 'left'` の場合はアイコンの後)。Aria ラベルで使用。
-        - `igx-expansion-panel-description` - コンポーネントの概要を保存します。短い概要を提供するために使用できます。説明は常にタイトルの後に表示されます (タイトルを設定した場合)。
+次にマークアップで `igx-expansion-panel` を使用します。展開パネルは以下のようにシンプルな構造です。
+- `igx-expansion-panel` - ヘッダーとボディを格納するコンポーネント ホスト。
+    - `igx-expansion-panel-header` - コンポーネント ヘッダーを格納。常に表示されます。タイトルと説明、追加のコンテンツを保存します。
+        - `igx-expansion-panel-title` - コンポーネントのタイトルを保存します。デフォルト スタイルがあります。タイトルは常に最初にヘッダー コンテンツに表示されます (`iconPosition === 'left'` の場合はアイコンの後)。Aria ラベルで使用。
+        - `igx-expansion-panel-description` - コンポーネントの説明を保存します。短い概要を提供するために使用できます。説明は常にタイトルの後に表示されます (タイトルを設定した場合)。
     - `igx-expansion-panel-body` - コンポーネントのボディを保存します。コンポーネントのこの部分は、パネルの展開時のみ表示されます。
 
 以下の例では、hummingbird についての情報を保持する縮小可能なコンポーネントを作成できます。
@@ -59,49 +60,27 @@ export class AppModule {}
     <igx-expansion-panel-body>
         <p>
             Hummingbirds are birds native to the Americas that constitute the family Trochilidae.
-            They are among the smallest of birds, most species measuring 7.5–13 cm (3–5 in) in length.
+            They are among the smallest of birds, most species measuring 7.5â€“13 cm (3â€“5 in) in length.
             Indeed, the smallest extant bird species is a hummingbird, the 5 cm (2.0 in) bee hummingbird weighing less
             than 2.0 g (0.07 oz).
         </p>
-        <a href="https://en.wikipedia.org/wiki/Hummingbird" target="_blank">Read more</a>
+        <a href="https://en.wikipedia.org/wiki/Hummingbird" target="_blank" rel="nofollow" title="Hummingbird">Read more</a>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
 
 ```
-[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)  は、コンポーネントにスタイル設定できる [`.igx-expansion-panel`]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) クラスを公開します。
-
-```css
-<!-- expansion-panel.component.css -->
-
-.igx-expansion-panel {
-    font-family: Verdana;
-    margin: 24px;
-    width: 420px;
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .26), 0 2px 2px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .08);
-}
-
-.igx-expansion-panel__header--expanded {
-    border-bottom: 1px dashed rgba(0, 0, 0, .74);
-}
-
-.igx-expansion-panel__body > * {
-    padding: 8px 16px;
-}
-```
-
-css クラスの `.igx-expansion-panel__ ヘッダーと `.igx-expansion-panel__body` は、ヘッダーとボディのスタイル設定を公開します。
 
 以下は結果です。
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### プロパティとイベントへバインドします。
 
-ロジックをコンポーネントに追加してパネルの状態に基づいて説明を表示/非表示にします。これには、説明をコントロール [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) へバインドします。
+ロジックをコンポーネントに追加してパネルの状態に基づいて説明を表示/非表示にします。これには、コントロールの [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) プロパティに説明をバインドします。
 
 ```typescript
 // in expansion-panel.component.ts
@@ -151,14 +130,74 @@ export class ExpansionPanelComponent {
     <iframe id="expansion-sample-2-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+### コンテキストの追加
+
+コンポーネントの[`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.md) を使用して展開パネルのインナー コンテンツを更新できます。
+はじめに、**app.module.ts** に `IgxAvatarModule` をインポートする必要があります。
+```typescript
+// in app.module.ts
+import { IgxExpansionPanelModule, IgxAvatarModule } from 'igniteui-angular';
+
+NgModule({
+    imports: [
+        ...
+        IgxAvatarModule
+        ...
+    ],
+    ...
+})
+```
+インポート後、マークアップでアバターを使用できます。
+
+```html
+<!-- in expansion-panel.component.html -->
+...
+<igx-expansion-panel-body>
+    <div>
+            <igx-avatar [src]="imgSource" roundShape="true" size="large">
+            </igx-avatar>
+        </div>
+        <p>
+            Hummingbirds are birds native to the Americas that constitute the family Trochilidae. They are among
+            the smallest of birds,
+            most species measuring 7.5â€“13 cm (3â€“5 in) in length. Indeed, the smallest extant bird species is a
+            hummingbird,
+            the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
+        </p>
+        <a [href]="readMore" target="_blank" rel="nofollow" title="Hummingbird">Read more</a>
+</igx-expansion-panel-body>
+...
+```
+コンポーネント定義に画像ソースを追加するだけで、簡単に変更できます。
+```typescript
+// in expansion-panel.component.html
+export class ExpansionPanelComponent {
+    ...
+    public imgSource = 'https://upload.wikimedia.org/wikipedia/commons/4/46/Purple-throated_carib_hummingbird_feeding.jpg';
+}
+```
+### 概要
+以下は、すべての変更を初期コンポーネントに適用後の最終的な結果です。
+<div class="sample-container loading" style="height: 550px;">
+    <iframe id="expansion-sample-3-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の拡張パネルもレンダリングできます。
+
+## スタイル設定
+拡張パネルには、本文のコンテンツに特定の境界線やパディングが定義されていません。拡張パネル本体要素のパディングを手動で設定するか、拡張パネル本体を `igxCard` でラップすることができます。後者については、[Weather Forecast (天気予報) サンプル](#weather-forecast-sample)をご覧ください。
+
 ### ヘッダーのスタイル設定
-[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、簡単にカスタマイズできます。
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用すると、[ヘッダー]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)を簡単にカスタマイズできます。
 コントロールのトグル状態のデフォルト アイコンをテンプレート化できます。このアイコンの位置は、ヘッダーの開始または終了に設定可能です。非表示にすることもできます。
 
-ヘッダー アイコンの位置は、`igx-expansion-panel-header` の [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) 入力で設定します。アイコンの配置に使用可能なオプションは、**left**、**right**、**none** です。次のコード サンプルは、コンポーネントのボタンを右側に設定する方法です。
+ヘッダーアイコンの位置を構成するには、は、`igx-expansion-panel-header` の [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) 入力を使​​用します。アイコンの位置の可能なオプションは、**left**、**right**、**none** です。次のコードサンプルは、コンポーネントのボタンが右側に移動するように構成する方法を示しています。
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -192,62 +231,83 @@ export class ExpansionPanelComponent {
 }
 ```
 このコンポーネントは、パネルの縮小時と完全に展開した後に「更に表示」を描画します。
-### コンテキストの追加
 
-コンポーネントの [`igx-expansion-panel-body`]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html) タグはすべてのマークアップを受け取り、`ng-content` プロジェクションですべてを描画します。[`IgxAvatar`](avatar.md) を使用して展開パネルのインナー コンテンツを更新できます。
-はじめに `IgxAvatarModule` を **app.module.ts** にインポートします。
-```typescript
-// in app.module.ts
-import { IgxExpansionPanelModule, IgxAvatarModule } from 'igniteui-angular';
+### テーマのインポート
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-expansion-panel** の外観を変更できます。次に、より安定する方法でカスタマイズします。
 
-NgModule({
-    imports: [
-        ...
-        IgxAvatarModule
-        ...
-    ],
-    ...
-})
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+
+```scss
+// in styles.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-インポート後、マークアップでアバターを使用できます。
 
-```html
-<!-- in expansion-panel.component.html -->
-...
-<igx-expansion-panel-body>
-    <div>
-            <igx-avatar [src]="imgSource" roundShape="true" size="large">
-            </igx-avatar>
-        </div>
-        <p>
-            Hummingbirds are birds native to the Americas that constitute the family Trochilidae. They are among
-            the smallest of birds,
-            most species measuring 7.5–13 cm (3–5 in) in length. Indeed, the smallest extant bird species is a
-            hummingbird,
-            the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
-        </p>
-        <a [href]="readMore" target="_blank">Read more</a>
-</igx-expansion-panel-body>
-...
+### パレットと色の定義
+`index` ファイルをインポート後、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用するメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、`igx-expansion-panel` スタイルにこれらを使用します。
+はじめにカスタム パレットを定義し、メイン カラーを渡します。
+```scss
+// in styles.scss
+$my-primary-color:#72da67;
+$my-secondary-color: #7344df81;
+$my-info-color:rgba(0, 0, 0, 0.54)
+
+$my-color-palette: igx-palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color,
+    $info: $my-info-color
+);
 ```
-画像ソースを追加する必要があります。
-```typescript
-// in expansion-panel.component.html
-export class ExpansionPanelComponent {
-    ...
-    public imgSource = 'https://upload.wikimedia.org/wikipedia/commons/4/46/Purple-throated_carib_hummingbird_feeding.jpg';
+
+カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
+次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの `igx-expansion-panel-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
+```scss
+// in styles.scss
+$custom-panel-theme: igx-expansion-panel-theme(
+    $palette: $my-color-palette,
+    $header-background: igx-color($my-color-palette, "primary", 200),
+    $header-focus-background: igx-color($my-color-palette, "primary", 300),
+    $header-title-color: igx-color($my-color-palette, "info"),
+    $header-icon-color: igx-color($my-color-palette, "info"),
+    $body-background: igx-color($my-color-palette, "secondary", 100),
+    $border-radius: 0.35em
+);
+```
+
+### 適用
+あとは新しく作成したテーマを適切にスコープするだけです。
+
+#### グローバル
+この新しく作成された `igx-expansion-panel テーマ`をアプリに [`グローバル`](themes/component-themes.md#creating-themes) に適用する場合、必要なのは、アプリのルート スタイル ファイルにテーマを含め、[igx-expansion-panel mixin]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) に渡すだけです。
+```scss
+// in styles.scss
+// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
+@include igx-expansion-panel($custom-panel-theme);
+```
+#### スコープ
+特定の `igx-expansion-panel` をアプリ内で異なるスタイルにしたい場合、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、上記のすべての手順を `styles.scss` から `component.scss` ファイルに移動する必要があります。 
+
+ >[!NOTE]
+ >コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ 一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+
+```scss
+// in component.scss
+:host {
+    ::ng-deep {
+        // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
+        @include igx-expansion-panel($custom-panel-theme);
+    }
 }
 ```
-### まとめ
-以下は、すべての変更を初期コンポーネントに適用後の最終的な結果です。
-<div class="sample-container loading" style="height: 550px;">
-    <iframe id="expansion-sample-3-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
+### デモのスタイル設定
+
+以下のサンプルで結果を確認できます。
+<div class="sample-container loading" style="height: 300px;">
+    <iframe id="expansion-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
-
-`IgxExpansionPanel` コントロールは、すべてのコンテンツの並べ替え[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、更に他の展開パネルも描画できます。
 
 ## アニメーションの使用
 ### 特定のアニメーションの使用
@@ -292,7 +352,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-[**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) と [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用し、コンポーネントのコンテンツを左側から動的に表示してコンテンツを縮小したときに右側で消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
+[**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/index.html#animations) の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
 
 サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します。
 `[animationSettings] = "animationSettingsCustom"`
@@ -341,11 +401,11 @@ export class ExpansionPanelComponent {
     <iframe id="expansion-sample-6-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-6" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### 複数パネルの場合
-以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルは、インビルト アニメーションのデフォルトの `growVerIn` と `growVerOut` アニメーションを使用するため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して[`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
+以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルでは、​​ビルトイン アニメーション スイートのデフォルトの `growVerIn` と `growVerOut` アニメーションが使用されるため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
 
 ```typescript
 // in expansion-panel.component.ts
@@ -518,12 +578,11 @@ export class ExpansionPanelComponent {
     <iframe id="expansion-sample-5-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ## 天気予報のサンプル
-
-以下のサンプルは、[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) に加え、[`IgxCard`](card.md) や [`IgxIcon`](icon.md) など、その他複数のコンポーネントを使用しています。ここでは、今日の気温や天気の状態、更に予報の詳細を表示する天気のコンポーネントを作成します。必要に応じてユーザーが更に展開でき、次の数日間の天気を表示できます。
+以下は、[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を [`IgxCard`](card.md) や [`IgxIcon`](icon.md) などの他のいくつかのコンポーネントと組み合わせて使用​​して、特定のタスクを実現することを示しています。ここでは、今日の気温や天気の状態、更に予報の詳細を表示する天気のコンポーネントを作成します。必要に応じてユーザーが更に展開でき、次の数日間の天気を表示できます。
 
 ```typescript
 // in weather-forecast.component.ts
@@ -557,7 +616,7 @@ export class WeatherForecast {
     <igx-card-content>
       <div class="weather__main" *ngIf=data>
         <div class="weather__main-temp">
-          <div>{{data.today.tempMax}}°<sup>C</sup></div>
+          <div>{{data.today.tempMax}}Â°<sup>C</sup></div>
           <div class="right"><igx-icon color="orange" fontSet="fas" name="fa-sun"></igx-icon></div>
         </div>
         <div class="weather__main-hum">
@@ -573,7 +632,7 @@ export class WeatherForecast {
               <div>{{day.name}}</div>
               <div class="right">
                 <igx-icon [color]="day.iconColor" fontSet="fas" [name]="day.iconName" font-size="1em"></igx-icon>
-                {{day.tempMin}}°/{{day.tempMax}}°
+                {{day.tempMin}}Â°/{{day.tempMax}}Â°
               </div>
             </div>
           </div>
@@ -612,7 +671,6 @@ export const data = {
     //...
   ]
 };
-
 ```
 
 以下は結果です。
@@ -620,7 +678,7 @@ export const data = {
     <iframe id="expansion-sample-7-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-7" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ## API リファレンス
@@ -628,4 +686,3 @@ export const data = {
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
 * [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
-

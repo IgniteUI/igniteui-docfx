@@ -44,6 +44,100 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+### From 8.1.x to 8.2.x
+
+* IgxDrag
+    * Since `hideBaseOnDrag` and `visible` inputs are being deprecated, in order to achieve the same functionality in your application, you can use any way of hiding the base element that Angular provides. One example is setting the `visibility` style to `hidden`, since it will only make in invisible and keep its space that it takes in the DOM:
+
+        ```html
+        <div igxDrag [ngStyle]="{ 'visibility': targetDragged ? 'hidden' : 'visible' }"
+            (dragStart)="onDragStarted($event)" (dragEnd)="onDragEnded($event)">
+            Drag me!
+        </div>
+        ```
+
+        ```typescript
+        public targetDragged = false;
+
+        public onDragStarted(event) {
+            this.targetDragged = true;
+        }
+
+        public onDragEnded(event) {
+            this.targetDragged = false;
+        }
+        ```
+
+    * Since `animateOnRelease` and `dropFinished()` are also being deprecated, any `dropFinished()` method usage should be replaced with `transitionToOrigin()`. Otherwise you would need to call `transitionToOrigin()` depending on when you would want the dragged element to transition back to its original location. Note that  if the dragged element DOM position is changed, then its original location will also change based on that.
+
+* IgxDrop
+    * Due to the default drop strategy provided with the `IxgDrop` directive is no longer applied by default, in order to continue having the same behavior, you need to set the new input `dropStrategy` to be the provided `IgxAppendDropStrategy` implementation.
+
+        ```html
+        <div igxDrop [dropStrategy]="appendStrategy"></div>
+        ```
+        ```typescript
+        import { IgxAppendDropStrategy } from 'igniteui-angular';
+
+        public appendStrategy = IgxAppendDropStrategy;
+        ```
+    * Any use of interfaces `IgxDropEnterEventArgs` and `IgxDropLeaveEventArgs` should be replaced with `IDragBaseEventArgs`.
+    * Also any use of the  `IgxDropEventArgs` interface should be replaced with `IDropDroppedEventArgs`.
+
+* IgxRowDragDirective 
+    * `IRowDragStartEventArgs` and `IRowDragEndEventArgs` have argument's name changed in order to be more clear to what it relates to. `owner` argument is renamed to `dragDirective`.
+    The `owner` argument now provides a reference to the owner component. If your code was like:
+        ```typescript
+        public dragStart(event) {
+            const directive = event.owner;
+        }
+        ```
+        From version 8.2.x it should be updated to:
+        ```typescript
+        public dragStart(event) {
+            const directive = event.dragDirective;
+            const grid = event.owner;
+        }
+        ```
+
+* IgxCombo
+    * The way that the [`igx-combo`](../combo.md) handles selection and data binding is changed.
+
+    - If the combo's [`valueKey`] input is defined, the control will look for that specific property in the passed array of data items when performing selection.
+    **All** selection events are handled with the value of the data items' `valueKey` property.
+    All combos that have `valueKey` specified should have their selection/two-way binding consist only of the values for the object property specified in the input:
+    ```html
+    <igx-combo [data]="cities" valueKey="id" displayKey="name"></igx-combo>
+    ```
+    ```typescript
+    export class MyExampleCombo {
+        public data: { name: string, id: string }[] = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01' }, ...];
+        ...
+        selectFavorites() {
+            // Selection is handled with the data entries' id properties
+            this.combo.selectItems(['UK01', 'BG01']);
+        }
+    }
+    ```
+
+    - If the combo **does not** have a `valueKey` defined, **all** selection events are handled with **equality (===)**.
+    All combos that **do not** have a `valueKey` specified should have their selection/two-way binding handled with **references** to their data items:
+    ```html
+    <igx-combo [data]="cities" displayKey="name"></igx-combo>
+    ```
+    ```typescript
+    export class MyExampleCombo {
+        public data: { name: string, id: string }[] = [{ name: 'London', id: 'UK01' }, { name: 'Sofia', id: 'BG01' }, ...];
+        ...
+        selectFavorites() {
+            // Selection is handled with references to the data entries
+            this.combo.selectItems([this.data[0], this.data[1]]);
+        }
+    }
+    ```
+
+    You can read more about setting up the combo in the [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection).
+
 ### From 8.0.x to 8.1.x
 * The `igx-paginator` component is introduced as a standalone component and is also used in the Grid components.
 Keep in mind that if you have set the `paginationTemplate`, you may have to modify your CSS to display the pagination correctly. This is due to the fact that the template is no longer applied under a paging-specific container with CSS rules to center content, so you might need to add them manually.

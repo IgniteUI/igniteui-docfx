@@ -114,6 +114,105 @@ export class AppModule {}
 > [!NOTE]
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
+### スタイル設定
+igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md) でスタイルを設定できます。リップルの [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) は、エフェクトの色をカスタマイズできるプロパティを公開します。        
+
+#### グローバル テーマのインポート
+事前定義されたリップルカラーのスタイリングを開始するには、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。  
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```   
+
+#### カスタム テーマの定義
+次に、[`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
+
+```scss
+$custom-theme: igx-ripple-theme(
+  $color: #FFCD0F
+);
+```   
+
+#### カスタム カラー パレットの定義
+上記の方法では、色の値はハードコードされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
+
+```scss
+$black-color: #494949;
+$yellow-color: #ffcd0f;
+
+$custom-palette: igx-palette(
+    $primary: $black-color,
+    $secondary: $yellow-color
+);
+```   
+
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
+
+```scss
+$custom-theme: igx-ripple-theme(
+    $color: igx-color($custom-palette, "secondary", 500)
+);
+```
+
+#### カスタム スキーマの定義
+[**schema**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_dark_ripple` を使用します。   
+
+```scss
+$custom-ripple-schema: extend($_dark-ripple, (
+    color: (igx-color("secondary", 500))
+));
+```   
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
+
+```scss
+$my-custom-schema: extend($dark-schema, (
+    igx-ripple: $custom-ripple-schema
+));
+
+$custom-theme: igx-ripple-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### カスタム テーマの適用
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
+```scss
+@include igx-ripple($custom-theme);
+```
+
+#### スコープ コンポーネント テーマ
+
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
+
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
+
+ >[!NOTE]
+ >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >[!NOTE]
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-ripple($custom-theme);
+    }
+}
+```    
+
+>[!NOTE]
+  > `igxRiple` ディレクティブを使用して設定される色は、カスタム テーマ内で設定される色よりも優先されます。  
+
+#### デモ
+<div class="sample-container loading" style="height:700px">
+    <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+
 ### API リファレンス
 <div class="divider--half"></div>
 

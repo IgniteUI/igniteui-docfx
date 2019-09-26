@@ -1,218 +1,49 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+title: Angular Grid Data Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to select data in the Ignite UI Angular Material Table by using variety of events, rich API or with simple mouse interactions like single select
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+title: Angular Tree Grid Data Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to select data in the Ignite UI Angular Material Table by using variety of events, rich API or with simple mouse interactions like single select
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+title: Angular Hierarchical Grid Data Selection | Ignite UI for Angular | infragistics 
+_description: Check how easy it is to select data in the Ignite UI Angular Material Table by using variety of events, rich API or with simple mouse interactions like single select
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+### @@igComponent Selection Overview
 
-### @@igComponent Мulti-cell Selection and Row Selection
+IgniteUI for Angular @@igComponent component provides two different selection modes - [Row selection](row_selection.md) and [Cell selection](cell_selection.md). The default selection mode of the grid is Multi-cell selection, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) properties.
 
-Multi-cell selection enables range data selection in the @@igComponent. Variety of multi-cell selection capabilities are available:
-- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
-- By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
-- Instant multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
-- Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
-- Keyboard multi-cell selection by using the `Ctrl + Arrow keys` and `Ctrl + Home/End` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
-- Clicking with the `Left Mouse key` while holding `Ctrl key` will add single cell ranges into the selected cells collection.
-- Continuous multiple cell selection is available, by clicking with the mouse and dragging. 
+Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
+- none - Row selection would be disabled for the @@igComponent
+- single - Selection of only one row within the @@igComponent would be available
+- multiple - multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused
 
-#### Demo
+> Go to [Row selection topic](row_selection.md) for more information.
 
-}
+Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) enables you to specify the following options:
+- none - Cell selection would be disabled for the @@igComponent
+- single - Selection of only one cell within the @@igComponent would be available.
+- multiple - Currently, this is the default state of the selection in the @@igComponent. Multi-cell selection is available by mouse dragging over the cells, after a left button mouse clicked continuously.
 
-@@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:700px">
-    <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:700px">
-    <iframe id="tree-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
+> Go to [Cell selection topic](cell_selection.md) for more information.
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
-#### Keyboard navigation interactions
-
-##### While Shift key is pressed
-- <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to add above cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to add left cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to add right cell to the current selection.
-
-##### While Ctrl + Shift keys are pressed
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to select all cells below the focused cell in the column.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select all cells till the start of the row.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to select all cells till the end of the row.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> to select all cells from the focused cell till the first-most cell in the grid
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> to select all cells from the focused cell till the last-most cell in the grid
-
-> [!NOTE] 
-> Continuous scroll is possible only within Grid's body.
-
-### Api usage
-Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
-
-##### Select range
-
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value. 
-
-```typescript
-const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
-this.grid1.selectRange(range);
-...
-
-const range = { rowStart: 0, rowEnd: 2, columnStart: 'Name', columnEnd: 'ParentID' };
-this.grid1.selectRange(range);
-
-```
-
-> [!NOTE] 
-> Select range is additive operation. It will not clear your previous selection.
-
-##### Clear cell selection
-
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) will clear the current cell selection.
-
-##### Get selected data
-
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return array of the selected data in format depending on the selection. Examples below:
-
-1. If three different single cells are selected:
-```
-expectedData = [
-    { CompanyName: "Infragistics" },
-    { Name: "Michael Langdon" },
-    { ParentID: 147 }
-];
-```
-		
-2. If three cells from one column are selected:
-```
-expectedData = [
-    { Address: "Obere Str. 57"},
-    { Address: "Avda. de la Constitución 2222"},
-    { Address: "Mataderos 2312"}
-];
-```
-
-3. If three cells are selected with mouse drag from one row and three columns:
-```
-expectedData = [
-    { Address: "Avda. de la Constitución 2222", City: "México D.F.", ContactTitle: "Owner" }
-];
-```
-
-4. If three cells are selected with mouse drag from two rows and three columns:
-```
-expectedData = [
-    { ContactTitle: "Sales Agent", Address: "Cerrito 333", City: "Buenos Aires"},
-    { ContactTitle: "Marketing Manager", Address: "Sierras de Granada 9993", City: "México D.F."}
-];
-```
-
-5. If two different ranges are selected:
-```
-expectedData = [
-    { ContactName: "Martín Sommer", ContactTitle: "Owner"},
-    { ContactName: "Laurence Lebihan", ContactTitle: "Owner"},
-    { Address: "23 Tsawassen Blvd.", City: "Tsawassen"},
-    { Address: "Fauntleroy Circus", City: "London"}
-];
-```
-
-6. If two overlapping ranges are selected, the format would be:
-```
-expectedData = [
-    { ContactName: "Diego Roel", ContactTitle: "Accounting Manager", Address: "C/ Moralzarzal, 86"},
-    { ContactName: "Martine Rancé", ContactTitle: "Assistant Sales Agent", Address: "184, chaussée de Tournai", City: "Lille"},
-    { ContactName: "Maria Larsson", ContactTitle: "Owner", Address: "Åkergatan 24", City: "Bräcke"},
-    { ContactTitle: "Marketing Manager", Address: "Berliner Platz 43", City: "München"}
-];
-```
-
-> [!NOTE] 
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return the selected cell data.
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
-
-
-### Features integration
-The multi-cell selection is index based (DOM elements selection).
-
-- `Sorting` - When sorting is performed selection will not be cleared. It will leave currently selected cells the same while sorting ascending or descending.
-- `Paging` - On paging selected cells will be cleared. Selection wont be persisted across pages.
-- `Filtering` - When filtering is performed selection will not be cleared. If filtering is cleared it will return - the initially selected cells.
-- `Resizing` - On column resizing selected cells will not be cleared.
-- `Hiding` - It will not clear the selected cells. If column is hidden, the cells from the next visible column will be selected.
-- `Pinning` - Selected cell will not be cleared. Same as hiding
-- `Group by` - On column grouping selected cells will not be cleared.
-
-}
-
-### @@igComponent Row Selection
-
-With row selection in Ignite UI for Angular, there is a checkbox that precedes all other columns within the row. When a user clicks on the checkbox, the row will either become selected or deselected, enabling the user to select multiple rows of data.  
-
-#### Demo
+### Showcase Applications
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:700px">
-    <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-selection-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:710px">
-    <iframe id="hierarchical-grid-selection-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
+#### Selection Based Summaries
 
-@@if (igxName === 'IgxGrid') {
-### Selection Based Summaries
-
-This sample demonstrates the usage of multiple selection along with custom summary functions. 
+This sample demonstrates the usage of multiple selection along with custom summary functions.
 Change the selection to see summaries of the currently selected range.
 
 <div class="sample-container loading" style="height: 560px;">
@@ -223,283 +54,8 @@ Change the selection to see summaries of the currently selected range.
 </div>
 }
 
-### Setup
-
-#### Single Selection
-
-The @@igComponent single selection can be easily setup using the @@igComponent's [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) event. The event emits a reference to the cell component. That cell component has a reference to the row component that is holding it. The row component reference [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) getter can be used to pass a unique identifier for the row (using either [`rowData[primaryKey]`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) or the [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) object itself) to the appropriate list of the selection. To make sure that only a single row is always selected, we empty the selection row selection list beforehand (the second argument in the [`selectRows`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectrows) method call):
-
-@@if (igxName === 'IgxGrid') {
-```html
-<!-- selectionExample.component.html -->
-
-<igx-grid #grid1 [data]="remote | async" [rowSelectable]="false" (onSelection)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-        ...
-</igx-grid>
-```
-```typescript
-/* selectionExample.component.ts */
-
-public handleRowSelection(args) {
-    const targetCell = args.cell as IgxGridCellComponent;
-    if (!this.selection) {
-        this.grid1.selectRows([targetCell.row.rowID], true);
-    }
-}
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<!-- selectionExample.component.html -->
-
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [height]="'530px'" width="100%"
-            [rowSelectable]="selection" [allowFiltering]="true" (onSelection)="handleRowSelection($event)">
-    ...
-</igx-tree-grid>
-```
-```typescript
-/* selectionExample.component.ts */
-
-public handleRowSelection(event) {
-    const targetCell = event.cell;
-    if (!this.selection) {
-        this.treeGrid.deselectAllRows();
-        this.treeGrid.selectRows([targetCell.row.rowID]);
-    }
-}
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelectable]="selection"
-        (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
-</igx-hierarchical-grid>
-```
-```typescript
-/* selectionExample.component.ts */
-
-    public handleRowSelection(event) {
-        const targetCell = event.cell;
-        if (!this.selection) {
-            this.hGrid.deselectAllRows();
-            this.hGrid.selectRows([targetCell.row.rowID]);
-        }
-    }
-```
-}
-
-#### Multiple Selection
-
-To enable multiple row selection, the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) exposes the [`rowSelectable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowselectable) property. Setting [`rowSelectable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowselectable) to `true` enables a select checkbox field on each row and in the @@igComponent header. The checkbox allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations such as sorting and filtering:
-
-@@if (igxName === 'IgxGrid') {
-```html
-<!-- selectionExample.component.html -->
-
-<igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-    ...
-</igx-grid>
-```
-
-```typescript
-/* selectionExample.component.ts */
-
-public selection = true;
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<!-- selectionExample.component.html -->
-
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [autoGenerate]="false" [rowSelectable]="selection" [allowFiltering]="true" (onSelection)="handleRowSelection($event)">
-    ...
-</igx-tree-grid>
-```
-
-```typescript
-/* selectionExample.component.ts */
-
-public selection = true;
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelectable]="selection"
-        (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
-</igx-hierarchical-grid>
-```
-```typescript
-/* selectionExample.component.ts */
-
-public selection = true;
-```
-}
-
-@@if (igxName !== 'IgxTreeGrid') {
-**Note:** In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
-}
-
-**Note:** If filtering is in place, [`selectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectallrows) and [`deselectAllRows()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectallrows) select/deselect all *filtered* rows.
-
-@@if (igxName !== 'IgxTreeGrid') {
-**Note:** When @@igComponent has remote virtualization then clicking the header checkbox will select/deselect all records. But when all records are selected through header checkbox and then a visible row has been deselected, when new data is loaded in the @@igComponent on demand, it is a limitation that the newly loaded rows are not selected.
-}
-
-**Note:** Cell selection will trigger [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) and not [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange).
-
-### Styling
-
-The theme engine exposes properties that allows us to style the range of selected cells.
-
-#### Import theme
-
-To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
-
-```scss
-// in component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
-
-#### Define colors
-
-Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
-```scss
-    $text-color: igx-contrast-color($default-palette, 'primary', 900);
-    $background-color: igx-color($default-palette, "primary", 900);
-    $border-yellow: #f2c43c;
-```
-
-#### Create custom theme
- 
-Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
-
-```scss
-$custom-grid-theme: igx-grid-theme(
-    $cell-selected-text-color: $text-color,
-    $cell-active-border-color: $border-yellow,
-    $cell-selected-background: $background-color
-);
-```
-
-#### Apply theme
-
-Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
-
-```scss
-    @include igx-grid($custom-grid-theme);
-```
-
- >[!NOTE]
- >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
- > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
-
- ```scss
-    :host { 
-        ::ng-deep {
-            @include igx-grid($custom-grid-theme);
-        }
-    }
-```
-
-
-With the custom theme applied, the selected grid cells are highlighted with our selected colors:
-
 @@if (igxName === 'IgxGrid'){
-#### Demo
-
-<div class="sample-container loading" style="height:620px">
-    <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-}
-
-@@if (igxName === 'IgxHierarchicalGrid'){
-#### Demo
-<div class="sample-container loading" style="height:620px">
-    <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>  
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
-</div>
-}
-
-
-@@if (igxName === 'IgxTreeGrid'){
-#### Demo
-<div class="sample-container loading" style="height:620px">
-    <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>  
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
-</div>
-}
-
-### Code Snippets
-
-#### Select rows programmatically
-
-The below code example can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)):
-
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
-```html
-<!-- selectionExample.component.html -->
-
-<@@igSelector ... [primaryKey]="'ID'">
-...
-</@@igSelector>
-...
-<button (click)="this.@@igObjectRef.selectRows([1,2,5])">Select 1,2 and 5</button>
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<!-- selectionExample.component.html -->
-
-<@@igSelector ... [primaryKey]="'artist'">
-...
-</@@igSelector>
-...
-<button (click)="this.@@igObjectRef.selectRows([1,2,5])">Select 1,2 and 5</button>
-```
-}
-
-This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the @@igComponent selection.
-
-#### Cancel selection event
-```html
-<!-- selectionExample.component.html -->
-
-<@@igSelector (onRowSelectionChange)="handleRowSelectionChange($event)">
-...
-</@@igSelector>
-```
-```typescript
-/* selectionExample.component.ts */
-
-public handleRowSelectionChange(args) {
-    args.newSelection = args.oldSelection; // overwrites the new selection, making it so that no new row(s) are entered in the selectionAPI
-    args.checked = false; // overwrites the checkbox state
-}
-```
-
-@@if (igxName === 'IgxGrid'){
-### Grid Context Menu
+#### Grid Context Menu
 
 Using the [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) event you can add a custom context menu to facilitate your work with **IgxGrid**. With a **right click** on the grid's body, the event emits the cell on which it is triggered. The **context menu** will operate with the emitted cell.
 
@@ -542,7 +98,7 @@ Basically the main function will look like this:
 The context menu will have the following functions:
 - Copy the selected cell's *value*
 - Copy the selected cell's *dataRow*
-- If the selected cell is within a **multi cell selection range**, copy all the *selected data*
+- If the selected cell is within a **multi-cell selection range**, copy all the *selected data*
 
 ```typescript
 //contextmenu.component.ts
@@ -590,6 +146,7 @@ The template we are going to use to combine the grid with the context menu:
     </div>
 </div>
 ```
+ Select multiple cells and press the `right mouse` button. The context menu will appear and after selecting `Copy cells data` the selected data will appear in the right empty box.
  The result is:
 
 <div class="sample-container loading" style="height:600px">
@@ -612,13 +169,13 @@ The template we are going to use to combine the grid with the context menu:
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
+* [Row Selection](row_selection.md)
+* [Cell Selection](cell_selection.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
 * [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
 * [Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>

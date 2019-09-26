@@ -104,7 +104,7 @@ public chipRemoved(event) {
 
 ![Dragging](../images/chip/dragging.gif)
 
-チップの位置を変更するためにユーザーによってドラッグできます。移動/ドラグ機能はデフォルトで無効ですが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要があります。
+ユーザーはドラッグしてチップの位置を変更できます。移動/ドラッグ機能はデフォルトで無効ですが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要がありますが、チップが別のチップの上にドラッグされて置き換わる場合に新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
 
 ```html
 <igx-chips-area (onReorder)="chipsOrderChanged($event)">
@@ -193,6 +193,124 @@ public chipsOrderChanged(event) {
 - 削除ボタンがフォーカスされた場合のキーボード コントロール:
 
   - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
+
+### スタイル設定
+igxChip を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。チップの [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) は、チップの多様なカスタマイズを可能にする多数のプロパティを公開します。        
+
+ #### グローバル テーマのインポート
+定義済みのチップ レイアウトのスタイリングを開始するには、すべてのスタイリング機能と mixin が配置されている `index` ファイルをインポートする必要があります。  
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```   
+
+#### カスタム テーマの定義
+次に、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) を拡張し、必要に応じてチップをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
+   
+
+```scss
+$custom-theme: igx-chip-theme(
+    $background: #494949,
+    $text-color: #e2e2e2,
+    $hover-text-color: #f2f2f2,
+    $selected-background: #ffcd0f,
+    $selected-border-color: #ffcd0f,
+    $hover-selected-background: #ebbf11,
+    $focus-selected-background: #ffcd0f,
+    $border-radius: 5px
+);
+```   
+
+#### カスタム カラー パレットの定義
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
+
+```scss
+$black-color: #494949;
+$yellow-color: #ffcd0f;
+
+$custom-palette: igx-palette(
+    $primary: $black-color,
+    $secondary: $yellow-color
+);
+```   
+
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
+
+```scss
+$custom-theme: igx-chip-theme(
+    $background: igx-color($custom-palette, "primary", 500),
+    $text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $hover-text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $selected-background: igx-color($custom-palette, "secondary", 500),
+    $selected-border-color: igx-color($custom-palette, "secondary", 500),
+    $hover-selected-background: igx-color($custom-palette, "secondary", 600),
+    $focus-selected-background: igx-color($custom-palette, "secondary", 500),
+    $border-radius: 5px
+);
+```
+
+#### カスタム スキーマの定義
+[**schema**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_light_chip` を使用します。   
+
+```scss
+$custom-chip-schema: extend($_light-chip, (
+    background: (igx-color("primary", 500)),
+    text-color: (igx-contrast-color("primary", 500)),
+    hover-text-color: (igx-contrast-color("primary", 500)),
+    selected-background: (igx-color("secondary", 500)),
+    selected-border-color: (igx-color("secondary", 500)),
+    hover-selected-background: (igx-color("secondary", 600)),
+    focus-selected-background: (igx-color("secondary", 500)),
+    border-radius: 5px
+));
+```   
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
+
+```scss
+$my-custom-schema: extend($light-schema, (
+    igx-chip: $custom-chip-schema
+));
+
+$custom-theme: igx-chip-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### カスタム テーマの適用
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
+```scss
+@include igx-chip($custom-theme);
+```
+
+#### スコープ コンポーネント テーマ
+
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
+
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
+
+ >[!NOTE]
+ >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >[!NOTE]
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-chip($custom-theme);
+    }
+}
+```   
+
+#### デモ
+<div class="sample-container loading" style="height:650px">
+    <iframe id="chip-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
 
 ### API
 

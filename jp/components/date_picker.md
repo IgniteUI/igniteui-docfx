@@ -102,6 +102,10 @@ Two-way データ バインディングを作成するには、以下のよう�
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
+#### Setting Multi View mode
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) input the number of displayed months in the calendar is set. To hide the days that do not belong to the current month, use the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays).
+
+
 ボタンが表示されるサンプル:
 <div class="sample-container loading" style="height: 680px;">
     <iframe id="date-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>

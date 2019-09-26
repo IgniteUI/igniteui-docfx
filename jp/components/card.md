@@ -116,7 +116,7 @@ export class AppModule {}
 </igx-card-header>
 ```
 
-また、これもできます:
+以下も可能です。
 
 ```html
 <igx-card-header>
@@ -129,10 +129,10 @@ export class AppModule {}
 </igx-card-header>
 ```
 
-#### Outlined cards
-カードには `type` 属性があり、`デフォルト` (省略した場合は自動的に設定) または`アウトライン`に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
+#### カードのアウトライン
+カードには `type` 属性があり、`default` (省略した場合は自動的に設定) または `outlined` に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
 
-以下はアウトラインのあるカードの例です。
+以下はアウトラインを使用したカードの例です。
 
 ```html
 <!--outlined-card.component.html>-->
@@ -156,7 +156,7 @@ export class AppModule {}
 </igx-card>
 ```
 
-この時点でカードは以下のようになります。
+この時点のカードは以下のようになります。
 <div class="sample-container loading" style="height: 168px">
     <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -196,9 +196,9 @@ export class AppModule {}
 </igx-card>
 ```
 
-We are using the `.h-sample-column` class to bundle the `igx-card-header` and `igx-card-content` together, keeping them aligned vertically, while other sections in the card align horizontally. 
+`.h-sample-column` クラスを使用して、`igx-card-header` と `igx-card-content` をまとめてバンドルし、垂直に揃え、カード内の他のセクションを水平に揃えています。 
 
-The styles that `.h-sample-column` class applies are:
+以下は、`.h-sample-column` クラスが適用されるスタイルです。
 
 ```scss
 .h-sample-column {
@@ -212,19 +212,7 @@ The styles that `.h-sample-column` class applies are:
 }
 ```
 
-`igx-card-actions` のボタンが`垂直`のレイアウトに切り替わりました。`igx-card-actions` は、その親と`逆`のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
-
-アクション領域の `vertical` 属性を明示的に設定して、デフォルトの動作を上書きすることができます。 
-
-```html
-<igx-card-actions layout="justify" [vertical]="false">
-    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
-        <igx-icon>{{icon}}</igx-icon>
-    </button>
-</igx-card-actions>
-```
-
-以下は横向きのカードです。
+以下は横向きのカードの例です。
 
 <div class="sample-container loading" style="height: 202px">
     <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
@@ -302,13 +290,13 @@ The styles that `.h-sample-column` class applies are:
 </igx-card-actions>
 ```
 
-<!-- ### Styling
-To get started with styling the card, we need to import the `index` file, where all the theme functions and component mixins live:
+### スタイル設定
+Cardのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Following the simplest approach, we create a new theme that extends the [`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) and accepts some parameters that style the card's items:
+最も単純なアプローチに従って、[`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
 
 ```scss
 $colorful-card: igx-card-theme(
@@ -318,15 +306,15 @@ $colorful-card: igx-card-theme(
     $content-text-color: #0A41F7
 );
 ```
-As seen, the `igx-card-theme` exposes some useful parameters for basic styling of its items. 
+ご覧のとおり、`igx-card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
 
-The last step is to **include** the component's theme.
+最後のステップは、コンポーネントのテーマを**含める**ことです。
 
 ```scss
  @include igx-card($colorful-card);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -335,11 +323,11 @@ The last step is to **include** the component's theme.
     }
 }
 ```
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #E7EB0B;
@@ -347,7 +335,7 @@ $red-color: #F00B1E;
 $colorful-palette: igx-palette($primary: $red-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
 $colorful-card: igx-card-theme(
@@ -360,13 +348,13 @@ $colorful-card: igx-card-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](themes/palette.md) のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [スキーマ](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-card`]({environment:sassApiUrl}/index.html#variable-_dark-card) schema:
+すべてのコンポーネントに提供されている2つの定義済みスキーマの 1 つを拡張します。この場合 - [`dark-card`]({environment:sassApiUrl}/index.html#variable-_dark-card)スキーマ:
 
 ```scss
 // Extending the dark-card schema
@@ -388,7 +376,7 @@ $dark-card-schema: extend($_dark-card,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル [`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -403,20 +391,20 @@ $dark-card: igx-card-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+テーマを上記と同じ方法で含めることに注意してください。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height: 486px">
     <iframe id="card-style-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-styling-sample" class="lazyload no-theming">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
-### Summary
-In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
-The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article. -->
+### まとめ
+このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能性を向上しました。最後に公開されたテーマの色を設定してカスタムパレットを作成、スキーマを拡張してカードのテーマを変更しました。 
+カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
 ### API と スタイル リファレンス
 

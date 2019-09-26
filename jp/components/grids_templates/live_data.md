@@ -1,9 +1,9 @@
-
+﻿
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
-_keywords: angular data grid, agular grid updates, angular live data
+_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
 _language: ja
 ---
 }
@@ -12,13 +12,14 @@ _language: ja
 ---
 title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
-_keywords: angular data grid, agular grid updates, angular live data
+_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
 _language: ja
 ---
 }
 
 ### 更新のライブデモ
-The @@igComponent component in Ignite UI for Angular is able to handle thousands of updates per seconds, while keeping the grid responsive for any interaction that the user may undertake. This sample demonstrates the @@igComponent handling thousands of updates per second and also Chart representation of data, based on Category Prices per Region. Use the `Chart` button to show data based on the `selected rows` or use the button under `Chart column` to see the same based on row `Region` value.
+
+Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -30,7 +31,7 @@ The @@igComponent component in Ignite UI for Angular is able to handle thousands
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
@@ -51,8 +52,8 @@ The @@igComponent component in Ignite UI for Angular is able to handle thousands
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
 }
 
 @@if (igxName === 'IgxTreeGrid') {
