@@ -268,30 +268,21 @@ Another thing worth mentioning is that `igx-select` uses the `SelectPositioningS
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
-Thanks to the fact that `igx-select` extends `igx-drop-down` it also has built-in support for *groups*. 
-
-In order to make use of this functionality you need to change the data that will be passed to `igx-select`, which in this case should look something like this:
+Select component exposes items grouping functionality. This helps to visually group and indent different items based on some criteria.
+In order to make use of this feature, you may change the data to contain a grouping criteria. In the following case, we use the `label` for the purpose and list a collection of `items` under each group:
 ```typescript
-public items: any[] = [
-    { type: "Fruits", fruits: [ "Apple", "Orange", "Banana" ] },
-    { type: "Vegetables", vegetables: [ "Cucumber", "Potato", "Pepper" ] }
+public greengrocery: any[] = [
+    { label: "Fruits", items: [ "Apple", "Orange", "Banana" ] },
+    { label: "Vegetables", items: [ "Cucumber", "Potato", "Pepper" ] }
 ];
 ```
 
-You would notice that now we pass in objects that have certain properties, such as `type` and `fruits`. This is because the `IgxSelectItemComponent` has functionality that allows it to receive specific styling inside the drop-down list. This functionality comes inherited from the [*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
-
-Then in your template file you can iterate over these objects and access their properties accordingly:
+Then in your template file you can iterate over the greengrocery objects and access their properties accordingly:
 ```html
 <igx-select>
-    <igx-select-item-group *ngFor="let item of items" [label]="item.type">
-        <igx-select-item *ngFor="let fruit of item.fruits" 
-        [value]="fruit">
-            {{fruit}}
-        </igx-select-item>
-
-        <igx-select-item *ngFor="let vegetable of item.vegetables" 
-        [value]="vegetable">
-            {{vegetable}}
+    <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
+        <igx-select-item *ngFor="let item of group.items" [value]="item">
+            {{item}}
         </igx-select-item>
     </igx-select-item-group>
 </igx-select>
