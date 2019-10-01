@@ -268,8 +268,8 @@ Another thing worth mentioning is that `igx-select` uses the `SelectPositioningS
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
-Select component exposes items grouping functionality. This helps to visually group and indent different items based on some criteria.
-In order to make use of this feature, you may change the data to contain a grouping criteria. In the following case, we use the `label` for the purpose and list a collection of `items` under each group:
+To help visually separate item groups, select component supports items grouping by wrapping items in `<igx-select-item-group>`.
+This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and list a collection of `items`:
 ```typescript
 public greengrocery: any[] = [
     { label: "Fruits", items: [ "Apple", "Orange", "Banana" ] },
@@ -277,7 +277,7 @@ public greengrocery: any[] = [
 ];
 ```
 
-Then in your template file you can iterate over the greengrocery objects and access their properties accordingly:
+Then in your template file you can iterate over the greengrocery objects and access their items accordingly:
 ```html
 <igx-select>
     <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
