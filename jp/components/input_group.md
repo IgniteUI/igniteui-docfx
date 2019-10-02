@@ -178,7 +178,7 @@ $input-group-theme: igx-input-group-theme(
 ```
 
  >[!NOTE]
- > コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
+ > コンポーネントが[`エミュレート`](themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
 
 #### デモ
 

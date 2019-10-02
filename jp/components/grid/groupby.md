@@ -122,7 +122,7 @@ export interface IGroupByRecord {
 
 ### 集計でグループ化
 
-グループ化と要約の統合については、[集計](summaries.html#summaries-with-group-by)トピックで説明しています。
+グループ化と要約の統合については、[集計](summaries.html#グループの集計)トピックで説明しています。
 
 
 #### キーボード ナビゲーション
@@ -266,7 +266,7 @@ $custom-theme: igx-grid-theme(
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 

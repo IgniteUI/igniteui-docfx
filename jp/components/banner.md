@@ -267,7 +267,7 @@ $my-color-palette: igx-palette(
 ```
 
 カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
+次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
 ```scss
 // in styles.scss
 $custom-banner-theme: igx-banner-theme(
@@ -308,7 +308,7 @@ $custom-button-theme: igx-button-theme(
 特定の `igx-banner` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用し、さらに、上記のすべての手順を styles.scss から component.scss ファイルへ移動してください。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
