@@ -461,6 +461,115 @@ export class AppRoutingModule { }
     data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
+### Styles
+
+To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
+
+```scss
+$dark-bottom-nav: igx-bottom-nav-theme(
+    $background: #292826,
+    $active-item-color: #F4D45C
+);
+```
+
+If we take a look at the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
+
+> [!NOTE]
+> In order to style any additional components that are used as part of a tab panel's content, an additional theme should be created that is specific to the respective component.
+
+The last step is to **include** the component theme in our application.
+
+```scss
+@include igx-bottom-nav($dark-bottom-nav);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-bottom-nav($dark-bottom-nav);
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #F4D45C;
+$black-color: #292826;
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$dark-bottom-nav: igx-bottom-nav-theme(
+    $background: igx-color($dark-palette, "primary", 400),
+    $active-item-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-bottom-nav`]({environment:sassApiUrl}/index.html#variable-_dark-bottom-nav) schema:
+
+```scss
+// Extending the dark bottom nav schema
+$dark-bottom-nav-schema: extend($_dark-bottom-nav,
+    (
+        background: (
+            igx-color: ("primary", 400)
+        ),
+        active-item-color: (
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-bottom-nav: $dark-bottom-nav-schema
+));
+
+// Defining bottom-nav-theme with the global dark schema
+$dark-bottom-nav: igx-bottom-nav-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
+    <iframe id="tabbar-style-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-style' width="100%" height="100%" seamless
+        frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-style-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### API リファレンス
 <div class="divider--half"></div>
 
