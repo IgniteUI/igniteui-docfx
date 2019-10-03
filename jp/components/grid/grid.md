@@ -610,7 +610,7 @@ public ngOnInit() {
 }
 ```
 
-<div class="sample-container loading" style="height:800px">
+<div class="sample-container loading" style="height:910px">
     <iframe id="grid-state-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
