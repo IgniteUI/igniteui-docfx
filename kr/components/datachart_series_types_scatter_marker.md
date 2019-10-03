@@ -7,15 +7,15 @@ _language: kr
 
 ## 분산 마커 시리즈
 
-이 항목에서는 [`IgxDataChart`](datachart_series_types_scatter_marker.md) 제어에서 다양한 유형의 분산 마커 시리즈에 대해 설명합니다. 분산 마커 시리즈는 데카르트(x, y) 좌표계를 사용하여 각 데이터 항목의 마커를 플롯하는 시리즈 그룹입니다.
+이 항목에서는 [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어에서 다양한 유형의 분산 마커 시리즈에 대해 설명합니다. 분산 마커 시리즈는 데카르트(x, y) 좌표계를 사용하여 각 데이터 항목의 마커를 플롯하는 시리즈 그룹입니다.
 
 ### 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:demosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-scatter-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -25,21 +25,21 @@ _language: kr
 
 다음 표에는 모든 유형의 분산 마커 시리즈와 그 설명이 표시되어 있습니다.
 
-| 시리즈 이름                                                                                                            | 설명                                                                 |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | ```XMemberPath`` 와``` \`YMemberPath`` 속성에 매핑 된 데이터 포인트의 표식을 표시합니다. |
-| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                                    |
-| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                           |
+| 시리즈 이름                                                                                                                                   | 설명                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)             | ```XMemberPath`` 와``` \`YMemberPath`` 속성에 매핑 된 데이터 포인트의 표식을 표시합니다. |
+| [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                                    |
+| [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                           |
 
 ### 필요한 축
 
-[`IgxDataChart`](datachart_series_types_scatter_marker.md) 제어는 다양한 유형의 축을 제공하지만 분산 마커 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
+[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어는 다양한 유형의 축을 제공하지만 분산 마커 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
-| 시리즈 유형                                                                                                            | YAxis 유형                                                                                            | XAxis 유형                                                                                            |
-| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)             | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
-| [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md)     | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
-| [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericYAxisComponent`](datachart_series_types_scatter_marker.md) | [`IgxNumericXAxisComponent`](datachart_series_types_scatter_marker.md) |
+| 시리즈 유형                                                                                                                                   | YAxis 유형                                                                                                                   | XAxis 유형                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)             | [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 
 ### 필요한 데이터
 
@@ -88,7 +88,7 @@ export class AppModule { /* ... */ }
 
 ### 코드 예제
 
-이 코드는 [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
+이 코드는 [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
 ```html
  <igx-data-chart
@@ -107,7 +107,7 @@ export class AppModule { /* ... */ }
  </igx-data-chart>
 ```
 
-위의 코드를 사용하면 [`IgxScatterSeriesComponent`](datachart_series_types_scatter_marker.md)를 대체하여 [`IgxScatterLineSeriesComponent`](datachart_series_types_scatter_marker.md) 또는 [`IgxScatterSplineSeriesComponent`](datachart_series_types_scatter_marker.md)를 생성할 수도 있습니다.
+위의 코드를 사용하면 [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)를 대체하여 [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html) 또는 [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html)를 생성할 수도 있습니다.
 
 ### 시리즈 외관
 

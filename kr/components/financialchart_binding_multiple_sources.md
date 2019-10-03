@@ -7,15 +7,15 @@ _language: kr
 
 ## 금융 차트를 복수의 데이터 소스에 바인딩
 
-[`IgxFinancialChart`](financialchart_binding_multiple_sources.md) 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
+[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
 
 ### 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 <div class="divider--half"></div>

@@ -12,10 +12,10 @@ By the default, the Ignite UI for Angular map component displays geographic imag
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-display-osm-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-display-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-display-osm-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="geo-map-display-osm-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="geo-map-display-osm-imagery-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -23,4 +23,4 @@ By the default, the Ignite UI for Angular map component displays geographic imag
 
 ### Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the [`OpenStreetMapImagery`](map_displaying_osm_imagery.md) object which provides geographic imagery tile from the Open Street Maps.
+This code example explicitly sets `BackgroundContent` of the map component to the `OpenStreetMapImagery` object which provides geographic imagery tile from the Open Street Maps.
