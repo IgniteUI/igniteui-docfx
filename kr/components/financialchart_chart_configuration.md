@@ -7,15 +7,15 @@ _language: kr
 
 ## 컨피규레이터 옵션
 
-[`IgxFinancialChart`](financialchart_chart_configuration.md) 제어는 탐색 동작, 추세선 레이어, 오버레이, 범례, 차트 제목, 부제 등의 사용자 지정이 가능한 많은 비주얼을 제공합니다.
+[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어는 탐색 동작, 추세선 레이어, 오버레이, 범례, 차트 제목, 부제 등의 사용자 지정이 가능한 많은 비주얼을 제공합니다.
 
 ### 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -23,7 +23,7 @@ _language: kr
 
 ### 탐색 구성
 
-[`IgxFinancialChart`](financialchart_chart_configuration.md) 제어에서 차트 탐색은 기본적으로 활성화됩니다. 그러나, 다음 속성을 설정하여 사용자 정의를 실시할 수 있습니다:
+[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어에서 차트 탐색은 기본적으로 활성화됩니다. 그러나, 다음 속성을 설정하여 사용자 정의를 실시할 수 있습니다:
 
 -   `IsHorizontalZoomEnabled` - 차트가 사용자 조작에 의해 수평 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 true로 설정됩니다.
 -   `IsVerticalZoomEnabled` - 차트가 사용자 조작에 의해 수직 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.

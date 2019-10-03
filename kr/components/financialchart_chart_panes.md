@@ -7,15 +7,15 @@ _language: kr
 
 ## 금융 차트 창
 
-[`IgxFinancialChart`](financialchart_chart_panes.md) 제어에는 금융 데이터를 표시하는 복수의 창이 있습니다.
+[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어에는 금융 데이터를 표시하는 복수의 창이 있습니다.
 
 ### 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-panes-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-panes-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -85,7 +85,7 @@ _language: kr
  </igx-financial-chart>
 ```
 
-`ZoomSliderType` 옵션을 [`ChartType`](financialchart_chart_panes.md) 옵션이 설정된 값과 동일하게 설정해야 합니다. 이렇게 하면 줌 슬라이더는 가격 창의 미리보기가 올바르게 표시됩니다. 다음의 코드는 이를 실행하는 방법을 보여줍니다:
+`ZoomSliderType` 옵션을 [`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 옵션이 설정된 값과 동일하게 설정해야 합니다. 이렇게 하면 줌 슬라이더는 가격 창의 미리보기가 올바르게 표시됩니다. 다음의 코드는 이를 실행하는 방법을 보여줍니다:
 
 ```html
  <igx-financial-chart
