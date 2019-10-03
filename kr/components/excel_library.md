@@ -11,7 +11,7 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -23,7 +23,7 @@ When installing the excel package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel**
 
-The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`](excel_library.md) inside your `AppModule`:
+The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxexcelmodule.html) inside your `AppModule`:
 
 ```ts
 // app.module.ts
@@ -74,7 +74,7 @@ The following is a list of the supported versions of Excel.\*\*
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save [`Workbook`](excel_library.md) objects, you can utilize the save method of the actual [`Workbook`](excel_library.md) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](excel_library.md):
+In order to load and save [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html):
 
 ```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";

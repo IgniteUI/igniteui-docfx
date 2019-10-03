@@ -12,10 +12,10 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 ### 데모
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -30,7 +30,7 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 
 ### 필요한 모듈
 
-[`IgxDoughnutChart`](doughnutchart.md)에는 다음 모듈이 필요합니다:
+[`IgxDoughnutChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchart.html)에는 다음 모듈이 필요합니다:
 
 ```ts
 // app.module.ts
@@ -92,17 +92,17 @@ this.state = {
 
 **조각을 클릭하여 선택 상태를 변경** - `SliceClick` 이벤트에 이벤트 핸들러를 연결한 경우, 선택 상태를 수정할 수 있도록 이벤트 인수에서 클릭한 조각에 대한 참조를 제공합니다. 도넛형 차트는 선택한 조각의 모양을 결정하는 `SelectedStyle` 속성을 공개합니다. 기본적으로 모양이 적용되지 않으며 조각을 선택해도 어떤 식으로든 모양이 변경되지는 않습니다. 선택한 조각에 사용자 모양을 적용하려면 조각의 `targetType`로 스타일을 정의하고 선택한 `SelectedStyle` 속성의 값으로 설정해야 합니다.
 
-**IsSelected 속성 설정** - [`IgxDoughnutChart`](doughnutchart.md)는 `IsSelected` 속성을 직접 수정할 수 있도록 모든 조각에 대한 참조를 보유하고 있습니다. 도넛형 차트는 조각의 선택/선택 해제 상태를 변경하는 데 사용되는 `SliceClick` 이벤트를 공개합니다.
+**IsSelected 속성 설정** - [`IgxDoughnutChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchart.html)는 `IsSelected` 속성을 직접 수정할 수 있도록 모든 조각에 대한 참조를 보유하고 있습니다. 도넛형 차트는 조각의 선택/선택 해제 상태를 변경하는 데 사용되는 `SliceClick` 이벤트를 공개합니다.
 
 **SelectedSlices 컬렉션의 콘텐츠 수정** - `selectedSlices` 컬렉션의 콘텐츠를 변경하여 선택한 조각을 변경할 수 있습니다. 도넛형 차트에는 슬라이스 객체에 대한 `IsSelected` 속성을 직접 수정할 수 있도록 모든 조각에 대한 참조를 보유하고 있습니다.
 
 ### 조각 선택 데모
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -119,7 +119,7 @@ this.state = {
 `SliceClick` 이벤트에 이벤트 핸들러를 연결한 경우, 클릭한 조각에 대한 참조가 이벤트 인수에 제공되고 해당 전개 상태를 수정할 수 있습니다.
 
 **IsExploded 속성 설정**
-[`IgxDoughnutChart`](doughnutchart.md)에는 모든 조각에 대한 참조가 있으며 `IsExploded` 속성을 직접 수정할 수 있습니다.
+[`IgxDoughnutChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchart.html)에는 모든 조각에 대한 참조가 있으며 `IsExploded` 속성을 직접 수정할 수 있습니다.
 
 **ExplodedSlices 컬렉션의 콘텐츠 수정**
 `ExplodedSlices` 컬렉션의 콘텐츠를 변경하여 전개된 조각을 변경할 수 있습니다.
@@ -127,10 +127,10 @@ this.state = {
 ### 조각 전개 데모
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -143,9 +143,9 @@ this.state = {
 ### 범례 데모
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:demosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>

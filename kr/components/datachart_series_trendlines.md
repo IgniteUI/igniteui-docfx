@@ -7,40 +7,40 @@ _language: kr
 
 ## 추세선
 
-[`IgxDataChart`](datachart_series_trendlines.md) 제어는 시리즈에 바인딩된 데이터의 추세를 식별하는 데 도움이 되는 추세선을 지원합니다.
+[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어는 시리즈에 바인딩된 데이터의 추세를 식별하는 데 도움이 되는 추세선을 지원합니다.
 
 ### 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-series-trendlines-iframe" src='{environment:demosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-series-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-trendlines-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-trendlines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-[`IgxDataChart`](datachart_series_trendlines.md) 제어의 추세선은 기본적으로 무효로 되어 있습니다. 이것을 설정하기 위해 추세선을 표시할 해당 시리즈에서 [`TrendLineType`](datachart_series_trendlines.md) 속성을 설정할 수 있습니다. 브러시, 기간, 두께, 대시 배열과 같은 추세선의 여러 모양 속성을 수정할 수 있습니다.
+[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어의 추세선은 기본적으로 무효로 되어 있습니다. 이것을 설정하기 위해 추세선을 표시할 해당 시리즈에서 [`TrendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html) 속성을 설정할 수 있습니다. 브러시, 기간, 두께, 대시 배열과 같은 추세선의 여러 모양 속성을 수정할 수 있습니다.
 
 추세선은 스택 시리즈 및 범위 시리즈를 제외한 모든 시리즈에서 지원됩니다. 다음은 차트 시리즈에서 사용할 수 있는 추세선 목록입니다:
 
--   [`None`](datachart_series_trendlines.md)
--   [`CubicFit`](datachart_series_trendlines.md)
--   [`CumulativeAverage`](datachart_series_trendlines.md)
--   [`ExponentialAverage`](datachart_series_trendlines.md)
--   [`ExponentialFit`](datachart_series_trendlines.md)
--   [`LinearFit`](datachart_series_trendlines.md)
--   [`LogarithmicFit`](datachart_series_trendlines.md)
--   [`ModifiedAverage`](datachart_series_trendlines.md)
--   [`PowerLawFit`](datachart_series_trendlines.md)
--   [`QuadraticFit`](datachart_series_trendlines.md)
--   [`QuarticFit`](datachart_series_trendlines.md)
--   [`QuinticFit`](datachart_series_trendlines.md)
--   [`SimpleAverage`](datachart_series_trendlines.md)
--   [`WeightedAverage`](datachart_series_trendlines.md)
+-   [`None`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#none)
+-   [`CubicFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#cubicfit)
+-   [`CumulativeAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#cumulativeaverage)
+-   [`ExponentialAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#exponentialaverage)
+-   [`ExponentialFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#exponentialfit)
+-   [`LinearFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#linearfit)
+-   [`LogarithmicFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#logarithmicfit)
+-   [`ModifiedAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#modifiedaverage)
+-   [`PowerLawFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#powerlawfit)
+-   [`QuadraticFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quadraticfit)
+-   [`QuarticFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quarticfit)
+-   [`QuinticFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quinticfit)
+-   [`SimpleAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#simpleaverage)
+-   [`WeightedAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#weightedaverage)
 
-다음 코드 조각은 [`IgxDataChart`](datachart_series_trendlines.md) 제어의 시리즈에 추세선을 추가하는 방법을 보여 줍니다:
+다음 코드 조각은 [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어의 시리즈에 추세선을 추가하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart  [dataSource]="data"

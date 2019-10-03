@@ -12,10 +12,10 @@ _language: kr
 ### 데모
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -23,7 +23,7 @@ _language: kr
 
 ### 코드 예제
 
-이 코드는 2개의 [`IgxNumericYAxisComponent`](datachart_axis_locations.md)가 왼쪽/오른쪽에 배치되고, 2개의 [`IgxCategoryXAxisComponent`](datachart_axis_locations.md)가 서로 쌓이는 데이터 차트를 생성하는 방법을 보여 줍니다.
+이 코드는 2개의 [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)가 왼쪽/오른쪽에 배치되고, 2개의 [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)가 서로 쌓이는 데이터 차트를 생성하는 방법을 보여 줍니다.
 
 ```html
  <igx-data-chart
