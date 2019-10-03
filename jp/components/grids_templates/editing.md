@@ -174,13 +174,13 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[編集イベント](#editing-events)をトリガーし、[トランザクション状態](batch-editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[編集イベント](#編集イベント)をトリガーし、[トランザクション状態](batch_editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
-> セル編集テンプレート ディレクティブ (`igxCellEditor`) は、[セル テンプレート(`igxCell`)](../grid/grid.md#cell-template) とは異なります。前者は、**編集モード**の列のセルの表示方法を処理し、編集されたセルの**編集値**を制御します。後者は、**編集モード外**での列のセルの表示方法を制御します。
+> セル編集テンプレート ディレクティブ (`igxCellEditor`) は、[セル テンプレート(`igxCell`)](../grid/grid.md#セル編集テンプレート) とは異なります。前者は、**編集モード**の列のセルの表示方法を処理し、編集されたセルの**編集値**を制御します。後者は、**編集モード外**での列のセルの表示方法を制御します。
 
 
-列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#columns-configuration)のドキュメントを参照してください。
+列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#列の構成)のドキュメントを参照してください。
 
 ### CRUD 操作
 
@@ -524,7 +524,7 @@ $custom-grid-theme: igx-grid-theme(
 
 #### デモのスタイル設定
 
-上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling))。
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#スタイル設定), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#スタイル設定g))。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

@@ -115,7 +115,7 @@ export class CustomOverlayCombo {
 <igx-combo [data]="items" [overlaySettings]="customSettings"></igx-combo>
 ```
 
-たとえば、上記の設定では、[GlobalPositionStrategy](overlay_position.md#global) を使用して、コンボのリストが中央に表示されます。
+たとえば、上記の設定では、[GlobalPositionStrategy](overlay_position.md#Global) を使用して、コンボのリストが中央に表示されます。
 
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>

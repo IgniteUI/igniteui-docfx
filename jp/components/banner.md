@@ -296,7 +296,7 @@ $custom-button-theme: igx-button-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 #### グローバル
-新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#creating-themes)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
+新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#テーマの作成)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
 ```scss
 // in styles.scss
 // Pass our banner theme to the `igx-banner` mixin

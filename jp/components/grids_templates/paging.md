@@ -615,7 +615,7 @@ public changeTemplate() {
 @@if (igxName === 'IgxGrid') {
 ### グループ化によるページング
 
-ページングとグループ化の統合については、[グループ化](groupby.html#group-by-with-paging)のトピックで説明しています。
+ページングとグループ化の統合については、[グループ化](groupby.html#ページングによるグループ化)のトピックで説明しています。
 }
 
 ### ページネータ コンポーネント

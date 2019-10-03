@@ -330,7 +330,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 #### 警告:
 
-* `@@igxName - ピン固定領域がピン固定可能な最大幅を超過しています。次の列のピン固定は、問題を回避するため解除しています。.`- この警告は初期時にユーザーが列をピン固定を過剰に定義した場合にスローされます。初期時にピン固定した列の合計幅は、@@igComponent 幅の 80% を超えないようにしてください。超過した場合は、デフォルトで @@igComponent の最初の列を取得し、残りの列 (警告にリストされた列) はピン解除されます。@@igComponent でピン固定を初期化する前に [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) を使用し、初期化時に手動で列のピン固定解除するかどうかを決定するためのロジックを実行できます。各列でトリガーされます。
+* `@@igxName - ピン固定領域がピン固定可能な最大幅を超過しています。次の列のピン固定は、問題を回避するため解除しています。`- この警告は初期時にユーザーが列をピン固定を過剰に定義した場合にスローされます。初期時にピン固定した列の合計幅は、@@igComponent 幅の 80% を超えないようにしてください。超過した場合は、デフォルトで @@igComponent の最初の列を取得し、残りの列 (警告にリストされた列) はピン解除されます。@@igComponent でピン固定を初期化する前に [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) を使用し、初期化時に手動で列のピン固定解除するかどうかを決定するためのロジックを実行できます。各列でトリガーされます。
 
 <div class="divider--half"></div>
 
