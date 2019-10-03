@@ -343,8 +343,8 @@ When the [**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcompon
 - <kbd>PageDown</kbd> key to move to the next month,
 - <kbd>Shift</kbd> + <kbd>PageUp</kbd> keys to move to the previous year,
 - <kbd>Shift</kbd> + <kbd>PageDown</kbd> keys to move to the next year,
-- <kbd>Home</kbd> key to focus the first day of the current month that is into view,
-- <kbd>End</kbd> key to focus the last day of the current month that is into view,
+- <kbd>Home</kbd> key to focus the first day of the current month  or first month in view
+- <kbd>End</kbd> key to focus the last day of the current month or last month in view
 - <kbd>Tab</kbd> key to navigate through the subheader buttons;
 
 When `prev` or `next` month buttons (in the subheader) are focused, use:
@@ -359,6 +359,8 @@ When `year` button (in the subheader) is focused, use:
 When a day inside the current month is focused, use:
 - Arrow keys to navigate through the days,
 - Arrow keys to navigate to previous/next month as well,
+- Navigating next from last day in current month or previous from first day in current month, will move focus to next/previos month that is in view.
+- Navigating next from last day in last visible current month or previous from first day in first current month, will change the months in view.
 - <kbd>Enter</kbd> key to select the currently focused day.
 
 When a month inside the months view is focused, use:
@@ -371,7 +373,23 @@ When an year inside the decade view is focused, use:
 - Arrow keys to navigate through the years,
 - <kbd>Enter</kbd> key to select the currently focused year and close the view.
 
+>[!NOTE]
+ >Following version 8.2.0, keyboard navigation will not focus days that are outside of current month, but will rather change the month in view.
+
 <div class="divider--half"></div>
+
+
+### Multi View Calendar
+Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) input the number of displayed months is set. There is no limit on the max value set, and the months are displayed in a flex container horizontally. Showing a multi view calendar, you may want to hide the days that do not belong to the current month, using the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays). Multiview calendar supports all three types of selection. Keyboard navigation moves to next/previous months when those are in view.
+
+Result:
+
+<div class="sample-container loading" style="height: 540px">
+    <iframe id="multiview-calendar" data-src='{environment:demosBaseUrl}/scheduling/multiview-calendar' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="multiview-calendar" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+</div>
 
 ### Styling
 

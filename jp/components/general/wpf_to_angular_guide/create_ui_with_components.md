@@ -1,15 +1,15 @@
 ﻿---
-title: Create User Interface with an Angular component | IgniteUI for Angular | Infragistics
-_description: Learn how to create user interface using an Angular component when you migrate from WPF to Angular.
-_keywords: angular component, ignite ui for angular, infragistics
+title: Angular コンポーネントを使用した UI の作成 | IgniteUI for Angular | Infragistics
+_description: WPF から Angular へ移行時に Angularコンポーネントを使用してユーザー インターフェイスを作成する方法をを説明します。
+_keywords: angular コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-### Create User Interface with an Angular component
+### Angular コンポーネントを使用した UI の作成
 
 > [!Video https://www.youtube.com/embed/z1SZUezpRXY]
 
-When it comes to creating user interface in an Angular application you can use an Angular component to facilitate the process.
+Angular アプリケーションでユーザー インターフェイスを作成する場合、Angular コンポーネントを使用してプロセスを促進できます。
 
 Angularで UI を作成する方法は、WPF で UI を作成する方法と非常に似ています。通常、UserControl クラスで表されるユーザー コントロールを使用します。`UserControl` は、マークアップとコードを再利用可能なコンテナにグループ化し、複数の異なる場所で同じインターフェイスと機能を使用できるようにします。このユーザー コントロールには、UI マークアップ用の .xaml ファイルとロジック用の C# ファイルがあります。さらに、このユーザー コントロール用の任意のタイプのスタイリング情報を含むリソース ディクショナリがあります。Angular では、`Component` と呼ばれるものを使用します。コンポーネントには、UI マークアップに使用される html ファイルがあります。プロパティとロジックに使用される typescript ファイルがあり、すべてのスタイル情報に CSS ファイルを使用します。以下は比較ですが類似点が多くあります。
 
@@ -18,7 +18,7 @@ Angularで UI を作成する方法は、WPF で UI を作成する方法と非�
 左側には、`Sample` というユーザー コントロールを備えた WPF アプリケーションがあります。また、スタイリング情報を含む `SampleResources` と呼ばれるリソース ディクショナリもあります。
 右側には、`AppComponent` を持つ Angular アプリケーションがあります。先に進み、Angular アプリ コンポーネントを WPF アプリケーションのサンプル ユーザーコントロールのコンポーネントと比較します。
 
-アプリ コンポーネントの typescript ファイルを開きます。このファイルをコンポーネントの背後にあるコードと考えることができます。その理由は、WPF にアクセスして Sample ユーザー コントロールの背後にあるコードである Sample.xaml.cs を開いて多くの類似点を確認できます。
+アプリ コンポーネントの typescript ファイルを開きます。このファイルをコンポーネントの背後にあるコードと考えることができます。その理由は、WPF にアクセスして `Sample` ユーザー コントロールの背後にあるコードである Sample.xaml.cs を開いて多くの類似点を確認できます。
 
 <img src="../../../images/general/component_code_behind.png" />
 

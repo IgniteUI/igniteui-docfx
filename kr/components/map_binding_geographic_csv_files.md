@@ -11,10 +11,10 @@ With the Ignite UI for Angular map component, you can plot geographic data loade
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-binding-data-csv-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-data-csv' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-binding-data-csv-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-csv-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-csv-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -32,4 +32,4 @@ Dundee,42.5236,-76.9775,New York,NY,Yates,579,1650
 
 ### Code Snippet
 
-The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`](map_binding_geographic_csv_files.md) in the map component to an array of objects created from loaded CSV file with geographic locations.
+The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) in the map component to an array of objects created from loaded CSV file with geographic locations.

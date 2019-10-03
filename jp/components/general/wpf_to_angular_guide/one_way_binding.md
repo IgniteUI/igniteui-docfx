@@ -1,7 +1,7 @@
 ﻿---
 title: One-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
-_description: Learn how to create one-way data binding in Angular when you migrate from WPF to Angular.
-_keywords: data binding, ignite ui for angular, infragistics
+_description: WPF から Angular に移行するときに、Angular で一方向のデータバインディングを作成する方法を説明します。
+_keywords: data binding, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -9,7 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
 
-The one-way data binding in Angular is used to display information to the end user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF.
+Angular の一方向データ バインディングは、WPF の一方向バインディング同様、基になるデータの変更ごとに自動的に同期を維持する情報をエンドユーザーに表示するために使用されます。
 
 Angular のデータ バインディングは非常に簡単で、WPF とは異なり、データ コンテキスト、ビューモデル、または `INotifyPropertyChanged` (INPC) の定義は必要ありません。必要なのは、HTML ファイルと typescript ファイルのみです。データ バインディングでは、最初にバインドするプロパティが必要です。それでは、`text` というプロパティをコンポーネント クラスに追加し、その値を設定しましょう。
 WPF では、DataContext を設定し、XAML でプロパティをバインドします。
@@ -114,8 +114,7 @@ export class SampleComponent implements OnInit {
 > バインディングがデータ型の結果に依存する場合、`プロパティ バインディング`を使用する必要があることに注意してください。バインディングが単に文字列値に依存している場合は、`補間`を使用する必要があります。
 
 ## その他のリソース
-* [デスクトップから Web: 
- Angular 補間とプロパティバインディングによる一方向データバインディング](https://www.youtube.com/watch?v=fP7iVhFNTOk&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+* [デスクトップから Web: Angular 補間とプロパティバインディングによる一方向データバインディング](https://www.youtube.com/watch?v=fP7iVhFNTOk&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
 * [双方向バインディング](two_way_binding.md)
 * [Angular データの表示](https://angular.io/guide/displaying-data#displaying-data)
 

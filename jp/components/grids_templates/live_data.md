@@ -1,9 +1,9 @@
-
+﻿
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
-_keywords: angular data grid, agular grid updates, angular live data
+_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
 _language: ja
 ---
 }
@@ -12,13 +12,14 @@ _language: ja
 ---
 title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
-_keywords: angular data grid, agular grid updates, angular live data
+_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
 _language: ja
 ---
 }
 
 ### 更新のライブデモ
-Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。以下は、1 秒間に何千もの更新を処理する @@igComponent のサンプルです。
+
+Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -30,7 +31,7 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
@@ -51,8 +52,8 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
 }
 
 @@if (igxName === 'IgxTreeGrid') {

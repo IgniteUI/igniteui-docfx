@@ -1,15 +1,15 @@
 ﻿---
 title: Handling Angular Events | IgniteUI for Angular | Infragistics
-_description: Learn how Angular events handling works when you migrate from WPF to Angular.
-_keywords: angular events, ignite ui for angular, infragistics
+_description: WPF から Angular への移行時の Angular イベント処理について学びます。
+_keywords: angular events, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Handling Angular Events
+## Angular イベントの処理
 
 > [!Video https://www.youtube.com/embed/V1Futz4W400]
 
-The Angular events are emitted as a response to user interactions. When an Angular event is emitted, its event handling logic is executed. WPF provides routed events, CLR events, and commands. While in Angular, there are DOM events.
+Angular イベントは、ユーザー インタラクションへの応答として発行されます。Angular イベントが発行されると、そのイベント処理ロジックが実行されます。WPF は、ルーティング イベント、CLR イベント、およびコマンドを提供します。Angular では、DOM イベントがあります。
 
 WPF でボタンのクリックイベントに応答する簡単な例を次に示します。
 
@@ -44,7 +44,7 @@ onClicked(event) {
 }
 ```
 
-イベント オブジェクトを渡すことはあまり有用ではない場合があります。代わりに、ページの入力値を渡すことができます。
+イベント オブジェクトを渡すことはあまり有用ではない場合があります。代わりに、ページの`入力`値を渡すことができます。
 
 ```html
 <input #messageInput>

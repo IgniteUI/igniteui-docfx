@@ -81,6 +81,9 @@
     - name: Excel Style Filtering
       href: grid/excel_style_filtering.md
       new: false
+    - name: Advanced Filtering
+      href: grid/advanced_filtering.md
+      new: true
     - name: Sorting
       href: grid/sorting.md
       new: false
@@ -179,6 +182,9 @@
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
       new: false
+    - name: Advanced Filtering
+      href: treegrid/advanced_filtering.md
+      new: true
     - name: Sorting
       href: treegrid/sorting.md
       new: false
@@ -268,6 +274,9 @@
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
       new: false
+    - name: Advanced Filtering
+      href: hierarchicalgrid/advanced_filtering.md
+      new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       new: false

@@ -1,17 +1,17 @@
----
-title: Angular Directives | IgniteUI for Angular | Infragistics
-_description: Configure Angular components appearance based on custom conditions, simply by using the Angular structural directives.
-_keywords: angular directives, ignite ui for angular, infragistics
+﻿---
+title: Angular ディレクティブ | IgniteUI for Angular | Infragistics
+_description: Angular 構造ディレクティブを使用して、カスタム条件に基づいて Angular コンポーネントの外観を設定します。
+_keywords: angular ディレクティブ, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Angular Structural Directives
+## Angular 構造ディレクティブ
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 
-When it comes to control the appearance of the visual tree elements’ appearance in WPF, the most common way is to use binding and visibility converter, which requires some extra logic and static resources. Angular also has a similar technique, which changes the appearance or behavior of a DOM element - the Angular directives. One of the Angular `directives` type is the `structural directives` – they change the DOM layout by adding or removing DOM elements.
+WPF でのビジュアル ツリー要素の外観を制御する場合、最も一般的な方法は、バインディングと可視コンバーターを使用することです。これには、追加のロジックと静的リソースが必要です。Angular にも同様のテクニックがあり、DOM 要素 (Angularディレクティブ) の外観や動作を変更します。Angular `ディレクティブ` タイプの 1 つは`構造ディレクティブ`です。DOM 要素を追加または削除することで DOM レイアウトを変更します。
 
-In this topic, we are going to demonstrate the following three structural directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
+このトピックでは、3 つの構造ディレクティブ (`ngIf`、`ngSwitch`、`ngFor`) を示します。名前からわかるように、これらはそれぞれ C# 構造と比較できます。`ngIf` は "if-else" C# コード ブロックと同じものであり、`ngSwitch` はC＃switch-caseステートメントと同じものであり、最後に、`ngFor` は C# "for-loop" とまったく同じものです。
 
 ### `ngIf` ディレクティブ
 それぞれのディレクティブを `ngIf` から開始します。このディレクティブにより、ブール条件に基づいて要素を表示または非表示にすることができます。まず、名前を含む　"h2" タグを持つ "div" 要素を作成します。

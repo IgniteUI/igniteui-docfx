@@ -41,7 +41,7 @@ export class AppModule {}
 The demo uses [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component to toggle [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) properties' values. Note that grouping is enabled/disabled by setting [groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) to corresponding data source entity or setting it to empty string.
 ```html
 <div class="combo-container">
-    <igx-combo #combo [data]="lData" [displayKey]="'field'" [valueKey]="'field'"
+    <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
         [filterable]="filterable"
         [disabled]="disabled">
@@ -72,7 +72,7 @@ The demo uses [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponen
 Basic usage of [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) bound to a local data source, defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey):
 
 ```html
-<igx-combo [data]="lData" [valueKey]="'ProductID'" [displayKey]="'ProductName'"></igx-combo>
+<igx-combo [data]="lData" valueKey="ProductID" displayKey="ProductName"></igx-combo>
 ```
 
 ```typescript
@@ -87,27 +87,12 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> Note: If [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) entity will be used instead.
+> [!Note]
+> If [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) entity will be used instead.
 
 
 Follow this [topic](combo_remote.md) for more details about binding [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with remote data.
 
-## Value Binding
-
-For two-way data-binding, the `ngModel` can be used like shown below:
-
-```html
-<igx-combo #combo [data]="data" [(ngModel)]="values"></igx-combo>
-```
-
-```typescript
-export class MyExampleComponent {
-    ...
-    public data: ExampleType[] = ...;
-    ...
-    public values: ExampleType[] = ...;
-}
-```
 
 <div class="divider--half"></div>
 

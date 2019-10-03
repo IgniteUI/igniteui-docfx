@@ -12,10 +12,10 @@ In the Ignite UI for Angular data chart component, you are able to add annotatio
 ### Demo
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="data-chart-axis-locations-iframe" src='{environment:demosBaseUrl}/charts/data-chart-axis-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -23,21 +23,21 @@ In the Ignite UI for Angular data chart component, you are able to add annotatio
 
 In the Ignite UI for Angular data chart, the following are the series and layers that support axis annotations:
 
--   [`IgxCrosshairLayerComponent`](datachart_axis_annotations.md)
--   [`IgxFinalValueLayerComponent`](datachart_axis_annotations.md)
--   [`IgxValueOverlayComponent`](datachart_axis_annotations.md)
+-   [`IgxCrosshairLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html)
+-   [`IgxFinalValueLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html)
+-   [`IgxValueOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html)
 
-You can enable the axis annotations by setting the [`isAxisAnnotationEnabled`](datachart_axis_annotations.md) property of the corresponding layer or overlay to `true`. In doing so, this will place a box on the corresponding owning axis or axes with the value that that particular overlay or layer represents at the point that it is currently at. For example, with the [`IgxCrosshairLayerComponent`](datachart_axis_annotations.md), these annotations can appear on both the X and Y axes and will move around and change as you scroll around the plot area.
+You can enable the axis annotations by setting the [`isAxisAnnotationEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#isaxisannotationenabled) property of the corresponding layer or overlay to `true`. In doing so, this will place a box on the corresponding owning axis or axes with the value that that particular overlay or layer represents at the point that it is currently at. For example, with the [`IgxCrosshairLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html), these annotations can appear on both the X and Y axes and will move around and change as you scroll around the plot area.
 
-The [`isAxisAnnotationEnabled`](datachart_axis_annotations.md) property does not exist on the [`IgxFinalValueLayerComponent`](datachart_axis_annotations.md), as this layer is an axis annotation in itself and has no other visualization other than the annotation on the axis.
+The [`isAxisAnnotationEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#isaxisannotationenabled) property does not exist on the [`IgxFinalValueLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html), as this layer is an axis annotation in itself and has no other visualization other than the annotation on the axis.
 
-You can customize the axis annotations in background, value precision, outline, padding, stroke (outline) thickness, and text color. These can be set using the [`axisAnnotationBackground`](datachart_axis_annotations.md), [`axisAnnotationInterpolatedValuePrecision`](datachart_axis_annotations.md), [`axisAnnotationOutline`](datachart_axis_annotations.md), `AxisAnnotationPadding`, [`axisAnnotationStrokeThickness`](datachart_axis_annotations.md), and [`axisAnnotationTextColor`](datachart_axis_annotations.md) properties, respectively. In addition to these properties, there is also an `AxisAnnotationFormatLabel` event that you can use to fully customize what exactly is shown in axis annotations.
+You can customize the axis annotations in background, value precision, outline, padding, stroke (outline) thickness, and text color. These can be set using the [`axisAnnotationBackground`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackground), [`axisAnnotationInterpolatedValuePrecision`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationinterpolatedvalueprecision), [`axisAnnotationOutline`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationoutline), `AxisAnnotationPadding`, [`axisAnnotationStrokeThickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationstrokethickness), and [`axisAnnotationTextColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationtextcolor) properties, respectively. In addition to these properties, there is also an `AxisAnnotationFormatLabel` event that you can use to fully customize what exactly is shown in axis annotations.
 
-Note, the [`IgxCrosshairLayerComponent`](datachart_axis_annotations.md) has the ability to show annotations on both the X and Y axis. These can be customized individually, and as such, each of the above properties exist, but with either an `XAxis` or a `YAxis` placed in front of the name. For example, [`xAxisAnnotationBackground`](datachart_axis_annotations.md) or [`yAxisAnnotationTextColor`](datachart_axis_annotations.md).
+Note, the [`IgxCrosshairLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html) has the ability to show annotations on both the X and Y axis. These can be customized individually, and as such, each of the above properties exist, but with either an `XAxis` or a `YAxis` placed in front of the name. For example, [`xAxisAnnotationBackground`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#xaxisannotationbackground) or [`yAxisAnnotationTextColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#yaxisannotationtextcolor).
 
 ### Code Example
 
-This code demonstrates how to create a Ignite UI for Angular data chart with each of the layers and the overlay with axis annotations enabled for each. In this case, the [`IgxFinalValueLayerComponent`](datachart_axis_annotations.md) is also customized to have a yellow text color.
+This code demonstrates how to create a Ignite UI for Angular data chart with each of the layers and the overlay with axis annotations enabled for each. In this case, the [`IgxFinalValueLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) is also customized to have a yellow text color.
 
 ```html
 <igx-data-chart [dataSource]="data" width="100%" height="500px">

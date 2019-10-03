@@ -1,15 +1,15 @@
 ﻿---
-title: Create an Angular application | IgniteUI for Angular | Infragistics
-_description: Learn how to create an Angular application when you migrate from WPF to Angular.
-_keywords: angular application, ignite ui for angular, infragistics
+title: Angular アプリケーションの作成 | IgniteUI for Angular | Infragistics
+_description: WPF から Angular へ移行時の Angularアプリケーション作成方法を説明します。
+_keywords: angular application, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Create an Angular application
+## Angular アプリケーションの作成
 
 > [!Video https://www.youtube.com/embed/dhjrAPPad54]
 
-Learn how to start creating an Angular application when you migrate from WPF to Angular.
+WPF から Angular に移行するときに、Angular アプリケーションの作成を開始する方法を学びます。
 
 ### 前提条件
 

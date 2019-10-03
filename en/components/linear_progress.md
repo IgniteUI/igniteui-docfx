@@ -263,6 +263,119 @@ And now let's see it in the browser:
 > If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is defined greater than the [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) input, there is only one update, which gets **the value that is passed for progress update**.   
 <div class="divider--half"></div>
 
+### Styling
+
+To get started with styling the linear progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) and accepts the `$track-color`, `$fill-color-default`, `$fill-color-danger`, `$stripes-color` and `$text-color` parameters.
+
+```scss
+$custom-theme: igx-progress-linear-theme(
+    $track-color: lightgray,
+    $fill-color-default:  rgb(22, 187, 238),
+    $fill-color-danger: rgb(22, 187, 238),
+    $stripes-color: rgba(0, 0, 0, 0.26),
+    $text-color: rgb(22, 187, 238)
+);
+```
+The last step is to **include** the component mixins: 
+
+```scss
+ @include igx-progress-linear($custom-theme);
+```
+
+>[!NOTE]
+ >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+ ```scss
+:host {
+  ::ng-deep {
+    @include igx-progress-linear($custom-theme);
+  }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$gray-color: lightgray;
+$blue-color: rgb(22, 187, 238);
+
+$custom-palette: igx-palette($primary: $gray-color, $secondary: $blue-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+
+```scss
+$custom-theme: igx-progress-linear-theme(
+    $track-color: igx-color($custom-palette, "primary", 500),
+    $fill-color-default: igx-color($custom-palette, "secondary", 500),
+    $fill-color-danger: igx-color($custom-palette, "secondary", 500),
+    $stripes-color: igx-color($custom-palette, "grays", 400),
+    $text-color: igx-color($custom-palette, "secondary", 500)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](./themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](./themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-progress-linear`]({environment:sassApiUrl}/index.html#variable-_light-progress-linear):  
+
+```scss
+// Extending the light progress linear schema
+$custom-progress-schema: extend($_light-progress-linear,
+    (
+        track-color: (igx-color:('primary', 500)),
+        fill-color-default: (igx-color:('secondary', 500)),
+        fill-color-danger: (igx-color:('secondary', 500)),
+        stripes-color: (igx-color:('grays', 400)),
+        text-color: (igx-color:('secondary', 500))
+    )
+);
+```
+
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, 
+    (
+        igx-linear-bar: $custom-progress-schema
+    )
+);
+
+// Defining our custom theme with the custom schema
+$custom-theme: igx-progress-linear-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height:450px">
+    <iframe id="linear-progressbar-styling-iframe" src='{environment:demosBaseUrl}/data-display/linear-progressbar-styling' width="100%" height="100%" 
+        seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### API
 <div class="divider--half"></div>
 

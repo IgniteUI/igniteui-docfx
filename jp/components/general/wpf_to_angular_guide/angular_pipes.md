@@ -1,19 +1,19 @@
 ﻿---
-title: Transform Data with Angular Pipes | IgniteUI for Angular | Infragistics
-_description: Learn how to transform data using Angular pipes which is similar to WPF converters.
-_keywords: transform data, ignite ui for angular, infragistics
+title: Angular パイプでデータを変換 | IgniteUI for Angular | Infragistics
+_description: WPF コンバーターに類似した、Angular パイプを使用してデータを変換する方法を学びます。
+_keywords: transform data, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Transform Data with Angular Pipes
+## Angular パイプでデータを変換
 
 > [!Video https://www.youtube.com/embed/Gmz5kio50FE]
 
-You can use the Angular pipes to transform data from one value to another. This technic is similar to WPF converters.
+WPF コンバーターに類似した、Angular パイプを使用してデータを変換する方法を学びます。このテクニックは、WPF コンバーターに似ています。
 
 WPF では、データをある値から別の値に変換するために、[IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8) を使用します。Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
 
-Angular は、最も一般的なデータ変換用に事前定義された多数のパイプを提供します。たとえば、ヘッダー テキストを大文字で表示する場合は、[UpperCasePipe](https://angular.io/api/common/UpperCasePipe) を使用できます。パイプの使用はとても簡単です。式の後に、パイプ演算子`|`とその後にパイプ名を提供します。
+Angular は、最も一般的なデータ変換用に事前定義された多数のパイプを提供します。たとえば、ヘッダー テキストを大文字で表示する場合は、[UpperCasePipe](https://angular.io/api/common/UpperCasePipe) を使用できます。パイプの使用はとても簡単です。式の後に、パイプ演算子 `|` とその後にパイプ名を提供します。
 
 ```html
 <h2>{{ header | uppercase }}</h2>
@@ -89,8 +89,7 @@ export class ReplacePipe implements PipeTransform {
 > Angular パイプと WPF コンバーターの重要な違いは、Angular パイプは [ConvertBack](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) メソッドを持つ WPF コンバーターとは異なり、一方向のバインディングに対してのみ機能することです。
 
 ## その他のリソース
-* [
-デスクトップから Web: Angular パイプを使用したデータの変換](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
+* [デスクトップから Web: Angular パイプを使用したデータの変換](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
 * [Angular パイプ](https://angular.io/guide/pipes)
 * [事前定義された Angular パイプのリスト](https://angular.io/api?type=pipe)
 
