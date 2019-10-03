@@ -98,7 +98,7 @@ First we have to import the required modules of the components we want to use. W
 
 ### Using Components
 
-We are now ready to use the `GeographicMap` component in our markup! Let's go ahead and define it:
+We are now ready to use the Ignite UI for Angular map component in our markup! Let's go ahead and define it:
 
 ### Running Application
 

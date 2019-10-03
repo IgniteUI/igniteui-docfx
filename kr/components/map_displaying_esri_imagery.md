@@ -7,15 +7,15 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Displaying Imagery from Esri Maps
 
-The [`ArcGISOnlineMapImagery`](map_displaying_esri_imagery.md) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
+The [`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-display-esri-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-display-esri-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-display-esri-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-esri-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-display-esri-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-display-esri-imagery-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -23,6 +23,6 @@ The [`ArcGISOnlineMapImagery`](map_displaying_esri_imagery.md) is a free geograp
 
 ### Code Snippet
 
-The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](map_displaying_esri_imagery.md) using [`ArcGISOnlineMapImagery`](map_displaying_esri_imagery.md).
+The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html).
 
 Also, you can use the [EsriUtility](map_resources_esri.md) which defines all styles of Esri Maps.

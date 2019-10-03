@@ -12,10 +12,10 @@ _language: kr
 ### 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
 </div>
 
@@ -25,15 +25,15 @@ _language: kr
 
 금융 차트 컴포넌트는 데이터 열을 분석하고 선택하며, 날짜/시간 열을 X축으로 사용하여 열기, 높음, 낮음, 닫기, 볼륨 열 또는 최초 5개의 수치 열을 Y축으로 사용합니다. 그 밖에도 사용자가 차트 유형을 바, 캔들, 기둥, 선으로 설정할 수 있습니다. 도구 모음, 가격 보기, 볼륨 보기, 인디케이터 보기 및 탐색 보기의 다섯 가지 주요 시각적 요소로 인해 데이터가 더 많이 인식됩니다.
 
-[`ChartType`](financialchart.md) 속성을 다음 옵션 중 하나에 설정하여 차트 유형을 명시적으로 지정할 수 있습니다:
+[`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 속성을 다음 옵션 중 하나에 설정하여 차트 유형을 명시적으로 지정할 수 있습니다:
 
-| 속성                                                                                      | 설명                                                                                                                        |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `Bar`                                                                                   | 각 데이터 점에 마커로 바 시리즈를 지정합니다.                                                                                                |
-| `Candle`                                                                                | 캔들 시리즈를 지정합니다.                                                                                                            |
-| [`IgxColumnComponent`](financialchart.md) | 기둥 시리즈를 지정합니다.                                                                                                            |
-| `Line`                                                                                  | 선 시리즈를 지정합니다                                                                                                              |
-| `auto`                                                                                  | 데이터의 이름 및 수치 열 수를 기반으로 한 위의 값 중에서 제안하는 데이터 어댑터를 기반으로 차트 유형의 자동 선택을 지정합니다. 예를 들면, 열기, 높음, 낮음, 닫기 열이 있는 데이터 항목에 ‘바’를 제안합니다. |
+| 속성                                                                                                             | 설명                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `Bar`                                                                                                          | 각 데이터 점에 마커로 바 시리즈를 지정합니다.                                                                                                |
+| `Candle`                                                                                                       | 캔들 시리즈를 지정합니다.                                                                                                            |
+| [`IgxColumnComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) | 기둥 시리즈를 지정합니다.                                                                                                            |
+| `Line`                                                                                                         | 선 시리즈를 지정합니다                                                                                                              |
+| `auto`                                                                                                         | 데이터의 이름 및 수치 열 수를 기반으로 한 위의 값 중에서 제안하는 데이터 어댑터를 기반으로 차트 유형의 자동 선택을 지정합니다. 예를 들면, 열기, 높음, 낮음, 닫기 열이 있는 데이터 항목에 ‘바’를 제안합니다. |
 
 다른 차트 창에 대한 정보는 [금융 차트 창](financialchart_chart_panes.md) 항목을 참조하십시오.
 
@@ -52,7 +52,7 @@ _language: kr
 
 ### 필요한 모듈
 
-[`IgxFinancialChart`](financialchart.md)에는 다음 모듈이 필요합니다:
+[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html)에는 다음 모듈이 필요합니다:
 
 ```ts
 // app.module.ts
@@ -74,7 +74,7 @@ export class AppModule {}
 
 금융 차트 모듈을 불러오기 한 후 다음 단계는 데이터에 바인딩합니다.
 
-[`IgxFinancialChart`](financialchart.md) 제어를 생성하려면 먼저 데이터를 바인딩해야 합니다. 다음의 코드 조작은 간단한 데이터 소스를 작성하는 방법을 보여줍니다.
+[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어를 생성하려면 먼저 데이터를 바인딩해야 합니다. 다음의 코드 조작은 간단한 데이터 소스를 작성하는 방법을 보여줍니다.
 
 ```ts
 let data = [

@@ -6,15 +6,15 @@ _keywords: map, Ignite UI for Angular, infragistics
 
 ## Using Scatter Symbol Series
 
-Use the map component's [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
+Use the map component's [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-type-scatter-symbol-series-iframe" src='{environment:demosBaseUrl}/maps/geo-map-type-scatter-symbol-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-scatter-symbol-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-symbol-series-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-symbol-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -22,11 +22,11 @@ Use the map component's [`IgxGeographicSymbolSeriesComponent`](map_geographic_sc
 
 ### Data Requirements
 
-Similarly to other types of geographic series in the map component, the [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the [`latitudeMemberPath`](map_geographic_scatter_symbol_series.md) and [`longitudeMemberPath`](map_geographic_scatter_symbol_series.md) properties. The [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) uses values of these mapped data columns to plot symbol elements in the geographic map component.
+Similarly to other types of geographic series in the map component, the [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have two numeric data columns that store a geographic location (longitude and latitude). These data columns are then mapped to the [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath) and [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath) properties. The [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) uses values of these mapped data columns to plot symbol elements in the geographic map component.
 
 ### Code Snippet
 
-The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`](map_geographic_scatter_symbol_series.md) to locations of cities loaded from a shape file using the `ShapeDataSource`.
+The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) to locations of cities loaded from a shape file using the `ShapeDataSource`.
 
 <!-- Angular -->
 
