@@ -6,7 +6,7 @@ mentionedTypes: ['XamDataChart','BubbleSeries']
 
 ---
 
-## Scatter Bubble Series
+## Scatter Bubble Chart
 
 This topic explains, with code examples, how to use scatter [`IgxBubbleSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) in the Angular data chart component. This series
 is similar to [Scatter Marker Series](data-chart-type-scatter-point-series.md) which use the Cartesian (x, y) coordinate system to plot data. This series displays the data as a collection of scaled bubbles, each having a pair of numeric X/Y values that determines its location and 3rd value that determines its size.

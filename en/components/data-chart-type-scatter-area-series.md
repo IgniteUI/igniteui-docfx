@@ -5,7 +5,7 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','ScatterAreaSeries','ScatterContourSeries']
 ---
 
-## Scatter Area Series
+## Scatter Area Chart
 
 This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) in the Angular data chart component. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) works a lot like the [`IgxScatterContourSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
 
