@@ -149,7 +149,7 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 #### Known issues and limitations
 
 - If there are cells bind to the same condition (from different columns) and one cell is updated, the other cells won't be updated based on the new value, if the condition is met.
-A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operatior` ... on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
+A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operator` ... on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
 
 ```ts
 public backgroundClasses = {
