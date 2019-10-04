@@ -125,6 +125,14 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 
 When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
 
+@@if (igxName === 'IgxGrid') {
+#### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Exporting grouped data|When exporting Grid data that is grouped by one or more columns, the output result in Excel will be a flat collection that is not grouped.|
+}
+
 #### API References
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
