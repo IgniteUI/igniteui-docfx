@@ -1,30 +1,26 @@
 ---
 title: Badge コンポーネント
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
-_language: ja
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
 ---
 
-## Badge
-
+##Badge
 <p class="highlight">Ignite UI for Angular の Badge はアプリケーションで視覚的な通知が必要なアバター、ナビゲーション メニュー、またはその他のコンポーネントをデコレートする絶対配置要素です。Badge は情報、成功、警告、またはエラーを示す定義済みのスタイルを持つアイコンとして設定できます。</p>
 <div class="divider"></div>
 
 ### Badge デモ
-
 <div class="sample-container loading" style="height:280px">
-    <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[「**インストール**」](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順を参照できます。
+> Ignite UI for Angular コンポーネント、をプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
 
-### 使用方法
-
+###使用方法
 Ignite UI for Angular Badge を初期化する前に、`IgxBadgeModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
@@ -41,9 +37,9 @@ import { IgxBadgeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを実装するために [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) コンポーネントを使用します。コンテナーのために [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を使用します。
+チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを達成するには、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) コンポーネントを使用します。コンテナの場合、[`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) が使用されます。
 
-すべての必要なモジュールを含み、**app.module.ts** ファイルにインポートします。
+続行するには、必要なすべてのモジュールを含めて、**app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -62,7 +58,7 @@ import {
 export class AppModule {}
 ```
 
-構成の後、すべての連絡先を [**IgxList**](list.md) コンポーネントに表示します。リストはメンバー名および状態を表示します。
+すべての設定後、[`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントのすべての連絡先を表示しましょう。リストはメンバー名および状態を表示します。
 
 ```html
 <!-- contacts.component.html -->
@@ -92,6 +88,7 @@ export class AppModule {}
     new Member("Lisa Landers", "away"),
     new Member("Dorothy H. Spencer", "offline"),
   ];
+
 ```
 
 ```typescript
@@ -123,20 +120,19 @@ class Member {
     }
 }
 ```
-
 サンプルを正しく構成すると、メンバー名および状態を含むリストが表示されます。
 
 <div class="sample-container loading" style="height: 280px">
     <iframe id="badge-sample-1-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-各チャット メンバーの前にアバターを追加します。そのため、[**IgxAvatar**](avatar.md) を含む [`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) に div 要素を追加します。リスト項目コンテンツを以下のように変更します。
+各チャット メンバーの前にアバターを追加します。これには、[`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) を含む別の div 要素を [`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) に配置します。リスト項目コンテンツを以下のように変更します。
 
 ```html
 <!-- contacts.component.html -->
@@ -163,19 +159,19 @@ class Member {
 <iframe id="badge-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-名前のみのリストはそれほど有用な情報を表示しません。最後に、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) を追加し、連絡先の状態通知を表示します。バッジ コンポーネントをアバター コンポーネントに追加し、[`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) コンテンツを以下のコードのように変更します。
+名前のみのリストはそれほど有用な情報を表示しません。最後にリストアイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。以下に示すようにリスト アイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。
 
-[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) を設定するには、名前を公式の[マテリアル アイコン セット](https://material.io/icons/)から提供します。バッジの [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) を [`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) に設定します。その型により、特定の背景色が適用されます。
+[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) 　および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があることに注意してください。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景色が適用されます。
 
-このサンプルで、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* および *type* のモデル プロパティにバインドされます。
+サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* と *type* という名前のモデルプロパティにバインドされています。
 
-バッジを親コンテナーに配置するには、*badge-style* のカスタム CSS クラスを作成し、bottom および right 位置を定義します。
+親コンテナにバッジを配置するには、カスタム css クラス *badge-style* を作成し、上部と右側の位置を定義します。
 
 ```html
 <!-- contacts.component.html -->
@@ -216,19 +212,19 @@ class Member {
     <iframe id="badge-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
     </button>
 </div>
 
-### Styling
+### スタイル設定
 
-To get started with styling the badges, we need to import the `index` file, where all the theme functions and component mixins live:
+Badge のスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) and accepts the ` $icon-color`, `$text-color`, `$border-radius`, `$disable-border` and the `$shadow` parameters.
+最も簡単なアプローチに従って、[`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) を拡張し、` $icon-color`、`$text-color`、`$border-radius`、`$disable-border`、および `$shadow` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $color-1: #3d5770;
@@ -247,16 +243,16 @@ $custom-theme: igx-badge-theme(
 ```
 
 > [!NOTE]
-> As we see the `$shadow` parameter accepts `igx-elevation`, which is of type box-shadow. In order to learn more about various options for IgniteUI Shadows, you can take a look at this [link](shadows.md).
+> ご覧のとおり、`$shadow` パラメーターは `igx-elevation` を受け取ります。Ignite UI シャドウのさまざまなオプションの詳細については、この[リンク](shadows.md)をご覧ください。
 
-The last step is to **include** the component mixins: 
+最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
 
 ```scss
 @include igx-badge($custom-theme);
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+ >コンポーネントが [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
  ```scss
 :host {
@@ -266,11 +262,11 @@ The last step is to **include** the component mixins:
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $white-color: white;
@@ -282,7 +278,7 @@ $custom-palette: igx-palette(
 );
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
 $custom-theme: igx-badge-theme(
@@ -295,13 +291,13 @@ $custom-theme: igx-badge-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](./themes/palette.md) topic for detailed guidance on how to use them.
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`Palettes`](./themes/palette.md) のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](./themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [スキーマ](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-badge):  
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-badge) の 1 つを拡張します。  
 
 ```scss
 // Extending the light badge schema
@@ -315,7 +311,7 @@ $custom-badge-schema: extend($_light-badge,
 );
 ```
 
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル [`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global light-schema
@@ -333,11 +329,11 @@ $custom-theme: igx-badge-theme(
 );
 ```
 >[!NOTE]
->When `elevation` is set to a value different than 0 there are two possible scenarios for applying the shadow: <br>1) `$elevations` property of the theme is set => custom shadow is applied with `elevation` equal to the one set in the schema.<br>2) `$elevations` property of the theme is not set => the default shadow is applied with `elevation` equal to the one set in the schema.
+> `Elevation` が 0 以外の値に設定されている場合、シャドウを適用するための 2 つの方法があります。<br>1) テーマの `$elevations` プロパティが設定されていません => デフォルトのシャドウは、スキーマで設定されたものと同じ `elevation` で適用されます。2) テーマの `$elevations` プロパティが設定されていない => デフォルトのシャドウは、スキーマで設定されたものと同じ `elevation` で適用されます。
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+テーマを上記と同じ方法で含めることに注意してください。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:340px">
     <iframe id="badge-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-styling-sample' width="100%" height="100%" 
@@ -345,7 +341,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### API リファレンス
@@ -358,9 +354,12 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [Type]({environment:angularApiUrl}/enums/type.html)
 
-### 追加のリソース
+### その他のリソース
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+* Ignite UI for Angular [フォーラム](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) (英語)
+* Ignite UI for Angular [GitHub](https://github.com/IgniteUI/igniteui-angular) (英語)
+
+
 
