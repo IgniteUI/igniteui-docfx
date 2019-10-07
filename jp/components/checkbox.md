@@ -117,7 +117,7 @@ $my-color-palette: igx-palette(
 ```
 
 カスタム パレットが適用されていることを確認するには、テーマ関数に渡す必要があります。
-そのため、1 つの大胆な動きで[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、さらに 3 つの特定のパラメーターも渡します。これらを変更するだけで、コンポーネントを思いどおりに見せるには十分すぎると判断したとします。
+そのため、1 つの大胆な動きで[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、さらに 3 つの特定のパラメーターも渡します。これらを変更するだけで、コンポーネントを思いどおりに見せるには十分すぎると判断したとします。
 ```scss
 // in styles.scss
 $custom-checkbox-theme: igx-checkbox-theme(
@@ -143,7 +143,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 特定の `igx-checkbox` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、styles.scss で指定する上記のスタイルはすべて、代わりに component.scss ファイルで定義する必要があります。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](/themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
