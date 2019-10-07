@@ -143,7 +143,7 @@ export class AppModule {}
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法として、[`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) を拡張し、`$base-circle-color`、`$progress-circle-color` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) を拡張し、`$base-circle-color`、`$progress-circle-color` および `$text-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $custom-theme: igx-progress-circular-theme(
@@ -159,7 +159,7 @@ $custom-theme: igx-progress-circular-theme(
 ```
 
 >[!NOTE]
- >コンポーネントが [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
  ```scss
 :host {
@@ -197,7 +197,7 @@ $custom-theme: igx-progress-circular-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [**schemas**](./themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
+テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
 すべてのコンポーネントに提供される 2 つの定義済みスキーマ ([`_light-progress-circular`]({environment:sassApiUrl}/index.html#variable-_light-progress-circular)) のいずれかを拡張します。 
 
@@ -212,7 +212,7 @@ $custom-progress-schema: extend($_light-progress-circular,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを拡張する必要があります。この方法は、基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加します。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。この方法は、基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加します。
 
 ```scss
 // Extending the global light-schema
@@ -245,4 +245,4 @@ $custom-theme: igx-progress-circular-theme(
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)
+* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)
