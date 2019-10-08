@@ -227,7 +227,7 @@ interface IgxSummaryResult {
 ```
 
 > [!NOTE]
-> 集計行の高さを正しく計算するために、@@igComponent の [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドでデータが空の場合も常に IgxSummaryResult 配列の正しい長さを返す必要があります。
+> 集計行の高さを正しく計算するために、@@igComponent の [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドでデータが空の場合も常に [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) 配列の正しい長さを返す必要があります。
 @@if (igxName !== 'IgxHierarchicalGrid') {
 `UnitsInStock` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
@@ -375,7 +375,7 @@ $custom-theme: igx-grid-summary-theme(
 ```
 
 >[!NOTE]
- >コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ >コンポーネントが[`エミュレート`](../themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
 
  ```scss
 :host {

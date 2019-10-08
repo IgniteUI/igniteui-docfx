@@ -39,25 +39,23 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+### 用方法
 
-### 使用方法
+[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
 
 ```html
 <igx-icon color="magenta">home</igx-icon>
 ```
 
-### コード例
-
-[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
-
-```html
-<igx-icon color="magenta" isActive="true">home</igx-icon>
-```
-
-`inactive` アイコンを設定します。
-
+inactive アイコンを設定します。
 ```html
 <igx-icon [isActive]="false">volume_off</igx-icon>
+```
+
+コンテンツ プロジェクションでアイコンを設定します。
+
+```html
+<igx-icon color="red">bluetooth</igx-icon>
 ```
 
 CSS でアイコン サイズを設定するには、カスタム CSS を作成して名前を *custom-size* とします。アイコン サイズは **font-size** プロパティで変更でき、更に中央揃えにするには、**width** と **height** を同じ値にします。
@@ -135,7 +133,7 @@ npm i xmlhttprequest
 </ol>
 
 ### スタイル設定
-igxIcon では、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。アイコンのテーマは、コンポーネントの色をカスタマイズできるプロパティを公開します。
+igxIcon では、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。アイコンの[テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)は、コンポーネントの色をカスタマイズできるプロパティを公開します。
 
 #### グローバル テーマのインポート
 定義済みのアイコン レイアウトのスタイリングを開始するには、すべてのスタイリング機能と mixin が配置されている `index` ファイルをインポートする必要があります。  
@@ -156,7 +154,7 @@ $custom-theme: igx-icon-theme(
 
 #### カスタム カラー パレットの定義
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。  
 
 ```scss
 $black-color: #494949;
@@ -178,7 +176,7 @@ $custom-theme: igx-icon-theme(
 ```
 
 #### カスタム スキーマの定義
-[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+[**スキーマ**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、 `$_dark_icon` を使用します。   
 
 ```scss
@@ -213,7 +211,7 @@ $custom-theme: igx-icon-theme(
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ >コンポーネントが[`エミュレート`](./themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 

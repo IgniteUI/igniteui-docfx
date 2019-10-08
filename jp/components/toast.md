@@ -156,7 +156,7 @@ $dark-toast: igx-toast-theme(
 ```
 
 >[!NOTE]
->コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+>コンポーネントが[`エミュレート`](themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
 
 ```scss
 :host {
@@ -213,7 +213,7 @@ $dark-toast-schema: extend($_dark-toast,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
