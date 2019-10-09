@@ -149,10 +149,10 @@ public priceClasses = {
 
 **::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
-#### Known issues and limitations
+#### 既知の問題と制限
 
-- If there are cells bind to the same condition (from different columns) and one cell is updated, the other cells won't be updated based on the new value, if the condition is met.
-A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operator` ... on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
+- 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされている場合も他のセルが新しい値に基づいて更新されない問題。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子` を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {
