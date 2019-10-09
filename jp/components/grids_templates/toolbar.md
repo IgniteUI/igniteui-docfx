@@ -70,9 +70,9 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 ツールバーは、列の非表示、列のピン固定、データを MS Excel や CSV 形式にエクスポートできます。 
 各機能は、対応する boolean プロパティを設定して個別に有効にすることができます。
 - 列の非表示は [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) を **true** に設定
-- 列のピン固定は [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) を **true** に設定
+- 列のピン固定は [`columnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) を **true** に設定
 - MS Excel エクスポートは、グリッドの [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexcel) プロパティを **true** に設定
-- MS Excel エクスポートは、@@igComponent の [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) プロパティを **true** に設定
+- CSV エクスポートは、@@igComponent の [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) プロパティを **true** に設定
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
@@ -168,7 +168,7 @@ export class AppModule {}
 @@if (igxName !== 'IgxHierarchicalGrid') {
 #### エクスポートのカスタマイズ
 
-更にツールバー機能は簡単にオン/オフすることができます。エクスポート処理は、エクスポート処理初期化する際に発生される  **app.module.ts** イベントで詳細設定することができます。このイベントは、エクスポーターとエクスポーターのオプションで公開できます。
+更にツールバー機能は簡単にオン/オフすることができます。エクスポート処理は、エクスポート処理初期化する際に発生される [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) イベントで詳細設定することができます。このイベントは、エクスポーターとエクスポーターのオプションで公開できます。
 
 > [!NOTE]
 > デフォルトで CSV にエクスポートした際にエクスポーターがカンマ区切りセパレーターを使用してエクスポートし、出力ファイルに .csv 拡張しを使用します。
@@ -324,7 +324,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 ```
 
 >[!NOTE]
->コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+>コンポーネントが[`エミュレート`](../themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
 
 ```scss
 :host {
@@ -395,7 +395,7 @@ $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema

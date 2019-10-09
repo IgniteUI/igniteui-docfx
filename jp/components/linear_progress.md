@@ -298,7 +298,7 @@ $custom-theme: igx-progress-linear-theme(
 ```
 
 >[!NOTE]
- >コンポーネントが[`エミュレート`](./themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ >コンポーネントが[`エミュレート`](./themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
 
  ```scss
 :host {
