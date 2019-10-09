@@ -422,7 +422,7 @@ $custom-theme: igx-grid-theme(
 * [集計](summaries.md)
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
-@@if (igxName === 'IgxGrid') {* [Group by](groupby.md)}
+@@if (igxName === 'IgxGrid') {* [グループ化](groupby.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

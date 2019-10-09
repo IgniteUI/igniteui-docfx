@@ -440,7 +440,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->`.igx-grid__filtering-row` 内で **igx-button** および　**igx-input-group** mixins をスコープし、行フィルター ボタンとその入力グループのみのスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
+>`.igx-grid__filtering-row` 内で **igx-button** および **igx-input-group** mixins をスコープし、行フィルター ボタンとその入力グループのみのスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
@@ -595,7 +595,7 @@ $custom-input-group: igx-input-group-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:500px">
@@ -603,7 +603,7 @@ $custom-input-group: igx-input-group-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {

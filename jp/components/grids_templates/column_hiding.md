@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列サイズ変更|Ignite UI for Angular |Infragistics
+title: Angular Grid 列非表示|Ignite UI for Angular |Infragistics
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics
 _language: ja
@@ -25,7 +25,7 @@ _language: ja
 
 ### グリッドの列非表示
 
-Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) は、ユーザーが UI を介して直接、または Angle コンポーネントを使用した列の非表示が可能です。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
+Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) は、ユーザーが UI を介して直接、または Angle コンポーネントを使用した列の非表示が可能です。Material UI Grid には組み込み列非表示 **UI** があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
 #### デモ
 
