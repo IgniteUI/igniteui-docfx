@@ -82,6 +82,36 @@ $unnecessary: (igx-avatar, igx-badge);
 ```
 アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
 
+### Switching from Material to Fluent theme
+Since version `8.2` our components support a new theme, built based on `Microsoft fluent design system`.  
+in order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
+
+For `white` version of the `fluent theme` using `excel palette`, use the code below: 
+```scss
+// Replace
+@include igx-theme($default-palette);
+// With     
+@include igx-fluent-theme($fluent-excel-palette);
+```
+
+For `Dark` version of the `fluent theme` using `excel palette`, use the code below:
+```scss    
+// replace
+@include igx-dark-theme($default-palette);
+// With 
+@include igx-fluent-dark-theme($fluent-excel-palette);
+```
+
+We also added a `Microsoft word` palette, in order to use it, just replace the `$fluent-excel-palette` with `$fluent-word-palette`
+
+```scss
+// for the white version    
+@include igx-fluent-theme($fluent-word-palette);
+
+// for the dark version
+@include igx-fluent-dark-theme($fluent-word-palette);
+```
+
 ### ブラウザー サポート
 <div class="divider--half"></div>
 
