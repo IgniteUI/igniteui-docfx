@@ -238,7 +238,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 </div>
 
 ### 日付の無効化
-このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) 機能の使用について説明します。型 [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) の `single dates` または `range` 要素を Array に追加して [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) 記述子に渡します。
+このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) 機能の使用について説明します。異なる`単一の日付`または`範囲`の要素を配列に追加し、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) 記述子に渡すことができます。
 
 ```typescript
 this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
@@ -346,22 +346,42 @@ export class CalendarSample7Component {
 </div>
 
 ### キーボード ナビゲーション
+[**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) コンポーネントにフォーカスがある場合、以下を使用してナビゲーションできます。
+- <kbd>PageUp</kbd> キーは前の月に移動します。
+- <kbd>PageDown</kbd> キーは次の月に移動します。
+- <kbd>Shift</kbd> + <kbd>PageUp</kbd> キーは前の年に移動します。
+- <kbd>Shift</kbd> + <kbd>PageDown</kbd>> キーは次の年に移動します。
+- <kbd>Home</kbd> キーは現在の年の最初の月をフォーカスします。
+- <kbd>End</kbd> キーは現在の月の最後の日または最後の月をフォーカスします。
+- <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
 
-[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) コンポーネントがフォーカスを持つ場合:
+`前` または`次`の月のボタン（サブヘッダー内）にフォーカスがある場合、以下を使用します。
+- <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次の月または前の月のビューへスクロールします。
 
-* `PageUp` は前の月へ移動します。
-* `PageDown` は次の月へ移動します。
-* `Shift + PageUp` は前の年へ移動します。
-* `Shift + PageDown` は次の年へ移動します。
-* `Home` は表示されている現在月の最初日にフォーカスします。
-* `End` は表示されている現在月の最後日にフォーカスします。
+サブヘッダーの`月`ボタンのフォーカス時:
+- <kbd>Space</kbd> または <kbd>Enter</kbd> キーは月ビューを開きます。
 
-現在月の日がフォーカスされる場合:
+サブヘッダーの`年`ボタンのフォーカス時:
+- <kbd>Space</kbd> または <kbd>Enter</kbd> キーは10 年ビューを開きます。
 
-* 矢印キーは日を移動します。
-* `Enter` はフォーカスされている日を選択します。
+現在月の日のフォーカス時:
+- 矢印キーで日を移動します。
+- 矢印キーで前/翌月に移動します。
+- 現在の月の最終日から次の日または現在の月の最初の日から前に移動すると、表示されている次の月または前の月にフォーカスが移動します。
+- 現在の月の最終日から次の日または現在の月の最初の日から前に移動すると、表示されている次の月または前の月にフォーカスが移動します。
+- <kbd>Enter</ kbd> キーを使用して、現在フォーカスされている日を選択します。
 
->[!NOTE]
+月ビュー内の月のフォーカス時:
+- 矢印キーで月を移動します。
+- <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
+- <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
+- <kbd>Enter</ kbd> キーは、現在フォーカスされている月を選択してビューと閉じます。
+
+10 年ビュー内の年のフォーカス時:
+- 矢印キーで年を移動します。
+- <kbd>Enter</ kbd> キーは、現在フォーカスされている年を選択してビューと閉じます。
+
+>注:
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
 <div class="divider--half"></div>

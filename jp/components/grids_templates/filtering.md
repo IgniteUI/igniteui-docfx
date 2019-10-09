@@ -440,7 +440,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->We scope the **igx-button** and the **igx-input-group** mixins within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
+>`.igx-grid__filtering-row` 内で **igx-button** および　**igx-input-group** mixins をスコープし、行フィルター ボタンとその入力グループのみのスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
