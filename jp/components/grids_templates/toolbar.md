@@ -1,5 +1,5 @@
 ---
-title: Angular Grid ツール バー | Material Table | Ignite UI for Angular | infragistics 
+title: Angular Grid ツール バー | マテリアル テーブル |Ignite UI for Angular |infragistics 
 _description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
 _keywords: Angular ツール バー, igniteui for angular, infragistics
 _language: ja
@@ -70,9 +70,9 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 ツールバーは、列の非表示、列のピン固定、データを MS Excel や CSV 形式にエクスポートできます。 
 各機能は、対応する boolean プロパティを設定して個別に有効にすることができます。
 - 列の非表示は [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) を **true** に設定
-- 列のピン固定は [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) を **true** に設定
+- 列のピン固定は [`columnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) を **true** に設定
 - MS Excel エクスポートは、グリッドの [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexcel) プロパティを **true** に設定
-- MS Excel エクスポートは、@@igComponent の [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) プロパティを **true** に設定
+- CSV エクスポートは、@@igComponent の [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) プロパティを **true** に設定
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
@@ -168,7 +168,7 @@ export class AppModule {}
 @@if (igxName !== 'IgxHierarchicalGrid') {
 #### エクスポートのカスタマイズ
 
-更にツールバー機能は簡単にオン/オフすることができます。エクスポート処理は、エクスポート処理初期化する際に発生される  **app.module.ts** イベントで詳細設定することができます。このイベントは、エクスポーターとエクスポーターのオプションで公開できます。
+更にツールバー機能は簡単にオン/オフすることができます。エクスポート処理は、エクスポート処理初期化する際に発生される [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) イベントで詳細設定することができます。このイベントは、エクスポーターとエクスポーターのオプションで公開できます。
 
 > [!NOTE]
 > デフォルトで CSV にエクスポートした際にエクスポーターがカンマ区切りセパレーターを使用してエクスポートし、出力ファイルに .csv 拡張しを使用します。
@@ -293,17 +293,16 @@ public toolbarExportingHandler(args) {
 <div class="divider"></div>
 }
 
-@@if (false) { <!-- remove after translation -->
-### Styling
+### スタイル設定
 
-To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
+ツールバーのスタイル設定を開始するには、すべてのテーマ機能とコンポーネントミックスインが存在するインデックスファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color`, `$title-text-color`, `$button-background`, `$button-text-color`, `$button-hover-background` and the `$button-hover-text-color` parameters.
+最も簡単な方法は、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color`、`$title-text-color`, `$button-background`、`$button-text-color`、`$button-hover-background`、`$button-hover-text-color` パラメーターを受け取る方法です。
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
@@ -316,16 +315,16 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 );
 ```
 
-As seen, the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) only controls colors for the toolbar container and the buttons inside of it by taking advantage of the respective parameters for the button (e.g. `$button-background`). (Buttons outside the toolbar will not be affected.)
+ご覧のように、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) は、ボタンの各パラメーター (`$button-background`) を利用して、ツールバー コンテナーとその中のボタンの色のみを制御します。(ツールバーの外側のボタンは影響を受けません。)
 
-The last step is to **include** the newly created theme.
+最後にコンポーネントのテーマを**含めます**。
 
 ```scss
 @include igx-grid-toolbar($dark-grid-toolbar-theme);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが[`エミュレート`](../themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
 
 ```scss
 :host {
@@ -335,11 +334,11 @@ The last step is to **include** the newly created theme.
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #FFCD0F;
@@ -348,7 +347,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
@@ -362,13 +361,13 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) schema: 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) の 1 つを拡張します。 
 
 ```scss
  Extending the dark toolbar schema
@@ -396,7 +395,7 @@ $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -411,9 +410,9 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
@@ -421,7 +420,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -431,7 +430,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -441,11 +440,10 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider"></div>
 }
-} <!-- remove after translation -->
 
 ### API リファレンス
 
