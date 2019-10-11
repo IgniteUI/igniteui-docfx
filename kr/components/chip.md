@@ -211,6 +211,8 @@ Next, create a new theme, that extends the [`igx-chip-theme`]({environment:sassA
 $custom-theme: igx-chip-theme(
     $background: #494949,
     $text-color: #e2e2e2,
+    $remove-icon-color: #e2e2e2,
+    $remove-icon-color-focus: #ffcd0f,
     $hover-text-color: #f2f2f2,
     $selected-background: #ffcd0f,
     $selected-border-color: #ffcd0f,
@@ -240,6 +242,8 @@ After the custom palette has been generated, the `igx-color` function can be use
 $custom-theme: igx-chip-theme(
     $background: igx-color($custom-palette, "primary", 500),
     $text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $remove-icon-color: igx-contrast-color($custom-palette, "primary", 500),
+    $remove-icon-color-focus: igx-color($custom-palette, "secondary", 500),
     $hover-text-color: igx-contrast-color($custom-palette, "primary", 500),
     $selected-background: igx-color($custom-palette, "secondary", 500),
     $selected-border-color: igx-color($custom-palette, "secondary", 500),
@@ -258,6 +262,8 @@ $custom-chip-schema: extend($_light-chip, (
     background: (igx-color("primary", 500)),
     text-color: (igx-contrast-color("primary", 500)),
     hover-text-color: (igx-contrast-color("primary", 500)),
+    remove-icon-color: (igx-contrast-color("primary", 500)),
+    remove-icon-color-focus: (igx-contrast-color("secondary", 500)),
     selected-background: (igx-color("secondary", 500)),
     selected-border-color: (igx-color("secondary", 500)),
     hover-selected-background: (igx-color("secondary", 600)),
