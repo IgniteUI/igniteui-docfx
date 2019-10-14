@@ -195,7 +195,7 @@ public chipsOrderChanged(event) {
   - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
 
 ### スタイル設定
-igxChip を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。チップの [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) は、チップの多様なカスタマイズを可能にする多数のプロパティを公開します。        
+igxChip を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。チップの [テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme) は、チップの多様なカスタマイズを可能にする多数のプロパティを公開します。        
 
  #### グローバル テーマのインポート
 定義済みのチップ レイアウトのスタイリングを開始するには、すべてのスタイリング機能と mixin が配置されている `index` ファイルをインポートする必要があります。  

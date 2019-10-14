@@ -287,7 +287,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 特定の `igx-expansion-panel` をアプリ内で異なるスタイルにしたい場合、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、上記のすべての手順を `styles.scss` から `component.scss` ファイルに移動する必要があります。 
 
  >[!NOTE]
- >コンポーネントが[`エミュレート`](themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ >コンポーネントが[`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss

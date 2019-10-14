@@ -115,7 +115,7 @@ export class AppModule {}
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
 ### スタイル設定
-igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md) でスタイルを設定できます。リップルの [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) は、エフェクトの色をカスタマイズできるプロパティを公開します。        
+igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md) でスタイルを設定できます。リップルの [テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) は、エフェクトの色をカスタマイズできるプロパティを公開します。        
 
 #### グローバル テーマのインポート
 事前定義されたリップルカラーのスタイリングを開始するには、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。  
@@ -217,7 +217,7 @@ $custom-theme: igx-ripple-theme(
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ### その他のリソース
 

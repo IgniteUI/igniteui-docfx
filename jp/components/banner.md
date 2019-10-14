@@ -337,4 +337,4 @@ $custom-button-theme: igx-button-theme(
 ## API リファレンス
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-banner)

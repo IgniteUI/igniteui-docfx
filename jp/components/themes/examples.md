@@ -318,12 +318,12 @@ export class ThemeChooserSampleComponent implements OnInit {
 
 ### API
 
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
-* [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGrid Filtering スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
+* [IgxGrid Paginator スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>
