@@ -84,7 +84,7 @@ Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somew
 
 ### Switching from Material to Fluent theme
 Since version `8.2` our components support a new theme, built based on the [`Microsoft Fluent Design System`](https://www.microsoft.com/design/fluent/).  
-in order to switch from `material` to `fluent`, you have to use one of the newly created mixins.	In order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
+In order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
 
 For the `light` version of the `fluent theme` using `excel color palette`, use the code below: 
 
