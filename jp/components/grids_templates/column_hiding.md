@@ -441,7 +441,6 @@ export class AppModule {}
 }
 }
 
-@@if (false) { <!-- remove after translation -->
 ### スタイル設定
 
 列非表示コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在するインデックス ファイルをインポートする必要があります。
