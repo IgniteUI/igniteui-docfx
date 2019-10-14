@@ -35,4 +35,4 @@ Here is a sample that shows a grid in the A4 format ready to be printed. Open th
 
 note that even if you have a colorful grid it will appear black and white in order to be as clean and simple as possible and to reduce the use of ink. All the clickable elements in the grid will be omitted since they don't make sense on a paper
 
-If you have other elements on the page and you don't want them to appear in the print document you can add the `.no-print` class that we provide. That class will set the display property on the target element to `display: none` which will make sure that the element will be omitted from the print page, so you can have a nice clean `Data Grid` ready for print.
+If you have other elements on the page and you don't want them to appear in the print document you can add the `.igx-no-print` class that we provide. That class will set the display property on the target element to `display: none` which will make sure that the element will be omitted from the print page, so you can have a nice clean `Data Grid` ready for print.
