@@ -381,7 +381,7 @@ export class CalendarSample7Component {
 - 矢印キーで年を移動します。
 - <kbd>Enter</kbd> キーは、現在フォーカスされている年を選択してビューと閉じます。
 
->注:
+>[!NOTE]
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
 <div class="divider--half"></div>
