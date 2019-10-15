@@ -1,13 +1,13 @@
----
-title: Angular Data Tree Grid | Material Table | Ignite UI for Angular | Infragistics
+﻿---
+title: Angular データ ツリー グリッド | マテリアル テーブル | Ignite UI for Angular | Infragistics
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: Angular データ グリッド, igniteui for angular, infragistics
+_keywords: angular group by, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
 ## データ ツリー グリッド
 
-<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
+<p class="highlight">Ignite UI for Angular Tree Grid は、階層データまたはフラットデータを簡単に表示および操作できます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、並べ替え、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI ツリー グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
 ### デモ
 
@@ -239,7 +239,7 @@ export class MyComponent implements OnInit {
 
 <!-- ### Sizing
 
-See the [Grid Sizing](sizing.md) topic. -->
+See the [Grid Sizing](sizing.md) topic.-->
 
 ## 既知の問題と制限
 
@@ -249,7 +249,7 @@ See the [Grid Sizing](sizing.md) topic. -->
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
 > [!NOTE]
-> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`.For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
