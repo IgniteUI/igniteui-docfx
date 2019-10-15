@@ -13,10 +13,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 1. Install NodeJS.
 2. Install Visual Studio Code.
 
-<!-- Before you can run Ignite UI for Angular, there are 2 steps to get everything on your machine set up to run any Angular app, including Ignite UI for Angular, and to build Ignite UI for Angular apps.
-
-To get started, you must install both NodeJS and Visual Studio Code on your machine. Modern web development with Angular requires NodeJS, it’s sort of like an ASP.NET app running in the browser and requires ASP.NET runtime deployed on the server. For development, there is nothing better than Visual Studio Code to build Angular apps. Getting started is easy, just download and install both Node.js and Visual Studio Code. -->
-
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
       <img src="../../images/general/nodejs.svg"
@@ -45,7 +41,7 @@ The Ignite UI for Angular can be installed either wth the Angular CLI or with th
 
 The Angular CLI provides support for external libraries to your project through the `ng add` command, which installs a library's `npm` packages to your workspace and configures the project in the current working directory to use that library.
 
-To create an Angular application with the Angular CLI, open your preferred terminal and type the following command:
+To create an Angular application with the Angular CLI, open your preferred terminal and type in the following command:
 
 ```cmd
 ng new <project name> --style=scss
