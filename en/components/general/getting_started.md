@@ -43,22 +43,22 @@ The Ignite UI for Angular can be installed either wth the Angular CLI or with th
 
 #### Quick Start with the Angular CLI
 
-The Angular CLI provides support for external libraries to your project through the ng add command, which installs library's npm packages to your workspace and configures the project in the current working directory to use that library.
+The Angular CLI provides support for external libraries to your project through the `ng add` command, which installs a library's `npm` packages to your workspace and configures the project in the current working directory to use that library.
 
-To create an Angular application with the Angular CLI open your preferred terminal application and type the following command:
+To create an Angular application with the Angular CLI, open your preferred terminal and type the following command:
 
 ```cmd
 ng new <project name> --style=scss
 ```
-You can specify the file extension or preprocessor to use for your application's style files by the --style option. We recommend using Scss since our components' styles are based on the [Ignite UI for Angular theming library](../themes.md). When you install Ignite UI package your application will be configured to use the default styling theme which can be then easily customized either for all or for specific component instances.
+You can specify the file extension or preprocessor to use for your application's style files with the `--style` option. We recommend using Scss since our components' styles are based on the [Ignite UI for Angular theming library](../themes.md). Later on, when you install the Ignite UI for Angular package, your application will be configured to use the default styling theme which can be then easily customized either for all or for specific component instances.
 
-Thereafter you can install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project by the following command: 
+Thereafter you can install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project, by running the following command: 
 
 ```cmd
 ng add igniteui-angular
 ```
 
-During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the web-animations-js package in your project, which is required if you use AnimationBuilder in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the minireset.css will be installed in your application.
+During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
 
 #### Create an application by using the Ignite UI CLI
 
