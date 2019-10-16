@@ -300,7 +300,6 @@ $custom-theme: igx-progress-linear-theme(
 >[!NOTE]
 >コンポーネントが[`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
-
  ```scss
 :host {
   ::ng-deep {

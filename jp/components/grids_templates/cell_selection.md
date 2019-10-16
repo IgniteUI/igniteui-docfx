@@ -252,7 +252,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
  >[!NOTE]
- >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
+ >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
  > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
 
  ```scss
@@ -331,5 +331,5 @@ $custom-grid-theme: igx-grid-theme(
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* Ignite UI for Angular [フォーラム](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) (英語)
-* Ignite UI for Angular [GitHub](https://github.com/IgniteUI/igniteui-angular) (英語)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
