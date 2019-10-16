@@ -88,7 +88,8 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが代わりに使用されます。
+> [!Note]
+> [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが代わりに使用されます。
 
 
 詳細については、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を[リモートデータにバインド](combo_remote.md)を参照してください。

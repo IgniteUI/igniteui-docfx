@@ -240,7 +240,7 @@ export class MyBannerComponent {
 
 
 ## スタイル設定
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#animation-demo)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#styling)を直接参照できます。
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#アニメーション-デモ)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#styling)を直接参照できます。
 
 ### テーマのインポート
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
@@ -337,4 +337,4 @@ $custom-button-theme: igx-button-theme(
 ## API リファレンス
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-banner)

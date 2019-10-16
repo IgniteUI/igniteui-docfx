@@ -478,13 +478,13 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 スタイル:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-igx-card-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxButtonDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxCardComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 <div class="divider"></div>
 

@@ -336,7 +336,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     );
 ```
 
-ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) (テーマ ライブラリによって公開) と共に使用しています。
+ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (テーマ ライブラリによって公開) と共に使用しています。
 
 #### テーマを含む
 

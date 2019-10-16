@@ -293,7 +293,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### その他のリソース
 <div class="divider--half"></div>

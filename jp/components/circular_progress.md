@@ -123,15 +123,15 @@ export class AppModule {}
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 入力に値を提供する場合、この値は [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value)入力より大きい値に定義します。それ以外の場合、**進行状況の更新に渡す値を取得する更新は一度のみとなります。
 <div class="divider--half"></div>
 
-### Styling
+### スタイル設定
 
-To get started with styling the circular progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
+円形のプログレスバーのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) and accepts the `$base-circle-color`, `$progress-circle-color` and `$text-color` parameters.
+最も簡単な方法として、[`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) を拡張し、`$base-circle-color`、`$progress-circle-color` および `$text-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $custom-theme: igx-progress-circular-theme(
@@ -140,14 +140,14 @@ $custom-theme: igx-progress-circular-theme(
     $text-color: lightgray
 );
 ```
-The last step is to **include** the component mixins: 
+最後にそれぞれのテーマを持つコンポーネント mixins を**含めます**。
 
 ```scss
  @include igx-progress-circular($custom-theme);
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+ >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
  ```scss
 :host {
@@ -157,11 +157,11 @@ The last step is to **include** the component mixins:
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $gray-color: lightgray;
@@ -170,7 +170,7 @@ $green-color: rgb(32, 192, 17);
 $custom-palette: igx-palette($primary: $gray-color, $secondary: $green-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
 $custom-theme: igx-progress-circular-theme(
@@ -181,13 +181,13 @@ $custom-theme: igx-progress-circular-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](./themes/palette.md) topic for detailed guidance on how to use them.
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palette.md) のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](./themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-progress-circular`]({environment:sassApiUrl}/index.html#variable-_light-progress-circular):  
+すべてのコンポーネントに提供される 2 つの定義済みスキーマ ([`_light-progress-circular`]({environment:sassApiUrl}/index.html#variable-_light-progress-circular)) のいずれかを拡張します。 
 
 ```scss
 // Extending the light progress circular schema
@@ -200,7 +200,7 @@ $custom-progress-schema: extend($_light-progress-circular,
 );
 ```
 
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。この方法は、基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加します。
 
 ```scss
 // Extending the global light-schema
@@ -217,8 +217,7 @@ $custom-theme: igx-progress-circular-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
-
+上記と同じ方法でテーマを含める必要があることに注意してください。
 #### Demo
 
 <div class="sample-container loading" style="height:350px">
@@ -227,11 +226,11 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
 </div>
 
 ### API
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)
+* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)

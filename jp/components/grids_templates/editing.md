@@ -454,7 +454,7 @@ export class MyHGridEventsComponent {
 
 ### スタイル設定
 
-@@ igxName で [Ignite UI for Angular Theme Library](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@ igxName で [Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
@@ -504,7 +504,7 @@ $custom-grid-theme: igx-grid-theme(
 
 #### スコープ コンポーネント テーマ
 
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#importing-style-library) を含む)。
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#スタイル-ライブラリのインポート) を含む)。
 
 このように、Angular の [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
@@ -524,7 +524,7 @@ $custom-grid-theme: igx-grid-theme(
 
 #### デモのスタイル設定
 
-上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#スタイル設定), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#スタイル設定g))。
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#スタイル設定), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#スタイル設定))。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
