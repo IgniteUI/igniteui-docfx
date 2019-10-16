@@ -419,7 +419,7 @@ $my-color-palette: igx-palette(
 );
 ```
 カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの多数の `igx-drop-down-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成したパレットを使用して、新しい色をその[パレット](themes/palette.md)に基づいて作成すると非常に便利です。紫色のいくつかの異なる色合いを使用します。
+次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの多数の `igx-drop-down-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成したパレットを使用して、新しい色をその[パレット](themes/palette.md)に基づいて作成すると非常に便利です。紫色のいくつかの異なる色合いを使用します。
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
     $background-color: igx-color($my-color-palette, "secondary", 100),
@@ -452,7 +452,7 @@ $custom-button-theme: igx-button-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 ##### グローバル
-この新しく作成された `igx-drop-down` テーマをアプリで[`グローバル`](themes/component-themes.md#creating-themes)に適用したい場合 (このタイプのすべてのコンポーネントに、実際に igx-drop-down-theme を拡張していることに注意してください)、必要なすべてテーマをアプリのルート スタイルファイルに含めてください。同じことがカスタム ボタン テーマにも当てはまります。
+この新しく作成された `igx-drop-down` テーマをアプリで[`グローバル`](themes/component-themes.md#テーマの作成)に適用したい場合 (このタイプのすべてのコンポーネントに、実際に igx-drop-down-theme を拡張していることに注意してください)、必要なすべてテーマをアプリのルート スタイルファイルに含めてください。同じことがカスタム ボタン テーマにも当てはまります。
 ```scss
 // in root app.scss
 // Pass our drop-down theme to the `igx-drop-down` mixin
@@ -465,7 +465,7 @@ $custom-button-theme: igx-button-theme(
 特定の `igx-drop-down` のスタイルをアプリ内の他のものとは異なるようにする場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要があります。
+ >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要があります。
 
  
 
@@ -491,7 +491,7 @@ $custom-button-theme: igx-button-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ### API リファレンス
 

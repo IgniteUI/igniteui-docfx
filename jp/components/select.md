@@ -61,7 +61,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
     </igx-select-item>
 </igx-select>
 ```
-さらに、上記のサンプルは、`ngModel` を介した双方向のデータ バインディングを示しています。さらに、[`Angular Forms`](#select-in-angular-forms) の Select コンポーネントを使用できます。
+さらに、上記のサンプルは、`ngModel` を介した双方向のデータ バインディングを示しています。さらに、[`Angular Forms`](#angular-フォームの選択) の Select コンポーネントを使用できます。
 
 
 
@@ -410,8 +410,8 @@ export class MyClass implements OnInit {
 
 ## スタイル設定
 [Ignite UI for Angular テーマ ](themes/index.md)を使用して、**igx-select** の外観を変更できます。 
-`igx-select` は igx-drop-down を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイル ガイド](drop_down.md#styling)をご覧ください。
-さらに、`IgxInputGroup` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxSelect` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#styling) スタイル ガイドを参照できます。
+`igx-select` は igx-drop-down を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイル ガイド](drop_down.md#スタイル設定)をご覧ください。
+さらに、`IgxInputGroup` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxSelect` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#スタイル設定) スタイル ガイドを参照できます。
 
 ### コード スニペット
 以下を使用します。

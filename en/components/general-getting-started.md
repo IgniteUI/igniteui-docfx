@@ -94,7 +94,7 @@ This will automatically install packages for Ignite UI for Angular, along with a
 
 ### Importing Modules
 
-First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](map_overview.md) component.
+First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](geo-map.md) component.
 
 ### Using Components
 

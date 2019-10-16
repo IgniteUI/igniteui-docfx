@@ -164,7 +164,7 @@ $input-group-theme: igx-input-group-theme(
 
 グローバル スタイル ファイル (デフォルトでは styles.scss) に igx-input-group ミックスインを含めると、カスタム テーマはアプリケーションのすべての入力グループに影響します。入力グループ要素の*特定のサブセット*のみにカスタム スタイルを適用する場合は、それに応じてテーマをスコープする必要があります。
 
-例のコンテキストで続けると、サンプル コンポーネントの下の `igx-input-group` 要素にのみ適用するようにテーマをスコープできます。これを行うには、カスタム スタイルをコンポーネントのスタイル ファイル (`input-group-style.component.scss`) に移動します。ただし、[include 手順](#including-the-theme)に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、Angular の `View カプセル化`によるものです。コンポーネントは `エミュレートされた` ビューのカプセル化 (デフォルト) を使用しているため、`@include` ステートメントのスタイルは、コンポーネントのテンプレートのみにスコープされます。`Input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。ただし、入力の下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの影響を**受けません**。
+例のコンテキストで続けると、サンプル コンポーネントの下の `igx-input-group` 要素にのみ適用するようにテーマをスコープできます。これを行うには、カスタム スタイルをコンポーネントのスタイル ファイル (`input-group-style.component.scss`) に移動します。ただし、[include 手順](#テーマを含む)に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、Angular の `View カプセル化`によるものです。コンポーネントは `エミュレートされた` ビューのカプセル化 (デフォルト) を使用しているため、`@include` ステートメントのスタイルは、コンポーネントのテンプレートのみにスコープされます。`Input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。ただし、入力の下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの影響を**受けません**。
 
 境界線のスタイルを設定するには、コンポーネントの scss ファイルで `::ng-deep` セレクターを使用して、Angular の`エミュレート`されたビューのカプセル化をペネトレーションする必要があります。`::ng-deep` を使用する場合、スタイルを `:host` セレクターでスコープし、これらのスタイルがコンポーネントの下の要素にのみ適用されるようにする必要があります。
 
@@ -178,7 +178,7 @@ $input-group-theme: igx-input-group-theme(
 ```
 
  >[!NOTE]
- > コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
+ > コンポーネントが[`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
 
 #### デモ
 
@@ -197,7 +197,7 @@ $input-group-theme: igx-input-group-theme(
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ### その他のリソース
 関連トピック:

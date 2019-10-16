@@ -240,7 +240,7 @@ export class MyBannerComponent {
 
 
 ## スタイル設定
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#animation-demo)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#styling)を直接参照できます。
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#アニメーション-デモ)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#styling)を直接参照できます。
 
 ### テーマのインポート
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
@@ -267,7 +267,7 @@ $my-color-palette: igx-palette(
 ```
 
 カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
+次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
 ```scss
 // in styles.scss
 $custom-banner-theme: igx-banner-theme(
@@ -296,7 +296,7 @@ $custom-button-theme: igx-button-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 #### グローバル
-新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#creating-themes)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
+新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#テーマの作成)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
 ```scss
 // in styles.scss
 // Pass our banner theme to the `igx-banner` mixin
@@ -308,7 +308,7 @@ $custom-button-theme: igx-button-theme(
 特定の `igx-banner` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用し、さらに、上記のすべての手順を styles.scss から component.scss ファイルへ移動してください。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
@@ -337,4 +337,4 @@ $custom-button-theme: igx-button-theme(
 ## API リファレンス
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-banner)

@@ -175,7 +175,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 ```
 
 > [!NOTE]
-> コンポーネントの [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要な場合があります。
+> コンポーネントの [**View Encapsulation**](/components/themes/component-themes.html#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要な場合があります。
 
 ```scss
 :host {
@@ -293,7 +293,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### その他のリソース
 <div class="divider--half"></div>

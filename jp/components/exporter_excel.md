@@ -102,12 +102,12 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grid Excel エクスポーター:
-* [`IgxGrid Excel Exporters`](grid/export_excel.md)
-* [`IgxTreeGrid Excel Exporters`](treegrid/export_excel.md)
+* [`IgxGrid Excel エクスポーター`](grid/export_excel.md)
+* [`IgxTreeGrid Excel エクスポーター`](treegrid/export_excel.md)
 
 その他の使用されたコンポーネント:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 

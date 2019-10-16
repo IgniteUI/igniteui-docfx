@@ -83,7 +83,7 @@ export class ComboDemo implements OnInit {
 
 ### Two-Way バインディング
 
-このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey` に基づく](#data-value-and-display-properties)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
+このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey` に基づく](#データ値と表示プロパティ)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
 
 上記例の構成に従った場合:
 
@@ -111,7 +111,7 @@ export class MyCombo {
 ### 選択
 このコンボは、コントロールの現在の選択状態を取得および操作できる API を公開します。 
 
-コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。[指定された `valueKey`](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
+コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。[指定された `valueKey`](#データ値と表示プロパティ) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
 
 cities の例では、`selectedItems` は選択された都市の `id` の配列を返します。
 
@@ -268,7 +268,7 @@ $custom-combo-theme: igx-combo-theme(
 ```
 
 ### 適用
-あとは新しく作成したテーマを適切にスコープするだけです。ここでは、アプリケーション内のこのタイプの他のコンポーネントがカスタム テーマの影響を受けないよう、特定の `IgxCombo` にスタイルを設定します。テーマをグローバルに適用、またはスコープの適用に関する詳細については、[igx-drop-down スタイリング ガイド](drop_down.md#applying)をご覧ください。
+あとは新しく作成したテーマを適切にスコープするだけです。ここでは、アプリケーション内のこのタイプの他のコンポーネントがカスタム テーマの影響を受けないよう、特定の `IgxCombo` にスタイルを設定します。テーマをグローバルに適用、またはスコープの適用に関する詳細については、[igx-drop-down スタイリング ガイド](drop_down.md#適用)をご覧ください。
 
 ```scss
 // Pass our custom-drop-down-theme and custom-combo-theme to respectively `igx-drop-down` and igx-combo mixins.
@@ -307,7 +307,7 @@ $custom-combo-theme: igx-combo-theme(
 - Combo は高さのサイズ変更のための入力はありません。 [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)  は、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で ` igxForOf` ディレクティブを使用するため、すべての `igxForOf`制限が ` igxCombo` に対して有効です。詳細については、[igxForOf 既知の問題](for_of.html#known-limitations) セクションを参照してください。
+> `igxCombo` は内部で ` igxForOf` ディレクティブを使用するため、すべての `igxForOf`制限が ` igxCombo` に対して有効です。詳細については、[igxForOf 既知の問題](for_of.html#既知の問題と制限) セクションを参照してください。
 
 ## その他のリソース
 

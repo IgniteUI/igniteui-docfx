@@ -381,7 +381,7 @@ export class CalendarSample7Component {
 - 矢印キーで年を移動します。
 - <kbd>Enter</kbd> キーは、現在フォーカスされている年を選択してビューと閉じます。
 
->注:
+>[!NOTE]
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
 <div class="divider--half"></div>
@@ -481,7 +481,8 @@ $my-calendar-theme: igx-calendar-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。 使い方の詳細については [`Palettes`](./themes/palette.md) のトピックを参照してください。
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。 使い方の詳細については [`パレット`](./themes/palette.md) のトピックを参照してください。
+
 
 #### スキーマの使用
 
@@ -557,3 +558,4 @@ $my-calendar-theme: igx-calendar-theme(
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
+
