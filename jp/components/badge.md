@@ -2,6 +2,7 @@
 title: Badge コンポーネント
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
+_language: ja
 ---
 
 ##Badge
@@ -165,11 +166,11 @@ class Member {
 
 <div class="divider--half"></div>
 
-名前のみのリストはそれほど有用な情報を表示しません。最後にリストアイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。以下に示すようにリスト アイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。
+名前のみのリストはそれほど有用な情報を表示しません。最後に、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) を追加し、連絡先の状態通知を表示します。以下に示すようにリスト アイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。
 
 [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) 　および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があることに注意してください。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景色が適用されます。
 
-サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* と *type* という名前のモデルプロパティにバインドされています。
+サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および｀ [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* と *type* という名前のモデルプロパティにバインドされています。
 
 親コンテナにバッジを配置するには、カスタム css クラス *badge-style* を作成し、上部と右側の位置を定義します。
 
