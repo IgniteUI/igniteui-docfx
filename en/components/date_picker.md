@@ -25,7 +25,7 @@ To get started with the Date Picker component, first you need to install Ignite 
 ```cmd
 ng add igniteui-angular
 ```
-For a more complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 The next step is to import the `IgxDatePickerModule` in our **app.module.ts** file:
 
