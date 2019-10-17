@@ -79,7 +79,7 @@ p {
 
 ## その他のリソース
 * [デスクトップから Web: はじめての Angular アプリを作成](https://www.youtube.com/watch?v=z1SZUezpRXY&t)
-* [Angular Introduction to Components](https://angular.io/guide/architecture-components)
+* [Angular Introduction to Components (英語)](https://angular.io/guide/architecture-components)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
