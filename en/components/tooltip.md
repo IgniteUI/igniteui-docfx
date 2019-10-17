@@ -22,7 +22,14 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 ### Setup
 
-To get started with the Ignite UI for Angular Tooltip and Tooltip Target, let's first import the `IgxTooltipModule` in the app.module.ts file.
+To get started with the Tooltip and Tooltip Target, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxTooltipModule` in the app.module.ts file.
 
 ```typescript
 // app.module.ts

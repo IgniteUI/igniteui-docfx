@@ -22,7 +22,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 #### Radio Button Usage
 
 At its core the radio button component allows for a single option selection. The default styling is done according to the selection controls specification as per the Material Design guidelines.
-To get started with the Ignite UI for Angular Radio, let's first import the `IgxRadioModule` in the **app.module.ts** file:
+
+To get started with the Radio Button component install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Now let's import the `IgxRadioModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

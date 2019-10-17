@@ -14,12 +14,16 @@ The Ignite UI for Angular Select component allows a single item selection from a
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
->[!WARNING]
->To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](general/getting_started.md) topic.
-
 
 ## Usage
-To get started with the Select component you first need to import the `IgxSelectModule`:
+To get started with the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Then you need to import the `IgxSelectModule`:
 ```typescript
 // app.module.ts
 

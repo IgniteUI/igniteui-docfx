@@ -22,7 +22,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Avatar, let's first import the `IgxAvatarModule` in the **app.module.ts** file:
+To get started with the Avatar component, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxAvatarModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
