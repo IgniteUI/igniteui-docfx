@@ -458,7 +458,7 @@ export class AppRoutingModule { }
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### Styles

@@ -14,7 +14,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### 使用方法
@@ -41,7 +41,7 @@ public ngOnInit(): void {
 ```
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
 </button>
 </div>
 
@@ -57,7 +57,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
 
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-3" 
-        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -75,7 +75,7 @@ this.grid.resourceStrings = newGridRes;
 ```
 
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### ローカライズされたリソースを npm パッケージから読み込む

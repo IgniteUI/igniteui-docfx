@@ -17,7 +17,7 @@ _language: ja
     <iframe id="financial-chart-high-volume-iframe" src='{environment:demosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 

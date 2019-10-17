@@ -39,7 +39,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -49,7 +49,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
