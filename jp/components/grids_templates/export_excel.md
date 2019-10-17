@@ -1,24 +1,24 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid の Excel エクスポート  |Ignite UI for Angular |Infragistics
-_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
-_keywords: data export, ignite ui for angular, infragistics
+_description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
+_keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid を Excel へエクスポート|Ignite UI for Angular |Infragistics
-_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
-_keywords: data export, ignite ui for angular, infragistics
+_description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
+_keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchica Grid を Excel へエクスポート|Ignite UI for Angular |Infragistics
-_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
-_keywords: data export, ignite ui for angular, infragistics
+_description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
+_keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
@@ -129,11 +129,11 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 @@igComponent コンポーネントのデータ エクスポートでは、行フィルタリングおよび列の非表示などの機能に応じて @@igComponent で表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
 @@if (igxName === 'IgxGrid') {
-#### Known Limitations
+#### 既知の問題と制限
 
-|Limitation|Description|
+|制限|説明|
 |--- |--- |
-|Exporting grouped data|When exporting Grid data that is grouped by one or more columns, the output result in Excel will be a flat collection that is not grouped.|
+|グループ化したデータのエクスポート|複数列でグループ化されたグリッド データをエクスポートすると、Excel の出力結果ではグループ化されていないフラットなコレクションになります。|
 }
 
 #### API リファレンス
