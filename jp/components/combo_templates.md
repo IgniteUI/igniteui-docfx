@@ -83,7 +83,7 @@ export class AppModule {}
 ```
 
 ### ヘッダー テンプレート
-Use selector `[igxComboHeader]`:
+セレクター `[igxComboHeader]`の使用:
 
 ```html
 <igx-combo>
@@ -95,7 +95,7 @@ Use selector `[igxComboHeader]`:
 ```
 
 ### フッター テンプレート
-Use selector `[igxComboFooter]`:
+セレクター `[igxComboFooter]` の使用:
 
 ```html
 <igx-combo>
@@ -107,7 +107,7 @@ Use selector `[igxComboFooter]`:
 ```
 
 ### 空のテンプレート
-Use selector `[igxComboEmpty]`:
+セレクター `[igxComboEmpty]` の使用:
 
 ```html
 <igx-combo>

@@ -7,7 +7,7 @@ _language: ja
 
 ## 仮想ドロップダウン
 
-<p class="highlight">[Ignite UI for Angular Drop Down](drop_down.md) は、選択可能な項目リストを表示するために、[IgxForOf directive](for_of.md) の使用方法を完全に統合できます。</p>
+<p class="highlight">[Ignite UI for Angular Drop Down](drop_down.md) は、選択可能な項目リストを表示するために、[IgxForOf ディレクティブ](for_of.md) の使用方法を完全に統合できます。</p>
 
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ _language: ja
 ## 構成
 
 仮想項目のリストを表示するようにドロップダウンを設定するには、いくつかの前提条件を満たす必要があります。
-はじめにドロップダウンを宣言するコンポーネントのモジュールに IgxForOfModule をインポートします。
+はじめにドロップダウンを宣言するコンポーネントのモジュールに `IgxForOfModule` をインポートします。
 
 
 ### モジュールのインポート
@@ -41,7 +41,7 @@ export class AppModule {}
 
 ### テンプレートの構成
 
-次に、ngFor の代わりに [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) を使用してデータをループ処理し、ドロップダウン コンポーネントのテンプレートを作成します。すべての項目を正しく表示するために`*igxFor` に追加の構成を行います。
+次に、`*ngFor` の代わりに [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) を使用してデータをループ処理し、ドロップダウン コンポーネントのテンプレートを作成します。すべての項目を正しく表示するために`*igxFor` に追加の構成を行います。
 ```html
 <!-- drop-down-virtual.component.html -->
 <button igxButton [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Item Series</button>
@@ -111,7 +111,7 @@ export class DropDownVirtualComponent {
 ### スタイル
 
 設定の最後の非常に重要な部分は、コンポーネントのスタイルシート `drop-down-virtual.component.scss` 内で行われます。2 つのスクロールバー (1 つは `igxFor` から、もう 1 つはコンテナ自体から) が表示されるのを防止します。
-wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (1 つは igxFor から、もう 1 つはコンテナー自体から) を表示しないように、`overflow: hidden` セットにする必要があります。
+wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (1 つは `igxFor` から、もう 1 つはコンテナー自体から) を表示しないように、`overflow: hidden` セットにする必要があります。
 
 ```scss
     .drop-down-virtual-wrapper {
@@ -186,7 +186,7 @@ export class RemoteService {
 }
 ```
 
-このサービスは、`remoteData` の下に Observable を公開します。リモート ドロップダウン コンポーネントでサービスを注入し、そのプロパティにバインドします。
+このサービスは、`remoteData` の下に `Observable` を公開します。リモート ドロップダウン コンポーネントでサービスを注入し、そのプロパティにバインドします。
 
 ```typescript
 // remote-drop-down.component.ts

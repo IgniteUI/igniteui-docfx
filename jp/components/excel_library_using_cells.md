@@ -21,7 +21,7 @@ Excel ワークシートの [`WorksheetCell`](excel_library_using_cells.md) オ�
 
 <div class="divider--half"></div>
 
-### References
+### 参照
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 
