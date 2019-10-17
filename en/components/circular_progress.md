@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Usage
-Circular Progress Indicator can be used to show a user that he is in a process.
+Circular Progress Indicator can be used to show a user that they are in a process.
 
 To get started with the Circular Progress Indicator component, first you need to install Ignite UI for Angular by typing the following command:
 
