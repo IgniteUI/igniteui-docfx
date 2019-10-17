@@ -27,7 +27,7 @@ To get started with the Toggle directive, first you need to install Ignite UI fo
 ```cmd
 ng add igniteui-angular
 ```
-For a more complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 Now let's import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 

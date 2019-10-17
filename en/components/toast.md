@@ -24,7 +24,7 @@ To get started with the Toast component, first you need to install Ignite UI for
 ```cmd
 ng add igniteui-angular
 ```
-For a more complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 The next step is to import the `IgxToastModule` in our **app.module.ts** file:
 

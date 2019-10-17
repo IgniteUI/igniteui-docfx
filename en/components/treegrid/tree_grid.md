@@ -25,7 +25,7 @@ To get started with the tree grid, first you need to install Ignite UI for Angul
 ```cmd
 ng add igniteui-angular
 ```
-For a more complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxTreeGridModule` inside your `AppModule`:
 

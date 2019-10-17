@@ -26,7 +26,7 @@ To get started install Ignite UI for Angular by typing the following command:
 ```cmd
 ng add igniteui-angular
 ```
-For a more complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 Then import all modules for Ignite UI components and the **FormsModule** in order to have working Template Driven Form:
 

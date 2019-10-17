@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Checkbox install Ignite UI for Ang
 ```cmd
 ng add igniteui-angular
 ```
-For a more complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 Then you need to import the `IgxCheckboxModule` in the **app.module.ts** file:
 
