@@ -9,7 +9,7 @@ _language: ja
 
 データソースの状態を保持し、一度に多くのトランザクションをコミットする必要があるコンポーネントを使用する場合、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) を利用できます。 
 
-Ignite UI for Angular グリッドコンポーネントの [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、グリッドと統合して、追加設定なしに一括編集機能が使用できます。ただし、その他の Ignite UI for Angular またはカスタムコンポーネントでトランザクションを使用する必要がある場合は、再度 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を使用して、同様の動作を実装できます。
+Ignite UI for Angular グリッドコンポーネントの [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、グリッドと統合して、追加設定なしに一括編集機能が使用できます。ただし、その他の Ignite UI for Angular またはカスタムコンポーネントでトランザクションを使用する必要がある場合は、再度 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を使用して、同様の動作を実装できます。
 
 #### デモ
 

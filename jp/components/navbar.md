@@ -212,7 +212,7 @@ $dark-navbar: igx-navbar-theme(
 
 テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-navbar`]({environment:sassApiUrl}/index.html#variable-_dark-navbar) の 1 つを拡張します。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-navbar`]({environment:sassApiUrl}/index.html#variable-_dark-navbar)) の 1 つを拡張します。
 
 ```scss
  // Extending the dark navbar schema.

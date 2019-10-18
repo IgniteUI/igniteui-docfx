@@ -276,7 +276,7 @@ export class ExampleComponent {
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## 前提事項と制限
-アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [here] (https://developer.mozilla.org/ja-jp/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。
+アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [こちら] (https://developer.mozilla.org/ja-jp/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。
 
 ## その他のリソース
 * [配置方法](overlay_position.md)

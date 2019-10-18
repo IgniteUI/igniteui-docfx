@@ -231,7 +231,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -246,7 +246,7 @@ $dark-button: igx-button-theme(
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #FFCD0F;
@@ -277,7 +277,7 @@ $dark-button: igx-button-theme(
 
 テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) の 1 つを拡張します。 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button)) の 1 つを拡張します。 
 
 ```scss
 // Extending the dark button schema

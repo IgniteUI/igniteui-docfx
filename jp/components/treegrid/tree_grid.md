@@ -243,7 +243,7 @@ export class MyComponent implements OnInit {
 
 ### スタイル設定
 
-[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。ツリー グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
+[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
 
 Tree Grid (ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が含まれる `index` ファイルをインポートする必要があります。
 
@@ -278,7 +278,7 @@ $custom-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -290,7 +290,7 @@ $custom-theme: igx-grid-theme(
 
 #### カラーパレットの定義
 
-上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
@@ -319,9 +319,9 @@ $custom-theme: igx-grid-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。スキーマはテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) の 1 つを拡張します。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
 
 ```scss
 // Extending the light tree grid schema
@@ -339,7 +339,7 @@ $custom-grid-schema: extend($_light-grid, (
 ));
 ```
 
-カスタム スキーマを適用するには、globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global light-schema
@@ -364,7 +364,7 @@ $custom-theme: igx-grid-theme(
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ## 既知の問題と制限
 

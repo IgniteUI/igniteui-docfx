@@ -175,7 +175,7 @@ public processData() {
 
 ### 仮想化の制限
 
-*   Mac OS で 「Show scrollbars only when scrolling」システム オプションを true (デフォルト値) に設定した場合、水平スクロールバーが表示されません。これは、@@igComponent の行コンテナーで、overflow が hidden に設定されているためです。オプションを "Always"に変更するとスクロールが表示されます。
+*   Mac OS で 「Show scrollbars only when scrolling」システム オプションを true (デフォルト値) に設定した場合、水平スクロールバーが表示されません。これは、@@igComponent の行コンテナーで、overflow が hidden に設定されているためです。オプションを "Always" に変更するとスクロールが表示されます。
 
 ### FAQ
 

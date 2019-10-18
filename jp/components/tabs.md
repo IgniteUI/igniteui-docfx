@@ -217,7 +217,7 @@ $dark-tabs: igx-tabs-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation) を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -230,7 +230,7 @@ $dark-tabs: igx-tabs-theme(
 
 #### カラーパレットの定義
 
-上記のように色の値をハードコーディングする代わりに、`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と `igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
@@ -258,7 +258,7 @@ $dark-tabs: igx-tabs-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。スキーマはテーマを使用する方法です。
+テーマ エンジンを使用して [スキーマ](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている2つの定義済みスキーマの 1 つを拡張します。この場合 - [`dark-tabs`]({environment:sassApiUrl}/index.html#variable-_dark-tabs) スキーマ。
 
@@ -294,7 +294,7 @@ $dark-tabs-schema: extend($_dark-tabs,
 );
 ```
 
-カスタム スキーマを適用するには、globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema

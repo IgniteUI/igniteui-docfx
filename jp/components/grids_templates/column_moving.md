@@ -175,7 +175,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 ```
 
 > [!NOTE]
-> コンポーネントの [**View Encapsulation**](/components/themes/component-themes.html#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要な場合があります。
+> コンポーネントの [**View Encapsulation**](/components/themes/component-themes.html#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `ペネトレーション` する必要な場合があります。
 
 ```scss
 :host {
@@ -217,7 +217,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 テーマ エンジンを使用して、[スキーマ](/components/themes/schemas.html)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid) の 1 つを拡張します。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
 
 ```scss
 // Extending the dark grid schema

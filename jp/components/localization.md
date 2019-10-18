@@ -110,4 +110,4 @@ public ngOnInit(): void {
 
 * [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
-* [Ignite UI for Angular **フォーラム** (英語) ](https://github.com/IgniteUI/igniteui-angular-i18n)
+* [Ignite UI for Angular **ResourceStrings** (英語) ](https://github.com/IgniteUI/igniteui-angular-i18n)

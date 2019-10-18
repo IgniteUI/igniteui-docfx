@@ -141,7 +141,7 @@ export class @@igxNameRowDragComponent {
 
 #### ドロップ エリア イベント ハンドラー
 
-テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
+テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
 
 はじめに、`enter` と `leave` ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
 
@@ -168,7 +168,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 `changeGhostIcon` **private** メソッドは、ドラッグ ゴースト内のアイコンを変更するだけです。メソッドのロジックは、アイコンを含む要素を検索し (ドラッグ インジケーター コンテナに適用される `igx-grid__drag-indicator` クラスを使用)、要素の内部テキストを渡されたものに変更します。
-アイコンは [`material` フォントセット](https://material.io/tools/icons/)からのもので、別の**`enum`**で定義されています。
+アイコンは [`material` フォントセット](https://material.io/tools/icons/)からのもので、別の **`enum`** で定義されています。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 enum DragIcon {
@@ -298,7 +298,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }

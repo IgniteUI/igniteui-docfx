@@ -258,7 +258,7 @@ public date: Date = new Date(Date.now());
 
 #### 入力グループのテンプレート - ドロップダウン モード
 
-<a href="#templating-input-group"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
+<a href="#入力グループのテンプレート化"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
 ```html
 <igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">
@@ -304,7 +304,7 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 </div>
 
 #### カスタム ボタン アクション
-[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、igxTimePickerActionsディレクティブセレクタでマークされた ng-template でボタンをラップします。
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、igxTimePickerActions ディレクティブセレクタでマークされた ng-template でボタンをラップします。
 
 以下の例では、'CANCEL'、'OK'、'NOW' 操作用のカスタム操作ボタンが追加されています。
 
