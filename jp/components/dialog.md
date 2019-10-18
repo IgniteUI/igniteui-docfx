@@ -209,7 +209,7 @@ public positionSettings: PositionSettings = {
 
 > [!Note] 同じアプローチをアニメーション設定に使用する必要があります。`openAnimation` と `closeAnimation` を使用して、期間などのアニメーション パラメーターを定義します。
 
-`params` object example:
+`params` オブジェクトの例:
 
 ```typescript
 params: {
