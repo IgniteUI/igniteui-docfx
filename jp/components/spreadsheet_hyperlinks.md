@@ -8,23 +8,23 @@ _language: ja
 
 ## Spreadsheet ハイパーリンク
 
-Angular Spreadsheet コンポーネントを使用すると、Excelワークブックに既存のハイパーリンクを表示したり、Webサイト、ファイルディレクトリ、およびワークブック内の他のワークシートにリンクできる新しいハイパーリンクを挿入したりできます。
+$ PlatformShort$ Spreadsheet コンポーネントを使用すると、Excelワークブックに既存のハイパーリンクを表示したり、Webサイト、ファイルディレクトリ、およびワークブック内の他のワークシートにリンクできる新しいハイパーリンクを挿入したりできます。
 
 ### デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-hyperlinks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-hyperlinks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>
 
 ### ハイパーリンク概要
 
-ハイパーリンクを配置するワークシートの `Hyperlinks` コレクションにアクセスすると、ハイパーリンクが `表計算、スプレッドシート` コントロールに追加されます。このコレクションには、[`WorksheetHyperlink`](spreadsheet_hyperlinks.md) オブジェクトを受け取る `add` メソッドがあり、セル アドレス、移動先のハイパーリンク URL、表示テキスト、およびオプションでホバー時に表示するツールチップを定義できます。
+ハイパーリンクを配置するワークシートの `Hyperlinks` コレクションにアクセスすると、ハイパーリンクが `表計算、スプレッドシート` コントロールに追加されます。このコレクションには、[`WorksheetHyperlink`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheethyperlink.html) オブジェクトを受け取る `add` メソッドがあり、セル アドレス、移動先のハイパーリンク URL、表示テキスト、およびオプションでホバー時に表示するツールチップを定義できます。
 
 ### 依存関係
 
-ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`WorksheetHyperlink`](spreadsheet_hyperlinks.md) クラスをインポートする必要があります。
+ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`WorksheetHyperlink`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheethyperlink.html) クラスをインポートする必要があります。
 
 <!-- Angular -->
 
@@ -34,7 +34,7 @@ import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlin
 
 ### コード スニペット
 
-次のコードスニペットは、[`IgxSpreadsheetComponent`](spreadsheet_hyperlinks.md) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
+次のコードスニペットは、[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```ts
 this.spreadsheet.activeWorksheet.hyperlinks().add(new WorksheetHyperlink("A1", "http://www.infragistics.com", "Infragistics", "Infragistics Home Page"));

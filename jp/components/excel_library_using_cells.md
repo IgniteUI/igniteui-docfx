@@ -7,15 +7,15 @@ _language: ja
 
 ## セルの使用
 
-Excel ワークシートの [`WorksheetCell`](excel_library_using_cells.md) オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
+Excel ワークシートの [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
 
 ### デモ
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
     </button>
 </div>
 
@@ -37,7 +37,7 @@ import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
 
 ### セルと領域を参照
 
-[`worksheet`](excel_library_using_cells.md) オブジェクトの `getCell` または `getRegion` メソッドを呼び出して [`WorksheetCell`](excel_library_using_cells.md) オブジェクト または [`WorksheetRegion`](excel_library_using_cells.md) オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
+[`worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの `getCell` または `getRegion` メソッドを呼び出して [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクト または [`WorksheetRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
 
 以下のコード例では、セルと領域を参照する方法を示します。
 
@@ -55,7 +55,7 @@ var region = worksheet.getRegion("G1:G10");
 
 Microsoft Excel では各セルとセル領域に名前が割り当てられています。アドレスの代わりにセルまたは領域の名前を使用してセルまたは領域を参照できます。
 
-Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する [`NamedReference`](excel_library_using_cells.md) インスタンスを使用してセルまたは領域を参照します。
+Infragistics Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する [`NamedReference`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/namedreference.html) インスタンスを使用してセルまたは領域を参照します。
 
 以下のコードスニペットは、セルまたは領域の名前の例です。
 
@@ -76,7 +76,7 @@ var region = worksheet.getRegion("myRegion");
 
 ### セルにコメントを追加
 
-コメントによって、エンドユーザーがマウスをセル上にホバーするとセルのヒントまたはメモを表示することができます。コメントはテキストを含むツールチップのような吹き出しとして表示します。Infragistics Excel Library は [`WorksheetCell`](excel_library_using_cells.md) オブジェクトの `comment` プロパティでセルにコメントを追加できます。
+コメントによって、エンドユーザーがマウスをセル上にホバーするとセルのヒントまたはメモを表示することができます。コメントはテキストを含むツールチップのような吹き出しとして表示します。Infragistics Excel Library は [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの `comment` プロパティでセルにコメントを追加できます。
 
 以下のコード例は、セルにコメントを追加する方法を示します。
 
@@ -93,7 +93,7 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### セルに数式を追加
 
-Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。[`WorksheetCell`](excel_library_using_cells.md) オブジェクトの [`applyFormula`](excel_library_using_cells.md) メソッドを使用、または [`formula`](excel_library_using_cells.md) オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、[`WorksheetCell`](excel_library_using_cells.md) オブジェクトのプロパティを使用して [`formula`](excel_library_using_cells.md) オブジェクトにアクセスできます。値が必要な場合、セルの [`value`](excel_library_using_cells.md) プロパティを使用します。
+Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの [`applyFormula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#applyformula) メソッドを使用、または [`formula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトのプロパティを使用して [`formula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) オブジェクトにアクセスできます。値が必要な場合、セルの [`value`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#value) プロパティを使用します。
 
 以下のコードは、セルに数式を追加する方法を示します。
 
@@ -109,7 +109,7 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
 
 ### セル書式のコピー
 
-セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、[`WorksheetCell`](excel_library_using_cells.md) オブジェクトの `cellFormat` プロパティで公開した各オプションを設定する代わりに [`cellFormat`](excel_library_using_cells.md) オブジェクトの `setFormatting` メソッドを呼び出して [`cellFormat`](excel_library_using_cells.md) オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
+セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの `cellFormat` プロパティで公開した各オプションを設定する代わりに [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトの `setFormatting` メソッドを呼び出して [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
 
 以下のコードは、2 列目の書式を 4 列目にコピーする方法を示します。
 
@@ -127,7 +127,7 @@ worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 
 ### セルの書式設定
 
-Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。[`WorksheetCell`](excel_library_using_cells.md)、[`WorksheetRow`](excel_library_using_cells.md)、[`WorksheetColumn`](excel_library_using_cells.md)、または [`WorksheetMergedCellsRegion`](excel_library_using_cells.md) オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
+Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html)、[`WorksheetRow`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html)、[`WorksheetColumn`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html)、または [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
 
 セル外観の各アスペクトをカスタマイズできます。セルのフォント、背景、境界線だけでなくテキストの配列と回転を設定できます。セルのテキストで文字ごとに異なる書式を適用することさえ可能です。
 
@@ -146,27 +146,27 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 このカラー パレットは Microsoft Excel 2007 UI のカラー ダイアログと似ています。[Excel オプション] => [保存] => [色] からこのカラー ダイアログを開くことができます。
 
-[`CellFill`](excel_library_using_cells.md) クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。以下の通りです:
+[`CellFill`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfill.html) クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。以下の通りです:
 
 -   `noColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
 
--   `createSolidFill` - Solid のパターン スタイルと、メソッドで指定された `Color` または [`WorkbookColorInfo`](excel_library_using_cells.md) に設定された背景色を持つ [`CellFillPattern`](excel_library_using_cells.md) インスタンスを返します。
+-   `createSolidFill` - Solid のパターン スタイルと、メソッドで指定された `Color` または [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) に設定された背景色を持つ [`CellFillPattern`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) インスタンスを返します。
 
--   `createPatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された `Color` または [`WorkbookColorInfo`](excel_library_using_cells.md) 値がある [`CellFillPattern`](excel_library_using_cells.md) インスタンスを返します。
+-   `createPatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された `Color` または [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) 値がある [`CellFillPattern`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) インスタンスを返します。
 
--   `createLinearGradientFill` - 角度とグラデーション境界が指定された [`CellFillLinearGradient`](excel_library_using_cells.md) インスタンスを返します。
+-   `createLinearGradientFill` - 角度とグラデーション境界が指定された [`CellFillLinearGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) インスタンスを返します。
 
--   `createRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`](excel_library_using_cells.md) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
+-   `createRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
 
 作成可能なさまさまな塗りつぶしを表す派生タイプは以下の通りです:
 
--   [`CellFillPattern`](excel_library_using_cells.md) - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
+-   [`CellFillPattern`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
 
--   [`CellFillLinearGradient`](excel_library_using_cells.md) - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
+-   [`CellFillLinearGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
 
--   [`CellFillRectangularGradient`](excel_library_using_cells.md) - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
+-   [`CellFillRectangularGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
 
-以下のコード スニペットは、[`WorksheetCell`](excel_library_using_cells.md) で単色の塗りつぶしを作成する方法を示します。
+以下のコード スニペットは、[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) で単色の塗りつぶしを作成する方法を示します。
 
 ```ts
 var workbook = new Workbook();
@@ -216,11 +216,11 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 -   これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
 
-色は、シールされた不変クラスである、[`WorkbookColorInfo`](excel_library_using_cells.md) クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`](excel_library_using_cells.md) インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
+色は、シールされた不変クラスである、[`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
 
-[`WorkbookColorInfo`](excel_library_using_cells.md) の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
+[`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
 
-[`WorkbookColorInfo`](excel_library_using_cells.md) がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
+[`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
 
 .xlsx など新しいファイル形式で保存するときは、より新しい色の情報が直接ファイルに保存されます。.xls など古いファイル形式で保存するときは、パレットで最も近い色のインデックスが保存されます。さらに、古い形式には、新しい色の情報を示すために保存できる将来の機能レコードがあります。
 
@@ -228,9 +228,9 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 ### Excel 書式設定のサポート
 
-セルの `cellFormat` プロパティから返された `CellFormat` オブジェクトを使用して [`WorksheetCell`](excel_library_using_cells.md) でさまざまな形式のホストを設定できます。この [`cellFormat`](excel_library_using_cells.md) オブジェクトはさまざまなセルの側面 (境界線、フォント、塗りつぶし、配置) のスタイル設定、セルのサイズ自動調整やロックなどを設定できます。
+セルの `cellFormat` プロパティから返された `CellFormat` オブジェクトを使用して [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) でさまざまな形式のホストを設定できます。この [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトはさまざまなセルの側面 (境界線、フォント、塗りつぶし、配置) のスタイル設定、セルのサイズ自動調整やロックなどを設定できます。
 
-[`Workbook`](excel_library_using_cells.md) オブジェクトの `styles` コレクションを使用して Microsoft Excel 2007 ビルトイン スタイルにアクセスできます。Excel のスタイル リストは、Microsoft Excel 2007 で [ホーム] タブの [セルのスタイル] ギャラリーにあります。
+[`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの `styles` コレクションを使用して Microsoft Excel 2007 ビルトイン スタイルにアクセスできます。Excel のスタイル リストは、Microsoft Excel 2007 で [ホーム] タブの [セルのスタイル] ギャラリーにあります。
 
 ワークブックの `styles` コレクションに標準スタイルという特別なタイプのスタイルがあり、コレクションの `normalStyle` プロパティによって、または Normal という名前でコレクションにインデックスしてアクセスできます。
 
@@ -238,7 +238,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 以下のメソッドを使用して`styles` コレクションのクリア、または `clear` や `reset` メソッドで定義された状態にリセットすることができます。両メソッドはすべてのユーザー定義スタイルを削除しますが `clear` は `styles` コレクション全体をクリアします。
 
-この機能では、`style` プロパティが `CellFormat` オブジェクトに追加されています。これは書式の親スタイルを表す、[`WorkbookStyle`](excel_library_using_cells.md) インターフェイスへの参照です。スタイルの書式では、このプロパティは常に null です。スタイルが親スタイルを持つことができないためです。行、列およびセル書式には、`style` プロパティが常にデフォルトで `normalStyle` スタイルを返します。
+この機能では、`style` プロパティが `CellFormat` オブジェクトに追加されています。これは書式の親スタイルを表す、[`WorkbookStyle`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) インターフェイスへの参照です。スタイルの書式では、このプロパティは常に null です。スタイルが親スタイルを持つことができないためです。行、列およびセル書式には、`style` プロパティが常にデフォルトで `normalStyle` スタイルを返します。
 
 `style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
 
@@ -254,11 +254,11 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 セルの値または書式の設定以外に、2 つ以上のセルをひとつのセルとして表示するためにセルを結合することができます。セルを結合する場合、長方形の領域内にセルがなければなりません。
 
-セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ [`WorksheetMergedCellsRegion`](excel_library_using_cells.md) オブジェクトに関連付けされ、`associatedMergedCellsRegion` プロパティからアクセスできるようになります。[`WorksheetMergedCellsRegion`](excel_library_using_cells.md) オブジェクトも結果としてセルと同じ値およびセル書式になります。
+セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトに関連付けされ、`associatedMergedCellsRegion` プロパティからアクセスできるようになります。[`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトも結果としてセルと同じ値およびセル書式になります。
 
 領域または領域内の任意のセルの値（またはセル書式）を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
 
-結合されたセル領域を作成するには、セルの範囲を [`Worksheet`](excel_library_using_cells.md) オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
+結合されたセル領域を作成するには、セルの範囲を [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
 
 ```ts
 var workbook = new Workbook();
