@@ -1,21 +1,21 @@
 ---
-title: Ignite UI CLI Schematics
-_description: The Ignite UI CLI is a tool for initializing, developing, scaffolding and maintaining applications in a wide variety of frameworks.
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+title: Ignite UI Angular Schematics
+_description: Ignite UI Schematics is a workflow tool for creating, modifying and customizing web projects that use Ignite UI for Angular components.
+_keywords: Ignite UI for Angular, Schematics, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Ignite UI CLI Schematics
+## Ignite UI Angular Schematics
 
-[Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) is a command-line tool for creating and scaffolding applications for a variety of frameworks. It provides project templates pre-configured for Ignite UI for Angular that helps you get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects provides a substantial productivity boost for developers.
+Ignite UI Angular Schematics is a workflow tool for creating, modifying and customizing web projects that use Ignite UI for Angular components. Built on top of the Angular Schematics, it provides commands for generating files and adding Ignite UI dependencies in an application.
 
 ### Getting Started
 
-The first step is to install Ignite UI CLI Schematics using the npm package manager:
+The first step is to install Ignite UI Angular Schematics tool globally:
 ```cmd
 npm i -g @igniteui/angular-schematics
 ```
 
-Next, you can either create a new project with the Ignite UI for Angular components or add the Ignite UI for Angular package to an Angular application.
+The above command will install a schematics executable, which you can use either to create a blank Schematics project or to modify an existing Angular application.
 
 #### Create project from scratch
 To create an application that is configured to use the Ignite UI for Angular controls run the following command: 
@@ -32,18 +32,40 @@ ng add igniteui-angular
 ```
 After running this command, the igniteui-angular library and the schematics definitions will be added to your project.
 
-### Add View
+### Add template
 
-Once your project is configured, you can add Ignite UI for Angular components through the component schematics by calling:
+Once your project is configured, you can add Ignite UI for Angular components through the `component`(alias:`c`) schematic.
+
+To activate the Ignite UI CLI [Step-by-Step Guide](step-by-step-guide.md) run:
 
 ```cmd
 ng g @igniteui/angular-schematics:component
 ```
 
-This will enter the Step by step mode. Alternatively , you can generate a specific component by providing its template ID and a name:
+Alternatively, you can add one of the [available templates](component-templates.md) by providing an ID and component name:
 
 ```cmd
 ng g @igniteui/angular-schematics:component [templateId] [componentName]
 ```
+Additionally, you can specify **arguments** to control the theme or skip packages install:
 
-You can find all of the template definitions in the official documentation
+<details>
+  <summary>module <span align="right"><strong>(v2.0.0)</strong></span></summary>
+  <p>
+    <code>--module</code> (alias: <code>-m</code>)
+  </p>  
+  <p>
+    Path to the module.ts file, relative to the /src/app/ folder, for the module where the new component should be registered:
+  </p>
+  <code>ng g @igniteui/angular-schematics:component combo newCombo --module=myModule/myModule.module.ts</code>
+</details>
+
+<details>
+  <summary>skip-route <span align="right"><strong>(v3.2.0)</strong></span></summary>
+  <p>
+    <code>--skip-route</code> (alias: <code>-srk</code>)
+  </p>
+  <p>
+    Don't auto-generate an app navigation route for the new component
+  </p>
+</details>

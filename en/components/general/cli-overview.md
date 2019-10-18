@@ -156,7 +156,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
   <p>
     Path to the module.ts file, relative to the /src/app/ folder, for the module where the new component should be registered:
   </p>
-  <code>ig add grid newCombo --name=myModule/myModule.module.ts</code>
+  <code>ig add combo newCombo --module=myModule/myModule.module.ts</code>
 </details>
 
 <details>
@@ -165,7 +165,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
     <code>--skip-route</code> (alias: <code>-srk</code>)
   </p>
   <p>
-    Don't auto-generate am app navigation route for the new component
+    Don't auto-generate an app navigation route for the new component
   </p>
 </details>
 
