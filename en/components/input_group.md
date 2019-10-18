@@ -21,7 +21,14 @@ Input groups in the Ignite UI for Angular controls allow developers to create ea
 The default styling of the Input Group component as well as its complimentary directives follow the text fields specification in the Material Design
 [**guidelines**](https://material.io/guidelines/components/text-fields.html).
 
-To get started import all modules for Ignite UI components and the **FormsModule** in order to have working Template Driven Form:
+To get started install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Then import all needed modules from the `igniteui-angular` toolkit as well as the **FormsModule** in order to have a working Template Driven Form:
 
 ```typescript
 // app.module.ts
