@@ -15,7 +15,7 @@ Infragistics Excel エンジンは、データを Microsoft® Excel® に保存�
     <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -34,27 +34,27 @@ normalFont.height = 16 * 20;
 
 ### ワークブック プロパティの設定
 
-Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](excel_library_using_workbooks.md) オブジェクトの [`documentProperties`](excel_library_using_workbooks.md) プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
+Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](excel_library_using_workbooks.md) オブジェクトの `documentProperties`プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
 
--   author
+-   `author`
 
--   title
+-   `title`
 
--   subject
+-   `subject`
 
--   keywords
+-   `keywords`
 
--   category
+-   `category`
 
--   status
+-   `status`
 
--   comments
+-   `comments`
 
--   company
+-   `company`
 
--   manager
+-   `manager`
 
-以下のコードは、ワークブックを作成し、Title および Status ドキュメント プロパティを設定する方法を示します。
+以下のコードは、ワークブックを作成し、`Title` および `Status` ドキュメント プロパティを設定する方法を示します。
 
 ```ts
 var workbook = new Workbook();
