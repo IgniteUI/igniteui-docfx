@@ -20,6 +20,13 @@ _keywords: angular data grid, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ### Dependencies
+To get started with the Hierarchical Data Grid, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
 The Hierarchical Grid is exported as an `NgModule` - all you need to do in your application is import the _IgxHierarchicalGridModule_ inside your `AppModule`.
 
 ```typescript

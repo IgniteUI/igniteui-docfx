@@ -108,10 +108,10 @@
       href: grid/selection.md
       new: true
       items:
-        - name: Row selection
+        - name: 行選択
           href: grid/row_selection.md
           new: true
-        - name: Cell selection
+        - name: セル選択
           href: grid/cell_selection.md
           new: true
     - name: 検索

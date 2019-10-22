@@ -15,7 +15,7 @@ _language: ja
     <iframe id="data-chart-navigation-iframe" src='{environment:demosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -52,7 +52,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 [`IgxDataChart`](datachart_chart_navigation.md) コントロールのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
 -   `Panning`:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
--   `Zoom In`:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
+-   `Zoom In`:  キーボードの PageUp キーを使用するか、マウスホイールを回転させます。
 -   `Zoom Out`:  キーボードの PageDown キーを使用するか、マウスホイールを回転させます。
 -   `チャート プロット領域に合わせる`: キーボードの Home キー。これに対するマウス操作はありません。
 -   `領域ズーム`: `DefaultInteraction` プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。

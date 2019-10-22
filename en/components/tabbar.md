@@ -27,7 +27,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the control, let's first import the `IgxBottomNavModule` in the **app.module.ts** file:
+To get started with the Bottom Navigation component, install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxBottomNavModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts

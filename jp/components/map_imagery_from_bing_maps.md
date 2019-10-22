@@ -15,7 +15,7 @@ Bing Maps は Microsoft® のライセンス付きの地理画像マッピング
     <iframe id="geo-map-binding-bing-imagery-iframe" src='{environment:demosBaseUrl}/maps/geo-map-binding-bing-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-bing-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-bing-imagery-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 

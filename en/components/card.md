@@ -18,10 +18,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ###Usage
+
 Cards allow you to easily display content composed of different types of objects or similar objects whose size and supported actions can vary.
 
 ####Getting Started
-To get started with the Ignite UI for Angular Card, let's first import the `IgxCardModule` inside our **app.module.ts** file:
+
+To get started with the Card component, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxCardModule` inside our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
