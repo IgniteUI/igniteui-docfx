@@ -13,10 +13,10 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:demosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -63,11 +63,11 @@ export class AppModule { /* ... */ }
 
 ### サポートされるシリーズ
 
-[`IgxDataChart`](datachart.md) コントロールは、[カテゴリ シリーズ](datachart_series_types_category.md)、[ファイナンシャル シリーズ](datachart_series_types_financial.md)、[極座標シリーズ](datachart_series_types_polar.md)、[ラジアル シリーズ](datachart_series_types_radial.md)、[エリア シリーズ](datachart_series_types_range.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [Series](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
+[`IgxDataChart`](datachart.md) コントロールは、[カテゴリ シリーズ](datachart_series_types_category.md)、[ファイナンシャル シリーズ](datachart_series_types_financial.md)、[極座標シリーズ](datachart_series_types_polar.md)、[ラジアル シリーズ](datachart_series_types_radial.md)、[エリア シリーズ](datachart_series_types_range.md)、[散布シリーズ](datachart_series_types_scatter_bubble.md)、[図形シリーズ](datachart_series_types_shape.md) を含む 65 種類以上のシリーズをサポートします。サポートされている [シリーズ](datachart_series_types.md) のタイプとそれらの使用方法のリストについては、シリーズのトピックを参照してください。
 
 ### サポートされる軸
 
-[`IgxDataChart`](datachart.md) コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。   これらのタイプの軸の使用方法については、[Series](datachart_series_types.md) と [Axis](datachart_axis_types.md) のトピックを参照してください。
+[`IgxDataChart`](datachart.md) コントロールは、特定の種類のシリーズで使用することを目的としたさまざまな種類の軸をサポートします。以下の表はシリーズ タイプで使用できます。   これらのタイプの軸の使用方法については、[シリーズ](datachart_series_types.md) と [Axis](datachart_axis_types.md) のトピックを参照してください。
 
 | 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                          |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

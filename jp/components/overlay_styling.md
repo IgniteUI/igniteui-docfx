@@ -148,5 +148,5 @@ $my-overlay-theme: igx-overlay-theme(
 
 ## その他のリソース
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [オーバーレイ メイン トピック](overlay_main.md)

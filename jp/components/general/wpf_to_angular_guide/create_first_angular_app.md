@@ -9,7 +9,7 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/dhjrAPPad54]
 
-WPF から Angular に移行するときに、Angular アプリケーションの作成を開始する方法を学びます。
+WPF から Angular へ移行する際の Angular アプリケーションの作成方法を学びます。
 
 ### 前提条件
 

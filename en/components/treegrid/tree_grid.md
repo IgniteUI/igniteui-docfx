@@ -20,6 +20,12 @@ _keywords: angular data grid, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ### Getting started
+To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
 The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxTreeGridModule` inside your `AppModule`:
 
@@ -239,6 +245,131 @@ The indentation of the **tree cells** persists across other tree grid features l
 ### Sizing
 
 See the [Grid Sizing](sizing.md) topic.
+
+### Styling
+
+The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
+
+To get started with styling the Tree Grid, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
+
+>[!NOTE]
+>There is no specific `sass` tree grid function.
+
+```scss
+$custom-theme: igx-grid-theme(
+  $cell-active-border-color: #FFCD0F,
+  $cell-selected-background: #6F6F6F,
+  $row-hover-background: #F8E495,
+  $row-selected-background: #8D8D8D,
+  $header-background: #494949,
+  $header-text-color: #FFF,
+  $expand-icon-color: #FFCD0F,
+  $expand-icon-hover-color: #E0B710,
+  $resize-line-color: #FFCD0F,
+  $row-highlight: #FFCD0F
+);
+```
+
+The last step is to **include** the component theme in our application.
+
+```scss
+@include igx-grid($custom-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #494949;
+$custom-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
+    $cell-selected-background: igx-color($custom-palette, "primary", 300),
+    $row-hover-background: igx-color($custom-palette, "secondary", 100),
+    $row-selected-background: igx-color($custom-palette, "primary", 100),
+    $header-background: igx-color($custom-palette, "primary", 500),
+    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $expand-icon-color: igx-color($custom-palette, "secondary", 500),
+    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 600),
+    $resize-line-color: igx-color($custom-palette, "secondary", 500),
+    $row-highlight: igx-color($custom-palette, "secondary", 500)
+);
+```
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
+
+```scss
+// Extending the light tree grid schema
+$custom-grid-schema: extend($_light-grid, (
+    cell-active-border-color: (igx-color:('secondary', 500)),
+    cell-selected-background: (igx-color:('primary', 300)),
+    row-hover-background: (igx-color:('secondary', 100)),
+    row-selected-background: (igx-color:('primary', 100)),
+    header-background: (igx-color:('primary', 500)),
+    header-text-color: (igx-contrast-color:('primary', 500)),
+    expand-icon-color: (igx-color:('secondary', 500)),
+    expand-icon-hover-color: (igx-color:('secondary', 600)),
+    resize-line-color: (igx-color:('secondary', 500)),
+    row-highlight: (igx-color:('secondary', 500))
+));
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, (
+    igx-grid: $custom-grid-schema
+));
+
+// Defining grid-theme with the global light schema
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+); 
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Demo
+
+<div class="sample-container loading" style="height:600px">
+    <iframe id="tree-grid-styling" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ## Known Limitations
 

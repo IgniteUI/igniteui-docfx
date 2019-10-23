@@ -21,7 +21,7 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
     <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -65,7 +65,7 @@ export class ComboDemo implements OnInit {
 
 ### データ値と表示プロパティ
 
-上記の構成では、コンボは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、`@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) の 2 つの `@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) プロパティを公開します。
+上記の構成では、コンボは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、2 つの `@Input` プロパティ - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) プロパティを公開します。
 
  - `valueKey`: **Optional.オブジェクト配列に推奨。**コンボの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボ値はデータ エントリへの参照を使用します (選択は `combo.data` からのエントリの配列になります)。
  - `displayKey`: **オブジェクト配列に必須。**アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボは指定された `valueKey` (存在する場合) を使用します。 
@@ -222,7 +222,6 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 ## スタイル設定
 [Ignite UI for Angular テーマ ](themes/index.md)を使用して、**igx-combo** の外観を変更できます。 
-
 `Igx-combo` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#スタイル設定)をご覧ください。
 さらに、`IgxCombo` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxCombo` コンポーネントに影響します。詳細については、[igx-input-group スタイリング ガイド](input_group.md#スタイル設定) を参照できます。また `IgxCheckbox` も関連コンポーネントです。詳細については、[`igx-checkbox スタイリング ガイド`](checkbox.md#スタイル設定) を確認してください。
 
@@ -288,7 +287,7 @@ $custom-combo-theme: igx-combo-theme(
     <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>

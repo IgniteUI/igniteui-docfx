@@ -39,25 +39,25 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+### 用方法
 
-### 使用方法
+[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
+
+[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
 
 ```html
 <igx-icon color="magenta">home</igx-icon>
 ```
 
-### コード例
-
-[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
-
-```html
-<igx-icon color="magenta" isActive="true">home</igx-icon>
-```
-
-`inactive` アイコンを設定します。
-
+inactive アイコンを設定します。
 ```html
 <igx-icon [isActive]="false">volume_off</igx-icon>
+```
+
+コンテンツ プロジェクションでアイコンを設定します。
+
+```html
+<igx-icon color="red">bluetooth</igx-icon>
 ```
 
 CSS でアイコン サイズを設定するには、カスタム CSS を作成して名前を *custom-size* とします。アイコン サイズは **font-size** プロパティで変更でき、更に中央揃えにするには、**width** と **height** を同じ値にします。
@@ -108,7 +108,7 @@ public ngOnInit() {
     <iframe id="svg-icon-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
 </iframe></div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -134,17 +134,17 @@ npm i xmlhttprequest
 </li>
 </ol>
 
-### Styling
-The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme) exposes a property that allows customization of the color of the component.
+### スタイル設定
+igxIcon では、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。アイコンの[テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)は、コンポーネントの色をカスタマイズできるプロパティを公開します。
 
-#### Importing global theme
-To begin styling of the predefined icon layout, you need to import the `index` file, where all styling functions and mixins are located.  
+#### グローバル テーマのインポート
+定義済みのアイコン レイアウトのスタイリングを開始するには、すべてのスタイリング機能と mixin が配置されている `index` ファイルをインポートする必要があります。  
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```   
 
-#### Defining custom theme
-You can easily create a new theme, that extends the [`igx-icon-theme`]({environment:sassApiUrl}/index.html#function-igx-icon-theme) and accepts the parameters, required to customize the icon as desired.   
+#### カスタム テーマの定義
+[`igx-icon-theme`]({environment:sassApiUrl}/index.html#function-igx-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを簡単に作成できます。   
    
 
 ```scss
@@ -154,9 +154,9 @@ $custom-theme: igx-icon-theme(
 );
 ```   
 
-#### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+#### カスタム カラー パレットの定義
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
+`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。  
 
 ```scss
 $black-color: #494949;
@@ -168,7 +168,7 @@ $custom-palette: igx-palette(
 );
 ```   
 
-After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
 
 ```scss
 $custom-theme: igx-icon-theme(
@@ -177,9 +177,9 @@ $custom-theme: igx-icon-theme(
 );
 ```
 
-#### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_icon`.   
+#### カスタム スキーマの定義
+[**スキーマ**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ** はテーマを作成させるための方法です。   
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、 `$_dark_icon` を使用します。   
 
 ```scss
 $custom-icon-schema: extend($_dark-icon, (
@@ -187,7 +187,7 @@ $custom-icon-schema: extend($_dark-icon, (
     disabled-color: (igx-color("primary", 500))
 ));
 ```   
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
 
 ```scss
 $my-custom-schema: extend($dark-schema, (
@@ -200,22 +200,22 @@ $custom-theme: igx-icon-theme(
 );
 ```
 
-#### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
+#### カスタム テーマの適用
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 ```scss
 @include igx-icon($custom-theme);
 ```
 
-#### Scoped component theme
+#### スコープ コンポーネント テーマ
 
-In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
 
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >コンポーネントが[`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
 ```scss
 :host {
@@ -225,13 +225,13 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 }
 ```    
 
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:320px">
     <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### 6.2.0 の重大な変更
@@ -241,7 +241,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ### その他のリソース
 
@@ -250,4 +250,3 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
-
