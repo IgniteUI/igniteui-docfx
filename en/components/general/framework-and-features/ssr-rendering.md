@@ -10,7 +10,7 @@ This topic aims to describe what server-side rendering is and how to configure i
 
 ### Angular Universal
 
-Most of the Angular applications run in a client's browser, but if you want to generate the full HTML for a page on the server, and avoid additional round-trips for data fetching - [Angular Universal](https://angular.io/guide/universal) come in handy. It renders a client-side page to HTML on the server that is later bootstrapped on the client. Okay, but how it works?
+Most of the Angular applications run in a client's browser, but if you want to generate the full HTML for a page on the server, and avoid additional round-trips for data fetching - [Angular Universal](https://angular.io/guide/universal) comes in handy. It renders a client-side page to HTML on the server that is later bootstrapped on the client. Okay, but how it works?
 
 ### How it works?
 
@@ -38,6 +38,7 @@ This schematic will perform several changes to your app client and server config
 Since Universal apps run on the server and not in the browser, there are a few things you need to watch out for in your code. Browser-specific objects, such as `window`, `document`, or `location` are missing, so we can use [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) for server-side dom abstraction. Domino is a Server-side DOM implementation based on Mozilla's dom.js.
 
 ```typescript
+// server.ts
 const domino = require('domino');
 const fs = require('fs');
 const path = require('path');
@@ -126,5 +127,5 @@ npm run build:ssr && npm run serve:ssr
 * [Angular Universal guide](https://angular.io/guide/universal)
 * [Ignite UI Starter Kit](https://github.com/zdrawku/ng-universal-example)
 * [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Getting started with Ignite UI for Angular](getting_started.md)
+* [Getting started with Ignite UI for Angular](../getting_started.md)
 * [Ignite UI CLI Guide](step-by-step-guide.md)
