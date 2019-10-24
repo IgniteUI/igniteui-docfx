@@ -67,7 +67,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 Additionally, the above sample illustrates two-way data-binding via `ngModel`. What is more, you can use the Select component in [`Angular Forms`](#select-in-angular-forms).
 
 
-By default, the select component will use the selected item's element `innerText` to be displayed in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when selecting this item. For example:
+By default, the select component will use the selected item's element `innerText` to be displayed in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when this item is selected. For example:
 
 ```html
 <igx-select>
