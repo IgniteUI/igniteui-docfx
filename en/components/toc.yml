@@ -47,6 +47,12 @@
     - name: Layout Elements
       href: general/wpf_to_angular_guide/layout.md
       new: false
+- name: Framework & features
+  new: true
+  items:
+    - name: SSR Rendering
+      href: general/framework-and-features/ssr-rendering.md
+      new: true
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
