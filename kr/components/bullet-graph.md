@@ -8,7 +8,7 @@ mentionedTypes: ['XamBulletGraph']
 
 ## Bullet Graph
 
-The Bullet Graph Component allows for a linear and concise view of measures compared against a scale.
+Test The Bullet Graph Component allows for a linear and concise view of measures compared against a scale.
 
 ### Demo
 
