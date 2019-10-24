@@ -96,7 +96,7 @@ Use the starter project that includes Ignite UI for Angular components. The proj
 #### Step 1 - Clone the starter repository
 
 ```
-git clone https://github.com/zdrawku/ng-universal-example.git
+git clone https://github.com/IgniteUI/ng-universal-example.git
 ```
 
 #### Step 2 - Use NPM to install the needed dependencies 
@@ -125,7 +125,7 @@ npm run build:ssr && npm run serve:ssr
 <div class="divider--half"></div>
 
 * [Angular Universal guide](https://angular.io/guide/universal)
-* [Ignite UI Starter Kit](https://github.com/zdrawku/ng-universal-example)
+* [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
 * [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
 * [Getting started with Ignite UI for Angular](../getting_started.md)
-* [Ignite UI CLI Guide](step-by-step-guide.md)
+* [Ignite UI CLI Guide](../cli/step-by-step-guide.md)
