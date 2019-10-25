@@ -100,7 +100,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```html
-<div class="drop-area" igxDrop (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)"
+<div class="drop-area" igxDrop (Enter)="onEnterAllowed($event)" (Leave)="onLeaveAllowed($event)"
 (onDrop)="onDropAllowed($event)">
     <igx-icon>delete</igx-icon>
     <div>Drag a row here to delete it</div>
@@ -111,7 +111,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 この場合、ドロップ領域は行をドロップする 2 番目のグリッドになります。
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
-    (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)" (onDrop)="onDropAllowed($event)" [primaryKey]="'ID'">
+    (Enter)="onEnterAllowed($event)" (Leave)="onLeaveAllowed($event)" (Drop)="onDropAllowed($event)" [primaryKey]="'ID'">
     ...
 </igx-grid>
 ```
@@ -141,7 +141,7 @@ export class @@igxNameRowDragComponent {
 
 #### ドロップ エリア イベント ハンドラー
 
-テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
+テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`Enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`Leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`Drop`]({environment:angularApiUrl}/classes/igxdropdirective.html#drop) イベントを宣言する必要があります。
 
 はじめに、`enter` と `leave` ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
 
@@ -149,11 +149,11 @@ export class @@igxNameRowDragComponent {
 export class @@igxNameRowDragComponent {
     ...
     public onEnterAllowed(args) {
-        this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
+        this.changeGhostIcon(args.drag.ghostElement, DragIcon.ALLOW);
     }
 
     public onLeaveAllowed(args) {
-        this.changeGhostIcon(args.drag.dragGhost, DragIcon.DEFAULT);
+        this.changeGhostIcon(args.drag.ghostElement, DragIcon.DEFAULT);
     }
 
     private changeGhostIcon(ghost, icon: string) {
@@ -192,7 +192,6 @@ enum DragIcon {
 export class @@igxNameRowDragComponent {
     ...
     public onDropAllowed(args: IgxDropEventArgs) {
-        args.cancel = true;
         const draggedRow: @@igxNameGridRowComponent = args.dragData;
         draggedRow.delete();
     }
@@ -210,7 +209,6 @@ export class @@igxNameRowDragComponent {
     @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
     ... 
     public onDropAllowed(args) {
-        args.cancel = true;
         this.targetGrid.addRow(args.dragData.rowData);
         this.sourceGrid.deleteRow(args.dragData.rowID);
     }
@@ -219,7 +217,6 @@ export class @@igxNameRowDragComponent {
 ```
 
 次のように `ViewChild` デコレータを使用して各グリッドに refenrece を定義し、ドロップを処理します。
-- イベントのキャンセル
 - 削除される行のデータを含む行を `targetGrid` に追加します。
 - `sourceGrid` からドラッグした行を削除します
 }
@@ -368,8 +365,6 @@ enum DragIcon {
 ### 制限
 
 `rowDraggable` ディレクティブを使用するときに考慮する必要があることがいくつかあります。
-> [!NOTE]
-> 行ドロップイベントを処理するときは、行ドラッグゴーストの残りの要素が表示されないようにするため、`eventArgs.cancel` を **`true`** に設定する必要があります。 
 
 ### API リファレンス
 

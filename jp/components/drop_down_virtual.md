@@ -243,7 +243,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 ```
 `ngAfterViewInit` フックの内で初期状態のデータを取得し、`igxForOf` ディレクティブの [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
 
-### リモートの仮想化-デモ
+### リモートの仮想化 - デモ
 上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。デモを確認し、以下の設定で試すことができます。
 
 <div class="sample-container loading" style="height:400px">

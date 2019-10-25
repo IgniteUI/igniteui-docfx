@@ -468,7 +468,7 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="treegrid-summary-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
