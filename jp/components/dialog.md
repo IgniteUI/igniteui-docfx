@@ -26,7 +26,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-次に、** app.module.ts ** ファイルに  **IgxDialogModule** をインポートします。
+次に、**app.module.ts** ファイルに  **IgxDialogModule** をインポートします。
 
 ```typescript
 // app.module.ts

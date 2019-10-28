@@ -21,7 +21,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 依存関係
-階層データ グリッドを初期化する前に、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+階層データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular

@@ -20,7 +20,7 @@ _language: ja
 
 Carousel を全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
 
-Carousel コンポーネントを初期化する前に、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+Carousel コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
 
 ```cmd
 ng add igniteui-angular

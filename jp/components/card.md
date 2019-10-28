@@ -23,7 +23,7 @@ Card コンポーネントは、様々なオブジェクト タイプ、サイ�
 
 ####作業の開始
 
-Card コンポーネントを初期化する前に、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Card コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular

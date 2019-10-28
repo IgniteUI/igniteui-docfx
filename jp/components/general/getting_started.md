@@ -79,7 +79,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-Ignite UI CLI [`コマンド`](cli-overview.md#commands) を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドができます。
+または、Ignite UI CLI [`コマンド`](cli-overview.md#コマンド) を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドもできます。
 
 ## Ignite UI for Angular の使用
 

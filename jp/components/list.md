@@ -24,7 +24,7 @@ _language: ja
 
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
 
-Ignite UI for Angular List を初期化する前に、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Ignite UI for Angular List を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular
