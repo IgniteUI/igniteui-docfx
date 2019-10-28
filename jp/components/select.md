@@ -15,12 +15,15 @@ Ignite UI for Angular Select コンポーネントは、特殊な配置が可能
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 
->[!WARNING]
->Ignite UI for Angular コンポーネント、をプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。手順は、[*はじめに*](general/getting_started.md)のトピックをご確認ください。
-
-
 ## 使用方法
-Select コンポーネントを開始するには、はじめに `IgxSelectModule` をインポートする必要があります。
+[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に `IgxSelectModule` をインポートする必要があります。
 ```typescript
 // app.module.ts
 
@@ -273,9 +276,9 @@ public customOverlaySettings: OverlaySettings = {
 
 この機能を活用するには、`igx-select` に渡すデータを変更する必要があり、この場合は以下のようになります。
 ```typescript
-public items: any[] = [
-    { type: "Fruits", fruits: [ "Apple", "Orange", "Banana" ] },
-    { type: "Vegetables", vegetables: [ "Cucumber", "Potato", "Pepper" ] }
+public greengrocery: any[] = [
+    { label: "Fruits", items: [ "Apple", "Orange", "Banana" ] },
+    { label: "Vegetables", items: [ "Cucumber", "Potato", "Pepper" ] }
 ];
 ```
 
@@ -284,20 +287,13 @@ public items: any[] = [
 次にテンプレート ファイルでこれらのオブジェクトを反復してプロパティへ適切にアクセスします。
 ```html
 <igx-select>
-    <igx-select-item-group *ngFor="let item of items" [label]="item.type">
-        <igx-select-item *ngFor="let fruit of item.fruits" 
-        [value]="fruit">
-            {{fruit}}
-        </igx-select-item>
-
-        <igx-select-item *ngFor="let vegetable of item.vegetables" 
-        [value]="vegetable">
-            {{vegetable}}
+    <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
+        <igx-select-item *ngFor="let item of group.items" [value]="item">
+            {{item}}
         </igx-select-item>
     </igx-select-item-group>
 </igx-select>
 ```
-
 ### Angular フォームの選択
 `Select` コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで`必要な`バリデーターを使用する方法を示しています。
 

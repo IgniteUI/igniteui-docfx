@@ -19,7 +19,14 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 
 ### 使用方法
 
-Ignite UI for Angular Dialog Window を初期化する前に、**IgxDialogModule** を **app.module.ts** ファイルにインポートします。
+Dialog Window コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに  **IgxDialogModule** をインポートします。
 
 ```typescript
 // app.module.ts

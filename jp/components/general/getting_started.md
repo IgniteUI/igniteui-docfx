@@ -7,11 +7,12 @@ _language: ja
 
 ## Ignite UI で作業を開始
 
-[`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。Ignite UI for Angular は、デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
+[`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-Ignite UI for Angular を実行するには、以下の 2 つの手順に従い Ignite UI for Angular を含む Angular アプリをシステムでビルド、実行する準備を行います。
+### 前提条件
 
-作業を開始する前にシステムに NodeJS と Visual Studio Code をインストールする必要があります。Angular のモダン ウェブ開発は、ブラウザーで実行する ASP.NET アプリのようなもので サーバーで ASP.NET ランタイム配備が必要です。Angular アプリの開発では、Visual Studio Code が最適です。作業を開始する前に Node.js と Visual Studio Code をインストールします。
+1. NodeJS をインストールします。
+2. Visual Studio Code をインストールします。
 
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
@@ -33,21 +34,38 @@ Ignite UI for Angular を実行するには、以下の 2 つの手順に従い 
 </div>
 <div class="divider--half"></div>
 
-## Ignite UI for Angular のインストール
+### Ignite UI for Angular のインストール
 
-これですべての準備が整いました。さっそくアプリケーションを作成しましょう。
+Ignite UI for Angular は、Angular CLI または Ignite UI CLI を使用してインストールできます。
 
-### Ignite UI CLI を使用してアプリケーションを作成
+#### Angular CLI のクイック スタート
 
-お気に入りのターミナルを開いたら [`Ignite UI CLI`](https://github.com/IgniteUI/igniteui-cli) をインストールします。
+Angular CLI は、`ng add` コマンドでプロジェクトに外部ライブラリのサポートを提供します。このコマンドは、ライブラリの `npm` パッケージをワークスペースにインストールし、そのライブラリを使用するように現在の作業ディレクトリにプロジェクトを設定します。
+
+Angular CLI を使用して Angular アプリケーションを作成するには、ターミナルを開き、次のコマンドを入力します。
+
+```cmd
+ng new <project name> --style=scss
+```
+`--style` オプションでアプリケーションのスタイルフ ァイルに使用するファイル拡張子またはプリプロセッサを指定できます。コンポーネントのスタイルは [Ignite UI for Angular テーマ ライブラリ](../themes.md) に基づいているため、Scss を使用することをお勧めします。後で、Ignite UI for Angular パッケージをインストールすると、アプリケーションはデフォルトのスタイリング テーマを使用するように構成され、すべてのコンポーネント インスタンスまたは特定のコンポーネント インスタンスに対して簡単にカスタマイズできます。
+
+その後、次のコマンドを実行して、Ignite UI for Angular パッケージを、その依存関係、フォントのインポートおよびプロジェクトへのスタイル参照とともにインストールできます。 
+
+```cmd
+ng add igniteui-angular
+```
+
+インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。 これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
+
+#### Ignite UI CLI を使用してアプリケーションを作成
+
+ターミナルを開き、[`Ignite UI CLI`](cli-overview.md) をインストールします。
 
 ```cmd
 npm install -g igniteui-cli 
 ```
 
-#### ガイドの使用
-
-アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガイド エクスペリエンス`](https://github.com/IgniteUI/igniteui-cli/wiki/step-by-step) を使用する方法です。アプリをビルドしたら 1 コマンドで開始できます。 
+アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガイド エクスペリエンス`](cli/step-by-step-guide.md) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。
 
 ```cmd
 ig
@@ -61,40 +79,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-#### コマンドの使用
-
-Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands) を使用し、Ignite UI プロジェクトを生成して新しいコンポーネントの作成やプロジェクトの提供が可能です。以下のコマンドを使用できます。
-
-```cmd
-ig new <project name> --framework=angular --type=igx-ts 
-cd <project name>
-ig add <component/template> <component_name>
-ig start 
-```
-
-- **Component/template** 値の完全リストは[`こちら`](https://github.com/IgniteUI/igniteui-cli/wiki/add#ignite-ui-for-angular-templates)です。
-- 開発者は、**プロジェクト名**と**コンポーネント_名**の両方をカスタム値に設定できます。
-
-igxGrid コントロールで新しい Ignite UI for Angular プロジェクトを作成する例です。
-
-```cmd
-ig new newAngularProject --framework=angular --type=igx-ts
-cd newAngularProject
-ig add grid newGrid
-ig start
-```
-
-シンプルなコマンドを実行すると、新しいプロジェクトがビルドされます。これによりデフォルト ブラウザーが自動的に開かれ、グリッド コントロールをインスペクトしてプロジェクトに変更を加えることができます。
-
-### 既存アプリケーションに Ignite UI for Angular を追加
-
-既存の Angular CLI プロジェクト (既存プロジェクトまたは Angular CLI を使用して作成したプロジェクト) で Ignite UI for Angular を使用する場合、以下のコマンドを実行します。
-
-```cmd
-ng add igniteui-angular
-```
-
-[`Igniteui-angular`](https://github.com/IgniteUI/igniteui-angular) パッケージを依存関係、フォント、スタイル参照とともに既存プロジェクトへ自動的にインストールします。インストールの完了後、更新したアプリケーションで Ignite UI CLI [`コマンド`](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)を実行し、Ignite UI for Angular コンポーネントを使用して更にカスタマイズできます。
+または、Ignite UI CLI [`コマンド`](cli-overview.md#コマンド) を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドもできます。
 
 ## Ignite UI for Angular の使用
 
