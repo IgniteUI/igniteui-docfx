@@ -15,12 +15,15 @@ Ignite UI for Angular Select コンポーネントは、特殊な配置が可能
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 
->[!WARNING]
->Ignite UI for Angular コンポーネント、をプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。手順は、[*はじめに*](general/getting_started.md)のトピックをご確認ください。
-
-
 ## 使用方法
-Select コンポーネントを開始するには、はじめに `IgxSelectModule` をインポートする必要があります。
+[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に `IgxSelectModule` をインポートする必要があります。
 ```typescript
 // app.module.ts
 

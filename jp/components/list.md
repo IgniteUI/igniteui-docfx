@@ -23,8 +23,15 @@ _language: ja
 ### 使用方法
 
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
-Ignite UI for Angular List を初期化する前に、最初に `IgxListModule` を app.module.ts ファイルにインポートします:
 
+Ignite UI for Angular List を初期化する前に、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に app.module.ts ファイルに `IgxListModule` をインポートします。
 ```typescript
 // app.module.ts
 

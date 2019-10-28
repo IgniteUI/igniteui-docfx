@@ -21,9 +21,16 @@ _language: ja
 
 ## 使用方法
 
-Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
+Toggle は、簡単に開閉できるボックスにコンテンツをラップします。
 
-Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
+Toggle ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** に **IgxToggleModule** をインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
 
 ```typescript
 // app.module.ts

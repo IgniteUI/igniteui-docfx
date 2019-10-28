@@ -22,6 +22,13 @@ Ignite UI for Angular では、大規模なデータをテンプレート化す�
 
 ### 依存関係
 
+[`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブを初期化するはに、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
 [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxForOfModule_ をインポートする必要があります。
 
 ```typescript

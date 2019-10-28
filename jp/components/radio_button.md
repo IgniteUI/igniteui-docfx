@@ -26,7 +26,14 @@ _language: ja
 
 ラジオ ボタン コンポーネントはオプションの単一選択を可能にします。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Radio を初期化する前に `IgxRadioModule` を **app.module.ts** ファイルにインポートします。
+Radio Button コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+**app.module.ts** ファイルに `IgxRadioModule` をインポートします。
 
 ```typescript
 // app.module.ts

@@ -20,12 +20,16 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
-
 ## 使用方法
 
-Ignite UI for Angular Banner の使用は、はじめに **app.module.ts** ファイルに `IgxBannerModule` をインポートします。
+Banner コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBannerModule` をインポートします。
 
 ```typescript
 // app.module.ts

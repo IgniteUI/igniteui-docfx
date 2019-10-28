@@ -22,7 +22,14 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular NavBar コンポーネントを初期化する前に `IgxNavbarModule` を **app.module.ts** ファイルにインポートします。
+Navbar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxNavbarModule` をインポートします。
 
 ```typescript
 // app.module.ts

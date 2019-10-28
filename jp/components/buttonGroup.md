@@ -18,6 +18,13 @@ Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/
 <div class="divider--half"></div>
 
 ### 依存関係
+コンポーネントを使用する前に、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
 Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
 
 ```typescript
