@@ -19,7 +19,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -102,12 +102,12 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grid Excel エクスポーター:
-* [`IgxGrid Excel Exporters`](grid/export_excel.md)
-* [`IgxTreeGrid Excel Exporters`](treegrid/export_excel.md)
+* [`IgxGrid Excel エクスポーター`](grid/export_excel.md)
+* [`IgxTreeGrid Excel エクスポーター`](treegrid/export_excel.md)
 
 その他の使用されたコンポーネント:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 

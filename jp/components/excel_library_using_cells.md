@@ -21,7 +21,7 @@ Excel ワークシートの [`WorksheetCell`](/products/ignite-ui-angular/api/do
 
 <div class="divider--half"></div>
 
-### References
+### 参照
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 

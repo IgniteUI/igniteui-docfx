@@ -18,7 +18,7 @@ Combo コントロールは、データと値のバインディング、**[カ�
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -88,7 +88,8 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-> 注: [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが代わりに使用されます。
+> [!Note]
+> [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが代わりに使用されます。
 
 
 詳細については、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を[リモートデータにバインド](combo_remote.md)を参照してください。
@@ -115,7 +116,7 @@ export class CustomOverlayCombo {
 <igx-combo [data]="items" [overlaySettings]="customSettings"></igx-combo>
 ```
 
-たとえば、上記の設定では、[GlobalPositionStrategy](overlay_position.md#global) を使用して、コンボのリストが中央に表示されます。
+たとえば、上記の設定では、[GlobalPositionStrategy](overlay_position.md#Global) を使用して、コンボのリストが中央に表示されます。
 
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -99,7 +99,7 @@ export class AppModule {
 
 ![](../../../images/general/igx-side-auth-login-google.png)
 
-このガイドに従って [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
+このガイドに従って [Microsoft](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
 
 https://docs.microsoft.com/ja-jp/azure/active-directory/develop/quickstart-register-app
 

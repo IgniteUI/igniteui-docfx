@@ -1,34 +1,37 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+_keywords: データ選択, igniteui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Tree Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス 
+_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+_keywords: データ選択, igniteui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
-_keywords: data select, igniteui for angular, infragistics
+title: Angular Hierarchical Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス 
+_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+_keywords: データ選択, igniteui for angular, infragistics
+_language: ja
 ---
 }
 
 ### @@igComponent Selection
-The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
+選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@ igComponent はセル選択の 3 つのモードをサポートするようになり、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで簡単に切り替えることができます。セルの選択を無効にしたり、*グリッド内のセルを 1 つだけ選択*したり、デフォルトのオプションとして提供される*グリッド内の複数のセルを選択*したりできます。これらの各オプションについて詳しく説明します。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -38,32 +41,32 @@ The selection feature enables rich data select capabilities in the Material UI b
     <iframe id="treegrid-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-#### @@igComponent Мultiple-cell Selection
+#### @@igComponent 複数セル選択
 
-How to select cells:
-- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
-- By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
-- Instant multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
-- Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
-- Keyboard multi-cell selection by using the `Ctrl + Arrow keys` and `Ctrl + Home/End` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
-- Clicking with the `Left Mouse key` while holding `Ctrl key` will add single cell ranges into the selected cells collection.
-- Continuous multiple cell selection is available, by clicking with the mouse and dragging.
+セルの選択方法:
+- `マウス ドラッグ` - セルの長方形データ選択。
+- `Ctrl キー` 押下 + `マウス ドラッグ` - 複数の範囲が選択されます。その他の既存のセル選択は保持されます。
+- Shift キーを使用して複数セルの選択をインスタンス化します。Shift キーを押しながら、単一セルを選択して別の単一セルを選択します。2 つのセル間のセル範囲が選択されます。`Shift キー`を押しながら他の 2 番目のセルを選択すると、最初に選択したセルの位置 (開始点) に基づいてセル選択範囲が更新されます。
+- `Shift キー`を押しながら`矢印キー`を使用してキーボードで複数セルを選択します。マルチセル選択範囲は、フォーカスされたセルに基づいて作成されます。
+- Shift キーを押しながら `Ctrl + Arrow キー`と `Ctrl + Home/End` を使用してキーボードで複数セルを選択します。マルチセル選択範囲は、フォーカスされたセルに基づいて作成されます。
+- `Ctrl キー`を押しながら`左マウスキー`でクリックすると、選択したセルコレクションに単一のセル範囲が追加されます。
+- マウスでクリックしてドラッグすることで、連続した複数セルの選択が可能です。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -72,47 +75,47 @@ How to select cells:
     <iframe id="tree-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 }
 
-#### @@igComponent Single Selection
+#### @@igComponent 単一選択
 
-When you set the `[cellSelection]="'single'"`, this allows you to have only one selected cell in the grid at a time. Also the mode `mouse drag` will not work and instead of selecting a cell, this will make default text selection.
+`[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
-> When single cell is selected [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event is emitted, no matter if the `selection mode` is `single` or `multiple`. In multi-cell selection mode when you select a range of cells [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) event is emitted.
+> `選択モード`が`単一`であるか`複数`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
 
-#### @@igComponent None selection
-If you want to disable cell selection you can just set `[cellSelection]="'none'"` property. In this mode when you click over the cell or try to navigate with keyboard, the cell is **not selected**, only the `activation style` is applied and it is going to be lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
+#### @@igComponent 選択なし
+セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### Keyboard navigation interactions
+#### キーボード ナビゲーションのインタラクション
 
-##### While Shift key is pressed
-- <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to add above cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to add left cell to the current selection.
-- <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to add right cell to the current selection.
+##### Shift キーが押されている間
+- <kbd>Shift</kbd> + <kbd>上矢印</kbd> - 現在の選択範囲に上のセルを追加します。
+- <kbd>Shift</kbd> + <kbd>下矢印</kbd> - 現在の選択範囲に下のセルを追加します。
+- <kbd>Shift</kbd> + <kbd>左矢印</kbd> - 現在の選択に左のセルを追加します。
+- <kbd>Shift</kbd> + <kbd>右矢印</kbd> - 現在の選択範囲に右のセルを追加します。
 
-##### While Ctrl + Shift keys are pressed
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to select all cells below the focused cell in the column.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select all cells till the start of the row.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to select all cells till the end of the row.
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> to select all cells from the focused cell till the first-most cell in the grid
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> to select all cells from the focused cell till the last-most cell in the grid
+##### Ctrl + Shift キーが押されている間
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>上矢印</kbd> - 列内のフォーカスのあるセルの上にあるすべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>下矢印</kbd> - 列内のフォーカスのあるセルの下にあるすべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>左矢印</kbd> - 行の先頭まですべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>右矢印</kbd> - 行末まですべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> - フォーカスされているセルからグリッド内の最初のセルまでのすべてのセルを選択します。
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> - フォーカスされているセルからグリッド内の最後のセルまでのすべてのセルを選択します。
 
 > [!NOTE]
-> Continuous scroll is possible only within Grid's body.
+> 連続スクロールは、グリッド本体でのみ可能です。
 
-### Api usage
-Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
+### API の使用
+以下は、範囲の選択、選択の解除、または選択したセル データを取得する方法です。
 
-#### Select range
+#### 範囲の選択
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value.
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -125,17 +128,17 @@ this.grid1.selectRange(range);
 ```
 
 > [!NOTE]
-> Select range is additive operation. It will not clear your previous selection.
+> 選択範囲は加算操作です。以前の選択はクリアされません。
 
-#### Clear cell selection
+#### セル選択のクリア
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) will clear the current cell selection.
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) は、現在のセル選択をクリアします。
 
-#### Get selected data
+#### 選択したデータの取得
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return array of the selected data in format depending on the selection. Examples below:
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) は、選択内容に応じた形式で選択されたデータの配列を返します。
 
-1. If three different single cells are selected:
+1. 3 つの異なる単一セルが選択されている場合:
 ```
 expectedData = [
     { CompanyName: "Infragistics" },
@@ -144,7 +147,7 @@ expectedData = [
 ];
 ```
 
-2. If three cells from one column are selected:
+2. 1 列から 3 つのセルが選択されている場合:
 ```
 expectedData = [
     { Address: "Obere Str. 57"},
@@ -153,14 +156,14 @@ expectedData = [
 ];
 ```
 
-3. If three cells are selected with mouse drag from one row and three columns:
+3. 1 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 ```
 expectedData = [
     { Address: "Avda. de la Constitución 2222", City: "México D.F.", ContactTitle: "Owner" }
 ];
 ```
 
-4. If three cells are selected with mouse drag from two rows and three columns:
+4. 2 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 ```
 expectedData = [
     { ContactTitle: "Sales Agent", Address: "Cerrito 333", City: "Buenos Aires"},
@@ -168,7 +171,7 @@ expectedData = [
 ];
 ```
 
-5. If two different ranges are selected:
+5. 2 つの異なる範囲が選択されている場合:
 ```
 expectedData = [
     { ContactName: "Martín Sommer", ContactTitle: "Owner"},
@@ -178,7 +181,7 @@ expectedData = [
 ];
 ```
 
-6. If two overlapping ranges are selected, the format would be:
+6. 2 つの重複範囲が選択されている場合、形式は次のようになります。
 ```
 expectedData = [
     { ContactName: "Diego Roel", ContactTitle: "Accounting Manager", Address: "C/ Moralzarzal, 86"},
@@ -189,48 +192,48 @@ expectedData = [
 ```
 
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) will return the selected cell data.
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
+> セルがグリッドビューポートに表示されていない場合、[`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) は結果を返しませんが、[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) は選択されたセルデータを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 
 
-### Features integration
-The multi-cell selection is index based (DOM elements selection).
+### 機能の統合
+マルチセル選択はインデックス ベースです (DOM 要素選択)。
 
-- `Sorting` - When sorting is performed selection will not be cleared. It will leave currently selected cells the same while sorting ascending or descending.
-- `Paging` - On paging selected cells will be cleared. Selection wont be persisted across pages.
-- `Filtering` - When filtering is performed selection will not be cleared. If filtering is cleared it will return - the initially selected cells.
-- `Resizing` - On column resizing selected cells will not be cleared.
-- `Hiding` - It will not clear the selected cells. If column is hidden, the cells from the next visible column will be selected.
-- `Pinning` - Selected cell will not be cleared. Same as hiding
-- `Group by` - On column grouping selected cells will not be cleared.
+- `ソート` - ソートが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
+- `ページング` - ページング時に選択されたセルはクリアされます。選択はページを超えては持続されません。選択はページを超えては持続されません。
+- `フィルタリング` - フィルタリングが実行されると、選択は解除されません。フィルタリングがクリアされている場合は、最初に選択されたセルが返されます。
+- `サイズ変更` - 列のサイズを変更すると、選択したセルはクリアされません。
+- `非表示` - 選択したセルはクリアされません。列が非表示の場合は、次に表示されている列のセルが選択されます。
+- `ピン固定` - 選択したセルはクリアされません。非表示と同じです。
+- `グループ化` - 列をグループ化すると、選択したセルはクリアされません。
 
 }
 
-### Styling Guidelines
+### スタイリングのガイドライン
 
-The theme engine exposes properties that allows us to style the `range of selected cells`.
+テーマ エンジンは、`選択したセルの範囲`をスタイルできるプロパティを公開します。
 
-#### Import theme
+#### テーマのインポート
 
-To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
+選択のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 // in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-#### Define colors
+#### 色の定義
 
-Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+完了後、[`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
 ```scss
     $text-color: igx-contrast-color($default-palette, 'primary', 900);
     $background-color: igx-color($default-palette, "primary", 900);
     $border-yellow: #f2c43c;
 ```
 
-#### Create custom theme
+#### カスタム テーマの作成
 
-Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張する新しいテーマを作成します。
 
 ```scss
 $custom-grid-theme: igx-grid-theme(
@@ -240,17 +243,17 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Apply theme
+#### テーマの適用
 
-Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
+次にコンポーネントのスタイルに mixin を含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
     @include igx-grid($custom-grid-theme);
 ```
 
  >[!NOTE]
- >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
- > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
+ >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
+ > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
 
  ```scss
     :host {
@@ -261,72 +264,72 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
 ```
 
 
-With the custom theme applied, the selected grid cells are highlighted with our selected colors:
+カスタム テーマを適用すると、選択したグリッドセルが選択した色で強調表示されます。
 
 @@if (igxName === 'IgxGrid'){
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }
 
 
 @@if (igxName === 'IgxTreeGrid'){
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:620px">
     <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }
 
 
-### API References
+### API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Selection](selection.md)
-* [Row selection](row_selection.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Virtualization and Performance](virtualization.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [選択](selection.md)
+* [行の選択](row_selection.md)
+* [フィルタリング](filtering.md)
+* [並び替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
+* [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 

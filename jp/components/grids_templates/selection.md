@@ -60,7 +60,7 @@ Ignite UI for Angular @@ igComponentコンポーネントは、[行選択](row_s
 @@if (igxName === 'IgxGrid'){
 #### グリッドのコンテキスト メニュー
 
-[`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルを放出します。**コンテキスト メニュー**は、放出されたセルで動作します。
+[`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルをエミットします。**コンテキスト メニュー**は、エミットされたセルで動作します。
 
 **複数セルの選択**がある場合、選択したセルが複数セルの選択領域にあるかどうかをチェックするロジックを配置します。その場合、選択したセルの値も出力します
 

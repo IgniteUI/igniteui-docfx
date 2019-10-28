@@ -34,27 +34,28 @@ normalFont.height = 16 * 20;
 
 ### ワークブック プロパティの設定
 
+
 Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの [`documentProperties`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
 
--   author
+-   `author`
 
--   title
+-   `title`
 
--   subject
+-   `subject`
 
--   keywords
+-   `keywords`
 
--   category
+-   `category`
 
--   status
+-   `status`
 
--   comments
+-   `comments`
 
--   company
+-   `company`
 
--   manager
+-   `manager`
 
-以下のコードは、ワークブックを作成し、Title および Status ドキュメント プロパティを設定する方法を示します。
+以下のコードは、ワークブックを作成し、`Title` および `Status` ドキュメント プロパティを設定する方法を示します。
 
 ```ts
 var workbook = new Workbook();
