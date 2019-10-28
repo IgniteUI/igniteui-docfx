@@ -30,7 +30,7 @@ ng add igniteui-angular
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
 必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用して、'igniteui-angular/navigation-drawer' からアプリケーションにインポートします。
-```typescript
+```
 @NgModule({
     imports: [
         IgxNavigationDrawerModule,
