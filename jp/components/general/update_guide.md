@@ -1,4 +1,4 @@
----
+﻿---
 title: アップデート ガイド
 _description: このトピックでは、新しいバージョンの Ignite UI for Angular ライブラリにアップデートする方法についてご紹介します。
 _keywords: Ignite UI for Angular, アップデート, npm パッケージ, バージョン, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
@@ -84,6 +84,22 @@ ng update @angular/cli
         ```
     * インターフェイス `IgxDropEnterEventArgs` と `IgxDropLeaveEventArgs` を使用する場合は、`IDragBaseEventArgs` に置き換える必要があります。
     * また、`IgxDropEventArgs` インターフェイスの使用はすべて、用する場合は、`IDropDroppedEventArgs` に置き換える必要があります。
+
+* IgxRowDragDirective 
+    * `IRowDragStartEventArgs` および `IRowDragEndEventArgs` では、関連先をより明確にするために引数の名前が変更されています。`owner` 引数は `dragDirective` に名前が変更されます。
+    `owner` 引数は、owner コンポーネントへの参照を提供するようになりました。コードが以下のような場合:
+        ```typescript
+        public dragStart(event) {
+            const directive = event.owner;
+        }
+        ```
+        バージョン 8.2.x から以下のように更新します。
+        ```typescript
+        public dragStart(event) {
+            const directive = event.dragDirective;
+            const grid = event.owner;
+        }
+        ```
 
 * IgxCombo
     * [`igx-combo`](../combo.md) が選択とデータバインディングを処理する方法が変更されました。
