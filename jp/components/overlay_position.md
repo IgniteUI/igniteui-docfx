@@ -59,15 +59,15 @@ import {
 
 ### 定義済みの位置設定でポジション ストラテジを作成する
 
-各ポジション ストラテジには、固有のポジション設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定されたターゲット (buttonElement) の左上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は右上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`PositionSettings` を渡します。
+各ポジション ストラテジには、固有のポジション設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定されたターゲット (buttonElement) の右上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は左上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`PositionSettings` を渡します。
 
 ```typescript
 const positionSettings: PositionSettings = {
     target: buttonElement.nativeElement,
-    horizontalDirection: HorizontalAlignment.Left,
-    verticalDirection: VerticalAlignment.Top,
     horizontalStartPoint: HorizontalAlignment.Right,
-    verticalStartPoint: VerticalAlignment.Top
+    verticalStartPoint: VerticalAlignment.Top,
+    horizontalDirection: HorizontalAlignment.Left,
+    verticalDirection: VerticalAlignment.Top
 };
 
 const strategy = new ConnectedPositioningStrategy(positionSettings);
