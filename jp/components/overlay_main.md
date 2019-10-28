@@ -13,8 +13,14 @@ _language: ja
 <div class="divider--half"></div>
 
 ## 使用方法
+オーバーレイ サービスを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
 
-[`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) を使用するには、コンポーネントにインポートします。 サービスへの参照をコンポーネントの [`constructor`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#constructor) に注入します。
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、コンポーネントに [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) をインポートし、コンポーネントへの参照をコンポーネントのコンストラクターに`注入`する必要があります。
 ```typescript
 
 import { Inject } from '@angular/core'

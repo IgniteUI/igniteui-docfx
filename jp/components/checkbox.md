@@ -23,7 +23,14 @@ _language: ja
 
 チェックボックス コンポーネントは、選択/選択解除の状態の選択ができます。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-Ignite UI for Angular Checkbox を初期化する前に、`IgxCheckboxModule` を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Checkbox を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに  `IgxCheckboxModule` をインポートします。
 
 ```typescript
 // app.module.ts

@@ -28,7 +28,14 @@ _language: ja
 
 #### 使用方法
 
-コントロールを初期化する前に、`IgxBottomNavModule` を **app.module.ts** ファイルにインポートします。
+Bottom Navigation コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
 
 ```typescript
 // app.module.ts
