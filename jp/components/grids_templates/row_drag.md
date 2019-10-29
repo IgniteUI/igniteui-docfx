@@ -217,7 +217,6 @@ export class @@igxNameRowDragComponent {
 ```
 
 次のように `ViewChild` デコレータを使用して各グリッドに refenrece を定義し、ドロップを処理します。
-- イベントのキャンセル
 - 削除される行のデータを含む行を `targetGrid` に追加します。
 - `sourceGrid` からドラッグした行を削除します
 }

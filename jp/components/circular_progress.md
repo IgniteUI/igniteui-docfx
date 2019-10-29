@@ -237,7 +237,7 @@ $custom-theme: igx-progress-circular-theme(
 ```
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:350px">
     <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 

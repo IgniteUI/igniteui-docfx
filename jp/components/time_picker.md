@@ -339,7 +339,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 ...
 ```
 
-The result is as follows:
+以下は結果です。
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="time-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" class="lazyload"></iframe>
 </div>
@@ -360,8 +360,8 @@ The result is as follows:
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
-
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

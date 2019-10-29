@@ -117,7 +117,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-これで、カスタム [palette](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
+これで、カスタム [パレット](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
 
 #### カラーパレットの定義
 

@@ -250,8 +250,6 @@ export class AutocompleteSampleComponent {
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-## 既知の問題
-
 ### その他のリソース
 <div class="divider--half"></div>
 
