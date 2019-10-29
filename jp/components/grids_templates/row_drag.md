@@ -1,7 +1,7 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: グリッド行のドラッグ
-_description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチなグリッドが実現できます。
+_description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチな階層グリッドが実現できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
 _language: ja
 ---
@@ -100,8 +100,8 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```html
-<div class="drop-area" igxDrop (Enter)="onEnterAllowed($event)" (Leave)="onLeaveAllowed($event)"
-(onDrop)="onDropAllowed($event)">
+<div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (\leave)="onLeaveAllowed($event)"
+(onDrop)="onDropAllowed($event)">	(dropped)="onDropAllowed($event)">
     <igx-icon>delete</igx-icon>
     <div>Drag a row here to delete it</div>
 </div>
@@ -111,7 +111,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 この場合、ドロップ領域は行をドロップする 2 番目のグリッドになります。
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
-    (Enter)="onEnterAllowed($event)" (Leave)="onLeaveAllowed($event)" (Drop)="onDropAllowed($event)" [primaryKey]="'ID'">
+    (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)" (dropped)="onDropAllowed($event)" [primaryKey]="'ID'">
     ...
 </igx-grid>
 ```
@@ -141,7 +141,7 @@ export class @@igxNameRowDragComponent {
 
 #### ドロップ エリア イベント ハンドラー
 
-テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`Enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`Leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`Drop`]({environment:angularApiUrl}/classes/igxdropdirective.html#drop) イベントを宣言する必要があります。
+テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) イベントを宣言する必要があります。
 
 はじめに、`enter` と `leave` ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
 
@@ -191,7 +191,7 @@ enum DragIcon {
 ```typescript
 export class @@igxNameRowDragComponent {
     ...
-    public onDropAllowed(args: IgxDropEventArgs) {
+	    public onDropAllowed(args: IDropDroppedEventArgs) {
         const draggedRow: @@igxNameGridRowComponent = args.dragData;
         draggedRow.delete();
     }
@@ -199,7 +199,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-行をドロップした後は、行の [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) メソッドを呼び出します。
+行が削除されたら、行の [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) メソッドを呼び出すだけです。
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -364,7 +364,7 @@ enum DragIcon {
 
 ### 制限
 
-`rowDraggable` ディレクティブを使用するときに考慮する必要があることがいくつかあります。
+現在、`rowDraggable` ディレクティブに既知の制限はありません。
 
 ### API リファレンス
 
@@ -381,5 +381,5 @@ enum DragIcon {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

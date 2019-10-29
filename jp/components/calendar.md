@@ -17,7 +17,14 @@ _language: ja
 </div>
 
 ### 使用方法
-**Ignite UI for Angular Calendar** を初期化する前に、`IgxCalendarModule` をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に **BrowserAnimationsModule** の依存関係があるため、それを AppModule に追加する必要もあります。
+Calendar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、アプリケーションの AppModule に `IgxCalendarModule`をインポートします。通常、これは **app.module.ts** ファイルです。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** に依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
