@@ -6,22 +6,28 @@ _keywords: Ignite UI for Angular, Universal, Server-side rendering
 
 ## Server-side Rendering with Angular Universal
 
-This topic aims to describe what server-side rendering is and how to configure it within Ignite UI for Angular application. 
+This topic aims at describing what Server-side Rendering is and how to configure it within Ignite UI for Angular application. 
 
 ### Angular Universal
 
-Most of the Angular applications run in a client's browser, but if you want to generate the full HTML for a page on the server, and avoid additional round-trips for data fetching - [Angular Universal](https://angular.io/guide/universal) comes in handy. It renders a client-side page to HTML on the server that is later bootstrapped on the client. Okay, but how it works?
+We all know that Angular applications run in a client's browser and most of the times this may result in a negative performance hit on the [First Meaningful Paint (FCP)](https://web.dev/first-meaningful-paint) i.e. when a browser first renders the primary content of a page. This is when [Angular Universal](https://angular.io/guide/universal) comes in handy, you can generate the full HTML for a page on the server. It renders a client-side page to HTML on the server that is later bootstrapped on the client. Okay, but how it works?
+
+> [FMP](https://web.dev/first-meaningful-paint) measures when the primary content of a page is visible to the user, as for [FCP](https://web.dev/first-contentful-paint) metric, it measures how long it takes the browser to render the first piece of DOM content after a user navigates to your page. See [Lighthouse performance scoring](https://web.dev/performance-scoring) for more information. 
+
+
 
 ### How it works?
 
-With Angular Universal, you will serve a static version of your apps' landing page, while at the same time the full Angular application loads in the background. The landing pages will be pure HTML and will be displayed even if the JavaScript is disabled, keep in mind that [handling browser events](ssr-rendering.md#things-to-note) won't be possible. More about Server Rendering you can find [here](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
+With Angular Universal, you will serve a static version of your apps' landing page, while at the same time the full Angular application loads in the background. The landing pages will be pure HTML and will be displayed even if the JavaScript is disabled. More about Server Rendering you can find [here](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
 
 ### Usage
 
 Server-side rendering is one of the many techniques part of [Rendering on Web](https://developers.google.com/web/updates/2019/02/rendering-on-the-web) guidelines, that can:
-- Increase the chance of search engines to access your website - by easing web crawlers through Search Engine Optimization (SEO). 
+- Ease web crawlers to index your website higher in searches - will improve your Search Engine Optimization (SEO). 
 - Show the first page quickly - slow initial page load is disengaging for the users (if it takes more than 3 seconds to load).
-- Improve your app performance - which has a positive impact on the initial user experience.
+- Improve your app performance - it will have a positive impact on both [First Meaningful Paint](https://web.dev/first-meaningful-paint) and [First Contentful Paint](https://web.dev/first-contentful-paint). 
+
+> It gives you full control over SEO and social-media previews, and it improves the overall perceived performance of your application by allowing users to see an initial painted view.
 
 ### Add SSR to existing Ignite UI application
 
@@ -35,7 +41,7 @@ ng add @nguniversal/express-engine --clientProject ssr-example
 This schematic will perform several changes to your app client and server configurations, as well as npm commands and app.module updates.
 
 #### Step 2 - Define all browser-specific objects that are missing
-Since Universal apps run on the server and not in the browser, there are a few things you need to watch out for in your code. Browser-specific objects, such as `window`, `document`, or `location` are missing, so we can use [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) for server-side dom abstraction. Domino is a Server-side DOM implementation based on Mozilla's dom.js.
+Since Universal apps run on the server and not in the browser, there are a few things you need to watch out for in your code. Browser-specific objects, such as `window`, `document`, or `location` are missing, so we recommend using of [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) for Server-side DOM abstraction. Domino is a Server-side DOM implementation based on Mozilla's dom.js.
 
 ```typescript
 // server.ts
@@ -46,8 +52,6 @@ const template = fs
   .readFileSync(path.join('dist/browser', 'index.html'))
   .toString();
 const window = domino.createWindow(template);
-window.Object = Object;
-window.Math = Math;
 
 // Ignite UI browser objects abstractions
 (global as any).window = window;
@@ -83,9 +87,9 @@ npm run build:ssr && npm run serve:ssr
 
 1. Use `ng new` or the [Ignite UI CLI](../cli-overview.md) `ig new` command.
 2. Execute `ng add igniteui-angular` which installs the library's npm packages to your workspace and configures the project in the current working directory to use that library.
-4. Add Angular Universal with `ng add @nguniversal/express-engine --clientProject ig-ssr-example`. `ig-ssr-example` is your project name.
+4. Add Angular Universal with `ng add @nguniversal/express-engine --clientProject ig-ssr-example`. "ig-ssr-example" is your project name.
 3. Add Ignite UI for Angular components - e.g. Grid, Calendar et
-4. Configure the `server.ts` file to define all needed browser-specific objects, such as `window`, `document`, or `location`.
+4. Configure the "server.ts" file to define all needed browser-specific objects, such as "window", "document", or "location".
 	- install domino `npm install domino` - for server-side dom abstraction
 	- install xmlhttprequest `npm i xmlhttprequest` - If using IgxIconService to register icons
 
@@ -111,8 +115,9 @@ npm install
 npm run build:ssr && npm run serve:ssr
 ```
 
+> You may consider using of ASP.NET Core for building universally rendered apps with enabled Server-Side Rendering, just check the guide in [the official Microsoft page](https://docs.microsoft.com/en-gb/aspnet/core/client-side/spa/angular?view=aspnetcore-2.1&tabs=visual-studio#publish-and-deploy).
 
-### Things to note 
+### Things to note:
 
 - If your application is using other browser-specific objects, wrap their usage in a conditional statement, so that they’ll only be used by Angular on the browser. You can do this by importing the functions `isPlatformBrowser` and `isPlatformServer` from `@angular/common`, injecting the `PLATFORM_ID` token into your component, and running the imported functions to see whether you’re on the server or the browser.
 - If using ElementRef for HTML element handling, don’t use the nativeElement to manipulate attributes on the element. Instead, inject and use the [Renderer2 methods](https://alligator.io/angular/using-renderer2).
