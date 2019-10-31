@@ -115,8 +115,6 @@ npm install
 npm run build:ssr && npm run serve:ssr
 ```
 
-> You may consider using of ASP.NET Core for building universally rendered apps with enabled Server-Side Rendering, just check the guide in [the official Microsoft page](https://docs.microsoft.com/en-gb/aspnet/core/client-side/spa/angular?view=aspnetcore-2.1&tabs=visual-studio#publish-and-deploy).
-
 ### Things to note:
 
 - If your application is using other browser-specific objects, wrap their usage in a conditional statement, so that they’ll only be used by Angular on the browser. You can do this by importing the functions `isPlatformBrowser` and `isPlatformServer` from `@angular/common`, injecting the `PLATFORM_ID` token into your component, and running the imported functions to see whether you’re on the server or the browser.
