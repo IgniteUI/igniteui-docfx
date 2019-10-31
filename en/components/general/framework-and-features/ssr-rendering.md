@@ -18,7 +18,7 @@ All Angular applications run in a client's browser and most of the times this ma
 
 ### How it works?
 
-With Angular Universal, you will serve a static version of your apps' landing page, while at the same time the full Angular application loads in the background. The landing pages will be pure HTML and will be displayed even if the JavaScript is disabled. More about Server Rendering you can find [here](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
+With Angular Universal, you will serve a static version of your apps' landing page, while at the same time the full Angular application loads in the background. The landing page will be pure HTML and will be displayed even if the JavaScript is disabled. More about Server Rendering you can find [here](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
 
 ### Usage
 
@@ -82,6 +82,8 @@ Run the following command:
 ```
 npm run build:ssr && npm run serve:ssr
 ```
+
+> As alternative to [Angular Express Engine](https://github.com/angular/universal/blob/master/modules/express-engine/README.md) you may use [ASP.NET Core Engine](https://github.com/angular/universal/tree/master/modules/aspnetcore-engine) for running Angular Apps with Server-side Rendering.
 
 ### Build a new application from scratch 
 
