@@ -111,29 +111,60 @@ public processData() {
 ***注:*** 最初の  [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
 ### リモートの並べ替え/フィルタリングの仮想化
-リモート並べ替えとフィルタリングは、[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) アウトプットにサブスクライブする必要があるため、引数に基づいて適切に要求し、。[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`] を設定します。
 
-リモートデータを要求する際にフィルタリング処理で大文字と小文字を区別することに注意してください。
+To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange), [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+
+> [!NOTE]
+> The [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs are fired whenever a change to the sorting and filtering expressions has occurred respectively. These outputs are triggered prior to the actual sorting and filtering operations, unlike the [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) and the [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) outputs, which are triggered after the respective operations have finished.
+
+When remote sorting and filtering are provided, usually we do not need the built-in sorting and filtering of the grid. We can disable them by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) and the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) inputs of the grid to the `NoopSortingStrategy` and the `NoopFilteringStrategy` respective instances.
+
+```html
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
+        [filterStrategy]="noopFilterStrategy"
+        [sortStrategy]="noopSortStrategy"
+        (onDataPreLoad)="processData()"
+        (sortingExpressionsChange)="processData()"
+        (filteringExpressionsTreeChange)="processData()"
+        [allowFiltering]="true">
+    ...
+</igx-grid>
+```
+
+```typescript
+public noopFilterStrategy = NoopFilteringStrategy.instance();
+public noopSortStrategy = NoopSortingStrategy.instance();
+```
+
+Note that when requesting remote data, filtering operation is case-sensitive.
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-remote-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-### リモート フィルタリング仮想化
+### Remote Filtering Virtualization
 
-リモート フィルタリングを提供するには、受け取った引数に基づいて適切な要求を行うように [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 出力にサブスクライブする必要があります。[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey) を提供して、Tree Grid のデータソースとしてフラット コレクションを使用します。
+To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey).
+
+> [!NOTE]
+> The [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) output is fired whenever a change to the filtering expressions has occurred. This output is triggered prior to the actual filtering operation, unlike the [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) output, which is triggered after the respective operation has finished.
+
+When remote filtering is provided, usually we do not need the built-in filtering of the Tree Grid. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) input of the Tree Grid to the `NoopFilteringStrategy` instance.
 
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
 
 <igx-tree-grid #treeGrid [data]="remoteData | async" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%" height="450px"
-                [autoGenerate]="false" (onFilteringDone)="processData()" [allowFiltering]="true">
+               [autoGenerate]="false"
+               [filterStrategy]="noopFilterStrategy"
+               (filteringExpressionsTreeChange)="processData()"
+               [allowFiltering]="true">
     <igx-column [field]="'Name'" dataType="string"></igx-column>
     <igx-column [field]="'Title'" dataType="string"></igx-column>
     <igx-column [field]="'Age'" dataType="number"></igx-column>
@@ -144,17 +175,19 @@ public processData() {
 ```typescript
 // tree-grid-remote-filtering-sample.ts
 
+public noopFilterStrategy = NoopFilteringStrategy.instance();
+
 public ngAfterViewInit() {
     this.processData();
 }
 
 public processData() {
-    this.toast.show();
+    this.treeGrid.isLoading = true;
 
     const filteringExpr = this.treeGrid.filteringExpressionsTree;
 
     this._remoteService.getData(filteringExpr, () => {
-        this.toast.hide();
+        this.treeGrid.isLoading = false;
     });
 }
 ```

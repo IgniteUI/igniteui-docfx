@@ -198,9 +198,23 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 #### Remote Filtering
-You can provide @@igComponent's remote filtering by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) and [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
+You can provide @@igComponent's remote filtering by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) and either the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) or the [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) outputs. More information on how to use them you can find in the `@@igComponent Virtualization and Performance` [documentation](virtualization.md).
+
+> [!NOTE]
+> The [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) output is fired whenever a change to the filtering expressions has occurred. This output is triggered prior to the actual filtering operation, unlike the [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) output, which is triggered after the filtering has finished.
+
+When remote filtering is provided, usually we do not need the built-in filtering of the @@igComponent. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) input of the @@igComponent to the `NoopFilteringStrategy` instance. When this strategy is used, the filtering functionality is left entirely for the developer to implement.
+
+```html
+<@@igSelector [allowFiltering]="true" [filterStrategy]="noopFilterStrategy">
+</@@igSelector>
+```
+
+```typescript
+public noopFilterStrategy = NoopFilteringStrategy.instance();
+```
 
 <div class="divider--half"></div>
 }
