@@ -57,15 +57,18 @@ import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axi
 import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financial-price-series";
 import { IgxBollingerBandsOverlay } from "igniteui-angular-charts/ES5/igx-bollinger-bands-overlay";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxFinancialPriceSeriesModule } from "igniteui-angular-charts/ES5/igx-financial-price-series-module";
 
 // in app.module.ts file
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        IgxFinancialPriceSeriesModule,
         // ...
     ]
 })

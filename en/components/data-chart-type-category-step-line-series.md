@@ -56,14 +56,13 @@ import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis"
 // series' modules:
 import { IgxStepLineSeries } from "igniteui-angular-charts/ES5/igx-step-line-series";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
 import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
 
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartCategoryModule,
         // ...

@@ -70,15 +70,15 @@ The following code walks through creating a bullet graph component, and configur
                    targetValue = "43">
         <igx-linear-graph-range startValue="0"
                                 endValue="15"
-                                Brush="#828181">
+                                brush="#828181">
         </igx-linear-graph-range>
-        <igx-linear-graph-range StartValue="15"
-                                EndValue="30"
-                                Brush="#AAAAAA">
+        <igx-linear-graph-range startValue="15"
+                                endValue="30"
+                                brush="#AAAAAA">
         </igx-linear-graph-range>
-        <igx-linear-graph-range StartValue="30"
-                                EndValue="55"
-                                Brush="#D0D0D0">
+        <igx-linear-graph-range startValue="30"
+                                endValue="55"
+                                brush="#D0D0D0">
         </igx-linear-graph-range>
  </igx-bullet-graph>
 ```
