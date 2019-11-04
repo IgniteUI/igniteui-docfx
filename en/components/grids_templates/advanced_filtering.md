@@ -110,6 +110,35 @@ In case you don't want to show the @@igComponent toolbar, you could use the [`op
 >[!NOTE]
 >You can enable both the [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) and the advanced filtering user interfaces in the @@igComponent. Both filtering user interfaces will work independently of one another. The final filtered result in the @@igComponent is the intersection between the results of the two filters.
 
+
+### External Advanced filtering
+
+As you see the demo above the appearance of the Advanced filtering dialog is inside the Infragistics grid. When the setup in the dialog is ready, the apply or close actions would hide that dialog. There is a way to make that dialog stay always visible - it can  be used outside of the grid as a standalone component. At the demo below, the advanced filtering dialog is declared separately of the grid.
+
+#### Demo
+
+
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Usage
+
+It's super easy to configure the advanced filtering to work outside of the grid. All you need to do is to create the dialog and set its `grid` property:
+
+```html
+<igx-advanced-filtering-dialog [grid]="grid1">
+</igx-advanced-filtering-dialog>
+```
+
+
+<div class="divider--half"></div>
+
+
 ### Styling
 
 To get started with styling the Advanced Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
