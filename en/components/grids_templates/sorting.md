@@ -97,6 +97,9 @@ this.@@igObjectRef.clearSort();
 ```
 
 > [!NOTE]
+> The [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) of the **@@igComponent** is of different type compared to the [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy) of the **column**, since they work in different scopes and expose different parameters.
+
+> [!NOTE]
 > The sorting operation **DOES NOT** change the underlying data source of the @@igComponent.
 
 #### Initial sorting state
@@ -117,27 +120,9 @@ public ngOnInit() {
 
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+@@if (igxName === 'IgxGrid') {
 #### Remote Sorting
-You can provide @@igComponent's remote sorting by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) and either the [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) or the [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) outputs.
-@@if (igxName === 'IgxGrid') {More information on how to use them you can find in the `@@igComponent Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).}
-
-> [!NOTE]
-> The [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) output is fired whenever a change to the sorting expressions has occurred. This output is triggered prior to the actual sorting operation, unlike the [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) output, which is triggered after the sorting has finished.
-
-When remote sorting is provided, usually we do not need the built-in sorting of the @@igComponent. We can disable it by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) input of the @@igComponent to the `NoopSortingStrategy` instance. When this strategy is used, the sorting functionality is left entirely for the developer to implement.
-
-> [!NOTE]
-> The [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) of the **@@igComponent** is of different type compared to the [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy) of the **column**, since they work in different scopes and expose different parameters.
-
-```html
-<@@igSelector [allowFiltering]="true" [sortStrategy]="noopSortStrategy">
-</@@igSelector>
-```
-
-```typescript
-public noopSortStrategy = NoopSortingStrategy.instance();
-```
+For more information on how to implement remote sorting, you can take a look at the `@@igComponent Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
 
 <div class="divider--half"></div>
 }
