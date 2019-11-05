@@ -117,7 +117,7 @@ As you see the demo above the appearance of the Advanced filtering dialog is ins
 
 #### Demo
 
-
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -125,15 +125,50 @@ As you see the demo above the appearance of the Advanced filtering dialog is ins
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
 
 #### Usage
 
-It's super easy to configure the advanced filtering to work outside of the grid. All you need to do is to create the dialog and set its `grid` property:
+It's super easy to configure the advanced filtering to work outside of the grid. All you need to do is to create the dialog and set its `grid` property, then apply some filters:
 
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-advanced-filtering-dialog [grid]="grid1">
 </igx-advanced-filtering-dialog>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="treegrid1">
+</igx-advanced-filtering-dialog>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="hierarchicalgrid1">
+</igx-advanced-filtering-dialog>
+```
+}
 
 
 <div class="divider--half"></div>

@@ -457,7 +457,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 #### Demo
 
-
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:654px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -465,6 +465,27 @@ As you see at the demos above the default appearance of the Excel Style filterin
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:658px">
+    <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:658px">
+    <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
 
 
 <div class="divider--half"></div>
@@ -473,6 +494,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 At the sample above a column should be selected first, in order to instruct the ExcelStyle filter dialog which grid's column to filtrate. You can filter, hide or show, pin or unpin given column via that dialog. All you need to do, is to create the excel style dialog and bind its column property to a grid's column:
 
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-select #gridColums value="ProductID">
    <label igxLabel>Columns:</label>
@@ -484,6 +506,34 @@ At the sample above a column should be selected first, in order to instruct the 
 <igx-grid-excel-style-filtering [column]="grid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-select #gridColums value="ID">
+   <label igxLabel>Columns:</label>
+   <igx-select-item *ngFor="let c of treegrid1.columns" [value]="c.field">
+       {{ c.field }}
+   </igx-select-item>
+</igx-select>
+
+<igx-grid-excel-style-filtering [column]="treegrid1.getColumnByName(gridColums.value)">
+</igx-grid-excel-style-filtering>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-select #gridColums value="Artist">
+   <label igxLabel>Columns:</label>
+   <igx-select-item *ngFor="let c of hierarchicalgrid1.columns" [value]="c.field">
+       {{ c.field }}
+   </igx-select-item>
+</igx-select>
+
+<igx-grid-excel-style-filtering [column]="hierarchicalgrid1.getColumnByName(gridColums.value)">
+</igx-grid-excel-style-filtering>
+```
+}
+
 
 The excel style filtering `column` is set via the igx-select selected value, which is actually contains the grid columns. That's all you need to make the excel style filtering dialog work outside of the grid, as a standalone component. 
 
