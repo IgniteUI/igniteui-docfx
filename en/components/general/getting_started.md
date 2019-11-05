@@ -48,6 +48,11 @@ ng new <project name> --style=scss
 ```
 You can specify the file extension or preprocessor to use for your application's style files with the `--style` option. We recommend using Scss since our components' styles are based on the [Ignite UI for Angular theming library](../themes.md). Later on, when you install the Ignite UI for Angular package, your application will be configured to use the default styling theme which can be then easily customized either for all or for specific component instances.
 
+In case you want to use the Ignite UI Angular Schematics tool you need to install it globally:
+```cmd
+npm i -g @igniteui/angular-schematics
+```
+
 Thereafter you can install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project, by running the following command: 
 
 ```cmd

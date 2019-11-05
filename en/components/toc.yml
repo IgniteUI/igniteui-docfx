@@ -6,15 +6,12 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
-- name: Ignite UI CLI
+- name: Ignite UI Angular Schematics & CLI
   href: general/cli-overview.md
   new: false
   items:
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
-      new: false
-    - name: Schematics
-      href: general/cli/schematics.md
       new: false
     - name: Templates
       href: general/cli/component-templates.md

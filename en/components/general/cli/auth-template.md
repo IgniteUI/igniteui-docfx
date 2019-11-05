@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 
 Ignite UI CLI provides support of multiple versions of a project (called project templates) to choose from when using either the [`new` command](../cli-overview.md#commands) or the [Step by step mode](step-by-step-guide.md).
 
-When creating Ignite UI for Angular project with the Ignite UI CLI you can select a template with an basic implementation of a client-side authentication module that require as little additional setup as possible to jump-start apps with user management.
+When creating Ignite UI for Angular project with the Ignite UI Angular Schematics or CLI tool you can select a template with an basic implementation of a client-side authentication module that require as little additional setup as possible to jump-start apps with user management.
 
 ### Create Authentication Project
 You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
