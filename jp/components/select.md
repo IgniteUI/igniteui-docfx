@@ -283,8 +283,8 @@ public customOverlaySettings: OverlaySettings = {
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 
-To help visually separate item groups, select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
-This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
+項目グループを視覚的に分離するために、select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
+これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
 ```typescript
     public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
             { label: "Fruits", items:[
