@@ -12,10 +12,10 @@ Infragistics Excel エンジンは、データを Microsoft® Excel® に保存�
 ### デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
     </button>
 </div>
 
@@ -23,7 +23,7 @@ Infragistics Excel エンジンは、データを Microsoft® Excel® に保存�
 
 ### 既定のフォントを変更
 
-[`IWorkbookFont`](excel_library_using_workbooks.md) の新しいインスタンスを作成します。workbook.styles.apply メソッドでワークブックの Style コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
+[`IWorkbookFont`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html) の新しいインスタンスを作成します。workbook.styles.apply メソッドでワークブックの Style コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
 
 ```ts
 var workbook = new Workbook();
@@ -32,32 +32,48 @@ normalFont.name = "Times New Roman";
 normalFont.height = 16 * 20;
 ```
 
+```ts
+import { IWorkbookFont } from 'igniteui-webcomponents-excel/ES2015/excel.core';
+
+let workbook = new Workbook();
+let font: IWorkbookFont;
+font = workbook.styles().normalStyle.styleFormat.font;
+font.name = "Times New Roman";
+font.height = 16 * 20;
+```
+
 ### ワークブック プロパティの設定
 
-Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](excel_library_using_workbooks.md) オブジェクトの `documentProperties`プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
+Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの [`documentProperties`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
 
--   `author`
+-   author
 
--   `title`
+-   title
 
--   `subject`
+-   subject
 
--   `keywords`
+-   keywords
 
--   `category`
+-   category
 
--   `status`
+-   status
 
--   `comments`
+-   comments
 
--   `company`
+-   company
 
--   `manager`
+-   manager
 
-以下のコードは、ワークブックを作成し、`Title` および `Status` ドキュメント プロパティを設定する方法を示します。
+以下のコードは、ワークブックを作成し、Title および Status ドキュメント プロパティを設定する方法を示します。
 
 ```ts
 var workbook = new Workbook();
+workbook.documentProperties.title = "Expense Report";
+workbook.documentProperties.status = "Complete";
+```
+
+```ts
+let workbook = new Workbook();
 workbook.documentProperties.title = "Expense Report";
 workbook.documentProperties.status = "Complete";
 ```

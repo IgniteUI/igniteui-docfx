@@ -87,15 +87,19 @@ Since version `8.2` our components support a new theme, built based on the [`Mic
 In order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
 
 For the `light` version of the `fluent theme` using `excel color palette`, use the code below: 
+
 ```scss
 // Replace
 @include igx-theme($default-palette);
-// With
+// With   
 @include igx-fluent-theme($fluent-excel-palette);
 ```
 
 For the `dark` version of the `fluent theme` using `excel palette`, use the code below:
-```scss
+
+
+```scss    
+
 // replace
 @include igx-dark-theme($default-palette);
 // With
@@ -105,7 +109,9 @@ For the `dark` version of the `fluent theme` using `excel palette`, use the code
 We also added a `Microsoft Word` palette. To use it just replace the `$fluent-excel-palette` with `$fluent-word-palette`:
 
 ```scss
-// for the white version
+
+// for the light version
+
 @include igx-fluent-theme($fluent-word-palette);
 
 // for the dark version
