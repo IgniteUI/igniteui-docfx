@@ -18,6 +18,13 @@ Ignite UI for Angular [**igx-buttongroup**]({environment:angularApiUrl}/classes/
 <div class="divider--half"></div>
 
 ### 依存関係
+コンポーネントを使用する前に、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
 Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
 
 ```typescript
@@ -295,7 +302,7 @@ $dark-button-group: igx-button-group-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている2つの定義済みスキーマの 1 つを拡張します。この場合 - [`dark-button-group`]({environment:sassApiUrl}/index.html#variable-_dark-button-group) スキーマ:
 

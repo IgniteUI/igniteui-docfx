@@ -17,7 +17,14 @@ _language: ja
 </div>
 
 ### 使用方法
-**Ignite UI for Angular Calendar** を初期化する前に、`IgxCalendarModule` をアプリケーションの AppModule (**app.module.ts** ファイル) にインポートします。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に **BrowserAnimationsModule** の依存関係があるため、それを AppModule に追加する必要もあります。
+Calendar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、アプリケーションの AppModule に `IgxCalendarModule`をインポートします。通常、これは **app.module.ts** ファイルです。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** に依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -355,7 +362,7 @@ export class CalendarSample7Component {
 - <kbd>End</kbd> キーは現在の月の最後の日または最後の月をフォーカスします。
 - <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
 
-`前` または`次`の月のボタン（サブヘッダー内）にフォーカスがある場合、以下を使用します。
+`前` または`次`の月のボタン(サブヘッダー内)にフォーカスがある場合、以下を使用します。
 - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次の月または前の月のビューへスクロールします。
 
 サブヘッダーの`月`ボタンのフォーカス時:
@@ -485,7 +492,7 @@ $my-calendar-theme: igx-calendar-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-calendar) の 1 つを拡張します。  
 

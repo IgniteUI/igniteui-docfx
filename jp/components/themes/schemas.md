@@ -37,7 +37,7 @@ $_light-avatar: (
 );
 ```
 
-上記の例では、コンポーネント スキーマが [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。前もって解決せずに色と avatar を指示します。
+上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。前もって解決せずに色と avatar を指示します。
 
 以下は、`icon-background` プロパティの例です。 avatar テーマにデフォルト背景をタイプ アイコンの新しい igx-avatar にすることを指示します。 
 

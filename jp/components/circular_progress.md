@@ -22,7 +22,14 @@ _language: ja
 
 Circular Progress Indicator はプロセスの進行状況を表示します。
 
-Ignite UI for Angular Circular Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+Circular Progress Indicator を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに  **IgxProgressBarModule** をインポートします。
 
 ```typescript
 // app.module.ts
@@ -230,7 +237,7 @@ $custom-theme: igx-progress-circular-theme(
 ```
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:350px">
     <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 

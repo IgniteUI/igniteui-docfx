@@ -20,9 +20,7 @@
     "gulp-file-include": "^2.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-shell": "^0.6.5",
-
-    "igniteui-docfx-template": "2.0.25",
-
+    "igniteui-docfx-template": "2.3.1",
     "natives": "^1.1.6",
     "yargs": "^10.0.3"
   }

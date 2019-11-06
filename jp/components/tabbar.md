@@ -28,7 +28,14 @@ _language: ja
 
 #### 使用方法
 
-コントロールを初期化する前に、`IgxBottomNavModule` を **app.module.ts** ファイルにインポートします。
+Bottom Navigation コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -504,7 +511,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #F4D45C;
