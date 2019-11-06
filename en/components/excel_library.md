@@ -79,15 +79,29 @@ The following is a list of the supported versions of Excel.\*\*
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-In order to load and save [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method. In the following code snippet, an external [ExcelUtility](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/src/app/utilities/excel-utility.ts) class is used to save and load a [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html):
+> [!NOTE]
+>
+> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+
+In order to load and save [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method.
 
 ```ts
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
 import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
 import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { ExcelUtility } from "excel_utility_location";
+import { ExcelUtility } from "ExcelUtility";
 
 var workbook = ExcelUtility.load(file);
+ExcelUtility.save(workbook, "fileName");
+```
+
+```ts
+import { Workbook } from "igniteui-webcomponents-excel/ES2015/Workbook";
+import { WorkbookFormat } from "igniteui-webcomponents-excel/ES2015/WorkbookFormat";
+import { WorkbookSaveOptions } from "igniteui-webcomponents-excel/ES2015/WorkbookSaveOptions";
+import { ExcelUtility } from "ExcelUtility";
+
+let workbook = ExcelUtility.load(file);
 ExcelUtility.save(workbook, "fileName");
 ```
 

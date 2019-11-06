@@ -31,6 +31,17 @@ import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellCo
 import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
 ```
 
+```ts
+import { Workbook } from "igniteui-webcomponents-excel/ES2015/Workbook";
+import { Worksheet } from "igniteui-webcomponents-excel/ES2015/Worksheet";
+import { WorkbookFormat } from "igniteui-webcomponents-excel/ES2015/WorkbookFormat";
+import { WorksheetTable } from "igniteui-webcomponents-excel/ES2015/WorksheetTable";
+import { NamedReference } from "igniteui-webcomponents-excel/ES2015/NamedReference";
+import { WorksheetCellComment } from "igniteui-webcomponents-excel/ES2015/WorksheetCellComment";
+import { FormattedString } from "igniteui-webcomponents-excel/ES2015/FormattedString";
+import { CellReferenceMode, Formula, CellFill } from 'igniteui-webcomponents-excel/ES2015/excel.core';
+```
+
 ### Referencing Cells and Regions
 
 You can access a [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object or a [`WorksheetRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) object by calling the [`worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
@@ -45,6 +56,16 @@ var worksheet = workbook.worksheets().add("Sheet1");
 var cell = worksheet.getCell("E2");
 //Accessing a range of cells
 var region = worksheet.getRegion("G1:G10");
+```
+
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+// Accessing a single cell
+let cell = worksheet.getCell("E2");
+// Accessing a range of cells
+let region = worksheet.getRegion("G1:G10");
 ```
 
 ### Accessing Cells and Regions by Name
@@ -63,11 +84,24 @@ var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
 var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
 ```
 
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+let cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
+let region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
+```
+
 The following code can be used to the get the cell and region referenced by the "myCell" and "myRegion" named references above:
 
 ```ts
 var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
+```
+
+```ts
+let cell = worksheet.getCell("myCell");
+let region = worksheet.getRegion("myRegion");
 ```
 
 ### Adding a Comment to a Cell
@@ -82,6 +116,17 @@ var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellComment = new WorksheetCellComment();
 var commentText = new FormattedString("This cell has a comment.");
+cellComment.text = commentText;
+
+worksheet.rows(0).cells(0).comment = cellComment;
+```
+
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+let cellComment = new WorksheetCellComment();
+let commentText = new FormattedString("This cell has a comment.");
 cellComment.text = commentText;
 
 worksheet.rows(0).cells(0).comment = cellComment;
@@ -103,6 +148,17 @@ The following code shows you how to add a formula to a cell.
  sumFormula.applyTo(worksheet.rows(5).cells(0));
 ```
 
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.rows(5).cells(0).applyFormula("=SUM(A1:A5)");
+
+ // Using a Formula object to apply a formula
+ let sumFormula = Formula.parse("=SUM(A1:A5)", CellReferenceMode.A1);
+ sumFormula.applyTo(worksheet.rows(5).cells(0));
+```
+
 ### Copying a Cell’s Format
 
 Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `cellFormat` property, you can call the [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
@@ -121,6 +177,20 @@ worksheet.columns(1).cellFormat.font.bold = true;
 worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 ```
 
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.rows(5).cells(0).applyFormula("=SUM(A1:A5)");
+
+// Format 2nd column
+worksheet.columns(1).cellFormat.fill = CellFill.createSolidFill("Blue");
+worksheet.columns(1).cellFormat.font.bold = true;
+
+// Copy format of 2nd column to 4th column
+worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
+```
+
 ### Formatting a Cell
 
 The Infragistics Angular Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html), [`WorksheetRow`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html), [`WorksheetColumn`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html), or [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) objects.
@@ -134,6 +204,13 @@ The following code shows you how to format a cell to display numbers as currency
 ```ts
 var workbook = new Workbook(format);
 var workbook = workbook.worksheets().add("Sheet1");
+
+worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
+```
+
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 ```
@@ -169,7 +246,15 @@ var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellFill = CellFill.createSolidFill("Blue");
-worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
+worksheet.rows(0).cells(0).cellFormat.fill = cellFill;
+```
+
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+let cellFill = CellFill.createSolidFill("Blue");
+worksheet.rows(0).cells(0).cellFormat.fill = cellFill;
 ```
 
 You can specify a color (the color of Excel cells background, border, etc) using linear and rectangular gradients in cells. When workbooks with these gradients are saved in .xls file format and opened in Microsoft Excel 2007/2010, the gradients will be visible, but when these files are opened in Microsoft Excel 2003, the cell will be filled with the solid color from the first gradient stop.
@@ -276,6 +361,26 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+// Make some column headers
+worksheet.rows(1).cells(1).value = "Morning";
+worksheet.rows(1).cells(2).value = "Afternoon";
+worksheet.rows(1).cells(3).value = "Evening";
+
+// Create a merged region from column 1 to column 3
+let mergedRegion1 =  worksheet.mergedCellsRegions().add(0, 1, 0, 3);
+
+// Set the value of the merged region
+mergedRegion1.value = "Day 1";
+
+// Set the cell alignment of the middle cell in the merged region.
+// Since a cell and its merged region shared a cell format, this will ultimately set the format of the merged region
+worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
+```
+
 ### Retrieving the Cell Text as Displayed in Excel
 
 The text displayed in a cell depends on several factors other than the actual cell value, such as the format string and the width of the column that the cell is contained in.
@@ -327,4 +432,11 @@ var workbook = new Workbook();
 var worksheet = this.workbook.worksheets().add("Sheet1");
 
 var cellText = worksheet.rows(0).cells(0).getText();
+```
+
+```ts
+let workbook = new Workbook();
+let worksheet = workbook.worksheets().add("Sheet1");
+
+let cellText = worksheet.rows(0).cells(0).getText();
 ```

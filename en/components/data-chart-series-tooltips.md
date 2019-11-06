@@ -26,7 +26,9 @@ In order to use tooltips or tooltip layers in the Angular data chart component, 
 ```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
-IgxDataChartInteractivityModule.register();
+@NgModule({
+    imports: [ IgxDataChartInteractivityModule ]
+})
 ```
 
 ### Default Tooltips

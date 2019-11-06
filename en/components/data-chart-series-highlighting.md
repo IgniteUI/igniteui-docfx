@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart']
 
 ## Highlighting
 
-The Angular data chart component allows you to highlight the plotted series in the data chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers.
+The Angular data chart component allows you to highlight the plotted series in the data chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers. Please note that highlighting is not currently supported for stacked series.
 
 ### Demo
 
@@ -27,8 +27,12 @@ In order to enable highlighting in the Angular data chart component, you need to
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-data-chart-annotation-module";
 
-IgxDataChartInteractivityModule.register();
-IgxDataChartAnnotationModule.register();
+@NgModule({
+    imports: [ 
+        IgxDataChartInteractivityModule, 
+        IgxDataChartAnnotationModule,
+    ]
+})
 ```
 
 ### Highlighting Series Visuals
