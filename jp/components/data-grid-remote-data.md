@@ -48,4 +48,13 @@ vds.entitySet = ("Orders");
 this.virtualData = vds;
 ```
 
+```ts
+private virtualData: ODataVirtualDataSource;
+// ...
+const vds = new ODataVirtualDataSource();
+vds.baseUri = ("https://services.odata.org/V4/Northwind/Northwind.svc");
+vds.entitySet = ("Orders");
+this.virtualData = vds;
+```
+
 データソースをグリッドに割り当てます。

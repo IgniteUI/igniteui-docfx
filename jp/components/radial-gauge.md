@@ -42,9 +42,9 @@ import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gau
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxRadialGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -61,7 +61,7 @@ export class AppModule {}
     value="25"
     interval="5"
     minimumValue="0"
-    maximumValue="50">
+    maximumValue="100">
     <igx-radial-gauge-range startValue="0"
                             endValue="30"
                             brush="red">
@@ -156,7 +156,7 @@ export class AppModule {}
     font="11px Verdana"
     fontBrush="DodgerBlue"
 
-    height="80px" width="400px"
+    height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=100 interval=10>
 </igx-radial-gauge>

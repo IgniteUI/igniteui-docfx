@@ -1,5 +1,5 @@
 ---
-title: React データ グリッド | Table コントロール | Ignite UI for Angular | 列タイプ | Infragistics 
+title: React データ グリッド | Table コントロール | Ignite UI for Angular | 列タイプ | Infragistics
 _description: Ignite UI for Angular Table / Grid コンポーネントは、グリッド ドメインの複雑さを管理しやすい API に簡素化しているためユーザーがデータのコレクションを簡単にバインドできます。
 _keywords: react table, Ignite UI for Angular, infragistics
 _language: ja

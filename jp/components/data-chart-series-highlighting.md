@@ -27,8 +27,12 @@ _language: ja
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-data-chart-annotation-module";
 
-IgxDataChartInteractivityModule.register();
-IgxDataChartAnnotationModule.register();
+@NgModule({
+    imports: [ 
+        IgxDataChartInteractivityModule, 
+        IgxDataChartAnnotationModule,
+    ]
+})
 ```
 
 ### シリーズ ビジュアルをハイライト

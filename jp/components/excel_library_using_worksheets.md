@@ -51,11 +51,25 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showGridlines = false;
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.displayOptions.showGridlines = false;
+```
+
 ワークシートの `displayOptions` の `gridlineColor` プロパティを使用して、グリッド線の色を設定できます。以下のコードは、ワークシートのグリッド線を変更する方法を示します。
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.displayOptions.gridlineColor = "Red";
+```
+
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.displayOptions.gridlineColor = "Red";
 ```
@@ -73,6 +87,13 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showRowAndColumnHeaders = false;
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.displayOptions.showRowAndColumnHeaders = false;
+```
+
 ### ワークシートの編集を設定
 
 デフォルトで保存する [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトが有効です。[`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `protect` メソッドを使用してワークシートを保護することにより、ワークシートの編集を禁止できます。このメソッドは、保護する部分を決定する null 許容型 `bool` 引数が多くあり、オプションの 1 つは編集オブジェクトを許容し、`false` に設定した場合はワークシートの編集を防止します。
@@ -86,6 +107,13 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.protect();
+```
+
 [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `protect` メソッドを使用して構造変更からワークシートを保護できます。
 
 保護が設定されると、Worksheet オブジェクトの保護をこれらのオブジェクトでオーバーライドするために、`CellFormat` オブジェクトの `locked` プロパティを各セル、行、マージされたセル領域、または列で設定することができます。たとえば、1 つの列のセルを除き、ワークシートのすべてのセルを読み取り専用にする必要がある場合、特定の [`WorksheetColumn`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html) オブジェクトで `CellFormat` プロパティの `locked` を `false` に設定します。これにより、その列内のセルの編集をユーザーに許可し、ワークシートの他のセルの編集は禁止できます。
@@ -95,6 +123,14 @@ worksheet.protect();
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.protect();
+worksheet.columns(0).cellFormat.locked = false;
+```
+
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.protect();
 worksheet.columns(0).cellFormat.locked = false;
@@ -131,6 +167,14 @@ worksheet.filterSettings.setRegion("Sheet1!A1:A10");
 worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.filterSettings.setRegion("Sheet1!A1:A10");
+worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
+```
+
 ### ペインの固定と分割
 
 ペイン固定機能は、行をワークシートの上または列を左にで固定できます。ユーザーがスクロールしている間、固定した行や列は表示されたままになります。固定された行列は、削除できない実線によってワークシートの残りの部分と区切られます。
@@ -154,6 +198,19 @@ worksheet.displayOptions.frozenPaneSettings.firstColumnInRightPane = 2;
 worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.displayOptions.panesAreFrozen = true;
+
+worksheet.displayOptions.frozenPaneSettings.frozenRows = 3;
+worksheet.displayOptions.frozenPaneSettings.frozenColumns = 1;
+
+worksheet.displayOptions.frozenPaneSettings.firstColumnInRightPane = 2;
+worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
+```
+
 ### ワークシート ズーム レベルの設定
 
 各ワークシートのズーム レベルは、[`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `displayOptions` の `magnificationInNormalView` プロパティを使用して個別に変更できます。このプロパティは、10 から 400 の間の値を取得して適用したいズームのパーセンテージを表します。
@@ -163,6 +220,13 @@ worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.displayOptions.magnificationInNormalView = 300;
+```
+
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.displayOptions.magnificationInNormalView = 300;
 ```
@@ -180,6 +244,13 @@ worksheet.displayOptions.magnificationInNormalView = 300;
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
+```
+
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
 ```
@@ -210,6 +281,13 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+worksheet.protect();
+```
+
 ### ワークシートの条件付き書式設定
 
 [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) の条件付き書式を設定するには、ワークシートの `conditionalFormats` コレクションで公開される多数の Add メソッドを使用できます。この Add メソッドの最初のパラメーターは条件付き書式に適用する Worksheet の `string` 領域です。
@@ -230,5 +308,16 @@ var color = new Color();
 color.colorString = "Red";
 
 var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
+format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
+```
+
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+
+let color = new Color();
+color.colorString = "Red";
+
+let format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```

@@ -73,19 +73,18 @@ import { IgxRadialLineSeries } from "igniteui-angular-charts/ES5/igx-radial-line
 import { IgxRadialPieSeries } from "igniteui-angular-charts/ES5/igx-radial-pie-series";
 import { IgxRadialColumnSeries } from "igniteui-angular-charts/ES5/igx-radial-column-series";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartRadialCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-core-module";
 import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-module";
 
 @NgModule({
     imports: [
-        ...
-        IgxDataChartModule,
+        // ...
         IgxDataChartCoreModule,
         IgxDataChartRadialCoreModule,
         IgxDataChartRadialModule,
-        ...
+        // ...
     ]
 })
 ```

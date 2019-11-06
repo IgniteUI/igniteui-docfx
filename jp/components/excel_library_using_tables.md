@@ -30,6 +30,12 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 worksheet.tables().add("A1:G10", true);
 ```
 
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+worksheet.tables().add("A1:G10", true);
+```
+
 テーブルを追加後 [`WorksheetTable`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) で `insertColumns`、`insertDataRows`、`deleteColumns`、または `deleteDataRows` メソッドを呼び出して行列を追加または削除して変更できます。テーブルの `resize` メソッドを使用して新しいテーブル範囲を設定できます。
 
 以下のコード スニペットは、3 つのメソッドの使用方法を示します。
@@ -52,6 +58,27 @@ table.deleteColumns(1, 5);
 table.deleteDataRows(0, 5);
 
 //Will resize the table to be in the region of A1:G15.
+table.resize("A1:G15");
+```
+
+```ts
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+let table = worksheet.tables().add("A1:G10", true);
+
+// Will add 5 columns at index 1.
+table.insertColumns(1, 5);
+
+// Will add 5 rows at index 0.
+table.insertDataRows(0, 5);
+
+// Will delete 5 columns starting at index 1.
+table.deleteColumns(1, 5);
+
+// Will delete 5 rows starting at index 0.
+table.deleteDataRows(0, 5);
+
+// Will resize the table to be in the region of A1:G15.
 table.resize("A1:G15");
 ```
 
@@ -83,6 +110,16 @@ var table = worksheet.tables().add("A1:G10", true);
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 ```
 
+```ts
+import { AverageFilterType } from 'igniteui-webcomponents-excel/ES2015/excel.core';
+
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+let table = worksheet.tables().add("A1:G10", true);
+
+table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
+```
+
 ### テーブルの並べ替え
 
 テーブル列で並べ替え条件を設定すると並べ替えが実行されます。並べ替え条件が列で設定されると、テーブルのセルの順番を決定するためにテーブルのすべての並べ替え条件が再評価されます。並べ替えの基準を満たすためにセルを移動させる必要があるとき、テーブルのセルの行全体が 1 つの単位として移動されます。
@@ -110,5 +147,18 @@ var table = worksheet.tables().add("A1:G10", true);
 table.columns(0).sortCondition = new OrderedSortCondition(SortDirection.Ascending);
 
 //Alternative:
+table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCondition(SortDirection.Ascending));
+```
+
+```ts
+import { OrderedSortCondition, SortDirection } from 'igniteui-webcomponents-excel/ES2015/excel.core';
+
+let workbook = new Workbook(WorkbookFormat.Excel2007);
+let worksheet = workbook.worksheets().add("Sheet1");
+let table = worksheet.tables().add("A1:G10", true);
+
+table.columns(0).sortCondition = new OrderedSortCondition(SortDirection.Ascending);
+
+// Alternative:
 table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCondition(SortDirection.Ascending));
 ```

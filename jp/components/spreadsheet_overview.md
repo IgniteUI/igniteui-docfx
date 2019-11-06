@@ -40,10 +40,10 @@ import { IgxSpreadsheetModule } from "igniteui-angular-spreadsheet/ES5/igx-sprea
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxExcelModule,
         IgxSpreadsheetModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
@@ -60,12 +60,17 @@ export class AppModule {}
 </igx-spreadsheet>
 ```
 
+> [!NOTE]
+>
+> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
+
 以下は、ワークブックをスプレッドシートにロードする方法を示しています。
 
 ```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
-import { ExcelUtility } from './../utilities/excel-utility';
-...
+import { ExcelUtility } from 'ExcelUtility';
+
+// ...
 
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;

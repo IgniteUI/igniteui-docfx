@@ -41,13 +41,13 @@ Map は、マウス、キーボード、またはコードビハインドを使�
 
 ```ts
 // app.module.ts
-import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
+import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-geographic-map-module";
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxMapModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}

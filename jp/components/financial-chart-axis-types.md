@@ -57,7 +57,7 @@ Financial Chart コントロールは、チャートで表示されるラベル�
     yAxisLabelTextStyle="8pt Verdana"
     yAxisLabelTextColor="Gray"
     yAxisLabelLeftMargin="5"
-    yAxisLabeleAngle="0"
+    yAxisLabelAngle="0"
     width="850px"
     height="600px"
     [dataSource]="data">

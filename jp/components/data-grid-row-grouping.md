@@ -27,3 +27,14 @@ Angular Data Table / Data Grid を使用すると、列の値を「固定ヘッ�
 import { ColumnGroupDescription } from "igniteui-react-grids/ES5/igr-column-group-description";
 import { ListSortDirection } from "igniteui-react-core/ES5/ListSortDirection";
 ```
+
+```ts
+import { ColumnGroupDescription } from 'igniteui-webcomponents-grids/ES2015/igc-column-group-description';
+import { ListSortDirection } from "igniteui-webcomponents-core/ES2015/ListSortDirection";
+
+const desc = new ColumnGroupDescription();
+    desc.propertyPath = "LastName";
+    desc.displayName = "Last Name";
+    desc.sortDirection = ListSortDirection.Descending;
+    grid1.groupDescriptions.add(desc);
+```

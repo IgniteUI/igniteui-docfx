@@ -26,7 +26,9 @@ _language: ja
 ```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
-IgxDataChartInteractivityModule.register();
+@NgModule({
+    imports: [ IgxDataChartInteractivityModule ]
+})
 ```
 
 ### チャート UI ナビゲーションの概要

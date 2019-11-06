@@ -1,5 +1,5 @@
 ---
-title: React Data Grid |Table コントロール|Ignite UI for Angular |セルのアクティブ化|Infragistics 
+title: React Data Grid |Table コントロール|Ignite UI for Angular |セルのアクティブ化|Infragistics
 _description: Ignite UI for Angular Table / Gridコンポーネントは、ユーザーがデータのコレクションをバインドできるように、グリッドドメインの複雑さを管理可能な API に単純化します。
 _keywords: react table, Ignite UI for Angular, infragistics
 _language: ja

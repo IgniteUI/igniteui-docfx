@@ -1,5 +1,5 @@
 ---
-title: React Data Grid | Table Controls | Ignite UI for Angular | Column Types | Infragistics 
+title: React Data Grid | Table Controls | Ignite UI for Angular | Column Types | Infragistics
 _description: The Ignite UI for Angular Table / Grid component simplifies the complexities of the grid domain into manageable API so that a user can bind a collection of data.
 _keywords: react table, Ignite UI for Angular, infragistics
 ---

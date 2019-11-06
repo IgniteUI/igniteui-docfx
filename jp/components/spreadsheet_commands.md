@@ -41,7 +41,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 
----
+// ...
 
 public zoomIn(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.ZoomIn);

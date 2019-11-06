@@ -35,7 +35,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ```ts
 // data chart's modules required for all series:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
 // scatter series' modules:
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
@@ -49,8 +49,7 @@ import { IgxValueBrushScale } from "igniteui-angular-charts/ES5/igx-value-brush-
 
 @NgModule({
     imports: [
-        ...
-        IgxDataChartModule,
+        // ...
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
         IgxDataChartScatterModule,

@@ -44,26 +44,12 @@ import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
 
 @NgModule({
     imports: [
-        ...
+        // ...
         IgxLinearGaugeModule,
-        ...
+        // ...
     ]
 })
 export class AppModule {}
-```
-
-```ts
-import { IgrLinearGaugeModule } from "igniteui-react-gauges/ES5/igr-linear-gauge-module";
-import { IgxLinearGauge } from "ignite-react-gauges/ES5/igx-linear-gauge";
-
-IgrLinearGaugeModule.register();
-```
-
-```ts
-import { IgcLinearGaugeModule } from "igniteui-webcomponents-gauges/ES5/igc-linear-gauge-module";
-import { IgxLinearGauge } from "ignite-webcomponents-gauges/ES5/igx-linear-gauge";
-
-IgcLinearGaugeModule.register();
 ```
 
 <div class="divider--half"></div>

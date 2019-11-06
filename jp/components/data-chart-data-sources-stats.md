@@ -15,8 +15,8 @@ export class SampleScatterStats {
     public static countries: Country[];
 
     public static sortByPopDescending(a: Country, b: Country) {
-        if (a.Population > b.Population) { return 1; }
-        if (a.Population < b.Population) { return -1; }
+        if (a.population > b.population) { return 1; }
+        if (a.population < b.population) { return -1; }
         return 0;
     }
 
@@ -247,33 +247,33 @@ export class SampleScatterStats {
 }
 
 class Country {
-    public Population: number;
-    public GdpPerCapita: number;
-    public GdpTotal: number;
-    public DptPerCapita: number;
-    public PhonePer100: number;
+    public population: number;
+    public gdpPerCapita: number;
+    public gdpTotal: number;
+    public dptPerCapita: number;
+    public phonePer100: number;
 
-    public Code: string;
-    public Name: string;
-    public Region: string;
+    public code: string;
+    public name: string;
+    public region: string;
 
     constructor(code: string,
         pop: number, gdp: number, dpt: number, phones: number,
         name: string, region: string) {
-        this.Code = code;
-        this.Region = region;
-        this.Name = name;
+        this.code = code;
+        this.region = region;
+        this.name = name;
 
-        this.Population = pop;
-        this.GdpPerCapita = gdp;
-        this.GdpTotal = gdp * pop;
-        this.DptPerCapita = dpt;
-        this.PhonePer100 = phones;
+        this.population = pop;
+        this.ddpPerCapita = gdp;
+        this.gdpTotal = gdp * pop;
+        this.dptPerCapita = dpt;
+        this.phonePer100 = phones;
     }
 
     public isValid(): boolean {
-        return this.GdpPerCapita > 0 && this.Population > 0  &&
-               this.DptPerCapita > 0 && this.PhonePer100 > 0
+        return this.gdpPerCapita > 0 && this.population > 0  &&
+               this.dptPerCapita > 0 && this.phonePer100 > 0
     }
 }
 ```
