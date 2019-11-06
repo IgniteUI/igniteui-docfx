@@ -130,7 +130,7 @@ npm run build:ssr && npm run serve:ssr
 <div class="divider--half"></div>
 
 * [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
-* [Ignite UI スタート キット  (英語)](https://github.com/IgniteUI/ng-universal-example)
+* [Ignite UI スターターキット (英語)](https://github.com/IgniteUI/ng-universal-example)
 * [サーバー側レンダリング用語](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
 * [Ignite UI で作業を開始](../getting_started.md)
 * [Ignite UI CLI ガイド](../cli/step-by-step-guide.md)
