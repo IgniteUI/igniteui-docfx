@@ -263,7 +263,7 @@ public ngOnInit() {
 
 public applyCSS() {
     this.columns.forEach((column, index) => {
-        column.cellStyles = (index % 2 === 0 ? this.oddColStyles : this.evenColStyles);
+        column.cellStyles = (index % 2 === 0 ? this.evenColStyles : this.oddColStyles);
     });
 }
 
