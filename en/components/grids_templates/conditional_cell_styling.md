@@ -20,7 +20,7 @@ _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 
-### @@igxName Conditional Cell Styling
+### @@igComponent Conditional Cell Styling
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of cells** based on custom rules.
 
 - By setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
@@ -117,7 +117,7 @@ public styles = {
 
 ### Overview
 
-#### Using of cellClasses
+#### Using cellClasses
 You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and define custom rules.
 
 @@if (igxName === 'IgxGrid') {
@@ -213,10 +213,12 @@ public priceClasses = {
 
 Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
-#### Using of cellStyles
-Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation.
+#### Using cellStyles
+Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
 
-In the [sample above](conditional_cell_styling.md#demo-with-cellstyles) we've created two different styles that will be applied based on the column index. If you uncommend the `color` callback call, you will also change the `text color` based on certain condition, in our case even/odd rows.
+In the [sample above](conditional_cell_styling.md#demo-with-cellstyles) we've created:
+- Two different styles that will be applied based on the column index. 
+- You will also change the `text color` based on even/odd rows.
 
 > The callback signature for both `cellStyles` is:
 
@@ -230,21 +232,19 @@ Let's define our styles:
 // component.ts
 public oddColStyles = {
     background: "linear-gradient(to right, #b993d6, #8ca6db)",
-    color: "white",
-    // "color": (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "red" : "green",
+    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "white" : "gray",
     animation: "0.75s popin"
 };
 
 public evenColStyles = {
     background: "linear-gradient(to right, #8ca6db, #b993d6)",
-    color: "white",
-    // "color": (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "red" : "green",
+    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "gray" : "white",
     animation: "0.75s popin"
 };
 
 ```
 
-On `ngOnInit` we will add the `cellStyles` configuration for each column of the predefined `columns` collection, which is used to create the @@igxName Columns dynamically.
+On `ngOnInit` we will add the `cellStyles` configuration for each column of the predefined `columns` collection, which is used to create the @@igxName columns dynamically.
 
 ```ts
 // component.ts
@@ -269,7 +269,7 @@ public applyCSS() {
 
 public updateCSS(css: string) {
     this.oddColStyles = {...this.oddColStyles, ...JSON.parse(css)};
-    this.evenColStyles = {...this.oddColStyles, ...JSON.parse(css)};
+    this.evenColStyles = {...this.evenColStyles, ...JSON.parse(css)};
     this.applyCSS();
 }
 ```

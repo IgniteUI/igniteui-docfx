@@ -141,7 +141,7 @@
       new: false
     - name: Conditional Cell Styling
       href: grid/conditional_cell_styling.md
-      new: false
+      new: true
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
