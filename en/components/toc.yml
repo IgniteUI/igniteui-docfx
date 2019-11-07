@@ -154,6 +154,9 @@
     - name: Sizing
       href: grid/sizing.md
       new: true
+    - name: Master-Detail Grid
+      href: grid/master_detail.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
