@@ -202,9 +202,9 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxGrid') {
-#### リモート フィルタリング
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) と [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンスの`[ヘルプ](virtualization.md#remote-sortingfiltering-virtualization)をご覧ください。
+@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+#### Remote Filtering
+For more information on how to implement remote filtering, you can take a look at the `@@igComponent Virtualization and Performance` [documentation](virtualization.md).
 
 <div class="divider--half"></div>
 }

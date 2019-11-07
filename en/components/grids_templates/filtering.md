@@ -198,9 +198,9 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 #### Remote Filtering
-You can provide @@igComponent's remote filtering by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) and [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) outputs. More information on how to use it you can find in the `Grid Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
+For more information on how to implement remote filtering, you can take a look at the `@@igComponent Virtualization and Performance` [documentation](virtualization.md).
 
 <div class="divider--half"></div>
 }
