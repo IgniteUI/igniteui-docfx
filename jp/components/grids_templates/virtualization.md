@@ -132,7 +132,7 @@ public ngAfterViewInit() {
         debounceTime(DEBOUNCE_TIME),
         takeUntil(this.destroy$)
     ).subscribe(() => {
-        this.processData();
+        this.processData(true);
     });
 
     this.grid.sortingExpressionsChange.pipe(
