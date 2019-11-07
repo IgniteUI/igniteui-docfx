@@ -46,10 +46,10 @@
       new: false
     - name: レイアウト要素
       href: general/wpf_to_angular_guide/layout.md
-- name: Framework & features
+- name: フレームワーク & 機能
   new: true
   items:
-    - name: SSR Rendering
+    - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
       new: true
 - name: グリッドとリスト
@@ -83,7 +83,7 @@
     - name: フィルタリング
       href: grid/filtering.md
       new: false
-    - name: Excel フィルタリング
+    - name: Excel スタイルフィルタリング
       href: grid/excel_style_filtering.md
       new: false
     - name: 高度なフィルタリング
@@ -141,7 +141,7 @@
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
       new: false
-    - name: キーボードナビゲーション
+    - name: キーボード ナビゲーション
       href: grid/keyboard_navigation.md
       new: false
     - name: 複数行レイアウト
@@ -184,7 +184,7 @@
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
-    - name: Excel フィルタリング
+    - name: Excel スタイルフィルタリング
       href: treegrid/excel_style_filtering.md
       new: false
     - name: 高度なフィルタリング
@@ -211,6 +211,13 @@
     - name: 選択
       href: treegrid/selection.md
       new: false
+      items:
+        - name: 行選択
+          href: treegrid/row_selection.md
+          new: true
+        - name: セル選択
+          href: treegrid/cell_selection.md
+          new: true     
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -269,7 +276,7 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
-    - name: Excel フィルタリング
+    - name: Excel スタイルフィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
       new: false
     - name: 高度なフィルタリング
@@ -295,9 +302,17 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
+     items:
+        - name: 行選択
+          href: hierarchicalgrid/row_selection.md
+          new: true
+        # Not yet fully implemented for igxHGrid
+        # - name: Cell selection
+        #  href: grid/cell_selection.md
+        #  new: true
     # Not yet fully implemented for igxHGrid
-    # - name: 検索
+    # - name: Searching
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: ツールバー
@@ -614,15 +629,6 @@
     - name: ワールド ユーティリティ
       href: map_resources_world_util.md
       new: false
-    # - name: Binding Data
-    #   href: map_binding_data_overview.md
-    #   new: true
-    #   items:
-    # TODO
-    # - name: Geographic Series
-    #   href: map_geographic_series_overview.md
-    #   new: true
-    #   items:
 - name: フレームワーク
   header: true
 - name: Excel Library
@@ -646,7 +652,7 @@
       new: false
     # - name: Working with Grids
     #   href: excel_library_working_with_grid.md
-    #   new: true
+    #   new: false
     - name: スパークラインでの作業
       href: excel_library_working_with_sparklines.md
       new: false
