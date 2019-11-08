@@ -140,7 +140,7 @@
       new: false
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
-      new: false
+      new: true
     - name: キーボードナビゲーション
       href: grid/keyboard_navigation.md
       new: false
@@ -228,7 +228,7 @@
       new: false
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional_cell_styling.md
-      new: false
+      new: true
     - name: 集計
       href: treegrid/aggregations.md
       new: false
