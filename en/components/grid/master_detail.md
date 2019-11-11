@@ -1,4 +1,8 @@
-
+---
+title: Grid Master-Detail - Native Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Data Grid Master-Detail feature allows for specifying expandable details view template for each row.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Grid, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, master detail, master-detail, grid master detail, master detail grid, expandable detail, detail template
+---
 
 ### Master-Detail Grid
 
