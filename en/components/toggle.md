@@ -256,12 +256,20 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 <custom-component #reference></custom-component>
 ```
 
+### Offsetting the toggle container
+
+To offset the container along the corresponding axis by a provided amount:
+```typescript
+    // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
+    this.toggleForm.setOffset(deltaX, deltaY);
+```
+
 ## API Summary
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behavior.
 Furthermore we added another helping directive which controls automatically this same behavior by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.
 
-###API References
+### API References
 <div class="divider"></div>
 
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
