@@ -15,8 +15,8 @@ export class SampleScatterStats {
     public static countries: Country[];
 
     public static sortByPopDescending(a: Country, b: Country) {
-        if (a.oopulation > b.population) { return 1; }
-        if (a.oopulation < b.population) { return -1; }
+        if (a.population > b.population) { return 1; }
+        if (a.population < b.population) { return -1; }
         return 0;
     }
 
