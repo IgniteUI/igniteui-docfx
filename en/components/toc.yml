@@ -67,7 +67,7 @@
       href: grid/virtualization.md
       new: false
     - name: Remote scenarios
-      href: grid/remote_scenarios.md
+      href: grid/remote_data_operations.md
       new: true
     - name: Editing
       href: grid/editing.md
@@ -168,7 +168,7 @@
       href: treegrid/virtualization.md
       new: false
     - name: Remote scenarios
-      href: treegrid/remote_scenarios.md
+      href: treegrid/remote_data_operations.md
       new: true      
     - name: Load On Demand
       href: treegrid/load_on_demand.md
@@ -263,7 +263,7 @@
       href: hierarchicalgrid/virtualization.md
       new: false
     - name: Remote scenarios
-      href: hierarchicalgrid/remote_scenarios.md
+      href: hierarchicalgrid/remote_data_operations.md
       new: true      
     - name: Load on Demand
       href: hierarchicalgrid/load_on_demand.md
