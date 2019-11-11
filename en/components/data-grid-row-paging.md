@@ -12,7 +12,7 @@ Paging is not currently implemented within the Ignite UI for Angular Data Table 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="live-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/grids/data-grid-paging' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="ldata-grid-row-paging-iframe" src='{environment:demosBaseUrl}/grids/data-grid-row-paging' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>

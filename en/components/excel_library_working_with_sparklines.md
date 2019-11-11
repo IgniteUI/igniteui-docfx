@@ -35,3 +35,13 @@ sheet1.sparklineGroups().add(SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A1
 sheet1.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11");
 workbook.save(workbook, "Sparklines.xlsx");
 ```
+
+```ts
+ let workbook: Workbook;
+ let sheet1 = workbook.worksheets().add("Sparklines");
+ let sheet2 = workbook.worksheets().add("Data");
+ sheet1.sparklineGroups().add(SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11");
+ sheet2.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11");
+ workbook.save(workbook, "Sparklines.xlsx");
+ 
+```
