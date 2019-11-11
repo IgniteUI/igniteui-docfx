@@ -22,7 +22,7 @@ _keywords: angular remote data operations, ignite ui for angular, infragistics
 
 ### @@igComponent Remote Data Operations Overview
 
-The Ignite UI for Angular @@igComponent supports remote data operations such as Remote Virtualization, Remote Sorting, Remote Filtering, Remote Paging and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
+The Ignite UI for Angular @@igComponent supports remote data operations such as remote virtualization, remote sorting, remote filtering and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
 #### Demo
@@ -97,7 +97,8 @@ public processData(reset) {
 
 When requesting data, you need to utilize the [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) interface, which provides the [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) and [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) properties.
 
-***Note:*** The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
+>[!NOTE]
+>The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
 
 #### Remote Virtualization Demo
 
@@ -159,7 +160,8 @@ public noopFilterStrategy = NoopFilteringStrategy.instance();
 public noopSortStrategy = NoopSortingStrategy.instance();
 ```
 
-Note that when requesting remote data, filtering operation is case-sensitive.
+>[!NOTE]
+>When remote data is requested, the filtering operation is case-sensitive.
 
 #### Remote Sorting/Filtering Demo
 
@@ -220,7 +222,8 @@ public processData() {
 
 The remote filtering will have to be performed over the flat collection directly. We will also have to include all the parents for any record that matches the filtering condition regardless of whether or not the parents match the filtering (we do this to keep the hierarchy intact). The result can be seen below:
 
-Note that when requesting remote data, filtering operation is case-sensitive.
+>[!NOTE]
+>When remote data is requested, the filtering operation is case-sensitive.
 
 #### Remote Filtering Demo
 
@@ -232,10 +235,9 @@ You can see the result of the code from above at the beginning of this article i
 
 ### Remote Paging
 
-Paging could also operate with remote data.
-
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
-Lets first declare our service that will be responsible for data fetching.
+The paging feature can operate with remote data.
+Let's first declare our service that will be responsible for data fetching.
 We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 ```typescript
 @Injectable()
@@ -757,9 +759,6 @@ After all the changes above, the following result will be achieved.
 </div>
 <div class="divider--half"></div>
 }
-
-
-
 
 ### API References
 <div class="divider--half"></div>
