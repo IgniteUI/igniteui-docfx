@@ -1,29 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Remote Scenarios | Angular Grid Remote Scenarios | Ignite UI for Angular | Infragistics
-_description: Start using angular remote scenarios such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
-_keywords: angular remote scenarios, ignite ui for angular, infragistics
+title: Angular Remote Data Operations | Angular Grid Remote Data Operations | Ignite UI for Angular | Infragistics
+_description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
+_keywords: angular remote data operations, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Remote Scenarios | Angular Tree Grid Remote Scenarios | Ignite UI for Angular | Infragistics
-_description: Start using angular remote scenarios such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
-_keywords: angular remote scenarios, ignite ui for angular, infragistics
+title: Angular Remote Data Operations | Angular Tree Grid Remote Data Operations | Ignite UI for Angular | Infragistics
+_description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
+_keywords: angular remote data operations, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Remote Scenarios | Angular Hierarchical Grid Remote Scenarios | Ignite UI for Angular | Infragistics
-_description: Start using angular remote scenarios such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
-_keywords: angular remote scenarios, ignite ui for angular, infragistics
+title: Angular Remote Data Operations | Angular Hierarchical Grid Remote Data Operations | Ignite UI for Angular | Infragistics
+_description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
+_keywords: angular remote data operations, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Remote Scenarios Overview
+### @@igComponent Remote Data Operations Overview
 
-The Ignite UI for Angular @@igComponent supports remote scenarios such as Remote Virtualization, Remote Sorting, Remote Filtering, Remote Paging and others. This allows the developer to perform remote operations on a server, retrieve the data that is produced and display it in the @@igComponent.
-
+The Ignite UI for Angular @@igComponent supports remote data operations such as Remote Virtualization, Remote Sorting, Remote Filtering, Remote Paging and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
 #### Demo

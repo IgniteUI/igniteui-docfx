@@ -59,6 +59,12 @@ In most cases, letting the grid apply its default behavior by leaving dimensions
 
 Explicitly setting column widths in percentages (%) will, in most cases, create a grid that is not virtualized horizontally as it will not have a horizontal scrollbar.
 
+@@if (igxName === 'IgxGrid') {
+### Remote Virtualization
+
+The @@igComponent supports remote virtualization, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+}
+
 ### Virtualization Limitations
 
 *   On Mac OS horizontal scrollbar is not visible when "Show scrollbars only when scrolling" system option is set to true (which is the default value). This is because the @@igComponent’s row container has an overflow set to hidden. Change the option to "Always" and the scrollbar will appear.
