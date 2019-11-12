@@ -39,7 +39,7 @@ mentionedTypes: ['XamDataChart']
         </a>
         <a class="link" href="data-chart-type-radial-pie-series.md">
             <div class="linkContent">
-                <h4>Radial Pie Indicators</h4>
+                <h4>Radial Pie Chart</h4>
                 <img src="../images/charts/data-chart-type-radial-pie-series.png">
             </div>
         </a>

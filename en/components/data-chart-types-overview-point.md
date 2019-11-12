@@ -27,7 +27,7 @@ mentionedTypes: ['XamDataChart']
     <body>
         <a class="link" href="data-chart-type-category-point-series.md">
             <div class="linkContent" >
-                <h4>Category Point Chart</h4>
+                <h4>Point Chart</h4>
                 <img src="../images/charts/data-chart-type-category-point-series.png">
             </div>
         </a>
@@ -39,7 +39,7 @@ mentionedTypes: ['XamDataChart']
         </a>
         <a class="link" href="data-chart-type-scatter-point-series.md">
             <div class="linkContent">
-                <h4>Scatter Point Chart</h4>
+                <h4>Scatter Marker Chart</h4>
                 <img src="../images/charts/data-chart-type-scatter-point-series.png">
             </div>
         </a>

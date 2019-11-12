@@ -27,20 +27,26 @@ mentionedTypes: ['XamDataChart']
     <body>
         <a class="link" href="data-chart-type-category-area-series.md">
             <div class="linkContent">
-                <h4>Category Area Chart</h4>
+                <h4>Area Chart</h4>
                 <img src="../images/charts/data-chart-type-category-area-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-category-spline-area-series.md">
             <div class="linkContent">
-                <h4>Category Spline Area Chart</h4>
+                <h4>Spline Area Chart</h4>
                 <img src="../images/charts/data-chart-type-category-spline-area-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-category-step-area-series.md">
             <div class="linkContent">
-                <h4>Category Step Area Chart</h4>
+                <h4>Step Area Chart</h4>
                 <img src="../images/charts/data-chart-type-category-step-area-series.png">
+            </div>
+        </a>
+        <a class="link" href="data-chart-type-range-area-series.md">
+            <div class="linkContent">
+                <h4>Range Area Chart</h4>
+                <img src="../images/charts/data-chart-type-range-area-series.png">
             </div>
         </a>
         <br>
@@ -53,7 +59,7 @@ mentionedTypes: ['XamDataChart']
         <a class="link" href="data-chart-type-stacked-spline-area-series.md">
             <div class="linkContent">
                 <h4>Stacked Spline Area Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-spline-area-series.png">
+                <img src="../images/charts/data-chart-type-stacked-area-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-stacked-100-area-series.md">
@@ -65,7 +71,7 @@ mentionedTypes: ['XamDataChart']
         <a class="link" href="data-chart-type-stacked-100-spline-area-series.md">
             <div class="linkContent">
                 <h4>Stacked 100 Spline Area Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-100-spline-area-series.png">
+                <img src="../images/charts/data-chart-type-stacked-100-area-series.png">
             </div>
         </a>
         <br>

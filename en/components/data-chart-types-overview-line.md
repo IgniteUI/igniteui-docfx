@@ -27,19 +27,19 @@ mentionedTypes: ['XamDataChart']
     <body>
         <a class="link" href="data-chart-type-category-line-series.md">
             <div class="linkContent">
-                <h4>Category Line Chart</h4>
+                <h4>Line Chart</h4>
                 <img src="../images/charts/data-chart-type-category-line-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-category-spline-series.md">
             <div class="linkContent">
-                <h4>Category Spline Chart</h4>
+                <h4>Spline Chart</h4>
                 <img src="../images/charts/data-chart-type-category-spline-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-category-step-line-series.md">
             <div class="linkContent">
-                <h4>Category Step Line Chart</h4>
+                <h4>Step Line Chart</h4>
                 <img src="../images/charts/data-chart-type-category-step-line-series.png">
             </div>
         </a>

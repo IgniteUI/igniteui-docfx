@@ -27,13 +27,13 @@ mentionedTypes: ['XamDataChart']
     <body>
         <a class="link" href="data-chart-type-category-bar-series.md">
             <div class="linkContent">
-                <h4>Category Bar Chart</h4>
+                <h4>Bar Chart</h4>
                 <img src="../images/charts/data-chart-type-category-bar-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-category-column-series.md">
             <div class="linkContent">
-                <h4>Category Column Chart</h4>
+                <h4>Column Chart</h4>
                 <img src="../images/charts/data-chart-type-category-column-series.png">
             </div>
         </a>
