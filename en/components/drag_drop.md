@@ -92,8 +92,9 @@ You can specify an element that is a child of the `igxDrag` by which to drag, si
 ```html
 <div
     igxDrag 
-    [ghost]="false" 
-    [dragTolerance]="0">
+    [ghost]="false"
+    [dragTolerance]="0"
+    (dragMove)=onDragMove($event)>
     <igx-icon igxDragHandle fontSet="material" class="dialogHandle">drag_indicator</igx-icon>
     <div class="igx-dialog__window">
     </div>
