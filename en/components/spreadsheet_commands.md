@@ -36,7 +36,7 @@ The following snippet shows how you can setup the data validation rules
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 
----
+// ...
 
 public zoomIn(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.ZoomIn);
