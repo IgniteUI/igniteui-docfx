@@ -261,6 +261,8 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 To offset the container along the corresponding axis by a provided amount:
 ```typescript
     // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
     this.toggleForm.setOffset(deltaX, deltaY);
 ```
 
