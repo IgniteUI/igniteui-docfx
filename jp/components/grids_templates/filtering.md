@@ -169,6 +169,8 @@ this.@@igObjectRef.clearFilter();
 グリッドの初期フィルタリング状態の設定は、[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
 
 ```typescript
+constructor(private cdr: ChangeDetectorRef) { }
+
 public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
     const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
@@ -182,6 +184,7 @@ public ngAfterViewInit() {
     gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
 
     this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
+    this.cdr.detectChanges();
 }
 ```
 

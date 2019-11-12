@@ -165,6 +165,8 @@ this.@@igObjectRef.clearFilter();
 To set the initial filtering state of the @@igComponent, set the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
 
 ```typescript
+constructor(private cdr: ChangeDetectorRef) { }
+
 public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
     const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
@@ -178,6 +180,7 @@ public ngAfterViewInit() {
     gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
 
     this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
+    this.cdr.detectChanges();
 }
 ```
 
