@@ -691,6 +691,8 @@
       new: false
     - name: Examples
       href: themes/examples.md
+    - name: Printing styles
+      href: themes/printing-styles.md
 - name: Componets Roundness
   href: roundness.md
   new: true
