@@ -453,12 +453,12 @@ In order to provide a custom loading template for the excel style filtering, we 
 
 ### External Excel Style filtering
 
-As you see at the demos above the default appearance of the Excel Style filtering dialog is inside the grid. So this dialog is only visible when configuring the fitlers. There is a way to make that dialog stay always visible - it can  be used outside of the grid as a standalone component. All you need to do is to add it in your html and set its `column` property.
+As you see at the demos above the default appearance of the Excel Style filtering dialog is inside the @@igComponent. So this dialog is only visible when configuring the fitlers. There is a way to make that dialog stay always visible - it can be used outside of the grid as a standalone component. In the demo below, the Excel style filtering is declared separately of the @@igComponent.
 
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:654px">
+<div class="sample-container loading" style="height:670px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -468,7 +468,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:658px">
+<div class="sample-container loading" style="height:670px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -478,7 +478,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:658px">
+<div class="sample-container loading" style="height:670px">
     <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -492,7 +492,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 #### Usage
 
-At the sample above a column should be selected first, in order to instruct the ExcelStyle filter dialog which grid's column to filtrate. You can filter, hide or show, pin or unpin given column via that dialog. All you need to do, is to create the excel style dialog and bind its column property to a grid's column:
+In order to configure the Excel style filtering component, you should set its [`column`]({environment:sassApiUrl}/) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:sassApiUrl}/) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -533,9 +533,6 @@ At the sample above a column should be selected first, in order to instruct the 
 </igx-grid-excel-style-filtering>
 ```
 }
-
-
-The excel style filtering `column` is set via the igx-select selected value, which is actually contains the grid columns. That's all you need to make the excel style filtering dialog work outside of the grid, as a standalone component. 
 
 
 ### Styling

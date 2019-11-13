@@ -113,12 +113,12 @@ In case you don't want to show the @@igComponent toolbar, you could use the [`op
 
 ### External Advanced filtering
 
-As you see the demo above the appearance of the Advanced filtering dialog is inside the Infragistics grid. When the setup in the dialog is ready, the apply or close actions would hide that dialog. There is a way to make that dialog stay always visible - it can  be used outside of the grid as a standalone component. At the demo below, the advanced filtering dialog is declared separately of the grid.
+As you see the demo above the appearance of the Advanced filtering dialog is hosted in an overlay on top of the @@igComponent. When the setup in the dialog is ready, the apply or close actions would hide that dialog. There is a way to make that dialog stay always visible - be used as a standalone component. In the demo below, the advanced filtering dialog is declared separately of the @@igComponent.
 
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -128,7 +128,7 @@ As you see the demo above the appearance of the Advanced filtering dialog is ins
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -138,7 +138,7 @@ As you see the demo above the appearance of the Advanced filtering dialog is ins
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -149,7 +149,7 @@ As you see the demo above the appearance of the Advanced filtering dialog is ins
 
 #### Usage
 
-It's super easy to configure the advanced filtering to work outside of the grid. All you need to do is to create the dialog and set its `grid` property, then apply some filters:
+It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/) property:
 
 @@if (igxName === 'IgxGrid') {
 ```html
