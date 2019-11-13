@@ -492,7 +492,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 #### Usage
 
-In order to configure the Excel style filtering component, you should set its [`column`]({environment:sassApiUrl}/) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:sassApiUrl}/) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
+In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
 @@if (igxName === 'IgxGrid') {
 ```html
