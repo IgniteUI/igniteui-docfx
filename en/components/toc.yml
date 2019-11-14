@@ -66,7 +66,7 @@
     - name: Virtualization and performance
       href: grid/virtualization.md
       new: false
-    - name: Remote data operations
+    - name: Remote Data Operations
       href: grid/remote_data_operations.md
       new: true
     - name: Editing
@@ -167,7 +167,7 @@
     - name: Virtualization and performance
       href: treegrid/virtualization.md
       new: false
-    - name: Remote data operations
+    - name: Remote Data Operations
       href: treegrid/remote_data_operations.md
       new: true      
     - name: Load On Demand
@@ -262,7 +262,7 @@
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
       new: false
-    - name: Remote data operations
+    - name: Remote Data Operations
       href: hierarchicalgrid/remote_data_operations.md
       new: true      
     - name: Load on Demand
