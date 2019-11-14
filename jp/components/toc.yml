@@ -681,6 +681,11 @@
       new: false
     - name: サンプル
       href: themes/examples.md
+<<<<<<< HEAD
+=======
+    - name: 印刷スタイル
+      href: themes/printing-styles.md
+>>>>>>> d43c7c0b... Updated for #1591.
 - name: 丸み付け
   href: roundness.md
   new: true
