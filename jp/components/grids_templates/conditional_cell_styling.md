@@ -24,10 +24,10 @@ _language: ja
 }
 
 
-### @@igComponent Conditional Cell Styling
-The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of cells** based on custom rules.
+### @@igComponent 条件付きセルのスタイル設定
+Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいて 2 通りの条件付きセルのスタイル設定をサポートします。
 
-- By setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
 
 ```ts
 // component.ts file
@@ -53,7 +53,7 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-#### Demo with 'cellClasses'
+#### 'cellClasses' を使用したデモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -78,7 +78,7 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 <div class="divider--half"></div>
 
-- By using the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles) which accepts an object literal where the keys are style properties and the values are expressions for evaluation.
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)　入力を使用して、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取る [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles)。
 
 ```ts
 public styles = {
@@ -88,13 +88,13 @@ public styles = {
 };
 ```
 
-> The callback signature for both `cellStyles` and `cellClasses` is now changed to:
+> `cellStyles` と `cellClasses` の両方のコールバック シグネチャが次のように変更されました。
 
 ```ts
 (rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
 ```
 
-#### Demo with 'cellStyles'
+#### 'cellStyles' を使用したデモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -119,10 +119,10 @@ public styles = {
 }
 <div class="divider--half"></div>
 
-### Overview
+### 概要
 
-#### Using cellClasses
-You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and define custom rules.
+#### cellClasses の使用
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -145,7 +145,7 @@ You can conditionally style the @@igxName cells by setting the [`IgxColumnCompon
 <!-- TODO -->
 }
 
-The [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -215,22 +215,22 @@ public priceClasses = {
 <!-- TODO -->
 }
 
-Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
+**::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
-#### Using cellStyles
-Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
+#### cellStyles の使用
+列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
-In the [sample above](conditional_cell_styling.md#demo-with-cellstyles) we've created:
-- Two different styles that will be applied based on the column index. 
-- You will also change the `text color` based on even/odd rows.
+[上記のサンプル](conditional_cell_styling.md#demo-with-cellstyles)で作成した項目:
+- 列インデックスに基づいて適用される 2 つの異なるスタイル。 
+- また、偶数/奇数行に基づいて`テキストの色`を変更します。
 
-> The callback signature for both `cellStyles` is:
+> 両方の `cellStyles` のコールバック署名は以下のとおりです。
 
 ```ts
 (rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
 ```
 
-Let's define our styles:
+次にスタイルを定義します。
 
 ```typescript
 // component.ts
@@ -248,7 +248,7 @@ public evenColStyles = {
 
 ```
 
-On `ngOnInit` we will add the `cellStyles` configuration for each column of the predefined `columns` collection, which is used to create the @@igxName columns dynamically.
+`ngOnInit` で、@@igxName 列を動的に作成するために使用される事前定義 `columns` コレクションの各列に `cellStyles` 構成を追加します。
 
 ```ts
 // component.ts
@@ -293,7 +293,7 @@ public updateCSS(css: string) {
 </igx-grid>
 ```
 
-Define a `popin` animation
+`popin` アニメーションの定義
 
 ```scss
 // component.scss
@@ -318,10 +318,10 @@ Define a `popin` animation
 ```
 
 
-#### Known issues and limitations
+#### 既知の問題と制約
 
-- If there are cells bind to the same condition (from different columns) and one cell is updated, the other cells won't be updated based on the new value, if the condition is met.
-A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operator` ... on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
+- 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントでスプレッド演算子...を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {
