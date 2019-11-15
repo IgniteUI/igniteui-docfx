@@ -95,16 +95,6 @@ var workbook = ExcelUtility.load(file);
 ExcelUtility.save(workbook, "fileName");
 ```
 
-```ts
-import { Workbook } from "igniteui-webcomponents-excel/ES2015/Workbook";
-import { WorkbookFormat } from "igniteui-webcomponents-excel/ES2015/WorkbookFormat";
-import { WorkbookSaveOptions } from "igniteui-webcomponents-excel/ES2015/WorkbookSaveOptions";
-import { ExcelUtility } from "ExcelUtility";
-
-let workbook = ExcelUtility.load(file);
-ExcelUtility.save(workbook, "fileName");
-```
-
 <div class="divider--half"></div>
 
 ### Managing Heap
