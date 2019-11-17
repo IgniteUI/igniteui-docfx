@@ -29,12 +29,6 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 worksheet.tables().add("A1:G10", true);
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-worksheet.tables().add("A1:G10", true);
-```
-
 Once you have added a table, you can modify it by adding or deleting rows and columns by calling the `insertColumns`, `insertDataRows`, `deleteColumns`, or `deleteDataRows` methods on the [`WorksheetTable`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html). You can also set a new table range by using the `resize` method of the table.
 
 The following code snippet shows the usage of these methods:
@@ -57,27 +51,6 @@ table.deleteColumns(1, 5);
 table.deleteDataRows(0, 5);
 
 //Will resize the table to be in the region of A1:G15.
-table.resize("A1:G15");
-```
-
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-let table = worksheet.tables().add("A1:G10", true);
-
-// Will add 5 columns at index 1.
-table.insertColumns(1, 5);
-
-// Will add 5 rows at index 0.
-table.insertDataRows(0, 5);
-
-// Will delete 5 columns starting at index 1.
-table.deleteColumns(1, 5);
-
-// Will delete 5 rows starting at index 0.
-table.deleteDataRows(0, 5);
-
-// Will resize the table to be in the region of A1:G15.
 table.resize("A1:G15");
 ```
 
@@ -109,16 +82,6 @@ var table = worksheet.tables().add("A1:G10", true);
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 ```
 
-```ts
-import { AverageFilterType } from 'igniteui-webcomponents-excel/ES2015/excel.core';
-
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-let table = worksheet.tables().add("A1:G10", true);
-
-table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
-```
-
 ### Sorting Tables
 
 Sorting is done by setting a sorting condition on a table column. When a sorting condition is set on a column, all sorting conditions in the table will be reevaluated to determine the order of the cells in the table. When cells need to be moved to meet their sort criteria, the entire row of cells in the table is moved as a unit.
@@ -146,18 +109,5 @@ var table = worksheet.tables().add("A1:G10", true);
 table.columns(0).sortCondition = new OrderedSortCondition(SortDirection.Ascending);
 
 //Alternative:
-table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCondition(SortDirection.Ascending));
-```
-
-```ts
-import { OrderedSortCondition, SortDirection } from 'igniteui-webcomponents-excel/ES2015/excel.core';
-
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-let table = worksheet.tables().add("A1:G10", true);
-
-table.columns(0).sortCondition = new OrderedSortCondition(SortDirection.Ascending);
-
-// Alternative:
 table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCondition(SortDirection.Ascending));
 ```

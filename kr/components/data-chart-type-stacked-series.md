@@ -3,6 +3,8 @@
 _description: The Ignite UI for Angular 데이터 차트는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈 식 디자인을 제공하는 차트 구성 요소입니다. 데이터 차트는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈 식 디자인을 제공하는 차트 구성 요소입니다.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Chart Control, Angular Chart Example, Angular Chart Component, Angular Data Chart
 _language: kr
+mentionedTypes: ['XamDataChart','StackedColumnSeries','CategoryXAxis']
+namespace: Infragistics.Controls.Charts
 ---
 
 ## 스택 시리즈
@@ -67,7 +69,7 @@ _language: kr
 
 -   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
 -   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 스택 시리즈를 렌더링하지 않습니다.
--   모든 데이터 항목에는 카테고리 축(예: [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))의 `Label` 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
+-   모든 데이터 항목에는 카테고리 축(예: [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))의 [`label`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#label) 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
 -   모든 데이터 항목에는스택 시리즈의  `시리즈` 컬렉션에 추가할 [`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)의　[`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html#valuememberpath) 속성을 사용하여 매핑해야 하는 숫자 데이터 열이 적어도 하나 이상 포함되어야 합니다.
 
 ### 필요한 모듈

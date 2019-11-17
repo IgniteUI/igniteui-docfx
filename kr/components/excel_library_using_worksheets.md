@@ -46,25 +46,11 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showGridlines = false;
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.displayOptions.showGridlines = false;
-```
-
 You can configure the gridlines' color using the `gridlineColor` property of the `displayOptions` of the worksheet. The following code demonstrates how you can change the gridlines in your worksheet to be red:
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.displayOptions.gridlineColor = "Red";
-```
-
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.displayOptions.gridlineColor = "Red";
 ```
@@ -82,13 +68,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showRowAndColumnHeaders = false;
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.displayOptions.showRowAndColumnHeaders = false;
-```
-
 ### Configuring Editing of the Worksheet
 
 By default, the [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) objects that you save will be editable. You can disable editing of a worksheet by protecting it using the [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object's `protect` method. This method has a lot of nullable `bool` arguments that determine which pieces are protected, and one of these options is to allow editing of objects, which if set to `false` will prevent editing of the worksheet.
@@ -102,13 +81,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.protect();
-```
-
 You can also use the [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object's `protect` method to protect a worksheet against structural changes.
 
 When protection is set, you can set the `CellFormat` object's `locked` property on individual cells, rows, merged cell regions, or columns to override the worksheet object's protection on those objects. For example, if you need all cells of a worksheet to be read-only except for the cells of one column, you can protect the worksheet and then set the `CellFormat` object's `locked` property to `false` on a specific [`WorksheetColumn`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html) object. This will allow your users to edit cells within the column while disabling editing of the other cells in the worksheet.
@@ -118,14 +90,6 @@ The following code demonstrates how you can do this:
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.protect();
-worksheet.columns(0).cellFormat.locked = false;
-```
-
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.protect();
 worksheet.columns(0).cellFormat.locked = false;
@@ -162,14 +126,6 @@ worksheet.filterSettings.setRegion("Sheet1!A1:A10");
 worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.filterSettings.setRegion("Sheet1!A1:A10");
-worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
-```
-
 ### Freezing and Splitting Panes
 
 You can freeze rows at the top of your worksheet or columns at the left using the freezing panes features. Frozen rows and columns remain visible at all times while the user is scrolling. The frozen rows and columns are separated from the rest of the worksheet by a single, solid line, which cannot be removed.
@@ -193,19 +149,6 @@ worksheet.displayOptions.frozenPaneSettings.firstColumnInRightPane = 2;
 worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.displayOptions.panesAreFrozen = true;
-
-worksheet.displayOptions.frozenPaneSettings.frozenRows = 3;
-worksheet.displayOptions.frozenPaneSettings.frozenColumns = 1;
-
-worksheet.displayOptions.frozenPaneSettings.firstColumnInRightPane = 2;
-worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
-```
-
 ### Setting the Worksheet Zoom Level
 
 You can change the zoom level for each worksheet independently using the `magnificationInNormalView` property on the [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object's `displayOptions`. This property takes a value between 10 and 400 and represents the percentage of zoom that you wish to apply.
@@ -215,13 +158,6 @@ The following code demonstrates how you can do this:
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.displayOptions.magnificationInNormalView = 300;
-```
-
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.displayOptions.magnificationInNormalView = 300;
 ```
@@ -239,13 +175,6 @@ The following code snippet demonstrates how to apply a sort to a region of cells
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
-```
-
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
 ```
@@ -276,13 +205,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.protect();
-```
-
 ### Worksheet Conditional Formatting
 
 You can configure the conditional formatting of a [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object by using the many "Add" methods exposed on the `conditionalFormats` collection of that worksheet. The first parameter of these "Add" methods is the `string` region of the worksheet that you would like to apply the conditional format to.
@@ -303,16 +225,5 @@ var color = new Color();
 color.colorString = "Red";
 
 var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
-format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
-```
-
-```ts
-let workbook = new Workbook(WorkbookFormat.Excel2007);
-let worksheet = workbook.worksheets().add("Sheet1");
-
-let color = new Color();
-color.colorString = "Red";
-
-let format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```

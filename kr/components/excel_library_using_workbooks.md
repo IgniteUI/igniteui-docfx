@@ -28,16 +28,6 @@ font.name = "Times New Roman";
 font.height = 16 * 20;
 ```
 
-```ts
-import { IWorkbookFont } from 'igniteui-webcomponents-excel/ES2015/excel.core';
-
-let workbook = new Workbook();
-let font: IWorkbookFont;
-font = workbook.styles().normalStyle.styleFormat.font;
-font.name = "Times New Roman";
-font.height = 16 * 20;
-```
-
 ### Setting Workbook Properties
 
 Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object’s `documentProperties` property. The available properties are:
@@ -68,12 +58,6 @@ workbook.documentProperties.title = "Expense Report";
 workbook.documentProperties.status = "Complete";
 ```
 
-```ts
-let workbook = new Workbook();
-workbook.documentProperties.title = "Expense Report";
-workbook.documentProperties.status = "Complete";
-```
-
 ### Workbook Protection
 
 The workbook protection feature allows you to protect the structure of the workbook. That is, the ability for a user to add, rename, delete, hide, and reorder the worksheets in that workbook.
@@ -93,11 +77,6 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
-```ts
-let workbook = new Workbook();
-workbook.protect(false, false);
-```
-
 -   isProtected
 
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
@@ -107,11 +86,6 @@ var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
 
-```ts
-let workbook = new Workbook();
-let protect = workbook.isProtected;
-```
-
 -   protection
 
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
@@ -119,9 +93,4 @@ This read-only property returns an object of type WorkbookProtection which conta
 ```ts
 var workbook = new Workbook();
 var protection = workbook.protection;
-```
-
-```ts
-let workbook = new Workbook();
-let protection = workbook.protection;
 ```
