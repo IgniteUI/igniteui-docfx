@@ -7,7 +7,10 @@ mentionedTypes: ['XamDataChart']
 
 ## Highlighting
 
-The Angular data chart component allows you to highlight the plotted series in the data chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers. Please note that highlighting is not currently supported for stacked series.
+The Angular data chart component allows you to highlight the plotted series in the data chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers. 
+
+> [!NOTE]
+> Please note that highlighting is not currently supported for stacked series.
 
 ### Demo
 

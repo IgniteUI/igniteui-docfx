@@ -37,7 +37,7 @@ Financial series, indicators, and overlays have the following data requirements:
 You can use the [SampleFinancialData](data-chart-data-sources-financial.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleFinancialData.create() }
+this.chart.dataSource = SampleFinancialData.create();
 ```
 
 ### Required Modules

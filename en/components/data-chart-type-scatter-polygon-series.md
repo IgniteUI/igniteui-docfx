@@ -42,7 +42,7 @@ The [`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/ty
 You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleShapeData.create() }
+this.chart.dataSource = SampleShapeData.create();
 ```
 
 ### Required Modules
@@ -91,6 +91,24 @@ This code demonstrates how to create an instance the Ignite UI for Angular data 
         outline="Black">
     </igx-scatter-polygon-series>
  </igx-data-chart>
+```
+
+```html
+ <igc-data-chart
+    width="700px"
+    height="500px">
+    <igc-numeric-x-axis name="xAxis"></igx-numeric-x-axis>
+    <igc-numeric-y-axis name="yAxis"></igx-numeric-y-axis>
+    <igc-scatter-polygon-series
+        name="series1"
+        x-axis-name="xAxis"
+        y-axis-name="yAxis"
+        shape-member-path="Points"
+        title="House Floor Plan"
+        brush="Gray"
+        outline="Black">
+    </igc-scatter-polygon-series>
+ </igc-data-chart>
 ```
 
 ### Additional Resources

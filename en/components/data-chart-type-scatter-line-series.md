@@ -41,7 +41,7 @@ The [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/types
 You can use the [SampleScatterStats](data-chart-data-sources-stats.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleScatterStats.getCountries() }
+this.chart.dataSource = SampleScatterStats.getCountries();
 ```
 
 ### Required Modules

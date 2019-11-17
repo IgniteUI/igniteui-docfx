@@ -40,7 +40,7 @@ The [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typesc
 You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleRadialData.create() }
+this.chart.dataSource = SampleRadialData.create();
 ```
 
 ### Required Modules

@@ -11,7 +11,7 @@ The Ignite UI for Angular map component allows you to display data that contains
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -91,5 +91,5 @@ Now that the map module is imported, next step is to create geographic map. The 
         height="500px"
         zoomable="true" >
     </igx-geographic-map>
-  </div>
+</div>
 ```

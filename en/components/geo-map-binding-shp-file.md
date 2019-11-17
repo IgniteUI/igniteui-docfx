@@ -11,7 +11,7 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-shp-file-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-file' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

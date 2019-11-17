@@ -14,7 +14,7 @@ Treemaps are not designed to convey numerical quantities; the intent is to show 
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 600px">
     <iframe id="tree-map-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/tree-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -92,7 +92,7 @@ The following code demonstrates how to setup the Treemap.
 ```html
 <igx-treemap
     height="100%"
-    width="100%"    
+    width="100%"
     layoutType="stripped"
     layoutOrientation="horizontal"
     parentIdMemberPath="parent"
@@ -100,9 +100,23 @@ The following code demonstrates how to setup the Treemap.
     labelMemberPath="name"
     valueMemberPath="pop"
     transitionDuration="500"
-    rootTitle="Countries"   
-    >           
-</igx-treemap>   
+    rootTitle="Countries"   >
+</igx-treemap>
+```
+
+### Fill Scale
+
+The following code demonstrates how to set fill scale on the Treemap.
+
+```ts
+import { TreemapFillScaleMode } from 'igniteui-angular-charts/ES5/TreemapFillScaleMode';
+// ...
+this.treeMap = new IgxTreemapComponent()
+this.treeMap.fillScaleMode = TreemapFillScaleMode.Value;
+this.treeMap.fillScaleMinimumValue = 0;
+this.treeMap.fillScaleMaximumValue = 1500000000; // 1.5B
+this.treeMap.fillBrushes = "#4e62cf #8a58d6" as any;
+this.treeMap.isFillScaleLogarithmic = false;
 ```
 
 <div class="divider--half"></div>

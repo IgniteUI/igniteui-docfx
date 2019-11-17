@@ -42,7 +42,7 @@ The [`IgxStepLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescri
 You can use the [SampleCategoryData](data-chart-data-sources-category.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleCategoryData.create() }
+this.dataSource = SampleCategoryData.create();
 ```
 
 ### Required Modules

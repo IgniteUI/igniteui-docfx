@@ -42,7 +42,7 @@ The [`IgxScatterPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/t
 You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleShapeData.create() }
+this.chart.dataSource = SampleScatterStats.getCountries();
 ```
 
 ### Required Modules
