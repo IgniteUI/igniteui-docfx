@@ -33,3 +33,13 @@ var chart = ws.shapes().addChart(ChartType.ColumnClustered,
 
 chart.setSourceData("A2:M6", true);
 ```
+
+```ts
+import { ChartType } from 'igniteui-webcomponents-excel/ES2015/excel.core';
+
+let chart = ws.shapes().addChart(ChartType.ColumnClustered,
+    ws.rows(0).cells(0), { x: 0, y: 0 },
+    ws.rows(0).cells(12), { x: 100, y: 100 });
+
+chart.setSourceData("A2:M6", true);
+```
