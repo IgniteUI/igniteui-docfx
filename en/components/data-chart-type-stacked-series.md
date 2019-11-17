@@ -2,7 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Stacked
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['StackedColumnSeries','CategoryXAxis']
+mentionedTypes: ['XamDataChart','StackedColumnSeries','CategoryXAxis']
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -22,7 +22,7 @@ This topic explains the various types of stacked series in the Angular data char
 
 <div class="divider--half"></div>
 
-Each stacked series has its own [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection in which you can place the [`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html) elements. These fragments are what make up the actual rendering of the chart and are the elements that accept the [`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html#valuememberpath).
+Each stacked series has its own Series collection in which you can place the [`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html) elements. These fragments are what make up the actual rendering of the chart and are the elements that accept the [`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html#valuememberpath).
 
 ### Types of Stacked Series
 
@@ -69,7 +69,7 @@ Stacked series have the following data requirements:
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the stacked series.
 -   All data items must contain at least one data column (string or date time) which should be mapped to the [`label`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#label) property of the category axis (e.g. [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html) to be added to [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the stacked series.
+-   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html) to be added to Series collection of the stacked series.
 
 ### Required Modules
 
