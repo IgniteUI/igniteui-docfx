@@ -42,7 +42,7 @@ The [`IgxRangeAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescr
 You can use the [SampleRangeData](data-chart-data-sources-range.md) as data source which meets above data requirements.
 
 ```ts
-this.chart.dataSource = SampleRangeData.create();
+public dataSource: any[] = SampleRangeData.create();
 ```
 
 ### Required Modules

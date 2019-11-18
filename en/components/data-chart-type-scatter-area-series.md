@@ -36,7 +36,7 @@ The [`IgxScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/types
 You can use the [SampleScatterData](data-chart-data-sources-scatter.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleScatterData.create() }
+public dataSource: any[] = SampleScatterData.create();
 ```
 
 ### Required Modules

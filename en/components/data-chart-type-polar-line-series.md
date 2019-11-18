@@ -41,7 +41,7 @@ In polar coordinate systems, the location of data points is determined by an ang
 You can use the [SamplePolarData](data-chart-data-sources-polar.md) as data source which meets above data requirements.
 
 ```ts
-this.dataSource = SamplePolarData.create();
+public dataSource: any[] = SamplePolarData.create();
 ```
 
 ### Required Modules
