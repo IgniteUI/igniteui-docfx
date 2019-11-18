@@ -21,7 +21,14 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 依存関係
-Hierarchical Grid が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
+階層データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+階層グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
 
 ```typescript
 // app.module.ts

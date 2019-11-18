@@ -20,7 +20,14 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Time Picker を初期化する前に、`IgxTimePickerModule` を **app.module.ts** ファイルにインポートします。注: IgxTimePicker に **BrowserAnimationsModule** の依存関係があるため、AppModule にも追加する必要があります。
+Time Picker コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。注: IgxTimePicker は **BrowserAnimationsModule** に依存関係があるため、AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
