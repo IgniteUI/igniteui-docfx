@@ -144,7 +144,7 @@
       new: false
     - name: Conditional Cell Styling
       href: grid/conditional_cell_styling.md
-      new: false
+      new: true
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
@@ -700,6 +700,8 @@
       new: false
     - name: Examples
       href: themes/examples.md
+    - name: Printing styles
+      href: themes/printing-styles.md
 - name: Componets Roundness
   href: roundness.md
   new: true
