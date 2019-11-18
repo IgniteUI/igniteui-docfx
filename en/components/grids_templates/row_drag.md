@@ -242,6 +242,43 @@ enum DragIcon {
 }
 ```
 
+#### Templating the drag ghost
+The drag ghost can be templated using the `IgxRowDragGhost` directive. It allows using a `<ng-template>` to define a custom template for the drag ghost when dragging a row. To do so, we can use the `IgxRowDragGhost` to pass a template inside of the `@@igSelector`'s body:
+
+```html
+<@@igSelector>
+...
+    <ng-template IgxRowDragGhost>
+        <div>
+            Custom text.
+        </div>
+    </ng-template>
+...
+</@@igSelector>
+```
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+The drag ghost can be templated on every grid level, making it possible to have multiple ghost templates or to only provide a template for a single row island.
+
+```html
+<@@igSelector>
+...
+    <ng-template IgxRowDragGhost>
+        <div>
+            Custom text.
+        </div>
+    </ng-template>
+    <igx-row-island>
+        ...
+        <ng-template IgxRowDragGhost>
+            <img src="smile.gif" height="42" width="42">
+        </ng-template>
+    </igx-row-island>
+...
+</@@igSelector>
+```
+}
+
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 #### Styling the drop area
 Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
