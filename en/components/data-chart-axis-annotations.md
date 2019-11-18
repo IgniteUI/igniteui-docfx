@@ -46,9 +46,9 @@ This code demonstrates how to create a Ignite UI for Angular data chart with eac
 
     <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" valueMemberPath="value"></igx-column-series>
 
-    <igx-value-overlay [axis]="yAxis" isAxisAnnotationsEnabled=true thickness=3 value=85></igx-value-overlay>
+    <igx-value-overlay [axis]="yAxis" isAxisAnnotationEnabled=true thickness=3 value=85></igx-value-overlay>
 
-    <igx-crosshair-layer isAxisAnnotationsEnabled=true></igx-crosshair-layer>
+    <igx-crosshair-layer isAxisAnnotationEnabled=true></igx-crosshair-layer>
 
     <igx-final-value-layer axisAnnotationTextColor="Yellow"></igx-final-value-layer>
 </igx-data-chart>

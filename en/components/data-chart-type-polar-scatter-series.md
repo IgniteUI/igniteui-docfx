@@ -41,7 +41,7 @@ In polar coordinate systems, the location of data points is determined by an ang
 You can use the [SamplePolarData](data-chart-data-sources-polar.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SamplePolarData.create() }
+this.chart.dataSource = SamplePolarData.create();
 ```
 
 ### Required Modules
@@ -55,7 +55,7 @@ import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-ra
 // series modules:
 import { IgxPolarScatterSeries } from "igniteui-angular-charts/ES5/igx-polar-scatter-series";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartPolarCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-polar-core-module";
 import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-chart-polar-module";
@@ -64,7 +64,6 @@ import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-ch
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartPolarCoreModule,
         IgxDataChartPolarModule,

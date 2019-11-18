@@ -30,9 +30,11 @@ When using the value overlay with a numeric angle axis, it will appear as a line
 
 [`IgxValueOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html) appearance properties are inherited from [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) and so [`brush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) for example are available and work the same way they do with other types of series.
 
+It is also possible to show an axis annotation on a [`IgxValueOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html) to show the value of the overlay on the owning axis. In order to show this, you can set the [`isAxisAnnotationEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#isaxisannotationenabled) property to true.
+
 ### Code Example - Value Overlay
 
-The following code snippet demonstrates adding a value overlay to the Ignite UI for Angular data chart component:
+The following code snippet demonstrates adding a value overlay with axis annotation to the Ignite UI for Angular data chart component:
 
 ```html
 <igx-data-chart #chart height="600px" width="800px" [dataSource]="data">
@@ -41,7 +43,7 @@ The following code snippet demonstrates adding a value overlay to the Ignite UI 
 
   <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" valueMemberPath="Value"></igx-column-series>
 
-  <igx-value-overlay [axis]="yAxis" value=5 thickness=5></igx-value-overlay>
+  <igx-value-overlay [axis]="yAxis" value=5 thickness=5 isAxisAnnotationEnabled=true></igx-value-overlay>
 
 </igx-data-chart>
 ```

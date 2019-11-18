@@ -34,8 +34,9 @@ The Angular data chart component requires the following modules:
 
 ```ts
 // data chart's modules required for all series:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
+import { IgxNumberAbbreviatorModule } from 'igniteui-angular-charts/ES5/igx-number-abbreviator-module';
 // scatter series' modules:
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -49,10 +50,10 @@ import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-val
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
         IgxDataChartScatterModule,
+        IgxNumberAbbreviatorModule
     ]
 })
 export class AppModule { /* ... */ }
@@ -101,9 +102,9 @@ The following code snippet demonstrates how to create scatter [`bubble`](/produc
         name="series1"
         [xAxis]="xAxis"
         [yAxis]="yAxis"
-        xMemberPath="Population"
-        yMemberPath="GdpTotal"
-        radiusMemberPath="GdpPerCapita"
+        xMemberPath="population"
+        yMemberPath="gdpTotal"
+        radiusMemberPath="gdpPerCapita"
         [dataSource]="data"  ></igx-bubble-series>
  </igx-data-chart>
 ```

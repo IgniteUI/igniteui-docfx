@@ -26,7 +26,9 @@ In order to use navigation in the data chart, you need to import and register th
 ```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
-IgxDataChartInteractivityModule.register();
+@NgModule({
+    imports: [ IgxDataChartInteractivityModule ]
+})
 ```
 
 ### Data Chart UI Navigation Overview
