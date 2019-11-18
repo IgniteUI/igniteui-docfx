@@ -169,7 +169,7 @@ var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellFill = CellFill.createSolidFill("Blue");
-worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
+worksheet.rows(0).cells(0).cellFormat.fill = cellFill;
 ```
 
 You can specify a color (the color of Excel cells background, border, etc) using linear and rectangular gradients in cells. When workbooks with these gradients are saved in .xls file format and opened in Microsoft Excel 2007/2010, the gradients will be visible, but when these files are opened in Microsoft Excel 2003, the cell will be filled with the solid color from the first gradient stop.

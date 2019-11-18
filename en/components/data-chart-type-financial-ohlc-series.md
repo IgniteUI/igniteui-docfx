@@ -37,7 +37,7 @@ Financial series have the following data requirements:
 You can use the [SampleFinancialData](data-chart-data-sources-financial.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleFinancialData.create() }
+this.chart.dataSource = SampleFinancialData.create();
 ```
 
 ### Required Modules
@@ -51,15 +51,18 @@ import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axi
 // series' modules:
 import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financial-price-series";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxFinancialPriceSeriesModule } from "igniteui-angular-charts/ES5/igx-financial-price-series-module";
 
 // in app.module.ts file
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        IgxFinancialPriceSeriesModule,
         // ...
     ]
 })

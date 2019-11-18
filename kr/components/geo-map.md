@@ -40,7 +40,7 @@ The [`IgxGeographicMap`](/products/ignite-ui-angular/api/docs/typescript/latest/
 
 ```ts
 // app.module.ts
-import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-map-module";
+import {IgxMapModule} from "igniteui-angular-maps/ES5/igx-geographic-map-module";
 
 @NgModule({
     imports: [

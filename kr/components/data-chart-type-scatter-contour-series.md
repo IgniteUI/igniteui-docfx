@@ -53,7 +53,7 @@ import { IgxScatterContourSeries } from "igniteui-angular-charts/ES5/igx-scatter
 import { IgxValueBrushScale } from "igniteui-angular-charts/ES5/igx-value-brush-scale";
 import { IgxLinearContourValueResolver } from "igniteui-angular-charts/ES5/igx-linear-contour-value-resolver";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -61,7 +61,6 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
         IgxDataChartScatterModule,

@@ -11,10 +11,10 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-binding-shp-file-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-file' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-file-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-polylines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
