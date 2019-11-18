@@ -206,8 +206,8 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
-#### Remote Filtering
-For more information on how to implement remote filtering, you can take a look at the `@@igComponent Virtualization and Performance` [documentation](virtualization.md).
+#### リモート フィルタリング
+リモート フィルタリングの実装方法の詳細については、`@@igComponent の仮想化とパフォーマンス` [ヘルプ](virtualization.md) をご覧ください。
 
 <div class="divider--half"></div>
 }
