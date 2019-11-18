@@ -63,7 +63,7 @@ The following code demonstrates how create a radial gauge containing a needle an
     value="25"
     interval="5"
     minimumValue="0"
-    maximumValue="50">
+    maximumValue="100">
     <igx-radial-gauge-range startValue="0"
                             endValue="30"
                             brush="red">
@@ -152,7 +152,7 @@ The radial gauge labels are visual elements displaying numeric values at a speci
     labelInterval=10
     font="11px Verdana"
     fontBrush="DodgerBlue"
-    height="80px" width="400px"
+    height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=100 interval=10>
 </igx-radial-gauge>

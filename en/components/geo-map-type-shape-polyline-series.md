@@ -11,7 +11,7 @@ Use the map component's [`IgxGeographicPolylineSeriesComponent`](/products/ignit
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-shape-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

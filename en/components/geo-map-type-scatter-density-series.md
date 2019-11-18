@@ -130,6 +130,5 @@ export class MapTypeScatterDensitySeriesComponent implements AfterViewInit {
         geoBounds.height = -50;
         this.map.zoomToGeographic(geoBounds);
     }
-
 }
 ```

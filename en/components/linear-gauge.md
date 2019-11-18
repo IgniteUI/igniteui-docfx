@@ -59,8 +59,8 @@ export class AppModule {}
 The following code demonstrates how create a linear gauge containing a needle and three comparative ranges on the scale.
 
 ```html
- <igx-linear-gauge width="70px"
-                   height="300px"
+ <igx-linear-gauge width="700px"
+                   height="30px"
                    minimumValue = "5"
                    maximumValue = "55"
                    value = "43">

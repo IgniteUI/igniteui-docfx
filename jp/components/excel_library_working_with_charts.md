@@ -12,10 +12,10 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-charts' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-charts' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
     </button>
 </div>
 
@@ -37,4 +37,14 @@ var chart = ws.shapes().addChart(ChartType.ColumnClustered,
       ws.rows(0).cells(headers.length - 1), { x: 100, y: 100 });
 
 chart.setSourceData(table.wholeTableRegion.toString(), true);
+```
+
+```ts
+import { ChartType } from 'igniteui-webcomponents-excel/ES2015/excel.core';
+
+let chart = ws.shapes().addChart(ChartType.ColumnClustered,
+    ws.rows(0).cells(0), { x: 0, y: 0 },
+    ws.rows(0).cells(12), { x: 100, y: 100 });
+
+chart.setSourceData("A2:M6", true);
 ```

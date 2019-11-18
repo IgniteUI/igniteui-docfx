@@ -11,7 +11,7 @@ Use the map component's [`IgxGeographicContourLineSeriesComponent`](/products/ig
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>

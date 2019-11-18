@@ -12,10 +12,10 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:demosBaseUrl}/excel-library/working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
     </button>
 </div>
 
@@ -38,4 +38,14 @@ var sheet2 = workbook.worksheets().add("Data");
 sheet1.sparklineGroups().add($.ig.excel.SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11");
 sheet1.sparklineGroups().add($.ig.excel.SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11");
 workbook.save(workbook, "Sparklines.xlsx");
+```
+
+```ts
+ let workbook: Workbook;
+ let sheet1 = workbook.worksheets().add("Sparklines");
+ let sheet2 = workbook.worksheets().add("Data");
+ sheet1.sparklineGroups().add(SparklineType.Line, "Sparklines!A1:A1", "Data!A2:A11");
+ sheet2.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:A11");
+ workbook.save(workbook, "Sparklines.xlsx");
+ 
 ```
