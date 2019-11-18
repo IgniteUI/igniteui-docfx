@@ -27,8 +27,12 @@ _language: kr
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-data-chart-annotation-module";
 
-IgxDataChartInteractivityModule.register();
-IgxDataChartAnnotationModule.register();
+@NgModule({
+    imports: [ 
+        IgxDataChartInteractivityModule, 
+        IgxDataChartAnnotationModule,
+    ]
+})
 ```
 
 ### 시리즈 비주얼 강조 표시
