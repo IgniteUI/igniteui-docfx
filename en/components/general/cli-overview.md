@@ -31,7 +31,7 @@ To activate the guide using the Ignite UI Angular Schematics run:
 ```cmd
 ng new --collection="@igniteui/angular-schematics"
 ```
-or in case you are using the CLI tool:
+or run the following command in case you are using the CLI tool:
 ```cmd
 ig
 ```
@@ -44,7 +44,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-#### Using commands
+<!-- #### Using commands
 To create new project, add a component template and build it use the following Ignite UI CLI [commands](#commands):
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
@@ -54,15 +54,20 @@ ig start
 ```
 
 To execute the above commands, you should replace the *project name* and *component_name* placeholders with an actual value.
-After running these commands, your new project will be built, served and automatically opened in your default browser.
+After running these commands, your new project will be built, served and automatically opened in your default browser. -->
 
 
-### Commands
+<!-- ### Commands -->
 
-#### Create new project
+### Create new project
 
-To create an application that is configured to use the Ignite UI for Angular controls, you need to provide `angular` as framework and `igx-ts` as your project type argument:
+To create an Angular application that is configured to use the Ignite UI controls run the `ng new` command providing `@igniteui/angular-schematics` to the collection option.
 
+```cmd
+ng new newAngularProject --collection="@igniteui/angular-schematics" --template=side-nav
+```
+
+If you use the CLI tool you need to provide `angular` as framework and `igx-ts` as your project type argument to the `new` command:
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 ```
@@ -87,7 +92,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
 </details>
 
 <details>
-  <summary>framework</summary>
+  <summary>framework<span align="right"><strong> (CLI tool only)</strong></span></summary>
   <p>
     <code>--framework</code> (alias: <code>-f</code>) <em>default value: "jquery"</em>
   </p>
@@ -97,7 +102,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
 </details>
 
 <details>
-  <summary>type</summary>
+  <summary>type<span align="right"><strong> (CLI tool only)</strong></span></summary>
   <p>
     <code>--type</code> (alias: <code>-t</code>)
   </p>
@@ -127,17 +132,17 @@ Additionally, you can specify **arguments** to control the theme or skip package
 </details>
 
 <details>
-  <summary>skip-install <span align="right"><strong>(v4.0.0)</strong></span></summary>
+  <summary>skip-install</summary>
   <p>
     <code>--skip-install</code> (alias: <code>--si</code>)
   </p>
   <p>
-    Since v4.0.0 the <code>ig new</code> command will install package dependencies when the project is created. Passing this flag will skip the initial installation.
+    The <code>ig new</code> command will install package dependencies on project creation. Passing this flag will skip the initial installation.
   </p>
 </details>
 
 <details>
-  <summary markdown='span'>template <span align="right"><strong>(v3.0.0)</strong></span></summary>
+  <summary markdown='span'>template</summary>
   <p>
     <code>--template</code>
   </p>
@@ -147,36 +152,17 @@ Additionally, you can specify **arguments** to control the theme or skip package
 </details>
 
 
-#### Add template
-Ignite UI Angular Schematics allows addition of one of the [available templates](cli/component-templates.md) by providing an ID and component name to the following command:
+### Add template
+To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and component name as follows:
+
+for Ignite UI Schematics use the `component [template] [name]` schematic:
 
 ```cmd
-ng g @igniteui/angular-schematics:component [templateId] [componentName]
+cd newAngularProject
+ng g @igniteui/angular-schematics:component grid newGrid
 ```
-Additionally, you can specify **arguments** to control the theme or skip packages install:
 
-<details>
-  <summary>module <span align="right"><strong>(v2.0.0)</strong></span></summary>
-  <p>
-    <code>--module</code> (alias: <code>-m</code>)
-  </p>  
-  <p>
-    Path to the module.ts file, relative to the /src/app/ folder, for the module where the new component should be registered:
-  </p>
-  <code>ng g @igniteui/angular-schematics:component combo newCombo --module=myModule/myModule.module.ts</code>
-</details>
-
-<details>
-  <summary>skip-route <span align="right"><strong>(v3.2.0)</strong></span></summary>
-  <p>
-    <code>--skip-route</code> (alias: <code>-srk</code>)
-  </p>
-  <p>
-    Don't auto-generate an app navigation route for the new component
-  </p>
-</details>
-
-In case you use the CLI tool, the `ig add [template] [name]` command adds a template by ID from the [available templates](cli/component-templates.md) with the name provided.
+for the CLI tool use the `ig add [template] [name]` command:
 
 ```cmd
 cd newAngularProject
@@ -185,10 +171,10 @@ ig add grid newGrid
 
 The `add` command is supported only on existing project created with the Ignite UI CLI. To get a list of all the [available templates](cli/component-templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
 
-Additionally, you can specify **arguments** to control the theme or skip packages install:
+Additionally, you can specify the module in which the component will be registered or skip the auto-generation of app navigation route:
 
 <details>
-  <summary>module <span align="right"><strong>(v2.0.0)</strong></span></summary>
+  <summary>module</summary>
   <p>
     <code>--module</code> (alias: <code>-m</code>)
   </p>
@@ -198,11 +184,13 @@ Additionally, you can specify **arguments** to control the theme or skip package
   <p>
     Path to the module.ts file, relative to the /src/app/ folder, for the module where the new component should be registered:
   </p>
+  <code>ng g @igniteui/angular-schematics:component combo newCombo --module=myModule/myModule.module.ts</code>
+  <br>
   <code>ig add combo newCombo --module=myModule/myModule.module.ts</code>
 </details>
 
 <details>
-  <summary>skip-route <span align="right"><strong>(v3.2.0)</strong></span></summary>
+  <summary>skip-route</summary>
   <p>
     <code>--skip-route</code> (alias: <code>-srk</code>)
   </p>
@@ -211,9 +199,10 @@ Additionally, you can specify **arguments** to control the theme or skip package
   </p>
 </details>
 
-#### Run the application
 
-The `start` command will build the application, start a web server and open it in your default browser.
+### Run the application
+
+The `start` schematic or command will build the application, start a web server and open it in your default browser.
 
 using Ignite UI Angular Schematics:
 ```cmd
@@ -224,7 +213,7 @@ using Ignite UI CLI:
 ig start
 ```
 
-#### Available Commands
+### Ignite UI CLI Commands
 A full list of the available Ignite UI CLI commands and their usage (like passing flags, etc.), can be found at the [Ignite UI CLI wiki pages](https://github.com/IgniteUI/igniteui-cli/wiki):
 
 | Command | Alias | Description |

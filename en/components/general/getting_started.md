@@ -48,11 +48,6 @@ ng new <project name> --style=scss
 ```
 You can specify the file extension or preprocessor to use for your application's style files with the `--style` option. We recommend using Scss since our components' styles are based on the [Ignite UI for Angular theming library](../themes.md). Later on, when you install the Ignite UI for Angular package, your application will be configured to use the default styling theme which can be then easily customized either for all or for specific component instances.
 
-In case you want to use the Ignite UI Angular Schematics tool you need to install it globally:
-```cmd
-npm i -g @igniteui/angular-schematics
-```
-
 Thereafter you can install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project, by running the following command: 
 
 ```cmd
@@ -61,16 +56,26 @@ ng add igniteui-angular
 
 During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
 
-#### Create an application by using the Ignite UI CLI
+#### Quick Start with the Ignite UI Schematics & CLI
+To create an application from scratch and configure it to use the Ignite UI components you can use either the Ignite UI Schematics or the Ignite UI CLI. The first step is to install the respective tool globally as follows:
 
-Let's start by opening a preferred terminal and installing the [`Ignite UI CLI`](cli-overview.md):
+```cmd
+npm i -g @igniteui/angular-schematics
+```
+
+or:
 
 ```cmd
 npm install -g igniteui-cli 
 ```
 
-The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI [`guided experience`](cli/step-by-step-guide.md), which builds a configured app that the developer can run with the ease of a single command. 
+The Ignite UI CLI [`guided experience`](cli/step-by-step-guide.md) is the easiest way to bootstrap a configured application.
 
+To activate the guide using the Ignite UI Angular Schematics run:
+```cmd
+ng new --collection="@igniteui/angular-schematics"
+```
+or run the following command in case you are using the CLI tool:
 ```cmd
 ig
 ```
@@ -83,7 +88,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-Alternatively you can use the Ignite UI CLI [`commands`](cli-overview.md#commands) for generating an Ignite UI project, adding a new component or building and serving the application.
+Alternatively you can use the Ignite UI Schematics collection or CLI [`commands`](cli-overview.md#commands) for generating an Ignite UI project, adding a new component or building and serving the application.
 
 ## Using Ignite UI for Angular
 
@@ -92,7 +97,11 @@ We are now ready to start using Ignite UI for Angular components!
 ### Add components automatically
 
 #### Import modules and use components
-In order to easily add new components to our application, we can take advantage of the Ignite UI CLI!
+Now we can add new components to our application using either the `component` schematic or the `add` command:
+
+```cmd
+ng g @igniteui/angular-schematics:component
+```
 
 ```cmd
 ig add
@@ -106,7 +115,11 @@ After going through the options of the menu and choosing which component we want
 
 #### Run application
 
-Now let’s run our application with the [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) command to see our awesome page!
+Now let’s run our application with the `start` schematic or [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) command to see our awesome page!
+
+```cmd
+ng g @igniteui/angular-schematics:start
+```
 
 ```cmd
 ig start
