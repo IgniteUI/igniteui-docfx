@@ -242,7 +242,7 @@
       new: false
     - name: Conditional Cell Styling
       href: treegrid/conditional_cell_styling.md
-      new: false
+      new: true
     - name: Aggregations
       href: treegrid/aggregations.md
       new: false
