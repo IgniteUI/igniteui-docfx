@@ -120,6 +120,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
+
 #### リモート並べ替え
 リモート並べ替えの実装方法の詳細については、`@@igComponent の仮想化とパフォーマンス` [ヘルプ](virtualization.md#リモートの並べ替え/フィルタリングの仮想化) をご覧ください。
 
