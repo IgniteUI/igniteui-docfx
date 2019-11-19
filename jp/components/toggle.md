@@ -254,9 +254,17 @@ export class AppModule {}
 <button [igxToggleAction]="reference" [igxToggleOutlet]="outlet">Toggle</button>
 <custom-component #reference></custom-component>
 ```
+### トグル コンテナのオフセット
+
+対応する軸に沿って指定した量のみコンテナをオフセットする方法:
+```typescript
+    // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    this.toggleForm.setOffset(deltaX, deltaY);
+```
 
 ### API リファレンス
-
 <div class="divider"></div>
 
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)

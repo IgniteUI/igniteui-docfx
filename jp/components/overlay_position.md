@@ -121,6 +121,16 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
     overlay.show(overlayId, overlaySettings);
 ```
 
+### オーバーレイ コンテンツのオフセット
+
+対応する軸に沿って指定した量のみコンテンツをオフセットする方法:
+```typescript
+    // deltaX and deltaY determine by how much the content will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    overlay.setOffset(this._overlayId, deltaX, deltaY);
+```
+
 ## ポジション ストラテジ
 
 5 つのポジション ストラテジがあります。
