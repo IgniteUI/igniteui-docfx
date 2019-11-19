@@ -9,6 +9,7 @@ const argv = require('yargs').argv;
 const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 const fileinclude = require('gulp-file-include');
+const exec = require('child_process').exec;
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -22,70 +23,13 @@ const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-templ
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 
-gulp.task('serve', ['build'], () => {
-    browserSync.init({
-        server: {
-            baseDir: `${DOCFX_SITE}`
-        },
-        notify: {
-            styles: {
-                top: 'auto',
-                bottom: '0',
-                margin: '0px',
-                padding: '5px',
-                position: 'fixed',
-                fontSize: '10px',
-                zIndex: '9999',
-                borderRadius: '5px 0px 0px',
-                color: 'white',
-                textAlign: 'center',
-                display: 'block',
-                backgroundColor: 'rgba(60, 197, 31, 0.498039)'
-            }
-        }
-    });
+const cleanup =  async (done) => {
+     await del(`${DOCFX_SITE}`).then(()=>{
+         done()
+     });
+}
 
-    const excluded = [
-        `!${DOCFX_ARTICLES}/grid/**`,
-        `!${DOCFX_ARTICLES}/treegrid/**`,
-        `!${DOCFX_ARTICLES}/hierarchicalgrid/**`
-    ];
-
-    // All topics that are not auto-generated and are specific to the respective grid, should be here.
-    const included = [
-        `${DOCFX_ARTICLES}/grid/grid.md`,
-        `${DOCFX_ARTICLES}/grid/groupby.md`,
-        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
-        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
-        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
-        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
-    ];
-
-    gulp.watch(`${DOCFX_TEMPLATE}/**/*`, ['watch']);
-    gulp.watch([`${DOCFX_PATH}/**/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), ['build']);
-});
-
-gulp.task('styles', () => {
-    return gulp
-        .src(`${DOCFX_TEMPLATE}/styles/sass/main.scss`)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(
-            autoprefixer({
-                browsers: ['last 2 versions'],
-                cascase: false
-            })
-        )
-        .pipe(gulp.dest(`${DOCFX_TEMPLATE}/styles/css`));
-});
-
-gulp.task('watch', ['build'], done => {
-    browserSync.reload();
-    done();
-});
-
-gulp.task('post-processor-configs', ['cleanup'], () => {
+const environment_variables_config =  (done) => {
     var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
 
     if (process.env.NODE_ENV) {
@@ -105,15 +49,12 @@ gulp.task('post-processor-configs', ['cleanup'], () => {
         `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
         JSON.stringify(environmentVariablesConfig)
     );
-});
+    done();
+}
 
-gulp.task('build-site', shell.task([`docfx build ${DOCFX_CONF}`]));
+// gulp.task('post-processor-configs', gulp.series('cleanup', 'environment-variables-config'));
 
-gulp.task('cleanup', () => {
-    return del([`${DOCFX_SITE}`]);
-});
-
-gulp.task('generate-grids-topics', () => {
+const generate_grids_topics = (done) => {
     const grids = [
         {
             igPath: '/grid',
@@ -162,19 +103,85 @@ gulp.task('generate-grids-topics', () => {
             }))
             .pipe(gulp.dest(DOCFX_ARTICLES + grid.igPath));
     }
+    done();
+}
+
+const  styles = () => {
+    return gulp
+        .src(`${DOCFX_TEMPLATE}/styles/sass/main.scss`)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(
+            autoprefixer({
+                browsers: ['last 2 versions'],
+                cascase: false
+            })
+        )
+        .pipe(gulp.dest(`${DOCFX_TEMPLATE}/styles/css`));
+};
+
+const build_site = shell.task([`docfx build ${DOCFX_CONF}`]);
+
+// const build_site = (done) => exec(`docfx build ${DOCFX_CONF}`, {})
+//                             .on("message", (message) => console.log(message))
+//                             .on("exit", () => done());
+gulp.task('build', gulp.series(cleanup, environment_variables_config, styles, generate_grids_topics, build_site));
+
+gulp.parallel(asd);
+// gulp.task('build-travis', gulp.series(
+//     'styles',
+//     'cleanup',
+//     'post-processor-configs',
+//     'generate-grids-topics'
+// ));
+
+gulp.task('serve', gulp.series('build', (done) => {
+    browserSync.init({
+        server: {
+            baseDir: `${DOCFX_SITE}`
+        },
+        notify: {
+            styles: {
+                top: 'auto',
+                bottom: '0',
+                margin: '0px',
+                padding: '5px',
+                position: 'fixed',
+                fontSize: '10px',
+                zIndex: '9999',
+                borderRadius: '5px 0px 0px',
+                color: 'white',
+                textAlign: 'center',
+                display: 'block',
+                backgroundColor: 'rgba(60, 197, 31, 0.498039)'
+            }
+        }
+    });
+
+    const excluded = [
+        `!${DOCFX_ARTICLES}/grid/**`,
+        `!${DOCFX_ARTICLES}/treegrid/**`,
+        `!${DOCFX_ARTICLES}/hierarchicalgrid/**`
+    ];
+
+    // All topics that are not auto-generated and are specific to the respective grid, should be here.
+    const included = [
+        `${DOCFX_ARTICLES}/grid/grid.md`,
+        `${DOCFX_ARTICLES}/grid/groupby.md`,
+        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
+        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
+        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
+    ];
+ 
+    gulp.watch(`${DOCFX_TEMPLATE}/**/*`, gulp.series('watch'));
+    gulp.watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), gulp.series('build'));
+
+    done();
+})); 
+
+gulp.task('watch', gulp.series('build'), done => {
+    browserSync.reload();
+    done();
 });
-
-gulp.task('build', [
-    'styles',
-    'cleanup',
-    'post-processor-configs',
-    'generate-grids-topics',
-    'build-site'
-]);
-
-gulp.task('build-travis', [
-    'styles',
-    'cleanup',
-    'post-processor-configs',
-    'generate-grids-topics'
-]);
