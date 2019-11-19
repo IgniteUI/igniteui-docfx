@@ -119,7 +119,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

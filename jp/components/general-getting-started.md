@@ -93,7 +93,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 
 ### モジュールのインポート
 
-はじめに、使いたいコンポーネントのそれぞれのモジュールをインポートする必要があります。[**GeographicMap**](map_overview.md) に対してこれを行います。
+はじめに、使いたいコンポーネントのそれぞれのモジュールをインポートする必要があります。[**GeographicMap**](geo-map.md) に対してこれを行います。
 
 ### コンポーネントを使う
 

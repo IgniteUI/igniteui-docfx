@@ -96,7 +96,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 ### その他のリソース
 

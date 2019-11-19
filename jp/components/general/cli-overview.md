@@ -33,7 +33,7 @@ ig
 </div>
 
 #### コマンドの使用
-新しいプロジェクトを作成するには、コンポーネントテンプレートを追加してビルドし、次の Ignite UI CLI [コマンド](#commands) を使用します。
+新しいプロジェクトを作成するには、コンポーネントテンプレートを追加してビルドし、次の Ignite UI CLI [コマンド](#コマンド) を使用します。
 ```cmd
 ig new <project name> --framework=angular --type=igx-ts 
 cd <project name>

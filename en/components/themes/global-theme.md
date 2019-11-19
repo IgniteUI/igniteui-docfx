@@ -97,7 +97,9 @@ For the `light` version of the `fluent theme` using `excel color palette`, use t
 
 For the `dark` version of the `fluent theme` using `excel palette`, use the code below:
 
+
 ```scss    
+
 // replace
 @include igx-dark-theme($default-palette);
 // With
@@ -107,7 +109,9 @@ For the `dark` version of the `fluent theme` using `excel palette`, use the code
 We also added a `Microsoft Word` palette. To use it just replace the `$fluent-excel-palette` with `$fluent-word-palette`:
 
 ```scss
+
 // for the light version
+
 @include igx-fluent-theme($fluent-word-palette);
 
 // for the dark version

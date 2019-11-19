@@ -520,7 +520,7 @@ public leftPanPerformed(args) {
 <iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -589,7 +589,7 @@ public leftPanPerformed(args) {
 この記事では List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+* [IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 使用したその他のコンポーネント:

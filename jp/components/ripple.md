@@ -121,7 +121,7 @@ export class AppModule {}
 > リップル アニメーションで相対的な位置を持つ要素を使用します。また、[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) を使用して子要素を対象にすることもできます。
 
 ### スタイル設定
-igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md) でスタイルを設定できます。リップルの [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) は、エフェクトの色をカスタマイズできるプロパティを公開します。        
+igxRipple を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md) でスタイルを設定できます。リップルの [テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) は、エフェクトの色をカスタマイズできるプロパティを公開します。        
 
 #### グローバル テーマのインポート
 事前定義されたリップルカラーのスタイリングを開始するには、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。  
@@ -161,7 +161,7 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### カスタム スキーマの定義
-[**schema**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+[**スキーマ**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ** はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_dark_ripple` を使用します。   
 
 ```scss
@@ -216,14 +216,14 @@ $custom-theme: igx-ripple-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ### その他のリソース
 

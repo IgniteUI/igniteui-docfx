@@ -263,9 +263,9 @@ ul.igx-carousel__indicators {
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
-* [IgxCarouselComponent Styles]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
+* [IgxCarouselComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
 * [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)

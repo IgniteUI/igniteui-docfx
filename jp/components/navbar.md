@@ -146,13 +146,12 @@ export class AppModule {}
     <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 > [!NOTE]
 > [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されます。
-
 
 ### スタイル設定
 
@@ -180,7 +179,7 @@ $dark-navbar: igx-navbar-theme(
 ```
 
 >[!NOTE]
->コンポーネントが[`エミュレート`](./themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+>コンポーネントが[`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -220,7 +219,7 @@ $dark-navbar: igx-navbar-theme(
 
 テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-navbar`]({environment:sassApiUrl}/index.html#variable-_dark-navbar) の 1 つを拡張します。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-navbar`]({environment:sassApiUrl}/index.html#variable-_dark-navbar)) の 1 つを拡張します。
 
 ```scss
  // Extending the dark navbar schema.
@@ -291,3 +290,4 @@ $dark-navbar: igx-navbar-theme(
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+

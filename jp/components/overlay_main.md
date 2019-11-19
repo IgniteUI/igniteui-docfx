@@ -120,7 +120,7 @@ export class MyOverlayComponent {
     <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -218,7 +218,7 @@ export class MyOverlayComponent {
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -279,10 +279,10 @@ export class ExampleComponent {
 ## API
 
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## 前提事項と制限
-アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [here] (https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。
+アウトレットにオーバーレイを表示する際にアウトレットが変換で要素の子、視点、フィルター css の場合、モーダル オーバレイが表示されません。これは、上記いずれかの css プロパティが設定された場合にブラウザーが新しく含まれるブロックを作成して [こちら] (https://developer.mozilla.org/ja-jp/docs/Web/CSS/position#fixed) のようにオーバーレイがこのブロックに制限されるためです。
 
 ## その他のリソース
 * [配置方法](overlay_position.md)

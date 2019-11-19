@@ -14,7 +14,7 @@ Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/class
     <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -185,7 +185,7 @@ div テキストと IgxTextHighlight ディレクティブを追加します。�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
@@ -270,12 +270,171 @@ div テキストと IgxTextHighlight ディレクティブを追加します。�
     <iframe id="text-highlight-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/text-highlight-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
-### API とスタイルのリファレンス
+### スタイル設定
+
+[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、指定された文字列のすべての発生の色と背景を変更してスタイル設定できます。まず、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+最も簡単な方法は、[`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、 `$resting-color`、 `$active-background` と `$active-color`パラメーターを受け取る方法です。
+
+```scss
+$dark-highlight: igx-highlight-theme(
+    $resting-background: #FFCD0F,
+    $resting-color: #292826,
+    $active-background: #292826,
+    $active-color: #FFCD0F
+);
+```
+
+`$resting-background` と `$resting-color` パラメーターは、`$active-background` と `$active-color`パラメーターに基づいてスタイル設定されるアクティブな強調表示の文字列以外、すべての強調表示に適用されます。 
+
+最後にコンポーネントのテーマを**含めます**。
+
+```scss
+@include igx-highlight($dark-highlight);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-highlight($dark-highlight);
+    }
+}
+```
+
+#### カラーパレットの定義
+
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を持つことができます。
+
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
+
+```scss
+$dark-highlight: igx-highlight-theme(
+    $resting-background: igx-color($dark-palette, "secondary", 400),
+    $resting-color: igx-color($dark-palette, "primary", 400),
+    $active-background: igx-color($dark-palette, "primary", 400),
+    $active-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+>[!NOTE]
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](themes/palette.md) のトピックをご覧ください。
+
+#### スキーマの使用
+
+テーマ エンジンを使用して [**スキーマ**](themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマの 1 つを拡張します。この場合、[`dark-highlight`]({environment:sassApiUrl}/index.html#variable-_dark-highlight) スキーマ。
+
+```scss
+ // Extending the dark highlight schema.
+$dark-highlight-schema: extend($_dark-highlight,
+    (
+        resting-background: (
+            igx-color: ("secondary", 400)
+        ),
+        resting-color: (
+            igx-color: ("primary", 400)
+        ),
+        active-background: (
+            igx-color: ("primary", 400)
+        ),
+        active-color: (
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。この方法は、基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加します。
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-highlight: $dark-highlight-schema
+));
+
+// Defining highlight-theme with the global dark schema
+$dark-highlight: igx-highlight-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+上記と同じ方法でテーマを含める必要があることに注意してください。
+
+#### カスタム スタイル
+
+[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブの [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) と [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) 入力を利用できます。これらのクラスを [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) のスタイルと組み合わせて、優れたユーザー エクスペリエンスを提供できます。
+
+プロパティを持ついくつかの CSS クラスを作成し、上記の入力を使用してそれらを添付します。
+
+```html
+<div igxTextHighlight
+     [value]="html"
+     [groupName]="'group1'"
+     [cssClass]="'custom-highlight'"
+     [activeCssClass]="'custom-active-highlight'">
+    {{html}}
+</div>
+```
+
+```scss
+.custom-highlight {
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+.custom-active-highlight {
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+```
+
+上記のように、テーマと組み合わせることもできます。
+
+```scss
+:host {
+    ::ng-deep {
+       @include igx-highlight($dark-highlight);
+
+       .custom-highlight {
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+       }
+       .custom-active-highlight {
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+        }
+   }
+}
+```
+
+#### デモ
+
+<div class="sample-container loading" style="height: 300px;">
+    <iframe id="text-highlight-style-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/text-highlight-style" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider"></div>
+
+### API リファレンス
 
 TextHighlight ディレクティブの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)

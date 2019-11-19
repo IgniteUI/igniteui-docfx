@@ -13,7 +13,7 @@ _language: ja
     <iframe id="theme-chooser-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/theming/theme-chooser" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> Stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
@@ -40,7 +40,7 @@ _language: ja
     <iframe id="default-theme-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/default-theme-sample" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="default-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> Stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
@@ -205,7 +205,7 @@ public themesClass = "dark-theme";
     <iframe id="dark-theme-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/dark-theme-sample" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dark-theme-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}"> Stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
@@ -311,19 +311,19 @@ export class ThemeChooserSampleComponent implements OnInit {
     <iframe id="theme-chooser-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/theming/theme-chooser" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="theme-chooser-iframe" data-demos-base-url="{environment:demosBaseUrl}"> Stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
 
 ### API
 
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
-* [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGrid Filtering スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
+* [IgxGrid Paginator スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

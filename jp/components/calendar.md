@@ -283,7 +283,7 @@ export class CalendarSample6Component {
     <iframe id="calendar-sample-6-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 
@@ -336,7 +336,7 @@ export class CalendarSample7Component {
     <iframe id="calendar-sample-7-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-7-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### ビュー
@@ -349,7 +349,7 @@ export class CalendarSample7Component {
     <iframe id="calendar-views-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-views-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-views-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### キーボード ナビゲーション
@@ -362,7 +362,7 @@ export class CalendarSample7Component {
 - <kbd>End</kbd> キーは現在の月の最後の日または最後の月をフォーカスします。
 - <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
 
-`前` または`次`の月のボタン（サブヘッダー内）にフォーカスがある場合、以下を使用します。
+`前` または`次`の月のボタン(サブヘッダー内)にフォーカスがある場合、以下を使用します。
 - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次の月または前の月のビューへスクロールします。
 
 サブヘッダーの`月`ボタンのフォーカス時:
@@ -388,7 +388,7 @@ export class CalendarSample7Component {
 - 矢印キーで年を移動します。
 - <kbd>Enter</kbd> キーは、現在フォーカスされている年を選択してビューと閉じます。
 
->注:
+>[!NOTE]
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
 <div class="divider--half"></div>
@@ -404,7 +404,7 @@ export class CalendarSample7Component {
     <iframe id="multiview-calendar" data-src='{environment:demosBaseUrl}/scheduling/multiview-calendar' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="multiview-calendar" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="multiview-calendar" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -488,11 +488,11 @@ $my-calendar-theme: igx-calendar-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。 使い方の詳細については [`Palettes`](./themes/palette.md) のトピックを参照してください。
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。 使い方の詳細については [`パレット`](./themes/palette.md) のトピックを参照してください。
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-calendar) の 1 つを拡張します。  
 
@@ -545,7 +545,7 @@ $my-calendar-theme: igx-calendar-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API リファレンス

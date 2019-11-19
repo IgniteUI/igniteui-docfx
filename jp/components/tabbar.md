@@ -465,18 +465,18 @@ export class AppRoutingModule { }
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### Styles
+### スタイル設定
 
-To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
+タブのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
+次に、[`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
 $dark-bottom-nav: igx-bottom-nav-theme(
@@ -485,19 +485,19 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 );
 ```
 
-If we take a look at the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
+[`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
 
 > [!NOTE]
-> In order to style any additional components that are used as part of a tab panel's content, an additional theme should be created that is specific to the respective component.
+> タブ パネルのコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
 
-The last step is to **include** the component theme in our application.
+最後にコンポーネントのテーマを**含めます**。
 
 ```scss
 @include igx-bottom-nav($dark-bottom-nav);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -507,11 +507,11 @@ The last step is to **include** the component theme in our application.
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #F4D45C;
@@ -519,7 +519,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
 $dark-bottom-nav: igx-bottom-nav-theme(
@@ -528,11 +528,11 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 );
 ```
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-bottom-nav`]({environment:sassApiUrl}/index.html#variable-_dark-bottom-nav) schema:
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-bottom-nav`]({environment:sassApiUrl}/index.html#variable-_dark-bottom-nav) の 1 つを拡張します。
 
 ```scss
 // Extending the dark bottom nav schema
@@ -548,7 +548,7 @@ $dark-bottom-nav-schema: extend($_dark-bottom-nav,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -563,9 +563,9 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
     <iframe id="tabbar-style-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-style' width="100%" height="100%" seamless
@@ -573,7 +573,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-style-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -582,7 +582,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
+* [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)

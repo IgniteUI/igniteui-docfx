@@ -7,20 +7,20 @@ _language: ja
 
 ## 仮想ドロップダウン
 
-<p class="highlight">[Ignite UI for Angular Drop Down](drop_down.md) は、選択可能な項目リストを表示するために、[IgxForOf directive](for_of.md) の使用方法を完全に統合できます。</p>
+<p class="highlight">[Ignite UI for Angular Drop Down](drop_down.md) は、選択可能な項目リストを表示するために、[IgxForOf ディレクティブ](for_of.md) の使用方法を完全に統合できます。</p>
 
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ## 構成
 
 仮想項目のリストを表示するようにドロップダウンを設定するには、いくつかの前提条件を満たす必要があります。
-はじめにドロップダウンを宣言するコンポーネントのモジュールに IgxForOfModule をインポートします。
+はじめにドロップダウンを宣言するコンポーネントのモジュールに `IgxForOfModule` をインポートします。
 
 
 ### モジュールのインポート
@@ -41,7 +41,7 @@ export class AppModule {}
 
 ### テンプレートの構成
 
-次に、ngFor の代わりに [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) を使用してデータをループ処理し、ドロップダウン コンポーネントのテンプレートを作成します。すべての項目を正しく表示するために`*igxFor` に追加の構成を行います。
+次に、`*ngFor` の代わりに [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) を使用してデータをループ処理し、ドロップダウン コンポーネントのテンプレートを作成します。すべての項目を正しく表示するために`*igxFor` に追加の構成を行います。
 ```html
 <!-- drop-down-virtual.component.html -->
 <button igxButton [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Item Series</button>
@@ -111,7 +111,7 @@ export class DropDownVirtualComponent {
 ### スタイル
 
 設定の最後の非常に重要な部分は、コンポーネントのスタイルシート `drop-down-virtual.component.scss` 内で行われます。2 つのスクロールバー (1 つは `igxFor` から、もう 1 つはコンテナ自体から) が表示されるのを防止します。
-wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (1 つは igxFor から、もう 1 つはコンテナー自体から) を表示しないように、`overflow: hidden` セットにする必要があります。
+wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (1 つは `igxFor` から、もう 1 つはコンテナー自体から) を表示しないように、`overflow: hidden` セットにする必要があります。
 
 ```scss
     .drop-down-virtual-wrapper {
@@ -131,7 +131,7 @@ wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -139,7 +139,7 @@ wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (
 `igx-drop-down` ドロップダウンは、`igxFor` ディレクティブを使用したリモートデータ チャンクのロードをサポートします。設定はローカル項目で `igxFor` を使用するものと似ていますが、主な違いは異なるデータ チャンク ロードの処理です。
 
 ### テンプレート
-ドロップダウン テンプレートは、[上記の例](#configuration) と比べてそれほど変更する必要はありませんが、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。またリモートソースからデータを取得するため、データが観測可能になるように指定して Angular の`非同期`パイプに渡します。
+ドロップダウン テンプレートは、[上記の例](#構成) と比べてそれほど変更する必要はありませんが、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。またリモートソースからデータを取得するため、データが観測可能になるように指定して Angular の`非同期`パイプに渡します。
 
 ```html
 <igx-drop-down #remoteDropDown>
@@ -186,7 +186,7 @@ export class RemoteService {
 }
 ```
 
-このサービスは、`remoteData` の下に Observable を公開します。リモート ドロップダウン コンポーネントでサービスを注入し、そのプロパティにバインドします。
+このサービスは、`remoteData` の下に `Observable` を公開します。リモート ドロップダウン コンポーネントでサービスを注入し、そのプロパティにバインドします。
 
 ```typescript
 // remote-drop-down.component.ts
@@ -243,14 +243,14 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 ```
 `ngAfterViewInit` フックの内で初期状態のデータを取得し、`igxForOf` ディレクティブの [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
 
-### リモートの仮想化-デモ
+### リモートの仮想化 - デモ
 上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。デモを確認し、以下の設定で試すことができます。
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="dropdown-remote-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-remote' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
