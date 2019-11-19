@@ -37,7 +37,7 @@ Financial series have the following data requirements:
 You can use the [SampleFinancialData](data-chart-data-sources-financial.md) as data source which meets above data requirements.
 
 ```ts
-this.chart.dataSource = SampleFinancialData.create();
+public dataSource: any[] = SampleFinancialData.create();
 ```
 
 ### Required Modules

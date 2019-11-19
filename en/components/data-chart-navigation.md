@@ -85,7 +85,7 @@ The following code snippet demonstrates how you can enable UI navigation in the 
 
 <!-- ### Chart Navigation with Overview Plus Detail Pane
 
-In the `Ig$DataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
+In the `XamDataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
 
 The following is a summary of the operations a user can carry out with the overview plus detail pane:
 

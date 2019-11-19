@@ -53,7 +53,7 @@ Scatter shape series have the following data requirements:
 You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleShapeData.create() }
+public dataSource: any[] = SampleShapeData.create();
 ```
 
 ### Required Modules

@@ -34,7 +34,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxRadialGauge`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgauge.html) requires the following modules:
+The [`IgxRadialGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts
