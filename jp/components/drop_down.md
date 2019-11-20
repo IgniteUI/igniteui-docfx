@@ -307,7 +307,7 @@ export class MyMenuComponent {
 
 #### Navigation ディレクティブ
 `igxDropDown` コンポーネントのキーボード ナビゲーションを有効にするには、[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用します。ディレクティブをアクティブ (フォーカスした) 要素または親コンテナに適用することにより、トリガーしたすべてのイベントを処理できるようになります。デフォルトでは、igxDropDown またはその項目にフォーカスが当たらないため、たとえばディレクティブをドロップダウンを制御する`ボタン`や`入力`に配置できます。
-[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブ値は、ターゲット コンポーネントまたは拡張 [IgxDropDownBase]({environment:angularApiUrl}/classes/igxdropdownbase.html) クラスにする必要があります。
+[igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブ値は、ターゲット コンポーネントまたは拡張 [IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスにする必要があります。
 
 
 以下のサンプルは、クリックによって igxDropDown インスタンスを開いたり閉じたりする例です。入力に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) を適用し、上矢印と下矢印の使用時にキーボード ナビゲーションを有効にします。[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) が無効のデフォルトのドロップダウン動作に依存し、ボタン入力にフォーカスを維持することが可能です。
