@@ -42,7 +42,7 @@ The [`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/ty
 You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data source which meets above data requirements.
 
 ```ts
-this.chart.dataSource = SampleShapeData.create();
+public dataSource: any[] = SampleShapeData.create();
 ```
 
 ### Required Modules

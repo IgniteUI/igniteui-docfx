@@ -97,7 +97,7 @@ import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
 
 ### Code Snippet
 
-The following code snippet demonstrates how to add charts to the currently viewed worksheet in the [`IgxSpreadsheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheet.html) control:
+The following code snippet demonstrates how to add charts to the currently viewed worksheet in the `XamSpreadsheet` control:
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();

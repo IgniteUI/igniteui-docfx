@@ -312,7 +312,7 @@
     - name: 選択
       href: hierarchicalgrid/selection.md
       new: true
-     items:
+      items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
           new: true
