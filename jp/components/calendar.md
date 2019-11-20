@@ -76,11 +76,11 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 
 ### ローカライズと書式設定
 
-カレンダーにおいてローカライズや書式設定はとても重要な要素です。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbase.html#formatviews) プロパティによって制御してカスタマイズ化されます。
+カレンダーにおいてローカライズや書式設定はとても重要な要素です。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbasedirective.html#formatviews) プロパティによって制御してカスタマイズ化されます。
 <br>
 これらの設定に加え、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarbase.html#weekstart) を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
 
-以下のマークアップは、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) および [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbase.html#formatviews) プロパティをバインドして表示書式設定をカスタマイズします。最後に、[`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) プロパティをユーザーの選択した場所に基づいて値にバインドします。
+以下のマークアップは、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) および [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbasedirective.html#formatviews) プロパティをバインドして表示書式設定をカスタマイズします。最後に、[`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) プロパティをユーザーの選択した場所に基づいて値にバインドします。
 
 ```html
 <!-- app.component.html -->
