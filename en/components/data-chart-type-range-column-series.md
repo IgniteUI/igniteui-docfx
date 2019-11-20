@@ -42,7 +42,7 @@ The [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/types
 You can use the [SampleRangeData](data-chart-data-sources-range.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleRangeData.create() }
+public dataSource: any[] = SampleRangeData.create();
 ```
 
 ### Required Modules

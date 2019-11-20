@@ -7,7 +7,7 @@ mentionedTypes: ['Spreadsheet']
 
 ## Data Validation
 
-This topic explains how to configure and set the bulit-in data validation rules.
+This topic explains how to configure and set the built-in data validation rules.
 
 ### Demo
 
