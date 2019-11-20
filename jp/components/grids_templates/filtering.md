@@ -169,6 +169,8 @@ this.@@igObjectRef.clearFilter();
 グリッドの初期フィルタリング状態の設定は、[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
 
 ```typescript
+constructor(private cdr: ChangeDetectorRef) { }
+
 public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
     const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
@@ -182,6 +184,7 @@ public ngAfterViewInit() {
     gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
 
     this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
+    this.cdr.detectChanges();
 }
 ```
 
@@ -202,9 +205,10 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxGrid') {
-#### リモート フィルタリング
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) と [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) アウトプットにサブスクライブしてグリッドでリモート フィルタリングができます。詳細については、`グリッドの仮想化とパフォーマンスの`[ヘルプ](virtualization.md#remote-sortingfiltering-virtualization)をご覧ください。
+@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+#### Remote Filtering
+
+The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
 
 <div class="divider--half"></div>
 }

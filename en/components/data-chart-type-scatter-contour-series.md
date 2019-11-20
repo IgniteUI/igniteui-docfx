@@ -6,7 +6,7 @@ mentionedTypes: ['XamDataChart','ScatterContourSeries']
 
 ---
 
-## Scatter Contour Series
+## Scatter Contour Chart
 
 This topic explains, with code examples, how to use  [`IgxScatterContourSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) in the Angular data chart component. This series
 draws colored contour lines based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterContourSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) works a lot like the [`IgxScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) except that it represents data as contour lines colored using a fill scale and the scatter area series represents data as a surface interpolated using a color scale.
@@ -38,7 +38,7 @@ The [`IgxScatterContourSeriesComponent`](/products/ignite-ui-angular/api/docs/ty
 You can use the [SampleScatterData](data-chart-data-sources-scatter.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleScatterData.create() }
+public dataSource: any[] = SampleScatterData.create();
 ```
 
 ### Required Modules
@@ -54,7 +54,7 @@ import { IgxScatterContourSeries } from "igniteui-angular-charts/ES5/igx-scatter
 import { IgxValueBrushScale } from "igniteui-angular-charts/ES5/igx-value-brush-scale";
 import { IgxLinearContourValueResolver } from "igniteui-angular-charts/ES5/igx-linear-contour-value-resolver";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -62,7 +62,6 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
         IgxDataChartScatterModule,

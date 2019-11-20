@@ -97,6 +97,9 @@ this.@@igObjectRef.clearSort();
 ```
 
 > [!NOTE]
+> The [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) of the **@@igComponent** is of different type compared to the [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy) of the **column**, since they work in different scopes and expose different parameters.
+
+> [!NOTE]
 > The sorting operation **DOES NOT** change the underlying data source of the @@igComponent.
 
 #### Initial sorting state
@@ -119,7 +122,8 @@ public ngOnInit() {
 
 @@if (igxName === 'IgxGrid') {
 #### Remote Sorting
-You can provide @@igComponent's remote sorting by subscribing to [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) and [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) outputs. More information on how to use it you can find in the `@@igComponent Virtualization and Performance` [documentation](virtualization.md#remote-sortingfiltering-virtualization).
+
+The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
 
 <div class="divider--half"></div>
 }

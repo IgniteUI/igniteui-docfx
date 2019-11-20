@@ -66,6 +66,17 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ```
 さらに、上記のサンプルは、`ngModel` を介した双方向のデータ バインディングを示しています。さらに、[`Angular Forms`](#angular-フォームの選択) の Select コンポーネントを使用できます。
 
+デフォルトでは、select コンポーネントは選択した項目の要素 `innerText` を使用して入力フィールドに表示されます。複雑な項目テンプレートの場合、 `text` プロパティを明示的に設定して、項目が選択された場合入力フィールドに何を表示するかを指定できます。例：
+
+```html
+<igx-select>
+    <igx-select-item *ngFor="let item of items" [value]="item.value" [text]="item.text">
+        {{item.text}} ( {{item.count}} )
+    </igx-select-item>
+</igx-select>
+
+```
+もう少し複雑な項目テンプレートで `text` プロパティを確認するには、以下のグループ化サンプル[グループ選択](#グループ選択)を参照してください。
 
 
 ### ラベル、プレフィックス、サフィックス
@@ -272,28 +283,40 @@ public customOverlaySettings: OverlaySettings = {
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 
-`igx-select` が `igx-drop-down` に拡張し、groups のビルトイン サポートがあります。 
-
-この機能を活用するには、`igx-select` に渡すデータを変更する必要があり、この場合は以下のようになります。
+項目グループを視覚的に分離するために、select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
+これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
 ```typescript
-public greengrocery: any[] = [
-    { label: "Fruits", items: [ "Apple", "Orange", "Banana" ] },
-    { label: "Vegetables", items: [ "Cucumber", "Potato", "Pepper" ] }
-];
+    public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
+            { label: "Fruits", items:[
+                    { type: "Apple", origin: "local" },
+                    { type: "Orange", origin: "import" },
+                    { type: "Banana", origin: "import"}
+                ]
+            },
+            { label: "Vegetables", items: [
+                    { type: "Cucumber", origin: "local" },
+                    { type: "Potato", origin: "import" },
+                    { type: "Pepper", origin: "local" }
+                ]
+            }
+        ];
 ```
-
-`type` や `fruits` など特定のプロパティを持つオブジェクトを渡します。`IgxSelectItemComponent` にドロップダウン リスト内の特定のスタイルを受け取りを許容する機能があるためです。この機能は、[*IgxDropDownItemComponent*]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) から継承されます。
 
 次にテンプレート ファイルでこれらのオブジェクトを反復してプロパティへ適切にアクセスします。
 ```html
 <igx-select>
     <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
-        <igx-select-item *ngFor="let item of group.items" [value]="item">
-            {{item}}
+        <igx-select-item *ngFor="let item of group.items" [value]="item.type" [text]="item.type">
+            {{item.type}}
+            <igx-icon title="Local product" class="icon" color="green" *ngIf="item.origin === 'local';else templateImport">local_shipping</igx-icon>
+            <ng-template #templateImport>
+                <igx-icon title="Import product" class="icon" color="orange">flight</igx-icon>
+            </ng-template>
         </igx-select-item>
     </igx-select-item-group>
 </igx-select>
 ```
+
 ### Angular フォームの選択
 `Select` コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで`必要な`バリデーターを使用する方法を示しています。
 

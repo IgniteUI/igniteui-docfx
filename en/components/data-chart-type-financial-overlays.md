@@ -7,9 +7,7 @@ mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 
 ## Financial Overlays
 
-<!-- This topic explains various types of financial series in the Angular data chart component. Financial series is a group of the simplest and most common form of data chart series that take financial data such as stock prices and render it as collection of OHLC bars or candlesticks along a horizontal line (e.g. `FinancialPriceSeries`). -->
-
-TODO TODO TODO
+Financial Overlays are often used by traders to measure changes and to show trends in stock prices. These overlays are usually displayed in front of the [`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) because they share the same Y-Axis scale. In contrast, financial indicators do not share the same Y-Axis scale with the [`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) and as result financial indicators are usually plotted below or above the [`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) or overlays. However, the chart control supports plotting both overlays as well as indicators in the same plot area, if desired, using multiple axes or by sharing axes.
 
 ### Demo
 
@@ -23,10 +21,7 @@ TODO TODO TODO
 
 <div class="divider--half"></div>
 
-### Financial Overlays
-
-Financial overlays are usually displayed behind [`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html)
-and they show trends in stock prices. These overlays can be plotted in the same Data Chart that plots [`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) because they use the same scale of values on Y-Axis. The following list shows all types of financial overlays:
+The following lists the available financial overlays:
 
 -   [`IgxBollingerBandsOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html) (BBO) is based on the standard deviation in the prices, so they incorporate price changes in their width. The bands are wider when the standard deviation increases and narrower when the standard deviation decreases and are smoothed by a moving average. Apart from the standard deviation and smoothing period being user adjustable, there is also a user adjustable multiplier to affect the scale of the BollingerBandsOverlay width,
 -   [`IgxPriceChannelOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpricechanneloverlaycomponent.html) (PCO) is price volatility or the changes in price over time between two parallel lines. The lower line is the trend line and is drawn on the lows prices, and the upper line is the channel line and is based on the high prices. Channels show trend direction for any time frame. Price channels, or trend, can be up, down or sideways
@@ -47,7 +42,7 @@ Financial overlays have the following data requirements:
 You can use the [SampleFinancialData](data-chart-data-sources-financial.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleFinancialData.create() }
+public dataSource: any[] = SampleFinancialData.create();
 ```
 
 ### Required Modules
@@ -61,17 +56,19 @@ import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axi
 // series' modules:
 import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financial-price-series";
 import { IgxBollingerBandsOverlay } from "igniteui-angular-charts/ES5/igx-bollinger-bands-overlay";
-import { IgxMedianPriceIndicator } from "igniteui-angular-charts/ES5/igx-median-price-indicator";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxFinancialPriceSeriesModule } from "igniteui-angular-charts/ES5/igx-financial-price-series-module";
 
 // in app.module.ts file
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        IgxFinancialPriceSeriesModule,
         // ...
     ]
 })

@@ -6,7 +6,7 @@ mentionedTypes: ['XamDataChart','BubbleSeries']
 
 ---
 
-## Scatter Bubble Series
+## Scatter Bubble Chart
 
 This topic explains, with code examples, how to use scatter [`IgxBubbleSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) in the Angular data chart component. This series
 is similar to [Scatter Marker Series](data-chart-type-scatter-point-series.md) which use the Cartesian (x, y) coordinate system to plot data. This series displays the data as a collection of scaled bubbles, each having a pair of numeric X/Y values that determines its location and 3rd value that determines its size.
@@ -38,7 +38,7 @@ The [`IgxBubbleSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript
 You can use the [SampleScatterStats](data-chart-data-sources-stats.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleScatterStats.getCountries() }
+public dataSource: any[] = SampleScatterStats.getCountries();
 ```
 
 ### Required Modules
@@ -57,7 +57,7 @@ import { IgxCustomPaletteBrushScale } from "igniteui-angular-charts/ES5/igx-cust
 import { BrushSelectionMode } from "igniteui-angular-charts/ES5/BrushSelectionMode";
 import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -65,7 +65,6 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
         IgxDataChartScatterModule,

@@ -35,17 +35,6 @@ import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellCo
 import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
 ```
 
-```ts
-import { Workbook } from "igniteui-webcomponents-excel/ES2015/Workbook";
-import { Worksheet } from "igniteui-webcomponents-excel/ES2015/Worksheet";
-import { WorkbookFormat } from "igniteui-webcomponents-excel/ES2015/WorkbookFormat";
-import { WorksheetTable } from "igniteui-webcomponents-excel/ES2015/WorksheetTable";
-import { NamedReference } from "igniteui-webcomponents-excel/ES2015/NamedReference";
-import { WorksheetCellComment } from "igniteui-webcomponents-excel/ES2015/WorksheetCellComment";
-import { FormattedString } from "igniteui-webcomponents-excel/ES2015/FormattedString";
-import { CellReferenceMode, Formula, CellFill } from 'igniteui-webcomponents-excel/ES2015/excel.core';
-```
-
 ### セルと領域を参照
 
 [`worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの `getCell` または `getRegion` メソッドを呼び出して [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクト または [`WorksheetRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
@@ -60,16 +49,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 var cell = worksheet.getCell("E2");
 //Accessing a range of cells
 var region = worksheet.getRegion("G1:G10");
-```
-
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-// Accessing a single cell
-let cell = worksheet.getCell("E2");
-// Accessing a range of cells
-let region = worksheet.getRegion("G1:G10");
 ```
 
 ### セルと領域に名前でアクセス
@@ -88,24 +67,11 @@ var cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
 var region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
 ```
 
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-let cell_reference = workbook.namedReferences().add("myCell", "=Sheet1:A1");
-let region_reference = workbook.namedReferences().add("myRegion", "=Sheet1!A1:B2");
-```
-
 以下のコードは、"myCell" と "myRegion" 名前付き参照によって参照されたセルと領域を取得する例です。
 
 ```ts
 var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
-```
-
-```ts
-let cell = worksheet.getCell("myCell");
-let region = worksheet.getRegion("myRegion");
 ```
 
 ### セルにコメントを追加
@@ -120,17 +86,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellComment = new WorksheetCellComment();
 var commentText = new FormattedString("This cell has a comment.");
-cellComment.text = commentText;
-
-worksheet.rows(0).cells(0).comment = cellComment;
-```
-
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-let cellComment = new WorksheetCellComment();
-let commentText = new FormattedString("This cell has a comment.");
 cellComment.text = commentText;
 
 worksheet.rows(0).cells(0).comment = cellComment;
@@ -152,17 +107,6 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
  sumFormula.applyTo(worksheet.rows(5).cells(0));
 ```
 
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.rows(5).cells(0).applyFormula("=SUM(A1:A5)");
-
- // Using a Formula object to apply a formula
- let sumFormula = Formula.parse("=SUM(A1:A5)", CellReferenceMode.A1);
- sumFormula.applyTo(worksheet.rows(5).cells(0));
-```
-
 ### セル書式のコピー
 
 セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの `cellFormat` プロパティで公開した各オプションを設定する代わりに [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトの `setFormatting` メソッドを呼び出して [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
@@ -181,20 +125,6 @@ worksheet.columns(1).cellFormat.font.bold = true;
 worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 ```
 
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-worksheet.rows(5).cells(0).applyFormula("=SUM(A1:A5)");
-
-// Format 2nd column
-worksheet.columns(1).cellFormat.fill = CellFill.createSolidFill("Blue");
-worksheet.columns(1).cellFormat.font.bold = true;
-
-// Copy format of 2nd column to 4th column
-worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
-```
-
 ### セルの書式設定
 
 Infragistics Excel Library は、セルの外観と動作をカスタマイズすることができます。[`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html)、[`WorksheetRow`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html)、[`WorksheetColumn`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html)、または [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
@@ -208,13 +138,6 @@ Infragistics Excel Library は、セルの外観と動作をカスタマイズ�
 ```ts
 var workbook = new Workbook(format);
 var workbook = workbook.worksheets().add("Sheet1");
-
-worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
-```
-
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
 
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 ```
@@ -251,14 +174,6 @@ var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellFill = CellFill.createSolidFill("Blue");
 worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
-```
-
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-let cellFill = CellFill.createSolidFill("Blue");
-worksheet.rows(0).cells(0).cellFormat.fill = cellFill;
 ```
 
 セルで線状グラデーションと長方形グラデーションを使用して、色 (Excel セルの背景、罫線などの色) を指定できます。これらのグラデーションを付けられたワークブックを .xls ファイル形式で保存して、Excel 2007/2010 で開いたとき、グラデーションを表示したいが、これらのファイルを Microsoft Excel 2003 で開くときは、最初のグラデーション境界からのベタ一色の色でセルが塗りつぶされるようにしたいです。
@@ -365,26 +280,6 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-// Make some column headers
-worksheet.rows(1).cells(1).value = "Morning";
-worksheet.rows(1).cells(2).value = "Afternoon";
-worksheet.rows(1).cells(3).value = "Evening";
-
-// Create a merged region from column 1 to column 3
-let mergedRegion1 =  worksheet.mergedCellsRegions().add(0, 1, 0, 3);
-
-// Set the value of the merged region
-mergedRegion1.value = "Day 1";
-
-// Set the cell alignment of the middle cell in the merged region.
-// Since a cell and its merged region shared a cell format, this will ultimately set the format of the merged region
-worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
-```
-
 ### Excel に表示されるセル テキストを取得
 
 セルに表示されるテキストは、書式文字列やセルが含まれる列幅など実際のセル値以外の複数の要因に依存します。
@@ -436,11 +331,4 @@ var workbook = new Workbook();
 var worksheet = this.workbook.worksheets().add("Sheet1");
 
 var cellText = worksheet.rows(0).cells(0).getText();
-```
-
-```ts
-let workbook = new Workbook();
-let worksheet = workbook.worksheets().add("Sheet1");
-
-let cellText = worksheet.rows(0).cells(0).getText();
 ```
