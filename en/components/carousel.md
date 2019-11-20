@@ -8,14 +8,21 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.</p>
 <div class="divider"></div>
 
-### Carousel Demo
-<div class="sample-container loading" style="height: 620px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+### Demo
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="carousel-base-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-base-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
 </div>
 
 
-### Usage
+### Getting Started
 The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
+
+#### First steps
+<div class="divider--half"></div>
 
 To get started with the Carousel component, install Ignite UI for Angular by typing the following command:
 
@@ -36,103 +43,162 @@ import { IgxCarouselModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Then in the template of our carousel component we can add the following markup to add two slides and define their html content:
+
+In the **onboarding** demo above we have 3 slides with images and one with an image and a sign up form, disabled [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop), custom indicators, which are positioned above the carousel and routing navigation to another component.
+
+In this section we will go through the setup of the demo.
+
+#### Configuring IgxCarousel
+<div class="divider--half"></div>
+
+By **default** carousel's **loop** behavior is set to true and the property, that sets  the position of the indicators ( [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) ) is assigned with `bottom`, we are going to change these properties with following code snippet:
 
 ```html
-<!-- app.component.html -->
-<igx-carousel>
-    <igx-slide>
-        <h3>Ignite UI for Angular</h3>
-        <p>30+ Material-based Angular components to code speedy web apps faster.</p>
-    </igx-slide>
-    <igx-slide>
-        <h3>Ignite UI for Javascript</h3>
-        <p>A complete JavaScript UI component library giving you the ability to build data-rich responsive web apps.</p>
-    </igx-slide>
-</igx-carousel>
+<div class="carousel-container">
+    <igx-carousel #carousel [loop]="false" indicatorsOrientation="top">
+      ...
+    </igx-carousel>
+</div>
 ```
 
-This is enough to have the carousel instantiated on our page, let's have a look at it:
+#### Adding slides with *ngFor
+<div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 230px">
-    <iframe id="carousel-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
-</div>
-
-### Displaying slides using the ngFor directive
-
-A real world scenario would include dynamically loading the slides and not declaring via markup. To demonstrate this, first we will provide the slides via code:
+For convenience we are going to create an array of objects in the **ts** file and use it to populate the **igx-carousel** with slides:
 
 ```typescript
-  // app.component.ts
-  public slides: any[] = [];
-  constructor() { }
-
-  public ngOnInit() {
-     this.addNewSlide();
-  }
-
-  public addNewSlide() {
-      this.slides.push(
-        { description: "30+ Material-based Angular components to code speedy web apps faster.",
-          heading: "Ignite UI for Angular",
-          image: "assets/images/carousel/slide1-angular.png"},
-        { description: "A complete JavaScript UI library empowering you to build data-rich responsive web apps.",
-          heading: "Ignite UI for Javascript",
-          image: "assets/images/carousel/slide2-ignite.png"}
-      );
-  }
+...
+public slides = 
+  [
+      {
+        src: "assets/images/svg/carousel/Onboarding1.svg"
+      },
+      {
+        src: "assets/images/svg/carousel/Onboarding2.svg"
+      },
+      {
+        src: "assets/images/svg/carousel/Onboarding3.svg"
+      }
+  ];
+...
 ```
-And now we are ready to add the ngFor directive to the [`igx-slide`]({environment:angularApiUrl}/classes/igxslidecomponent.html) and provide our html inside as usual. We are also adding an image to each slide:
+
+Since the first three slides are going to contain only images we will use **ngFor** to add them in the template:
+```html
+...
+  <igx-slide  *ngFor="let slide of slides;">
+      <div class="image-container">
+          <img style="width: 80%" [src]="slide.src">
+      </div>
+  </igx-slide>
+...
+```
+#### Slide containing other components
+<div class="divider--half"></div>
+
+The last slide is going to contain an image, a sign up form and a button for routing, so we are going to define it separately:
+```html
+...
+  <igx-slide>
+      <div class="slide-content-wrapper">
+
+          <div style="margin: 20px auto; width: 60%">
+              <img style="width: 80%" src="assets/images/svg/carousel/SignUp.svg">
+              <button igxButton="icon" (click)="goTo()">
+                  <igx-icon class="icon" fontSet="material">info</igx-icon>
+              </button>
+          </div>
+
+          <form #form class="signInForm" >
+              <igx-input-group>
+                  <igx-prefix>
+                      <igx-icon>person</igx-icon>
+                  </igx-prefix>
+                  <label style="display: flex;" igxLabel for="username">Username</label>
+                  <input igxInput id="username" type="text" />
+              </igx-input-group>
+              <igx-input-group>
+                  <igx-prefix>
+                      <igx-icon>lock</igx-icon>
+                  </igx-prefix>
+                  <label style="display: flex;" igxLabel for="password">Password</label>
+                  <input igxInput id="password" type="password" />
+              </igx-input-group>
+          </form>
+          <button igxButton="raised" type="submit" (click)="form.reset()">Sign Up</button>
+      </div>
+  </igx-slide>
+...
+```
+
+#### Custom indicators
+<div class="divider--half"></div>
+
+The last step to create the carousel in the [demo](carousel.md#demo) is to add custom carousel indicators.
+We will going to achieve this using the [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html):
 
 ```html
-<!-- app.component.html -->
-<igx-carousel #carousel>
-    <igx-slide *ngFor="let slide of slides;">
-        <h3>{{slide.heading}}}</h3>
-        <p>{{slide.description}}}</p>
-        <img [src]="slide.image">
-    </igx-slide>
+...
+  <ng-template igxCarouselIndicator let-slide>
+      <div [ngClass]="{'selected': slide.current === current}" class="indicator"></div>
+  </ng-template>
+...
+```
+### Animations
+
+Animated slide transitioning gives the end users nice experience during their interaction with the carousel.
+
+#### Animation types
+
+[IgxCarousel]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) has two animations for slide transitioning:
+
+- **Slide** animation
+- **Fade** animation
+
+The **deafult** one is **Slide** and you can change it through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype) input, like this:
+
+```html
+
+<igx-carousel animationType="fade">
+...
 </igx-carousel>
+
 ```
+Setting `none` to the `animationType` input disables carousel's animations.
 
-The carousel that we created is functional but not really well looking. Let's add some styles to it starting from the navigation as it is the most important feature. Previous and Next arrows must be eye catching so we need to change their default color and center the carousel content:
+#### Demo
 
-```css
-/* app.component.css */
-.igx-carousel__inner {
-    width: 100%;
-    text-align: center; 
-}
-a > igx-icon > span{
-    color: #e41c77;
-}
-```
-
-Let's see what we have now, sure looks better with the arrows standing out clearly on both sides and all the content centered:
+The demo below demonstrates the different slide transition approaches, which the carousel supports. 
 
 <div class="sample-container loading" style="height: 600px">
-<iframe id="carousel-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="carousel-animations-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-animations-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-animations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
-### Navigation
 
-As mentioned navigation and transition are the most important carousel features. One should make sure that the transition interval, auto playing and pausing are configured as per the requirements. All those are easily managed through the exposed properties, like we are going to demonstrate now. Say we don't want to distract the users, so we will stop the automatic playing, enable pausing on interactions and enable looping (looping is when first slide comes after navigating Next from last slide):
+### Navigation and Transition
 
+Transition and navigation are the most important carousel features.
+Enabling [navigation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#navigation) of the carousel will render the navigation buttons.
+The last two demos demostrated two types of transition - with user interaction (button click) and automatic slide change.
+
+#### Automatic transitioning
+To enable automatic transitioning a numeric value should be assigned to the transition [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval),  which sets the amount of time in milliseconds between slides transition. 
+
+>[!NOTE]
+>Entering the slide area with the mouse coursor or focusing it with a tab click **will stop the current slide transition until `mouseleave`/blur**. This is regulated by the [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) input, unless the transition is regulated by the user from the [stop]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#stop)/[play]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#play) methods (e.g. like in the animation [demo](carousel.md#demo-1)), then the slide transitioning is controlled entirely by the user.
+
+Say we want to create a carousel, which is going to loop over a couple of slides, without any interruptions, no indecators and the navigation is done only with a list items:
+
+The carousel template will look like this
 ```html
-<!-- app.component.html -->
-<igx-carousel #carousel [loop]="loop" [pause]="pause">
-...
+<igx-carousel #carousel navigation="false" pause="false">
+  <!-- slides area -->
 </igx-carousel>
 ```
-In the above snippet we are setting values to the [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) and [`pause`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) element properties using [property binding](https://angular.io/guide/template-syntax#property-binding). Another optional property to set is the [`interval`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval), which sets the amount of time in milliseconds between slides transition. We are skipping this as we do not want our carousel to transition the content by itself, but want it to be entirely controlled by the user. The component properties values are provided via code below. Notice that to disable the automatic playing we need to call the [`stop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#stop) method exposed by the carousel:
 
 ```typescript
   // app.component.ts
@@ -204,13 +270,11 @@ ul.igx-carousel__indicators {
 }
 ```
 
-Following all the steps above brings us a nice and functional carousel that the user has full control over using the navigation arrows. The linear bar provides adittional UI that acts as an indicator of the user progress:
-
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 750px">
+<iframe id="carousel-no-navigation-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-no-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
@@ -245,7 +309,7 @@ Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The `go
 Given this configuration, the router matches that URL to the given route path **/details:index** and displays the corresponding page:
 
 <div class="sample-container loading" style="height: 620px">
-    <iframe data-src='{environment:demosBaseUrl}/layouts/carousel-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe data-src='{environment:demosBaseUrl}/layouts/carousel-base-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ###API References
