@@ -220,7 +220,7 @@ public priceClasses = {
 #### cellStyles の使用
 列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
-[上記のサンプル](conditional_cell_styling.md#demo-with-cellstyles)で作成した項目:
+[上記のサンプル](conditional_cell_styling.md#cellStyles-を使用したデモ)で作成した項目:
 - 列インデックスに基づいて適用される 2 つの異なるスタイル。 
 - また、偶数/奇数行に基づいて`テキストの色`を変更します。
 
@@ -321,7 +321,7 @@ public updateCSS(css: string) {
 #### 既知の問題と制約
 
 - 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
-残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントでスプレッド演算子...を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子`...を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {
