@@ -157,6 +157,9 @@
     - name: サイズ変更
       href: grid/sizing.md
       new: true
+    - name: Grid マスターと詳細
+      href: grid/master_detail.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
