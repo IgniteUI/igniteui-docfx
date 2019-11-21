@@ -143,23 +143,21 @@ Additionally, you can specify **arguments** to control the theme or skip package
 
 
 ### Add template
-To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](cli/step-by-step-guide.md#add-view). 
+To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](cli/step-by-step-guide.md#add-view). Supported only inside existing projects created with the Angular Schematics, Ignite UI CLI or where Ignite UI for Angular has been [installed using `ng add`](getting_started.md#installing-ignite-ui-for-angular).
 
 With Schematics, use `ng generate` with the Ignite UI for Angular collection and `component [template] [name]`:
 
 ```cmd
-cd newAngularProject
 ng g @igniteui/angular-schematics:component grid newGrid
 ```
 
 For Ignite UI CLI use the `ig add [template] [name]` command:
 
 ```cmd
-cd newAngularProject
 ig add grid newGrid
 ```
 
-The `add` command is supported only on existing project created with the Ignite UI CLI. To get a list of all the [available templates](cli/component-templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
+To get a list of all the [available templates](cli/component-templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
 
 Additionally, you can specify the module in which the component will be registered or skip the auto-generation of app navigation route:
 
