@@ -56,8 +56,8 @@ ng add igniteui-angular
 
 During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
 
-#### Quick Start with the Ignite UI Schematics & CLI
-To create an application from scratch and configure it to use the Ignite UI components you can use either the Ignite UI Schematics or the Ignite UI CLI. The first step is to install the respective tool globally as follows:
+#### Quick Start with Angular Schematics & Ignite UI  CLI
+To create an application from scratch and configure it to use the Ignite UI for Angular components you can use either the Ignite UI for Angular Schematics or the Ignite UI CLI. The first step is to install the respective package globally as follows:
 
 ```cmd
 npm i -g @igniteui/angular-schematics
@@ -69,9 +69,9 @@ or:
 npm install -g igniteui-cli 
 ```
 
-The Ignite UI CLI [`guided experience`](cli/step-by-step-guide.md) is the easiest way to bootstrap a configured application.
+Our [`guided experience`](cli/step-by-step-guide.md) is the easiest way to bootstrap a configured application.
 
-To activate the guide using the Ignite UI Angular Schematics run:
+To activate the guide using the Ignite UI for Angular Schematics run:
 ```cmd
 ng new --collection="@igniteui/angular-schematics"
 ```

@@ -6,7 +6,7 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
-- name: Ignite UI Angular Schematics & CLI
+- name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
   items:

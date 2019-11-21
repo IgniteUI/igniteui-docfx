@@ -5,9 +5,9 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 ---
 
 ## Step-by-Step Guide
-If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics or the CLI tool](../cli-overview.md).
+If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics or Ignite UI CLI](../cli-overview.md).
 
-To activate the guide using the Schematics tool run:
+To activate the guide using the Schematics collection run:
 
 ```cmd
 ng new --collection="@igniteui/angular-schematics"
@@ -56,14 +56,14 @@ After completing the above steps the application structure will be generated, gi
 
 ## Add view
 
-Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project.
+Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project. This mode can be activated either after completing project creation or inside an existing project using the commands below.
 
-To activate the the step by step mode using the Schematics tool run the `component`(alias:`c`) schematic:
+To activate the the step by step mode using the Schematics collection run the `component`(alias:`c`) schematic:
 ```bash
 ng g @igniteui/angular-schematics:component
 ```
 
-When using the CLI, this mode can be activated either after completing project creation or by running the `add` command inside an existing project:
+When using Ignite UI CLI, run the `add` command:
 ```bash	
 ig add
 ```
