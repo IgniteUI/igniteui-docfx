@@ -1,6 +1,6 @@
 const path = require('path');
 const del = require('del');
-const gulp = require('gulp');
+const {dest, series, src, watch} = require('gulp');
 const shell = require('gulp-shell');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
@@ -29,7 +29,7 @@ const cleanup =  async (done) => {
      });
 }
 
-const environment_variables_config =  (done) => {
+const environmentVariablesConfig =  (cb) => {
     var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
 
     if (process.env.NODE_ENV) {
@@ -49,12 +49,10 @@ const environment_variables_config =  (done) => {
         `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
         JSON.stringify(environmentVariablesConfig)
     );
-    done();
+    cb();
 }
 
-// gulp.task('post-processor-configs', gulp.series('cleanup', 'environment-variables-config'));
-
-const generate_grids_topics = (done) => {
+const generateGridsTopics = (cb) => {
     const grids = [
         {
             igPath: '/grid',
@@ -88,7 +86,7 @@ const generate_grids_topics = (done) => {
     for (let j = 0; j < grids.length; j++) {
         const grid = grids[j];
 
-        gulp.src([DOCFX_ARTICLES + '/grids_templates/*.md'])
+        src([DOCFX_ARTICLES + '/grids_templates/*.md'])
             .pipe(fileinclude({
                 prefix: '@@',
                 basepath: '@file',
@@ -101,14 +99,13 @@ const generate_grids_topics = (done) => {
                     "igSelector": grid.igSelector
                 }
             }))
-            .pipe(gulp.dest(DOCFX_ARTICLES + grid.igPath));
+            .pipe(dest(DOCFX_ARTICLES + grid.igPath));
     }
-    done();
+     cb();
 }
 
 const  styles = () => {
-    return gulp
-        .src(`${DOCFX_TEMPLATE}/styles/sass/main.scss`)
+  return src(`${DOCFX_TEMPLATE}/styles/sass/main.scss`)
         .pipe(sass().on('error', sass.logError))
         .pipe(
             autoprefixer({
@@ -116,25 +113,27 @@ const  styles = () => {
                 cascase: false
             })
         )
-        .pipe(gulp.dest(`${DOCFX_TEMPLATE}/styles/css`));
+        .pipe(dest(`${DOCFX_TEMPLATE}/styles/css`));
 };
 
-const build_site = shell.task([`docfx build ${DOCFX_CONF}`]);
+const buildSite = async() => {
+     await shell.task(`docfx build ${DOCFX_CONF}`)(done =>  done());
+
+};
 
 // const build_site = (done) => exec(`docfx build ${DOCFX_CONF}`, {})
 //                             .on("message", (message) => console.log(message))
 //                             .on("exit", () => done());
-gulp.task('build', gulp.series(cleanup, environment_variables_config, styles, generate_grids_topics, build_site));
 
-gulp.parallel(asd);
-// gulp.task('build-travis', gulp.series(
+// gulp.parallel(asd);
+// gulp.task('build-travis', series(
 //     'styles',
 //     'cleanup',
 //     'post-processor-configs',
 //     'generate-grids-topics'
 // ));
 
-gulp.task('serve', gulp.series('build', (done) => {
+const init = (done) => {
     browserSync.init({
         server: {
             baseDir: `${DOCFX_SITE}`
@@ -175,13 +174,20 @@ gulp.task('serve', gulp.series('build', (done) => {
         `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
     ];
  
-    gulp.watch(`${DOCFX_TEMPLATE}/**/*`, gulp.series('watch'));
-    gulp.watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), gulp.series('build'));
+    watch(`${DOCFX_TEMPLATE}/**/*`, watcher);
+    watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), watcher );
 
     done();
-})); 
+};
 
-gulp.task('watch', gulp.series('build'), done => {
+
+
+const  browserSyncReload = (done) => {
     browserSync.reload();
     done();
-});
+};
+
+const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
+const build = series(generateGridsTopics ,postProcessorConfigs, styles, buildSite);
+const watcher = series(build, browserSyncReload);
+exports.serve = series(build, init);
