@@ -88,7 +88,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-Alternatively you can use the Ignite UI Schematics collection or CLI [`commands`](cli-overview.md#commands) for generating an Ignite UI project, adding a new component or building and serving the application.
+Alternatively you can use the Ignite UI Schematics collection or CLI commands for generating an Ignite UI project, adding a new component or building and serving the application.
 
 ## Using Ignite UI for Angular
 
@@ -115,14 +115,10 @@ After going through the options of the menu and choosing which component we want
 
 #### Run application
 
-Now let’s run our application with the `start` schematic or [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) command to see our awesome page!
+Now let’s run our application to see our awesome page!
 
 ```cmd
-ng g @igniteui/angular-schematics:start
-```
-
-```cmd
-ig start
+npm start
 ```
 
 ### Add components manually

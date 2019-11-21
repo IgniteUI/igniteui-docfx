@@ -47,19 +47,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-<!-- #### Using commands
-To create new project, add a component template and build it use the following Ignite UI CLI [commands](#commands):
-```cmd
-ig new <project name> --framework=angular --type=igx-ts 
-cd <project name>
-ig add <component/template> <component_name>
-ig start 
-```
-
-To execute the above commands, you should replace the *project name* and *component_name* placeholders with an actual value.
-After running these commands, your new project will be built, served and automatically opened in your default browser. -->
-
-
+Otherwise you can use the Ignite UI Schematics collection or CLI commands for creating an Ignite UI project, adding new component/s or building the application.
 
 ### Create new project
 
@@ -73,7 +61,7 @@ If you use Ignite UI CLI you need to provide `angular` as framework and `igx-ts`
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 ```
-The new application is created in a directory with the same name (`newAngularProject`). [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) also provides several project templates from which you can choose when creating an Ignite UI for Angular application:
+The new application is created in a directory with the same name (`newAngularProject`). There are several project templates from which you can choose when creating an Ignite UI for Angular application:
 
 | template id   | template description |
 | ---           | ---                  |
