@@ -340,7 +340,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ### 一意の列値ストラテジ
 
-The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. These values can be provided manually and loaded on demand, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#unique-column-values-strategy) topic.
+Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。これらの値は手動で提供し、ロード オン デマンドすることができます。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#一意の列値ストラテジ)で説明されています。
 
 ### スタイル設定
 

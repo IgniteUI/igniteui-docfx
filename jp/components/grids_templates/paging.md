@@ -85,9 +85,9 @@ this.@@igObjectRef.perPage = 25;
 this.@@igObjectRef.paging = false;
 ```
 
-### Remote Paging
+### リモート ページング
 
-The @@igComponent supports remote paging, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
+@@igComponent はリモート ページングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#リモート-ページング) トピックで説明されています。
 
 @@if (igxName === 'IgxGrid') {
 ### グループ化によるページング

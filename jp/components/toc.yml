@@ -66,7 +66,7 @@
     - name: 仮想化とパフォーマンス
       href: grid/virtualization.md
       new: false
-    - name: Remote Data Operations
+    - name: リモート データ操作
       href: grid/remote_data_operations.md
       new: true
     - name: 編集
@@ -170,7 +170,7 @@
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
       new: false
-    - name: Remote Data Operations
+    - name: リモート データ操作
       href: treegrid/remote_data_operations.md
       new: true
     - name: ロードオンデマンド
@@ -265,7 +265,7 @@
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
       new: false
-    - name: Remote Data Operations
+    - name: リモート データ操作
       href: hierarchicalgrid/remote_data_operations.md
       new: true
     - name: ロードオンデマンド

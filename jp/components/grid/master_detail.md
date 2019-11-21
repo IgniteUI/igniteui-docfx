@@ -2,6 +2,7 @@
 title: Angular Grid マスターと詳細 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI Angular Grid の行の展開可能な詳細ビュー テンプレートを定義する方法について説明します。
 _keywords: マスターと詳細, igniteui for angular, インフラジスティックス
+_language: ja
 ---
 
 ### Grid マスターと詳細

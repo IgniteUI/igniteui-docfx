@@ -62,8 +62,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 @@if (igxName === 'IgxGrid') {
 ### リモート仮想化
 
-[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、データ チャンクがリモート サービスから要求されるシナリオをサポートし、内部で使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブで実装された動作を公開します。
-
+@@igComponent はリモート仮想化をサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
 
 ### 仮想化の制限
 
