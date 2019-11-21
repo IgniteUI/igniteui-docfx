@@ -1,5 +1,5 @@
 ---
-title: Ignite UI Angular Schematics & CLI
+title: Angular Schematics & Ignite UI CLI
 _description: Angular Schematics and Ignite UI CLI help you get a jump start on creating and modifying projects with Ignite UI for Angular components.
 _keywords: Ignite UI for Angular, UI controls, Schematics, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
@@ -25,7 +25,6 @@ If you choose to use the Ignite UI CLI you can install it using npm:
 ```cmd
 npm install -g igniteui-cli 
 ```
-Once the installation process is finished, you can start whichever of both tools using either guided experience or specific commands.
 
 #### Using guided experience
 The shortest and easiest way to bootstrap an application is to use the [Step-by-Step Guide](cli/step-by-step-guide.md). 
