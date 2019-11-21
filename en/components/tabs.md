@@ -17,12 +17,16 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
-
 ### Usage
 
-To get started with the Ignite UI for Angular Tabs component, let's first import the `IgxTabsModule` in the **app.module.ts** file.
+To get started with the Tabs component, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxTabsModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts

@@ -120,6 +120,16 @@ To change the position settings of an already existing strategy, override any of
     overlay.show(overlayId, overlaySettings);
 ```
 
+### Offsetting the overlay content
+
+To offset the content along the corresponding axis by a provided amount:
+```typescript
+    // deltaX and deltaY determine by how much the content will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    overlay.setOffset(this._overlayId, deltaX, deltaY);
+```
+
 ## Position strategies
 
 There are five position strategies:

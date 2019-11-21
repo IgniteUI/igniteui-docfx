@@ -37,7 +37,7 @@ Financial series, indicators, and overlays have the following data requirements:
 You can use the [SampleFinancialData](data-chart-data-sources-financial.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleFinancialData.create() }
+public dataSource: any[] = SampleFinancialData.create();
 ```
 
 ### Required Modules
@@ -53,15 +53,18 @@ import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financi
 import { IgxBollingerBandsOverlay } from "igniteui-angular-charts/ES5/igx-bollinger-bands-overlay";
 import { IgxMedianPriceIndicator } from "igniteui-angular-charts/ES5/igx-median-price-indicator";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
+import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxFinancialPriceSeriesModule } from "igniteui-angular-charts/ES5/igx-financial-price-series-module";
 
 // in app.module.ts file
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        IgxFinancialPriceSeriesModule,
         // ...
     ]
 })

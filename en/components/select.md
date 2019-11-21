@@ -14,12 +14,16 @@ The Ignite UI for Angular Select component allows a single item selection from a
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
->[!WARNING]
->To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](general/getting_started.md) topic.
-
 
 ## Usage
-To get started with the Select component you first need to import the `IgxSelectModule`:
+To get started with the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Then you need to import the `IgxSelectModule`:
 ```typescript
 // app.module.ts
 
@@ -62,6 +66,18 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 ```
 Additionally, the above sample illustrates two-way data-binding via `ngModel`. What is more, you can use the Select component in [`Angular Forms`](#select-in-angular-forms).
 
+
+By default, the select component will use the selected item's element `innerText` to be displayed in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when this item is selected. For example:
+
+```html
+<igx-select>
+    <igx-select-item *ngFor="let item of items" [value]="item.value" [text]="item.text">
+        {{item.text}} ( {{item.count}} )
+    </igx-select-item>
+</igx-select>
+
+```
+To see `text` property in action with a bit more complicated item template, check the below grouping sample [Select with Groups](#select-with-groups).
 
 
 ### Label, Prefix and Suffix
@@ -271,18 +287,32 @@ Another thing worth mentioning is that `igx-select` uses the `SelectPositioningS
 To help visually separate item groups, select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
 ```typescript
-public greengrocery: any[] = [
-    { label: "Fruits", items: [ "Apple", "Orange", "Banana" ] },
-    { label: "Vegetables", items: [ "Cucumber", "Potato", "Pepper" ] }
-];
+    public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
+            { label: "Fruits", items:[
+                    { type: "Apple", origin: "local" },
+                    { type: "Orange", origin: "import" },
+                    { type: "Banana", origin: "import"}
+                ]
+            },
+            { label: "Vegetables", items: [
+                    { type: "Cucumber", origin: "local" },
+                    { type: "Potato", origin: "import" },
+                    { type: "Pepper", origin: "local" }
+                ]
+            }
+        ];
 ```
 
 Then in your template file you can iterate over the greengrocery objects and access their items accordingly:
 ```html
 <igx-select>
     <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
-        <igx-select-item *ngFor="let item of group.items" [value]="item">
-            {{item}}
+        <igx-select-item *ngFor="let item of group.items" [value]="item.type" [text]="item.type">
+            {{item.type}}
+            <igx-icon title="Local product" class="icon" color="green" *ngIf="item.origin === 'local';else templateImport">local_shipping</igx-icon>
+            <ng-template #templateImport>
+                <igx-icon title="Import product" class="icon" color="orange">flight</igx-icon>
+            </ng-template>
         </igx-select-item>
     </igx-select-item-group>
 </igx-select>

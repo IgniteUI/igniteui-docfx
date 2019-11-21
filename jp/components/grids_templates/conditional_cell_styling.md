@@ -23,12 +23,37 @@ _language: ja
 ---
 }
 
-### @@igxName 条件付きセルのスタイル設定
-Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいた**条件付きセル**のスタイル設定をサポートします。
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) をキーと値のペアを含むオブジェクト リテラルに設定します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
+### @@igComponent Conditional Cell Styling
+The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of cells** based on custom rules.
 
-#### デモ
+- By setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
+
+```ts
+// component.ts file
+public beatsPerMinuteClasses = {
+    downFont: this.downFontCondition,
+    upFont: this.upFontCondition
+};
+...
+
+private downFontCondition = (rowData: any, columnKey: any): boolean => {
+    return rowData[columnKey] <= 95;
+}
+```
+
+```css
+// component.scss file
+.upFont {
+    color: red;
+}
+
+.downFont {
+    color: green;
+}
+```
+
+#### Demo with 'cellClasses'
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -36,7 +61,7 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム条�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -45,7 +70,7 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム条�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -53,8 +78,51 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム条�
 }
 <div class="divider--half"></div>
 
-#### 概要
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
+- By using the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles) which accepts an object literal where the keys are style properties and the values are expressions for evaluation.
+
+```ts
+public styles = {
+    "background": "linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)",
+    "text-shadow": "1px 1px 2px rgba(25,25,25,.25)",
+    "animation": "0.25s ease-in-out forwards alternate popin"
+};
+```
+
+> The callback signature for both `cellStyles` and `cellClasses` is now changed to:
+
+```ts
+(rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
+```
+
+#### Demo with 'cellStyles'
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-cell-cellStyling-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-cell-cellStyling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
+<div class="divider--half"></div>
+
+### Overview
+
+#### Using cellClasses
+You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and define custom rules.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -77,7 +145,7 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム条�
 <!-- TODO -->
 }
 
-[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+The [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -147,7 +215,108 @@ public priceClasses = {
 <!-- TODO -->
 }
 
-**::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
+Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
+
+#### Using cellStyles
+Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
+
+In the [sample above](conditional_cell_styling.md#demo-with-cellstyles) we've created:
+- Two different styles that will be applied based on the column index. 
+- You will also change the `text color` based on even/odd rows.
+
+> The callback signature for both `cellStyles` is:
+
+```ts
+(rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
+```
+
+Let's define our styles:
+
+```typescript
+// component.ts
+public oddColStyles = {
+    background: "linear-gradient(to right, #b993d6, #8ca6db)",
+    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "white" : "gray",
+    animation: "0.75s popin"
+};
+
+public evenColStyles = {
+    background: "linear-gradient(to right, #8ca6db, #b993d6)",
+    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "gray" : "white",
+    animation: "0.75s popin"
+};
+
+```
+
+On `ngOnInit` we will add the `cellStyles` configuration for each column of the predefined `columns` collection, which is used to create the @@igxName columns dynamically.
+
+```ts
+// component.ts
+public ngOnInit() {
+    this.data = athletesData;
+    this.columns = [
+        { field: "Id" },
+        { field: "Position" },
+        { field: "Name" },
+        { field: "AthleteNumber" },
+        { field: "CountryName" }
+    ];
+
+    this.applyCSS();
+}
+
+public applyCSS() {
+    this.columns.forEach((column, index) => {
+        column.cellStyles = (index % 2 === 0 ? this.evenColStyles : this.oddColStyles);
+    });
+}
+
+public updateCSS(css: string) {
+    this.oddColStyles = {...this.oddColStyles, ...JSON.parse(css)};
+    this.evenColStyles = {...this.evenColStyles, ...JSON.parse(css)};
+    this.applyCSS();
+}
+```
+
+```html
+// component.html
+<igx-grid
+    #grid1 [data]="data"
+    primaryKey="ID"
+    width="80%"
+    height="300px">
+    <igx-column *ngFor="let c of columns"
+        [field]="c.field"
+        [header]="c.field"
+        [cellStyles]="c.cellStyles">
+    </igx-column>
+</igx-grid>
+```
+
+Define a `popin` animation
+
+```scss
+// component.scss
+@keyframes popin {
+    0% {
+        opacity: 0.1;
+        transform: scale(.75, .75);
+        filter: blur(3px) invert(1);
+    }
+
+    50% {
+        opacity: .5;
+        filter: blur(1px);
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+        filter: none;
+    }
+}
+```
+
 
 #### Known issues and limitations
 

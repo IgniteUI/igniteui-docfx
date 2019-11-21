@@ -21,6 +21,12 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 依存関係
+Ripple ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
 Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxRippleModule` をインポートする必要があります。
 
@@ -210,7 +216,7 @@ $custom-theme: igx-ripple-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API リファレンス

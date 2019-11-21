@@ -14,16 +14,22 @@ _language: ja
     <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
-
 ### 使用方法
 
-[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。Ignite UI for Angular Mask ディレクティブを初期化する前に、`IgxMaskModule` および `IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。**igxMask** ディレクティブを任意の Angular 入力コントロールと使用できます。
+[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。
+
+Mask ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -79,7 +85,7 @@ export class AppModule {}
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 #### 書式設定付き/Raw 値にバインド
@@ -123,7 +129,7 @@ public clear() {
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 #### マスク値を検証
@@ -269,7 +275,7 @@ inputFormat = new InputFormatPipe();
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 #### プレースホルダーの追加
@@ -292,7 +298,7 @@ value = null;
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API リファレンス

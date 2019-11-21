@@ -20,8 +20,16 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
 
 ## Usage
 
-The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
-To get started with the IgniteUI for Angular Toggle, let's first import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
+The toggle allows you to wrap some content into a box which can be easily opened and closed.
+
+To get started with the Toggle directive, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Now let's import the **IgxToggleModule** in our **app.module.ts**. We are also planning to take advantage of [**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) directive so we will have to import **IgxButtonModule** into the **app.module.ts** too.
 
 ```typescript
 // app.module.ts
@@ -248,12 +256,22 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 <custom-component #reference></custom-component>
 ```
 
+### Offsetting the toggle container
+
+To offset the container along the corresponding axis by a provided amount:
+```typescript
+    // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    this.toggleForm.setOffset(deltaX, deltaY);
+```
+
 ## API Summary
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behavior.
 Furthermore we added another helping directive which controls automatically this same behavior by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.
 
-###API References
+### API References
 <div class="divider"></div>
 
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)

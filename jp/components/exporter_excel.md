@@ -19,7 +19,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

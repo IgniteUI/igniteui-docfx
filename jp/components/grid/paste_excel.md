@@ -28,7 +28,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-paste-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 

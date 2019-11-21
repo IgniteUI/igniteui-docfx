@@ -7,12 +7,12 @@ _language: ja
 
 ## WPF から Angular への移行チュートリアル
 
-WPF から Angular への移行チュートリアルは、`デスクトップ`から `Web` フレームワークへのスムーズな移行を行うための最初のステップです。このチュートリアルは、Web 開発の第一歩を踏み出す WPF 開発者を対象としており、アプリケーション構造、データバインディング、イベント、コンポーネントなど、両方のフレームワークの相違点と類似点を検証します。ガイドは以下のトピックで構成されています。
+WPF から Angular への移行チュートリアルは、`デスクトップ`から `Web` フレームワークへのスムーズな移行を行うための最初のステップです。このチュートリアルは、これから Web 開発を始める WPF 開発者を対象としており、アプリケーション構造、データバインディング、イベント、コンポーネントなど、両方のフレームワークの相違点や類似点を検証していきます。コンテンツは、以下のトピックで構成されます。
 - [はじめての Angular アプリを作成](create_first_angular_app.md)
 - [Angular コンポーネントを使用した UI の作成](create_ui_with_components.md)
-- [One-Way バインディング](one_way_binding.md)
+- [一方向バインディング](one_way_binding.md)
 - [Angular イベント](angular_events.md)
-- [Two-way バインディング](two_way_binding.md)
+- [双方向バインディング](two_way_binding.md)
 - [Angular パイプでデータを変換](angular_pipes.md)
 - [Angular の構造ディレクティブ](structural_directives.md)
 - [レイアウト要素](layout.md)

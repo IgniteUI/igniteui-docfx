@@ -1,4 +1,4 @@
----
+﻿---
 title: Circular Progress コンポーネント
 _description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Circular Progress コンポーネント, Angular Circular Progress コントロール
@@ -22,7 +22,14 @@ _language: ja
 
 Circular Progress Indicator はプロセスの進行状況を表示します。
 
-Ignite UI for Angular Circular Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+Circular Progress Indicator を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに  **IgxProgressBarModule** をインポートします。
 
 ```typescript
 // app.module.ts
@@ -113,7 +120,7 @@ export class AppModule {}
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/circular-progressbar" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -121,6 +128,18 @@ export class AppModule {}
 >デフォルトの進行状況のアップデートは、**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%** で、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値が定義されていない場合に発生します。より速い進行の場合、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) * 1%**) より大きい値に定義し、より遅い進行はデフォルト進捗状況未満にする必要があります。
 
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 入力に値を提供する場合、この値は [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value)入力より大きい値に定義します。それ以外の場合、**進行状況の更新に渡す値を取得する更新は一度のみとなります。
+<div class="divider--half"></div>
+
+#### 不確定の進行状態
+
+あらかじめ設定された終了状態を提供しないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) 入力プロパティを `true` に設定できます。プログレスバーにこのバインドを適用すると以下のような結果になります。
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="indeterminate-progressbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="indeterminate-progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
 <div class="divider--half"></div>
 
 ### スタイル設定
@@ -218,7 +237,7 @@ $custom-theme: igx-progress-circular-theme(
 ```
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:350px">
     <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 
@@ -226,7 +245,7 @@ $custom-theme: igx-progress-circular-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API

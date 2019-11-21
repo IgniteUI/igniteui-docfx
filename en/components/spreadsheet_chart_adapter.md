@@ -36,17 +36,17 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
 -   Column Charts
     -   Clustered column
     -   Stacked column
-    -   100% stacked column  
--   Line Charts  
+    -   100% stacked column
+-   Line Charts
     -   Line
     -   Line with Markers
     -   Stacked line
     -   Stacked line with markers
     -   100% stacked line
-    -   100% stacked line with markers  
+    -   100% stacked line with markers
 -   Pie Charts
--   Doughnut Charts  
--   Bar Charts  
+-   Doughnut Charts
+-   Bar Charts
     -   Clustered bar
     -   Stacked bar
     -   100% stacked bar
@@ -54,7 +54,7 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
     -   Area
     -   Stacked area
     -   100% stacked area
--   XY (Scatter) and Bubble Charts  
+-   XY (Scatter) and Bubble Charts
     -   Scatter (with Marker only)
     -   Scatter with smooth lines
     -   Scatter with smooth lines and markers
@@ -62,16 +62,16 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
     -   Scatter with straight lines and markers
     -   Bubble (without effects)
     -   Bubble3DEffect
--   Stock Charts  
+-   Stock Charts
     -   High-low-close
     -   Open-high-low-close
     -   Volume-high-low-close
     -   Volume-open-high-low-close
--   Radar Charts  
+-   Radar Charts
     -   Radar without markers
     -   Radar with markers
     -   Filled Radar
--   Combo Charts  
+-   Combo Charts
     -   Column and line chart sharing xAxis
     -   Column and line chart and 2nd xAxis
     -   Stacked Area and Column
@@ -79,23 +79,25 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
 
 ### Dependencies
 
+> [!NOTE]
+>
+> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
+
 When setting up your spreadsheet control to add charts, you will need to import the [`SpreadsheetChartAdapter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) class like so:
 
 ```ts
 import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
-
----
 import { SpreadsheetChartAdapter } from "igniteui-angular-spreadsheet-chart-adapter/ES5/SpreadsheetChartAdapter";
 
 import { ChartTitle, ChartType, FormattedString, Workbook } from "igniteui-angular-excel/ES5/excel.core";
-import { ExcelUtility } from "../../utilities/excel-utility";
+import { ExcelUtility } from "ExcelUtility";
 import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
 import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
 ```
 
 ### Code Snippet
 
-The following code snippet demonstrates how to add charts to the currently viewed worksheet in the [`IgxSpreadsheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheet.html) control:
+The following code snippet demonstrates how to add charts to the currently viewed worksheet in the `XamSpreadsheet` control:
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();

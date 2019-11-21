@@ -53,7 +53,7 @@ Scatter shape series have the following data requirements:
 You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleShapeData.create() }
+public dataSource: any[] = SampleShapeData.create();
 ```
 
 ### Required Modules
@@ -68,7 +68,7 @@ import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis"
 import { IgxScatterPolygonSeries } from "igniteui-angular-charts/ES5/igx-scatter-polygon-series";
 import { IgxScatterPolylineSeries } from "igniteui-angular-charts/ES5/igx-scatter-polyline-series";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartShapeCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-core-module";
 import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-module";
@@ -76,7 +76,6 @@ import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-ch
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartShapeCoreModule,
         IgxDataChartShapeModule,

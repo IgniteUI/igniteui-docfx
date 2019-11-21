@@ -58,7 +58,7 @@ _language: ja
 ### カスタム キーボード ナビゲーション
 特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event（keydown）= "onKeydown（$ event）"を使用できます。
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event(keydown)= "onKeydown($ event)"を使用できます。
 - [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
 - [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
@@ -92,7 +92,7 @@ const cell = args.event.shiftKey ?
 this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
-- `Enter key` キーを押すと列ベースのナビゲーション（垂直）を実行します。
+- `Enter key` キーを押すと列ベースのナビゲーション(垂直)を実行します。
 
 ```typescript
 if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {

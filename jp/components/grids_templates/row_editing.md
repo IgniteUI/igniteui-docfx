@@ -21,7 +21,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -31,7 +31,7 @@ _language: ja
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -41,7 +41,7 @@ _language: ja
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -307,7 +307,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     - コンテンツをレンダリングするための [`igx-banner`](../banner.md)
     - [`Igx-button`](../button.md) はデフォルトのテンプレートでレンダリングされます (`完了`ボタンと`キャンセル`ボタンの場合)。
 
-以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#styling) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
+以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#スタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
 次に、現在のセルのエディターと背景をより明確にするためにスタイルを設定します。セル スタイリングの詳細については、[こちら](editing.md#スタイル設定)をご覧ください。
 
 #### テーマのインポート
@@ -390,7 +390,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#styling)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
@@ -418,7 +418,7 @@ $button-theme: igx-button-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -430,7 +430,7 @@ $button-theme: igx-button-theme(
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
+        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }
@@ -443,7 +443,7 @@ $button-theme: igx-button-theme(
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く
+        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }

@@ -7,7 +7,7 @@ _language: ja
 
 ## 表示密度
 
-密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、事前に定義された一連のオプション (comfortable,, compact, cosy) を提供します。
+密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、事前に定義された一連のオプション (comfortable、compact、 cosy) を提供します。
 
 [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) インジェクション トークンを使用し、アプリケーションやコンポーネントの表示密度を設定できます。 
 
@@ -16,7 +16,7 @@ _language: ja
     <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

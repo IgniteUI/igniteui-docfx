@@ -17,7 +17,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -26,7 +26,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -35,7 +35,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -110,6 +110,70 @@ ngAfterViewInit(): void {
 
 >[!NOTE]
 >@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルターの結果の共通部分です。
+
+
+### External Advanced filtering
+
+As you see the demo above the Advanced filtering dialog is hosted in an overlay on top of the @@igComponent. When the setup in the dialog is ready, the apply or close actions would hide that dialog. There is a way to make that dialog stay always visible - be used as a standalone component. In the demo below, the advanced filtering dialog is declared separately of the @@igComponent.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="treegrid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="hierarchicalgrid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+#### Usage
+
+It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/classes/igxadvancedfilteringdialogcomponent.html#grid) property:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="grid1">
+</igx-advanced-filtering-dialog>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="treegrid1">
+</igx-advanced-filtering-dialog>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="hierarchicalgrid1">
+</igx-advanced-filtering-dialog>
+```
+}
+
+
+<div class="divider--half"></div>
+
 
 ### スタイル設定
 
@@ -293,7 +357,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供される 2 つの定義済みスキーマのいずれかを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group)、[`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) です。
 
@@ -407,7 +471,7 @@ $custom-drop-down: igx-drop-down-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -416,7 +480,7 @@ $custom-drop-down: igx-drop-down-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -425,7 +489,7 @@ $custom-drop-down: igx-drop-down-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 

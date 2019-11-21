@@ -339,116 +339,92 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 
 ### Unique Column Values Strategy
 
-The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In order to provide these unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input. This input is actually a method that provides three arguments:
-- **column**  - The respective column instance.
-- **filteringExpressionsTree** - The filtering expressions tree, which is reduced based on the respective column.
-- **done** - Callback that should be called with the newly generated column values when they are retrieved from the server.
+The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. These values can be provided manually and loaded on demand, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#unique-column-values-strategy) topic.
 
-The developer can manually generate the necessary unique column values based on the information, that is provided by the **column** and the **filteringExpressionsTree** arguments and then invoke the **done** callback.
 
-> [!NOTE]
-> When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
+### External Excel Style filtering
+
+As you see at the demos above the default appearance of the Excel Style filtering dialog is inside the @@igComponent. So this dialog is only visible when configuring the fitlers. There is a way to make that dialog stay always visible - it can be used outside of the grid as a standalone component. In the demo below, the Excel style filtering is declared separately of the @@igComponent.
+
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:670px">
+    <iframe id="grid-sample-4-iframe" src='{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:670px">
+    <iframe id="treegrid-sample-4-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:670px">
+    <iframe id="hierarchicalgrid-sample-4-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+
+<div class="divider--half"></div>
+
+#### Usage
+
+In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
-    ...
-</igx-grid>
-```
+<igx-select #gridColums value="ProductID">
+   <label igxLabel>Columns:</label>
+   <igx-select-item *ngFor="let c of grid1.columns" [value]="c.field">
+       {{ c.field }}
+   </igx-select-item>
+</igx-select>
 
-```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
-                               columnExprTree: IFilteringExpressionsTree,
-                               done: (uniqueValues: any[]) => void) => {
-    // Get specific column data.
-    this.remoteValuesService.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
-}
+<igx-grid-excel-style-filtering [column]="grid1.getColumnByName(gridColums.value)">
+</igx-grid-excel-style-filtering>
 ```
-
-<div class="sample-container loading" style="height:800px">
-    <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
-    ...
-</igx-tree-grid>
-```
+<igx-select #gridColums value="ID">
+   <label igxLabel>Columns:</label>
+   <igx-select-item *ngFor="let c of treegrid1.columns" [value]="c.field">
+       {{ c.field }}
+   </igx-select-item>
+</igx-select>
 
-```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
-                               columnExprTree: IFilteringExpressionsTree,
-                               done: (uniqueValues: any[]) => void) => {
-    // Get specific column data.
-    this.remoteValuesService.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
-}
+<igx-grid-excel-style-filtering [column]="treegrid1.getColumnByName(gridColums.value)">
+</igx-grid-excel-style-filtering>
 ```
-
-<div class="sample-container loading" style="height:800px">
-    <iframe id="tree-grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'Artist'" [data]="data" [filterMode]="'excelStyleFilter'"
-                       [uniqueColumnValuesStrategy]="singersColumnValuesStrategy">
-    ...
-    <igx-row-island [primaryKey]="'Album'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
-                    [uniqueColumnValuesStrategy]="albumsColumnValuesStrategy">
-        ...
-    </igx-row-island>
-</igx-hierarchical-grid>
-```
+<igx-select #gridColums value="Artist">
+   <label igxLabel>Columns:</label>
+   <igx-select-item *ngFor="let c of hierarchicalgrid1.columns" [value]="c.field">
+       {{ c.field }}
+   </igx-select-item>
+</igx-select>
 
-```typescript
-public singersColumnValuesStrategy = (column: IgxColumnComponent,
-                                      columnExprTree: IFilteringExpressionsTree,
-                                      done: (uniqueValues: any[]) => void) => {
-// Get specific column data for the singers.
-this.remoteValuesService.getColumnData(
-    null, "Singers", column, columnExprTree, uniqueValues => done(uniqueValues));
+<igx-grid-excel-style-filtering [column]="hierarchicalgrid1.getColumnByName(gridColums.value)">
+</igx-grid-excel-style-filtering>
+```
 }
 
-public albumsColumnValuesStrategy = (column: IgxColumnComponent,
-                                     columnExprTree: IFilteringExpressionsTree,
-                                     done: (uniqueValues: any[]) => void) => {
-// Get specific column data for the albums of a specific singer.
-const parentRowId = (column.grid as any).foreignKey;
-this.remoteValuesService.getColumnData(
-    parentRowId, "Albums", column, columnExprTree, uniqueValues => done(uniqueValues));
-}
-```
-
-<div class="sample-container loading" style="height:800px">
-    <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-esf-load-on-demand-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-}
-
-In order to provide a custom loading template for the excel style filtering, we can use the `igxExcelStyleLoading` directive:
-
-```html
-<@@igSelector [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
-    ...
-    <ng-template igxExcelStyleLoading>
-        Loading ...
-    </ng-template>
-</@@igSelector>
-```
-
-<div class="divider--half"></div>
 
 ### Styling
 

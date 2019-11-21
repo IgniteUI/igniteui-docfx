@@ -1,13 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Marker
+title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Point
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamDataChart']
+mentionedTypes: ['XamDataChart', 'ScatterSeries']
 ---
 
-## Scatter Marker Series
+## Scatter Point Chart
 
-This topic explains various types of scatter marker series in the Angular data chart component. Scatter marker series is a group of series that plot a marker for each data item using the Cartesian (x, y) coordinate system.
+The Ignite UI for Angular scatter point chart belongs to a group of scatter charts that use the Cartesian (x, y) coordinate system to plot data. This series is rendered as a collection of markers, each having a pair of numeric X/Y values that determines its location in the Cartesian coordinate system.
+
+The [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) draws attention to uneven intervals or clusters of data. They can highlight the deviation of collected data from predicted results and they are often used to plot scientific and statistical data. The [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) organizes and plots data chronologically (even if the data is not in chronological order before binding) on X-Axis and Y-Axis.
 
 ### Demo
 
@@ -21,43 +23,30 @@ This topic explains various types of scatter marker series in the Angular data c
 
 <div class="divider--half"></div>
 
-### Types of Scatter Marker Series
-
-The following table lists all types of scatter marker series and their descriptions:
-
-| Series Name                                                                                                                              | Description                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)             | Displays a marker for data point mapped to `XMemberPath` and `YMemberPath` properties. |
-| [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | Displays a straight line between each data point in addition to a marker.              |
-| [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | Displays smooth line interpolated between each data point in addition to a marker.     |
-
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only the following types of axes can be used with scatter marker series.
+The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html).
 
-| Series Type                                                                                                                              | YAxis Type                                                                                                                 | XAxis Type                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)             | [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
-| [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
-| [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+-   [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### Required Data
 
-The scatter marker series have the following data requirements:
+The [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain 2 numeric data columns which should be mapped to the `XMemberPath` and `YMemberPath` properties
+-   All data items must contain 2 numeric data columns which should be mapped to the [`xMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath) and [`yMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath) properties
 
 You can use the [SampleScatterStats](data-chart-data-sources-stats.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleScatterStats.getCountries() }
+public dataSource: any[] = SampleScatterStats.getCountries();
 ```
 
 ### Required Modules
 
-The scatter marker series requires the following modules:
+Creation of the [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -65,11 +54,9 @@ import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis"
 import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
 // series' modules:
 import { IgxScatterSeries } from "igniteui-angular-charts/ES5/igx-scatter-series";
-import { IgxScatterLineSeries } from "igniteui-angular-charts/ES5/igx-scatter-line-series";
-import { IgxScatterSplineSeries } from "igniteui-angular-charts/ES5/igx-scatter-spline-series";
 import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
 import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
@@ -77,7 +64,6 @@ import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartScatterCoreModule,
         IgxDataChartScatterModule,
@@ -88,7 +74,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance of data chart with [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) and bind it to the data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart
@@ -107,16 +93,14 @@ This code demonstrates how to create an instance of data chart with [`IgxScatter
  </igx-data-chart>
 ```
 
-Note that you can also use above code to create [`IgxScatterLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html) or [`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) by replacing [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html).
-
 ### Series Appearance
 
-You can customize appearance of marker using the [Markers](data-chart-series-markers.md) properties as well as changing `Brush` and `Thickness` of line visuals between markers. This code snippet below demonstrate how to use these properties.
+You can customize appearance of marker using the [Markers](data-chart-series-markers.md) properties as well as changing [`brush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) of line visuals between markers. This code snippet below demonstrate how to use these properties.
 
 ```html
 <igx-scatter-series
  name="series1"
- brush="Blue"
+ brush="Purple"
  markerType="Square"
  markerBrush="White"
  markerOutline="Blue"
@@ -125,11 +109,11 @@ You can customize appearance of marker using the [Markers](data-chart-series-mar
 ```
 
 ```ts
-const series1 = new IgxScatterLineSeries({ name: "series1" });
+const series1 = new IgxScatterSeries({ name: "series1" });
 series1.markerType = MarkerType.Square;
 series1.markerBrush = "White";
 series1.markerOutline = "Blue";
-series1.brush = "Blue";
+series1.brush = "Purple";
 series1.thickness = 2;
 ```
 

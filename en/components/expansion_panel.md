@@ -22,7 +22,14 @@ The [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelc
 
 ## Usage
 ### Getting Started
-To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) we need to import the **IgxExpansionPanelModule** in our **app.module**:
+To use the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) first we need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the **IgxExpansionPanelModule** in our **app.module**:
 ```typescript
 // app.module.ts
 

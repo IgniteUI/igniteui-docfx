@@ -14,14 +14,21 @@ Ignite UI for Angular Input Group は、簡単に使用できるデータ入力�
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-6' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
 Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-テンプレート駆動フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **FormsModule** をインポートします。
+まず、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、テンプレート駆動フォームを機能させるために、すべての必要なモジュールを `igniteui-angular` ツールキットと **FormsModule** からインポートします。
 
 ```typescript
 // app.module.ts
@@ -94,7 +101,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 <iframe id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -110,7 +117,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-これで、カスタム [palette](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
+これで、カスタム [パレット](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
 
 #### カラーパレットの定義
 
@@ -189,7 +196,7 @@ $input-group-theme: igx-input-group-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

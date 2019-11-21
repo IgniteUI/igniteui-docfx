@@ -22,6 +22,12 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 依存関係
+Icon コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
 Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への `IgxIconModule` のインポートのみが必要になります。
 
@@ -39,8 +45,7 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-
-### 使用方法
+### 用方法
 
 [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用して [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) ホーム アイコンをマゼンタ [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) に設定します。
 
@@ -107,7 +112,7 @@ public ngOnInit() {
     <iframe id="svg-icon-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
 </iframe></div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 

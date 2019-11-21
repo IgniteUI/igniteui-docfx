@@ -19,8 +19,14 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
+Linear Progress Bar インジケーター コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
-Ignite UI for Angular Linear Progress を初期化する前に、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに **IgxProgressBarModule** をインポートします。
 
 ```typescript
 // app.module.ts
@@ -298,7 +304,7 @@ $custom-theme: igx-progress-linear-theme(
 ```
 
 >[!NOTE]
- >コンポーネントが[`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+>コンポーネントが[`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
  ```scss
 :host {
@@ -340,7 +346,7 @@ $custom-theme: igx-progress-linear-theme(
 
 テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-progress-linear`]({environment:sassApiUrl}/index.html#variable-_light-progress-linear) の 1 つを拡張します。:  
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-progress-linear`]({environment:sassApiUrl}/index.html#variable-_light-progress-linear)) の 1 つを拡張します。:  
 
 ```scss
 // Extending the light progress linear schema

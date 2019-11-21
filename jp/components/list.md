@@ -23,8 +23,15 @@ _language: ja
 ### 使用方法
 
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
-Ignite UI for Angular List を初期化する前に、最初に `IgxListModule` を app.module.ts ファイルにインポートします:
 
+Ignite UI for Angular List を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に app.module.ts ファイルに `IgxListModule` をインポートします。
 ```typescript
 // app.module.ts
 
@@ -513,7 +520,7 @@ public leftPanPerformed(args) {
 <iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

@@ -31,7 +31,25 @@ The display of the geographic tile series when using the heat-map functionality 
 
 The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) can also use a logarithmic scale. If you want to use this, you can set the [`useLogarithmicScale`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#uselogarithmicscale) property to `true`.
 
+### Web Worker
+
 The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) also has support for web workers to do the heavy lifting of the loading of the tile imagery from your shape file on a separate thread. This can greatly improve the performance of your geographic map when using the heat-map functionality. In order to use a web worker with the generator, you can set the [`useWebWorkers`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#usewebworkers) property to `true` and then set the [`webWorkerInstance`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#webworkerinstance) property to an instance of your web worker.
+
+<!-- Angular -->
+
+```ts
+// heatworker.worker.ts
+import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/ES5/HeatTileGeneratorWebWorker";
+
+const worker: Worker = self as any;
+worker.onmessage = HeatTileGeneratorWebWorker.onmessage;
+HeatTileGeneratorWebWorker.postmessage = heatWorkerPostMessage;
+function heatWorkerPostMessage() {
+  (self as any).postMessage.apply(self, Array.prototype.slice.call(arguments));
+}
+HeatTileGeneratorWebWorker.start();
+export default {} as typeof Worker & (new () => Worker);
+```
 
 ### Dependencies
 
@@ -44,26 +62,9 @@ import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geograp
 import { TileGeneratorMapImagery } from "igniteui-angular-maps/ES5/igx-tile-generator-map-imagery";
 ```
 
-### Code Snippet
+### Creating Heatmap
 
-The following code snippet shows how to display a population based heat-map in the Ignite UI for Angular map component along with a custom web worker:
-
-```ts
-import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/ES5/HeatTileGeneratorWebWorker";
-
-const worker: Worker = self as any;
-
-worker.onmessage = HeatTileGeneratorWebWorker.onmessage;
-HeatTileGeneratorWebWorker.postmessage = heatWorkerPostMessage;
-
-function heatWorkerPostMessage() {
-  (self as any).postMessage.apply(self, Array.prototype.slice.call(arguments));
-}
-
-HeatTileGeneratorWebWorker.start();
-
-export default {} as typeof Worker & (new () => Worker);
-```
+The following code snippet shows how to display a population based heat-map in the Ignite UI for Angular map component:
 
 <!-- Angular -->
 
@@ -76,23 +77,20 @@ export default {} as typeof Worker & (new () => Worker);
 ```ts
 @ViewChild("map", { static: true })
 public map: IgxGeographicMapComponent;
-
 public data: any[];
 public tileImagery: TileGeneratorMapImagery;
-
+// ...
 constructor() {
     this.data = this.initData();
 
     this.tileImagery = new TileGeneratorMapImagery();
 
     const con: ShapeDataSource = new ShapeDataSource();
-
     con.importCompleted.subscribe((s, e) => {
         const data = con.getPointData();
         const lat: number[] = [];
         const lon: number[] = [];
         const val: number[] = [];
-
         for (let i = 0; i < data.length; i++) {
             const item = data[i];
             for (let j = 0; j < item.points.length; j++) {
@@ -124,7 +122,6 @@ constructor() {
         gen.useLogarithmicScale = true;
         gen.useWebWorkers = true;
         gen.webWorkerInstance = new Worker("../heatworker.worker", { type: "module" });
-
         gen.scaleColors = [
             "rgba(0, 0, 255, 64)",
             "rgba(0, 255, 255, 96)",
@@ -135,28 +132,8 @@ constructor() {
 
         this.tileImagery.tileGenerator = gen;
     });
-
     con.shapefileSource = "assets/Shapes/AmericanCities.shp";
-    con.databaseSource = "assets/Shapes/AmericanCities.dbf";
+    con.databaseSource  = "assets/Shapes/AmericanCities.dbf";
     con.dataBind();
-}
-
-public initData(): any {
-    const rows: any[] = [];
-    for (let i = 0; i < 5; i++) {
-        rows.push({
-            index: i,
-            name: "row" + i,
-            state: "Initial... Initial... Initial... Initial... ",
-            value: i * 10
-        });
-    }
-    rows.push({
-        index: 5,
-        name: "row5",
-        state: "Initial",
-        value: undefined
-    });
-    return rows;
 }
 ```

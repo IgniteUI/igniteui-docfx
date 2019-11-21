@@ -20,6 +20,13 @@ The Button directive within Ignite UI for Angular is intended to be used on any 
 
 ### Dependencies
 
+To get started with the Button directive, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
 The Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxButtonModule` inside your `AppModule`:
 
 ```typescript
