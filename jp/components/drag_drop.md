@@ -54,7 +54,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 #### ゴーストのカスタマイズ
 
-デフォルトのゴースト要素は、`igxDrag` が使用されるベース要素のコピーです。[`ghostTemplate`](environment:angularApiUrl}/classes/igxdragdirective.html#ghostTemplate) 入力へのテンプレート参照を直接提供することでカスタマイズできます。
+デフォルトのゴースト要素は、`igxDrag` が使用されるベース要素のコピーです。[`ghostTemplate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostTemplate) 入力へのテンプレート参照を直接提供することでカスタマイズできます。
 
 ##### 使用方法
 ```html
@@ -119,13 +119,13 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 要素がドラッグされている場合、デフォルトでニメーションは適用されません。
 
-`igxDrag` にトランジション アニメーションを適用できますが、ドラッグの終了時または要素が現在ドラッグされていないときの使用をお勧めします。これは、[`transitionToOrigin`](environment:angularApiUrl}/classes/igxdragdirective.html#transitiontoorigin) および [`transitionTo`](environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) メソッドを使用して実現できます。
+`igxDrag` にトランジション アニメーションを適用できますが、ドラッグの終了時または要素が現在ドラッグされていないときの使用をお勧めします。これは、[`transitionToOrigin`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitiontoorigin) および [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) メソッドを使用して実現できます。
 
 `transitionToOrigin` メソッドは、その名前が示すように、現在ドラッグされている要素または要素のゴーストを、ドラッグが開始された開始位置へアニメーション化します。`transitionTo` メソッドは、ページ (`pageX` および `pageY` など) に関連する特定の位置に要素をアニメーション化します。または、指定された要素の位置をアニメーション化します。要素が現在ドラッグされていない場合は、アニメーション化するか、ゴーストを作成して目的の位置にアニメーション化します。
 
 両方の関数には、トランジション アニメーションをカスタマイズし、期間、タイミング関数、または遅延を設定するために設定できる引数があります。特定の開始位置が設定されている場合、そこから要素をアニメーション化します。
 
-トランジション アニメーションが終了すると、ゴーストが作成される場合、ゴーストは削除され、 `igxDrag` ディレクティブは初期状態に戻ります。ゴーストが作成されていない場合、位置を維持します。いずれの場合もアニメーションの持続時間に基づいて、[`transitioned`](environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) イベントがトリガーされます。アニメーションが適用されていない場合、ただちにトリガーされます。
+トランジション アニメーションが終了すると、ゴーストが作成される場合、ゴーストは削除され、 `igxDrag` ディレクティブは初期状態に戻ります。ゴーストが作成されていない場合、位置を維持します。いずれの場合もアニメーションの持続時間に基づいて、[`transitioned`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) イベントがトリガーされます。アニメーションが適用されていない場合、ただちにトリガーされます。
 
 要素の変換を処理する他のアニメーションを作成できます。これは、Angular Animations または CSS Animations を使用して、ベース `igxDrag` 要素/そのゴーストのいずれかに他の要素と同様に実行できます。ゴーストに適用する場合は、カスタムゴ ーストを定義し、その要素にアニメーションを適用する必要があります。
 

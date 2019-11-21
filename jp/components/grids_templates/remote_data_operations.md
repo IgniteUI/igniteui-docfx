@@ -267,6 +267,8 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
+#### 一意の列値ストラテジのデモ
+
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
@@ -894,8 +896,8 @@ public changeTemplate() {
 * [ページング](paging.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列ピン固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

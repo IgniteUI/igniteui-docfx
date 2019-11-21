@@ -399,13 +399,13 @@
   new: false
   items:
     - name: 注釈とオーバーレイ
-      href: categorychart_annotation_layers.md
+      href: category-chart-annotations.md
       new: false
     - name: 軸オプション
       href: category-chart-axis-options.md
       new: false
     - name: リアルタイム データ
-      href: categorychart_real_time_data.md
+      href: category-chart-high-frequency.md
       new: false
     - name: 大規模なデータの処理
       href: category-chart-high-volume.md
@@ -423,11 +423,11 @@
 #     href: category-chart-tooltip-template.md
 #     new: false
 - name: Data Chart
-  href: datachart.md
+  href: data-chart.md
   new: false
   items:
     - name: 軸
-      href: datachart_axis_types.md
+      href: data-chart-axis-types.md
       new: false
       items:
         - name: 軸の注釈

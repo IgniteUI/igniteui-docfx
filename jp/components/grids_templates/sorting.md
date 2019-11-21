@@ -122,7 +122,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxGrid') {
 
 #### リモート並べ替え
-@@igComponent はリモート 並べ替えをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
+@@igComponent はリモート並べ替えをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
 
 <div class="divider--half"></div>
 }
@@ -201,7 +201,7 @@ $custom-grid-schema: extend($_light-grid,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global light-schema
@@ -269,8 +269,8 @@ $custom-theme: igx-grid-theme(
 * [フィルタリング](filtering.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列ピン固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

@@ -50,7 +50,7 @@ _language: ja
 
 ##### API
 
-展開状態は、 `igxGrid` の [`expansionStates`](environment:angularApiUrl}/classes/igxgridcomponent.html#expansionStates) 入力で制御できます。状態はキーと値のペア [行識別子、展開状態] に保存されます。このプロパティは、展開状態を取得/設定し、双方向バインディングをサポートします。
+展開状態は、 `igxGrid` の [`expansionStates`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expansionStates) 入力で制御できます。状態はキーと値のペア [行識別子、展開状態] に保存されます。このプロパティは、展開状態を取得/設定し、双方向バインディングをサポートします。
 
 ```html
   <igx-grid [(expansionStates)]='expansionState' >
