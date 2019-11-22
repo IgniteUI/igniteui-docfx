@@ -47,7 +47,6 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-Otherwise you can use the Ignite UI Schematics collection or CLI commands for creating an Ignite UI project, adding new component/s or building the application.
 
 ### Create new project
 
