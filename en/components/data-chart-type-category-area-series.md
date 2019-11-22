@@ -42,7 +42,7 @@ The [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/l
 You can use the [SampleCategoryData](data-chart-data-sources-category.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleCategoryData.create() }
+public dataSource: any[] = SampleCategoryData.create();
 ```
 
 ### Required Modules
@@ -56,39 +56,18 @@ import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis"
 // series' modules:
 import { IgxAreaSeries } from "igniteui-angular-charts/ES5/igx-area-series";
 // data chart's modules:
-import { IgxDataChartModule } from "igniteui-angular-charts/ES5/igx-data-chart-module";
+
 import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
 import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
 
 @NgModule({
     imports: [
         // ...
-        IgxDataChartModule,
         IgxDataChartCoreModule,
         IgxDataChartCategoryModule,
         // ...
     ]
 })
-```
-
-### Code Example - Area Series
-
-This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) and bind it to a data source.
-
-```html
- <igx-data-chart
-    [dataSource]="dataSource"
-    width="700px"
-    height="500px">
-    <igx-category-x-axis name="xAxis" label="Year"></igx-category-x-axis>
-    <igx-numeric-y-axis  name="yAxis"></igx-numeric-y-axis>
-    <igx-area-series
-        name="series1"
-        xAxisName="xAxis"
-        yAxisName="yAxis"
-        valueMemberPath="USA">
-    </igx-area-series>
- </igx-data-chart>
 ```
 
 ### Additional Resources

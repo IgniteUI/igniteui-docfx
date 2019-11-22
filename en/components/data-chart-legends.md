@@ -2,7 +2,7 @@
 title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Legends
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamDataChart', 'Infragistics.Controls.Charts.Legend']
+mentionedTypes: ['XamDataChart', 'XamLegend','Infragistics.Controls.Charts.Legend']
 ---
 
 ## Legends
@@ -23,7 +23,7 @@ Legends help end-users identify visuals of data chart series with contextual inf
 
 ### Legend Overview
 
-By default, the Angular data chart component does not display legends for any series in the data chart. If you want to show a common legend for multiple series, you need to add an `IgxLegend` object to your application and then set it to the `Infragistics.Controls.Charts.Legend` property of the data chart.
+By default, the [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) component does not display legends for any series in the data chart. If you want to show a common legend for multiple series, you need to add an `XamLegend` object to your application and then set it to the `Infragistics.Controls.Charts.Legend` property of the data chart.
 
 In addition, you must set the [`chartTitle`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) property for each series object or the legend will use a default series title.
 

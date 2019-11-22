@@ -165,6 +165,8 @@ this.@@igObjectRef.clearFilter();
 To set the initial filtering state of the @@igComponent, set the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
 
 ```typescript
+constructor(private cdr: ChangeDetectorRef) { }
+
 public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
     const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
@@ -178,6 +180,7 @@ public ngAfterViewInit() {
     gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
 
     this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
+    this.cdr.detectChanges();
 }
 ```
 
@@ -200,7 +203,8 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 #### Remote Filtering
-For more information on how to implement remote filtering, you can take a look at the `@@igComponent Virtualization and Performance` [documentation](virtualization.md).
+
+The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
 
 <div class="divider--half"></div>
 }

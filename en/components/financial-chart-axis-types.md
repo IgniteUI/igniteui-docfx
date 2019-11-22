@@ -57,7 +57,7 @@ The following code example shows how to style labels on the x-axis using style p
     yAxisLabelTextStyle="8pt Verdana"
     yAxisLabelTextColor="Gray"
     yAxisLabelLeftMargin="5"
-    yAxisLabeleAngle="0"
+    yAxisLabelAngle="0"
     width="850px"
     height="600px"
     [dataSource]="data">

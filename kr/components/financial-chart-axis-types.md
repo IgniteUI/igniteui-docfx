@@ -57,7 +57,7 @@ _language: kr
     yAxisLabelTextStyle="8pt Verdana"
     yAxisLabelTextColor="Gray"
     yAxisLabelLeftMargin="5"
-    yAxisLabeleAngle="0"
+    yAxisLabelAngle="0"
     width="850px"
     height="600px"
     [dataSource]="data">

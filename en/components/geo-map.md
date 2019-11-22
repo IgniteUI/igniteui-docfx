@@ -11,7 +11,7 @@ The Ignite UI for Angular map component allows you to display data that contains
 
 ### Demo
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -37,11 +37,11 @@ To use the geographic map component, you need to first install these packages:
 
 ### Required Modules
 
-The [`IgxGeographicMap`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmap.html) requires the following modules, however the Ig$DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
+The [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules, however the Ig$DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
 
 ```ts
 // app.module.ts
-import { IgxGeographicMapModule } from "igniteui-angular-maps/ES5/igx-map-module";
+import { IgxGeographicMapModule } from "igniteui-angular-maps/ES5/igx-geographic-map-module";
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
 
 @NgModule({
@@ -91,5 +91,5 @@ Now that the map module is imported, next step is to create geographic map. The 
         height="500px"
         zoomable="true" >
     </igx-geographic-map>
-  </div>
+</div>
 ```

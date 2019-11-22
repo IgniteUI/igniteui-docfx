@@ -40,7 +40,7 @@ The following snippt shows how you can setup the data validation rules
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 
----
+// ...
 
 public cut(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.Cut);

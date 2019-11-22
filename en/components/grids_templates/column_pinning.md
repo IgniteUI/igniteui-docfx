@@ -55,7 +55,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 #### Column Pinning API
 
-Each column can be pinned, as long as the pinned area does not become wider than the @@igComponent itself. Column pinning is controlled through the `pinned` input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). Pinned columns are always rendered on the left side of the @@igComponent and stay fixed through horizontal scrolling of the unpinned columns in the @@igComponent body.
+Column pinning is controlled through the `pinned` input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). Pinned columns are always rendered on the left side of the @@igComponent and stay fixed through horizontal scrolling of the unpinned columns in the @@igComponent body.
 
 
 @@if (igxName === 'IgxGrid') {
@@ -109,51 +109,7 @@ this.hierarchicalGrid.unpinColumn("Debut");
 ```
 }
 
-Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state. [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pincolumn) also fails when the result would mean that the pinned area becomes larger than or the same size as the @@igComponent itself. Consider the following example:
-
-@@if (igxName === 'IgxGrid') {
-```html
-<igx-grid #grid1 [data]="data | async" [width]="300px" [autoGenerate]="false">
-    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
-    <igx-column [field]="AthleteNumber" [width]="200px"></igx-column>
-</igx-grid>
-```
-
-```typescript
-var succeed = this.grid.pinColumn("AthleteNumber"); // pinning fails and succeed will be false
-```
-
-If pinning the `AthleteNumber` column is allowed the pinned area would exceed the @@igComponent's width.
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid #treeGrid [data]="data" [width]="300px" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
-    <igx-column [field]="Name" [width]="200px" [pinned]="true"></igx-column>
-    <igx-column [field]="Title" [width]="200px"></igx-column>
-</igx-tree-grid>
-```
-
-```typescript
-var succeed = this.treeGrid.pinColumn("Title"); // pinning fails and succeed will be false
-```
-
-If pinning the `Title` column is allowed the pinned area would exceed the @@igComponent's width.
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'800px'" #hierarchicalGrid>
-    <igx-column [field]="Artist" [width]="200px" [pinned]="true"></igx-column>
-    <igx-column [field]="Debut" [width]="200px"></igx-column>
-</igx-hierarchical-grid>
-```
-
-```typescript
-var succeed = this.hierarchicalGrid.pinColumn("Artist"); // pinning fails and succeed will be false
-```
-
-If pinning the `Artist` column is allowed the pinned area would exceed the @@igComponent's width.
-}
+Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state.
 
 A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the [`onColumnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) property of the event arguments to the desired position index.
 
@@ -327,16 +283,6 @@ public toggleColumn(col: IgxColumnComponent) {
 ### Pinning Limitations
 
 *   Setting column widths in percentage (%) explicitly makes the @@igComponent body and header content to be misaligned when there are pinned columns. For column pinning to function correctly the column widths should be in pixels (px) or auto-assigned by the @@igComponent.
-
-<div class="divider--half"></div>
-
-### Troubleshooting
-
-This section will provide you with hints what to do if you are having trouble with the Column Pinning feature.
-
-#### Warnings
-
-* `@@igxName - The pinned area exceeds maximum pinned width. The following columns were unpinned to prevent further issues: ... .` - This warning is thrown when the user has defined too many pinned columns initially. The combined width of the initially pinned columns should not exceed 80% of the @@igComponent width. Otherwise the @@igComponent by default takes the first columns (in order of their definition) that don't exceed the limit and the rest are unpinned (the columns listed in the warning). You can execute your own logic in order to determine if you want to unpin some columns manually on initialization using the [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) event before the @@igComponent initializes the pinning. It is triggered for each column.
 
 <div class="divider--half"></div>
 
