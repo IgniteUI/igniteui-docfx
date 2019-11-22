@@ -82,13 +82,11 @@ $unnecessary: (igx-avatar, igx-badge);
 ```
 アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
 
+### Material から Fluent テーマへの切り替え
+バージョン `8.2` 以降、インフラジスティックスのコンポーネントでは、[`Microsoft フルーエント デザイン システム`](https://www.microsoft.com/design/fluent/)に基づいて構築された新しいテーマをサポートします。  
+`マテリアル`から`フルーエント`へ切り替えるには、新しく作成された mixins の 1 つを使用する必要があります。
 
-### Switching from Material to Fluent theme
-Since version `8.2` our components support a new theme, built based on `Microsoft fluent design system`.  
-in order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
-
-For `white` version of the `fluent theme` using `excel palette`, use the code below: 
-
+`Excel パレット`を使用した`フルーエント テーマ`の `white` バージョンの場合、以下のコードを使用します。
 ```scss
 // Replace
 @include igx-theme($default-palette);
@@ -96,8 +94,7 @@ For `white` version of the `fluent theme` using `excel palette`, use the code be
 @include igx-fluent-theme($fluent-excel-palette);
 ```
 
-For `Dark` version of the `fluent theme` using `excel palette`, use the code below:
-
+`Excel パレット`を使用した`フルーエント テーマ`の `Dark` バージョンの場合、以下のコードを使用します。
 ```scss    
 // replace
 @include igx-dark-theme($default-palette);
@@ -105,43 +102,10 @@ For `Dark` version of the `fluent theme` using `excel palette`, use the code bel
 @include igx-fluent-dark-theme($fluent-excel-palette);
 ```
 
-
-We also added a `Microsoft word` palette, in order to use it, just replace the `$fluent-excel-palette` with `$fluent-word-palette`
+また、`Microsoft word` パレットを追加しました。使用するには、`$fluent-excel-palette` を `$fluent-word-palette` に置き換えるだけです。
 
 ```scss
 // for the white version    
-@include igx-fluent-theme($fluent-word-palette);
-
-// for the dark version
-@include igx-fluent-dark-theme($fluent-word-palette);
-```
-
-### Switching from Material to Fluent theme
-Since version `8.2` our components support a new theme, built based on the [`Microsoft Fluent Design System`](https://www.microsoft.com/design/fluent/).  
-In order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
-
-For the `light` version of the `fluent theme` using `excel color palette`, use the code below: 
-
-```scss
-// Replace
-@include igx-theme($default-palette);
-// With   
-@include igx-fluent-theme($fluent-excel-palette);
-```
-
-For the `dark` version of the `fluent theme` using `excel palette`, use the code below:
-
-```scss    
-// replace
-@include igx-dark-theme($default-palette);
-// With
-@include igx-fluent-dark-theme($fluent-excel-palette);
-```
-
-We also added a `Microsoft Word` palette. To use it just replace the `$fluent-excel-palette` with `$fluent-word-palette`:
-
-```scss
-// for the light version
 @include igx-fluent-theme($fluent-word-palette);
 
 // for the dark version

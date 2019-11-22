@@ -34,7 +34,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxLinearGauge`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargauge.html) requires the following modules:
+The [`IgxLinearGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts

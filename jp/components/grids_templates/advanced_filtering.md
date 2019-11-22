@@ -111,6 +111,70 @@ ngAfterViewInit(): void {
 >[!NOTE]
 >@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルターの結果の共通部分です。
 
+
+### 外部の高度なフィルタリング
+
+上記デモで示されるように、高度なフィルタリング ダイアログは、@@igComponent の上にあるオーバーレイでホストされます。ダイアログのセットアップの準備ができたときに、適用または閉じる操作によってダイアログが非表示になります。ダイアログはスタンドアロン コンポーネントとして使用した場合、常に表示になります。以下のデモでは、高度なフィルタリングダイアログが @@igComponent とは別に宣言されます。
+
+#### デモ
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="treegrid-sample-2-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="hierarchicalgrid-sample-2-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+}
+
+#### 使用方法
+
+@@igComponent の外部で動作するように高度なフィルタリングを構成する方法は簡単です。ダイアログを作成して、その [`grid`]({environment:angularApiUrl}/classes/igxadvancedfilteringdialogcomponent.html#grid) プロパティを設定するだけです。
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="grid1">
+</igx-advanced-filtering-dialog>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="treegrid1">
+</igx-advanced-filtering-dialog>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-advanced-filtering-dialog [grid]="hierarchicalgrid1">
+</igx-advanced-filtering-dialog>
+```
+}
+
+
+<div class="divider--half"></div>
+
+
 ### スタイル設定
 
 高度なフィルタリング ダイアログのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。

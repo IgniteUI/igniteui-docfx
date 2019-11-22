@@ -7,7 +7,7 @@ mentionedTypes: ['Spreadsheet']
 
 ## Spreadsheet Conditional Formatting
 
-The Angular Spreadsheet component allows you conditionally format the cells of a worksheet. This allows you to highlight different pieces of your data based on a condition.
+The Angular Spreadsheet component allows you to conditionally format the cells of a worksheet. This allows you to highlight different pieces of your data based on a condition.
 
 ### Demo
 

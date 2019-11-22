@@ -56,7 +56,7 @@ Radial series have the following data requirements:
 You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data source which meets above data requirements.
 
 ```ts
-this.state = { dataSource: SampleRadialData.create() }
+public dataSource: any[] = SampleRadialData.create();
 ```
 
 ### Required Modules

@@ -40,7 +40,7 @@ The [`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/la
 You can use the [SampleCategoryData](data-chart-data-sources-category.md) as data source which meets above data requirements.
 
 ```ts
-this.chart.dataSource = SampleCategoryData.create();
+public dataSource: any[] = SampleCategoryData.create();
 ```
 
 ### Required Modules
