@@ -22,21 +22,15 @@ _language: ja
 
 ### 依存関係
 
-必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用してアプリケーションの `AppModule` にインポートします。
+Navigation Drawer コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
-```typescript
-import { IgxNavigationDrawerModule } from 'igniteui-angular';
+```cmd
+ng add igniteui-angular
 ```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-または
-
-```typescript
-import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
+必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用して、'igniteui-angular/navigation-drawer' からアプリケーションにインポートします。
 ```
-
-app.module にインポートします。
-
-```typescript
 @NgModule({
     imports: [
         IgxNavigationDrawerModule,

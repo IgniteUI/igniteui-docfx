@@ -2,6 +2,7 @@
 title: Badge コンポーネント
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
+_language: ja
 ---
 
 ##Badge
@@ -13,15 +14,19 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
     <iframe id="badge-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネント、をプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
+### 使用方法
+Badge を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
-###使用方法
-Ignite UI for Angular Badge を初期化する前に、`IgxBadgeModule` を **app.module.ts** ファイルにインポートします。
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBadgeModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -126,7 +131,7 @@ class Member {
     <iframe id="badge-sample-1-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -159,17 +164,17 @@ class Member {
 <iframe id="badge-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-名前のみのリストはそれほど有用な情報を表示しません。最後にリストアイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。以下に示すようにリスト アイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。
+名前のみのリストはそれほど有用な情報を表示しません。最後に、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) を追加し、連絡先の状態通知を表示します。以下に示すようにリスト アイテムのコンテンツを変更し、アバター コンポーネント内にバッジ コンポーネントを追加します。
 
 [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) 　および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があることに注意してください。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景色が適用されます。
 
-サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* と *type* という名前のモデルプロパティにバインドされています。
+サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および｀ [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が *icon* と *type* という名前のモデルプロパティにバインドされています。
 
 親コンテナにバッジを配置するには、カスタム css クラス *badge-style* を作成し、上部と右側の位置を定義します。
 
@@ -212,7 +217,7 @@ class Member {
     <iframe id="badge-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -291,13 +296,14 @@ $custom-theme: igx-badge-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`Palettes`](./themes/palette.md) のトピックを参照してください。
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palette.md) のトピックを参照してください。
+
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-badge) の 1 つを拡張します。  
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-badge) の 1 つを拡張します。 
 
 ```scss
 // Extending the light badge schema
@@ -341,7 +347,7 @@ $custom-theme: igx-badge-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API リファレンス
@@ -360,6 +366,4 @@ $custom-theme: igx-badge-theme(
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
-
-
 

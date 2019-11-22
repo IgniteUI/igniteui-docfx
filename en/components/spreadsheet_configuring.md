@@ -38,6 +38,10 @@ import { SpreadsheetEnterKeyNavigationDirection } from "igniteui-react-spreadshe
 ```
 
 ```ts
+import { SpreadsheetEnterKeyNavigationDirection } from "igniteui-webcomponents-spreadsheet/ES2015/SpreadsheetEnterKeyNavigationDirection";
+```
+
+```ts
 this.spreadsheet.isEnterKeyNavigationEnabled = true;
 this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDirection.Left;
 ```
@@ -131,6 +135,10 @@ The following code snippets demonstrate configuration of the selection mode:
 
 ```ts
 import { SpreadsheetCellSelectionMode } from "igniteui-react-spreadsheet/ES5/SpreadsheetCellSelectionMode";
+```
+
+```ts
+import { SpreadsheetCellSelectionMode } from "igniteui-webcomponents-spreadsheet/ES2015/SpreadsheetCellSelectionMode";
 ```
 
 ```ts

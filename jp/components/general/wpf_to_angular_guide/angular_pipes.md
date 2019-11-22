@@ -11,7 +11,7 @@ _language: ja
 
 WPF コンバーターに類似した、Angular パイプを使用してデータを変換する方法を学びます。このテクニックは、WPF コンバーターに似ています。
 
-WPF では、データをある値から別の値に変換するために、[IValueConverter](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8) を使用します。Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
+WPF では、データをある値から別の値に変換するために、[IValueConverter](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.8) を使用します。Angular アプリケーションでデータを変換するには、[Pipe](https://angular.io/api/core/Pipe) を使用します。パイプは WPF コンバーターにとても似ています。データを入力として受け取り、そのデータを表示用の目的の出力に変換します。
 
 Angular は、最も一般的なデータ変換用に事前定義された多数のパイプを提供します。たとえば、ヘッダー テキストを大文字で表示する場合は、[UpperCasePipe](https://angular.io/api/common/UpperCasePipe) を使用できます。パイプの使用はとても簡単です。式の後に、パイプ演算子 `|` とその後にパイプ名を提供します。
 

@@ -16,16 +16,20 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
     <iframe id="banner-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)のトピックで手順をご確認ください。
-
 ## 使用方法
 
-Ignite UI for Angular Banner の使用は、はじめに **app.module.ts** ファイルに `IgxBannerModule` をインポートします。
+Banner コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBannerModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -62,7 +66,7 @@ Banner は、要素がページ テンプレートに挿入された場所にそ
     <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### Banner のテンプレート化
@@ -174,7 +178,7 @@ export class MyBannerComponent implements OnInit, OnDestroy {
     <iframe id="banner-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### カスタム アニメーションの適用
@@ -211,7 +215,7 @@ export class MyBannerComponent {
     <iframe id="banner-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-3" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### イベントにバインド
@@ -240,7 +244,7 @@ export class MyBannerComponent {
 
 
 ## スタイル設定
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#animation-demo)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#styling)を直接参照できます。
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#アニメーション-デモ)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#スタイル設定)を直接参照できます。
 
 ### テーマのインポート
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
@@ -267,7 +271,7 @@ $my-color-palette: igx-palette(
 ```
 
 カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
+次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
 ```scss
 // in styles.scss
 $custom-banner-theme: igx-banner-theme(
@@ -296,7 +300,7 @@ $custom-button-theme: igx-button-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 #### グローバル
-新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#creating-themes)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
+新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#テーマの作成)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
 ```scss
 // in styles.scss
 // Pass our banner theme to the `igx-banner` mixin
@@ -308,7 +312,7 @@ $custom-button-theme: igx-button-theme(
 特定の `igx-banner` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用し、さらに、上記のすべての手順を styles.scss から component.scss ファイルへ移動してください。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
@@ -329,7 +333,7 @@ $custom-button-theme: igx-button-theme(
     <iframe id="banner-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -337,4 +341,4 @@ $custom-button-theme: igx-button-theme(
 ## API リファレンス
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-banner)

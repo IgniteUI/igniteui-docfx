@@ -20,7 +20,7 @@ Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生デ�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -117,7 +117,7 @@ public exportButtonHandler() {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 
@@ -168,7 +168,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedD
 使用したその他のコンポーネント:
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 <div class="divider"></div>
 

@@ -1,7 +1,7 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: グリッド行のドラッグ
-_description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチなグリッドが実現できます。
+_description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチな階層グリッドが実現できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
 _language: ja
 ---
@@ -35,7 +35,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -45,7 +45,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -56,7 +56,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -84,9 +84,9 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 #### ドロップエリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
-[`igxDrop` directive](../drag_drop.md) ディレクティブを使用して、行をドロップする場所を定義できます。
+[`igxDrop` ディレクティブ](../drag_drop.md) を使用して、行をドロップする場所を定義できます。
 
-はじめに、アプリ モジュールに IgxDragDropModule をインポートする必要があります。
+はじめに、アプリ モジュールに `IgxDragDropModule` をインポートする必要があります。
 
 ```typescript
 import { ..., IgxDragDropModule } from 'igniteui-angular';
@@ -100,8 +100,8 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```html
-<div class="drop-area" igxDrop (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)"
-(onDrop)="onDropAllowed($event)">
+<div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (\leave)="onLeaveAllowed($event)"
+(onDrop)="onDropAllowed($event)">	(dropped)="onDropAllowed($event)">
     <igx-icon>delete</igx-icon>
     <div>Drag a row here to delete it</div>
 </div>
@@ -111,7 +111,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 この場合、ドロップ領域は行をドロップする 2 番目のグリッドになります。
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
-    (onEnter)="onEnterAllowed($event)" (onLeave)="onLeaveAllowed($event)" (onDrop)="onDropAllowed($event)" [primaryKey]="'ID'">
+    (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)" (dropped)="onDropAllowed($event)" [primaryKey]="'ID'">
     ...
 </igx-grid>
 ```
@@ -125,7 +125,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 ```
 }
 
-[`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) イベントの animation パラメーターを使用して、ドロップできない領域に行がドロップされたときにアニメーションを有効にできます。true に設定されている場合、ドラッグされた行は、ドロップできない領域の上にドロップされると元の位置に戻ります。
+[`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) イベントの `animation` パラメーターを使用して、ドロップできない領域に行がドロップされたときにアニメーションを有効にできます。true に設定されている場合、ドラッグされた行は、ドロップできない領域の上にドロップされると元の位置に戻ります。
 
 以下はアニメーションを有効にする方法です。
 
@@ -141,19 +141,19 @@ export class @@igxNameRowDragComponent {
 
 #### ドロップ エリア イベント ハンドラー
 
-テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`'s [`onEnter`]({environment:angularApiUrl}/classes/igxdropdirective.html#onenter)、[`onLeave`]({environment:angularApiUrl}/classes/igxdropdirective.html#onleave)、[`onDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html#ondrop) イベントを宣言する必要があります。
+テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) イベントを宣言する必要があります。
 
-はじめに、onEnter と onLeave ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
+はじめに、`enter` と `leave` ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
 
 ```typescript
 export class @@igxNameRowDragComponent {
     ...
     public onEnterAllowed(args) {
-        this.changeGhostIcon(args.drag.dragGhost, DragIcon.ALLOW);
+        this.changeGhostIcon(args.drag.ghostElement, DragIcon.ALLOW);
     }
 
     public onLeaveAllowed(args) {
-        this.changeGhostIcon(args.drag.dragGhost, DragIcon.DEFAULT);
+        this.changeGhostIcon(args.drag.ghostElement, DragIcon.DEFAULT);
     }
 
     private changeGhostIcon(ghost, icon: string) {
@@ -168,7 +168,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 `changeGhostIcon` **private** メソッドは、ドラッグ ゴースト内のアイコンを変更するだけです。メソッドのロジックは、アイコンを含む要素を検索し (ドラッグ インジケーター コンテナに適用される `igx-grid__drag-indicator` クラスを使用)、要素の内部テキストを渡されたものに変更します。
-アイコンは [`material` フォントセット](https://material.io/tools/icons/)からのもので、別の**`列挙型`**で定義されています。
+アイコンは [`material` フォントセット](https://material.io/tools/icons/)からのもので、別の **`enum`** で定義されています。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 enum DragIcon {
@@ -191,8 +191,7 @@ enum DragIcon {
 ```typescript
 export class @@igxNameRowDragComponent {
     ...
-    public onDropAllowed(args: IgxDropEventArgs) {
-        args.cancel = true;
+	    public onDropAllowed(args: IDropDroppedEventArgs) {
         const draggedRow: @@igxNameGridRowComponent = args.dragData;
         draggedRow.delete();
     }
@@ -200,9 +199,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-行をドロップした後は、以下のようにします。
-- イベントのキャンセル
-- 行の [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) メソッドを呼び出します。
+行が削除されたら、行の [`delete()`]({environment:angularApiUrl}/classes/@@igxNameRowComponent.html#delete) メソッドを呼び出すだけです。
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -212,7 +209,6 @@ export class @@igxNameRowDragComponent {
     @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
     ... 
     public onDropAllowed(args) {
-        args.cancel = true;
         this.targetGrid.addRow(args.dragData.rowData);
         this.sourceGrid.deleteRow(args.dragData.rowID);
     }
@@ -221,7 +217,6 @@ export class @@igxNameRowDragComponent {
 ```
 
 次のように `ViewChild` デコレータを使用して各グリッドに refenrece を定義し、ドロップを処理します。
-- イベントのキャンセル
 - 削除される行のデータを含む行を `targetGrid` に追加します。
 - `sourceGrid` からドラッグした行を削除します
 }
@@ -291,7 +286,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 以下のサンプルは、グリッドで行の並べ替えを構成する方法を示します。ドラッグ アイコンを押下しながら、グリッド内で好きな場所に行を移動できます。
@@ -300,7 +295,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -311,7 +306,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -321,7 +316,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div> 
 }
@@ -332,7 +327,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -343,7 +338,7 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div> 
 }
@@ -369,9 +364,7 @@ enum DragIcon {
 
 ### 制限
 
-`rowDraggable` ディレクティブを使用するときに考慮する必要があることがいくつかあります。
-> [!NOTE]
-> 行ドロップイベントを処理するときは、行ドラッグゴーストの残りの要素が表示されないようにするため、`eventArgs.cancel` を **`true`** に設定する必要があります。 
+現在、`rowDraggable` ディレクティブに既知の制限はありません。
 
 ### API リファレンス
 
@@ -388,5 +381,5 @@ enum DragIcon {
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

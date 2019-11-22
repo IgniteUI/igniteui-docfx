@@ -7,11 +7,12 @@ _language: ja
 
 # Combo
 <p class="highlight">
-[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を組み合わせたコンポーネントです。<br />
-Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br />
-**[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br />
-[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br />
-[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br />
+
+[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントは、基本的な HTML `input`、選択機能、Ignite UI for Angular [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を組み合わせたコンポーネントです。<br/>
+Combo コンポーネントは、**[フィルタリング](combo_features.md#フィルタリング)**、項目の**複数選択**、**[グループ化](combo_features.md#グループ化)**、ドロップダウン リストに**[カスタム値](combo_features.md#カスタム値)** の追加などの機能をサポートします。<br/>
+**[カスタム テンプレート](combo_templates.md)** は、項目、ヘッダー、フッターなどコンポーネントの異なる領域をカスタマイズするために提供されます。<br/>
+[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントは、**[テンプレート駆動フォーム](input_group.md)** と **[Reactive フォーム](input_group_reactive_forms.md)** を統合したコンポーネントです。<br/>
+[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、直感的な **キーボード ナビゲーション**を公開し、**アクセシビリティ規格**に準拠しています。<br/>
 ドロップダウン項目を**仮想化**することにより、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を多くの項目を持つデータ ソースにバインドした場合もスムーズにスクロールを行うことができます。
 </p>
 <div class="divider"></div>
@@ -21,15 +22,21 @@ Combo コンポーネントは、**[フィルタリング](combo_features.md#フ
     <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。詳細については、[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) トピックをご確認ください。
-
 ## 使用方法
-[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、リストから項目の検索および選択が可能です。コンボは、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。Ignite UI for Angular Combo で作業を開始する前に `IgxComboModule` を **app.module.ts** ファイルにインポートします。
+[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、リストから項目の検索および選択が可能です。コンボは、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。
+
+Combo コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに  `IgxComboModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -65,7 +72,7 @@ export class ComboDemo implements OnInit {
 
 ### データ値と表示プロパティ
 
-上記の構成では、コンボは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、`@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) の 2 つの `@Input` properties - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) プロパティを公開します。
+上記の構成では、コンボは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、2 つの `@Input` プロパティ - [`valueKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [`displayKey`]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) プロパティを公開します。
 
  - `valueKey`: **Optional.オブジェクト配列に推奨。**コンボの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボ値はデータ エントリへの参照を使用します (選択は `combo.data` からのエントリの配列になります)。
  - `displayKey`: **オブジェクト配列に必須。**アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボは指定された `valueKey` (存在する場合) を使用します。 
@@ -79,11 +86,11 @@ export class ComboDemo implements OnInit {
 これでコンボがデータにバインドされ、初期化されると項目のリストが表示されます。ユーザーは、マウスとキーボードの操作を介して項目を選択済みとしてマークし、コンボを視覚的に更新して現在の選択を反映します (入力で選択した項目を表示し、リストで選択した項目を強調表示します)。コンボ選択には、[双方向バインディング](#two-way-バインディング)または[選択 API](#選択) を使用してアクセスできます。 
 
 > [!Note]
-> データソースが単純なタイプ (`string[]`、`number[]` など）で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
+> データソースが単純なタイプ (`string[]`、`number[]` など)で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
 
 ### Two-Way バインディング
 
-このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey` に基づく](#data-value-and-display-properties)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
+このコンボは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボの選択項目 ([`valueKey` に基づく](#データ値と表示プロパティ)) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
 
 上記例の構成に従った場合:
 
@@ -111,7 +118,7 @@ export class MyCombo {
 ### 選択
 このコンボは、コントロールの現在の選択状態を取得および操作できる API を公開します。 
 
-コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。[指定された `valueKey`](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
+コンボの選択を取得する 1 つの方法は、[`selectedItems()`]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。[指定された `valueKey`](#データ値と表示プロパティ) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
 
 cities の例では、`selectedItems` は選択された都市の `id` の配列を返します。
 
@@ -222,7 +229,6 @@ igxCombo が開いて、カスタム値が有効で、「項目の追加」ボ�
 
 ## スタイル設定
 [Ignite UI for Angular テーマ ](themes/index.md)を使用して、**igx-combo** の外観を変更できます。 
-
 `Igx-combo` は `igx-drop-down` を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイリング ガイド](drop_down.md#スタイル設定)をご覧ください。
 さらに、`IgxCombo` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxCombo` コンポーネントに影響します。詳細については、[igx-input-group スタイリング ガイド](input_group.md#スタイル設定) を参照できます。また `IgxCheckbox` も関連コンポーネントです。詳細については、[`igx-checkbox スタイリング ガイド`](checkbox.md#スタイル設定) を確認してください。
 
@@ -268,7 +274,7 @@ $custom-combo-theme: igx-combo-theme(
 ```
 
 ### 適用
-あとは新しく作成したテーマを適切にスコープするだけです。ここでは、アプリケーション内のこのタイプの他のコンポーネントがカスタム テーマの影響を受けないよう、特定の `IgxCombo` にスタイルを設定します。テーマをグローバルに適用、またはスコープの適用に関する詳細については、[igx-drop-down スタイリング ガイド](drop_down.md#applying)をご覧ください。
+あとは新しく作成したテーマを適切にスコープするだけです。ここでは、アプリケーション内のこのタイプの他のコンポーネントがカスタム テーマの影響を受けないよう、特定の `IgxCombo` にスタイルを設定します。テーマをグローバルに適用、またはスコープの適用に関する詳細については、[igx-drop-down スタイリング ガイド](drop_down.md#適用)をご覧ください。
 
 ```scss
 // Pass our custom-drop-down-theme and custom-combo-theme to respectively `igx-drop-down` and igx-combo mixins.
@@ -288,7 +294,7 @@ $custom-combo-theme: igx-combo-theme(
     <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -307,7 +313,7 @@ $custom-combo-theme: igx-combo-theme(
 - Combo は高さのサイズ変更のための入力はありません。 [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)  は、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で ` igxForOf` ディレクティブを使用するため、すべての `igxForOf`制限が ` igxCombo` に対して有効です。詳細については、[igxForOf 既知の問題](for_of.html#known-limitations) セクションを参照してください。
+> `igxCombo` は内部で ` igxForOf` ディレクティブを使用するため、すべての `igxForOf`制限が ` igxCombo` に対して有効です。詳細については、[igxForOf 既知の問題](for_of.html#既知の問題と制限) セクションを参照してください。
 
 ## その他のリソース
 

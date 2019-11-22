@@ -21,6 +21,7 @@ _language: ja
 印刷しない場合は、出力される CSS のサイズを減らすために、印刷スタイルをなしにすることをお勧めします。
  
 これには、テーマ `SCSS` ファイルを変更できます。
+
 ```scss
 // Import the IgniteUI themes library first.
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -31,6 +32,7 @@ igx-core($print-layout: false)
 // Add the theme and the palette.
 @include igx-theme($default-palette);
 ```
+
 
 注: カラフルなグリッドを使用する場合でも、できる限りきれいでシンプルにするため、またインクの使用を減らすために、白黒のグリッドが表示されます。グリッド上のすべてのクリック可能な要素は、紙では意味をなさないため、省略されます。
 

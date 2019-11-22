@@ -50,7 +50,7 @@ ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 - `/register` - ユーザー情報で登録します。
 - `/extlogin` - 外部ソースからユーザー情報を渡します。
 
-すべてのエンドポイントは、JSON Wen Token（JWT） またはメッセージとともにエラー状態を返す必要があります。
+すべてのエンドポイントは、JSON Wen Token(JWT） またはメッセージとともにエラー状態を返す必要があります。
 
 > **注:**デモンストレーションの目的で、プロジェクトには要求をインターセプトする `services/fake-backend.service.ts` があります。`authentication.module.ts` の `BackendProvider` は、本番環境では使用しないでください。開発の開始時に、プロバイダーとファイルの両方を削除する必要があります。
 
@@ -99,7 +99,7 @@ export class AppModule {
 
 ![](../../../images/general/igx-side-auth-login-google.png)
 
-このガイドに従って [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
+このガイドに従って [Microsoft](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
 
 https://docs.microsoft.com/ja-jp/azure/active-directory/develop/quickstart-register-app
 

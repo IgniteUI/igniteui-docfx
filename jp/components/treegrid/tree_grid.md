@@ -1,13 +1,13 @@
----
-title: Angular Data Tree Grid | Material Table | Ignite UI for Angular | Infragistics
+﻿---
+title: Angular データ ツリー グリッド | マテリアル テーブル | Ignite UI for Angular | Infragistics
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: Angular データ グリッド, igniteui for angular, infragistics
+_keywords: angular group by, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
 ## データ ツリー グリッド
 
-<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
+<p class="highlight">Ignite UI for Angular Tree Grid は、階層データまたはフラットデータを簡単に表示および操作できます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、並べ替え、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI ツリー グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
 ### デモ
 
@@ -16,11 +16,17 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### はじめに
+ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
 ツリー グリッドが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に `IgxTreeGridModule` をインポートする必要があります。
 
@@ -150,7 +156,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 このトピックのはじめにあるコードの結果は、[デモ](#demo)で確認できます。
 
 ### プライマリと外部キー
-**primary and foreign keys** オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
+**Primary and foreign keys** オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
 
 以下は、主と外部キーの関係を定義したフラット コレクションを含むコンポーネントの例です。
 
@@ -184,7 +190,7 @@ export class MyComponent implements OnInit {
 }
 ```
 
-上記サンプル データはすべてのレコードに ID (ParentID と Name, JobTitle、Age.などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
+上記サンプル データはすべてのレコードに ID (ParentID と Name、 JobTitle、Age.などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
 
 親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) プロパティを使用して設定されます。
 
@@ -221,7 +227,7 @@ export class MyComponent implements OnInit {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -237,9 +243,134 @@ export class MyComponent implements OnInit {
 
 <div class="divider--half"></div>
 
-<!-- ### Sizing
+### サイズ変更
 
-See the [Grid Sizing](sizing.md) topic. -->
+[Grid サイズ変更](sizing.md) トピックを確認してください。
+
+### スタイル設定
+
+[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
+
+Tree Grid (ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が含まれる `index` ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じてツリー グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
+
+>[!NOTE]
+>`sass` 階層グリッド固有の機能はありません。
+
+```scss
+$custom-theme: igx-grid-theme(
+  $cell-active-border-color: #FFCD0F,
+  $cell-selected-background: #6F6F6F,
+  $row-hover-background: #F8E495,
+  $row-selected-background: #8D8D8D,
+  $header-background: #494949,
+  $header-text-color: #FFF,
+  $expand-icon-color: #FFCD0F,
+  $expand-icon-hover-color: #E0B710,
+  $resize-line-color: #FFCD0F,
+  $row-highlight: #FFCD0F
+);
+```
+
+最後にコンポーネントのテーマを**含めます**。
+
+```scss
+@include igx-grid($custom-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```
+
+#### カラーパレットの定義
+
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #494949;
+$custom-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
+
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
+    $cell-selected-background: igx-color($custom-palette, "primary", 300),
+    $row-hover-background: igx-color($custom-palette, "secondary", 100),
+    $row-selected-background: igx-color($custom-palette, "primary", 100),
+    $header-background: igx-color($custom-palette, "primary", 500),
+    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $expand-icon-color: igx-color($custom-palette, "secondary", 500),
+    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 600),
+    $resize-line-color: igx-color($custom-palette, "secondary", 500),
+    $row-highlight: igx-color($custom-palette, "secondary", 500)
+);
+```
+
+#### スキーマの使用
+
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
+
+```scss
+// Extending the light tree grid schema
+$custom-grid-schema: extend($_light-grid, (
+    cell-active-border-color: (igx-color:('secondary', 500)),
+    cell-selected-background: (igx-color:('primary', 300)),
+    row-hover-background: (igx-color:('secondary', 100)),
+    row-selected-background: (igx-color:('primary', 100)),
+    header-background: (igx-color:('primary', 500)),
+    header-text-color: (igx-contrast-color:('primary', 500)),
+    expand-icon-color: (igx-color:('secondary', 500)),
+    expand-icon-hover-color: (igx-color:('secondary', 600)),
+    resize-line-color: (igx-color:('secondary', 500)),
+    row-highlight: (igx-color:('secondary', 500))
+));
+```
+
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
+
+```scss
+// Extending the global light-schema
+$my-custom-schema: extend($light-schema, (
+    igx-grid: $custom-grid-schema
+));
+
+// Defining grid-theme with the global light schema
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+); 
+```
+
+上記と同じ方法でテーマを含める必要があることに注意してください。
+
+#### デモ
+
+<div class="sample-container loading" style="height:600px">
+    <iframe id="tree-grid-styling" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
 
 ## 既知の問題と制限
 
@@ -249,7 +380,7 @@ See the [Grid Sizing](sizing.md) topic. -->
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
 > [!NOTE]
-> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxTreeGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxTreeGrid` で有効です。詳細については、[igxForOf 既知の問題](../for_of.html#既知の問題と制限) のセクションを参照してください。
 
 <div class="divider--half"></div>
 
@@ -261,7 +392,7 @@ See the [Grid Sizing](sizing.md) topic. -->
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
 * [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
@@ -271,7 +402,7 @@ See the [Grid Sizing](sizing.md) topic. -->
 
 <div class="divider--half"></div>
 
-<!-- * [Grid Sizing](sizing.md) -->
+* [Grid サイズ変更](sizing.md)
 * [データ グリッド](../grid/grid.md)
 * [行編集](row_editing.md)
 

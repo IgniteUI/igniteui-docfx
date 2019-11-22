@@ -23,7 +23,14 @@ _language: ja
 
 ## 使用方法
 ### 作業の開始
-[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用するには、**app.module** に **IgxExpansionPanelModule** をインポートする必要があります。
+[`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を使用するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** に  **IgxExpansionPanelModule** をインポートします。
 ```typescript
 // app.module.ts
 
@@ -191,7 +198,7 @@ export class ExpansionPanelComponent {
 `IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の拡張パネルもレンダリングできます。
 
 ## スタイル設定
-拡張パネルには、本文のコンテンツに特定の境界線やパディングが定義されていません。拡張パネル本体要素のパディングを手動で設定するか、拡張パネル本体を `igxCard` でラップすることができます。後者については、[Weather Forecast (天気予報) サンプル](#weather-forecast-sample)をご覧ください。
+拡張パネルには、本文のコンテンツに特定の境界線やパディングが定義されていません。拡張パネル本体要素のパディングを手動で設定するか、拡張パネル本体を `igxCard` でラップすることができます。後者については、[Weather Forecast (天気予報) サンプル](#天気予報のサンプル)をご覧ください。
 
 ### ヘッダーのスタイル設定
 [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を使用すると、[ヘッダー]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)を簡単にカスタマイズできます。
@@ -259,7 +266,7 @@ $my-color-palette: igx-palette(
 ```
 
 カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの `igx-expansion-panel-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
+次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの `igx-expansion-panel-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
 ```scss
 // in styles.scss
 $custom-panel-theme: igx-expansion-panel-theme(
@@ -277,7 +284,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 #### グローバル
-この新しく作成された `igx-expansion-panel テーマ`をアプリに [`グローバル`](themes/component-themes.md#creating-themes) に適用する場合、必要なのは、アプリのルート スタイル ファイルにテーマを含め、[igx-expansion-panel mixin]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) に渡すだけです。
+この新しく作成された `igx-expansion-panel テーマ`をアプリに [`グローバル`](themes/component-themes.md#テーマの作成) に適用する場合、必要なのは、アプリのルート スタイル ファイルにテーマを含め、[igx-expansion-panel mixin]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) に渡すだけです。
 ```scss
 // in styles.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
@@ -287,7 +294,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 特定の `igx-expansion-panel` をアプリ内で異なるスタイルにしたい場合、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、上記のすべての手順を `styles.scss` から `component.scss` ファイルに移動する必要があります。 
 
  >[!NOTE]
- >コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ >コンポーネントが[`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss

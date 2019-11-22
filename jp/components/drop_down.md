@@ -14,15 +14,19 @@ _language: ja
     <iframe id="dropdown-sample-4-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-4' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順を確認できます。
-
 ### 使用方法
-Ignite UI for Angular Drop Down コンポーネントを初期化する前に `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
+[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxDropDownModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -74,7 +78,7 @@ export class MyDropDownComponent {
     <iframe id="dropdown-sample-1-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -112,7 +116,7 @@ export class MyDropDownComponent {
     <iframe id="dropdown-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="dropdown-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -159,7 +163,7 @@ export class MyDropDownComponent {
     <iframe id="dropdown-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -237,7 +241,7 @@ export class MyCustomDropDownComponent {
     <iframe id="dropdown-sample-5-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                stackblitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -297,7 +301,7 @@ export class MyMenuComponent {
     <iframe id="dropdown-menu-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-menu' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
@@ -362,7 +366,7 @@ export class InputDropDownComponent {
     <iframe id="dropdown-sample-4-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -419,7 +423,7 @@ $my-color-palette: igx-palette(
 );
 ```
 カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#creating-themes)し、定義済みの多数の `igx-drop-down-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成したパレットを使用して、新しい色をその[パレット](themes/palette.md)に基づいて作成すると非常に便利です。紫色のいくつかの異なる色合いを使用します。
+次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの多数の `igx-drop-down-theme` パラメーターに色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成したパレットを使用して、新しい色をその[パレット](themes/palette.md)に基づいて作成すると非常に便利です。紫色のいくつかの異なる色合いを使用します。
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
     $background-color: igx-color($my-color-palette, "secondary", 100),
@@ -452,7 +456,7 @@ $custom-button-theme: igx-button-theme(
 あとは新しく作成したテーマを適切にスコープするだけです。
 
 ##### グローバル
-この新しく作成された `igx-drop-down` テーマをアプリで[`グローバル`](themes/component-themes.md#creating-themes)に適用したい場合 (このタイプのすべてのコンポーネントに、実際に igx-drop-down-theme を拡張していることに注意してください)、必要なすべてテーマをアプリのルート スタイルファイルに含めてください。同じことがカスタム ボタン テーマにも当てはまります。
+この新しく作成された `igx-drop-down` テーマをアプリで[`グローバル`](themes/component-themes.md#テーマの作成)に適用したい場合 (このタイプのすべてのコンポーネントに、実際に igx-drop-down-theme を拡張していることに注意してください)、必要なすべてテーマをアプリのルート スタイルファイルに含めてください。同じことがカスタム ボタン テーマにも当てはまります。
 ```scss
 // in root app.scss
 // Pass our drop-down theme to the `igx-drop-down` mixin
@@ -465,7 +469,7 @@ $custom-button-theme: igx-button-theme(
 特定の `igx-drop-down` のスタイルをアプリ内の他のものとは異なるようにする場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要があります。
+ >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要があります。
 
  
 
@@ -488,18 +492,20 @@ $custom-button-theme: igx-button-theme(
     <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ### API リファレンス
 
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
 * [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -18,11 +18,17 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
-
 ### 使用方法
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用してカレンダーから日付を選択できます。ピッカーは内部で [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をカレンダーとして使用します。Ignite UI for Angular Date Picker を初期化する前に、`IgxDatePickerModule` を **app.module.ts** ファイルにインポートします。
+デフォルトで、[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) でカレンダーから日付を選択できます。ピッカーは内部で [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をカレンダーとして使用します。
+
+Date Picker コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxDatePickerModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -102,8 +108,8 @@ Two-way データ バインディングを作成するには、以下のよう�
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
-#### Setting Multi View mode
-Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) input the number of displayed months in the calendar is set. To hide the days that do not belong to the current month, use the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays).
+#### マルチビュー モードの設定
+monthsViewNumber 入力を使用して、カレンダーに表示される月数を設定します。現在の月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) を使用します。
 
 
 ボタンが表示されるサンプル:
@@ -143,7 +149,7 @@ public formatter = (date: Date) => {
     <iframe id="date-picker-sample-4" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -191,7 +197,7 @@ public formatter = (date: Date) => {
     <iframe id="date-picker-dropdown" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -246,12 +252,12 @@ public date: Date = new Date(Date.now());
     <iframe id="date-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 #### ドロップダウン モード デート ピッカーのテンプレート
-<a href="#templating-dialog-mode-date-picker"> テンプレート ダイアログ モードのデートピッカー</a>セクションに記載されているすべての情報は、ドロップダウン デートピッカーを再テンプレートするときに適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
+<a href="#入力グループのテンプレート化"> テンプレート ダイアログ モードのデートピッカー</a>セクションに記載されているすべての情報は、ドロップダウン デートピッカーを再テンプレートするときに適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
 <div class="sample-container loading" style="height: 650px;">
     <iframe id="date-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>
@@ -298,7 +304,7 @@ public yearsView(datePicker: IgxDatePickerComponent) {
     <iframe id="date-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -385,10 +391,10 @@ public getDatePart(val: any, component: any, datePart: string) {
 <div class="divider--half"></div>
 
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 <div class="divider--half"></div>
 
