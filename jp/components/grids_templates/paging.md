@@ -8,6 +8,7 @@ _language: ja
 ### @@igComponent ページング
 
 @@igComponent のページングは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) で設定できます。その他の Angular Material テーブルと同様に、@@igComponent のページングはカスタム ページのテンプレートをサポートします。
+
 #### デモ
 
 @@if (igxName === 'IgxGrid') {
@@ -85,9 +86,9 @@ this.@@igObjectRef.perPage = 25;
 this.@@igObjectRef.paging = false;
 ```
 
-### Remote Paging
+### リモート ページング
 
-The @@igComponent supports remote paging, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
+@@igComponent はリモート ページングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#リモート-ページング) トピックで説明されています。
 
 @@if (igxName === 'IgxGrid') {
 ### グループ化によるページング
@@ -363,8 +364,8 @@ $dark-button: igx-button-theme(
 * [並べ替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列ピン固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>
