@@ -60,7 +60,7 @@ To add a month picker in a template, use the following code:
 ```
 
 #### Setting date
-Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#value) input.
+Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) input.
 
 ```typescript
 // month-picker-sample.component.ts
@@ -83,7 +83,7 @@ To create a two-way data-binding, set `ngModel` like this:
 ```
 
 #### Formatting
-Change the month picker display format, using the [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions) inputs.
+Change the month picker display format, using the [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) inputs.
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -110,7 +110,7 @@ Here is an example of modifying the default format options of the month picker:
 </div>
 
 #### Localization
-Use the [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale) input, to customize the month picker localization.
+Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the month picker localization.
 
 ```html
 <!-- month-picker-sample.component.html -->
