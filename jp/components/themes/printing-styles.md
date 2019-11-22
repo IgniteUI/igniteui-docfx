@@ -1,25 +1,26 @@
----
-title: Print Layout
+﻿---
+title: 印刷レイアウト
 _description: 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, printing styles, @media print 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ、印刷スタイル、@media 印刷 
+_language: ja
 ---
 
-## Printing styles
-<p class="highlight">The Ignite UI for Angular theming engine provides some default printing styles, which make sure that our components have at least the bare minimum to look decent when they are printed on a paper</p>
+## 印刷スタイル
+<p class="highlight">Ignite UI for Angular テーマ エンジンは、いくつかのデフォルトの印刷スタイルがあり、紙に印刷する際に最低限必要なスタイルが含まれます。</p>
 <div class="divider--half"></div>
 
-### How to make use of the printing styles
+### 印刷スタイルを使用する方法
 
-In order to make use of the printing styles, you need to make sure that your components are the same size as the selected document for print, otherwise, they will be cut off. 
+印刷スタイルを使用するには、コンポーネントが印刷用に選択したドキュメントと同じサイズであることを確認する必要があります。サイズが合わない場合は見切れが発生します。 
 
-For example, if you are planning to `print` a `Grid` in A4 format, you need to make sure that your `grid` size is exactly the same as the document for print. The `width and height` should match the size of the format that you want to print in. Also, the data needs to fit in that view, without the need for scrollbars to appear.
+たとえば、A4 形式をで`グリッド`を `印刷`する場合は、`グリッド`のサイズが印刷用のドキュメントと同じであることを確認してください。`幅と高さ`は、印刷する形式のサイズと一致する必要があります。また、スクロールバーを表示せずに、データがそのビューに合わせてください。
 
-If you have huge amount of data that requires scrollbars, the data that is currently in the view will be printed and everything else will be cut off.
+スクロールバーを必要とする大量のデータがある場合、現在ビューにあるデータが印刷され、その他はすべて印刷されません。
 
-By `default` the `printing styles` are incorporated in the `compiled CSS`.
-If you are not planning to print, we suggest you turn them off in order to reduce the size of the outputted CSS.
+`デフォルト`では、`印刷スタイル`は`コンパイル済み CSS` に組み込まれます。
+印刷しない場合は、出力される CSS のサイズを減らすために、印刷スタイルをなしにすることをお勧めします。
  
-You can do that in your theme `SCSS` file:
+これには、テーマ `SCSS` ファイルを変更できます。
 ```scss
 // Import the IgniteUI themes library first.
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -31,6 +32,6 @@ igx-core($print-layout: false)
 @include igx-theme($default-palette);
 ```
 
-Note that even if you have a colorful grid it will appear black and white in order to be as clean and simple as possible and to reduce the use of ink. All the clickable elements in the grid will be omitted since they don't make sense on a paper
+注: カラフルなグリッドを使用する場合でも、できる限りきれいでシンプルにするため、またインクの使用を減らすために、白黒のグリッドが表示されます。グリッド上のすべてのクリック可能な要素は、紙では意味をなさないため、省略されます。
 
-If you have other elements on the page and you don't want them to appear in the print document you can add the `.igx-no-print` class that we provide. That class will set the display property on the target element to `display: none` which will make sure that the element will be omitted from the print page, so you can have a nice clean `Data Grid` ready for print.
+ページに他の要素があり、それらを印刷ドキュメントに表示しない場合は、提供する `.igx-no-print` クラスを追加できます。このクラスは、ターゲット要素の表示プロパティを `display: none` に設定することにより、要素が印刷ページから省略されるようになり、`Data Grid` を印刷仕様にできます。
