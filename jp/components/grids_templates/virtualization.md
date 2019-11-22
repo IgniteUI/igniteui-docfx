@@ -48,7 +48,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 
 ### 仮想化の有効化
 
-[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブは、ビューポートに表示されているデータのみを描画し、ユーザーがスクロール時に表示データを切り替えた際に @@ が DOM 描画およびメモリ使用を最適化します。[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`width`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#width) と [`height`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#height) は、デフォルトが `100%` で表示コンテンツが使用可能なスペースにフィットしない場合、水平または垂直のスクロールバーが必要になります。ただし、@@igComponent の [`width`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#width) および/または [`height`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#height) を `null` に設定することが可能で、関連するディメンションが内部の項目サイズの合計で決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション ([`width`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#width) が `null` 値の場合は列で、[`height`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#height) が null 値の場合は行) に描画されます。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブは、ビューポートに表示されているデータのみを描画し、ユーザーがスクロール時に表示データを切り替えた際に @@ が DOM 描画およびメモリ使用を最適化します。[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`width`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#width) と [`height`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#height) は、デフォルトが `100%` で表示コンテンツが使用可能なスペースにフィットしない場合、水平または垂直のスクロールバーが必要になります。ただし、@@igComponent の [`width`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#width) および/または [`height`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#height) を `null` に設定することが可能で、関連するディメンションが内部の項目サイズの合計で決定されます。スクロールバーが表示されず、すべての項目が相対するディメンション ([`width`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#width) が `null` 値の場合は列で、[`height`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#height) が `null` 値の場合は行) に描画されます。
 
 データのサイズは以下によって決定されます。
 
@@ -62,7 +62,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 @@if (igxName === 'IgxGrid') {
 ### リモート仮想化
 
-The @@igComponent supports remote virtualization, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+@@igComponent はリモート仮想化をサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
 }
 
 ### 仮想化の制限
@@ -71,7 +71,7 @@ The @@igComponent supports remote virtualization, which is demonstrated in the [
 
 ### FAQ
 
-#### 仮想化で @@igComponentでディメンションを設定する必要があるのはなぜですか？
+#### 仮想化で @@igComponent でディメンションを設定する必要があるのはなぜですか？
 
 描画する前にコンテナーおよび項目のサイズの情報がない場合に @@igComponent でランダムな位置にスクロールすると、スクロールバーの幅や高さの設定、表示項目の決定で誤りが発生します。ディメンションの推測がスクロールバーの誤操作となり、ユーザー エクスペリエンスを低下させます。そのため、仮想化を有効にするには、関連ディメンションを設定する必要があります。
 
@@ -93,8 +93,8 @@ The @@igComponent supports remote virtualization, which is demonstrated in the [
 * [並べ替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列ピン固定](column_pinning.md)
+* [列サイズ変更](column_resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>
