@@ -242,7 +242,7 @@
       new: false
     - name: Conditional Cell Styling
       href: treegrid/conditional_cell_styling.md
-      new: false
+      new: true
     - name: Aggregations
       href: treegrid/aggregations.md
       new: false
@@ -933,8 +933,8 @@
   href: drag_drop.md
   new: true
 - name: Zoom Slider
-  new: true
-  href: zoomslider_overview.md
+  new: false
+  href: zoomslider-overview.md
 - name: Menus
   header: true
 - name: Navigation Drawer

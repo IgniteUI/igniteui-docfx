@@ -9,6 +9,8 @@ mentionedTypes: ['Workbook', 'WorkbookFormat', 'WorkbookSaveOptions']
 
 This topic provides utility function for loading and saving Microsoft Excel files using [Excel Library](excel_library.md)
 
+<!-- Angular -->
+
 ```ts
 import { saveAs } from "file-saver"; // npm package: "file-saver": "^1.3.8"
 import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
