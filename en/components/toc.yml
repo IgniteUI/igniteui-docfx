@@ -933,8 +933,8 @@
   href: drag_drop.md
   new: true
 - name: Zoom Slider
-  new: true
-  href: zoomslider_overview.md
+  new: false
+  href: zoomslider-overview.md
 - name: Menus
   header: true
 - name: Navigation Drawer
