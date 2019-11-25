@@ -30,7 +30,7 @@ const cleanup =  async (done) => {
      });
 }
 
-const environmentVariablesConfig =  (cb) => {
+const environmentVariablesConfig =  (done) => {
     var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
 
     if (process.env.NODE_ENV) {
@@ -50,11 +50,10 @@ const environmentVariablesConfig =  (cb) => {
         `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
         JSON.stringify(environmentVariablesConfig)
     );
-    cb();
+    done();
 }
 
-const generateGridsTopics = (cb) => {
-    const eventEmitter = new EventEmitter();
+const generateGridsTopics = (done) => {
 
     const grids = [
         {
@@ -104,8 +103,7 @@ const generateGridsTopics = (cb) => {
             }))
             .pipe(dest(DOCFX_ARTICLES + grid.igPath));
     }
-     setTimeout( () => eventEmitter.emit("finish"), 3000);
-     return eventEmitter;
+    done();
 }
 
 const  styles = () => {
@@ -121,10 +119,10 @@ const  styles = () => {
 };
 
 const buildSite = async() => {
-     await shell.task(`docfx build ${DOCFX_CONF}`)(done =>  done());
+     await shell.task(`docfx build ${DOCFX_CONF}`)();
 }
 
-const watchFiles = () => {
+const watchFiles = (done) => {
     
     const excluded = [
         `!${DOCFX_ARTICLES}/grid/**`,
@@ -152,7 +150,9 @@ const watchFiles = () => {
            `${DOCFX_PATH}/general/**/*.md`,
            `${DOCFX_PATH}/themes/*.md`,
            `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included),
+            {delay: 3000},
             series(build, browserSyncReload));
+    done();
 }
 
 const init = (done) => {
@@ -177,20 +177,17 @@ const init = (done) => {
             }
         }
     });
-    watchFiles()
     done();
 };
 
-const  browserSyncReload = () => {
-    const eventEmitter = new EventEmitter();
+const  browserSyncReload = (done) => {
     browserSync.reload();
-    setTimeout(()=> eventEmitter.emit("finish"), 1000);
-    return eventEmitter;
+    done();
 };
 
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
-const build = series(parallel(styles), postProcessorConfigs, generateGridsTopics, buildSite);
+const build = series(styles, postProcessorConfigs, generateGridsTopics, buildSite);
 
 exports.build = build;
-exports.serve = series(build, init);
+exports.serve = series(build, init, watchFiles);
 exports.buildTravis = series(parallel(styles), postProcessorConfigs, generateGridsTopics);
