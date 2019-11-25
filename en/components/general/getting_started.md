@@ -56,16 +56,26 @@ ng add igniteui-angular
 
 During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
 
-#### Create an application by using the Ignite UI CLI
+#### Quick Start with Angular Schematics & Ignite UI  CLI
+To create an application from scratch and configure it to use the Ignite UI for Angular components you can use either the Ignite UI for Angular Schematics or the Ignite UI CLI. The first step is to install the respective package globally as follows:
 
-Let's start by opening a preferred terminal and installing the [`Ignite UI CLI`](cli-overview.md):
+```cmd
+npm i -g @igniteui/angular-schematics
+```
+
+or:
 
 ```cmd
 npm install -g igniteui-cli 
 ```
 
-The shortest and easiest way to bootstrap an application is to use the Ignite UI CLI [`guided experience`](cli/step-by-step-guide.md), which builds a configured app that the developer can run with the ease of a single command. 
+Our [`guided experience`](cli/step-by-step-guide.md) is the easiest way to bootstrap a configured application.
 
+To activate the guide using the Ignite UI for Angular Schematics run:
+```cmd
+ng new --collection="@igniteui/angular-schematics"
+```
+or run the following command in case you are using the CLI tool:
 ```cmd
 ig
 ```
@@ -78,7 +88,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-Alternatively you can use the Ignite UI CLI [`commands`](cli-overview.md#commands) for generating an Ignite UI project, adding a new component or building and serving the application.
+Learn more about our [Angular Schematics & Ignite UI CLI](cli-overview.md).
 
 ## Using Ignite UI for Angular
 
@@ -87,7 +97,11 @@ We are now ready to start using Ignite UI for Angular components!
 ### Add components automatically
 
 #### Import modules and use components
-In order to easily add new components to our application, we can take advantage of the Ignite UI CLI!
+Now we can add new components to our application using either the `component` schematic or the `add` command:
+
+```cmd
+ng g @igniteui/angular-schematics:component
+```
 
 ```cmd
 ig add
@@ -101,10 +115,10 @@ After going through the options of the menu and choosing which component we want
 
 #### Run application
 
-Now let’s run our application with the [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) command to see our awesome page!
+Now let’s run our application to see our awesome page!
 
 ```cmd
-ig start
+npm start
 ```
 
 ### Add components manually
