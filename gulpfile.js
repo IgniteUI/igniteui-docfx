@@ -1,6 +1,7 @@
 const path = require('path');
+const { EventEmitter } = require('events');
 const del = require('del');
-const {dest, series, src, watch} = require('gulp');
+const {dest, series, src, watch, parallel} = require('gulp');
 const shell = require('gulp-shell');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
@@ -9,7 +10,6 @@ const argv = require('yargs').argv;
 const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 const fileinclude = require('gulp-file-include');
-const exec = require('child_process').exec;
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -53,6 +53,8 @@ const environmentVariablesConfig =  (cb) => {
 }
 
 const generateGridsTopics = (cb) => {
+    const eventEmitter = new EventEmitter();
+
     const grids = [
         {
             igPath: '/grid',
@@ -101,7 +103,9 @@ const generateGridsTopics = (cb) => {
             }))
             .pipe(dest(DOCFX_ARTICLES + grid.igPath));
     }
-     cb();
+     setTimeout( () => eventEmitter.emit("buildSite"), 3000);
+     eventEmitter.on("buildSite", series(buildSite, () => eventEmitter.emit("finish")));
+     return eventEmitter;
 }
 
 const  styles = () => {
@@ -119,19 +123,7 @@ const  styles = () => {
 const buildSite = async() => {
      await shell.task(`docfx build ${DOCFX_CONF}`)(done =>  done());
 
-};
-
-// const build_site = (done) => exec(`docfx build ${DOCFX_CONF}`, {})
-//                             .on("message", (message) => console.log(message))
-//                             .on("exit", () => done());
-
-// gulp.parallel(asd);
-// gulp.task('build-travis', series(
-//     'styles',
-//     'cleanup',
-//     'post-processor-configs',
-//     'generate-grids-topics'
-// ));
+}
 
 const init = (done) => {
     browserSync.init({
@@ -174,20 +166,19 @@ const init = (done) => {
         `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
     ];
  
-    watch(`${DOCFX_TEMPLATE}/**/*`, watcher);
-    watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), watcher );
+    watch(`${DOCFX_TEMPLATE}/**/*`, watcher2);
+    watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), build );
 
     done();
 };
-
-
 
 const  browserSyncReload = (done) => {
     browserSync.reload();
     done();
 };
 
+const watcher2 = (done)=>{console.log(wathched); done();}
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
-const build = series(generateGridsTopics ,postProcessorConfigs, styles, buildSite);
+const build = series(postProcessorConfigs, parallel(styles, generateGridsTopics), browserSyncReload);
 const watcher = series(build, browserSyncReload);
 exports.serve = series(build, init);
