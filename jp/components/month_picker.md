@@ -61,7 +61,7 @@ import { IgxMonthPickerComponent } from "igniteui-angular";
 ```
 
 #### 日付の設定
-[`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxcalendarbase.html#value) 入力を設定します。
+[`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) 入力を設定します。
 
 ```typescript
 // month-picker-sample.component.ts
@@ -84,7 +84,7 @@ Two-way データ バインディングを作成するには、以下のよう�
 ```
 
 #### 書式設定
-`formatViews` と [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
+`formatViews` と [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -111,7 +111,7 @@ public numericFormatOptions = {
 </div>
 
 #### ローカライズ
-[`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) 入力を使用してマンスピッカーのローカライズをカスタマイズします。
+[`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) 入力を使用してマンスピッカーのローカライズをカスタマイズします。
 
 ```html
 <!-- month-picker-sample.component.html -->
