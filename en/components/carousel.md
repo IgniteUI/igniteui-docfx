@@ -152,7 +152,7 @@ To add custom carousel indicators we will have to use the [IgxCarouselIndicatorD
 
 The last step is to customize the navigation buttons.
 
-To achieve this we will use [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) with the following approach:
+To achieve this we will use [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) with the following approach:
 
 ```html
 ...
@@ -214,7 +214,7 @@ The navigation in the carousel can be handled by the user through navigation but
 
 By default the carousel can be used for any kind of touch devices. This is optional and can be changed by setting `false` to the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property.
 
-The carousel persists all the supported [animations](carousel.md#animations) during slide change on a touch device, which makes it consistent with any platform and a perfect tool for building a progressive web application([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) with.
+The carousel [animations](carousel.md#animations) are supported even on a touch device, which makes it consistent with any platform and a perfect tool for building a progressive web application([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) with.
 
 #### Keyboard navigation
 <div class="divider--half"></div>
