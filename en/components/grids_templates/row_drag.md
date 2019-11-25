@@ -213,13 +213,77 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-We define a refenrece to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
+We define a reference to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
 - add a row to the `targetGrid` that contains the data of the row being dropped
 - remove the dragged row from the `sourceGrid`
 }
 
 > [!NOTE]
 > When using row data from the event arguments (`args.dragData.rowData`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you must clone the data you need, if you want to distinguish it from the one in the source grid.
+
+#### Templating the drag ghost
+The drag ghost can be templated using the `IgxRowDragGhost` directive, applied to a `<ng-template>` inside of the `@@igSelector`'s body:
+```html
+<@@igSelector>
+...
+   <ng-template igxRowDragGhost>
+        <div>
+            <igx-icon fontSet="material">arrow_right_alt</igx-icon>
+        </div>
+    </ng-template>
+...
+</@@igSelector>
+```
+The result of the configuration can be seem below in a `@@igSelector` with row dragging and multiple selection enabled. The demo shows the count of the currently dragged rows:
+##### Example Demo
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/grid/grid-multiple-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="tree-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+The drag ghost can be templated on every grid level, making it possible to have multiple ghost templates or to only provide a template for a single row island.
+```html
+<@@igSelector>
+...
+    <ng-template igxRowDragGhost>
+        <div>
+            <igx-icon fontSet="material">arrow_right_alt</igx-icon> 
+        </div>
+    </ng-template>
+    <igx-row-island>
+        ...
+        <ng-template IgxRowDragGhost>
+            <img src="smile.gif" height="42" width="42">
+        </ng-template>
+    </igx-row-island>
+...
+</@@igSelector>
+```
+<div class="sample-container loading" style="height:600px">
+    <iframe id="hierarchical-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
 #### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
@@ -275,7 +339,7 @@ Once our drop handlers are properly configured, we're good to go!
 The result of the configuration can be seem below:
 }
 
-#### Example Demo
+##### Example Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
