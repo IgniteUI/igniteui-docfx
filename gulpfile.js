@@ -103,8 +103,7 @@ const generateGridsTopics = (cb) => {
             }))
             .pipe(dest(DOCFX_ARTICLES + grid.igPath));
     }
-     setTimeout( () => eventEmitter.emit("buildSite"), 3000);
-     eventEmitter.on("buildSite", series(buildSite, () => eventEmitter.emit("finish")));
+     setTimeout( () => eventEmitter.emit("finish"), 3000);
      return eventEmitter;
 }
 
@@ -166,7 +165,7 @@ const init = (done) => {
         `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
     ];
  
-    watch(`${DOCFX_TEMPLATE}/**/*`, watcher2);
+    watch(`${DOCFX_TEMPLATE}/**/*`, build);
     watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), build );
 
     done();
@@ -177,8 +176,6 @@ const  browserSyncReload = (done) => {
     done();
 };
 
-const watcher2 = (done)=>{console.log(wathched); done();}
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
-const build = series(postProcessorConfigs, parallel(styles, generateGridsTopics), browserSyncReload);
-const watcher = series(build, browserSyncReload);
+const build = series(parallel(styles), postProcessorConfigs, generateGridsTopics, buildSite, browserSyncReload);
 exports.serve = series(build, init);
