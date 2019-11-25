@@ -10,6 +10,7 @@ const argv = require('yargs').argv;
 const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 const fileinclude = require('gulp-file-include');
+const slash = require("slash");
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -19,7 +20,7 @@ const DOCFX_BASE = {
 };
 const DOCFX_PATH = `${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
-const DOCFX_TEMPLATE = path.join(__dirname, `./node_modules/igniteui-docfx-template/template`);
+const DOCFX_TEMPLATE = slash(path.join(__dirname, `./node_modules/igniteui-docfx-template/template`));
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 
@@ -112,7 +113,7 @@ const  styles = () => {
         .pipe(sass().on('error', sass.logError))
         .pipe(
             autoprefixer({
-                browsers: ['last 2 versions'],
+                overrideBrowserslist: ['last 2 versions'],
                 cascase: false
             })
         )
@@ -121,7 +122,37 @@ const  styles = () => {
 
 const buildSite = async() => {
      await shell.task(`docfx build ${DOCFX_CONF}`)(done =>  done());
+}
 
+const watchFiles = () => {
+    
+    const excluded = [
+        `!${DOCFX_ARTICLES}/grid/**`,
+        `!${DOCFX_ARTICLES}/treegrid/**`,
+        `!${DOCFX_ARTICLES}/hierarchicalgrid/**`
+    ];
+
+    // All topics that are not auto-generated and are specific to the respective grid, should be here.
+    const included = [
+        `${DOCFX_ARTICLES}/grid/grid.md`,
+        `${DOCFX_ARTICLES}/grid/groupby.md`,
+        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
+        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
+        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
+    ];
+
+    // watch([`${DOCFX_TEMPLATE}/**/*`, `!${DOCFX_TEMPLATE}/styles/css`], series(build));
+    watch([
+           `${DOCFX_TEMPLATE}/**/*`,
+           `!${DOCFX_TEMPLATE}/styles/css/main.css`,
+          ,`${DOCFX_PATH}/components/*.md`,
+           `${DOCFX_PATH}/general/**/*.md`,
+           `${DOCFX_PATH}/themes/*.md`,
+           `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included),
+            series(build, browserSyncReload));
 }
 
 const init = (done) => {
@@ -146,36 +177,17 @@ const init = (done) => {
             }
         }
     });
-
-    const excluded = [
-        `!${DOCFX_ARTICLES}/grid/**`,
-        `!${DOCFX_ARTICLES}/treegrid/**`,
-        `!${DOCFX_ARTICLES}/hierarchicalgrid/**`
-    ];
-
-    // All topics that are not auto-generated and are specific to the respective grid, should be here.
-    const included = [
-        `${DOCFX_ARTICLES}/grid/grid.md`,
-        `${DOCFX_ARTICLES}/grid/groupby.md`,
-        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
-        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
-        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
-        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
-    ];
- 
-    watch(`${DOCFX_TEMPLATE}/**/*`, build);
-    watch([`${DOCFX_PATH}/components/*.md`, `${DOCFX_PATH}/general/**/*.md`, `${DOCFX_PATH}/themes/*.md`, `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included), build );
-
+    watchFiles()
     done();
 };
 
-const  browserSyncReload = (done) => {
+const  browserSyncReload = () => {
+    const eventEmitter = new EventEmitter();
     browserSync.reload();
-    done();
+    setTimeout(()=> eventEmitter.emit("finish"), 1000);
+    return eventEmitter
+;
 };
-
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
-const build = series(parallel(styles), postProcessorConfigs, generateGridsTopics, buildSite, browserSyncReload);
+const build = series(parallel(styles), postProcessorConfigs, generateGridsTopics, buildSite);
 exports.serve = series(build, init);
