@@ -185,9 +185,12 @@ const  browserSyncReload = () => {
     const eventEmitter = new EventEmitter();
     browserSync.reload();
     setTimeout(()=> eventEmitter.emit("finish"), 1000);
-    return eventEmitter
-;
+    return eventEmitter;
 };
+
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
 const build = series(parallel(styles), postProcessorConfigs, generateGridsTopics, buildSite);
+
+exports.build = build;
 exports.serve = series(build, init);
+exports.buildTravis = series(parallel(styles), postProcessorConfigs, generateGridsTopics);
