@@ -214,7 +214,7 @@ The navigation in the carousel can be handled by the user through navigation but
 
 By default the carousel can be used for any kind of touch devices. This is optional and can be changed by setting `false` to the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property.
 
-The carousel [animations](carousel.md#animations) are supported even on a touch device, which makes it consistent with any platform and a perfect tool for building a progressive web application([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) with.
+The carousel [animations](carousel.md#animations) are fully supported on a touch device, which makes it consistent with any platform and a perfect tool for building a progressive web application([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) with.
 
 #### Keyboard navigation
 <div class="divider--half"></div>
