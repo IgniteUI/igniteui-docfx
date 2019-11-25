@@ -5,9 +5,15 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 ---
 
 ## Step-by-Step Guide
-If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you to create and setup your new application, as well as update project previously created with the [Ignite UI CLI](../cli-overview.md).
+If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics or Ignite UI CLI](../cli-overview.md).
 
-To start the guide, simply run the `ig` command:
+To activate the guide using the Schematics collection run:
+
+```cmd
+ng new --collection="@igniteui/angular-schematics"
+```
+
+To start the guide using the Ignite UI CLI, simply run the `ig` command:
 
 ```bash
 ig
@@ -50,14 +56,17 @@ After completing the above steps the application structure will be generated, gi
 
 ## Add view
 
-Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project.
+Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project. This mode can be activated either after completing project creation or inside an existing project using the commands below.
 
-This mode can be activated either after completing project creation or by running the `add` command inside an existing project:
+To activate the the step by step mode using the Schematics collection run the `component`(alias:`c`) schematic:
+```bash
+ng g @igniteui/angular-schematics:component
+```
+
+When using Ignite UI CLI, run the `add` command:
 ```bash	
 ig add
 ```
-
-
 In case you choose to add a new control, you will be provided with a [list of the available templates](component-templates.md#component-templates), grouped in categories.
 
 ![](../../../images/general/ig-step-by-step-template-group.png)

@@ -498,9 +498,9 @@ And the result from this configuration is:
 
 #### Flat data
 
-The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property of the [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html).
+The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property of the [IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html).
 
-Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property provides you this opportunity.
+Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property provides you this opportunity.
 
 Below is the data that we are going to use:
 ```typescript
