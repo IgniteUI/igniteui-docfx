@@ -7,7 +7,7 @@ _language: ja
 
 ## ツールチップ
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールは、2 つのツールチップ 「レイヤー」 と共にツールチップを表示できます。これらのツールチップを使用すると、チャート内の各シリーズに関するコンテキスト情報を確認するのに役立ちます。
+[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールは、2 つのツールチップ 「レイヤー」 と共にツールチップを表示できます。これらのツールチップを使用すると、チャート内の各シリーズに関するコンテキスト情報を確認するのに役立ちます。
 
 ### デモ
 
@@ -15,13 +15,13 @@ _language: ja
     <iframe id="data-chart-series-tooltips-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールでツールチップ レイヤーを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
+[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでツールチップ レイヤーを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
 
 ```ts
 import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
@@ -33,9 +33,9 @@ import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx
 
 ### デフォルト ツールチップ
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルトのツールチップには、シリーズのタイトル、データ値、軸の値など、ホバーされている特定のシリーズ項目に関連するすべての情報が表示されます。これらもシリーズの外観に合わせてスタイル設定されています。
+[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールは、シリーズの種類ごとに既定のツールチップを提供します。デフォルトのツールチップには、シリーズのタイトル、データ値、軸の値など、ホバーされている特定のシリーズ項目に関連するすべての情報が表示されます。これらもシリーズの外観に合わせてスタイル設定されています。
 
-次のコードスニペットは、[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールで既定のツールチップを有効にする方法を示しています。
+次のコードスニペットは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで既定のツールチップを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -58,9 +58,9 @@ import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx
 
 ### カテゴリ ツールチップ レイヤー
 
-CategoryToolTipLayer は、カテゴリ軸を使用する [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールのシリーズ用にグループ化されたヒントを表示します。グループ化されたツールチップは現在、[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールの上部に表示されています。
+CategoryToolTipLayer は、カテゴリ軸を使用する [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのシリーズ用にグループ化されたヒントを表示します。グループ化されたツールチップは現在、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールの上部に表示されています。
 
-次のコードスニペットは、[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
+次のコードスニペットは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -85,9 +85,9 @@ CategoryToolTipLayer は、カテゴリ軸を使用する [`IgxDataChart`](/prod
 
 ### 項目ツールチップ レイヤー
 
-itemToolTipLayer は、特定のシリーズにマウスがホバーする場合に [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロール上のすべてのシリーズに関するヒントを個別に表示します。ツールチップスタイルは、ツールチップを表示しているシリーズから継承されます。
+itemToolTipLayer は、特定のシリーズにマウスがホバーする場合に [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロール上のすべてのシリーズに関するヒントを個別に表示します。ツールチップスタイルは、ツールチップを表示しているシリーズから継承されます。
 
-次のコードスニペットは、[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) コントロールに項目ツールチップ レイヤーを追加する方法を示しています。
+次のコードスニペットは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールに項目ツールチップ レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart
