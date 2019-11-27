@@ -1,7 +1,6 @@
 const path = require('path');
-const { EventEmitter } = require('events');
 const del = require('del');
-const {dest, series, src, watch, parallel} = require('gulp');
+const {dest, series, src, watch, parallel, task} = require('gulp');
 const shell = require('gulp-shell');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
@@ -188,6 +187,8 @@ const  browserSyncReload = (done) => {
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
 const build = series(styles, postProcessorConfigs, generateGridsTopics, buildSite);
 
+const buildTravis = series(parallel(styles), postProcessorConfigs, generateGridsTopics);
+
+exports.buildTravis = buildTravis;
 exports.build = build;
 exports.serve = series(build, init, watchFiles);
-exports.buildTravis = series(parallel(styles), postProcessorConfigs, generateGridsTopics);
