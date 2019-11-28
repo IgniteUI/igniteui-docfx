@@ -50,12 +50,13 @@ ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
-The next step is to import the `IgxGridModule` in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi_column_headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
+The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi_column_headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
 
-#### Usage
+### Usage
 
 *Collapsible Column Groups* is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. When a column group is collapsed, a subset of the columns will be shown to the end-user and the other child columns of the group are going to be hidden. Each collapsed/expanded column can be bound to the data source of the grid, or it may be unbound, thus calculated.
-In order to define a column group as `collapsible`, you need to set the property to `[collapsible]="true"` and also keep in mind that you need to define the property `visibleWhenCollapse` to at least two child columns. You need to set at least one column that will be visible when the parent column is collapsed (`[visibleWhenCollapse]="true"`) and at least one column should be set to be visible when the parent is expanded (`[visibleWhenCollapse]="false"`), otherwise the **collapsible fuctionallity will be disabled**. If you don't specify the property `visibleWhenCollapse` for some of the child columns, this means that that column will be always visible no matter whether the parent state is expanded or collapsed.
+
+In order to define a column group as `collapsible`, you need to set the property to `[collapsible]="true"` and also keep in mind that you need to define the property `visibleWhenCollapse` to at least two child columns. You need to set at least one column that will be visible when the parent column is collapsed (`[visibleWhenCollapse]="true"`) and at least one column should be set to be visible when the parent is expanded (`[visibleWhenCollapse]="false"`), otherwise the **collapsible fuctionallity will be disabled**. If you don't specify the property `visibleWhenCollapse` for some of the child columns - means that that column will be always visible no matter whether the parent state is expanded or collapsed.
 
 So let's see the markup below:
 
@@ -78,7 +79,7 @@ So let's see the markup below:
 </igx-column-group>
 ```
 
-And now lets sum up: every child column has tree states:
+And now let's sum up: every child column has tree states:
 -	Can be always visible, no matter expand state of its parent;
 -	Can be visible, when its parent is expanded;
 -	Can be visible, when its parent is collapsed;
@@ -88,9 +89,12 @@ The initial state of the column group which is specified as collapsible is `[exp
 ### Expand/Collapse indicator template
 
 Default expand indicator for the igxGrid is the following:
- <img src="../../images/general/expand_indicator.png" style="width: 70%"/>
+
+ <img src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
+
 Default collapse indicator for the igxGrid is the following:
-<img src="../../images/general/collapsed_indicator.png" style="width: 70%"/>
+
+<img src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
 Also if you need to change the default expand/collapse indicator we introduce you two easy way to do it.
 ##### By input property
