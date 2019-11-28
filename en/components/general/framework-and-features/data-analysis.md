@@ -1,7 +1,7 @@
 ---
 title: Data analysis with Ignite UI for Angular.
 _description: How to use chart integration functionality with Ignite UI for Angular and provide the data analysis means to achieve better business objectives.
-_keywords: Ignite UI for Angular, chart integration, data analysis
+_keywords: data analysis, ignite ui for angular, infragistics
 ---
 
 ## Data Analysis  
