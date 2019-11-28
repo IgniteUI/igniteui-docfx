@@ -53,7 +53,7 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 > 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
 ### 選択
-[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をインスタンス化するには、セレクター要素をテンプレートに追加します。カレンダーで現在の月が表示され、単一選択モードが使用されます。その他の選択モードに変更するには、[`selection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#selection) プロパティを `multi` または `range` に設定します。
+[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をインスタンス化するには、セレクター要素をテンプレートに追加します。カレンダーで現在の月が表示され、単一選択モードが使用されます。その他の選択モードに変更するには、[`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) プロパティを `multi` または `range` に設定します。
 
 ```html
 <!-- app.component.html -->
@@ -76,11 +76,11 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 
 ### ローカライズと書式設定
 
-カレンダーにおいてローカライズや書式設定はとても重要な要素です。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbase.html#formatviews) プロパティによって制御してカスタマイズ化されます。
+カレンダーにおいてローカライズや書式設定はとても重要な要素です。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティによって制御してカスタマイズ化されます。
 <br>
-これらの設定に加え、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarbase.html#weekstart) を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
+これらの設定に加え、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart) を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
 
-以下のマークアップは、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) および [`formatViews`]({environment:angularApiUrl}/classes/igxmonthpickerbase.html#formatviews) プロパティをバインドして表示書式設定をカスタマイズします。最後に、[`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) プロパティをユーザーの選択した場所に基づいて値にバインドします。
+以下のマークアップは、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions) および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティをバインドして表示書式設定をカスタマイズします。最後に、[`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale) プロパティをユーザーの選択した場所に基づいて値にバインドします。
 
 ```html
 <!-- app.component.html -->
@@ -127,7 +127,7 @@ public changeLocale(event) {
 </div>
 
 ### イベント
-このサンプルを拡張します。ユーザーが 5 日以下の日付範囲を入力する必要があります。カレンダーの [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) モードを range に設定し、範囲が無効な場合にユーザーに選択を変更するための通知を表示する [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#onselection) イベントを使用します。
+このサンプルを拡張します。ユーザーが 5 日以下の日付範囲を入力する必要があります。カレンダーの [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) モードを range に設定し、範囲が無効な場合にユーザーに選択を変更するための通知を表示する [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントを使用します。
 
 ```html
 <!-- app.component.html -->
@@ -138,7 +138,7 @@ public changeLocale(event) {
 </igx-calendar>
 ```
 
-[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarbase.html#onselection) イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択をユーザーに通知する場合、選択を範囲の最初の日のみを含むために [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) メソッドを使用してリセットします。
+[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択をユーザーに通知する場合、選択を範囲の最初の日のみを含むために [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) メソッドを使用してリセットします。
 
 ```typescript
 // app.component.ts
@@ -245,7 +245,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 </div>
 
 ### 日付の無効化
-このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) 機能の使用について説明します。異なる`単一の日付`または`範囲`の要素を配列に追加し、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) 記述子に渡すことができます。
+このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) 機能の使用について説明します。異なる`単一の日付`または`範囲`の要素を配列に追加し、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) 記述子に渡すことができます。
 
 ```typescript
 this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
@@ -289,9 +289,9 @@ export class CalendarSample6Component {
 
 ### 特定の日付
 
-[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#specialdates) 機能は、[`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#disableddates) とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。また [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#specialdates) の選択やフォーカスが可能です。
+[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) 機能は、[`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。また [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) の選択やフォーカスが可能です。
 
-[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarbase.html#specialdates) を [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に追加し、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange) で日付の配列を渡します。
+[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) を [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に追加し、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange) で日付の配列を渡します。
 
 ```typescript
 export class CalendarSample7Component {

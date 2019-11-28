@@ -53,6 +53,9 @@
     - name: SSR Rendering
       href: general/framework-and-features/ssr-rendering.md
       new: true
+    - name: Data Analysis
+      href: general/framework-and-features/data-analysis.md
+      new: true
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
