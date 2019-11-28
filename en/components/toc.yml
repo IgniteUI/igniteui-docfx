@@ -142,6 +142,9 @@
     - name: Multi Column Headers
       href: grid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: grid/collapsible_column_groups.md
+      new: true
     - name: Display Density
       href: grid/display_density.md
       new: false
@@ -240,6 +243,9 @@
     - name: Multi Column Headers
       href: treegrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: treegrid/collapsible_column_groups.md
+      new: true
     - name: Display Density
       href: treegrid/display_density.md
       new: false
@@ -334,6 +340,9 @@
     - name: Multi Column Headers
       href: hierarchicalgrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: hierarchicalgrid/collapsible_column_groups.md
+      new: true
     - name: Display Density
       href: hierarchicalgrid/display_density.md
       new: false
