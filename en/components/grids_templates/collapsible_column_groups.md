@@ -134,7 +134,7 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 
 
 > [!Note]
-> Please keep in mind that initially Group options collapse takes precedence over column hidden - If you declared your column to be hidden using the property
+> Please keep in mind that initially collapse group option takes precedence over column hidden - If you declared your column to be hidden using the property
 > hidden and you have a group defined where the same column should be shown, the column will be shown.
 
 
