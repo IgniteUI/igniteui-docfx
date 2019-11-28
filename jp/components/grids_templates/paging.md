@@ -140,6 +140,79 @@ this.@@igObjectRef.paging = false;
 
 <div class="divider--half"></div>
 
+### Remote Paging
+
+The @@igComponent supports remote paging, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
+
+
+
+@@if (igxName === 'IgxGrid') {
+### Remote Paging with custom template
+
+Sometimes you need to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="grid-custom-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+Below you will find the methods that we've defined in order to implement our own `next` and `previous` page actions.
+
+```typescript
+@ViewChild("customPager", { read: TemplateRef })
+public remotePager: TemplateRef<any>;
+
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
+    }
+}
+
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page <= 0) {
+        this.firstPage = true;
+    }
+}
+
+public paginate(page: number, recalc: true) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
+    }
+    this.remoteService.getData(skip, top);
+    this.buttonDeselection(this.page, this.totalPages);
+}
+
+public buttonDeselection(page: number, totalPages: number) {
+...
+}
+
+...
+public ngAfterViewInit() {
+    this.remoteService.getData(0, this.perPage);
+    this.@@igObjectRef.paginationTemplate = this.remotePager;
+}
+
+```
+
+}
+
+
 ### スタイル設定
 
 ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する`インデックス` ファイルをインポートする必要があります。

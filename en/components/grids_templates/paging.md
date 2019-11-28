@@ -140,7 +140,7 @@ The @@igComponent supports remote paging, which is demonstrated in the [`@@igCom
 
 
 @@if (igxName === 'IgxGrid') {
-### Custom Remote Paging 
+### Remote Paging with custom template
 
 Sometimes you need to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
 
