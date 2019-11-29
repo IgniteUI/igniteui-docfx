@@ -911,7 +911,11 @@
 - name: Dialog Window
   href: dialog.md
 - name: Slider
-  href: slider.md
+  href: slider/slider.md
+  new: true
+  items:
+    - name: Slider ticks
+      href: slider/slider_ticks.md
 - name: Ripple
   href: ripple.md
 - name: Toggle

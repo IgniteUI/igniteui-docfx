@@ -1,10 +1,10 @@
 ---
-title: Slider Component
+title: Slider ticks | Ticks | Ignite UI for Angular | infragistics
 _description: Ignite UI for Angular Slider control provides a rich input for value selection and delivers consistent experience across browsers.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Slider components, Angular Slider controls
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Slider components, Angular Slider controls, Slider ticks, Slider, ticks
 ---
 
-##Slider
+## Slider
 <p class="highlight">The Ignite UI for Angular Slider component allows selection in a given range by moving the thumb along the track. The track can be defined as continuous or stepped and you can choose between single and range slider types.</p>
 <div class="divider"></div>
 
@@ -42,13 +42,10 @@ export class AppModule {}
 ```
 
 #### Continuous Slider
-> [!WARNING]
-> `isContinuous` property has been deprecated, [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) should be used instead.
-
 Let's start with a simple continuous slider. First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
 
 > [!NOTE]
-> Continuous slider does not display ticks and bubble label for the current value.
+> Continuous slider doesn't have step indicators over the track and visible thumb labels during interaction.
 
 ```html
 <!--sample.component.html-->
@@ -283,6 +280,8 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 
 ###Additional Resources
+
+* [Slider ticks](slider_ticks.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

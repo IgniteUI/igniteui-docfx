@@ -287,6 +287,10 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 
+###Additional Resources
+
+* [Slider ticks](slider_ticks.md)
+
 ### 追加のリソース
 
 <div class="divider--half"></div>
