@@ -6,7 +6,7 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
-- name: Ignite UI CLI
+- name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
   items:
@@ -52,6 +52,9 @@
   items:
     - name: SSR Rendering
       href: general/framework-and-features/ssr-rendering.md
+      new: true
+    - name: Data Analysis
+      href: general/framework-and-features/data-analysis.md
       new: true
 - name: Grids & Lists
   href: grids_and_lists.md
