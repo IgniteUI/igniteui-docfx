@@ -574,7 +574,7 @@ export const DATA: any[] = [
 
 ### パーシステンス (永続化) 状態
 
-Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
+新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
 ### サイズ変更
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。

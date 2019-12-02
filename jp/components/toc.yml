@@ -160,7 +160,7 @@
     - name: サイズ変更
       href: grid/sizing.md
       new: true
-    - name: State Persistence
+    - name: ステート パーシステンス
       href: grid/state_persistence.md
       new: true
 #    - name: Grid マスターと詳細
