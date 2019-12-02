@@ -917,7 +917,7 @@
   href: slider/slider.md
   new: true
   items:
-    - name: Slider ticks
+    - name: スライダー目盛り
       href: slider/slider_ticks.md
 - name: Ripple
   href: ripple.md
