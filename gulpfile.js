@@ -1,7 +1,6 @@
 const path = require('path');
 const del = require('del');
-const {dest, series, src, watch, parallel, task} = require('gulp');
-const shell = require('gulp-shell');
+const {dest, series, src, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -10,6 +9,7 @@ const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 const fileinclude = require('gulp-file-include');
 const slash = require("slash");
+const { exec } = require('child_process');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -19,17 +19,16 @@ const DOCFX_BASE = {
 };
 const DOCFX_PATH = `${DOCFX_BASE[LANG]}`;
 const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
-const DOCFX_TEMPLATE = slash(path.join(__dirname, `./node_modules/igniteui-docfx-template/template`));
+const DOCFX_TEMPLATE = slash(path.join(__dirname, 'node_modules', 'igniteui-docfx-template', 'template'));
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 
-const cleanup =  async (done) => {
-     await del(`${DOCFX_SITE}`).then(()=>{
-         done()
-     });
-}
+const cleanup =  (done) => {
+    del(`${DOCFX_SITE}`);
+    done();
+};
 
-const environmentVariablesConfig =  (done) => {
+const environmentVariablesConfig = (done) => {
     var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
 
     if (process.env.NODE_ENV) {
@@ -50,7 +49,7 @@ const environmentVariablesConfig =  (done) => {
         JSON.stringify(environmentVariablesConfig)
     );
     done();
-}
+};
 
 const generateGridsTopics = (done) => {
 
@@ -103,7 +102,7 @@ const generateGridsTopics = (done) => {
             .pipe(dest(DOCFX_ARTICLES + grid.igPath));
     }
     done();
-}
+};
 
 const  styles = () => {
   return src(`${DOCFX_TEMPLATE}/styles/sass/main.scss`)
@@ -117,9 +116,13 @@ const  styles = () => {
         .pipe(dest(`${DOCFX_TEMPLATE}/styles/css`));
 };
 
-const buildSite = async() => {
-     await shell.task(`docfx build ${DOCFX_CONF}`)();
-}
+const buildSite = (done) => {
+    exec(`docfx build ${DOCFX_CONF}`, (err, stdout, stderr) => {
+      console.log(stdout);
+      console.log(stderr);
+      done(err);
+    });
+};
 
 const watchFiles = (done) => {
     
@@ -143,14 +146,14 @@ const watchFiles = (done) => {
 
     // watch([`${DOCFX_TEMPLATE}/**/*`, `!${DOCFX_TEMPLATE}/styles/css`], series(build));
     watch([
-           `${DOCFX_TEMPLATE}/**/*`,
-           `!${DOCFX_TEMPLATE}/styles/css/main.css`,
-          ,`${DOCFX_PATH}/components/*.md`,
-           `${DOCFX_PATH}/general/**/*.md`,
-           `${DOCFX_PATH}/themes/*.md`,
-           `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included),
-            {delay: 3000},
-            series(build, browserSyncReload));
+      `${DOCFX_TEMPLATE}/**/*`,
+      `!${DOCFX_TEMPLATE}/styles/css/main.css`,
+      `${DOCFX_PATH}/components/*.md`,
+      `${DOCFX_PATH}/general/**/*.md`,
+      `${DOCFX_PATH}/themes/*.md`,
+      `${DOCFX_ARTICLES}/**`].concat(excluded).concat(included),
+      {delay: 3000, queue: false},
+      series(build, browserSyncReload));
     done();
 }
 
@@ -187,7 +190,7 @@ const  browserSyncReload = (done) => {
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
 const build = series(styles, postProcessorConfigs, generateGridsTopics, buildSite);
 
-const buildTravis = series(parallel(styles), postProcessorConfigs, generateGridsTopics);
+const buildTravis = series(styles, postProcessorConfigs, generateGridsTopics);
 
 exports.buildTravis = buildTravis;
 exports.build = build;
