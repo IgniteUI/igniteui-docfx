@@ -7,7 +7,7 @@ _language: ja
 
 ## ツールチップ タイプ
 
-このトピックでは、[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) のツールチップ タイプについて説明します。
+このトピックでは、`XamFinancialChart` のツールチップ タイプについて説明します。
 
 ### デモ
 

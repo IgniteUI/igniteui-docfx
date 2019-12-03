@@ -7,7 +7,7 @@ _language: ja
 
 ## チャート タイプの選択
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+`XamFinancialChart` コントロールでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
 ### デモ
 
@@ -15,7 +15,7 @@ _language: ja
     <iframe id="financial-chart-axis-types-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -68,7 +68,7 @@ Financial Chart コントロールは、チャートで表示されるラベル�
 
 ### 軸モード
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
+`XamFinancialChart` コントロールで X 軸および Y 軸に別のモードを設定できます。X 軸で以下のモードを選択できます。
 
 -   Time - このモードはデータのギャップを X 軸にスペースを用いて描画します。つまり、週末または休日に株取引がないことを示します。
 -   Ordinal - このモードはデータがない日付領域を縮小します。これがデフォルト値です。
