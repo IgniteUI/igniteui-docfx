@@ -270,7 +270,7 @@ public getSelectedRows(args) {
 #### 行テンプレート
 カスタム行セレクター テンプレートを作成するには、`@@igSelector` 内で` igxRowSelector` ディレクティブを使用して `<ng-template>` を宣言します。テンプレートから、行の状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
 
-`選択された`プロパティは、現在の行が選択されているかどうかを示しますが、`インデックス` プロパティを使用して行インデックスにアクセスできます。
+`selected` プロパティは、現在の行が選択されているかどうかを示しますが、`index` プロパティを使用して行インデックスにアクセスできます。
 ```html
 <ng-template igxRowSelector let-rowContext>
     {{ rowContext.index }}
