@@ -1,22 +1,23 @@
-
+﻿
 ---
-title: Angular Collapsible Column Groups | Ignite UI for Angular | Infragistics
-_description: Collapsible multi-column headers make it possible to collapse some subset of the nested columns under the current one and to show some nested headers, which will give you a shorten informtion for example.
-_keywords: collpasible column headers, ignite ui for angular, infragistics
+title: Angular 列グループの折りたたみ|Ignite UI for Angular |インフラジスティックス
+_description: 複数列ヘッダーで折りたたみ機能使用すると、現在の列の下にあるネストされた列のサブセットを折りたたみ、ネストされたヘッダーを表示して、要約した情報の例を示します。
+_keywords: 列ヘッダーの折りたたみ, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 
-### Grid Collapsible Column Groups Overview
+### グリッド列グループの折りたたみ
 
-Multi-column headers allow you to have multiple levels of nested columns and column groups, also they provide you the ability to mark each column group as **collapsible**. **Collapsible multi-column headers** make it possible to collapse/expand, e.g. to show and hide the nested headers under the current one, which will give you a shortened/summarized information for example.
+複数列ヘッダーを使用すると、複数レベルのネストされた列と列グループを使用できるため、各列グループを**折りたたみ可能**としてマークできます。**折りたたみ可能な複数列ヘッダー**では、折りたたみ/展開が可能です。現在のヘッダーの下にネストされたヘッダーを表示および非表示にします。これにより、たとえば短縮/要約された情報を示すことができます。
 
-##### Demo
+##### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-collapsible-groups-iframe" src='{environment:demosBaseUrl}/grid/grid-collapsible-groups' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -26,7 +27,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
     <iframe id="tree-grid-collapsible-groups-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -36,29 +37,29 @@ Multi-column headers allow you to have multiple levels of nested columns and col
     data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-collapsible-column-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-collapsible-column-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
 
-### Setup
+### 構成
 
-To get started with the IgxGrid and the **Collapsible multi-column headers** , first you need to install Ignite UI for Angular by typing the following command:
+IgxGrid および縮小可能な複数列ヘッダーを使用するには、まず以下のコマンドを入力して、Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+Ignite UI for Angular については、[*はじめに*](general/getting_started.md) トピックををご覧ください。
 
-The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi_column_headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
+次に app.module.ts ファイルに @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} をインポートします。そのため、[*複数列グループ*](./multi_column_headers.md)のトピックを簡単に確認することを強くお勧めします。グリッドで列グループを設定する方法の詳細情報を参照してください。
 
-### Usage
+### 使用方法
 
-*Collapsible Column Groups* is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. When a column group is collapsed, a subset of the columns will be shown to the end-user and the other child columns of the group will hide. Each collapsed/expanded column can be bound to the grid data source, or it may be unbound, thus calculated.
+縮小可能な列グループは複数列ヘッダー機能の一部で、列グループをより小さいデータ セットに縮小/展開する方法を提供します。列グループが折りたたまれると、列のサブセットがエンドユーザーに表示され、グループの他の子列が非表示になります。折りたたまれた/展開された各列は、グリッド データソースにバインドすることも、非バインドにして計算することもできます。
 
-In order to define a column group as `collapsible`, you need to set the property to `[collapsible]="true"` and also keep in mind that you need to define the property `visibleWhenCollapse` to at least two child columns: at least one column must be visible when the group is collapsed (`[visibleWhenCollapse]="true"`) and at least one column must be hidden when the group is expanded (`[visibleWhenCollapse]="false"`), otherwise the **collapsible functionality will be disabled**. If  `visibleWhenCollapse` is not specified for some of the child columns, then this column will be always visible no matter whether the parent state is expanded or collapsed.
+列グループを `collapsible` に定義するには、プロパティを `[collapsible]="true"` に設定する必要があり、プロパティ `visibleWhenCollapse` を少なくとも 2 つの子列に定義する必要があることに注意してください。グループが折りたたまれたときに少なくとも 1 列が表示され (`[visibleWhenCollapse]="true"`)、グループが展開されたときは少なくとも 1 列が非表示になります (`[visibleWhenCollapse]="false"`)。それ以外は、折りたたみ機能は無効になります。子列の一部に`visibleWhenCollapse` が指定されていない場合、この列は、親の状態が展開または折りたたまれているかに関係なく常に表示されます。
 
-So let's see the markup below:
+それでは、以下のマークアップを見てみましょう。
 
 ```html
 <igx-column-group header="Customer Information" [collapsible]="true"> <!-- Initially the column groups will be expanded--->
@@ -79,27 +80,27 @@ So let's see the markup below:
 </igx-column-group>
 ```
 
-And now let's sum up: every child column has tree states:
--	Can be always visible, no matter expand state of its parent;
--	Can be visible, when its parent is expanded;
--	Can be visible, when its parent is collapsed;
+すべての子列にツリー状態があります。
+-	親の展開状態に関係なく、常に表示できます。
+-	親が展開されているときに表示できます。
+-	親が折りたたまれているときに表示できます。
 
-The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expand]="false"`.
+折りたたみ可能として指定されている列グループの初期状態は、`[expanded]="true"` です。ただし、プロパティ `[expand]="false"` を設定することにより、この動作を簡単に変更できます。
 
-### Expand/Collapse indicator template
+### 展開 / 縮小インジケーター (ハンドル)
 
-Default expand indicator for the igxGrid is the following:
+igxGrid のデフォルトの展開インジケーターは次のとおりです。
 
  <img src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
 
-Default collapse indicator for the igxGrid is the following:
+igxGrid のデフォルトの展開インジケーターは次のとおりです。
 
 <img src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
-Also if you need to change the default expand/collapse indicator we introduce you two easy ways to do it.
-##### By input property
+したがって、デフォルトの展開/折りたたみインジケータを変更する必要がある場合、2 つの簡単な方法を紹介します。
+##### 入力プロパティ
 
-You can define custom expand/collapse template and provide it to each of the collapsible column groups using **collapsibleIndicatorTemplate** input property. Check the markup below:
+**collapsibleIndicatorTemplate** 入力プロパティを使用して、カスタムの展開/折りたたみテンプレートを定義し、それを各折りたたみ可能な列グループに提供できます。以下のマークアップを確認してください。
 
 ```html
 <ng-template #indTemplate let-column="column">
@@ -114,9 +115,9 @@ You can define custom expand/collapse template and provide it to each of the col
     </igx-column-group>
 </igx-column-group>
 ```
-##### Using igxCollapsibleIndicator directive
+##### igxCollapsibleIndicator ディレクティブの使用
 
-Another way to achieve this behavior is to use the igxCollapsibleIndicator directive as shown in the example below:
+この動作を実現する別の方法は、以下の例に示すように igxCollapsibleIndicator ディレクティブを使用することです。
 
 ```html
 <igx-column-group header="Customer Information" [collapsible]="true">
@@ -134,32 +135,32 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 
 
 > [!Note]
-> Please keep in mind that initially collapse group option takes precedence over column hidden - If you declared your column to be hidden using the property
-> hidden and you have a group defined where the same column should be shown, the column will be shown.
+> プロパティを使用して列を非表示にすると宣言した場合、最初にグループを折りたたむオプションは非表示の列よりも優先されることに注意してください。
+> 非表示で、同じ列が表示される場所にグループが定義されている場合、列が表示されます。
 
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Selection](selection.md)
+* [Grid の概要](grid.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [ソート](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
