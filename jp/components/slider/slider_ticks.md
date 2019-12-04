@@ -1,7 +1,8 @@
----
-title: Slider Component
-_description: Ignite UI for Angular Slider control provides a rich input for value selection and delivers consistent experience across browsers.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Slider components, Angular Slider controls
+﻿---
+title: Slider コンポーネント
+_description: Ignite UI for Angular Slider コントロールは、ブラウザー間で統一したエクスペリエンスおよび値選択の入力機能を提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Slider コンポーネント, Angular Slider コントロール
+_language: ja
 ---
 
 ## Slider Ticks
@@ -10,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Usage
 Before we start, make sure that you have gone through the **Ignite UI for Angular** [getting started](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html) section.
 
-Once the set up is ready, the **IgxSliderModule** needs to be included in the **app.module.ts** file:
+Once the set up is ready, the **IgxSliderModule** needs to be included in the **app.module.ts** file
 
 ```typescript
 // app.module.ts
@@ -45,7 +46,7 @@ public type = SliderType.RANGE;
     <iframe id="discrete-slider-ticks-bottom-iframe" data-src='{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 Let’s look at the ticks below the slider. Firstly the whole feature is enabled by setting [`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) to **true**. Then setting [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) to six (because the rendering starts from 0), defines and spreads all primary **ticks** equally below the slider. [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) set up works a little bit different. It defines four secondary ticks between every two **primary** and if the calculation is right, 21 **ticks** will be rendered totally.
@@ -100,7 +101,7 @@ export class PriceRange {
     <iframe id="slider-ticks-bottomtotop-labels-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 Following the example above, it is easy to determine that setting [`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) to **false** disable all **secondary tick labels**, and passing **BottomToTop**(-90) property of [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) enumeration to [`tickLabelsOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticklabelsorientation) input does the rotation.
@@ -135,7 +136,7 @@ The two buttons above are used just to control/update slider's **value**, but le
     <iframe id="slider-secondary-ticks-mirror-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 The change of the orientation has come from [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) input, which was changed from **Bottom**(default) to **Mirror**. This mirrors the visualization of the **ticks** and duplicates them at the top as well. 
@@ -159,7 +160,7 @@ public ticksOrientation = TicksOrientation.Top;
     <iframe id="slider-primary-ticks-top-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-primary-ticks-top' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-primary-ticks-top-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-primary-ticks-top-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 We haven’t done anything special here, except that we’ve changed the **orientation** of the **ticks** and positioned them at the top of the slider. We can see that, there isn’t any **thumb label** that is popping up.
@@ -183,7 +184,7 @@ The feature has been aligned with the **labels view** feature as well. Let's see
     <iframe id="slider-timeframe-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-timeframe' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 Here, the [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) hasn't been set, because it won’t be reflected in any way. The **length** of the collection takes precedence and control over it. This does not mean that we are not able to set any [`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks). We are, but all **secondary ticks** will be empty(without any **labels**), which makes them seem more as some sort of indicators between the **primary ticks**.
@@ -228,24 +229,24 @@ From the **tackLabel** callback above, we can see that every **primary** tick **
     <iframe id="slider-tick-labels-template-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tick-labels-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-tick-labels-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-tick-labels-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)
 * [TickLabelsOrientation]({environment:angularApiUrl}/enums/ticklablesorientation.html)
 
-###Additional Resources
+###その他のリソース
 
-* [Slider overview](slider.md)
+* [Slider の概要](slider.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+コミュニティに参加して新しいアイデアをご提案ください。
+* Ignite UI for Angular **フォーラム** (英語)
+* Ignite UI for Angular **GitHub** (英語)

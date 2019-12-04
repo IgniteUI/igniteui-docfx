@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Usage
 Before we start, make sure that you have gone through the **Ignite UI for Angular** [getting started](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html) section.
 
-Once the set up is ready, the **IgxSliderModule** needs to be included in the **app.module.ts** file:
+Once the set up is ready, the **IgxSliderModule** needs to be included in the **app.module.ts** file
 
 ```typescript
 // app.module.ts
