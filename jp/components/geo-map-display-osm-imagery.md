@@ -24,4 +24,4 @@ Open Street Maps は、世界中の OpenStreetMap© のコントリビュータ�
 
 ### コード スニペット
 
-このコード例では、マップ コンポーネントの `BackgroundContent` を OpenStreetMap© コントリビューターの地理画像を提供する `OpenStreetMapImagery` オブジェクトに明示的に設定します。
+このコード例では、マップ コンポーネントの `BackgroundContent` を OpenStreetMap© コントリビューターの地理画像を提供する [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) オブジェクトに明示的に設定します。
