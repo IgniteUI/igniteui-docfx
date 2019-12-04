@@ -1,5 +1,5 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | Infragistics | 軸の注釈
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 軸の注釈
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
 _keywords: データチャート, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
@@ -8,7 +8,7 @@ _language: ja
 
 ## 軸の注釈
 
-Ignite UI for Angular データチャート コンポーネントでは、軸に注釈を追加して、その軸上のさまざまな点に特定の値を表示することができます。これによって最終的なシリーズ値、オーバーレイ値、チャート内の十字線に対応する値などを視覚化するのに役立ちます。
+Ignite UI for Angular データチャート コンポーネントでは、軸に注釈を追加して、その軸上のさまざまな点に特定の値を表示することができます。これによって最終的なシリーズ値、オーバーレイ値、チャート内の十字線に対応する値などを可視化するのに役立ちます。
 
 ### デモ
 
@@ -32,7 +32,7 @@ Ignite UI for Angular データチャート コンポーネントでは、軸に
 
 [`isAxisAnnotationEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#isaxisannotationenabled) プロパティは [`IgxFinalValueLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) には存在しません。このレイヤーはそれ自体が軸の注釈であり、軸上の注釈以外の視覚タイプは他にありません。
 
-背景、値の精度、アウトライン、パディング、ストローク (アウトライン) の太さ、およびテキストの色で軸の注釈をカスタマイズできます。これらは、それぞれ [`axisAnnotationBackground`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackground)、[`axisAnnotationInterpolatedValuePrecision`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationinterpolatedvalueprecision)、[`axisAnnotationOutline`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationoutline)、`AxisAnnotationPadding`、[`axisAnnotationStrokeThickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationstrokethickness)、[`axisAnnotationTextColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationtextcolor) プロパティを使用して設定できます。これらのプロパティに加えて、`AxisAnnotationFormatLabel` イベントもあります。これを使用して、軸注釈に表示されるコンテンツを完全にカスタマイズできます。
+背景、値の精度、アウトライン、パディング、ストローク (アウトライン) の太さ、およびテキストの色で軸の注釈をカスタマイズできます。これらは、それぞれ  [`axisAnnotationBackground`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackground)、[`axisAnnotationInterpolatedValuePrecision`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationinterpolatedvalueprecision)、[`axisAnnotationOutline`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationoutline)、`AxisAnnotationPadding`、[`axisAnnotationStrokeThickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationstrokethickness)、[`axisAnnotationTextColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationtextcolor) プロパティを使用して設定できます。これらのプロパティに加えて、`AxisAnnotationFormatLabel` イベントもあります。これを使用して、軸注釈に表示されるコンテンツを完全にカスタマイズできます。
 
 [`IgxCrosshairLayerComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html) には、X 軸と Y 軸の両方に注釈を表示する機能があります。これらは個別にカスタマイズできるため、上記の各プロパティは存在しますが、名前の前に Xaxis または Yaxis  があります。たとえば、[`xAxisAnnotationBackground`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#xaxisannotationbackground) または [`yAxisAnnotationTextColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#yaxisannotationtextcolor) です。
 
@@ -47,9 +47,9 @@ Ignite UI for Angular データチャート コンポーネントでは、軸に
 
     <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" valueMemberPath="value"></igx-column-series>
 
-    <igx-value-overlay [axis]="yAxis" isAxisAnnotationsEnabled=true thickness=3 value=85></igx-value-overlay>
+    <igx-value-overlay [axis]="yAxis" isAxisAnnotationEnabled=true thickness=3 value=85></igx-value-overlay>
 
-    <igx-crosshair-layer isAxisAnnotationsEnabled=true></igx-crosshair-layer>
+    <igx-crosshair-layer isAxisAnnotationEnabled=true></igx-crosshair-layer>
 
     <igx-final-value-layer axisAnnotationTextColor="Yellow"></igx-final-value-layer>
 </igx-data-chart>

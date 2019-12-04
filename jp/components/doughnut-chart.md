@@ -30,7 +30,7 @@ Doughnut Chart コンポーネントは円チャートと同様、変数の発�
 
 ### 必要なモジュール
 
-[`IgxDoughnutChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchart.html) は、以下のモジュールが必要です。
+[`IgxDoughnutChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -88,7 +88,7 @@ xamDoughnutChart は、複数のリングを、異なるコレクションにバ
 
 ドーナツ型チャート コンポーネントは、1 つ以上のスライスの状態を 選択された状態に設定する API を公開します。任意で、単一のカスタム ビジュアル スタイルを選択済みスライスに適用できます。
 
-**スライス選択の有効化/無効化** - `AllowSliceSelection` を設定してドーナツ型チャートでスライスの選択を有効または無効にします。
+**スライス選択の有効化/無効化** - [`allowSliceSelection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceselection) を設定してドーナツ型チャートでスライスの選択を有効または無効にします。
 
 **選択されたスライスのスタイル設定** - スライスの `targetType` で選択されたスライスのスタイルを定義し、ドーナツ型チャートの `SelectedStyle` プロパティに割り当てることでスタイル設定できます。
 
@@ -134,7 +134,7 @@ import { SliceClickEventArgs } from "igniteui-react-charts/ES5/igr-slice-click-e
 
 ### 凡例
 
-[`IgxDoughnutChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchart.html) は凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
+[`IgxDoughnutChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) は凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
 
 ### 凡例のデモ
 
