@@ -669,8 +669,8 @@ In some cases you may want to define your own paging behavior and this is when w
 Below you will find the methods that we've defined in order to implement our own `next` and `previous` page actions.
 
 ```typescript
-@ViewChild("customPager", { read: TemplateRef })
-public remotePager: TemplateRef<any>;
+@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
+@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
 public nextPage() {
     this.firstPage = false;
@@ -681,6 +681,7 @@ public nextPage() {
     if (this.page + 1 >= this.totalPages) {
         this.lastPage = true;
     }
+    this.setNumberOfPagingItems(this.page, this.totalPages);
 }
 
 public previousPage() {
@@ -692,15 +693,17 @@ public previousPage() {
     if (this.page <= 0) {
         this.firstPage = true;
     }
+    this.setNumberOfPagingItems(this.page, this.totalPages);
 }
 
-public paginate(page: number, recalc: true) {
+public paginate(page: number, recalc = false) {
     this.page = page;
     const skip = this.page * this.perPage;
     const top = this.perPage;
     if (recalc) {
         this.totalPages = Math.ceil(this.totalCount / this.perPage);
     }
+    this.setNumberOfPagingItems(this.page, this.totalPages);
     this.remoteService.getData(skip, top);
     this.buttonDeselection(this.page, this.totalPages);
 }
