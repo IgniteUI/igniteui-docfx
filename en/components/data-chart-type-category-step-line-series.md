@@ -70,7 +70,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example - Step Line Series
+### Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStepLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html) and bind it to a data source.
 

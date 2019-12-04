@@ -70,7 +70,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 })
 ```
 
-### Code Example - Waterfall Series
+### Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) and bind it to a data source.
 

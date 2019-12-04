@@ -69,7 +69,7 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Spline Area Chart
+### Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html) and bind it to a data source.
 

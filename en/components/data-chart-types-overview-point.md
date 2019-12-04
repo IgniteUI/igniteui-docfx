@@ -31,16 +31,16 @@ mentionedTypes: ['XamDataChart']
                 <img src="../images/charts/data-chart-type-category-point-series.png">
             </div>
         </a>
-        <a class="link" href="data-chart-type-scatter-bubble-series.md">
-            <div class="linkContent">
-                <h4>Scatter Bubble Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-bubble-series.png">
-            </div>
-        </a>
         <a class="link" href="data-chart-type-scatter-point-series.md">
             <div class="linkContent">
                 <h4>Scatter Marker Chart</h4>
                 <img src="../images/charts/data-chart-type-scatter-point-series.png">
+            </div>
+        </a>
+        <a class="link" href="data-chart-type-scatter-bubble-series.md">
+            <div class="linkContent">
+                <h4>Scatter Bubble Chart</h4>
+                <img src="../images/charts/data-chart-type-scatter-bubble-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-polar-scatter-series.md">
@@ -49,5 +49,11 @@ mentionedTypes: ['XamDataChart']
                 <img src="../images/charts/data-chart-type-polar-scatter-series.png">
             </div>
         </a>
+        <!-- <a class="link" href="data-chart-type-scatter-hd-series.md">
+            <div class="linkContent">
+                <h4>Scatter High Density Chart</h4>
+                <img src="../images/charts/data-chart-type-scatter-hd-series.png">
+            </div>
+        </a> -->
     </body>
 </section>

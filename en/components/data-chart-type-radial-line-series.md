@@ -70,7 +70,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 })
 ```
 
-### Code Example - Radial Line Chart
+### Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) and bind it to a data source.
 
