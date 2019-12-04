@@ -212,7 +212,7 @@ export class HierarchicalGridLoDSampleComponent {
 }
 ````
 
-グリッドがサービスのデータを要求して割り当てる前に描画されることを確認するために、ライフサイクル フックを使用します。親がないため、`rootLevel` は `true` でそのキーのみをサービスの `getData` へ渡すことができます。サブスクライブする必要のある observable を返します。
+グリッドがサービスのデータを要求して割り当てる前に描画されることを確認するために、`AfterViewInit` ライフサイクル フックを使用します。親がないため、`rootLevel` は `true` でそのキーのみをサービスの `getData` へ渡すことができます。サブスクライブする必要のある observable を返します。
 
 ````TypeScript
 public ngAfterViewInit() {

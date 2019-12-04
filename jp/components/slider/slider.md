@@ -229,15 +229,15 @@ public updatePriceRange(event) {
 #### ラベル モード
 ここまでで目盛りでのみ数値を表示しましたが、基本的な値の配列を使用することで、情報を提示するために使用できる別の方法があります。
 >[!NOTE]
-> 初期値の配列には少なくとも 2 つの値を含める必要があり、含めない場合は labelsView が有効になりません。
+> 初期値の配列には少なくとも 2 つの値を含める必要があり、含めない場合は `labelsView` が有効になりません。
 
-このルールに対応する定義ができたら、`ラベル`の入力プロパティに渡す準備ができました。これは、データをトラック全体に均等に分散させることによって処理します。ラベル値は、コレクション内で定義したすべての初期値を表します。それらは、[lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) または [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel) のいずれかを要求することによって、API を通じていつでもアクセスできます。
+このルールに対応する定義ができたら、`labels` 入力プロパティに渡す準備ができました。これは、データを`トラック`全体に均等に分散させることによって処理します。ラベル値は、コレクション内で定義したすべての初期値を表します。それらは、[lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) または [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel) のいずれかを要求することによって、API を通じていつでもアクセスできます。
 
 >[!NOTE]
 > [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。 
 
 もう 1 つの重要な要素は、`labelsView` が有効になっているときに`スライダー`が更新プロセスを処理する方法です。
-これは単にコレクションのインデックスで動作します。それぞれ、`value`、`lowerBound` および `upperBound` プロパティがフォロー/設定することでトラックを制御することを意味します (`インデックス`)。
+これは単にコレクションの`インデックス`で動作します。それぞれ、`value`、`lowerBound` および `upperBound` プロパティがフォロー/設定することでトラックを制御することを意味します (`インデックス`)。
 
 ```html
 <!--sample.component.html-->
@@ -267,8 +267,8 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) に対応すると、スライドできる範囲が制限されます。
 
 #### ラベルのテンプレート化
-上記では、igxSliderThumbFrom ディレクティブと igxSliderThumbTo ディレクティブの両方を使用して、カスタム ラベル テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
-ここでの[コンテキスト]({environment:angularApiUrl}/classes/igxslidercomponent.html#context)は、暗黙的に `value` input プロパティへの参照を、そして `labelsView` が有効な場合は明示的にラベル入力への参照を与えます。
+上記では、[igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) ディレクティブと [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) ディレクティブの両方を使用して、カスタム `labels` テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
+ここでの[コンテキスト]({environment:angularApiUrl}/classes/igxslidercomponent.html#context)は、暗黙的に `value` input プロパティへの参照を、そして `labelsView` が有効な場合は明示的に `labels` 入力への参照を与えます。
 
 ```html
   <ng-template igxSliderThumbFrom let-value let-labels="labels">
@@ -292,6 +292,8 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 * [Slider の目盛り](slider_ticks.md)
 
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
+
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -302,7 +302,7 @@ public toolbarExportingHandler(args) {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color` and the `$title-text-color` parameters.
+最も簡単な方法として、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張し、`$background-color` と `$title-text-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
@@ -311,7 +311,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 );
 ```
 
-In order to style the buttons inside the toolbar, we will also create another theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme).
+ツールバー内のボタンをスタイル設定するために、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張する別のテーマを作成します。
 
 ```scss
 $dark-button-theme: igx-button-theme(
@@ -322,7 +322,7 @@ $dark-button-theme: igx-button-theme(
 );
 ```
 
-The last step is to **include** the newly created themes. The button theme will be scoped to the actions container of the toolbar, so the buttons outside the toolbar do not get affected by it.
+最後にコンポーネントのテーマを**含めます**。Button テーマは、ツールバーのアクション コンテナにスコープされるため、外側のボタンはツールバーに影響を受けません。
 
 ```scss
 @include igx-grid-toolbar($dark-grid-toolbar-theme);
@@ -337,7 +337,7 @@ The last step is to **include** the newly created themes. The button theme will 
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -390,9 +390,9 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 #### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマの 1 つを拡張します。この場合、[`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ。
 
 ```scss
 $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
@@ -424,7 +424,7 @@ $dark-button-schema: extend($_dark-button,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。この方法は、基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加します。
 
 ```scss
 // Extending the global dark-schema
