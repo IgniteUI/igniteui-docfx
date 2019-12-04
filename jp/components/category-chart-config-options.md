@@ -1,21 +1,22 @@
 ---
-title: 構成オプション
-_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
+title: カテゴリー チャート|データ可視化ツール|Ignite UI for Angular|構成オプション|インフラジスティックス
+_description: カテゴリー チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
+_keywords: カテゴリ チャート, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamCategoryChart']
 _language: ja
 ---
 
 ## 構成オプション
 
-マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどのカテゴリ チャート機能をカスタマイズできます。
+マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどの Ignite UI for Angular カテゴリ チャート コンポネント機能をカスタマイズできます。
 
 ### デモ
 
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-config-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -38,9 +39,9 @@ _language: ja
 
 ### チャート マーカーの構成
 
-マーカーは、Category Chart コントロールのプロット領域のデータ ポイント値を表示する視覚的要素です。値が主グリッド線と副グリッド線の間にある場合も指定したデータ ポイントの値をただちに識別できるようユーザーをサポートします。
+マーカーは、カテゴリ チャート コンポーネントのプロット領域のデータ ポイント値を表示する視覚的要素です。値が主グリッド線と副グリッド線の間にある場合も指定したデータ ポイントの値をただちに識別できるようユーザーをサポートします。
 
-チャート マーカーの外観は、Category Chart の `markerType`、`markerBrushes`、および `markerOutlines` プロパティによって処理されます。以下のコード例では、このプロパティを使用しています。
+チャート マーカーの外観は、カテゴリ チャートの [`MarkerType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html)、`MarkerBrushes`、および `MarkerOutlines` プロパティによって処理されます。以下のコード例では、このプロパティを使用しています。
 
 ```html
 <igx-category-chart
@@ -80,14 +81,13 @@ _language: ja
 
 チャートでタイトルおよびサブタイトル情報がサイズ変更できます。
 
-> [!NOTE]
-> デフォルトでトランジションイン アニメーションは無効ですが、`IsTransitionInEnabled` オプションを `true` に設定してトランジションイン アニメーションを有効にできます。
+デフォルトでアニメーションのトランジションは無効ですが、`IsTransitionInEnabled` オプションを true に設定してトランジションイン アニメーションを有効にできます。
 
-トランジションイン アニメーションのトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
+アニメーションのトランジショントはトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
 
 トランジション タイプは、transitionInMode オプションを任意のトランジション名に設定して構成します。プロパティを `Auto` (デフォルト値) に設定し、シリーズ タイプに基づいてトランジション タイプを自動的に選択することもできます。
 
-以下の例では、トランジション イン アニメーションを有効にし、チャートを右側からアコーディオン表示する方法を示します。
+以下のコード例では、トランジションイン アニメーションを有効にし、チャートを右側からアコーディオン表示する方法を示します。
 
 ```html
  <igx-category-chart

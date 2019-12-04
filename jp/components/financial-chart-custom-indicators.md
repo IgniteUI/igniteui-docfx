@@ -7,7 +7,7 @@ _language: ja
 
 ## カスタム インジケーター
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
+`XamFinancialChart` コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
 
 ### デモ
 
@@ -15,13 +15,13 @@ _language: ja
     <iframe id="financial-chart-custom-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
+`XamFinancialChart` でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
 
