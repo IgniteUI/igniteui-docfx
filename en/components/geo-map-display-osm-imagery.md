@@ -25,3 +25,21 @@ By the default, the Ignite UI for Angular map component already displays geograp
 ### Code Snippet
 
 This code example explicitly sets `BackgroundContent` of the map component to the [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) object which provides geographic imagery from  OpenStreetMap© contributors.
+
+```html
+<igx-geographic-map #map
+    width="100%"
+    height="100%"
+    zoomable="true" >
+</igx-geographic-map>
+```
+
+```ts
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { OpenStreetMapImagery } from "igniteui-angular-maps/ES5/igx-open-street-map-imagery";
+// ...
+public map: IgxGeographicMapComponent;
+
+const tileSource = new OpenStreetMapImagery();
+this.map.backgroundContent = tileSource;
+```

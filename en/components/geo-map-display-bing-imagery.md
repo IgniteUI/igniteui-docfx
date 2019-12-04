@@ -25,6 +25,33 @@ The [`BingMapsMapImagery`](/products/ignite-ui-angular/api/docs/typescript/lates
 
 The following code snippet shows how to display geographic imagery from Bing Maps in [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`BingMapsMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/bingmapsmapimagery.html).
 
+```html
+<igx-geographic-map #map
+    width="100%"
+    height="100%"
+    zoomable="true" >
+</igx-geographic-map>
+```
+
+```ts
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { BingMapsMapImagery } from "igniteui-angular-maps/ES5/igx-bing-maps-map-imagery";
+// ...
+const tileSource = new BingMapsMapImagery();
+let tileUri = tileSource.actualBingImageryRestUri;
+
+// resolving BingMaps uri based on HTTP protocol of hosting website
+const isHttpSecured = window.location.toString().startsWith("https:");
+if (isHttpSecured) {
+    tileUri = tileUri.replace("http:", "https:");
+} else {
+    tileUri = tileUri.replace("https:", "http:");
+}
+tileSource.bingImageryRestUri = tileUri;
+
+this.map.backgroundContent = tileSource;
+```
+
 ### Properties
 
 The following table summarized properties of the [`BingMapsMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/bingmapsmapimagery.html) class:
