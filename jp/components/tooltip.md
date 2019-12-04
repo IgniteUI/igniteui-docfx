@@ -90,7 +90,7 @@ export class AppModule {}
 #### ツールチップ ターゲット
 avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブを設定し、ツールチップを持つ要素としてマークします。
 
-- [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`igxToggleAction`] ディレクティブを拡張します。
+- [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) ディレクティブを拡張します。
 - [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、名前 **tooltipTarget** でエクスポートされます。
 
 ```html
@@ -104,7 +104,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 #### ツールチップ
 ツールチップ要素を作成します。シンプルなテキスト ツールチップを作成するためテキストを含む標準 div 要素を定義し、ツールチップとしてマークされる [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを設定します。
 
-- [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは [`igxToggle`] ディレクティブを拡張します。
+- [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブを拡張します。
 - [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは、名前 **tooltip** でエクスポートされます。
 
 ```html
@@ -333,29 +333,6 @@ export class AppModule {}
 > [!NOTE]
 > [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
 
-### ユーザー補助
-
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id)  プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
-
-以下の状況では十分な注意が必要です。
-- ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
-- ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
-- ターゲット要素はフォーカスできません。
-
-### スタイル設定
-
-ツールチップのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
-
-```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
-
-最も簡単な方法は、[`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
-
-```scss
-$dark-tooltip: igx-tooltip-theme($text-color: #F4D45C, $background: rgb(65,65,65), $border-radius: 10px);
-```
-
 > [!NOTE]
 > ダイアログ ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md)、[`IgxSwitch`](switch.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ツールチップのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
 
@@ -467,7 +444,7 @@ $dark-tooltip: igx-tooltip-theme(
 
 ### ユーザー補助
 
-igxTooltip ディレクティブを持つ要素には、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) プロパティ (開発者によって設定されていない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、およびツールチップが表示されているかどうかに応じて自動的に更新される **aria-hidden** 属性があります。ターゲットの **aria-describedby** 属性をそれぞれのツールチップの [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定することにより、ツールチップ要素への参照が提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを持つ要素には、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) プロパティ (開発者によって設定されていない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、およびツールチップが表示されているかどうかに応じて自動的に更新される **aria-hidden** 属性があります。ターゲットの **aria-describedby** 属性をそれぞれのツールチップの [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定することにより、ツールチップ要素への参照が提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。
 
 以下の状況では十分な注意が必要です。
 - ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
