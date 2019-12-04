@@ -282,9 +282,9 @@ export class HGridSummarySampleComponent implements OnInit {
 
 #### Custom summaries, which access all @@igComponent data
  Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
-As you can see in the code snippet below the operate method has the following tree parameters:
-- columnData - gives you an array that contains the values only for the certain column
-- gridDataSource - gives you the whole grid data source
+As you can see in the code snippet below the operate method has the following three parameters:
+- columnData - gives you an array that contains the values only for the current column
+- allGridData - gives you the whole grid data source
 - fieldName - current column field
 
 ```typescript
@@ -294,7 +294,7 @@ class MySummary extends IgxNumberSummaryOperand {
     }
     operate(columnData: any[], allGridData = [], fieldName?): IgxSummaryResult[] {
         const result = super.operate(allData.map(r => r[fieldName]));
-        result.push({ key: 'test', label: 'Total Discounted', summaryResult: allData.filter((rec) => rec.Discontinued).length });
+        result.push({ key: 'test', label: 'Total Discontinued', summaryResult: allData.filter((rec) => rec.Discontinued).length });
         return result;
     }
 }
