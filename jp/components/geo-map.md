@@ -37,7 +37,7 @@ Map は、マウス、キーボード、またはコードビハインドを使�
 
 ### 必要なモジュール
 
-[`IgxGeographicMap`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmap.html) は、以下のモジュールが必要です。
+[`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts

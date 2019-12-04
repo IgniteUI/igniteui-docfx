@@ -31,11 +31,11 @@ _language: ja
 | 画像クラス                                                                                                              | 説明                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | [`GeographicMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) | サポートされている地理的画像タイルのすべてのタイプを表示するすべての画像クラスの基本コントロールを表します。このクラスは、Map Quest マッピング サービスなどの他の地理的画像ソースから地理的画像タイルのサポートを実装する目的のために拡張できます。 |
-| `OpenStreetMapImagery`                                                                                             | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
+| [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
 
 <!-- |`BingMapsMapImagery`|Represents the multi-scale imagery control for displaying geographic imagery tiles from the Bing Maps service.| -->
 
-デフォルトでは、`BackgroundContent` プロパティは `OpenStreetMapImagery` オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
+デフォルトでは、`BackgroundContent` プロパティは [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
 
 さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、[`GeographicMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
 
@@ -43,4 +43,4 @@ _language: ja
 
 ### コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、`OpenStreetMapImagery` の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

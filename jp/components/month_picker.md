@@ -84,7 +84,7 @@ Two-way データ バインディングを作成するには、以下のよう�
 ```
 
 #### 書式設定
-`formatViews` と [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
+[`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -158,7 +158,7 @@ public formatOptions = {
     - <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
     - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
     - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
-    - <kbd>Tab</kbd> key to navigate through the months.
+    - <kbd>Tab</kbd> キーは月を移動します。
 
 ### API リファレンス
 <div class="divider--half"></div>

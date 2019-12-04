@@ -48,7 +48,7 @@ export class AppModule {}
 
 ### 使用方法
 
-`igxForOf` モジュールをインポート後、ローカル データにバインドする **igxFor** の基本構成を設定します。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) モジュールをインポート後、ローカル データにバインドする **igxFor** の基本構成を設定します。
 
 ```html
 <span #container>
@@ -185,7 +185,7 @@ private buildUrl(dataState: any): string {
 }
 ```
 
-`onChunkPreload` イベントが発生されたとき、新しいデータの部分を要求します。
+[`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) イベントが発生されたとき、新しいデータの部分を要求します。
 
 ```typescript
 chunkLoading(evt) {
@@ -215,11 +215,11 @@ chunkLoading(evt) {
 ```
 上記の例では、`even` クラスがすべての even div 要素に割り当てられています。
 
-## 既知の問題と制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |
-| `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOMノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば MutationObserver を使用して、手動でスクロール位置をリセットします。`</li></ul>
+| `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOMノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば `MutationObserver` を使用して、手動でスクロール位置をリセットします。`</li></ul>
 
 ## API リファレンス
 
