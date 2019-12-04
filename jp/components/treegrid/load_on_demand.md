@@ -31,7 +31,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 </igx-tree-grid>
 ```
 
-loadChildrenOnDemand コールバックは、2 つのパラメーターを提供します。
+[`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) コールバックは、2 つのパラメーターを提供します。
 
 - parentID - 展開されている親行の ID。
 - done  - 子がサーバーから取得されたときに子と共に呼び出されるコールバック。 

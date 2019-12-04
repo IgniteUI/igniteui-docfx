@@ -220,6 +220,18 @@ export class AppModule {}
 }
 ```
 
+`igx-card-actions` のボタンが `vertical` のレイアウトに切り替わりました。`igx-card-actions` は、その`親`と`逆`のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
+
+アクション領域の `vertical` 属性を明示的に設定して、デフォルトの動作を上書きすることができます。
+
+```html
+<igx-card-actions layout="justify" [vertical]="false">
+    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon>{{icon}}</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
 以下は横向きのカードの例です。
 
 <div class="sample-container loading" style="height: 202px">

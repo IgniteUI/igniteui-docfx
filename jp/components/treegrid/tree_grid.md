@@ -403,7 +403,7 @@ $custom-theme: igx-grid-theme(
 <div class="divider--half"></div>
 
 * [Grid サイズ変更](sizing.md)
-* [データ グリッド](../grid/grid.md)
+* [Data Grid](../grid/grid.md)
 * [行編集](row_editing.md)
 
 <div class="divider--half"></div>
