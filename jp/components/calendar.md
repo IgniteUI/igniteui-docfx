@@ -48,7 +48,7 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 @ViewChild('calendar', { read: IgxCalendarComponent }) public calendar: IgxCalendarComponent;
 ```
 
-> [!WARNING]
+> [!Note]
 > 注: [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI を使用します。
 > 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 

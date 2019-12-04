@@ -129,7 +129,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 @@igComponent コンポーネントのデータ エクスポートでは、行フィルタリングおよび列の非表示などの機能に応じて @@igComponent で表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
 @@if (igxName === 'IgxGrid') {
-#### 既知の問題と制限
+#### 既知の制限
 
 |制限|説明|
 |--- |--- |

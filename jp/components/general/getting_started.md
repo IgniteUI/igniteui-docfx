@@ -57,16 +57,26 @@ ng add igniteui-angular
 
 インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。 これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
 
-#### Ignite UI CLI を使用してアプリケーションを作成
+#### Angular Schematics & Ignite UI CLI のクイック スタート
+アプリケーションをゼロから作成し、Ignite UI for Angular コンポーネントを使用するように構成するには、Ignite UI for Angular Schematics または Ignite UI CLI を使用できます。最初の手順には、以下のように各パッケージをグローバルにインストールします。
 
-ターミナルを開き、[`Ignite UI CLI`](cli-overview.md) をインストールします。
+```cmd
+npm i -g @igniteui/angular-schematics
+```
+
+or:
 
 ```cmd
 npm install -g igniteui-cli 
 ```
 
-アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [`ガイド エクスペリエンス`](cli/step-by-step-guide.md) を使用する方法です。アプリをビルドしたあとは 1 コマンドで開始できます。
+構成されたアプリケーションをブートストラップする最も簡単な方法は[`ガイド エクスペリエンス`](cli/step-by-step-guide.md)トピックで説明します。
 
+Ignite UI for Angular Schematics を使用してガイドをアクティブにするには、次のコマンドを実行します。
+```cmd
+ng new --collection="@igniteui/angular-schematics"
+```
+CLI ツール を使用する場合は、以下のコマンドを実行します。
 ```cmd
 ig
 ```
@@ -79,7 +89,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-または、Ignite UI CLI [`コマンド`](cli-overview.md#コマンド) を使用し、Ignite UI プロジェクトを生成、新しいコンポーネントの追加、プロジェクトのビルドもできます。
+[Angular Schematics & Ignite UI CLI](cli-overview.md) についての詳細。
 
 ## Ignite UI for Angular の使用
 
@@ -88,7 +98,11 @@ ig
 ### コンポーネントの自動追加
 
 #### モジュールのインポートとコンポーネントの使用
- Ignite UI CLI を使用して簡単に新しいコンポーネントをアプリケーションに追加することができます。
+`component` スケマティックまたは `add` コマンドを使用して、アプリケーションに新しいコンポーネントを追加できます。
+
+```cmd
+ng g @igniteui/angular-schematics:component
+```
 
 ```cmd
 ig add
@@ -101,10 +115,10 @@ ig add
 
 #### アプリケーションの実行
 
-次に [`ig start`](https://github.com/IgniteUI/igniteui-cli/wiki/start) コマンドでアプリケーションを実行してページを確認します。
+アプリケーションを実行してページを確認します。
 
 ```cmd
-ig start
+npm start
 ```
 
 ### コンポーネントの自動追加
