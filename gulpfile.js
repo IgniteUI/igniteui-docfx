@@ -52,8 +52,8 @@ const gridsConfigs = {
     }
   };
   
-  const cleanup = async () => {
-    await del(`${DOCFX_SITE}`);
+  const cleanup = () => {
+    return del(`${DOCFX_SITE}`);
   };
   
   const environmentVariablesConfig = (done) => {
