@@ -1,7 +1,8 @@
 ---
 title: ZoomSlider |データ可視化ツール|Ignite UI for Angular |データ バインディング|Infragistics
-_description: Use the ZoomSlider within the data chart to easily display a subset of data. It is displayed with two handles representing minimum and maximum values.
+_description: データ チャートで ZoomSlider を使用して、データのサブセットを簡単に表示します。最小値および最大値を表す 2 つのハンドルで表示します。
 mentionedTypes: ['ZoomSlider, XamDataChart']
+_language: ja
 ---
 
 ### ズーム スライダー タイプ
@@ -10,7 +11,7 @@ ZoomSlider コントロールは、範囲対応コントロールにズーム機
 
 ### デモ
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 600px">
     <iframe id="zoomslider-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/zoomslider-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -40,7 +41,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### モジュールの要件
 
-The [`IgxZoomSliderComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
+[`IgxZoomSliderComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) は以下のモジュールを要求します。
 
 ```ts
 import { IgxZoomSliderModule } from "igniteui-angular-charts/ES5/igx-zoom-slider-module";

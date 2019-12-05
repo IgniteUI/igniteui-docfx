@@ -1,17 +1,18 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 地理的データ モデル | Infragistics
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: Map |データ可視化ツール|Ignite UI for Angular |地理的データ モデル|インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, インフラジスティックス
+mentionedTypes: ['XamGeographicMap', GeographicScatterAreaSeries, GeographicHighDensityScatterSeries, GeographicProportionalSymbolSeries, GeographicScatterAreaSeries, GeographicContourLineSeries, GeographicShapeSeries, GeographicPolylineSeries  ]
 _language: ja
 ---
 
-## 地理的データ モデルのバインド
+## 地理的データ モデルをバインディング
 
 Ignite UI for Angular マップ コンポーネントは、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示するように設計されています。地理的シリーズの `ItemsSource` プロパティは、データ モデルへのバインディングのために使用されます。このプロパティは、カスタム オブジェクトの配列にバインドできます。
 
 ### デモ
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-data-model-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -23,16 +24,144 @@ Ignite UI for Angular マップ コンポーネントは、シェイプ ファ�
 
 以下の表で、地理的シリーズのタイプごとに必要となるデータ構造を簡単に説明します。
 
-| 地理的シリーズ                                                                                                                                                                | プロパティ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 説明                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)                         | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath)                                                                                                                                                                                    | 2 つの数値の経度と緯度座標の名前を指定します。                                                                            |
-| [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath)                                                                                                                                                            | 2 つの数値の経度と緯度座標の名前を指定します。                                                                            |
-| [`IgxGeographicProportionalSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath), [`radiusMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) | 2 つの経度座標と緯度座標の名前と、シンボルのサイズ/半径の数字列を 1 列指定します。                                                        |
-| [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html)               | `LongitudeMemberPath`, `LatitudeMemberPath`, [`colorMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)                                                                                                                                                                                                                                                                                             | 数値の三角測量のために、2 つの経度と緯度座標および数値列を 1 列指定します。                                                            |
-| [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)               | `LongitudeMemberPath`, `LatitudeMemberPath`, [`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#valuememberpath)                                                                                                                                                                                                                                                                                             | 数値の三角測量のために、2 つの経度と緯度座標および数値列を 1 列指定します。                                                            |
-| [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)                           | `ShapeMemberPath`                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 図形の地理的ポイントを含む `ItemsSource` 項目のデータ列の名前を指定します。このプロパティは、x プロパティと y プロパティを持つオブジェクトの配列の配列にマップする必要があります。 |
-| [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)                     | `ShapeMemberPath`                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 線の地理的座標を含む`ItemsSource` 項目のデータ列の名前を指定します。このプロパティは、x プロパティと y プロパティを持つオブジェクトの配列の配列にマップする必要があります。     |
+| Geographic シリーズ                                                                                                                                                        | プロパティ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 概要                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)                         | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath)                                                                                                                                                                                    | 2 つの数値の経度と緯度座標の名前を指定します。                                                                          |
+| [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath)                                                                                                                                                            | 2 つの数値の経度と緯度座標の名前を指定します。                                                                          |
+| [`IgxGeographicProportionalSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath), [`radiusMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) | 2 つの経度座標と緯度座標の名前と、シンボルのサイズ/半径の数字列を 1 列指定します。                                                      |
+| [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html)               | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#latitudememberpath), [`colorMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)                | 数値の三角測量のために、2 つの経度と緯度座標および数値列を 1 列指定します。                                                          |
+| [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)               | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#longitudememberpath), [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#latitudememberpath), [`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#valuememberpath)                | 数値の三角測量のために、2 つの経度と緯度座標および数値列を 1 列指定します。                                                          |
+| [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)                           | [`shapeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriesbasecomponent.html#shapememberpath)                                                                                                                                                                                                                                                                                                                                            | 図形の地理的ポイントを含む ItemsSource 項目のデータ列の名前を指定します。このプロパティは、x プロパティと y プロパティを持つオブジェクトの配列の配列にマップする必要があります。 |
+| [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)                     | [`shapeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriesbasecomponent.html#shapememberpath)                                                                                                                                                                                                                                                                                                                                            | 線の地理的座標を含む ItemsSource 項目のデータ列の名前を指定します。このプロパティは、x プロパティと y プロパティを持つオブジェクトの配列の配列にマップする必要があります。    |
 
 ### コード スニペット
 
 次のコードは、[`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) を、経度と緯度の座標を使用して格納された世界の一部の都市の地理的位置を含むカスタム データ モデルにバインドする方法を示します。また、[WorldUtility](geo-map-resources-world-util.md) を使用してこれらの場所間の最短の地理的経路をプロットするために [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。
+
+```html
+<div className="sampleRoot" >
+    <igx-geographic-map #map
+        width="700px"
+        height="500px"
+        zoomable="true" >
+    </igx-geographic-map>
+</div>
+
+<ng-template let-series="series" let-item="item" #pointSeriestemplate>
+        <div>
+            <span [style.color]="series.brush">
+                {{item.country}}
+            </span>
+        </div>
+</ng-template>
+
+<ng-template let-series="series" let-item="item" #polylineSeriesTooltipTemplate>
+    <div>
+        <span [style.color]="series.brush">
+            Departure: {{item.origin.country}}
+        </span>
+        <br/>
+        <span [style.color]="series.brush">
+            Arrival: {{item.dest.country}}
+        </span>
+    </div>
+</ng-template>
+```
+
+```ts
+import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicPolylineSeriesComponent
+} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { WorldUtils } from "../../utilities/WorldUtils";
+
+@Component({
+  selector: "app-map-binding-geographic-data-models",
+  styleUrls: ["./map-binding-geographic-data-models.component.scss"],
+  templateUrl: "./map-binding-geographic-data-models.component.html"
+})
+
+export class MapBindingDataModelComponent implements AfterViewInit {
+
+    @ViewChild ("map")
+    public map: IgxGeographicMapComponent;
+    @ViewChild("pointSeriestemplate")
+    public pointSeriestemplate: TemplateRef<object>;
+    @ViewChild("polylineSeriesTooltipTemplate")
+    public polylineSeriesTooltipTemplate: TemplateRef<object>;
+    public flights: any[];
+    constructor() {
+    }
+
+    public ngAfterViewInit(): void {
+        const cityDAL = { lat:  32.763, lon: -96.663, country: "US", name: "Dallas" };
+        const citySYD = { lat: -33.889, lon: 151.028, country: "Australia", name: "Sydney" };
+        const cityNZL = { lat: -36.848, lon: 174.763, country: "New Zealand", name: "Auckland" };
+        const cityQTR = { lat: 25.285, lon:  51.531,  country: "Qatar", name: "Doha" };
+        const cityPAN = { lat:  8.949, lon: -79.400,  country: "Panama", name: "Panama" };
+        const cityCHL = { lat: -33.475, lon: -70.647, country: "Chile", name: "Santiago" };
+        const cityJAP = { lat:  35.683, lon: 139.809, country: "Japan", name: "Tokyo" };
+        const cityALT = { lat: 33.795,  lon: -84.349, country: "US", name: "Atlanta" };
+        const cityJOH = { lat: -26.178, lon: 28.004,  country: "South Africa", name: "Johannesburg" };
+        const cityNYC = { lat: 40.750, lon: -74.0999, country: "US", name: "New York" };
+        const citySNG = { lat:  1.229, lon: 104.177,  country: "Singapore", name: "Singapore" };
+        const cityMOS = { lat: 55.750, lon:  37.700,  country: "Russia", name: "Moscow" };
+        const cityROM = { lat:  41.880, lon: 12.520,  country: "Italy", name: "Roma" };
+        const cityLAX = { lat: 34.000, lon: -118.25,  country: "US", name: "Los Angeles" };
+
+        this.flights = [
+            { origin: cityDAL, dest: citySNG, color: "Green" },
+            { origin: cityMOS, dest: cityNZL, color: "Red" },
+            { origin: cityCHL, dest: cityJAP, color: "Blue" },
+            { origin: cityPAN, dest: cityROM, color: "Orange" },
+            { origin: cityALT, dest: cityJOH, color: "Black" },
+            { origin: cityNYC, dest: cityQTR, color: "Purple" },
+            { origin: cityLAX, dest: citySYD, color: "Gray" }
+        ];
+
+        for (const flight of this.flights) {
+            this.createPolylineSeries(flight);
+            this.createSymbolSeries(flight);
+        }
+    }
+
+    public createSymbolSeries(flight: any) {
+        const geoLocations = [flight.origin, flight.dest ];
+        const symbolSeries = new IgxGeographicSymbolSeriesComponent ();
+        symbolSeries.dataSource = geoLocations;
+        symbolSeries.markerType = MarkerType.Circle;
+        symbolSeries.latitudeMemberPath = "lat";
+        symbolSeries.longitudeMemberPath = "lon";
+        symbolSeries.markerBrush  = "White";
+        symbolSeries.markerOutline = flight.color;
+        symbolSeries.thickness = 1;
+        symbolSeries.tooltipTemplate = this.pointSeriestemplate;
+
+        this.map.series.add(symbolSeries);
+    }
+
+    public createPolylineSeries(flight: any) {
+        const geoPath = WorldUtils.calcPaths(flight.origin, flight.dest);
+        const geoDistance = WorldUtils.calcDistance(flight.origin, flight.dest);
+        const geoRoutes = [
+            {
+              dest: flight.dest,
+              distance: geoDistance,
+              origin: flight.origin,
+              points: geoPath,
+              time: geoDistance / 850
+        }];
+
+        const lineSeries = new IgxGeographicPolylineSeriesComponent ();
+        lineSeries.dataSource = geoRoutes;
+        lineSeries.shapeMemberPath = "points";
+        lineSeries.shapeStrokeThickness = 9;
+        lineSeries.shapeOpacity = 0.5;
+        lineSeries.shapeStroke = flight.color;
+        lineSeries.tooltipTemplate = this.polylineSeriesTooltipTemplate;
+        this.map.series.add(lineSeries);
+    }
+}
+```

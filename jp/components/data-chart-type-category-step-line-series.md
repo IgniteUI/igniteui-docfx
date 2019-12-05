@@ -8,7 +8,7 @@ _language: ja
 
 ## ステップ折れ線チャート
 
-ProductName$ ステップ折れ線チャートは、カテゴリ チャートのグループに属し、連続的な垂直線と水平線で接続されたポイントのコレクションを使用して描画され、階段状のチャートを形成します。値は y 軸に表示され、カテゴリは x 軸に表示されます。[`IgxStepLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html) は時間毎のデータの変化や複数の項目を比較する場合に用いられます。Angular ステップ折れ線チャートは、ステップ線の下の領域が塗りつぶされていないことを除いて、すべての面で Angular ステップ領域チャートと同じです。
+Ignite UI for Angular ステップ折れ線チャートは、カテゴリ チャートのグループに属し、連続的な垂直線と水平線で接続されたポイントのコレクションを使用して描画され、階段状のチャートを形成します。値は y 軸に表示され、カテゴリは x 軸に表示されます。[`IgxStepLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html) は時間毎のデータの変化や複数の項目を比較する場合に用いられます。Angular ステップ折れ線チャートは、ステップ線の下の領域が塗りつぶされていないことを除いて、すべての面で Angular ステップ領域チャートと同じです。
 
 ### デモ
 

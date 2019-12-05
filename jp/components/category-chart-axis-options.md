@@ -134,8 +134,8 @@ Ignite UI for Angular カテゴリー チャート コンポーネントでは�
 カテゴリ チャートの軸間隔機能は、チャート シリーズ間の間隔を設定できます。
 
 プロパティ値は、0 と 1 の間の float 値である必要があります。この値は、シリーズ間の利用可能なピクセル数で間隔の相対幅を表します。
-   0 - no gap is rendered between series;
-   1 - maximum available gap is rendered between series.
+   0 - シリーズ間に間隔は描画されません。
+   1 - シリーズ間に利用可能な最大の間隔が描画されます。
 
 カテゴリ チャートの `XAxisGap` を `0.125` に設定するには、以下のコードを使用します。
 
