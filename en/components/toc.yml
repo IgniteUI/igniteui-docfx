@@ -163,6 +163,9 @@
     - name: Sizing
       href: grid/sizing.md
       new: true
+    - name: State Persistence
+      href: grid/state_persistence.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true

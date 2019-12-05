@@ -548,7 +548,7 @@ $dark-bottom-nav-schema: extend($_dark-bottom-nav,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema

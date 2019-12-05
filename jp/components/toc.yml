@@ -6,7 +6,7 @@
 - name: アップデート ガイド
   href: general/update_guide.md
   new: false
-- name: Ignite UI CLI
+- name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
   items:
@@ -53,7 +53,7 @@
     - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
       new: true
-    - name: Data Analysis
+    - name: データ分析
       href: general/framework-and-features/data-analysis.md
       new: true
 - name: グリッドとリスト
@@ -162,6 +162,9 @@
       new: true
     - name: サイズ変更
       href: grid/sizing.md
+      new: true
+    - name: ステート パーシステンス
+      href: grid/state_persistence.md
       new: true
 #    - name: Grid マスターと詳細
 #      href: grid/master_detail.md

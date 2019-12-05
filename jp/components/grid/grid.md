@@ -127,6 +127,7 @@ public grid: IgxGridComponent;
 </igx-column>
 ...
 ```
+#### セル テンプレート
 
 `igxCell` は提供したテンプレートを列のすべてのセルに適用します。テンプレートで提供されるコンテキスト オブジェクトは暗示的に提供されたセル値およびセル オブジェクトです。以下のようにセルがコンテンツに応じて拡張するテンプレートを定義するために使用できます。
 
@@ -159,11 +160,11 @@ public grid: IgxGridComponent;
 <igx-grid>
 ```
 
-`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集)  を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この [selection](selection.md) はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。 
+`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集)  を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
 
 セル内のデータが `[(ngModel)]` でバインドされていて、値の変更が処理されない場合、新しい値はグリッドの基になるデータソースで適切に更**されません**。カスタム テンプレートを使用してセルの編集を行う場合は、セルの**セル編集テンプレート**を使用することを強くお勧めします。
 
-適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド編集イベント サイクルを正しく渡します。
+適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド[編集イベント サイクル](editing.md#編集イベント) を正しく渡します。
 
 #### セル編集テンプレート
 
@@ -574,61 +575,12 @@ export const DATA: any[] = [
 
 ### パーシステンス (永続化) 状態
 
-ページ/セッション間でグリッドの状態を維持することは一般的なシナリオであり、現在アプリケーション レベルで実現可能です。ページをまたいで状態のパーシステンスを実装します。この例では、`localStorage` オブジェクトを使用して状態の JSON 文字列を格納していますが、必要に応じて `sessionStorage` オブジェクトを使用することもできます。実装の詳細はすべて `igxState` ディレクティブに抽出されます。
-
-```typescript
-// state.directive.ts
-
-@Directive({
-    selector: "[igxState]"
-})
-export class IgxGridStateDirective {
-
-    public ngOnInit() {
-        this.loadGridState();
-        this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
-            this.saveGridState();
-        });
-    }
-
-    public ngAfterViewInit() {
-        this.restoreGridState();
-    }
-
-    public saveGridState() { ... }
-    public loadGridState() { ... }
-    public restoreGridState() { ... }
-}
-```
-
-上の例にあるように、NavigationStart イベントが発生すると (ユーザーがページから移動するたびに) `saveGridState` メソッドが呼び出されます。このメソッドには、グリッドの状態 (ソートおよびフィルター式、ページング状態、列の順序など) を読み込むロジックが含まれ、選択された行のコレクション）を作成して、このデータを json 文字列として `localStorge` に保存します。後でユーザーがグリッドに戻ったときに、`loadGridState` と `restoreGridState` メソッドがそれぞれ `OnInit` と `AfterViewInit`ライフサイクル フック中に呼び出されます。
-`loadGridState` は JSON 文字列を `localStorage` から `gridState` オブジェクトにデコードします。一方、`restoreGridState` は grid API を使用して、対応する並べ替えとフィルタリングの式をグリッドに適用したり、ページングを設定したりします。
-
-最後にディレクティブをグリッドに適用し、グリッド コンポーネントの `OnInit` フック間で列コレクションを復元します。 
-
-```typescript
-// grid.component.ts
-
-public ngOnInit() {
-    const columnsFromState = this.state.getColumnsForGrid(this.gridId);
-    this.columns = this.state.columns && columnsFromState ?
-        columnsFromState : this.initialColumns;
-}
-```
-
-<div class="sample-container loading" style="height:910px">
-    <iframe id="grid-state-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-<div class="divider--half"></div>
+新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
 ### サイズ変更
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。
 
-## 既知の問題と制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |

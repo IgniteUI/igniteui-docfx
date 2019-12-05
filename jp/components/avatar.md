@@ -49,7 +49,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 #### イニシャルを表示するアバター
 
-イニシャル ('John Smith' の場合 'JS') を使用した簡易なアバターを作成するには、以下のコードをコンポーネントのテンプレートに追加します。
+[イニシャル]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) ('John Smith' の場合 'JS') を使用した簡易なアバターを作成するには、以下のコードをコンポーネントのテンプレートに追加します。
 
 ```html
 <igx-avatar initials="JS">
