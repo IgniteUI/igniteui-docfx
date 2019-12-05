@@ -8,6 +8,7 @@ _language: ja
 ### @@igComponent ページング
 
 @@igComponent のページングは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) で設定できます。その他の Angular Material テーブルと同様に、@@igComponent のページングはカスタム ページのテンプレートをサポートします。
+
 #### デモ
 
 @@if (igxName === 'IgxGrid') {
@@ -85,9 +86,9 @@ this.@@igObjectRef.perPage = 25;
 this.@@igObjectRef.paging = false;
 ```
 
-### Remote Paging
+### リモート ページング
 
-The @@igComponent supports remote paging, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
+@@igComponent はリモート ページングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#リモート-ページング) トピックで説明されています。
 
 @@if (igxName === 'IgxGrid') {
 ### グループ化によるページング
@@ -141,7 +142,7 @@ The @@igComponent supports remote paging, which is demonstrated in the [`@@igCom
 
 ### スタイル設定
 
-ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する`インデックス` ファイルをインポートする必要があります。
+ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss

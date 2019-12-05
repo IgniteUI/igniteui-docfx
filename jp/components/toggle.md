@@ -202,6 +202,8 @@ export class AppModule {}
     </button>
 </div>
 
+***注***：デフォルトで、[**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) から除外します。ホスト要素をクリックすると、外側のクリックで閉じられることはが発生しません。さらに、[**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) はホスト要素を [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) のポジション ストラテジとして設定します。
+
 ### サービス プロバイダーを使用するトグル自動操作
 
 状態を保持し、[**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) をコマンドするには、**igxNavigationService** プロパイダーを使用します。アプリケーションで状態を追跡する場合に便利です。[**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブの識別子を設定すると、サービスの登録が処理されます。この状態を自動的に制御するには、この識別子をヘルパー **igxToggleActionDirective** に渡します。
@@ -254,9 +256,20 @@ export class AppModule {}
 <button [igxToggleAction]="reference" [igxToggleOutlet]="outlet">Toggle</button>
 <custom-component #reference></custom-component>
 ```
+### トグル コンテナのオフセット
+
+対応する軸に沿って指定した量のみコンテナをオフセットする方法:
+```typescript
+    // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    this.toggleForm.setOffset(deltaX, deltaY);
+```
+## API まとめ
+
+このトピックでは Toggle ディレクティブの使用方法について紹介しました。この動作を決定するコードでメソッドを呼び出して表示または非表示にすることができるコンテンツを作成しました。さらに適切なトグル参照を使用して同じ動作を自動的に制御するその他のディレクティブを追加しました。最後に、ヘルパー **igxToggleAction** ディレクティブに提供された ID を使用して、[**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブ **igxNavigationService** プロバイダーに登録しました。
 
 ### API リファレンス
-
 <div class="divider"></div>
 
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)

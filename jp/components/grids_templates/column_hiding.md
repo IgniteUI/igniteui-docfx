@@ -661,8 +661,8 @@ $custom-button: igx-button-theme(
 * [ページング](paging.md)
 * [並び替え](sorting.md)
 * [集計](summaries.md)
-* [列固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
 * [検索](search.md)
 
