@@ -1,6 +1,6 @@
 const path = require('path');
 const del = require('del');
-const {dest, series, src, watch} = require('gulp');
+const {dest, series, src, watch, parallel} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -9,7 +9,7 @@ const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
 const fileinclude = require('gulp-file-include');
 const slash = require("slash");
-const { exec } = require('child_process');
+const { exec, spawnSync } = require('child_process');
 
 const LANG = argv.lang === undefined ? "en" : argv.lang;
 const DOCFX_BASE = {
@@ -22,86 +22,90 @@ const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
 const DOCFX_TEMPLATE = slash(path.join(__dirname, 'node_modules', 'igniteui-docfx-template', 'template'));
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
-
-const cleanup =  (done) => {
-    del(`${DOCFX_SITE}`);
-    done();
-};
-
-const environmentVariablesConfig = (done) => {
+const gridsConfigs = {
+  grid: {
+      igPath: '/grid',
+      igMainTopic: 'grid',
+      igObjectRef: "grid",
+      igComponent: "Grid",
+      igxName: "IgxGrid",
+      igTypeDoc: "igxgridcomponent",
+      igSelector: "igx-grid"
+  },
+  treeGrid: {
+      igPath: '/treegrid',
+      igMainTopic: 'tree_grid',
+      igObjectRef: "treeGrid",
+      igComponent: "Tree Grid",
+      igxName: "IgxTreeGrid",
+      igTypeDoc: "igxtreegridcomponent",
+      igSelector: "igx-tree-grid"
+  },
+  hierarchicalGrid: {
+      igPath: '/hierarchicalgrid',
+      igMainTopic: 'hierarchical_grid',
+      igObjectRef: "hierarchicalGrid",
+      igComponent: "Hierarchical Grid",
+      igxName: "IgxHierarchicalGrid",
+      igTypeDoc: "igxhierarchicalgridcomponent",
+      igSelector: "igx-hierarchical-grid"
+    }
+  };
+  
+  const cleanup = async () => {
+    await del(`${DOCFX_SITE}`);
+  };
+  
+  const environmentVariablesConfig = (done) => {
     var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
-
+    
     if (process.env.NODE_ENV) {
-        environmentVariablesConfig.environment = process.env.NODE_ENV.trim();
+      environmentVariablesConfig.environment = process.env.NODE_ENV.trim();
     }
-
+    
     environmentVariablesConfig.variables =
-        environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
-        environmentVariablesConfig.environment
-        ];
-
+    environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
+      environmentVariablesConfig.environment
+    ];
+    
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
-        fs.mkdirSync(`${DOCFX_SITE}`);
+      fs.mkdirSync(`${DOCFX_SITE}`);
     }
-
+    
     fs.writeFileSync(
-        `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
-        JSON.stringify(environmentVariablesConfig)
-    );
-    done();
+      `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
+      JSON.stringify(environmentVariablesConfig)
+      );
+      done();
+    };
+    
+const fileInclude = (grid) => {
+  return src([DOCFX_ARTICLES + '/grids_templates/*.md'])
+      .pipe(fileinclude({
+          prefix: '@@',
+          basepath: '@file',
+          context: {
+              "igMainTopic": grid.igMainTopic,
+              "igObjectRef": grid.igObjectRef,
+              "igComponent": grid.igComponent,
+              "igxName": grid.igxName,
+              "igTypeDoc": grid.igTypeDoc,
+              "igSelector": grid.igSelector
+          }
+      }))
+      .pipe(dest(DOCFX_ARTICLES + grid.igPath));
+}
+
+const generateGridsTopics = () => {
+  return fileInclude(gridsConfigs.grid);
 };
 
-const generateGridsTopics = (done) => {
+const generateTreeGridsTopics = () => {
+  return fileInclude(gridsConfigs.treeGrid);
+};
 
-    const grids = [
-        {
-            igPath: '/grid',
-            igMainTopic: 'grid',
-            igObjectRef: "grid",
-            igComponent: "Grid",
-            igxName: "IgxGrid",
-            igTypeDoc: "igxgridcomponent",
-            igSelector: "igx-grid"
-        },
-        {
-            igPath: '/treegrid',
-            igMainTopic: 'tree_grid',
-            igObjectRef: "treeGrid",
-            igComponent: "Tree Grid",
-            igxName: "IgxTreeGrid",
-            igTypeDoc: "igxtreegridcomponent",
-            igSelector: "igx-tree-grid"
-        },
-        {
-            igPath: '/hierarchicalgrid',
-            igMainTopic: 'hierarchical_grid',
-            igObjectRef: "hierarchicalGrid",
-            igComponent: "Hierarchical Grid",
-            igxName: "IgxHierarchicalGrid",
-            igTypeDoc: "igxhierarchicalgridcomponent",
-            igSelector: "igx-hierarchical-grid"
-        }
-    ];
-
-    for (let j = 0; j < grids.length; j++) {
-        const grid = grids[j];
-
-        src([DOCFX_ARTICLES + '/grids_templates/*.md'])
-            .pipe(fileinclude({
-                prefix: '@@',
-                basepath: '@file',
-                context: {
-                    "igMainTopic": grid.igMainTopic,
-                    "igObjectRef": grid.igObjectRef,
-                    "igComponent": grid.igComponent,
-                    "igxName": grid.igxName,
-                    "igTypeDoc": grid.igTypeDoc,
-                    "igSelector": grid.igSelector
-                }
-            }))
-            .pipe(dest(DOCFX_ARTICLES + grid.igPath));
-    }
-    done();
+const generateHierarchicalGridsTopics = () => {
+  return fileInclude(gridsConfigs.hierarchicalGrid);
 };
 
 const  styles = () => {
@@ -188,7 +192,11 @@ const  browserSyncReload = (done) => {
 };
 
 const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
-const build = series(styles, postProcessorConfigs, generateGridsTopics, buildSite);
+const build = series(
+  styles, 
+  postProcessorConfigs, 
+  parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics), 
+  buildSite);
 
 const buildTravis = series(styles, postProcessorConfigs, generateGridsTopics);
 
