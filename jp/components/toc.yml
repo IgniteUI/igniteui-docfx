@@ -46,7 +46,7 @@
       new: false
     - name: レイアウト要素
       href: general/wpf_to_angular_guide/layout.md
-      new: false     
+      new: false
 - name: フレームワーク & 機能
   new: true
   items:
@@ -142,6 +142,9 @@
     - name: 複数列ヘッダー
       href: grid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: grid/collapsible_column_groups.md
+      new: true
     - name: 表示密度
       href: grid/display_density.md
       new: false
@@ -159,6 +162,9 @@
       new: true
     - name: サイズ変更
       href: grid/sizing.md
+      new: true
+    - name: ステート パーシステンス
+      href: grid/state_persistence.md
       new: true
 #    - name: Grid マスターと詳細
 #      href: grid/master_detail.md
@@ -230,7 +236,7 @@
           new: true
         - name: セル選択
           href: treegrid/cell_selection.md
-          new: true     
+          new: true
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -243,6 +249,9 @@
     - name: 複数列ヘッダー
       href: treegrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: treegrid/collapsible_column_groups.md
+      new: true
     - name: 表示密度
       href: treegrid/display_density.md
       new: false
@@ -337,6 +346,9 @@
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: hierarchicalgrid/collapsible_column_groups.md
+      new: true
     - name: 表示密度
       href: hierarchicalgrid/display_density.md
       new: false
