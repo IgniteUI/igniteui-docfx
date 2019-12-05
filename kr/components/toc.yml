@@ -79,6 +79,9 @@
     - name: 복수 열 헤더
       href: grid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: grid/collapsible_column_groups.md
+      new: true
     - name: 표시 밀도
       href: grid/display_density.md
       new: false
@@ -161,6 +164,9 @@
     - name: 복수 열 헤더
       href: treegrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: treegrid/collapsible_column_groups.md
+      new: true
     - name: 표시 밀도
       href: treegrid/display_density.md
       new: false
@@ -238,6 +244,9 @@
     - name: 복수 열 헤더
       href: hierarchicalgrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: hierarchicalgrid/collapsible_column_groups.md
+      new: true
     - name: 표시 밀도
       href: hierarchicalgrid/display_density.md
       new: false
