@@ -229,11 +229,11 @@ $myboringCard: igx-card-theme(
 
 以下は上記コードスニペットの結果です。
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="shadows-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/shadows-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 470px">
+    <iframe id="card-sample-shadow-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/card-sample-shadow" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="shadows-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 

@@ -10,15 +10,21 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動できます。</p>
 <div class="divider"></div>
 
-### Carousel デモ
-
-<div class="sample-container loading" style="height: 620px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
+### デモ
+<div class="sample-container loading" style="height: 550px">
+    <iframe id="carousel-base-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-base-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
+    </button>
 </div>
 
-### 使用方法
+### 作業の開始
 
 Carousel を全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
+
+#### はじめに
+<div class="divider--half"></div>
 
 Carousel コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
 
@@ -28,7 +34,6 @@ ng add igniteui-angular
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
 次に、**app.module.ts** ファイルに **IgxCarouselModule** をインポートします。
-
 ```typescript
 // app.module.ts
 ...
@@ -41,231 +46,272 @@ import { IgxCarouselModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、カルーセル コンポーネントのテンプレートに以下のマークアップを追加し、2 つのスライドとその HTML コンテンツを定義します。
+このセクションでは、上記で定義した **onboarding デモ**の設定を行います。
+
+#### IgxCarousel の定義
+<div class="divider--half"></div>
+
+デフォルトでは、カルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 動作は true に設定されています (ループ - 最初のスライドが最後のスライドから Next に移動した後に来る場合、または最後のスライドが最初のスライドから Previous に移動した後に来る場合)。
+
+各スライド インデックスを追跡するために、カルーセルにはインジケーターがあります。デフォルトでは、インジケーターの位置はカルーセルの下部にあります。それを変更するには、`top` を割り当てて [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) プロパティを使用する必要があります。
+
+ここまでで、カルーセル テンプレートは以下のようになります。
 
 ```html
-<!-- app.component.html -->
-<igx-carousel>
-    <igx-slide>
-        <h3>Ignite UI for Angular</h3>
-        <p>30+ Material-based Angular components to code speedy web apps faster.</p>
-    </igx-slide>
-    <igx-slide>
-        <h3>Ignite UI for Javascript</h3>
-        <p>A complete JavaScript UI component library giving you the ability to build data-rich responsive web apps.</p>
-    </igx-slide>
-</igx-carousel>
+<div class="carousel-container">
+    <igx-carousel #carousel [loop]="false" indicatorsOrientation="top">
+      ...
+    </igx-carousel>
+</div>
 ```
 
-このコードはカルーセルをページでインスタンス化します。
+#### *ngFor を使用してスライドを追加する
+<div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 230px">
-    <iframe id="carousel-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
-    </button>
-</div>
+同じ種類のコンテンツを含むスライドがある場合、ngFor を使用してテンプレートに追加する方が簡単です。
 
-### ngFor ディレクティブを使用したスライドの表示
-
-実環境シナリオでスライドをマークアップに宣言する代わりに動的に読み込みます。この方法を説明するためにコードでスライドを提供します。
+最初の 3 つのスライドには画像のみが含まれるので、**ts** ファイルにオブジェクトの配列を作成し、それを使用して **igx-carousel** にスライドを追加します。
 
 ```typescript
-  // app.component.ts
-  public slides: any[] = [];
-  constructor() { }
-
-  public ngOnInit() {
-     this.addNewSlide();
-  }
-
-  public addNewSlide() {
-      this.slides.push(
-        { description: "30+ Material-based Angular components to code speedy web apps faster.",
-          heading: "Ignite UI for Angular",
-          image: "assets/images/carousel/slide1-angular.png"},
-        { description: "A complete JavaScript UI library empowering you to build data-rich responsive web apps.",
-          heading: "Ignite UI for Javascript",
-          image: "assets/images/carousel/slide2-ignite.png"}
-      );
-  }
+...
+public slides = 
+  [
+      {
+        src: "assets/images/svg/carousel/Onboarding1.svg"
+      },
+      {
+        src: "assets/images/svg/carousel/Onboarding2.svg"
+      },
+      {
+        src: "assets/images/svg/carousel/Onboarding3.svg"
+      }
+  ];
+...
 ```
-
-次に [`igx-slide`]({environment:angularApiUrl}/classes/igxslidecomponent.html) に ngFor ディレクティブを追加して HTML コンテンツを提供します。各スライドに画像も追加します。
 
 ```html
-<!-- app.component.html -->
-<igx-carousel #carousel>
-    <igx-slide *ngFor="let slide of slides;">
-        <h3>{{slide.heading}}}</h3>
-        <p>{{slide.description}}}</p>
-        <img [src]="slide.image">
-    </igx-slide>
-</igx-carousel>
+...
+  <igx-slide  *ngFor="let slide of slides;">
+      <div class="image-container">
+          <img style="width: 80%" [src]="slide.src">
+      </div>
+  </igx-slide>
+...
 ```
 
-ここまででカルーセルは動作しますが、更に外観を変更してみます。最も重要なナビゲーション機能にスタイルを追加するために [前へ] および [次へ] 矢印のデフォルト色を変更し、カルーセル コンテンツを中央揃えにします。
+#### 他のコンポーネントを含むスライド
+<div class="divider--half"></div>
 
-```css
-/* app.component.css */
-.igx-carousel__inner {
-    width: 100%;
-    text-align: center; 
-}
-a > igx-icon > span{
-    color: #e41c77;
-}
+最後のスライドには、画像、サインアップ フォーム、およびルーティング用のボタンが含まれるため、個別に定義します。
+```html
+...
+  <igx-slide>
+      <div class="slide-content-wrapper">
+
+          <div style="margin: 20px auto; width: 60%">
+              <img style="width: 80%" src="assets/images/svg/carousel/SignUp.svg">
+              <button igxButton="icon" (click)="goTo()">
+                  <igx-icon class="icon" fontSet="material">info</igx-icon>
+              </button>
+          </div>
+
+          <form #form class="signInForm" >
+              <igx-input-group>
+                  <igx-prefix>
+                      <igx-icon>person</igx-icon>
+                  </igx-prefix>
+                  <label style="display: flex;" igxLabel for="username">Username</label>
+                  <input igxInput id="username" type="text" />
+              </igx-input-group>
+              <igx-input-group>
+                  <igx-prefix>
+                      <igx-icon>lock</igx-icon>
+                  </igx-prefix>
+                  <label style="display: flex;" igxLabel for="password">Password</label>
+                  <input igxInput id="password" type="password" />
+              </igx-input-group>
+          </form>
+          <button igxButton="raised" type="submit" (click)="form.reset()">Sign Up</button>
+      </div>
+  </igx-slide>
+...
 ```
 
-スタイルの適用後、矢印が強調表示され、コンテンツが中央揃えになります。
-<div class="sample-container loading" style="height: 600px">
-<iframe id="carousel-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
-    </button>
-</div>
+#### カスタム インジケーター
+<div class="divider--half"></div>
 
-### ナビゲーション
-
-ナビゲーションおよびトランジションは最も重要なカルーセル機能です。トランジション期間、自動再生、および停止機能を要件に応じて構成できます。この機能は、公開されたプロパティによって管理できます。ユーザーの注意をそらさないよう自動再生を無効にし、操作によって停止を有効にして、ループ化 (最初のスライドが最後のスライドの後になること) を有効にします。
+カスタム カルーセル インジケーターを追加するには、以下のように [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html) を使用する必要があります。
 
 ```html
-<!-- app.component.html -->
-<igx-carousel #carousel [loop]="loop" [pause]="pause">
+...
+  <ng-template igxCarouselIndicator let-slide>
+      <div [ngClass]="{'selected': slide.current === current}" class="indicator"></div>
+  </ng-template>
+...
+```
+
+#### カスタム nav ボタン
+
+最後の手順では、ナビゲーション ボタンをカスタマイズします。
+
+これを実現するために、次のアプローチで [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) と [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) を使用します。
+
+```html
+...
+  <ng-template igxCarouselNextButton let-disabled>
+          <button igxButton="fab" igxRipple="white" [disabled]="disabled">
+                  <igx-icon fontSet="material">add</igx-icon>
+          </button>
+  </ng-template>
+
+  <ng-template igxCarouselPrevButton let-disabled>
+          <button igxButton="fab" igxRipple="white" [disabled]="disabled">
+                  <igx-icon fontSet="material">remove</igx-icon>
+          </button>
+  </ng-template>
+...
+```
+
+### アニメーション
+
+アニメーション化されたスライドの移行により、エンドユーザーはカルーセルとのインタラクティブで高いエクスペリエンスを得ることができます。
+
+#### アニメーション
+カルーセルは、デフォルトで**スライド**アニメーションの移行が設定されており、**フェード**アニメーションもサポートしています。
+
+アニメーションは [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype)入力を介して構成されます。
+
+```html
+
+<igx-carousel animationType="fade">
 ...
 </igx-carousel>
+
 ```
+`animationType` 入力に `none` を設定すると、カルーセルのアニメーションが無効になります。
 
-上記のスニペットで、[プロパティ バインディング](https://angular.io/guide/template-syntax#property-binding)を使用して [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) および [`pause`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) 要素プロパティに値を設定します。オプションのプロパティには、スライド変更の間隔をミリ秒単位で設定する [`interval`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) があります。コンテンツがカルーセルに自動的に変更される代わりに、ユーザーの操作によって変更されるために、このプロパティを設定しません。コンポーネントのプロパティ値が以下のコードによって設定されます。注: 自動再生を無効にするには、カルーセルの [`stop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#stop) メソッドを呼び出します。
 
-```typescript
-  // app.component.ts
-  public loop = true;
-  public pause = true;
+#### デモ
 
-  constructor() { }
+以下のデモは、カルーセルがサポートするさまざまなタイプのアニメーションを示しています。
 
-  public ngOnInit() {
-     this.addNewSlide();
-     // stops the auto playing
-     this.carousel.stop();
-  }
-```
-
-プロパティを構成した後、ユーザーはカルーセルのコンテンツを変更できます。次にナビゲーションをカスタマイズし、カルーセルのインジケーターをプログレス バーと置き換えます。[`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) イベントを処理し、[**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) コンポーネントを使用して進行状況を示す UI を追加します。最初、**IgxLinearProgressBar** モジュールをインポートします。
-
-```typescript
-// app.component.ts
-import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
-```
-
-モジュールをインポートした後、[**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) をテンプレートに追加します。[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) プロパティを **app.component.ts** ファイルで定義される [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) プロパティの値に設定します。[`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) イベントのハンドラーを追加し、進行状況のテキストを追加します。
-
-```html
-<!-- app.component.html -->
-<igx-carousel #carousel [loop]="loop" pause="false" (onSlideChanged)="onSlideChanged(carousel)">
-    <igx-slide *ngFor="let slide of slides;">
-        <h3>{{slide.heading}}</h3>
-        <p>{{slide.description}}</p>
-        <img [src]="slide.image">
-    </igx-slide>
-    <igx-linear-bar #linearbar [max]="total"></igx-linear-bar>
-    <span>{{current}} out of {{total}}</span>
-</igx-carousel>
-```
-
-[`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) および [`current`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#current) プロパティの値を **ngOnInit** で更新し、リニア バーの値を [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) イベント ハンドラーで更新します。
-
-```typescript
-// app.component.ts
-  @ViewChild("carousel") public carousel: IgxCarousel;
-  @ViewChild("linearbar") public linearbar: IgxLinearProgressBar;
-
-  public total: number;
-  public current: number;
-
-  constructor() { }
-
-  public ngOnInit() {
-     this.addNewSlide();
-     this.carousel.stop();
-     this.total = this.slides.total;
-     this.current = this.carousel.current;
-  }
-
-  public onSlideChanged(carousel: IgxCarousel) {
-    this.current = carousel.current + 1;
-    this.linearbar.value = carousel.current + 1;
-  }
-```
-
-プログレス バーがパーセンテージ値を表示しますが、カスタム インジケーター テキストを追加したため、このパーセンテージ値を表示する必要がありません。このパーセンテージ値およびカルーセルの元のインジケーターを非表示にします。
-
-```css
-/* app.component.css */
-span.progress-linear__value {
-    display: none;
-}
-ul.igx-carousel__indicators {
-    display: none;
-}
-```
-
-すべての手順を実行すると、ナビゲーション矢印を使用してユーザーが管理するカルーセルになります。リニア バーが進行状況のインジケーターになります。
-
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 700px">
+    <iframe id="carousel-animations-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-animations-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-animations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
     </button>
 </div>
 
-### タップ / クリックでのアクション
-カルーセルがホーム ページ コンテンツを表示しています。ただし、スライドとのユーザー インタラクション ハンドラーを実装する必要があります。ユーザーがスライドにクリック/タップしたとき、カルーセルが新しいページまたはビューに移動することが予期されます。これには、移動するルートを設定します。ヘッダーを [`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) と置き換え、ボタンのクリック イベントにイベント ハンドラーを追加します。
+
+### ナビゲーション
+<div class="divider--half"></div>
+
+トランジションとナビゲーションは、最も重要なカルーセル機能です。
+
+カルーセル内のナビゲーションは、モバイル デバイスでのナビゲーション ボタン、キーボード ナビゲーション、パン操作を通じてユーザーが処理できます。
+
+#### パン ジェスチャ
+<div class="divider--half"></div>
+
+デフォルトでは、カルーセルはあらゆる種類のタッチ デバイスに使用できます。 これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) プロパティに `false` を設定して変更できます。
+
+カルーセル [アニメーション](carousel.md#アニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームにに合わせてプログレッシブウェブアプリ ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
+
+#### キーボード ナビゲーション
+<div class="divider--half"></div>
+
+* **次へ**/**前へ**のスライドに移動するには、丁寧に使用する必要があります。
+    * `右矢印`キー - 次のスライド
+    * `左矢印`キー - 前のスライド
+*  **最後**/**最初**のスライドに移動するには丁寧に使用する必要があります。
+    * `End` キー - 最後のスライド
+    * `Home` キー - 最初のスライド
+ 
+#### 自動的なトランジション
+<div class="divider--half"></div>
+
+**IgxCarousel** は、ユーザーの操作なしでスライドを自動的に変更するように簡単に構成できます。この方法では、トランジション間隔を [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) プロパティに設定するだけで、スライドショーを作成できます。このプロパティは、スライド トランジション間の間隔 (ミリ秒)を決定します。
+
+>[!NOTE]
+>自動的なスライド トランジションは、デフォルトでユーザーに完全に依存しているわけではありません。スライドの上にマウス ポインターを置くと、マウス ポインターがスライド領域から出るまで、現在のスライド トランジションが中断されます。これは、[pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) プロパティを `false` に設定することで防止できます。
+
+#### デモ
+<div class="divider--half"></div>
+
+[リスト項目]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)と同期されたループを有効にして完全に自律的なカルーセルを作成します。スライドの選択は、ユーザーが`リスト項目`でのみ制御します。
+
+
+これを実現するには、カルーセルを以下のように構成する必要があります。
+ - `gesturesSupport` を無効にします。
+ - `ナビゲーション` ボタンを無効にします。
+ - カルーセルの`インジケーター`を無効にします。
+ - ユーザーがスライドを操作すると `pause` を無効にします。
+ - トランジション`間隔`を追加します。
+
+カルーセル テンプレートは以下のようになります。
 
 ```html
-<!-- app.component.html-->
-<igx-slide *ngFor="let slide of slides;">
-    <span igxButton="raised" igxButtonColor="white" 
-        igxButtonBackground="#e41c77" (click)="goTo(carousel.current)">{{slide.heading}}</span>
-    <p>{{slide.description}}</p>
-    ...
-</igx-slide>
+...
+<div class="carousel-wrapper">
+    <igx-carousel [navigation]="false" [pause]="false" animationType="fade" [interval]="2000" [gesturesSupport]="false">
+        <div class="slides-wrapper">
+            <igx-slide *ngFor="let item of slides">
+                  <!-- Slides content goes here -->
+             </igx-slide>
+        </div>
+        <!-- Adding an empty template to disable carousel's indicators -->
+        <ng-template igxCarouselIndicator></ng-template>
+    </igx-carousel>
+</div>
+...
 ```
+カルーセル構成の準備ができました。次に、[リスト](list.md) コンポーネントを追加して、両方のコンポーネントを同期します。
 
-**IgxButtonModule** を **app.component.ts** に追加します。`goto()` 関数は [Angular ルーター](https://angular.io/guide/router)を使用してその他のビューに移動します。
+[IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html) の追加:
+```html
+...
+<div class="list-wrapper">
+    <igx-list displayDensity="compact">
+      <!-- Adding disabled classes when the list item index does not match the current slide index-->
+        <igx-list-item *ngFor="let item of slides; let i=index" [ngClass]="{'disabled': i !== currentIndex }" >
+      <!-- List item content goes here -->
+        </igx-list-item>
+    </igx-list>
+</div>
+...
+```
+カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [onItemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#onitemclicked) イベントを処理し、コンポーネントを同期する方法: 
 
 ```typescript
-  // app.component.ts
-  import { Router } from "@angular/router";
-  import { Direction, IgxButtonModule, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
-  ...
+  public ngOnInit() {
+    ...
+    this.list.onItemClicked.subscribe((args: IListItemClickEventArgs) => {
+        this.currentIndex = args.item.index;
+        this.carousel.select(this.carousel.get(this.currentIndex));
+    });
 
-  export class AppComponent implements OnInit {
-  ...
-  constructor(private router: Router) { }
-
-  public goTo(index: number) {
-    this.router.navigate(["/details", index]);
+    this.carousel.onSlideChanged.subscribe((args: ISlideEventArgs) => {
+        this.currentIndex = args.slide.index;
+    });
   }
 ```
-
-これを構成した後、ルーターが URL を指定した **/details:index** ルート パスと一致させ、相対するページを表示します。
-
-<div class="sample-container loading" style="height: 620px">
-    <iframe data-src='{environment:demosBaseUrl}/layouts/carousel-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+これらの構成の結果は以下のようになります。
+<div class="sample-container loading" style="height: 700px">
+<iframe id="carousel-no-navigation-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-no-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                Stackblitz で表示
+    </button>
 </div>
 
-###API
+
+`
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
 * [IgxCarouselComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
 * [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
-* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)

@@ -75,8 +75,8 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 
 ### モーダル
 [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトに [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) ブール値を渡すことができます。これはオーバーレイが表示される方法を制御します。
-[`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
-[`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
+- [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
+- [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>

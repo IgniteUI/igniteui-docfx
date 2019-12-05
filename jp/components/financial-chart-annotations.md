@@ -7,7 +7,7 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) の注釈について説明します。
+このトピックでは、`XamFinancialChart` の注釈について説明します。
 
 ### デモ
 

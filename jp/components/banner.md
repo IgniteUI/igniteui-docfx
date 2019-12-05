@@ -126,7 +126,7 @@ Connection Banner のテンプレート化は、`igx-banner-actions` セレク�
     ...
 ```
 
-閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`connectionBanner.close()` のみの呼び出しが可能です。確認操作 (`‘Turn On Wifi’`) は追加のロジックを必要とするため、コンポーネントで定義します。
+閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`connectionBanner.close()` のみの呼び出しが可能です。確認操作 (`'Turn On Wifi'`) は追加のロジックを必要とするため、コンポーネントで定義します。`onNetworkStateChange` `Observable`を作成してサブスクライブし、変更するたびに `refreshBanner` メソッドを呼び出します。このメソッドは、`wifiState` に基づいてバナーを切り替えます。
 
 
 ```typescript

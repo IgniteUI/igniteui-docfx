@@ -6,11 +6,10 @@ _language: ja
 ---
 
 ## Radio & Radio Group
-
-### Radio Button
-
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能をサポートします。</p>
 <div class="divider"></div>
+
+### Radio Button
 
 #### Radio Button デモ
 
@@ -113,7 +112,7 @@ public selectedColor: string = this.colors[3].hex;
 </div>
 
 ### Radio Group
-<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、子 [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) コンポーネントをより詳細に制御ができ、テンプレート主導やリアクティブ フォームをサポートするグルーピング コンテナーを提供します。</p>
+<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、子 [igxRadio]({environment:angularApiUrl}/classes/igxradiocomponent.html) コンポーネントをより詳細に制御ができ、テンプレート主導やリアクティブ フォームをサポートするグルーピング コンテナーを提供します。</p>
 <div class="divider"></div>
 
 #### Radio Group デモ
@@ -127,7 +126,7 @@ public selectedColor: string = this.colors[3].hex;
 
 #### Radio Group の使用
 
-Radio Group ディレクティブが NgModule としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの `IgxRadioModule` をインポートする必要があります。
+Radio Group ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの `IgxRadioModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -166,8 +165,8 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 * [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
 ### その他のリソース
-
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
