@@ -6,12 +6,12 @@ _language: ja
 ---
 
 ## Slider Ticks
-**Slider ticks**, provide a new and more attractive way for data visualization, like a particular timeframe, days of the week and more. With this new functionality the users are not obligated to interact with the slider in order to see what data stays behind. It is extremely flexible, in regards of the control over positioning and orientation of the **ticks** and **tick labels**. The **ticks** can be turned **on/off**, as well as pick between **primary**, **secondary** or **both**. Additionally this feature provides a way to  turn **on/of** **primary**, **secondary** **tick labels** or both, they can even change their rotation form **horizontal** to **vertical** (**top to bottom** (90) or **bottom to top** (-90)).
+**スライダー目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行う方法を提供します。この新しい機能を使用すると、どのデータが残っているかを確認するためにスライダーを操作する必要がなくなります。目盛りと目盛りラベルの配置と方向の制御に関して、高い柔軟性があります。**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、またはその**両方**を選択したりできます。さらに、この機能は、プライマリ目盛りラベル、セカンダリ目盛りラベル、またはその両方をオンまたはオフにする方法を提供し、水平から垂直 (上から下 (90) または下から上 (-90)) で回転形式を変更することもできます。
 
-### Usage
-Before we start, make sure that you have gone through the **Ignite UI for Angular** [getting started](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html) section.
+### 使用方法
+開始する前に、Ignite UI for Angular の入門セクションを完了していることを確認してください。
 
-Once the set up is ready, the **IgxSliderModule** needs to be included in the **app.module.ts** file
+セットアップの準備ができたら、**IgxSliderModule** を **app.module.ts** ファイルに含める必要があります
 
 ```typescript
 // app.module.ts
@@ -26,8 +26,8 @@ import { IgxSliderModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-#### Bottom Ticks
-Let’s start with something simple and enable slider **ticks** below the slider and show every **even** number within a particular sequence.
+#### 下目盛り
+単純なものから始めて、特定のシーケンス内のすべての偶数を表示するスライダーの下のスライダー**目盛り**を有効にします。
 
 ```html
 <!--sample.component.html-->
@@ -49,12 +49,12 @@ public type = SliderType.RANGE;
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-Let’s look at the ticks below the slider. Firstly the whole feature is enabled by setting [`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) to **true**. Then setting [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) to six (because the rendering starts from 0), defines and spreads all primary **ticks** equally below the slider. [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) set up works a little bit different. It defines four secondary ticks between every two **primary** and if the calculation is right, 21 **ticks** will be rendered totally.
+スライダーの下の目盛りを見てみましょう。まず、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を true に設定することにより、機能全体が有効になります。[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を 6 に設定すると（レンダリングが0から始まるため）、すべてのプライマリ**目盛り**をスライダーの下に均等に定義して広げます。[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) のセットアップは少し異なります。2 つの**プライマリ**間の4つのセカンダリティックを定義し、計算が正しい場合、21 **目盛り** がすべてレンダリングされます。
 
 
 
-#### Disable secondary ticks and rotate primary ones.
-In the next sample all **secondary labels** are disabled and all **primary labels** rotated. 
+#### セカンダリ目盛りを無効にし、プライマリ目盛りを回転します。
+次のサンプルでは、​​すべての**セカンダリ ラベル**が無効になり、すべての**プライマリ ラベル**が回転します。 
 
 ```html
 <igx-slider
@@ -69,7 +69,7 @@ In the next sample all **secondary labels** are disabled and all **primary label
     [(ngModel)]="priceRange"></igx-slider>
 ```
 
-Just to make it more interesting the **value** has been two-way data-bound to two inputs.
+より興味深いものにするために、**値**は 2 つの入力に双方向でデータバインドされています。
 ```html
   <div class="wrapper">
       <igx-input-group>
@@ -104,10 +104,10 @@ export class PriceRange {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-Following the example above, it is easy to determine that setting [`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) to **false** disable all **secondary tick labels**, and passing **BottomToTop**(-90) property of [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) enumeration to [`tickLabelsOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticklabelsorientation) input does the rotation.
+上記の例に従えば、[`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) を **false** に設定するとすべての**セカンダリ目盛りラベル**が無効になり、[`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) 列挙のBottomToTop（-90）プロパティを [`tickLabelsOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticklabelsorientation) 入力に渡すと回転が行われると簡単に判断できます。
 
-#### Disable primary ticks and change their orientation
-Let’s move on and see how the orientation  of the **ticks** is changed as well as their **primary** visibility.
+#### プライマリ ティックを無効にし、方向を変更します。
+次に、**目盛り**の方向がどのように変化するかと、**プライマリ**の表示を見てみましょう。
 
 ```html
 <button igxButton="fab" igxRipple="white" (click)="decrease()">
@@ -126,7 +126,7 @@ Let’s move on and see how the orientation  of the **ticks** is changed as well
 </button>
 
 ```
-The two buttons above are used just to control/update slider's **value**, but let's focus on the **ticks** manipulation. 
+表示される 2 つのボタンを使用して、スライダーの**値**を制御/更新できますが、**目盛り**の操作について説明します。 
 
 ```typescript
   public ticksOrientation = TicksOrientation.Mirror;
@@ -139,10 +139,10 @@ The two buttons above are used just to control/update slider's **value**, but le
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-The change of the orientation has come from [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) input, which was changed from **Bottom**(default) to **Mirror**. This mirrors the visualization of the **ticks** and duplicates them at the top as well. 
+方向の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) 入力から行われ、これはの変更は **Bottom** から **Mirror** に変更されました。これにより、**目盛り**の視覚化が反映され、上部にも複製されます。 
 
-#### Top ticks with visible labels
-There is an edge case where **thumb label** is hidden intentionally, and it is when [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) is set to **Top** or **Mirror** and there are any visible **tick labels**. This prevents a bad user experience and overlap between the two labels. To gain a better view over that scenario let’s see the example below.
+#### 表示ラベル付きの上目盛り
+まれに、**つまみラベル**が意図的に非表示になっている場合があります。これは [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) が **Top** または **Mirror** に設定されていて、目盛りラベルが表示されている場合です。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。そのシナリオをよりよく理解するために、以下の例を見てみましょう。
 
 ```html
 <igx-slider
@@ -163,10 +163,10 @@ public ticksOrientation = TicksOrientation.Top;
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-primary-ticks-top-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-We haven’t done anything special here, except that we’ve changed the **orientation** of the **ticks** and positioned them at the top of the slider. We can see that, there isn’t any **thumb label** that is popping up.
+ここでは、**目盛り**の**向き**を変更し、スライダーの上部に配置します。ポップアップ表示される**つまみラベル**はありません。
 
-#### Slider ticks with labels view
-The feature has been aligned with the **labels view** feature as well. Let's see how.
+#### ラベル ビューを含むスライダー 目盛り
+この機能は、**ラベル ビュー**機能にも合わせられています。以下はコード例です。
 
 ```html
 <igx-slider
@@ -187,10 +187,10 @@ The feature has been aligned with the **labels view** feature as well. Let's see
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-Here, the [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) hasn't been set, because it won’t be reflected in any way. The **length** of the collection takes precedence and control over it. This does not mean that we are not able to set any [`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks). We are, but all **secondary ticks** will be empty(without any **labels**), which makes them seem more as some sort of indicators between the **primary ticks**.
+ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) は設定されていません。いずれにせよ反映されないためです。コレクションの**長さ**が優先され、それを制御します。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を設定できないという意味ではありません。ただし、すべての**セカンダリ目盛り**は空 (ラベルなし) になり、プライマリ目盛り間でインジケーターのように見えます。
 
-#### Template tick labels
-Lastly, we will see how we can provide a custom template for the **tick labels** and what the [`template context`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) provides.
+#### テンプレート目盛りラベル
+最後に、**目盛りラベル**にカスタム テンプレートを提供する方法と、[`テンプレート コンテキスト`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context)が提供するものを確認します。
 
 ```html
     <igx-slider
@@ -202,16 +202,16 @@ Lastly, we will see how we can provide a custom template for the **tick labels**
         </ng-template>
     </igx-slider>
 ```
-Applying [`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) to the `ng-template` gives as control over all **tick labels**. 
+[`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) を `ng-template` に適用すると、すべての目盛りラベルを制御できます。 
 
 > [!NOTE]
-> The [`context`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) executes per each tick.
+> コンテキストは各目盛りごとに実行されます。
 
-Which means that it provides a reference to: 
-  * each corresponding tick **value**
-  * If that tick is **primary**.
-  * **tick** index.
-  * And the [`labels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labels) collection if we have such one. 
+つまり、次への参照を提供します。 
+  * 対応する各目盛りの**値**
+  * 目盛りが**プライマリ**の場合:
+  * **目盛り**インデックス。
+  * そして、[`ラベル`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labels)コレクションがある場合: 
 
 ```typescript
   public tickLabel(value, primary, index) {
@@ -223,7 +223,7 @@ Which means that it provides a reference to:
   }
 ```
 
-From the **tackLabel** callback above, we can see that every **primary** tick **value** has been rounded. 
+上記の **tackLabel** コールバックから、すべての **プライマリ**値が丸められていることがわかります。 
 
 <div class="sample-container loading" style="height: 140px">
     <iframe id="slider-tick-labels-template-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tick-labels-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
@@ -248,5 +248,5 @@ From the **tackLabel** callback above, we can see that every **primary** tick **
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
-* Ignite UI for Angular **フォーラム** (英語)
-* Ignite UI for Angular **GitHub** (英語)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
