@@ -6,12 +6,12 @@ _language: ja
 ---
 
 ## Slider Ticks
-**スライダー目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行う方法を提供します。この新しい機能を使用すると、どのデータが残っているかを確認するためにスライダーを操作する必要がなくなります。目盛りと目盛りラベルの配置と方向の制御に関して、高い柔軟性があります。**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、またはその**両方**を選択したりできます。さらに、この機能は、プライマリ目盛りラベル、セカンダリ目盛りラベル、またはその両方をオンまたはオフにする方法を提供し、水平から垂直 (上から下 (90) または下から上 (-90)) で回転形式を変更することもできます。
+**スライダー目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行う方法を提供します。この新しい機能を使用すると、どのデータが残っているかを確認するためにスライダーを操作する必要がなくなります。また、目盛りと目盛りラベルの配置と方向の制御に関して、高い柔軟性があり、**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、またはその**両方**を選択したりできます。さらに、この機能は、プライマリ目盛りラベル、セカンダリ目盛りラベル、またはその両方をオンまたはオフにする方法を提供し、水平から垂直 (上から下 (90) または下から上 (-90)) で回転形式を変更することもできます。
 
 ### 使用方法
-開始する前に、Ignite UI for Angular の入門セクションを完了していることを確認してください。
+はじめに、[Ignite UI for Angular で作業を開始](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html)を完了してください。
 
-セットアップの準備ができたら、**IgxSliderModule** を **app.module.ts** ファイルに含める必要があります
+セットアップの準備ができたら、**IgxSliderModule** を **app.module.ts** ファイルに含める必要があります。
 
 ```typescript
 // app.module.ts
@@ -27,7 +27,7 @@ import { IgxSliderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 #### 下目盛り
-単純なものから始めて、特定のシーケンス内のすべての偶数を表示するスライダーの下のスライダー**目盛り**を有効にします。
+シンプルなものから始めて、特定のシーケンス内のすべての偶数を表示するスライダーの下の**目盛り**を有効にします。
 
 ```html
 <!--sample.component.html-->
@@ -49,12 +49,12 @@ public type = SliderType.RANGE;
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-スライダーの下の目盛りを見てみましょう。まず、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を true に設定することにより、機能全体が有効になります。[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を 6 に設定すると（レンダリングが0から始まるため）、すべてのプライマリ**目盛り**をスライダーの下に均等に定義して広げます。[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) のセットアップは少し異なります。2 つの**プライマリ**間の4つのセカンダリティックを定義し、計算が正しい場合、21 **目盛り** がすべてレンダリングされます。
+スライダーの下の目盛りを見てみましょう。まず、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を true に設定することにより、機能全体が有効になります。[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を 6 に設定すると（レンダリングが0から始まるため）、すべてのプライマリ**目盛り**をスライダーの下に定義して均等に配置します。[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) の設定は少し異なり、2 つの**プライマリ**間の4つのセカンダリ目盛りを定義し、計算が正しい場合、21 **目盛り**がすべてレンダリングされます。
 
 
 
 #### セカンダリ目盛りを無効にし、プライマリ目盛りを回転します。
-次のサンプルでは、​​すべての**セカンダリ ラベル**が無効になり、すべての**プライマリ ラベル**が回転します。 
+以下のサンプルでは、​​すべての**セカンダリ ラベル**が無効になり、すべての**プライマリ ラベル**が回転します。 
 
 ```html
 <igx-slider
@@ -69,7 +69,7 @@ public type = SliderType.RANGE;
     [(ngModel)]="priceRange"></igx-slider>
 ```
 
-より興味深いものにするために、**値**は 2 つの入力に双方向でデータバインドされています。
+**値**を 2 つの入力に対して双方向でデータバインドします。
 ```html
   <div class="wrapper">
       <igx-input-group>
@@ -106,7 +106,7 @@ export class PriceRange {
 
 上記の例に従えば、[`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) を **false** に設定するとすべての**セカンダリ目盛りラベル**が無効になり、[`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) 列挙のBottomToTop（-90）プロパティを [`tickLabelsOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticklabelsorientation) 入力に渡すと回転が行われると簡単に判断できます。
 
-#### プライマリ ティックを無効にし、方向を変更します。
+#### プライマリ目盛りを無効にして、方向を変更します。
 次に、**目盛り**の方向がどのように変化するかと、**プライマリ**の表示を見てみましょう。
 
 ```html
