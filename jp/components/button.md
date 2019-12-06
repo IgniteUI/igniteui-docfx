@@ -341,13 +341,6 @@ $dark-button: igx-button-theme(
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
-### API リファレンス
-<div class="divider--half"></div>
-
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-
 ### その他のリソース
 
 <div class="divider--half"></div>
