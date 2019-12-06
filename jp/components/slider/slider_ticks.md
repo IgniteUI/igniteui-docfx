@@ -126,7 +126,7 @@ export class PriceRange {
 </button>
 
 ```
-表示される 2 つのボタンを使用して、スライダーの**値**を制御/更新できますが、**目盛り**の操作について説明します。 
+表示される 2 つのボタンを使用して、スライダーの**値**を制御/更新できます。次に**目盛り**の向きの処理について説明します。 
 
 ```typescript
   public ticksOrientation = TicksOrientation.Mirror;
@@ -139,10 +139,10 @@ export class PriceRange {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-方向の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) 入力から行われ、これはの変更は **Bottom** から **Mirror** に変更されました。これにより、**目盛り**の視覚化が反映され、上部にも複製されます。 
+方向は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) 入力によって、**Bottom** から **Mirror** に変更されました。これにより、**目盛り**の表示がミラーされて、上下に表示されます。 
 
 #### 表示ラベル付きの上目盛り
-まれに、**つまみラベル**が意図的に非表示になっている場合があります。これは [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) が **Top** または **Mirror** に設定されていて、目盛りラベルが表示されている場合です。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。そのシナリオをよりよく理解するために、以下の例を見てみましょう。
+意図的に**つまみラベル**が非表示になっている場合、[`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) が **Top** または **Mirror** に設定されていて目盛りラベルが表示される場合があります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。このようなケースについて以下の例で詳しく説明します。
 
 ```html
 <igx-slider
@@ -163,7 +163,7 @@ public ticksOrientation = TicksOrientation.Top;
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-primary-ticks-top-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-ここでは、**目盛り**の**向き**を変更し、スライダーの上部に配置します。ポップアップ表示される**つまみラベル**はありません。
+ここでは、**目盛り**の**向き**を変更し、スライダーの上部に配置します。インタラクションに基づいて表示される**つまみラベル**はありません。
 
 #### ラベル ビューを含むスライダー 目盛り
 この機能は、**ラベル ビュー**機能にも合わせられています。以下はコード例です。
@@ -187,7 +187,7 @@ public ticksOrientation = TicksOrientation.Top;
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) は設定されていません。いずれにせよ反映されないためです。コレクションの**長さ**が優先され、それを制御します。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を設定できないという意味ではありません。ただし、すべての**セカンダリ目盛り**は空 (ラベルなし) になり、プライマリ目盛り間でインジケーターのように見えます。
+ここでは、設定が反映されないため、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) は設定されていません。コレクションの**長さ**が優先され、コレクションの **長さ** が優先されます。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を設定できないという意味ではありません。すべての**セカンダリ目盛り**は、**ラベル**なしで空になります。
 
 #### テンプレート目盛りラベル
 最後に、**目盛りラベル**にカスタム テンプレートを提供する方法と、[`テンプレート コンテキスト`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context)が提供するものを確認します。
@@ -202,7 +202,7 @@ public ticksOrientation = TicksOrientation.Top;
         </ng-template>
     </igx-slider>
 ```
-[`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) を `ng-template` に適用すると、すべての目盛りラベルを制御できます。 
+[`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) を `ng-template` に適用すると、すべての**目盛りラベル**にテンプレートを割り当てます。 
 
 > [!NOTE]
 > コンテキストは各目盛りごとに実行されます。
@@ -211,7 +211,7 @@ public ticksOrientation = TicksOrientation.Top;
   * 対応する各目盛りの**値**
   * 目盛りが**プライマリ**の場合:
   * **目盛り**インデックス。
-  * そして、[`ラベル`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labels)コレクションがある場合: 
+  * そして、[`ラベル`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labels) コレクションがある場合: 
 
 ```typescript
   public tickLabel(value, primary, index) {
@@ -223,7 +223,7 @@ public ticksOrientation = TicksOrientation.Top;
   }
 ```
 
-上記の **tackLabel** コールバックから、すべての **プライマリ**値が丸められていることがわかります。 
+上記の **tickLabel** コールバックでは、すべての**プライマリ**目盛りの値が丸められています。 
 
 <div class="sample-container loading" style="height: 140px">
     <iframe id="slider-tick-labels-template-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tick-labels-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
