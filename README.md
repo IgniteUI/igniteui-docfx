@@ -102,7 +102,7 @@ For instance, for English, the static site lives under `en/_site`;
 
 ## Building for Staging and Production
 
-The build command is very similar to the beforementioned step. To build the site for staging, run:
+The build command is very similar to the aforementioned step. To build the site for staging, run:
 
 ```
 npm run build-staging --lang en
