@@ -32,15 +32,15 @@ Angular Universal を使用すると、アプリのランディング ページ�
 ### 既存の Ignite UI アプリケーションに SSR を追加する
 
 #### 手順 1 - @nguniversal を追加します 
-Angular CLI 概略図を使用すると、次のコマンドを実行できます。
+Angular CLI schematic を使用すると、次のコマンドを実行できます。
 
 ```
 ng add @nguniversal/express-engine --clientProject ssr-example
 ```
 
-この概略図は、npm コマンドや app.module 更新、アプリのクライアントおよびサーバーの構成などに複数の変更を実行します。
+この schematic は、npm コマンドや app.module 更新、アプリのクライアントおよびサーバーの構成などに複数の変更を実行します。
 
-#### Step 2 - 手順 2 - 不足しているブラウザー固有のすべてのオブジェクトを定義します
+#### 手順 2 - 不足しているブラウザー固有のすべてのオブジェクトを定義します
 `Window`、`document`、`location` などのブラウザー固有のオブジェクトが不足しているため、サーバー側の DOM 抽象化には [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) を使用することをお勧めします。Domino は、Mozilla の dom.js に基づくサーバー側の DOM 実装です。
 
 ```typescript
@@ -99,7 +99,7 @@ npm run build:ssr && npm run serve:ssr
 
 Ignite UI for Angular コンポーネントを含むスターター プロジェクトを使用します。このプロジェクトは Angular CLI を使用して、Angular Universal で簡単なアプリケーションをすばやく作成します。
 
-#### Step 1 - 手順 1 - スターター リポジトリをクローンします
+#### 手順 1 - スターター リポジトリをクローンします
 
 ```
 git clone https://github.com/IgniteUI/ng-universal-example.git
@@ -111,7 +111,7 @@ git clone https://github.com/IgniteUI/ng-universal-example.git
 npm install
 ```
 
-#### Step 3 - 手順 3 - 次のコマンドを使用して、アプリケーションを作成および起動します
+#### 手順 3 - 次のコマンドを使用して、アプリケーションを作成および起動します
 
 ```
 npm run build:ssr && npm run serve:ssr

@@ -48,7 +48,7 @@ export class AppModule {}
 
 ### 使用方法
 
-`igxForOf` モジュールをインポート後、ローカル データにバインドする **igxFor** の基本構成を設定します。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) モジュールをインポート後、ローカル データにバインドする **igxFor** の基本構成を設定します。
 
 ```html
 <span #container>
@@ -60,7 +60,7 @@ export class AppModule {}
 
 ディレクティブはデータを垂直、水平、または両方向で仮想化できます。
 
-#### 垂直仮想化
+### 垂直仮想化
 
 ```html
 <table style='height: 500px; overflow: hidden; position: relative;'>
@@ -74,7 +74,7 @@ export class AppModule {}
 </table>
 ```
 
-#### 水平仮想化
+### 水平仮想化
 
 ```html
 <table>
@@ -93,7 +93,7 @@ export class AppModule {}
 
 ***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナで関連するディメンション (垂直の場合は `height` で、水平の場合は `width`) を設定し、`overflow: hidden` および `position: relative` の CSS ルールを適用する必要があります。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
-#### 水平仮想化および垂直仮想化
+### 水平仮想化および垂直仮想化
 
 ```html
 <table #container [style.width]='width' [style.height]='height' [style.overflow]='"hidden"' [style.position]='"relative"'>
@@ -129,7 +129,7 @@ export class AppModule {}
 </div>
 ```
 
-また、`totalItemCount` プロパティを [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) インスタンスに設定する必要があります。
+また、[`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) プロパティを [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) インスタンスに設定する必要があります。
 
 ```typescript
 this.virtDirRemote.totalItemCount = data["@odata.count"];
@@ -152,7 +152,7 @@ public ngAfterViewInit() {
 }
 ```
 
-データを要求する際に [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) および [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) を提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを使用できます。注: 最初の chunkSize は 0 です。最初に読み込んだ部分のサイズを指定する必要があります。最適な値は [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) / [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)) です。
+データを要求する際に [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) および [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) を提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを使用できます。注: 最初の [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) は 0 です。最初に読み込んだ部分のサイズを指定する必要があります。最適な値は [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) / [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)) です。
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
@@ -185,7 +185,7 @@ private buildUrl(dataState: any): string {
 }
 ```
 
-`onChunkPreload` イベントが発生されたとき、新しいデータの部分を要求します。
+[`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) イベントが発生されたとき、新しいデータの部分を要求します。
 
 ```typescript
 chunkLoading(evt) {
@@ -197,7 +197,6 @@ chunkLoading(evt) {
     });
 }
 ```
-
 ### ローカル変数
 
 `igxFor` ディレクティブのコンテキストには、`even`、`odd`、`first`、`last` のヘルパー プロパティが含まれています。これらは、コレクション内の現在の要素の位置を識別するために使用されます。
@@ -215,11 +214,11 @@ chunkLoading(evt) {
 ```
 上記の例では、`even` クラスがすべての even div 要素に割り当てられています。
 
-## 既知の問題と制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |
-| `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOMノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば MutationObserver を使用して、手動でスクロール位置をリセットします。`</li></ul>
+| `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOMノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば `MutationObserver` を使用して、手動でスクロール位置をリセットします。`</li></ul>
 
 ## API リファレンス
 

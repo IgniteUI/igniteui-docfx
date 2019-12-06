@@ -1,33 +1,34 @@
 ---
-title: Data analysis with Ignite UI for Angular.
-_description: How to use chart integration functionality with Ignite UI for Angular and provide the data analysis means to achieve better business objectives.
-_keywords: Ignite UI for Angular, chart integration, data analysis
+title: Ignite UI for Angular のデータ分析
+_description: Ignite UI for Angular でチャート統合の機能を使用して最適なビジネス目標を達成するためのデータ分析手段を提供する方法。
+_keywords: Ignite UI for Angular, チャート統合, データ分析
+_language: ja
 ---
 
-## Data Analysis  
-This topic introduces Grid's integration with charting functionality, which allows the end user to visualize a chart based on Grid's data and choose different chart types if needed. Data analytics is the process of examining, transforming, and arranging data in a specific way to generate useful information from it. Data analysis allows for the evaluation of data through analytical and logical reasoning to lead to some sort of outcome or conclusion in some context.
+## データ分析 
+このトピックでは、エンドユーザーがグリッドのデータに基づいてチャートを視覚化し、必要に応じて異なるチャート タイプを選択できる、チャート作成機能とグリッドの統合を紹介します。データ分析とは、特定の方法でデータを検査、変換、および整理して、そこから役立つ情報を生成するプロセスです。データ分析では、分析的および論理的な推論を通じてデータを評価し、コンテキストに基づいた結果または結論を導き出すことができます。
 
-The chart will be shown by selecting a range of cells and by clicking on the context menu.
+チャートは、セルの範囲を選択し、コンテキスト メニューをクリックすると表示されます。
 
 <div class="sample-container loading" style="height: 650px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/grid/grid-dynamic-chart-data" class="lazyload"></iframe>
 </div>
 
-We currently support the following Chart types:
+以下のチャート タイプをサポートします。
 - [ColumnGrouped](../../data-chart-type-category-series.md), [AreaGrouped](../../data-chart-type-category-area-series.md), [LineGrouped](../../data-chart-type-category-line-series.md), [BarGrouped](../../data-chart-type-category-series.md)
 - [ColumnStacked](../../data-chart-type-stacked-column-series.md), [AreaStacked](../../data-chart-type-category-spline-area-series.md), [LineStacked](../../data-chart-type-stacked-line-series.md), [BarStacked](../../data-chart-type-stacked-bar-series.md)
 - Column100Stacked, [Area100Stacked](../../data-chart-type-stacked-100-area-series.md), [Line100Stacked](../../data-chart-type-stacked-100-line-series.md), [Bar100Stacked](../../data-chart-type-stacked-100-bar-series.md)
-- ScatterPoint, ScatterBubble, ScatterLine. In order to show meaningful Scatter Bubble Chart we disable the preview when the data is not in valid format.
-- Bubble Chart
+- ScatterPoint, ScatterBubble, ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
+- [Pie チャート](../../pie-chart.md)
 
-> Note: This functionality will be introduced as a Directive in order to ease the configuration and limit the required code at minimum
+> 注: この機能は、構成を簡単にし、必要なコードを最小限に制限するために、ディレクティブとして導入されます。
 
-### Useful resources
+### 便利なリソース
 
 <div class="divider--half"></div>
 
-* [Angular Universal guide](https://angular.io/guide/universal)
-* [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
-* [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Getting started with Ignite UI for Angular](../getting_started.md)
-* [Ignite UI CLI Guide](../cli/step-by-step-guide.md)
+* [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
+* [Ignite UI スタート キット (英語)](https://github.com/IgniteUI/ng-universal-example)
+* [サーバー側レンダリング用語](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
+* [Ignite UI で作業を開始](../getting_started.md)
+* [Ignite UI CLI ガイド](../cli/step-by-step-guide.md)

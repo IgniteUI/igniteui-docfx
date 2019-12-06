@@ -1,49 +1,52 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Remote Data Operations | Angular Grid Remote Data Operations | Ignite UI for Angular | Infragistics
-_description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
-_keywords: angular remote data operations, ignite ui for angular, infragistics
+title: Angular リモート データ操作 | Angular Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
+_description: リモート フィルタリング、リモート並べ替え、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Remote Data Operations | Angular Tree Grid Remote Data Operations | Ignite UI for Angular | Infragistics
-_description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
-_keywords: angular remote data operations, ignite ui for angular, infragistics
+title: Angular リモート データ操作 | Angular Tree Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
+_description: リモート フィルタリング、リモート並べ替え、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Remote Data Operations | Angular Hierarchical Grid Remote Data Operations | Ignite UI for Angular | Infragistics
-_description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
-_keywords: angular remote data operations, ignite ui for angular, infragistics
+title: Angular リモート データ操作 | Angular Hierarchical Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
+_description: リモート フィルタリング、リモート並べ替え、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 
-### @@igComponent Remote Data Operations Overview
+### @@igComponent リモート データ操作の概要
 
-The Ignite UI for Angular @@igComponent supports remote data operations such as remote virtualization, remote sorting, remote filtering and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
+Ignite UI for Angular @@igComponent は、リモート仮想化、リモート並べ替え、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
 
 @@if (igxName === 'IgxGrid') {
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-scenarios-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-scenarios-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -51,15 +54,14 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
  <!-- TODO -->
 }
 
-By default, the @@igComponent uses its own logic for performing data operations.
-You can perform these tasks remotely and feed the resulting data to the @@igComponent by taking advantage of certain inputs and events, which are exposed by the @@igComponent.
+デフォルトで、@@igComponent は独自のロジックを使用してデータ操作を実行します。これらのタスクをリモートで実行し、@@igComponent で公開される特定の入力とイベントを使用して @@igComponent に結果のデータを供給できます。
 
 @@if (igxName === 'IgxGrid') {
-### Remote Virtualization
+### リモート仮想化
 
-The [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
+[@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、データ チャンクがリモート サービスから要求されるシナリオをサポートし、内部で使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブで実装された動作を公開します。
 
-To utilize this feature, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+この機能を使用するには、[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
@@ -95,26 +97,26 @@ public processData(reset) {
 }
 ```
 
-When requesting data, you need to utilize the [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) interface, which provides the [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) and [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) properties.
+データを要求時、[`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) と [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) プロパティを提供する [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) インターフェイスを使用する必要があります。
 
 >[!NOTE]
->The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
+>最初の [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
-#### Remote Virtualization Demo
+#### リモート仮想化のデモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### Remote Sorting/Filtering
+### リモート並べ替え/フィルタリング
 
-To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+リモート並べ替えとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
 
-We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
+また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
 ```typescript
 const DEBOUNCE_TIME = 300;
@@ -144,7 +146,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When remote sorting and filtering are provided, usually we do not need the built-in sorting and filtering of the grid. We can disable them by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) and the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) inputs of the grid to the `NoopSortingStrategy` and the `NoopFilteringStrategy` respective instances.
+リモート並べ替えとフィルタリングが提供される場合、グリッドの組み込みの並べ替えとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
@@ -161,18 +163,18 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 ```
 
 >[!NOTE]
->When remote data is requested, the filtering operation is case-sensitive.
+>リモー トデータが要求された場合、フィルタリング操作が大文字と小文字を区別します。
 
-#### Remote Sorting/Filtering Demo
+#### リモート並べ替え/フィルタリングのデモ
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
 }
 @@if (igxName === 'IgxTreeGrid') {
-### Remote Filtering
+### リモート フィルタリング
 
-To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey).
+リモート フィルタリングを提供するには、受け取った引数に基づいて適切な要求を行うように [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブする必要があります。[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey) を提供して、ツリー グリッドのデータ ソースとしてフラット コレクションを使用します。
 
-We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
+また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
 ```typescript
 const DEBOUNCE_TIME = 300;
@@ -188,7 +190,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When remote filtering is provided, usually we do not need the built-in filtering of the Tree Grid. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) input of the Tree Grid to the `NoopFilteringStrategy` instance.
+リモート フィルタリングが提供される場合、ツリー グリッドの組み込みのフィルタリングは必要ありません。ツリー グリッドの [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力を `NoopFilteringStrategy` インスタンスに設定して、無効にできます。
 
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
@@ -220,14 +222,14 @@ public processData() {
 }
 ```
 
-The remote filtering will have to be performed over the flat collection directly. We will also have to include all the parents for any record that matches the filtering condition regardless of whether or not the parents match the filtering (we do this to keep the hierarchy intact). The result can be seen below:
+リモート フィルタリングは、フラット コレクションで直接実行する必要があります。また、親がフィルターに一致するかどうかにかかわらず、フィルター条件に一致するすべてのレコードにすべての親を含める必要があります (階層をそのままにするためにこれを行います)。結果は以下で確認できます。
 
 >[!NOTE]
->When remote data is requested, the filtering operation is case-sensitive.
+>リモー トデータが要求された場合、フィルタリング操作が大文字と小文字を区別します。
 
-#### Remote Filtering Demo
+#### リモート フィルタリングのデモ
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->
@@ -238,7 +240,7 @@ You can see the result of the code from above at the beginning of this article i
 #### 一意の列値ストラテジ
 }
 
-Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。In case of remote filtering, the grid data does not contain all the data from the server. これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
+Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
 - **column**  - フィルタリング式ツリー。各列に基づいて削減されます。
 - **filteringExpressionsTree** - フィルタリング式ツリー。各列に基づいて削減されます。
 - **done** - 
@@ -264,6 +266,8 @@ public columnValuesStrategy = (column: IgxColumnComponent,
     this.remoteValuesService.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
 }
 ```
+
+#### 一意の列値ストラテジのデモ
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -350,7 +354,7 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 
 <div class="divider--half"></div>
 
-### Remote Paging
+### リモート ページング
 
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
@@ -707,28 +711,28 @@ public changeTemplate() {
 <div class="divider--half"></div>
 }
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Paging](paging.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [フィルタリング](filtering.md)
+* [並べ替え](sorting.md)
+* [ページング](paging.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

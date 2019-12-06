@@ -48,12 +48,6 @@ export class AppModule {}
 
 ### 使用方法
 
-```html
-<target-element igxButton [..options]>クリック</target-element>
-```
-
-### コード例
-
 シンプルな [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を設定します。タイプを選択しない場合、デフォルト値は `flat` です。
 
 ```html
@@ -89,7 +83,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
 
-[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
+[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して `span` 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 
 ```html
 <span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">クリック</span>
@@ -313,7 +307,7 @@ $dark-button-schema: extend($_dark-button,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル (軽量または暗色) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -339,13 +333,6 @@ $dark-button: igx-button-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
-
-### API リファレンス
-<div class="divider--half"></div>
-
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ### API リファレンス
 <div class="divider--half"></div>
