@@ -1,7 +1,8 @@
 ---
-title: Map |データ可視化ツール|Ignite UI for Angular |Infragistics
-_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: Map |データ可視化ツール|Ignite UI for Angular |インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, インフラジスティックス
+mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
@@ -9,7 +10,7 @@ _language: ja
 
 マップ コンポーネントの [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) を使用して、非常に少ないロード時間で、数百から数百万のデータ ポイントを持つ散布図データをバインドして表示できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="geo-map-type-scatter-density-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-density-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +22,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-上記のデモは、オーストラリアの人口密度を表す何百、何千ものデータ ポイントにバインドされた [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) シリーズをマップ コンポーネントで示しています。大量のデータ ポイントを含むマップのプロット領域は凝縮された赤色のピクセルによって表します。少量のデータ ポイントを含む領域は青色のピクセルによって表します。
+上記のサンプルは、オーストラリアの人口密度を表す何百、何千ものデータ ポイントにバインドされた [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) シリーズをマップ コンポーネントで示しています。大量のデータ ポイントを含むマップのプロット領域は凝縮された赤色のピクセルによって表します。少量のデータ ポイントを含む領域は青色のピクセルによって表します。
 
 相当数のデータ ポイントがあるため、シリーズではフルサイズのマーカーに対して散布データを小さな点として表示し、領域にはデータ ポイントの集合を表す高い色密度を使用した大半のデータを表示します。
 
@@ -31,9 +32,9 @@ _language: ja
 
 #### データ バインディング
 
-以下の表に、データ バインドに使用される [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) シリーズのプロパティをまとめています。
+以下の表に、データ バインドに使用される GeographicHighDensityScatterSeries シリーズのプロパティをまとめています。
 
-| プロパティ                                                                                                                                                           | タイプ                                               | 説明                                                |
+| プロパティ                                                                                                                                                           | タイプ                                               | 概要                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
 | `ItemsSource`                                                                                                                                                   | any                                               | 項目ソースを取得または設定します。                                 |
 | [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) | 経度値が割り当てられた項目上の位置を決定するには ItemsSource プロパティを使用します。 |                                                   |
@@ -43,7 +44,7 @@ _language: ja
 
 熱色スケールは、シリーズ内のカラー パターンを決定するオプションの機能です。以下の表は、カラー スケールを決定するために使用するプロパティをまとめたものです。
 
-| プロパティ                                                                                                                                                     | タイプ                             | 説明                               |
+| プロパティ                                                                                                                                                     | タイプ                             | 概要                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------- |
 | [`heatMinimum`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimum)           | カラー スケールの最小端を表す double 値を定義します。 |                                  |
 | [`heatMaximum`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximum)           | カラー スケールの最大端を表す double 値を定義します。 |                                  |
@@ -130,6 +131,5 @@ export class MapTypeScatterDensitySeriesComponent implements AfterViewInit {
         geoBounds.height = -50;
         this.map.zoomToGeographic(geoBounds);
     }
-
 }
 ```

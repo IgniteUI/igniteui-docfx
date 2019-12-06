@@ -10,7 +10,7 @@ mentionedTypes: ['Spreadsheet']
 
 [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を使用すると、セルの編集、グリッド線とヘッダーの表示、保護、ズームレベル、および Excel ワークシートに関連するその他のさまざまなプロパティを含むがこれらに限定されない、コントロールのさまざまな側面を設定できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -30,7 +30,7 @@ mentionedTypes: ['Spreadsheet']
 
 `Enter` キーを押したときに移動する隣接セルの方向を、[`enterKeyNavigationDirection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#enterkeynavigationdirection) プロパティを `Down`、`Up`、`Left` または `Right` に設定して構成することもできます。
 
-次のコードスニペットは上記のデモです。
+以下のコードスニペットは上記のサンプルです。
 
 ```html
 <igx-spreadsheet isEnterKeyNavigationEnabled=true
@@ -55,7 +55,7 @@ this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDire
 
 [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を使用すると、コントロールの [`isFormulaBarVisible`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isformulabarvisible) プロパティを設定して数式バーの表示/非表示を設定できます。
 
-次のコードスニペットは上記のデモです。
+以下のコードスニペットは上記のサンプルです。
 
 ```html
 <igx-spreadsheet isFormulaBarVisible=true></igx-spreadsheet>
@@ -69,7 +69,7 @@ this.spreadsheet.isFormulaBarVisible = true;
 
 [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を使用すると、コントロールの [`areGridlinesVisible`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#aregridlinesvisible) プロパティを設定し目盛線, グリッド線の表示/非表示を設定できます。
 
-次のコードスニペットは上記のデモです。
+以下のコードスニペットは上記のサンプルです。
 
 ```html
 <igx-spreadsheet areGridlinesVisible=true></igx-spreadsheet>
@@ -83,7 +83,7 @@ this.spreadsheet.areGridlinesVisible = true;
 
 [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) では、コントロールの [`areHeadersVisible`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#areheadersvisible) プロパティを設定することで、ヘッダーの表示設定を構成できます。
 
-次のコードスニペットは上記のデモです。
+以下のコードスニペットは上記のサンプルです。
 
 ```html
 <igx-spreadsheet areHeadersVisible=false></igx-spreadsheet>
@@ -124,7 +124,7 @@ this.spreadsheet.activeWorksheet.unprotect();
 
 ### 選択の設定
 
-[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (`Shift` または `Ctrl`)  を押します。これは、スプレッドシートの [`selectionMode`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#selectionmode) プロパティを次のいずれかの値に設定することによって行われます。
+[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (`Shift` または `Ctrl`)  を押します。これは、スプレッドシートの [`selectionMode`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#selectionmode) プロパティを以下のいずれかの値に設定することによって行われます。
 
 -   `AddToSelection`: マウスでドラッグしているときにCtrlキーを押す必要がなく、新しいセル範囲が [`SpreadsheetSelection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトの [`cellRanges`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html#cellranges) コレクションに追加され、モードに入った後の最初の矢印キーナビゲーションで範囲が追加されます。Shift+F8 を押すとモードに入ります。
 -   `ExtendSelection`: アクティブセルを表す [`SpreadsheetSelection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトの [`cellRanges`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html#cellranges) コレクション内の選択範囲は、マウスを使用してセルを選択するかキーボードで移動すると更新されます。
@@ -132,7 +132,7 @@ this.spreadsheet.activeWorksheet.unprotect();
 
 上記の説明で述べた [`SpreadsheetSelection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトは、[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールの [`activeSelection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activeselection) プロパティを使用して取得できます。
 
-次のコードスニペットは、選択モードの設定を示しています。
+以下のコードスニペットは、選択モードの設定を示しています。
 
 ```html
 <igx-spreadsheet selectionMode="ExtendSelection"></igx-spreadsheet>
@@ -154,7 +154,7 @@ this.spreadsheet.selectionMode = SpreadsheetCellSelectionMode.ExtendSelection;
 
 [`SpreadsheetSelection`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトには、新しい [`SpreadsheetCellRange`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetcellrange.html) オブジェクトの形式でスプレッドシートの選択範囲にプログラムでセルの範囲を追加できる `AddCellRange()` メソッドがあります。
 
-次のコードスニペットは、スプレッドシートの選択範囲にセル範囲を追加する方法を示しています。
+以下のコードスニペットは、スプレッドシートの選択範囲にセル範囲を追加する方法を示しています。
 
 ```ts
 this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 5));
@@ -166,7 +166,7 @@ this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 
 
 タブバー領域は、ワークシート名をコントロール内のタブとして可視化する領域です。
 
-次のコードスニペットを使用して、タブバーの表示と幅を設定できます。
+以下のコードスニペットを使用して、タブバーの表示と幅を設定できます。
 
 ```ts
 this.spreadsheet.workbook.windowOptions.tabBarVisible = false;
@@ -180,7 +180,7 @@ this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
 
 このプロパティを数値に設定すると、整数としてのパーセンテージが表されるため、[`zoomLevel`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#zoomlevel) を 100 に設定することは、100% に設定することと同じです。
 
-次のコード スニペットは、スプレッドシートのズームレベルを設定する方法を示しています。
+以下のコード スニペットは、スプレッドシートのズームレベルを設定する方法を示しています。
 
 ```html
 <igx-spreadsheet zoomLevel=200></igx-spreadsheet>

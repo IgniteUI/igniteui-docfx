@@ -1,17 +1,18 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 散布エリア シリーズ | Infragistics
-_description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: Map |データ可視化ツール|Ignite UI for Angular |散布エリア シリーズ|インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, インフラジスティックス
+mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
 ## 散布エリア シリーズの使用
 
-地図コンポーネントの [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) を使用して、各点に数値が割り当てられた経度および緯度データの三角測量に基づいて、地理的なコンテキストで色付きの表面を描画します。このタイプの地理的シリーズは、気象温度、降水量、人口分布、大気汚染などの地理的位置によって定義される散在データをレンダリングするのに役立ちます。
+マップ コンポーネントの [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) を使用して、各ポイントに割り当てられた数値を持つ経度と緯度のデータの三角形分割に基づいて、地理的背景で色付きの表面を描画します。このタイプの地理的シリーズは、気象温度、降水量、人口分布、大気汚染などの地理的位置によって定義される散乱データのレンダリングに使用できます。
 
-### デモ
+### サンプル
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-scatter-area-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -25,7 +26,7 @@ _language: ja
 
 ### データ要件
 
-マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、項目ソースの各項目にはデータ列が 3 つあり、2 つは地理的な経度および緯度座標を保管し、1 つのデータ列は地理的位置に関連した値を保管します。地理的シリーズの `LongitudeMemberPath`、`LatitudeMemberPath`、[`colorMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath) プロパティはこれらのデータ列を識別します。
+マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、項目ソースの各項目にはデータ列が 3 つあり、2 つは地理的な経度および緯度座標を保管し、1 つのデータ列は地理的位置に関連した値を保管します。地理的シリーズの `LongitudeMemberPath`、`LatitudeMemberPath` および [`colorMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath) プロパティはこれらのデータ列を識別します。
 [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) は、三角測量が `TrianglesSource` プロパティに設定されていない場合、ItemsSource の項目で組み込みのデータ三角測量を自動的に実行します。ただし、三角測量の計算は非常に時間のかかるプロセスであるため、このプロパティのために TriangulationSource を指定すると、ランタイム パフォーマンスがよくなります。特にデータ項目が多数ある場合には顕著です。
 
 ### データ バインディング
@@ -59,10 +60,111 @@ _language: ja
 
 ### コード スニペット
 
-以下のコードは、[`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) をアメリカの降水量を表す三角測量データにバインドする方法を示します。
+以下のコードは、[`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) を世界の表面温度を表す三角測量データにバインドする方法を示しています。
 
 <!-- Angular -->
 
 ```html
-TODO - ADD CODE SNIPPET
+<div className="sampleRoot" >
+    <igx-geographic-map #map
+        width="700px"
+        height="500px"
+        zoomable="true" >
+    </igx-geographic-map>
+</div>
+
+<ng-template let-series="series" let-item="item" #template>
+    <div>
+        <span>
+            Degrees: {{item.value}} "°F"
+        </span>
+        <br/>
+        <span>
+                Longitutde: {{item.lon}}
+        </span>
+        <br/>
+        <span>
+                Latitude: {{item.lat}}
+        </span>
+    </div>
+</ng-template>
+```
+
+```ts
+import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { IgxCustomPaletteColorScaleComponent
+} from "igniteui-angular-charts/ES5/igx-custom-palette-color-scale-component";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicScatterAreaSeriesComponent
+} from "igniteui-angular-maps/ES5/igx-geographic-scatter-area-series-component";
+
+@Component({
+  selector: "app-map-geographic-scatter-area-series",
+  styleUrls: ["./map-geographic-scatter-area-series.component.scss"],
+  templateUrl: "./map-geographic-scatter-area-series.component.html"
+})
+export class MapTypeScatterAreaSeriesComponent implements AfterViewInit {
+
+    @ViewChild ("map")
+    public map: IgxGeographicMapComponent;
+    @ViewChild ("template")
+    public tooltipTemplate: TemplateRef<object>;
+    constructor() {
+    }
+
+    public ngAfterViewInit(): void {
+    const sds = new ShapeDataSource();
+    sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
+    sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
+    sds.dataBind();
+    sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+}
+
+    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    const shapeRecords = sds.getPointData();
+    const contourPoints: any[] = [];
+    for (const record of shapeRecords) {
+        const temp = record.fieldValues.Contour;
+        // using only major contours (every 10th degrees Celsius)
+        if (temp % 10 === 0 && temp >= 0) {
+            for (const shapes of record.points) {
+                for (let i = 0; i < shapes.length; i++) {
+                if (i % 5 === 0) {
+                    const p = shapes[i];
+                    const item = { lon: p.x, lat: p.y, value: temp};
+                    contourPoints.push(item);
+                }
+                }
+            }
+        }
+    }
+    this.createContourSeries(contourPoints);
+}
+
+    public createContourSeries(data: any[]) {
+    const brushes = [
+        "rgba(32, 146, 252, 0.5)", // semi-transparent blue
+        "rgba(14, 194, 14, 0.5)",  // semi-transparent green
+        "rgba(252, 120, 32, 0.5)", // semi-transparent orange
+        "rgba(252, 32, 32, 0.5)"  // semi-transparent red
+    ];
+
+    const colorScale = new IgxCustomPaletteColorScaleComponent();
+    colorScale.palette = brushes;
+    colorScale.minimumValue = 0;
+    colorScale.maximumValue = 30;
+
+    const areaSeries = new IgxGeographicScatterAreaSeriesComponent();
+    areaSeries.dataSource = data;
+    areaSeries.longitudeMemberPath = "lon";
+    areaSeries.latitudeMemberPath = "lat";
+    areaSeries.colorMemberPath = "value";
+    areaSeries.colorScale = colorScale;
+    areaSeries.tooltipTemplate = this.tooltipTemplate;
+    areaSeries.thickness = 4;
+
+    this.map.series.add(areaSeries);
+}
+}
 ```

@@ -10,7 +10,7 @@ _language: ja
 
 マーカー、チャート タイトルとサブタイトル、およびチャート タイプなどの Ignite UI for Angular カテゴリ チャート コンポネント機能をカスタマイズできます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-config-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -22,7 +22,7 @@ _language: ja
 
 ### チャート ビジュアルの構成
 
-上記デモのようにチャート タイプにブラシを構成できます。以下のコード例はチャート タイプを waterfall に設定し、ブラシのデフォルト色を変更します。
+上記サンプルのようにチャート タイプにブラシを構成できます。以下のコード例はチャート タイプを waterfall に設定し、ブラシのデフォルト色を変更します。
 
 ```html
  <igx-category-chart

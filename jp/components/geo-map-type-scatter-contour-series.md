@@ -1,17 +1,18 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 等高線シリーズ | Infragistics
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープファイルからロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: Map |データ可視化ツール|Ignite UI for Angular |等高線シリーズ|インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, インフラジスティックス
+mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## 散布図 - 等高線シリーズの使用
+## 散布等高線シリーズの使用
 
 地図コンポーネントの [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) を使用して、各点に数値が割り当てられた経度および緯度データの三角測量に基づいて、地理的なコンテキストで色付きの等高線を描画します。このタイプの地理的シリーズは、天気の気温、気圧、降水量、人口分布、地形データなどの地理的位置によって定義される散在データをレンダリングするのに役立ちます。
 
-### デモ
+### サンプル
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -21,18 +22,18 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) は [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
+[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) は [`IgxGeographicScatterAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、地理散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
 
 ### データ要件
 
-マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、項目ソースの各項目にはデータ列が 3 つあり、2 つは地理的位置 (経度および緯度座標) を保管し、1 つのデータ列は地理的位置に関連した値を保管します。これらのデータ列は、地理的シリーズの `LongitudeMemberPath`、`LatitudeMemberPath`、[`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#valuememberpath) プロパティによって識別されます。
-[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) は、三角測量が `TrianglesSource` プロパティに設定されていない場合、ItemsSource の項目で組み込みのデータ三角測量を自動的に実行します。ただし、三角測量の計算は非常に時間のかかるプロセスであるため、このプロパティのために `TriangulationSource` を指定すると、ランタイム パフォーマンスがよくなります。特にデータ項目が多数ある場合には顕著です。
+マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、項目ソースの各項目にはデータ列が 3 つあり、2 つは地理的位置 (経度および緯度座標) を保管し、1 つのデータ列は地理的位置に関連した値を保管します。これらのデータ列は、地理的シリーズの `LongitudeMemberPath`、`LatitudeMemberPath` および [`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#valuememberpath) プロパティによって識別されます。
+[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) は、三角測量が `TrianglesSource` プロパティに設定されていない場合、ItemsSource の項目で定義済みのデータ三角測量を自動的に実行します。ただし、三角測量の計算は非常に時間のかかるプロセスであるため、このプロパティのために `TriangulationSource` を指定すると、ランタイム パフォーマンスがよくなります。特にデータ項目が多数ある場合には顕著です。
 
 ### データ バインディング
 
 以下の表は、データ バインドに使用される [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) プロパティの概要です。
 
-| プロパティ名                                                                                                                                           | プロパティ型 | 説明                                                                                                                                                                                                |
+| プロパティ名                                                                                                                                           | プロパティ型 | 概要                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ItemsSource`                                                                                                                                    | 任意     | `TrianglesSource` プロパティが三角測量データを提供しない場合に三角測量を実行するデータ項目のソースです。                                                                                                                                     |
 | `LongitudeMemberPath`                                                                                                                            | 文字列    | `ItemsSource` にバインドされているすべてのアイテムの経度を含むプロパティの名前。                                                                                                                                                   |
@@ -47,9 +48,9 @@ _language: ja
 
 [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) の [`fillScale`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#fillscale) を使用して地理的シリーズの等高線の塗りブラシを解決します。
 ValueBrushScale クラスは、ユーザーの色分けのニーズもほとんどを満たすはずですが、カスタムの色分けロジックのアプリケーションで ValueBrushScale クラスを継承できます。
-次の表は、GeographicContourLineSeries のサーフェス カラーリングに影響を与える CustomPaletteColorScale のプロパティの一覧です。
+以下の表は、GeographicContourLineSeries のサーフェス カラーリングに影響を与える CustomPaletteColorScale のプロパティの一覧です。
 
-| プロパティ名         | プロパティ型          | 説明                                                                                                                                                                                          |
+| プロパティ名         | プロパティ型          | 概要                                                                                                                                                                                          |
 | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Brushes`      | BrushCollection | [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) の輪郭を塗りつぶすためのブラシのコレクションを取得または設定します。 |
 | `MaximumValue` | double          | 塗りつぶしスケールでブラシを割り当てるための最高値。                                                                                                                                                                  |
@@ -57,10 +58,104 @@ ValueBrushScale クラスは、ユーザーの色分けのニーズもほとん�
 
 ### コード スニペット
 
-以下のコードは、[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) をアメリカの降水量を表す三角測量データにバインドする方法を示します。
+以下のコードは、[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) を世界の表面温度を表す三角測量データにバインドする方法を示しています。
 
 <!-- Angular -->
 
 ```html
-TODO - ADD CODE SNIPPET
+<div className="sampleRoot" >
+    <igx-geographic-map #map
+        width="700px"
+        height="500px"
+        zoomable="true" >
+    </igx-geographic-map>
+</div>
+
+<ng-template let-series="series" let-item="item" #template>
+    <span [style.color]="series.brush">
+        {{item | number: 2}} "°C"
+    </span>
+</ng-template>
+```
+
+```ts
+import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicContourLineSeriesComponent
+} from "igniteui-angular-maps/ES5/igx-geographic-contour-line-series-component";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+
+@Component({
+  selector: "app-map-geographic-scatter-contour-series",
+  styleUrls: ["./map-geographic-scatter-contour-series.component.scss"],
+  templateUrl: "./map-geographic-scatter-contour-series.component.html"
+})
+
+export class MapTypeScatterContourSeriesComponent implements AfterViewInit {
+
+    @ViewChild ("map")
+    public map: IgxGeographicMapComponent;
+
+    @ViewChild ("template")
+    public tooltip: TemplateRef<object>;
+    constructor() {
+    }
+
+    public ngAfterViewInit(): void {
+        const sds = new ShapeDataSource();
+        sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
+        sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
+        sds.dataBind();
+        sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+    }
+
+    public onDataLoaded(sds: ShapeDataSource, e: any) {
+        const shapeRecords = sds.getPointData();
+
+        const contourPoints: any[] = [];
+        for (const record of shapeRecords) {
+            const temp = record.fieldValues.Contour;
+            // using only major contours (every 10th degrees Celsius)
+            if (temp % 10 === 0 && temp >= 0) {
+                for (const shapes of record.points) {
+                     for (let i = 0; i < shapes.length; i++) {
+                        if (i % 5 === 0) {
+                            const p = shapes[i];
+                            const item = { lon: p.x, lat: p.y, value: temp};
+                            contourPoints.push(item);
+                        }
+                     }
+                }
+            }
+        }
+
+        this.createContourSeries(contourPoints);
+    }
+
+    public createContourSeries(data: any[]) {
+        const brushes = [
+            "rgba(32, 146, 252, 0.5)", // semi-transparent blue
+            "rgba(14, 194, 14, 0.5)",  // semi-transparent green
+            "rgba(252, 120, 32, 0.5)", // semi-transparent orange
+            "rgba(252, 32, 32, 0.5)"  // semi-transparent red
+        ];
+
+        const brushScale = new IgxValueBrushScaleComponent();
+        brushScale.brushes = brushes;
+        brushScale.minimumValue = 0;
+        brushScale.maximumValue = 30;
+
+        const contourSeries = new IgxGeographicContourLineSeriesComponent();
+        contourSeries.dataSource = data;
+        contourSeries.longitudeMemberPath = "lon";
+        contourSeries.latitudeMemberPath = "lat";
+        contourSeries.valueMemberPath = "value";
+        contourSeries.fillScale = brushScale;
+        contourSeries.tooltipTemplate = this.tooltip;
+        contourSeries.thickness = 4;
+
+        this.map.series.add(contourSeries);
+    }
+}
 ```

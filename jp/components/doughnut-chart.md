@@ -9,7 +9,7 @@ _language: ja
 
 Doughnut Chart コンポーネントは円チャートと同様、変数の発生を比例的に表示します。ドーナツ型チャート は、複数の変数をコンセントリック リングで表示でき、階層データの可視化を組み込みでサポートします。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -136,7 +136,7 @@ import { SliceClickEventArgs } from "igniteui-react-charts/ES5/igr-slice-click-e
 
 [`IgxDoughnutChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) は凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
 
-### 凡例のデモ
+### 凡例のサンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>

@@ -11,7 +11,7 @@ _language: ja
 
 散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-shape-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -25,7 +25,7 @@ _language: ja
 
 ### シェイプ シリーズの種類
 
-次の表は、すべての種類のシェイプ シリーズとその説明を示しています。
+以下の表は、すべての種類のシェイプ シリーズとその説明を示しています。
 
 | シリーズ名                                                                                                                                        | 説明                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |

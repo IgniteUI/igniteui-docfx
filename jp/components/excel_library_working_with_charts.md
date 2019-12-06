@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、データ トレンドを視覚的に表示するためにコードを使用して Excel ワークシート (.xlsx) にワークシート チャートを追加し、ワークシートのセル領域のデータ トレンドを可視化する方法を表します。たとえば Excel データを柱状チャートや折れ線チャートで可視化する場合などでこの機能が役立ちます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-charts' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

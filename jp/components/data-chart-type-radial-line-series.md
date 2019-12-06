@@ -1,16 +1,16 @@
 ---
-title: データ チャート|可視化ツール|Ignite UI for Angular |Infragistics |放射型折れ線チャート
+title: データ チャート|可視化ツール|Ignite UI for Angular |Infragistics |ラジアル折れ線チャート
 _description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示するラジアル折れ線チャートを作成します。
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialLineSeries']
 _language: ja
 ---
 
-## 放射型折れ線チャート
+## ラジアル折れ線チャート
 
-Ignite UI for Angular 放射型折れ線チャートは、放射チャートのグループに属し、データ ポイントを接続する直線のコレクションを使用して描画されます。[`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) は [`IgxLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) と同じデータ プロットの概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
+Ignite UI for Angular ラジアル折れ線チャートは、放射チャートのグループに属し、データ ポイントを接続する直線のコレクションを使用して描画されます。[`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) は [`IgxLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) と同じデータ プロットの概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

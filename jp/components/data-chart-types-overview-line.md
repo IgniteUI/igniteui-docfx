@@ -109,7 +109,7 @@ _language: ja
         </a>
         <a class="link" href="data-chart-type-radial-line-series.md">
             <div class="linkContent">
-                <h4>放射型折れ線チャート</h4>
+                <h4>ラジアル折れ線チャート</h4>
                 <img src="../images/charts/data-chart-type-radial-line-series.png">
             </div>
         </a>

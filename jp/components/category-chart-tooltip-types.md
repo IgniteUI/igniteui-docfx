@@ -8,9 +8,9 @@ _language: ja
 
 ## ツールチップ タイプ
 
-このトピックでは、Ignite UI for Angular カテゴリ チャート コンポネントのツールチップ タイプについて説明します。
+Ignite UI for Angular カテゴリ チャート コンポネントには、さまざまなツールチップ タイプがあります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-tooltip-types-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
