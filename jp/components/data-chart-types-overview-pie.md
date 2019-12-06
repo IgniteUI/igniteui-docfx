@@ -40,7 +40,7 @@ _language: ja
         </a>
         <a class="link" href="data-chart-type-radial-pie-series.md">
             <div class="linkContent">
-                <h4>放射型状円チャート</h4>
+                <h4>ラジアル状円チャート</h4>
                 <img src="../images/charts/data-chart-type-radial-pie-series.png">
             </div>
         </a>

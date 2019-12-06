@@ -7,9 +7,9 @@ _language: ja
 
 ## ハイライト
 
-[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールを使用すると、チャートにプロットされたシリーズを強調表示し、マウスが移動している項目またはシリーズを視覚化、またはハイライト レイヤーを使用して視覚化できます。
+React データチャート コンポーネントは、データチャートにプロットされたシリーズを強調表示して、マウスがホバーしている項目やシリーズの可視化、また強調表示レイヤーも使用できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -39,7 +39,7 @@ import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-da
 
 [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのシリーズ ハイライト機能を使用すると、単一のアイテムまたはシリーズ全体を強調表示できます。たとえば、折れ線シリーズを使用している場合、ハイライトは線の形状全体を 1 つの単一形状として強調表示します。ただし、列シリーズなどのシリーズの各項目にハイライトを適用することはできます。
 
-次のコードスニペットは、チャートのシリーズで強調表示を有効にする方法を示しています。
+以下のコードスニペットは、チャートのシリーズで強調表示を有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -110,7 +110,7 @@ import { IgxDataChartAnnotationModule } from "igniteui-angular-charts/ES5/igx-da
 
 デフォルトの強調表示はシリーズの型に依存します。たとえば、列シリーズと行シリーズのハイライトは異なります。列シリーズの場合は縞模様で、ライン シリーズの場合はマーカーです。`HighlightType` プロパティを設定してデフォルトの強調表示をオーバーライドできます。
 
-次のコードスニペットは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
+以下のコードスニペットは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールにカテゴリ項目ハイライト レイヤーを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart

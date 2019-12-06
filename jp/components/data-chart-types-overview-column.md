@@ -78,7 +78,7 @@ _language: ja
         <br>
         <a class="link" href="data-chart-type-radial-column-series.md">
             <div class="linkContent">
-                <h4>放射型状縦棒チャート</h4>
+                <h4>ラジアル状縦棒チャート</h4>
                 <img src="../images/charts/data-chart-type-radial-column-series.png">
             </div>
         </a>

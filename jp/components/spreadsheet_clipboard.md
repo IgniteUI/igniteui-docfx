@@ -10,7 +10,7 @@ mentionedTypes: ['Spreadsheet']
 
 このトピックでは、クリップボードの操作を実行する方法を説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

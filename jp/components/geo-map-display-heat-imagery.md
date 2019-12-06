@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |ヒート画像マップ|インフラジスティックス
-_description: マップを使用すると、ヒート画像マップを表示できます。詳細については、デモおよび使用方法を参照してください。
+_description: マップを使用すると、ヒート画像マップを表示できます。詳細については、サンプルおよび使用方法を参照してください。
 _keywords: map, Ignite UI for Angular, infragistics
 mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
@@ -12,7 +12,7 @@ Ignite UI for Angular マップ コントロールには、Shape ファイルを
 
 このトピックを読み進めるための前提条件として、[シェープ ファイルを地理的データにバインディング](geo-map-binding-shp-file.md)をお読みください。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-display-heat-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-heat-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -65,7 +65,7 @@ import { TileGeneratorMapImagery } from "igniteui-angular-maps/ES5/igx-tile-gene
 
 ### ヒートマップの作成
 
-次のコードスニペットは、人口ベースのヒートマップを Ignite UI for Angular マップ コンポーネントに表示する方法を示しています。
+以下のコードスニペットは、人口ベースのヒートマップを Ignite UI for Angular マップ コンポーネントに表示する方法を示しています。
 
 <!-- Angular -->
 

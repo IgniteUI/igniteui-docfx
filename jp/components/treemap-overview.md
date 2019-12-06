@@ -12,7 +12,7 @@ mentionedTypes: ['XamTreemap']
 
 ツリーマップは、数値の表示ではなく相対的順位の表示に向いていますツリーマップは、データ ポイントを分類し、値の相対的な差異の表示が円チャートや他のエリア チャートよりも効果的です。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 600px">
     <iframe id="tree-map-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/tree-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

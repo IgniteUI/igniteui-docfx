@@ -10,7 +10,7 @@ mentionedTypes: ['Spreadsheet']
 
 このトピックでは、一括データ検証規則を構成および設定する方法について説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

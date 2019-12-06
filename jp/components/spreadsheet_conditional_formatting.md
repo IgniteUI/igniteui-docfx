@@ -10,7 +10,7 @@ _language: ja
 
 Angular Spreadsheet コンポーネントは、ワークシートのセルに条件付き書式を設定できます。これにより、条件に基づいてデータのさまざまな部分を強調表示できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="live-grid-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-conditional-formatting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -50,7 +50,7 @@ Angular Spreadsheet コンポーネントは、ワークシートのセルに条
 
 ### 依存関係
 
-[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールに条件付き書式を追加するには、次の依存関係をインポートする必要があります。
+[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールに条件付き書式を追加するには、以下の依存関係をインポートする必要があります。
 
 <!-- Angular -->
 
@@ -69,7 +69,7 @@ import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/WorkbookColorInfo"
 
 ### コード スニペット
 
-次のコードスニペットは、[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールのスプレッドシートに各条件付き書式を追加する方法を示しています。
+以下のコードスニペットは、[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールのスプレッドシートに各条件付き書式を追加する方法を示しています。
 
 ```ts
 let sheet = this.spreadsheet.activeWorksheet;
