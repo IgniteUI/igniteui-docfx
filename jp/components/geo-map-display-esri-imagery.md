@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |Esri マップ|インフラジスティックス
-_description: Map (マップ) で Esri Street Maps の画像を表示できます。デモと使い方をご覧ください。
+_description: Map (マップ) で Esri Street Maps の画像を表示できます。サンプルと使い方をご覧ください。
 _keywords: map, Ignite UI for Angular, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
@@ -10,7 +10,7 @@ _language: ja
 
 [`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html) は、Esri によって作成された無料の地理的画像マッピング サービスです。世界の地理的画像タイルの 40 スタイル以上を提供します。この地理的画像サービスは、<a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> に直接アクセスして利用できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-display-esri-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-esri-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

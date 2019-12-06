@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |Open Street Maps|インフラジスティックス
-_description: Map (マップ) で Esri Street Maps の画像を表示できます。デモと使い方を参照してください。
+_description: Map (マップ) で Esri Street Maps の画像を表示できます。サンプルと使い方を参照してください。
 _keywords: map, Ignite UI for Angular, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
@@ -11,7 +11,7 @@ _language: ja
 [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) は、世界中の OpenStreetMap© のコントリビューターが共同で作成した無料の地理的画像マッピングサービスです。これは、構成オプションなしで、道路地図スタイル限定で世界の地理的画像を提供します。この地理的画像サービスは、<a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> に直接アクセスして利用できます。
 デフォルトでは、Ignite UI for Angular マップ コンポーネントには、Open Street Maps の地理的画像が既に表示されています。したがって、Open Street Maps から地理的画像を表示するように、コントロールを構成する必要はありません。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-display-osm-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

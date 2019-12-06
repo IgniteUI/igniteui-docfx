@@ -8,9 +8,9 @@ _language: ja
 
 ## リアルタイムのデータ
 
-Ignite UI for Angular カテゴリ チャート コンポネントは、次のデモに示すように、数百万に及ぶデータ ポイントを含む大量データを処理し、それらを数ミリ秒ごとに更新できます。
+Ignite UI for Angular カテゴリ チャート コンポネントは、以下のサンプルのように数百万に及ぶデータ ポイントを含む大量のデータを処理し、数ミリ秒ごとに更新できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px;">
     <iframe id="category-chart-high-frequency-iframe" align="center" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency' height="100%" width="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

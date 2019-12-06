@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular データ チャート コンポーネントでは、軸は軸線、目盛、タイトル、や軸のラベルのこの外観を設定する基本プロパティを提供します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-axis-settings-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-settings' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -26,7 +26,7 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 
 データ チャート コンポーネントは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。これらのラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
 
-次のコード例は、データ チャートのカテゴリ X 軸のラベルのスタイルを設定する方法を示しています。
+以下のコード例は、データ チャートのカテゴリ X 軸のラベルのスタイルを設定する方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -42,7 +42,7 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 
 データ チャート コンポーネントの軸タイトル機能を使用すると、データ チャートの軸にコンテキスト情報を追加できます。さまざまなフォントスタイル、マージン、および配置を適用するなど、さまざまな方法で軸タイトルの外観をカスタマイズできます。
 
-次のコード例は、チャートのカテゴリ X 軸のタイトルを設定およびカスタマイズする方法を示しています。
+以下のコード例は、チャートのカテゴリ X 軸のタイトルを設定およびカスタマイズする方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -58,7 +58,7 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 
 目盛りは、Angular データ チャート コンポーネントの軸上に点を表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。データ チャート コンポーネントでは、軸上の目盛りの長さ、太さ、および色を変更できます。
 
-次のコード例は、データ チャートのカテゴリX軸上の目盛りの色、長さ、および太さを設定およびカスタマイズする方法を示しています。
+以下のコード例は、データ チャートのカテゴリX軸上の目盛りの色、長さ、および太さを設定およびカスタマイズする方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -75,7 +75,7 @@ Angular データ チャート コンポーネントでは、数値軸または�
 
 デフォルトでは、データ チャート コンポーネントは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の [`minimumValue`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。[`minimumValue`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
 
-次のコードスニペットは、データ チャート コンポーネントの軸範囲を変更する方法を示しています。
+以下のコードスニペットは、データ チャート コンポーネントの軸範囲を変更する方法を示しています。
 
 ```html
 <igx-numeric-y-axis #yAxis
@@ -113,7 +113,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 このプロパティは、0 から 1 までの数値を受け入れます。値は、シリーズ間の利用可能なピクセル数からのギャップの相対幅を表します。このプロパティを 0 に設定すると、シリーズ間にギャップがレンダリングされず、1 に設定すると最大ギャップがレンダリングされます。
 
-次のサンプルコードは、x 軸の間隔を設定する方法を示しています。
+以下のサンプルコードは、x 軸の間隔を設定する方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -133,7 +133,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 このプロパティを正の値 （最大 1） に設定すると、カテゴリが互いに重なります。値が 1 の場合、チャートはカテゴリを互いの上に表示します。
 
-次のコードスニペットは、x 軸の [`overlap`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
+以下のコードスニペットは、x 軸の [`overlap`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
 
 ```html
 <igx-category-x-axis #xAxis

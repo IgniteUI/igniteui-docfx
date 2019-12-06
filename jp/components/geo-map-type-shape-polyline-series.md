@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |ポリライン シリーズ|インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: map, Ignite UI for Angular, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
@@ -10,7 +10,7 @@ _language: ja
 
 地理的コンテキストでポリラインを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためにしばしば使用されます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-shape-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

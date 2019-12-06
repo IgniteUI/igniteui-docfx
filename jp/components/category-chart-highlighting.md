@@ -8,9 +8,9 @@ _language: ja
 
 ## ハイライト
 
-このトピックでは、Ignite UI for Angular カテゴリ チャート コンポネントのハイライト機能について説明します。
+Ignite UI for Angular カテゴリ チャート コンポネントには、ハイライト機能があります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

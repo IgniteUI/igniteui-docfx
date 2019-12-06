@@ -8,7 +8,7 @@ _language: ja
 
 ## Excel ユーティリティ
 
-このトピックは、[Excel ライブラリ](excel_library.md) を使用して Microsoft Excel ファイルを読み込むおよび保存するユーティリティ関数を提供します。
+Excel ライブラリ](excel\_library.md) には、Microsoft Excel ファイルの読み込みや保存が可能なユーティリティ関数があります。
 
 ```ts
 import { saveAs } from "file-saver"; // npm package: "file-saver": "^1.3.8"

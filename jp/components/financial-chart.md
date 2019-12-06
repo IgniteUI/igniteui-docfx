@@ -1,6 +1,6 @@
 ---
 title: Financial Chart の構成|データ可視化ツール |Ignite UI for Angular |Infragistics
-_description: 簡単な API を使用して財務データを可視化するには、財務チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_description: 簡単な API を使用して財務データを可視化するには、財務チャート コンポーネントを使用します。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: ファイナンシャル　チャート, Ignite UI for Angular, infragistics
 _language: ja
 mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayType']
@@ -10,7 +10,7 @@ mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayTyp
 
 Financial Chart は、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -105,7 +105,7 @@ let data = [
 
 ### ツールバー
 
-ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには次のセレクターが含まれます。
+ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには以下のセレクターが含まれます。
 
 -   インジケーター タイプ セレクター - 財務指標のタイプを選択できます。これらのインジケーターは価格またはその他のインジケーターと同じ Y 軸を共有しないため、価格ペインの下のペインに表示されます。
 -   オーバーレイ タイプ セレクター - ファイナンシャル オーバーレイのタイプを選択できます。これらのオーバーレイは、同じ Y 軸スケールを共有する財務物価シリーズと共に表示されます。オーバーレイには、[`BollingerBands`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#bollingerbands) と [`PriceChannel`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#pricechannel) の 2 種類があります。

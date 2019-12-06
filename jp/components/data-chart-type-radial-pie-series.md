@@ -1,16 +1,16 @@
 ---
-title: データ チャート|可視化ツール|Ignite UI for Angular |インフラジスティックス|放射型状円チャート
+title: データ チャート|可視化ツール|Ignite UI for Angular |インフラジスティックス|ラジアル状円チャート
 _description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示するラジアル円チャートを作成します。
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialPieSeries']
 _language: ja
 ---
 
-## 放射型状円チャート
+## ラジアル状円チャート
 
-Ignite UI for Angular 放射状円チャートは放射状チャートのグループに属し、チャートの中心からデータポイントの位置に向かって伸びる円スライスを使用します。[`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) は、データ ポイントの複数シリーズを分類する概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
+Ignite UI for Angular 放射状円チャートはラジアル チャートのグループに属し、チャートの中心からデータポイントの位置に向かって伸びる円スライスを使用します。[`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) は、データ ポイントの複数シリーズを分類する概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

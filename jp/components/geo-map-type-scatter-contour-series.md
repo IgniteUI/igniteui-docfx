@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |等高線シリーズ|インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: map, Ignite UI for Angular, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
@@ -10,7 +10,7 @@ _language: ja
 
 地図コンポーネントの [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) を使用して、各点に数値が割り当てられた経度および緯度データの三角測量に基づいて、地理的なコンテキストで色付きの等高線を描画します。このタイプの地理的シリーズは、天気の気温、気圧、降水量、人口分布、地形データなどの地理的位置によって定義される散在データをレンダリングするのに役立ちます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -48,7 +48,7 @@ _language: ja
 
 [`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) の [`fillScale`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#fillscale) を使用して地理的シリーズの等高線の塗りブラシを解決します。
 ValueBrushScale クラスは、ユーザーの色分けのニーズもほとんどを満たすはずですが、カスタムの色分けロジックのアプリケーションで ValueBrushScale クラスを継承できます。
-次の表は、GeographicContourLineSeries のサーフェス カラーリングに影響を与える CustomPaletteColorScale のプロパティの一覧です。
+以下の表は、GeographicContourLineSeries のサーフェス カラーリングに影響を与える CustomPaletteColorScale のプロパティの一覧です。
 
 | プロパティ名         | プロパティ型          | 概要                                                                                                                                                                                          |
 | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ ValueBrushScale クラスは、ユーザーの色分けのニーズもほとん�
 
 ### コード スニペット
 
-次のコードは、[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) を世界の表面温度を表す三角測量データにバインドする方法を示しています。
+以下のコードは、[`IgxGeographicContourLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) を世界の表面温度を表す三角測量データにバインドする方法を示しています。
 
 <!-- Angular -->
 

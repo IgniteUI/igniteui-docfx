@@ -8,9 +8,9 @@ _language: ja
 
 ## 軸オプション
 
-Ignite UI for Angular カテゴリー チャート コンポーネントでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+Ignite UI for Angular カテゴリー チャート コンポーネントは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定するための基本的なプロパティを提供します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-axis-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-axis-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

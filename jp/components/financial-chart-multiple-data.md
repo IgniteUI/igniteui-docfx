@@ -9,7 +9,7 @@ _language: ja
 
 `XamFinancialChart` コントロールは、以下のように複数のデータ ソースへバインドできます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

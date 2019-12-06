@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |ジオグラフィック JSON データ|インフラジスティックス
-_description: マップは、ビューモデルの地理的位置や JSON ファイルからロードされた地理的位置を含むデータを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_description: マップは、ビューモデルの地理的位置や JSON ファイルからロードされた地理的位置を含むデータを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: map, Ignite UI for Angular, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular Map マップは、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -37,7 +37,7 @@ JSON ファイルからのデータの例:
 
 ### コード スニペット
 
-次のコードは、マップコンポーネント内の GeographicHighDensityScatterSeries を、ロードされた JSON ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
+以下のコードは、マップコンポーネント内の GeographicHighDensityScatterSeries を、ロードされた JSON ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
 
 ```html
 <div className="sampleRoot" >

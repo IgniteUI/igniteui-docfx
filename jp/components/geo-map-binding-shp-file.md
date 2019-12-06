@@ -1,6 +1,6 @@
 ---
 title: Map |データ可視化ツール|Ignite UI for Angular |地理図形ファイル|インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェイプ ファイルからロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェイプ ファイルからロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: map, Ignite UI for Angular, インフラジスティックス
 mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを [`ShapefileRecord`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトのコレクションに変換します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -67,7 +67,7 @@ Map コンポーネントでは、Geographic Series は、シェイプ ファイ
 ### コード スニペット
 
 このコード例は、シェープ ファイルが `ShapeDataSource` を使用して読み込まれたことを前提としています。
-次のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトの `Points` プロパティをマップします。
+以下のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトの `Points` プロパティをマップします。
 
 ```html
 <div className="sampleRoot" >

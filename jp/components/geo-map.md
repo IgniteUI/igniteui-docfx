@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular Map コンポーネントを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープ ファイルからロードされた地理空間データを地理的画像マップに表示できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -83,7 +83,7 @@ export class MapOverviewComponent implements AfterViewInit {
 
 ### 使用方法
 
-マップ モジュールがインポートされたので、次のステップは地理的地図を作成することです。次のコードは、これを実行して地図内でズームを有効にする方法を示しています。
+マップ モジュールがインポートされたので、以下のステップは地理的地図を作成することです。以下のコードは、これを実行して地図内でズームを有効にする方法を示しています。
 
 ```html
 <div className="sampleRoot" >

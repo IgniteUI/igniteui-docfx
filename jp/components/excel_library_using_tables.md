@@ -21,7 +21,7 @@ Infragistics Excel Engine の [`WorksheetTable`](/products/ignite-ui-angular/api
 
 Infragistics Excel Engine のワークシート テーブルは [`WorksheetTable`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) オブジェクトによって表され、ワー​​クシートの `tables` コレクションに追加されます。テーブルを追加するには、このコレクションの `Add` メソッドを呼び出す必要があります。このメソッドでは、テーブルを追加する領域、テーブルにヘッダーを含めるかどうか、およびオプションで [`WorksheetTableStyle`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html) オブジェクトとしてテーブルのスタイルを指定できます。
 
-以下のコード デモは、ヘッダーを含むテーブルを [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) の A1 to G10 (A1 to G1 が列ヘッダー) 領域に追加する方法を示します。
+以下のコード サンプルは、ヘッダーを含むテーブルを [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) の A1 to G10 (A1 to G1 が列ヘッダー) 領域に追加する方法を示します。
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -69,7 +69,7 @@ table.resize("A1:G15");
 -   [`FillFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html) - 特定の塗りつぶしを含むセルのみが表示されます。
 -   [`FixedValuesFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/fixedvaluesfilter.html) - 特定の表示値のみに一致するまたは日付/時間の特定のグループ内に分類されるセルが表示されます。
 -   [`FontColorFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorfilter.html) - 特定のフォントの色を含むセルのみが表示されます。
--   [`RelativeDateRangeFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/relativedaterangefilter.html) - フィルターが適用されたときに、次の日または前の四半期のように日付の相対的な時間の範囲内で発生するかどうかに基づいて、日付値ををフィルターできます。
+-   [`RelativeDateRangeFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/relativedaterangefilter.html) - フィルターが適用されたときに、以下の日または前の四半期のように日付の相対的な時間の範囲内で発生するかどうかに基づいて、日付値ををフィルターできます。
 -   [`TopOrBottomFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/toporbottomfilter.html) - このフィルターはトップまたはボトム N 値をフィルターします。このフィルターはトップまたはボトム N %値をフィルターします。
 -   [`YearToDateFilter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/yeartodatefilter.html) - 年の始まりとフィルターが適用される日付の間に発生する場合、日付値を含むYearToDateFilter-をフィルターできます。
 
@@ -91,7 +91,7 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 
 テーブル列から並べ替え条件へアクセスする以外に [`WorksheetTable`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の `sortSettings` プロパティの `sortConditions` コレクションからも公開されます。これは、列/並べ替え条件のペアの順番に並べられたコレクションです。このコレクション内の順序は並べ替えの優先順位です。
 
-列に設定可能な並べ替え条件タイプは次のとおりです。
+列に設定可能な並べ替え条件タイプは以下のとおりです。
 
 -   [`OrderedSortCondition`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - セル値に基づいてセルを昇順または降順に並べ替えます。
 -   [`CustomListSortCondition`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - テキストまたは表示値に基づいて定義された順序でセルを並べ替えます。この並べ替え方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。

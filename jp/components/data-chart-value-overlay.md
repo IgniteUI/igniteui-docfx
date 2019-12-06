@@ -11,7 +11,7 @@ _language: ja
 
 Ignite UI for Angular データチャート コンポーネントを使用すると、ValueOverlay を使用して定義した単一の数値で水平線または垂直線を配置できます。特定のシリーズの平均値や中央値などのデータを視覚化するのに役立ちます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-value-overlay' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -35,7 +35,7 @@ Ignite UI for Angular データチャート コンポーネントを使用する
 
 ### コード例 - 値のオーバーレイ
 
-次のコード スニペットは、Ignite UI for Angular データチャート コンポーネントに値オーバーレイを追加する方法を示しています。
+以下のコード スニペットは、Ignite UI for Angular データチャート コンポーネントに値オーバーレイを追加する方法を示しています。
 
 ```html
 <igx-data-chart #chart height="600px" width="800px" [dataSource]="data">
