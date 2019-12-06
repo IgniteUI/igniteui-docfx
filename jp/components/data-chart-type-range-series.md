@@ -9,7 +9,7 @@ _language: ja
 
 このトピックでは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのさまざまな種類のエリア シリーズについて説明します。エリア シリーズは、2 つの数値データ列を使用し、それらを水平方向に引き伸ばされたデータポイントのコレクションとしてレンダリングする一連のチャート シリーズです ([`IgxRangeAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangeareaseriescomponent.html) など)。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-range-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-range-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -23,7 +23,7 @@ _language: ja
 
 ### エリア シリーズのタイプ
 
-次の表は、すべての種類のエリア シリーズとその説明を示しています。
+以下の表は、すべての種類のエリア シリーズとその説明を示しています。
 
 | シリーズ名                                                                                                                                | 説明                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |

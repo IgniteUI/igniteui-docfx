@@ -1,16 +1,16 @@
 ---
-title: データ チャート|可視化ツール|Ignite UI for Angular |インフラジスティックス|放射型縦棒チャート
+title: データ チャート|可視化ツール|Ignite UI for Angular |インフラジスティックス|ラジアル縦棒チャート
 _description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示するラジアル縦棒チャートを作成します。
 _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialColumnSeries']
 _language: ja
 ---
 
-## 放射型縦棒チャート
+## ラジアル縦棒チャート
 
-Ignite UI for Angular 放射型縦棒チャートは、放射状チャートのグループに属し、チャートの中心からデータポイントの位置に向かって伸びる長方形のコレクションを使用して描画されます。[`IgxRadialColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) は [`IgxColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と同じデータ プロットの概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
+Ignite UI for Angular ラジアル縦棒チャートは、放射状チャートのグループに属し、チャートの中心からデータポイントの位置に向かって伸びる長方形のコレクションを使用して描画されます。[`IgxRadialColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) は [`IgxColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と同じデータ プロットの概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-column-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

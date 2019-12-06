@@ -7,9 +7,9 @@ _language: ja
 
 ## トレンドライン
 
-[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールは、シリーズにバインドされたデータの傾向を識別するのに役立つ傾向線をサポートしています。
+[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールは、シリーズにバインドされたデータの傾向を識別するのに役立つトレンドラインをサポートしています。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -40,7 +40,7 @@ _language: ja
 -   [`SimpleAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#simpleaverage)
 -   [`WeightedAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#weightedaverage)
 
-次のコードスニペットは、[`TrendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html) コントロールのシリーズに近似曲線を追加する方法を示しています。
+以下のコードスニペットは、[`TrendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html) コントロールのシリーズに近似曲線を追加する方法を示しています。
 
 ```html
 <igx-data-chart  [dataSource]="data"

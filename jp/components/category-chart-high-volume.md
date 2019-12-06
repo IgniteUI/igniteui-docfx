@@ -8,9 +8,9 @@ _language: ja
 
 ## 大規模データ
 
-Ignite UI for Angular カテゴリ チャート コンポネントは、次のデモに示すように、数百万に及ぶデータ ポイントを含む大量のデータを高速で処理できます。
+Ignite UI for Angular カテゴリ チャート コンポネントは、以下のサンプルに示すように、数百万に及ぶデータ ポイントを含む大量のデータを高速で処理できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

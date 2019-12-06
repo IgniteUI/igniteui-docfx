@@ -9,7 +9,7 @@ _language: ja
 
 このトピックは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのファイナンシャル シリーズのさまざまなタイプを説明します。ファイナンシャル シリーズはシンプルで最も一般的なチャート シリーズ フォームのグループで、株価などの財務データを取得し、OHLC バーやろうそく足のコレクションとして水平線と一緒に描画します ([`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) など)。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular 棒チャートはカテゴリ チャートのグループに属し、チャートの左から右にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して描画されます。[`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) は、[`IgxColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と同じデータ プロットの概念を使用していますが、データ ポイントは、水平 (x 軸) でなく垂直軸 (y 軸) に沿って拡大します。つまり、棒チャートは柱状チャートのように描画されますが、時計回りに 90 度回転します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-bar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -46,7 +46,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ### モジュールの要件
 
-[`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) を作成するには、次のモジュールが必要です。
+[`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:

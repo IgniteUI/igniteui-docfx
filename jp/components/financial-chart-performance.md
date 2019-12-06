@@ -7,9 +7,9 @@ _language: ja
 
 ## パフォーマンス
 
-`XamFinancialChart` コントロールは多数のデータ ポイントの描画で高いパフォーマンスを実現します。以下のデモは 20 年間のデータをバインドし、ローソク足チャートで 1 日間隔の在庫価格を示します。
+`XamFinancialChart` コントロールは多数のデータ ポイントの描画で高いパフォーマンスを実現します。以下のサンプルは 20 年間のデータをバインドし、ローソク足チャートで 1 日間隔の在庫価格を示します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="financial-chart-performance-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -86,7 +86,7 @@ export class AppComponent {
 
 ### チャート ペイン
 
-`indicatorTypes` および `OverlayTypes` オプションを使用して複数のペインを設定した場合、パフォーマンスが低下する可能性があり、少数の財務指標および単一の財務オーバーレイを使用することをお勧めします。
+`indicatorTypes` および `OverlayTypes` オプションを使用して複数のペインを設定した場合、パフォーマンスが低下する可能性があり、少数の財務指標および単一のファイナンシャル オーバーレイを使用することをお勧めします。
 
 ### X 軸モード
 

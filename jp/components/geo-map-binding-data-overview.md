@@ -1,17 +1,18 @@
 ---
-title: マップ|データ可視化ツール|Ignite UI for Angular|データ バインディング|Infragistics
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: Map |データ可視化ツール|Ignite UI for Angular |Data Binding |インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, インフラジスティックス
+mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## データ バインディング
+## データ バインド
 
 Ignite UI for Angular マップ コンポーネントは、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示するように設計されています。地理的シリーズの `ItemsSource` プロパティは、データ モデルへのバインディングのために使用されます。
 
 ### データソースの種類
 
-次のセクションでは、ジオグラフィック マップ コンポーネントにバインドできるいくつかのデータソースをリストします。
+以下のセクションでは、ジオグラフィック マップ コンポーネントにバインドできるいくつかのデータソースをリストします。
 
 -   [シェープ ファイルのバインド](geo-map-binding-shp-file.md)
 -   [JSON ファイルのバインド](geo-map-binding-data-json-points.md)

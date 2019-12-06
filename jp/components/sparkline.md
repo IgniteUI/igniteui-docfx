@@ -11,7 +11,7 @@ Ignite UI for Angular スパークライン コンポーネントは、軽量な
 
 スパークライン コントロールには、チャートの種類、マーカー、範囲、トレンドライン、不明な値のプロット、ツールチップなど、構成およびカスタマイズが可能ないくつかの視覚的要素とそれに対応する機能があります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-display-types-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -85,7 +85,7 @@ $ ProductName $ スパークライン コンポーネントは、以下のスパ
 
 Ignite UI for Angular スパークライン コンポーネントを使用すると、マーカーをシリーズ上の円形のアイコンとして表示して、X/Y 座標に基づいて個々のデータポイントを示すことができます。マーカーは、表示タイプが Line、Area、および Column のスパークラインに設定できます。`Win/Loss` 型のスパークラインは、現在マーカーを設定できません。既定では、マーカーは表示されません。
 
-スパークライン内のマーカーは、次の場所を任意に組み合わせて配置できます。
+スパークライン内のマーカーは、以下の場所を任意に組み合わせて配置できます。
 
 -   `すべて`: スパークライン内のすべてのデータ ポイントにマーカーを表示します。
 -   `低値`: 最低値のデータ ポイントにマーカーを表示します。最小値に複数の点がある場合は、その値を持つ各点に表示されます。
