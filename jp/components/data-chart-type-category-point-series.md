@@ -12,7 +12,7 @@ Ignite UI for Angular ポイント チャートはカテゴリ チャートの�
 
 Angular データ チャートは、単一または複数のポイント シリーズ オブジェクトのレンダリングに対応します。これは 2 つ以上のコレクションのデータに対応できるということになります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-point-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

@@ -11,7 +11,7 @@ _language: ja
 
 Ignite UI for Angular 積層型 100 折れ線チャートはカテゴリ チャートのグループに属し、互いの上に積み重ねられた線セグメント ([`IgxStackedFragmentSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) で接続されたポイントのコレクションを使用してレンダリングされます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。Angular 積層型 100 折れ線チャートは、y 軸の値の処理を除き、すべての面で Angular 積層型折れ線チャートと同じです。データを直接表現するのでなく、[`IgxStacked100LineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) は、データ ポイント内のすべての値の合計の割合という観点からデータを表します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

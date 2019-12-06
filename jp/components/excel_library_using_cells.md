@@ -9,7 +9,7 @@ _language: ja
 
 Excel ワークシートの [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 150px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -294,7 +294,7 @@ worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center
 
 -   `Normal Value` - スペースに制限がない場合と同じように数字が表示されます。
 
--   `10 進数の削除` - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は次の書式に一致するまで減らされます。 12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
+-   `10 進数の削除` - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は以下の書式に一致するまで減らされます。 12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
 
 -   `指数、5 decimal digits` - 数字は 1.23457E+09 または 1.23457E-04 などの 0.00000E+00 の形式で表示されます。
 

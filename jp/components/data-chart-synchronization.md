@@ -1,15 +1,15 @@
 ---
 title: データ チャート | 可視化ツール | Ignite UI for Angular | Infragistics | 同期
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: データチャート, Ignite UI for Angular, Infragistics
+_keywords: データチャート, Ignite UI for Angular, インフラジスティックス
 _language: ja
 ---
 
-## チャートの同期
+## 同期
 
-Ignite UI for Angular データチャート コンポーネントを使用すると、複数のチャート間のズーム、パン、および十字線イベントの調整に関して同期をとることができます。これは、データソースが軸に関して似ているか同じであると仮定して、複数のチャートの同じ領域を視覚化するのに役立ちます。
+Ignite UI for Angular データチャート コンポーネントは、複数のチャート間のズーム、パン、および十字線イベントの調整に関して同期をとることができます。これは、データソースが軸に関して似ているか同じであると仮定して、複数のチャートの同じ領域を可視化するのに役立ちます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -29,7 +29,7 @@ Ignite UI for Angular データチャート コンポーネントを使用する
 
 ### コード スニペット - チャートの同期
 
-次のコードスニペットは、Ignite UI for Angular データチャートのチャート コントロールのペアを同期する方法を示しています。
+以下のコードスニペットは、Ignite UI for Angular データチャートのチャート コントロールのペアを同期する方法を示しています。
 
 ```html
 <igx-data-chart width="600px"

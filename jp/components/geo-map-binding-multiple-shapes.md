@@ -1,17 +1,18 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 複数シリーズ | Infragistics
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: Map |データ可視化ツール|Ignite UI for Angular |複数シリーズ|インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, インフラジスティックス
+mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## 複数のシェープファイルのバインドとオーバレイ
+## 複数のシェイプ ファイルのバインドとオーバーレイ
 
-[`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) では、複数の地理的シリーズオブジェクトを追加して、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、港湾間のルートをプロットするための [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)、国の形状をプロットするための [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) などです。
+Ignite UI for Angular マップでは、複数の地理的シリーズオブジェクトを追加して、複数のシェープファイルを地理空間データでオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、港湾間のルートをプロットするための [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)、国の形状をプロットするための [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) などがあります。
 
-### デモ
+### サンプル
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-multiple-shapes-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-shapes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -21,28 +22,338 @@ _language: ja
 
 <div class="divider--half"></div>
 
-このトピックでは、マップ コンポーネントに複数の地理的シリーズを表示する方法について段階的に説明します。すべての地理的シリーズは、`ShapeDataSource` クラスを使用して形状ファイルからロードされた地理空間データに従ってプロットします。`ShapeDataSource` オブジェクトの詳細については、[シェープファイルのバインディング](geo-map-binding-shp-file.md)のトピックを参照してください。
+このトピックでは、マップ コンポーネントに複数の地理的シリーズを表示する方法について段階的に説明します。すべての地理的シリーズは、`ShapeDataSource` クラスを使用して形状ファイルからロードされた地理空間データに従ってプロットします。ShapeDataSource オブジェクトの詳細については、[シェープファイルのバインディング](geo-map-binding-shp-file.md)のトピックを参照してください。
 
-[`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – 主要都市の位置を表示します
-[`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – 主要なポート間の経路を表示します。
-[`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) – 世界の国々の形を表示します。
+-   [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – 主要都市の場所を表示します。
+-   [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – 主要ポート間のルートを表示します。
+-   [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) – 世界の国々の形を表示します。
 
-目的のデータをプロットするために、地理的シリーズをこの組み合わせまたは他の組み合わせでも使用できます。
+目的のデータをプロットするために、地理的シリーズを上記の組み合わせまたは他の組み合わせで使用できます。
 
-### 複数シェープファイルの読み込み
+### コンポーネントのインポート
 
-ページのコンストラクタで、地理マップコンポーネントに表示する各シェープファイルの `ShapeDataSource` を追加します。
+まず、必要なコンポーネントとモジュールをインポートします。
 
-### オーバーレイ シェイプ ポリゴン
+```ts
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
+import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+```
 
-世界の国々の形状で [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) オブジェクトを作成し、それを [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) の [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+### シリーズの作成
 
-### オーバーレイ シェイプ ポリライン
+次に、後で異なるタイプのシェープ ファイルをロードする地理的シリーズでマップを作成します。
 
-メジャー ポート間のルートで [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、それを [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) の [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+```html
+<div className="sampleRoot">
+    <div className="map" >
+        <igx-geographic-map
+            #map
+            width="700px"
+            height="500px"
+            zoomable="true" >
+            <igx-geographic-shape-series #shapeSeries
+                name="polygonSeries"
+                shapeMemberPath="points"
+                shapeFill="rgb(150, 150, 150)"
+                shapeStroke="Black"
+                shapeStrokeThickness={1.0} >
+            </igx-geographic-shape-series>
+            <igx-geographic-polyline-series  #polylineSeries
+            [tooltipTemplate]="polylineTooltipTemplate"
+                  name="polylineSeries"
+                 shapeMemberPath="points"
+                 shapeStroke="rgba(147, 15, 180, 0.5)"
+                 thickness={3.0} >
+            </igx-geographic-polyline-series>
+            <igx-geographic-symbol-series  #symbolSeries
+                name="symbolSeries"
+                longitudeMemberPath="longitude"
+                latitudeMemberPath="latitude"
+                markerType="Circle"
+                markerOutline="rgb(2, 102, 196)"
+                markerBrush="White" >
+            </igx-geographic-symbol-series>
+        </igx-geographic-map>
+    </div>
+</div>
 
-### オーバーレイ シェイプ ポイント
+<ng-template let-series="series" let-item="item" #polylineTooltipTemplate>
+        <div>
+            <span>{{item.capacity}}</span><br />
+            <span>Distance: {{item.distance}}</span>
+        </div>
+    </ng-template>
 
-主要都市の場所を含む [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) の [`IgxSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+    <ng-template let-series="series" let-item="item" #shapeTooltipTemplate>
+        <div>
+            <span>{{item.name}}</span><br />
+            <span>Population: {{item.population}}</span>
+        </div>
+    </ng-template>
+
+    <ng-template let-series="series" let-item="item" #pointTooltipTemplate>
+        <div>
+            <span [style.color]="series.brush">City: {{item.city}}</span>
+        </div>
+    </ng-template>
+```
+
+### シェープファイルの読み込み
+
+次に、ページのコンストラクターで、地理マップコンポーネントに表示する各シェープファイルの `ShapeDataSource` を追加します。
+
+```ts
+const sdsPolygons = new ShapeDataSource();
+sdsPolygons.importCompleted = this.onPolygonsLoaded;
+sdsPolygons.shapefileSource = url + "/shapes/WorldCountries.shp";
+sdsPolygons.databaseSource  = url + "/shapes/WorldCountries.dbf";
+sdsPolygons.dataBind();
+const sdsPolylines = new ShapeDataSource();
+sdsPolylines.importCompleted = this.onPolylinesLoaded;
+sdsPolylines.shapefileSource = url + "/shapes/WorldConnections.shp";
+sdsPolylines.databaseSource  = url + "/shapes/WorldConnections.dbf";
+sdsPolylines.dataBind();
+const sdsLocations = new ShapeDataSource();
+sdsLocations.importCompleted = this.onPointsLoaded;
+sdsLocations.shapefileSource = url + "/Shapes/WorldCities.shp";
+sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
+sdsLocations.dataBind();
+```
+
+### ポリゴンの処理
+
+世界の国々の`ShapeDataSource` に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
+
+```ts
+import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+// ...
+public onPolygonsLoaded(sds: ShapeDataSource, e: any) {
+    const geoPolygons: any[] = [];
+    // parsing shapefile data and creating geo-polygons
+    let pointData = sds.getPointData();
+    for ( let i = 0; i < pointData.length; i++ ) {
+        let record = pointData[i];
+        // using field/column names from .DBF file
+        const country = {
+            points: record.points,
+            name: record.fieldValues.NAME,
+            gdp: record.fieldValues.GDP,
+            population: record.fieldValues.POPULATION
+        };
+        geoPolygons.push(country);
+    };
+
+    const shapeSeries = this.geoMap.series[0] as IgxGeographicShapeSeries;
+    shapeSeries.dataSource = geoPolygons;
+}
+```
+
+### ポリラインの処理
+
+`ShapeDataSource` に読み込まれた形状データを処理し、主要都市間の通信ルートを使用して、[`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトに割り当てます。
+
+```ts
+import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+// ...
+public onPolylinesLoaded(sds: ShapeDataSource, e: any) {
+    const geoPolylines: any[] = [];
+    // parsing shapefile data and creating geo-polygons
+    let pointData = sds.getPointData();
+    for ( let i = 0; i < pointData.length; i++ ) {
+        let record = pointData[i];
+        // using field/column names from .DBF file
+        const route = {
+            points: record.points,
+            name: record.fieldValues.Name,
+            capacity: record.fieldValues.CapacityG,
+            distance: record.fieldValues.DistanceKM,
+            isOverLand: record.fieldValues.OverLand === 0,
+            isActive: record.fieldValues.NotLive !== 0,
+            service: record.fieldValues.InService
+        };
+        geoPolylines.push(route);
+    }
+    const lineSeries = this.geoMap.series[1] as IgxGeographicPolylineSeries;
+    lineSeries.dataSource = geoPolylines;
+}
+```
+
+### ポイントの処理
+
+`ShapeDataSource` に読み込まれた世界各国の形状データを処理し、[`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトに割り当てます。
+
+```ts
+import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+// ...
+public onPointsLoaded(sds: ShapeDataSource, e: any) {
+    const geoLocations: any[] = [];
+    // parsing shapefile data and creating geo-locations
+    let pointData = sds.getPointData();
+    for ( let i = 0; i < pointData.length; i++ ) {
+        let record = pointData[i];
+        const pop = record.fieldValues.POPULATION;
+        if (pop > 0) {
+            // each shapefile record has just one point
+            const location = {
+                latitude: record.points[0][0].y,
+                longitude: record.points[0][0].x,
+                city: record.fieldValues.NAME,
+                population: pop
+            };
+            geoLocations.push(location);
+        }
+    }
+    const symbolSeries = this.geoMap.series[2] as IgxGeographicSymbolSeries;
+    symbolSeries.dataSource = geoLocations;
+}
+```
+
+### マップ背景
 
 また形状ファイルがアプリケーションのために十分な地理的文脈 (国の形状など) を提供した際に、地図背景コンテンツで地理的画像を非表示にしたい場合があります。
+
+```ts
+public geoMap: IgxGeographicMapComponent;
+// ...
+
+this.geoMap.backgroundContent = {};
+```
+
+### 概要
+
+上記すべてのコード スニペットを以下のコード ブロックにまとめて、プロジェクトに簡単にコピーできます。
+
+```ts
+import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicPolylineSeriesComponent
+} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
+import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+
+@Component({
+  selector: "app-map-binding-multiple-shapes-files",
+  styleUrls: ["./map-binding-multiple-shapes-files.component.scss"],
+  templateUrl: "./map-binding-multiple-shapes-files.component.html"
+})
+
+export class MapBindingMultipleShapesComponent implements AfterViewInit {
+
+    @ViewChild ("map")
+    public map: IgxGeographicMapComponent;
+
+    @ViewChild ("shapeSeries")
+    public shapeSeries: IgxGeographicShapeSeriesComponent;
+
+    @ViewChild ("polylineSeries")
+    public polylineSeries: IgxGeographicPolylineSeriesComponent;
+
+    @ViewChild ("symbolSeries")
+    public symbolSeries: IgxGeographicSymbolSeriesComponent;
+
+    @ViewChild("polylineTooltipTemplate")
+    public polylineTooltipTemplate: TemplateRef<object>;
+
+    @ViewChild("shapeTooltipTemplate")
+    public shapeTooltipTemplate: TemplateRef<object>;
+
+    @ViewChild("pointTooltipTemplate")
+    public pointTooltipTemplate: TemplateRef<object>;
+
+    constructor() {
+    }
+
+    public ngAfterViewInit(): void {
+
+        this.map.windowRect = { left: 0.2, top: 0.1, width: 0.6, height: 0.6 };
+
+        // loading a shapefile with geographic polygons
+        const sdsPolygons = new ShapeDataSource();
+        sdsPolygons.importCompleted.subscribe(() => this.onPolygonsLoaded(sdsPolygons, ""));
+        sdsPolygons.shapefileSource = "assets/Shapes/WorldCountries.shp";
+        sdsPolygons.databaseSource  = "assets/Shapes/WorldCountries.dbf";
+        sdsPolygons.dataBind();
+        // loading a shapefile with geographic polylines at runtime.
+        const sdsPolylines = new ShapeDataSource();
+        sdsPolylines.shapefileSource = "assets/Shapes/WorldCableRoutes.shp";
+        sdsPolylines.databaseSource  = "assets/Shapes/WorldCableRoutes.dbf";
+        sdsPolylines.dataBind();
+        sdsPolylines.importCompleted.subscribe(() => this.onPolylinesLoaded(sdsPolylines, ""));
+
+        // loading a shapefile with geographic points
+        const sdsPoints = new ShapeDataSource();
+        sdsPoints.importCompleted.subscribe(() => this.onPointsLoaded(sdsPoints, ""));
+        sdsPoints.shapefileSource = "assets/Shapes/WorldCities.shp";
+        sdsPoints.databaseSource  = "assets/Shapes/WorldCities.dbf";
+        sdsPoints.dataBind();
+    }
+
+    public onPointsLoaded(sds: ShapeDataSource, e: any) {
+        const geoLocations: any[] = [];
+        // parsing shapefile data and creating geo-locations
+        for (const record of sds.getPointData()) {
+            const pop = record.fieldValues["POPULATION"];
+            if (pop > 0) {
+                // each shapefile record has just one point
+                const location = {
+                    city: record.fieldValues["NAME"],
+                    latitude: record.points[0][0].y,
+                    longitude: record.points[0][0].x,
+                    population: pop
+                };
+                geoLocations.push(location);
+            }
+        }
+        this.symbolSeries.dataSource = geoLocations;
+        this.symbolSeries.tooltipTemplate = this.pointTooltipTemplate;
+    }
+
+    public onPolylinesLoaded(sds: ShapeDataSource, e: any) {
+        const geoPolylines: any[] = [];
+        // parsing shapefile data and creating geo-polygons
+        for (const record of sds.getPointData()) {
+            // using field/column names from .DBF file
+            const route = {
+                capacity: record.fieldValues["CapacityG"],
+                distance: record.fieldValues["DistanceKM"],
+                isActive: record.fieldValues["NotLive"] !== 0,
+                isOverLand: record.fieldValues["OverLand"] === 0,
+                name: record.fieldValues["Name"],
+                points: record.points,
+                service: record.fieldValues["InService"]
+            };
+            geoPolylines.push(route);
+        }
+        this.polylineSeries.dataSource = geoPolylines;
+        this.polylineSeries.shapeMemberPath = "points";
+        this.polylineSeries.shapeFilterResolution = 2.0;
+        this.polylineSeries.shapeStrokeThickness = 2;
+        this.polylineSeries.shapeStroke = "rgba(252, 32, 32, 0.9)";
+        this.polylineSeries.tooltipTemplate = this.polylineTooltipTemplate;
+    }
+
+    public onPolygonsLoaded(sds: ShapeDataSource, e: any) {
+        const geoPolygons: any[] = [];
+        // parsing shapefile data and creating geo-polygons
+        sds.getPointData().forEach((record) => {
+            // using field/column names from .DBF file
+            const country = {
+                gdp: record.fieldValues["GDP"],
+                name: record.fieldValues["NAME"],
+                points: record.points,
+                population: record.fieldValues["POPULATION"]
+            };
+            geoPolygons.push(country);
+        });
+        this.shapeSeries.dataSource = geoPolygons;
+        this.shapeSeries.tooltipTemplate = this.shapeTooltipTemplate;
+    }
+}
+```
