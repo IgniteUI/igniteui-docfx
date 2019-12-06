@@ -1,6 +1,6 @@
 ---
 title: Tick Marks | Thumb Track |  Ignite UI for Angular | Infragistics
-_description: Ignite UI for Angular Slider control provides a rich input for value selection and delivers consistent experience across browsers.
+_description: Learn how to configure the Ignite UI for Angular slider tick marks, and improve your data visualization by using angular slider step with convenient thumb track
 _keywords: tick marks, igniteui for angular, infragistics
 ---
 
