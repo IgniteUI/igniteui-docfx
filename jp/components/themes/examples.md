@@ -63,7 +63,7 @@ _language: ja
 次のステップは、カスタマイズするコンポーネントと対応するテーマをすべてインポートします。
 
 以下がアプリに含まれます。
-- **Igx-Grid** の **paging** と **フィルタリング**。
+- [**Igx-Grid**](../grid/grid.md) の  [**ページング**](../grid/paging.md)と[**フィルタリング**](../grid/filtering.md)。
 
 ```scss
 // Import grid component and theme styles
@@ -212,10 +212,107 @@ public themesClass = "dark-theme";
 
 *utilities*、コンポーネント mixins とテーマ関数をインポートし、テーマを定義して適用します。**Ignite UI for Angular Theming** でアプリをスタイル設定するための手順があります。
 
+### スキーマの設定
+
+スキーマの作成とは、テーマに必要なコンポーネント プロパティを定義することです。これらは、テーマ マップを生成するときにコンポーネント テーマが使用する「方法」です。
+
+まず、グローバル スキーマ ([light-schema]({environment:sassApiUrl}/index.html#variable-light-schema) または [dark-schema]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかをインポートする必要があります。
+
+```scss
+...
+@import '~igniteui-angular/lib/core/styles/themes/utilities';
+...
+```
+各コンポーネントには独自の light/dark スキーマがあります。したがって、カスタム スキーマを作成する場合は、コンポーネントのデフォルト スキーマのいずれかを拡張する必要があります。
+```scss
+//Define the `recipe` for the igx-grid
+$_black-grid-schema: extend($_dark-grid,
+        (
+            content-background:(
+                igx-color:("primary", 100)
+            ),
+            header-background:(
+                igx-color:("primary", 700)
+            ),
+            header-border-color:(
+                igx-color:("secondary", 500)
+            ),
+            header-text-color:(
+                igx-color:("secondary", 500)
+            ),
+            cell-selected-background:(
+                igx-color:("primary", 500)
+            ),
+            cell-selected-text-color:(
+                igx-color:("secondary", 500)
+            ),
+            row-hover-background:(
+                igx-color:("secondary", 100)
+            ),
+            content-text-color: white,
+            row-hover-text-color:(
+                igx-color:("primary", 700)
+            ),   
+        )
+);
+//Define the `recipe` for the igx-grid-paginator
+$_black-grid-paginator-schema: extend($_dark-grid-pagination,
+        (
+            text-color:(
+                igx-color: ("secondary", 700)
+            ),
+            background-color:(
+                igx-color: ("primary", 700)
+            ),
+            border-color:(
+                igx-color:( "secondary", 500)
+            )
+        )
+);
+```
+カスタム スキーマを適用するには、グローバル (`$dark-schema` または `$light-schema`) のいずれかを拡張する必要があります。
+```scss
+    $my-black-schema: extend( $dark-schema, (
+            ...
+            igx-grid: $_black-grid-schema,
+            igx-grid-paginator: $_black-grid-paginator-schema,
+            ...
+        )
+    );
+```
+`$palette` を定義します。
+```scss
+...
+$black-color: #000000;
+$aqua-color: #00BFFF;
+
+$black-theme-palette: igx-palette($primary: $black-color, $secondary: $aqua-color, $grays: #fff);
+...
+```
+>[!NOTE]
+> グローバルな `$black-scheme`を拡張する場合、[igx-palette](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-palette) 関数で `$grays` パラメーターを `#fff` に設定してください！ 
+
+最後に、定義した新しいグローバル スキーマの `$palette` をコンポーネントテーマに適用します。
+```scss
+...
+$black-grid-theme: igx-grid-theme(
+  $palette: $black-theme-palette,
+  $schema: $my-black-schema
+);
+
+$black-grid-paginator-theme: igx-grid-paginator-theme(
+  $palette: $black-theme-palette,
+  $schema: $my-black-schema  
+);
+...
+```
+スキーマを定義する場合、すべてのコンポーネントで使用でき、 `$palette` に新しい値を設定するだけで簡単に変更できる方法を提供します。
+<div class="divider--half"></div>
+
 ### テーマの選択
 上記サンプルは、各コンポーネントに 1 つのテーマを設定しました。
 
-**Ignite UI for Angular コンポーネント**にその他のテーマを定義する場合は、**テーマ**を追加できます。
+テーマを定義した場合、簡単に切り替えるために**テーマの選択**が必要です。
 
 変更を少し加えるだけです。
 - SCSS ファイルを作成してテーマを含むクラスを定義します。
@@ -323,6 +420,10 @@ export class ThemeChooserSampleComponent implements OnInit {
 * [IgxGrid Paginator スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
 * [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
+* [Light Components スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
+* [Dark Components スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
+* [Dark Grid スキーマ]({environment:sassApiUrl}/index.html#variable-_dark-grid)
+* [Dark Grid Paginator スキーマ]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
@@ -330,6 +431,7 @@ export class ThemeChooserSampleComponent implements OnInit {
 
 * [Global テーマ](global-theme.md)
 * [コンポーネント テーマ](component-themes.md)
+* [スキーマ](schemas.md)
 * [カラー パレット](palette.md)
 * [グリッド](../grid/grid.md)
 * [グリッド ページング](../grid/paging.md)
