@@ -127,6 +127,7 @@ public grid: IgxGridComponent;
 </igx-column>
 ...
 ```
+#### セル テンプレート
 
 `igxCell` は提供したテンプレートを列のすべてのセルに適用します。テンプレートで提供されるコンテキスト オブジェクトは暗示的に提供されたセル値およびセル オブジェクトです。以下のようにセルがコンテンツに応じて拡張するテンプレートを定義するために使用できます。
 
@@ -159,11 +160,11 @@ public grid: IgxGridComponent;
 <igx-grid>
 ```
 
-`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集)  を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この [selection](selection.md) はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。 
+`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集)  を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
 
 セル内のデータが `[(ngModel)]` でバインドされていて、値の変更が処理されない場合、新しい値はグリッドの基になるデータソースで適切に更**されません**。カスタム テンプレートを使用してセルの編集を行う場合は、セルの**セル編集テンプレート**を使用することを強くお勧めします。
 
-適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド編集イベント サイクルを正しく渡します。
+適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド[編集イベント サイクル](editing.md#編集イベント) を正しく渡します。
 
 #### セル編集テンプレート
 
@@ -495,9 +496,9 @@ export const EMPLOYEE_DATA = [
 
 #### フラット データ
 
-フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) プロパティを使用します。 
+フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。 
 
-グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) プロパティを使用します。
+グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
 
 以下は使用するデータです。
 ```typescript
@@ -628,7 +629,7 @@ public ngOnInit() {
 ### サイズ変更
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。
 
-## 既知の問題と制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |

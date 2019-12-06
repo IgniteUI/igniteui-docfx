@@ -224,6 +224,80 @@ export class @@igxNameRowDragComponent {
 > [!NOTE]
 > イベント引数 (`args.dragData.rowData`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
+#### ドラッグ ゴーストのテンプレート化
+ドラッグゴーストは、`@@igSelector` のボディ内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
+
+```html
+<@@igSelector>
+...
+   <ng-template igxRowDragGhost>
+        <div>
+            <igx-icon fontSet="material">arrow_right_alt</igx-icon>
+        </div>
+    </ng-template>
+...
+</@@igSelector>
+```
+
+以下は、行ドラッグと複数選択を有効にした `@@igSelector` で確認できる設定の結果です。以下のデモでは、現在ドラッグされている行の数を示します。
+
+##### デモ
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/grid/grid-multiple-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="tree-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+ドラッグ ゴーストは各グリッド レベルでテンプレート化できます。複数のゴース トテンプレートを作成できて、または単一の行アイランドにのみテンプレートを提供できます。
+
+```html
+<@@igSelector>
+...
+    <ng-template igxRowDragGhost>
+        <div>
+            <igx-icon fontSet="material">arrow_right_alt</igx-icon> 
+        </div>
+    </ng-template>
+    <igx-row-island>
+        ...
+        <ng-template IgxRowDragGhost>
+            <img src="smile.gif" height="42" width="42">
+        </ng-template>
+    </igx-row-island>
+...
+</@@igSelector>
+```
+
+<div class="sample-container loading" style="height:600px">
+    <iframe id="hierarchical-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+}
+
 #### ドラッグ アイコンのテンプレート化
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
 `igxDragIndicatorIcon` を使用して `@@igSelector` のボディ内にテンプレートを渡して変更できます。

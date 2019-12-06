@@ -143,7 +143,7 @@ export class AppModule {}
 > プライマリキーは行編集操作で必須です。
 
 > [!NOTE]
-> 各列の編集を有効にする必要はありません。@@igComponent で[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
+> 各列の編集を有効にする必要はありません。@@igComponent で [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -259,7 +259,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 ### キーボード ナビゲーション
 
-- `Enter` と F2 で行編集モードに入ります。
+- `Enter` と `F2` で行編集モードに入ります。
 
 - `Esc` で行編集モードを終了し、行の編集モード時に変更されたいずれのセルの変更もサブミットしません。
 
@@ -313,7 +313,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 #### テーマのインポート
 
 行編集バナーのスタイルを設定する最も簡単な方法は、`アプリ`のグローバル スタイル ファイル (通常 `styles.scss`) でスタイルを定義することです。
-はじめに`テーマ/インデックス`ファイルをインポートすることにより、Ignite UI for Angular Sass フレームワークの強力なツールへアクセスできるようになります。
+はじめに `themes/index` ファイルをインポートすることにより、Ignite UI for Angular Sass フレームワークの強力なツールへアクセスできるようになります。
 
 ```scss
 // in styles.scss
@@ -324,7 +324,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 #### テーマの定義
 
-行編集の背景にカスタムの [`banner theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
+行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
     $my-light-gray: #e3e3e3;

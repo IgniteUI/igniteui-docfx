@@ -85,7 +85,7 @@ _language: ja
 
 `[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
-> `選択モード`が`単一`であるか`複数`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
+> `選択モード`が `single`であるか `multiple`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
 
 #### @@igComponent 選択なし
 セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
@@ -115,7 +115,7 @@ _language: ja
 
 #### 範囲の選択
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectrange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectrange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -132,11 +132,11 @@ this.grid1.selectRange(range);
 
 #### セル選択のクリア
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#clearcellselection) は、現在のセル選択をクリアします。
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearcellselection) は、現在のセル選択をクリアします。
 
 #### 選択したデータの取得
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) は、選択内容に応じた形式で選択されたデータの配列を返します。
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) は、選択内容に応じた形式で選択されたデータの配列を返します。
 
 1. 3 つの異なる単一セルが選択されている場合:
 ```
@@ -192,14 +192,14 @@ expectedData = [
 ```
 
 > [!NOTE]
-> セルがグリッドビューポートに表示されていない場合、[`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#selectedcells) は結果を返しませんが、[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselecteddata) は選択されたセルデータを返します。
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getselectedranges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
+> セルがグリッドビューポートに表示されていない場合、[`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) は結果を返しませんが、[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) は選択されたセルデータを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 
 
 ### 機能の統合
 マルチセル選択はインデックス ベースです (DOM 要素選択)。
 
-- `ソート` - ソートが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
+- `並べ替え` - 並べ替えが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
 - `ページング` - ページング時に選択されたセルはクリアされます。選択はページを超えては持続されません。選択はページを超えては持続されません。
 - `フィルタリング` - フィルタリングが実行されると、選択は解除されません。フィルタリングがクリアされている場合は、最初に選択されたセルが返されます。
 - `サイズ変更` - 列のサイズを変更すると、選択したセルはクリアされません。
@@ -324,8 +324,8 @@ $custom-grid-theme: igx-grid-theme(
 * [並び替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>

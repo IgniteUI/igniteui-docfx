@@ -82,7 +82,7 @@ public groupColumnKey = "Categories";
 
 * [TreeGrid 概要](tree_grid.md)
 * [TreeGrid 集計](summaries.md)
-* [グリッドの集計](../grid/summaries.md)
+* [Grid 集計](../grid/summaries.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

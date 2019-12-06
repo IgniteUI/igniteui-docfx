@@ -51,7 +51,10 @@ Typography は Sass theming フレームワークは別でコンポーネント 
 * [コンポーネント テーマ](component-themes.md)
 
 コンポーネント スキーマの作成する方法:
-* [Schemas](./schemas.md)
+* [スキーマ](./schemas.md)
+
+色パレットを作成する方法:
+* [パレット](./palette.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
