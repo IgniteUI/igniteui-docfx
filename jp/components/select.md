@@ -5,7 +5,7 @@ _keywords:  angular select, igniteui for angular, インフラジスティック
 _language: ja
 ---
 
-## 選択
+## Select
 Ignite UI for Angular Select コンポーネントは、特殊な配置が可能な項目ドロップダウンリストから単一のアイテムを選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づく選択を含む、迅速な項目リスト ナビゲーションを提供します。
 
 ## 選択のデモ

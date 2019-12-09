@@ -142,7 +142,7 @@
     - name: 複数列ヘッダー
       href: grid/multi_column_headers.md
       new: false
-    - name: Collapsible Column Groups
+    - name: 列グループの折りたたみ
       href: grid/collapsible_column_groups.md
       new: true
     - name: 表示密度
