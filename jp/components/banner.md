@@ -255,7 +255,7 @@ export class MyBannerComponent {
 ```
 
 ### パレットと色の定義
-インデックス ファイルをインポート後、 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用する 2 色のメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、カスタム `igx-banner` スタイルにこれらを使用します。
+`index` ファイルをインポート後、 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用する 2 色のメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、カスタム `igx-banner` スタイルにこれらを使用します。
 最初にカスタム パレットを定義し、メイン カラーを渡します。
 ```scss
 // in styles.scss

@@ -109,7 +109,7 @@ public date: Date = new Date(Date.now());
 ```
 
 #### マルチビュー モードの設定
-monthsViewNumber 入力を使用して、カレンダーに表示される月数を設定します。現在の月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) を使用します。
+[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) 入力を使用して、カレンダーに表示される月数を設定します。現在の月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) を使用します。
 
 
 ボタンが表示されるサンプル:

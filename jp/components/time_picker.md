@@ -187,7 +187,7 @@ public onValidationFailed(timepicker){
 
 #### ドロップダウン モード
 
-タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。編集可能なモードに変更するには、[mode]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
+タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。編集可能なモードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
 
 ```typescript
 // timePickerDropdown.component.ts
@@ -318,7 +318,7 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 </div>
 
 #### カスタム ボタン アクション
-[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、igxTimePickerActions ディレクティブセレクタでマークされた ng-template でボタンをラップします。
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、`igxTimePickerActions` ディレクティブセレクタでマークされた `ng-template` でボタンをラップします。
 
 以下の例では、'CANCEL'、'OK'、'NOW' 操作用のカスタム操作ボタンが追加されています。
 
