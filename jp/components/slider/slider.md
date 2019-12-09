@@ -1,11 +1,11 @@
 ﻿---
-title: スライダー目盛り | 目盛り | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Slider コントロールは、ブラウザー間で統一したエクスペリエンスおよび値選択の入力機能を提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Slider コンポーネント, Angular Slider コントロール, Slider 目盛り, スライダー, 目盛り
+title: Angular Slider |  Ignite UI for Angular | Infragistics
+_description: Learn how to configure a selection in a given range by using the thumb track with Angular Slider part of Ignite UI for Angular. Choose between singe and range slider types
+_keywords: angular slider, igniteui for angular, infragistics
 _language: ja
 ---
 
-## スライダー
+## Slider Overview and Configuration
 <p class="highlight">Ignite UI for Angular Slider コンポーネントを使用すると、つまみをトラックで移動して指定した範囲内で値選択を許可します。トラックを連続またはステップに定義でき、単一または範囲によってスライダーのタイプを選択できます。</p>
 <div class="divider"></div>
 

@@ -1,7 +1,7 @@
 ﻿---
-title: Slider コンポーネント
-_description: Ignite UI for Angular Slider コントロールは、ブラウザー間で統一したエクスペリエンスおよび値選択の入力機能を提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Slider コンポーネント, Angular Slider コントロール
+title: Tick Marks | Thumb Track |  Ignite UI for Angular | Infragistics
+_description: Learn how to configure the Ignite UI for Angular slider tick marks, and improve your data visualization by using angular slider step with convenient thumb track
+_keywords: tick marks, igniteui for angular, infragistics
 _language: ja
 ---
 

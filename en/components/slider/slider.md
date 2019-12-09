@@ -1,10 +1,10 @@
 ---
-title: Tick Marks | Thumb Track |  Ignite UI for Angular | Infragistics
-_description: Learn how to configure the Ignite UI for Angular slider tick marks, and improve your data visualization by using angular slider step with convenient thumb track
-_keywords: tick marks, igniteui for angular, infragistics
+title: Angular Slider |  Ignite UI for Angular | Infragistics
+_description: Learn how to configure a selection in a given range by using the thumb track with Angular Slider part of Ignite UI for Angular. Choose between singe and range slider types
+_keywords: angular slider, igniteui for angular, infragistics
 ---
 
-## Slider
+## Slider Overview and Configuration
 <p class="highlight">The Ignite UI for Angular Slider component allows selection in a given range by moving the thumb along the track. The track can be defined as continuous or stepped and you can choose between single and range slider types.</p>
 <div class="divider"></div>
 
