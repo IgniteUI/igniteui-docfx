@@ -140,16 +140,16 @@ this.@@igObjectRef.paging = false;
 
 <div class="divider--half"></div>
 
-### Remote Paging
+### リモート ページング
 
-The @@igComponent supports remote paging, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
+@@igComponent はリモート ページングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#リモート-ページング) トピックで説明されています。
 
 
 
 @@if (igxName === 'IgxGrid') {
-### Remote Paging with custom template
+### カスタム テンプレートのリモート ページング
 
-In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. [This section](remote_data_operations.md#remote-paging-with-custom-template) explains how we are going to extend the Remote Paging example in order to demonstrate this.
+独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。[このセクション](remote_data_operations.md#カスタム-テンプレートのリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 }
 
 ### スタイル設定
