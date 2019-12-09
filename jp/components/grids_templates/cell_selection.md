@@ -85,7 +85,7 @@ _language: ja
 
 `[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
-> `選択モード`が`単一`であるか`複数`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
+> `選択モード`が `single`であるか `multiple`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
 
 #### @@igComponent 選択なし
 セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
@@ -199,7 +199,7 @@ expectedData = [
 ### 機能の統合
 マルチセル選択はインデックス ベースです (DOM 要素選択)。
 
-- `ソート` - ソートが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
+- `並べ替え` - 並べ替えが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
 - `ページング` - ページング時に選択されたセルはクリアされます。選択はページを超えては持続されません。選択はページを超えては持続されません。
 - `フィルタリング` - フィルタリングが実行されると、選択は解除されません。フィルタリングがクリアされている場合は、最初に選択されたセルが返されます。
 - `サイズ変更` - 列のサイズを変更すると、選択したセルはクリアされません。
@@ -324,8 +324,8 @@ $custom-grid-theme: igx-grid-theme(
 * [並び替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>
