@@ -9,7 +9,7 @@ _language: ja
 
 [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -37,7 +37,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 
 またマウスやタッチでボタンをクリックしてズームまたはパンニングできます。チャートの `DefaultInteraction` プロパティは、マウスクリック イベントやタッチ イベントで何が起こるかを決定します。このプロパティはデフォルトで `DragZoom` に設定されており、ズームを有効に設定すると、クリックしてドラッグした際にプロット領域の上に四角形のプレビューが配置され、グラフのズーム領域になります。この `DefaultInteraction` プロパティは、パンニングを許可する場合は `DragPan`、これらの操作を禁止する場合は `None` に設定することもできます。
 
-次のコードスニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
+以下のコードスニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -68,7 +68,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 -   Apple キー
 -   None
 
-次のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、`Shift` キーを押しながらズーム、`Alt` キーを押しながらパンのみ可能です。
+以下のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、`Shift` キーを押しながらズーム、`Alt` キーを押しながらパンのみ可能です。
 
 ```html
 <igx-data-chart #chart
@@ -120,7 +120,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 -   [`windowScaleHorizontal`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): チャートで表示されるコンテンツ ビュー長方形の幅部分を表す数値。
 -   [`windowScaleVertical`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): チャートで表示されるコンテンツ ビュー長方形の高さ部分を表す数値。
 
-次のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールを表す変数名 chart があると仮定します。
+以下のコードスニペットは、`WindowRect` コントロールのビューをプログラムで変更する方法を示しています。以下では、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールを表す変数名 chart があると仮定します。
 
 ```ts
 // Zoom in by a factor of 0.05

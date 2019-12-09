@@ -6,11 +6,11 @@ mentionedTypes: ['XamDataChart', 'SeriesType']
 _language: ja
 ---
 
-## Data Chart (データ チャート)
+## データ チャート
 
 Angular データ チャートは、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。データ チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -85,9 +85,9 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 ### 使用方法
 
-データチャートモジュールがインポートされたので、次のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[Data Sources](data-chart-data-sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
+データチャートモジュールがインポートされたので、以下のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[Data Sources](data-chart-data-sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
 
-次のコードスニペットは、散布 [`bubble`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) を作成し、それを [SampleScatterStats](data-chart-data-sources-stats.md) データにバインドする方法を示しています。
+以下のコードスニペットは、散布 [`bubble`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) を作成し、それを [SampleScatterStats](data-chart-data-sources-stats.md) データにバインドする方法を示しています。
 
 > [!NOTE]
 >

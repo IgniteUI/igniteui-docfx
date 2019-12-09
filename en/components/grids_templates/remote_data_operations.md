@@ -714,8 +714,8 @@ public buttonDeselection(page: number, totalPages: number) {
 
 ...
 public ngAfterViewInit() {
+    this.grid1.isLoading = true;
     this.remoteService.getData(0, this.perPage);
-    this.@@igObjectRef.paginationTemplate = this.remotePager;
 }
 
 ```

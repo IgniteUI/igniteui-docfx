@@ -10,7 +10,7 @@ _language: ja
 
 このトピックでは、Angular カテゴリ チャート コンポーネントの注釈やインタラクションについて説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

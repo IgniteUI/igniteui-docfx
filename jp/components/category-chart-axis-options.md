@@ -8,9 +8,9 @@ _language: ja
 
 ## 軸オプション
 
-Ignite UI for Angular カテゴリー チャート コンポーネントでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
+Ignite UI for Angular カテゴリー チャート コンポーネントは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定するための基本的なプロパティを提供します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-axis-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-axis-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -134,8 +134,8 @@ Ignite UI for Angular カテゴリー チャート コンポーネントでは�
 カテゴリ チャートの軸間隔機能は、チャート シリーズ間の間隔を設定できます。
 
 プロパティ値は、0 と 1 の間の float 値である必要があります。この値は、シリーズ間の利用可能なピクセル数で間隔の相対幅を表します。
-   0 - no gap is rendered between series;
-   1 - maximum available gap is rendered between series.
+   0 - シリーズ間に間隔は描画されません。
+   1 - シリーズ間に利用可能な最大の間隔が描画されます。
 
 カテゴリ チャートの `XAxisGap` を `0.125` に設定するには、以下のコードを使用します。
 

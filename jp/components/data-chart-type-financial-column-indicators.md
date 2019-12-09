@@ -10,7 +10,7 @@ _language: ja
 
 財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのインジケーターは、同じ Y 軸を共有しないため [`IgxFinancialPriceSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) を使用するチャートの上または下に表示されます。ただし、チャート コントロールは同じプロット領域で価格シリーズとインジケーターの描画をサポートします。複数軸の使用や軸を共有することもできます。詳細については、[軸共有と複数軸](data-chart-axis-sharing.md)のトピックを参照してください。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-column-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
