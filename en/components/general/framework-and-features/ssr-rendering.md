@@ -43,10 +43,6 @@ This schematic will perform several changes to your app client and server config
 #### Step 2 - Define all browser-specific objects that are missing
 Since Universal apps run on the server and not in the browser, there are a few things you need to watch out for in your code. Browser-specific objects, such as `window`, `document`, or `location` are missing, so we recommend using of [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) for Server-side DOM abstraction. Domino is a Server-side DOM implementation based on Mozilla's dom.js.
 
-- install domino `npm install domino` - for server-side dom abstraction
-- install xmlhttprequest `npm i xmlhttprequest` - If using IgxIconService to register icons
-- Configure the "server.ts" 
-
 ```typescript
 // server.ts
 const domino = require('domino');
@@ -60,11 +56,6 @@ const window = domino.createWindow(template);
 // Ignite UI browser objects abstractions
 (global as any).window = window;
 (global as any).document = window.document;
-(global as any).Event = window.Event;
-(global as any).KeyboardEvent = window.KeyboardEvent;
-(global as any).MouseEvent = window.MouseEvent;
-(global as any).FocusEvent = window.FocusEvent;
-(global as any).PointerEvent = window.PointerEvent;
 (global as any).HTMLElement = window.HTMLElement;
 (global as any).HTMLElement.prototype.getBoundingClientRect = () => {
     return {
