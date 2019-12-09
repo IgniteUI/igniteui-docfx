@@ -43,10 +43,6 @@ ng add @nguniversal/express-engine --clientProject ssr-example
 #### 手順 2 - 不足しているブラウザー固有のすべてのオブジェクトを定義します
 `Window`、`document`、`location` などのブラウザー固有のオブジェクトが不足しているため、サーバー側の DOM 抽象化には [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) を使用することをお勧めします。Domino は、Mozilla の dom.js に基づくサーバー側の DOM 実装です。
 
-- install domino `npm install domino` - for server-side dom abstraction
-- install xmlhttprequest `npm i xmlhttprequest` - If using IgxIconService to register icons
-- Configure the "server.ts" 
-
 ```typescript
 // server.ts
 const domino = require('domino');
@@ -60,11 +56,6 @@ const window = domino.createWindow(template);
 // Ignite UI browser objects abstractions
 (global as any).window = window;
 (global as any).document = window.document;
-(global as any).Event = window.Event;
-(global as any).KeyboardEvent = window.KeyboardEvent;
-(global as any).MouseEvent = window.MouseEvent;
-(global as any).FocusEvent = window.FocusEvent;
-(global as any).PointerEvent = window.PointerEvent;
 (global as any).HTMLElement = window.HTMLElement;
 (global as any).HTMLElement.prototype.getBoundingClientRect = () => {
     return {
