@@ -13,7 +13,7 @@ This mode is useful when you need to display master-detail style data in a hiera
 #### Demo
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-master-detail-iframe" src='{environment:demosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
