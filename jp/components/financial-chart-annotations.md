@@ -7,9 +7,9 @@ _language: ja
 
 ## 注釈
 
-このトピックでは、[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) の注釈について説明します。
+このトピックでは、`XamFinancialChart` の注釈について説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="financial-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

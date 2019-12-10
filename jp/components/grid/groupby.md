@@ -288,7 +288,7 @@ $custom-theme: igx-grid-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### 既知の問題と制限
+### 既知の制限
 
 |制限|説明|
 |--- |--- |
@@ -307,7 +307,7 @@ $custom-theme: igx-grid-theme(
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [グリッドの概要](grid.md)
+* [Grid 概要](grid.md)
 * [可視化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)

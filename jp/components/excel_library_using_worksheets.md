@@ -9,7 +9,7 @@ _language: ja
 
 Infragistics Excel エンジンの [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。[`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) は、フィルター、並べ替え、セル書式のカスタマイズができます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

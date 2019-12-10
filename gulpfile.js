@@ -141,6 +141,7 @@ const watchFiles = (done) => {
         `${DOCFX_ARTICLES}/grid/grid.md`,
         `${DOCFX_ARTICLES}/grid/groupby.md`,
         `${DOCFX_ARTICLES}/grid/paste_excel.md`,
+        `${DOCFX_ARTICLES}/grid/master_detail.md`,
         `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
         `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
         `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,

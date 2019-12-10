@@ -106,7 +106,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 - 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `tab キー` を押します。プロンプト メッセージが表示されます。
 - セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
-> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに F2 キーを使用できることに注意してください。
+> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに `F2 キー`を使用できることに注意してください。
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -224,7 +224,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 </div>
 }
 
-既知の問題
+既知の制限
 |制限|説明|
 |--- |--- |
 |スクロール可能な親コンテナを使用してグリッド内を移動します。|グリッドがスクロール可能な親コンテナ内に配置され、ユーザーがグリッド内をナビゲートする際にビュー範囲外にセルがある場合、親コンテナーはスクロールしません。|

@@ -293,6 +293,8 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
+#### 一意の列値ストラテジのデモ
+
 <div class="sample-container loading" style="height:800px">
     <iframe id="tree-grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
@@ -332,6 +334,8 @@ this.remoteValuesService.getColumnData(
 }
 ```
 
+#### 一意の列値ストラテジのデモ
+
 <div class="sample-container loading" style="height:800px">
     <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
@@ -362,9 +366,10 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
 ```typescript
 @Injectable()
-export class RemoteService {
+export class RemotePagingService {
     public remoteData: BehaviorSubject<any[]>;
-    private url: string = "https://www.igniteui.com/api/products";
+    public dataLenght: BehaviorSubject<number> = new BehaviorSubject(0);
+    public url = "https://www.igniteui.com/api/products";
 
     constructor(private http: HttpClient) {
         this.remoteData = new BehaviorSubject([]);
@@ -399,16 +404,23 @@ export class RemoteService {
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit {
     public data: Observable<any[]>;
+    private _dataLengthSubscriber;
 
     constructor(private remoteService: RemoteService) {}
 
-     public ngOnInit() {
+    public ngOnInit() {
         this.data = this.remoteService.remoteData.asObservable();
+
         this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
             this.totalCount = data;
-            this.totalPages = Math.ceil(data / this.perPage);
-            this.buttonDeselection(this.page, this.totalPages);
+            this.grid1.isLoading = false;
         });
+    }
+
+    public ngOnDestroy() {
+        if (this._dataLengthSubscriber) {
+            this._dataLengthSubscriber.unsubscribe();
+        }
     }
 }
 ```
@@ -424,15 +436,20 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     
     constructor(private remoteService: RemotePagingService) {}
 
-    public ngOnInit(): void {
-        this._dataLengthSubscriber = this.remoteService.getDataLength(
-            { parentID: null, rootLevel: true, key: "Customers" }).subscribe((length) => {
-            this.totalCount = length;
-            this.totalPages = Math.ceil(length / this.perPage);
-            this.buttonDeselection(this.page, this.totalPages);
-        });
+    public ngOnInit() {
+        this.data = this.remoteService.remoteData.asObservable();
 
-}
+        this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+            this.totalCount = data;
+            this.grid1.isLoading = false;
+        });
+    }
+
+    public ngOnDestroy() {
+        if (this._dataLengthSubscriber) {
+            this._dataLengthSubscriber.unsubscribe();
+        }
+    }
 }
 ```
 }
@@ -455,290 +472,114 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 @@if (igxName === 'IgxGrid') {
 ```html
 <ng-template #customPager let-api>
-    <div class="igx-grid__footer">
-        <div class="igx-grid-paginator">
-            <div class="igx-grid-paginator__select">
-                <label class="igx-grid-paginator__label">Items per page</label>
-                <div class="igx-grid-paginator__select-input">
-                    <igx-select [(ngModel)]="perPage" type="border">
-                        <igx-select-item *ngFor=" let item of [5, 10, 15, 25, 50, 100, 500]" [value]="item">
-                            {{item}}
-                        </igx-select-item>
-                    </igx-select>
-                </div>
-            </div>
-            <div class="igx-grid-paginator__pager">
-                <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">first_page</igx-icon>
-                </button>
-                <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">chevron_left</igx-icon>
-                </button>
-                <span>{{ page + 1 }} of {{totalPages}}</span>
-                <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true"
-                        igxButton="icon">
-                    <igx-icon fontSet="material">chevron_right</igx-icon>
-                </button>
-                <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">last_page</igx-icon>
-                </button>
-            </div>
-        </div>
-    </div>
+    <igx-paginator #paginator
+        [totalRecords]="totalCount"
+        [(perPage)]="perPage"
+        [selectLabel]="'Records per page:'"
+        [selectOptions]="selectOptions"
+        [displayDensity]="grid1.displayDensity"
+        (pageChange)="paginate($event)">
+    </igx-paginator>
 </ng-template>
 ```
 
 ```typescript
-@ViewChild("customPager", { read: TemplateRef })
-public remotePager: TemplateRef<any>;
+@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
+@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
-public nextPage() {
-    this.firstPage = false;
-    this.page++;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-    this.remoteService.getData(skip, top);
-    if (this.page + 1 >= this.totalPages) {
-        this.lastPage = true;
-    }
+private _perPage = 10;
+private _dataLengthSubscriber;
+
+constructor(private remoteService: RemotePagingService) {
 }
 
-public previousPage() {
-    this.lastPage = false;
-    this.page--;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-    this.remoteService.getData(skip, top);
-    if (this.page <= 0) {
-        this.firstPage = true;
-    }
+...
+
+public ngAfterViewInit() {
+    this.grid1.isLoading = true;
+    this.remoteService.getData(0, this.perPage);
 }
 
-public paginate(page: number, recalc: true) {
+public paginate(page: number) {
     this.page = page;
     const skip = this.page * this.perPage;
     const top = this.perPage;
-    if (recalc) {
-        this.totalPages = Math.ceil(this.totalCount / this.perPage);
-    }
+
     this.remoteService.getData(skip, top);
-    this.buttonDeselection(this.page, this.totalPages);
 }
 
-public buttonDeselection(page: number, totalPages: number) {
-...
-}
-
-...
-public ngAfterViewInit() {
-    this.remoteService.getData(0, this.perPage);
-    this.@@igObjectRef.paginationTemplate = this.remotePager;
-}
 
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <ng-template #customPager let-api>
-    <div class="igx-grid__footer">
-        <div class="igx-grid-paginator">
-            <div class="igx-grid-paginator__select">
-                <label class="igx-grid-paginator__label">Items per page</label>
-                <div class="igx-grid-paginator__select-input">
-                    <igx-select [(ngModel)]="perPage" type="border">
-                        <igx-select-item *ngFor=" let item of [5, 10, 15, 25, 50, 100, 500]" [value]="item">
-                            {{item}}
-                        </igx-select-item>
-                    </igx-select>
-                </div>
-            </div>
-            <div class="igx-grid-paginator__pager">
-                <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">first_page</igx-icon>
-                </button>
-                <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">chevron_left</igx-icon>
-                </button>
-                <span>{{ page + 1 }} of {{totalPages}}</span>
-                <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true"
-                        igxButton="icon">
-                    <igx-icon fontSet="material">chevron_right</igx-icon>
-                </button>
-                <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">last_page</igx-icon>
-                </button>
-            </div>
-        </div>
-    </div>
+    <igx-paginator #paginator
+        [totalRecords]="totalCount"
+        [(perPage)]="perPage"
+        [selectLabel]="'Records per page:'"
+        [selectOptions]="selectOptions"
+        [displayDensity]="grid1.displayDensity"
+        (pageChange)="paginate($event)">
+    </igx-paginator>
 </ng-template>
 ```
 ```typescript
 @ViewChild("customPager", { read: TemplateRef })
-    public remotePager: TemplateRef<any>;
-    public title = "gridPaging";
+public remotePager: TemplateRef<any>;
+public title = "gridPaging";
     
 @ViewChild("layout1")
-    public layout1: IgxRowIslandComponent;
+public layout1: IgxRowIslandComponent;
 
 @ViewChild("hierarchicalGrid")
-    public hierarchicalGrid: IgxHierarchicalGridComponent;
-    
-    ...
-        public ngAfterViewInit() {
-        this.hierarchicalGrid.isLoading = true;
-        this.remoteService.getData(
-            { parentID: null, rootLevel: true, key: "Customers" }, 0, this.perPage).subscribe((data) => {
-            this.hierarchicalGrid.isLoading = false;
-            this.hierarchicalGrid.data = data;
-            this.hierarchicalGrid.paginationTemplate = this.remotePager;
-            this.hierarchicalGrid.cdr.detectChanges();
-        });
-    }
-    ...
-   public nextPage() {
-        this.firstPage = false;
-        this.page++;
-        const skip = this.page * this.perPage;
-        const top = this.perPage;
-        this.remoteService.getData(
-            { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
-            this.hierarchicalGrid.data = data;
-            this.hierarchicalGrid.cdr.detectChanges();
-        });
-        if (this.page + 1 >= this.totalPages) {
-            this.lastPage = true;
-        }
-    }
+public hierarchicalGrid: IgxHierarchicalGridComponent;
 
-    public previousPage() {
-        this.lastPage = false;
-        this.page--;
-        const skip = this.page * this.perPage;
-        const top = this.perPage;
-        this.remoteService.getData(
-            { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
-            this.hierarchicalGrid.data = data;
-            this.hierarchicalGrid.cdr.detectChanges();
-        });
-        if (this.page <= 0) {
-            this.firstPage = true;
-        }
-    }
+...
+    public ngAfterViewInit() {
+    this.hierarchicalGrid.isLoading = true;
+    this.remoteService.getData(
+        { parentID: null, rootLevel: true, key: "Customers" }, 0, this.perPage).subscribe((data) => {
+        this.hierarchicalGrid.isLoading = false;
+        this.hierarchicalGrid.data = data;
+        this.hierarchicalGrid.paginationTemplate = this.remotePager;
+        this.hierarchicalGrid.cdr.detectChanges();
+    });
+}
 
-    public paginate(page: number, recalc: true) {
-        this.page = page;
-        const skip = this.page * this.perPage;
-        const top = this.perPage;
-        if (recalc) {
-            this.totalPages = Math.ceil(this.totalCount / this.perPage);
-        }
-        this.remoteService.getData(
-            { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
-            this.hierarchicalGrid.data = data;
-            this.hierarchicalGrid.cdr.detectChanges();
-        });
-        this.buttonDeselection(this.page, this.totalPages);
-    }
+public paginate(page: number) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
 
-    public buttonDeselection(page: number, totalPages: number) {
-        ...
-    }
+    this.remoteService.getData(skip, top);
+}
+...
+
 
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <ng-template #customPager let-api>
-    <div class="igx-grid__footer">
-        <div class="igx-grid-paginator">
-            <div class="igx-grid-paginator__select">
-                <label class="igx-grid-paginator__label">Items per page</label>
-                <div class="igx-grid-paginator__select-input">
-                    <igx-select [(ngModel)]="perPage" type="border">
-                        <igx-select-item *ngFor=" let item of [5, 10, 15, 25, 50, 100, 500]" [value]="item">
-                            {{item}}
-                        </igx-select-item>
-                    </igx-select>
-                </div>
-            </div>
-            <div class="igx-grid-paginator__pager">
-                <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">first_page</igx-icon>
-                </button>
-                <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">chevron_left</igx-icon>
-                </button>
-                <span>{{ page + 1 }} of {{totalPages}}</span>
-                <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true"
-                        igxButton="icon">
-                    <igx-icon fontSet="material">chevron_right</igx-icon>
-                </button>
-                <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
-                        igxRippleCentered="true">
-                    <igx-icon fontSet="material">last_page</igx-icon>
-                </button>
-            </div>
-        </div>
-    </div>
+    <igx-paginator #paginator
+        [totalRecords]="totalCount"
+        [(perPage)]="perPage"
+        [selectLabel]="'Records per page:'"
+        [selectOptions]="selectOptions"
+        [displayDensity]="grid1.displayDensity"
+        (pageChange)="paginate($event)">
+    </igx-paginator>
 </ng-template>
 ```
 
 ```typescript
-public nextPage() {
-    this.firstPage = false;
-    this.page++;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-    this.remoteService.getData(skip, top);
-    if (this.page + 1 >= this.totalPages) {
-        this.lastPage = true;
-    }
-}
-
-public previousPage() {
-    this.lastPage = false;
-    this.page--;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-    this.remoteService.getData(skip, top);
-    if (this.page <= 0) {
-        this.firstPage = true;
-    }
-}
-
-public paginate(page: number, recalc: true) {
+public paginate(page: number) {
     this.page = page;
     const skip = this.page * this.perPage;
     const top = this.perPage;
-    if (recalc) {
-        this.totalPages = Math.ceil(this.totalCount / this.perPage);
-    }
-    this.remoteService.getData(skip, top);
-    this.buttonDeselection(this.page, this.totalPages);
-}
 
-public buttonDeselection(page: number, totalPages: number) {
-    if (totalPages === 1) {
-        this.lastPage = true;
-        this.firstPage = true;
-    } else if (page + 1 >= totalPages) {
-        this.lastPage = true;
-        this.firstPage = false;
-    } else if (page !== 0 && page !== totalPages) {
-        this.lastPage = false;
-        this.firstPage = false;
-    } else {
-        this.lastPage = false;
-        this.firstPage = true;
-    }
+    this.remoteService.getData(skip, top);
 }
 ```
 }
@@ -785,71 +626,11 @@ public buttonDeselection(page: number, totalPages: number) {
 </igx-tree-grid>
 ```
 }
-@@if (igxName === 'IgxGrid') {
-これでサンプルを実行できます。またパージング テンプレートをランタイムで変更するオプションを追加してサンプルを更に拡張できます。以下は、実装方法です。はじめにテンプレートにもう 1 つページング テンプレートを追加します。
-
-```html
-<ng-template #secCustomPager let-api>
-    <div class="igx-grid__footer">
-        <div id="numberPager" class="igx-grid-paginator" style="justify-content: center;">
-            <button [disabled]="firstPage" (click)="previousPage()" igxButton="flat">
-                PREV
-            </button>
-            <span *ngIf="shouldShowFirstPage" (click)="paginate(0, false)">
-                <a class="pageNavLinks" [routerLink]=''>{{1}}</a> <span class="pageNavLinks">...</span>
-            </span>
-            <span *ngFor="let item of pages" (click)="paginate(item, false)">
-                <a class="pageNavLinks {{activePage(item)}}" [routerLink]=''>{{item + 1}}</a>
-            </span>
-            <span *ngIf="shouldShowLastPage" (click)="paginate(totalPages - 1, false)">
-                <span class="pageNavLinks">...</span> <a class="pageNavLinks" [routerLink]=''>{{ totalPages }}</a>
-            </span>
-            <button [disabled]="lastPage" (click)="nextPage()" igxButton="flat">
-                NEXT
-            </button>
-        </div>
-    </div>
-</ng-template>
-```
-
-次にその他のロジックを使用してすでに作成したメソッドを拡張します。
-
-```typescript
-// the same also applies for the methods previousPage() and paginate(page: number, recalc: true)
-public nextPage() {
-    ...
-    if (this.grid1.paginationTemplate === this.secondPagerTemplate) {
-        this.setNumberOfPagingItems(this.page, this.totalPages);
-    }
-}
-// creates an array with the visible page numbers where the user can navigate according to the current page and the total page number
-public setNumberOfPagingItems(currentPage, totalPages) {
-    ....
-}
-```
-最後にランタイムでユーザーがページャー テンプレートを変更するためのボタンを追加します。
-
-```html
-<button (click)="changeTemplate()" igxButton="flat">Change Paging Template</button>
-```
-
-```typescript
-public changeTemplate() {
-    if (this.grid1.paginationTemplate === this.remotePager) {
-        this.grid1.paginationTemplate = this.secondPagerTemplate;
-        this.setNumberOfPagingItems(this.page, this.totalPages);
-    } else {
-        this.pages = [];
-        this.grid1.paginationTemplate = this.remotePager;
-    }
-    this.grid1.cdr.detectChanges();
-}
-```
-}
 
 上記すべての設定を完了すると以下のような結果になります。
 
 #### デモ
+
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
@@ -858,16 +639,6 @@ public changeTemplate() {
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:580px">
-    <iframe id="hierarchical-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:560px">
@@ -879,6 +650,86 @@ public changeTemplate() {
 </div>
 <div class="divider--half"></div>
 }
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:580px">
+    <iframe id="hierarchical-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxGrid') {
+### カスタム テンプレートのリモート ページング
+
+独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。上記を実証するために、リモート ページングの例を拡張する方法を説明します。
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="grid-custom-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
+以下は、独自の `next `および `previous` ページ操作を実装するために定義したメソッドです。
+
+```typescript
+@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
+@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
+
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
+    }
+    this.setNumberOfPagingItems(this.page, this.totalPages);
+}
+
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(skip, top);
+    if (this.page <= 0) {
+        this.firstPage = true;
+    }
+    this.setNumberOfPagingItems(this.page, this.totalPages);
+}
+
+public paginate(page: number, recalc = false) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
+    }
+    this.setNumberOfPagingItems(this.page, this.totalPages);
+    this.remoteService.getData(skip, top);
+    this.buttonDeselection(this.page, this.totalPages);
+}
+
+public buttonDeselection(page: number, totalPages: number) {
+...
+}
+
+...
+public ngAfterViewInit() {
+    this.remoteService.getData(0, this.perPage);
+    this.@@igObjectRef.paginationTemplate = this.remotePager;
+}
+
+```
+
+}
+
 
 ### API リファレンス
 <div class="divider--half"></div>
@@ -896,8 +747,8 @@ public changeTemplate() {
 * [ページング](paging.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
-* [列ピン固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列のピン固定](column_pinning.md)
+* [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

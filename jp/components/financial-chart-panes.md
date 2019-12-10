@@ -7,21 +7,21 @@ _language: ja
 
 ## ペイン
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールには、財務データを表示する複数のペインがあります。
+`XamFinancialChart` コントロールには、財務データを表示する複数のペインがあります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="financial-chart-panes-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 以下のペインが Financial Chart コントロールで利用できます。
 
--   価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
+-   価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、およびファイナンシャル オーバーレイを使用して価格を描画します。
 -   インジケーター ペイン - すべての財務指標を別のチャートに描画し、`BollingerBands` および `PriceChannel` オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
 -   ボリューム ペイン - 柱状、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
 -   ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
@@ -56,7 +56,7 @@ _language: ja
 
 ### 価格ペイン
 
-このペインは、在庫価格を表示し、経時的な在庫の高値、安値、始値、終値を示します。さらに、トレンドラインおよびオーバーレイを表示できます。ツールバーからチャート タイプを選択できます。デフォルトで、チャート タイプは `auto` に設定されています。次のコードに示すように、デフォルト設定をオーバーライドできます。
+このペインは、在庫価格を表示し、経時的な在庫の高値、安値、始値、終値を示します。さらに、トレンドラインおよびオーバーレイを表示できます。ツールバーからチャート タイプを選択できます。デフォルトで、チャート タイプは `auto` に設定されています。以下のコードに示すように、デフォルト設定をオーバーライドできます。
 
 ```html
 <igx-financial-chart

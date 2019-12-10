@@ -10,14 +10,10 @@ mentionedTypes: ['Spreadsheet']
 
 このトピックでは、クリップボードの操作を実行する方法を説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-clipboard-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
 </div>
 
 <div class="divider--half"></div>
@@ -25,6 +21,8 @@ mentionedTypes: ['Spreadsheet']
 ### 依存関係
 
 クリップボードを利用する前に、SpreadsheetAction をインポートします。
+
+<!-- Angular -->
 
 ```ts
 import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
@@ -38,11 +36,14 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 以下のコードスニペットは、データの検証規則を設定する方法を示しています。
 
 ```ts
+<<<<<<< HEAD
+=======
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 
 // ...
 
+>>>>>>> origin/vnext
 public cut(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.Cut);
 }

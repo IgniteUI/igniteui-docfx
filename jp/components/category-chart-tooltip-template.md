@@ -1,27 +1,28 @@
 ---
-title: Category Chart のカスタム ツールチップ
-_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Category Chart
+title: カテゴリー チャート|データ可視化ツール|Ignite UI for Angular|ツールチップ テンプレート|インフラジスティックス
+_description: カテゴリー チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
+_keywords: カテゴリ チャート, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamCategoryChart']
 _language: ja
 ---
 
-## カスタム ツールチップ
+## ツールチップ テンプレート
 
-Category Chart は、各シリーズ タイプにデフォルト ツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルト ツールチップのコンテンツおよびルック アンド フィールを変更するためにカスタム ツールチップを構成できます。
+Angular カテゴリー チャート コンポネントは、各シリーズ タイプにデフォルト ツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルトのツールチップが適切でない場合、 ツールチップのコンテンツおよびルック アンド フィールをカスタマイズできます。
 
-### デモ
+### サンプル
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="category-chart-custom-tooltips-sample-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-custom-tooltips-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="category-chart-tooltip-template-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-custom-tooltips-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-template-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-ツールチップ コンテンツは、以下のコードのように、ツールチップのためのテンプレートを作成してカスタマイズ化されます。
+以下のコードのようにツールチップ コンテンツは、ツールチップ用のテンプレートを作成してカスタマイズできます。
 
 ```html
 <ng-template let-series="series" let-item="item" #valueTooltip>
@@ -34,7 +35,7 @@ Category Chart は、各シリーズ タイプにデフォルト ツールチッ
       <span> Hyrdo :{{item.Hydro | number}}<br/></span>
     </div>
 </ng-template>
-    
+
 <div class="chart">
     <igx-category-chart height="100%" width="100%"
         [dataSource]="data" chartTitle="Energy Production"

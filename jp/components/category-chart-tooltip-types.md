@@ -1,15 +1,16 @@
 ---
-title: ツールチップ タイプ
-_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular Grid コンポーネント, Angular Chart コンポーネント, Angular Category Chart
+title: カテゴリー チャート|データ可視化ツール|Ignite UI for Angular|ツールチップ タイプ|インフラジスティックス
+_description: カテゴリー チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
+_keywords: カテゴリ チャート, Ignite UI for Angular, Infragistics
+mentionedTypes: ['XamCategoryChart', 'ToolTipType']
 _language: ja
 ---
 
 ## ツールチップ タイプ
 
-このトピックでは、[`IgxCategoryChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychart.html) のツールチップ タイプについて説明します。
+Ignite UI for Angular カテゴリ チャート コンポネントには、さまざまなツールチップ タイプがあります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-tooltip-types-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -22,12 +23,12 @@ _language: ja
 
 ### ツールチップ タイプ
 
-[`IgxCategoryChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychart.html) は以下の方法でツールチップの表示を設定できます。
+カテゴリ チャート コンポネントは以下の方法でツールチップの表示を設定できます。
 
-1.  `Default` ツールチップはポインターが項目上に配置されたときに単一の項目に対してツールチップを表示できます。
-2.  `Item` ツールチップはポインターが項目上に配置されたときに各データ項目に対してツールチップを表示できます。
-3.  `Category` ツールチップはポインターがデータ ポイント上に配置されたときにすべてのデータ ポイントに対してツールチップを表示できます。
-4.  `None` はツールチップが非表示になります。
+1.  [`Default`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#default) ツールチップはポインターが項目上に配置されたときに単一の項目に対してツールチップを表示できます。
+2.  [`Item`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#item) ツールチップはポインターが項目上に配置されたときに各データ項目に対してツールチップを表示できます。
+3.  [`Category`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#category) ツールチップはポインターがデータ ポイント上に配置されたときにすべてのデータ ポイントに対してツールチップを表示できます。
+4.  [`None`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#none) はツールチップが非表示になります。
 
 ```html
 <igx-category-chart
