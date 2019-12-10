@@ -14,4 +14,4 @@ node_js:
 # # Create as alias for nuget
 # - mono /usr/local/bin/nuget.exe install docfx.console -ExcludeVersion
 # - export DOCFX_TOOL="mono docfx.console/tools/docfx.exe"
-script: gulp build-travis
+script: gulp buildTravis
