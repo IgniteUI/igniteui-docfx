@@ -110,7 +110,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
         <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
         <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
         ...
-    </igx-hierarchical-grid> 
+    </igx-hierarchical-grid>
 
 ```
 }
@@ -171,6 +171,8 @@ public disableSummary() {
 }
 ```
 }
+
+#### カスタム @@igComponent 集計
 この関数が要件に合わない場合、指定した列にカスタム集計を提供できます。これには、基本クラス [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかを列データ型や必要に応じてオーバーライドします。このように既存の関数を再定義、または新しい関数を追加できます。[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) クラスは、[`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) メソッドにデフォルト実装のみを提供します。[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、[`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min)、[`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max)、[`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum)、[`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average) を提供します。[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、追加で [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) と [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest) を提供します。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
@@ -182,7 +184,7 @@ class MySummary extends IgxNumberSummaryOperand {
     constructor() {
         super();
     }
-    
+
     operate(data?: any[]): IgxSummaryResult[] {
         const result = super.operate(data);
         result.push({
@@ -211,7 +213,7 @@ class MySummary extends IgxNumberSummaryOperand {
         label: "More than 5",
         summaryResult: data.filter((rec) => rec > 5).length
       });
-  
+
       return result;
     }
   }
@@ -280,6 +282,55 @@ export class HGridSummarySampleComponent implements OnInit {
 }
 ```
 }
+
+#### Custom summaries, which access all @@igComponent data
+ Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
+As you can see in the code snippet below the operate method has the following three parameters:
+- columnData - gives you an array that contains the values only for the current column
+- allGridData - gives you the whole grid data source
+- fieldName - current column field
+
+```typescript
+class MySummary extends IgxNumberSummaryOperand {
+    constructor() {
+        super();
+    }
+    operate(columnData: any[], allGridData = [], fieldName?): IgxSummaryResult[] {
+        const result = super.operate(allData.map(r => r[fieldName]));
+        result.push({ key: 'test', label: 'Total Discontinued', summaryResult: allData.filter((rec) => rec.Discontinued).length });
+        return result;
+    }
+}
+```
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-alldata-summaries-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-alldata-summaries' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="tree-grid-allData-summary-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+  <div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-allData-summary-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 @@if (igxName === 'IgxGrid') {
 ### グループの集計
 
@@ -353,7 +404,7 @@ export class HGridSummarySampleComponent implements OnInit {
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法は、[`igx-grid-summary-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`, `$focus-background-color`、`$label-color`, `$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
 
@@ -368,7 +419,7 @@ $custom-theme: igx-grid-summary-theme(
     $pinned-border-color: #e41c77
 );
 ```
-最後にそれぞれのテーマを持つコンポーネント mixins を**含めます**。 
+最後にそれぞれのテーマを持つコンポーネント mixins を**含めます**。
 
 ```scss
 @include igx-grid-summary($custom-theme);
@@ -419,7 +470,7 @@ $custom-theme: igx-grid-summary-theme(
 
 テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary) の 1 つを拡張します。:  
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary) の 1 つを拡張します。:
 
 ```scss
 // Extending the light grid summary schema
@@ -459,7 +510,7 @@ $custom-theme: igx-grid-summary-theme(
 #### デモ
 
 <div class="sample-container loading" style="height:710px">
-    <iframe id="grid-groupby-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary-styling' width="100%" height="100%" 
+    <iframe id="grid-groupby-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary-styling' width="100%" height="100%"
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>

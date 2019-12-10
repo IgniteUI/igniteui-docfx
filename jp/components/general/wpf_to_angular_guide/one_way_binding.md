@@ -49,7 +49,7 @@ export class SampleComponent implements OnInit {
 
 ### 補間
 
-上記のコードでは、`text` プロパティの値へのバインディングを使用して、HTML にテキストを表示するだけです。ここでは、`補間`を使用して一方向のバインディングを作成しています。次に二重中括弧、プロパティの名前 (ここではテキスト)、2 つの閉じ中括弧を入力します。同じ結果となる他の方法として、`補間`構文を再度使用して、h2 タグを作成し、`text` プロパティをその innerHTML プロパティにバインドがあります。
+上記のコードでは、`text` プロパティの値へのバインディングを使用して、HTML にテキストを表示するだけです。ここでは、`補間`を使用して一方向のバインディングを作成しています。次に二重中括弧、プロパティの名前 (ここでは `text`)、2 つの閉じ中括弧を入力します。同じ結果となる他の方法として、`補間`構文を再度使用して、h2 タグを作成し、`text` プロパティをその innerHTML プロパティにバインドがあります。
 ```html
 <h2 innerHTML="{{ text }}"></h2>
 ```
@@ -94,7 +94,7 @@ export class SampleComponent implements OnInit {
   constructor() { }
 ...
 ```
-テキストタイプの単純な`入力`を作成し、`isDisabled` プロパティを入力の `disabled` プロパティにバインドします。
+テキストタイプの単純な `input` を作成し、`isDisabled` プロパティを入力の `disabled` プロパティにバインドします。
 ```html
 <input type="text" disabled="{{ isDisabled }}">
 ```

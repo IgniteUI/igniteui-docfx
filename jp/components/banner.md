@@ -126,7 +126,7 @@ Connection Banner のテンプレート化は、`igx-banner-actions` セレク�
     ...
 ```
 
-閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`connectionBanner.close()` のみの呼び出しが可能です。確認操作 (`‘Turn On Wifi’`) は追加のロジックを必要とするため、コンポーネントで定義します。
+閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`connectionBanner.close()` のみの呼び出しが可能です。確認操作 (`'Turn On Wifi'`) は追加のロジックを必要とするため、コンポーネントで定義します。`onNetworkStateChange` `Observable`を作成してサブスクライブし、変更するたびに `refreshBanner` メソッドを呼び出します。このメソッドは、`wifiState` に基づいてバナーを切り替えます。
 
 
 ```typescript
@@ -255,7 +255,7 @@ export class MyBannerComponent {
 ```
 
 ### パレットと色の定義
-インデックス ファイルをインポート後、 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用する 2 色のメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、カスタム `igx-banner` スタイルにこれらを使用します。
+`index` ファイルをインポート後、 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用する 2 色のメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、カスタム `igx-banner` スタイルにこれらを使用します。
 最初にカスタム パレットを定義し、メイン カラーを渡します。
 ```scss
 // in styles.scss
