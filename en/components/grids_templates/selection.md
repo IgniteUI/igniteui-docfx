@@ -177,6 +177,7 @@ The template we are going to use to combine the grid with the context menu:
 * [Summaries](summaries.md)
 * [Column Moving](column_moving.md)
 * [Virtualization and Performance](virtualization.md)
+@@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
