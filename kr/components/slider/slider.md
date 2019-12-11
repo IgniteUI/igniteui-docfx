@@ -281,6 +281,9 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 
 ###Additional Resources
 
+* [Slider ticks](slider_ticks.md)
+
+
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
