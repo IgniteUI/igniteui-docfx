@@ -142,7 +142,7 @@
     - name: 複数列ヘッダー
       href: grid/multi_column_headers.md
       new: false
-    - name: Collapsible Column Groups
+    - name: 列グループの折りたたみ
       href: grid/collapsible_column_groups.md
       new: true
     - name: 表示密度
@@ -926,7 +926,11 @@
 - name: Dialog Window
   href: dialog.md
 - name: Slider
-  href: slider.md
+  href: slider/slider.md
+  new: true
+  items:
+    - name: スライダー目盛り
+      href: slider/slider_ticks.md
 - name: Ripple
   href: ripple.md
 - name: Toggle

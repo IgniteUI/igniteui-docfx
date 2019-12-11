@@ -163,6 +163,9 @@
     - name: Sizing
       href: grid/sizing.md
       new: true
+    - name: Master-Detail Grid
+      href: grid/master_detail.md
+      new: true
     - name: State Persistence
       href: grid/state_persistence.md
       new: true
@@ -923,7 +926,11 @@
 - name: Dialog Window
   href: dialog.md
 - name: Slider
-  href: slider.md
+  href: slider/slider.md
+  new: true
+  items:
+    - name: Slider ticks
+      href: slider/slider_ticks.md
 - name: Ripple
   href: ripple.md
 - name: Toggle

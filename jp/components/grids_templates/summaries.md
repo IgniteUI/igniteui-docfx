@@ -283,12 +283,12 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-#### Custom summaries, which access all @@igComponent data
- Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
-As you can see in the code snippet below the operate method has the following three parameters:
-- columnData - gives you an array that contains the values only for the current column
-- allGridData - gives you the whole grid data source
-- fieldName - current column field
+#### すべての @@igComponent データにアクセスするカスタム集計
+ カスタム列集計内のすべてのグリッド データにアクセスできます。IgxSummaryOperand `operate` メソッドには、2 つの追加のオプション パラメーターが導入されています。
+以下のコード スニペットで示されるように operate メソッドには以下の 3 つのパラメーターがあります。
+- columnData - 現在の列の値のみを含む配列を提供します。
+- allGridData - グリッド データソース全体を提供します。
+- fieldName - 現在の列フィールド。
 
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
@@ -309,7 +309,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -318,7 +318,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -327,7 +327,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 

@@ -75,7 +75,7 @@ public date: Date = new Date(Date.now());
 <igx-month-picker [value]="date"></igx-date-picker>
 ```
 
-Two-way データ バインディングを作成するには、以下のように `ngModel` を設定します。
+双方向データ バインディングを作成するには、以下のように `ngModel` を設定します。
 
 ```html
 <!-- month-picker-sample.component.html -->
