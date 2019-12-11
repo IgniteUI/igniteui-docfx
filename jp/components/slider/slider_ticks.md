@@ -1,12 +1,12 @@
 ﻿---
-title: Tick Marks | Thumb Track |  Ignite UI for Angular | Infragistics
-_description: Learn how to configure the Ignite UI for Angular slider tick marks, and improve your data visualization by using angular slider step with convenient thumb track
-_keywords: tick marks, igniteui for angular, infragistics
+title: 目盛り | つまみトラック |  Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular Slider 目盛りを設定する方法を紹介し、便利なつまみトラックで Angular スライダー ステップを使用してデータ可視化を向上します。
+_keywords: 目盛り, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-## Slider Ticks
-**スライダー目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行う方法を提供します。この新しい機能を使用すると、どのデータが残っているかを確認するためにスライダーを操作する必要がなくなります。また、目盛りと目盛りラベルの配置と方向の制御に関して、高い柔軟性があり、**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、またはその**両方**を選択したりできます。さらに、この機能は、プライマリ目盛りラベル、セカンダリ目盛りラベル、またはその両方をオンまたはオフにする方法を提供し、水平から垂直 (上から下 (90) または下から上 (-90)) で回転形式を変更することもできます。
+## Slider 目盛り
+**Slider 目盛り**, **Slider 目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行うことができます。この新しい機能は、データの表示範囲を確認するための Angular Slider の操作が必要なくなります。また、目盛りと目盛りラベルの配置と方向の制御に関して、高い柔軟性があり、**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、またはその**両方**を選択したりできます。さらに、この機能は、プライマリ目盛りラベル、セカンダリ目盛りラベル、またはその両方をオンまたはオフにする方法を提供し、水平から垂直 (上から下 (90) または**下から上** (-90)) で回転形式を変更することもできます。
 
 ### 使用方法
 はじめに、[Ignite UI for Angular で作業を開始](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html)を完了してください。
@@ -49,7 +49,7 @@ public type = SliderType.RANGE;
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-スライダーの下の目盛りを見てみましょう。まず、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を true に設定することにより、機能全体が有効になります。[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を 6 に設定すると（レンダリングが0から始まるため）、すべてのプライマリ**目盛り**をスライダーの下に定義して均等に配置します。[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) の設定は少し異なり、2 つの**プライマリ**間の4つのセカンダリ目盛りを定義し、計算が正しい場合、21 **目盛り**がすべてレンダリングされます。
+スライダーの下の目盛りを見てみましょう。まず、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を **true** に設定することにより、機能全体が有効になります。[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を 6 に設定すると（レンダリングが0から始まるため）、すべてのプライマリ**目盛り**をスライダーの下に定義して均等に配置します。[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) の設定は少し異なり、2 つの**プライマリ**間の4つのセカンダリ目盛りを定義し、計算が正しい場合、21 **目盛り**がすべてレンダリングされます。
 
 
 
@@ -248,5 +248,6 @@ public ticksOrientation = TicksOrientation.Top;
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
+
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

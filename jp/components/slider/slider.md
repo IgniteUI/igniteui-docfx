@@ -1,7 +1,7 @@
 ﻿---
-title: Angular Slider |  Ignite UI for Angular | Infragistics
-_description: Learn how to configure a selection in a given range by using the thumb track with Angular Slider part of Ignite UI for Angular. Choose between singe and range slider types
-_keywords: angular slider, igniteui for angular, infragistics
+title: Angular Slider |  Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular の Angular Slider でつまみラックを使用して、特定の範囲で選択を構成する方法を紹介します。
+_keywords: angular slider, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -43,12 +43,9 @@ export class AppModule {}
 ```
 
 #### 連続スライダー
-> [!WARNING]
-> `isContinuous` プロパティは非推奨になりました。代わりに [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) を使用してください。
-
 簡易な連続スライダーを使用します。最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) プロパティを true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。また、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの "volume" プロパティにバインドします。
 
-> 注:
+> [!NOTE]
 > 連続スライダーには、トラック上にステップ インジケーターはなく、操作中に表示されるつまみラベルもありません。
 
 ```html
@@ -267,8 +264,8 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) に対応すると、スライドできる範囲が制限されます。
 
 #### ラベルのテンプレート化
-上記では、[igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) ディレクティブと [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) ディレクティブの両方を使用して、カスタム `labels` テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
-ここでの[コンテキスト]({environment:angularApiUrl}/classes/igxslidercomponent.html#context)は、暗黙的に `value` input プロパティへの参照を、そして `labelsView` が有効な場合は明示的に `labels` 入力への参照を与えます。
+上記では、[igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) ディレクティブと [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) ディレクティブの両方を使用して、カスタム `label` テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
+ここでの[コンテキスト]({environment:angularApiUrl}/classes/igxslidercomponent.html#context)は、暗黙的に `value` 入力プロパティへの参照を、そして `labelsView` が有効な場合は明示的に `labels` 入力への参照を与えます。
 
 ```html
   <ng-template igxSliderThumbFrom let-value let-labels="labels">
