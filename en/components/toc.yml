@@ -127,6 +127,9 @@
         - name: Cell selection
           href: grid/cell_selection.md
           new: true
+        - name: Selection-based Aggregates
+          href: grid/selection_based_aggregates.md
+          new: true
     - name: Searching
       href: grid/search.md
       new: false
