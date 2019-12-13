@@ -34,12 +34,12 @@ The following code snippet shows how to display geographic imagery from Esri Map
 ```
 
 ```ts
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { ArcGISOnlineMapImagery } from "igniteui-angular-maps/ES5/igx-arc-gis-online-map-imagery";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxArcGISOnlineMapImagery } from 'igniteui-angular-maps';
 // ...
 public map: IgxGeographicMapComponent;
 
-const tileSource = new ArcGISOnlineMapImagery();
+const tileSource = new IgxArcGISOnlineMapImagery();
 tileSource.mapServerUri = "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer";
 this.map.backgroundContent = tileSource;
 ```

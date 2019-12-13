@@ -38,8 +38,8 @@ The [`IgxLinearGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/
 
 ```ts
 // app.module.ts
-import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
-import { IgxLinearGaugeComponent } from "igniteui-angular-gauges/ES5/igx-linear-gauge-component";
+import { IgxLinearGaugeModule } from 'igniteui-angular-gauges';
+import { IgxLinearGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [

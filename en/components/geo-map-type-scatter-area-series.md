@@ -91,12 +91,10 @@ The following code shows how to bind the [`IgxGeographicScatterAreaSeriesCompone
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxCustomPaletteColorScaleComponent
-} from "igniteui-angular-charts/ES5/igx-custom-palette-color-scale-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicScatterAreaSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-scatter-area-series-component";
+import { IgxCustomPaletteColorScaleComponent } from 'igniteui-angular-charts';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicScatterAreaSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-geographic-scatter-area-series",
@@ -113,14 +111,14 @@ export class MapTypeScatterAreaSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-    const sds = new ShapeDataSource();
+    const sds = new IgxShapeDataSource();
     sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
     sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
     sds.dataBind();
     sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
 }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
     const shapeRecords = sds.getPointData();
     const contourPoints: any[] = [];
     for (const record of shapeRecords) {

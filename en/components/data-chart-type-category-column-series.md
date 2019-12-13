@@ -51,14 +51,14 @@ Creation of the [`IgxColumnSeriesComponent`](/products/ignite-ui-angular/api/doc
 
 ```ts
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxColumnSeries } from "igniteui-angular-charts/ES5/igx-column-series";
+import { IgxColumnSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

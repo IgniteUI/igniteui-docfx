@@ -20,18 +20,18 @@ The Infragistics Angular Excel Engine's [`Worksheet`](/products/ignite-ui-angula
 The following code shows the imports needed to use the code-snippets below:
 
 ```ts
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { Color } from "igniteui-angular-core/ES5/Color";
+import { Workbook } from "igniteui-angular-excel";
+import { Worksheet } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { Color } from "igniteui-angular-core";
 
-import { CustomFilterCondition } from "igniteui-angular-excel/ES5/excel.core";
-import { ExcelComparisonOperator } from "igniteui-angular-excel/ES5/excel.core";
-import { FormatConditionTextOperator } from "igniteui-angular-excel/ES5/excel.core";
-import { OrderedSortCondition } from "igniteui-angular-excel/ES5/excel.core";
-import { RelativeIndex } from "igniteui-angular-excel/ES5/excel.core";
-import { SortDirection } from "igniteui-angular-excel/ES5/excel.core";
-import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/excel.core";
+import { CustomFilterCondition } from "igniteui-angular-excel";
+import { ExcelComparisonOperator } from "igniteui-angular-excel";
+import { FormatConditionTextOperator } from "igniteui-angular-excel";
+import { OrderedSortCondition } from "igniteui-angular-excel";
+import { RelativeIndex } from "igniteui-angular-excel";
+import { SortDirection } from "igniteui-angular-excel";
+import { WorkbookColorInfo } from "igniteui-angular-excel";
 ```
 
 ### Configuring the Gridlines

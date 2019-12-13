@@ -41,8 +41,8 @@ The [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescrip
 
 ```ts
 // app.module.ts
-import { IgxGeographicMapModule } from "igniteui-angular-maps/ES5/igx-geographic-map-module";
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { IgxGeographicMapModule } from 'igniteui-angular-maps';
+import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -57,7 +57,7 @@ export class AppModule {}
 
 ```ts
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-overview",

@@ -39,7 +39,7 @@ The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest
 
 ```ts
 // heatworker.worker.ts
-import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/ES5/HeatTileGeneratorWebWorker";
+import { HeatTileGeneratorWebWorker } from 'igniteui-angular-core';
 
 const worker: Worker = self as any;
 worker.onmessage = HeatTileGeneratorWebWorker.onmessage;
@@ -56,10 +56,10 @@ export default {} as typeof Worker & (new () => Worker);
 <!-- Angular -->
 
 ```ts
-import { HeatTileGenerator } from "igniteui-angular-core/ES5/igx-heat-tile-generator";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { TileGeneratorMapImagery } from "igniteui-angular-maps/ES5/igx-tile-generator-map-imagery";
+import { IgxHeatTileGenerator } from 'igniteui-angular-core';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxTileGeneratorMapImagery } from 'igniteui-angular-maps';
 ```
 
 ### Creating Heatmap
@@ -78,14 +78,14 @@ The following code snippet shows how to display a population based heat-map in t
 @ViewChild("map", { static: true })
 public map: IgxGeographicMapComponent;
 public data: any[];
-public tileImagery: TileGeneratorMapImagery;
+public tileImagery: IgxTileGeneratorMapImagery;
 // ...
 constructor() {
     this.data = this.initData();
 
-    this.tileImagery = new TileGeneratorMapImagery();
+    this.tileImagery = new IgxTileGeneratorMapImagery();
 
-    const con: ShapeDataSource = new ShapeDataSource();
+    const con: IgxShapeDataSource = new IgxShapeDataSource();
     con.importCompleted.subscribe((s, e) => {
         const data = con.getPointData();
         const lat: number[] = [];
@@ -108,7 +108,7 @@ constructor() {
             }
         }
 
-        const gen = new HeatTileGenerator();
+        const gen = new IgxHeatTileGenerator();
         gen.xValues = lon;
         gen.yValues = lat;
         gen.values = val;

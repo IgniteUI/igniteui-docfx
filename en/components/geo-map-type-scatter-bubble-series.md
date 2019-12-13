@@ -63,14 +63,13 @@ The following table summarizes the GeographicHighDensityScatterSeries series pro
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxSizeScaleComponent } from "igniteui-angular-charts/ES5/igx-size-scale-component";
-import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { DataContext } from "igniteui-angular-core/ES5/igx-data-context";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicProportionalSymbolSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-proportional-symbol-series-component";
+import { IgxSizeScaleComponent } from 'igniteui-angular-charts';
+import { IgxValueBrushScaleComponent } from 'igniteui-angular-charts';
+import { IgxDataContext } from 'igniteui-angular-core';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicProportionalSymbolSeriesComponent } from 'igniteui-angular-maps';
+import { MarkerType } from 'igniteui-angular-charts';
 import { WorldLocations } from "../../utilities/WorldLocations";
 
 @Component({
@@ -88,14 +87,14 @@ export class MapTypeScatterBubbleSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-    const sds = new ShapeDataSource();
+    const sds = new IgxShapeDataSource();
     sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
     sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
     sds.dataBind();
     sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
 }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
     const shapeRecords = sds.getPointData();
     console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
 

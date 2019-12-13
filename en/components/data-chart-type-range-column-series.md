@@ -51,11 +51,11 @@ Creation of the [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/ap
 
 ```ts
 // in app.module.ts file
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxRangeColumnSeries } from "igniteui-angular-charts/ES5/igx-range-column-series";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxRangeColumnSeries } from 'igniteui-angular-charts';
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

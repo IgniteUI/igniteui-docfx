@@ -77,28 +77,28 @@ The stacked series requires the following modules:
 
 ```ts
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxCategoryYAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxStackedAreaSeries } from "igniteui-angular-charts/ES5/igx-stacked-area-series";
-import { IgxStackedBarSeries } from "igniteui-angular-charts/ES5/igx-stacked-bar-series";
-import { IgxStackedColumnSeries } from "igniteui-angular-charts/ES5/igx-stacked-column-series";
-import { IgxStackedLineSeries } from "igniteui-angular-charts/ES5/igx-stacked-line-series";
-import { IgxStackedSplineAreaSeries } from "igniteui-angular-charts/ES5/igx-stacked-spline-area-series";
-import { IgxStackedSplineSeries } from "igniteui-angular-charts/ES5/igx-stacked-spline-series";
-import { IgxStacked100AreaSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-area-series";
-import { IgxStacked100BarSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-bar-series";
-import { IgxStacked100ColumnSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-column-series";
-import { IgxStacked100LineSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-line-series";
-import { IgxStacked100SplineAreaSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-spline-area-series"
-import { IgxStacked100SplineSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-spline-series";
+import { IgxStackedAreaSeries } from 'igniteui-angular-charts';
+import { IgxStackedBarSeries } from 'igniteui-angular-charts';
+import { IgxStackedColumnSeries } from 'igniteui-angular-charts';
+import { IgxStackedLineSeries } from 'igniteui-angular-charts';
+import { IgxStackedSplineAreaSeries } from 'igniteui-angular-charts';
+import { IgxStackedSplineSeries } from 'igniteui-angular-charts';
+import { IgxStacked100AreaSeries } from 'igniteui-angular-charts';
+import { IgxStacked100BarSeries } from 'igniteui-angular-charts';
+import { IgxStacked100ColumnSeries } from 'igniteui-angular-charts';
+import { IgxStacked100LineSeries } from 'igniteui-angular-charts';
+import { IgxStacked100SplineAreaSeries } from 'igniteui-angular-charts'
+import { IgxStacked100SplineSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
-import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-chart-stacked-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
+import { IgxDataChartStackedModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

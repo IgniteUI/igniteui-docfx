@@ -35,11 +35,11 @@ This code example explicitly sets `BackgroundContent` of the map component to th
 ```
 
 ```ts
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { OpenStreetMapImagery } from "igniteui-angular-maps/ES5/igx-open-street-map-imagery";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxOpenStreetMapImagery } from 'igniteui-angular-maps';
 // ...
 public map: IgxGeographicMapComponent;
 
-const tileSource = new OpenStreetMapImagery();
+const tileSource = new IgxOpenStreetMapImagery();
 this.map.backgroundContent = tileSource;
 ```

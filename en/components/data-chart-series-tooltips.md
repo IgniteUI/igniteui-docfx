@@ -24,7 +24,7 @@ The Angular data chart component has support for showing tooltips along with a c
 In order to use tooltips or tooltip layers in the Angular data chart component, you need to import and register the interactivity module. This can be done by using the following code:
 
 ```ts
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [ IgxDataChartInteractivityModule ]

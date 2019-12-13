@@ -75,25 +75,25 @@ The category series require the following modules:
 
 ```ts
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxCategoryYAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxAreaSeries } from "igniteui-angular-charts/ES5/igx-area-series";
-import { IgxBarSeries } from "igniteui-angular-charts/ES5/igx-bar-series";
-import { IgxColumnSeries } from "igniteui-angular-charts/ES5/igx-column-series";
-import { IgxLineSeries } from "igniteui-angular-charts/ES5/igx-line-series";
-import { IgxPointSeries } from "igniteui-angular-charts/ES5/igx-point-series";
-import { IgxSplineSeries } from "igniteui-angular-charts/ES5/igx-spline-series";
-import { IgxSplineAreaSeries } from "igniteui-angular-charts/ES5/igx-spline-area-series";
-import { IgxStepAreaSeries } from "igniteui-angular-charts/ES5/igx-step-area-series";
-import { IgxStepLineSeries } from "igniteui-angular-charts/ES5/igx-step-line-series";
-import { IgxWaterfallSeries } from "igniteui-angular-charts/ES5/igx-waterfall-series";
+import { IgxAreaSeries } from 'igniteui-angular-charts';
+import { IgxBarSeries } from 'igniteui-angular-charts';
+import { IgxColumnSeries } from 'igniteui-angular-charts';
+import { IgxLineSeries } from 'igniteui-angular-charts';
+import { IgxPointSeries } from 'igniteui-angular-charts';
+import { IgxSplineSeries } from 'igniteui-angular-charts';
+import { IgxSplineAreaSeries } from 'igniteui-angular-charts';
+import { IgxStepAreaSeries } from 'igniteui-angular-charts';
+import { IgxStepLineSeries } from 'igniteui-angular-charts';
+import { IgxWaterfallSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

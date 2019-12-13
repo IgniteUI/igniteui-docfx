@@ -46,15 +46,15 @@ Creation of the [`IgxStacked100BarSeriesComponent`](/products/ignite-ui-angular/
 
 ```ts
 // axis' modules:
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
-import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axis";
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
+import { IgxCategoryYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxStacked100BarSeries } from "igniteui-angular-charts/ES5/igx-stacked-100-bar-series";
+import { IgxStacked100BarSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
-import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-chart-stacked-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
+import { IgxDataChartStackedModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

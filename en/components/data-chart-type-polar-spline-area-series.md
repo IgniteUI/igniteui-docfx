@@ -50,15 +50,15 @@ Creation of the [`IgxPolarSplineAreaSeriesComponent`](/products/ignite-ui-angula
 
 ```ts
 // axis' modules:
-import { IgxNumericAngleAxis } from "igniteui-angular-charts/ES5/igx-numeric-angle-axis";
-import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
+import { IgxNumericAngleAxis } from 'igniteui-angular-charts';
+import { IgxNumericRadiusAxis } from 'igniteui-angular-charts';
 // series modules:
-import { IgxPolarSplineAreaSeries } from "igniteui-angular-charts/ES5/igx-polar-spline-area-series";
+import { IgxPolarSplineAreaSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartPolarCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-polar-core-module";
-import { IgxDataChartPolarModule } from "igniteui-angular-charts/ES5/igx-data-chart-polar-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartPolarCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 
 // in app.module.ts file
 @NgModule({

@@ -34,10 +34,10 @@ The following code snippet shows how to display geographic imagery from Bing Map
 ```
 
 ```ts
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { BingMapsMapImagery } from "igniteui-angular-maps/ES5/igx-bing-maps-map-imagery";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxBingMapsMapImagery } from 'igniteui-angular-maps';
 // ...
-const tileSource = new BingMapsMapImagery();
+const tileSource = new IgxBingMapsMapImagery();
 let tileUri = tileSource.actualBingImageryRestUri;
 
 // resolving BingMaps uri based on HTTP protocol of hosting website

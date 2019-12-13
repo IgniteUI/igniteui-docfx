@@ -48,15 +48,15 @@ Creation of the [`IgxStackedSplineAreaSeriesComponent`](/products/ignite-ui-angu
 
 ```ts
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxStackedSplineAreaSeries } from "igniteui-angular-charts/ES5/igx-stacked-spline-area-series";
+import { IgxStackedSplineAreaSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
-import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-chart-stacked-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
+import { IgxDataChartStackedModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

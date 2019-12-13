@@ -30,8 +30,8 @@ When installing the spreadsheet package, the core and excel package must also be
 The [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) requires the following modules:
 
 ```ts
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
-import { IgxSpreadsheetModule } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-module";
+import { IgxExcelModule } from 'igniteui-angular-excel';
+import { IgxSpreadsheetModule } from 'igniteui-angular-spreadsheet';
 
 @NgModule({
     imports: [
@@ -62,7 +62,7 @@ Now that the spreadsheet module is imported, next is the basic configuration of 
 The following demonstrates how to load a workbook into the spreadsheet
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
 import { ExcelUtility } from 'ExcelUtility';
 
 // ...

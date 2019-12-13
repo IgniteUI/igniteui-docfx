@@ -72,8 +72,8 @@ When installing the chart package, the core package must also be installed.
 The [`IgxTreemapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules:
 
 ```ts
-import { IgxTreemapModule} from "igniteui-angular-charts/ES5/igx-treemap-module";
-import { IgxTreemapComponent } from "igniteui-angular-charts/ES5/igx-treemap-component";
+import { IgxTreemapModule } from "igniteui-angular-charts";
+import { IgxTreemapComponent } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -109,7 +109,7 @@ The following code demonstrates how to setup the Treemap.
 The following code demonstrates how to set fill scale on the Treemap.
 
 ```ts
-import { TreemapFillScaleMode } from 'igniteui-angular-charts/ES5/TreemapFillScaleMode';
+import { TreemapFillScaleMode } from 'igniteui-angular-charts';
 // ...
 this.treeMap = new IgxTreemapComponent()
 this.treeMap.fillScaleMode = TreemapFillScaleMode.Value;

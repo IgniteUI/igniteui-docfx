@@ -59,9 +59,8 @@ The following code loads and binds [`IgxGeographicHighDensityScatterSeriesCompon
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxGeographicHighDensityScatterSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-high-density-scatter-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicHighDensityScatterSeriesComponent } from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-binding-geographic-csv_files",
