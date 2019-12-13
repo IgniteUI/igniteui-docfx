@@ -79,11 +79,10 @@ The following code shows how to bind the [`IgxGeographicContourLineSeriesCompone
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicContourLineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-contour-line-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxValueBrushScaleComponent } from 'igniteui-angular-charts';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicContourLineSeriesComponent } from 'igniteui-angular-maps';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-geographic-scatter-contour-series",
@@ -102,14 +101,14 @@ export class MapTypeScatterContourSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        const sds = new ShapeDataSource();
+        const sds = new IgxShapeDataSource();
         sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
         sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
         sds.dataBind();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
     }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
 
         const contourPoints: any[] = [];

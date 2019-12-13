@@ -25,4 +25,23 @@ The [`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/l
 
 The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html).
 
+```html
+<igx-geographic-map #map
+    width="100%"
+    height="100%"
+    zoomable="true" >
+</igx-geographic-map>
+```
+
+```ts
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxArcGISOnlineMapImagery } from 'igniteui-angular-maps';
+// ...
+public map: IgxGeographicMapComponent;
+
+const tileSource = new IgxArcGISOnlineMapImagery();
+tileSource.mapServerUri = "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer";
+this.map.backgroundContent = tileSource;
+```
+
 Also, you can use the [EsriUtility](geo-map-resources-esri.md) which defines all styles of Esri Maps.

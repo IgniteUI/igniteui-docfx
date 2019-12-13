@@ -24,8 +24,8 @@ Before making use of the clipboard you will want to import the `SpreadsheetActio
 <!-- Angular -->
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
-import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
+import { SpreadsheetAction } from 'igniteui-angular-spreadsheet';
 ```
 
 <div class="divider--half"></div>

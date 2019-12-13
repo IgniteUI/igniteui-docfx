@@ -62,15 +62,15 @@ In order to use range series, you need to import the following modules in your a
 // in app.module.ts file
 
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxRangeAreaSeries } from "igniteui-angular-charts/ES5/igx-range-area-series";
-import { IgxRangeColumnSeries } from "igniteui-angular-charts/ES5/igx-range-column-series";
+import { IgxRangeAreaSeries } from 'igniteui-angular-charts';
+import { IgxRangeColumnSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

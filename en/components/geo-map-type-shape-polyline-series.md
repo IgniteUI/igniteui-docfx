@@ -58,10 +58,9 @@ The following code shows how to bind the [`IgxGeographicPolylineSeriesComponent`
 
 ```ts
 import { AfterViewInit, Component, EmbeddedViewRef, TemplateRef, ViewChild} from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicPolylineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxIgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-geographic-shape-polyline-series",
@@ -83,14 +82,14 @@ export class MapTypeShapePolylineSeriesComponent implements AfterViewInit {
   public ngAfterViewInit(): void {
     this.map.windowRect = { left: 0.195, top: 0.325, width: 0.2, height: 0.1 };
 
-    const sds = new ShapeDataSource();
+    const sds = new IgxShapeDataSource();
     sds.shapefileSource = "/assets/Shapes/AmericanRoads.shp";
     sds.databaseSource  = "/assets/Shapes/AmericanRoads.dbf";
     sds.dataBind();
     sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
   }
 
-  public onDataLoaded(sds: ShapeDataSource, e: any) {
+  public onDataLoaded(sds: IgxShapeDataSource, e: any) {
     const shapeRecords = sds.getPointData();
     console.log("loaded /Shapes/AmericanRoads.shp " + shapeRecords.length);
 

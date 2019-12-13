@@ -31,11 +31,11 @@ The following table summarizes imagery classes provided by the map component.
 | Imagery Class                                                                                                      | Description                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`GeographicMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) | Represents the base control for all imagery classes that display all types of supported geographic imagery tiles. This class can be extended for the purpose of implementing support for geographic imagery tiles from other geographic imagery sources such as Map Quest mapping service. |
-| `OpenStreetMapImagery`                                                                                             | Represents the multi-scale imagery control for displaying geographic imagery tiles from the Open Street Maps service.                                                                                                                                                                      |
+| [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) | Represents the multi-scale imagery control for displaying geographic imagery tiles from the Open Street Maps service.                                                                                                                                                                      |
 
 <!-- |`BingMapsMapImagery`|Represents the multi-scale imagery control for displaying geographic imagery tiles from the Bing Maps service.| -->
 
-By default, the `BackgroundContent` property is set to `OpenStreetMapImagery` object and the map component displays geographic imagery tiles from the Open Street Maps service. In order to display different types of geographic imagery tiles, the map component must be re-configured.
+By default, the `BackgroundContent` property is set to [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) object and the map component displays geographic imagery tiles from the Open Street Maps service. In order to display different types of geographic imagery tiles, the map component must be re-configured.
 
 In addition, the `BackgroundContent` property can be set to any object that inherits the class. However, only objects that inherit the [`GeographicMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) class will allow panning and zooming of the map background content.
 
@@ -43,4 +43,4 @@ In the map component, map background content is always rendered behind all geogr
 
 ### Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the `OpenStreetMapImagery` object which provides geographic imagery tile from the Open Street Maps.
+This code example explicitly sets `BackgroundContent` of the map component to the [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) object which provides geographic imagery tile from the Open Street Maps.

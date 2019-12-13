@@ -38,8 +38,8 @@ The [`IgxRadialGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/
 
 ```ts
 // app.module.ts
-import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
-import { IgxRadialGaugeComponent } from "igniteui-angular-gauges/ES5/igx-radial-gauge-component";
+import { IgxRadialGaugeModule } from 'igniteui-angular-gauges';
+import { IgxRadialGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [

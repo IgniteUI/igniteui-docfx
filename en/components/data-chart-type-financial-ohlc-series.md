@@ -46,15 +46,15 @@ The financial series require the following modules:
 
 ```ts
 // axis' modules:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxFinancialPriceSeries } from "igniteui-angular-charts/ES5/igx-financial-price-series";
+import { IgxFinancialPriceSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
-import { IgxFinancialPriceSeriesModule } from "igniteui-angular-charts/ES5/igx-financial-price-series-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
+import { IgxFinancialPriceSeriesModule } from 'igniteui-angular-charts';
 
 // in app.module.ts file
 @NgModule({
