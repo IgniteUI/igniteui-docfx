@@ -48,15 +48,15 @@ Creation of the [`IgxStackedSplineSeriesComponent`](/products/ignite-ui-angular/
 
 ```ts
 // axis' modules:
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
-import { IgxCategoryYAxis } from "igniteui-angular-charts/ES5/igx-category-y-axis";
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
+import { IgxCategoryYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxStackedSplineSeries } from "igniteui-angular-charts/ES5/igx-stacked-spline-series";
+import { IgxStackedSplineSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
-import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-chart-stacked-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
+import { IgxDataChartStackedModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -69,7 +69,7 @@ import { IgxDataChartStackedModule } from "igniteui-angular-charts/ES5/igx-data-
 })
 ```
 
-### Code Example - Stacked Spline Chart
+### Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxStackedSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineseriescomponent.html) and bind it to a data source.
 

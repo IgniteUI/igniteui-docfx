@@ -86,13 +86,13 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
 When setting up your spreadsheet control to add charts, you will need to import the [`SpreadsheetChartAdapter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) class like so:
 
 ```ts
-import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
-import { SpreadsheetChartAdapter } from "igniteui-angular-spreadsheet-chart-adapter/ES5/SpreadsheetChartAdapter";
+import { IgxSpreadsheetchartadaptermodule } from 'igniteui-angular-spreadsheet-chart-adapter';
+import { SpreadsheetChartAdapter } from 'igniteui-angular-spreadsheet-chart-adapter';
 
-import { ChartTitle, ChartType, FormattedString, Workbook } from "igniteui-angular-excel/ES5/excel.core";
+import { ChartTitle, ChartType, FormattedString, Workbook } from 'igniteui-angular-excel';
 import { ExcelUtility } from "ExcelUtility";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
+import { Worksheet } from 'igniteui-angular-excel';
+import { WorksheetCell } from 'igniteui-angular-excel';
 ```
 
 ### Code Snippet

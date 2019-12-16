@@ -23,7 +23,7 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 
 <div class="divider--half"></div>
 
-When a `ShapeDataSource` loads its shape files, it converts that data into `ShapeFileRecord` objects. These objects can be retrieved from the `GetPointData()` method of the `ShapeDataSource` and can then be used to create a heat-map through usage of a `TileGeneratorMapImagery` object with a [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) assigned to its `TileGenerator` property. This `TileGeneratorMapImagery` can then be used in a geographic tile series as its `TileImagery` source.
+When a `ShapeDataSource` loads its shape files, it converts that data into `ShapeFileRecord` objects. These objects can be retrieved from the `GetPointData()` method of the `ShapeDataSource` and can then be used to create a heat-map through usage of a [`TileGeneratorMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/tilegeneratormapimagery.html) object with a [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) assigned to its `TileGenerator` property. This [`TileGeneratorMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/tilegeneratormapimagery.html) can then be used in a geographic tile series as its `TileImagery` source.
 
 The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) object works such that it has three value paths, [`xValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#xvalues), [`yValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#yvalues) and [`values`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values). As an example of how these could be used, in the case of a shape file that has information about population, you could consider the [`xValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#xvalues) to be longitude, [`yValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#yvalues) to be latitude, and [`values`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values) to be the population data. Each of these properties takes a `number[]`.
 
@@ -39,7 +39,7 @@ The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest
 
 ```ts
 // heatworker.worker.ts
-import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/ES5/HeatTileGeneratorWebWorker";
+import { HeatTileGeneratorWebWorker } from 'igniteui-angular-core';
 
 const worker: Worker = self as any;
 worker.onmessage = HeatTileGeneratorWebWorker.onmessage;
@@ -56,10 +56,10 @@ export default {} as typeof Worker & (new () => Worker);
 <!-- Angular -->
 
 ```ts
-import { HeatTileGenerator } from "igniteui-angular-core/ES5/igx-heat-tile-generator";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { TileGeneratorMapImagery } from "igniteui-angular-maps/ES5/igx-tile-generator-map-imagery";
+import { IgxHeatTileGenerator } from 'igniteui-angular-core';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxTileGeneratorMapImagery } from 'igniteui-angular-maps';
 ```
 
 ### Creating Heatmap
@@ -78,14 +78,14 @@ The following code snippet shows how to display a population based heat-map in t
 @ViewChild("map", { static: true })
 public map: IgxGeographicMapComponent;
 public data: any[];
-public tileImagery: TileGeneratorMapImagery;
+public tileImagery: IgxTileGeneratorMapImagery;
 // ...
 constructor() {
     this.data = this.initData();
 
-    this.tileImagery = new TileGeneratorMapImagery();
+    this.tileImagery = new IgxTileGeneratorMapImagery();
 
-    const con: ShapeDataSource = new ShapeDataSource();
+    const con: IgxShapeDataSource = new IgxShapeDataSource();
     con.importCompleted.subscribe((s, e) => {
         const data = con.getPointData();
         const lat: number[] = [];
@@ -108,7 +108,7 @@ constructor() {
             }
         }
 
-        const gen = new HeatTileGenerator();
+        const gen = new IgxHeatTileGenerator();
         gen.xValues = lon;
         gen.yValues = lat;
         gen.values = val;

@@ -37,7 +37,7 @@ The [`IgxPieChartComponent`](/products/ignite-ui-angular/api/docs/typescript/lat
 ```ts
 // app.module.ts
 
-import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
+import { IgxPieChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

@@ -67,18 +67,18 @@ In order to use radial series, you need to import the following modules in your 
 
 ```ts
 // axis' modules:
-import { IgxCategoryAngleAxis } from "igniteui-angular-charts/ES5/igx-category-angle-axis";
-import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
+import { IgxCategoryAngleAxis } from 'igniteui-angular-charts';
+import { IgxNumericRadiusAxis } from 'igniteui-angular-charts';
 // series modules:
-import { IgxRadialAreaSeries } from "igniteui-angular-charts/ES5/igx-radial-area-series";
-import { IgxRadialLineSeries } from "igniteui-angular-charts/ES5/igx-radial-line-series";
-import { IgxRadialPieSeries } from "igniteui-angular-charts/ES5/igx-radial-pie-series";
-import { IgxRadialColumnSeries } from "igniteui-angular-charts/ES5/igx-radial-column-series";
+import { IgxRadialAreaSeries } from 'igniteui-angular-charts';
+import { IgxRadialLineSeries } from 'igniteui-angular-charts';
+import { IgxRadialPieSeries } from 'igniteui-angular-charts';
+import { IgxRadialColumnSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartRadialCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-core-module";
-import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

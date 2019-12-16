@@ -58,9 +58,9 @@ The following code loads and binds [`IgxGeographicHighDensityScatterSeriesCompon
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { MarkerType } from 'igniteui-angular-charts';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-binding-geographic-json-files",

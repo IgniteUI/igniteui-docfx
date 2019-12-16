@@ -54,16 +54,16 @@ In order to add conditional formatting to the [`IgxSpreadsheetComponent`](/produ
 <!-- Angular -->
 
 ```ts
-import { CellFill} from "igniteui-angular-excel/ES5/CellFill";
-import { Color } from "igniteui-angular-core/ES5/Color";
-import { ColorScaleType} from "igniteui-angular-excel/ES5/ColorScaleType";
-import { FormatConditionAboveBelow } from "igniteui-angular-excel/ES5/FormatConditionAboveBelow";
-import { FormatConditionIconSet } from "igniteui-angular-excel/ES5/FormatConditionIconSet";
-import { FormatConditionOperator } from "igniteui-angular-excel/ES5/FormatConditionOperator";
-import { FormatConditionTextOperator } from "igniteui-angular-excel/ES5/FormatConditionTextOperator";
-import { FormatConditionTimePeriod } from "igniteui-angular-excel/ES5/FormatConditionTimePeriod";
-import { FormatConditionTopBottom} from "igniteui-angular-excel/ES5/FormatConditionTopBottom";
-import { WorkbookColorInfo } from "igniteui-angular-excel/ES5/WorkbookColorInfo";
+import { CellFill } from "igniteui-angular-excel";
+import { Color } from 'igniteui-angular-core';
+import { ColorScaleType } from "igniteui-angular-excelScaleType";
+import { FormatConditionAboveBelow } from 'igniteui-angular-excel';
+import { FormatConditionIconSet } from 'igniteui-angular-excel';
+import { FormatConditionOperator } from 'igniteui-angular-excel';
+import { FormatConditionTextOperator } from 'igniteui-angular-excel';
+import { FormatConditionTimePeriod } from 'igniteui-angular-excel';
+import { FormatConditionTopBottom } from "igniteui-angular-excel";
+import { WorkbookColorInfo } from 'igniteui-angular-excel';
 ```
 
 ### Code Snippet

@@ -22,13 +22,13 @@ The [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/cla
 The following code shows the imports needed to use the code-snippets below:
 
 ```ts
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
-import { NamedReference } from "igniteui-angular-excel/ES5/NamedReference";
-import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment";
-import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { Worksheet } from "igniteui-angular-excel";
+import { WorksheetTable } from "igniteui-angular-excel";
+import { NamedReference } from "igniteui-angular-excel";
+import { WorksheetCellComment } from "igniteui-angular-excel";
+import { FormattedString } from "igniteui-angular-excel";
 ```
 
 ### Referencing Cells and Regions

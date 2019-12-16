@@ -33,19 +33,15 @@ When installing the data chart package, the core package must also be installed.
 The Angular data chart component requires the following modules:
 
 ```ts
-// data chart's modules required for all series:
-
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxNumberAbbreviatorModule } from 'igniteui-angular-charts/ES5/igx-number-abbreviator-module';
-// scatter series' modules:
-import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
-import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
-// scatter series elements:
-import { IgxBubbleSeriesComponent } from "igniteui-angular-charts/ES5/igx-bubble-series-component";
-import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
-import { IgxSizeScaleComponent } from "igniteui-angular-charts/ES5/igx-size-scale-component";
-import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxNumberAbbreviatorModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
+import { IgxBubbleSeriesComponent } from 'igniteui-angular-charts';
+import { IgxNumericXAxisComponent } from 'igniteui-angular-charts';
+import { IgxNumericYAxisComponent } from 'igniteui-angular-charts';
+import { IgxSizeScaleComponent } from 'igniteui-angular-charts';
+import { IgxValueBrushScaleComponent } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

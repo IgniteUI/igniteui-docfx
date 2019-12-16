@@ -1,7 +1,7 @@
 ---
 title: Treemap | Data Visualization Tools | Ignite UI for Angular | Data Binding | Infragistics
 _description: Use the Treemap to show users relative weighting of data points at more than one level supporting strip, squarified, and slice-and-dice algorithms.
-mentionedTypes: ['Treemap']
+mentionedTypes: ['XamTreemap']
 ---
 
 ### Treemap
@@ -26,7 +26,7 @@ Treemaps are not designed to convey numerical quantities; the intent is to show 
 
 ### Required Data
 
-Binding to the `Treemap` contains the following data requirements:
+Binding to the `XamTreemap` contains the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the map will not render any nodes.
@@ -69,11 +69,11 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The `Treemap` requires the following modules:
+The [`IgxTreemapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules:
 
 ```ts
-import { IgxTreemapModule} from "igniteui-angular-charts/ES5/igx-treemap-module";
-import { IgxTreemapComponent } from "igniteui-angular-charts/ES5/igx-treemap-component";
+import { IgxTreemapModule } from "igniteui-angular-charts";
+import { IgxTreemapComponent } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -109,7 +109,7 @@ The following code demonstrates how to setup the Treemap.
 The following code demonstrates how to set fill scale on the Treemap.
 
 ```ts
-import { TreemapFillScaleMode } from 'igniteui-angular-charts/ES5/TreemapFillScaleMode';
+import { TreemapFillScaleMode } from 'igniteui-angular-charts';
 // ...
 this.treeMap = new IgxTreemapComponent()
 this.treeMap.fillScaleMode = TreemapFillScaleMode.Value;

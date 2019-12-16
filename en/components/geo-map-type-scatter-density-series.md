@@ -76,10 +76,9 @@ The following code demonstrates how set the [`heatMinimumColor`](/products/ignit
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicHighDensityScatterSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-high-density-scatter-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicHighDensityScatterSeriesComponent } from 'igniteui-angular-maps';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 import { WorldUtils } from "../../utilities/WorldUtils";
 
 @Component({
@@ -106,7 +105,7 @@ export class MapTypeScatterDensitySeriesComponent implements AfterViewInit {
          .then((data) => this.onDataLoaded(data, ""));
       }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         this.geoLocations = sds;
         // creating HD series with loaded data
         const geoSeries = new IgxGeographicHighDensityScatterSeriesComponent();

@@ -13,9 +13,9 @@ This topic provides utility function for loading and saving Microsoft Excel file
 
 ```ts
 import { saveAs } from "file-saver"; // npm package: "file-saver": "^1.3.8"
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
+import { Workbook } from 'igniteui-angular-excel';
+import { WorkbookFormat } from 'igniteui-angular-excel';
+import { WorkbookSaveOptions } from 'igniteui-angular-excel';
 
 export class ExcelUtility {
     public static getExtension(format: WorkbookFormat) {
