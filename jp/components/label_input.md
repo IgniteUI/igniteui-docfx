@@ -16,7 +16,7 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 <iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-2-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-2-frame" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -26,7 +26,14 @@ Label および Input ディレクティブのデフォルト スタイル設定
 > [!NOTE]
 > [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および `igxLabel` を使用するには、`<igx-input-group>` コンテナーにラップする必要があります。
 
-Ignite UI for Angular Label および Input を初期化する前に、`IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。
+Label および Input ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxInputGroupModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -79,7 +86,7 @@ Ignite UI for Angular Input ディレクティブで検証が有効な場合に�
 <div class="divider--half"></div>
 
 #### データ バインディング
-Ignite UI for Angular Input は one-way および two-way データ バインディングをサポートします。入力に両方向のデータ バインディングを追加します。以下はコンポーネントのコード:
+Ignite UI for Angular Input は一方向および双方向データ バインディングをサポートします。入力に両方向のデータ バインディングを追加します。以下はコンポーネントのコード:
 
 ```typescript
 public user = {

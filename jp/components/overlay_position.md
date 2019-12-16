@@ -59,15 +59,15 @@ import {
 
 ### 定義済みの位置設定でポジション ストラテジを作成する
 
-各ポジション ストラテジには、固有のポジション設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定されたターゲット (buttonElement) の左上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は右上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`PositionSettings` を渡します。
+各ポジション ストラテジには、固有のポジション設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定された`ターゲット` (`buttonElement`) の右上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は左上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`PositionSettings` を渡します。
 
 ```typescript
 const positionSettings: PositionSettings = {
     target: buttonElement.nativeElement,
-    horizontalDirection: HorizontalAlignment.Left,
-    verticalDirection: VerticalAlignment.Top,
     horizontalStartPoint: HorizontalAlignment.Right,
-    verticalStartPoint: VerticalAlignment.Top
+    verticalStartPoint: VerticalAlignment.Top,
+    horizontalDirection: HorizontalAlignment.Left,
+    verticalDirection: VerticalAlignment.Top
 };
 
 const strategy = new ConnectedPositioningStrategy(positionSettings);
@@ -84,7 +84,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
     <iframe id="overlay-position-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -101,7 +101,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
     <iframe id="overlay-position-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -119,6 +119,16 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
     // the element will now start to the left of the target (dummyHTMLElement)
     // and will align itself to the left
     overlay.show(overlayId, overlaySettings);
+```
+
+### オーバーレイ コンテンツのオフセット
+
+対応する軸に沿って指定した量のみコンテンツをオフセットする方法:
+```typescript
+    // deltaX and deltaY determine by how much the content will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    overlay.setOffset(this._overlayId, deltaX, deltaY);
 ```
 
 ## ポジション ストラテジ

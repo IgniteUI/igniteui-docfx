@@ -21,7 +21,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
-To get started with the Ignite UI for Angular List, let's first import the `IgxListModule` in our app.module.ts file:
+
+To get started with the Ignite UI for Angular List, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxListModule` in our app.module.ts file:
 
 ```typescript
 // app.module.ts

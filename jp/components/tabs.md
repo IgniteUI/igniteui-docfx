@@ -14,16 +14,20 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
     <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
-
 ### 使用方法
 
-Ignite UI for Angular Tabs コンポーネントを初期化する前に `IgxTabsModule` を **app.module.ts** ファイルにインポートします。
+Tabs コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxTabsModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -58,7 +62,7 @@ export class AppModule {}
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
@@ -102,16 +106,16 @@ export class AppModule {}
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
 ### タブのカスタマイズ
 
-タブにアイコンを追加します。Tabs コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
+タブに [`icon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) 入力を追加します。Tabs コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 
-最初に Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
+はじめに Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
 
 ```css
 // styles.css
@@ -161,12 +165,12 @@ export class AppModule {}
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
-タブのラベルおよびアイコンの変更を拡張する場合、各タブ ヘッダーでカスタム テンプレートを作成することもできます。
+タブのラベルおよびアイコンの変更を拡張する場合、各タブ ヘッダーで [`IgxTabItemTemplateDirective`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) を作成することもできます。
 
 ```html
 <igx-tabs>
@@ -180,17 +184,133 @@ export class AppModule {}
     </igx-tabs-group>
 </igx-tabs>
 ```
+### ルーター アウトレット コンテナとの統合
 
+タブ コンポーネントの主な用途はコンテンツを含むグループの定義ですが、タブ項目のみを定義する必要がある場合があります。
 
-### Styles
+> [!NOTE]
+> タブ項目定義モードはタブのコンテンツをサポートしていないことに注意してください。コンポーネントはタブ項目のストリップのみをレンダリングします。また、このコンポーネントでタブ項目定義とグループ定義を混合することはサポートされません。
 
-To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
+タブ項目を定義する際にディレクティブを適用することができます。たとえば、この機能を使用して、Angular Router を使用してビュー間のナビゲーションを実現できます。次の例は、タブ コンポーネントを構成して、単一のルーターアウトレットで 3 つのコンポーネントを切り替える方法を示しています。
+
+まず、タブ コンポーネントをホストするメイン コンポーネントと、デモ用のコンテンツを含む 3 つのビュー コンポーネントが必要です。コードスニペットを簡素化するために、ビューコンポーネントに短いテンプレートがありますが、必要に応じてそれらをより識別しやすくしてください。また、これらのビューコンポーネントを `app.module.ts` ファイルにインポートします。
+
+```typescript
+// tabs-routing.component.ts
+import { Component } from "@angular/core";
+
+@Component({
+    selector: "app-tabs-routing",
+    styleUrls: ["tabs-routing.component.scss"],
+    templateUrl: "tabs-routing.component.html"
+})
+export class TabsRoutingComponent {
+    constructor() { }
+}
+
+@Component({
+    template: "<h3>Tab 1 Content</h3>"
+})
+export class TabsRoutingView1Component {
+}
+
+@Component({
+    template: "<h3>Tab 2 Content</h3>"
+})
+export class TabsRoutingView2Component {
+}
+
+@Component({
+    template: "<h3>Tab 3 Content</h3>"
+})
+export class TabsRoutingView3Component {
+}
+```
+
+次のステップでは、`app-routing.module.ts` ファイルに適切なナビゲーション マッピングを作成します。
+
+```typescript
+// app-routing.module.ts
+import {
+    TabsRoutingComponent,
+    TabsRoutingView1Component,
+    TabsRoutingView2Component,
+    TabsRoutingView3Component } from './tabs-routing.component';
+
+...
+
+const appRoutes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/tabs-routing'
+    },
+    {
+        path: 'tabs-routing',
+        component: TabsRoutingComponent,
+        children: [
+            { path: 'view1', component: TabsRoutingView1Component },
+            { path: 'view2', component: TabsRoutingView2Component },
+            { path: 'view3', component: TabsRoutingView3Component },
+        ]
+    }
+];
+
+@NgModule({
+    exports: [RouterModule],
+    imports: [RouterModule.forRoot(appRoutes)]
+})
+export class AppRoutingModule { }
+```
+
+すべてのナビゲーション ルートがセットアップされたので、タブ コンポーネントを宣言し、ルーティング用に構成する必要があります。また、ビュー コンポーネントの出力をレンダリングするためのルーター アウトレットを必ず追加してください。
+
+```html
+<!-- tabs-routing.component.html -->
+<igx-tabs>
+  <igx-tab-item label="Tab 1" icon="dashboard"
+    routerLink="view1"
+    routerLinkActive #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive">
+  </igx-tab-item>
+
+  <igx-tab-item label="Tab 2" icon="check_circle_outline"
+    routerLink="view2"
+    routerLinkActive #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive">
+  </igx-tab-item>
+
+  <igx-tab-item label="Tab 3" icon="radio_button_checked"
+    routerLink="view3"
+    routerLinkActive #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive">
+  </igx-tab-item>
+</igx-tabs>
+
+<router-outlet></router-outlet>
+```
+
+上記のコードは、3 つのタブ項目を持つタブ コンポーネントを作成します。すべてのタブ項目には、ナビゲーションに使用されるルーティング リンクを指定するために使用される `RouterLink` ディレクティブが適用されています。これらのリンクのいずれかがアクティブになると、`RouterLinkActive` ディレクティブの `isActive` プロパティにバインドされるため、対応するタブ項目の `isSelected` プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
+
+上記のアプローチは、タブ コンポーネントを使用したルーティングを示すために、次のサンプルで使用されています。
+
+<div class="sample-container loading" style="height: 500px; width: 500px;">
+    <iframe id="tabs-sample-6-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-6-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+### スタイル設定
+
+タブのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) and accepts various parameters that allow us to style the tab groups.
+次に、[`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
 $dark-tabs: igx-tabs-theme(
@@ -205,19 +325,19 @@ $dark-tabs: igx-tabs-theme(
 );
 ```
 
-If we take a look at the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme), we will notice that there are even more parameters available to us in order to style our tabs component!
+[`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
 
 > [!NOTE]
-> In order to style any additional components that are used as part of a tab group's content, an additional theme should be created that is specific to the respective component.
+> タブ グループのコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
 
-The last step is to **include** the component theme in our application.
+最後にコンポーネントのテーマを**含めます**。
 
 ```scss
 @include igx-tabs($dark-tabs);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -228,11 +348,11 @@ The last step is to **include** the component theme in our application.
 ```
 
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #F4D45C;
@@ -240,7 +360,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
 $dark-tabs: igx-tabs-theme(
@@ -256,11 +376,11 @@ $dark-tabs: igx-tabs-theme(
 );
 ```
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-tabs`]({environment:sassApiUrl}/index.html#variable-_dark-tabs) schema:
+すべてのコンポーネントに提供されている2つの定義済みスキーマの 1 つを拡張します。この場合 - [`dark-tabs`]({environment:sassApiUrl}/index.html#variable-_dark-tabs) スキーマ。
 
 ```scss
 // Extending the dark tabs schema
@@ -294,7 +414,7 @@ $dark-tabs-schema: extend($_dark-tabs,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -309,16 +429,16 @@ $dark-tabs: igx-tabs-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height: 400px; width: 600px;">
     <iframe id="tabs-style-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-style-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -331,7 +451,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
+* [IgxTabsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
 * [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 

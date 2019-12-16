@@ -107,7 +107,7 @@ For `date` data type, the following functions are available:
         <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
         <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
         ...
-    </igx-hierarchical-grid> 
+    </igx-hierarchical-grid>
 
 ```
 }
@@ -168,6 +168,8 @@ public disableSummary() {
 }
 ```
 }
+
+#### Custom @@igComponent summaries
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) according to the column data type and your needs. This way you can redefine the existing function or you can add new functions. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) class provides the default implementation only for the [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) method. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and provides implementation for the [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) and [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average). [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and additionally gives you [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) and [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
@@ -179,7 +181,7 @@ class MySummary extends IgxNumberSummaryOperand {
     constructor() {
         super();
     }
-    
+
     operate(data?: any[]): IgxSummaryResult[] {
         const result = super.operate(data);
         result.push({
@@ -208,7 +210,7 @@ class MySummary extends IgxNumberSummaryOperand {
         label: "More than 5",
         summaryResult: data.filter((rec) => rec > 5).length
       });
-  
+
       return result;
     }
   }
@@ -277,6 +279,56 @@ export class HGridSummarySampleComponent implements OnInit {
 }
 ```
 }
+
+#### Custom summaries, which access all @@igComponent data
+ Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
+As you can see in the code snippet below the operate method has the following three parameters:
+- columnData - gives you an array that contains the values only for the current column
+- allGridData - gives you the whole grid data source
+- fieldName - current column field
+
+```typescript
+class MySummary extends IgxNumberSummaryOperand {
+    constructor() {
+        super();
+    }
+    operate(columnData: any[], allGridData = [], fieldName?): IgxSummaryResult[] {
+        const result = super.operate(allData.map(r => r[fieldName]));
+        result.push({ key: 'test', label: 'Total Discontinued', summaryResult: allData.filter((rec) => rec.Discontinued).length });
+        return result;
+    }
+}
+```
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-alldata-summaries-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-alldata-summaries' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="tree-grid-allData-summary-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+  <div class="sample-container loading" style="height:650px">
+    <iframe id="hierarchical-grid-allData-summary-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+
 @@if (igxName === 'IgxGrid') {
 ### Summaries with Group By
 
@@ -350,7 +402,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`igx-grid-summary-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
 
@@ -365,7 +417,7 @@ $custom-theme: igx-grid-summary-theme(
     $pinned-border-color: #e41c77
 );
 ```
-The last step is to **include** the component mixins: 
+The last step is to **include** the component mixins:
 
 ```scss
 @include igx-grid-summary($custom-theme);
@@ -416,7 +468,7 @@ $custom-theme: igx-grid-summary-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary):  
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary):
 
 ```scss
 // Extending the light grid summary schema
@@ -456,7 +508,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 #### Demo
 
 <div class="sample-container loading" style="height:710px">
-    <iframe id="grid-groupby-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary-styling' width="100%" height="100%" 
+    <iframe id="grid-groupby-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary-styling' width="100%" height="100%"
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>

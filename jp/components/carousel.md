@@ -18,7 +18,16 @@ _language: ja
 
 ### 使用方法
 
-カルーセルを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。**Ignite UI for Angular Carousel** を初期化する前に、**IgxCarouselModule** を **app.module.ts** ファイルにインポートします。 
+Carousel を全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
+
+Carousel コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに **IgxCarouselModule** をインポートします。
 
 ```typescript
 // app.module.ts
@@ -254,9 +263,9 @@ ul.igx-carousel__indicators {
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
-* [IgxCarouselComponent Styles]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
+* [IgxCarouselComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-carousel-theme)
 * [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)

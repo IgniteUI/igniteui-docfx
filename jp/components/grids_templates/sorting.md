@@ -35,7 +35,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -44,7 +44,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -53,7 +53,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -96,6 +96,9 @@ this.@@igObjectRef.clearSort();
 ```
 
 > [!NOTE]
+> **@@igComponent** の [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) は **column** の [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy) と比較して異なるタイプです。異なるスコープで機能し、異なるパラメーターを公開するためです。
+
+> [!NOTE]
 > 並べ替え操作で @@igComponent の基になるデータ ソースは変更**しません**。
 
 #### 初期の並べ替え状態
@@ -117,8 +120,9 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
+
 #### リモート並べ替え
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) と [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) アウトプットにサブスクライブして @@igComponent のリモート並べ替えが可能です。詳細については、[@@igComponent の仮想化とパフォーマンス](virtualization.md#remote-sortingfiltering-virtualization)をご覧ください。
+@@igComponent はリモート並べ替えをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
 
 <div class="divider--half"></div>
 }
@@ -179,13 +183,13 @@ $custom-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`Palettes`](../themes/palette.md) のトピックをご覧ください。
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) の 1 つを拡張します。  
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。  
 
 ```scss
 // Extending the light grid schema
@@ -197,7 +201,7 @@ $custom-grid-schema: extend($_light-grid,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
 
 ```scss
 // Extending the global light-schema
@@ -225,7 +229,7 @@ $custom-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -236,7 +240,7 @@ $custom-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -247,7 +251,7 @@ $custom-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 

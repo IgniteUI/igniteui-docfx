@@ -20,7 +20,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -212,7 +212,7 @@ export class HierarchicalGridLoDSampleComponent {
 }
 ````
 
-グリッドがサービスのデータを要求して割り当てる前に描画されることを確認するために、ライフサイクル フックを使用します。親がないため、`rootLevel` は `true` でそのキーのみをサービスの `getData` へ渡すことができます。サブスクライブする必要のある observable を返します。
+グリッドがサービスのデータを要求して割り当てる前に描画されることを確認するために、`AfterViewInit` ライフサイクル フックを使用します。親がないため、`rootLevel` は `true` でそのキーのみをサービスの `getData` へ渡すことができます。サブスクライブする必要のある observable を返します。
 
 ````TypeScript
 public ngAfterViewInit() {

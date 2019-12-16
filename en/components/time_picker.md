@@ -19,7 +19,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Ignite UI for Angular Time Picker, let's first import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Time Picker component, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts

@@ -82,6 +82,36 @@ $unnecessary: (igx-avatar, igx-badge);
 ```
 アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
 
+### Material から Fluent テーマへの切り替え
+バージョン `8.2` 以降、インフラジスティックスのコンポーネントでは、[`Microsoft フルーエント デザイン システム`](https://www.microsoft.com/design/fluent/)に基づいて構築された新しいテーマをサポートします。  
+`マテリアル`から`フルーエント`へ切り替えるには、新しく作成された mixins の 1 つを使用する必要があります。
+
+`Excel パレット`を使用した`フルーエント テーマ`の `white` バージョンの場合、以下のコードを使用します。
+```scss
+// Replace
+@include igx-theme($default-palette);
+// With     
+@include igx-fluent-theme($fluent-excel-palette);
+```
+
+`Excel パレット`を使用した`フルーエント テーマ`の `Dark` バージョンの場合、以下のコードを使用します。
+```scss    
+// replace
+@include igx-dark-theme($default-palette);
+// With 
+@include igx-fluent-dark-theme($fluent-excel-palette);
+```
+
+また、`Microsoft word` パレットを追加しました。使用するには、`$fluent-excel-palette` を `$fluent-word-palette` に置き換えるだけです。
+
+```scss
+// for the white version    
+@include igx-fluent-theme($fluent-word-palette);
+
+// for the dark version
+@include igx-fluent-dark-theme($fluent-word-palette);
+```
+
 ### ブラウザー サポート
 <div class="divider--half"></div>
 

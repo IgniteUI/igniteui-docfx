@@ -40,7 +40,7 @@ Then you will be guided to choose one of the available project templates. You ca
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
 
-The next step is to choose a theme for your application. If you select the default option a pre-compiled CSS file (`igniteui-angular.css`) with the default Ignite UI for Angular theme is included in your project's `angular.json`. The custom option generates code for a color palette and theme with our [our Theming API](../../themes.md) in the `app/styles.scss`.
+The next step is to choose a theme for your application. If you select the default option a pre-compiled CSS file (`igniteui-angular.css`) with the default Ignite UI for Angular theme is included in your project's `angular.json`. The custom option generates code for a color palette and theme with our [Theming API](../../themes.md) in the `app/styles.scss`.
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 

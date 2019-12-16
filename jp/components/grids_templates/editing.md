@@ -35,7 +35,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -44,7 +44,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -53,7 +53,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 <div class="divider--half"></div>
@@ -163,7 +163,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 #### セル編集テンプレート
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html) を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります。
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html) を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcell.html#editvalue) に適切にバインドする必要があります。
 
 ```html
 <igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
@@ -174,13 +174,13 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[編集イベント](#editing-events)をトリガーし、[トランザクション状態](batch-editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcell.html#editvalue) に加えられた変更は、終了時に適切な[編集イベント](#編集イベント)をトリガーし、[トランザクション状態](batch_editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
-> セル編集テンプレート ディレクティブ (`igxCellEditor`) は、[セル テンプレート(`igxCell`)](../grid/grid.md#cell-template) とは異なります。前者は、**編集モード**の列のセルの表示方法を処理し、編集されたセルの**編集値**を制御します。後者は、**編集モード外**での列のセルの表示方法を制御します。
+> セル編集テンプレート ディレクティブ (`igxCellEditor`) は、[セル テンプレート(`igxCell`)](../grid/grid.md#セル編集テンプレート) とは異なります。前者は、**編集モード**の列のセルの表示方法を処理し、編集されたセルの**編集値**を制御します。後者は、**編集モード外**での列のセルの表示方法を制御します。
 
 
-列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#columns-configuration)のドキュメントを参照してください。
+列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#列の構成)のドキュメントを参照してください。
 
 ### CRUD 操作
 
@@ -323,7 +323,7 @@ row.delete();
 | イベント | 説明 | 引数 | キャンセル可能 |
 |-------|-------------|-----------|-------------|
 | [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | セルが**編集モードに入る**と発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | `[rowEditing]` が有効な場合、行が**編集モードに入る**と起動します (`onCellEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | true |
+| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | `[rowEditing]` が有効な場合、行が**編集モードに入る**と起動します (`onCellEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | セルの値が**確定**されたときに発生します (Enter の押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | セルがその値を**コミットせず**に編集モードを終了すると起動します (`Esc` キーの押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | 編集モードの値の行が**コミット**されたときに発生します (行編集オーバーレイの`完了`ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
@@ -366,7 +366,7 @@ export class MyGridEventsComponent {
     }
 }
 ```
-**注文済み**列の下のセルに入力された値が使用可能量 (**在庫数**の値) よりも大きい場合、編集はキャンセルされ、エラー メッセージ付きのトーストが表示されます。
+**Ordered**列の下のセルに入力された値が使用可能量 (**在庫数**の値) よりも大きい場合、編集はキャンセルされ、エラー メッセージ付きのトーストが表示されます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
@@ -429,7 +429,7 @@ export class MyHGridEventsComponent {
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -438,7 +438,7 @@ export class MyHGridEventsComponent {
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -447,14 +447,14 @@ export class MyHGridEventsComponent {
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
 
 ### スタイル設定
 
-@@ igxName で [Ignite UI for Angular Theme Library](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@ igxName で [Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
@@ -504,12 +504,12 @@ $custom-grid-theme: igx-grid-theme(
 
 #### スコープ コンポーネント テーマ
 
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#importing-style-library) を含む)。
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#スタイル-ライブラリのインポート) を含む)。
 
 このように、Angular の [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネント外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
@@ -524,7 +524,7 @@ $custom-grid-theme: igx-grid-theme(
 
 #### デモのスタイル設定
 
-上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling))。
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#スタイル設定), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#スタイル設定))。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -532,7 +532,7 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -541,7 +541,7 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -550,7 +550,7 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 <div class="divider--half"></div>

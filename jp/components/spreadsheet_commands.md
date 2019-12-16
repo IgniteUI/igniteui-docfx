@@ -13,10 +13,10 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
 ### デモ
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-commands-sample-iframe" src='{environment:demosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-commands-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz　で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-commands-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz　で表示
     </button>
 </div>
 
@@ -41,7 +41,7 @@ import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetA
 @ViewChild("spreadsheet", { read: IgxSpreadsheetComponent })
 public spreadsheet: IgxSpreadsheetComponent;
 
----
+// ...
 
 public zoomIn(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.ZoomIn);

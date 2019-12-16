@@ -37,7 +37,7 @@ $_light-avatar: (
 );
 ```
 
-上記の例では、コンポーネント スキーマが [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。前もって解決せずに色と avatar を指示します。
+上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。前もって解決せずに色と avatar を指示します。
 
 以下は、`icon-background` プロパティの例です。 avatar テーマにデフォルト背景をタイプ アイコンの新しい igx-avatar にすることを指示します。 
 
@@ -131,5 +131,5 @@ $my-avatar-theme: igx-avatar-theme(
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [**Ignite UI for Angular フォーラム (英語) **](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [**Ignite UI for Angular GitHub (英語) **](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

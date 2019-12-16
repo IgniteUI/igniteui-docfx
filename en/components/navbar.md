@@ -18,7 +18,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Ignite UI for Angular NavBar component, let's first import the `IgxNavbarModule` in our **app.module.ts** file:
+
+To get started with the Navbar component, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxNavbarModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts

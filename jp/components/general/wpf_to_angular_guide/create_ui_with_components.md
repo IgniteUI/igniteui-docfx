@@ -9,9 +9,9 @@ _language: ja
 
 > [!Video https://www.youtube.com/embed/z1SZUezpRXY]
 
-Angular アプリケーションでユーザー インターフェイスを作成する場合、Angular コンポーネントを使用してプロセスを促進できます。
+Angular アプリケーションでユーザー インターフェイスを作成する場合、Angular コンポーネントを使用して処理を効率化できます。
 
-Angularで UI を作成する方法は、WPF で UI を作成する方法と非常に似ています。通常、UserControl クラスで表されるユーザー コントロールを使用します。`UserControl` は、マークアップとコードを再利用可能なコンテナにグループ化し、複数の異なる場所で同じインターフェイスと機能を使用できるようにします。このユーザー コントロールには、UI マークアップ用の .xaml ファイルとロジック用の C# ファイルがあります。さらに、このユーザー コントロール用の任意のタイプのスタイリング情報を含むリソース ディクショナリがあります。Angular では、`Component` と呼ばれるものを使用します。コンポーネントには、UI マークアップに使用される html ファイルがあります。プロパティとロジックに使用される typescript ファイルがあり、すべてのスタイル情報に CSS ファイルを使用します。以下は比較ですが類似点が多くあります。
+Angular で UI を作成する方法は、WPF で UI を作成する方法と非常に似ています。通常、UserControl クラスで表されるユーザー コントロールを使用します。`UserControl` は、マークアップとコードを再利用可能なコンテナにグループ化し、複数の異なる場所で同じインターフェイスと機能を使用できるようにします。このユーザー コントロールには、UI マークアップ用の .xaml ファイルとロジック用の C# ファイルがあります。さらに、このユーザー コントロール用の任意のタイプのスタイリング情報を含むリソース ディクショナリがあります。Angular では、`Component` と呼ばれるものを使用します。コンポーネントには、UI マークアップに使用される html ファイルがあります。プロパティとロジックに使用される typescript ファイルがあり、すべてのスタイル情報に CSS ファイルを使用します。以下は比較ですが類似点が多くあります。
 
 <img src="../../../images/general/component_structure.png" />
 
@@ -43,7 +43,7 @@ ng g c sample
 
 <img src="../../../images/general/sample_component.png" />
 
-新しく作成したコンポーネントを含むサンプル フォルダーを確認します。コンポーネントに必要な 3 つのファイルすべてに加えて、SPEC ファイルがありますが、このトピックでは必要ないテスト ファイルです。また、app.module.ts に変更を加え、NgModule の`宣言`セクションにサンプルコンポーネントを追加しました。
+新しく作成したコンポーネントを含む `sample` フォルダーを確認します。コンポーネントに必要な 3 つのファイルすべてに加えて、SPEC ファイルがありますが、このトピックでは必要ないテスト ファイルです。また、app.module.ts に変更を加え、NgModule の`宣言`セクションにサンプルコンポーネントを追加しました。
 > [!NOTE]
 > 重要: 新しいコンポーネントが作成されるたびに、NG モジュールの宣言セクションで宣言する必要があります。このセクションでは、このモジュールに属するコンポーネントについて説明します。
 
@@ -79,7 +79,7 @@ p {
 
 ## その他のリソース
 * [デスクトップから Web: はじめての Angular アプリを作成](https://www.youtube.com/watch?v=z1SZUezpRXY&t)
-* [Angular Introduction to Components](https://angular.io/guide/architecture-components)
+* [Angular Introduction to Components (英語)](https://angular.io/guide/architecture-components)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

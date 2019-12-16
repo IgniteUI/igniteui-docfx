@@ -46,7 +46,7 @@ Ignite UI for Angular の @@igComponent コンポーネントは、標準ドラ�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -56,7 +56,7 @@ Ignite UI for Angular の @@igComponent コンポーネントは、標準ドラ�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -66,7 +66,7 @@ Ignite UI for Angular の @@igComponent コンポーネントは、標準ドラ�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -175,7 +175,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 ```
 
 > [!NOTE]
-> コンポーネントの [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `penetrate` する必要な場合があります。
+> コンポーネントの [**View Encapsulation**](../themes/component-themes.md#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `ペネトレーション` する必要な場合があります。
 
 ```scss
 :host {
@@ -211,13 +211,13 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 
 > [!NOTE]
-> igx-color および igx-palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](/components/themes/palette.html)のトピックを参照してください。
+> igx-color および igx-palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palette.md)のトピックを参照してください。
 
 #### スキーマの使用
 
-テーマ エンジンを使用して、[スキーマ](/components/themes/schemas.html)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して、[スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid) の 1 つを拡張します。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
 
 ```scss
 // Extending the dark grid schema
@@ -261,7 +261,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -272,7 +272,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -283,7 +283,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-column-moving-styled-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -293,12 +293,12 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent の概要](@@igMainTopic.md)
+* [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
@@ -308,7 +308,6 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
 * [検索](search.md)
-* [Excel エクスポーター](../exporter_excel.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

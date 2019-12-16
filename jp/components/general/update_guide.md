@@ -1,4 +1,4 @@
----
+﻿---
 title: アップデート ガイド
 _description: このトピックでは、新しいバージョンの Ignite UI for Angular ライブラリにアップデートする方法についてご紹介します。
 _keywords: Ignite UI for Angular, アップデート, npm パッケージ, バージョン, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) は、最初の数字がコードでサポートされる Angular のメジャー バージョンで、2 番目の数字はメジャー バージョン リリースの数字です。また重大な変更がメジャー リリース間でリリースされる場合があります。
 **Ignite UI for Angular** 各リリースのすべての変更の一覧は、製品 [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md) (英語) をご覧ください。
 
-Ignite UI for Angular パッケージは `ng update` Schematics で自動バージョン マイグレーションをサポートします。これにより、すべての可能性のある重大な変更 (セレクターの名前、クラス、@Input/Output プロパティの変更) をマイグレーションを試みます。ただし、マイグレーションできない変更がある場合もあります。通常これらの変更はタイプ スクリプト アプリケーション ロジックに関連しており、[詳細](#additional-manual-changes)は以下をご確認ください。
+Ignite UI for Angular パッケージは `ng update` Schematics で自動バージョン マイグレーションをサポートします。これにより、すべての可能性のある重大な変更 (セレクターの名前、クラス、@Input/Output プロパティの変更) をマイグレーションを試みます。ただし、マイグレーションできない変更がある場合もあります。通常これらの変更はタイプ スクリプト アプリケーション ロジックに関連しており、[詳細](#その他の手動の変更)は以下をご確認ください。
 
 はじめに [**`ng update`**](https://angular.io/cli/update) コマンドを実行してアプリケーションとパッケージに使用できるアップデートをチェックします。
 ```cmd
@@ -85,6 +85,22 @@ ng update @angular/cli
     * インターフェイス `IgxDropEnterEventArgs` と `IgxDropLeaveEventArgs` を使用する場合は、`IDragBaseEventArgs` に置き換える必要があります。
     * また、`IgxDropEventArgs` インターフェイスの使用はすべて、用する場合は、`IDropDroppedEventArgs` に置き換える必要があります。
 
+* IgxRowDragDirective 
+    * `IRowDragStartEventArgs` および `IRowDragEndEventArgs` では、関連先をより明確にするために引数の名前が変更されています。`owner` 引数は `dragDirective` に名前が変更されます。
+    `owner` 引数は、owner コンポーネントへの参照を提供するようになりました。コードが以下のような場合:
+        ```typescript
+        public dragStart(event) {
+            const directive = event.owner;
+        }
+        ```
+        バージョン 8.2.x から以下のように更新します。
+        ```typescript
+        public dragStart(event) {
+            const directive = event.dragDirective;
+            const grid = event.owner;
+        }
+        ```
+
 * IgxCombo
     * [`igx-combo`](../combo.md) が選択とデータバインディングを処理する方法が変更されました。
 
@@ -121,7 +137,7 @@ ng update @angular/cli
     }
     ```
 
-    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#selection)をご覧ください。
+    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#選択)をご覧ください。
 
 ### 8.0.x から 8.1.x の場合:
 * `igx-paginator` コンポーネントはスタンドアロン コンポーネントとして導入され、Grid コンポーネントでも使用されます。

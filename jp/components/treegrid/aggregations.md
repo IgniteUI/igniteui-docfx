@@ -15,7 +15,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -74,7 +74,7 @@ public groupColumnKey = "Categories";
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 
 ### その他のリソース
 
@@ -82,7 +82,7 @@ public groupColumnKey = "Categories";
 
 * [TreeGrid 概要](tree_grid.md)
 * [TreeGrid 集計](summaries.md)
-* [グリッドの集計](../grid/summaries.md)
+* [Grid 集計](../grid/summaries.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

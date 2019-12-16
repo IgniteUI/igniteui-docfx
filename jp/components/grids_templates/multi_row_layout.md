@@ -13,7 +13,7 @@ _language: ja
 </div>	
 <br/>	
 <div>	
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>	
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>	
 </div>	
 
 
@@ -59,7 +59,7 @@ _language: ja
 複数行レイアウトのレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。  その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。	
 - フィルタリング - Excel スタイルのフィルタリングのみがサポートされています。`filterMode` を `FilterMode.quickFilter` に明示的に設定しても効果はありません。	
 - ページング - 表示行ではなくレコードで機能します。	
-- Group By - `hideGroupedColumns` オプションは、複数行レイアウトでは効果がありません。グループ化された列は常に表示されます。	
+- グループ化 - `hideGroupedColumns` オプションは、複数行レイアウトでは効果がありません。グループ化された列は常に表示されます。	
 
  以下の機能は現在サポート**されません**。	
 - 列移動 	
@@ -95,8 +95,8 @@ _language: ja
 
 グリッドでは、特定のキーが押されたときのデフォルトのナビゲーション動作をカスタマイズできます。`隣りのセル`または`下のセル`へ移動するような操作は、キーボード ナビゲーション API を使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` イベント `(keydown)="onKeydown($event)"` を使用できます。
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` イベント `(keydown)="onKeydown($event)"` を使用できます。
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
 
 以下のデモでは、Excel と同じように、<kbd>Enter</kbd> と <kbd>Shift</kbd> + <kbd>Enter</kbd> キーを使って追加のナビゲーションを使用します。
@@ -108,7 +108,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### レイアウトの構成
@@ -131,7 +131,7 @@ _language: ja
 </div>
 
 ### スタイル設定
-igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。     
 
@@ -188,7 +188,7 @@ $custom-theme: igx-grid-theme(
 ```
 
 #### カスタム スキーマの定義
-さらに進んで、[**schema**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
+さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -228,7 +228,7 @@ $my-custom-schema: extend($light-schema, (
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが[`エミュレート`](../themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+ >コンポーネントが[`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。 
 

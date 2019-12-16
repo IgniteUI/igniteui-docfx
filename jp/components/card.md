@@ -22,7 +22,15 @@ _language: ja
 Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされるアクションが異なる同様のオブジェクトから成るコンテンツを表示できます。
 
 ####作業の開始
-Ignite UI for Angular Card の初期化前に `IgxCardModule` を **app.module.ts** ファイルにインポートします:
+
+Card コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxCardModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -212,6 +220,18 @@ export class AppModule {}
 }
 ```
 
+`igx-card-actions` のボタンが `vertical` のレイアウトに切り替わりました。`igx-card-actions` は、その`親`と`逆`のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
+
+アクション領域の `vertical` 属性を明示的に設定して、デフォルトの動作を上書きすることができます。
+
+```html
+<igx-card-actions layout="justify" [vertical]="false">
+    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon>{{icon}}</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
 以下は横向きのカードの例です。
 
 <div class="sample-container loading" style="height: 202px">
@@ -399,7 +419,7 @@ $dark-card: igx-card-theme(
     <iframe id="card-style-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-styling-sample" class="lazyload no-theming">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### まとめ

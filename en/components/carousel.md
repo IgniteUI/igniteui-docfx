@@ -15,7 +15,16 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 ### Usage
-The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components. To get started with the **Ignite UI for Angular Carousel**, let's first import the **IgxCarouselModule** in our **app.module.ts** file:
+The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
+
+To get started with the Carousel component, install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
 ```typescript
 // app.module.ts
 ...

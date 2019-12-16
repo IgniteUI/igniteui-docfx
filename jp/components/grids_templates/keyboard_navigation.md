@@ -58,16 +58,16 @@ _language: ja
 ### カスタム キーボード ナビゲーション
 特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event（keydown）= "onKeydown（$ event）"を使用できます。
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event(keydown)= "onKeydown($ event)"を使用できます。
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
-- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) - 
-現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
-- [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) -
-現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
+- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
+現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
+- [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) -
+現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
 
  @@if (igxName === 'IgxHierarchicalGrid') {
-> 注: [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#navigateto) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasecomponent.html#getpreviouscell) は現在のレベルでは使用できないため、子セルにアクセスすることはできません。
+> 注: [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) は現在のレベルでは使用できないため、子セルにアクセスすることはできません。
 }
 
 以下のサンプルは、その方法を示しています。
@@ -92,7 +92,7 @@ const cell = args.event.shiftKey ?
 this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
-- `Enter key` キーを押すと列ベースのナビゲーション（垂直）を実行します。
+- `Enter key` キーを押すと列ベースのナビゲーション(垂直)を実行します。
 
 ```typescript
 if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
@@ -106,7 +106,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 - 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `tab キー` を押します。プロンプト メッセージが表示されます。
 - セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
-> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに F2 キーを使用できることに注意してください。
+> 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに `F2 キー`を使用できることに注意してください。
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -224,7 +224,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 </div>
 }
 
-既知の問題
+既知の制限
 |制限|説明|
 |--- |--- |
 |スクロール可能な親コンテナを使用してグリッド内を移動します。|グリッドがスクロール可能な親コンテナ内に配置され、ユーザーがグリッド内をナビゲートする際にビュー範囲外にセルがある場合、親コンテナーはスクロールしません。|

@@ -20,12 +20,16 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、すべての必要な依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。「[**インストール**](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation)」のトピックで手順を参照できます。
-
 ### 使用方法
 
-Ignite UI for Angular Toast を初期化する前に、最初に `IgxToastModule` を **app.module.ts** ファイルにインポートします:
+Toast コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxToastModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -156,7 +160,7 @@ $dark-toast: igx-toast-theme(
 ```
 
 >[!NOTE]
->コンポーネントが[`エミュレート`](themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+>コンポーネントが[`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -196,7 +200,7 @@ $dark-toast: igx-toast-theme(
 
 テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-toast`]({environment:sassApiUrl}/index.html#variable-_dark-toast) の 1 つを拡張します。 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-toast`]({environment:sassApiUrl}/index.html#variable-_dark-toast)) の 1 つを拡張します。 
 
 ```scss
 //  Extending the toast schema

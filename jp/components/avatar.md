@@ -22,7 +22,14 @@ _language: ja
 
 ### 使用方法
 
-Ignite UI for Angular Avatar を初期化する前に、`IgxAvatarModule` を **app.module.ts** ファイルにインポートします。
+Avatar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxAvatarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -42,7 +49,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 #### イニシャルを表示するアバター
 
-イニシャル ('John Smith' の場合 'JS') を使用した簡易なアバターを作成するには、以下のコードをコンポーネントのテンプレートに追加します。
+[イニシャル]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) ('John Smith' の場合 'JS') を使用した簡易なアバターを作成するには、以下のコードをコンポーネントのテンプレートに追加します。
 
 ```html
 <igx-avatar initials="JS">
@@ -112,7 +119,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ### その他のリソース
 <div class="divider--half"></div>

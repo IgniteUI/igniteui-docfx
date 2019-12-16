@@ -8,14 +8,14 @@ _language: ja
 ## オーバーレイ スタイリング
 <p class="highlight">
 
-IgxOverlayService は、コンテンツまたはページ全体の上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントのの多くは、ドロップダウン、コンボ、日付ピッカーなどのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
-他の要素上にコンテンツを表示するために、サービスは特別なアウトレット コンテナにへ移動します  (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープ](#scoped-component-styles)されたスタイルに影響を与える可能性があります。
+[`IgxOverlayService`](overlay_main.md) は、コンテンツまたはページ全体の上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントのの多くは、[ドロップダウン](drop_down.md)、[コンボ](combo.md)、[日付ピッカー](date_picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
+他の要素上にコンテンツを表示するために、サービスは特別なアウトレット コンテナにへ移動します  (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープ](#スコープ-コンポーネント-スタイル)されたスタイルに影響を与える可能性があります。
 </p>
 <div class="divider--half"></div>
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-最も一般的な使用例 - アプリのテーマを[グローバル](themes/global-theme.md)に定義する - では、スタイルは通常オーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-drop-down-theme` 関数でスタイル設定されたドロップダウンを見てみましょう。
+最も一般的な使用例 - アプリのテーマを[グローバル](themes/global-theme.md)に定義する - では、スタイルは通常オーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-drop-down-theme` 関数]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)でスタイル設定された[ドロップダウン](drop_down.md#スタイル設定)を見てみましょう。
 
 ```html
 <!-- in overlay-styling.component.html -->
@@ -40,7 +40,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 
 グローバル スタイルはスコープされたルール下では生成されず、カプセル化の影響も受けないため、サービスがオーバーレイ アウトレットに移動した `igx-drop-down-item` など、ページ上の任意の要素と一致できます。
 
-あるいは、カスタム コンポーネントのビューのみにスタイルを制限するために、オーバーレイを追加考慮せずに [`ViewEncapsulation`](themes/component-themes.md#view-encapsulation) を使用することもできます。これは、上記のドロップダウンや [`igxToggle`]() ディレクティブなど、ほとんどテンプレート化されたコンテンツを表示するコンポーネントに適用されます。
+あるいは、カスタム コンポーネントのビューのみにスタイルを制限するために、オーバーレイを追加考慮せずに [`ViewEncapsulation`](themes/component-themes.md#表示のカプセル化) を使用することもできます。これは、上記のドロップダウンや [`igxToggle`]() ディレクティブなど、ほとんどテンプレート化されたコンテンツを表示するコンポーネントに適用されます。
 
 たとえば、カスタム コンポーネントのスタイル ファイル `overlay-styling.component.scss` で上記のスタイルを定義できます。
 
@@ -59,7 +59,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 
 オーバーレイに表示される要素のスタイルをスコーピングする際に DOMのオーバーレイ `アウトレット`の位置を指定する必要があります。スコープが設定された CSS ルールには、要素の特定の階層構造が必要です - オーバーレイ コンテンツが、適用するスタイルの正しいコンテキストで表示されることを確認してください。
 
-たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目[スタイル](combo.md#styling)は igx-drop-down テーマを使用します。カスタム テーマがそれらに影響を与えるには、`ViewEncapsulation.Emulated` を使用するときに、`::ng-deep` でカプセル化をペネトレーションし、アプリ全体ににじまないようにスタイルをスコープする必要があります。
+たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目[スタイル](combo.md#スタイル設定)は igx-drop-down テーマを使用します。カスタム テーマがそれらに影響を与えるには、`ViewEncapsulation.Emulated` を使用するときに、`::ng-deep` でカプセル化をペネトレーションし、アプリ全体ににじまないようにスタイルをスコープする必要があります。
 
 ```scss
 // in overlay-styling.component.scss
@@ -69,7 +69,7 @@ $my-drop-down-theme: igx-drop-down-theme(
     }
 }
 ```
-コンボのリスト内項目は、コンポーネント ホストの子孫では**ありません**。現在、`ドキュメント`本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。これを変更するには、`overlaySettings` のアウトレット[`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`アウトレット`は、オーバーレイ コンテナをレンダリングする場所を制御します。
+コンボのリスト内項目は、コンポーネント `host` の子孫では**ありません**。現在、`ドキュメント`本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。これを変更するには、`overlaySettings` のアウトレット[`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナをレンダリングする場所を制御します。
 
 以下でコンテナを配置する要素への参照を渡すことができます。
 
@@ -98,7 +98,7 @@ export class OverlayStylingComponent {
 ## オーバーレイのスタイル設定
 
 
-`ViewEncapsulation` がオーバーレイのアウトレット プロパティとどのように連携するかを説明しました。次にオーバーレイ ラッパー自体のスタイルを設定する方法を示します。
+`ViewEncapsulation` がオーバーレイの `outlet` プロパティとどのように連携するかを説明しました。次にオーバーレイ ラッパー自体のスタイルを設定する方法を示します。
 [`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
 
 ### グローバル スタイル
@@ -120,8 +120,8 @@ $my-overlay-theme: igx-overlay-theme(
 
 ### スコープ オーバーレイ スタイル
 
-特定のコンポーネントの下に**のみ**特定の背景をオーバーレイに表示したい場合は、[テーマをスコープ](#scoped-component-styles)できます。
-モーダル オーバーレイをスコープする場合、オーバーレイ アウトレットを移動する必要がありますが、これにはいくつかの[制限](overlay_main.md#assumptions-and-limitations)があります。オーバーフロークリッピング、`z-index`、およびビューポートの問題のリスクを最小限に抑えるために、より高いレベルのコンポーネントでのみモーダルオーバーレイのアウトレットを使用することをお勧めします。
+特定のコンポーネントの下に**のみ**特定の背景をオーバーレイに表示したい場合は、[テーマをスコープ](#スコープ-コンポーネント-スタイル)できます。
+モーダル オーバーレイをスコープする場合、オーバーレイ アウトレットを移動する必要がありますが、これにはいくつかの[制限](overlay_main.md#前提事項と制限)があります。オーバーフロークリッピング、`z-index`、およびビューポートの問題のリスクを最小限に抑えるために、より高いレベルのコンポーネントでのみモーダルオーバーレイのアウトレットを使用することをお勧めします。
 
 ```scss
 //  styles.scss
@@ -132,7 +132,7 @@ $my-overlay-theme: igx-overlay-theme(
 ```
 
 >[!NOTE]
-> コンポーネントが[``エミュレート](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。これは、オーバーレイ ラッパーがコンポーネントのビューの一部**ではない**オーバーレイ サービスによって動的に作成されるためです。
+> コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。これは、オーバーレイ ラッパーがコンポーネントのビューの一部**ではない**オーバーレイ サービスによって動的に作成されるためです。
 > テーマがアプリの他のコンポーネントの要素に影響を**与えない**ように、`:host` の下の `::ng-deep` ステートメントをスコープします。
 
 ```scss
@@ -148,5 +148,5 @@ $my-overlay-theme: igx-overlay-theme(
 
 ## その他のリソース
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [オーバーレイ メイン トピック](overlay_main.md)

@@ -16,7 +16,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 #### Chip の初期化
@@ -195,7 +195,7 @@ public chipsOrderChanged(event) {
   - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
 
 ### スタイル設定
-igxChip を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。チップの [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) は、チップの多様なカスタマイズを可能にする多数のプロパティを公開します。        
+igxChip を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。チップの [テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme) は、チップの多様なカスタマイズを可能にする多数のプロパティを公開します。        
 
  #### グローバル テーマのインポート
 定義済みのチップ レイアウトのスタイリングを開始するには、すべてのスタイリング機能と mixin が配置されている `index` ファイルをインポートする必要があります。  
@@ -254,7 +254,7 @@ $custom-theme: igx-chip-theme(
 ```
 
 #### カスタム スキーマの定義
-[**schema**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**schema** はテーマを作成させるための方法です。   
+[**スキーマ**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ** はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_light_chip` を使用します。   
 
 ```scss
@@ -315,7 +315,7 @@ $custom-theme: igx-chip-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### API

@@ -17,7 +17,7 @@ _language: ja
     <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### 使用方法
@@ -83,7 +83,7 @@ export class AppModule {}
 ```
 
 ### ヘッダー テンプレート
-Use selector `[igxComboHeader]`:
+セレクター `[igxComboHeader]`の使用:
 
 ```html
 <igx-combo>
@@ -95,7 +95,7 @@ Use selector `[igxComboHeader]`:
 ```
 
 ### フッター テンプレート
-Use selector `[igxComboFooter]`:
+セレクター `[igxComboFooter]` の使用:
 
 ```html
 <igx-combo>
@@ -107,7 +107,7 @@ Use selector `[igxComboFooter]`:
 ```
 
 ### 空のテンプレート
-Use selector `[igxComboEmpty]`:
+セレクター `[igxComboEmpty]` の使用:
 
 ```html
 <igx-combo>

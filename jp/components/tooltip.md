@@ -1,5 +1,5 @@
 ---
-title: Tooltip - ネイティブ Angular | Ignite UI for Angular
+title: Tooltip - ネイティブ Angular |Ignite UI for Angular
 _description: Ignite UI for Angular Tooltip and Tooltip Target ディクティブは、ツールチップを作成する機能と要素へアタッチする機能が含まれます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ツールチップ ディレクティブ, Angular ツールチップ コントロール, Angular ツールチップ, ツールチップ ターゲット
 _language: ja
@@ -17,13 +17,20 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 設定
 
-Ignite UI for Angular ツールチップ、ヒント および ツールチップ、ヒントターゲットを初期化する前に、app.module.ts ファイルに `IgxTooltipModule` をインポートします。
+Tooltip と Tooltip Target を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、app.module.ts ファイルに `IgxTooltipModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -83,7 +90,7 @@ export class AppModule {}
 #### ツールチップ ターゲット
 avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブを設定し、ツールチップを持つ要素としてマークします。
 
-- [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`igxToggleAction`] ディレクティブを拡張します。
+- [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) ディレクティブを拡張します。
 - [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、名前 **tooltipTarget** でエクスポートされます。
 
 ```html
@@ -97,7 +104,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 #### ツールチップ
 ツールチップ要素を作成します。シンプルなテキスト ツールチップを作成するためテキストを含む標準 div 要素を定義し、ツールチップとしてマークされる [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを設定します。
 
-- [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは [`igxToggle`] ディレクティブを拡張します。
+- [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブを拡張します。
 - [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは、名前 **tooltip** でエクスポートされます。
 
 ```html
@@ -314,7 +321,7 @@ export class AppModule {}
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-rich-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-rich-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -326,33 +333,24 @@ export class AppModule {}
 > [!NOTE]
 > [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
 
-### ユーザー補助
+### スタイル設定
 
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブの要素には、ツールチップの表示状態に基づいて自動的に更新、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id)  プロパティ (開発者が設定しない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、**aria-hidden** 属性が含まれます。ターゲットの **aria-describedby** 属性を各ツールチップの[`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定すると、参照がツールチップ要素に提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。 
-
-以下の状況では十分な注意が必要です。
-- ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
-- ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
-- ターゲット要素はフォーカスできません。
-
-<!-- ### Styles
-
-To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
+ツールチップのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
+最も簡単な方法は、[`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
 $dark-tooltip: igx-tooltip-theme($text-color: #F4D45C, $background: rgb(65,65,65), $border-radius: 10px);
 ```
 
 > [!NOTE]
-> In order to style any additional components that are used as part of the tooltip's content (such as [`IgxButton`](button.md), [`IgxSwitch`](switch.md), etc.), an additional theme should be created that is specific to the respective component and placed under the tooltip's scope only (so it does not affect the rest of the application).
+> ダイアログ ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md)、[`IgxSwitch`](switch.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ツールチップのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
 
-Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the tooltip that we want to style, we will provide a specific outlet where the tooltip will be placed in the DOM when it is visible.
+ツールチップは [`IgxOverlayService`](overlay_main.md) を使用するため、スタイル設定するツールチップにカスタム テーマが適用されるよう、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 
 ```html
 <igx-avatar #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
@@ -367,16 +365,16 @@ Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for 
 ```
 
 > [!NOTE]
-> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> [`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、この[リンク](overlay_main.md#スタイル設定)をご覧ください。
 
-The last step is to **include** the component theme in our application.
+最後にコンポーネントのテーマを**含めます**。
 
 ```scss
 @include igx-tooltip($dark-tooltip);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -386,11 +384,11 @@ The last step is to **include** the component theme in our application.
 }
 ```
 
-#### Defining a color palette
+#### カラーパレットの定義
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #F4D45C;
@@ -398,7 +396,7 @@ $black-color: rgb(65,65,65);
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
 $dark-tooltip: igx-tooltip-theme(
@@ -409,11 +407,11 @@ $dark-tooltip: igx-tooltip-theme(
 );
 ```
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-tooltip`]({environment:sassApiUrl}/index.html#variable-_dark-tooltip) schema:
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-tooltip`]({environment:sassApiUrl}/index.html#variable-_dark-tooltip) の 1 つを拡張します。
 
 ```scss
 // Extending the dark tooltip schema
@@ -430,7 +428,7 @@ $dark-tooltip-schema: extend($_dark-tooltip,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -445,18 +443,27 @@ $dark-tooltip: igx-tooltip-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:200px">
     <iframe id="tooltip-style-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
+
+### ユーザー補助
+
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを持つ要素には、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) プロパティ (開発者によって設定されていない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、およびツールチップが表示されているかどうかに応じて自動的に更新される **aria-hidden** 属性があります。ターゲットの **aria-describedby** 属性をそれぞれのツールチップの [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定することにより、ツールチップ要素への参照が提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。
+
+以下の状況では十分な注意が必要です。
+- ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
+- ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
+- ターゲット要素はフォーカスできません。
 
 ### API リファレンス
 
@@ -478,13 +485,13 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 スタイル:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-igx-card-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxButtonDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxCardComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 <div class="divider"></div>
 

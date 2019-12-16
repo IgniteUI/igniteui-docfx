@@ -14,14 +14,21 @@ Ignite UI for Angular Input Group は、簡単に使用できるデータ入力�
 <iframe id="input-group-sample-6-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-6' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-6-frame" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
 Input Group コンポーネントおよびその関連するディレクティブのデフォルト スタイル設定は、マテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
-テンプレート駆動フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **FormsModule** をインポートします。
+まず、以下のコマンドを実行して Ignite UI for Angular をインストールします。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、テンプレート駆動フォームを機能させるために、すべての必要なモジュールを `igniteui-angular` ツールキットと **FormsModule** からインポートします。
 
 ```typescript
 // app.module.ts
@@ -94,7 +101,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 <iframe id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -110,7 +117,7 @@ Ignite UI for Angular Hint は、入力の下に配置されるヘルパー テ�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-これで、カスタム [palette](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
+これで、カスタム [パレット](themes/palette.md) の構築を開始し、それを使用して入力用の[テーマ](themes/component-themes.md)を生成できます。
 
 #### カラーパレットの定義
 
@@ -164,7 +171,7 @@ $input-group-theme: igx-input-group-theme(
 
 グローバル スタイル ファイル (デフォルトでは styles.scss) に igx-input-group ミックスインを含めると、カスタム テーマはアプリケーションのすべての入力グループに影響します。入力グループ要素の*特定のサブセット*のみにカスタム スタイルを適用する場合は、それに応じてテーマをスコープする必要があります。
 
-例のコンテキストで続けると、サンプル コンポーネントの下の `igx-input-group` 要素にのみ適用するようにテーマをスコープできます。これを行うには、カスタム スタイルをコンポーネントのスタイル ファイル (`input-group-style.component.scss`) に移動します。ただし、[include 手順](#including-the-theme)に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、Angular の `View カプセル化`によるものです。コンポーネントは `エミュレートされた` ビューのカプセル化 (デフォルト) を使用しているため、`@include` ステートメントのスタイルは、コンポーネントのテンプレートのみにスコープされます。`Input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。ただし、入力の下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの影響を**受けません**。
+例のコンテキストで続けると、サンプル コンポーネントの下の `igx-input-group` 要素にのみ適用するようにテーマをスコープできます。これを行うには、カスタム スタイルをコンポーネントのスタイル ファイル (`input-group-style.component.scss`) に移動します。ただし、[include 手順](#テーマを含む)に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、Angular の `View カプセル化`によるものです。コンポーネントは `エミュレートされた` ビューのカプセル化 (デフォルト) を使用しているため、`@include` ステートメントのスタイルは、コンポーネントのテンプレートのみにスコープされます。`Input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。ただし、入力の下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの影響を**受けません**。
 
 境界線のスタイルを設定するには、コンポーネントの scss ファイルで `::ng-deep` セレクターを使用して、Angular の`エミュレート`されたビューのカプセル化をペネトレーションする必要があります。`::ng-deep` を使用する場合、スタイルを `:host` セレクターでスコープし、これらのスタイルがコンポーネントの下の要素にのみ適用されるようにする必要があります。
 
@@ -178,7 +185,7 @@ $input-group-theme: igx-input-group-theme(
 ```
 
  >[!NOTE]
- > コンポーネントが[`エミュレート`](themes/component-themes.md#view-encapsulation)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
+ > コンポーネントが[`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。テーマがアプリの他のコンポーネントの入力グループに影響を**与えない**ように、`:host` の下に `::ng-deep` ステートメントをスコープします。
 
 #### デモ
 
@@ -189,7 +196,7 @@ $input-group-theme: igx-input-group-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -197,7 +204,7 @@ $input-group-theme: igx-input-group-theme(
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ### その他のリソース
 関連トピック:

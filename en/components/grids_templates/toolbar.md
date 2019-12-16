@@ -301,25 +301,38 @@ To get started with styling the toolbar, we need to import the index file, where
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color`, `$title-text-color`, `$button-background`, `$button-text-color`, `$button-hover-background` and the `$button-hover-text-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
     $background-color: #292826,
-    $title-text-color: #FFCD0F,
-    $button-background: #FFCD0F,
-    $button-text-color: #292826,
-    $button-hover-background: #404040,
-    $button-hover-text-color: #FFCD0F
+    $title-text-color: #FFCD0F
 );
 ```
 
-As seen, the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) only controls colors for the toolbar container and the buttons inside of it by taking advantage of the respective parameters for the button (e.g. `$button-background`). (Buttons outside the toolbar will not be affected.)
+In order to style the buttons inside the toolbar, we will also create another theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme).
 
-The last step is to **include** the newly created theme.
+```scss
+$dark-button-theme: igx-button-theme(
+    $outlined-background: #FFCD0F,
+    $outlined-text-color: #292826,
+    $outlined-hover-background: #404040,
+    $outlined-hover-text-color: #FFCD0F
+);
+```
+
+The last step is to **include** the newly created themes. The button theme will be scoped to the actions container of the toolbar, so the buttons outside the toolbar do not get affected by it.
 
 ```scss
 @include igx-grid-toolbar($dark-grid-toolbar-theme);
+.igx-grid-toolbar__actions {
+    @include igx-button($dark-button-theme);
+
+    .igx-button--outlined {
+        margin-left: 0.5rem;
+        border: none;
+    }
+}
 ```
 
 >[!NOTE]
@@ -329,6 +342,15 @@ The last step is to **include** the newly created theme.
 :host {
     ::ng-deep {
         @include igx-grid-toolbar($dark-grid-toolbar-theme);
+
+        .igx-grid-toolbar__actions {
+            @include igx-button($dark-button-theme);
+    
+            .igx-button--outlined {
+                margin-left: 0.5rem;
+                border: none;
+            }
+        }
     }
 }
 ```
@@ -349,13 +371,16 @@ $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
+$dark-button-theme: igx-button-theme(
+    $outlined-background: igx-color($dark-palette, "secondary", 400),
+    $outlined-text-color: igx-color($dark-palette, "primary", 400),
+    $outlined-hover-background: igx-color($dark-palette, "primary", 400),
+    $outlined-hover-text-color: igx-color($dark-palette, "secondary", 400)
+);
+
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
     $background-color: igx-color($dark-palette, "primary", 200),
-    $title-text-color: igx-color($dark-palette, "secondary", 400),
-    $button-background: igx-color($dark-palette, "secondary", 400),
-    $button-text-color: igx-color($dark-palette, "primary", 400),
-    $button-hover-background: igx-color($dark-palette, "primary", 400),
-    $button-hover-text-color: igx-color($dark-palette, "secondary", 400)
+    $title-text-color: igx-color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -366,10 +391,9 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) schema: 
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
 
 ```scss
- Extending the dark toolbar schema
 $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
     (
         background-color:(
@@ -377,17 +401,22 @@ $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
         ),
         title-text-color:(
             igx-color: ("secondary", 400)
-        ),
-        button-background:(
+        )
+    )
+);
+
+$dark-button-schema: extend($_dark-button,
+    (
+        outlined-background: (
             igx-color: ("secondary", 400)
         ),
-        button-text-color:(
+        outlined-text-color: (
             igx-color: ("primary", 400)
         ),
-        button-hover-background:(
+        outlined-hover-background: (
             igx-color: ("primary", 400)
         ),
-        button-hover-text-color:(
+        outlined-hover-text-color: (
             igx-color: ("secondary", 400)
         )
     )
@@ -399,8 +428,15 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-grid-toolbar: $dark-grid-toolbar-schema
+    igx-grid-toolbar: $dark-grid-toolbar-schema,
+    igx-button: $dark-button-schema
 ));
+
+// Defining button-theme with the global dark schema
+$dark-button-theme: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
 
 // Defining grid-toolbar-theme with the global dark schema
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(

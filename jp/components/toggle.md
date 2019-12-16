@@ -21,9 +21,16 @@ _language: ja
 
 ## 使用方法
 
-Toggle は、簡単に開いたり、閉じたりできるボックスにコンテンツをラップします。
+Toggle は、簡単に開閉できるボックスにコンテンツをラップします。
 
-Ignite UI for Angular Toggle を初期化する前に、**IgxToggleModule** を **app.module.ts** ファイルにインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
+Toggle ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
+次に、**app.module.ts** に **IgxToggleModule** をインポートします。また、[**igxButton**]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用するため、**IgxButtonModule** も **app.module.ts** にインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -147,7 +154,7 @@ export class AppModule {}
     <iframe id="toggle-iframe-1" data-src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 
@@ -194,6 +201,8 @@ export class AppModule {}
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz で表示
     </button>
 </div>
+
+***注***：デフォルトで、[**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) から除外します。ホスト要素をクリックすると、外側のクリックで閉じられることはが発生しません。さらに、[**IgxToggleActionDirective**]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) はホスト要素を [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target) のポジション ストラテジとして設定します。
 
 ### サービス プロバイダーを使用するトグル自動操作
 
@@ -247,9 +256,20 @@ export class AppModule {}
 <button [igxToggleAction]="reference" [igxToggleOutlet]="outlet">Toggle</button>
 <custom-component #reference></custom-component>
 ```
+### トグル コンテナのオフセット
+
+対応する軸に沿って指定した量のみコンテナをオフセットする方法:
+```typescript
+    // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
+   const deltaX: number = 30;
+   const deltaY: number = 15;
+    this.toggleForm.setOffset(deltaX, deltaY);
+```
+## API まとめ
+
+このトピックでは Toggle ディレクティブの使用方法について紹介しました。この動作を決定するコードでメソッドを呼び出して表示または非表示にすることができるコンテンツを作成しました。さらに適切なトグル参照を使用して同じ動作を自動的に制御するその他のディレクティブを追加しました。最後に、ヘルパー **igxToggleAction** ディレクティブに提供された ID を使用して、[**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブ **igxNavigationService** プロバイダーに登録しました。
 
 ### API リファレンス
-
 <div class="divider"></div>
 
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)

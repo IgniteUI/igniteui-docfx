@@ -34,7 +34,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -44,7 +44,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -54,7 +54,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -185,7 +185,7 @@ $custom-grid-theme: igx-grid-theme(
 
 ```
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -220,9 +220,9 @@ $custom-grid-theme: igx-grid-theme(
 >`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
 
 #### スキーマの使用
-テーマ エンジンを使用して [スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている定義済みスキーマ、(ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) スキーマを拡張します。
+すべてのコンポーネントに提供されている定義済みスキーマ、ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) スキーマを拡張します。
 
 ```scss
 // Extending the light grid schema
@@ -293,7 +293,7 @@ $custom-grid-theme: igx-grid-theme(
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ### その他のリソース
 <div class="divider--half"></div>

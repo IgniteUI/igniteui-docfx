@@ -17,12 +17,16 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 </div>
 <div class="divider--half"></div>
 
-> [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](general/getting_started.md) topic.
-
 ### Usage
 
-To get started with the Ignite UI for Angular TextHighlight directive, let's first import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
+To get started with the Ignite UI for Angular TextHighlight directive, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
 
 ```typescript
 // app.module.ts
@@ -270,7 +274,166 @@ All the rest of the code in the .ts file is identical to the single element exam
 
 <div class="divider"></div>
 
-### API and Style References
+### Styles
+
+The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive can be styled in terms of changing the color and the background of all occurrences of the given string. To get started, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
+
+```scss
+$dark-highlight: igx-highlight-theme(
+    $resting-background: #FFCD0F,
+    $resting-color: #292826,
+    $active-background: #292826,
+    $active-color: #FFCD0F
+);
+```
+
+The `$resting-background` and the `$resting-color` parameters will be applied to all highlighted occurrences, except for the active highlighted string, which will be styled based on the `$active-background` and the `$active-color` parameters.
+
+The last step is to **include** the newly created theme.
+
+```scss
+@include igx-highlight($dark-highlight);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-highlight($dark-highlight);
+    }
+}
+```
+
+#### Defining a color palette
+
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+
+```scss
+$yellow-color: #FFCD0F;
+$black-color: #292826;
+$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
+
+```scss
+$dark-highlight: igx-highlight-theme(
+    $resting-background: igx-color($dark-palette, "secondary", 400),
+    $resting-color: igx-color($dark-palette, "primary", 400),
+    $active-background: igx-color($dark-palette, "primary", 400),
+    $active-color: igx-color($dark-palette, "secondary", 400)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-highlight`]({environment:sassApiUrl}/index.html#variable-_dark-highlight) schema:
+
+```scss
+ // Extending the dark highlight schema.
+$dark-highlight-schema: extend($_dark-highlight,
+    (
+        resting-background: (
+            igx-color: ("secondary", 400)
+        ),
+        resting-color: (
+            igx-color: ("primary", 400)
+        ),
+        active-background: (
+            igx-color: ("primary", 400)
+        ),
+        active-color: (
+            igx-color: ("secondary", 400)
+        )
+    )
+);
+```
+
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+
+```scss
+// Extending the global dark-schema
+$custom-dark-schema: extend($dark-schema,(
+    igx-highlight: $dark-highlight-schema
+));
+
+// Defining highlight-theme with the global dark schema
+$dark-highlight: igx-highlight-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
+```
+
+Don't forget to include the themes in the same way as it was demonstrated above.
+
+#### Custom styles
+
+Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) and provide an awesome experience to our users!
+
+All we have to do is create a couple of css classes with some properties and attach them by using the inputs from above:
+
+```html
+<div igxTextHighlight
+     [value]="html"
+     [groupName]="'group1'"
+     [cssClass]="'custom-highlight'"
+     [activeCssClass]="'custom-active-highlight'">
+    {{html}}
+</div>
+```
+
+```scss
+.custom-highlight {
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+.custom-active-highlight {
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+```
+
+As mentioned earlier, we can even combine them with a theme:
+
+```scss
+:host {
+    ::ng-deep {
+       @include igx-highlight($dark-highlight);
+
+       .custom-highlight {
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+       }
+       .custom-active-highlight {
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+        }
+   }
+}
+```
+
+#### Demo
+
+<div class="sample-container loading" style="height: 300px;">
+    <iframe id="text-highlight-style-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/text-highlight-style" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider"></div>
+
+### API References
 
 For more detailed information regarding the TextHighlight directive's API, refer to the following link:
 * [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)

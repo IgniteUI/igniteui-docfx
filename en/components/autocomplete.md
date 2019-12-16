@@ -25,12 +25,16 @@ The following sample demonstrates simple use of the `igx-autocomplete` directive
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**Getting Started**](general/getting_started.md) topic.
-
 ## Usage
 ### Getting Started
-To use the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) we need to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
+To get started with the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html), first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Then we need to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
 
 ```typescript
 // app.module.ts

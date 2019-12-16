@@ -22,6 +22,13 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 
 ### 依存関係
 
+Button ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+
 Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります。
 
 ```typescript
@@ -40,12 +47,6 @@ export class AppModule {}
 ```
 
 ### 使用方法
-
-```html
-<target-element igxButton [..options]>クリック</target-element>
-```
-
-### コード例
 
 シンプルな [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を設定します。タイプを選択しない場合、デフォルト値は `flat` です。
 
@@ -82,7 +83,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
 
-[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して span 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
+[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を使用して `span` 要素を Ignite UI for Angular のスタイル設定済みボタンにします。
 
 ```html
 <span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">クリック</span>
@@ -194,19 +195,19 @@ public selectDensity(event) {
     <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-<!-- ### Styling
+### スタイル設定
 
-To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
+ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$raised-text-color` and the `$raised-background` parameters with their respective hover parameters and the focus parameters.
+次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバー パラメーターとフォーカス パラメーターと共に `$raised-text-color` と `$raised-background` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $dark-button: igx-button-theme(
@@ -221,17 +222,17 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In the theme from above, we have obviously provided parameter values only for the **raised buttons** and in order to implement this for any other type of button, the approach is analogical - we simply have to target the parameters that are specific for the button type we wish to style.
-If we take a look at the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme), we will notice the vast amount of parameters that are available to us in order to style any type of button!
+上記のテーマでは、**Raised ボタン**にのみパラメーター値を提供しましたが、他のタイプのボタンも同様の方法で実装できます。スタイルを設定するボタン タイプに固有のパラメーターをターゲットにするだけです。
+[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) には、あらゆるタイプのボタンをスタイル設定するための多数のパラメーターがあります。
 
-The last step is to **include** the button theme in our application:
+最後のステップは、ボタンテーマをアプリケーションに**含めます**。
 
 ```scss
 @include igx-button($dark-button);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -241,11 +242,12 @@ The last step is to **include** the button theme in our application:
 }
 ```
 
-#### Defining a color palette
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+#### カラーパレットの定義
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+
+`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $yellow-color: #FFCD0F;
@@ -254,7 +256,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
 $dark-button: igx-button-theme(
@@ -270,13 +272,13 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palette.md)のトピックを参照してください。
 
-#### Using Schemas
+#### スキーマの使用
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+テーマ エンジンを使用して [**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button)) の 1 つを拡張します。 
 
 ```scss
 // Extending the dark button schema
@@ -305,7 +307,7 @@ $dark-button-schema: extend($_dark-button,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 // Extending the global dark-schema
@@ -320,23 +322,23 @@ $dark-button: igx-button-theme(
 );
 ```
 
-Don't forget to include the themes in the same way as it was demonstrated above.
+上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" class="lazyload no-theming">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
-<div class="divider--half"></div> -->
+<div class="divider--half"></div>
 
 ### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ### その他のリソース

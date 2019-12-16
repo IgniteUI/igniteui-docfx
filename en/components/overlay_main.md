@@ -12,8 +12,14 @@ The overlay service is fully integrated in the toggle directive.
 <div class="divider--half"></div>
 
 ## Getting Started
+To get started with the overlay service, install Ignite UI for Angular by typing the following command:
 
-To use the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) it needs to be imported in the component. `Inject` a reference to it in the component's constructor:
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+Then we need to import the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) in the component and `inject` a reference to it in the component's constructor:
 ```typescript
 
 import { Inject } from '@angular/core'

@@ -17,7 +17,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -26,7 +26,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -35,7 +35,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -88,7 +88,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -97,7 +97,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -106,7 +106,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -222,7 +222,7 @@ public toolbarExportingHandler(args) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -232,7 +232,7 @@ public toolbarExportingHandler(args) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -268,7 +268,7 @@ public toolbarExportingHandler(args) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-toolbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -278,7 +278,7 @@ public toolbarExportingHandler(args) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -288,7 +288,7 @@ public toolbarExportingHandler(args) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-toolbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider"></div>
 }
@@ -302,34 +302,56 @@ public toolbarExportingHandler(args) {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color`、`$title-text-color`, `$button-background`、`$button-text-color`、`$button-hover-background`、`$button-hover-text-color` パラメーターを受け取る方法です。
+最も簡単な方法として、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張し、`$background-color` と `$title-text-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
     $background-color: #292826,
-    $title-text-color: #FFCD0F,
-    $button-background: #FFCD0F,
-    $button-text-color: #292826,
-    $button-hover-background: #404040,
-    $button-hover-text-color: #FFCD0F
+    $title-text-color: #FFCD0F
 );
 ```
 
-ご覧のように、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) は、ボタンの各パラメーター (`$button-background`) を利用して、ツールバー コンテナーとその中のボタンの色のみを制御します。(ツールバーの外側のボタンは影響を受けません。)
+ツールバー内のボタンをスタイル設定するために、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張する別のテーマを作成します。
 
-最後にコンポーネントのテーマを**含めます**。
+```scss
+$dark-button-theme: igx-button-theme(
+    $outlined-background: #FFCD0F,
+    $outlined-text-color: #292826,
+    $outlined-hover-background: #404040,
+    $outlined-hover-text-color: #FFCD0F
+);
+```
+
+最後にコンポーネントのテーマを**含めます**。Button テーマは、ツールバーのアクション コンテナにスコープされるため、外側のボタンはツールバーに影響を受けません。
 
 ```scss
 @include igx-grid-toolbar($dark-grid-toolbar-theme);
+.igx-grid-toolbar__actions {
+    @include igx-button($dark-button-theme);
+
+    .igx-button--outlined {
+        margin-left: 0.5rem;
+        border: none;
+    }
+}
 ```
 
 >[!NOTE]
->コンポーネントが[`エミュレート`](../themes/component-themes.md#表示のカプセル化)された ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。
+>コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
 
 ```scss
 :host {
     ::ng-deep {
         @include igx-grid-toolbar($dark-grid-toolbar-theme);
+
+        .igx-grid-toolbar__actions {
+            @include igx-button($dark-button-theme);
+    
+            .igx-button--outlined {
+                margin-left: 0.5rem;
+                border: none;
+            }
+        }
     }
 }
 ```
@@ -350,13 +372,16 @@ $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
+$dark-button-theme: igx-button-theme(
+    $outlined-background: igx-color($dark-palette, "secondary", 400),
+    $outlined-text-color: igx-color($dark-palette, "primary", 400),
+    $outlined-hover-background: igx-color($dark-palette, "primary", 400),
+    $outlined-hover-text-color: igx-color($dark-palette, "secondary", 400)
+);
+
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
     $background-color: igx-color($dark-palette, "primary", 200),
-    $title-text-color: igx-color($dark-palette, "secondary", 400),
-    $button-background: igx-color($dark-palette, "secondary", 400),
-    $button-text-color: igx-color($dark-palette, "primary", 400),
-    $button-hover-background: igx-color($dark-palette, "primary", 400),
-    $button-hover-text-color: igx-color($dark-palette, "secondary", 400)
+    $title-text-color: igx-color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -365,12 +390,11 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
+テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) の 1 つを拡張します。 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマの 1 つを拡張します。この場合、[`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ。
 
 ```scss
- Extending the dark toolbar schema
 $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
     (
         background-color:(
@@ -378,30 +402,42 @@ $dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
         ),
         title-text-color:(
             igx-color: ("secondary", 400)
-        ),
-        button-background:(
+        )
+    )
+);
+
+$dark-button-schema: extend($_dark-button,
+    (
+        outlined-background: (
             igx-color: ("secondary", 400)
         ),
-        button-text-color:(
+        outlined-text-color: (
             igx-color: ("primary", 400)
         ),
-        button-hover-background:(
+        outlined-hover-background: (
             igx-color: ("primary", 400)
         ),
-        button-hover-text-color:(
+        outlined-hover-text-color: (
             igx-color: ("secondary", 400)
         )
     )
 );
 ```
 
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。この方法は、基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加します。
 
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-grid-toolbar: $dark-grid-toolbar-schema
+    igx-grid-toolbar: $dark-grid-toolbar-schema,
+    igx-button: $dark-button-schema
 ));
+
+// Defining button-theme with the global dark schema
+$dark-button-theme: igx-button-theme(
+  $palette: $dark-palette,
+  $schema: $custom-dark-schema
+);
 
 // Defining grid-toolbar-theme with the global dark schema
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(

@@ -15,11 +15,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-> [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
-
 ### Usage
-To get started with the **Ignite UI for Angular Month Picker**, let's first import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+To get started with the Month Picker component, first you need to install Ignite UI for Angular by typing the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+
+The next step is to import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts

@@ -69,20 +69,20 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
     <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### モーダル
 [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトに [`modal`] ({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) ブール値を渡すことができます。これはオーバーレイが表示される方法を制御します。
-[`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
-[`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
+- [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
+- [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で開く</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
