@@ -11,7 +11,7 @@ This section introduces Grid's integration with charting functionality, which al
 
 The chart will be shown by selecting a range of cells and by clicking on the show analysis button.
 
-<div class="sample-container loading" style="height: 650px;">
+<div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/grid/grid-dynamic-chart-data" class="lazyload"></iframe>
 </div>
 
@@ -27,10 +27,11 @@ We currently support the following Chart types:
 ### Conditional Cell Formatting 
 If you have a Grid with thousands of rows of data it would be very difficult to see patterns and trends just from examining the raw information. Similar to charts and sparklines, `Conditional formatting` provides another way to visualize data and make it easier to understand. 
 
-Understanding conditional formatting - it allows you to automatically apply formatting such as colors and data bars to more cells based on the `cell value` range selection. The sample below demonstrates how you can configure the Grid to apply `Conditional Formatting`. In depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply Conditional formatting to your data.
+Understanding conditional formatting - it allows you to automatically apply formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data.
 
 #### Number range selection
-- `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. The cell that holds 0 value has no data bar and the cell that holds the maximum value (95) has a data bar that fills the entire cell (Positive values are with `green` color). All other cells are filled proportionally. If the cell has negative values, the bar will be `red`.
+- `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
+
 
 ![](../../../images/general/data-bars-formatting.png)
 
@@ -62,6 +63,8 @@ Understanding conditional formatting - it allows you to automatically apply form
 - `Duplicate values` - Marks all duplicate values.
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).
 - `Empty`- Marks all cells with `undefined` values
+
+#### Demo
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/grid/grid-dynamic-chart-data" class="lazyload"></iframe>
