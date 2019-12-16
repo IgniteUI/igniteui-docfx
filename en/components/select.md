@@ -318,6 +318,58 @@ Then in your template file you can iterate over the greengrocery objects and acc
 </igx-select>
 ```
 
+### Select Header & Footer
+<div class="sample-container loading" style="height: 610px;">
+    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+
+Currently, there are no default header and footer templates for the `igxSelect` component. However, you can define own header AND/OR footer template and mark it respectively with `IgxSelectHeaderDirective` or `IgxSelectFooterDirective`. As these are custom templates, you should define the styling as well.
+
+In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items based on a delivery method.
+
+```html
+    <igx-select>
+        <label igxLabel>Pick your fruit</label>
+            <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
+                {{fruit.type}}
+                <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
+                <igx-icon *ngSwitchCase="'train'">train</igx-icon>
+                <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
+            </igx-select-item>
+        <ng-template igxSelectHeader>
+            <div class="custom-select-header">
+                <span class="sample-template-heading">DELIVERY METHOD</span>
+                <igx-buttongroup (click)="filter($event.target.title)">
+                        <button igxButton title="flight"><igx-icon title="flight">flight</igx-icon></button>
+                        <button igxButton title="train"><igx-icon title="train">train</igx-icon></button>
+                        <button igxButton title="boat"><igx-icon title="boat">directions_boat</igx-icon></button>
+                </igx-buttongroup>
+            </div>
+        </ng-template>
+        <ng-template igxSelectFooter>
+            <div class="custom-select-footer">
+                <span class="sample-template-heading">TOTAL</span>
+                <div class="sample-template-icons">
+                    <span class="sample-template-icons__item">
+                        <igx-icon title="flight" [class.important-icon]="selected ==='flight'">flight</igx-icon>
+                        {{flightCount}}
+                    </span>
+                    <span class="sample-template-icons__item">
+                        <igx-icon title="train" [class.important-icon]="selected === 'train'">train</igx-icon>
+                        {{trainCount}}
+                    </span>
+                    <span class="sample-template-icons__item">
+                        <igx-icon title="boat" [class.important-icon]="selected  === 'boat'">directions_boat</igx-icon>
+                        {{boatCount}}
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+    </igx-select>
+```
+
 ### Select In Angular Forms
 The `Select` component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
