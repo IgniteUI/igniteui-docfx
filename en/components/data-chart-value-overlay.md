@@ -32,7 +32,7 @@ When using the value overlay with a numeric angle axis, it will appear as a line
 
 It is also possible to show an axis annotation on a [`IgxValueOverlayComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html) to show the value of the overlay on the owning axis. In order to show this, you can set the [`isAxisAnnotationEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#isaxisannotationenabled) property to true.
 
-### Code Example - Value Overlay
+### Code Example
 
 The following code snippet demonstrates adding a value overlay with axis annotation to the Ignite UI for Angular data chart component:
 

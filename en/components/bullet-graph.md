@@ -41,8 +41,8 @@ The [`IgxBulletGraphComponent`](/products/ignite-ui-angular/api/docs/typescript/
 
 ```ts
 // app.module.ts
-import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
-import { IgxBulletGraphComponent } from "igniteui-angular-gauges/ES5/igx-bullet-graph-component";
+import { IgxBulletGraphModule } from 'igniteui-angular-gauges';
+import { IgxBulletGraphComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [

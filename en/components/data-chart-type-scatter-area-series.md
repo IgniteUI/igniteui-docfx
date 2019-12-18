@@ -45,17 +45,17 @@ The scatter area series requires the following modules:
 
 ```ts
 // axis' modules:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxScatterAreaSeries } from "igniteui-angular-charts/ES5/igx-scatter-area-series";
-import { IgxCustomPaletteColorScale } from "igniteui-angular-charts/ES5/igx-custom-palette-color-scale";
-import { ColorScaleInterpolationMode } from "igniteui-angular-charts/ES5/ColorScaleInterpolationMode";
+import { IgxScatterAreaSeries } from 'igniteui-angular-charts';
+import { IgxCustomPaletteColorScale } from 'igniteui-angular-charts';
+import { ColorScaleInterpolationMode } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
-import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

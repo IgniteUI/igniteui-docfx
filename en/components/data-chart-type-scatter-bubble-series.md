@@ -47,20 +47,20 @@ The scatter bubble series requires the following modules:
 
 ```ts
 // axis' modules:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxBubbleSeries } from "igniteui-angular-charts/ES5/igx-bubble-series";
-import { IgxSizeScale } from "igniteui-angular-charts/ES5/igx-size-scale";
-import { IgxValueBrushScale } from "igniteui-angular-charts/ES5/igx-value-brush-scale";
-import { IgxCustomPaletteBrushScale } from "igniteui-angular-charts/ES5/igx-custom-palette-brush-scale";
-import { BrushSelectionMode } from "igniteui-angular-charts/ES5/BrushSelectionMode";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
+import { IgxBubbleSeries } from 'igniteui-angular-charts';
+import { IgxSizeScale } from 'igniteui-angular-charts';
+import { IgxValueBrushScale } from 'igniteui-angular-charts';
+import { IgxCustomPaletteBrushScale } from 'igniteui-angular-charts';
+import { BrushSelectionMode } from 'igniteui-angular-charts';
+import { MarkerType } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
-import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

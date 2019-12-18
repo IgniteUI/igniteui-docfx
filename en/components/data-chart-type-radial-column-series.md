@@ -49,15 +49,15 @@ Creation of the [`IgxRadialColumnSeriesComponent`](/products/ignite-ui-angular/a
 
 ```ts
 // axis' modules:
-import { IgxCategoryAngleAxis } from "igniteui-angular-charts/ES5/igx-category-angle-axis";
-import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
+import { IgxCategoryAngleAxis } from 'igniteui-angular-charts';
+import { IgxNumericRadiusAxis } from 'igniteui-angular-charts';
 // series modules:
-import { IgxRadialColumnSeries } from "igniteui-angular-charts/ES5/igx-radial-column-series";
+import { IgxRadialColumnSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartRadialCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-core-module";
-import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [

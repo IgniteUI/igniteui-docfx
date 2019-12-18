@@ -24,7 +24,7 @@ In the Angular data chart component, navigation is disabled by default. Once ena
 In order to use navigation in the data chart, you need to import and register the interactivity module. This can be done by using the following code:
 
 ```ts
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [ IgxDataChartInteractivityModule ]

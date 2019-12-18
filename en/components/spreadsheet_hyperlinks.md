@@ -28,7 +28,7 @@ When setting up your spreadsheet control to use hyperlinks, you will need to imp
 <!-- Angular -->
 
 ```ts
-import { WorksheetHyperlink } from "igniteui-angular-excel/ES5/WorksheetHyperlink";
+import { WorksheetHyperlink } from 'igniteui-angular-excel';
 ```
 
 ### Code Snippet

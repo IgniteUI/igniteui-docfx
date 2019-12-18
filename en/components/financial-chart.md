@@ -56,7 +56,7 @@ The Angular financial chart component requires the following modules:
 
 ```ts
 // app.module.ts
-import {IgxFinancialChartModule} from "igniteui-angular-charts/ES5/igx-financial-chart-module";
+import { IgxFinancialChartModule } from "igniteui-angular-charts";
 
 @NgModule({
     imports: [

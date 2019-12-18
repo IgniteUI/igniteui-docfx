@@ -43,8 +43,8 @@ When installing the chart package, the core package must also be installed.
 The [`IgxZoomSliderComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
 
 ```ts
-import { IgxZoomSliderModule } from "igniteui-angular-charts/ES5/igx-zoom-slider-module";
-import { IgxZoomSliderComponent} from 'igniteui-angular-charts/ES5/igx-zoom-slider-component';
+import { IgxZoomSliderModule } from 'igniteui-angular-charts';
+import { IgxZoomSliderComponent } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
