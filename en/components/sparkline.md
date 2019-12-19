@@ -13,7 +13,7 @@ The sparkline control has several visual elements and corresponding features tha
 
 ### Demo
 
-<div class="sample-container loading" style="height: 450px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-display-types-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -71,7 +71,7 @@ If the [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/
     displayType="Area" />
 ```
 
-<div class="sample-container loading" style="height: 450px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-display-types-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
