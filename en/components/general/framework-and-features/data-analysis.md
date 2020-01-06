@@ -26,7 +26,7 @@ This section introduces Grid's integration with charting functionality, which al
 The chart will be shown by selecting a range of cells and by clicking on the show analysis button.
 
 >[!NOTE]
->The chart creation option is available when there are numeric values in the selected data, otherwise it will be disabled.
+>The chart creation option is only available when there are numeric values in the selected data.
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/grid/grid-dynamic-chart-data" class="lazyload"></iframe>
