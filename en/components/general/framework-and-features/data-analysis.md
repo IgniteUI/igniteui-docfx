@@ -18,7 +18,7 @@ The data analysis button is the outlet to visualize your selected data in variou
 
 This way every range selection performed in the grid can be easily analyzed in a single click.
 
-The button renders on every range selection, its position is at the **bottom-right most fully visible cell** of the selection and hides when the range selection is no more active. Horizontal and vertical scrolling reposition the button so that it can always render at its designated position.
+The button is rendered on every range selection at the **bottom-right** of the selection and hides when the selection is inactive. Horizontal and vertical scrolling reposition the button so that it is always rendered at its designated position.
 
 ### Chart Integration
 This section introduces Grid's integration with charting functionality, which allows the end user to visualize a chart, based on Grid's selected data and choose different chart types if needed.
