@@ -6,7 +6,7 @@ _keywords: data analysis, ignite ui for angular, infragistics
 
 ## Data Analysis
 
- Data analysis is the process of examining, transforming, and arranging data in a specific way to generate useful information from it. Data analysis allows for the evaluation of data through analytical and logical reasoning to lead to some sort of outcome or conclusion in some context.
+Data analysis is the process of examining, transforming, and arranging data in a specific way to generate useful information based on it. It also allows for reaching certain outcomes and conclusions through analytical and logical reasoning.
 
 >[!NOTE]
 >This functionality will be introduced in **Ignite UI for Angular** as external package in order to ease the configuration and limit the required code at minimum
