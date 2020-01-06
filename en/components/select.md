@@ -278,12 +278,6 @@ Another thing worth mentioning is that `igx-select` uses the `SelectPositioningS
 > You can pass a [variety of positioning strategies]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) to the `positionStrategy` property.
 
 ### Select With Groups
-<div class="sample-container loading" style="height: 470px;">
-    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
-</div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-
 To help visually separate item groups, select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
 ```typescript
@@ -318,13 +312,13 @@ Then in your template file you can iterate over the greengrocery objects and acc
 </igx-select>
 ```
 
-### Select Header & Footer
-<div class="sample-container loading" style="height: 610px;">
-    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 470px;">
+    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
 </div>
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
+### Select Header & Footer
 Currently, there are no default header and footer templates for the `igxSelect` component. However, you can define own header AND/OR footer template and mark it respectively with `IgxSelectHeaderDirective` or `IgxSelectFooterDirective`. As these are custom templates, you should define the styling as well.
 
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items based on a delivery method.
@@ -353,7 +347,7 @@ In this example, there are both header and footer ng-templates defined. In the h
                 <span class="sample-template-heading">TOTAL</span>
                 <div class="sample-template-icons">
                     <span class="sample-template-icons__item">
-                        <igx-icon title="flight" [class.important-icon]="selected ==='flight'">flight</igx-icon>
+                        <igx-icon title="flight" [class.important-icon]="selected === 'flight'">flight</igx-icon>
                         {{flightCount}}
                     </span>
                     <span class="sample-template-icons__item">
@@ -361,7 +355,7 @@ In this example, there are both header and footer ng-templates defined. In the h
                         {{trainCount}}
                     </span>
                     <span class="sample-template-icons__item">
-                        <igx-icon title="boat" [class.important-icon]="selected  === 'boat'">directions_boat</igx-icon>
+                        <igx-icon title="boat" [class.important-icon]="selected === 'boat'">directions_boat</igx-icon>
                         {{boatCount}}
                     </span>
                 </div>
@@ -369,6 +363,12 @@ In this example, there are both header and footer ng-templates defined. In the h
         </ng-template>
     </igx-select>
 ```
+
+<div class="sample-container loading" style="height: 610px;">
+    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 ### Select In Angular Forms
 The `Select` component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
