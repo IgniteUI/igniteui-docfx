@@ -21,7 +21,7 @@ This way every range selection performed in the grid can be easily analyzed in a
 The button is rendered on every range selection at the **bottom-right** of the selection and hides when the selection is inactive. Horizontal and vertical scrolling reposition the button so that it is always rendered at its designated position.
 
 ### Chart Integration
-This section introduces Grid's integration with charting functionality, which allows the end user to visualize a chart, based on Grid's selected data and choose different chart types if needed.
+This section introduces Grid's integration with charting functionality, which allows the end user to visualize a chart based on Grid's selected data and choose different chart types if needed.
 
 The chart will be shown by selecting a range of cells and by clicking on the show analysis button.
 
@@ -42,7 +42,7 @@ We currently support the following Chart types:
 ### Conditional Cell Formatting 
 If you have a Grid with thousands of rows of data it would be very difficult to see patterns and trends just from examining the raw information. Similar to charts and sparklines, `Conditional formatting` provides another way to visualize data and make it easier to understand. 
 
-Understanding conditional formatting - it allows you to automatically apply formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown.  Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data. The formatting of a range clears when performing formatting on different range or through the clear button. The clear button activates when there is an applied formatting and removes the formatting from the whole range.  
+Understanding conditional formatting - it allows for applying formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data. The formatting of a range gets cleared when performing formatting on different range or through the clear button. The clear button is only active when there is an applied formatting.  
 
 #### Number range selection
 - `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
