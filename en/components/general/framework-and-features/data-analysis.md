@@ -16,7 +16,7 @@ The data analysis button is the outlet to visualize your selected data in variou
 
 ![](../../../images/general/data-analysis-button.png)
 
-This way every range selection you perform in the grid is gaining importance and can be easily analyzed with just a button click.
+This way every range selection performed in the grid can be easily analyzed in a single click.
 
 The button renders on every range selection, its position is at the **bottom-right most fully visible cell** of the selection and hides when the range selection is no more active. Horizontal and vertical scrolling reposition the button so that it can always render at its designated position.
 
