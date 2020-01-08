@@ -562,6 +562,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Column Pinning](column_pinning.md)
 * [Column Resizing](column_resizing.md)
 * [Selection](selection.md)
+@@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
