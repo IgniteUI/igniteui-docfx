@@ -86,7 +86,7 @@ public options =  { cellSelection: false; sorting: false; }
       this.state.setState(state);
   }
 ```
-. Depending on the scenario, the state can be saved to the browser `localStorage` or `sessionStorage` object, or saved in a database, cloud, passed on to a service, etc.
+. 状況に応じてステートをブラウザーの `localStorage` または `sessionStorage` オブジェクトに保存、またはデータベースやクラウドに保存し、サービスへ渡すことができます。
 
 #### デモ
 
