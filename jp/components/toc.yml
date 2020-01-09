@@ -684,7 +684,7 @@
     - name: リアルタイムデータのバインド
       href: financial-chart-high-frequency.md
       new: false
-    - name: 大量のバインド
+    - name: 大量データのバインド
       href: financial-chart-high-volume.md
       new: false
     - name: 複数データソースのバインド
@@ -867,7 +867,7 @@
   href: display_density.md
 - name: データ入力と表示
   header: true
-- name: ドロップダウン
+- name: Drop Down
   href: drop_down.md
   new: false
   items:
