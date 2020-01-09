@@ -52,7 +52,7 @@ public restoreSortingFiltering(sortingFilteringStates: IGridState) {
 }
 ```
 
-`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/classes/igridstateoptions.html) インターフェースを実装するオブジェクトです。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。開発者が特定の機能を除外した場合、オブジェクトは [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドを取得し、それらの機能の状態は含まれません。
+`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/classes/igridstateoptions.html) インターフェイスを実装するオブジェクトです。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。開発者が特定の機能を除外した場合、オブジェクトは [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドを取得し、それらの機能の状態は含まれません。
 
 ```typescript
 public options =  { cellSelection: false; sorting: false; }
@@ -62,7 +62,7 @@ public options =  { cellSelection: false; sorting: false; }
 ```
 
 
-これらのシンプルなシングル ポイント API を使用すると、わずか数行のコードで完全な状態維持機能を実現できます。**下からコードをコピーして貼り付けます** - ユーザーが現在のページを離れるたびに、ブラウザーの `sessionStorage` オブジェクトにグリッドの状態が保存されます。ユーザーがこのページに戻るたびに、グリッドはユーザーが設定したのと同じ状態に復元されます。必要なデータを取得するために、複雑で高度なフィルタリングや並べ替えの式を毎回設定する必要はなくなりました。一度実行して、以下のコードでユーザーに代わって処理してください。
+これらのシンプルなシングル ポイント API を使用すると、わずか数行のコードで完全な状態維持機能を実現できます。**以下のコードをコピーして貼り付け** - ユーザーが現在のページを離れるたびに、ブラウザーの `sessionStorage` オブジェクトにグリッドの状態が保存されます。ユーザーがこのページに戻るたびに、グリッドはユーザーが設定したのと同じ状態に復元されます。必要なデータを取得するために、複雑で高度なフィルタリングや並べ替えの式を毎回設定する必要はなくなりました。一度実行して、以下のコードでユーザーに代わって処理してください。
 
 ```typescript
   // app.component.ts
@@ -86,7 +86,7 @@ public options =  { cellSelection: false; sorting: false; }
       this.state.setState(state);
   }
 ```
-. 状況に応じてステートをブラウザーの `localStorage` または `sessionStorage` オブジェクトに保存、またはデータベースやクラウドに保存し、サービスへ渡すことができます。
+状況に応じてステートをブラウザーの `localStorage` または `sessionStorage` オブジェクトに保存、またはデータベースやクラウドに保存し、サービスへ渡すことができます。
 
 #### デモ
 

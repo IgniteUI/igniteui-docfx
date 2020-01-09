@@ -34,10 +34,10 @@ _language: ja
 </div>
 
 以下のチャート タイプをサポートします。
-- [ColumnGrouped](../../data-chart-type-category-series.md), [AreaGrouped](../../data-chart-type-category-area-series.md), [LineGrouped](../../data-chart-type-category-line-series.md), [BarGrouped](../../data-chart-type-category-series.md)
-- [ColumnStacked](../../data-chart-type-stacked-column-series.md), [AreaStacked](../../data-chart-type-category-spline-area-series.md), [LineStacked](../../data-chart-type-stacked-line-series.md), [BarStacked](../../data-chart-type-stacked-bar-series.md)
-- Column100Stacked, [Area100Stacked](../../data-chart-type-stacked-100-area-series.md), [Line100Stacked](../../data-chart-type-stacked-100-line-series.md), [Bar100Stacked](../../data-chart-type-stacked-100-bar-series.md)
-- ScatterPoint, ScatterBubble, ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
+- [ColumnGrouped](../../data-chart-type-category-series.md)、[AreaGrouped](../../data-chart-type-category-area-series.md)、[LineGrouped](../../data-chart-type-category-line-series.md)、[BarGrouped](../../data-chart-type-category-series.md)
+- [ColumnStacked](../../data-chart-type-stacked-column-series.md)、[AreaStacked](../../data-chart-type-category-spline-area-series.md)、[LineStacked](../../data-chart-type-stacked-line-series.md)、[BarStacked](../../data-chart-type-stacked-bar-series.md)
+- Column100Stacked、[Area100Stacked](../../data-chart-type-stacked-100-area-series.md)、[Line100Stacked](../../data-chart-type-stacked-100-line-series.md)、[Bar100Stacked](../../data-chart-type-stacked-100-bar-series.md)
+- ScatterPoint、ScatterBubble、ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
 - [円チャート](../../pie-chart.md)
 
 ### セルの条件付き書式 
