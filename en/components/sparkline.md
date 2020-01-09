@@ -53,16 +53,16 @@ export class AppModule {}
 
 The Ignite UI for Angular sparkline component supports the following types of sparklines:
 
--   [`Area`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area)
--   [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column)
--   [`Line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line)
--   [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss)
+-   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area)
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column)
+-   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line)
+-   [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss)
 
-The type is defined by setting the [`displayType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) property. If the [`displayType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) property is not specified, then by default, the [`Line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) type is displayed.
+The type is defined by setting the [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) property. If the [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) property is not specified, then by default, the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) type is displayed.
 
-The [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) sparkline type is a column chart type, in which the value of each column is equal to either the positive maximum (for positive values) or the negative minimum (for negative values) of the bound data set, often denoting a Win or a Loss, or similar opposing concepts. For the [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) sparkline to display properly, the data set should have both positive and negative values.
+The [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) sparkline type is a column chart type, in which the value of each column is equal to either the positive maximum (for positive values) or the negative minimum (for negative values) of the bound data set, often denoting a Win or a Loss, or similar opposing concepts. For the [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) sparkline to display properly, the data set should have both positive and negative values.
 
-If the [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) sparkline is bound to the same data as the other types such as the [`Line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) type, which can be bound to a collection of numeric values, then the sparkline component will select two values from the collection - the highest and the lowest - and will render the sparkline based upon those values.
+If the [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) sparkline is bound to the same data as the other types such as the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) type, which can be bound to a collection of numeric values, then the sparkline component will select two values from the collection - the highest and the lowest - and will render the sparkline based upon those values.
 
 ```html
 <igx-sparkline height="200px" width="400px"
@@ -83,7 +83,7 @@ If the [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/
 
 ### Markers
 
-The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types [`Line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line), [`Area`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area), and [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column). The [`WinLoss`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) type of sparkline does not currently accept markers. By default, markers are not displayed.
+The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line), [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area), and [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column). The [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) type of sparkline does not currently accept markers. By default, markers are not displayed.
 
 Markers in the sparkline can be placed in any combination of the following locations:
 
@@ -94,7 +94,7 @@ Markers in the sparkline can be placed in any combination of the following locat
 -   `Last`: Display a marker on the last data point in the sparkline.
 -   `Negative`: Display markers on the negative data points plotted in the sparkline.
 
-All of the markers mentioned above can be customized using the related marker types' property in aspects of color, visibility, and size. For example, the `Low` markers above will have properties [`lowMarkerBrush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkerbrush), [`lowMarkerVisibility`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkervisibility), and [`lowMarkerSize`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkersize).
+All of the markers mentioned above can be customized using the related marker types' property in aspects of color, visibility, and size. For example, the `Low` markers above will have properties [`lowMarkerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkerbrush), [`lowMarkerVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkervisibility), and [`lowMarkerSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkersize).
 
 ```html
 <igx-sparkline
@@ -126,15 +126,15 @@ All of the markers mentioned above can be customized using the related marker ty
 
 The normal range feature of the Ignite UI for Angular sparkline component is a horizontal stripe representing some pre-defined meaningful range when the data is being visualized. The normal range can be set as a shaded area outlined with the desired color.
 
-The normal range can be wider than the maximum data point or beyond, and it can also be as thin as the sparkline's [`Line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) display type, to serve as a threshold indicator, for instance. The width of the normal range is determined by the following three properties, which serve as the minimum settings required for displaying the normal range:
+The normal range can be wider than the maximum data point or beyond, and it can also be as thin as the sparkline's [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) display type, to serve as a threshold indicator, for instance. The width of the normal range is determined by the following three properties, which serve as the minimum settings required for displaying the normal range:
 
--   [`normalRangeVisibility`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangevisibility): Whether or not the normal range is visible.
--   [`normalRangeMaximum`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangemaximum): The bottom border of the range.
--   [`normalRangeMinimum`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangeminimum): The top border of the range.
+-   [`normalRangeVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangevisibility): Whether or not the normal range is visible.
+-   [`normalRangeMaximum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangemaximum): The bottom border of the range.
+-   [`normalRangeMinimum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangeminimum): The top border of the range.
 
-By default, the normal range is not displayed. When enabled, the normal range shows up with a light gray color appearance, which can also be configured using the [`normalRangeFill`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangefill) property.
+By default, the normal range is not displayed. When enabled, the normal range shows up with a light gray color appearance, which can also be configured using the [`normalRangeFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangefill) property.
 
-You can also configure whether or not to show the normal range in front of or behind the plotted series in your sparkline component by setting the [`displayNormalRangeInFront`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaynormalrangeinfront) property.
+You can also configure whether or not to show the normal range in front of or behind the plotted series in your sparkline component by setting the [`displayNormalRangeInFront`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaynormalrangeinfront) property.
 
 ```html
 <igx-sparkline
@@ -157,28 +157,28 @@ You can also configure whether or not to show the normal range in front of or be
 
 ### Trendlines
 
-The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the [`trendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) property.
+The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) property.
 
-The trendlines are calculated according to the algorithm specified by the [`trendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) property using the values of the data the the chart is bound to.
+The trendlines are calculated according to the algorithm specified by the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) property using the values of the data the the chart is bound to.
 
 Trendlines can only be displayed one at a time and by default, the trendline is not displayed.
 
 A list of supported trendlines can be found below:
 
--   [`None`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#none)
--   [`CubicFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#cubicfit)
--   [`CumulativeAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#cumulativeaverage)
--   [`ExponentialAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#exponentialaverage)
--   [`ExponentialFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#exponentialfit)
--   [`LinearFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#linearfit)
--   [`LogarithmicFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#logarithmicfit)
--   [`ModifiedAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#modifiedaverage)
--   [`PowerLawFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#powerlawfit)
--   [`QuadraticFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quadraticfit)
--   [`QuarticFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quarticfit)
--   [`QuinticFit`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quinticfit)
--   [`SimpleAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#simpleaverage)
--   [`WeightedAverage`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#weightedaverage)
+-   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#none)
+-   [`CubicFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#cubicfit)
+-   [`CumulativeAverage`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#cumulativeaverage)
+-   [`ExponentialAverage`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#exponentialaverage)
+-   [`ExponentialFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#exponentialfit)
+-   [`LinearFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#linearfit)
+-   [`LogarithmicFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#logarithmicfit)
+-   [`ModifiedAverage`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#modifiedaverage)
+-   [`PowerLawFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#powerlawfit)
+-   [`QuadraticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quadraticfit)
+-   [`QuarticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quarticfit)
+-   [`QuinticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#quinticfit)
+-   [`SimpleAverage`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#simpleaverage)
+-   [`WeightedAverage`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/trendlinetype.html#weightedaverage)
 
 The following code example shows how to enable a trendline in the Ignite UI for Angular sparkline component:
 
@@ -204,7 +204,7 @@ The following code example shows how to enable a trendline in the Ignite UI for 
 
 The Ignite UI for Angular sparkline component can detect unknown values and render the space for unknown values through a specified interpolation algorithm. If your data contains null values and you do not use this feature, meaning no interpolation is specified, the unknown value will not be plotted.
 
-In order to plot the unknown values, you can set the [`unknownValuePlotting`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) property of the sparkline component.
+In order to plot the unknown values, you can set the [`unknownValuePlotting`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) property of the sparkline component.
 
 ```html
 <igx-sparkline
