@@ -1,7 +1,7 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | データ検証 | Infragistics |
+title: スプレッドシート | Grid Controls | Ignite UI for Angular | データ検証 | Infragistics |
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 _language: ja
 mentionedTypes: ['Spreadsheet']
 ---
@@ -25,14 +25,14 @@ mentionedTypes: ['Spreadsheet']
 <!-- Angular -->
 
 ```ts
-import { AnyValueDataValidationRule } from "igniteui-angular-excel/ES5/AnyValueDataValidationRule";
-import { CustomDataValidationRule } from "igniteui-angular-excel/ES5/CustomDataValidationRule";
-import { DataValidationErrorStyle } from "igniteui-angular-excel/ES5/DataValidationErrorStyle";
-import { ListDataValidationRule } from "igniteui-angular-excel/ES5/ListDataValidationRule";
-import { OneConstraintDataValidationOperator } from "igniteui-angular-excel/ES5/OneConstraintDataValidationOperator";
-import { OneConstraintDataValidationRule } from "igniteui-angular-excel/ES5/OneConstraintDataValidationRule";
-import { TwoConstraintDataValidationOperator } from "igniteui-angular-excel/ES5/TwoConstraintDataValidationOperator";
-import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoConstraintDataValidationRule";
+import { AnyValueDataValidationRule } from 'igniteui-angular-excel';
+import { CustomDataValidationRule } from 'igniteui-angular-excel';
+import { DataValidationErrorStyle } from 'igniteui-angular-excel';
+import { ListDataValidationRule } from 'igniteui-angular-excel';
+import { OneConstraintDataValidationOperator } from 'igniteui-angular-excel';
+import { OneConstraintDataValidationRule } from 'igniteui-angular-excel';
+import { TwoConstraintDataValidationOperator } from 'igniteui-angular-excel';
+import { TwoConstraintDataValidationRule } from 'igniteui-angular-excel';
 ```
 
 <div class="divider--half"></div>

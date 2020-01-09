@@ -1,7 +1,8 @@
 ---
-title: Radial Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular の Radial Gauge コンポーネントは、針、目盛り、範囲、およびラベルなどの視覚要素を提供し、定義済みの図形およびスケールを表示できます。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular グリッド, Angular データグリッド, Angular グリッドコントロール, Angular グリッドコンポーネント, Angular ラジアル ゲージ コンポーネント, Angular ラジアル ゲージ
+title: ラジアル ゲージ チャート| データ可視化ツール | Ignite UI for Angular | インフラジスティックス
+_description: 針、目盛り、範囲などの多数の表示要素を表示するカラフルなラジアル ゲージを作成します。データ可視化ツールをご覧ください。
+_keywords: Radial Gauge, Ignite UI for Angular, Infragistics, ラジアル ゲージ, インフラジスティックス
+mentionedTypes: ['XamRadialGauge']
 _language: ja
 ---
 
@@ -11,7 +12,7 @@ Radial Gauge コンポーネントは、針、目盛り、範囲、ラベルな�
 
 ### サンプル
 
-Radial Gauge コンポーネントは、ゲージを表示するデータ ビジュアライゼーション ツールです。スケール、目盛り、ラベル、針、および範囲などの複数の視覚要素を含むことができます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
+Ignite UI for Angular Radial Gauge コンポーネントは、ゲージを表示するデータ ビジュアライゼーション ツールです。スケール、目盛り、ラベル、針、および範囲などの複数の視覚要素を含むことができます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
@@ -34,11 +35,11 @@ gauges パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxRadialGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) は、以下のモジュールが必要です。
+[`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
-import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
+import { IgxRadialGaugeModule } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
@@ -239,7 +240,7 @@ export class AppModule {}
 
 サポートされている針の形とキャップは、`needleShape` と `needlePivotShape` プロパティで設定します。
 
-ゲージのインタラクティブ モードを有効 ([`isNeedleDraggingEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html#isneedledraggingenabled) プロパティを使用) にするとユーザーは `minimumValue` と `maximumValue` の値間で針をドラッグして値を変更できるようになります。
+ゲージのインタラクティブ モードを有効 ([`isNeedleDraggingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html#isneedledraggingenabled) プロパティを使用) にするとユーザーは `minimumValue` と `maximumValue` の値間で針をドラッグして値を変更できるようになります。
 
 ```html
 <igx-radial-gauge

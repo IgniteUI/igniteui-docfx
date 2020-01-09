@@ -1,7 +1,7 @@
 ---
-title: Data Chart |可視化ツール|Ignite UI for Angular |Infragistics |Pie and Doughnut Chart
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 円・ドーナツ型チャート
 _description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示するエリア チャートを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
