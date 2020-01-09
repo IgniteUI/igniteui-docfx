@@ -1,14 +1,14 @@
 ---
-title: データ チャート|可視化ツール|Ignite UI for Angular |インフラジスティックス|範囲縦棒チャート
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 範囲縦棒チャート
 _description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示する範囲縦棒チャートを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
 ## 範囲縦棒チャート
 
-Ignite UI for Angular 範囲縦棒チャートは、範囲チャートのグループに属し、線の間の領域が塗りつぶされた 2 本の線を使用してレンダリングされます。このタイプのシリーズは、同じデータ ポイントの低い値と高い値の間の変化量を強調します一定期間、または複数のアイテムを比較します。範囲値は y 軸に表示され、カテゴリは x 軸に表示されます。[`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) は、範囲が塗りつぶされた領域ではなく垂直柱の集まりで表されること以外は [`IgxRangeAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangeareaseriescomponent.html) と同じです。
+Ignite UI for Angular 範囲縦棒チャートは、範囲チャートのグループに属し、線の間の領域が塗りつぶされた 2 本の線を使用してレンダリングされます。このタイプのシリーズは、同じデータ ポイントの低い値と高い値の間の変化量を強調します一定期間、または複数のアイテムを比較します。範囲値は y 軸に表示され、カテゴリは x 軸に表示されます。[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) は、範囲が塗りつぶされた領域ではなく垂直柱の集まりで表されること以外は [`IgxRangeAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangeareaseriescomponent.html) と同じです。
 
 ### サンプル
 
@@ -24,21 +24,21 @@ Ignite UI for Angular 範囲縦棒チャートは、範囲チャートのグル�
 
 ### 軸の要件
 
-Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
--   [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
--   [`IgxOrdinalTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
--   [`IgxTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
+-   [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
+-   [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### データの要件
 
-[`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) には以下のデータ要件があります。
+[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
--   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) がレンダリングされません。
--   すべてのデータ項目には、カテゴリ軸の `Label` プロパティにマッピングする必要があるラベルデータ列（文字列または日時）を少なくとも1つ含める必要があります ([`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など)。
--   すべてのデータ項目には、[`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) の `HighMemberPath` プロパティと `LowMemberPath` プロパティを使用してマップする必要がある少なくとも 2 つの数値データ列が含まれている必要があります。
+-   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) がレンダリングされません。
+-   すべてのデータ項目には、カテゴリ軸の `Label` プロパティにマッピングする必要があるラベルデータ列（文字列または日時）を少なくとも1つ含める必要があります ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など)。
+-   すべてのデータ項目には、[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) の `HighMemberPath` プロパティと `LowMemberPath` プロパティを使用してマップする必要がある少なくとも 2 つの数値データ列が含まれている必要があります。
 
 上記データ要件を満たすデータソースとして [SampleRangeData](data-chart-data-sources-range.md) を使用できます。
 
@@ -48,15 +48,15 @@ public dataSource: any[] = SampleRangeData.create();
 
 ### モジュールの要件
 
-[`IgxRadialColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) の作成には、以下のモジュールが必要です。
+[`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) の作成には、以下のモジュールが必要です。
 
 ```ts
 // in app.module.ts file
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxRangeColumnSeries } from "igniteui-angular-charts/ES5/igx-range-column-series";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxRangeColumnSeries } from 'igniteui-angular-charts';
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -70,7 +70,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### コード例
 
-このコードは、[`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
+このコードは、[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
 ```html
  <igx-data-chart

@@ -1,7 +1,8 @@
 ---
-title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
-_description: Ignite UI for Excel Library コンポーネントTODO.
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例,  Angular Excel Library コンポーネント, Angular Excel エンジン
+title: Excel ライブラリ | データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
+_description: Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Excel からアプリケーションへデータを簡単に転送できます。
+_keywords: Excel library, Ignite UI for Angular, Infragistics, Excel ライブラリ, インフラジスティックス
+mentionedTypes: ['Workbook']
 _language: ja
 ---
 

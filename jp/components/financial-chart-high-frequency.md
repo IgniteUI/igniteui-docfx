@@ -1,13 +1,14 @@
 ---
-title: Financial Chart - リアルタイム データ
-_description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
+title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | リアルタイム データ
+_description: 簡単な API を使用して財務データを視覚化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
 ## リアルタイム データにバインド
 
-`XamFinancialChart` コントロールはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のサンプルでは、Financial Chart のデータが高頻度で更新されています。
+Angular Financial Chart コンポーネントはリアルタイムでデータの描画をすばやく処理できるコントロールです。以下のサンプルでは、Financial Chart のデータが高頻度で更新されています。
 
 ### サンプル
 
@@ -23,7 +24,7 @@ _language: ja
 
 ### コード例
 
-高頻度でデータを更新するファイナンシャル チャート コントロールを作成するには、データ ソースの最初のデータ項目を削除し、新しいデータ項目をデータの最後に追加します。また、チャートに変更について通知するために `notifyRemoveItem` および `notifyInsertItem` 関数を呼び出します。バインドしたデータの変更をチャートに通知する方法の詳細については、ファイナンシャル チャートの `notify*` メソッドを参照してください。
+高頻度でデータを更新する Angular Financial Chart コンポーネントを作成するには、データ ソースの最初のデータ項目を削除し、新しいデータ項目をデータの最後に追加します。また、チャートに変更について通知するために `notifyRemoveItem` および `notifyInsertItem` 関数を呼び出します。バインドしたデータの変更をチャートに通知する方法の詳細については、ファイナンシャル チャートの `notify*` メソッドを参照してください。
 
 以下の例は、高頻度のデータ更新について Financial Chart を通知する方法を紹介します。
 

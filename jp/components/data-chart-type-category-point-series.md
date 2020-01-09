@@ -1,7 +1,7 @@
 ---
-title: データ グリッド|可視化ツール|Ignite UI for Angular |インフラジスティックス|ポイント チャート
+title: データ グリッド | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ポイント チャート
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するポイント チャートを作成し、複合チャート ビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
@@ -26,21 +26,21 @@ Angular データ チャートは、単一または複数のポイント シリ�
 
 ### 軸の要件
 
-Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
--   [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
--   [`IgxOrdinalTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
--   [`IgxTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
+-   [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
+-   [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### データの要件
 
-[`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) には以下のデータ要件があります。
+[`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
--   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) がレンダリングされません。
--   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
--   すべてのデータ項目には、[`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) の `ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
+-   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) がレンダリングされません。
+-   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   すべてのデータ項目には、[`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) の `ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
 
 上記データ要件を満たすデータソースとして [SampleCategoryData](data-chart-data-sources-category.md) を使用できます。
 
@@ -50,18 +50,18 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ### モジュールの要件
 
-[`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) は以下のモジュールが必要です。
+[`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) は以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxPointSeries } from "igniteui-angular-charts/ES5/igx-point-series";
+import { IgxPointSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -75,7 +75,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### コード例
 
-このコードは、[`IgxPointSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
+このコードは、[`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
 ```html
  <igx-data-chart

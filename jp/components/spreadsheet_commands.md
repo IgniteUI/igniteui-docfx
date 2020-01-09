@@ -1,7 +1,7 @@
 ---
-title: Spreadsheet | Grid コントロール | Ignite UI for Angular | コマンド | Infragistics |
+title: スプレッドシート | Grid コントロール | Ignite UI for Angular | コマンド | インフラジスティックス
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 _language: ja
 mentionedTypes: ['Spreadsheet']
 ---
@@ -27,8 +27,8 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
 コマンドボードを利用する前に、`SpreadsheetAction` をインポートします。
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
-import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
+import { SpreadsheetAction } from 'igniteui-angular-spreadsheet';
 ```
 
 <div class="divider--half"></div>

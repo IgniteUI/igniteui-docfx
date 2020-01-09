@@ -1,14 +1,14 @@
 ---
-title: データ チャート|可視化ツール|Ignite UI for Angular |Infragistics |ウォーターフォール チャート
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ウォーターフォール チャート
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するスプライン チャートを作成し、複合チャート ビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
 ## ウォーターフォール チャート
 
-Ignite UI for Angular ウォーターフォール チャートはカテゴリ チャートのグループに属し、連続するデータポイント間の差を示す垂直列のコレクションを使用してレンダリングされます。値の正/負の変化を区別するため、列は色分けされます。値は y 軸に表示され、カテゴリは x 軸に表示されます。Angular [`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) は、外観は Angular [`IgxRangeColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html)  に似ていますが、各データポイントに2列ではなく、1 つの数値データ列のみが必要です。
+Ignite UI for Angular ウォーターフォール チャートはカテゴリ チャートのグループに属し、連続するデータポイント間の差を示す垂直列のコレクションを使用してレンダリングされます。値の正/負の変化を区別するため、列は色分けされます。値は y 軸に表示され、カテゴリは x 軸に表示されます。Angular [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) は、外観は Angular [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) に似ていますが、各データポイントに2列ではなく、1 つの数値データ列のみが必要です。
 
 ### サンプル
 
@@ -24,21 +24,21 @@ Ignite UI for Angular ウォーターフォール チャートはカテゴリ �
 
 ### 軸の要件
 
-Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
--   [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
--   [`IgxOrdinalTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
--   [`IgxTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
+-   [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
+-   [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### データの要件
 
-[`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) には以下のデータ要件があります。
+[`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
--   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) がレンダリングされません。
--   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
--   すべてのデータ項目には、[`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) の `ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
+-   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) がレンダリングされません。
+-   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   すべてのデータ項目には、[`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) の `ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
 
 上記データ要件を満たすデータソースとして [SampleCategoryData](data-chart-data-sources-category.md) を使用できます。
 
@@ -48,18 +48,18 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ### モジュールの要件
 
-[`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) は以下のモジュールが必要です。
+[`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) は以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
-import { IgxCategoryXAxis } from "igniteui-angular-charts/ES5/igx-category-x-axis";
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxWaterfallSeries } from "igniteui-angular-charts/ES5/igx-waterfall-series";
+import { IgxWaterfallSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category--module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -73,7 +73,7 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
 
 ### コード例
 
-このコードは、[`IgxWaterfallSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
+このコードは、[`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
 ```html
  <igx-data-chart

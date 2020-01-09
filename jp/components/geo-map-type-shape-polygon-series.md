@@ -1,14 +1,14 @@
 ---
-title: Map |データ可視化ツール|Ignite UI for Angular |インフラジスティックス
+title: マップ | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, インフラジスティックス
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
 ## シェイプ ポリゴン シリーズの使用
 
-地理的コンテキストで形状ポリゴンを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) を使用します。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
+地理的コンテキストで形状ポリゴンを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) を使用します。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
 
 ### サンプル
 
@@ -22,15 +22,15 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) は、地理空間データがポリラインではなくポリゴンでレンダリングされる以外、[`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) とほとんど同じです。
+[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) は、地理空間データがポリラインではなくポリゴンでレンダリングされる以外、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) とほとんど同じです。
 
 ### データ要件
 
-マップコントロールの他の種類の地理的シリーズと同様に、[`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、`ShapeMemberPath` プロパティにマップされます。[`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) は、マップされたデータ列の点を使用してマップコントロールにポリゴンをプロットします。
+マップコントロールの他の種類の地理的シリーズと同様に、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、`ShapeMemberPath` プロパティにマップされます。[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) は、マップされたデータ列の点を使用してマップコントロールにポリゴンをプロットします。
 
 ### コード スニペット
 
-以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした世界の国々の図形に [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) をバインドする方法を示します。
+以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした世界の国々の図形に [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) をバインドする方法を示します。
 
 <!-- Angular -->
 
@@ -69,9 +69,9 @@ _language: ja
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicShapeSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-geographic-shape-polygon-series",
@@ -91,14 +91,14 @@ export class MapTypeShapePolygonSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-      const sds = new ShapeDataSource();
+      const sds = new IgxShapeDataSource();
       sds.shapefileSource = "assets/Shapes/WorldCountries.shp";
       sds.databaseSource  = "assets/Shapes/WorldCountries.dbf";
       sds.dataBind();
       sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
     }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
         console.log("loaded /Shapes/WorldCountries.shp " + shapeRecords.length);
 

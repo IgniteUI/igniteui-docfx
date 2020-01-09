@@ -1,13 +1,14 @@
 ---
-title: Financial Chart - 構成オプション
-_description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
+title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | 構成オプション
+_description: 簡単な API を使用して財務データを視覚化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
 ## 構成オプション
 
-`XamFinancialChart` コントロールで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、凡例、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。コード例を使用してプロパティでファイナンシャル チャートをカスタマイズする方法を説明します。
+Angular Financial Chart コンポーネントで、ナビゲーション動作、トレンドライン レイヤー、オーバーレイ、凡例、チャート タイトル、チャート サブタイトルなどのカスタマイズ可能なビジュアルがあります。コード例を使用してプロパティでファイナンシャル チャートをカスタマイズする方法を説明します。
 
 ### サンプル
 
@@ -23,7 +24,7 @@ _language: ja
 
 ### ナビゲーションの構成
 
-`XamFinancialChart` コントロールでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
+Angular Financial Chart コンポーネントでは、チャート ナビゲーションがデフォルトで有効になっています。ただし、以下のプロパティを設定することによって、カスタマイズできます。
 
 -   `IsHorizontalZoomEnabled` - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
 -   `IsVerticalZoomEnabled` - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。

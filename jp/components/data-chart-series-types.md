@@ -1,17 +1,18 @@
 ---
-title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Data Chart, Angular Data Chart コントロール, Angular Data Chart Example, Angular Data Chart コンポーネント, Angular Data Chart
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | シリーズ
+_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
 ## シリーズ
 
-[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでシリーズは類似するシリーズの以下のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
+Angular データ チャート コンポーネントでシリーズは類似するシリーズの以下のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
 
-これらのシリーズに加えて、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールに[シリーズ注釈](data-chart-series-annotations.md)と[シリーズ ハイライト](data-chart-series-highlighting.md)を追加できます。
+これらのシリーズに加えて、Angular データ チャート コンポーネントに[シリーズ注釈](data-chart-series-annotations.md)と[シリーズ ハイライト](data-chart-series-highlighting.md)を追加できます。
 
-以下のリストは、各グループのすべてのシリーズ タイプを示します。[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
+以下のリストは、各グループのすべてのシリーズ タイプを示します。Angular データ チャート コンポーネントで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
 
 #### カテゴリ シリーズ
 
@@ -48,14 +49,14 @@ _language: ja
 
 #### 散布図シリーズ
 
--   [Scatter Area Series](data-chart-type-scatter-area-series.md)
--   [Scatter Bubble Series](data-chart-type-scatter-bubble-series.md)
--   [Scatter Contour Series](data-chart-type-scatter-contour-series.md)
--   [Scatter Marker Series](data-chart-type-scatter-point-series.md)
--   [Scatter Line Series](data-chart-type-scatter-point-series.md)
--   [Scatter Spline Series](data-chart-type-scatter-point-series.md)
--   [Scatter Polygon Series](data-chart-type-shape-series.md)
--   [Scatter Polyline Series](data-chart-type-shape-series.md)
+-   [Scatter Area シリーズ](data-chart-type-scatter-area-series.md)
+-   [Scatter Bubble シリーズ](data-chart-type-scatter-bubble-series.md)
+-   [Scatter Contour シリーズ](data-chart-type-scatter-contour-series.md)
+-   [Scatter Marker シリーズ](data-chart-type-scatter-point-series.md)
+-   [Scatter Line シリーズ](data-chart-type-scatter-point-series.md)
+-   [Scatter Spline シリーズ](data-chart-type-scatter-point-series.md)
+-   [Scatter Polygon シリーズ](data-chart-type-shape-series.md)
+-   [Scatter Polyline シリーズ](data-chart-type-shape-series.md)
 
 #### ファイナンシャル シリーズ
 

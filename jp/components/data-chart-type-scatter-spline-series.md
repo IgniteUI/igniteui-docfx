@@ -1,7 +1,7 @@
 ---
-title: データ グリッド|可視化ツール|Ignite UI for Angular |Infragistics |散布図 - スプライン
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 散布図 - スプライン
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'ScatterSplineSeries']
 _language: ja
 ---
@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular 散布ポイント チャートは、デカルト (x, y) 座標系を使用してデータをプロットする散布図のグループに属します。このシリーズは、スプラインで接続されたマーカーのコレクションとしてレンダリングされ、各マーカーにはデカルト座標系での位置を決定する X/Y の数値のペアがあります。
 
-[`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) は、不均等な間隔またはデータのクラスターに注意を促します。予測結果の収集データの標準偏差を強調表示し、科学データや統計データをプロットするためによく使用されます。[`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) はデータを X 軸および Y 軸で時系列に管理およびプロットします (バインドする前はデータが時系列でない場合も)。
+[`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) は、不均等な間隔またはデータのクラスターに注意を促します。予測結果の収集データの標準偏差を強調表示し、科学データや統計データをプロットするためによく使用されます。[`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) はデータを X 軸および Y 軸で時系列に管理およびプロットします (バインドする前はデータが時系列でない場合も)。
 
 ### サンプル
 
@@ -26,18 +26,18 @@ Ignite UI for Angular 散布ポイント チャートは、デカルト (x, y) �
 
 ### 軸の要件
 
-Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
--   [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### データの要件
 
-[`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) には以下のデータ要件があります。
+[`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、[`xMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath) と [`yMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath)  プロパティにマップされる 2 つの数値データ列を含める必要があります。
+-   すべてのデータ項目には、[`xMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath) と [`yMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath)  プロパティにマップされる 2 つの数値データ列を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SamplePolarData](data-chart-data-sources-stats.md) を使用できます。
 
@@ -47,19 +47,19 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 ### モジュールの要件
 
-[`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) は以下のモジュールを要求します。
+[`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) は以下のモジュールを要求します。
 
 ```ts
 // axis' modules:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxScatterSplineSeries } from "igniteui-angular-charts/ES5/igx-scatter-spline-series";
+import { IgxScatterSplineSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
-import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -74,7 +74,7 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、[`IgxScatterSplineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
+このコードは、[`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
 ```html
  <igx-data-chart
@@ -95,7 +95,7 @@ export class AppModule { /* ... */ }
 
 ### シリーズの外観
 
-[マーカー](data-chart-series-markers.md) プロパティを使用してマーカーの外観をカスタマイズできます。マーカーごとに [`brush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) と [`thickness`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) のビジュアルを変更することもできます。以下のこのコードスニペットは、これらのプロパティの使用方法を示しています。
+[マーカー](data-chart-series-markers.md) プロパティを使用してマーカーの外観をカスタマイズできます。マーカーごとに [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) と [`thickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) のビジュアルを変更することもできます。以下のこのコードスニペットは、これらのプロパティの使用方法を示しています。
 
 ```html
 <igx-scatter-spline-series

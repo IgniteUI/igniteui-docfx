@@ -1,14 +1,14 @@
 ---
-title: Spreadsheet|Grid コントロール|Ignite UI for Angular |チャート アダプター|インフラジスティックス |
+title: スプレッドシート | Grid コントロール | Ignite UI for Angular | チャート アダプター | インフラジスティックス
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集機能をアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 mentionedTypes: ['Spreadsheet']
 _language: ja
 ---
 
 ## Spreadsheet チャート アダプター
 
-Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) にチャートを表示できます。
+Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) にチャートを表示できます。
 
 ### サンプル
 
@@ -20,7 +20,7 @@ Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetCompone
 
 ### チャート アダプターの概要
 
-[`chartAdapter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
+[`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
 
 WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの `AddChart` メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
 
@@ -80,20 +80,20 @@ Spreadsheet ChartAdapter は、折れ線、エリア、縦棒、ドーナツを�
 
 ### 依存関係
 
-> 注:
+> [!NOTE]
 >
-> 以下のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
+> 以下のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
 
-ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
+ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
 
 ```ts
-import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
-import { SpreadsheetChartAdapter } from "igniteui-angular-spreadsheet-chart-adapter/ES5/SpreadsheetChartAdapter";
+import { IgxSpreadsheetchartadaptermodule } from 'igniteui-angular-spreadsheet-chart-adapter';
+import { SpreadsheetChartAdapter } from 'igniteui-angular-spreadsheet-chart-adapter';
 
-import { ChartTitle, ChartType, FormattedString, Workbook } from "igniteui-angular-excel/ES5/excel.core";
+import { ChartTitle, ChartType, FormattedString, Workbook } from 'igniteui-angular-excel';
 import { ExcelUtility } from "ExcelUtility";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
+import { Worksheet } from 'igniteui-angular-excel';
+import { WorksheetCell } from 'igniteui-angular-excel';
 ```
 
 ### コード スニペット
