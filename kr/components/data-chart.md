@@ -8,7 +8,7 @@ _language: kr
 
 ## 데이터 차트
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html)는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈식 디자인을 제공하는 차트 컴포넌트입니다. 이 차트를 사용하면 복합 차트 뷰를 생성하기 위해 동일한 차트 영역에 시각적 요소의 인스턴스를 여러 개 생성할 수 있습니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)는 축, 마커, 시리즈, 범례 및 주석 레이어의 모듈식 디자인을 제공하는 차트 컴포넌트입니다. 이 차트를 사용하면 복합 차트 뷰를 생성하기 위해 동일한 차트 영역에 시각적 요소의 인스턴스를 여러 개 생성할 수 있습니다.
 
 ### 데모
 
@@ -31,21 +31,17 @@ _language: kr
 
 ### 필요한 모듈
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html)에는 다음 모듈이 필요합니다:
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)에는 다음 모듈이 필요합니다:
 
 ```ts
-// data chart's modules required for all series:
-
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core--module";
-// scatter series' modules:
-import { IgxDataChartScatterCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-core-module";
-import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
-// scatter series elements:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
-import { IgxBubbleSeries } from "igniteui-angular-charts/ES5/igx-bubble-series";
-import { IgxSizeScale } from "igniteui-angular-charts/ES5/igx-size-scale";
-import { IgxValueBrushScale } from "igniteui-angular-charts/ES5/igx-value-brush-scale";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
+import { IgxBubbleSeries } from 'igniteui-angular-charts';
+import { IgxSizeScale } from 'igniteui-angular-charts';
+import { IgxValueBrushScale } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -62,30 +58,30 @@ export class AppModule { /* ... */ }
 
 ### 지원되는 시리즈
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어는 [카테고리 시리즈](data-chart-type-category-series.md), [금융 시리즈](data-chart-type-financial-series.md), [폴라 시리즈](data-chart-type-polar-series.md), [레이디얼 시리즈](data-chart-type-radial-series.md), [범위 시리즈](data-chart-type-range-series.md), [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md)를 포함하여 65가지 이상의 시리즈를 지원합니다. 지원되는 시리즈 유형 및 사용 방법의 목록은 [시리즈](data-chart-series-types.md) 항목을 참조하십시오.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 [카테고리 시리즈](data-chart-type-category-series.md), [금융 시리즈](data-chart-type-financial-series.md), [폴라 시리즈](data-chart-type-polar-series.md), [레이디얼 시리즈](data-chart-type-radial-series.md), [범위 시리즈](data-chart-type-range-series.md), [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md)를 포함하여 65가지 이상의 시리즈를 지원합니다. 지원되는 시리즈 유형 및 사용 방법의 목록은 [시리즈](data-chart-series-types.md) 항목을 참조하십시오.
 
 ### 지원되는 축
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어는 특정 시리즈 유형에 사용할 수 있도록 다양한 유형의 축을 지원합니다. 다음 표에는 시리즈 유형에 사용할 수 있는 축이 열거되어 있습니다.   이러한 축 유형을 사용하는 방법에 대한 자세한 것은 [시리즈](data-chart-series-types.md) 및 [축](data-chart-axis-types.md) 항목을 참조하십시오.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 특정 시리즈 유형에 사용할 수 있도록 다양한 유형의 축을 지원합니다. 다음 표에는 시리즈 유형에 사용할 수 있는 축이 열거되어 있습니다.   이러한 축 유형을 사용하는 방법에 대한 자세한 것은 [시리즈](data-chart-series-types.md) 및 [축](data-chart-axis-types.md) 항목을 참조하십시오.
 
-| 축 유형               | 지원되는 시리즈 유형                                                                                                                                                                                                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | [카테고리 시리즈](data-chart-type-category-series.md) 그룹의 [`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html)만                                                                                                   |
-| CategoryXAxis      | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)      |
-| TimeXAxis          | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)      |
-| OrdinalTimeXAxis   | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)      |
-| PercentChangeYAxis | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md), [카테고리 시리즈](data-chart-type-category-series.md), [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md)                                 |
-| NumericYAxis       | 모든 [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md), [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md), [카테고리 시리즈](data-chart-type-category-series.md)                                 |
-| NumericXAxis       | [카테고리 시리즈](data-chart-type-category-series.md) 그룹의 모든 [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md) 및 [`IgxBarSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) |
-| NumericAngleAxis   | 모든 [폴라 시리즈](data-chart-type-polar-series.md)                                                                                                                                                                                                                               |
-| NumericRadiusAxis  | 모든 [폴라 시리즈](data-chart-type-polar-series.md) 및 [레이디얼 시리즈](data-chart-type-radial-series.md)                                                                                                                                                                                |
-| CategoryAngleAxis  | 모든 [레이디얼 시리즈](data-chart-type-radial-series.md)                                                                                                                                                                                                                            |
+| 축 유형               | 지원되는 시리즈 유형                                                                                                                                                                                                                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CategoryYAxis      | [카테고리 시리즈](data-chart-type-category-series.md) 그룹의 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html)만                                                                                                   |
+| CategoryXAxis      | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)      |
+| TimeXAxis          | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)      |
+| OrdinalTimeXAxis   | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)      |
+| PercentChangeYAxis | 모든 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md), [카테고리 시리즈](data-chart-type-category-series.md), [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md)                                                           |
+| NumericYAxis       | 모든 [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md), [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md), [카테고리 시리즈](data-chart-type-category-series.md)                                                           |
+| NumericXAxis       | [카테고리 시리즈](data-chart-type-category-series.md) 그룹의 모든 [분산 시리즈](data-chart-type-scatter-bubble-series.md), [모양 시리즈](data-chart-type-shape-series.md) 및 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) |
+| NumericAngleAxis   | 모든 [폴라 시리즈](data-chart-type-polar-series.md)                                                                                                                                                                                                                                                         |
+| NumericRadiusAxis  | 모든 [폴라 시리즈](data-chart-type-polar-series.md) 및 [레이디얼 시리즈](data-chart-type-radial-series.md)                                                                                                                                                                                                          |
+| CategoryAngleAxis  | 모든 [레이디얼 시리즈](data-chart-type-radial-series.md)                                                                                                                                                                                                                                                      |
 
 ### 사용 방법
 
 데이터 차트 모듈을 가져 왔으므로 다음 단계는 차트를 데이터에 바인딩하는 것입니다. 모든 시리즈는 올바르게 렌더링하기 위해 특정 수와 유형의 데이터 열을 요구하며 [데이터 소스](data-chart-data-sources.md) 항목에서 각 계열 유형에 대한 데이터 소스를 찾을 수 있습니다.
 
-다음 코드 조각은 분산 [`IgxBubbleSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html)를 생성하고 이것을 [SampleScatterStats](data-chart-data-sources-stats.md) 데이터에 바인딩하는 방법을 보여줍니다.
+다음 코드 조각은 분산 [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html)를 생성하고 이것을 [SampleScatterStats](data-chart-data-sources-stats.md) 데이터에 바인딩하는 방법을 보여줍니다.
 
 > [!NOTE]
 >
