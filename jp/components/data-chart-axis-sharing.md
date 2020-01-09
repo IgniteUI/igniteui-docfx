@@ -1,7 +1,7 @@
 ---
-title: データ チャート|可視化ツール|Ignite UI for Angular|インフラジスティックス|軸の共有
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 軸の共有
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: データチャート, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 _language: ja
 ---
@@ -24,7 +24,7 @@ _language: ja
 
 ### コード例
 
-このコードは、2 つのシリーズ間で共有される 2 つの [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) と 1 つの [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) でデータ チャートを作成する方法を示します。
+このコードは、2 つのシリーズ間で共有される 2 つの [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) と 1 つの [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) でデータ チャートを作成する方法を示します。
 
 ```html
  <igx-data-chart

@@ -1,14 +1,14 @@
 ---
-title: Map |データ可視化ツール|Ignite UI for Angular |シンボル シリーズ|インフラジスティックス
+title: マップ | データ可視化ツール | Ignite UI for Angular | シンボル シリーズ | インフラジスティックス
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, インフラジスティックス
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
 ## 散布図記号シリーズの使用
 
-地図コンポーネントの [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) を使用して、地理的コンテキストでポイントまたはマーカーを使用して地理空間データを表示します。地理的シリーズのこのタイプは、都市、空港、地震または興味のあるポイントなどの地理的位置のコレクションを描画するためにしばしば使用されます。
+地図コンポーネントの [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) を使用して、地理的コンテキストでポイントまたはマーカーを使用して地理空間データを表示します。地理的シリーズのこのタイプは、都市、空港、地震または興味のあるポイントなどの地理的位置のコレクションを描画するためにしばしば使用されます。
 
 ### サンプル
 
@@ -24,11 +24,11 @@ _language: ja
 
 ### データ要件
 
-マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目は、地理的位置（経度と緯度）を保存する 2 つの数値データ列を持つ必要があります。これらのデータ列は、[`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath) および [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath) プロパティにマップされます。[`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) は、これらのマップされたデータ列の値を使用して、地理マップコンポーネントにシンボル要素をプロットします。
+マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目は、地理的位置（経度と緯度）を保存する 2 つの数値データ列を持つ必要があります。これらのデータ列は、[`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath) および [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath) プロパティにマップされます。[`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) は、これらのマップされたデータ列の値を使用して、地理マップコンポーネントにシンボル要素をプロットします。
 
 ### コード スニペット
 
-以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) をバインドする方法を示します。
+以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) をバインドする方法を示します。
 
 <!-- Angular -->
 
@@ -67,10 +67,9 @@ _language: ja
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicSymbolSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { MarkerType } from 'igniteui-angular-charts';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps";
 import { WorldLocations } from "../../utilities/WorldLocations";
 
 @Component({

@@ -1,7 +1,8 @@
 ---
-title: マップ|データ可視化ツール|Ignite UI for Angular|地理的画像|Infragistics
+title: マップ | データ可視化ツール | Ignite UI for Angular | 地理的画像 | インフラジスティックス
 _description: マップを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープファイルから地理的画像マップにロードされた地理空間データを表示できます。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
@@ -28,19 +29,19 @@ _language: ja
 
 以下の表は、xamGeographicMap  コントロールによって提供される画像クラスを簡単に説明します。
 
-| 画像クラス                                                                                                              | 説明                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| [`GeographicMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) | サポートされている地理的画像タイルのすべてのタイプを表示するすべての画像クラスの基本コントロールを表します。このクラスは、Map Quest マッピング サービスなどの他の地理的画像ソースから地理的画像タイルのサポートを実装する目的のために拡張できます。 |
-| [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
+| 画像クラス                                                                                                                                        | 説明                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [`GeographicMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) | サポートされている地理的画像タイルのすべてのタイプを表示するすべての画像クラスの基本コントロールを表します。このクラスは、Map Quest マッピング サービスなどの他の地理的画像ソースから地理的画像タイルのサポートを実装する目的のために拡張できます。 |
+| [`OpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) | Open Street Maps サービスから地理的画像タイルを表示するためのマルチスケール画像コントロールを表します。                                                                    |
 
 <!-- |`BingMapsMapImagery`|Represents the multi-scale imagery control for displaying geographic imagery tiles from the Bing Maps service.| -->
 
-デフォルトでは、`BackgroundContent` プロパティは [`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
+デフォルトでは、`BackgroundContent` プロパティは [`OpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) オブジェクトに設定され、マップコンポーネントはOpen Street Mapsサービスからの地理的画像タイルを表示します。さまざまな種類の地理的画像タイルを表示するには、マップ コンポーネントを再設定する必要があります。
 
-さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、[`GeographicMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
+さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、[`GeographicMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/geographicmapimagery.html) クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
 
 マップ コンポーネントでは、マップの背景コンテンツは常にすべての地理的シリーズの背後にレンダリングされます。つまり、地理的画像タイルは常に最初にレンダリングされ、マップ コンポーネントの Series プロパティ内の地理的シリーズは地理的画像タイルの上にレンダリングされます。地理的画像タイルはマップ ビューにすばやく埋め込まれるため、これは、マップ コンポーネントの同じプロット領域に複数の地理的シリーズを表示する場合に特に重要です。
 
 ### コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、[`OpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。

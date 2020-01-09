@@ -1,7 +1,7 @@
 ---
-title: Bullet Graph | データ プレゼンテーションと可視化 | Ignite UI for Angular | Infragistics
+title: ブレット グラフ | データ プレゼンテーションと可視化 | Ignite UI for Angular | インフラジスティックス
 _description: Bullet Graph　コンポーネントは、データ範囲の表示、複数の測定値の比較に適しています。インフラジスティックス データ視覚化ツールを是非お試しください。
-_keywords: Bullet Graph, Ignite UI for Angular, Infragistics
+_keywords: Bullet Graph, Ignite UI for Angular, Infragistics, ブレット グラフ, インフラジスティックス
 _language: ja
 mentionedTypes: ['XamBulletGraph']
 ---
@@ -38,12 +38,12 @@ gauges パッケージのインストール時に core パッケージもイン�
 
 ### 必要なモジュール
 
-[`IgxBulletGraphComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) は、以下のモジュールが必要です。
+[`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
-import { IgxBulletGraphModule } from "igniteui-angular-gauges/ES5/igx-bullet-graph-module";
-import { IgxBulletGraph } from "igniteui-angular-gauges/ES5/igx-bullet-graph";
+import { IgxBulletGraphModule } from 'igniteui-angular-gauges';
+import { IgxBulletGraph } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
@@ -250,7 +250,7 @@ export class AppModule {}
 
 ### スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-bullet-graph

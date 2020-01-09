@@ -1,13 +1,14 @@
 ---
-title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
-_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 凡例
+_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+mentionedTypes: ['XamDataChart', 'Infragistics.Controls.Charts.Legend']
 _language: ja
 ---
 
 ## 凡例
 
-凡例は、エンドユーザーが [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールにプロットされたデータに関連するコンテキスト情報を使用してチャートシリーズのビジュアルを識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのチャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、チャートはデフォルトで凡例なしで表示できます。
+凡例は、エンドユーザーが Angular データ チャート コンポネントにプロットされたデータに関連するコンテキスト情報を使用してデータ チャートシリーズの表示を識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのデータ チャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、データ チャートはデフォルトで凡例なしで表示できます。
 
 ### サンプル
 
@@ -23,11 +24,11 @@ _language: ja
 
 ### 凡例概要
 
-デフォルトでは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) はチャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、`XamLegend` オブジェクトをアプリケーションに追加してから、それをチャートの `Infragistics.Controls.Charts.Legend` プロパティに設定する必要があります。
+デフォルトでは、Angular データ チャート コンポネントはデータ チャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、凡例 オブジェクトをアプリケーションに追加してから、それをデータ チャートの Legend プロパティに設定する必要があります。
 
-さらに、各シリーズオブジェクトの `Title` プロパティを設定しないと、凡例にデフォルトのシリーズタイトルが使用されます。
+さらに、各シリーズオブジェクトの [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) プロパティを設定しない場合、凡例にデフォルトのシリーズ タイトルが使用されます。
 
-以下のコードスニペットは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで凡例を使用する方法を示しています。
+次のコードスニペットは、Angular データ チャート コンポネントで凡例を使用する方法を示しています。
 
 ```html
 <div>
