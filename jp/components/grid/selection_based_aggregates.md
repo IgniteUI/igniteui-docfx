@@ -1,28 +1,28 @@
 ---
-title: Angular Selection-based Data Aggregation | selection | Ignite UI for Angular | Infragistics 
-_description: Learn how to aggregate selected data in a grid with the Ignite Angular Material table using rich API. It also allows instant content aggregations in the virtualized data of the Grid
-_keywords: Data aggregation, selection, ignite ui for angular, infragistics
+title: Angular 選択に基づいたデータ集計 | 選択 | Ignite UI for Angular | インフラジスティックス
+_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド内の選択したデータを集計する方法。また、グリッドの仮想化データでコンテンツの即時集計も可能。
+_keywords: データ集計, 選択, ignite ui for angular, インフラジスティックス
 ---
 
 
-### Selection-based Aggregates
+### 選択に基づいた集計
 
-With the sample, illustrated beyond, you may see how multiple selection is being used, alongside with custom summary functions, to display aggregates based on the selected values in the grid footer.
+以下のサンプルでは、グリッドのフッターで選択した値に基づいて、カスタム集計関数と共に集計を表示する際の複数選択の動作を確認できます。
 
-#### Overview
+#### 概要
 
-To achieve the selection-based aggregates functionality, you can use our [`Grid Selection`]({environment:angularApiUrl}/components/grid/selection.html) feature, together with the [`Grid Summaries`]({environment:angularApiUrl}/components/grid/summaries.html).    
-The Summaries are allowing for customization of the basic Summary feature functionality through extending one of the base classess, [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html), depending on the column data type and your needs.  
+選択に基づいた集計機能を実現するには、[`グリッド選択`]({environment:angularApiUrl}/components/grid/selection.html)機能と[`グリッド集計`]({environment:angularApiUrl}/components/grid/summaries.html)を使用できます。    
+集計では、列のデータ タイプとニーズに応じて、[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、 [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、 [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかの基本クラスを拡張することにより、基本的な集計機能をカスタマイズできます。  
 
-#### Selection
-To start working with the data in the selected grid range, you will have to subscribe to events that are notifying of changes in the grid selection. That can be done by subscribing to the [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) event and to the [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event. You need to bind to both of them because the Selection feature differentiates between selecting a single cell and selecting a range of cells.     
+#### 選択
+選択したグリッド範囲のデータの操作を開始するには、グリッド選択の変更を通知するイベントにサブスクライブする必要があります。これは、[`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) と [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントにサブスクライブすることで実行できます。選択機能では、単一のセル選択とセル範囲の選択が区別されるため、両方にバインドする必要があります。     
 
-In the events subscription logic, you can extract the selected data using the grid's [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) function and pass the selected data to the custom summary operand.
+イベント サブスクリプション ロジックでは、グリッドの [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) 関数を使用して選択したデータを抽出し、選択したデータをカスタム集計オペランドに渡すことができます。
 
 
-#### Summary
-Within the custom summary class, you'd have to be differentiating the types of data in the grid. For instance, in the scenario below, there are four different columns, whose type of data is suitable for custom summaries. These are the Unit Price, the Units in Stock, Discontinued status and the Order Date.   
-The `operate` method of the derived class of the `IgxSummaryOperand`, is where you will process the data, starting by casing it in different categories based on the data types:
+#### まとめ
+カスタム集計クラス内では、グリッドのデータ タイプを差別化する必要があります。たとえば、以下のシナリオでは、4 つの異なる列があり、それぞれのデータ タイプがカスタム集計に適しています。それらは、Unit Price、Units in Stock、 Discontinued status、Order Date です。   
+`IgxSummaryOperand` の派生クラスの `operate` メソッドでデータを処理します。データ タイプに基づいて、さまざまなカテゴリにデータを入れていきます。
 
 ```typescript
 const numberData = data.filter(rec => typeof rec === "number");
@@ -31,43 +31,43 @@ const dates = data.filter(rec => isDate(rec));
 ```   
 
 > [!NOTE]
-> Bear in mind, that `isDate` is a custom function.     
+> `isDate` はカスタム関数であることに注意してください。     
 
-After having the data types grouped accordingly, you can proceed to the aggregation itself. For that reason, you could use the already exposed methods of the `IgxNumberSummaryOperand` and `IgxDateSummaryOperand`. 
-After that, you'd have to put the aggregated data in the same array, which would be returned to the template.  
-For the visualization of the data, you might want to use the `<igx-grid-footer>`, which in a combination with the `custom-summaries` class will give the natural look of the Summary.
+データ タイプをグループ化した後、集計を開始できます。そのため、`IgxNumberSummaryOperand` および `IgxDateSummaryOperand` の既に公開されているメソッドを使用できます。 
+その後、集計データを同じ配列に配置する必要があり、テンプレートに返されます。  
+データを可視化には、`<igx-grid-footer>`を使用することができ、`custom-summaries` クラスと組み合わせて集計を表示します。
 
 
-#### Demo
-Change the selection to see summaries of the currently selected range.   
+#### デモ
+選択を変更して、現在選択されている範囲の概要を表示します。     
 
 <div class="sample-container loading" style="height: 560px;">
     <iframe id="grid-selection-custom-summaries" data-src='{environment:demosBaseUrl}/grid/grid-selection-custom-summaries' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API References
+### API リファレンス
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)    
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>    
 
-* [Grid overview](grid.md)    
+* [Grid の概要](grid.md)    
 * [Selection Service]({environment:angularApiUrl}/classes/igxgridselectionservice.html)
-* [Row Selection](row_selection.md)   
-* [Cell Selection](cell_selection.md)    
+* [行選択](row_selection.md)   
+* [セル選択](cell_selection.md)    
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
-* [Summaries](summaries.md)    
-* [Paging](paging.md)    
+* [集計](summaries.md)    
+* [ページング](paging.md)      
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.    
+コミュニティに参加して新しいアイデアをご提案ください。    
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)    
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)     
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)    
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)   
