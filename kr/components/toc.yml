@@ -335,7 +335,7 @@
 #    - name: 툴팁 템플릿
 #      href: category-chart-tooltip-template.md
 #      new: false-
-  name: Data Chart
+- name: Data Chart
   href: data-chart.md
   new: false
   items:
