@@ -1,7 +1,7 @@
 ---
-title: Map |データ可視化ツール|Ignite UI for Angular |ジオグラフィック CSV データ|インフラジスティックス
+title: マップ | データ可視化ツール | Ignite UI for Angular | ジオグラフィック CSV データ | インフラジスティックス
 _description: マップは、ビューモデルの地理的位置や CSV ファイルからロードされた地理的位置を含むデータを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, インフラジスティックス
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
@@ -60,9 +60,8 @@ Dundee,42.5236,-76.9775,New York,NY,Yates,579,1650
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxGeographicHighDensityScatterSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-high-density-scatter-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicHighDensityScatterSeriesComponent } from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-binding-geographic-csv_files",

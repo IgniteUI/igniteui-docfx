@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart']
 
 ## Spline Area Chart
 
-The Ignite UI for Angular spline area chart belongs to a group of category charts and it is rendered using a collection of points connected by smooth curves of spline with the area below the spline filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The Angular spline area chart is identical to the Angular area chart in all aspects except that line connecting data points has spline interpolation and smoothing for improved presentation of data.
+The Ignite UI for Angular spline area chart belongs to a group of category charts and it is rendered using a collection of points connected by smooth curves of spline with the area below the spline filled in. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The Angular spline area chart is identical to the Angular area chart in all aspects except that line connecting data points has spline interpolation and smoothing for improved presentation of data.
 
 ### Demo
 
@@ -23,21 +23,21 @@ The Ignite UI for Angular spline area chart belongs to a group of category chart
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
+The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
 
--   [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
--   [`IgxOrdinalTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
--   [`IgxTimeXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
+-   [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
+-   [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### Required Data
 
-The [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) has the following data requirements:
+The [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
--   The data source must contain at least one data item otherwise the chart will not render the [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
--   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
+-   The data source must contain at least one data item otherwise the chart will not render the [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
+-   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))
+-   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html).
 
 You can use the [SampleCategoryData](data-chart-data-sources-category.md) as data source which meets above data requirements.
 
@@ -47,7 +47,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ### Required Modules
 
-Creation of the [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) requires the following modules:
+Creation of the [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -72,7 +72,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 ### Code Example
 
-This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxSplineAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) and bind it to a data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

@@ -1,5 +1,5 @@
 ---
-title: Treemap | データ可視化ツール | Ignite UI for Angular | データ バインディング | インフラジスティックス
+title: ツリーマップ | データ可視化ツール | Ignite UI for Angular | データ バインディング | インフラジスティックス
 _description: Treemap を使用して、ストリップ、スクエア、スライスアンドダイスアルゴリズムをサポートする複数のレベルでデータポイントの相対的な重み付けをユーザーに表示します。
 mentionedTypes: ['XamTreemap']
 ---
@@ -69,11 +69,11 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### モジュールの要件
 
-[`IgxTreemapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) は以下のモジュールを要求します。
+[`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) は以下のモジュールを要求します。
 
 ```ts
-import { IgxTreemapModule} from "igniteui-angular-charts/ES5/igx-treemap-module";
-import { IgxTreemapComponent } from "igniteui-angular-charts/ES5/igx-treemap-component";
+import { IgxTreemapModule } from "igniteui-angular-charts";
+import { IgxTreemapComponent } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -109,7 +109,7 @@ export class AppModule {}
 以下のコードは、Treemap の塗りつぶしスケールを設定する方法を示します。
 
 ```ts
-import { TreemapFillScaleMode } from 'igniteui-angular-charts/ES5/TreemapFillScaleMode';
+import { TreemapFillScaleMode } from 'igniteui-angular-charts';
 // ...
 this.treeMap = new IgxTreemapComponent()
 this.treeMap.fillScaleMode = TreemapFillScaleMode.Value;

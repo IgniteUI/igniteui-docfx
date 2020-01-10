@@ -1,7 +1,8 @@
 ---
-title: Linear Gauge コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Linear Gauge コンポーネントを使用して、シンプルで簡潔なビューでデータを可視化します。構成可能な要素、依存関係、そしてコードスニペットについて学びます。
-_keywords: Angular, Ignite UI for Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular リニア ゲージ コンポーネント, Angular リニア ゲージ
+title: リニア ゲージ | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
+_description: リニア ゲージ コンポーネントを使用して、シンプルで簡潔なビューでデータを可視化します。構成可能な要素、依存関係、コードスニペットについて説明します。
+_keywords: linear gauge, Ignite UI for Angular, infragistics, リニア ゲージ, インフラジスティックス
+mentionedTypes: ['XamLinearGauge']
 _language: ja
 ---
 
@@ -11,7 +12,7 @@ Linear Gauge コンポーネントは、値とスケールまたは複数の範�
 
 ### サンプル
 
-Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
+Ignite UI for Angular Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
 また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
@@ -35,12 +36,12 @@ gauges パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxLinearGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) は、以下のモジュールが必要です。
+[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
-import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
-import { IgxLinearGauge } from "igniteui-angular-gauges/ES5/igx-linear-gauge";
+import { IgxLinearGaugeModule } from 'igniteui-angular-gauges';
+import { IgxLinearGauge } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
@@ -239,7 +240,7 @@ export class AppModule {}
 
 ### スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-linear-gauge

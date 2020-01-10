@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart','RadialPieSeries']
 
 ## Radial Pie Chart
 
-The Ignite UI for Angular radial pie chart belongs to a group of radial charts and uses pie slices that extend from the center of chart towards locations of data points. The [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) take concepts of categorizing multiple series of data points and wrapping them around on a circle rather than stretching data points along a horizontal line.
+The Ignite UI for Angular radial pie chart belongs to a group of radial charts and uses pie slices that extend from the center of chart towards locations of data points. The [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) take concepts of categorizing multiple series of data points and wrapping them around on a circle rather than stretching data points along a horizontal line.
 
 ### Demo
 
@@ -23,19 +23,19 @@ The Ignite UI for Angular radial pie chart belongs to a group of radial charts a
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html).
+The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html).
 
--   [`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
--   [`IgxCategoryAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)
+-   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
+-   [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)
 
 ### Required Data
 
-The [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) has the following data requirements:
+The [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
--   The data source must contain at least one data item otherwise the chart will not render the [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html).
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)).
--   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath) property of the [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html).
+-   The data source must contain at least one data item otherwise the chart will not render the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html).
+-   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)).
+-   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath) property of the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html).
 
 You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data source which meets above data requirements.
 
@@ -45,7 +45,7 @@ public dataSource: any[] = SampleRadialData.create();
 
 ### Required Modules
 
-Creation of the [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) requires the following modules:
+Creation of the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -72,7 +72,7 @@ import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 
 ### Code Example
 
-This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) and bind it to a data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

@@ -40,7 +40,7 @@ When installing the chart package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxZoomSliderComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
+The [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
 
 ```ts
 import { IgxZoomSliderModule } from 'igniteui-angular-charts';

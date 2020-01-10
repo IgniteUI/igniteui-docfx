@@ -32,7 +32,7 @@ When installing the charts package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxPieChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) requires the following modules:
+The [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts

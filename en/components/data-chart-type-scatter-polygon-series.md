@@ -26,18 +26,18 @@ Scatter shape series are often used highlight regions in scientific data or they
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html).
+The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html).
 
--   [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### Required Data
 
-The [`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) has the following data requirements:
+The [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the scatter shape series.
--   All data items must contain at one shape data column (array or arrays of X/Y coordinates) which should be mapped to the [`shapeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) property of scatter shape series.
+-   All data items must contain at one shape data column (array or arrays of X/Y coordinates) which should be mapped to the [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) property of scatter shape series.
 
 You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data source which meets above data requirements.
 
@@ -47,7 +47,7 @@ public dataSource: any[] = SampleShapeData.create();
 
 ### Required Modules
 
-Creation of the [`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) requires the following modules:
+Creation of the [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -74,7 +74,7 @@ export class AppModule { /* ... */ }
 
 ### Code Example
 
-This code demonstrates how to create an instance the Ignite UI for Angular data chart with [`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) and bind it to a data source.
+This code demonstrates how to create an instance the Ignite UI for Angular data chart with [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

@@ -1,14 +1,14 @@
 ---
-title: Map |データ可視化ツール|Ignite UI for Angular |Esri マップ|インフラジスティックス
+title: マップ | データ可視化ツール | Ignite UI for Angular | Esri マップ | インフラジスティックス
 _description: Map (マップ) で Esri Street Maps の画像を表示できます。サンプルと使い方をご覧ください。
-_keywords: map, Ignite UI for Angular, インフラジスティックス
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
 ## Esri Maps から地理的画像を表示
 
-[`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html) は、Esri によって作成された無料の地理的画像マッピング サービスです。世界の地理的画像タイルの 40 スタイル以上を提供します。この地理的画像サービスは、<a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> に直接アクセスして利用できます。
+[`ArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html) は、Esri によって作成された無料の地理的画像マッピング サービスです。世界の地理的画像タイルの 40 スタイル以上を提供します。この地理的画像サービスは、<a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> に直接アクセスして利用できます。
 
 ### サンプル
 
@@ -24,7 +24,7 @@ _language: ja
 
 ### コード スニペット
 
-以下のコード スニペットは、[`ArcGISOnlineMapImagery`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html) を使用して [`IgxGeographicMapComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で Esri Maps からの地理的画像を表示する方法を示します。
+以下のコード スニペットは、[`ArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/arcgisonlinemapimagery.html) を使用して [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で Esri Maps からの地理的画像を表示する方法を示します。
 
 ```html
 <igx-geographic-map #map
@@ -35,12 +35,12 @@ _language: ja
 ```
 
 ```ts
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { ArcGISOnlineMapImagery } from "igniteui-angular-maps/ES5/igx-arc-gis-online-map-imagery";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxArcGISOnlineMapImagery } from 'igniteui-angular-maps';
 // ...
 public map: IgxGeographicMapComponent;
 
-const tileSource = new ArcGISOnlineMapImagery();
+const tileSource = new IgxArcGISOnlineMapImagery();
 tileSource.mapServerUri = "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer";
 this.map.backgroundContent = tileSource;
 ```
