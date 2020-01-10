@@ -308,260 +308,374 @@
 - name: Charts
   header: true
 - name: Category Chart
-  href: categorychart.md
+  href: category-chart.md
   new: false
   items:
     - name: 주석 및 오버레이
-      href: categorychart_annotation_layers.md
+      href: category-chart-annotations.md
       new: false
     - name: 차트 유형 탐색
-      href: categorychart_axis_options.md
+      href: category-chart-axis-options.md
       new: false
     - name: 실시간 데이터
-      href: categorychart_real_time_data.md
+      href: category-chart-high-frequency.md
       new: false
     - name: 대용량 데이터
-      href: categorychart_high_volume_data.md
+      href: category-chart-high-volume.md
       new: false
     - name: 컨피규레이터 옵션
-      href: categorychart_configuration_options.md
+      href: category-chart-config-options.md
       new: false
     - name: 강조 표시
-      href: categorychart_highlighting.md
+      href: category-chart-highlighting.md
       new: false
     - name: Tooltip Types
-      href: categorychart_tooltip_types.md
+      href: category-chart-tooltip-types.md
       new: false
-    - name: 툴팁 템플릿
-      href: categorychart_tooltip_templates.md
-      new: false
+#    - name: 툴팁 템플릿
+#      href: category-chart-tooltip-template.md
+#      new: false-
 - name: Data Chart
-  href: datachart.md
+  href: data-chart.md
   new: false
   items:
     - name: Axis
-      href: datachart_axis_types.md
+      href: data-chart-axis-types.md
       new: false
       items:
         - name: Axis Annotations
-          href: datachart_axis_annotations.md
+          href: data-chart-axis-annotations.md
           new: true
         - name: 축 설정
-          href: datachart_axis_settings.md
+          href: data-chart-axis-settings.md
           new: false
         #- name: Axis Scales
-        #  href: datachart_axis_scales.md
+        #  href: data-chart-axis-scales.md
         #  new: true
-        #- name: Axis Locations
-        #  href: datachart_axis_locations.md
-        #  new: false
+        - name: Axis Locations
+          href: data-chart-axis-locations.md
+          new: false
         - name: 축 공유 및 다중 행
-          href: datachart_axis_sharing.md
+          href: data-chart-axis-sharing.md
           new: false
     - name: Series
-      href: datachart_series_types.md
+      href: data-chart-series-types.md
       new: false
       items:
       #  - name: Requirements
-      #    href: datachart_series_requirements.md
+      #    href: datachart-series-requirements.md
       #    new: true
         - name: 카테고리 시리즈
-          href: datachart_series_types_category.md
+          href: data-chart-type-category-series.md
+          new: false
+        - name: Category Area Series
+          href: data-chart-type-category-area-series.md
+          new: false
+        - name: Category Bar Series
+          href: data-chart-type-category-bar-series.md
+          new: false
+        - name: Category Column Series
+          href: data-chart-type-category-column-series.md
+          new: false
+        - name: Category Line Series
+          href: data-chart-type-category-line-series.md
+          new: false
+        - name: Category Point Series
+          href: data-chart-type-category-point-series.md
+          new: false
+        - name: Category Spline Area Series
+          href: data-chart-type-category-spline-area-series.md
+          new: false
+        - name: Category Spline Series
+          href: data-chart-type-category-spline-series.md
+          new: false
+        - name: Category Step Area Series
+          href: data-chart-type-category-step-area-series.md
+          new: false
+        - name: Category Step Line Series
+          href: data-chart-type-category-step-line-series.md
+          new: false
+        - name: Category Waterfall Series
+          href: data-chart-type-category-waterfall-series.md
           new: false
         - name: 금융 시리즈
-          href: datachart_series_types_financial.md
+          href: data-chart-type-financial-series.md
+          new: false
+        - name: Financial Candlestick Series
+          href: data-chart-type-financial-candlestick-series.md
+          new: false
+        - name: Financial OHLC Series
+          href: data-chart-type-financial-ohlc-series.md
+          new: false
+        - name: Financial Indicators
+          href: data-chart-type-financial-indicators.md
+          new: false
+        - name: Financial Overlays
+          href: data-chart-type-financial-overlays.md
           new: false
         - name: 폴라 시리즈
-          href: datachart_series_types_polar.md
+          href: data-chart-type-polar-series.md
+          new: false
+        - name: Polar Area Series
+          href: data-chart-type-polar-area-series.md
+          new: false
+        - name: Polar Line Series
+          href: data-chart-type-polar-line-series.md
+          new: false
+        - name: Polar Scatter Series
+          href: data-chart-type-polar-scatter-series.md
+          new: false
+        - name: Polar Spline Area Series
+          href: data-chart-type-polar-spline-area-series.md
+          new: false
+        - name: Polar Spline Series
+          href: data-chart-type-polar-spline-series.md
           new: false
         - name: 레이디얼 시리즈
-          href: datachart_series_types_radial.md
+          href: data-chart-type-radial-series.md
+          new: false
+        - name: Radial Area Series
+          href: data-chart-type-radial-area-series.md
+          new: false
+        - name: Radial Column Series
+          href: data-chart-type-radial-column-series.md
+          new: false
+        - name: Radial Line Series
+          href: data-chart-type-radial-line-series.md
+          new: false
+        - name: Radial Pie Series
+          href: data-chart-type-radial-pie-series.md
           new: false
         - name: 범위 시리즈
-          href: datachart_series_types_range.md
+          href: data-chart-type-range-series.md
+          new: false
+        - name: Range Area Series
+          href: data-chart-type-range-area-series.md
+          new: false
+        - name: Range Column Series
+          href: data-chart-type-range-column-series.md
           new: false
         - name: 분산 영역 시리즈
-          href: datachart_series_types_scatter_area.md
+          href: data-chart-type-scatter-area-series.md
           new: false
         - name: 분산 등고선 시리즈
-          href: datachart_series_types_scatter_contour.md
+          href: data-chart-type-scatter-contour-series.md
           new: false
         - name: 분산 버블 시리즈
-          href: datachart_series_types_scatter_bubble.md
+          href: data-chart-type-scatter-bubble-series.md
           new: false
         # - name: Scatter HD Series
-        #  href: datachart_series_types_scatter_hd.md
+        #  href: data-chart-type-scatter-hd-series.md
         #  new: true
         - name: 분산 마커 시리즈
-          href: datachart_series_types_scatter_marker.md
+          href: data-chart-type-scatter-point-series.md
           new: false
         - name: 분산 모양 시리즈
-          href: datachart_series_types_shape.md
+          href: data-chart-type-shape-series.md
           new: false
         - name: 스택 시리즈
-          href: datachart_series_types_stacked.md
+          href: data-chart-type-stacked-series.md
+          new: false
+        - name: Stacked 100 Area Series
+          href: data-chart-type-stacked-100-area-series.md
+          new: false
+        - name: Stacked 100 Bar Series
+          href: data-chart-type-stacked-100-bar-series.md
+          new: false
+        - name: Stacked 100 Column Series
+          href: data-chart-type-stacked-100-column-series.md
+          new: false
+        - name: Stacked 100 Line Series
+          href: data-chart-type-stacked-100-line-series.md
+          new: false
+        - name: Stacked 100 Spline Area Series
+          href: data-chart-type-stacked-100-spline-area-series.md
+          new: false
+        - name: Stacked 100 Spline Series
+          href: data-chart-type-stacked-100-spline-series.md
+          new: false
+        - name: Stacked Area Series
+          href: data-chart-type-stacked-area-series.md
+          new: false
+        - name: Stacked Bar Series
+          href: data-chart-type-stacked-bar-series.md
+          new: false
+        - name: Stacked Column Series
+          href: data-chart-type-stacked-column-series.md
+          new: false
+        - name: Stacked Line Series
+          href: data-chart-type-stacked-line-series.md
+          new: false
+        - name: Stacked Spline Area Series
+          href: data-chart-type-stacked-spline-area-series.md
+          new: false
+        - name: Stacked Spline Series
+          href: data-chart-type-stacked-spline-series.md
           new: false
     #- name: Animations
     #  href: datachart_series_animations.md
     #  new: true
     - name: 시리즈 주석
-      href: datachart_series_annotations.md
+      href: data-chart-series-annotations.md
       new: false
     - name: 강조 표시
-      href: datachart_series_highlighting.md
+      href: data-chart-series-highlighting.md
       new: false
     - name: 범례
-      href: datachart_chart_legends.md
+      href: data-chart-legends.md
       new: false
     - name: 마커
-      href: datachart_series_markers.md
+      href: data-chart-series-markers.md
       new: false
     - name: 탐색
-      href: datachart_chart_navigation.md
+      href: data-chart-navigation.md
       new: false
     - name: Synchronization
-      href: datachart_chart_synchronization.md
+      href: data-chart-synchronization.md
       new: true
     - name: 제목 및 부제
-      href: datachart_chart_titles.md
+      href: data-chart-titles.md
       new: false
     - name: 도구 설명
-      href: datachart_series_tooltips.md
+      href: data-chart-series-tooltips.md
       new: false
     - name: 추세선
-      href: datachart_series_trendlines.md
+      href: data-chart-series-trendlines.md
       new: false
     - name: 데이터 소스
-      href: datachart_data_sources.md
+      href: data-chart-data-sources.md
       new: false
     #- name: Data Triangulation
-    #  href: datachart_data_triangulation.md
+    #  href: data-chart-data-triangulation.md
     #  new: true
     #- name: Series Error Bars
-    #  href: datachart_series_errorbars.md
+    #  href: data-chart-series-errorbars.md
     #  new: true
     - name: Value Overlay
-      href: datachart_series_value_overlay.md
+      href: data-chart-value-overlay.md
       new: true
 - name: Financial Chart
-  href: financialchart.md
+  href: financial-chart.md
   new: false
   items:
     - name: 실시간 데이터 바인딩
-      href: financialchart_binding_live_data.md
+      href: financial-chart-high-frequency.md
       new: false
     - name: 대용량 데이터
-      href: financialchart_binding_large_data.md
+      href: financial-chart-high-volume.md
       new: false
     - name: 복수의 데이터 소스에 바인딩
-      href: financialchart_binding_multiple_sources.md
+      href: financial-chart-multiple-data.md
       new: false
     - name: 주석 및 오버레이
-      href: financialchart_chart_annotations.md
+      href: financial-chart-annotations.md
       new: false
-    - name: 컨피규레이터 옵션
-      href: financialchart_chart_configuration.md
+    - name: Chart Trendlines
+      href: financial-chart-trendlines.md
       new: false
-    - name: 차트 유형 탐색
-      href: financialchart_chart_display_types.md
+    - name: Chart Axis Types
+      href: financial-chart-axis-types.md
       new: false
     - name: 퍼포먼스
-      href: financialchart_chart_performance.md
+      href: financial-chart-performance.md
       new: false
     - name: 금융 차트 창
-      href: financialchart_chart_panes.md
+      href: financial-chart-panes.md
       new: false
-    - name: 사용자 인디케이터
-      href: financialchart_custom_indicators.md
-      new: false
-    - name: 설명 유형
-      href: financialchart_tooltip_types.md
-      new: false
-    - name: 사용자 도구 설명
-      href: financialchart_tooltip_templates.md
-      new: false
+#    - name: 사용자 인디케이터
+#      href: financial-chart-custom-indicators.md
+#      new: false
+#    - name: 설명 유형
+#      href: financial-chart-tooltip-types.md
+#      new: false
+#    - name: 사용자 도구 설명
+#      href: financial-chart-tooltip-template.md
+#      new: false
 - name: Doughnut Chart
-  href: doughnutchart.md
+  href: doughnut-chart.md
   new: false
 - name: Pie Chart
-  href: piechart.md
+  href: pie-chart.md
   new: false
 - name: Sparkline
   href: sparkline.md
   new: true
 - name: Maps
   header: false
+- name: Treemap
+  href: treemap-overview.md
+  new: true
 - name: Map
-  href: map_overview.md
+  href: geo-map.md
   new: false
   items:
     - name: Binding CSV File
-      href: map_binding_geographic_csv_files.md
+      href: geo-map-binding-data-csv.md
       new: false
     - name: Binding JSON File
-      href: map_binding_geographic_json_files.md
+      href: geo-map-binding-data-json-points.md
       new: false
     - name: Binding Data Model
-      href: map_binding_geographic_data_models.md
+      href: geo-map-binding-data-model.md
       new: false
     - name: Binding Shape File
-      href: map_binding_geographic_shape_files.md
+      href: geo-map-binding-shp-file.md
       new: false
     - name: Binding Multiple Shapes
-      href: map_binding_multiple_shapes_files.md
+      href: geo-map-binding-multiple-shapes.md
       new: false
     - name: Binding Multiple Sources
-      href: map_binding_multiple_data_sources.md
+      href: geo-map-binding-multiple-sources.md
       new: false
     - name: Displaying Bing Imagery
-      href: map_displaying_bing_imagery.md
+      href: geo-map-display-bing-imagery.md
       new: true
     - name: Displaying Esri Imagery
-      href: map_displaying_esri_imagery.md
+      href: geo-map-display-esri-imagery.md
       new: true
     - name: Displaying OSM Imagery
-      href: map_displaying_osm_imagery.md
+      href: geo-map-display-osm-imagery.md
       new: true
     - name: Navigating Map Content
-      href: map_navigating_map_content.md
+      href: geo-map-navigation.md
       new: true
     - name: Scatter Area Series
-      href: map_geographic_scatter_area_series.md
+      href: geo-map-type-scatter-area-series.md
       new: false
     - name: Scatter Contour Series
-      href: map_geographic_scatter_contour_series.md
+      href: geo-map-type-scatter-contour-series.md
       new: false
     - name: Scatter Density Series
-      href: map_geographic_scatter_density_series.md
+      href: geo-map-type-scatter-density-series.md
       new: false
     - name: Scatter Proportional Series
-      href: map_geographic_scatter_proportional_series.md
+      href: geo-map-type-scatter-bubble-series.md
       new: false
     - name: Scatter Symbol Series
-      href: map_geographic_scatter_symbol_series.md
+      href: geo-map-type-scatter-symbol-series.md
       new: false
     - name: Shape Polygon Series
-      href: map_geographic_shape_polygon_series.md
+      href: geo-map-type-shape-polygon-series.md
       new: false
     - name: Shape Polyline Series
-      href: map_geographic_shape_polyline_series.md
+      href: geo-map-type-shape-polyline-series.md
       new: false
     - name: World Connections
-      href: map_resources_world_connections.md
+      href: geo-map-resources-world-connections.md
       new: false
     - name: World Locations
-      href: map_resources_world_locations.md
+      href: geo-map-resources-world-locations.md
       new: false
     - name: World Utility
-      href: map_resources_world_util.md
+      href: geo-map-resources-world-util.md
       new: false
     # - name: Binding Data
-    #   href: map_binding_data_overview.md
+    #   href: geo-map-binding-data-overview.md
     #   new: true
     #   items:
     # TODO
     # - name: Geographic Series
-    #   href: map_geographic_series_overview.md
+    #   href: geo-map-type-series.md
     #   new: true
     #   items:
 - name: Frameworks
@@ -595,13 +709,13 @@
   header: true
   new: false
 - name: Bullet Graph
-  href: bulletgraph.md
+  href: bullet-graph.md
   new: false
 - name: Linear Gauge
-  href: lineargauge.md
+  href: linear-gauge.md
   new: false
 - name: Radial Gauge
-  href: radialgauge.md
+  href: radial-gauge.md
   new: false
 - name: Styling & Themes
   header: true

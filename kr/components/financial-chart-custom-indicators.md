@@ -7,7 +7,7 @@ _language: kr
 
 ## 사용자 인디케이터
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어를 사용하면 인디케이터 창에 표시하는 사용자 금융지표를 정의할 수 있습니다.
+`XamFinancialChart` 제어를 사용하면 인디케이터 창에 표시하는 사용자 금융지표를 정의할 수 있습니다.
 
 ### 데모
 
@@ -21,7 +21,7 @@ _language: kr
 
 <div class="divider--half"></div>
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html)에서 사용자 금융지표를 사용하려면 `customIndicatorNames` 속성에 이름을 추가하고 `applyCustomIndicators` 이벤트에서 해당 값의 계산을 실행합니다.
+`XamFinancialChart`에서 사용자 금융지표를 사용하려면 `customIndicatorNames` 속성에 이름을 추가하고 `applyCustomIndicators` 이벤트에서 해당 값의 계산을 실행합니다.
 
 다음의 코드 예제는 단순 이동 평균(SMA) 및 임의 값을 표시하는 두 가지 사용자 인디케이터를 설정하고 계산하는 방법을 보여줍니다.
 
@@ -36,16 +36,16 @@ _language: kr
 ```
 
 ```ts
-    public applyCustomIndicators(event: { sender: any, args: FinancialChartCustomIndicatorArgs }) {
+    public applyCustomIndicators(event: { sender: any, args: IgxFinancialChartCustomIndicatorArgs }) {
         if (event.args.index === 0) {
-            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
             const ds = info.dataSource;
             const open = ds.openColumn;
             for (let i = 0; i < ds.indicatorColumn.length; i++) {
                 ds.indicatorColumn[i] = open[i];
             }
         } else {
-            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
             const ds = info.dataSource;
             const close = ds.closeColumn;
             for (let i = 0; i < ds.indicatorColumn.length; i++) {

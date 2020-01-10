@@ -31,11 +31,11 @@ When installing the spreadsheet package, the core and excel package must also be
 
 ### Required Modules
 
-The [`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) requires the following modules:
+The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) requires the following modules:
 
 ```ts
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
-import { IgxSpreadsheetModule } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-module";
+import { IgxExcelModule } from 'igniteui-angular-excel';
+import { IgxSpreadsheetModule } from 'igniteui-angular-spreadsheet';
 
 @NgModule({
     imports: [
@@ -61,12 +61,12 @@ Now that the spreadsheet module is imported, next is the basic configuration of 
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
+> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
 
 The following demonstrates how to load a workbook into the spreadsheet
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
 import { ExcelUtility } from 'ExcelUtility';
 
 // ...
