@@ -1,7 +1,7 @@
 ---
-title: ツリーマップ | データ可視化ツール | Ignite UI for Angular | データ バインディング | インフラジスティックス
+title: ツリーマップ |データ可視化ツール |Ignite UI for Angular |データ バインディング |インフラジスティックス
 _description: Treemap を使用して、ストリップ、スクエア、スライスアンドダイスアルゴリズムをサポートする複数のレベルでデータポイントの相対的な重み付けをユーザーに表示します。
-mentionedTypes: ['XamTreemap']
+mentionedTypes: ['Treemap']
 ---
 
 ### ツリーマップ
@@ -20,39 +20,39 @@ mentionedTypes: ['XamTreemap']
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="tree-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
-</div>
+</div
 
 <div class="divider--half"></div>
 
 ### データの要件
 
-`XamTreemap` のバインドは以下のデータ要件があります。
+[`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) のバインドは以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はマップでノードがレンダリングされません。
--   すべてのデータ項目には、`LabelMemberPath` プロパティにマッピングする必要があるデータ列 (文字列など) を少なくとも 1 列含める必要があります。
--   すべてのデータ項目には、`ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
--   データを整理されたタイルに分類するには、オプションで `ParentIdMemberPath` および `IdMemberpath` を使用できます。
+-   すべてのデータ項目には、[`labelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#labelmemberpath) プロパティにマッピングする必要があるデータ列 (文字列など) を少なくとも 1 列含める必要があります。
+-   すべてのデータ項目には、[`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#valuememberpath) プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
+-   データを整理されたタイルに分類するには、オプションで [`parentIdMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#parentidmemberpath) および `IdMemberpath` を使用できます。
 
 ### レイアウトのタイプ
 
 Ignite UI for Angular ツリーマップ コンポーネントは、以下のタイプのアルゴリズムをサポートします。
 
--   `Slice and Dice`
+-   `SliceAndDice`
 -   `Squarified`
--   `Strip`
+-   `Stripped`
 
-タイプは `LayoutType` プロパティの設定により定義されます。`LayoutType` プロパティが指定されていない場合は、既定では `Stripped` 型が表示されます。データを表示するようになる時にはさまざまなタイリング アルゴリズムがあります。すべてのアルゴリズムには、ユーザーのニーズに基づいて利点があります。最適なアスペクト比を得ることを目的とするものもあります。ノードは可能な限り長方形に近くなります。他のアルゴリズムは、要素の初期順序を保持することを目的としています。データソース内で互いに近いオブジェクトは、ツリーマップ上で互いに近くに配置されます。
+型は [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) プロパティの設定により定義されます。[`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) プロパティが指定されていない場合は、既定では [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) 型が表示されます。データを表示するようになる時にはさまざまなタイル アルゴリズムがあります。すべてのアルゴリズムには、ユーザーのニーズに基づいて利点があります。最適なアスペクト比を得ることを目的とするものもあります。ノードは可能な限り長方形に近くなります。その他のアルゴリズムは、要素の初期順序を保持することを目的としています。データソース内で互いに近いオブジェクトは、ツリーマップ上で互いに近くに配置されます。
 
--   `Stripped` タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
+-   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
 
--   `SliceAndDice` レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
+-   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice) レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
 
--   ``Strip\` レイアウトのタイリング アルゴリズムでは、SliceAndDice より縦横比がより正確で、Squarified より適切に並べ替えされます。
+-   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) レイアウトのタイル アルゴリズムでは、SliceAndDice より縦横比がより正確で、Squarified より適切に並べ替えされます。
 
 ### レイアウトの方向
 
-LayoutOrientation プロパティによってユーザーは階層のノードが展開される方向を設定できます。
+[`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layoutorientation) プロパティによってユーザーは階層のノードが展開される方向を設定できます。
 
 LayoutOrientation プロパティがレイアウト タイプ SliceAndDice および Strip と動作することに注意してください。
 
