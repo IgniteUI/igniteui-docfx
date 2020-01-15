@@ -20,7 +20,7 @@ mentionedTypes: ['Treemap']
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="tree-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
-</div
+</div>
 
 <div class="divider--half"></div>
 
