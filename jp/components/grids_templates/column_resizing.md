@@ -54,7 +54,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resizing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resizing-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }

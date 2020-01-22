@@ -14,7 +14,7 @@ If you have non-hierarchical data and you want to **group by** one or more colum
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 

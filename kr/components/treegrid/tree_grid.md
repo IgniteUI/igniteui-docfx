@@ -16,7 +16,7 @@ _language: kr
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 
@@ -221,7 +221,7 @@ export class MyComponent implements OnInit {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 

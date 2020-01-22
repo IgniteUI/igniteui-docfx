@@ -15,7 +15,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
