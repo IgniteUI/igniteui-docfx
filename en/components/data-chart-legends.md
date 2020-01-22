@@ -23,9 +23,9 @@ Legends help end-users identify visuals of data chart series with contextual inf
 
 ### Legend Overview
 
-By default, the Angular data chart component does not display legends for any series in the data chart. If you want to show a common legend for multiple series, you need to add an `IgxLegend` object to your application and then set it to the `Infragistics.Controls.Charts.Legend` property of the data chart.
+By default, the Angular data chart component does not display legends for any series in the data chart. If you want to show a common legend for multiple series, you need to add a legend object to your application and then set it to the Legend property of the data chart.
 
-In addition, you must set the [`chartTitle`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) property for each series object or the legend will use a default series title.
+In addition, you must set the [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) property for each series object or the legend will use a default series title.
 
 The following code snippet shows how to use a legend in the Angular data chart component:
 

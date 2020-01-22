@@ -23,23 +23,23 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 
 <div class="divider--half"></div>
 
-When a `ShapeDataSource` loads its shape files, it converts that data into `ShapeFileRecord` objects. These objects can be retrieved from the `GetPointData()` method of the `ShapeDataSource` and can then be used to create a heat-map through usage of a `TileGeneratorMapImagery` object with a [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) assigned to its `TileGenerator` property. This `TileGeneratorMapImagery` can then be used in a geographic tile series as its `TileImagery` source.
+When a `ShapeDataSource` loads its shape files, it converts that data into `ShapeFileRecord` objects. These objects can be retrieved from the `GetPointData()` method of the `ShapeDataSource` and can then be used to create a heat-map through usage of a [`TileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/tilegeneratormapimagery.html) object with a [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) assigned to its `TileGenerator` property. This [`TileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/tilegeneratormapimagery.html) can then be used in a geographic tile series as its `TileImagery` source.
 
-The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) object works such that it has three value paths, [`xValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#xvalues), [`yValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#yvalues) and [`values`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values). As an example of how these could be used, in the case of a shape file that has information about population, you could consider the [`xValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#xvalues) to be longitude, [`yValues`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#yvalues) to be latitude, and [`values`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values) to be the population data. Each of these properties takes a `number[]`.
+The [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) object works such that it has three value paths, [`xValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#xvalues), [`yValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#yvalues) and [`values`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values). As an example of how these could be used, in the case of a shape file that has information about population, you could consider the [`xValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#xvalues) to be longitude, [`yValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#yvalues) to be latitude, and [`values`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values) to be the population data. Each of these properties takes a `number[]`.
 
-The display of the geographic tile series when using the heat-map functionality can be customized by setting the [`minimumColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#minimumcolor) and [`maximumColor`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#maximumcolor) properties to "rgba" strings that describe colors that you wish to correspond to the minimum and maximum values of the collection that you assign to the [`values`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values) property of the `HeatTileGenerator.` You can further customize this by setting the `ScaleColors` property of the generator to contain a collection of strings that describe colors, as this will tell the [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) what colors to use for the displayed values in the map. It is also possible to customize how colors in your `ScaleColors` collection blur together by using the [`blurRadius`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#blurradius), [`maxBlurRadius`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#maxblurradius), and [`useBlurRadiusAdjustedForZoom`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#useblurradiusadjustedforzoom) properties.
+The display of the geographic tile series when using the heat-map functionality can be customized by setting the [`minimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#minimumcolor) and [`maximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#maximumcolor) properties to "rgba" strings that describe colors that you wish to correspond to the minimum and maximum values of the collection that you assign to the [`values`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#values) property of the `HeatTileGenerator.` You can further customize this by setting the `ScaleColors` property of the generator to contain a collection of strings that describe colors, as this will tell the [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) what colors to use for the displayed values in the map. It is also possible to customize how colors in your `ScaleColors` collection blur together by using the [`blurRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#blurradius), [`maxBlurRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#maxblurradius), and [`useBlurRadiusAdjustedForZoom`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#useblurradiusadjustedforzoom) properties.
 
-The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) can also use a logarithmic scale. If you want to use this, you can set the [`useLogarithmicScale`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#uselogarithmicscale) property to `true`.
+The [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) can also use a logarithmic scale. If you want to use this, you can set the [`useLogarithmicScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#uselogarithmicscale) property to `true`.
 
 ### Web Worker
 
-The [`HeatTileGenerator`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) also has support for web workers to do the heavy lifting of the loading of the tile imagery from your shape file on a separate thread. This can greatly improve the performance of your geographic map when using the heat-map functionality. In order to use a web worker with the generator, you can set the [`useWebWorkers`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#usewebworkers) property to `true` and then set the [`webWorkerInstance`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#webworkerinstance) property to an instance of your web worker.
+The [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) also has support for web workers to do the heavy lifting of the loading of the tile imagery from your shape file on a separate thread. This can greatly improve the performance of your geographic map when using the heat-map functionality. In order to use a web worker with the generator, you can set the [`useWebWorkers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#usewebworkers) property to `true` and then set the [`webWorkerInstance`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#webworkerinstance) property to an instance of your web worker.
 
 <!-- Angular -->
 
 ```ts
 // heatworker.worker.ts
-import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/ES5/HeatTileGeneratorWebWorker";
+import { HeatTileGeneratorWebWorker } from 'igniteui-angular-core';
 
 const worker: Worker = self as any;
 worker.onmessage = HeatTileGeneratorWebWorker.onmessage;
@@ -56,10 +56,10 @@ export default {} as typeof Worker & (new () => Worker);
 <!-- Angular -->
 
 ```ts
-import { HeatTileGenerator } from "igniteui-angular-core/ES5/igx-heat-tile-generator";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { TileGeneratorMapImagery } from "igniteui-angular-maps/ES5/igx-tile-generator-map-imagery";
+import { IgxHeatTileGenerator } from 'igniteui-angular-core';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxTileGeneratorMapImagery } from 'igniteui-angular-maps';
 ```
 
 ### Creating Heatmap
@@ -78,14 +78,14 @@ The following code snippet shows how to display a population based heat-map in t
 @ViewChild("map", { static: true })
 public map: IgxGeographicMapComponent;
 public data: any[];
-public tileImagery: TileGeneratorMapImagery;
+public tileImagery: IgxTileGeneratorMapImagery;
 // ...
 constructor() {
     this.data = this.initData();
 
-    this.tileImagery = new TileGeneratorMapImagery();
+    this.tileImagery = new IgxTileGeneratorMapImagery();
 
-    const con: ShapeDataSource = new ShapeDataSource();
+    const con: IgxShapeDataSource = new IgxShapeDataSource();
     con.importCompleted.subscribe((s, e) => {
         const data = con.getPointData();
         const lat: number[] = [];
@@ -108,7 +108,7 @@ constructor() {
             }
         }
 
-        const gen = new HeatTileGenerator();
+        const gen = new IgxHeatTileGenerator();
         gen.xValues = lon;
         gen.yValues = lat;
         gen.values = val;
