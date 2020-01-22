@@ -1,5 +1,6 @@
 - name: General
   header: true
+  _language: "kr"
 - name: Getting started
   href: general/getting_started.md
   new: false

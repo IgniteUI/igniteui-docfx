@@ -23,7 +23,7 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -58,7 +58,7 @@ Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何
 
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>

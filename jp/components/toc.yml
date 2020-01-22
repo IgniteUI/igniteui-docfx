@@ -1,5 +1,6 @@
 ﻿- name: 概要
   header: true
+  _language: "ja"
 - name: 作業の開始
   href: general/getting_started.md
   new: false

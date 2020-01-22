@@ -1,3 +1,4 @@
 - name: Download Now
   href: 'https://www.infragistics.com/products/ignite-ui-angular/download'
   cta: true
+  _language: "kr"
