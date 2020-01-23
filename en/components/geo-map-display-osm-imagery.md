@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Displaying Imagery from Open Street Maps
 
-The `OpenStreetMapImagery` is a free geographic imagery mapping service created collaboratively by OpenStreetMap© contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on <a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> web site.
+The [`OpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) is a free geographic imagery mapping service created collaboratively by OpenStreetMap© contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on <a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> web site.
 By the default, the Ignite UI for Angular map component already displays geographic imagery from the Open Street Maps. Therefore, there is no need to configure the control to display geographic imagery from the Open Street Maps.
 
 ### Demo
@@ -24,4 +24,22 @@ By the default, the Ignite UI for Angular map component already displays geograp
 
 ### Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the `OpenStreetMapImagery` object which provides geographic imagery from  OpenStreetMap© contributors.
+This code example explicitly sets `BackgroundContent` of the map component to the [`OpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) object which provides geographic imagery from  OpenStreetMap© contributors.
+
+```html
+<igx-geographic-map #map
+    width="100%"
+    height="100%"
+    zoomable="true" >
+</igx-geographic-map>
+```
+
+```ts
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxOpenStreetMapImagery } from 'igniteui-angular-maps';
+// ...
+public map: IgxGeographicMapComponent;
+
+const tileSource = new IgxOpenStreetMapImagery();
+this.map.backgroundContent = tileSource;
+```

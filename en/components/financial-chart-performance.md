@@ -56,25 +56,25 @@ Also, you should consider the following features of the financial chart when opt
 
 ### Chart Type
 
-Setting the [`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) option can have the following impact on chart performance:
+Setting the [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) option can have the following impact on chart performance:
 
--   [`line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) chart type and it is recommended when rendering data items with single numeric value.
--   [`Bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) - is more expensive to render than the [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) chart type and it is recommended when rendering data items with OHLC  numeric values.
--   [`Candle`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) - is more expensive to render than the [`Bar`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) chart type and it is also recommended when rendering data items with OHLC  numeric values.
+-   [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) chart type and it is recommended when rendering data items with single numeric value.
+-   [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) - is more expensive to render than the [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) chart type and it is recommended when rendering data items with OHLC  numeric values.
+-   [`Candle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) - is more expensive to render than the [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) chart type and it is also recommended when rendering data items with OHLC  numeric values.
 
 ### Volume Type
 
 Setting the `VolumeType` option can have the following impact on chart performance:
 
--   [`line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   [`area`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) - is more expensive to render than the [`line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) volume type.
--   [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`area`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) volume type and it is recommended when rendering volume data of 1-3 stocks.
--   [`None`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartvolumetype.html#none) - does not display the volume pane.
+-   [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   [`area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) - is more expensive to render than the [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) volume type.
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) volume type and it is recommended when rendering volume data of 1-3 stocks.
+-   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartvolumetype.html#none) - does not display the volume pane.
 
 ### Marker Type
 
-Setting the [`MarkerType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html) option to `none` will decrease the amount of items to render than any other type.
+Setting the [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html) option to `none` will decrease the amount of items to render than any other type.
 
 ### Legend Visibility
 
@@ -86,14 +86,14 @@ Setting the `ZoomSliderType` option to `none` will improve chart performance and
 
 ### Chart Panes
 
-Setting a lot of panes using [`FinancialIndicatorType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialindicatortype.html) and [`FinancialOverlayType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html) options, might decrease performance and it is recommended to use a few financial indicators and one financial overlay.
+Setting a lot of panes using [`FinancialIndicatorType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialindicatortype.html) and [`FinancialOverlayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html) options, might decrease performance and it is recommended to use a few financial indicators and one financial overlay.
 
 ### X-Axis Mode
 
 Setting the `XAxisMode` option can have the following impact on chart performance:
 
--   [`Ordinal`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) - is the least expensive x-axis mode to use in the financial chart and it is recommended when rendering of break in data range (e.g. weekends or holidays) is not important.
--   `time` - is more expensive expensive than the [`Ordinal`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
+-   [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) - is the least expensive x-axis mode to use in the financial chart and it is recommended when rendering of break in data range (e.g. weekends or holidays) is not important.
+-   `time` - is more expensive expensive than the [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
 
 ### Y-Axis Mode
 
