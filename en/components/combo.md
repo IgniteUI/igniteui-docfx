@@ -202,6 +202,7 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
     if (event.added.length) {
         event.newSelection = event.added;
     }
+}
 ```
 
 <div class="sample-container loading" style="height: 400px;">
