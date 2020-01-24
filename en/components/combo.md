@@ -195,13 +195,13 @@ Combo control exposes the following features:
     - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
 
 ## Single Selection
-By default the Combo control provides multiple selection. By using the code below you can change its behavior to single selection:
+By default, the Combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component:
 
 ```typescript
 public singleSelection(event: IComboSelectionChangeEventArgs) {
-      if (event.added.length) {
+    if (event.added.length) {
         event.newSelection = event.added;
-      }
+    }
 ```
 
 <div class="sample-container loading" style="height: 400px;">
