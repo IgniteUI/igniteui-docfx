@@ -7,7 +7,7 @@ mentionedTypes: ['Workbook']
 
 ## Using Cells
 
-The [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
+The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
 
 ### Demo
 
@@ -22,18 +22,18 @@ The [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/cla
 The following code shows the imports needed to use the code-snippets below:
 
 ```ts
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
-import { NamedReference } from "igniteui-angular-excel/ES5/NamedReference";
-import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment";
-import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { Worksheet } from "igniteui-angular-excel";
+import { WorksheetTable } from "igniteui-angular-excel";
+import { NamedReference } from "igniteui-angular-excel";
+import { WorksheetCellComment } from "igniteui-angular-excel";
+import { FormattedString } from "igniteui-angular-excel";
 ```
 
 ### Referencing Cells and Regions
 
-You can access a [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object or a [`WorksheetRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) object by calling the [`worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
+You can access a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object or a [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) object by calling the [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
 
 The following example code demonstrates how to reference cells and regions:
 
@@ -51,7 +51,7 @@ var region = worksheet.getRegion("G1:G10");
 
 In Microsoft Excel, individual cells, as well as cell regions can have names assigned to them. The name of a cell or region can be used to reference that cell or region instead of their address.
 
-The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the [`worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) object. You refer to the cell or region using the [`NamedReference`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/namedreference.html) instance that refers to that cell or region.
+The Infragistics Angular Excel Library supports the referencing of cells and regions by name through the `getCell` and `getRegion` methods of the [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) object. You refer to the cell or region using the [`NamedReference`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/namedreference.html) instance that refers to that cell or region.
 
 You can use the following code snippet as an example for naming a cell or region:
 
@@ -72,7 +72,7 @@ var region = worksheet.getRegion("myRegion");
 
 ### Adding a Comment to a Cell
 
-A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Angular Excel Library allows you to add comments to a cell by setting a [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `comment` property.
+A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Angular Excel Library allows you to add comments to a cell by setting a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `comment` property.
 
 The following example code demonstrates how to add a comment to a cell:
 
@@ -89,7 +89,7 @@ worksheet.rows(0).cells(0).comment = cellComment;
 
 ### Adding a Formula to a Cell
 
-The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s [`applyFormula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#applyformula) method or by instantiating a [`formula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) object using the [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s [`formula`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#value) property.
+The Infragistics Angular Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s [`applyFormula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#applyformula) method or by instantiating a [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) object using the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#value) property.
 
 The following code shows you how to add a formula to a cell.
 
@@ -105,7 +105,7 @@ The following code shows you how to add a formula to a cell.
 
 ### Copying a Cell’s Format
 
-Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `cellFormat` property, you can call the [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
+Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `cellFormat` property, you can call the [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
 
 The following code shows you how to copy the format of the 2nd column to the 4th column:
 
@@ -123,7 +123,7 @@ worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 
 ### Formatting a Cell
 
-The Infragistics Angular Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html), [`WorksheetRow`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html), [`WorksheetColumn`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html), or [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) objects.
+The Infragistics Angular Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html), [`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html), [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html), or [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) objects.
 
 You can customize every aspect of a cell’s appearance. You can set a cell’s font, background, and borders, as well as text alignment and rotation. You can even apply a different format on a character-by-character basis for a cell’s text.
 
@@ -142,27 +142,27 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 The color palette is analogous to the color dialog in Microsoft Excel 2007 UI. You can open this color dialog by navigating to Excel Options => Save => Colors.
 
-You can create all possible fill types using static properties and methods on the [`CellFill`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfill.html) class. They are as follows:
+You can create all possible fill types using static properties and methods on the [`CellFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfill.html) class. They are as follows:
 
 -   `noColor` - A property that represents a fill with no color, which allows a background image of the worksheet, if any, to show through.
 
--   `createSolidFill` - Returns a [`CellFillPattern`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) instance which has a pattern style of `Solid` and a background color set to the `Color` or [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) specified in the method.
+-   `createSolidFill` - Returns a [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) instance which has a pattern style of `Solid` and a background color set to the `Color` or [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) specified in the method.
 
--   `createPatternFill` - Returns a [`CellFillPattern`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) instance which has the specified pattern style and the `Color` or [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) values, specified for the background and pattern colors.
+-   `createPatternFill` - Returns a [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) instance which has the specified pattern style and the `Color` or [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) values, specified for the background and pattern colors.
 
--   `createLinearGradientFill` - Returns a [`CellFillLinearGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) instance with the specified angle and gradient stops.
+-   `createLinearGradientFill` - Returns a [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) instance with the specified angle and gradient stops.
 
--   `createRectangularGradientFill` - Returns a [`CellFillRectangularGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
+-   `createRectangularGradientFill` - Returns a [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) instance with the specified left, top, right, and bottom of the inner rectangle and gradient stops. If the inner rectangle values are not specified, the center of the cell is used as the inner rectangle.
 
 The derived types, representing the various fills which can be created, are as follows:
 
--   [`CellFillPattern`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
+-   [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) - A pattern that represents a cell fill of no color, a solid color, or a pattern fill for a cell. It has background color info and a pattern color info which correspond directly to the color sections in the Fill tab of the Format Cells dialog of Excel.
 
--   [`CellFillLinearGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
+-   [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) - Represents a linear gradient fill. It has an angle, which is degrees clockwise of the left to right linear gradient, and a gradients stops collection which describes two or more color transitions along the length of the gradient.
 
--   [`CellFillRectangularGradient`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
+-   [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) - Represents a rectangular gradient fill. It has top, left, right, and bottom values, which describe, in relative coordinates, the inner rectangle from which the gradient starts and goes out to the cell edges. It also has a gradient stops collection which describes two or more color transitions along the path from the inner rectangle to the cell edges.
 
-The following code snippet demonstrates how to create a solid fill in a [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html):
+The following code snippet demonstrates how to create a solid fill in a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html):
 
 ```ts
 var workbook = new Workbook();
@@ -212,11 +212,11 @@ Each workbook has 12 associated theme colors. They are the following:
 
 -   There are default values when a workbook is created, which can be customized via Excel.
 
-Colors are defined by the [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) class, which is a sealed immutable class. The class has a static `automatic` property, which returns the automatic color, and there are various constructors which allow you to create a [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) instance with a color or a theme value and an optional tint.
+Colors are defined by the [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) class, which is a sealed immutable class. The class has a static `automatic` property, which returns the automatic color, and there are various constructors which allow you to create a [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) instance with a color or a theme value and an optional tint.
 
-The `getResolvedColor` method on [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) allows you to determine what color will actually be seen by the user when they open the file in Excel.
+The `getResolvedColor` method on [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) allows you to determine what color will actually be seen by the user when they open the file in Excel.
 
-If the [`WorkbookColorInfo`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) represents a theme color, you must pass in a Workbook instance to the method so it can get the theme color’s RGB value from the workbook.
+If the [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) represents a theme color, you must pass in a Workbook instance to the method so it can get the theme color’s RGB value from the workbook.
 
 When saving out in the newer file formats such as .xlsx, the newer color information is saved directly into the file. When saving out in an older file format such as .xls, the index to the closest color in the palette will be saved out. In addition, the older formats have future feature records that can be saved out to indicate the newer color information.
 
@@ -224,9 +224,9 @@ When the older formats are opened in Microsoft Excel 2003 and earlier versions, 
 
 ### Excel Format Support
 
-You can set a host of different formats on a [`WorksheetCell`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) by using the [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
+You can set a host of different formats on a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) by using the [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
 
-You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
+You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
 
 There is a special type of style on the workbook's `styles` collection known as the "normal" style, which can be accessed using that collection's `normalStyle` property, or by indexing into the collection with the name "Normal".
 
@@ -234,7 +234,7 @@ The `normalStyle` contains the default properties for all cells in the workbook,
 
 You can clear the `styles` collection or reset it to its predefined state by using the `clear` and `reset` methods, respectively. Both of these will remove all user-defined styles, but `clear` will clear the `styles` collection entirely.
 
-With this feature, a `style` property has been added to the `CellFormat` object. This is a reference to a [`WorkbookStyle`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
+With this feature, a `style` property has been added to the `CellFormat` object. This is a reference to a [`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
 
 If the `style` property is set to null, it will revert back to the `normalStyle`. If it is set to another style in the styles collection, that style will now hold the defaults for all unset properties on the cell format.
 
@@ -250,11 +250,11 @@ This method returns a `CellFormat` instance which refers back to the associated 
 
 Aside from setting the value or format of cells, you can also merge cells to make two or more cells appear as one. If you merge cells, they must be in a rectangular region.
 
-When you merge cells, each cell in the region will have the same value and cell format. The merged cells will also be associated with the same [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) object, accessible from their `associatedMergedCellsRegion` property. The resultant [`WorksheetMergedCellsRegion`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) object will also have the same value and cell format as the cells.
+When you merge cells, each cell in the region will have the same value and cell format. The merged cells will also be associated with the same [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) object, accessible from their `associatedMergedCellsRegion` property. The resultant [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) object will also have the same value and cell format as the cells.
 
 Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you unmerge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
 
-In order to create a merged cell region, you must add a range of cells to the [`Worksheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
+In order to create a merged cell region, you must add a range of cells to the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
 
 ```ts
 var workbook = new Workbook();
@@ -286,29 +286,29 @@ The amount of horizontal space available in a cell plays a big part in how the v
 
 Displayed text can be different depending on varying column widths.
 
-When displaying numbers and using format string containing “General” or “@”, there are various formats which are tried to find a formatting which fits the cell width. A list of example formats are shown below:
+When displaying numbers and using format string containing **"General"** or **"@"**, there are various formats which are tried to find a formatting which fits the cell width. A list of example formats are shown below:
 
--   `Normal Value` - Number is displayed as it would be if there is unlimited amount of space.
+-   **Normal Value** - Number is displayed as it would be if there is unlimited amount of space.
 
--   `Remove decimal digits` - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
+-   **Remove decimal digits** - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
 
--   `Scientific, 5 decimal digits` - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
+-   **Scientific, 5 decimal digits** - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
 
--   `Scientific, 4 decimal digits` - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
+-   **Scientific, 4 decimal digits** - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
 
--   `Scientific, 3 decimal digits` - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
+-   **Scientific, 3 decimal digits** - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
 
--   `Scientific, 2 decimal digits` - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
+-   **Scientific, 2 decimal digits** - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
 
--   `Scientific, 1 decimal digits` - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
+-   **Scientific, 1 decimal digits** - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
 
--   `Scientific, 0 decimal digits` - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
+-   **Scientific, 0 decimal digits** - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
 
--   `Rounded value` - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
+-   **Rounded value** - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
 
--   `Hash marks` - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
+-   **Hash marks** - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
 
--   `Empty string` - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
+-   **Empty string** - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
 
 If the format string for numeric value does not contain General or @, there are only the following stages of resizing: Normal value, Hash marks, Empty string
 

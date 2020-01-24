@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Using Scatter Proportional Series
 
-Use the map component's [`IgxGeographicProportionalSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) to plot markers for the geographic points specified by the data in your application. This map series can be useful for highlighting points of interest in your particular business case like department stores, warehouses, or offices. Also you can use this map series in a fleet management system or a GPS system for dynamic vehicle tracking.
+Use the map component's [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) to plot markers for the geographic points specified by the data in your application. This map series can be useful for highlighting points of interest in your particular business case like department stores, warehouses, or offices. Also you can use this map series in a fleet management system or a GPS system for dynamic vehicle tracking.
 
 ### Demo
 
@@ -21,23 +21,23 @@ Use the map component's [`IgxGeographicProportionalSymbolSeriesComponent`](/prod
 
 <div class="divider--half"></div>
 
-The demo above shows the [`IgxGeographicProportionalSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) series and how to specify data binding options of the series. Automatic marker selection is configured along with marker collision avoidance logic, and marker outline and fill colors are specified too.
+The demo above shows the [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) series and how to specify data binding options of the series. Automatic marker selection is configured along with marker collision avoidance logic, and marker outline and fill colors are specified too.
 
 ### Configuration Summary
 
-Similar to other types of scatter series in the map control, the [`IgxGeographicProportionalSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) and [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath) properties to map these data columns. The [`radiusScale`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale) and [`radiusMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) will settings configures the radius for the bubbles.
+Similar to other types of scatter series in the map control, the [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) series has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in the items source must have two data columns that store geographic longitude and latitude coordinates and uses the [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) and [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath) properties to map these data columns. The [`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale) and [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) will settings configures the radius for the bubbles.
 
 The following table summarizes the GeographicHighDensityScatterSeries series properties used for data binding.
 
-| Property                                                                                                                                                        | Type                                                                                                                 | Description                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `ItemsSource`                                                                                                                                                   | any                                                                                                                  | Gets or sets the items source                                                                         |
-| [`longitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) | string                                                                                                               | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
-| [`latitudeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath)   | string                                                                                                               | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
-| [`radiusMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath)       | string                                                                                                               | Sets the path to use to get the radius values for the series.                                         |
-| [`radiusScale`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale)                 | [`IgxSizeScaleComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html) | Gets or sets the radius scale property for the current bubble series.                                 |
-| [`minimumValue`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue)                                        | any                                                                                                                  | Configure the minimum value for calculating value sub ranges.                                         |
-| [`maximumValue`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue)                                        | any                                                                                                                  | Configure the maximum value for calculating value sub ranges.                                         |
+| Property                                                                                                                                                                                  | Type                                                                                                                                           | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `ItemsSource`                                                                                                                                                                             | any                                                                                                                                            | Gets or sets the items source                                                                         |
+| [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) | string                                                                                                                                         | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
+| [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath)   | string                                                                                                                                         | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
+| [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath)       | string                                                                                                                                         | Sets the path to use to get the radius values for the series.                                         |
+| [`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale)                 | [`IgxSizeScaleComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html) | Gets or sets the radius scale property for the current bubble series.                                 |
+| [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue)                                        | any                                                                                                                                            | Configure the minimum value for calculating value sub ranges.                                         |
+| [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue)                                        | any                                                                                                                                            | Configure the maximum value for calculating value sub ranges.                                         |
 
 ### Code Snippet
 
@@ -63,14 +63,13 @@ The following table summarizes the GeographicHighDensityScatterSeries series pro
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxSizeScaleComponent } from "igniteui-angular-charts/ES5/igx-size-scale-component";
-import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { DataContext } from "igniteui-angular-core/ES5/igx-data-context";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicProportionalSymbolSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-proportional-symbol-series-component";
+import { IgxSizeScaleComponent } from 'igniteui-angular-charts';
+import { IgxValueBrushScaleComponent } from 'igniteui-angular-charts';
+import { IgxDataContext } from 'igniteui-angular-core';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicProportionalSymbolSeriesComponent } from 'igniteui-angular-maps';
+import { MarkerType } from 'igniteui-angular-charts';
 import { WorldLocations } from "../../utilities/WorldLocations";
 
 @Component({
@@ -88,14 +87,14 @@ export class MapTypeScatterBubbleSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-    const sds = new ShapeDataSource();
+    const sds = new IgxShapeDataSource();
     sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
     sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
     sds.dataBind();
     sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
 }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
     const shapeRecords = sds.getPointData();
     console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
 
