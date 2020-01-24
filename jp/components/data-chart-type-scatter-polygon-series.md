@@ -1,7 +1,7 @@
 ---
-title: データ グリッド|可視化ツール|Ignite UI for Angular |Infragistics |散布多角形
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 散布多角形
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries']
 _language: ja
 ---
@@ -26,18 +26,18 @@ _language: ja
 
 ### 軸の要件
 
-Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
--   [`IgxNumericXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
--   [`IgxNumericYAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
+-   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
+-   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
 ### Required Data
 
-[`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) には以下のデータ要件があります。
+[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、散布シェイプシリーズの  [`shapeMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある 1 つのシェイプ データ列 (Xまたは Y 座標の配列) を含める必要があります。
+-   すべてのデータ項目には、散布シェイプシリーズの  [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある 1 つのシェイプ データ列 (Xまたは Y 座標の配列) を含める必要があります。
 
 上記データ要件を満たすデータソースとして [SampleShapeData](data-chart-data-sources-shape.md) を使用できます。
 
@@ -47,19 +47,19 @@ public dataSource: any[] = SampleShapeData.create();
 
 ### モジュールの要件
 
-[`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) は以下のモジュールが必要です。
+[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) は以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
-import { IgxNumericYAxis } from "igniteui-angular-charts/ES5/igx-numeric-y-axis";
-import { IgxNumericXAxis } from "igniteui-angular-charts/ES5/igx-numeric-x-axis";
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+import { IgxNumericXAxis } from 'igniteui-angular-charts';
 // series' modules:
-import { IgxScatterPolygonSeries } from "igniteui-angular-charts/ES5/igx-scatter-polygon-series";
+import { IgxScatterPolygonSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartShapeCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-core-module";
-import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartShapeCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartShapeModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -74,7 +74,7 @@ export class AppModule { /* ... */ }
 
 ### コード例
 
-このコードは、[`IgxScatterPolygonSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
+このコードは、[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
 ```html
  <igx-data-chart

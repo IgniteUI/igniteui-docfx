@@ -1,13 +1,14 @@
 ---
-title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
-_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ラジアル
+_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+mentionedTypes: ['XamDataChart','RadialPieSeries']
 _language: ja
 ---
 
 ## ラジアル シリーズ
 
-このトピックは、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのラジアル シリーズのさまざまなタイプについて説明します。ラジアル シリーズは、[カテゴリ シリーズ](data-chart-type-category-series.md)のように水平線に沿って伸びるのではなく、円の周りを囲んだデータポイントのコレクションとしてデータをレンダリングするシリーズのグループです。ラジアル シリーズは、チャートの範囲の最小から最大までのカテゴリのリストもマッピングし、カテゴリシリーズと同じカテゴリグループ化メカニズムをサポートします。
+このトピックは、Angular データ チャート コンポーネントのラジアル シリーズのさまざまなタイプについて説明します。ラジアル シリーズは、[カテゴリ シリーズ](data-chart-type-category-series.md)のように水平線に沿って伸びるのではなく、円の周りを囲んだデータポイントのコレクションとしてデータをレンダリングするシリーズのグループです。ラジアル シリーズは、チャートの範囲の最小から最大までのカテゴリのリストもマッピングし、カテゴリシリーズと同じカテゴリグループ化メカニズムをサポートします。
 
 ### サンプル
 
@@ -25,24 +26,24 @@ _language: ja
 
 以下の表は、すべてのタイプのカテゴリ シリーズとその説明をまとめたものです。
 
-| シリーズ名                                                                                                                              | 説明                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合で囲まれ、塗りつぶされた多角形を表示します          |
-| `RadialSplineAreaSeries`                                                                                                           | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合で囲まれ、塗りつぶされた多角形を表示します |
-| `RadialSplineSeries`                                                                                                               | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合を表示します。               |
-| `RadialScatterSeries`                                                                                                              | 極座標 (角度/半径) 座標にあるデータ ポイントを表すマーカーの集合を表示します。                       |
-| [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合を表示します。                         |
+| シリーズ名                                                                                                                                                        | 説明                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合で囲まれ、塗りつぶされた多角形を表示します          |
+| `RadialSplineAreaSeries`                                                                                                                                     | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合で囲まれ、塗りつぶされた多角形を表示します |
+| `RadialSplineSeries`                                                                                                                                         | ラジアル (角度/半径) 座標にあるデータ ポイントを結ぶ滑らかな/補間された線の集合を表示します。               |
+| `RadialScatterSeries`                                                                                                                                        | 極座標 (角度/半径) 座標にあるデータ ポイントを表すマーカーの集合を表示します。                       |
+| [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) | 極座標 (角度/半径) 座標にあるデータ ポイントを結ぶ直線の集合を表示します。                         |
 
 ### 軸の要件
 
-[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールはさまざまな軸タイプを提供しますが、ラジアル シリーズで使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまな軸タイプを提供しますが、ラジアル シリーズで使用できるのは以下のタイプの軸のみです。
 
-| シリーズ タイプ                                                                                                                               | 半径軸タイプ                                                                                                                               | 角度軸タイプ                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html)     | [`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
-| [`IgxRadialPieSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html)       | [`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
-| [`IgxRadialColumnSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) | [`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
-| [`IgxRadialLineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html)     | [`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
+| シリーズ タイプ                                                                                                                                                         | 半径軸タイプ                                                                                                                                                         | 角度軸タイプ                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html)     | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
+| [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html)       | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
+| [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
+| [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html)     | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
 
 ### データの要件
 
@@ -50,8 +51,8 @@ _language: ja
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートはラジアル シリーズをレンダリングしません。
--   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
--   データ項目は、カテゴリシリーズ ([`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) など) の `ValueMemberPath` プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
+-   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   データ項目は、カテゴリシリーズ ([`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) など) の [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath) プロパティを使用してマップする数値データ列を少なくとも 1 列含む必要があります。
 
 上記データ要件を満たすデータソースとして [SampleRadialData](data-chart-data-sources-radial.md) を使用できます。
 
@@ -65,18 +66,18 @@ this.state = { dataSource: SampleRadialData.create() }
 
 ```ts
 // axis' modules:
-import { IgxCategoryAngleAxis } from "igniteui-angular-charts/ES5/igx-category-angle-axis";
-import { IgxNumericRadiusAxis } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis";
+import { IgxCategoryAngleAxis } from 'igniteui-angular-charts';
+import { IgxNumericRadiusAxis } from 'igniteui-angular-charts';
 // series modules:
-import { IgxRadialAreaSeries } from "igniteui-angular-charts/ES5/igx-radial-area-series";
-import { IgxRadialLineSeries } from "igniteui-angular-charts/ES5/igx-radial-line-series";
-import { IgxRadialPieSeries } from "igniteui-angular-charts/ES5/igx-radial-pie-series";
-import { IgxRadialColumnSeries } from "igniteui-angular-charts/ES5/igx-radial-column-series";
+import { IgxRadialAreaSeries } from 'igniteui-angular-charts';
+import { IgxRadialLineSeries } from 'igniteui-angular-charts';
+import { IgxRadialPieSeries } from 'igniteui-angular-charts';
+import { IgxRadialColumnSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartRadialCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-core-module";
-import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-chart-radial-module";
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -91,7 +92,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
 
 ### コード例
 
-このコードは、[`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -109,7 +110,7 @@ import { IgxDataChartRadialModule } from "igniteui-angular-charts/ES5/igx-data-c
  </igx-data-chart>
 ```
 
-上記のコードを使って [`IgxRadialAreaSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
+上記のコードを使って [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) をレンダリングしたい極座標シリーズの名前で置き換えて他のタイプの極座標 シリーズを作成することもできます。
 
 ### その他のリソース
 

@@ -1,14 +1,14 @@
 ---
-title: Spreadsheet | Grid コントロール | Ignite UI for Angular | 概要 | Infragistics |
+title: スプレッドシート | Grid コントロール | Ignite UI for Angular | 概要 | インフラジスティックス
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 _language: ja
 mentionedTypes: ['Spreadsheet']
 ---
 
 ## Angular Spreadsheet
 
-Angular Spreadsheet は、スプレッドシート データの視覚化と編集を可能にする Angular コンポーネントです。機能には、アクティブ化、セル編集、条件付き書式設定、選択、クリップボードなどがあります。
+Angular Spreadsheet は、スプレッドシート データの視覚化と編集を可能にします。機能には、アクティブ化、セル編集、条件付き書式設定、選択、クリップボードなどがあります。
 
 ### サンプル
 
@@ -32,11 +32,11 @@ Angular Spreadsheet は、スプレッドシート データの視覚化と編�
 
 ### 必要なモジュール
 
-[`IgxSpreadsheetComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、以下のモジュールが必要です。
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、以下のモジュールが必要です。
 
 ```ts
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
-import { IgxSpreadsheetModule } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-module";
+import { IgxExcelModule } from 'igniteui-angular-excel';
+import { IgxSpreadsheetModule } from 'igniteui-angular-spreadsheet';
 
 @NgModule({
     imports: [
@@ -62,12 +62,12 @@ export class AppModule {}
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
+> 次のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。.
 
 以下は、ワークブックをスプレッドシートにロードする方法を示しています。
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
 import { ExcelUtility } from 'ExcelUtility';
 
 // ...
@@ -80,5 +80,5 @@ ngOnInit() {
     ExcelUtility.loadFromUrl(excelFile).then((w) => {
       this.spreadsheet.workbook = w;
     });
-  }
+}
 ```

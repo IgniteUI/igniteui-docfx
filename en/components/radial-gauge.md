@@ -34,7 +34,7 @@ When installing the gauge package, the core package must also be installed.
 
 ### Required Modules
 
-The [`IgxRadialGaugeComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules:
+The [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts
@@ -232,7 +232,7 @@ Radial gauge needles are visual elements used to signify a gauge set value. Need
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties.
 
-You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html#isneedledraggingenabled) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
+You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html#isneedledraggingenabled) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
 
 ```html
 <igx-radial-gauge

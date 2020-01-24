@@ -1,17 +1,18 @@
 ---
-title: ペイン
-_description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
+title: データ チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | ペイン
+_description: 簡単な API を使用して財務データを可視化するには、ファイナンシャル チャート コンポーネントを使用します。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
-## ペイン
+## チャート ペイン
 
-`XamFinancialChart` コントロールには、財務データを表示する複数のペインがあります。
+Angular Financial Chart コンポネントには財務データを表示する複数のペインがあります。
 
 ### サンプル
 
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-panes-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -19,18 +20,21 @@ _language: ja
     </button>
 </div>
 
-以下のペインが Financial Chart コントロールで利用できます。
+<div class="divider--half"></div>
 
--   価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、およびファイナンシャル オーバーレイを使用して価格を描画します。
+以下のペインが Angular Financial Chart コンポネントで利用できます。
+
+-   価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
 -   インジケーター ペイン - すべての財務指標を別のチャートに描画し、`BollingerBands` および `PriceChannel` オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
--   ボリューム ペイン - 柱状、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
+-   ボリューム ペイン - 縦棒、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
 -   ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
 
 ### インジケーター ペイン
 
 財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのインジケーターは、同じ Y 軸を共有しないため価格ペインの下に表示されます。
 
-デフォルトでインジケーター ペインは表示されません。ユーザーはツールバーを使用してランタイムで表示するインジケーターを選択できます。初期でインジケーター ペインを表示するには、以下のコードのように `indicatorTypes` プロパティをインジケーターのタイプを 1 つ以上に設定する必要があります。
+デフォルトでインジケーター ペインは表示されません。ユーザーは、ツールバーを使用してランタイムで表示するインジケーターを選択できます。
+初期でインジケーター ペインを表示するには、以下のコードのように `indicatorTypes` プロパティをインジケーターのタイプを 1 つ以上に設定する必要があります。
 
 ```html
  <igx-financial-chart
@@ -43,7 +47,7 @@ _language: ja
 
 ### ボリューム ペイン
 
-ボリューム ペインは指定した期間に取引された株式数を表します。出来高の低さは関心が低いことを示し、出来高の多さは取引が多く、関心が高いことを示します。柱状、折れ線、またはエリア チャート タイプを使用して表示できます。ツールバーでチャート タイプを選択すると、ランタイムにデータを表示するボリューム ペインが表示されます。ペインを表示するには、以下のコードのようにボリューム タイプを設定する必要があります。
+ボリューム ペインは指定した期間に取引された株式数を表します。出来高の低さは関心が低いことを示し、出来高の多さは取引が多く、関心が高いことを示します。縦棒、折れ線、またはエリア チャート タイプを使用して表示できます。ツールバーでチャート タイプを選択すると、ランタイムにデータを表示するボリューム ペインが表示されます。ペインを表示するには、以下のコードのようにボリューム タイプを設定する必要があります。
 
 ```html
  <igx-financial-chart
@@ -56,7 +60,7 @@ _language: ja
 
 ### 価格ペイン
 
-このペインは、在庫価格を表示し、経時的な在庫の高値、安値、始値、終値を示します。さらに、トレンドラインおよびオーバーレイを表示できます。ツールバーからチャート タイプを選択できます。デフォルトで、チャート タイプは `auto` に設定されています。以下のコードに示すように、デフォルト設定をオーバーライドできます。
+このペインは、在庫価格を表示し、経時的な在庫の高値、安値、始値、終値を示します。さらに、トレンドラインおよびオーバーレイを表示できます。ツールバーからチャート タイプを選択できます。デフォルトで、チャート タイプは `auto` に設定されています。次のコードに示すように、デフォルト設定をオーバーライドできます。
 
 ```html
 <igx-financial-chart
@@ -82,7 +86,7 @@ _language: ja
  </igx-financial-chart>
 ```
 
-注: `ZoomSliderType` オプションを [`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
+注: `ZoomSliderType` オプションを [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
 
 ```html
  <igx-financial-chart

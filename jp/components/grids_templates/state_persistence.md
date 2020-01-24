@@ -1,33 +1,34 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid State Persistence | Ignite UI for Angular | Infragistics
-_description: Easily achieve state persistence for the IgxGrid by using the API exposed by the IgxGridState directive.
-_keywords: state persistence, ignite ui for angular, infragistics
+title: Angular Grid ステート パーシステンス|Ignite UI for Angular |インフラジスティックス
+_description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxGridの状態の永続性を簡単に実現します。
+_keywords: ステート パーシステンス, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 <!-- @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
+title: Angular TreeGrid Editing |Data Manipulation |Ignite UI for Angular
 _description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
+title: Angular HierarchicalGrid Editing |Data Manipulation |Ignite UI for Angular
 _description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
 ---
 } -->
 
-### @@igComponent State Persistence
+### @@igComponent ステート パーシステンス
 
-Ignite UI for Angular @@igComponent component provides the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive which allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) method, that developers can use to achieve state persistence in any scenario.
+Angular @@igComponent コンポーネントの Ignite UI には、開発者がグリッドの状態を簡単に保存および復元できる IgxGridState ディレクティブが用意されています。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate)メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
 
 #### API
 
-[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - This method returns the grid state in a serialized JSON string, the easisest way to enable developers just take it and save it on any data storage (database, cloud, etc). Once the developer needs to restore this state, just pass it back to the [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) method. The first optional method parameter is `serialize`, which determines whether [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) will return the original objects, or the serialized JSOn string.
-The developer may choose to get only the state for a certain feature/features, by passing in the feature name, or an array with feature names as a second argument.
+[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウドなど) に保存する最も簡単な方法です。開発者がこの状態を復元する必要がある場合は、[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドに渡します。最初のオプションのメソッド パラメーターは serialize で、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) が元のオブジェクトを返すか、シリアル化された JSOn 文字列を返すかを決定します。
+開発者は、機能名、または機能名を 2 番目の引数として持つ配列を渡すことにより、特定の機能の状態のみを取得することを選択できます。
 ```typescript
 // get all features` state in a serialized JSON string
 const gridState = this.state.getState();
@@ -39,7 +40,7 @@ const gridState = this.state.getState(false);
 const sortingFilteringStates = this.state.getState(false, ["sorting", "filtering"]);
 ```
 
-[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - The [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) method will accept the serialized JSON string or an object implementing the [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) interface as argument and will restore the state of each feature found in the object/JSON string. Internally the IgxGridState directive works with the public grid API, so it does not abstract away anything that cannot be done from the application itself. Instead, if wraps the API for getting/setting any features properties/states in an easy to use single API.
+[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドは、シリアル化されたJSON文字列または [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) インターフェイスを実装するオブジェクトを引数として受け入れ、オブジェクト/JSON 文字列で見つかった各機能の状態を復元します。内部的には、IgxGridState ディレクティブはパブリック グリッド API で動作するため、アプリケーション自体から実行できないことを抽象化することはありません。代わりに、使いやすい単一の API で機能のプロパティ/状態を取得/設定するための API をラップする場合。
 
 ```typescript
 public restoreGridState(gridState) {
@@ -51,7 +52,7 @@ public restoreSortingFiltering(sortingFilteringStates: IGridState) {
 }
 ```
 
-`options` - The [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) object is an object implementing the [`IGridStateOptions`]({environment:angularApiUrl}/classes/igridstateoptions.html) interface, i.e. for every key, which is the name of a certain feature, there is the boolean value indicating if this feature state will be tracked. If a developer has excluded certain features, then the object retrieved the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method will not contain those features' state.
+`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/classes/igridstateoptions.html) インターフェイスを実装するオブジェクトです。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。開発者が特定の機能を除外した場合、オブジェクトは [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドを取得し、それらの機能の状態は含まれません。
 
 ```typescript
 public options =  { cellSelection: false; sorting: false; }
@@ -61,7 +62,7 @@ public options =  { cellSelection: false; sorting: false; }
 ```
 
 
-The usefullnes of thеse simple to use single-point API's allows you to achieve a full state persistence functionality in just few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to this page, the grid is restored the same state that the user has set. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
+これらのシンプルなシングル ポイント API を使用すると、わずか数行のコードで完全な状態維持機能を実現できます。**以下のコードをコピーして貼り付け** - ユーザーが現在のページを離れるたびに、ブラウザーの `sessionStorage` オブジェクトにグリッドの状態が保存されます。ユーザーがこのページに戻るたびに、グリッドはユーザーが設定したのと同じ状態に復元されます。必要なデータを取得するために、複雑で高度なフィルタリングや並べ替えの式を毎回設定する必要はなくなりました。一度実行して、以下のコードでユーザーに代わって処理してください。
 
 ```typescript
   // app.component.ts
@@ -85,9 +86,9 @@ The usefullnes of thеse simple to use single-point API's allows you to achieve 
       this.state.setState(state);
   }
 ```
-. Depending on the scenario, the state can be saved to the browser `localStorage` or `sessionStorage` object, or saved in a database, cloud, passed on to a service, etc.
+状況に応じてステートをブラウザーの `localStorage` または `sessionStorage` オブジェクトに保存、またはデータベースやクラウドに保存し、サービスへ渡すことができます。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:800px">
@@ -95,13 +96,13 @@ The usefullnes of thеse simple to use single-point API's allows you to achieve 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
-#### Limitations
+#### 制限
 
-[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method uses JSON.stringify() method to convert the original objects to a JSON string. However, this does not support Functions, thats why the [`IgxGridState`] directive will ignore the columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter), [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters), [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries), [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy), [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) and [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellstyles) properties. It is up to the developer to keep track and restore those on application level. It is recommended to set these in the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event:
+[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトをJSON文字列に変換します。ただし、関数をサポートしないため、[`IgxGridState`] ディレクティブは、columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter)、[`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters)、[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries)、[`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy)、[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) プロパティを無視します。アプリケーション レベルでそれらを追跡および復元するのは開発者です。[`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントでこれらを設定することをお勧めします。
 
 ```typescript
 // app.component.ts
@@ -134,17 +135,17 @@ public initColumns(column: IgxColumnComponent) {
 <div class="divider--half"></div>
 
 
-### API References
+### API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
 
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Selection](selection.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [ソート](sorting.md)
+* [選択](selection.md)

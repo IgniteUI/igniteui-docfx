@@ -1,7 +1,7 @@
 ---
-title: データ可視化ツール|Ignite UI for Angular |Infragistics
+title: データ可視化ツール | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular は、開発者が最新のデスクトップ ブラウザー用の最新の高パフォーマンス HTML 5 および TypeScript アプリケーションを構築できるように設計された Angular コンポーネントのコンプリート セットです。
-_keywords: Ignite UI for Angular, Infragistics, はじめに, IG,
+_keywords: Ignite UI for Angular, Getting started, Infragistics, Install Angular, IG, インフラジスティックス, はじめに, Angular のインストール
 _language: ja
 ---
 

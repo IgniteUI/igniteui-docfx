@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart', 'PolarScatterSeries']
 
 ## Polar Scatter Chart
 
-The Ignite UI for Angular polar scatter chart belongs to a group of polar charts and is rendered using markers at the locations of data points without connecting lines. The [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) can be plotted in the same data chart and they can overlay each other to show differences and similarities between data sets.
+The Ignite UI for Angular polar scatter chart belongs to a group of polar charts and is rendered using markers at the locations of data points without connecting lines. The [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) can be plotted in the same data chart and they can overlay each other to show differences and similarities between data sets.
 
 ### Demo
 
@@ -23,20 +23,20 @@ The Ignite UI for Angular polar scatter chart belongs to a group of polar charts
 
 ### Required Axes
 
-The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html).
+The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html).
 
--   [`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
--   [`IgxNumericAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)
+-   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
+-   [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)
 
 ### Required Data
 
-The [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) has the following data requirements:
+The [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
--   The data source must contain at least one data item otherwise the chart will not render the [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html).
--   All data items must contain at least two numeric data columns which should be mapped using the [`angleMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath) and [`radiusMemberPath`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#radiusmemberpath) properties of the [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html).
+-   The data source must contain at least one data item otherwise the chart will not render the [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html).
+-   All data items must contain at least two numeric data columns which should be mapped using the [`angleMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath) and [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#radiusmemberpath) properties of the [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html).
 
-In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis ([`IgxNumericAngleAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)) and the concentric rings that surround the pole are gridlines of the radius axis ([`IgxNumericRadiusAxisComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html))
+In polar coordinate systems, the location of data points is determined by an angle (angular coordinate) from a fixed direction and distance (radial coordinate) from a fixed point (analogous to the origin of a Cartesian coordinate) which is called "the pole". The lines that start from the pole and point outwards are gridlines of the angular axis ([`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)) and the concentric rings that surround the pole are gridlines of the radius axis ([`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html))
 
 You can use the [SamplePolarData](data-chart-data-sources-polar.md) as data source which meets above data requirements.
 
@@ -46,7 +46,7 @@ public dataSource: any[] = SamplePolarData.create();
 
 ### Required Modules
 
-Creation of the [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) requires the following modules:
+Creation of the [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
@@ -74,7 +74,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 
 ### Code Example
 
-This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxPolarScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) and bind it to a data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) and bind it to a data source.
 
 ```html
 <igx-data-chart

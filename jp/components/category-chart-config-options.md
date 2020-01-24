@@ -1,7 +1,7 @@
 ---
-title: カテゴリー チャート|データ可視化ツール|Ignite UI for Angular|構成オプション|インフラジスティックス
-_description: カテゴリー チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
-_keywords: カテゴリ チャート, Ignite UI for Angular, Infragistics
+title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | 構成オプション | インフラジスティックス
+_description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
+_keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
 mentionedTypes: ['XamCategoryChart']
 _language: ja
 ---
@@ -41,7 +41,7 @@ _language: ja
 
 マーカーは、カテゴリ チャート コンポーネントのプロット領域のデータ ポイント値を表示する視覚的要素です。値が主グリッド線と副グリッド線の間にある場合も指定したデータ ポイントの値をただちに識別できるようユーザーをサポートします。
 
-チャート マーカーの外観は、カテゴリ チャートの [`MarkerType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html)、`MarkerBrushes`、および `MarkerOutlines` プロパティによって処理されます。以下のコード例では、このプロパティを使用しています。
+チャート マーカーの外観は、カテゴリ チャートの [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html)、`MarkerBrushes`、および `MarkerOutlines` プロパティによって処理されます。以下のコード例では、このプロパティを使用しています。
 
 ```html
 <igx-category-chart

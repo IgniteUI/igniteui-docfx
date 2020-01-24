@@ -1,5 +1,5 @@
 ---
-제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 도구 설명 템플릿 | Infragistics 
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | 도구 설명 템플릿 | Infragistics
 _description: 범주 차트 구성 요소를 사용하여 데이터를 나타내는 데 가장 적합한 차트 유형을 분석하고 자동으로 선택합니다. 시각화를위한 차트 유형에 대해 알아보십시오.
 _keywords: category chart, Ignite UI for Angular, infragistics
 _language: kr
@@ -7,7 +7,7 @@ _language: kr
 
 ## 도구 설명 템플릿
 
-[`IgxCategoryChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychart.html) 제어는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 도구 설명이 충분하지 않은 경우 도구 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 도구 설명 템플릿을 구성할 수 있습니다.
+`XamCategoryChart` 제어는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등의 특정 시리즈 항목과 관련된 모든 정보가 표시됩니다. 이들은 시리즈의 스타일에 맞게 디자인되어 있습니다. 기본 도구 설명이 충분하지 않은 경우 도구 설명 콘텐츠와 룩 앤드 필을 사용자 정의하여 도구 설명 템플릿을 구성할 수 있습니다.
 
 ### 데모
 
@@ -34,7 +34,7 @@ _language: kr
       <span> Hyrdo :{{item.Hydro | number}}<br/></span>
     </div>
 </ng-template>
-    
+
 <div class="chart">
     <igx-category-chart height="100%" width="100%"
         [dataSource]="data" chartTitle="Energy Production"

@@ -1,5 +1,6 @@
 ﻿- name: 概要
   header: true
+  _language: "ja"
 - name: 作業の開始
   href: general/getting_started.md
   new: false
@@ -684,7 +685,7 @@
     - name: リアルタイムデータのバインド
       href: financial-chart-high-frequency.md
       new: false
-    - name: 大量のバインド
+    - name: 大量データのバインド
       href: financial-chart-high-volume.md
       new: false
     - name: 複数データソースのバインド
@@ -867,7 +868,7 @@
   href: display_density.md
 - name: データ入力と表示
   header: true
-- name: ドロップダウン
+- name: Drop Down
   href: drop_down.md
   new: false
   items:

@@ -13,11 +13,11 @@ This mode is useful when you need to display master-detail style data in a hiera
 #### Demo
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-master-detail-iframe" src='{environment:demosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-master-detail-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
 </div>
 
 

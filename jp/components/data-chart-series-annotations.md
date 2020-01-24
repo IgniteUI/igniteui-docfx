@@ -1,13 +1,14 @@
 ---
-title: Data Chart コンポーネント - ネイティブ Angular|Ignite UI for Angular
-_description: Ignite UI for Angular Data Chart は、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
-_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 注釈
+_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
+_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
 ## シリーズの注釈
 
-[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) は、チャートにプロットされたポイントに関するコンテキスト情報を注釈として表示するレイヤーをサポートします。シリーズのみでは把握できないような、より多くの情報をエンドユーザーに表示する場合に役立つコンポーネントです。
+Angular データ チャート コンポーネントは、チャートにプロットされたポイントに関するコンテキスト情報を注釈として表示するレイヤーをサポートします。シリーズのみでは把握できないような、より多くの情報をエンドユーザーに表示する場合に役立つコンポーネントです。
 
 ### サンプル
 
@@ -23,7 +24,7 @@ _language: ja
 
 ### コールアウト レイヤー
 
-[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) はチャート既存または新しいデータの注釈を表示します。注釈は、データソース内の指定されたデータ値の横に表示されます。
+Angular データ チャート コンポーネントはチャート既存または新しいデータの注釈を表示します。注釈は、データソース内の指定されたデータ値の横に表示されます。
 
 コールアウト注釈を使用して、メモやデータポイントに関する特定の詳細など、ユーザーに追加情報を表示します
 
@@ -60,7 +61,7 @@ _language: ja
 
 十字線レイヤーは、各シリーズが個別の線をセットでレンダリングするように設定されているすべてのシリーズの実際の値で交差する交差ラインとしてレンダリングされます。
 
-デフォルトでは [`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのすべてのシリーズをターゲットとするように、特定のシリーズを 1 つだけ表示するように十字線レイヤーを構成できます。これを実行するには、`TargetSeries` プロパティを設定します。
+デフォルトでは Angular データ チャート コンポーネントのすべてのシリーズをターゲットとするように、特定のシリーズを 1 つだけ表示するように十字線レイヤーを構成できます。これを実行するには、`TargetSeries` プロパティを設定します。
 
 デフォルトでは、十字線の色は、相互作用しているシリーズの色です。ただし、このデフォルト値は、十字線に使用される色を選択できるようにオーバーライドできます。これは、`Brush` プロパティを設定することによって行います。
 
@@ -88,7 +89,7 @@ _language: ja
 
 ### 最終値レイヤー
 
-最終値レイヤーには、[`IgxDataChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのシリーズの最終値を表す注釈がチャートの軸に沿って表示されます。
+最終値レイヤーには、Angular データ チャート コンポーネントのシリーズの最終値を表す注釈がチャートの軸に沿って表示されます。
 
 複数の最終値レイヤーを異なる設定で使用したい場合は、注釈を設定して特定のシリーズをターゲットにすることができます。これには `TargetSeries` プロパティを設定します。
 

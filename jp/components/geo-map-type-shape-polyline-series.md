@@ -1,14 +1,14 @@
 ---
-title: Map |データ可視化ツール|Ignite UI for Angular |ポリライン シリーズ|インフラジスティックス
+title: マップ | データ可視化ツール | Ignite UI for Angular | ポリライン シリーズ | インフラジスティックス
 _description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, インフラジスティックス
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
 ## シェイプ ポリライン シリーズの使用
 
-地理的コンテキストでポリラインを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためにしばしば使用されます。
+地理的コンテキストでポリラインを使用して地理空間データを表示するには、マップコンポーネントの [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためにしばしば使用されます。
 
 ### サンプル
 
@@ -22,15 +22,15 @@ _language: ja
 
 <div class="divider--half"></div>
 
-[`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) は、[`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) とよく似ていますが、地理空間データがポリゴンではなくポリラインでレンダリングされる点が異なります。
+[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) は、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) とよく似ていますが、地理空間データがポリゴンではなくポリラインでレンダリングされる点が異なります。
 
 ### データ要件
 
-コントロール内の他の種類の地理的シリーズと同様に、[`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)  には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、ShapeMemberPath プロパティにマップされます。[`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) は、コントロールで多角形をプロットするために、このマップされたデータ列のポイントを使用します。
+コントロール内の他の種類の地理的シリーズと同様に、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)  には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、ShapeMemberPath プロパティにマップされます。[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) は、コントロールで多角形をプロットするために、このマップされたデータ列のポイントを使用します。
 
 ### コード スニペット
 
-以下のコードは、ShapefileConverter を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) をバインドする方法を示します。
+以下のコードは、ShapefileConverter を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) をバインドする方法を示します。
 
 <!-- Angular -->
 
@@ -59,10 +59,9 @@ _language: ja
 
 ```ts
 import { AfterViewInit, Component, EmbeddedViewRef, TemplateRef, ViewChild} from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicPolylineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-geographic-shape-polyline-series",
@@ -84,14 +83,14 @@ export class MapTypeShapePolylineSeriesComponent implements AfterViewInit {
   public ngAfterViewInit(): void {
     this.map.windowRect = { left: 0.195, top: 0.325, width: 0.2, height: 0.1 };
 
-    const sds = new ShapeDataSource();
+    const sds = new IgxShapeDataSource();
     sds.shapefileSource = "/assets/Shapes/AmericanRoads.shp";
     sds.databaseSource  = "/assets/Shapes/AmericanRoads.dbf";
     sds.dataBind();
     sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
   }
 
-  public onDataLoaded(sds: ShapeDataSource, e: any) {
+  public onDataLoaded(sds: IgxShapeDataSource, e: any) {
     const shapeRecords = sds.getPointData();
     console.log("loaded /Shapes/AmericanRoads.shp " + shapeRecords.length);
 
