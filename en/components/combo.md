@@ -197,16 +197,16 @@ Combo control exposes the following features:
 ## Single Selection
 By default, the Combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `onSelectionChange` event:
 
+```html
+<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+```
+
 ```typescript
 public singleSelection(event: IComboSelectionChangeEventArgs) {
     if (event.added.length) {
         event.newSelection = event.added;
     }
 }
-```
-
-```html
-<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
 ```
 
 <div class="sample-container loading" style="height: 400px;">
