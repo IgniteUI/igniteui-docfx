@@ -112,7 +112,7 @@ this.spreadsheet.activeWorksheet.unprotect();
 
 ### 選択の設定
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (`Shift` または `Ctrl`)  を押します。これは、スプレッドシートの [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#selectionmode) プロパティを次のいずれかの値に設定することによって行われます。
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (**Shift** または **Ctrl**)  を押します。これは、スプレッドシートの [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#selectionmode) プロパティを次のいずれかの値に設定することによって行われます。
 
 -   `AddToSelection`: マウスでドラッグするときに Ctrl キーを押す必要はありません。新しいセル範囲が [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトの [`cellRanges`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html#cellranges) コレクションに追加され、モードに入った後に最初の矢印キーナビゲーションで範囲が追加されます。シフト+F8 を押すとモードに入ります。
 -   `ExtendSelection`: [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトの [`cellRanges`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html#cellranges) コレクション内の選択範囲は、マウスを使用してセルを選択するかキーボードで移動すると更新されます。
