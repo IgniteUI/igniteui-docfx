@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 ## Binding and Overlaying Multiple Shape Files
 
-In the Ignite UI for Angular map, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) for plotting shapes of countries.
+In the Ignite UI for Angular map, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) for plotting shapes of countries.
 
 ### Demo
 
@@ -23,9 +23,9 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
 
 This topic takes you step-by-step towards displaying multiple geographic series in the map component. All geographic series plot following geo-spatial data loaded from shape files using the `ShapeDataSource` class. Refer to the [Binding Shape Files](geo-map-binding-shp-file.md) topic for more information about `ShapeDataSource` object.
 
--   [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – displays locations of major cities
--   [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – displays routes between major ports
--   [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) – displays shapes of countries of the world
+-   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) – displays locations of major cities
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) – displays routes between major ports
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) – displays shapes of countries of the world
 
 You can use geographic series in above or other combinations to plot desired data.
 
@@ -34,11 +34,11 @@ You can use geographic series in above or other combinations to plot desired dat
 First, let's import required components and modules:
 
 ```ts
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
-import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
-import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
+import { IgxGeographicShapeSeriesComponent } from 'igniteui-angular-maps';
+import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
 ### Creating Series
@@ -105,17 +105,17 @@ Next, we need to create a map with a few Geographic Series that will later load 
 Next, in constructor of your page, add a `ShapeDataSource` for each shapefile that you want to display in the geographic map component.
 
 ```ts
-const sdsPolygons = new ShapeDataSource();
+const sdsPolygons = new IgxShapeDataSource();
 sdsPolygons.importCompleted = this.onPolygonsLoaded;
 sdsPolygons.shapefileSource = url + "/shapes/WorldCountries.shp";
 sdsPolygons.databaseSource  = url + "/shapes/WorldCountries.dbf";
 sdsPolygons.dataBind();
-const sdsPolylines = new ShapeDataSource();
+const sdsPolylines = new IgxShapeDataSource();
 sdsPolylines.importCompleted = this.onPolylinesLoaded;
 sdsPolylines.shapefileSource = url + "/shapes/WorldConnections.shp";
 sdsPolylines.databaseSource  = url + "/shapes/WorldConnections.dbf";
 sdsPolylines.dataBind();
-const sdsLocations = new ShapeDataSource();
+const sdsLocations = new IgxShapeDataSource();
 sdsLocations.importCompleted = this.onPointsLoaded;
 sdsLocations.shapefileSource = url + "/Shapes/WorldCities.shp";
 sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
@@ -124,13 +124,13 @@ sdsLocations.dataBind();
 
 ### Processing Polygons
 
-Process shapes data loaded in `ShapeDataSource` with of countries of the world and assign it to [`IgxGeographicShapeSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) object.
+Process shapes data loaded in `ShapeDataSource` with of countries of the world and assign it to [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) object.
 
 ```ts
-import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
 // ...
-public onPolygonsLoaded(sds: ShapeDataSource, e: any) {
+public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
     const geoPolygons: any[] = [];
     // parsing shapefile data and creating geo-polygons
     let pointData = sds.getPointData();
@@ -153,13 +153,13 @@ public onPolygonsLoaded(sds: ShapeDataSource, e: any) {
 
 ### Processing Polyline
 
-Process shapes data loaded in `ShapeDataSource` with communication routes between major cities and assign it to [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object.
+Process shapes data loaded in `ShapeDataSource` with communication routes between major cities and assign it to [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object.
 
 ```ts
-import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
 // ...
-public onPolylinesLoaded(sds: ShapeDataSource, e: any) {
+public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
     const geoPolylines: any[] = [];
     // parsing shapefile data and creating geo-polygons
     let pointData = sds.getPointData();
@@ -184,13 +184,13 @@ public onPolylinesLoaded(sds: ShapeDataSource, e: any) {
 
 ### Processing Points
 
-Process shapes data loaded in `ShapeDataSource` with locations of major cities and assign it to [`IgxGeographicSymbolSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object.
+Process shapes data loaded in `ShapeDataSource` with locations of major cities and assign it to [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object.
 
 ```ts
-import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
+import { IgxShapeDataSource } from 'igniteui-angular-core';
 // ...
-public onPointsLoaded(sds: ShapeDataSource, e: any) {
+public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
     const geoLocations: any[] = [];
     // parsing shapefile data and creating geo-locations
     let pointData = sds.getPointData();
@@ -230,12 +230,11 @@ For your convenience, all above code snippets are combined into one code block b
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicPolylineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
-import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
-import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicPolylineSeriesComponent } from "igniteui-angular-maps";
+import { IgxGeographicShapeSeriesComponent } from 'igniteui-angular-maps';
+import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-binding-multiple-shapes-files",
@@ -274,27 +273,27 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         this.map.windowRect = { left: 0.2, top: 0.1, width: 0.6, height: 0.6 };
 
         // loading a shapefile with geographic polygons
-        const sdsPolygons = new ShapeDataSource();
+        const sdsPolygons = new IgxShapeDataSource();
         sdsPolygons.importCompleted.subscribe(() => this.onPolygonsLoaded(sdsPolygons, ""));
         sdsPolygons.shapefileSource = "assets/Shapes/WorldCountries.shp";
         sdsPolygons.databaseSource  = "assets/Shapes/WorldCountries.dbf";
         sdsPolygons.dataBind();
         // loading a shapefile with geographic polylines at runtime.
-        const sdsPolylines = new ShapeDataSource();
+        const sdsPolylines = new IgxShapeDataSource();
         sdsPolylines.shapefileSource = "assets/Shapes/WorldCableRoutes.shp";
         sdsPolylines.databaseSource  = "assets/Shapes/WorldCableRoutes.dbf";
         sdsPolylines.dataBind();
         sdsPolylines.importCompleted.subscribe(() => this.onPolylinesLoaded(sdsPolylines, ""));
 
         // loading a shapefile with geographic points
-        const sdsPoints = new ShapeDataSource();
+        const sdsPoints = new IgxShapeDataSource();
         sdsPoints.importCompleted.subscribe(() => this.onPointsLoaded(sdsPoints, ""));
         sdsPoints.shapefileSource = "assets/Shapes/WorldCities.shp";
         sdsPoints.databaseSource  = "assets/Shapes/WorldCities.dbf";
         sdsPoints.dataBind();
     }
 
-    public onPointsLoaded(sds: ShapeDataSource, e: any) {
+    public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
         const geoLocations: any[] = [];
         // parsing shapefile data and creating geo-locations
         for (const record of sds.getPointData()) {
@@ -314,7 +313,7 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         this.symbolSeries.tooltipTemplate = this.pointTooltipTemplate;
     }
 
-    public onPolylinesLoaded(sds: ShapeDataSource, e: any) {
+    public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
         const geoPolylines: any[] = [];
         // parsing shapefile data and creating geo-polygons
         for (const record of sds.getPointData()) {
@@ -338,7 +337,7 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         this.polylineSeries.tooltipTemplate = this.polylineTooltipTemplate;
     }
 
-    public onPolygonsLoaded(sds: ShapeDataSource, e: any) {
+    public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
         const geoPolygons: any[] = [];
         // parsing shapefile data and creating geo-polygons
         sds.getPointData().forEach((record) => {

@@ -40,7 +40,7 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 
 Markers are visual elements that display the values of data points in the category chart component's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
 
-The appearance of chart markers is managed through the [`MarkerType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html), `MarkerBrushes`, `MarkerOutlines` properties of the category chart, as demonstrated in the following code example.
+The appearance of chart markers is managed through the [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html), `MarkerBrushes`, `MarkerOutlines` properties of the category chart, as demonstrated in the following code example.
 
 ```html
 <igx-category-chart
