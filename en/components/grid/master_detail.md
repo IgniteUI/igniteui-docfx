@@ -61,8 +61,8 @@ Additional API methods for controlling the expansion states are also exposed:
 - [`expandAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandAll)
 - [`collapseAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseAll)
 - [`toggleRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toggleRow)
-- [`expand`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expand)
-- [`collapse`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapse)
+- [`expandRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandRow)
+- [`collapseRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseRow)
 
 #### Keyboard navigation
 
