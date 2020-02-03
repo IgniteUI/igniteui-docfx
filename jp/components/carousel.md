@@ -307,6 +307,12 @@ public slides =
 
 
 `
+
+### Known Limitations
+
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 ### API リファレンス
 <div class="divider--half"></div>
 

@@ -373,6 +373,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ## Known Limitations
 
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 |Limitation|Description|
 |--- |--- |
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|

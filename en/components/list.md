@@ -538,6 +538,10 @@ The result from the above code is
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 
+### Known Limitations
+
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
 
 ### API References
 

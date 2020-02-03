@@ -354,6 +354,11 @@ The result is as follows:
 </div>
 <div class="divider--half"></div>
 
+### Known Limitations
+
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 ### API References
 <div class="divider--half"></div>
 

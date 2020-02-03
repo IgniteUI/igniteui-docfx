@@ -548,6 +548,11 @@ $my-calendar-theme: igx-calendar-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
+### Known Limitations
+
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 ### API リファレンス
 <div class="divider--half"></div>
 

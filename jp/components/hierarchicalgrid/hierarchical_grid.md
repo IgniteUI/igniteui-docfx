@@ -378,6 +378,9 @@ $custom-theme: igx-grid-theme(
 
 ### 既知の問題と制限
 
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 |制限|説明|
 |--- |--- |
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|

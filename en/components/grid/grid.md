@@ -586,6 +586,10 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## Known Limitations
 
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
+
 |Limitation|Description|
 |--- |--- |
 |Column widths set in `percentage` and `px`|Currently we do not support mixing of column widths with `%` and `px`.|

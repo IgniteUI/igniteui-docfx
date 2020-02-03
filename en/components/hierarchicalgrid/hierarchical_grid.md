@@ -376,6 +376,9 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 ### Known Limitations
 
+>[!WARNING]
+>**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 |Limitation|Description|
 |--- |--- |
 |Group By|Group By feature is not supported by the hierarchical grid.|
