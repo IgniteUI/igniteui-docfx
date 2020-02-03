@@ -286,29 +286,29 @@ The amount of horizontal space available in a cell plays a big part in how the v
 
 Displayed text can be different depending on varying column widths.
 
-When displaying numbers and using format string containing “General” or “@”, there are various formats which are tried to find a formatting which fits the cell width. A list of example formats are shown below:
+When displaying numbers and using format string containing **"General"** or **"@"**, there are various formats which are tried to find a formatting which fits the cell width. A list of example formats are shown below:
 
--   `Normal Value` - Number is displayed as it would be if there is unlimited amount of space.
+-   **Normal Value** - Number is displayed as it would be if there is unlimited amount of space.
 
--   `Remove decimal digits` - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
+-   **Remove decimal digits** - Decimal digits will be removed one at a time until a format is found which fits. For example, a value of 12345.6789 will be reduced to the following formats until one fits: 12345.679, 12345.68, 12345.7, and 12346. This will stop when the first significant digit is the only one left, so for example value like 0.0001234567890 can only be reduced to 0.0001.
 
--   `Scientific, 5 decimal digits` - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
+-   **Scientific, 5 decimal digits** - Number is displayed in the form of 0.00000E+00, such as 1.23457E+09, or 1.23457E-04
 
--   `Scientific, 4 decimal digits` - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
+-   **Scientific, 4 decimal digits** - Number is displayed in the form of 0.0000E+00, such as 1.2346E+09, or 1.23456E-04
 
--   `Scientific, 3 decimal digits` - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
+-   **Scientific, 3 decimal digits** - Number is displayed in the form of 0.000E+00, such as 1.235E+09, or 1.235E-0
 
--   `Scientific, 2 decimal digits` - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
+-   **Scientific, 2 decimal digits** - Number is displayed in the form of 0.00E+00, such as 1.23E+09, or 1.23E-04
 
--   `Scientific, 1 decimal digits` - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
+-   **Scientific, 1 decimal digits** - Number is displayed in the form of 0.0E+00, such as 1.2E+09, or 1.2E-04
 
--   `Scientific, 0 decimal digits` - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
+-   **Scientific, 0 decimal digits** - Number is displayed in the form of 0E+00, such as 1E+09, or 1E-04
 
--   `Rounded value` - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
+-   **Rounded value** - If the first significant digit is in the decimal potion of the number, the value will be rounded to the nearest integer value. For example, for a value 0.0001234567890, it will be rounded to 0, and the displayed text in cell will be 0.
 
--   `Hash marks` - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
+-   **Hash marks** - If no condensed version of the number can be displayed, hashes (#) will be repeated through the width of the cell.
 
--   `Empty string` - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
+-   **Empty string** - If no hash marks can fit in the cell, an empty string will be returned as displayed cell text.
 
 If the format string for numeric value does not contain General or @, there are only the following stages of resizing: Normal value, Hash marks, Empty string
 
