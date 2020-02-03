@@ -55,13 +55,13 @@ The Ignite UI for Angular sparkline component supports the following types of sp
 -   `Area`
 -   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)
 -   `Line`
--   `Win/Loss`
+-   `WinLoss`
 
 The type is defined by setting the `DisplayType` property. If the `DisplayType` property is not specified, then by default, the `Line` type is displayed.
 
-The `Win/Loss` sparkline type is a column chart type, in which the value of each column is equal to either the positive maximum (for positive values) or the negative minimum (for negative values) of the bound data set, often denoting a Win or a Loss, or similar opposing concepts. For the `Win/Loss` sparkline to display properly, the data set should have both positive and negative values.
+The `WinLoss` sparkline type is a column chart type, in which the value of each column is equal to either the positive maximum (for positive values) or the negative minimum (for negative values) of the bound data set, often denoting a Win or a Loss, or similar opposing concepts. For the `WinLoss` sparkline to display properly, the data set should have both positive and negative values.
 
-If the `Win/Loss` sparkline is bound to the same data as the other types such as the `Line` type, which can be bound to a collection of numeric values, then the sparkline component will select two values from the collection - the highest and the lowest - and will render the sparkline based upon those values.
+If the `WinLoss` sparkline is bound to the same data as the other types such as the `Line` type, which can be bound to a collection of numeric values, then the sparkline component will select two values from the collection - the highest and the lowest - and will render the sparkline based upon those values.
 
 ```html
 <igx-sparkline height="200px" width="400px"
@@ -82,7 +82,7 @@ If the `Win/Loss` sparkline is bound to the same data as the other types such as
 
 ### Markers
 
-The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types `Line`, `Area`, and [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html). The `Win/Loss` type of sparkline does not currently accept markers. By default, markers are not displayed.
+The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types `Line`, `Area`, and [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html). The `WinLoss` type of sparkline does not currently accept markers. By default, markers are not displayed.
 
 Markers in the sparkline can be placed in any combination of the following locations:
 
