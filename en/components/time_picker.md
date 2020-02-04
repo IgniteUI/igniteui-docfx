@@ -355,8 +355,6 @@ The result is as follows:
 </div>
 <div class="divider--half"></div>
 
-### Known Limitations
-
 ### API References
 <div class="divider--half"></div>
 

@@ -160,8 +160,6 @@ Here is an example of localizing the month picker component:
     - <kbd>Enter</kbd> key to select the currently focused month and close the view,
     - <kbd>Tab</kbd> key to navigate through the months.
 
-### Known Limitations
-
 ### API References
 <div class="divider--half"></div>
 

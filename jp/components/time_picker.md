@@ -356,8 +356,6 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 </div>
 <div class="divider--half"></div>
 
-### Known Limitations
-
 ### API リファレンス
 <div class="divider--half"></div>
 

@@ -309,8 +309,6 @@ These configurions will have the following result:
 
 `
 
-### Known Limitations
-
 ###API References
 <div class="divider--half"></div>
 

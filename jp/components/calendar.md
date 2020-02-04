@@ -549,8 +549,6 @@ $my-calendar-theme: igx-calendar-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### Known Limitations
-
 ### API リファレンス
 <div class="divider--half"></div>
 

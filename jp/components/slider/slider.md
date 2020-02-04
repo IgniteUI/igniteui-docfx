@@ -279,7 +279,6 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
       <span class="ellipsis">{{ labels[value.upper] }}</span>
   </ng-template>
 ```
-### Known Limitations
 
 ### API まとめ
 <div class="divider--half"></div>

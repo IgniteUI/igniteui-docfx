@@ -275,8 +275,6 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
   </ng-template>
 ```
 
-### Known Limitations
-
 ### API References
 <div class="divider--half"></div>
 

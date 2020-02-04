@@ -311,8 +311,6 @@ public slides =
 
 `
 
-### Known Limitations
-
 ### API リファレンス
 <div class="divider--half"></div>
 

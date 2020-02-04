@@ -161,8 +161,6 @@ public formatOptions = {
     - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
     - <kbd>Tab</kbd> キーは月を移動します。
 
-### Known Limitations
-
 ### API リファレンス
 <div class="divider--half"></div>
 
