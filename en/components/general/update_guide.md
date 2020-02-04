@@ -44,6 +44,37 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+### From 8.x.x to 9.x.x
+
+Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added (please, refer to the following document for details: https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) . Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
+
+* igxGrid
+* igxHierarchicalGrid
+* igxTreeGrid
+* igxList
+* igxNavigationDrawer
+* igxTimePicker
+* igxMonthPicker
+* *igxSlider**
+* igxCalendar
+* igxCarousel
+
+> **\* Note** - igxSlider requires the HammerModule for ***all*** user interactions.
+
+You can use the following code snippet to update your app's root module file.
+
+```typescript
+import { HammerModule } from "@angular/platform-browser";
+
+@NgModule({
+    ...
+    imports: [
+        ...
+        HammerModule
+    ]
+})
+```
+
 ### From 8.1.x to 8.2.x
 
 * IgxDrag
