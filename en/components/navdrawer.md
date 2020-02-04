@@ -274,7 +274,5 @@ This approach, of course, does not affect the actual directive active state and 
 
 <div class="divider--half"></div>
 
-### Known Limitations
-
 ### API Reference
 * [IgxNavigationDrawerComponent]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)

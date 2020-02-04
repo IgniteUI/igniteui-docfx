@@ -296,7 +296,5 @@ export class AppComponent {
 
 <div class="divider--half"></div>
 
-### Known Limitations
-
 ### API 参照
 * [IgxNavigationDrawerComponent]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
