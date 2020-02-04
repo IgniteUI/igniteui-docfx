@@ -18,6 +18,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Dependencies
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 To get started with the Navigation Drawer component, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -271,9 +275,6 @@ This approach, of course, does not affect the actual directive active state and 
 <div class="divider--half"></div>
 
 ### Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
 
 ### API Reference
 * [IgxNavigationDrawerComponent]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)

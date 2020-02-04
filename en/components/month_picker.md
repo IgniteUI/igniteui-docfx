@@ -23,16 +23,17 @@ ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
-The next step is to import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+The next step is to import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
 ...
+import { HammerModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
-    imports: [..., BrowserAnimationsModule, IgxCalendarModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],
     ...
 })
 export class AppModule {}
@@ -160,9 +161,6 @@ Here is an example of localizing the month picker component:
     - <kbd>Tab</kbd> key to navigate through the months.
 
 ### Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
 
 ### API References
 <div class="divider--half"></div>

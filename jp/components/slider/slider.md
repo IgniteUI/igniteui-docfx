@@ -19,6 +19,10 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
+
+>[!WARNING]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 Slider コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
@@ -276,9 +280,6 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
   </ng-template>
 ```
 ### Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
 
 ### API まとめ
 <div class="divider--half"></div>

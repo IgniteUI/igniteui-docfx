@@ -18,6 +18,10 @@ _keywords: angular slider, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ### Usage
+
+>[!WARNING]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for user interactions to work as expected.**.
+
 To get started with the Slider component, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -272,9 +276,6 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 ```
 
 ### Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
 
 ### API References
 <div class="divider--half"></div>

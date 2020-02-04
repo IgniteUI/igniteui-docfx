@@ -29,11 +29,12 @@ Ignite UI for Angular については、[はじめに](general/getting_started.m
 ```typescript
 // app.module.ts
 ...
+import { HammerModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
-    imports: [..., BrowserAnimationsModule, IgxCalendarModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],
     ...
 })
 export class AppModule {}
@@ -161,9 +162,6 @@ public formatOptions = {
     - <kbd>Tab</kbd> キーは月を移動します。
 
 ### Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.    
 
 ### API リファレンス
 <div class="divider--half"></div>

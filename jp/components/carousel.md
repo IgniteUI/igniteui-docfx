@@ -26,6 +26,9 @@ Carousel を全画面要素またはコンポーネントの子に設定でき�
 #### はじめに
 <div class="divider--half"></div>
 
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 Carousel コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
 
 ```cmd
@@ -309,9 +312,6 @@ public slides =
 `
 
 ### Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
 
 ### API リファレンス
 <div class="divider--half"></div>

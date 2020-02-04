@@ -20,6 +20,10 @@ _keywords: angular data grid, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ### Dependencies
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 To get started with the Data Grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -585,10 +589,6 @@ Achieving a state persistence framework is easier than ever by using the new bui
 See the [Grid Sizing](sizing.md) topic.
 
 ## Known Limitations
-
->[!WARNING]
->**As of version 9.0.0 this component requires `HammerModule` to be imported in the root module of the application in order for user interactions to work as expected.**.
-
 
 |Limitation|Description|
 |--- |--- |
