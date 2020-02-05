@@ -18,7 +18,7 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 
@@ -62,8 +62,8 @@ _language: ja
 - [`expandAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandAll)
 - [`collapseAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseAll)
 - [`toggleRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toggleRow)
-- [`expand`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expand)
-- [`collapse`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapse)
+- [`expandRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandRow)
+- [`collapseRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseRow)
 
 #### キーボード ナビゲーション
 

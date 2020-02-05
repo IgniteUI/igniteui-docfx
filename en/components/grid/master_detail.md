@@ -17,7 +17,7 @@ This mode is useful when you need to display master-detail style data in a hiera
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
 </div>
 
 
@@ -61,8 +61,8 @@ Additional API methods for controlling the expansion states are also exposed:
 - [`expandAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandAll)
 - [`collapseAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseAll)
 - [`toggleRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toggleRow)
-- [`expand`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expand)
-- [`collapse`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapse)
+- [`expandRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandRow)
+- [`collapseRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseRow)
 
 #### Keyboard navigation
 
