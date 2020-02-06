@@ -54,6 +54,7 @@ Due to a breaking change in Angular 9 Hammer providers are no longer implicitly 
 * igxList
 * igxNavigationDrawer
 * igxTimePicker
+* igxDatePicker
 * igxMonthPicker
 * *igxSlider**
 * igxCalendar
