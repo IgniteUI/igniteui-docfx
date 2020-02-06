@@ -44,7 +44,7 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
-### From 8.x.x to 9.x.x
+### From 8.x.x to 9.0.x
 
 Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added (please, refer to the following document for details: https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) . Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
 
