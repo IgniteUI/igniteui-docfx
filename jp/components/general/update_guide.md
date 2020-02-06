@@ -45,7 +45,7 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-### From 8.x.x to 9.x.x
+### From 8.x.x to 9.0.x
 
 Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added (please, refer to the following document for details: https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) . Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
 
@@ -55,6 +55,7 @@ Due to a breaking change in Angular 9 Hammer providers are no longer implicitly 
 * igxList
 * igxNavigationDrawer
 * igxTimePicker
+* igxDatePicker
 * igxMonthPicker
 * *igxSlider**
 * igxCalendar
