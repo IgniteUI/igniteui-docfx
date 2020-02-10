@@ -7,28 +7,43 @@ _language: ja
 
 ## データ分析  
 
+データ分析とは、特定の方法でデータを検査、変換、および整理し、それに基づいて役立つ情報を生成するプロセスです。また、分析的および論理的な推論で特定の結果と結論に達することもできます。
+
+>[!NOTE]
+>この機能は、設定を簡単にし、コードを最小限に制限するために、**Ignite UI for Angular** の外部パッケージとして提供されます。
+
+### データ分析ボタン
+データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
+
+![](../../../images/general/data-analysis-button.png)
+
+グリッドで実行されるすべての範囲選択をシングル クリックで簡単に分析できます。
+
+ボタンは、選択範囲の**右下**にあるすべての範囲選択でレンダリングされ、選択範囲がインアクティブになると非表示になります。ボタンは、選択範囲の右下にあるすべての範囲選択でレンダリングされ、選択範囲がインアクティブになると非表示になります。
+
 ### チャートと統合
-このセクションでは、エンドユーザーがグリッドの選択したデータに基づいてチャートを可視化し、必要に応じて異なるチャート タイプを選択できる、チャート作成機能とグリッドの統合を紹介します。データ分析とは、特定の方法でデータを検査、変換、および整理し、役立つ情報を生成するプロセスです。データ分析では、分析的および論理的な推論を通じてデータを評価し、コンテキストに基づいた結果または結論を導き出すことができます。
+このセクションでは、エンドユーザーがグリッドの選択したデータに基づいてチャートを可視化し、必要に応じて異なるチャート タイプを選択できる、チャート作成機能とグリッドの統合を紹介します。
 
 チャートは、セルの範囲を選択し、分析の表示ボタンをクリックすると表示されます。
+
+>[!NOTE]
+>チャート作成オプションは、選択したデータに数値がある場合にのみ使用できます。
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/grid/grid-dynamic-chart-data" class="lazyload"></iframe>
 </div>
 
 以下のチャート タイプをサポートします。
-- [ColumnGrouped](../../data-chart-type-category-series.md), [AreaGrouped](../../data-chart-type-category-area-series.md), [LineGrouped](../../data-chart-type-category-line-series.md), [BarGrouped](../../data-chart-type-category-series.md)
-- [ColumnStacked](../../data-chart-type-stacked-column-series.md), [AreaStacked](../../data-chart-type-category-spline-area-series.md), [LineStacked](../../data-chart-type-stacked-line-series.md), [BarStacked](../../data-chart-type-stacked-bar-series.md)
-- Column100Stacked, [Area100Stacked](../../data-chart-type-stacked-100-area-series.md), [Line100Stacked](../../data-chart-type-stacked-100-line-series.md), [Bar100Stacked](../../data-chart-type-stacked-100-bar-series.md)
-- ScatterPoint, ScatterBubble, ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
+- [ColumnGrouped](../../data-chart-type-category-series.md)、[AreaGrouped](../../data-chart-type-category-area-series.md)、[LineGrouped](../../data-chart-type-category-line-series.md)、[BarGrouped](../../data-chart-type-category-series.md)
+- [ColumnStacked](../../data-chart-type-stacked-column-series.md)、[AreaStacked](../../data-chart-type-category-spline-area-series.md)、[LineStacked](../../data-chart-type-stacked-line-series.md)、[BarStacked](../../data-chart-type-stacked-bar-series.md)
+- Column100Stacked、[Area100Stacked](../../data-chart-type-stacked-100-area-series.md)、[Line100Stacked](../../data-chart-type-stacked-100-line-series.md)、[Bar100Stacked](../../data-chart-type-stacked-100-bar-series.md)
+- ScatterPoint、ScatterBubble、ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
 - [円チャート](../../pie-chart.md)
-
-> 注: この機能は、構成を簡単にし、必要なコードを最小限に制限するために、ディレクティブとして導入されます。
 
 ### セルの条件付き書式 
 グリッドに数千行のデータがある場合、生の情報を検査するだけでパターンと傾向を分析することは容易ではありません。チャートやスパークラインと同様に、`条件付き書式`は、データを可視化し、理解しやすくする別の方法を提供します。 
 
-条件付き書式は範囲選択の`値`に基づいて、色やデータ バーなどの書式設定をセルに自動的に適用できます。[以下のサンプル](#デモ)は、`条件付き書式`を適用するようにグリッドを構成する方法を表示します。どの条件`ルール`が表示されるかは、`条件付き書式の選択タイプ`によって異なります。以下に定義済みスタイル (プリセット) があります。これを使用すると、条件付き書式をデータにすばやく適用できます。
+条件付き書式は範囲選択の`値`に基づいて、色やデータ バーなどの書式設定をセルに適用できます。[以下のサンプル](#デモ) は、グリッドを構成して`条件付き書式`を適用する方法を示します。どの条件`ルール`が表示されるかは、`条件付き書式の選択タイプ`によって異なります。以下は定義済みスタイル (プリセット) があります。これを使用すると、条件付き書式をデータにすばやく適用できます。範囲の書式設定は、異なる範囲で書式設定を行った場合、またはクリア ボタンを使用してクリアにされます。クリア ボタンは、書式設定が適用されている場合にのみアクティブになります。
 
 #### 数の範囲選択
 - `Data Bars` - データバーは、売れ筋商品や売れ残り商品など、高値と低値を識別する場合などに役立ちます。このプリセットにより、選択したセルの範囲の値を簡単に可視化できます。長いバーはより高い値を表します。値が 0 のセルにはデータバーがありません。他のすべてのセルは比例的に塗りつぶされます。正の値は`緑色`で、負の値は`赤色`です。
