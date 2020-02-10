@@ -59,7 +59,7 @@ The volume pane represents the number of shares traded during a given period. Lo
 
 ### Price Pane
 
-This pane displays stock prices and shows the stock's high, low, open and close prices over time. In addition it can display trend lines and overlays. Your end user can choose different chart types from the toolbar. By default, the chart type is set to `auto`. You can override the default setting, as demonstrated in the following code:
+This pane displays stock prices and shows the stock's high, low, open and close prices over time. In addition it can display trend lines and overlays. Your end user can choose different chart types from the toolbar. By default, the chart type is set to `Auto`. You can override the default setting, as demonstrated in the following code:
 
 ```html
 <igx-financial-chart
@@ -85,7 +85,7 @@ This pane controls the zoom of all the displayed panes. This pane is displayed b
  </igx-financial-chart>
 ```
 
-Note that you should set the `ZoomSliderType` option to the same value as the [`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
+Note that you should set the `ZoomSliderType` option to the same value as the [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
 
 ```html
  <igx-financial-chart
