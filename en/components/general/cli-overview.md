@@ -64,7 +64,7 @@ The new application is created in a directory with the same name (`newAngularPro
 
 | template id   | template description |
 | ---           | ---                  |
-| empty-project | Project structure with routing and a home page |
+| empty         | Project structure with routing and a home page |
 | side-nav      | Project structure with side navigation drawer |
 | side-nav-auth | Side navigation project extended with user authentication module. <br> [Angular Authentication Project Template](cli/auth-template.md) topic covers the project template in detail. |
 

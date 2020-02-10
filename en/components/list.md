@@ -20,6 +20,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ### Usage
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
 
 To get started with the Ignite UI for Angular List, first you need to install Ignite UI for Angular by typing the following command:
@@ -537,7 +541,6 @@ The result from the above code is
 > Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/component-themes.html).
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
-
 
 ### API References
 

@@ -20,6 +20,10 @@ _keywords: angular data grid, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ### Dependencies
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 To get started with the Hierarchical Data Grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
