@@ -20,7 +20,7 @@
     - name: プロジェクト テンプレートの認証
       href: general/cli/auth-template.md
       new: false
-- name: WPF-Angular比較ガイド
+- name: WPF-Angular 比較ガイド
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
   new: true
   items:
@@ -868,7 +868,7 @@
   href: display_density.md
 - name: データ入力と表示
   header: true
-- name: Drop Down
+- name: ドロップダウン
   href: drop_down.md
   new: false
   items:

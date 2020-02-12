@@ -68,7 +68,7 @@ The zoom and pan operations can also be enabled by using modifier keys by settin
 -   Apple Key
 -   None
 
-The following code snippet demonstrates how you can enable UI navigation in the data chart. The following will only allow zooming while holding the `Shift` key and panning while holding the `Alt` key:
+The following code snippet demonstrates how you can enable UI navigation in the data chart. The following will only allow zooming while holding the **Shift** key and panning while holding the **Alt** key:
 
 ```html
 <igx-data-chart #chart

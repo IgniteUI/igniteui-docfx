@@ -2,7 +2,7 @@
 title: Map | Data Visualization Tools | Ignite UI for Angular | Bing Maps | Infragistics
 _description: The Map allows you to display imagery from Bing Maps. View the demo and usage for more
 _keywords: map, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'BingMapsMapImagery']
 ---
 
 ## Displaying Imagery from Bing Maps

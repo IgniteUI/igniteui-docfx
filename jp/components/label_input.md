@@ -86,7 +86,7 @@ Ignite UI for Angular Input ディレクティブで検証が有効な場合に�
 <div class="divider--half"></div>
 
 #### データ バインディング
-Ignite UI for Angular Input は one-way および two-way データ バインディングをサポートします。入力に両方向のデータ バインディングを追加します。以下はコンポーネントのコード:
+Ignite UI for Angular Input は一方向および双方向データ バインディングをサポートします。入力に両方向のデータ バインディングを追加します。以下はコンポーネントのコード:
 
 ```typescript
 public user = {
