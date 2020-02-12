@@ -128,6 +128,9 @@
         - name: セル選択
           href: grid/cell_selection.md
           new: true
+        - name: 選択に基づいた集計
+          href: grid/selection_based_aggregates.md
+          new: true
     - name: 検索
       href: grid/search.md
       new: false
@@ -164,7 +167,7 @@
     - name: サイズ変更
       href: grid/sizing.md
       new: true
-    - name: Grid マスターと詳細
+    - name: Grid Master-Detail
       href: grid/master_detail.md
       new: true
     - name: ステート パーシステンス
@@ -230,7 +233,7 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: treegrid/row_selection.md
@@ -250,7 +253,7 @@
     - name: 複数列ヘッダー
       href: treegrid/multi_column_headers.md
       new: false
-    - name: Collapsible Column Groups
+    - name: 列グループの折りたたみ
       href: treegrid/collapsible_column_groups.md
       new: true
     - name: 表示密度
@@ -347,7 +350,7 @@
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi_column_headers.md
       new: false
-    - name: Collapsible Column Groups
+    - name: 列グループの折りたたみ
       href: hierarchicalgrid/collapsible_column_groups.md
       new: true
     - name: 表示密度
