@@ -1,17 +1,18 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 地理図形ファイル | Infragistics
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープファイルからロードされた地理空間データを表示できます。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, infragistics, マップ,
+title: マップ | データ可視化ツール | Ignite UI for Angular | 地理図形ファイル | インフラジスティックス
+_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェイプ ファイルからロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
 ---
 
-## シェープ ファイルを地理的データにバインド
+## シェープ ファイルを地理的データにバインディング
 
-Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを ShapefileRecord オブジェクトのコレクションに変換します。
+Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを [`ShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトのコレクションに変換します。
 
-### デモ
+### サンプル
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -23,16 +24,16 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 以下の表は、シェイプ ファイルを読み込むための `ShapeDataSource` クラスのプロパティを説明します。
 
-| プロパティ             | タイプ | 説明                                                       |
-| ----------------- | --- | -------------------------------------------------------- |
-| `ShapefileSource` | 文字列 | Uri を地理的データ項目を含むシェープ ファイル (.shp) に指定します。                 |
-| `DatabaseSource`  | 文字列 | Uri を地理的データ項目のデータ テーブルを含むシェイプ データベース ファイル (.dbf) に指定します。 |
+| プロパティ             | 型      | 概要                                                    |
+| ----------------- | ------ | ----------------------------------------------------- |
+| `ShapefileSource` | string | シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。 |
+| `DatabaseSource`  | string | たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。     |
 
 <!-- TODO add for WPF only: -->
 
 <!-- Both of the source properties for shape files are of Uri type. This means that shape files can be embedded resources in the application assembly and on the internet (via http). Refer to the previous section for more information on this process. The rules for resolving Uri objects are equivalent to any standard Uri property, for example the BitmapImage.UriSource property. -->
 
-両方のソース プロパティが null 以外の値に設定されると、`ShapeDataSource` オブジェクトの ImportAsync メソッドが起動し、シェイプ ファイルを取得して読み込み、最終的に変換を実行します。この操作が完了すると、ShapefileConverter は ShapefileRecord オブジェクトで生成され、シェイプ ファイルから地理的データを読み込んで変換するプロセスが完了したことを通知するために、ImportCompleted イベントが起動されます。
+両方のソース プロパティが null 以外の値に設定されると、`ShapeDataSource` オブジェクトの ImportAsync メソッドが起動し、シェイプ ファイルを取得して読み込み、最終的に変換を実行します。この操作が完了すると、`ShapeDataSource` は [`ShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトで生成され、シェイプ ファイルから地理空間データを読み込んで変換するプロセスが完了したことを通知するために、`ImportCompleted` イベントが起動されます。
 
 ### シェープファイルの読み込み
 
@@ -40,19 +41,100 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 ### シェープファイルをバインド
 
-Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`ShapefileRecord`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
+Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`ShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
 
-[`ShapefileRecord`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
+[`ShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
 
-| プロパティ      | 説明                                                                                                                                                                                                                                                                      |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Points`   | シェイプ ファイル (.shp) から読み込まれた 1 つの地理的シェイプにすべてのポイントが含まれます。たとえば、シェープ ファイルの日本の国は、ポイント リスト オブジェクトのリスト オブジェクトとして表されます。ここで、<ul> <li>最初のポイント リストは、北海道の島の形状を表します。</li> <li>ポイントの 2 つ目のリストは本州の島の形を表しています</li> <li>ポイントの 3 つ目のリストは九州の島の形を表しています</li> <li>ポイントの 4 つ目のリストは四国の島の形を表しています |
-| </li></ul> |                                                                                                                                                                                                                                                                         |
-| `Fields`   | 列名でキーが付けられたシェイプ データベース ファイル (.dbf) からのデータ行を含みます。たとえば、日本についてのデータには、人口、地域、首都名などが含まれます。                                                                                                                                                                                    |
+| Property   | Description                                                                                                                                                                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Points`   | シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。<ul><li>ポイントの最初のリストは北海道のシェイプを表します。</li><li>ポイントの 2 番目のリストは本州のシェイプを表します。</li><li>ポイントの 3 番目のリストは九州のシェイプを表します。</li><li>ポイントの 4 番目のリストは四国のシェイプを表します。 |
+| </li></ul> |                                                                                                                                                                                                                                                         |
+| `Fields`   | 列名でキーが付けられたシェイプ データベース ファイル (.dbf) からのデータ行を含みます。たとえば、日本についてのデータには、人口、地域、首都名などが含まれます。                                                                                                                                                                    |
 
 このデータ構造は、適切なデータ列がマップされている限り、ほとんどの地理的シリーズでの使用に適しています。
 
 ### コード スニペット
 
 このコード例は、シェープ ファイルが `ShapeDataSource` を使用して読み込まれたことを前提としています。
-次のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトの `Points` プロパティをマップします。
+以下のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を `ShapeDataSource` にバインドし、すべての [`ShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/shapefilerecord.html) オブジェクトの `Points` プロパティをマップします。
+
+```html
+<div className="sampleRoot" >
+    <igx-geographic-map #map
+        width="700px"
+        height="500px"
+        zoomable="true" >
+    </igx-geographic-map>
+</div>
+
+<ng-template let-series="series" let-item="item" #template>
+            <div>
+                <span>
+                Airline: {{item.name}}
+                </span>
+                <br />
+                <span>
+                Length: {{item.distance}} miles
+                </span>
+            </div>
+</ng-template>
+```
+
+```ts
+import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { IgxShapeDataSource } from 'igniteui-angular-core';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
+
+@Component({
+  selector: "app-map-binding-shape-files",
+  styleUrls: ["./map-binding-shape-files.component.scss"],
+  templateUrl: "./map-binding-shape-files.component.html"
+})
+export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
+
+    @ViewChild ("map")
+    public map: IgxGeographicMapComponent;
+
+    @ViewChild("template")
+    public tooltipTemplate: TemplateRef<object>;
+    constructor() { }
+
+    public ngAfterViewInit() {
+    // loading a shapefile with geographic polygons
+    const sds = new IgxShapeDataSource();
+    sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+    sds.shapefileSource = "assets/Shapes/WorldCableRoutes.shp";
+    sds.databaseSource  = "assets/Shapes/WorldCableRoutes.dbf";
+    sds.dataBind();
+    }
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
+        const shapeRecords = sds.getPointData();
+        const geoPolylines: any[] = [];
+        // parsing shapefile data and creating geo-polygons
+        for (const record of shapeRecords) {
+            // using field/column names from .DBF file
+            const route = {
+                capacity: record.fieldValues["CapacityG"],
+                distance: record.fieldValues["DistanceKM"],
+                isActive: record.fieldValues["NotLive"] !== 0,
+                isOverLand: record.fieldValues["OverLand"] === 0,
+                name: record.fieldValues["Name"],
+                points: record.points,
+                service: record.fieldValues["InService"]
+            };
+            geoPolylines.push(route);
+        }
+
+        const geoSeries = new IgxGeographicPolylineSeriesComponent();
+        geoSeries.dataSource = geoPolylines;
+        geoSeries.shapeMemberPath = "points";
+        geoSeries.shapeFilterResolution = 0.0;
+        geoSeries.shapeStrokeThickness = 3;
+        geoSeries.shapeStroke = "rgb(82, 82, 82, 0.4)";
+        geoSeries.tooltipTemplate = this.tooltipTemplate;
+
+        this.map.series.add(geoSeries);
+        }
+}
+```

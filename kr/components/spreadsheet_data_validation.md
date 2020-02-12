@@ -26,25 +26,25 @@ This topic explains to to configure and set the bulit-in data validation rules.
 When setting up the data validation rules you will need to import the rules you want to use.
 
 ```ts
-import { AnyValueDataValidationRule } from "igniteui-angular-excel/ES5/AnyValueDataValidationRule";
-import { CustomDataValidationRule } from "igniteui-angular-excel/ES5/CustomDataValidationRule";
-import { DataValidationErrorStyle } from "igniteui-angular-excel/ES5/DataValidationErrorStyle";
-import { ListDataValidationRule } from "igniteui-angular-excel/ES5/ListDataValidationRule";
-import { OneConstraintDataValidationOperator } from "igniteui-angular-excel/ES5/OneConstraintDataValidationOperator";
-import { OneConstraintDataValidationRule } from "igniteui-angular-excel/ES5/OneConstraintDataValidationRule";
-import { TwoConstraintDataValidationOperator } from "igniteui-angular-excel/ES5/TwoConstraintDataValidationOperator";
-import { TwoConstraintDataValidationRule } from "igniteui-angular-excel/ES5/TwoConstraintDataValidationRule";
+import { AnyValueDataValidationRule } from 'igniteui-angular-excel';
+import { CustomDataValidationRule } from 'igniteui-angular-excel';
+import { DataValidationErrorStyle } from 'igniteui-angular-excel';
+import { ListDataValidationRule } from 'igniteui-angular-excel';
+import { OneConstraintDataValidationOperator } from 'igniteui-angular-excel';
+import { OneConstraintDataValidationRule } from 'igniteui-angular-excel';
+import { TwoConstraintDataValidationOperator } from 'igniteui-angular-excel';
+import { TwoConstraintDataValidationRule } from 'igniteui-angular-excel';
 ```
 
 ```ts
-import { AnyValueDataValidationRule } from "igniteui-react-excel/ES5/AnyValueDataValidationRule";
-import { CustomDataValidationRule } from "igniteui-react-excel/ES5/CustomDataValidationRule";
-import { DataValidationErrorStyle } from "igniteui-react-excel/ES5/DataValidationErrorStyle";
-import { ListDataValidationRule } from "igniteui-react-excel/ES5/ListDataValidationRule";
-import { OneConstraintDataValidationOperator } from "igniteui-react-excel/ES5/OneConstraintDataValidationOperator";
-import { OneConstraintDataValidationRule } from "igniteui-react-excel/ES5/OneConstraintDataValidationRule";
-import { TwoConstraintDataValidationOperator } from "igniteui-react-excel/ES5/TwoConstraintDataValidationOperator";
-import { TwoConstraintDataValidationRule } from "igniteui-react-excel/ES5/TwoConstraintDataValidationRule";
+import { AnyValueDataValidationRule } from 'igniteui-react-excel';
+import { CustomDataValidationRule } from 'igniteui-react-excel';
+import { DataValidationErrorStyle } from 'igniteui-react-excel';
+import { ListDataValidationRule } from 'igniteui-react-excel';
+import { OneConstraintDataValidationOperator } from 'igniteui-react-excel';
+import { OneConstraintDataValidationRule } from 'igniteui-react-excel';
+import { TwoConstraintDataValidationOperator } from 'igniteui-react-excel';
+import { TwoConstraintDataValidationRule } from 'igniteui-react-excel';
 ```
 
 <div class="divider--half"></div>

@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-### @@igComponent Selection
+### @@igComponent 選択
 選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@ igComponent はセル選択の 3 つのモードをサポートするようになり、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで簡単に切り替えることができます。セルの選択を無効にしたり、*グリッド内のセルを 1 つだけ選択*したり、デフォルトのオプションとして提供される*グリッド内の複数のセルを選択*したりできます。これらの各オプションについて詳しく説明します。
 
 @@if (igxName === 'IgxGrid') {

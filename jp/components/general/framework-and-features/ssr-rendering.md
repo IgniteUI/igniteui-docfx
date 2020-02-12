@@ -45,7 +45,7 @@ ng add @nguniversal/express-engine --clientProject ssr-example
 
 - サーバー側の DOM 抽象化には domino `npm install domino` をインストールします。
 - IgxIconService を使用してアイコンを登録する場合は、xmlhttprequest `npm i xmlhttprequest` をインストールします。
-- "server.ts" を設定します。
+- 「server.ts」 を設定します。
 
 ```typescript
 // server.ts

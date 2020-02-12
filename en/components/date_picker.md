@@ -27,17 +27,19 @@ ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
-The next step is to import the `IgxDatePickerModule` in our **app.module.ts** file:
+The next step is to import the `IgxDatePickerModule` in our **app.module.ts** file. As it uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
 
 ...
+import { HammerModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDatePickerModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxDatePickerModule],
     ...
 })
 export class AppModule {}

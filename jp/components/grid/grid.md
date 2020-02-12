@@ -12,15 +12,18 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 依存関係
+
+>**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
+
 データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
@@ -575,56 +578,7 @@ export const DATA: any[] = [
 
 ### パーシステンス (永続化) 状態
 
-ページ/セッション間でグリッドの状態を維持することは一般的なシナリオであり、現在アプリケーション レベルで実現可能です。ページをまたいで状態のパーシステンスを実装します。この例では、`localStorage` オブジェクトを使用して状態の JSON 文字列を格納していますが、必要に応じて `sessionStorage` オブジェクトを使用することもできます。実装の詳細はすべて `igxState` ディレクティブに抽出されます。
-
-```typescript
-// state.directive.ts
-
-@Directive({
-    selector: "[igxState]"
-})
-export class IgxGridStateDirective {
-
-    public ngOnInit() {
-        this.loadGridState();
-        this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
-            this.saveGridState();
-        });
-    }
-
-    public ngAfterViewInit() {
-        this.restoreGridState();
-    }
-
-    public saveGridState() { ... }
-    public loadGridState() { ... }
-    public restoreGridState() { ... }
-}
-```
-
-上の例にあるように、NavigationStart イベントが発生すると (ユーザーがページから移動するたびに) `saveGridState` メソッドが呼び出されます。このメソッドには、グリッドの状態 (ソートおよびフィルター式、ページング状態、列の順序など) を読み込むロジックが含まれ、選択された行のコレクション）を作成して、このデータを json 文字列として `localStorge` に保存します。後でユーザーがグリッドに戻ったときに、`loadGridState` と `restoreGridState` メソッドがそれぞれ `OnInit` と `AfterViewInit`ライフサイクル フック中に呼び出されます。
-`loadGridState` は JSON 文字列を `localStorage` から `gridState` オブジェクトにデコードします。一方、`restoreGridState` は grid API を使用して、対応する並べ替えとフィルタリングの式をグリッドに適用したり、ページングを設定したりします。
-
-最後にディレクティブをグリッドに適用し、グリッド コンポーネントの `OnInit` フック間で列コレクションを復元します。 
-
-```typescript
-// grid.component.ts
-
-public ngOnInit() {
-    const columnsFromState = this.state.getColumnsForGrid(this.gridId);
-    this.columns = this.state.columns && columnsFromState ?
-        columnsFromState : this.initialColumns;
-}
-```
-
-<div class="sample-container loading" style="height:910px">
-    <iframe id="grid-state-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-<div class="divider--half"></div>
+新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
 ### サイズ変更
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。

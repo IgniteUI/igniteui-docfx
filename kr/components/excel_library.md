@@ -23,11 +23,11 @@ When installing the excel package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel**
 
-The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxexcelmodule.html) inside your `AppModule`:
+The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxexcelmodule.html) inside your `AppModule`:
 
 ```ts
 // app.module.ts
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
+import { IgxExcelModule } from 'igniteui-angular-excel';
 
 @NgModule({
     imports: [
@@ -76,14 +76,14 @@ Now that the Excel Library module is imported, next step is to load a workbook.
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
 
-In order to load and save [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method.
+In order to load and save [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method.
 
 ```ts
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookSaveOptions } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
 import { ExcelUtility } from "ExcelUtility";
 
 var workbook = ExcelUtility.load(file);

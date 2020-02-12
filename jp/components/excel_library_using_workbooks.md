@@ -1,63 +1,98 @@
 ---
-title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
-_description: Ignite UI for Excel Library コンポーネントのワークブック処理
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例, Angular Excel ライブラリ コンポーネント, Angular Excel Engine, Workbook, Font, Document プロパティ
+title: Excel ライブラリ| データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
+_description: Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。
+_keywords: Excel library, Ignite UI for Angular, Infragistics, Excel ライブラリ, インフラジスティックス
+mentionedTypes: ['Workbook']
 _language: ja
 ---
 
-## ワークブックを使用した Excel ライブラリ
+## ワークブックの使用
 
-Infragistics Excel エンジンは、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。
+Infragistics Angular Excel Engine は、データを Microsoft® Excel® に保存、また Microsoft® Excel® からの読み込みを可能にします。ライブラリのさまざまなクラスを使用してワークブックやワークシートを作成、データを入力、データを Excel にエクスポートできます。Infragistics Angular Excel Engine は、Excel スプレッドシートでアプリケーションのデータの表示や Excel からアプリケーションへのデータのインポートが簡単にできます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
-    </button>
 </div>
 
 <div class="divider--half"></div>
 
 ### 既定のフォントを変更
 
-[`IWorkbookFont`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html) の新しいインスタンスを作成します。workbook.styles.apply メソッドでワークブックの Style コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
+[`IWorkbookFont`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html) の新しいインスタンスを作成します。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の `styles` コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
 
 ```ts
 var workbook = new Workbook();
-var normalFont: IWorkbookFont;
-normalFont.name = "Times New Roman";
-normalFont.height = 16 * 20;
+var font: IWorkbookFont;
+font = workbook.styles().normalStyle.styleFormat.font;
+font.name = "Times New Roman";
+font.height = 16 * 20;
 ```
 
 ### ワークブック プロパティの設定
 
-Microsoft® Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの [`documentProperties`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) プロパティで Infragistics Excel Library を使用してこれらのプロパティを設定できます。使用可能なプロパティは以下のとおりです。
+Microsoft Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの `documentProperties` プロパティを使用してこれらのプロパティを設定するために、Infragistics Angular Excel Engine を使用できます。使用可能なプロパティは以下のとおりです。
 
--   author
+-   `author`
 
--   title
+-   `title`
 
--   subject
+-   `subject`
 
--   keywords
+-   `keywords`
 
--   category
+-   `category`
 
--   status
+-   `status`
 
--   comments
+-   `comments`
 
--   company
+-   `company`
 
--   manager
+-   `manager`
 
-以下のコードは、ワークブックを作成し、Title および Status ドキュメント プロパティを設定する方法を示します。
+以下のコードは、ブックを作成し、`title` および `status` ドキュメント プロパティを設定する方法を示します。
 
 ```ts
 var workbook = new Workbook();
 workbook.documentProperties.title = "Expense Report";
 workbook.documentProperties.status = "Complete";
+```
+
+### ブックの保護
+
+ブック保護機能は、ブックの構造を保護できます。つまり、ユーザーがそのブック内のワークシートを追加、名前変更、削除、非表示、および並べ替えができます。
+
+Infragistics Excel Engine のオブジェクト モデルから保護が強制されることはありません。これらの保護設定を履行し、対応する操作の実行をユーザーに許可または制限することは、このオブジェクト モデルを表示する UI の役割です。
+
+保護は、`protect` メソッドを呼び出すことによってブックに適用されます。
+
+[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) がパスワードを使用せずに保護される場合、エンドユーザーは Excel で [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保護をパスワードを入力せずに解除できます。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保護をコードで解除するには、`Workbook.unprotect` メソッドを使用できます。
+
+[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) が保護される場合、この Workbook の `Workbook.protection` プロパティの [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html) インスタンスのプロパティの値は無効な操作を示します。
+
+[`isProtected`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#isprotected) が既に true の場合、`protect` メソッドは無視されます。
+
+```ts
+var workbook = new Workbook();
+workbook.protect(false, false);
+```
+
+-   IsProtected
+
+ブックが保護されているかどうかの確認この読み取り専用プロパティは、ワークブックに Protect メソッドのオーバーロードを使用して設定された保護がある場合、true を返します。
+
+```ts
+var workbook = new Workbook();
+var protect = workbook.isProtected;
+```
+
+-   protection
+
+この読み取り専用プロパティは、保護の各設定を個別に取得するためにプロパティを含む WorkbookProtection 型のオブジェクトを返します。
+
+```ts
+var workbook = new Workbook();
+var protection = workbook.protection;
 ```

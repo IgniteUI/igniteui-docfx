@@ -1,19 +1,22 @@
 ---
-title: Excel Utility | Data Spreadsheet | Ignite UI for Angular | Infragistics
-_description: Use the Excel Utility to load and save Microsoft Excel files using Excel Library.
-_keywords: Excel Utility, Excel library, Ignite UI for Angular, Infragistics
+title: Excel ユーティリティ | データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
+_description: Excel ユーティリティは、Microsoft Excel ファイルの読み込みと保存ができます。
+_keywords: Excel Utility, Excel library, Ignite UI for Angular, Infragistics, Excel ユーティリティ, Excel ライブラリ, インフラジスティックス
 mentionedTypes: ['Workbook', 'WorkbookFormat', 'WorkbookSaveOptions']
+_language: ja
 ---
 
-## Excel Utility
+## Excel ユーティリティ
 
-This topic provides utility function for loading and saving Microsoft Excel files using [Excel Library](excel_library.md)
+[Excel ライブラリ](excel_library.md) には、Microsoft Excel ファイルの読み込みや保存が可能なユーティリティ関数があります。
+
+<!-- Angular -->
 
 ```ts
 import { saveAs } from "file-saver"; // npm package: "file-saver": "^1.3.8"
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
+import { Workbook } from 'igniteui-angular-excel';
+import { WorkbookFormat } from 'igniteui-angular-excel';
+import { WorkbookSaveOptions } from 'igniteui-angular-excel';
 
 export class ExcelUtility {
     public static getExtension(format: WorkbookFormat) {

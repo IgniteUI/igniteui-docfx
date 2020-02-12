@@ -23,16 +23,17 @@ ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
 
-The next step is to import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
+The next step is to import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
 ...
+import { HammerModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
-    imports: [..., BrowserAnimationsModule, IgxCalendarModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],
     ...
 })
 export class AppModule {}
@@ -60,7 +61,7 @@ To add a month picker in a template, use the following code:
 ```
 
 #### Setting date
-Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxcalendarbase.html#value) input.
+Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) input.
 
 ```typescript
 // month-picker-sample.component.ts
@@ -83,7 +84,7 @@ To create a two-way data-binding, set `ngModel` like this:
 ```
 
 #### Formatting
-Change the month picker display format, using the [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarbase.html#formatoptions) inputs.
+Change the month picker display format, using the [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) inputs.
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -110,7 +111,7 @@ Here is an example of modifying the default format options of the month picker:
 </div>
 
 #### Localization
-Use the [`locale`]({environment:angularApiUrl}/classes/igxcalendarbase.html#locale) input, to customize the month picker localization.
+Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the month picker localization.
 
 ```html
 <!-- month-picker-sample.component.html -->
