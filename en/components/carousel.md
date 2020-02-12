@@ -24,6 +24,9 @@ The carousel can be used as a full-screen element or situated inside another com
 #### First steps
 <div class="divider--half"></div>
 
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 To get started with the Carousel component, install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -305,6 +308,7 @@ These configurions will have the following result:
 
 
 `
+
 ###API References
 <div class="divider--half"></div>
 

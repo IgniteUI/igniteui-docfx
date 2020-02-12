@@ -45,6 +45,38 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+### 8.x.x から 9.0.x の場合:
+
+Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
+
+* igxGrid
+* igxHierarchicalGrid
+* igxTreeGrid
+* igxList
+* igxNavigationDrawer
+* igxTimePicker
+* igxDatePicker
+* igxMonthPicker
+* *igxSlider**
+* igxCalendar
+* igxCarousel
+
+> **\* 注** - igxSlider のすべてのユーザー操作には HammerModule が必要です。
+
+以下のコード スニペットでアプリのルート モジュール ファイルを更新できます。
+
+```typescript
+import { HammerModule } from "@angular/platform-browser";
+
+@NgModule({
+    ...
+    imports: [
+        ...
+        HammerModule
+    ]
+})
+```
+
 ### 8.1.x から 8.2.x の場合:
 
 * IgxDrag

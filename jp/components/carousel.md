@@ -26,6 +26,9 @@ Carousel を全画面要素またはコンポーネントの子に設定でき�
 #### はじめに
 <div class="divider--half"></div>
 
+>[!NOTE]
+>**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
+
 Carousel コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
 
 ```cmd
@@ -307,6 +310,7 @@ public slides =
 
 
 `
+
 ### API リファレンス
 <div class="divider--half"></div>
 
