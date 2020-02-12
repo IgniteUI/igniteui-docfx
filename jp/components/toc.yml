@@ -1,5 +1,6 @@
 ﻿- name: 概要
   header: true
+  _language: "ja"
 - name: 作業の開始
   href: general/getting_started.md
   new: false
@@ -163,12 +164,12 @@
     - name: サイズ変更
       href: grid/sizing.md
       new: true
+    - name: Grid マスターと詳細
+      href: grid/master_detail.md
+      new: true
     - name: ステート パーシステンス
       href: grid/state_persistence.md
       new: true
-#    - name: Grid マスターと詳細
-#      href: grid/master_detail.md
-#      new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true

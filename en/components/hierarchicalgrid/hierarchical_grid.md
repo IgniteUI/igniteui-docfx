@@ -11,7 +11,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 ### Demo
 
 <div class="sample-container loading" style="height:520px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -20,6 +20,10 @@ _keywords: angular data grid, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ### Dependencies
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 To get started with the Hierarchical Data Grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd

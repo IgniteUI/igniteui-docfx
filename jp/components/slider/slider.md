@@ -19,6 +19,10 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
+
+>[!WARNING]
+>**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
+
 Slider コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
