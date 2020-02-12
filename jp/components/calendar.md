@@ -29,11 +29,12 @@ Ignite UI for Angular については、[はじめに](general/getting_started.m
 ```typescript
 // app.module.ts
 ...
+import { HammerModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
-    imports: [..., BrowserAnimationsModule, IgxCalendarModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],
     ...
 })
 export class AppModule {}

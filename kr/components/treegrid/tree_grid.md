@@ -12,11 +12,11 @@ _language: kr
 ### 데모
 
 <div class="sample-container loading" style="height:850px">
-    <iframe id="treegrid-childdatakey-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-childdatakey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-childdatakey-iframe" src='{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-childdatakey-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 
@@ -217,11 +217,11 @@ export class MyComponent implements OnInit {
 다음은 최종 결과입니다:
 
 <div class="sample-container loading" style="height:450px">
-    <iframe id="treegrid-primaryforeignkey-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+    <iframe id="treegrid-primaryforeignkey-iframe" data-src='{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-primaryforeignkey-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 <div class="divider--half"></div>
 

@@ -65,7 +65,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 
 | テンプレートの ID   | テンプレートの説明 |
 | ---           | ---                  |
-| empty-project | ルーティングとホームページを備えたプロジェクト構造 |
+| empty         | ルーティングとホームページを備えたプロジェクト構造 |
 | side-nav      | サイド ナビゲーション ドロワーを備えたプロジェクト構造 |
 | side-nav-auth | ユーザー認証モジュールで拡張されたサイド ナビゲーション プロジェクトプロジェクト テンプレートの詳細は、[Angular 認証プロジェクト テンプレート](cli/auth-template.md)トピックをご覧ください。 |
 
