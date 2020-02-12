@@ -5,7 +5,7 @@ _keywords: angular slider, igniteui for angular, インフラジスティック�
 _language: ja
 ---
 
-## Slider Overview and Configuration
+## Slider 概要と構成
 <p class="highlight">Ignite UI for Angular Slider コンポーネントを使用すると、つまみをトラックで移動して指定した範囲内で値選択を許可します。トラックを連続またはステップに定義でき、単一または範囲によってスライダーのタイプを選択できます。</p>
 <div class="divider"></div>
 
