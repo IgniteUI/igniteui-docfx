@@ -24,7 +24,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-次に、アプリケーションの AppModule に `IgxCalendarModule` をインポートします。通常、これは **app.module.ts** ファイルです。注: [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** に依存関係があるため、AppModule にも追加する必要があります。
+次に、アプリケーションの AppModule に `IgxCalendarModule` をインポートします。通常、これは **app.module.ts** ファイルです。注: タッチ操作を使用するために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
