@@ -195,6 +195,29 @@ Combo コンポーネントは以下の機能を公開します。
     - [テンプレート](combo_templates.md)
     - [テンプレート駆動フォーム](input_group.md) と [Reactive フォーム](input_group_reactive_forms.md) との統合
 
+## 単一選択
+デフォルトでは、Combo コントロールは複数選択を提供します。以下のコード例は、ハンドラーを `onSelectionChange` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
+
+```html
+<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+```
+
+```typescript
+public singleSelection(event: IComboSelectionChangeEventArgs) {
+    if (event.added.length) {
+        event.newSelection = event.added;
+    }
+}
+```
+
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="combo-single-selection-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-single-selection" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-single-selection-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
 ## キーボード ナビゲーション
 
 igxCombo が閉じてフォーカスされる場合:

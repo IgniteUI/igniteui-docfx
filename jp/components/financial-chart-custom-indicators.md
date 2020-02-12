@@ -1,27 +1,28 @@
 ---
-title: Financial Chart - カスタム インジケーター
-_description: Ignite UI for Angular Financial Chart コンポーネントは簡易な API を使用してファイナンシャル データを表示できます。ユーザーがデータにバインド後にチャートがデータの可視化オプションを複数提供します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
+title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | カスタム インジケーター
+_description: 簡単な API を使用して財務データを視覚化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
 ## カスタム インジケーター
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
+Angular Financial Chart コンポーネントでは、インジケーター ペインに表示するカスタム財務指標を定義できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="financial-chart-custom-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) でカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
+Angular Financial Chart コンポーネントでカスタム財務指標を有効にするには、`customIndicatorNames` プロパティに名前を追加し、`applyCustomIndicators` イベントで計算を実行します。
 
 以下のコード例は、2 つのカスタム インジケーターを設定して計算する方法を紹介します。単純移動平均 (SMA) およびランダム値を表示するインジケーターを使用します。
 
@@ -36,16 +37,16 @@ _language: ja
 ```
 
 ```ts
-    public applyCustomIndicators(event: { sender: any, args: FinancialChartCustomIndicatorArgs }) {
+    public applyCustomIndicators(event: { sender: any, args: IgxFinancialChartCustomIndicatorArgs }) {
         if (event.args.index === 0) {
-            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
             const ds = info.dataSource;
             const open = ds.openColumn;
             for (let i = 0; i < ds.indicatorColumn.length; i++) {
                 ds.indicatorColumn[i] = open[i];
             }
         } else {
-            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
             const ds = info.dataSource;
             const close = ds.closeColumn;
             for (let i = 0; i < ds.indicatorColumn.length; i++) {

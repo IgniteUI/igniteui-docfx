@@ -1,23 +1,24 @@
 ---
-title: Pie Chart コンポーネント - Native Angular  | Ignite UI for Angular
-_description: Ignite UI for Angular  Pie Chart を使用すると、列のデータ型に基づいて定義済みのデフォルト集計ビューを持つ別のコンテナーで列情報を表示します。
-_keywords: Ignite UI for Angular , Angular , ネイティブ Angular  コンポーネント スイート, ネイティブ Angular  コントロール, ネイティブ Angular  コンポーネント, ネイティブ Angular  コンポーネント ライブラリ, Angular  Chart, Angular  Pie Chart, Angular  Pie Chart コントロール, Angular Pie Chart コンポーネント
+title: 円チャート | 分類データの可視化 | Ignite UI for React | インフラジスティックス
+_description: Ignite UI にデータを可視化するために分類データを表示すカラフルな円チャートを作成します。詳細については、以下のサンプルを参照してください。
+_keywords: pie chart, ignite ui for react, infragistics, 円チャート, インフラジスティックス
+mentionedTypes: ['XamPieChart']
 _language: ja
 ---
 
 ## 円チャート
 
-円チャートは、セクションに分割された円形の領域で構成される、円チャートを表示するためのコンポーネントです。各セクションには、基本データ値に比例する円弧の長さがあります。
+Ignite UI for Angular 円チャート コンポネントは、セクションに分割された円形の領域で構成される、円チャートを表示するためのコンポーネントです。各セクションには、基本データ値に比例する円弧の長さがあります。
 
 コンポーネントは分類したデータを表すために使用されます。カテゴリが少ない場合や各カテゴリが全体としてデータの相対的に大きなパーセンテージを構成する場合、これは最も効率的です。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"  data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"  data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -32,11 +33,11 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxPieChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechart.html) は、以下のモジュールが必要です。
+[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) は、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
-import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
+import { IgxPieChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -101,7 +102,7 @@ var data = [
     <iframe id="pie-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -129,7 +130,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
     <iframe id="pie-chart-others-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -150,7 +151,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
     <iframe id="pie-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -189,6 +190,6 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
     <iframe id="pie-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>

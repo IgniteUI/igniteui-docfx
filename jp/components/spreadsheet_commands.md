@@ -1,7 +1,7 @@
 ---
-title: Spreadsheet | Grid コントロール | Ignite UI for Angular | コマンド | Infragistics |
+title: スプレッドシート | Grid コントロール | Ignite UI for Angular | コマンド | インフラジスティックス
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 _language: ja
 mentionedTypes: ['Spreadsheet']
 ---
@@ -10,7 +10,7 @@ mentionedTypes: ['Spreadsheet']
 
 Angular Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例えば、ZoomIn と ZoomOut の 2 つのコマンドです。完全なリストは SpreadsheetAction の enum を見てください。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-commands-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -27,8 +27,8 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
 コマンドボードを利用する前に、`SpreadsheetAction` をインポートします。
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
-import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
+import { SpreadsheetAction } from 'igniteui-angular-spreadsheet';
 ```
 
 <div class="divider--half"></div>

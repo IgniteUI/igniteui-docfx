@@ -1,8 +1,9 @@
 ---
-title: スパークライン | データ可視化ツール | Ignite UI for Angular | Infragistics
+title: スパークライン | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
 _description: スパークライン チャートを使用して、グリッド セルやスタンドアロンなどのコンパクトなレイアウトでレンダリングします。
-_keywords: Sparkline, Ignite UI for Angular, Infragistics
+_keywords: Sparkline, Ignite UI for Angular, Infragistics, スパークライン, インフラジスティックス
 mentionedTypes: ['XamSparkline']
+_language: ja
 ---
 
 ## スパークライン
@@ -11,7 +12,7 @@ Ignite UI for Angular スパークライン コンポーネントは、軽量な
 
 スパークライン コントロールには、チャートの種類、マーカー、範囲、トレンドライン、不明な値のプロット、ツールチップなど、構成およびカスタマイズが可能ないくつかの視覚的要素とそれに対応する機能があります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="sparkline-display-types-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -34,9 +35,9 @@ Ignite UI for Angular スパークライン コンポーネントを使用する
 
 ```ts
 // app.module.ts
-import { IgxSparklineModule} from "igniteui-angular-charts/ES5/igx-sparkline-module";
-import { IgxSparklineCoreModule} from "igniteui-angular-charts/ES5/igx-sparkline-core-module";
-import { SparklineDisplayType } from 'igniteui-angular-charts/ES5/SparklineDisplayType';
+import { IgxSparklineModule } from "igniteui-angular-charts";
+import { IgxSparklineCoreModule } from "igniteui-angular-charts";
+import { SparklineDisplayType } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -54,11 +55,11 @@ export class AppModule {}
 $ ProductName $ スパークライン コンポーネントは、以下のスパークライン タイプをサポートしています。
 
 -   `Area`
--   [`IgxColumnComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)
+-   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)
 -   `Line`
 -   `Win/Loss`
 
-タイプは [`displayType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では `Line` 型が表示されます。
+タイプは [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では `Line` 型が表示されます。
 
 `Win/Loss` スパークライン タイプは、柱状のチャート タイプです。ここでは、各列の値はデータセットの正の最大値 (正の値の場合) または負の最小値 (負の値の場合) に等しくなり、多くの場合 Win または Loss  (または似たような相反する概念) を意味します。`Win/Loss` スパークラインを正しく表示するには、データセットには正の値と負の値が必要です。
 
@@ -85,7 +86,7 @@ $ ProductName $ スパークライン コンポーネントは、以下のスパ
 
 Ignite UI for Angular スパークライン コンポーネントを使用すると、マーカーをシリーズ上の円形のアイコンとして表示して、X/Y 座標に基づいて個々のデータポイントを示すことができます。マーカーは、表示タイプが Line、Area、および Column のスパークラインに設定できます。`Win/Loss` 型のスパークラインは、現在マーカーを設定できません。既定では、マーカーは表示されません。
 
-スパークライン内のマーカーは、次の場所を任意に組み合わせて配置できます。
+スパークライン内のマーカーは、以下の場所を任意に組み合わせて配置できます。
 
 -   `すべて`: スパークライン内のすべてのデータ ポイントにマーカーを表示します。
 -   `低値`: 最低値のデータ ポイントにマーカーを表示します。最小値に複数の点がある場合は、その値を持つ各点に表示されます。
@@ -94,7 +95,7 @@ Ignite UI for Angular スパークライン コンポーネントを使用する
 -   `終値`: スパークラインの最後のデータ ポイントにマーカーを表示します。
 -   `負数`: スパークラインにプロットされた負のデータ点にマーカーを表示します。
 
-上記のすべてのマーカーは、色、可視性、およびサイズの観点で関連マーカー タイプのプロパティを使用してカスタマイズできます。たとえば、上記の `Low` マーカーは、[`lowMarkerBrush`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkerbrush)、[`lowMarkerVisibility`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkervisibility)、[`lowMarkerSize`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkersize) の各プロパティを持ちます。
+上記のすべてのマーカーは、色、可視性、およびサイズの観点で関連マーカー タイプのプロパティを使用してカスタマイズできます。たとえば、上記の `Low` マーカーは、[`lowMarkerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkerbrush)、[`lowMarkerVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkervisibility)、[`lowMarkerSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkersize) の各プロパティを持ちます。
 
 ```html
 <igx-sparkline
@@ -128,11 +129,11 @@ Ignite UI for Angular スパークライン コンポーネントの通常の範
 
 通常の範囲は、最大データ ポイントよりも広い場合もあれば、それを超える場合もあります。また、しきい値インジケータとして機能するように、スパークラインの `Line` 表示タイプと同じ幅にすることもできます。正常範囲の幅は、正常範囲を表示するために最低限必要な以下の 3 つのプロパティによって決まります。
 
--   [`normalRangeVisibility`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangevisibility): 標準範囲が表示されるかどうか。
--   [`normalRangeMaximum`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangemaximum): 範囲の下境界線。
--   [`normalRangeMinimum`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangeminimum): 範囲の上境界線。
+-   [`normalRangeVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangevisibility): 標準範囲が表示されるかどうか。
+-   [`normalRangeMaximum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangemaximum): 範囲の下境界線。
+-   [`normalRangeMinimum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangeminimum): 範囲の上境界線。
 
-既定では、標準範囲は表示されません。有効にすると、標準範囲は薄い灰色の外観で表示されますが、[`normalRangeFill`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangefill) プロパティを使用して構成することもできます。
+既定では、標準範囲は表示されません。有効にすると、標準範囲は薄い灰色の外観で表示されますが、[`normalRangeFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#normalrangefill) プロパティを使用して構成することもできます。
 
 DisplayNormalRangeInFront プロパティを設定することで、スパークライン コンポーネントのプロットされたシリーズの前または後ろに標準範囲を表示するかどうかを設定することもできます。
 
@@ -157,9 +158,9 @@ DisplayNormalRangeInFront プロパティを設定することで、スパーク
 
 ### トレンドライン
 
-Ignite UI for Angular スパークライン コンポーネントは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。近似曲線を表示するには、[`trendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティを使用します。
+Ignite UI for Angular スパークライン コンポーネントは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。近似曲線を表示するには、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティを使用します。
 
-近似曲線は、チャートがバインドされているデータの値を使用して、[`trendLineType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティで指定されたアルゴリズムに従って計算されます。
+近似曲線は、チャートがバインドされているデータの値を使用して、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティで指定されたアルゴリズムに従って計算されます。
 
 近似曲線は一度に 1 つだけ表示でき、デフォルトでは近似曲線は表示されません。
 
@@ -204,7 +205,7 @@ Ignite UI for Angular スパークライン コンポーネントは、実際の
 
 Ignite UI for Angular スパークライン コンポーネントは、不明な値を検出し、指定された補間アルゴリズムを介して不明な値のためのスペースを描画することができます。データに null 値が含まれていて、この機能を使用しない場合、つまり補間が指定されていない場合、不明な値はプロットされません。
 
-未知の値をプロットするために、スパークライン コンポーネントの [`unknownValuePlotting`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) プロパティを設定することができます。
+未知の値をプロットするために、スパークライン コンポーネントの [`unknownValuePlotting`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) プロパティを設定することができます。
 
 ```html
 <igx-sparkline

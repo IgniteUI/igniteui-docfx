@@ -1,15 +1,16 @@
 ---
-title: ファイナンシャル チャート
-_description: Ignite UI for Angular Financial Chart コンポーネントは、シンプルで直感的な API を使用してファイナンシャル データを表示します。ユーザーがデータにバインド後、チャートはデータの可視化オプションを複数提供します。
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular Financial Chart
+title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
+_description: 簡単な API を使用して財務データを視覚化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
 ## 注釈
 
-このトピックでは、[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) の注釈について説明します。
+このトピックでは、Angular Financial Chart コンポーネントの注釈について説明します。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 550px">
     <iframe id="financial-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

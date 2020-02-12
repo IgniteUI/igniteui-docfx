@@ -9,7 +9,7 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
-- name: Ignite UI CLI
+- name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
   items:
@@ -130,6 +130,9 @@
         - name: Cell selection
           href: grid/cell_selection.md
           new: true
+        - name: Selection-based Aggregates
+          href: grid/selection_based_aggregates.md
+          new: true
     - name: Searching
       href: grid/search.md
       new: false
@@ -145,6 +148,9 @@
     - name: Multi Column Headers
       href: grid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: grid/collapsible_column_groups.md
+      new: true
     - name: Display Density
       href: grid/display_density.md
       new: false
@@ -162,6 +168,12 @@
       new: true
     - name: Sizing
       href: grid/sizing.md
+      new: true
+    - name: Master-Detail Grid
+      href: grid/master_detail.md
+      new: true
+    - name: State Persistence
+      href: grid/state_persistence.md
       new: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
@@ -243,6 +255,9 @@
     - name: Multi Column Headers
       href: treegrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: treegrid/collapsible_column_groups.md
+      new: true
     - name: Display Density
       href: treegrid/display_density.md
       new: false
@@ -337,6 +352,9 @@
     - name: Multi Column Headers
       href: hierarchicalgrid/multi_column_headers.md
       new: false
+    - name: Collapsible Column Groups
+      href: hierarchicalgrid/collapsible_column_groups.md
+      new: true
     - name: Display Density
       href: hierarchicalgrid/display_density.md
       new: false
@@ -914,7 +932,11 @@
 - name: Dialog Window
   href: dialog.md
 - name: Slider
-  href: slider.md
+  href: slider/slider.md
+  new: true
+  items:
+    - name: Slider ticks
+      href: slider/slider_ticks.md
 - name: Ripple
   href: ripple.md
 - name: Toggle

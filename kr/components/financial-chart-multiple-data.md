@@ -7,7 +7,7 @@ _language: kr
 
 ## 금융 차트를 복수의 데이터 소스에 바인딩
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
+`XamFinancialChart` 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
 
 ### 데모
 

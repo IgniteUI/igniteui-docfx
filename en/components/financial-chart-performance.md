@@ -93,7 +93,7 @@ Setting a lot of panes using [`FinancialIndicatorType`]({environment:dvApiBaseUr
 Setting the `XAxisMode` option can have the following impact on chart performance:
 
 -   [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) - is the least expensive x-axis mode to use in the financial chart and it is recommended when rendering of break in data range (e.g. weekends or holidays) is not important.
--   [`Time`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#time) - is more expensive expensive than the [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
+-   `time` - is more expensive expensive than the [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
 
 ### Y-Axis Mode
 

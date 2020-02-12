@@ -1,33 +1,33 @@
 ---
-title: Financial Chart - 大規模なデータの処理
-_description: Ignite UI for Angular Financial Chart コンポーネントは、財務データを表示するタッチ対応、高いパフォーマンス、軽量なチャート コントロールです。
-_keywords: Ignite UI for Angular, データ ビジュアライゼーション, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chart コンポーネント, Angular Financial Chart コンポーネント, Angular Chart コントロール, Angular Financial Chart コントロール
+title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | 大規模データのバインド
+_description: 簡単な API を使用して財務データを可視化するには、ファイナンシャル チャート コンポーネントを使用します。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
-## 大規模なデータの処理
+## 大規模データのバインド
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールは大規模なデータを処理できます。以下のデモは 20 年にわたるデータをバインドします。折れ線チャートで 1 時間間隔の在庫価格を示します。
+Angular Financial Chart  コンポーネントは大量のデータを処理できます。以下のデモは 20 年間分のデータをバインドし、折れ線チャートで 1 時間間隔の在庫価格を示します。
 
-<div class="divider"></div>
+### サンプル
 
-### デモ
-
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
-
 <div class="divider--half"></div>
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 
--   コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。 Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
+> 注:
+> Angular:
+> コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush`  を設定します。Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
 
-以下のコードはファイナンシャル チャートを大量のデータにバインドします。
+以下のコードはファイナンシャル チャートを大量データにバインドします。
 
 ```ts
 import { GenerateHourlyPricesService } from "../services/generate-hourly-prices.service";
@@ -58,5 +58,5 @@ export class AppComponent {
 <div class="divider--half"></div>
 
 -   [チャートのパフォーマンス](financial-chart-performance.md)
--   [リアルタイム データにバインド](financial-chart-high-frequency.md)
--   [複数データ ソースへのバインド](financial-chart-multiple-data.md)
+-   [リアルタイムにデータをバインド](financial-chart-high-frequency.md)
+-   [複数データ ソースのバインド](financial-chart-multiple-data.md)

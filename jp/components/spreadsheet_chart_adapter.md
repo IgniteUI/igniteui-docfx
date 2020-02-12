@@ -1,16 +1,16 @@
 ---
-title: Spreadsheet | Grid コントロール | Ignite UI for Angular | chart adapter | Infragistics |
+title: スプレッドシート | Grid コントロール | Ignite UI for Angular | チャート アダプター | インフラジスティックス
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集機能をアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 mentionedTypes: ['Spreadsheet']
 _language: ja
 ---
 
 ## Spreadsheet チャート アダプター
 
-Angular Spreadsheet コンポーネント`を使用して`Spreadsheet\`にチャートを表示できます。
+Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) にチャートを表示できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-adapter' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ Angular Spreadsheet コンポーネント`を使用して`Spreadsheet\`にチャ
 
 ### チャート アダプターの概要
 
-[`chartAdapter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
+[`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
 
 WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの `AddChart` メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
 
@@ -32,12 +32,12 @@ WorksheetChart をワークシートに追加するには、ワークシート�
 
 ### サポートされるチャート タイプ
 
-Spreadsheet ChartAdapter は、折れ線、エリア、柱状、ドーナツを含む 35 以上のチャート タイプがサポートされます。チャート タイプ一覧:
+Spreadsheet ChartAdapter は、折れ線、エリア、縦棒、ドーナツを含む 35 以上のチャート タイプがサポートされます。チャート タイプ一覧:
 
--   柱状チャート
-    -   クラスタ柱状チャート
-    -   積層型の柱状チャート
-    -   100% 積層型柱状チャート
+-   縦棒チャート
+    -   クラスタ縦棒チャート
+    -   積層型の柱状。
+    -   100% 積層型縦棒チャート
 -   折れ線チャート
     -   折れ線チャート
     -   マーカー付き折れ線チャート
@@ -49,11 +49,11 @@ Spreadsheet ChartAdapter は、折れ線、エリア、柱状、ドーナツを�
 -   ドーナツ型チャート
 -   棒チャート
     -   クラスター棒チャート
-    -   積層型棒チャート
+    -   積層型棒。
     -   100% 積層型棒チャート
     -   エリア チャート
     -   エリア
-    -   積層型エリア チャート
+    -   積層型エリア。
     -   100% 積層型エリア チャート
 -   XY (散布図) とバブル チャート
     -   散布図 (マーカーのみ)
@@ -73,32 +73,32 @@ Spreadsheet ChartAdapter は、折れ線、エリア、柱状、ドーナツを�
     -   マーカー付きレーダー
     -   塗りつぶしたレーダー
 -   コンボ チャート
-    -   xAxis を共有する柱状チャートと折れ線チャート
-    -   柱状チャートと折れ線チャート、および第 2 xAxis
-    -   積層エリアと柱状チャート
+    -   xAxis を共有する縦棒チャートと折れ線チャート
+    -   縦棒チャートと折れ線チャート、および第 2 xAxis
+    -   積層エリアと縦棒チャート
     -   カスタムな組み合わせ
 
 ### 依存関係
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
+> 以下のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
 
-ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
+ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
 
 ```ts
-import { IgxSpreadsheetchartadaptermodule } from "igniteui-angular-spreadsheet-chart-adapter/ES5/igx-spreadsheet-chart-adapter-module";
-import { SpreadsheetChartAdapter } from "igniteui-angular-spreadsheet-chart-adapter/ES5/SpreadsheetChartAdapter";
+import { IgxSpreadsheetchartadaptermodule } from 'igniteui-angular-spreadsheet-chart-adapter';
+import { SpreadsheetChartAdapter } from 'igniteui-angular-spreadsheet-chart-adapter';
 
-import { ChartTitle, ChartType, FormattedString, Workbook } from "igniteui-angular-excel/ES5/excel.core";
+import { ChartTitle, ChartType, FormattedString, Workbook } from 'igniteui-angular-excel';
 import { ExcelUtility } from "ExcelUtility";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetCell } from "igniteui-angular-excel/ES5/WorksheetCell";
+import { Worksheet } from 'igniteui-angular-excel';
+import { WorksheetCell } from 'igniteui-angular-excel';
 ```
 
 ### コード スニペット
 
-次のコードスニペットは、[`IgxSpreadsheet`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheet.html) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
+以下のコードスニペットは、`XamSpreadsheet` コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();

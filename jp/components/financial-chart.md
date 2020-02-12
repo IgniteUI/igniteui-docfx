@@ -1,21 +1,22 @@
 ---
-title: Financial Chart の構成|データ可視化ツール |Ignite UI for Angular |Infragistics
-_description: 簡単な API を使用して財務データを可視化するには、財務チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: 財務チャート, Ignite UI for Angular, infragistics
+title: ファイナンシャル チャートの構成 | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
+_description: 簡単な API を使用して財務データを可視化するには、財務チャート コンポーネントを使用します。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
+_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 _language: ja
 ---
 
 ## ファイナンシャル チャート
 
-Financial Chart は、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
+Angular Financial Chart コンポーネントは、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
 
-### デモ
+### サンプル
 
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で開く
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -25,15 +26,15 @@ Financial Chart は、シンプルな API を使用して複雑なファイナ�
 
 ファイナンシャル チャート コンポーネントはデータ列を解析して選択します。日/時列を X 軸で使用し、Open、High、Low、Close、Volume 列、または最初の 5 つの数値列を Y 軸で使用します。ユーザーがチャート タイプを棒、ローソク足、柱状、または折れ線に設定できます。主要なビジュアル要素にツールバー、価格ペイン、ボリューム ペイン、インジケーター ペイン、およびナビゲーション ペインがあります。
 
-[`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
+[`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
 
-| プロパティ                                                                                                          | 説明                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `Bar`                                                                                                          | 各データ ポイントにマーカーがある棒シリーズを指定します。                                                                                                |
-| `Candle`                                                                                                       | ローソク足シリーズを指定します。                                                                                                             |
-| [`IgxColumnComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) | 柱状シリーズを指定します。                                                                                                                |
-| `Line`                                                                                                         | 折れ線シリーズを指定します。                                                                                                               |
-| `auto`                                                                                                         | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために `Bar` を使用します。 |
+| プロパティ                                                                                                                             | 説明                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar)       | 各データ ポイントにマーカーがある棒シリーズを指定します。                                                                                                                                                                                                                      |
+| [`Candle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) | ローソク足シリーズを指定します。                                                                                                                                                                                                                                   |
+| [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) | 柱状シリーズを指定します。                                                                                                                                                                                                                                      |
+| [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line)              | 折れ線シリーズを指定します。                                                                                                                                                                                                                                     |
+| `auto`                                                                                                                            | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) を使用します。 |
 
 その他のチャート ペインの詳細については、[Financial Chart ペイン](financial-chart-panes.md) トピックを参照してください。
 
@@ -52,11 +53,11 @@ chart パッケージをインストールするときに core パッケージ�
 
 ### 必要なモジュール
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) は、以下のモジュールが必要です。
+Angular Financial Chart コンポーネントは、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
-import {IgxFinancialChartModule} from "igniteui-angular-charts/ES5/igx-financial-chart-module";
+import { IgxFinancialChartModule } from "igniteui-angular-charts";
 
 @NgModule({
     imports: [
@@ -74,7 +75,7 @@ export class AppModule {}
 
 ファイナンシャル チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-[`IgxFinancialChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchart.html) コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+`XamFinancialChart` コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```ts
 let data = [
@@ -104,10 +105,10 @@ let data = [
 
 ### ツールバー
 
-ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには次のセレクターが含まれます。
+ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには以下のセレクターが含まれます。
 
 -   インジケーター タイプ セレクター - 財務指標のタイプを選択できます。これらのインジケーターは価格またはその他のインジケーターと同じ Y 軸を共有しないため、価格ペインの下のペインに表示されます。
--   オーバーレイ タイプ セレクター - ファイナンシャル オーバーレイのタイプを選択できます。これらのオーバーレイは、同じ Y 軸スケールを共有する財務物価シリーズと共に表示されます。オーバーレイには、`BollingerBands` と `PriceChannel` の 2 種類があります。
+-   オーバーレイ タイプ セレクター - ファイナンシャル オーバーレイのタイプを選択できます。これらのオーバーレイは、同じ Y 軸スケールを共有する財務物価シリーズと共に表示されます。オーバーレイには、[`BollingerBands`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#bollingerbands) と [`PriceChannel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#pricechannel) の 2 種類があります。
 -   トレンドライン タイプ セレクター - トレンドラインのタイプを選択できます。トレンドラインは、価格ペインとボリューム ペインの上のトレンドライン レイヤーに表示されます。
 -   日付範囲セレクター - データを表示するために定義済みの範囲を選択できます。データ範囲が 1 年未満の場合、無効になるボタンがあることに注意してください。
 -   チャート タイプ セレクター - ファイナンシャル チャートのチャート タイプを選択できます。これは価格ペインで表示されます。
@@ -121,16 +122,16 @@ let data = [
  </igx-financial-chart>
 ```
 
-### Additional Resources
+### その他のリソース
 
--   [Binding Multiple Sources](financial-chart-multiple-data.md)
--   [Binding High Volume Data](financial-chart-high-volume.md)
--   [Binding Real-Time Data](financial-chart-high-frequency.md)
--   [Chart Annotations](financial-chart-annotations.md)
--   [Chart Trendlines](financial-chart-trendlines.md)
--   [Chart Axis Types](financial-chart-axis-types.md)
--   [Chart Panes](financial-chart-panes.md)
--   [Chart Performance](financial-chart-performance.md)
+-   [複数ソースのバインド](financial-chart-multiple-data.md)
+-   [大規模データのバインド](financial-chart-high-volume.md)
+-   [リアルタイムにデータをバインド](financial-chart-high-frequency.md)
+-   [チャート注釈](financial-chart-annotations.md)
+-   [チャートの近似曲線](financial-chart-trendlines.md)
+-   [チャート軸タイプ](financial-chart-axis-types.md)
+-   [チャート ペイン](financial-chart-panes.md)
+-   [チャートのパフォーマンス](financial-chart-performance.md)
     <!-- - [Custom Indicators](financial-chart-custom-indicators.md) -->
     <!-- - [Tooltip Templates](financial-chart-tooltip-template.md) -->
     <!-- - [Tooltip Types](financial-chart-tooltip-types.md) -->

@@ -188,9 +188,8 @@ class Member {
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" roundShape="true" size="small">
-          <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
-        </igx-avatar>
+        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div style="margin-left: 20px; align-content: center;">
         <span class="contact-name">{{ member.name }}</span>

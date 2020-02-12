@@ -234,8 +234,11 @@ The drag ghost can be templated using the `IgxRowDragGhost` directive, applied t
 ...
 </@@igSelector>
 ```
+
 The result of the configuration can be seem below in a `@@igSelector` with row dragging and multiple selection enabled. The demo shows the count of the currently dragged rows:
+
 ##### Example Demo
+
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/grid/grid-multiple-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -256,8 +259,11 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 </div>
 <div class="divider--half"></div>
 }
+
+
 @@if (igxName === 'IgxHierarchicalGrid') {
 The drag ghost can be templated on every grid level, making it possible to have multiple ghost templates or to only provide a template for a single row island.
+
 ```html
 <@@igSelector>
 ...
