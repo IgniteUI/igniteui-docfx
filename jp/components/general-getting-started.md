@@ -1,7 +1,7 @@
 ---
-title: データ可視化ツール|Ignite UI for Angular |Infragistics
+title: データ可視化ツール | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular は、開発者が最新のデスクトップ ブラウザー用の最新の高パフォーマンス HTML 5 および TypeScript アプリケーションを構築できるように設計された Angular コンポーネントのコンプリート セットです。
-_keywords: Ignite UI for Angular, Infragistics, はじめに, IG,
+_keywords: Ignite UI for Angular, Getting started, Infragistics, Install Angular, IG, インフラジスティックス, はじめに, Angular のインストール
 _language: ja
 ---
 
@@ -44,7 +44,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 
 この手順の詳細は、<a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank">こちら</a> (英語)を参照してください。
 
-次に、VS Code で my-app-name フォルダーを開き、次のコマンドを使用して、Ignite UI for Angular に次のいずれかのパッケージをインストールする必要があります。
+次に、VS Code で my-app-name フォルダーを開き、以下のコマンドを使用して、Ignite UI for Angular に以下のいずれかのパッケージをインストールする必要があります。
 
 -   **npm install --save igniteui-angular-charts igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel igniteui-angular-core**
@@ -62,7 +62,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 -   **yarn add igniteui-angular-maps igniteui-angular-core**
 -   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
-最後に、次のコマンドでアプリケーションをビルドして起動することができます。
+最後に、以下のコマンドでアプリケーションをビルドして起動することができます。
 
 -   **npm run-script build**
 -   **npm run-script start**

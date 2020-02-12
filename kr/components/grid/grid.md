@@ -12,7 +12,7 @@ _language: kr
 ### 데모
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
@@ -380,56 +380,7 @@ export class MyComponent implements OnInit {
 
 ### 상태 지속성
 
-페이지/세션에서 그리드 상태를 유지하는 것은 일반적인 것으로 현재 응용 프로그램 수준에서 실현할 수 있습니다. 취해야 할 접근법을 설명하기 위해 페이지 전체에 걸쳐 상태 지속성을 구현해 보겠습니다. 이 예제에서는 `localStorage` 객체를 사용하여 상태의 JSON 문자열을 저장하지만 필요에 따라 `sessionStorage` 객체를 사용하도록 정할 수 있습니다. 모든 구현 세부 사항은 `igxState` 지시문에서 추출됩니다:
-
-```typescript
-// state.directive.ts
-
-@Directive({
-    selector: "[igxState]"
-})
-export class IgxGridStateDirective {
-
-    public ngOnInit() {
-        this.loadGridState();
-        this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
-            this.saveGridState();
-        });
-    }
-
-    public ngAfterViewInit() {
-        this.restoreGridState();
-    }
-
-    public saveGridState() { ... }
-    public loadGridState() { ... }
-    public restoreGridState() { ... }
-}
-```
-
-위 예제에서 볼 수 있듯이 NavigationStart 이벤트가 발생할 때마다(사용자가 페이지에서 이동할 때마다) 그리드 상태(정렬 및 필터링식, 페이징 상태, 열 순서, 선택한 행 수집)를 읽고 `localStorge`에 json 문자열로 이 데이터를 저장하기 위한 논리가 포함된 `saveGridState` 메소드가 호출됩니다. 나중에 사용자가 그리드로 돌아오면 `loadGridState` 및 `restoreGridState` 메소드가 `OnInit` 및 `AfterViewInit` 라이프 사이클 후크 중에 각각 호출됩니다.
-`loadGridState`가 수행하는 작업은 `localStorage`에서 `gridState` 객체로 JSON 문자열을 디코딩하는 반면, `restoreGridState`는 그리드 API를 사용하여 해당 정렬 및 필터링식을 그리드에 적용하고 페이징을 설정합니다.
-
-끝으로 그리드에 지시문을 적용하고 그리드 컴포넌트의 `OnInit` 후크 중에 열 집합을 복원합니다: 
-
-```typescript
-// grid.component.ts
-
-public ngOnInit() {
-    const columnsFromState = this.state.getColumnsForGrid(this.gridId);
-    this.columns = this.state.columns && columnsFromState ?
-        columnsFromState : this.initialColumns;
-}
-```
-
-<div class="sample-container loading" style="height:750px">
-    <iframe id="grid-state-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
-<div class="divider--half"></div>
+Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
 
 ### 키보드 탐색
 키보드 탐색은 모든 그리드에서 기본적으로 사용할 수 있으며 최종 사용자를 위해 가능한 많은 기능과 시나리오를 포함하도록 하고 있습니다. 특정 셀에 초점을 맞추고 다음 키 조합 중 하나를 누른 경우 설명된 동작이 실행됩니다:
@@ -463,10 +414,10 @@ public ngOnInit() {
 이 샘플은 실시간 데이터에 바인딩된 `igxGrid`를 보여줍니다. 
 
 <div class="sample-container loading" style="height:915px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:demosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
 
 ### Sizing

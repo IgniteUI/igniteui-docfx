@@ -11,15 +11,19 @@ _keywords: angular data grid, igniteui for angular, infragistics
 ### Demo
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 ### Dependencies
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+
 To get started with the Data Grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -498,9 +502,9 @@ And the result from this configuration is:
 
 #### Flat data
 
-The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property of the [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html).
+The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property of the [IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html).
 
-Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowcomponent.html#rowdata) property provides you this opportunity.
+Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property provides you this opportunity.
 
 Below is the data that we are going to use:
 ```typescript
@@ -577,56 +581,8 @@ And the result is:
 
 ### State persistence
 
-Persisting the grid state across pages/sessions is a common scenario and is currently achievable on application level. To demonstrate the approach to take, let's implement state persistence across pages. The example is using the `localStorage` object to store the JSON string of the state, but depending on your needs you may decide to go with the `sessionStorage` object. All implementation details are extracted in the `igxState` directive:
+Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
 
-```typescript
-// state.directive.ts
-
-@Directive({
-    selector: "[igxState]"
-})
-export class IgxGridStateDirective {
-
-    public ngOnInit() {
-        this.loadGridState();
-        this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
-            this.saveGridState();
-        });
-    }
-
-    public ngAfterViewInit() {
-        this.restoreGridState();
-    }
-
-    public saveGridState() { ... }
-    public loadGridState() { ... }
-    public restoreGridState() { ... }
-}
-```
-
-As seen in the example above, when a NavigationStart event occurs (each time a user navigates away from the page), `saveGridState` method is called, which contains the logic to read the grid state (sorting and filtering expressions, paging state, columns order, collection of selected rows) and save this data as json string in the `localStorge`. Later, when a user comes back to the grid, `loadGridState` and `restoreGridState` methods are called during the `OnInit` and `AfterViewInit` lifecycle hooks respectively.
-What `loadGridState` does is decode the JSON string from the `localStorage` into a `gridState` object, while `restoreGridState` uses the grid API to apply the corresponding sorting and filtering expressions to the grid, set paging, etc.
-
-Last thing to do is apply the directive to the grid and restore the columns collection during the `OnInit` hook of the grid component: 
-
-```typescript
-// grid.component.ts
-
-public ngOnInit() {
-    const columnsFromState = this.state.getColumnsForGrid(this.gridId);
-    this.columns = this.state.columns && columnsFromState ?
-        columnsFromState : this.initialColumns;
-}
-```
-
-<div class="sample-container loading" style="height:910px">
-    <iframe id="grid-state-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
 
 ### Sizing
 

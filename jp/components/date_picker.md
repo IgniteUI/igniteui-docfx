@@ -34,11 +34,13 @@ Ignite UI for Angular については、[はじめに](general/getting_started.m
 // app.module.ts
 
 ...
+import { HammerModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDatePickerModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxDatePickerModule],
     ...
 })
 export class AppModule {}

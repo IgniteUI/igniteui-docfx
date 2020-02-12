@@ -26,8 +26,8 @@ The Angular Spreadsheet component allows you to perform commands for activatinig
 Before making use of the commands you will want to import the SpreadsheetAction
 
 ```ts
-import { IgxSpreadsheetComponent } from "igniteui-angular-spreadsheet/ES5/igx-spreadsheet-component";
-import { SpreadsheetAction } from "igniteui-angular-spreadsheet/ES5/SpreadsheetAction";
+import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';
+import { SpreadsheetAction } from 'igniteui-angular-spreadsheet';
 ```
 
 <div class="divider--half"></div>

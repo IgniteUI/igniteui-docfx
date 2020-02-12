@@ -669,6 +669,7 @@ In some cases you may want to define your own paging behavior and this is when w
 Below you will find the methods that we've defined in order to implement our own `next` and `previous` page actions.
 
 ```typescript
+@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
 public nextPage() {

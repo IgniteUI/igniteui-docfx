@@ -1,12 +1,12 @@
 {
     "_navBarTitle": "Ignite UI for Angular",
     "_repoUrl": "https://github.com/IgniteUI/igniteui-docfx/tree/master/kr/",
-    "_navBarTitleHref": "https://kr.infragistics.com/products/ignite-ui-angular",
-    "_currentBaseUrl": "https://kr.infragistics.com/products/ignite-ui-angular/angular/",
+    "_navBarTitleHref": "https://www.infragistics.co.kr/products/ignite-ui-angular",
+    "_currentBaseUrl": "https://www.infragistics.co.kr/products/ignite-ui-angular/angular/",
     "_hasKRLang": true,
     "_ENBaseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
     "_JABaseUrl": "https://jp.infragistics.com/products/ignite-ui-angular/angular/",
-    "_KRBaseUrl": "https://kr.infragistics.com/products/ignite-ui-angular/angular/",
+    "_KRBaseUrl": "https://www.infragistics.co.kr/products/ignite-ui-angular/angular/",
     "_gitHubBtnLbl": "View page on ",
     "_themeUsage": true,
     "_demosBaseUrlVar": "{environment:demosBaseUrl}"
