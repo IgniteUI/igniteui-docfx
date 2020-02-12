@@ -21,6 +21,11 @@ Angular Schematics または Ignite UI CLI を使用して Angular プロジェ�
 ```bash
 ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 ```
+Schematics コレクションを使用する場合は、以下のコマンドを実行します。
+
+```bash
+ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=side-nav-auth
+```
 
 ### 説明
 このテンプレートはサイドナビゲーションのデフォルトに基づいて作成され、ログイン ページまたはログインユーザーのアバターを表示するプロファイル ページとログイン セクションをアプリのナビゲーションバーに追加します。
