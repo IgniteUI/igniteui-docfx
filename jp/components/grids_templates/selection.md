@@ -43,20 +43,6 @@ Ignite UI for Angular @@ igComponentコンポーネントは、[行選択](row_s
 
 ### ショーケース アプリケーション
 
-@@if (igxName === 'IgxGrid') {
-#### 選択に基づいた集計
-
-このサンプルは、カスタム集計機能とともに複数選択の使用方法を示します。
-選択を変更して、現在選択されている範囲の概要を表示します。
-
-<div class="sample-container loading" style="height: 560px;">
-    <iframe id="grid-selection-custom-summaries" data-src='{environment:demosBaseUrl}/grid/grid-selection-custom-summaries' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-}
-
 @@if (igxName === 'IgxGrid'){
 #### グリッドのコンテキスト メニュー
 
@@ -180,6 +166,7 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [仮想化とパフォーマンス](virtualization.md)
+@@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
