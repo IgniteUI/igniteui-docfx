@@ -38,7 +38,7 @@ Binding to the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignit
 
 The Ignite UI for Angular treemap component supports the following types algorithms:
 
--   `Slice and Dice`
+-   `SliceAndDice`
 -   `Squarified`
 -   `Strip`
 
@@ -92,7 +92,7 @@ The following code demonstrates how to setup the Treemap.
 ```html
 <igx-treemap
     height="100%"
-    width="100%"    
+    width="100%"
     layoutType="stripped"
     layoutOrientation="horizontal"
     parentIdMemberPath="parent"
@@ -100,9 +100,9 @@ The following code demonstrates how to setup the Treemap.
     labelMemberPath="name"
     valueMemberPath="pop"
     transitionDuration="500"
-    rootTitle="Countries"   
-    >           
-</igx-treemap>   
+    rootTitle="Countries"
+    >
+</igx-treemap>
 ```
 
 <div class="divider--half"></div>
