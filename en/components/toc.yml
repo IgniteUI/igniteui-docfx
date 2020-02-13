@@ -865,6 +865,18 @@
     - name: Component Themes
       href: themes/component-themes.md
       new: false
+    - name: Predefined Themes
+      new: true
+      items:
+        - name: material
+          href: themes/themes-list/material.md
+          new: false
+        - name: Fluent
+          href: themes/themes-list/fluent.md
+          new: true
+        - name: Bootstrap
+          href: themes/themes-list/bootstrap.md
+          new: true
     - name: Examples
       href: themes/examples.md
       new: false
