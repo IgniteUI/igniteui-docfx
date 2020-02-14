@@ -25,11 +25,11 @@ _language: kr
 
 다음 표에는 모든 유형의 분산 마커 시리즈와 그 설명이 표시되어 있습니다.
 
-| 시리즈 이름                                                                                                                                                             | 설명                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)             | ```XMemberPath`` 와``` \`YMemberPath`` 속성에 매핑 된 데이터 포인트의 표식을 표시합니다. |
-| [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                                    |
-| [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                           |
+| 시리즈 이름                                                                                                                                                             | 설명                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)             | `XMemberPath` 와 `YMemberPath` 속성에 매핑 된 데이터 포인트의 표식을 표시합니다. |
+| [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                            |
+| [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                   |
 
 ### 필요한 축
 
