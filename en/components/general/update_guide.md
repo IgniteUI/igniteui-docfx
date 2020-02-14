@@ -16,9 +16,6 @@ First run the [**`ng update`**](https://angular.io/cli/update) command which wil
 ng update
 ```
 
-> [!NOTE]
-> We recommend you to commit all your changes before proceeding with the update. 
-
 To update the **Ignite UI for Angular** package run the following command:
 ```cmd
 ng update igniteui-angular
