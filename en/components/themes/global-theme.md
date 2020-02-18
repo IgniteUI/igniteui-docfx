@@ -19,7 +19,7 @@ To generate a global theme we're going to be including two mixins `igx-core` and
 | Name                 |  Type    | Default            | Description                                                                           |
 | :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
 | `$print-layout`      | boolean  | true               | include/exclude the styles for printing                                               |
-| `$direction`         | Keyword  | ltr                | Specifies the text content direction for all components can be `ltr` or `rtl`         |
+| `$direction`         | Keyword  | ltr                | Specifies the content direction for all components can be `ltr` or `rtl`              |
 
 
 #### igx-theme  
@@ -30,8 +30,8 @@ To generate a global theme we're going to be including two mixins `igx-core` and
 | `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                                           |
 | `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                                               |
 | `$legacy-support` | boolean | `true`             | Determines the theming strategy - if set to false, theming is done via CSS variables.                          |
-| `$roundness`      | Number  |  null              | Sets the global roundness factor (the value can be any decimal fraction between 0 and 1) for all components..  |
-| `$elevation`      | boolean | `true`             | Determines the theming strategy - if set to false, theming is done via CSS variables.                          |
+| `$roundness`      | Number  |  null              | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1).   |
+| `$elevation`      | boolean | `true`             | Sets the global elevation for all components that come with elevation.                                           |
 
 
 Let's create a custom global theme that will use the primary and secondary colors of our company.
@@ -93,25 +93,24 @@ Here's a quick showcase of how you can create a light and dark theme for your ap
 ```
 Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
 
-#### Available themes
+#### Available Themes
 IgniteUI for angular gives you the option to pick from a set of predefined themes.  
 The table below shows all the built-in themes that you can use right away.
 
-| Theme               | Mixin                        |  Schema                   |  color palette                                          | Available in version |
-|---------------------|------------------------------|---------------------------|---------------------------------------------------------|----------------------|
-| **Material (base)** |  igx-theme()                 | `$light-schema          ` | $default-palette                                        |      **all**         |
-| **Material (light)**|  igx-light-theme()           | `$light-schema          ` | $default-palette                                        |      **6.2 +**       |
-| **Material (dark)** |  igx-dark-theme()            | `$dark-schema           ` | $dark-palette                                           |      **6.2 +**       |
-| **Fluent**          |  igx-fluent-theme()          | `$light-fluent-schema   ` | $fluent-excel-palette <br> $fluent-word-palette           |      **8.2 +**       |
-| **Fluent**          |  igx-fluent-theme()          | `$light-fluent-schema   ` | $fluent-excel-palette <br> $fluent-word-palette           |      **8.2 +**       |
-| **Fluent (dark)**   |  igx-fluent-dark-theme()     | `$dark-fluent-schema    ` | $fluent-excel-dark-palette or $fluent-word-dark-palette |      **8.2 +**       |
-| **Bootstrap**       |  igx-bootstrap-theme()       | `$light-bootstrap-schema` | $bootstrap-palette                                      |      **9.0 +**       |
-| **Bootstrap (dark)**|  igx-bootstrap-dark-theme()  | `$dark-bootstrap-schema ` | $bootstrap-dark-palette                                 |      **9.0 +**       |
+| Theme                                                                        | Mixin                                                                                             |  Schema                   |  color palette                                            | Available in version |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
+| [**Material (base)**](./themes-list/material.html)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
+| [**Material (light)**](./themes-list/material.html)                          |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-schema          ` | $default-palette                                          |      **6.2 +**       |
+| [**Material (dark)**](./themes-list/material.html)                           |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-schema           ` | $dark-palette                                             |      **6.2 +**       |
+| [**Fluent**](./themes-list/fluent.html)                                      |  [igx-fluent-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-theme)                 | `$light-fluent-schema   ` | $fluent-excel-palette <br> $fluent-word-palette           |      **8.2 +**       |
+| [**Fluent (dark)**](./themes-list/fluent.html)                               |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $fluent-excel-dark-palette <br> $fluent-word-dark-palette |      **8.2 +**       |
+| [**Bootstrap**](./themes-list/bootstrap.html)                                |  [igx-bootstrap-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstra-theme)            | `$light-bootstrap-schema` | $bootstrap-palette                                        |      **9.0 +**       |
+| [**Bootstrap (dark)**](./themes-list/bootstrap.html)                         |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstra-dark-theme)  | `$dark-bootstrap-schema ` | $bootstrap-dark-palette                                   |      **9.0 +**       |
 
-> [!IMPORTANT]
-> keep in mind that all theme extend the `base` theme `igx-theme`.
+> [!NOTE]
+> Note that all high-level theme mixins wrap the base `igx-theme` mixin.
 
-All themes can be used as a starting point to create your own theme. For example lets start our theme by using `igx-bootstrap-theme` as a starting point.
+All theme mixins can be used as a starting point to create your own theme. Let's create a new theme by using the `igx-bootstrap-theme` mixin.
 
 ```scss
 // Import the IgniteUI themes library first
@@ -127,7 +126,7 @@ $my-color-palette: igx-palette(
 
 // IMPORTANT: Make sure you always include igx-core first!
 @include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
+// Pass the color palette we generated to the igx-bootstrap-theme mixin
 @include igx-bootstrap-theme($my-color-palette);
 ```
 
