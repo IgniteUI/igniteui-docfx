@@ -860,7 +860,7 @@
     - name: Predefined Themes
       new: true
       items:
-        - name: material
+        - name: Material
           href: themes/themes-list/material.md
           new: false
         - name: Fluent
