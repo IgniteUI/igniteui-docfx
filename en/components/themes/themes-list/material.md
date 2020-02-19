@@ -41,11 +41,6 @@ $my-color-palette: igx-palette(
     // Since all individual components use the $default-palette by default, if you don't specify the rest of the colors like $info and $error they will use their default values from the $default-palette
 );
 
-$my-palette: igx-palette(
-  $primary: #09f,
-  $secondary: #ff4ba4,
-);
-
 @include igx-theme($my-color-palette, $schema: $dark-schema);
 ```
 
