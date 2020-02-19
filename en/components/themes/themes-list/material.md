@@ -35,7 +35,7 @@ $my-color-palette: igx-palette(
     // IMPORTANT, the primary and secondary colors are required
     $primary: $primary-color,
     $secondary: $secondary-color,
-    // The $grays will ensure that all the black text, borders, etc  will 
+    // The $grays will ensure that all the black text, borders, etc will 
     // become a shade of whites in order to be visible in the dark theme
     $grays: #fff 
     // Since all individual components use the $default-palette by default, if you don't specify the rest of the colors like $info and $error they will use their default values from the $default-palette
