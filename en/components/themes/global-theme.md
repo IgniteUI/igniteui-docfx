@@ -94,7 +94,7 @@ Here's a quick showcase of how you can create a light and dark theme for your ap
 Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
 
 #### Available Themes
-IgniteUI for angular gives you the option to pick from a set of predefined themes.  
+Ignite UI for Angular gives you the option to pick from a set of predefined themes.
 The table below shows all the built-in themes that you can use right away.
 
 | Theme                                                                        | Mixin                                                                                             |  Schema                   |  color palette                                            | Available in version |
