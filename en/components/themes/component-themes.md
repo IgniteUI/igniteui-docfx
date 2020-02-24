@@ -144,14 +144,14 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 With the code above we've created a version of the `igx-avatar`, which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' in other `igx-avatar` component instances, and thus stays encapsulated within our custom `app-avatar` component.
 <div class="divider"></div>
 
-### Hard Values
+### Targeting Older Browsers
 <div class="divider--half"></div>
 
-In the [overview](#overview) section I mentioned you could use hard values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
+In the [overview](#overview) section I mentioned you could use hard-coded values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
 
 #### Usage in global themes
 
-The below example shows how you can style components using hard value variables.
+The below example shows how you can style components using hard-coded values.
 
 ```scss
 // Import the IgniteUI themes library first
@@ -161,7 +161,7 @@ The below example shows how you can style components using hard value variables.
 @include igx-theme($default-palette, $legacy-support: true);
 
 // Overwrite the default themes for igx-avatar and igx-badge
-// using hard values;
+// using hard-coded values;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $badge-theme: igx-badge-theme($background-color: white);
 
