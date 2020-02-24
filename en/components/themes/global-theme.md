@@ -14,7 +14,16 @@ If you've included the _`igniteui-angular.css`_ file in your application project
 **Ignite UI for Angular** uses a global theme by default to theme the entire suite of components. You can, however, create themes scoped to components you have in your app, depending on your use case. For now, we will be including all of our themes in a single file.
 To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`; both of those mixins accepts a few arguments: 
 
+<<<<<<< HEAD
 #### igx-core  
+=======
+| Name              |  Type   | Default            | Description                                                                           |
+| :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
+| `$palette`        | map     | undefined          | The palette map to be used to by the default themes of all components.                |
+| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                  |
+| `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                      |
+| `$legacy-support` | boolean | `false`             | Determines the theming strategy - if set to true, theming is done via hard-coded values. |
+>>>>>>> 7e2025b2... docs(theme): update docs related to themes
 
 | Name                 |  Type    | Default            | Description                                                                           |
 | :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
@@ -132,7 +141,7 @@ $my-color-palette: igx-palette(
 ### Browser Support
 <div class="divider--half"></div>
 
-The value of `$igx-legacy-support` is quite important as it determines how component themes will work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
+The value of `$igx-legacy-support` is quite important as it determines how component themes will work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
 
 The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming.
 
