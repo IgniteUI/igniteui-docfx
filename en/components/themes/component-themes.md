@@ -144,31 +144,30 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 With the code above we've created a version of the `igx-avatar`, which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' in other `igx-avatar` component instances, and thus stays encapsulated within our custom `app-avatar` component.
 <div class="divider"></div>
 
-### CSS Variables
+### Hard Values
 <div class="divider--half"></div>
 
-In the [overview](#overview) section I mentioned you could use CSS variables to style your components by setting the `$igx-legacy-support` global variable to `false`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `false` it will set the `$igx-legacy-support` to `false`, too. This enables you to use a special mixin `igx-css-vars` to style Ignite UI for Angular components without duplicating any styles.
-
-The `igx-css-vars` mixing accepts one argument - a component theme.
+In the [overview](#overview) section I mentioned you could use hard values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
 
 #### Usage in global themes
 
-The below example shows how you can style multiple components using just CSS variables.
+The below example shows how you can style components using hard value variables.
 
 ```scss
 // Import the IgniteUI themes library first
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
-@include igx-theme($default-palette, $legacy-support: false);
+@include igx-theme($default-palette, $legacy-support: true);
 
 // Overwrite the default themes for igx-avatar and igx-badge
-// using only css variables;
+// using hard values;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $badge-theme: igx-badge-theme($background-color: white);
 
-@include igx-css-vars($avatar-theme);
-@include igx-css-vars($badge-theme);
+@include igx-avatar($avatar-theme);
+@include igx-badge($badge-theme);
+
 ```
 <div class="divider"></div>
 
@@ -180,25 +179,12 @@ The below sample uses the sample from the [View Encapsulation](#view-encapsulati
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component'; 
-// Disable legacy support first.
-$igx-legacy-support: false;
+// Enable legacy support first.
+$igx-legacy-support: true;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 :host ::ng-deep {
-    // We still need to include the base avatar styles just once.
-    @include igx-avatar(igx-avatar-theme());
-
-    // Pass the theme to overwrite the default root vars.
-    @include igx-css-vars($avatar-theme);
-}
-```
-As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `false` will allow styling of components without the need to use Sass in your project. For instance the above could be achieved by setting the value of `--igx-avatar-initials-background` CSS variable to the desired color:
-
-```css
-/* app-avatar.component.css */
-
-:host ::ng-deep {
-    --igx-avatar-initials-background: royalblue;
+    @include igx-avatar($avatar-theme);
 }
 ```
 <div class="divider"></div>
