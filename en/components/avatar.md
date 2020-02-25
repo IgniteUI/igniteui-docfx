@@ -150,7 +150,7 @@ The last step is to **include** the component mixins:
 
 You should see something like this:
 
-<div class="sample-container loading" style="height:100px">
+<div class="sample-container loading" style="height:120px">
     <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
