@@ -233,11 +233,9 @@ $my-color-palette: igx-palette(
 
 Since Ignite UI for Angular bases its component designs on the [Material Design Principles](https://material.io/guidelines/material-design/introduction.html), we try to get as close as possible to colors, sizes, typography, and the overall look and feel of our components to those created by Google. Here is an [Example](https://www.infragistics.com/angular-demos-lob/grid-crm): 
 
-```html
 <div class="sample-container loading" style="height: 477px">
     <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-```
 
 We want to also mention our samples browser Theming widget. Now, you can change themes at runtime in the [Ignite UI sample browser](http://www.infragistics.com//angularsite/components/grid/grid.html) with just one click. Theming widget allows you to change the styles, colors, roundness, and elevation. Customization of theming has never been easier. Once you are ready with your theme, just press "DOWNLOAD SASS" and you have your SCSS file at your disposal and you can use it in your app. Here is a [Gif example](https://www.infragistics.com/community/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-09-43/1882.ThemeingWidget1.gif)
 
@@ -259,7 +257,7 @@ Grid components, in general, are intended to visualize large quantities of tabul
 
 In order to satisfy the requirements of a web application for load time and run-time performance, it is important to virtualize the Document Object Model (DOM) elements that are rendered, and to either swap or reuse DOM elements when the user performs vertical and horizontal scrolling on the component’s container. The igxGrid has great tun-time scrolling performance without visual tears as well as soft performance (defined by the general usability of your software). Here’s an example of a Gif with scrolling performance: 
 
-https://miro.medium.com/max/1302/1*tdUeSwIiKN-rVMjwryAb5w.gif
+<img class="b-lazy" src="../../images/general/scrolling.gif" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/i../../images/general/scrolling.gif" data-srcset="../../images/general/scrolling.gif 480w, ../../images/general/scrolling.gif 768w, ../../images/general/scrolling.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Scrolling performance">
 
 Check out our Grid and see how easy it is to find and navigate to the feature you want to use, or how appealing the look and feel of it would be in your application. 
 

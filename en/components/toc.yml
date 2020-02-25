@@ -1,5 +1,8 @@
 - name: General
   header: true
+- name: Angular Grid and Angular App Development- A Complete Guide 
+  href: general/angular-grid-overview-guide.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
