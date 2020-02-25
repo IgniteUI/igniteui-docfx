@@ -148,6 +148,17 @@ The last step is to **include** the component mixins:
 }
 ```
 
+You should see something like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    </button>
+</div>
+<div class="divider--half"></div>
+
 ### API References
 <div class="divider--half"></div>
 
