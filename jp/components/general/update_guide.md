@@ -17,9 +17,6 @@ Ignite UI for Angular パッケージは `ng update` Schematics で自動バー�
 ng update
 ```
 
-> [!NOTE]
-> アップデートする前にすべての変更をコミットすることをお勧めします。 
-
 **Ignite UI for Angular** パッケージを更新するには、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-angular
@@ -76,6 +73,16 @@ import { HammerModule } from "@angular/platform-browser";
     ]
 })
 ```
+エクスポートで名前が変更された `Enumeration` があるため、メンバーを手動で更新する必要があります。以下は、手動の更新が必要なすべての変更のリストです。
+
+* AvatarType.`DEFAULT` -> IgxAvatarType.`CUSTOM`
+* Type.`DEFAULT` -> IgxBadgeType.`PRIMARY`
+* IgxCardType.`DEFAULT` -> IgxCardType.`ELEVATED`
+* IgxCardActionsLayout.`DEFAULT` -> IgxCardActionsLayout.`START`
+* IgxDividerType.`DEFAULT` -> IgxDividerType.`SOLID`
+* IgxProgressType.`DANGER` -> IgxProgressType.`ERROR`
+
+`ng update` プロセスは、`AvatarType`、`Type` などのすべての列挙名を `IgxAvatarType` と `IgxBadgeType` にそれぞれ更新します。その他の列挙メンバー名は変更されません。 
 
 ### 8.1.x から 8.2.x の場合:
 
