@@ -9,7 +9,7 @@
   new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
-  new: false
+  new: true
   items:
     - name: ステップバイステップガイド
       href: general/cli/step-by-step-guide.md
@@ -22,7 +22,7 @@
       new: false
 - name: WPF-Angular 比較ガイド
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
-  new: true
+  new: false
   items:
     - name: はじめての Angular アプリを作成
       href: general/wpf_to_angular_guide/create_first_angular_app.md
@@ -120,17 +120,17 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: grid/row_selection.md
-          new: true
+          new: false
         - name: セル選択
           href: grid/cell_selection.md
-          new: true
+          new: false
         - name: 選択に基づいた集計
           href: grid/selection_based_aggregates.md
-          new: true
+          new: false
     - name: 検索
       href: grid/search.md
       new: false
@@ -154,7 +154,7 @@
       new: false
     - name: 条件付きセルのスタイル設定
       href: grid/conditional_cell_styling.md
-      new: true
+      new: false
     - name: キーボード ナビゲーション
       href: grid/keyboard_navigation.md
       new: false
@@ -163,10 +163,10 @@
       new: false
     - name: クリップボード操作
       href: grid/clipboard_interactions.md
-      new: true
+      new: false
     - name: サイズ変更
       href: grid/sizing.md
-      new: true
+      new: false
     - name: Grid Master-Detail
       href: grid/master_detail.md
       new: true
@@ -209,7 +209,7 @@
       new: false
     - name: Excel スタイルフィルタリング
       href: treegrid/excel_style_filtering.md
-      new: false
+      new: true
     - name: 高度なフィルタリング
       href: treegrid/advanced_filtering.md
       new: true
@@ -218,7 +218,7 @@
       new: false
     - name: 集計
       href: treegrid/summaries.md
-      new: false
+      new: true
     - name: 列移動
       href: treegrid/column_moving.md
       new: false
@@ -233,14 +233,14 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: treegrid/row_selection.md
-          new: true
+          new: false
         - name: セル選択
           href: treegrid/cell_selection.md
-          new: true
+          new: false
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -261,7 +261,7 @@
       new: false
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional_cell_styling.md
-      new: true
+      new: false
     - name: 集計
       href: treegrid/aggregations.md
       new: false
@@ -270,13 +270,13 @@
       new: false
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
-      new: true
+      new: false
     - name: サイズ変更
       href: treegrid/sizing.md
-      new: true
+      new: false
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: false
+  new: true
   items:
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
@@ -307,7 +307,7 @@
       new: false
     - name: Excel スタイルフィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
-      new: false
+      new: true
     - name: 高度なフィルタリング
       href: hierarchicalgrid/advanced_filtering.md
       new: true
@@ -316,7 +316,7 @@
       new: false
     - name: 集計
       href: hierarchicalgrid/summaries.md
-      new: false
+      new: true
     - name: 列移動
       href: hierarchicalgrid/column_moving.md
       new: false
@@ -331,11 +331,11 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
-          new: true
+          new: false
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -364,7 +364,7 @@
       new: false
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
-      new: true
+      new: false
 - name: List View
   href: list.md
 - name: Combo
@@ -376,23 +376,23 @@
       new: false
     - name: リモートバインド
       href: combo_remote.md
-      new: true
+      new: false
     - name: テンプレート
       href: combo_templates.md
       new: false
     - name: カスケーディング
       href: combo_cascading.md
-      new: true
+      new: false
 - name: Spreadsheet
   href: spreadsheet_overview.md
-  new: true
+  new: false
   items:
      - name: アクティブ化
        href: spreadsheet_activation.md
        new: false
      - name: チャート アダプター
        href: spreadsheet_chart_adapter.md
-       new: true
+       new: false
      - name: クリップボード
        href: spreadsheet_clipboard.md
        new: false
@@ -451,7 +451,7 @@
       items:
         - name: 軸の注釈
           href: data-chart-axis-annotations.md
-          new: true
+          new: false
         - name: 軸設定
           href: data-chart-axis-settings.md
           new: false
@@ -650,7 +650,7 @@
       new: false
     - name: 同期
       href: data-chart-synchronization.md
-      new: true
+      new: false
     - name: タイトルとサブタイトル
       href: data-chart-titles.md
       new: false
@@ -720,12 +720,12 @@
 #      new: false
 - name: スパークライン
   href: sparkline.md
-  new: true
+  new: false
 - name: マップ
   header: true
 - name: ツリーマップ
   href: treemap-overview.md
-  new: true
+  new: false
 - name: マップ
   href: geo-map.md
   new: false
@@ -750,19 +750,19 @@
       new: false
     - name: Bing 画像の表示
       href: geo-map-display-bing-imagery.md
-      new: true
+      new: false
     - name: Esri 画像
       href: geo-map-display-esri-imagery.md
-      new: true
+      new: false
     - name: ヒート画像の表示
       href: geo-map-display-heat-imagery.md
-      new: true
+      new: false
     - name: OSM 画像の表示
       href: geo-map-display-osm-imagery.md
-      new: true
+      new: false
     - name: マップコンテンツのナビゲーション
       href: geo-map-navigation.md
-      new: true
+      new: false
     - name: 散布エリアシリーズ
       href: geo-map-type-scatter-area-series.md
       new: false
@@ -845,6 +845,7 @@
   header: true
 - name: Themes
   href: themes/index.md
+  new: true
   items:
     - name: パレット
       href: themes/palette.md
@@ -854,7 +855,8 @@
     - name: タイポグラフィ
       href: themes/typography.md
     - name: グローバルテーマ
-      href: themes/global-theme.md
+      href: 
+      new: true
     - name: コンポーネントテーマ
       href: themes/component-themes.md
       new: false
@@ -877,13 +879,13 @@
   items:
     - name: 仮想ドロップダウン
       href: drop_down_virtual.md
-      new: true
+      new: false
 - name: Select
   href: select.md
   new: true
 - name: Autocomplete
   href: autocomplete.md
-  new: true
+  new: false
 - name: Button
   href: button.md
 - name: Button Group
@@ -912,7 +914,7 @@
   href: icon.md
 - name: Divider
   href: divider.md
-  new: true
+  new: false
 - name: Linear Progress
   href: linear_progress.md
 - name: Circular Progress
@@ -934,7 +936,8 @@
   new: true
   items:
     - name: スライダー目盛り
-      href: slider/slider_ticks.md
+      href: 
+      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -954,7 +957,7 @@
     new: false
   - name: スタイル設定
     href: overlay_styling.md
-    new: true
+    new: false
 - name: Drag and Drop
   href: drag_drop.md
   new: true
@@ -973,6 +976,7 @@
   href: layout.md
 - name: Carousel
   href: carousel.md
+  new: true
 - name: Bottom Navigation
   href: tabbar.md
 - name: Tabs
@@ -984,12 +988,12 @@
   href: avatar.md
 - name: Expansion Panel
   href: expansion_panel.md
-  new: true
+  new: false
 - name: 通知
   header: true
 - name: Banner
   href: banner.md
-  new: true
+  new: false
 - name: Snackbar
   href: snackbar.md
 - name: Toast
@@ -1002,7 +1006,7 @@
   href: date_picker.md
 - name: Month Picker
   href: month_picker.md
-  new: true
+  new: false
 - name: Time Picker
   href: time_picker.md
   new: false
@@ -1019,11 +1023,11 @@
   new: false
 - name: トランザクションサービス
   href: transaction.md
-  new: true
+  new: false
   items:
     - name: トランザクションサービスクラス階層
       href: transaction-classes.md
-      new: true
+      new: false
     - name: トランザクションサービスの使用方法
       href: transaction-how-to-use.md
-      new: true
+      new: false
