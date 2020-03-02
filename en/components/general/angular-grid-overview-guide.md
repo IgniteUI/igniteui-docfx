@@ -28,17 +28,17 @@ Among its many benefits, Ignite UI for Angular offers easy integration, rapid de
 
 ### Installing and Creating a Project 
 
-You can install Ignite UI for Angular with either the Angular CLI or with the [Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html). To start quickly with the Angular CLI, run the following command: 
+You can install Ignite UI for Angular with either the Angular CLI or with the [Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html "Ignite UI CLI Overview page"). To start quickly with the Angular CLI, run the following command: 
 
 `ng add igniteui-angular` 
 
-This is the preferred option when you need to add Ignite UI for Angular to an [existing Angular application](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html#installing-ignite-ui-for-angular). 
+This is the preferred option when you need to add Ignite UI for Angular to an [existing Angular application](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html#installing-ignite-ui-for-angular "Installing Ignite UI for Angular"). 
 
 If you’re creating a new application from scratch, we recommend the following approach: 
 
 `npm install –g igniteui-cli` 
 
-Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide.html), which builds a configured app that the end user can run with a single command: 
+Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide.html "Step by step guide"), which builds a configured app that the end user can run with a single command: 
 
 `ig` 
 
@@ -48,11 +48,11 @@ Use this rich set of cli commands to perform other functions, including generati
 
 When it comes to importing product dependencies, we strongly recommend using our Ignite UI CLI. By simply using `ng add igniteui-angular` you can install the Ignite UI for Angular package, along with all of its dependencies, font imports, styles preferences, and more  to your project. 
 
-To start using Ignite UI for Angular components without the Ignite UI CLI, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this manually in the [Getting started](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic. 
+To start using Ignite UI for Angular components without the Ignite UI CLI, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this manually in the [Getting started](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation "Getting Started with Ignite UI for Angular") topic. 
 
 ### Adding Components to a Template 
 
-Once you finish with the development environment setup, you can continue adding and configuring other Ignite UI components. Here’s how to use [our schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#add-template) to add a grid with basic configuration and add templates to some of our columns. 
+Once you finish with the development environment setup, you can continue adding and configuring other Ignite UI components. Here’s how to use [our schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#add-template "Ignite UI CLI Overview page") to add a grid with basic configuration and add templates to some of our columns. 
 
 ```html
 <igx-grid #grid1 [data]="localData" [paging]="true" [perPage]="10" height="600px" (onSelection)="cellSelection($event)">
@@ -159,7 +159,7 @@ export class MyComponent implements OnInit {
     ...
 </igx-grid>
 ```
-Check out our [Data-binding topic](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid.html#data-binding) for more detailed information. 
+Check out our [Data-binding topic](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid.html#data-binding "igxGrid Data Binding topic") for more detailed information. 
 
 The same data binding technique is applicable to the other Ignite UI components, such as the igxDataChart.
 
@@ -199,13 +199,13 @@ Angular data grids support easy sorting, filtering, and pagination. With rich AP
 
 The Grid provides three types of Filtering with custom filtering conditions: 
 
- - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-filtering-overview) per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
+ - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-filtering-overview "Grid filtering Overview topic") per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
 
- - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
+ - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Excel-style Filtering Overview topic"), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
 
- - [Advanced filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html) that provides a dialog which allows the creation of groups with filtering conditions across all columns. 
+ - [Advanced filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html "Advanced Filtering Overview topic") that provides a dialog which allows the creation of groups with filtering conditions across all columns. 
 
-Our [Angular 9 release](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release) includes plenty of new key features – from data analysis to a rich visualization, grid state persistence, and theming widget. 
+Our [Angular 9 release](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release "Ignite UI for Angular 9.0.0 Release") includes plenty of new key features – from data analysis to a rich visualization, grid state persistence, and theming widget. 
 
 ### Styling Your Components 
 
@@ -231,24 +231,25 @@ $my-color-palette: igx-palette(
 @include igx-theme($my-color-palette);
 ```
 
-Since Ignite UI for Angular bases its component designs on the [Material Design Principles](https://material.io/guidelines/material-design/introduction.html), we try to get as close as possible to colors, sizes, typography, and the overall look and feel of our components to those created by Google. Here is an example:
+Since Ignite UI for Angular bases its component designs on the [Material Design Principles](https://material.io/guidelines/material-design/introduction.html "Introduction to Material Design"), we try to get as close as possible to colors, sizes, typography, and the overall look and feel of our components to those created by Google. Example:
 
 <div class="sample-container loading" style="height: 477px">
     <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
-We want to also mention our samples browser Theming widget. Now, you can change themes at runtime in the [Ignite UI sample browser](http://www.infragistics.com//angularsite/components/grid/grid.html) with just one click. Theming widget allows you to change the styles, colors, roundness, and elevation. Customization of theming has never been easier. Once you are ready with your theme, just press "DOWNLOAD SASS" and you have your SCSS file at your disposal and you can use it in your app: 
+We want to also mention our samples browser Theming widget. Now, you can change themes at runtime in the [Ignite UI sample browser](http://www.infragistics.com/angularsite/components/grid/grid.html "Data Grid Overview and Configuration") with just one click. Theming widget allows you to change the styles, colors, roundness, and elevation. Customization of theming has never been easier. Once you are ready with your theme, just press "DOWNLOAD SASS" and you have your SCSS file at your disposal and you can use it in your app: 
 
 <img class="b-lazy" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc;" 
     src="../../images/general/ThemeingWidget1.gif" 
     data-src="../../images/general/ThemeingWidget1.gif" 
     data-srcset="../../images/general/ThemeingWidget1.gif 480w, ../../images/general/ThemeingWidget1.gif 768w, ../../images/general/ThemeingWidget1.gif 1100w" 
     sizes="45vw" 
-    alt="Theming widget example">
+    alt="Theming widget example"
+    title="The Theming widget is using Ignite UI powerful theming framework.">
 
 ### Data Analysis with Ignite UI 
 
-The Ignite Angular UI toolset also includes [data analysis capabilities](https://www.infragistics.com//angularsite/components/general/framework-and-features/data-analysis.html). We strive to give you all of the business capabilities you will need to deliver great experiences to your customers. So, we now provide directives that will give you a more Excel-like experience. For example, by selecting a portion of data you are now able to click a button and perform a quick data analysis on that subset of your data. 
+The Ignite Angular UI toolset also includes [data analysis capabilities](https://www.infragistics.com//angularsite/components/general/framework-and-features/data-analysis.html "Data Analysis with igxGrid and igxDataChart"). We strive to give you all of the business capabilities you will need to deliver great experiences to your customers. So, we now provide directives that will give you a more Excel-like experience. For example, by selecting a portion of data you are now able to click a button and perform a quick data analysis on that subset of your data. 
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data" class="lazyload"></iframe>
@@ -256,7 +257,7 @@ The Ignite Angular UI toolset also includes [data analysis capabilities](https:/
 
 ### Tools for Code Generation and Design 
 
-Ignite UI for Angular is part of the [Indigo.Design System](https://www.infragistics.com/products/indigo-design/help/video-tutorials.html) which lets you [generate native Angular code](https://www.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html) from designs created in Sketch with the [Indigo.Design UI Kit](https://www.infragistics.com/products/indigo-design/help/creating-an-artboard.html). You can generate a mobile-friendly or data-dense grid supporting various editing and filtering modes, but you can also use many of the popular grid features such as sorting, paging, summaries, and group by. Moreover, on every column you can specify various operations like moving, resizing, hiding, and pinning to achieve the most sophisticated data manipulations scenarios at design time and have a pixel-perfect user interface running in minutes. 
+Ignite UI for Angular is part of the [Indigo.Design System](https://www.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design System") which lets you [generate native Angular code](https://www.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio Plugin") from designs created in Sketch with the [Indigo.Design UI Kit](https://www.infragistics.com/products/indigo-design/help/creating-an-artboard.html "Indigo Design Creating an artboard"). You can generate a mobile-friendly or data-dense grid supporting various editing and filtering modes, but you can also use many of the popular grid features such as sorting, paging, summaries, and group by. Moreover, on every column you can specify various operations like moving, resizing, hiding, and pinning to achieve the most sophisticated data manipulations scenarios at design time and have a pixel-perfect user interface running in minutes. 
 
 ### Performance Benchmarks 
 
@@ -269,8 +270,9 @@ In order to satisfy the requirements of a web application for load time and run-
     data-src="../../images/general/scrolling.gif" 
     data-srcset="../../images/general/scrolling.gif 480w, ../../images/general/scrolling.gif 768w, ../../images/general/scrolling.gif 1100w" 
     sizes="50vw" 
-    alt="Scrolling performance">
+    alt="Scrolling performance"
+    title="igxGrid virtual scrolling performance">
 
 Check out our Grid and see how easy it is to find and navigate to the feature you want to use, or how appealing the look and feel of it would be in your application. 
 
-Learn more about this in our [Medium Software Performance (Web) article](https://medium.com/ignite-ui/software-performance-web-61158c8583d). 
+Learn more about this in our [Medium Software Performance (Web) article](https://medium.com/ignite-ui/software-performance-web-61158c8583d "Web Software Performance"). 
