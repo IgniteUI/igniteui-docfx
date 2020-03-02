@@ -23,4 +23,4 @@ By the default, the Ignite UI for Angular map component displays geographic imag
 
 ### Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the [`OpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/openstreetmapimagery.html) object which provides geographic imagery tile from the Open Street Maps.
+This code example explicitly sets `BackgroundContent` of the map component to the [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) object which provides geographic imagery tile from the Open Street Maps.
