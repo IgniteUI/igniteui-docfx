@@ -23,9 +23,7 @@ Angular Financial Chart  コンポーネントは大量のデータを処理で�
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 
-> 注:
-> Angular:
-> コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush`  を設定します。Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
+コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush`  を設定します。Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
 
 以下のコードはファイナンシャル チャートを大量データにバインドします。
 

@@ -57,13 +57,13 @@ $ ProductName $ スパークライン コンポーネントは、以下のスパ
 -   `Area`
 -   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)
 -   `Line`
--   `Win/Loss`
+-   `WinLoss`
 
 タイプは [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では `Line` 型が表示されます。
 
-`Win/Loss` スパークライン タイプは、柱状のチャート タイプです。ここでは、各列の値はデータセットの正の最大値 (正の値の場合) または負の最小値 (負の値の場合) に等しくなり、多くの場合 Win または Loss  (または似たような相反する概念) を意味します。`Win/Loss` スパークラインを正しく表示するには、データセットには正の値と負の値が必要です。
+`WinLoss` スパークライン タイプは、柱状のチャート タイプです。ここでは、各列の値はデータセットの正の最大値 (正の値の場合) または負の最小値 (負の値の場合) に等しくなり、多くの場合 Win または Loss  (または似たような相反する概念) を意味します。`WinLoss` スパークラインを正しく表示するには、データセットには正の値と負の値が必要です。
 
-`Win/Loss` スパークラインが、数値のコレクションにバインドできる `Line` タイプなどの他のタイプと同じデータにバインドされている場合、スパークライン コンポーネントはそのコレクションから最大値と最小値の 2 つの値を選択し、それらの値に基づいてスパークラインをレンダリングします。
+`WinLoss` スパークラインが、数値のコレクションにバインドできる `Line` タイプなどの他のタイプと同じデータにバインドされている場合、スパークライン コンポーネントはそのコレクションから最大値と最小値の 2 つの値を選択し、それらの値に基づいてスパークラインをレンダリングします。
 
 ```html
 <igx-sparkline height="200px" width="400px"
@@ -84,7 +84,7 @@ $ ProductName $ スパークライン コンポーネントは、以下のスパ
 
 ### マーカー
 
-Ignite UI for Angular スパークライン コンポーネントを使用すると、マーカーをシリーズ上の円形のアイコンとして表示して、X/Y 座標に基づいて個々のデータポイントを示すことができます。マーカーは、表示タイプが Line、Area、および Column のスパークラインに設定できます。`Win/Loss` 型のスパークラインは、現在マーカーを設定できません。既定では、マーカーは表示されません。
+Ignite UI for Angular スパークライン コンポーネントを使用すると、マーカーをシリーズ上の円形のアイコンとして表示して、X/Y 座標に基づいて個々のデータポイントを示すことができます。マーカーは、表示タイプが Line、Area、および Column のスパークラインに設定できます。`WinLoss` 型のスパークラインは、現在マーカーを設定できません。既定では、マーカーは表示されません。
 
 スパークライン内のマーカーは、以下の場所を任意に組み合わせて配置できます。
 
@@ -221,3 +221,34 @@ Ignite UI for Angular スパークライン コンポーネントは、不明な
 </div>
 
 <div class="divider--half"></div>
+
+### データ グリッドのスパークライン
+
+Ignite UI for Angular スパークライン コンポーネントは、データ グリッドのテンプレート列またはテンプレートをサポートする他のコンポーネントに埋め込むことができます。以下のコード例ではその方法を示します。
+
+```html
+<igx-grid #grid1 [data]="data | async"
+[height]="'500px'" width="100%" [autoGenerate]='false' >
+    <!-- ... -->
+    <igx-column [field]="'OrderHistory'" [width]="'160px'" header="Order History" >
+        <ng-template igxCell let-val>
+            <igx-sparkline height="50px" width="150px"
+            [dataSource]="val"
+            valueMemberPath="Sold"
+            displayType="Line"
+            lineThickness="2"
+            brush="rgb(21, 190, 6)"  >
+            </igx-sparkline>
+        </ng-template>
+    </igx-column>
+    <!-- ... -->
+</igx-grid>
+```
+
+<div class="sample-container loading" style="height: 530px">
+    <iframe id="sparkline-grid-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-grid' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-grid-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+</div>
