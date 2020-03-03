@@ -59,7 +59,7 @@ The volume pane represents the number of shares traded during a given period. Lo
 
 ### Price Pane
 
-This pane displays stock prices and shows the stock's high, low, open and close prices over time. In addition it can display trend lines and overlays. Your end user can choose different chart types from the toolbar. By default, the chart type is set to `auto`. You can override the default setting, as demonstrated in the following code:
+This pane displays stock prices and shows the stock's high, low, open and close prices over time. In addition it can display trend lines and overlays. Your end user can choose different chart types from the toolbar. By default, the chart type is set to `Auto`. You can override the default setting, as demonstrated in the following code:
 
 ```html
 <igx-financial-chart
