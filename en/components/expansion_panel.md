@@ -228,7 +228,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
-@include igx-expansion-panel($custom-panel-theme);
+@include igx-css-vars($custom-panel-theme);
 ```
 
  >[!NOTE]
