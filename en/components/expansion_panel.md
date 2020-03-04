@@ -147,7 +147,7 @@ Our component will now render "Show More" when the panel is collapsed and "Show 
 
 The `IgxExpansionPanel` control allows all sorts of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.md), charts and even other expansion panels!
 
-For the seek of simplicity let's add some basic markup to the body of our expansion panel.
+For the sake of simplicity let's add some basic markup to the body of our expansion panel.
 ```html
 <!-- in expansion-panel.component.html -->
 ...
