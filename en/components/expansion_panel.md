@@ -16,7 +16,7 @@ _keywords: angular accordion, igniteui for angular, infragistics
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-First we need import the **IgxExpansionPanelModule** in our **app.module**:
+First, we need to import the **IgxExpansionPanelModule** in our **app.module**:
 ```typescript
 // app.module.ts
 ...
