@@ -233,7 +233,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 
  >[!NOTE]
  >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep`.
- On the other side, in order to prevent our custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+ In order to prevent our custom theme from leaking into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 // In expansion-styling.component.scss
