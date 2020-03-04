@@ -137,7 +137,7 @@ We can do that by passing content in an `igx-expansion-panel-icon` tag:
         <igx-expansion-panel-header [iconPosition]="'right'">
         ...
         <igx-expansion-panel-icon>
-            <span class="example-icon" *ngIf="panel.collapsed">Show more</span>
+            <span class="example-icon" *ngIf="panel.collapsed">Show More</span>
             <span class="example-icon" *ngIf="!panel.collapsed">Show Less</span>
         </igx-expansion-panel-icon>
         </igx-expansion-panel-header>
