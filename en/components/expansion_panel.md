@@ -62,7 +62,7 @@ The table below shows all the available markup parts for the expansion panel.
 | `igx-expansion-panel-body`        | This is the expandable container and it's only visible when the panel is expanded.                                     |
 
 
-### Properties Binding and events
+### Properties Binding and Events
 We can add some logic to our component to make it show/hide the `igx-expansion-panel-description` depending on the current state of the panel.  
 We can do this by binding the description to the control [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) property:
 
