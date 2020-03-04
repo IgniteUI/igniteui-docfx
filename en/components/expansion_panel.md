@@ -143,7 +143,7 @@ We can do that by passing content in an `igx-expansion-panel-icon` tag:
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-Our component will now render "Show More" when the panel is collapsed and "Show less" once it's fully expanded.
+Our component will now render "Show More" when the panel is collapsed and "Show Less" once it's fully expanded.
 
 The `IgxExpansionPanel` control allows all sorts of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.md), charts and even other expansion panels!
 
