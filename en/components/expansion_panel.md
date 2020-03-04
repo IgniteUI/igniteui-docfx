@@ -224,7 +224,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 > To see all the available parameters for styling trough the [`theming`](themes/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
 
 ### Applying the Component Theme
-Now to apply the component theme All that's left is to include `igx-expansion-panel` mixin and pass the `$custom-panel-theme` map.
+Now to apply the component theme all that's left is to include `igx-css-vars` mixin and pass the `$custom-panel-theme` map.
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
