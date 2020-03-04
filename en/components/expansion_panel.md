@@ -91,7 +91,7 @@ export class ExpansionPanelComponent {
 ```
 
 The following code sample will show the short description only when the component is in its collapsed state.
-If we want to add more complex functionality depending on the component state, we could also bind to a event emitter.
+If we want to add more complex functionality depending on the component state, we could also bind to an event emitter.
 ```typescript
 // in expansion-panel.component.ts
 
