@@ -181,7 +181,7 @@ You can see the styled sample below:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Define palette & colors
+### Palettes & Colors
 Fist we create a custom palette which can later be passed to our component:
 ```scss
 // In expansion-styling.component.scss
