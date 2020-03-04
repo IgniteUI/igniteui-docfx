@@ -8,7 +8,7 @@ _keywords: angular accordion, igniteui for angular, infragistics
     The [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The expansion panel can be toggled using mouse click, or keyboard interactions.
 </p>
 <div class="divider--half"></div>
-### Basic Usage
+### Usage
 <div class="sample-container loading" style="height: 320px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
