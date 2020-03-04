@@ -201,7 +201,7 @@ $my-color-palette: igx-palette(
 );
 ```
 
-### Create component theme
+### Creating the Component Theme
 Now lets create our component theme and pass the `$my-color-palette` palette from the above sniped.
 ```scss
 // In expansion-styling.component.scss
