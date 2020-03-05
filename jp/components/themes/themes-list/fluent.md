@@ -19,6 +19,6 @@ Word および Excel パレットをサポートしています。使用する�
 @include igx-fluent-dark-theme($fluent-excel-palette);
 ```
 
-### API Overview
+### API の概要
 * [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)
