@@ -855,11 +855,23 @@
     - name: タイポグラフィ
       href: themes/typography.md
     - name: グローバルテーマ
-      href: 
+      href: themes/global-theme.md
       new: true
     - name: コンポーネントテーマ
       href: themes/component-themes.md
       new: false
+    - name: 定義済みのテーマ
+      new: true
+      items:
+        - name: Material
+          href: themes/themes-list/material.md
+          new: false
+        - name: Fluent
+          href: themes/themes-list/fluent.md
+          new: true
+        - name: Bootstrap
+          href: themes/themes-list/bootstrap.md
+          new: true
     - name: テーマの例
       href: themes/examples.md
     - name: 印刷スタイル
