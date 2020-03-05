@@ -155,6 +155,64 @@ public columnPinning(event) {
 ```
 }
 
+### Pinning Position
+
+You can change the column pinning position via the [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) configuration option. It allows you to set the columns position to either Start or End.
+When set to End the columns are rendered at the end of the grid, after the unpinned columns. Unpinned columns can be scrolled horizontally, while the pinned columns remain fixed on the right.
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-grid>
+```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-tree-grid>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-hierarchical-grid>
+```
+}
+
+```typescript
+public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
+```
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:510px">
+    <iframe id="grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:510px">
+    <iframe id="hierarchical-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:510px">
+    <iframe id="tree-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### カスタム列ピン固定 UI
 
 カスタム UI を定義し、関連する API を介して列のピン状態を変更できます。
