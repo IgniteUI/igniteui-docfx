@@ -80,7 +80,7 @@ If all went well, you should see something like the following in the browser:
 </div>
 
 ####Avatar displaying image
-To get an avatar that dispalays an image, all you have to do is setting the image source via the `src` property.
+To get an avatar that displays an image, all you have to do is set the image source via the `src` property.
 
 ```html
 <igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
@@ -134,18 +134,7 @@ $custom-avatar-theme: igx-avatar-theme(
 The last step is to **include** the component mixins: 
 
 ```scss
-@include igx-avatar($custom-avatar-theme);
-```
-
->[!NOTE]
- >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
-
- ```scss
-:host {
-  ::ng-deep {
-    @include igx-avatar($custom-avatar-theme);
-  }
-}
+@include igx-css-vars($custom-avatar-theme);
 ```
 
 You should see something like this:
