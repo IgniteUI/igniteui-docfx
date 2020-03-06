@@ -25,9 +25,7 @@ Ignite UI for Angular 카테고리 차트 컴포넌트는 다음 데모에서 �
 
 차트의 퍼포먼스에 영향을 주는 여러 기능 및 Angular 고유 기능이 있으므로 애플리케이션에서 퍼포먼스를 최적화할 때 이를 고려해야 합니다.
 
-> [!NOTE]
-> Angular:
-> 컴포넌트에 바인딩할 속성에 대량의 데이터를 저장할 경우, `@Component` 데코레이터에서 `changeDetection: ChangeDetectionStrategy.OnPush`를 설정해야 합니다. 이것을 설정하면 Angular에서 데이터 배열 내의 변경 사항을 자세히 검사하지 않으며, 변경 검출 주기마다 Angular가 필요하지 않습니다.
+컴포넌트에 바인딩할 속성에 대량의 데이터를 저장할 경우, `@Component` 데코레이터에서 `changeDetection: ChangeDetectionStrategy.OnPush`를 설정해야 합니다. 이것을 설정하면 Angular에서 데이터 배열 내의 변경 사항을 자세히 검사하지 않으며, 변경 검출 주기마다 Angular가 필요하지 않습니다.
 
 -   Angular가 차트에 자동으로 데이터 변경을 알려주는 대신에 바인딩된 데이터가 변경된 방법을 컴포넌트에 알리도록 할 수 했습니다.
     -   이러한 델타 알림은 Angular가 변경 검출을 실행할 때마다 100만 레코드 배열의 모든 변경을 비교하는 것보다 훨씬 효율적으로 실행할 수 있습니다.
