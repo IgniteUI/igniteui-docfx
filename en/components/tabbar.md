@@ -146,6 +146,10 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
     font-size: 12px;
     color: darkgray;
 }
+
+igx-tab-panel {
+    padding: 10px;
+}
 ```
 
 After these modifications our Bottom Navigation should look similar to this:
@@ -200,63 +204,58 @@ import { Component } from "@angular/core";
     styleUrls: ["bottomnav-routing.component.scss"],
     templateUrl: "bottomnav-routing.component.html"
 })
-export class BottomNavRoutingComponent {
-    constructor() { }
-}
+export class BottomNavRoutingComponent { }
 
 @Component({
-    template: "<h3>Tab 1 Content</h3>"
+    template: "<p>Item 1 Content</p>"
 })
-export class BottomNavRoutingView1Component {
-}
+export class BottomNavRoutingView1Component { }
 
 @Component({
-    template: "<h3>Tab 2 Content</h3>"
+    template: "<p>Item 2 Content</p>"
 })
-export class BottomNavRoutingView2Component {
-}
+export class BottomNavRoutingView2Component { }
 
 @Component({
-    template: "<h3>Tab 3 Content</h3>"
+    template: "<p>Item 3 Content</p>"
 })
-export class BottomNavRoutingView3Component {
-}
+export class BottomNavRoutingView3Component { }
 ```
 
 The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
-// app-routing.module.ts
+import { RouterModule, Routes } from "@angular/router";
+
 import {
-    BottomNavRoutingComponent,
-    BottomNavRoutingView1Component,
-    BottomNavRoutingView2Component,
-    BottomNavRoutingView3Component } from './bottomnav-routing.component';
+    TabbarRoutingComponent,
+    TabbarRoutingView1Component,
+    TabbarRoutingView2Component,
+    TabbarRoutingView3Component,
+} from './tabbar-routing.component';
 
-...
-
-const appRoutes = [
+const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/bottomnav-routing'
+        redirectTo: '/tabbar-routing'
     },
     {
-        path: 'bottomnav-routing',
-        component: BottomNavRoutingComponent,
+        path: "tabbar-routing",
+        component: TabbarRoutingComponent,
         children: [
-            { path: 'view1', component: BottomNavRoutingView1Component },
-            { path: 'view2', component: BottomNavRoutingView2Component },
-            { path: 'view3', component: BottomNavRoutingView3Component },
+            { path: "tabbar-view1", component: TabbarView1Component },
+            { path: "tabbar-view2", component: TabbarView2Component },
+            { path: "tabbar-view3", component: TabbarView3Component }
         ]
     }
 ];
 
 @NgModule({
-    exports: [RouterModule],
-    imports: [RouterModule.forRoot(appRoutes)]
+    exports: [ RouterModule ],
+    imports: [ RouterModule.forChild(routes) ]
 })
-export class AppRoutingModule { }
+export class TabbarRoutingModule { }
 ```
 
 Now that we have all navigation routes setup, we need to declare the BottomNavigation component and configure it for routing.
@@ -267,23 +266,29 @@ Also, make sure to add a router-outlet for rendering the view components' output
 <router-outlet></router-outlet>
 
 <igx-bottom-nav>
-  <igx-tab label="Tab 1" icon="dashboard"
-    routerLink="view1"
-    routerLinkActive #rla1="routerLinkActive"
-    [isSelected]="rla1.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 1"
+    routerLink="tabbar-view1"
+    routerLinkActive
+    #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive"
+    ></igx-tab>
 
-  <igx-tab label="Tab 2" icon="check_circle_outline"
-    routerLink="view2"
-    routerLinkActive #rla2="routerLinkActive"
-    [isSelected]="rla2.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 2"
+    routerLink="tabbar-view2"
+    routerLinkActive
+    #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive"
+    ></igx-tab>
 
-  <igx-tab label="Tab 3" icon="radio_button_checked"
-    routerLink="view3"
-    routerLinkActive #rla3="routerLinkActive"
-    [isSelected]="rla3.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 3"
+    routerLink="tabbar-view3"
+    routerLinkActive
+    #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive"
+    ></igx-tab>
 </igx-bottom-nav>
 ```
 
@@ -291,7 +296,7 @@ The above code creates a BottomNavigation component with three tab items. All ta
 
 The described approach above is used by the following sample to demonstrate routing using the BottomNavigation component:
 
-<div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid #D4D4D4;">
+<div class="sample-container loading" style="height: 250px; width: 500px; border: 1px solid #D4D4D4;">
     <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
