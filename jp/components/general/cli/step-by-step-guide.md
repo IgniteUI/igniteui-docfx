@@ -5,9 +5,15 @@ _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, 
 ---
 
 ## ステップバイステップ ガイド
-利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に Ignite UI CLI で以前作成したプロジェクトを更新できます。
+利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics または Ignite UI CLI](../cli-overview.md) で以前作成したプロジェクトを更新できます。
 
-ガイドを開始するには、ig コマンドを実行します。
+Schematics コレクションを使用してガイドをアクティブにするには、以下のコマンドを実行します。
+
+```cmd
+ng new --collection="@igniteui/angular-schematics"
+```
+
+Ignite UI CLI を使用してガイドを開始するには、 `ig` コマンドを実行します。
 
 ```bash
 ig
@@ -26,7 +32,7 @@ ig new
     </a>
 </div>
 
-> **注** ステップバイステップ モードは Inquirer.js に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals) を参照してください。
+> **注** ステップバイステップ モードは `Inquirer.js` に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals) を参照してください。
 
 
 
@@ -40,7 +46,7 @@ ig new
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
 
-次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、 Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (igniteui-angular.css) がプロジェクトの angular.json に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
+次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、 Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (`igniteui-angular.css`) がプロジェクトの `angular.json` に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 
@@ -50,25 +56,28 @@ ig new
 
 ## ビューの追加
 
-Ignite UI CLI は、プロジェクトに追加できる複数のコンポーネント テンプレート、およびより詳細なシナリオ テンプレートをサポートしています。
+Ignite UI CLI は、プロジェクトに追加できる複数のコンポーネント テンプレート、およびより詳細なシナリオ テンプレートをサポートしています。このモードは、プロジェクトの作成が完了した後、または以下のコマンドを使用して既存のプロジェクト内でアクティブにできます。
 
-このモードは、プロジェクトの作成が完了した後、または既存のプロジェクト内で add コマンドを実行することでアクティブにできます。
+Schematics コレクションを使用してステップバイステップ モードをアクティブにするには、`component` (alias:`c`) スケマティックを実行します。
+```bash
+ng g @igniteui/angular-schematics:component
+```
+
+Ignite UI CLI を使用する場合、 `add` コマンドを実行します。
 ```bash	
 ig add
 ```
-
-
-新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#component-templates)のリストが提供されます。
+新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#コンポーネント-テンプレート)のリストが提供されます。
 
 ![](../../../images/general/ig-step-by-step-template-group.png)
 
 矢印キーを使用してオプションをナビゲートし、ENTER を使用して選択したオプションを選択します。
 
-たとえば、カスタムグリッドなどの一部のテンプレートでは、有効にできるオプションのリストが提供されます。オプションは、スペース キーで切り替えることができます。
+たとえば、`カスタムグリッド`などの一部のテンプレートでは、有効にできるオプションのリストが提供されます。オプションは、スペース キーで切り替えることができます。
 
 ![](../../../images/general/ig-step-by-step-component-features.png)
 
-アプリケーションにシナリオを追加することを選択した場合、使用可能な[シナリオ テンプレート](component-templates.md#scenario-templates)のリストも取得できます。
+アプリケーションにシナリオを追加することを選択した場合、使用可能な[シナリオ テンプレート](component-templates.md#シナリオ-テンプレート)のリストも取得できます。
 
 ![](../../../images/general/ig-step-by-step-scenario-templates.png)
 

@@ -124,7 +124,11 @@ public columnPinning(event) {
     }
 }
 ```
-#### デモ
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-tree-grid>
+```
 
 ```typescript
 public columnPinning(event) {

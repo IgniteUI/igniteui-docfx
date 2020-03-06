@@ -9,7 +9,7 @@ _language: ja
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid サイズ変更|Ignite UI for Angular |infragistics 
-_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accomodate the different scenarios that users can have.
+_description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
 ---
@@ -17,7 +17,7 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid サイズ変更 | Ignite UI for Angular |infragistics 
-_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accomodate the different scenarios that users can have.
+_description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
 ---
@@ -43,7 +43,7 @@ _language: ja
 
 グリッドの `幅` は `null` 値を許容でき、設定すると、DOM のすべての列がレンダリングされます。それに応じてグリッドのサイズが決定されて列の仮想化が適用されないため、グリッドの水平スクロールバーはありません。
 
-* 6 列あり、どれも幅が定義されていない場合、グリッドの`幅`は `816px` になります。この場合、デフォルトで各列に `136px` の幅が割り当てられています。列の`幅`がパーセンテージである場合も同様です。垂直スクロールバーがレンダリングされるか、追加の列をレンダリングする機能がある場合、幅も追加されます。
+* 6 列あり、どれも幅が定義されていない場合、グリッドの`幅`は `816px` になります。この場合、デフォルトで各列に `136px` の`幅`が割り当てられています。列の`幅`がパーセンテージである場合も同様です。垂直スクロールバーがレンダリングされるか、追加の列をレンダリングする機能がある場合、幅も追加されます。
 
     <img src="../../images/grid_sizing/columns-default-gridWidth-null-v2.jpg" style="width: 80%"/>
 
@@ -71,7 +71,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/width-cols-scrollbar-v2.jpg" style="width: 80%"/>
 
-* グリッドに親要素が場合は、スクロールバーをレンダリングするかどうかは親のスタイルに依存します。グリッド自体に関連する他のすべてはまだ保持されます。親要素の幅がグリッドの幅よりも小さく、overflow スタイルが `auto` または `scroll` に設定されている場合、スクロールバーはネイティブにレンダリングされます。たとえば、親の幅が `1000px` に設定されていて、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅` がまだ `1200px` である場合、以下の図のようになります。
+* グリッドに親要素が場合は、スクロールバーをレンダリングするかどうかは親のスタイルに依存します。グリッド自体に関連する他のすべてはまだ保持されます。親要素の幅がグリッドの幅よりも小さく、overflow スタイルが `auto` または `scroll` に設定されている場合、スクロールバーはネイティブにレンダリングされます。たとえば、親の`幅`が `1000px` に設定されていて、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅` がまだ `1200px` である場合、以下の図のようになります。
 
     <img src="../../images/grid_sizing/width-cols-scroll-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/width-cols-scroll-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -89,7 +89,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/width-percent-parent-100p-v2.jpg" style="width: 80%"/>
 
-* 幅が `1000px` ピクセルの親要素があり、グリッドの幅が `150%` に設定されている場合、計算されるグリッドの幅は `1500px` になります。この場合、グリッドは引き続き完全に表示されますが、`overflow: auto` を設定すると、親がスクロールバーを表示します。
+* 幅が `1000px` ピクセルの親要素があり、グリッドの`幅`が `150%` に設定されている場合、計算されるグリッドの`幅`は `1500px` になります。この場合、グリッドは引き続き完全に表示されますが、`overflow: auto` を設定すると、親がスクロールバーを表示します。
 
     <img src="../../images/grid_sizing/width-percent-150p-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/width-percent-150p-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -113,7 +113,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/height-null-24rows-v2.jpg" style="width: 80%"/>
 
-* 親要素に定義された`高さ`がある場合、グリッドに影響は受けずにすべての行を描画します。親の `高さ` が `650px` であると仮定します。`overflow` が `auto` または `scroll` に設定されている場合、グリッドは影響を受けずに垂直スクロールバーがレンダリングされます。
+* 親要素に定義された`高さ`がある場合、グリッドに影響は受けずにすべての行を描画します。親の`高さ`が `650px` であると仮定します。`overflow` が `auto` または `scroll` に設定されている場合、グリッドは影響を受けずに垂直スクロールバーがレンダリングされます。
 
     <img src="../../images/grid_sizing/height-null-24rows-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/height-null-24rows-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -123,7 +123,7 @@ _language: ja
 
 #### Pixels
 
-[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`高さ`をピクセル単位で設定すると、幅がピクセル単位で設定される方法と同様に、グリッドがあらゆる場合にその特定のサイズにサイズ変更されるため簡単です。
+[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`高さ`をピクセル単位で設定すると、`幅`がピクセル単位で設定される方法と同様に、グリッドがあらゆる場合にその特定のサイズにサイズ変更されるため簡単です。
 
 * たとえば、データ 4 行で高さ `500px` を設定すると、グリッドはそのサイズになり、4 行では表示領域を埋めるのに十分でないため、空の領域があると予想されます。
 
@@ -133,7 +133,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/height-500px-14rows-v2.jpg" style="width: 80%"/>
 
-* 高さが定義された親要素がある場合、`auto` または `scroll` に設定された `overflow` がない限り、グリッドは完全に表示されます。それ以外の場合は、スクロールバーがレンダリングされます。
+* `高さ`が定義された親要素がある場合、`auto` または `scroll` に設定された `overflow` がない限り、グリッドは完全に表示されます。それ以外の場合は、スクロールバーがレンダリングされます。
 
     <img src="../../images/grid_sizing/height-700px-14rows-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/height-700px-14rows-parent-scroll-v2.jpg" style="width: 80%"/>
@@ -146,7 +146,7 @@ _language: ja
 
 親要素の高さが定義されていない場合、ブラウザーは最初に高さを割り当てず、子とそのサイズに基づいてサイズを変更します。これが、グリッドがそれに基づいてパーセンテージのサイズ設定を適用するために使用するベースの高さを知る方法がない理由です。このため、最大 10 行がレンダリングされ、それらがより多くの行である場合、垂直スクロールバーがレンダリングされます。そうでない場合、グリッドはレンダリングされた行の数に適合します。次の例で、この状況をさらに詳しく見ていきます。
 
-幅を `1200px` に設定し、親要素にはサイズを適用しません。
+`幅`を `1200px` に設定し、親要素にはサイズを適用しません。
 
 * 10 行未満の場合、グリッドは、最後の行と表示領域の下部の間に空のスペースを持たずに、表示領域にすべての行を収めようとします。たとえば、グリッドデータを 7 行で構成してみましょう。グリッドは、垂直スクロールバーとグリッド内の空スペースなしで、7 行すべてをレンダリングします。
 
@@ -181,7 +181,7 @@ _language: ja
 
 このような状況でグリッドのサイズが変更されると、列の幅も更新されて変更が反映されるため、利用可能な新しい空のスペースが埋められます。
 
-* 列の幅を指定せずに、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の幅が null に設定されている場合、列のサイズは最小の `136px` になります。これは、幅が `null` で幅のない 6 列のグリッドの場合、各列のサイズが `136px` になることを意味します。
+* 列の`幅`を指定せずに、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`が `null` に設定されている場合、列のサイズは最小の `136px` になります。これは、`幅`が `null` で幅のない 6 列のグリッドの場合、各列のサイズが `136px` になることを意味します。
 
     <img src="../../images/grid_sizing/columns-default-gridWidth-null-v2.jpg" style="width: 80%"/>
 
@@ -189,7 +189,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/columns-default-all-row-selectors-v2.jpg" style="width: 80%"/>
 
-* 利用可能な空スペースがある場合、自動でサイズ変更される各列が `136px` 未満になるように、すべての自動サイズ変更列のデフォルトは `136px` となり、グリッドは水平スクロールバーを描画します。次の例では、自動でサイズ変更される 12 列と、グリッド `width` を `1000px` に設定します。
+* 利用可能な空スペースがある場合、自動でサイズ変更される各列が `136px` 未満になるように、すべての自動サイズ変更列のデフォルトは `136px` となり、グリッドは水平スクロールバーを描画します。次の例では、自動でサイズ変更される 12 列と、グリッド `幅` を `1000px` に設定します。
 
     <img src="../../images/grid_sizing/columns-default-all-min-136px-v2.jpg" style="width: 80%"/>
 
@@ -206,13 +206,13 @@ _language: ja
 
 #### ピクセル
 
-列の幅をピクセル単位で設定した場合、手動でサイズを変更しない限り、列はそのサイズで固定されます。列の結合された幅は静的であるため、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅`より小さくすることも、それを超えることもできます。
+列の`幅`をピクセル単位で設定した場合、手動でサイズを変更しない限り、列はそのサイズで固定されます。列の結合された`幅`は静的であるため、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅`より小さくすることも、それを超えることもできます。
 
-* すべての列の幅の合計が [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも小さい場合、グリッド内には列を埋めることができない空の領域があります。これは、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で予期される動作です。次の例では、列の幅は `150px` ピクセルです。
+* すべての列の`幅`の合計が [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも小さい場合、グリッド内には列を埋めることができない空の領域があります。これは、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で予期される動作です。次の例では、列の幅は `150px` ピクセルです。
 
     <img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
-* すべての列の合計`幅`が実際の [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `の幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、列の幅が `300px` で、グリッドの幅は `1200px` です。 
+* すべての列の合計`幅`が実際の [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、列の幅が `300px` で、グリッドの幅は `1200px` です。 
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
@@ -245,9 +245,9 @@ _language: ja
 
 #### 幅
 
-各子グリッドも[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html)のインスタンスであるため、子の幅は[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html)自体とそれほど大きな違いはありません。
+各子グリッドも[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html)のインスタンスであるため、子の`幅`は[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html)自体とそれほど大きな違いはありません。
 
-唯一の違いは、ユーザーが子グリッドの親要素を変更できないことです。そのため、`幅`がパーセンテージに設定されている場合、子に割り当てられた `100%` の幅は親グリッドの幅よりも小さくなります。これは、展開されたときに区別しやすくするためです。以下の画像は、デフォルトで `100%` の幅に設定されているため、デフォルトの子グリッド サイズを示しています。
+唯一の違いは、ユーザーが子グリッドの親要素を変更できないことです。そのため、`幅`がパーセンテージに設定されている場合、子に割り当てられた `100%` の`幅`は親グリッドの幅よりも小さくなります。これは、展開されたときに区別しやすくするためです。以下の画像は、デフォルトで `100%` の幅に設定されているため、デフォルトの子グリッド サイズを示しています。
 
 <img src="../../images/grid_sizing/hgrid-width-percentages-v2.jpg" style="width: 80%"/>
 
@@ -255,7 +255,7 @@ _language: ja
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の各子の`高さ`も、ルートレベルグリッドの`高さ`と同様に動作します。
 
-違いは、子グリッドの場合、高さがパーセンテージに設定されている場合、親要素の高さが設定されていないかのように動作することです。つまり、このシナリオでは、グリッドは最大 10 行をレンダリングします。データの行数が 10 未満の場合、グリッドはすべての行に収まるように表示領域のサイズを変更します。データにさらに行がある場合、垂直スクロールバーがレンダリングされ、ビュー領域のサイズが高さ 10 行になります。
+違いは、子グリッドの場合、`高さ`がパーセンテージに設定されている場合、親要素の高さが設定されていないかのように動作することです。つまり、このシナリオでは、グリッドは最大 10 行をレンダリングします。データの行数が 10 未満の場合、グリッドはすべての行に収まるように表示領域のサイズを変更します。データにさらに行がある場合、垂直スクロールバーがレンダリングされ、ビュー領域のサイズが高さ 10 行になります。
 
 <img src="../../images/grid_sizing/hgrid-height-percentages-v2.jpg" style="width: 80%"/>
 

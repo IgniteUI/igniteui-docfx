@@ -1,15 +1,16 @@
 ---
-title: Excel ライブラリ コンポーネント - Native Angular | Ignite UI for Angular
-_description: Ignite UI for Excel Library コンポーネントTODO.
-_keywords: Ignite UI for Angular, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Excel ライブラリ, Angular Excel ライブラリ例, Angular Excel ライブラリ コンポーネント, Angular Excel エンジン
+title: Excel ライブラリ | データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
+_description: Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Excel からアプリケーションへデータを簡単に転送できます。
+_keywords: Excel library, Ignite UI for Angular, Infragistics, Excel ライブラリ, インフラジスティックス
+mentionedTypes: ['Workbook']
 _language: ja
 ---
 
 ## Excel ライブラリ
 
-Infragistics Excel ライブラリは、Workbook、Worksheet、Cell、Formula などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Excel Library によって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
+Infragistics Angular Excel ライブラリは、Workbook、Worksheet、Cell、Formula などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Angular Excel ライブラリによって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -34,7 +35,7 @@ excel ライブラリは、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
+import { IgxExcelModule } from 'igniteui-angular-excel';
 
 @NgModule({
     imports: [
@@ -83,14 +84,14 @@ export class AppModule {}
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
 
-[`Workbook`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
+[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
 
 ```ts
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookSaveOptions } from "igniteui-angular-excel/ES5/WorkbookSaveOptions";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookSaveOptions } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
 import { ExcelUtility } from "ExcelUtility";
 
 var workbook = ExcelUtility.load(file);

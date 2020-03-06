@@ -1,50 +1,51 @@
 ---
-title: ZoomSlider | Data Visualization Tools | Ignite UI for Angular | Data Binding | Infragistics
-_description: Use the ZoomSlider within the data chart to easily display a subset of data. It is displayed with two handles representing minimum and maximum values.
+title: ズーム スライダー | データ可視化ツール | Ignite UI for Angular | データ バインディング| インフラジスティックス
+_description: データ チャートで ZoomSlider を使用して、データのサブセットを簡単に表示します。最小値および最大値を表す 2 つのハンドルで表示します。
 mentionedTypes: ['ZoomSlider, XamDataChart']
+_language: ja
 ---
 
-### Zoom Slider
+### ズーム スライダー
 
-The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart or CategoryChart.
+ZoomSlider コントロールは、範囲対応コントロールにズーム機能を提供します。ZoomSlider には、水平スクロールバー、全範囲の縮小表示、サイズ変更可能なズーム範囲ウィンドウの機能があります。ZoomSlider は、スタンド アロン コントロールとして機能できません。または、DataChart や CategoryChart などの範囲ベースのコントロールの拡張機能として動作します。
 
-### Demo
+### サンプル
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 600px">
     <iframe id="zoomslider-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/zoomslider-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="zoomslider-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="zoomslider-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-| Feature Name                      | Description                                                                                                                                                                |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scrollbar navigation              | Users can change scale and scroll through ranges of data using the built-in capabilities of the ZoomSlider scrollbar.                                                      |
-| Panning and zooming               | Users can adjust the display scale by dragging the edges of the thumb pad to either make the current display cover a larger range (zoom out) or a smaller range (zoom in). |
-| Multiple user interaction options | All mouse user interactions are redundantly supported through touch and most of them – through the keyboard. For details, see User Interactions and Usability.             |
-| Touch support                     | On touch-enabled devices, users can enjoy the full ZoomSlider functionality. All mouse interactions are supported in touch environment.                                    |
-| Extensibility                     | The ZoomSlider control supports DataChart control out-of the box.                                                                                                          |
-| Configurable zoom-range window    | The initial zoom-range window width and position, as well as its minimum size, are configurable.                                                                           |
+| 機能名                    | 説明                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| スクロールバーのナビゲーション        | ZoomSlider スクロールバーの組み込み機能を使用して、スケールを変更してデータ範囲をスクロールできます。                                |
+| パンとズーム                 | サムパッドの端をドラッグして表示スケールを調節し、現在の表示範囲を広げる (ズーム アウト)、または狭くする (ズーム イン) ことができます。                |
+| 複数のユーザー インタラクション オプション | マウスによるすべてのインタラクションは、タッチ操作 (ほとんどはキーボードを介した操作) でもサポートされます。詳細は、ユーザー インタラクションと操作性を参照してください。 |
+| タッチ サポート               | タッチ対応デバイスでは、ZoomSlider のすべての機能を使用できます。すべてのマウス操作は、タッチ環境でもサポートされます。                       |
+| 拡張性                    | ZoomSlider コントロールは、追加設定なしで DataChart コントロール をサポートします。                                   |
+| 構成可能なズーム範囲ウィンドウ        | ズーム範囲ウィンドウの初期幅、初期位置、最小サイズは、構成可能です。                                                      |
 
-### Dependencies
+### 依存関係
 
-When installing the chart package, the core package must also be installed.
+chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-### Required Modules
+### モジュールの要件
 
-The [`IgxZoomSliderComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
+[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) は以下のモジュールを要求します。
 
 ```ts
-import { IgxZoomSliderModule } from "igniteui-angular-charts/ES5/igx-zoom-slider-module";
-import { IgxZoomSliderComponent} from 'igniteui-angular-charts/ES5/igx-zoom-slider-component';
+import { IgxZoomSliderModule } from 'igniteui-angular-charts';
+import { IgxZoomSliderComponent } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -56,9 +57,9 @@ import { IgxZoomSliderComponent} from 'igniteui-angular-charts/ES5/igx-zoom-slid
 export class AppModule {}
 ```
 
-### Code Snippet
+### コード スニペット
 
-The following code demonstrates how to setup the ZoomSlider.
+以下のコードは、ZoomSlider を設定する方法を示します。
 
 ```html
 <igx-zoom-slider

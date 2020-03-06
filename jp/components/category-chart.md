@@ -1,59 +1,60 @@
 ---
-title: Category Chart コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Category Chart コンポーネントは複雑なデータ ビジュアライゼーションを API によって簡素化できます。ユーザーがデータのコレクションまたはコレクションのグループにバインドし、データを指定するプロパティを設定後、チャート コントロールが残りの作業を処理します。
-_keywords: Ignite UI for Angular, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular チャート, Angular チャート コントロール, Angular チャート例, Angular チャート コンポーネント, Angular データ チャート
-_language: ja
+title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
+_description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
+_keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
 mentionedTypes: ['XamCategoryChart', 'CategoryChartType']
+_language: ja
 ---
 
 ## カテゴリ チャート
 
-[`IgxCategoryChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychart.html) は、カテゴリ データの可視化を容易にするチャート コンポーネントです。このコントロールにより、データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
+カテゴリ チャート コンポーネント は、カテゴリ データの可視化を容易にする Ignite UI for Angular チャート コンポーネントです。データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
 
-### デモ
+### サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
- ユーザーがデータのコレクョンまたはコレクション グループにバインドしてデータを指定するプロパティを設定後、あとの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なシリーズ タイプを自動的に選択します。
+ ユーザーがデータのコレクョンまたはコレクション グループにバインドしてデータを指定するプロパティを設定後、あとの作業はチャート コントロールによって処理されます。コンポーネントはデータを解析し、データを表すための最適なチャート タイプを自動的に選択します。
 
-スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば、[`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) プロパティが [`Auto`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) に設定される場合、コントロールは小さいデータ セットのために柱状チャートを使用し、より大きいデータ セットのために折れ線チャートを使用します。
+スマート データ アダプターは、データを分析して適切なビジュアライゼーションを描画します。たとえば、[`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) プロパティが [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) に設定される場合、コントロールは小さいデータ セットのために柱状チャートを使用し、より大きいデータ セットのために折れ線チャートを使用します。
 
-ただし、[`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) を明示的に以下に設定してチャート タイプを指定することもできます。
+ただし、[`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) を明示的に以下に設定してチャート タイプを指定することもできます。
 
--   [`line`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line)
--   [`area`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area)
--   [`Column`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#column)
--   [`Point`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point)
--   [`Spline`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#spline)
--   [`SplineArea`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#splinearea)
--   [`StepArea`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#steparea)
--   [`StepLine`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)
--   [`waterfall`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#waterfall)
+-   `折れ線`
+-   `エリア`
+-   `縦棒`
+-   `ポイント`
+-   `スプライン`
+-   `スプライン エリア`
+-   `ステップ エリア`
+-   `ステップ折れ線`
+-   `ウォーターフォール`
 
-その他のカテゴリ チャート コントロールの直感的な動作の例として、明示的にラベルを設定する必要がないことがあります。カテゴリ チャートは、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用します。
+その他のカテゴリ チャート コンポーネントの直感的な動作の例として、明示的にラベルを設定する必要がないことがあります。カテゴリ チャートは、提供したデータ内で最初の適切な文字列プロパティを使用し、ラベルに使用します。
 
 ### 依存関係
 
-chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+チャート パッケージをインストールするときに core パッケージもインストールする必要があります。
 
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-### 必要なモジュール
+### モジュールの要件
 
-[`IgxCategoryChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychart.html) は、以下のモジュールが必要です。
+[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) は以下のモジュールを要求します。
 
 ```ts
 // app.module.ts
-import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
+import { IgxCategoryChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
     imports: [
@@ -65,7 +66,7 @@ import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category
 export class AppModule {}
 ```
 
-カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに [`IgxCategoryChartCoreModule`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcoremodule.html) や [`IgxLineSeriesDynamicModule`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriesdynamicmodule.html) など問題のシリーズの動的モジュールをロードして除外します。[`ChartType`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) が [`Auto`](/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) の場合、読み込んだシリーズ型が選択されます。
+カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに [`IgxCategoryChartCoreModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcoremodule.html) や [`IgxLineSeriesDynamicModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriesdynamicmodule.html) など問題のシリーズの動的モジュールをロードして除外します。[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) が [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) の場合、読み込んだシリーズ型が選択されます。
 
 <div class="divider--half"></div>
 
@@ -73,7 +74,7 @@ export class AppModule {}
 
 カテゴリ チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-[`IgxCategoryChartComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+カテゴリ チャート コンポーネントを作成するには、はじめにデータをバインドする必要があります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```ts
 var data = [
@@ -98,22 +99,23 @@ var data = [
 
 ### チャート タイプ
 
-表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、[`chartType`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを設定します。
+表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを設定します。
 以下は、カテゴリ チャートでサポートされるすべてのタイプです。
 
-<!-- > [!NOTE]
-> 特別なケースにプロパティの `Auto` 設定があります。`Auto` を使用した場合、チャートがデータを分析し、最適なチャート タイプを割り当てます。
+> [!NOTE]
+> 特別なケースにプロパティの [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) 設定があります。[`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) を使用した場合、チャートがデータを分析し、最適なチャート タイプを割り当てます。
 
 ### サポートされるチャート タイプ
-プロパティ|説明|例
----|---|---
-`Line`|各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。|![](../images/category_chart_line.png)
-`Area`|カテゴリ エリア シリーズを指定します。|![](../images/category_chart_area.png)
-`Column`|各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。|![](../images/category_chart_column.png)
-`Point`|各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。|![](../images/category_chart_point.png)
-`StepLine`|カテゴリ ステップ折れ線チャートを指定します。|![](../images/category_chart_stepline.png)
-`StepArea`|カテゴリ ステップ エリア チャートを指定します。|![](../images/category_chart_steparea.png)
-`Spline`|各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。|![](../images/category_chart_spline.png)
-`SplineArea`|カテゴリ スプライン エリア シリーズを指定します。|![](../images/category_chart_splinearea.png)
-`Waterfall`|カテゴリ ウォーターフォール チャートを指定します。|![](../images/category_chart_waterfall.png)
-`Auto`|データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。 -->
+
+| プロパティ                                                                                                                                    | 説明                                        | 例                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------- |
+| [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#line)             | 各データ ポイントにマーカーがあるカテゴリ折れ線シリーズを指定します。       | ![](../images/category_chart_line.png)       |
+| [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#area)             | カテゴリ エリア シリーズを指定します。                      | ![](../images/category_chart_area.png)       |
+| [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#column)         | 各データ ポイントに垂直長方形があるカテゴリ柱状チャートを指定します。       | ![](../images/category_chart_column.png)     |
+| [`Point`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point)           | 各データ ポイントにマーカーがあるカテゴリ ポイント チャートを指定します。    | ![](../images/category_chart_point.png)      |
+| [`StepLine`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)     | カテゴリ ステップ折れ線チャートを指定します。                   | ![](../images/category_chart_stepline.png)   |
+| [`StepArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#steparea)     | カテゴリ ステップ エリア チャートを指定します。                 | ![](../images/category_chart_steparea.png)   |
+| [`Spline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#spline)         | 各データ ポイントにマーカーがあるカテゴリ スプライン折れ線シリーズを指定します。 | ![](../images/category_chart_spline.png)     |
+| [`SplineArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#splinearea) | カテゴリ スプライン エリア シリーズを指定します。                | ![](../images/category_chart_splinearea.png) |
+| [`Waterfall`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#waterfall)   | カテゴリ ウォーターフォール チャートを指定します。                | ![](../images/category_chart_waterfall.png)  |
+| [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto)             | データ アダプターからの提案に基づいてチャート タイプの自動選択を指定します。   |                                              |

@@ -21,6 +21,12 @@ Or though the new command:
 ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 ```
 
+If you are using the Schematics collection run:
+
+```bash
+ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=side-nav-auth
+```
+
 ### Description
 This template builds upon the Side Navigation default and adds a profile page and a login section to the app's nav bar that will display a login button or an avatar of the logged in user:
 

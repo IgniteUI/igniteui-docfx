@@ -5,7 +5,7 @@ _keywords:  angular select, igniteui for angular, インフラジスティック
 _language: ja
 ---
 
-## 選択
+## Select
 Ignite UI for Angular Select コンポーネントは、特殊な配置が可能な項目ドロップダウンリストから単一のアイテムを選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づく選択を含む、迅速な項目リスト ナビゲーションを提供します。
 
 ## 選択のデモ
@@ -277,12 +277,6 @@ public customOverlaySettings: OverlaySettings = {
 > [さまざまな配置ストラテジ]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)を `positionStrategy` プロパティに渡すことができます。
 
 ### グループ選択
-<div class="sample-container loading" style="height: 470px;">
-    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
-</div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-
 項目グループを視覚的に分離するために、select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
 これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
 ```typescript
@@ -316,6 +310,64 @@ public customOverlaySettings: OverlaySettings = {
     </igx-select-item-group>
 </igx-select>
 ```
+
+<div class="sample-container loading" style="height: 470px;">
+    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+
+### ヘッダーとフッターの選択
+現在 `igxSelect` コンポーネントにデフォルトのヘッダーとフッターのテンプレートはありませんが、独自のヘッダーとまたはフッター テンプレートを定義して、それぞれ `IgxSelectHeaderDirective` または `IgxSelectFooterDirective` でマークすることができます。これらはカスタム テンプレートであるため、スタイル設定も定義する必要があります。
+
+以下の例では、ヘッダーとフッターの両方の ng テンプレートが定義されています。ヘッダーには、[`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) で実装された基本的なフィルタリングがあります。フッターには、配信方法に基づいて、すべての項目の静的な集計が含まれます。
+
+```html
+    <igx-select>
+        <label igxLabel>Pick your fruit</label>
+            <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
+                {{fruit.type}}
+                <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
+                <igx-icon *ngSwitchCase="'train'">train</igx-icon>
+                <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
+            </igx-select-item>
+        <ng-template igxSelectHeader>
+            <div class="custom-select-header">
+                <span class="sample-template-heading">DELIVERY METHOD</span>
+                <igx-buttongroup (click)="filter($event.target.title)">
+                        <button igxButton title="flight"><igx-icon title="flight">flight</igx-icon></button>
+                        <button igxButton title="train"><igx-icon title="train">train</igx-icon></button>
+                        <button igxButton title="boat"><igx-icon title="boat">directions_boat</igx-icon></button>
+                </igx-buttongroup>
+            </div>
+        </ng-template>
+        <ng-template igxSelectFooter>
+            <div class="custom-select-footer">
+                <span class="sample-template-heading">TOTAL</span>
+                <div class="sample-template-icons">
+                    <span class="sample-template-icons__item">
+                        <igx-icon title="flight" [class.important-icon]="selected === 'flight'">flight</igx-icon>
+                        {{flightCount}}
+                    </span>
+                    <span class="sample-template-icons__item">
+                        <igx-icon title="train" [class.important-icon]="selected === 'train'">train</igx-icon>
+                        {{trainCount}}
+                    </span>
+                    <span class="sample-template-icons__item">
+                        <igx-icon title="boat" [class.important-icon]="selected === 'boat'">directions_boat</igx-icon>
+                        {{boatCount}}
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+    </igx-select>
+```
+
+<div class="sample-container loading" style="height: 610px;">
+    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
+</div>
+
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 
 ### Angular フォームの選択
 `Select` コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで`必要な`バリデーターを使用する方法を示しています。

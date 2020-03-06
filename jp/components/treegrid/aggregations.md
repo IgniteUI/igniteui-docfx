@@ -11,11 +11,11 @@ _language: ja
 #### デモ
 
 <div class="sample-container loading" style="height:850px">
-    <iframe id="treegrid-finjs-iframe" src='{environment:demosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -82,7 +82,7 @@ public groupColumnKey = "Categories";
 
 * [TreeGrid 概要](tree_grid.md)
 * [TreeGrid 集計](summaries.md)
-* [グリッドの集計](../grid/summaries.md)
+* [Grid 集計](../grid/summaries.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

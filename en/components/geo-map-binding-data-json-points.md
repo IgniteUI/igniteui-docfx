@@ -36,7 +36,7 @@ Here is an example of data from JSON file:
 
 ### Code Snippet
 
-The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) in the map component to an array of objects created from loaded JSON file with geographic locations:
+The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) in the map component to an array of objects created from loaded JSON file with geographic locations:
 
 ```html
 <div className="sampleRoot" >
@@ -58,9 +58,9 @@ The following code loads and binds [`IgxGeographicHighDensityScatterSeriesCompon
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+import { MarkerType } from 'igniteui-angular-charts';
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 
 @Component({
   selector: "app-map-binding-geographic-json-files",

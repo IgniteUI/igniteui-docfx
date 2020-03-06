@@ -24,16 +24,17 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-次に、アプリケーションの AppModule に `IgxCalendarModule` をインポートします。通常、これは **app.module.ts** ファイルです。注: [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** に依存関係があるため、AppModule にも追加する必要があります。
+次に、アプリケーションの AppModule に `IgxCalendarModule` をインポートします。通常、これは **app.module.ts** ファイルです。注: タッチ操作を使用するために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
 ...
+import { HammerModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
     ...
-    imports: [..., BrowserAnimationsModule, IgxCalendarModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],
     ...
 })
 export class AppModule {}
@@ -75,7 +76,7 @@ public date: Date = new Date(Date.now());
 <igx-month-picker [value]="date"></igx-date-picker>
 ```
 
-Two-way データ バインディングを作成するには、以下のように `ngModel` を設定します。
+双方向データ バインディングを作成するには、以下のように `ngModel` を設定します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -84,7 +85,7 @@ Two-way データ バインディングを作成するには、以下のよう�
 ```
 
 #### 書式設定
-`formatViews` と [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
+[`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -158,7 +159,7 @@ public formatOptions = {
     - <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
     - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
     - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
-    - <kbd>Tab</kbd> key to navigate through the months.
+    - <kbd>Tab</kbd> キーは月を移動します。
 
 ### API リファレンス
 <div class="divider--half"></div>

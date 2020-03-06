@@ -7,7 +7,7 @@ _language: kr
 
 ## 시리즈 주석
 
-[`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html)는 차트에 플롯된 점에 대한 맥락 정보를 주석으로 표시할 수 있는 레이어를 지원합니다. 이것은 단순히 시리즈를 보는 것만으로는 파악하기 힘든 더 많은 정보를 최종 사용자에게 표시하여 도움을 줄 수 있습니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)는 차트에 플롯된 점에 대한 맥락 정보를 주석으로 표시할 수 있는 레이어를 지원합니다. 이것은 단순히 시리즈를 보는 것만으로는 파악하기 힘든 더 많은 정보를 최종 사용자에게 표시하여 도움을 줄 수 있습니다.
 
 ### 데모
 
@@ -23,7 +23,7 @@ _language: kr
 
 ### 콜아웃 레이어
 
-콜아웃 레이어는 [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어의 기존 데이터 또는 새로운 데이터의 주석을 표시합니다. 주석은 데이터 소스의 주어진 데이터 값 옆에 표시됩니다.
+콜아웃 레이어는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 기존 데이터 또는 새로운 데이터의 주석을 표시합니다. 주석은 데이터 소스의 주어진 데이터 값 옆에 표시됩니다.
 
 콜아웃 주석을 사용하여 사용자에게 알리고자 하는 메모나 데이터 세부 사항 등의 추가 정보를 표시합니다.
 
@@ -60,7 +60,7 @@ _language: kr
 
 십자형 레이어는 각 시리즈를 대상으로 구성된 모든 시리즈의 실제 값과 교차하는 교차선을 별도의 선 세트로 렌더링합니다.
 
-이 레이어는 기본적으로 [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어의 모든 시리즈를 대상으로 하여 하나의 특정 시리즈만 표시하도록 십자형 레이어를 구성할 수 있습니다. 이것을 실행하려면 `TargetSeries` 속성을 설정합니다.
+이 레이어는 기본적으로 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 모든 시리즈를 대상으로 하여 하나의 특정 시리즈만 표시하도록 십자형 레이어를 구성할 수 있습니다. 이것을 실행하려면 `TargetSeries` 속성을 설정합니다.
 
 기본적으로 십자선의 컬러는 상호 작용하는 시리즈의 컬러입니다. 단, 이 기본 설정은 십자선에 사용할 컬러를 선택하도록 재정의할 수 있습니다. 이는 `Brush` 속성을 설정하여 실행합니다.
 
@@ -88,7 +88,7 @@ _language: kr
 
 ### 최종값 레이어
 
-최종값 레이어는 [`IgxDataChart`](/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachart.html) 제어의 시리즈 최종값을 나타내는 주석을 차트 축에 따라 표시합니다.
+최종값 레이어는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 시리즈 최종값을 나타내는 주석을 차트 축에 따라 표시합니다.
 
 서로 다른 구성으로 여러 최종값 레이어를 표시하는 경우, 특정 시리즈를 대상으로 주석을 설정할 수 있습니다. 그러기 위해서는 `TargetSeries` 속성을 설정합니다.
 

@@ -28,17 +28,19 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-次に、**app.module.ts** ファイルに `IgxDatePickerModule` をインポートします。
+次に、**app.module.ts** ファイルに `IgxDatePickerModule` をインポートします。[**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)を使用するため、 **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
 
 ```typescript
 // app.module.ts
 
 ...
+import { HammerModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDatePickerModule],
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxDatePickerModule],
     ...
 })
 export class AppModule {}
@@ -90,7 +92,7 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
-Two-way データ バインディングを作成するには、以下のように `ngModel` を設定します。
+双方向データ バインディングを作成するには、以下のように `ngModel` を設定します。
 
 ```html
 <igx-date-picker [(ngModel)]="date"></igx-date-picker>
@@ -109,7 +111,7 @@ Two-way データ バインディングを作成するには、以下のよう�
 ```
 
 #### マルチビュー モードの設定
-monthsViewNumber 入力を使用して、カレンダーに表示される月数を設定します。現在の月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) を使用します。
+[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) 入力を使用して、カレンダーに表示される月数を設定します。現在の月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) を使用します。
 
 
 ボタンが表示されるサンプル:
@@ -153,8 +155,8 @@ public formatter = (date: Date) => {
 </div>
 <div class="divider--half"></div>
 
-#### 編集モード
-デフォルトでデート ピッカーは読み取り専用モードで表示されます。編集可能なモードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を `editable` に設定します。
+#### ドロップダウン モード
+デフォルトでデート ピッカーは読み取り専用モードで表示されます。ドロップダウン モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
 
 ```html
 <!-- date-picker-sample.component.html -->
@@ -168,7 +170,7 @@ public formatter = (date: Date) => {
 | ------------- |:-------------:|:-------------:| 
 | [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | 日付の表示書式を設定します。有効な記号と含む書式を受け付けます。詳細については、[DatePipe](https://angular.io/api/common/DatePipe) をご覧ください。shortDate, mediumDate, longDate and fullDate など定義済みの書式オプションもサポートされます。 |
 | [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`|日付エディター マスクの設定d、M、y 記号の数値表記や dd-MM-y などの任意のセパレーターの組み合わせを受け付けます。エディターは MMM、MMMM、MMMMM の文字表記を受け取りません。有効なマスクの日の部分は d と dd、月部分は M と MM、年部分は y、yy、yyyy となります。|
-| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | 継続するスピン ループを設定します。false に設定すると、日付部分のスピンが停止します。デフォルトでスピン ループは無限ループです。|
+| [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | エディターで <kbd>UP</kbd> および <kbd>DOWN</kbd> 矢印キーを使用するときに連続スピンループを構成します。false に設定された場合、最小/最大の日付/月に達すると、日付部分のスピンが停止します。デフォルトでスピン ループは無限ループです。 |
 | [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | ロケール プロパティを設定する場合に Angular に含まれるロケールが en-US のみであることに注意してください。その他の日付をローカライズするためには対応するロケール データをインポートする必要があります。詳細については、[I18n](https://angular.io/guide/i18n#i18n-pipes) ガイドをご覧ください。|
 
 
@@ -221,6 +223,8 @@ Date Picker の入力グループをカスタマイズできます。そのた�
 | [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) | デートピッカー モードを含みます。 |
 | [`specialDates`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#specialDates) | 特定の日付を含みます。 |
 | [`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) | 実数値を含みます。 |
+| [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) | 表示される月の数を設定します。 |
+| [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) | 現在の月に属さない日を非表示にします。 |
 
 ng-template 要素で変数を宣言して使用することができます。
 
@@ -269,7 +273,7 @@ public date: Date = new Date(Date.now());
 <div class="divider--half"></div>
 
 #### カスタム ボタン アクション
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの `Today` と `Cancel` ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの 'Today' と 'Cancel' ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
 以下の例では、年と月のカレンダー ビューに切り替えるための 2 つのカスタム アクション ボタンが含まれています。
 

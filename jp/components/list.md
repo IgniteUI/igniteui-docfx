@@ -22,6 +22,9 @@ _language: ja
 
 ### 使用方法
 
+>[!NOTE]
+>**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
+
 List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
 
 Ignite UI for Angular List を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
@@ -133,8 +136,6 @@ export class AppModule {}
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### カスタム リスト項目
-
 リスト項目にカスタム マークアップおよびスタイルを適用します。たとえば、名前の下に電話番号が表示される連絡先のリストを作成する場合、コンポーネントの typescript ファイルで連絡先のリストを定義します。
 
 ```typescript
@@ -158,7 +159,10 @@ public contacts = [{
 }];
 ```
 
-データを描画するマークアップを作成します。
+データを描画するマークアップを作成します。  
+すぐにスタイル設定したい場合は、リスト項目に付属するディレクティブを使用できます。 
+
+以下の例では、それらを使用する方法を示します。
 
 ```html
 <!--contacts.component.html-->
@@ -174,22 +178,7 @@ public contacts = [{
 </igx-list>
 ```
 
-> [!NOTE]
-> リスト項目の表示値は `flex` で、`flex-direction` が `column` に設定されます。リスト レイアウトの作成に注意してください。
-
-連絡先の名前および電話番号を表示するために span 要素を使用した場合も、要素は垂直方向に表示されます。これは各リスト項目の列レイアウトのためです。カスタム スタイル設定を追加します。名前および電話番号の span 要素に _name_ および _phone_ の新しいクラスを追加し、このクラスを使用して項目にスタイルを設定します。
-
-```css
-/* contacts.component.css */
-
-.name {
-    font-weight: 600;
-}
-
-.phone {
-    font-size: 0.875em;
-}
-```
+`igxListLineTitle` と `igxListLineSubTitle` ディレクティブは両方とも、リスト項目にデフォルトの外観を指定します。 
 
 結果は以下のようになります。
 
@@ -197,7 +186,7 @@ public contacts = [{
 <iframe id="list-sample-3-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 #### アバターおよびアイコンの追加
@@ -254,68 +243,30 @@ public contacts = [{
 }];
 ```
 
-連絡先リストのテンプレートをアバターおよびアイコンを表示するために更新します。
+連絡先リストのテンプレートをアバターおよびアイコンを表示するために更新します。リスト ディレクティブを使用してテンプレートを更新できます。
 
 ```html
 <!--contacts.component.html-->
 
 <igx-list>
   <igx-list-item isHeader="true">
-    連絡先
+    Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-    <div class="item-container">
-      <div class="contact">
-        <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
-        <div class="contact__info">
-          <span class="name">{{ contact.name }}</span>
-          <span class="phone">{{ contact.phone }}</span>
-        </div>
-      </div>
-      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
-    </div>
+      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <h4 igxListLineTitle>{{ contact.name }}</h4>
+      <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
+      <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
+      <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
   </igx-list-item>
 </igx-list>
 ```
 
-すべての要素を項目コンテナーにラップしてフローをスタイル設定できます。次に [**IgxAvatar**](avatar.md) コンポーネントを連絡先ラッパーに連絡先情報と共に追加し、最後に [**IgxIcon**](icon.md) コンポーネントを追加します。マークアップの変更に基づいて css スタイルシートを更新します。
+- `igxListThumbnail` は、リスト項目の開始に何らかのメディアを追加する必要がある場合に使用します。このディレクティブは、ターゲット要素（この場合は igx-avatar）を、デフォルトの位置と間隔を提供するコンテナーにラップします。
+- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは ` igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナでターゲット要素をラップします。
+- `igxListLine` は、 `igxListThumbnail` と ` igxListAction` の間にテキストが必要な場合に使用します。このディレクティブは、テキストの位置、間隔、配置が残りのディレクティブと外観がよくなるようにします。
 
-```css
-/* contacts.component.css */
-
-igx-icon {
-    cursor: pointer;
-    user-select: none;
-}
-
-.item-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact {
-    display: flex;
-    flex: 1 0 240px;
-    align-items: center;
-}
-
-.contact__info {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-left: 24px;
-}
-
-.name {
-    font-weight: 600;
-}
-
-.phone {
-    font-size: 0.875em;
-}
-```
-
-連絡先オブジェクトの _isFavorite_ プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
+次に、連絡先オブジェクトの isFavorite プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
 
 ```typescript
 // contacts.component.ts
@@ -411,17 +362,10 @@ public selectDensity(event) {
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <div class="item-container">
-      <div class="contact">
-        <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
-        <div class="contact__info">
-          <span class="name">{{ contact.name }}</span>
-          <span class="phone">{{ contact.phone }}</span>
-        </div>
-      </div>
-      <igx-icon [color]="contact.isFavorite ? 'orange' : 'lightgray'"
-        (click)="toggleFavorite(item)">star</igx-icon>
-    </div>
+    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <h4 igxListLineTitle>{{ contact.name }}</h4>
+    <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
+    <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
   </igx-list-item>
 </igx-list>
 
@@ -436,32 +380,6 @@ public selectDensity(event) {
 igx-icon {
     cursor: pointer;
     user-select: none;
-}
-
-.item-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact {
-    display: flex;
-    flex: 1 0 240px;
-    align-items: center;
-}
-
-.contact__info {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-left: 24px;
-}
-
-.name {
-    font-weight: 600;
-}
-
-.phone {
-    font-size: 0.875em;
 }
 
 .listItemLeftPanningStyle {
@@ -583,6 +501,42 @@ public leftPanPerformed(args) {
 ```
 
 <div class="divider"></div>
+
+### テーマの適用
+
+以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+次に、コンポーネントのテーマを作成します。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+:host ::ng-deep {
+    $my-list-theme: igx-list-theme(
+        $background: #0568ab
+    );
+
+    @include igx-list($my-list-theme);
+}
+```
+以下は上記コードの結果です。
+
+<div class="sample-container loading" style="height: 365px">
+<iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
+> [!NOTE]
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/themes/component-themes.html)トピックを参照してください。
+
+リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)を参照してください。
 
 ### API まとめ
 

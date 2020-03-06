@@ -40,8 +40,12 @@ ng add @nguniversal/express-engine --clientProject ssr-example
 
 この概略図は、npm コマンドや app.module 更新、アプリのクライアントおよびサーバーの構成などに複数の変更を実行します。
 
-#### Step 2 - 手順 2 - 不足しているブラウザー固有のすべてのオブジェクトを定義します
+#### 手順 2 - 不足しているブラウザー固有のすべてのオブジェクトを定義します
 `Window`、`document`、`location` などのブラウザー固有のオブジェクトが不足しているため、サーバー側の DOM 抽象化には [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) を使用することをお勧めします。Domino は、Mozilla の dom.js に基づくサーバー側の DOM 実装です。
+
+- サーバー側の DOM 抽象化には domino `npm install domino` をインストールします。
+- IgxIconService を使用してアイコンを登録する場合は、xmlhttprequest `npm i xmlhttprequest` をインストールします。
+- 「server.ts」 を設定します。
 
 ```typescript
 // server.ts
@@ -56,6 +60,11 @@ const window = domino.createWindow(template);
 // Ignite UI browser objects abstractions
 (global as any).window = window;
 (global as any).document = window.document;
+(global as any).Event = window.Event;
+(global as any).KeyboardEvent = window.KeyboardEvent;
+(global as any).MouseEvent = window.MouseEvent;
+(global as any).FocusEvent = window.FocusEvent;
+(global as any).PointerEvent = window.PointerEvent;
 (global as any).HTMLElement = window.HTMLElement;
 (global as any).HTMLElement.prototype.getBoundingClientRect = () => {
     return {
@@ -99,7 +108,7 @@ npm run build:ssr && npm run serve:ssr
 
 Ignite UI for Angular コンポーネントを含むスターター プロジェクトを使用します。このプロジェクトは Angular CLI を使用して、Angular Universal で簡単なアプリケーションをすばやく作成します。
 
-#### Step 1 - 手順 1 - スターター リポジトリをクローンします
+#### 手順 1 - スターター リポジトリをクローンします
 
 ```
 git clone https://github.com/IgniteUI/ng-universal-example.git
@@ -111,7 +120,7 @@ git clone https://github.com/IgniteUI/ng-universal-example.git
 npm install
 ```
 
-#### Step 3 - 手順 3 - 次のコマンドを使用して、アプリケーションを作成および起動します
+#### 手順 3 - 次のコマンドを使用して、アプリケーションを作成および起動します
 
 ```
 npm run build:ssr && npm run serve:ssr

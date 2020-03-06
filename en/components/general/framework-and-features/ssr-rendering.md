@@ -10,7 +10,7 @@ This topic aims at describing what Server-side Rendering is and how to configure
 
 ### Angular Universal
 
-All Angular applications run in the client's browser and often this may result in a negative performance hit on the [First Meaningful Paint (FCP)](https://web.dev/first-meaningful-paint) i.e. when a browser first renders the primary content of a page. This is when [Angular Universal](https://angular.io/guide/universal) comes in handy, you can generate the full HTML for a page on the server. It renders a client-side page to HTML on the server that is later bootstrapped on the client. Okay, but how it works?
+All Angular applications run in the client's browser and often this may result in a negative performance hit on the [First Meaningful Paint (FMP)](https://web.dev/first-meaningful-paint) i.e. when a browser first renders the primary content of a page. This is when [Angular Universal](https://angular.io/guide/universal) comes in handy, you can generate the full HTML for a page on the server. It renders a client-side page to HTML on the server that is later bootstrapped on the client. Okay, but how it works?
 
 > [FMP](https://web.dev/first-meaningful-paint) measures when the primary content of a page is visible to the user, as for [FCP](https://web.dev/first-contentful-paint) metric, it measures how long it takes the browser to render the first piece of DOM content after a user navigates to your page. See [Lighthouse performance scoring](https://web.dev/performance-scoring) for more information. 
 
@@ -43,6 +43,10 @@ This schematic will perform several changes to your app client and server config
 #### Step 2 - Define all browser-specific objects that are missing
 Since Universal apps run on the server and not in the browser, there are a few things you need to watch out for in your code. Browser-specific objects, such as `window`, `document`, or `location` are missing, so we recommend using of [domino](https://github.com/fgnass/domino#server-side-dom-implementation-based-on-mozillas-domjs) for Server-side DOM abstraction. Domino is a Server-side DOM implementation based on Mozilla's dom.js.
 
+- install domino `npm install domino` - for server-side dom abstraction
+- install xmlhttprequest `npm i xmlhttprequest` - If using IgxIconService to register icons
+- Configure the "server.ts" 
+
 ```typescript
 // server.ts
 const domino = require('domino');
@@ -56,6 +60,11 @@ const window = domino.createWindow(template);
 // Ignite UI browser objects abstractions
 (global as any).window = window;
 (global as any).document = window.document;
+(global as any).Event = window.Event;
+(global as any).KeyboardEvent = window.KeyboardEvent;
+(global as any).MouseEvent = window.MouseEvent;
+(global as any).FocusEvent = window.FocusEvent;
+(global as any).PointerEvent = window.PointerEvent;
 (global as any).HTMLElement = window.HTMLElement;
 (global as any).HTMLElement.prototype.getBoundingClientRect = () => {
     return {

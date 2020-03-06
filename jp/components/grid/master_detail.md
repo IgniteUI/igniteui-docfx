@@ -5,26 +5,26 @@ _keywords: マスターと詳細, igniteui for angular, インフラジスティ
 _language: ja
 ---
 
-### Grid マスターと詳細
+### Grid Master-Detail
 
-`igxGrid` コンポーネントは、コンテンツを展開/縮小することで特定の行の追加の詳細を表示する詳細テンプレートの指定をサポートします。指定した場合、各レコードはマスターとして機能し、展開すると、現在のレコードのコンテキスト データを含むカスタマイズ可能な詳細テンプレートが表示されます。
+`igxGrid` コンポーネントは、コンテンツを展開/縮小することで特定の行の追加の詳細を表示する detail テンプレートの指定をサポートします。指定した場合、各レコードは master として機能し、展開すると、現在のレコードのコンテキスト データを含むカスタマイズ可能な詳細テンプレートが表示されます。
 
-このモードは、マスター/詳細スタイル データを階層構造で表示する必要がある場合に役立ちます。
+このモードは、master-detail スタイル データを階層構造で表示する必要がある場合に役立ちます。
 
 #### デモ
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-master-detail-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 
 #### 構成
 
-マスター/詳細モードで表示するように `igxGrid` を設定するには、`igxGridDetail` ディレクティブでマークされたグリッド内のテンプレートを指定する必要があります。
+Master-detail モードで表示するように `igxGrid` を設定するには、`igxGridDetail` ディレクティブでマークされたグリッド内のテンプレートを指定する必要があります。
 
 ```html
  <igx-grid ... >
@@ -62,8 +62,8 @@ _language: ja
 - [`expandAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandAll)
 - [`collapseAll`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseAll)
 - [`toggleRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#toggleRow)
-- [`expand`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expand)
-- [`collapse`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapse)
+- [`expandRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandRow)
+- [`collapseRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseRow)
 
 #### キーボード ナビゲーション
 

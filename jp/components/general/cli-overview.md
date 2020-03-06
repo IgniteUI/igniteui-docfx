@@ -1,25 +1,42 @@
 ---
-title: Ignite UI CLI
-_description: Ignite UI CLI は、さまざまなフレームワークでアプリケーションを初期化、開発、スキャフォールディング、および保守するためのツールです。
+title: Angular Schematics & Ignite UI CLI
+_description: Angular Schematics & Ignite UI CLI は Ignite UI for Angular コンポーネントでプロジェクトを作成して変更できるためのヘルプを提供します。
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 _language: ja
 ---
 
-## Ignite UI CLI
+## Angular Schematics & Ignite UI CLI
+CLI ツールでは、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。プロジェクトにさらに追加できる Ignite UI for Angular コンポーネントを備えたビューの選択により、開発者の生産性が大幅に向上します。
 
-[Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) は、さまざまなフレームワーク用のアプリケーションを作成およびスキャフォールディングするためのコマンドラインツールです。
-Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。プロジェクトにさらに追加できる Angular コンポーネント用の Ignite UI を備えたビューの選択により、開発者の生産性が大幅に向上します。
+[Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) は、さまざまなフレームワーク用のアプリケーションを作成およびスキャフォールディングするためのスタンドアロン コマンドラインツールです。
+
+[Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) は同じプロジェクトの一部であり、[Angular CLI](https://angular.io/guide/schematics#schematics-for-the-angular-cli) で使用するコレクションとして利用できます。Ignite UI CLI のようなコア機能を提供しますが、Schematics ワークフローと統合され、製品に特化しています。[Ignite UI for Angular をインストールする](getting_started.md#ignite-ui-for-angular-のインストール)と、schematics コレクションがプロジェクトに追加されます。
+
+ツールの両方バージョンにより、異なるプロジェクト、コンポーネント、およびシナリオビュー (テンプレート)を生成し、ガイドモードを提供します。
 
 ### 作業の開始
 
-npm パッケージ マネージャーを使用して [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) をインストールします。
+Ignite UI for Angular Schematics をグローバルにインストールする方法:
+```cmd
+npm i -g @igniteui/angular-schematics
+```
+
+上記のインストールにより、schematics が `ng new` コマンドのコレクション パラメーターを使用できるようになります。
+
+IgniteUI CLI を使用する場合、npm でインストールできます。
 ```cmd
 npm install -g igniteui-cli 
 ```
-インストールの完了後、ガイドまたは特定のコマンドを使用してツールを開始できます。
 
 #### ガイドの使用
-アプリケーションを最短でブートストラップする最も簡単な方法は、Ignite UI CLI [ステップバイステップ ガイド](cli/step-by-step-guide.md) を使用する方法です。アプリのビルド後、1 コマンドで開始できます。 
+アプリケーションを最短でブートストラップする最も簡単な方法は、[Step-by-Step ガイド](cli/step-by-step-guide.md)を使用する方法です。
+
+Ignite UI for Angular Schematics を使用してガイドをアクティブにするには、次のコマンドを実行します。
+
+```cmd
+ng new --collection="@igniteui/angular-schematics"
+```
+Ignite UI CLI を使用している場合は、次のコマンドを実行します。
 ```cmd
 ig
 ```
@@ -32,35 +49,25 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-#### コマンドの使用
-新しいプロジェクトを作成するには、コンポーネントテンプレートを追加してビルドし、次の Ignite UI CLI [コマンド](#コマンド) を使用します。
-```cmd
-ig new <project name> --framework=angular --type=igx-ts 
-cd <project name>
-ig add <component/template> <component_name>
-ig start 
-```
-
-上記のコマンドを実行するには、*プロジェクト名*と*コンポーネント名*のプレースホルダーを実際の値に置き換える必要があります。
-これらのコマンドを実行すると、新しいプロジェクトがビルド、提供され、デフォルトのブラウザーで自動的に開かれます。
-
-
-### コマンド
-
 #### 新しいプロジェクトの作成
 
-Ignite UI for Angular コントロールに Ignite UI を使用するように構成されたアプリケーションを作成するには、フレームワークとして `angular` を、プロジェクトタイプ引数として `igx-ts` を提供する必要があります。
+Ignite UI for Angular コントロールを使用するように設定されたアプリケーションを作成するには、コレクションオプションに `@igniteui/angular-schematics` を提供する `ng new` コマンドを実行します。
 
+```cmd
+ng new newAngularProject --collection="@igniteui/angular-schematics" --template=side-nav
+```
+
+Ignite UI CLI を使用する場合、`angular` をフレームワークとして提供し、`igx-ts` を `new` コマンドのプロジェクト タイプ引数として提供する必要があります。
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 ```
-新しいアプリケーションが同じ名前でディレクトリに作成されます (`newAngularProject`)。[Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) は、Angular アプリケーション用の Ignite UI を作成するときに選択できるいくつかのプロジェクト テンプレートも提供します。
+新しいアプリケーションが同じ名前でディレクトリに作成されます (`newAngularProject`)。Ignite UI for Angular アプリケーションを作成するときに選択できるいくつかのプロジェクト テンプレートがあります。
 
 | テンプレートの ID   | テンプレートの説明 |
 | ---           | ---                  |
-| empty-project | ルーティングとホームページを備えたプロジェクト構造 |
+| empty         | ルーティングとホームページを備えたプロジェクト構造 |
 | side-nav      | サイド ナビゲーション ドロワーを備えたプロジェクト構造 |
-| side-nav-auth | ユーザー認証モジュールで拡張されたサイド ナビゲーション プロジェクトプロジェクト テンプレートの詳細は、[Angular 認証プロジェクト テンプレート](cli/auth-template.md) トピックをご覧ください。 |
+| side-nav-auth | ユーザー認証モジュールで拡張されたサイド ナビゲーション プロジェクトプロジェクト テンプレートの詳細は、[Angular 認証プロジェクト テンプレート](cli/auth-template.md)トピックをご覧ください。 |
 
 さらに、**引数**を指定してテーマを制御したり、パッケージのインストールをスキップしたりできます。
 
@@ -75,7 +82,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 </details>
 
 <details>
-  <summary>framework</summary>
+  <summary>framework<span align="right"><strong> (Ignite UI CLI only)</strong></span></summary>
   <p>
     <code>--framework</code> (alias: <code>-f</code>) <em>default value: "jquery"</em>
   </p>
@@ -85,7 +92,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 </details>
 
 <details>
-  <summary>type</summary>
+  <summary>type<span align="right"><strong> (Ignite UI CLI only)</strong></span></summary>
   <p>
     <code>--type</code> (alias: <code>-t</code>)
   </p>
@@ -115,17 +122,17 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 </details>
 
 <details>
-  <summary>skip-install <span align="right"><strong>(v4.0.0)</strong></span></summary>
+  <summary>skip-install</summary>
   <p>
     <code>--skip-install</code> (alias: <code>--si</code>)
   </p>
   <p>
-    v4.0.0以降、<code> ig new </ code>コマンドは、プロジェクトの作成時にパッケージの依存関係をインストールします。このフラグを渡すと、最初のインストールがスキップされます。
+    <code>new</code> コマンドは、プロジェクトの作成時にパッケージの依存関係をインストールします。このフラグを渡すと、最初のインストールがスキップされます。
   </p>
 </details>
 
 <details>
-  <summary markdown='span'>template <span align="right"><strong>(v3.0.0)</strong></span></summary>
+  <summary markdown='span'>template</summary>
   <p>
     <code>--template</code>
   </p>
@@ -136,20 +143,26 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 
 
 #### テンプレートの追加
+[利用可能な Ignite UI Angular テンプレート](cli/component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[Step-by-Step Guide](cli/step-by-step-guide.md#ビューの追加) を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting_started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
 
-`ig add [template] [name]` は、指定された名前で [利用可能なテンプレート](cli/component-templates.md) から ID でテンプレートを追加します。
+Schematics には、 Ignite UI for Angular コレクション と `component [template] [name]` の `ng generate` を使用します。
 
 ```cmd
-cd newAngularProject
+ng g @igniteui/angular-schematics:component grid newGrid
+```
+
+Ignite UI CLI には、`ig add [template] [name]` コマンドを使用します。
+
+```cmd
 ig add grid newGrid
 ```
 
-`Add` コマンドは、Ignite UI CLI で作成された既存のプロジェクトでのみサポートされます。すべての[利用可能なテンプレート](cli/component-templates.md)のリストを取得するには、プロジェクトディレクトリで [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) コマンドを実行することもできます。
+すべての[利用可能なテンプレート](cli/component-templates.md) のリストを取得するには、プロジェクトディレクトリで [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) コマンドを実行することもできます。
 
-さらに、**引数**を指定してテーマを制御したり、パッケージのインストールをスキップしたりできます。
+また、コンポーネントを登録するモジュールを指定するか、アプリ ナビゲーション ルートの自動生成をスキップできます。
 
 <details>
-  <summary>module <span align="right"><strong>(v2.0.0)</strong></span></summary>
+ <summary>module</summary>
   <p>
     <code>--module</code> (alias: <code>-m</code>)
   </p>
@@ -159,11 +172,13 @@ ig add grid newGrid
   <p>
     新しいコンポーネントを登録するモジュールの、 /src/app/ folder を基準とした module.ts ファイルのパス。
   </p>
-  <code>ig add grid newCombo --name=myModule/myModule.module.ts</code>
+  <code>ng g @igniteui/angular-schematics:component combo newCombo --module=myModule/myModule.module.ts</code>
+  <br>
+  <code>ig add combo newCombo --module=myModule/myModule.module.ts</code>
 </details>
 
 <details>
-  <summary>skip-route <span align="right"><strong>(v3.2.0)</strong></span></summary>
+  <summary>skip-route</summary>
   <p>
     <code>--skip-route</code> (alias: <code>-srk</code>)
   </p>
@@ -174,13 +189,18 @@ ig add grid newGrid
 
 #### アプリケーションの実行
 
-[ig start](https://github.com/IgniteUI/igniteui-cli/wiki/start) コマンドを実行すると、アプリケーションがビルドされ、Web サーバーが起動してデフォルトのブラウザーで開きます。
+`start` schematic またはコマンドはアプリケーションがビルドされ、Web サーバーが起動してデフォルトのブラウザーで開きます。
 
+Ignite UI for Angular Schematics の使用:
+```cmd
+ng g @igniteui/angular-schematics:start
+```
+Ignite UI CLI の使用:
 ```cmd
 ig start
 ```
 
-#### 利用可能なコマンド
+#### Ignite UI CLI コマンド
 使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)にあります。
 
 | コマンド | エイリアス | 説明 |

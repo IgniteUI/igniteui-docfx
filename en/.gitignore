@@ -17,6 +17,8 @@ components/hierarchicalgrid/*.md
 !components/grid/grid.md
 !components/grid/groupby.md
 !components/grid/paste_excel.md
+!components/grid/master_detail.md
+!components/grid/selection_based_aggregates.md
 
 # All tree grid specific files that should NOT be ignored:
 !components/treegrid/tree_grid.md

@@ -9,7 +9,7 @@ _language: ja
 
 ### トランザクション、状態、トランザクション ログ
 
-トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェースは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type) を定義します。
+トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type) を定義します。
 
 トランザクションの [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) はデータレコードごとに一意である必要があり、このトランザクションが影響するレコードを定義します。[`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) は、実行する操作に応じて、`ADD`、`DELETE`、`UPDATE` の 3 つのトランザクションタイプのいずれかになります。[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には、`ADD` トランザクションを追加する場合の新しいレコードの値が含まれます。既存のレコードを更新する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には変更のみが含まれます。同じ ID の `UPDATE` タイプのトランザクションが複数あるレコードを削除する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には削除されたレコードの値が含まれます。 
 

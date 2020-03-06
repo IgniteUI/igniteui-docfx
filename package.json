@@ -13,15 +13,18 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "2.18.13",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-file-include": "^2.0.1",
     "gulp-sass": "^4.0.1",
-    "gulp-shell": "^0.6.5",
-    "igniteui-docfx-template": "2.3.1",
+    "igniteui-docfx-template": "^2.5.6",
     "natives": "^1.1.6",
     "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-shell": "^0.7.1",
+    "slash": "^3.0.0"
   }
 }

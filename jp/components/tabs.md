@@ -113,7 +113,7 @@ export class AppModule {}
 
 ### タブのカスタマイズ
 
-タブにアイコンを追加します。Tabs コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
+タブに [`icon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) 入力を追加します。Tabs コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 
 はじめに Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
 
@@ -170,7 +170,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-タブのラベルおよびアイコンの変更を拡張する場合、各タブ ヘッダーでカスタム テンプレートを作成することもできます。
+タブのラベルおよびアイコンの変更を拡張する場合、各タブ ヘッダーで [`IgxTabItemTemplateDirective`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) を作成することもできます。
 
 ```html
 <igx-tabs>
@@ -184,7 +184,123 @@ export class AppModule {}
     </igx-tabs-group>
 </igx-tabs>
 ```
+### ルーター アウトレット コンテナとの統合
 
+タブ コンポーネントの主な用途はコンテンツを含むグループの定義ですが、タブ項目のみを定義する必要がある場合があります。
+
+> [!NOTE]
+> タブ項目定義モードはタブのコンテンツをサポートしていないことに注意してください。コンポーネントはタブ項目のストリップのみをレンダリングします。また、このコンポーネントでタブ項目定義とグループ定義を混合することはサポートされません。
+
+タブ項目を定義する際にディレクティブを適用することができます。たとえば、この機能を使用して、Angular Router を使用してビュー間のナビゲーションを実現できます。次の例は、タブ コンポーネントを構成して、単一のルーターアウトレットで 3 つのコンポーネントを切り替える方法を示しています。
+
+まず、タブ コンポーネントをホストするメイン コンポーネントと、デモ用のコンテンツを含む 3 つのビュー コンポーネントが必要です。コードスニペットを簡素化するために、ビューコンポーネントに短いテンプレートがありますが、必要に応じてそれらをより識別しやすくしてください。また、これらのビューコンポーネントを `app.module.ts` ファイルにインポートします。
+
+```typescript
+// tabs-routing.component.ts
+import { Component } from "@angular/core";
+
+@Component({
+    selector: "app-tabs-routing",
+    styleUrls: ["tabs-routing.component.scss"],
+    templateUrl: "tabs-routing.component.html"
+})
+export class TabsRoutingComponent {
+    constructor() { }
+}
+
+@Component({
+    template: "<h3>Tab 1 Content</h3>"
+})
+export class TabsRoutingView1Component {
+}
+
+@Component({
+    template: "<h3>Tab 2 Content</h3>"
+})
+export class TabsRoutingView2Component {
+}
+
+@Component({
+    template: "<h3>Tab 3 Content</h3>"
+})
+export class TabsRoutingView3Component {
+}
+```
+
+次のステップでは、`app-routing.module.ts` ファイルに適切なナビゲーション マッピングを作成します。
+
+```typescript
+// app-routing.module.ts
+import {
+    TabsRoutingComponent,
+    TabsRoutingView1Component,
+    TabsRoutingView2Component,
+    TabsRoutingView3Component } from './tabs-routing.component';
+
+...
+
+const appRoutes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/tabs-routing'
+    },
+    {
+        path: 'tabs-routing',
+        component: TabsRoutingComponent,
+        children: [
+            { path: 'view1', component: TabsRoutingView1Component },
+            { path: 'view2', component: TabsRoutingView2Component },
+            { path: 'view3', component: TabsRoutingView3Component },
+        ]
+    }
+];
+
+@NgModule({
+    exports: [RouterModule],
+    imports: [RouterModule.forRoot(appRoutes)]
+})
+export class AppRoutingModule { }
+```
+
+すべてのナビゲーション ルートがセットアップされたので、タブ コンポーネントを宣言し、ルーティング用に構成する必要があります。また、ビュー コンポーネントの出力をレンダリングするためのルーター アウトレットを必ず追加してください。
+
+```html
+<!-- tabs-routing.component.html -->
+<igx-tabs>
+  <igx-tab-item label="Tab 1" icon="dashboard"
+    routerLink="view1"
+    routerLinkActive #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive">
+  </igx-tab-item>
+
+  <igx-tab-item label="Tab 2" icon="check_circle_outline"
+    routerLink="view2"
+    routerLinkActive #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive">
+  </igx-tab-item>
+
+  <igx-tab-item label="Tab 3" icon="radio_button_checked"
+    routerLink="view3"
+    routerLinkActive #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive">
+  </igx-tab-item>
+</igx-tabs>
+
+<router-outlet></router-outlet>
+```
+
+上記のコードは、3 つのタブ項目を持つタブ コンポーネントを作成します。すべてのタブ項目には、ナビゲーションに使用されるルーティング リンクを指定するために使用される `RouterLink` ディレクティブが適用されています。これらのリンクのいずれかがアクティブになると、`RouterLinkActive` ディレクティブの `isActive` プロパティにバインドされるため、対応するタブ項目の `isSelected` プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
+
+上記のアプローチは、タブ コンポーネントを使用したルーティングを示すために、次のサンプルで使用されています。
+
+<div class="sample-container loading" style="height: 500px; width: 500px;">
+    <iframe id="tabs-sample-6-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-6-iframe"
+    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### スタイル設定
 
