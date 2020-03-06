@@ -170,10 +170,9 @@ Lets see the result from all the above changes:
 </div>
 
 
-## Styling
+## Styling  
 
-### Basic usage
-You can see the styled sample below:
+### Demo
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="expansion-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
 </div>
@@ -184,8 +183,8 @@ You can see the styled sample below:
 ### Palettes & Colors
 Fist we create a custom palette which can later be passed to our component:
 ```scss
-// In expansion-styling.component.scss
-// In real life scenario this should be in your main sass file, in our case it's in the component SCSS.
+// In real life, this should be in our main sass file so we can share the palette between all components. 
+// In our case, it's in the component SCSS file "expansion-styling.component.scss".
 
 // Import theming engine functionality.
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -228,12 +227,15 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
-@include igx-css-vars($custom-panel-theme);
+// The `:host` here makes sure that all the theming will affect only this component.
+:host {
+  @include igx-css-vars($custom-panel-theme);
+}
 ```
 
  >[!NOTE]
- >If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep`.
- In order to prevent our custom theme from leaking into other components, be sure to include the `:host` selector before `::ng-deep`:
+ > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `igx-css-vars` and because our component have [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
+ > Also in order to prevent our custom theme from leaking into other components, we have to include the `:host` selector before `::ng-deep`:
 
 ```scss
 // In expansion-styling.component.scss
@@ -280,12 +282,6 @@ export class ExpansionPanelComponent {
         })
     };
 
-    public user = {
-        email: "",
-        fullName: "",
-        phone: ""
-    };
-
     public collapsed() {
         return this.panel && this.panel.collapsed;
     }
@@ -299,37 +295,12 @@ The sample shows some user information and the key point here is passing the ani
 ```html
 <!-- in expansion-panel.component.html -->
 ...
-<igx-expansion-panel [animationSettings] = "animationSettingsCustom" class="content__collapsible">
-    <igx-expansion-panel-header [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
-        <igx-expansion-panel-icon>
-            <igx-icon fontSet="material">{{collapsed() ? 'expand_more':'expand_less'}}</igx-icon>
-        </igx-expansion-panel-icon>
+<igx-expansion-panel [animationSettings] = "animationSettingsCustom" class="my-expansion-panel">
+    <igx-expansion-panel-header>
+        <igx-expansion-panel-title class="sample-title">Angular</igx-expansion-panel-title>
     </igx-expansion-panel-header>
-    <igx-expansion-panel-body class="body">
-        <igx-input-group class="group">
-            <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName"/>
-            <label igxLabel for="fullName">Full Name</label>
-            <igx-suffix>
-                <igx-icon>person</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <igx-prefix>+359</igx-prefix>
-            <label igxLabel for="phone">Phone</label>
-            <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
-            <igx-suffix>
-                <igx-icon>phone</igx-icon>
-            </igx-suffix>
-            <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="email">Email address</label>
-            <input igxInput name="email" type="email" [(ngModel)]="user.email"/>
-            <igx-suffix>
-                <igx-icon>email</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
+    <igx-expansion-panel-body class="example-content">
+        Angular (commonly referred to as "Angular 2+" or "Angular v2 and above") is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.
     </igx-expansion-panel-body>
 </igx-expansion-panel>
 ...
@@ -337,13 +308,13 @@ The sample shows some user information and the key point here is passing the ani
 
 You can see the results below:
 <div class="sample-container loading" style="height: 380px;">
-    <iframe id="expansion-sample-6-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-6" class="lazyload"></iframe>
+    <iframe id="expansion-sample-5-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-6-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Multiple panel scenario
+## Multiple panel scenario
 In the following example, we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample, the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
 
 ```typescript
@@ -357,26 +328,6 @@ import { IgxExpansionPanelComponent } from "igniteui-angular";
 export class ExpansionPanelComponent {
     @ViewChildren(IgxExpansionPanelComponent)
     public accordion: QueryList<IgxExpansionPanelComponent>;
-
-    public user = {
-        email: "",
-        fullName: "",
-        phone: ""
-    };
-
-    public billingAddress = {
-        address: "",
-        city: "",
-        state: "",
-        zipCode: ""
-    };
-
-    public shippingAddress = {
-        address: "",
-        city: "",
-        state: "",
-        zipCode: ""
-    };
 
     public collapsed(index: number) {
          if (!this.accordion) {
@@ -398,226 +349,43 @@ export class ExpansionPanelComponent {
 
 ```html
 <!-- in expansion-panel.component.html -->
-...
-<igx-expansion-panel class="content__collapsible">
+<igx-expansion-panel class="my-expansion-panel">
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
-        <igx-expansion-panel-icon>
-            <igx-icon fontSet="material">{{collapsed(0) ? 'expand_more':'expand_less'}}</igx-icon>
-        </igx-expansion-panel-icon>
+        <igx-expansion-panel-title class="sample-title">HTML5</igx-expansion-panel-title>
     </igx-expansion-panel-header>
-    <igx-expansion-panel-body class="body">
-        <igx-input-group class="group">
-            <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName"/>
-            <label igxLabel for="fullName">Full Name</label>
-            <igx-suffix>
-                <igx-icon>person</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <igx-prefix>+359</igx-prefix>
-            <label igxLabel for="phone">Phone</label>
-            <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
-            <igx-suffix>
-                <igx-icon>phone</igx-icon>
-            </igx-suffix>
-            <igx-hint position="start">Ex.: +359 555 123 456</igx-hint>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="email">Email address</label>
-            <input igxInput name="email" type="email" [(ngModel)]="user.email"/>
-            <igx-suffix>
-                <igx-icon>email</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
+    <igx-expansion-panel-body>
+        <div class="example-content">
+            HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup-based pattern to it.            
+    </div>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
-
-<igx-expansion-panel class="content__collapsible">
+<igx-expansion-panel class="my-expansion-panel">
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">Billing Address</igx-expansion-panel-title>
-        <igx-expansion-panel-icon>
-            <igx-icon fontSet="material">{{collapsed(1) ? 'expand_more':'expand_less'}}</igx-icon>
-        </igx-expansion-panel-icon>
+        <igx-expansion-panel-title class="sample-title">CSS3</igx-expansion-panel-title>
     </igx-expansion-panel-header>
-    <igx-expansion-panel-body class="body">
-        <igx-input-group class="group">
-            <input igxInput name="address" type="text" [(ngModel)]="shippingAddress.address"/>
-            <label igxLabel for="address">Billing Address:</label>
-            <igx-suffix>
-                <igx-icon>add_location</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="city">City:</label>
-            <input igxInput name="city" type="text" [(ngModel)]="shippingAddress.city"/>
-            <igx-suffix>
-                <igx-icon>location_city</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="state">State:</label>
-            <input igxInput name="state" type="text" [(ngModel)]="shippingAddress.state"/>
-            <igx-suffix>
-                <igx-icon>terrain</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="zipCode">Zip Code:</label>
-            <input igxInput name="zipCode" type="text" [(ngModel)]="shippingAddress.zipCode">
-            <igx-suffix>
-                <igx-icon>mail_outline</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
+    <igx-expansion-panel-body>
+        <div class="example-content">
+            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML            
+        </div>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
-
-<igx-expansion-panel class="content__collapsible">
+<igx-expansion-panel class="my-expansion-panel">
     <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">Shipping Address</igx-expansion-panel-title>
-        <igx-expansion-panel-icon>
-            <igx-icon fontSet="material">{{collapsed(2) ? 'expand_more':'expand_less'}}</igx-icon>
-        </igx-expansion-panel-icon>
+        <igx-expansion-panel-title class="sample-title">SASS/SCSS</igx-expansion-panel-title>
     </igx-expansion-panel-header>
-    <igx-expansion-panel-body class="body">
-        <igx-input-group class="group">
-            <input igxInput name="address" type="text" [(ngModel)]="billingAddress.address"/>
-            <label igxLabel for="address">Shipping Address:</label>
-            <igx-suffix>
-                <igx-icon>add_location</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="city">City:</label>
-            <input igxInput name="city" type="text" [(ngModel)]="billingAddress.city"/>
-            <igx-suffix>
-                <igx-icon>location_city</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="state">State:</label>
-            <input igxInput name="state" type="text" [(ngModel)]="billingAddress.state"/>
-            <igx-suffix>
-                <igx-icon>terrain</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
-        <igx-input-group class="group">
-            <label igxLabel for="zipCode">Zip Code:</label>
-            <input igxInput name="zipCode" type="text" [(ngModel)]="billingAddress.zipCode">
-            <igx-suffix>
-                <igx-icon>mail_outline</igx-icon>
-            </igx-suffix>
-        </igx-input-group>
+    <igx-expansion-panel-body>
+        <div class="example-content">
+            Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). 
+        </div>
     </igx-expansion-panel-body>
 </igx-expansion-panel>
-...
 ```
 You can see the results below:
 <div class="sample-container loading" style="height: 480px;">
-    <iframe id="expansion-sample-5-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
+    <iframe id="expansion-sample-4-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-## Weather Forecast Sample
-The following is an illustration of using the [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) in combination with several other components like [`IgxCard`](card.md) and [`IgxIcon`](icon.md) to achieve a particular task. In this case - creating a weather component capable of showing both current day temperature and conditions as well as forecast details. If needed, the user can expand more and see the upcoming days' weather conditions.
-
-```typescript
-// in weather-forecast.component.ts
-import { Component, ViewChild } from "@angular/core";
-import { IgxExpansionPanelComponent } from "igniteui-angular";
-import { data as weatherData } from "./weather-data";
-
-@Component({
-    ...
-})
-export class WeatherForecast {
-
-    @ViewChild(IgxExpansionPanelComponent)
-    public panel: IgxExpansionPanelComponent;
-    public data = weatherData;
-
-    public toggleDetails() {
-        this.panel.toggle();
-    }
-}
-```
-
-```html
-<!-- in weather-forecast.component.html -->
-<div class="sample-wrapper">
-  <igx-card>
-    <igx-card-header>
-      <h3 class="igx-card-header__title">{{data.city}}</h3>
-      <h5 class="igx-card-header__subtitle">{{data.dateTime}}, {{data.today.description}}</h5>
-    </igx-card-header>
-    <igx-card-content>
-      <div class="weather__main" *ngIf=data>
-        <div class="weather__main-temp">
-          <div>{{data.today.tempMax}}°<sup>C</sup></div>
-          <div class="right"><igx-icon color="orange" fontSet="fas" name="fa-sun"></igx-icon></div>
-        </div>
-        <div class="weather__main-hum">
-          <div><igx-icon color="blue" fontSet="fas" name="fa-umbrella"></igx-icon>{{data.precipitation}} Precipitation </div>
-          <div class="right"><igx-icon color="aqua-blue" fontSet="fas" name="fa-tint"></igx-icon>{{data.humidity}} Humidity </div>
-        </div>
-      </div>
-      <button igxButton igxRipple (click)="toggleDetails()">Forecast Details</button>
-      <igx-expansion-panel>
-        <igx-expansion-panel-body>
-          <div class="forecast__container" *ngIf=data>
-            <div *ngFor="let day of data.daysOfWeek" class="forecast__day">
-              <div>{{day.name}}</div>
-              <div class="right">
-                <igx-icon [color]="day.iconColor" fontSet="fas" [name]="day.iconName" font-size="1em"></igx-icon>
-                {{day.tempMin}}°/{{day.tempMax}}°
-              </div>
-            </div>
-          </div>
-        </igx-expansion-panel-body>
-      </igx-expansion-panel>
-    </igx-card-content>
-  </igx-card>
-</div>
-```
-
-```typescript
-// in weather-data.ts
-export const data = {
-  city: "Sofia",
-  humidity: "44%",
-  precipitation: "5%",
-  windSpeed: 279,
-  dateTime: "10/7/2018, 14:35:00 PM",
-  today: {
-    name: "Sunday",
-    tempMax: 25,
-    tempMin: 15,
-    description: "Sunday",
-    iconColor: "gray",
-    iconName: "fa-cloud"
-  },
-  daysOfWeek: [
-    {
-      name: "Monday",
-      tempMax: 22,
-      tempMin: 15,
-      description: "Sunny",
-      iconColor: "orange",
-      iconName: "fa-sun"
-    },
-    //...
-  ]
-};
-```
-
-You can see the results below:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="expansion-sample-7-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-7" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-7-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-4-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ## API Reference
