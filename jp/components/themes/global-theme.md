@@ -12,16 +12,26 @@ _language: ja
 ### 概要
 アプリケーション プロジェクトに _`igniteui-angular.css`_ ファイルを追加した場合、削除してください。_`My-app-theme.scss`_ ファイルを使用してアプリケーションのすべてのコンポーネント用にグローバル テーマを生成します。
 
-**Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。グローバル テーマを生成するために 2 つの mixins `igx-core` と `igx-theme` を含みます。`igx-core` は引数を受け取りません。`igx-theme` は数個受け取ります。
+**Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。グローバル テーマの生成には 2 つの mixins `igx-core` と `igx-theme` を含みます。両方の mixins は数個の引数を受け取ります。
 
-| 名前              |  型   | デフォルト            | 説明                                                                           |
-| :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
-| `$palette`        | map     | undefined          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。             |
-| `$schema`         | map     | $light-schema      | コンポーネントのスタイル設定に基づいて使用されるスキーマ。                                  |
-| `$exclude`        | list    | ( )                | グローバル テーマから除外されるコンポーネント テーマのリスト。                     |
-| `$legacy-support` | boolean | `true`             | テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。 |
+#### igx-core  
 
-<div class="divider"></div>
+| 名前                 |  型    | デフォルト            | 説明                                                                           |
+| :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
+| `$print-layout`      | boolean  | true               | 印刷にスタイルを含めるか除外します。                                               |
+| `$direction`         | Keyword  | ltr                | すべてのコンポーネントのコンテンツの向きを指定します。 `ltr` または `rtl` に指定できます。 
+
+#### igx-theme  
+
+| 名前              |  型   | デフォルト            | 説明                                                                                                    |
+| :---------------: | :-----: | :---------------:  | :------------------------------------------------------------------------------------------------------------: |
+| `$palette`        | map     | 未定義          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。                                         |
+| `$schema`         | map     | $light-schema      | コンポーネントのスタイル設定に基づいて使用されるスキーマ。                                                           |
+| `$exclude`        | list    | ( )                | グローバル テーマから除外されるコンポーネント テーマのリスト。                                               |
+| `$legacy-support` | boolean | `true`             | テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。                          |
+| `$roundness`      | Number  |  null              | すべてのコンポーネントのグローバルな丸み係数 (値は0〜1の任意の小数にすることができます) を設定します。   |
+| `$elevation`      | boolean | `true`             | エレベーションが構成されたコンポーネントのグローバル エレベーションを設定します。                                           |
+
 
 企業のプライマリおよびセカンダリの色を使用するカスタム グローバル テーマを作成します。
 
@@ -37,9 +47,9 @@ $my-color-palette: igx-palette(
     $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
+//重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
+//生成したカラーパレットを igx-theme mixin に渡します。
 @include igx-theme($my-color-palette);
 ```
 
@@ -82,34 +92,41 @@ $unnecessary: (igx-avatar, igx-badge);
 ```
 アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
 
-### Material から Fluent テーマへの切り替え
-バージョン `8.2` 以降、インフラジスティックスのコンポーネントでは、[`Microsoft フルーエント デザイン システム`](https://www.microsoft.com/design/fluent/)に基づいて構築された新しいテーマをサポートします。  
-`マテリアル`から`フルーエント`へ切り替えるには、新しく作成された mixins の 1 つを使用する必要があります。
+#### 使用可能なテーマ
+Ignite UI for Angular には、事前定義されたテーマのセットから選択するオプションがあります。
+以下の表では、すぐに使用できるすべての定義済みテーマを示します。
 
-`Excel パレット`を使用した`フルーエント テーマ`の `white` バージョンの場合、以下のコードを使用します。
-```scss
-// Replace
-@include igx-theme($default-palette);
-// With     
-@include igx-fluent-theme($fluent-excel-palette);
-```
+| テーマ                                                                        | Mixin                                                                                             |  スキーマ                   |  カラーパレット                                            | 利用可能バージョン |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
+| [**Material (base)**](./themes-list/material.html)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
+| [**Material (light)**](./themes-list/material.html)                          |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-schema          ` | $default-palette                                          |      **6.2 +**       |
+| [**Material (dark)**](./themes-list/material.html)                           |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-schema           ` | $dark-palette                                             |      **6.2 +**       |
+| [**Fluent**](./themes-list/fluent.html)                                      |  [igx-fluent-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-theme)                 | `$light-fluent-schema   ` | $fluent-excel-palette <br> $fluent-word-palette           |      **8.2 +**       |
+| [**Fluent (dark)**](./themes-list/fluent.html)                               |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $fluent-excel-dark-palette <br> $fluent-word-dark-palette |      **8.2 +**       |
+| [**Bootstrap**](./themes-list/bootstrap.html)                                |  [igx-bootstrap-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-theme)            | `$light-bootstrap-schema` | $bootstrap-palette                                        |      **9.0 +**       |
+| [**Bootstrap (dark)**](./themes-list/bootstrap.html)                         |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $bootstrap-dark-palette                                   |      **9.0 +**       |
 
-`Excel パレット`を使用した`フルーエント テーマ`の `Dark` バージョンの場合、以下のコードを使用します。
-```scss    
-// replace
-@include igx-dark-theme($default-palette);
-// With 
-@include igx-fluent-dark-theme($fluent-excel-palette);
-```
+> [!NOTE]
+> すべてのハイレベルなテーマ mixin は、基本の `igx-theme` mixin をラップすることに注意してください。
 
-また、`Microsoft word` パレットを追加しました。使用するには、`$fluent-excel-palette` を `$fluent-word-palette` に置き換えるだけです。
+すべてのテーマ mixin は、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` mixin を使用して、新しいテーマを作成しましょう。
 
 ```scss
-// for the white version    
-@include igx-fluent-theme($fluent-word-palette);
+//最初に Ignite UI テーマ ライブラリをインポートします。
+@import '~igniteui-angular/lib/core/styles/themes/index';
 
-// for the dark version
-@include igx-fluent-dark-theme($fluent-word-palette);
+$primary-color: #b71053;
+$secondary-color: #6c757d; 
+
+$my-color-palette: igx-palette(
+    $primary: $primary-color,
+    $secondary: $secondary-color
+);
+
+//重要: 必ず最初に igx-core を含めてください。
+@include igx-core();
+//生成したカラーパレットを igx-bootstrap-theme mixin に渡します。
+@include igx-bootstrap-theme($my-color-palette);
 ```
 
 ### ブラウザー サポート
