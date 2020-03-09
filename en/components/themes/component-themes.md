@@ -150,6 +150,7 @@ As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support`
 /* app-avatar.component.css */
 :host {
     --igx-avatar-initials-background: royalblue;
+}
 ```
 
 <div class="divider"></div>
