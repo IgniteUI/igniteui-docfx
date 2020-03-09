@@ -103,7 +103,7 @@ In a component template:
 
 So far we've explored ways to create themes that are globally scoped, and are included in a single Sass file. However, this is not always desirable, and in some instances you will want the Sass file to be bound to a specific app component. In those cases we have to take View Encapsulation, and specifically how it is emulated in Angular, into consideration.
 
-The Angular team has adopted 3 strategies for View Encapsulation - Emulated(default), Native, and None. To learn more about each of this strategies, take a look at the [Angular Documentation](https://angular.io/api/core/ViewEncapsulation). We will take a closer look at how to handle theming of Ignite UI for Angular components that are part of View Encapsulated parent components.
+The Angular team has adopted 3 strategies for View Encapsulation - Emulated(default), ShadowDom, and None. To learn more about each of these strategies, take a look at the [Angular Documentation](https://angular.io/api/core/ViewEncapsulation). We will take a closer look at how to handle theming of Ignite UI for Angular components that are part of View Encapsulated parent components.
 
 What exactly does `Emulated` View Encapsulation mean, anyway? This type of View Encapsulation does not take care advantage of the Shadow DOM specification, instead it employs a way to bind styles for a component and its children by using an unique attribute identifier applied on the host element. Any style rules you add to a stylesheet of a View Encapsulated component that target some inner selector will not apply because they do not reference the unique attribute of the host element. To be able to 'penetrate' this encapsulation we have to use some View Encapsulation penetration strategy. Right now in Angular this strategy is `::ng-deep`; it allows you to target any inner selector, which is encapsulated by its host element. It's good practice to use `::ng-deep` if you're dealing with CSS rules, instead of CSS variables and you want to customize a single instance of a component. We'll provide an example for that in the next section.
 
@@ -142,7 +142,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 ```
 
-While using CSS variables we have no need of the `::ng-deep` pseudo selector. With the code above we've created CSS variable for the `igx-avatar`,  which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' in other `igx-avatar` component instances, and thus stays encapsulated within our custom `app-avatar` component.
+While using CSS variables we have no need of the `::ng-deep` pseudo-selector. With the code above we've created CSS variables for the `igx-avatar`,  which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' in other `igx-avatar` component instances, and thus stays encapsulated within our custom `app-avatar` component.
 
 As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `false` will allow styling of components without the need to use Sass in your project. For instance the above could be achieved by setting the value of `--igx-avatar-initials-background` CSS variable to the desired color:
 
