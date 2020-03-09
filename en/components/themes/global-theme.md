@@ -14,16 +14,7 @@ If you've included the _`igniteui-angular.css`_ file in your application project
 **Ignite UI for Angular** uses a global theme by default to theme the entire suite of components. You can, however, create themes scoped to components you have in your app, depending on your use case. For now, we will be including all of our themes in a single file.
 To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`; both of those mixins accepts a few arguments: 
 
-<<<<<<< HEAD
 #### igx-core  
-=======
-| Name              |  Type   | Default            | Description                                                                           |
-| :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
-| `$palette`        | map     | undefined          | The palette map to be used to by the default themes of all components.                |
-| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                  |
-| `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                      |
-| `$legacy-support` | boolean | `false`             | Determines the theming strategy - if set to true, theming is done via hard-coded values. |
->>>>>>> 7e2025b2... docs(theme): update docs related to themes
 
 | Name                 |  Type    | Default            | Description                                                                           |
 | :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
