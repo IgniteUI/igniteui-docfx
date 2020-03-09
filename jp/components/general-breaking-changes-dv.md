@@ -1,32 +1,33 @@
 ---
-title: Breaking Changes | Ignite UI for Angular | Angular | Infragistics
-_description: Learn about breaking changes in the Ignite UI for Angular and how to update your code to latest API.
-_keywords: Breaking Changes, Ignite UI for Angular, Angular, Infragistics
+title: 重大な変更 | Ignite UI for Angular | Angular | インフラジスティックス
+_description: Ignite UI for Angular の重大な変更とコードを最新の API に更新する方法について説明します。
+_keywords: Breaking Changes, Ignite UI for Angular, Angular, Infragistics, 重大な変更, インフラジスティックス
+_language: ja
 ---
 
-## Breaking Changes in Ignite UI for Angular
+## Ignite UI for Angular の重大な変更
 
-This topic provides information about breaking changes in Ignite UI for Angular as well as how to update older code to latest API.
+このトピックでは、Ignite UI for Angular の重大な変更に関する情報と、古いコードを最新の API に更新する方法について説明します。
 
-### Changed Import Statements
+### import ステートメントの変更
 
-Import statements have been simplified to use just package names instead of full paths to API classes and enums.
+Import ステートメントは、API クラスと列挙型へのフル パスではなくパッケージ名のみを使用するように簡素化されました。
 
 > [!NOTE]
-> These breaking changes were introduce in version 8.2.12 of these packages and components:
+> これらの重大な変更は、パッケージおよびコンポーネントの 8.2.12 バージョン で導入されました。
 
-| Affected Packages                                                                                                              | Affected Components                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel_library.md)                                                                                                                                                                              |
-| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet_overview.md)                                                                                                                                                                         |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](treemap-overview.md)                                                                                                                                                          |
-| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)                                                                                                              |
-| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | [Category Chart](category-chart.md), [Data Chart](data-chart.md), [Doughnut Chart](doughnut-chart.md), [Financial Chart](financial-chart.md), [Pie Chart](pie-chart.md), [Zoom Slider](zoomslider-overview.md) |
-| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | most classes and enums                                                                                                                                                                                         |
+| 影響されるパッケージ                                                                                                                     | 影響されるコンポーネント                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel ライブラリ](excel_library.md)                                                                                                                                                            |
+| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [スプレッドシート](spreadsheet_overview.md)                                                                                                                                                        |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [地理マップ](geo-map.md)、 [ツリーマップ](treemap-overview.md)                                                                                                                                         |
+| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [ブレット グラフ](bullet-graph.md)、 [リニア ゲージ](linear-gauge.md)、 [ラジアル ゲージ](radial-gauge.md)                                                                                                       |
+| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | [カテゴリ チャート](category-chart.md)、 [データ チャート](data-chart.md)、 [ドーナツ チャート](doughnut-chart.md)、 [ファイナンシャル チャート](financial-chart.md)、 [円チャート](pie-chart.md)、 [ズーム スライダー](zoomslider-overview.md) |
+| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | ほとんどのクラスと列挙型                                                                                                                                                                               |
 
-### Code After Changes
+### 変更後のコード
 
-Now, you need to use just package names instead of full paths to API classes and enums.
+API クラスと列挙型へのフル パスの代わりにパッケージ名のみを使用できます。
 
 ```ts
 // gauges:
@@ -50,9 +51,9 @@ import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 ```
 
-### Code Before Changes
+### 変更前のコード
 
-Before, you had to import using full paths to API classes and enums:
+以前は、API クラスと列挙型への完全なパスを使用してインポートする必要がありました。.
 
 ```ts
 // gauges:
