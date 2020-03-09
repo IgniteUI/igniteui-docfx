@@ -142,7 +142,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 ```
 
-While using CSS variables we have no need of the `::ng-deep` pseudo selector. With the code above we've created CSS variable for the `igx-avatar`,  which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' in other `igx-avatar` component instances, and thus stays encapsulated within our custom `app-avatar` component.
+While using CSS variables we have no need of the `::ng-deep` pseudo-selector. With the code above we've created CSS variables for the `igx-avatar`,  which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' in other `igx-avatar` component instances, and thus stays encapsulated within our custom `app-avatar` component.
 
 As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `false` will allow styling of components without the need to use Sass in your project. For instance the above could be achieved by setting the value of `--igx-avatar-initials-background` CSS variable to the desired color:
 
