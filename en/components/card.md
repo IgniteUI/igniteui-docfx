@@ -279,19 +279,42 @@ $colorful-card: igx-card-theme(
 ```
 As seen, the `igx-card-theme` exposes some useful parameters for basic styling of its items. 
 
-The last step is to **include** the component's theme.
+#### Including themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
  @include igx-card($colorful-card);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
      ::ng-deep {
         @include igx-card($colorful-card);
     }
+}
+```
+
+<div class="divider"></div>
+
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+
+```scss
+@include igx-css-vars($colorful-card);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+
+```scss
+:host {
+    @include igx-css-vars($colorful-card);
 }
 ```
 
