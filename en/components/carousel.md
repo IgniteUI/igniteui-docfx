@@ -27,13 +27,6 @@ The carousel can be used as a full-screen element or situated inside another com
 >[!NOTE]
 >This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.
 
-To get started with the Carousel component, install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
 The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
 ```typescript
 // app.module.ts
@@ -54,7 +47,7 @@ In this section we will go through the setup of the above defined **demo**.
 #### Adding slides with *ngFor
 <div class="divider--half"></div>
 
-If we have slides with the same type of content, the easiest approach is to use *ngFor* to add them in the template.
+If we have slides with the same type of content, the easiest approach is to use *\*ngFor* to add them in the template.
 
 Since our slides are going to contain only images, we are going to create an array of objects in the **ts** file and use it to populate the **igx-carousel** with slides:
 
@@ -92,9 +85,9 @@ public slides = [
 #### Configuring IgxCarousel
 <div class="divider--half"></div>
 
-By default carousel's **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** behavior is set to `true` ( *looping is when the first slide comes after navigating Next from the last slide or the last slide comes after navigating Previous from the first slide* ). Loop can disabled by setting its value to `false`.
+By default, the carousel has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
 
-To keep track of each slide index, the carousel has indicators which position, by default, is at the `bottom` of the carousel. In order to change it, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) property by assigning it with `top`. Indicators can be disabled by adding an empty template.
+To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
 
 The carousel template may look like this:
 
@@ -123,7 +116,7 @@ To add custom carousel indicators we will have to use the [IgxCarouselIndicatorD
 
 #### Custom nav buttons
 
-To achieve this we will use [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) with the following approach:
+To achieve this we will use the [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) directives:
 
 ```html
 ...
@@ -148,7 +141,7 @@ This carousel is going to contain slides with forms and images:
 ```html
 ...
   <div class="carousel-container">
-    <igx-carousel #carousel>
+    <igx-carousel>
         <igx-slide>
             <div class="slide-content-wrapper">
                 <img src="assets/images/svg/carousel/SignUp.svg">
@@ -209,9 +202,9 @@ This carousel is going to contain slides with forms and images:
 
 ### Animations
 
-Animated slide transitioning gives the end users really nice experience during their interaction with the carousel.
+Animated slide transitions provide the end-users a nice experience when interacting with the carousel.
 
-The carousel by default is configured with `slide` animation transitioning and also supports a `fade` animation.
+The carousel is configured to use the `slide` animation by default but it also supports `fade` as an alternative animation.
 
 The animations are configured through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype) input, like this:
 
@@ -247,9 +240,9 @@ The navigation in the carousel can be handled by the user through navigation but
 #### Pan gestures
 <div class="divider--half"></div>
 
-By default the carousel can be used for any kind of touch devices. This is optional and can be changed by setting `false` to the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property.
+By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property to `false`.
 
-The carousel [animations](carousel.md#animations) are fully supported on a touch device, which makes it consistent with any platform and a perfect tool for building a progressive web application ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) with.
+The carousel [animations](carousel.md#animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
 
 #### Keyboard navigation
 <div class="divider--half"></div>
@@ -272,7 +265,7 @@ The **IgxCarousel** can be easily configured to change the slides automatically,
 ### Advanced Example
 <div class="divider--half"></div>
 
-Let's create a fully autonomous carousel with enabled looping, synced with a [list item]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) and the selection of a slide will be controlled by the user only through the `list items`.
+Let's create a fully automated carousel with looping enabled. Each slide will be synced with a [list item]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) in a list. Clicking on a list item will trigger a slide change.
 
 
 To achieve this goal, we have to do the following configurations to the carousel:
