@@ -362,7 +362,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-bottom-nav($dark-bottom-nav);
+    @include igx-css-vars($dark-bottom-nav);
 }
 ```
 #### Defining a color palette
