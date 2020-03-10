@@ -1,5 +1,8 @@
 - name: General
   header: true
+- name: "Angular: A Complete Guide" 
+  href: general/angular-grid-overview-guide.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
@@ -48,6 +51,7 @@
       href: general/wpf_to_angular_guide/layout.md
       new: false
 - name: Framework & features
+  href: general/framework-and-features/framework-and-features.md
   new: true
   items:
     - name: SSR Rendering

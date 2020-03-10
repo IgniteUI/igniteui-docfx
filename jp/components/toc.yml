@@ -49,6 +49,7 @@
       href: general/wpf_to_angular_guide/layout.md
       new: false
 - name: フレームワーク & 機能
+  href: general/framework-and-features/framework-and-features.md
   new: true
   items:
     - name: SSR レンダリング
