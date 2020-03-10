@@ -69,8 +69,10 @@ We can also change the background through the `background` property or set a col
 ```scss
 // avatar.component.scss
 
+.igx-avatar {
     background:  #e41c77;
     color: #000000;
+}
 
 ```
 If all went well, you should see something like the following in the browser:
@@ -131,13 +133,30 @@ $custom-avatar-theme: igx-avatar-theme(
 );
 ```
 
-The last step is to **include** the component mixins: 
+#### Using CSS variables 
+
+The last step is to pass the custom avatar theme:
 
 ```scss
 @include igx-css-vars($custom-avatar-theme);
 ```
 
-You should see something like this:
+#### Using mixins
+
+In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
+
+If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        // Pass the custom avatar theme to the `igx-avatar` mixin
+        @include igx-avatar($custom-avatar-theme);
+    }
+}
+```
+
+If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:120px">
     <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
