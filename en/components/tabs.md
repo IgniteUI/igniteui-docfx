@@ -326,7 +326,7 @@ $dark-palette: igx-palette(
 );
 ```
 
-We can easily retrieve any color from the palette using the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color). 
+We can easily retrieve any color from the palette using [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color). 
 
 ```scss
 $dark-tabs: igx-tabs-theme(
