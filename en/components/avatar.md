@@ -64,7 +64,7 @@ Let's enhance our avatar by making it circular and bigger in size.
             size="medium">
 </igx-avatar>
 ```
-We can also change the background through the `background` property or set a color on the initials through the `color` property. 
+We can also change the background through the `background` property or set a color on the initials through the `color` property.
 
 ```scss
 // avatar.component.scss
@@ -143,9 +143,9 @@ The last step is to pass the custom avatar theme:
 
 #### Using mixins
 
-In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
+In order to style the components for Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
-If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is [`View Encapsulated`](themes/component-themes.md#view-encapsulation), it is necessary to `penetrate` the encapsulation using `::ng-deep`. To prevent the custom theme from leaking into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
