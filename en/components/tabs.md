@@ -264,7 +264,7 @@ Now that we have all navigation routes set up, we need to declare the `igx-tabs`
 <router-outlet></router-outlet>
 ```
 
-The above code creates a `igx-tabs` component with three tab items. All tab items have the `RouterLink` directive applied, which is used to specify the routing link used for the navigation. If any of the links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always be synchronized with the current url path.
+The above code creates an `igx-tabs` component with three tab items. All tab items have the `RouterLink` directive applied, which is used to specify the routing link used for the navigation. If any of the links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always be synchronized with the current url path.
 
 <div class="sample-container loading" style="height: 250px; border: 1px solid #ededed">
     <iframe id="tabs-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
