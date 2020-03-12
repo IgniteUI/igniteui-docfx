@@ -309,6 +309,15 @@ The last step is to **include** the component theme in our application.
 @include igx-css-vars($dark-tabs);
 ```
 
+If you are targeting browsers that don't support CSS variables, like IE 11, you can use the theme component mixin to overwrite its default theme:
+
+```scss
+:host {
+  ::ng-deep {
+    @include igx-tabs($dark-tabs);
+  }
+}
+```
 #### Palettes & Colors
 
 Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
@@ -346,6 +355,7 @@ $dark-tabs: igx-tabs-theme(
     <iframe id="tabs-style-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
+
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-style-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
