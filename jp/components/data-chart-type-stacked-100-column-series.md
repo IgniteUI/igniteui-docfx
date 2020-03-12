@@ -7,7 +7,7 @@ namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
-## 積層型 100D 縦棒チャート
+## 積層型 100 縦棒チャート
 
 Ignite UI for Angular 積層型 100 縦棒チャートはカテゴリ チャートのグループに属し、互いの上に積み上げられた長方形のコレクション ([`IgxStackedFragmentSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) を使用して描画されます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。Angular 積層型 100 縦棒チャートは、y 軸の値の処理以外は、Angular 積層型縦棒チャートと同じです。データを直接表現するのでなく、積層型棒チャートは、データ ポイント内のすべての値の合計の割合でデータを表します。[`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100columnseriescomponent.html) は [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html) と同じデータ プロットの概念を使用しますが、データ ポイントは、水平線 (x 軸) ではなく垂直線 (y 軸) に沿って積み上げられます。つまり、積層型 100 縦棒チャートは積層型 100 棒チャートのように描画されますが、反時計回りに 90 度回転します。
 
