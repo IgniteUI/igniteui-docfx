@@ -10,35 +10,30 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Demo
 <div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-base-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-base-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
 
-### Getting Started
+### Usage
 The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
 
 #### First steps
 <div class="divider--half"></div>
 
 >[!NOTE]
->**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
-
-To get started with the Carousel component, install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+>This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.
 
 The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
 ```typescript
 // app.module.ts
+
 ...
 import { IgxCarouselModule } from 'igniteui-angular';
+
 @NgModule({
     ...
     imports: [..., IgxCarouselModule],
@@ -47,44 +42,26 @@ import { IgxCarouselModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-In this section we will go through the setup of the above defined **onboarding demo**.
-
-#### Configuring IgxCarousel
-<div class="divider--half"></div>
-
-By **default** carousel's **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** behavior is set to true ( *looping is when the first slide comes after navigating Next from the last slide or the last slide comes after navigating Previous from the first slide* ).
-
-To keep track of each slide index, the carousel has indicators. The indicators position, by default, is at the *bottom* of the carousel and to change it, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) property by assigning it with `top`.
-
-The carousel template for now will look like this:
-
-```html
-<div class="carousel-container">
-    <igx-carousel #carousel [loop]="false" indicatorsOrientation="top">
-      ...
-    </igx-carousel>
-</div>
-```
+In this section we will go through the setup of the above defined **demo**.
 
 #### Adding slides with *ngFor
 <div class="divider--half"></div>
 
-If we have slides with the same type of content, it will be much easier to use *ngFor* to add them in the template.
+If we have slides with the same type of content, the easiest approach is to use *\*ngFor* to add them in the template.
 
-Since our first three slides are going to contain only images, we are going to create an array of objects in the **ts** file and use it to populate the **igx-carousel** with slides:
+Since our slides are going to contain only images, we are going to create an array of objects in the **ts** file and use it to populate the **igx-carousel** with slides:
 
 ```typescript
 ...
-public slides = 
-  [
+public slides = [
       {
-        src: "assets/images/svg/carousel/Onboarding1.svg"
+        src: "/assets/images/carousel/ignite-ui-angular-indigo-design.png"
       },
       {
-        src: "assets/images/svg/carousel/Onboarding2.svg"
+        src: "/assets/images/carousel/slider-image-chart.png"
       },
       {
-        src: "assets/images/svg/carousel/Onboarding3.svg"
+        src: "/assets/images/carousel/ignite-ui-angular-charts.png"
       }
   ];
 ...
@@ -92,50 +69,36 @@ public slides =
 
 ```html
 ...
-  <igx-slide  *ngFor="let slide of slides;">
-      <div class="image-container">
-          <img style="width: 80%" [src]="slide.src">
-      </div>
-  </igx-slide>
+<div class="carousel-container">
+    <igx-carousel #carousel>
+            <igx-slide  *ngFor="let slide of slides;">
+                <div class="image-container">
+                    <img [src]="slide.src">
+                </div>
+             </igx-slide>
+    </igx-carousel>
+</div>
 ...
 ```
+### Examples
 
-#### Slide containing other components
+#### Configuring IgxCarousel
 <div class="divider--half"></div>
 
-The last slide is going to contain an image, a sign up form and a button for routing, so we are going to define it separately:
+By default, the carousel has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
+
+To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
+
+The carousel template may look like this:
+
 ```html
-...
-  <igx-slide>
-      <div class="slide-content-wrapper">
-
-          <div style="margin: 20px auto; width: 60%">
-              <img style="width: 80%" src="assets/images/svg/carousel/SignUp.svg">
-              <button igxButton="icon" (click)="goTo()">
-                  <igx-icon class="icon" fontSet="material">info</igx-icon>
-              </button>
-          </div>
-
-          <form #form class="signInForm" >
-              <igx-input-group>
-                  <igx-prefix>
-                      <igx-icon>person</igx-icon>
-                  </igx-prefix>
-                  <label style="display: flex;" igxLabel for="username">Username</label>
-                  <input igxInput id="username" type="text" />
-              </igx-input-group>
-              <igx-input-group>
-                  <igx-prefix>
-                      <igx-icon>lock</igx-icon>
-                  </igx-prefix>
-                  <label style="display: flex;" igxLabel for="password">Password</label>
-                  <input igxInput id="password" type="password" />
-              </igx-input-group>
-          </form>
-          <button igxButton="raised" type="submit" (click)="form.reset()">Sign Up</button>
-      </div>
-  </igx-slide>
-...
+<div class="carousel-container">
+    <igx-carousel #carousel [loop]="false">
+      ...  
+        <!-- Adding an empty template to disable carousel's indicators -->
+        <ng-template igxCarouselIndicator></ng-template>
+    </igx-carousel>
+</div>
 ```
 
 #### Custom indicators
@@ -146,44 +109,106 @@ To add custom carousel indicators we will have to use the [IgxCarouselIndicatorD
 ```html
 ...
   <ng-template igxCarouselIndicator let-slide>
-      <div [ngClass]="{'selected': slide.current === current}" class="indicator"></div>
+      <div [ngClass]="{'selected': slide.current === current}"></div>
   </ng-template>
 ...
 ```
 
 #### Custom nav buttons
 
-The last step is to customize the navigation buttons.
-
-To achieve this we will use [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) with the following approach:
+To achieve this we will use the [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) directives:
 
 ```html
 ...
-  <ng-template igxCarouselNextButton let-disabled>
-          <button igxButton="fab" igxRipple="white" [disabled]="disabled">
-                  <igx-icon fontSet="material">add</igx-icon>
-          </button>
-  </ng-template>
+    <ng-template igxCarouselNextButton let-disabled>
+        <button igxButton="fab" igxRipple="white" [disabled]="disabled">
+            <igx-icon fontSet="material">navigate_next</igx-icon>
+        </button>
+    </ng-template>
 
-  <ng-template igxCarouselPrevButton let-disabled>
-          <button igxButton="fab" igxRipple="white" [disabled]="disabled">
-                  <igx-icon fontSet="material">remove</igx-icon>
-          </button>
-  </ng-template>
+    <ng-template igxCarouselPrevButton let-disabled>
+        <button igxButton="fab" igxRipple="white" [disabled]="disabled">
+            <igx-icon fontSet="material">navigate_before</igx-icon>
+        </button>
+    </ng-template>
 ...
 ```
 
+#### Slide containing other components
+<div class="divider--half"></div>
+
+This carousel is going to contain slides with forms and images:
+```html
+...
+  <div class="carousel-container">
+    <igx-carousel>
+        <igx-slide>
+            <div class="slide-content-wrapper">
+                <img src="assets/images/svg/carousel/SignUp.svg">
+                <form #form class="signInForm">
+                    <igx-input-group>
+                        <igx-prefix>
+                            <igx-icon>person</igx-icon>
+                        </igx-prefix>
+                        <label style="display: flex;" igxLabel for="username">Username</label>
+                        <input igxInput id="username" type="text" />
+                    </igx-input-group>
+                    <igx-input-group>
+                        <igx-prefix>
+                            <igx-icon>lock</igx-icon>
+                        </igx-prefix>
+                        <label style="display: flex;" igxLabel for="password">Password</label>
+                        <input igxInput id="password" type="password" />
+                    </igx-input-group>
+                </form>
+                <div class="btn">
+                    <button igxButton="raised" type="submit" (click)="form.reset()">Sign In</button>
+                </div>
+            </div>
+        </igx-slide>
+
+        <igx-slide>
+            <div class="slide-content-wrapper">
+                <img src="assets/images/svg/carousel/Route.svg">
+                <form #form2 class="searchForm">
+                    <igx-input-group>
+                        <igx-prefix>
+                            <igx-icon>search</igx-icon>
+                        </igx-prefix>
+                        <label style="display: flex;" igxLabel for="username">Search</label>
+                        <input igxInput id="search" type="text" />
+                    </igx-input-group>
+                </form>
+                <div class="btn">
+                    <button igxButton="raised" type="submit" (click)="form2.reset()">Search</button>
+                </div>
+            </div>
+        </igx-slide>
+    </igx-carousel>
+</div>
+...
+```
+
+##### Demo
+
+<div class="sample-container loading" style="height: 700px">
+    <iframe id="carousel-with-components-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-with-components-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-with-components-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+    </button>
+</div>
+
+
 ### Animations
 
-Animated slide transitioning gives the end users really nice experience during their interaction with the carousel.
+Animated slide transitions provide the end-users a nice experience when interacting with the carousel.
 
-#### Animations
-The carousel by default is configured with **slide** animation transitioning and also supports a **fade** animation.
+The carousel is configured to use the `slide` animation by default but it also supports `fade` as an alternative animation.
 
 The animations are configured through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype) input, like this:
 
 ```html
-
 <igx-carousel animationType="fade">
 ...
 </igx-carousel>
@@ -215,9 +240,9 @@ The navigation in the carousel can be handled by the user through navigation but
 #### Pan gestures
 <div class="divider--half"></div>
 
-By default the carousel can be used for any kind of touch devices. This is optional and can be changed by setting `false` to the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property.
+By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property to `false`.
 
-The carousel [animations](carousel.md#animations) are fully supported on a touch device, which makes it consistent with any platform and a perfect tool for building a progressive web application([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) with.
+The carousel [animations](carousel.md#animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
 
 #### Keyboard navigation
 <div class="divider--half"></div>
@@ -237,10 +262,10 @@ The **IgxCarousel** can be easily configured to change the slides automatically,
 >[!NOTE]
 >The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`. 
 
-#### Demo
+### Advanced Example
 <div class="divider--half"></div>
 
-Let's create a fully autonomous carousel with enabled looping, synced with a [list item]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) and the selection of a slide will be controlled by the user only through the `list items`.
+Let's create a fully automated carousel with looping enabled. Each slide will be synced with a [list item]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) in a list. Clicking on a list item will trigger a slide change.
 
 
 To achieve this goal, we have to do the following configurations to the carousel:
@@ -307,9 +332,9 @@ These configurions will have the following result:
 </div>
 
 
-`
 
-###API References
+
+### API References
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
@@ -317,3 +342,10 @@ These configurions will have the following result:
 * [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+
+### Additional Resources
+<div class="divider--half"></div>
+
+Our community is active and always welcoming to new ideas.
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
