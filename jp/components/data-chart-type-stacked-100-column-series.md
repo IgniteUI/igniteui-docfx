@@ -1,5 +1,5 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 積層型 100D 縦棒チャート
+title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 積層型 100 縦棒チャート
 _description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示する積層型 100 縦棒チャートを作成します。
 _keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart','Stacked100ColumnSeries']
