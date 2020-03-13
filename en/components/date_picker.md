@@ -266,6 +266,19 @@ All the information mentioned in the <a href="#templating-dialog-mode-date-picke
 
 <div class="divider--half"></div>
 
+#### Range Date Picker
+The following sample demonstrates how to create range date picker using [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) and [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html).
+The range date picker is used in a web form for ordering airplane tickets.
+
+<div class="sample-container loading" style="height: 650px;">
+    <iframe id="date-picker-sample-9" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-9" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-9" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+<div class="divider--half"></div>
+
 #### Custom button action
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports predefined 'Today' and ‘Cancel’ buttons, but custom actions buttons can be added as well. To do that, wrap the buttons in `ng-template` marked with the `igxDatePickerActions` directive selector.
 
