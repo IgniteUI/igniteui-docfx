@@ -8,23 +8,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Snackbar Demo
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="divider--half"></div>
+
+<div class="sample-container loading" style="height: 140px">
+    <iframe id="snackbar-sample-1-iframe" src='{environment:demosBaseUrl}/notifications/snackbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Snack Bar component, first you need to install Ignite UI for Angular by typing the following command:
 
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxSnackbarModule` in our **app.module.ts** file:
+The first step is to import the `IgxSnackbarModule` in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -51,11 +48,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 </div>
 ```
 
-If the sample is configured properly, a snackbar appears displaying a text message when the button is clicked.
-
-<div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
-</div>
+If the sample is configured properly, you should see the demo sample. A snackbar appears displaying a text message when the button is clicked.
 
 #### Hide/Auto Hide
 Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) method, you can close the component in the code.
@@ -80,26 +73,11 @@ public close(element) {
 If the sample is configured properly, a snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 
 #### Display Time
-Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible.
-
-```html
-<!--sample.component.html-->
-
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
-<div>
-  <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
-</div>
-```
-
-If the sample is configured properly, the snackbar auto hides faster.
-
-<div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
-</div>
+Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. By default, as we said, it's initially set to 4000 miliseconds.
 
 #### Customize Snackbar
 We can also customize the content of the Snackbar to display more complex elements than a message and a button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.
@@ -152,11 +130,11 @@ We can also customize the content of the Snackbar to display more complex elemen
 As a result, a message and three loading dots appear in the snackbar.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-5-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 </div>
 
@@ -237,11 +215,11 @@ public restore() {
 ```
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### Styling
