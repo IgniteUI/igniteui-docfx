@@ -30,48 +30,9 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
     </div>
 </div>
 
-### 新しいアプリの作成
+### 既存アプリの更新
 
-ここまですべての準備が整いました。さっそくアプリケーションを作成してみましょう。
-
-**VS Code** で、**ターミナル** メニュー、**新しいターミナル** オプションを選択し、以下のように入力します。
-
--   **npx create-react-app my-app-name --typescript**
-
-また
-
--   **yarn create react-app my-app-name --typescript**
-
-この手順の詳細は、<a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank">こちら</a> (英語)を参照してください。
-
-次に、VS Code で my-app-name フォルダーを開き、以下のコマンドを使用して、Ignite UI for Angular に以下のいずれかのパッケージをインストールする必要があります。
-
--   **npm install --save igniteui-angular-charts igniteui-angular-core**
--   **npm install --save igniteui-angular-excel igniteui-angular-core**
--   **npm install --save igniteui-angular-gauges igniteui-angular-core**
--   **npm install --save igniteui-angular-grids igniteui-angular-core**
--   **npm install --save igniteui-angular-maps igniteui-angular-core**
--   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
-
-また
-
--   **yarn add igniteui-angular-charts igniteui-angular-core**
--   **yarn add igniteui-angular-excel igniteui-angular-core**
--   **yarn add igniteui-angular-gauges igniteui-angular-core**
--   **yarn add igniteui-angular-grids igniteui-angular-core**
--   **yarn add igniteui-angular-maps igniteui-angular-core**
--   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
-
-最後に、以下のコマンドでアプリケーションをビルドして起動することができます。
-
--   **npm run-script build**
--   **npm run-script start**
-
-シンプルなコマンドの実行した後、新しいプロジェクトがビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで ProductName$ ンポーネントを使用できるようになります。
-
-### 既存のアプリの更新
-
-既存の Angular CLIプロジェクト(以前のもの) で Ignite UI for Angular を使用する場合は、以下のコマンドを実行するだけです。
+既存の Angular CLI プロジェクト (以前のもの) で Ignite UI for Angular を使用する場合は、以下のコマンドを実行します。
 
 -   **npm install --save igniteui-angular-charts igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel igniteui-angular-core**
@@ -91,13 +52,22 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 
 これにより、Ignite UI for Angular のパッケージが、それらのすべての依存関係、フォントのインポート、および既存のプロジェクトへのスタイル参照と共に自動的にインストールされます。
 
+### アプリの起動
+
+次のコマンドでアプリケーションをビルドまたは起動することができます。
+
+-   **npm run-script build**
+-   **npm run-script start**
+
+シンプルなコマンドを実行した後、プロジェクトがビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで Ignite UI for Angular コンポーネントを使用できるようになります。
+
 ### モジュールのインポート
 
-はじめに、使いたいコンポーネントのそれぞれのモジュールをインポートする必要があります。[**GeographicMap**](geo-map.md) に対してこれを行います。
+はじめに、使いたいコンポーネントの必要なモジュールをインポートします。[**GeographicMap**](geo-map.md) に対してこれを行います。
 
-### コンポーネントを使う
+### コンポーネントの使用
 
-マークアップに GeographicMap を使用する準備が整いました。定義します。
+マークアップに Ignite UI for Angular マップ コンポーネントを使用する準備が整いました。以下のように定義します。
 
 ### アプリケーションの実行
 
@@ -105,6 +75,6 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
 
 -   **npm run-script start**
 
-以下は、実行結果です。
+以下の画像は、上記を実行した結果です。
 
 <img src="../images/general/geo-map.png" />
