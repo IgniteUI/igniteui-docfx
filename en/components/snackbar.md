@@ -142,7 +142,7 @@ As a result, a message and three loading dots appear in the snackbar.
 </div>
 
 #### Snackbar in list
-Having all main snackbar features covered, we can integrate this component in more interesting scenario. We can use the snackbar to provide a notification and ability to revert actions.
+Having all main snackbar features covered, we can integrate this component in a more interesting scenario. We can use the snackbar to provide a notification and the ability to revert actions.
 
 Let’s create a list with contacts that can be deleted. When an item is deleted, a snackbar is displayed containing a message and a button to undo the action.
 
