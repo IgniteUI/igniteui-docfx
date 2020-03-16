@@ -241,20 +241,42 @@ $dark-snackbar: igx-snackbar-theme(
 );
 ```
 
-The last step is to **include** the newly created theme.
+#### Including themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
-@include igx-snackbar($dark-snackbar);
+ @include igx-snackbar($igx-snackbar-theme);
 ```
-
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
-    ::ng-deep {
-        @include igx-snackbar($dark-snackbar);
+     ::ng-deep {
+        @include igx-snackbar($igx-snackbar-theme);
     }
+}
+```
+
+<div class="divider"></div>
+
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+
+```scss
+@include igx-css-vars($igx-snackbar-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+
+```scss
+:host {
+    @include igx-css-vars($igx-snackbar-theme);
 }
 ```
 
