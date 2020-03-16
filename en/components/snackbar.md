@@ -75,6 +75,9 @@ If the sample is configured properly, a snackbar appears when the button is clic
 <div class="sample-container loading" style="height: 170px">
     <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 #### Display Time
 Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. By default, as we said, it's initially set to 4000 miliseconds.
