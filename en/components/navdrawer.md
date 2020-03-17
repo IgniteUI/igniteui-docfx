@@ -9,25 +9,21 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Navigation Drawer Demo
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="nav-drawer-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="divider--half"></div>
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+
 <div class="divider--half"></div>
 
 ### Dependencies
 
 >[!NOTE]
->**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
-
-To get started with the Navigation Drawer component, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+>This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected..
 
 To start with all necessary dependencies you can use the `IgxNavigationDrawerModule` and import it in your application from 'igniteui-angular/navigation-drawer';
 ```
@@ -62,13 +58,12 @@ While any content can be provided in the template, the [`igxDrawerItem`]({enviro
   <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
     <ng-template igxDrawer>
       <nav>
-        <span igxDrawerItem [isHeader]="true"> Email Account </span>
-        <span igxDrawerItem igxRipple> Inbox </span>
-        <span igxDrawerItem igxRipple [active]="true"> Drafts </span>
-        <span igxDrawerItem igxRipple> Sent </span>
-        <span igxDrawerItem [isHeader]="true"> Folders </span>
-        <span igxDrawerItem igxRipple> Deleted </span>
-        <span igxDrawerItem igxRipple> Archive </span>
+        <span igxDrawerItem [isHeader]="true">Components</span>
+        <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected"
+        igxRipple (click)="navigate(item)">
+          <igx-icon fontSet="material">{{ item.name }}</igx-icon>
+          <span>{{ item.text }}</span>
+        </span>
       </nav>
     </ng-template>
   </igx-nav-drawer>
@@ -92,6 +87,24 @@ To accommodate for the drawer switching modes, a simple flexible wrapper around 
     display: flex;
 }
 ```
+
+In order to add elements to our navigation drawer and be able to select them our typescript file should look like this:
+
+```ts
+/* app.component.ts */
+export class AppComponent {
+    public navItems = [
+        { name: "account_circle", text: "Avatar" },
+        ...
+    ];
+
+    public selected = "Avatar";
+
+    public navigate(item) {
+        this.selected = item.text;
+    }
+}
+```
 There are various ways to open and close the drawer. Input properties can be bound to app state, programatic access to the API in the component using a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference or even in this case using the `#drawer` [template reference variable](https://angular.io/guide/template-syntax#ref-vars):
 ```html
 <button (click)="drawer.toggle()"> Menu </button>
@@ -107,13 +120,29 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 </main>
 ```
 
-And the final result should look like this:
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+Also if you want the drawer to close when you select an item from it, you can use a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference like that:
+
+```ts
+/* app.component.ts */
+import { Component, ViewChild } from "@angular/core";
+import { IgxNavigationDrawerComponent } from "igniteui-angular";
+
+...
+
+export class AppComponent  {
+    @ViewChild(IgxNavigationDrawerComponent, { static: true })
+    public drawer: IgxNavigationDrawerComponent;
+
+    // And of couse add the key line to our navigate function
+
+    public navigate(item) {
+        this.selected = item.text;
+        this.drawer.close();
+    }
+}
+```
+
+If everything went well, you should see the demo sample in your browser.
 
 <div class="divider--half"></div>
 
@@ -133,7 +162,7 @@ Pin changes the position of the drawer from `fixed` to `relative` to put it on t
 Here's how that would would look applied to the previous example: 
 ```html
 <div class="content-wrap" igxLayout igxLayoutDir="row">
-    <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
+    <igx-nav-drawer id="navigation" #drawer [isOpen]="true" [pin]="true" [pinThreshold]="0">
         <!-- template(s) -->
     </igx-nav-drawer>
     <main igxFlex>
@@ -144,8 +173,15 @@ Here's how that would would look applied to the previous example:
 ```css
 .content-wrap {
     width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 ```
+
+Now the changed example should look like that:
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
@@ -181,18 +217,17 @@ This variant is enabled simply by the presence of an alternative mini template d
 The mini variant is commonly used in a persistent setup, so we've set `pin` and disabled the responsive threshold:
 ```html
 <igx-nav-drawer id="navigation" [pin]="true" [pinThreshold]="0">
-  <ng-template igxDrawer>
-      <span igxDrawerItem [isHeader]="true"> Header </span>
-      <span igxDrawerItem igxRipple> 
-          <igx-icon fontSet="material">home</igx-icon>
-          <span>Home</span>
-      </span>
-  </ng-template>
-  <ng-template igxDrawerMini>
-      <span igxDrawerItem igxRipple> 
-          <igx-icon fontSet="material">home</igx-icon>
-      </span>
-  </ng-template>
+    <ng-template igxDrawer>
+        <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
+          <igx-icon fontSet="material">{{ item.name }}</igx-icon>
+          <span>{{ item.text }}</span>
+        </span>
+    </ng-template>
+    <ng-template igxDrawerMini>
+        <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
+            <igx-icon fontSet="material">{{ item.name }}</igx-icon>
+        </span>
+    </ng-template>
 </igx-nav-drawer>
 ```
 
