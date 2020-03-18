@@ -88,7 +88,7 @@ To accommodate for the drawer switching modes, a simple flexible wrapper around 
 }
 ```
 
-In order to add elements to our navigation drawer and be able to select them our typescript file should look like this:
+In order to add elements to our navigation drawer and be able to select them, our typescript file should look like this:
 
 ```ts
 /* app.component.ts */
