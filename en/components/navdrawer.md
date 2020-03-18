@@ -159,7 +159,7 @@ The drawer can be pinned to take advantage of larger screens, placing it within 
 #### Pinned (persistent) setup
 Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) and [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directives.
 
-Here's how that would would look applied to the previous example: 
+Here's how that would look applied to the previous example: 
 ```html
 <div class="content-wrap" igxLayout igxLayoutDir="row">
     <igx-nav-drawer id="navigation" #drawer [isOpen]="true" [pin]="true" [pinThreshold]="0">
