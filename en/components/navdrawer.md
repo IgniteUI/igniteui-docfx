@@ -26,7 +26,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 >This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected..
 
 To start with all necessary dependencies you can use the `IgxNavigationDrawerModule` and import it in your application from 'igniteui-angular/navigation-drawer';
-```
+```ts
 @NgModule({
     imports: [
         IgxNavigationDrawerModule,
