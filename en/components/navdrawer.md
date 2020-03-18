@@ -26,7 +26,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 >This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected..
 
 To start with all necessary dependencies you can use the `IgxNavigationDrawerModule` and import it in your application from 'igniteui-angular/navigation-drawer';
-```
+```ts
 @NgModule({
     imports: [
         IgxNavigationDrawerModule,
@@ -88,7 +88,7 @@ To accommodate for the drawer switching modes, a simple flexible wrapper around 
 }
 ```
 
-In order to add elements to our navigation drawer and be able to select them our typescript file should look like this:
+In order to add elements to our navigation drawer and be able to select them, our typescript file should look like this:
 
 ```ts
 /* app.component.ts */
@@ -120,7 +120,7 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 </main>
 ```
 
-Also if you want the drawer to close when you select an item from it, you can use a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference like that:
+Also, if you want the drawer to close when you select an item from it, you can use a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference like that:
 
 ```ts
 /* app.component.ts */
@@ -159,7 +159,7 @@ The drawer can be pinned to take advantage of larger screens, placing it within 
 #### Pinned (persistent) setup
 Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) and [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directives.
 
-Here's how that would would look applied to the previous example: 
+Here's how that would look applied to the previous example: 
 ```html
 <div class="content-wrap" igxLayout igxLayoutDir="row">
     <igx-nav-drawer id="navigation" #drawer [isOpen]="true" [pin]="true" [pinThreshold]="0">
