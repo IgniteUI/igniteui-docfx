@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Navigation Drawer Demo
 <div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
     <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
 </div>
 <div>
@@ -75,7 +75,7 @@ While any content can be provided in the template, the [`igxDrawerItem`]({enviro
 > An additional template decorated with `igxDrawerMini` directive can be provided for the alternative [Mini variant](#mini-variant) as closed state.
 
 > [!NOTE]
-> The Navigation Drawer can either sit above content or be pinned alongside it and by default will switch between those depending the view size. See [Modes](#modes) for more.
+> The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the view-port size. See [Modes](#modes) for more information.
 
 To accommodate for the drawer switching modes, a simple flexible wrapper around the two content sections can be styled like so:
 ```css
@@ -183,7 +183,7 @@ Here's how that would would look applied to the previous example:
 
 Now the changed example should look like that:
 
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
     <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
 </div>
 <div>
@@ -231,7 +231,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 </igx-nav-drawer>
 ```
 
-<div class="sample-container loading" style="height: 400px">
+<div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
     <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" class="lazyload"></iframe>
 </div>
 <div>
@@ -306,6 +306,12 @@ This approach, of course, does not affect the actual directive active state and 
 </ng-template>
 <!-- ... -->
 ```
+<div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
+    <iframe id="nav-drawer-styled-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-styled" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-styled-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
