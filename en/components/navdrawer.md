@@ -120,7 +120,7 @@ Let's replace the `<main>` in **app.component.html** with the following, adding 
 </main>
 ```
 
-Also if you want the drawer to close when you select an item from it, you can use a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference like that:
+Also, if you want the drawer to close when you select an item from it, you can use a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference like that:
 
 ```ts
 /* app.component.ts */
