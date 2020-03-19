@@ -248,7 +248,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 ### Using Angular Router
 
-In order to use the angular router, first we need to it from `@angular/router` and create an instance of the router in our constructor.
+In order to use the angular router, first we need to import it from `@angular/router` and create an instance of the router in our constructor.
 Then we have to define our navigation items using the router for their link values.
 
 ```typescript
