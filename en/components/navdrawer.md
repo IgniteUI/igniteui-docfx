@@ -291,7 +291,26 @@ export class AppComponent {
 </ng-template>
 <!-- ... -->
 ```
+Finally, import the RouterModule along with the items' routes in your `app.module.ts` file:
 
+```ts
+/*app.module.ts*/
+import { RouterModule } from "@angular/router";
+
+@NgModule([
+    ...
+    imports: [
+        ...
+        RouterModule,
+		RouterModule.forRoot([
+            {path: "avatar", component: NavDrawerRoutingComponent},
+            {path: "badge", component: NavDrawerRoutingComponent},
+            {path: "button-group", component: NavDrawerRoutingComponent}
+        ])
+        ...
+    ]
+])
+```
 After all the steps above are completed, your app should look like that:
 
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
@@ -303,6 +322,63 @@ After all the steps above are completed, your app should look like that:
 
 <div class="divider--half"></div>
 
+### Styling
+To get started with styling the navigation drawer, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-navdrawer-theme`]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
+
+```scss
+$custom-theme: igx-navdrawer-theme(
+    $background: #2d313a,
+    $item-active-background: #ecc256,
+    $item-header-text-color: #ecc256
+);
+```
+As seen, the `igx-navdrawer-theme` exposes some useful parameters for basic styling of its items. 
+
+#### Including themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
+
+```scss
+ @include igx-navdrawer($custom-theme);
+```
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-navdrawer($custom-theme);
+    }
+}
+```
+
+<div class="divider"></div>
+
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+
+```scss
+@include igx-css-vars($custom-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+
+```scss
+:host {
+    @include igx-css-vars($custom-theme);
+}
+```
+
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
     <iframe id="nav-drawer-styling-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" class="lazyload"></iframe>
 </div>
@@ -311,5 +387,6 @@ After all the steps above are completed, your app should look like that:
 </div>
 
 <div class="divider--half"></div>
-### API Reference
-* [IgxNavigationDrawerComponent]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
+### API and Style References
+* [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
+* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme)
