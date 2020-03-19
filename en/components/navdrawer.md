@@ -51,7 +51,13 @@ With the dependencies imported, the Navigation Drawer can be defined in the app 
 </igx-nav-drawer>
 ```
 The content for the drawer should be provided via `<ng-template>` decorated with `igxDrawer` directive.
-While any content can be provided in the template, the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
+While any content can be provided in the template, the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. 
+The directive has two `@Input` properties:
+- `active` to style an item as selected.
+- `isHeader` to style an item as a group header, cannot be active.
+
+The [`igxRipple`](ripple.md) directive completes the look and feel:
+
 ```html
 <!-- app.component.html -->
 <div class="content-wrap">
@@ -240,63 +246,48 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 <div class="divider--half"></div>
 
-### Item Styling
+### Using Angular Router
 
-The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
+In order to use the angular router, first we need to it from `@angular/router` and create an instance of the router in our constructor.
+Then we have to define our navigation items using the router for their link values.
 
-The directive has two `@Input` properties:
-- `active` to style an item as selected.
-- `isHeader` to style an item as a group header, cannot be active.
-
-```html
-<!-- ... -->
-<ng-template igxDrawer>
-    <span igxDrawerItem [isHeader]="true"> Header </span>
-    <span igxDrawerItem [active]="true"> Selected Item </span>
-<!-- ... -->
-```
-The directive is exported both from the main `IgxNavigationDrawerModule` and separately as `IgxNavDrawerItemDirective`.
-
-<div class="divider--half"></div>
-
-#### Example: Use default item styles with Angular Router
-To make use of the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
-Take the following items defined in `app`:
 ```typescript
+/* app.component.ts */
+
+import { Router } from "@angular/router";
+
+ ...
+
 export class AppComponent {
     public componentLinks = [
         {
-            link: "/avatar",
+            link: `${this.router.url}/avatar`,
             name: "Avatar"
         },
         {
-            link: "/badge",
+            link:  `${this.router.url}/badge`,
             name: "Badge"
+        },
+        {
+            link:  `${this.router.url}/button-group`,
+            name: "Button Group"
         }
-        // ...
     ];
+
+    constructor(private router: Router) { }
 }
 ```
-One way to tie in the active state is to directly use the [`routerLinkActive`](https://angular.io/api/router/RouterLinkActive) default functionality and pass the drawer items active class `igx-nav-drawer__item--active`, so the `<igx-nav-drawer>` template would look like:
+By using `this.router.url`, you're taking the current directory.
 
+ You can use `routerLinkActive` where it's assigned to a template variable and the `isActive` can be used for binding. So the `<igx-nav-drawer>` template would look like this:
 ```html
+/* app.component.html */
+
 <!-- ... -->
 <ng-template igxDrawer>
     <nav>
-        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
-            igxDrawerItem igxRipple 
-            routerLinkActive="igx-nav-drawer__item--active" >
-                {{item.name}}
-        </span>
-    </nav>
-</ng-template>
-<!-- ... -->
-```
-This approach, of course, does not affect the actual directive active state and could be affected by styling changes. An alternative would be the more advanced use of `routerLinkActive` where it's assigned to a template variable and the `isActive` can be used for binding:
-```html
-<!-- ... -->
-<ng-template igxDrawer>
-    <nav>
+        <span igxDrawerItem [isHeader]="true">Components</span>
+
         <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
             routerLinkActive #rla="routerLinkActive"
             igxDrawerItem igxRipple [active]="rla.isActive">
@@ -306,6 +297,9 @@ This approach, of course, does not affect the actual directive active state and 
 </ng-template>
 <!-- ... -->
 ```
+
+After all the steps above are completed, your app should look like that:
+
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
     <iframe id="nav-drawer-styled-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-styled" class="lazyload"></iframe>
 </div>
