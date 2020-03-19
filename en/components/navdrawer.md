@@ -253,32 +253,27 @@ Then we have to define our navigation items using the router for their link valu
 
 ```typescript
 /* app.component.ts */
-
-import { Router } from "@angular/router";
-
  ...
 
 export class AppComponent {
     public componentLinks = [
         {
-            link: `${this.router.url}/avatar`,
+            link: "avatar",
             name: "Avatar"
         },
         {
-            link:  `${this.router.url}/badge`,
+            link:  "badge",
             name: "Badge"
         },
         {
-            link:  `${this.router.url}/button-group`,
+            link:  "button-group",
             name: "Button Group"
         }
     ];
-
-    constructor(private router: Router) { }
 }
 ```
 
- You can use `routerLinkActive` where it's assigned to a template variable and the `isActive` can be used for binding. So the `<igx-nav-drawer>` template would look like this:
+ You can use `routerLinkActive` where it's assigned to a template variable and its `isActive` property can be used for binding to the `active` input on the `igxDrawerItem`. The `<igx-nav-drawer>` template would look like this:
 ```html
 /* app.component.html */
 
