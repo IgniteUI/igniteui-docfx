@@ -57,7 +57,7 @@ In order to display the banner component, use its [`open()`]({environment:angula
 
 ### Examples
 
-The [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) allows easily templating of its content while still sticking as closely as possible to the material design banner guidelines.
+The [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) allows templating of its content while still sticking as closely as possible to the material design banner guidelines.
 
 #### Changing the banner message
 
@@ -77,7 +77,7 @@ An [`igx-icon`](icon.md) can be displayed in the banner by passing it to the ban
 > [!NOTE]
 > If several `igx-icon` elements are inserted as direct descendants of the banner, the banner will try to position all of them at the beginning. It is strongly advised to pass only one `igx-icon` directly to the banner.
 
-To include an `igx-icon` to you banner, simply insert it in the banner's content:
+To pass an `igx-icon` to you banner, simply insert it in the banner's content:
 
 ```html
     <!--banner.component.html-->
@@ -88,20 +88,22 @@ To include an `igx-icon` to you banner, simply insert it in the banner's content
     ...
 ```
 
-If you want to use `igx-icon` in your banner message, wrap it in a `span` tag:
+If you want to use an `igx-icon` in your banner message, wrap it in a `span` tag:
 
 ```html
     <!--banner.component.html-->
     <igx-banner #connectionBanner>
         You have lost connection to the internet. This app is offline.
-        <span><igx-icon>signal_wifi_off</igx-icon></span>
+        <span>
+            <igx-icon>signal_wifi_off</igx-icon>
+        </span>
     </igx-banner>
     ...
 ```
 
 #### Changing the banner button
 
-The `IgxBannerModule` exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). Using this directive allows you to override the default banner button (`Dismiss`) and add user defined custom actions.
+The `IgxBannerModule` exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). This directive allows you to override the default banner button (`Dismiss`) and add user-defined custom actions.
 
 ```html
     <!--banner.component.html-->
@@ -201,7 +203,7 @@ Let's create a banner with two custom buttons - one for dismissing the notificat
 
 The dismiss option (`'Continue Offline'`) doesn't need any further logic, so it can just call the `close()` method. The confirm action (`'Turn On Wifi'`), however, requires some additional logic, so we have to define it in the component. Then, we will create `onNetworkStateChange` Observable and subscribe to it. The last step is to call the `refreshBanner()` method on each change, which will toggle the banner depending on the `wifiState`.
 
-The banner will also have a WiFi icon in the navbar. As the subscription fires on any change of the `wifiState`, the icon will not only toggle the banner, but change according to the state ot the connection:
+The banner will also have a WiFi icon in the navbar. As the subscription fires on any change of the `wifiState`, the icon will not only toggle the banner, but change according to the state of the connection:
 
 ```html
 <!--banner.component.html-->
@@ -267,7 +269,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 
 Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+The `igx-palette` function generates a color palette based on the primary and secondary colors that are passed:
 
 ```scss
 $white-color: #dedede;
@@ -309,20 +311,11 @@ $light-toast-schema: extend($_light-toast,
         )
     )
 );
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend($light-schema,(
-    igx-banner: $light-banner-schema
-));
 
 // Defining banner with the global light schema
 $custom-banner-theme: igx-banner-theme(
   $palette: $light-banner-palette,
-  $schema: $custom-light-schema
+  $schema: $light-toast-schema
 );
 ```
 
