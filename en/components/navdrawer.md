@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Navigation Drawer
-<p class="highlight">The Ignite UI for Angular Navigation Drawer component is a side navigation container. It can rest above content and slide in/out of view or be pinned to expand/collapse within content. A mini version provides quick access to navigation even when closed. The Navigation Drawer features responsive mode selection and touch gestures. Content is completely customizable and can make use of default menu item styling.</p>
+<p class="highlight">The Ignite UI for Angular Navigation Drawer component is a side navigation container. It can rest above content and slide in/out of view or be pinned to expand/collapse within the content. A mini version provides quick access to navigation even when closed. The Navigation Drawer features responsive mode selection and touch gestures. Content is completely customizable and can make use of default menu item styling.</p>
 <div class="divider"></div>
 
 ### Navigation Drawer Demo
@@ -23,7 +23,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Dependencies
 
 >[!NOTE]
->This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected..
+>This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application for touch interactions to work as expected.
 
 To start with all necessary dependencies you can use the `IgxNavigationDrawerModule` and import it in your application from 'igniteui-angular/navigation-drawer';
 ```ts
@@ -81,7 +81,7 @@ The [`igxRipple`](ripple.md) directive completes the look and feel:
 > An additional template decorated with `igxDrawerMini` directive can be provided for the alternative [Mini variant](#mini-variant) as closed state.
 
 > [!NOTE]
-> The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the view-port size. See [Modes](#modes) for more information.
+> The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the viewport size. See [Modes](#modes) for more information.
 
 To accommodate for the drawer switching modes, a simple flexible wrapper around the two content sections can be styled like so:
 ```css
@@ -94,7 +94,7 @@ To accommodate for the drawer switching modes, a simple flexible wrapper around 
 }
 ```
 
-In order to add elements to our navigation drawer and be able to select them, our typescript file should look like this:
+To add elements to our navigation drawer and be able to select them, our typescript file should look like this:
 
 ```ts
 /* app.component.ts */
@@ -154,7 +154,7 @@ If everything went well, you should see the demo sample in your browser.
 
 ### Modes
 
-Unpinned (elevated above content) mode is the normal behavior where the drawer sits above and applies a darkened overlay over all content. Generally used to provide a temporary navigation suitable for mobile devices. 
+Unpinned (elevated above the content) mode is the normal behavior where the drawer sits above and applies a darkened overlay over the content. Generally used to provide temporary navigation suitable for mobile devices. 
 
 The drawer can be pinned to take advantage of larger screens, placing it within normal content flow with relative position. Depending on whether the app provides a way to toggle the drawer, the pinned mode can be used to achieve either [permanent or persistent behavior](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior).
 
@@ -216,7 +216,7 @@ Alternatively, skipping using directives, manual styling can be applied similar 
 ```
 
 #### Mini variant
-With the mini variant the Navigation Drawer changes its width instead of closing.
+With the mini variant, the Navigation Drawer changes its width instead of closing.
 Most commonly used to maintain quick selection available on the side at all times, leaving just the icons.
 This variant is enabled simply by the presence of an alternative mini template decorated with `igxDrawerMini` directive.
 
@@ -248,7 +248,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 ### Using Angular Router
 
-In order to use the angular router, first we need to import it from `@angular/router` and create an instance of the router in our constructor.
+To use the Angular Router, first, we need to import git from `@angular/router` and create an instance of the router in our constructor.
 Then we have to define our navigation items using the router for their link values.
 
 ```typescript
@@ -277,7 +277,6 @@ export class AppComponent {
     constructor(private router: Router) { }
 }
 ```
-By using `this.router.url`, you're taking the current directory.
 
  You can use `routerLinkActive` where it's assigned to a template variable and the `isActive` can be used for binding. So the `<igx-nav-drawer>` template would look like this:
 ```html
