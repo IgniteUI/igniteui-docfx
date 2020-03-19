@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Navigation Drawer
-<p class="highlight">The Ignite UI for Angular Navigation Drawer component is a side navigation container. It can rest above content and slide in/out of view or be pinned to expand/collapse within content. A mini version provides quick access to navigation even when closed. The Navigation Drawer features responsive mode selection and touch gestures. Content is completely customizable and can make use of default menu item styling.</p>
+<p class="highlight">The Ignite UI for Angular Navigation Drawer component is a side navigation container. It can rest above content and slide in/out of view or be pinned to expand/collapse within the content. A mini version provides quick access to navigation even when closed. The Navigation Drawer features responsive mode selection and touch gestures. Content is completely customizable and can make use of default menu item styling.</p>
 <div class="divider"></div>
 
 ### Navigation Drawer Demo
@@ -23,7 +23,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Dependencies
 
 >[!NOTE]
->This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected..
+>This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application for touch interactions to work as expected.
 
 To start with all necessary dependencies you can use the `IgxNavigationDrawerModule` and import it in your application from 'igniteui-angular/navigation-drawer';
 ```ts
@@ -51,7 +51,13 @@ With the dependencies imported, the Navigation Drawer can be defined in the app 
 </igx-nav-drawer>
 ```
 The content for the drawer should be provided via `<ng-template>` decorated with `igxDrawer` directive.
-While any content can be provided in the template, the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. The [`igxRipple`](ripple.md) directive completes the look and feel:
+While any content can be provided in the template, the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive (see [Item styling](#item-styling)) is available to apply out-of-the-box styling to items. 
+The directive has two `@Input` properties:
+- `active` to style an item as selected.
+- `isHeader` to style an item as a group header, cannot be active.
+
+The [`igxRipple`](ripple.md) directive completes the look and feel:
+
 ```html
 <!-- app.component.html -->
 <div class="content-wrap">
@@ -75,7 +81,7 @@ While any content can be provided in the template, the [`igxDrawerItem`]({enviro
 > An additional template decorated with `igxDrawerMini` directive can be provided for the alternative [Mini variant](#mini-variant) as closed state.
 
 > [!NOTE]
-> The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the view-port size. See [Modes](#modes) for more information.
+> The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the viewport size. See [Modes](#modes) for more information.
 
 To accommodate for the drawer switching modes, a simple flexible wrapper around the two content sections can be styled like so:
 ```css
@@ -88,7 +94,7 @@ To accommodate for the drawer switching modes, a simple flexible wrapper around 
 }
 ```
 
-In order to add elements to our navigation drawer and be able to select them, our typescript file should look like this:
+To add elements to our navigation drawer and be able to select them, our typescript file should look like this:
 
 ```ts
 /* app.component.ts */
@@ -148,7 +154,7 @@ If everything went well, you should see the demo sample in your browser.
 
 ### Modes
 
-Unpinned (elevated above content) mode is the normal behavior where the drawer sits above and applies a darkened overlay over all content. Generally used to provide a temporary navigation suitable for mobile devices. 
+Unpinned (elevated above the content) mode is the normal behavior where the drawer sits above and applies a darkened overlay over the content. Generally used to provide temporary navigation suitable for mobile devices. 
 
 The drawer can be pinned to take advantage of larger screens, placing it within normal content flow with relative position. Depending on whether the app provides a way to toggle the drawer, the pinned mode can be used to achieve either [permanent or persistent behavior](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior).
 
@@ -210,7 +216,7 @@ Alternatively, skipping using directives, manual styling can be applied similar 
 ```
 
 #### Mini variant
-With the mini variant the Navigation Drawer changes its width instead of closing.
+With the mini variant, the Navigation Drawer changes its width instead of closing.
 Most commonly used to maintain quick selection available on the side at all times, leaving just the icons.
 This variant is enabled simply by the presence of an alternative mini template decorated with `igxDrawerMini` directive.
 
@@ -240,63 +246,47 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 <div class="divider--half"></div>
 
-### Item Styling
+### Using Angular Router
 
-The content of the Navigation Drawer can be anything provided by the template, however for scenarios using the standard list of navigation items the optional [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive can be used to style them. This will apply default styles and patterns to your items as well as the appropriate theme colors.
+To use the Angular Router, first, we need to import git from `@angular/router` and create an instance of the router in our constructor.
+Then we have to define our navigation items using the router for their link values.
 
-The directive has two `@Input` properties:
-- `active` to style an item as selected.
-- `isHeader` to style an item as a group header, cannot be active.
-
-```html
-<!-- ... -->
-<ng-template igxDrawer>
-    <span igxDrawerItem [isHeader]="true"> Header </span>
-    <span igxDrawerItem [active]="true"> Selected Item </span>
-<!-- ... -->
-```
-The directive is exported both from the main `IgxNavigationDrawerModule` and separately as `IgxNavDrawerItemDirective`.
-
-<div class="divider--half"></div>
-
-#### Example: Use default item styles with Angular Router
-To make use of the [`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) directive to style items normally the `active` input should be set, however with routing that state is controlled externally.
-Take the following items defined in `app`:
 ```typescript
+/* app.component.ts */
+
+import { Router } from "@angular/router";
+
+ ...
+
 export class AppComponent {
     public componentLinks = [
         {
-            link: "/avatar",
+            link: `${this.router.url}/avatar`,
             name: "Avatar"
         },
         {
-            link: "/badge",
+            link:  `${this.router.url}/badge`,
             name: "Badge"
+        },
+        {
+            link:  `${this.router.url}/button-group`,
+            name: "Button Group"
         }
-        // ...
     ];
+
+    constructor(private router: Router) { }
 }
 ```
-One way to tie in the active state is to directly use the [`routerLinkActive`](https://angular.io/api/router/RouterLinkActive) default functionality and pass the drawer items active class `igx-nav-drawer__item--active`, so the `<igx-nav-drawer>` template would look like:
 
+ You can use `routerLinkActive` where it's assigned to a template variable and the `isActive` can be used for binding. So the `<igx-nav-drawer>` template would look like this:
 ```html
+/* app.component.html */
+
 <!-- ... -->
 <ng-template igxDrawer>
     <nav>
-        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
-            igxDrawerItem igxRipple 
-            routerLinkActive="igx-nav-drawer__item--active" >
-                {{item.name}}
-        </span>
-    </nav>
-</ng-template>
-<!-- ... -->
-```
-This approach, of course, does not affect the actual directive active state and could be affected by styling changes. An alternative would be the more advanced use of `routerLinkActive` where it's assigned to a template variable and the `isActive` can be used for binding:
-```html
-<!-- ... -->
-<ng-template igxDrawer>
-    <nav>
+        <span igxDrawerItem [isHeader]="true">Components</span>
+
         <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
             routerLinkActive #rla="routerLinkActive"
             igxDrawerItem igxRipple [active]="rla.isActive">
@@ -306,6 +296,9 @@ This approach, of course, does not affect the actual directive active state and 
 </ng-template>
 <!-- ... -->
 ```
+
+After all the steps above are completed, your app should look like that:
+
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
     <iframe id="nav-drawer-routing-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" class="lazyload"></iframe>
 </div>
