@@ -1,4 +1,4 @@
-﻿- name: 概要
+- name: 概要
   header: true
   _language: "ja"
 - name: 作業の開始
@@ -850,21 +850,37 @@
   items:
     - name: パレット
       href: themes/palette.md
+      new: false
     - name: スキーマ
       href: themes/schemas.md
       new: false
     - name: タイポグラフィ
       href: themes/typography.md
+      new: false
     - name: グローバルテーマ
-      href: 
+      href: themes/global-theme.md
       new: true
     - name: コンポーネントテーマ
       href: themes/component-themes.md
       new: false
+    - name: 定義済みのテーマ
+      new: true
+      items:
+        - name: Material
+          href: themes/themes-list/material.md
+          new: false
+        - name: Fluent
+          href: themes/themes-list/fluent.md
+          new: true
+        - name: Bootstrap
+          href: themes/themes-list/bootstrap.md
+          new: true
     - name: テーマの例
       href: themes/examples.md
+      new: false
     - name: 印刷スタイル
       href: themes/printing-styles.md
+      new: false
 - name: 丸み付け
   href: roundness.md
   new: true
@@ -937,7 +953,7 @@
   new: true
   items:
     - name: スライダー目盛り
-      href: 
+      href: slider/slider_ticks.md
       new: true
 - name: Ripple
   href: ripple.md
