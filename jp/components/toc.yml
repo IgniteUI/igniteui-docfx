@@ -132,6 +132,9 @@
         - name: 選択に基づいた集計
           href: grid/selection_based_aggregates.md
           new: false
+        - name: Column Selection
+          href: grid/column_selection.md
+          new: true
     - name: 検索
       href: grid/search.md
       new: false
@@ -242,6 +245,9 @@
         - name: セル選択
           href: treegrid/cell_selection.md
           new: false
+        - name: Column Selection
+          href: treegrid/column_selection.md
+          new: true
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -337,6 +343,9 @@
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
           new: false
+        - name: Column Selection
+          href: hierarchicalgrid/column_selection.md
+          new: true
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -949,7 +958,7 @@
   new: true
   items:
     - name: スライダー目盛り
-      href: 
+      href:
       new: true
 - name: Ripple
   href: ripple.md

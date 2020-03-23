@@ -24,7 +24,7 @@ _keywords: column selection, igniteui for angular, infragistics
 The **column selection feature** provides an easy way to select an entire column with a one click action. It **emphasizes** the importance of a particular column by focusing on the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows manipulation of the **state**, **data extraction** of the **selected** fractions easing **data analysis** operations and visualizations.
 
 <div class="sample-container" style="height:250px; background-color: lightgray">
-    <p>Basic example demonstrating the feature</p>
+    <p>Basic example demonstrating the feature with enabled/disabled columns selection</p>
 </div>
 <br/>
 
@@ -40,6 +40,12 @@ All of the presented columns are [`selectable`]({environment:angularApiUrl}/clas
     <p>Example showcasing multi column headers + column selection behaviour</p>
 </div>
 <br/>
+
+#### Keyboard combinations
+Basically there are three variations that could be experienced through the **Column Selection**:
+ - Single selection - <kbd>click</kbd> over the column cell if it is **selectable**.
+ - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> over every **selectable** column cell.
+ - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
 #### API manipulations
 The **API** provides some additional capabilities when it comes to the **non-visible** columns such that, every **hidden** column could be marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) by setting the corresponding **setter**.
