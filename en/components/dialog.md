@@ -86,7 +86,7 @@ To add standard dialog, in the template of our file manager component we can add
 #### Custom Dialog
 
 To create a custom dialog in the template of our sign-in component, we can add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
-Also we can add two groups of label and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
+We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
