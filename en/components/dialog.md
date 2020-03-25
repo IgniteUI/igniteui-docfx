@@ -167,7 +167,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 > [!NOTE]
 > In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
-#### Including themes
+#### Including Themes
 
 <div class="divider"></div>
 
