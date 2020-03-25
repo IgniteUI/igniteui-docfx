@@ -51,7 +51,7 @@ Basically there are three variations that could be experienced through the **Col
 The **API** provides some additional capabilities when it comes to the **non-visible** columns such that, every **hidden** column could be marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) by setting the corresponding **setter**.
 
 > [!NOTE]
-> The above statement also applies to the [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html), except that when the [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) is changed it respectively changes the state of it's descendants.
+> The above statement also applies to the [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html), except that when the [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) property is changed it respectively changes the state of it's descendants.
 
 <div class="sample-container" style="height:250px; background-color: lightgray">
     <p>Example showcasing API manipulation of multi column headers + column selection</p>
