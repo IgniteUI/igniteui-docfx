@@ -53,7 +53,7 @@ To create an alert dialog in the template of our email component, we can add the
 </igx-dialog>
 ```
 
-If everything's done right, you should see the demo sample in your browser.
+If everything's done right, you should see the demo sample shown above in your browser.
 
 <div class="divider--half"></div>
 
