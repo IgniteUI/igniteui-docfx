@@ -140,7 +140,7 @@ To get started with styling the dialog window, we need to import the `index` fil
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts some parameters that style the dialog's items.
+Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the dialog.
 
 ```scss
 $my-dialog-theme: igx-dialog-theme(
