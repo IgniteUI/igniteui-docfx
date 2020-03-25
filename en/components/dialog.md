@@ -38,7 +38,7 @@ export class AppModule {}
 
 #### Alert Dialog
 
-To add an alert dialog, in the template of our email component we can add the following code to get the notification dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+To create an alert dialog in the template of our email component, we can add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
 
 ```html
@@ -53,7 +53,7 @@ To add an alert dialog, in the template of our email component we can add the fo
 </igx-dialog>
 ```
 
-If everything's done right, you should see the demo sample in your browser.
+If everything's done right, you should see the demo sample shown above in your browser.
 
 <div class="divider--half"></div>
 
@@ -85,8 +85,8 @@ To add standard dialog, in the template of our file manager component we can add
 
 #### Custom Dialog
 
-To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. Dialog title area can be customized using `igxDialogTitle` directive or `igx-dialog-title` selector. The actions area can be customized using `igxDialogActions` directive or `igx-dialog-actions` selector.
-Also we can add two groups of label and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
+To create a custom dialog in the template of our sign-in component, we can add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
+We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
@@ -201,7 +201,7 @@ To get started with styling the dialog window, we need to import the `index` fil
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts some parameters that style the dialog's items.
+Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the dialog.
 
 ```scss
 $my-dialog-theme: igx-dialog-theme(
@@ -228,7 +228,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 > [!NOTE]
 > In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
-#### Including themes
+#### Including Themes
 
 <div class="divider"></div>
 
