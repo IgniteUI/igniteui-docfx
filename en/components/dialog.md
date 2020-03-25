@@ -132,6 +132,67 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 </div>
 <div class="divider--half"></div>
 
+#### Configure different Position and Animation Settings
+
+There are two ways to change the position at which the `igxDialog` will be shown:
+
+- Use [`open`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#open) method and pass a valid [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). Example:
+
+```typescript
+public positionSettingsOnOpen: PositionSettings = {
+    horizontalDirection: HorizontalAlignment.Right,
+    verticalDirection: VerticalAlignment.Middle,
+    horizontalStartPoint: HorizontalAlignment.Right,
+    verticalStartPoint: VerticalAlignment.Middle,
+};
+public overlaySettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(this.positionSettingsOnOpen),
+    scrollStrategy: new NoOpScrollStrategy(),
+    modal: false,
+    closeOnOutsideClick: true
+};
+....
+public openDialog() {
+    this.alert.open(this.overlaySettings);
+}
+....
+this.dialog.open(overlaySettings)
+```
+
+- Use `positionSettings` @input. Example:
+
+```html
+<igx-dialog #alert title="Notification" [positionSettings]="positionSettings" >
+</igx-dialog>
+```
+
+```typescript
+public positionSettings: PositionSettings = {
+    openAnimation: useAnimation(slideInTop, { params: { duration: '2000ms' } }),
+    closeAnimation: useAnimation(slideOutBottom, { params: { duration: '2000ms'} }),
+    horizontalDirection: HorizontalAlignment.Left,
+    verticalDirection: VerticalAlignment.Middle,
+    horizontalStartPoint: HorizontalAlignment.Left,
+    verticalStartPoint: VerticalAlignment.Middle,
+    minSize: { height: 100, width: 100 }
+};
+```
+
+> [!Note] The same approach should be used for the animation settings, use `openAnimation` and `closeAnimation` to define animation params like duration etc. 
+`params` object example:
+
+```typescript
+params: {
+    delay: '0s',
+    duration: '350ms',
+    easing: EaseOut.quad,
+    endOpacity: 1,
+    fromPosition: 'translateX(-500px)',
+    startOpacity: 0,
+    toPosition: 'translateY(0)'
+}
+```
+
 ### Styling
 
 To get started with styling the dialog window, we need to import the `index` file, where all the theme functions and component mixins live:
