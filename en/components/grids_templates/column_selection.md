@@ -60,5 +60,112 @@ The **API** provides some additional capabilities when it comes to the **non-vis
 
 More information regarding the API manipulations could be found in the [`API References`](#api-references) section.
 
+### Styling
+Before going deeper in the style manpulations, the core module and all component mixins need to be imported.
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+>[!NOTE]
+>Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated independently. They both depends on the same parameters the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) **function** accepts.
+
+With that being said, let's move on and change the **selection** and **hover** appearance.
+Firstly let's define our custom **theme** that latelly we will pass to the [`igx-grid`]({environment:sassApiUrl}/index.html#mixin-igx-grid) **mixin**.
+
+```scss
+$custom-column-selection-theme: igx-grid-theme(
+    $row-selected-background: steelblue,
+    $row-selected-text-color: gold,
+    $row-selected-hover-background: steelblue
+);
+```
+[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) accepts several parameters but basically those are the three responsible for the respective styling:
+- **$row-selected-background** - sets the background of the selected fraction.
+- **$row-selected-text-color** - sets the text color of the selected fraction
+- **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
+
+Lastly we should notify the component for the new theme that has been created.
+
+```scss
+@include igx-grid($custom-column-selection-theme);
+```
+
+>[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-column-selection-theme);
+    }
+}
+```
+#### Defining a color palette
+Instead of hardcoding the colors, we can build our own palette providing more flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+
+`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+```scss
+$yellow-color: gold;
+$blue-color: steelblue;
+
+$custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
+```
+
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve the colors from the palette.
+
+```scss
+
+$custom-column-selection-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $row-selected-background: igx-color($custom-palette, "primary", 400),
+    $row-selected-text-color: igx-color($custom-palette, "secondary", 300),
+    $row-selected-hover-background: igx-color($custom-palette, "primary", 600)
+);
+```
+
+>[!NOTE]
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+
+#### Using Schemas
+
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+
+```scss
+$custom-column-selection-schema: extend($_light_grid,
+    (
+        row-selected-background:(
+            igx-color: ('primary', 600)
+        ),
+        row-selected-text-color:(
+            igx-color: ('secondary', 300)
+        ),
+        row-selected-hover-background:(
+            igx-color: ('primary', 300)
+        )
+    )
+);
+```
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing the components with a custom schema, and then add it to the respective component theme:
+
+```scss
+// Extending the global light-schema
+$custom-light-schema: extend($light-schema,(
+    igx-grid: $custom-column-selection-schema
+));
+
+// Passing the new igx-grid custom schema.
+$custom-column-selection-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $custom-light-schema
+);
+```
+#### Demo
+
+<div class="sample-container" style="height:250px; background-color: lightgray">
+    <p>Example custom theme.</p>
+</div>
+<br/>
+
 ### <a name="api-references"></a> API References
 #### API REFS
+### Additional Resources
