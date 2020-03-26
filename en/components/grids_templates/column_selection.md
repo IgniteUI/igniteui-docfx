@@ -43,20 +43,15 @@ All of the presented columns are [`selectable`]({environment:angularApiUrl}/clas
 
 #### Keyboard combinations
 Basically there are three variations that could be experienced through the **Column Selection**:
- - Single selection - <kbd>click</kbd> over the column cell if it is **selectable**.
- - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> over every **selectable** column cell.
- - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
+- Single selection - <kbd>click</kbd> over the column cell if it is **selectable**.
+- Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> over every **selectable** column cell.
+- Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
 #### API manipulations
 The **API** provides some additional capabilities when it comes to the **non-visible** columns such that, every **hidden** column could be marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) by setting the corresponding **setter**.
 
 > [!NOTE]
 > The above statement also applies to the [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html), except that when the [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) property is changed it respectively changes the state of it's descendants.
-
-<div class="sample-container" style="height:250px; background-color: lightgray">
-    <p>Example showcasing API manipulation of multi column headers + column selection</p>
-</div>
-<br/>
 
 More information regarding the API manipulations could be found in the [`API References`](#api-references) section.
 
@@ -67,13 +62,13 @@ Before going deeper in the style manpulations, the core module and all component
 ```
 
 >[!NOTE]
->Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated independently. They both depends on the same parameters the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) **function** accepts.
+>Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated >independently. They both are dependent on the same `variables`.
 
-With that being said, let's move on and change the **selection** and **hover** appearance.
-Firstly let's define our custom **theme** that latelly we will pass to the [`igx-grid`]({environment:sassApiUrl}/index.html#mixin-igx-grid) **mixin**.
+With that being said, let's move on and change the **selection** and **hover** style.<br/>
+Following the simples approach let's define our custom **theme**.
 
 ```scss
-$custom-column-selection-theme: igx-grid-theme(
+$custom-grid-theme: igx-grid-theme(
     $row-selected-background: steelblue,
     $row-selected-text-color: gold,
     $row-selected-hover-background: steelblue
@@ -84,14 +79,18 @@ $custom-column-selection-theme: igx-grid-theme(
 - **$row-selected-text-color** - sets the text color of the selected fraction
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
 
-Lastly we should notify the component for the new theme that has been created.
+#### Using CSS Variables
+The last step is to pass the custom `igx-grid` theme.
 
 ```scss
-@include igx-grid($custom-column-selection-theme);
+@include igx-css-vars($custom-grid-theme)
 ```
 
+#### Using mixins
+In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables.
+
 >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to >`penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme to leak to other components, be sure that >you have included the `:host` selector before `::ng-deep`.
 
 ```scss
 :host {
@@ -100,65 +99,6 @@ Lastly we should notify the component for the new theme that has been created.
     }
 }
 ```
-#### Defining a color palette
-Instead of hardcoding the colors, we can build our own palette providing more flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-```scss
-$yellow-color: gold;
-$blue-color: steelblue;
-
-$custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve the colors from the palette.
-
-```scss
-
-$custom-column-selection-theme: igx-grid-theme(
-    $palette: $custom-palette,
-    $row-selected-background: igx-color($custom-palette, "primary", 400),
-    $row-selected-text-color: igx-color($custom-palette, "secondary", 300),
-    $row-selected-hover-background: igx-color($custom-palette, "primary", 600)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
-
-#### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
-
-```scss
-$custom-column-selection-schema: extend($_light_grid,
-    (
-        row-selected-background:(
-            igx-color: ('primary', 600)
-        ),
-        row-selected-text-color:(
-            igx-color: ('secondary', 300)
-        ),
-        row-selected-hover-background:(
-            igx-color: ('primary', 300)
-        )
-    )
-);
-```
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing the components with a custom schema, and then add it to the respective component theme:
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend($light-schema,(
-    igx-grid: $custom-column-selection-schema
-));
-
-// Passing the new igx-grid custom schema.
-$custom-column-selection-theme: igx-grid-theme(
-    $palette: $custom-palette,
-    $schema: $custom-light-schema
-);
-```
 #### Demo
 
 <div class="sample-container" style="height:250px; background-color: lightgray">
@@ -166,6 +106,49 @@ $custom-column-selection-theme: igx-grid-theme(
 </div>
 <br/>
 
-### <a name="api-references"></a> API References
-#### API REFS
+### <a name="api-references"></a>API References
+<div class="divider--half"></div>
+The column selection UI has a few more APIs to explore, which are listed below.
+
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumnomponent.html)
+* [IgxColumnGrpupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+
+[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
+* [selectedColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectedColumns)
+* [selectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectColumns)
+* [deselectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectColumns)
+* [selectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectAllColumns)
+* [deselectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectAllColumns)
+
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumnomponent.html) properties:
+* [selectable]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selectable)
+* [selected]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selected)
+
+[`IgxColumnGrpupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) properties:
+* [selectable]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selectable)
+* [selected]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected)
+
+[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:
+* [onColumnsSelectionChange]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onColumnsSelectionChange)
+
 ### Additional Resources
+
+* [@@igComponent overview](@@igMainTopic.md)
+* [Selection](selection.md)
+* [Cell selection](cell_selection.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Summaries](summaries.md)
+* [Column Moving](column_moving.md)
+* [Column Pinning](column_pinning.md)
+* [Column Resizing](column_resizing.md)
+* [Virtualization and Performance](virtualization.md)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
