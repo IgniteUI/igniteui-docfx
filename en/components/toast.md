@@ -220,7 +220,7 @@ $custom-light-schema: extend($light-schema,(
     igx-toast: $light-toast-schema
 ));
 
-// Defining toast with the global light schema
+// Defining toast with the custom light schema
 $custom-toast-theme: igx-toast-theme(
   $palette: $light-toast-palette,
   $schema: $custom-light-schema
