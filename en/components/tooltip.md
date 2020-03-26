@@ -11,7 +11,7 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 ### Demo
 
-<div class="sample-container loading" style="height:450px">
+<div class="sample-container loading" style="height:150px">
     <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -20,16 +20,9 @@ While most tooltips have a limited number of available positions, with the [`igx
 </div>
 <div class="divider--half"></div>
 
-### Setup
+### Usage
 
-To get started with the Tooltip and Tooltip Target, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxTooltipModule` in the app.module.ts file.
+The first step is to import the `IgxTooltipModule` in the app.module.ts file.
 
 ```typescript
 // app.module.ts
@@ -48,7 +41,7 @@ export class AppModule {}
 
 ### Simple tooltip
 
-Let's say we want to create a simple text tooltip for an element on our page. In our case, let's use our awesome [`IgxAvatar`](avatar.md) as the element in question by importing the `IgxAvatarModule` first.
+Let's say we want to create a simple text tooltip like the one above. In our case, we're using our awesome [`IgxAvatar`](avatar.md) as the element, so we start by importing the `IgxAvatarModule` first.
 
 ```typescript
 // app.module.ts
@@ -64,26 +57,6 @@ import {
     imports: [IgxTooltipModule, IgxAvatarModule],
 })
 export class AppModule {}
-```
-
-In addition, we will define some custom styles for our elements!
-
-
-```css
-/* simpleTooltip.component.css */
-
-.wrapper {
-    text-align: center;
-    margin: 20px;
-}
-
-.avatar {
-    display: inline-block;
-}
-
-.bottomMargin {
-    margin-bottom: 50px;
-}
 ```
 
 #### Tooltip target
@@ -110,7 +83,7 @@ Now let's create the tooltip element itself! Since we want a simple text tooltip
 <!--simpleTooltip.component.html-->
 
 <div #tooltipRef="tooltip" igxTooltip>
-    Her name is Toola Tipa
+    Her name is Madelyn James
 </div>
 ```
 
@@ -125,56 +98,14 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 </igx-avatar>
 
 <div #tooltipRef="tooltip" igxTooltip>
-    Her name is Toola Tipa
+    Her name is Madelyn James
 </div>
 ```
+
+If everything went well, you should see the sample shown in the [Tooltip Demo](#demo) section.
 
 #### Show/Hide delay settings
-What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time span in milliseconds.
-
-Now let's add a couple of [`IgxSlider`](slider.md) elements to control the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay). In addition, we will also use the [`IgxSwitch`](switch.md) to enable/disable the user interaction over the tooltip target by using the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target.
-
-We will go ahead and get the `IgxSliderModule` and the `IgxSwitchModule`.
-```typescript
-// app.module.ts
-
-...
-import {
-    IgxTooltipModule,
-    IgxAvatarModule,
-    IgxSliderModule,
-    IgxSwitchModule
-} from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [IgxTooltipModule, IgxAvatarModule, IgxSliderModule, IgxSwitchModule],
-})
-export class AppModule {}
-```
-
-Now we can define our sliders and switch controls in the template of the component! Then all we have to do is bind the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties as **ngModels** to the two sliders respectively and then bind the [`tooltipDisabled`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#tooltipdisabled) property of the target to the switch control in the same manner.
-
-```html
-<!--simpleTooltip.component.html-->
-
-...
-<div>
-    <div class="bottomMargin">
-        <igx-switch [(ngModel)]="target.tooltipDisabled">Disable tooltip</igx-switch>
-    </div>
-    <div class="bottomMargin">
-        <span>Show Delay: {{target.showDelay}} ms</span>
-        <igx-slider minValue="0" maxValue="3000" [step]="100" [(ngModel)]="target.showDelay"></igx-slider>                
-    </div>
-    <div>
-        <span>Hide Delay: {{target.hideDelay}} ms</span>
-        <igx-slider minValue="0" maxValue="3000" [step]="100" [(ngModel)]="target.hideDelay"></igx-slider>                
-    </div>
-</div>
-```
-
-You can see the result of the code from above at the beginning of this article in the [Tooltip Demo](#demo) section.
+What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
 
 > [!NOTE]
 > The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) and its respective API methods work by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. Showing and hiding the tooltip through the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does not take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
@@ -183,7 +114,7 @@ You can see the result of the code from above at the beginning of this article i
 
 Customizing and styling the content of our tooltip has never been easier with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive! Since the tooltip itself is an ordinary element in our markup, we can basically improve its content by adding any elements we need and have the ability to style them accordingly!
 
-Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and use it to provide more details for a specific location on a map! In order to make our application look even better, we will use the [`IgxCard`](card.md) to represent our map, the [`IgxAvatar`](avatar.md) for a logo in our tooltip, the [`IgxIcon`](icon.md) for the location icon on our map and the [`IgxButton`](button.md) for some card actions! For this purpose, we will get their respective modules.
+Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and use it to provide more details for a specific location on a map! We'll use a simple div to represent our map, the [`IgxAvatar`](avatar.md) for a logo in our tooltip and the [`IgxIcon`](icon.md) for the location icon on our map. For this purpose, we will get their respective modules.
 
 ```typescript
 // app.module.ts
@@ -191,15 +122,13 @@ Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classe
 ...
 import {
     IgxTooltipModule,
-    IgxCardModule,
     IgxAvatarModule,
     IgxIconModule,
-    IgxButtonModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [IgxTooltipModule, IgxCardModule, IgxAvatarModule, IgxIconModule, IgxButtonModule],
+    imports: [IgxTooltipModule, IgxAvatarModule, IgxIconModule],
 })
 export class AppModule {}
 ```
@@ -209,32 +138,28 @@ We will also use the following styles for our application:
 ```css
 /* richTooltip.component.css */
 
-.wrapper { 
+.wrapper {
     margin: 20px;
 }
 
-.cursorHover:hover {
+.location:hover {
     cursor: pointer;
 }
 
-.card-wrapper {
-    max-width: 200px;
-    min-width: 120px;
-}
-
-.location {
+.map {
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200px;
     height: 252px;
-    background-image: url(../../../assets/images/card/media/infragisticsMap.png);
+    background-image: url(assets/images/card/media/infragisticsMap.png);
+    border: 1px solid #D4D4D4;
 }
 
 .locationTooltip {
     width: 310px;
-    background-color: rgba(128, 128, 128, 0.7);
+    background-color: var(--igx-grays-700);
     padding: 3px;
     font-size: 13px;
 }
@@ -245,76 +170,54 @@ We will also use the following styles for our application:
     align-items: center;
 }
 
-.locationIcon {
+.logo {
+    margin-right: 10px;
+    min-width: 25px;
     width: 45px;
     height: 45px;
 }
 ```
 
-Let's start by creating our card and setting its content to be an element that has a map background image! In addition, we will add an icon that will indicate the position of our location! Since we want to provide more details for this location, our icon will obviously be the tooltip target.
+Let's start by creating our map. We need a simple div that has for a background an image with a map. Also, we will add an icon that will indicate the position of our location! Since we want to provide more details for this location, our icon will obviously be the tooltip target.
 
 ```html
 <!--richTooltip.component.html-->
 
-<igx-card>
-    <igx-card-content style="padding: 0px;">
-        <div class="location">
-            <igx-icon class="cursorHover" color="blue" fontSet="material" igxTooltipTarget>location_on</igx-icon>
-        </div>
-    </igx-card-content>
-</igx-card>
+<div class="map">
+    <igx-icon class="location" color="blue" fontSet="material"
+    [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
+    ...
+</div>
 ```
 
-Now for the tooltip! For its content, we will create a container that will be populated with some text information elements and an avatar. Then we will simply attach the tooltip to the target and include some nice css styling!
+Now for the tooltip! For its content, we will create a container that will be populated with some text information elements and an avatar. Then we will simply attach the tooltip to the target and include some nice CSS styling!
 
 ```html
 <!--richTooltip.component.html-->
 
-<igx-card>
-    <igx-card-content style="padding: 0px;">
-        <div class="location">
-            <igx-icon class="cursorHover" color="blue" fontSet="material" [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
+<div class="wrapper">
+    <div class="map">
+        <igx-icon class="location" color="blue" fontSet="material"
+        [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
 
-            <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
-                <div class="locationTooltipContent">
-                    <igx-avatar class="locationIcon" src="../../../assets/images/card/avatars/igLogo.png" size="medium"
-                        [roundShape]="false"></igx-avatar>
-                    <div>
-                        <div>Infragistics Inc. HQ</div>
-                        <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
-                    </div>
+        <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+            <div class="locationTooltipContent">
+                <igx-avatar class="logo" src="assets/images/card/avatars/igLogo.png"
+                    size="medium" [roundShape]="false"></igx-avatar>
+                <div>
+                    <div>Infragistics Inc. HQ</div>
+                    <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
                 </div>
             </div>
         </div>
-    </igx-card-content>
-</igx-card>
-```
+    </div>
+</div>
 
-As a finishing touch, we will add a couple of button icons as card actions at the bottom.
-
-```html
-<!--richTooltip.component.html-->
-
-<igx-card>
-    <igx-card-content style="padding: 0px;">
-        ...
-    </igx-card-content>
-    <igx-card-actions>
-        <div class="igx-card-actions__igroup--start">
-            <span igxButton="icon">
-                <igx-icon fontSet="material">favorite</igx-icon>
-            </span>
-            <span igxButton="icon">
-                <igx-icon fontSet="material">share</igx-icon>
-            </span>
-        </div>
-    </igx-card-actions>
-</igx-card>
 ```
 
 If all went well, this is how our location and tooltip should look like:
 
-<div class="sample-container loading" style="height:400px">
+<div class="sample-container loading" style="height:300px">
     <iframe id="tooltip-rich-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-rich' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -331,7 +234,7 @@ The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdir
 > [!NOTE]
 > Any property that is set through the [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default overlay settings and will have a direct impact on the tooltip.
 
-### Styles
+### Styling
 
 To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -342,7 +245,11 @@ To get started with styling the tooltip, we need to import the `index` file, whe
 Following the simplest approach, we create a new theme that extends the [`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
 
 ```scss
-$dark-tooltip: igx-tooltip-theme($text-color: #F4D45C, $background: rgb(65,65,65), $border-radius: 10px);
+$dark-tooltip: igx-tooltip-theme(
+    $text-color: #ECAA53,
+    $background: #011627,
+    $border-radius: 6px
+);
 ```
 
 > [!NOTE]
@@ -357,7 +264,7 @@ Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for 
 
 <div #outlet="overlay-outlet" igxOverlayOutlet>
     <div #tooltipRef="tooltip" igxTooltip>
-        Her name is Toola Tipa
+        Her name is Madelyn James
     </div>
 </div>
 ```
@@ -365,83 +272,46 @@ Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for 
 > [!NOTE]
 > In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
+#### Including Themes
+
+<div class="divider"></div>
+
 The last step is to **include** the component theme in our application.
 
-```scss
-@include igx-tooltip($dark-tooltip);
-```
+If `$legacy-support` is set to `true`, include the **component theme** like that:
 
+```scss
+ @include igx-tooltip($dark-tooltip);
+```
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
-    ::ng-deep {
+     ::ng-deep {
         @include igx-tooltip($dark-tooltip);
     }
 }
 ```
 
-#### Defining a color palette
+<div class="divider"></div>
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-$yellow-color: #F4D45C;
-$black-color: rgb(65,65,65);
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+@include igx-css-vars($dark-tooltip);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
-$dark-tooltip: igx-tooltip-theme(
-    $palette: $dark-palette,
-    $text-color: igx-color($dark-palette, "secondary", 400),
-    $background: igx-color($dark-palette, "primary", 400),
-    $border-radius: 10px
-);
+:host {
+    @include igx-css-vars($dark-tooltip);
+}
 ```
 
-#### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-tooltip`]({environment:sassApiUrl}/index.html#variable-_dark-tooltip) schema:
-
-```scss
-// Extending the dark tooltip schema
-$dark-tooltip-schema: extend($_dark-tooltip,
-    (
-        text-color:(
-            igx-color: ("secondary", 400)
-        ),
-        background: (
-            igx-color: ("primary", 400)
-        ),
-        border-radius: 10px
-    )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-tooltip: $dark-tooltip-schema
-));
-
-// Defining tooltip-theme with the global dark schema
-$dark-tooltip: igx-tooltip-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
+So now our styled tooltip should look like this:
 
 #### Demo
 
@@ -465,7 +335,7 @@ Extra care should be taken in the following scenarios:
 
 ### API References
 
-In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons, avatars and cards to improve on the design of our application! The respective APIs are listed below:
+In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons and avatars to improve on the design of our application! The respective APIs are listed below:
 
 * [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
 * [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
@@ -473,11 +343,7 @@ In this article we learned how to create, configure and style awesome tooltips f
 Additional components and/or directives that were used:
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
 * [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
@@ -485,11 +351,7 @@ Styles:
 
 * [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
 * [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-igx-card-theme)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 <div class="divider"></div>
 
