@@ -23,10 +23,14 @@ _keywords: column selection, igniteui for angular, infragistics
 ### @@igComponent Column Selection
 The **column selection feature** provides an easy way to select an entire column with a one click action. It **emphasizes** the importance of a particular column by focusing on the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows manipulation of the **state**, **data extraction** of the **selected** fractions easing **data analysis** operations and visualizations.
 
-<div class="sample-container" style="height:250px; background-color: lightgray">
-    <p>Basic example demonstrating the feature with enabled/disabled columns selection</p>
+<div class="sample-container loading" style="height:570px">
+    <iframe id="grid-column-selection" data-src='{environment:demosBaseUrl}/grid/grid-column-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Basic usage
 
@@ -36,15 +40,19 @@ All of the presented columns are [`selectable`]({environment:angularApiUrl}/clas
 > [!NOTE]
 > [`Multi Column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of it's children has that behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all it's descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)
 
-<div class="sample-container" style="height:250px; background-color: lightgray">
-    <p>Example showcasing multi column headers + column selection behaviour</p>
+<div class="sample-container loading" style="height:570px">
+    <iframe id="grid-column-group-selection" data-src='{environment:demosBaseUrl}/grid/grid-column-group-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-group-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 #### Keyboard combinations
-Basically there are three variations that could be experienced through the **Column Selection**:
+Basically there are three scenarios for the keyboard navigation of the **Column Selection**:
 - Single selection - <kbd>click</kbd> over the column cell if it is **selectable**.
-- Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> over every **selectable** column cell.
+- Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> over every **selectable** header cell.
 - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
 #### API manipulations
@@ -62,7 +70,7 @@ Before going deeper in the style manpulations, the core module and all component
 ```
 
 >[!NOTE]
->Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated >independently. They both are dependent on the same `variables`.
+>Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated   independently. They both are dependent on the same `variables`.
 
 With that being said, let's move on and change the **selection** and **hover** style.<br/>
 Following the simples approach let's define our custom **theme**.
@@ -90,7 +98,7 @@ The last step is to pass the custom `igx-grid` theme.
 In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables.
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to >`penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme to leak to other components, be sure that >you have included the `:host` selector before `::ng-deep`.
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme to leak to other components, be sure that you have included the `:host` selector before `::ng-deep`.
 
 ```scss
 :host {
@@ -101,10 +109,14 @@ In order to style components for Internet Explorer 11, we have to use different 
 ```
 #### Demo
 
-<div class="sample-container" style="height:250px; background-color: lightgray">
-    <p>Example custom theme.</p>
+<div class="sample-container loading" style="height:570px">
+    <iframe id="grid-column-selection-styles" data-src='{environment:demosBaseUrl}/grid/grid-column-selection-styles' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-selection-styles-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### <a name="api-references"></a>API References
 <div class="divider--half"></div>
