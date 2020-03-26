@@ -38,7 +38,7 @@ export class AppModule {}
 
 #### Alert Dialog
 
-To create an alert dialog in the template of our email component, we can add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+To create an alert dialog, in the template of our email component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
 
 ```html
@@ -59,7 +59,7 @@ If everything's done right, you should see the demo sample shown above in your b
 
 #### Standard Dialog
 
-To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+To create a standard dialog, in the template of our file manager component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
 
 ```html
@@ -85,7 +85,7 @@ To add standard dialog, in the template of our file manager component we can add
 
 #### Custom Dialog
 
-To create a custom dialog in the template of our sign-in component, we can add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
+To create a custom dialog, in the template of our sign-in component, we add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
 We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
 
 ```html
@@ -132,7 +132,7 @@ We add two input groups consisting of a label and and input decorated with the [
 </div>
 <div class="divider--half"></div>
 
-#### Configure different Position and Animation Settings
+#### Position and Animation Settings
 
 There are two ways to change the position at which the `igxDialog` will be shown:
 
@@ -159,7 +159,7 @@ public openDialog() {
 this.dialog.open(overlaySettings)
 ```
 
-- Use `positionSettings` @input. Example:
+- Use the `positionSettings` @input. Example:
 
 ```html
 <igx-dialog #alert title="Notification" [positionSettings]="positionSettings" >
@@ -178,7 +178,7 @@ public positionSettings: PositionSettings = {
 };
 ```
 
-> [!Note] The same approach should be used for the animation settings, use `openAnimation` and `closeAnimation` to define animation params like duration etc. 
+> [!Note] The same approach should be used for the animation settings, use the `openAnimation` and `closeAnimation` properties to define animation params like duration. 
 `params` object example:
 
 ```typescript
@@ -213,7 +213,7 @@ $my-dialog-theme: igx-dialog-theme(
 ```
 
 > [!NOTE]
-> In order to style any additional components that are used as part of the dialog window's content (such as [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and placed under the dialog window's scope only (so it does not affect the rest of the application).
+> In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
 Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
@@ -226,7 +226,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 ```
 
 > [!NOTE]
-> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
 #### Including Themes
 
@@ -234,7 +234,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 
 The last step is to **include** the component theme in our application.
 
-If `$legacy-support` is set to `true`, include the **component theme** like that:
+If `$legacy-support` is set to `true`, include the **theme** like that:
 
 ```scss
  @include igx-dialog($my-dialog-theme);
