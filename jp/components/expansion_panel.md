@@ -109,7 +109,7 @@ export class ExpansionPanelComponent {
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 400px;">
+<div class="sample-container loading" style="height: 320px;">
     <iframe id="expansion-sample-2-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" class="lazyload"></iframe>
 </div>
 <div>
@@ -184,17 +184,17 @@ export class ExpansionPanelComponent {
 ### パレットおよび色
 はじめに、後でコンポーネントに渡すカスタム パレットを作成します。
 ```scss
-// 実際のシナリオでは、これはメインの sass ファイルにあるのが普通で、すべてのコンポーネント間でパレットを共有することができます。
-// ここでの場合、コンポーネント SCSS ファイル "expansion-styling.component.scss" にあります。
+// In real life, this should be in our main sass file so we can share the palette between all components. 
+// In our case, it's in the component SCSS file "expansion-styling.component.scss".
 
-// テーマ化 エンジン機能をインポートします。
+// Import theming engine functionality.
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// ブランディング カラーを追加します。
+// Add your brand colors.
 $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
 
-// カスタム パレットを作成します。
+// Create custom palette.
 $my-color-palette: igx-palette(
     $primary: $my-primary-color,
     $secondary: $my-secondary-color
@@ -204,13 +204,13 @@ $my-color-palette: igx-palette(
 ### コンポーネント テーマの作成
 コンポーネント テーマを作成し、上記のスニペットから `$my-color-palette` パレットを渡します。
 ```scss
-// expansion-styling.component.scss で
-// expansion panel theme を作成します。
+// In expansion-styling.component.scss
+// Create expansion panel theme.
 $custom-panel-theme: igx-expansion-panel-theme(
-    // `$my-color-palette` パレットを渡します.
+    // pass `$my-color-palette` palette.
     $palette: $my-color-palette,
 
-    // タイリングのパラメーター。
+    // Styling parameters.
     $header-background: igx-color($my-color-palette, "primary", 700),
     $header-focus-background: igx-color($my-color-palette, "primary", 700),
     $header-title-color: igx-color($my-color-palette, "secondary"),
@@ -226,9 +226,9 @@ $custom-panel-theme: igx-expansion-panel-theme(
 ### コンポーネント テーマの適用
 コンポーネント テーマを適用するには、 `igx-css-vars` mixin をインクルードし、 `$custom-panel-theme` マップを渡します。 
 ```scss
-// expansion-styling.component.scss で
-// custom-panel-theme を `igx-expansion-panel` mixin に渡します。
-// `:host` によって、すべてのテーマ化の影響範囲をこのコンポーネントのみに限定できます。
+// In expansion-styling.component.scss
+// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
+// The `:host` here makes sure that all the theming will affect only this component.
 :host {
   @include igx-css-vars($custom-panel-theme);
 }
@@ -239,10 +239,10 @@ $custom-panel-theme: igx-expansion-panel-theme(
  > カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含める必要があります。
 
 ```scss
-// expansion-styling.component.scss 内
-// `:host` によって、ViewEncapsulation のペネトレーションの後ですべてのテーマ化の影響範囲をこのコンポーネントのみに限定できます。
+// In expansion-styling.component.scss
+// The `:host` here makes sure that all the theming will affect only this component after the ViewEncapsulation Penetration.
 :host {
-    // ViewEncapsulation をペネトレーションします。
+    // Penetrate the ViewEncapsulation.
     ::ng-deep {
         @include igx-expansion-panel($custom-panel-theme);
     }

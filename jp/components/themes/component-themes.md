@@ -14,7 +14,7 @@ _language: ja
 
 Ignite UI for Angular でコンポーネント テーマを設定する方法、次にコンポーネント レベル IE 11 などの古いブラウザーをサポートするためにコンポーネントのテーマ設定に 2 つの方法があります。
 - 1 つ目の方法は、コンポーネント インスタンスを [CSS 変数](https://developer.mozilla.org/ja-JP/docs/Web/CSS/Using_CSS_variables) を使用してスタイル設定する方法です。CSS 変数を使用するとスタイルを繰り返し定義することなくコンポーネント テーマを作成できます。この方法は、CSS 変数の値をランタイムで変更できます。
-- 2 つ目の方法は、特定のコンポーネントで既に宣言されているCSSルールを上書きする新しいルールを作成することです。この方法は古いブラウザーをサポートする簡単で唯一の方法ですが、多くの追加 CSS ルールを生成した CSS テーマに追加するため理想的ではありません。
+- 2 つ目の方法は、特定のコンポーネントで既に宣言されている CSS ルールを上書きする新しいルールを作成することです。この方法は古いブラウザーをサポートする簡単で唯一の方法ですが、多くの追加 CSS ルールを生成した CSS テーマに追加するため理想的ではありません。
 
 これらの方法を実際に使用する方法やコンポーネント レベルのテーマを作成する場合にどちらか一方を使用する方法について説明します。
 <div class="divider"></div>
@@ -34,16 +34,16 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 アバター テーマの定義:
 
 ```scss
-// igx-theme($my-color-palette); の後
+// Some place after igx-theme($my-color-palette);
 
-// アバターの initials-background と icon-background 
-// を purple に変更します。
+// Change the initials and icon backgrounds 
+// of the avatar to purple.
 $new-avatar-theme: igx-avatar-theme(
     $initials-background: purple,
     $icon-background: purple
 );
 
-// css-vars を `igx-css-vars` mixin に渡します。
+// Pass the css-vars to the `igx-css-vars` mixin
 @include igx-css-vars($new-avatar-theme);
 ```
 
@@ -76,7 +76,7 @@ $another-avatar-theme: igx-avatar-theme(
 
 ```scss
 // ...
-// CSS クラス セレクター
+// CSS class selectors
 .avatar-royalblue {
     @include igx-css-vars($avatar-royalblue-theme);
 }
@@ -130,7 +130,7 @@ export class AvatarComponent extends Component {
 ```scss
 // app-avatar.component.scss
 
-// すべての必要な関数と mixin をインポートします。
+// Import all required functions and mixins
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
@@ -165,14 +165,14 @@ CSS 変数を使用すれば、`:: ng-deep` 擬似セレクターは必要あり
 テーマ設定の方法を決定する - true の場合、テーマはハードコーディングされた値で設定されます。
 
 ```scss
-// 最初に、IgniteUI テーマ ライブラリをインポートします。
+// Import the IgniteUI themes library first
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
 @include igx-theme($default-palette, $legacy-support: true);
 
-// ハードコーディングされた値で
-// igx-avatar と igx-badge のデフォルトの テーマを上書きします;
+// Overwrite the default themes for igx-avatar and igx-badge
+// using hard-coded values;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 $badge-theme: igx-badge-theme($background-color: white);
 
@@ -190,7 +190,7 @@ $badge-theme: igx-badge-theme($background-color: white);
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component'; 
-// 最初に legacy-support を有効にします。
+// Enable legacy support first.
 $igx-legacy-support: true;
 $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
