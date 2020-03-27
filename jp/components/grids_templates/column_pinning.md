@@ -57,7 +57,6 @@ _keywords: lock column, ignite ui for angular, infragistics 
 
 列ピン固定は、[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の `pinned` 入力によって制御されます。ピン固定列は常に @@igComponent の左側に描画され、@@igComponent 本体のピン固定されていない列の水平スクロールで固定されます。
 
-
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
@@ -77,6 +76,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 </igx-tree-grid>
 ```
 }
+
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
@@ -155,10 +155,10 @@ public columnPinning(event) {
 ```
 }
 
-### Pinning Position
+### ピン固定の位置
 
-You can change the column pinning position via the [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) configuration option. It allows you to set the columns position to either Start or End.
-When set to End the columns are rendered at the end of the grid, after the unpinned columns. Unpinned columns can be scrolled horizontally, while the pinned columns remain fixed on the right.
+[`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) 設定オプションを使用して、列のピン固定の位置を変更できます。列の位置を Start または End のいずれかに設定できます。End に設定すると、列がピン固定されていない列の後に、グリッドの最後にレンダリングされます。
+ピン固定されていない列は水平にスクロールできますが、ピン固定された列は右側に固定されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -181,35 +181,35 @@ When set to End the columns are rendered at the end of the grid, after the unpin
 ```typescript
 public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 ```
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:510px">
-    <iframe id="grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-right-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-sample-right-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:510px">
-    <iframe id="tree-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-sample-right-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -335,6 +335,7 @@ public toggleColumn(col: IgxColumnComponent) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
+
 
 ### ピン固定の制限
 
