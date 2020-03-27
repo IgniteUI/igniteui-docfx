@@ -6,29 +6,24 @@ _language: ja
 ---
 
 ## Snackbar
-
 <p class="highlight">Ignite UI for Angular Snack Bar コンポーネントは単一行のメッセージで操作のフィードバックを提供します。元に戻すなどの操作へのリンクを追加できます。Snack Bar メッセージがその他の画面要素の上に表示されます。モバイル デバイス画面の下部に配置され、より大きいデバイス画面の左下に配置されます。</p>
 <div class="divider"></div>
 
 ### Snackbar デモ
+<div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 140px">
+    <iframe id="snackbar-sample-1-iframe" src='{environment:demosBaseUrl}/notifications/snackbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
+
 <div class="divider--half"></div>
 
 ### 使用方法
-Snack Bar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに `IgxSnackbarModule` をインポートします。
+はじめに、**app.module.ts** ファイルに  `IgxSnackbarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -43,9 +38,7 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-
 #### Snackbar の表示
-
 Snackbar コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを呼び出します。
 
 ```html
@@ -57,14 +50,9 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 </div>
 ```
 
-サンプルが正しく構成された場合、ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
-
-<div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
-</div>
+サンプルが正しく構成された場合、デモ サンプルが表示されます。ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
 
 #### 非表示/自動的に隠す
-
 開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) メソッドを使用して、コードでコンポーネントを閉じることができます。
 
 ```html
@@ -87,27 +75,14 @@ public close(element) {
 サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
-
-#### 表示期間
-
-[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される期間を構成します。
-
-```html
-<!--sample.component.html-->
-
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
-```
 
-サンプルが正しく構成された場合、Snackbar が自動ですばやく非表示になります。
-
-<div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
-</div>
+#### 表示時間
+[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
 
 #### Snackbar のカスタマイズ
 Snackbar の内容をカスタマイズして、メッセージやボタンよりも複雑な要素を表示することもできます。たとえば、ファイルの読み込み中にスナックバーを表示したい場合は、読み込みアニメーションをそのコンテンツに追加することができます。
@@ -169,18 +144,16 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 </div>
 
 #### リストの Snackbar
-
 Snackbar の主な機能を説明しました。次の例はより複雑なサンプルにコンポーネントを追加します。通知およびアクションの元に戻す機能を提供する Snackbar を作成します。
 
 削除可能な連絡先のリストを作成します。項目を削除後、メッセージおよびアクションを元に戻すボタンを含む Snackbar が表示されます。
 
 ```html
 <!--sample.component.html-->
-
 <igx-list>
     <igx-list-item [isHeader]="true">Contacts</igx-list-item>
 
-	<igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
+    <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
         <div class="item-container">
             <div class="contact">
                 <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
@@ -191,7 +164,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
             <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
                 <igx-icon color="#ff5252">delete</igx-icon>
             </span>
-		</div>
+        </div>
 
     </igx-list-item>
 
@@ -247,11 +220,11 @@ public restore() {
 ```
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -273,20 +246,42 @@ $dark-snackbar: igx-snackbar-theme(
 );
 ```
 
-最後にコンポーネントのテーマを**含めます**。
+#### テーマを含む
+
+<div class="divider"></div>
+
+最後にコンポーネントのテーマを含めます。
+
+`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
-@include igx-snackbar($dark-snackbar);
+ @include igx-snackbar($igx-snackbar-theme);
 ```
-
 >[!NOTE]
->コンポーネントが[`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
-    ::ng-deep {
-        @include igx-snackbar($dark-snackbar);
+     ::ng-deep {
+        @include igx-snackbar($igx-snackbar-theme);
     }
+}
+```
+
+<div class="divider"></div>
+
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+
+```scss
+@include igx-css-vars($igx-snackbar-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+
+```scss
+:host {
+    @include igx-css-vars($igx-snackbar-theme);
 }
 ```
 
@@ -370,7 +365,6 @@ $dark-snackbar: igx-snackbar-theme(
 <div class="divider--half"></div>
 
 ### API リファレンス
-
 このトピックでは、[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) を使用と構成方法を説明しました。API の詳細については以下のリンク先を参照してください。
 
 * [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
@@ -382,7 +376,6 @@ $dark-snackbar: igx-snackbar-theme(
 ### その他のリソース
 
 <div class="divider--half"></div>
-
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
