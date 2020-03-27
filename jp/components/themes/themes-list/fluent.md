@@ -8,14 +8,14 @@ Word および Excel パレットをサポートしています。使用する�
 ### Fluent Light テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-fluent-theme($fluent-excel-palette);
 ```
 
 ### Fluent Dark テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-fluent-dark-theme($fluent-excel-palette);
 ```
 
