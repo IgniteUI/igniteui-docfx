@@ -2,7 +2,7 @@
 title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | 注釈 | インフラジスティックス
 _description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。可視化のチャート タイプについて説明します。
 _keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
-mentionedTypes: ['XamCategoryChart']
+mentionedTypes: ['CategoryChart']
 _language: ja
 ---
 
@@ -23,7 +23,7 @@ _language: ja
 
 ### 十字線レイヤー
 
-カテゴリ チャートの十字線レイヤーは、各ターゲット シリーズの実際の値に一致する十字線を提供します。十字線タイプは、Horizontal、Vertical、Both があります。`CrosshairsSnapToData` プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。注釈を有効にして軸に沿って十字線の値を表示できます。
+カテゴリ チャートの十字線レイヤーは、各ターゲット シリーズの実際の値に一致する十字線を提供します。十字線タイプは、Horizontal、Vertical、Both があります。[`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。注釈を有効にして軸に沿って十字線の値を表示できます。
 
 ```html
 <igx-category-chart
