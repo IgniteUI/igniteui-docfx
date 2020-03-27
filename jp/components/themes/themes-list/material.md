@@ -3,21 +3,21 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-theme($default-palette);
 ```
 
 ### Material Light テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-light-theme($default-palette);
 ```
 
 ### Material Dark テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-dark-theme($default-palette);
 ```
 
@@ -26,7 +26,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;

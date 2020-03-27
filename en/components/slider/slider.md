@@ -22,14 +22,7 @@ _keywords: angular slider, igniteui for angular, infragistics
 >[!WARNING]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for user interactions to work as expected.**.
 
-To get started with the Slider component, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the **IgxSliderModule** in our **app.module.ts** file:
+To get started with the Slider component, first you need to import the **IgxSliderModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -45,35 +38,6 @@ import { IgxSliderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Continuous Slider
-Let's start with a simple continuous slider. First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
-
-> [!NOTE]
-> Continuous slider doesn't have step indicators over the track and visible thumb labels during interaction.
-
-```html
-<!--sample.component.html-->
-
-<igx-slider id="slider" [minValue]="0" [maxValue]="100" [continuous]=true [(ngModel)]="volume" ></igx-slider>
-<label igxLabel for="slider">Volume: {{volume}}</label>
-```
-
-```typescript
-// sample.component.ts 
-
-// Set an initial value
-public volume = 20;
-```
-
-If the sample is configured properly, dragging the slider thumb should update the label below and the slider value should be limited between the specified minimum and maximum values:
-
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slide-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
 #### Discrete Slider
 By default, the Ignite UI for Angular Slider is discrete. Discrete slider provides visualization of the current value with a numeric label (bubble).
 
@@ -86,7 +50,11 @@ In the following example, we define a discrete slider that displays values from 
 
 <igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>
 <div class="igx-form-group">
-    <input igxInput id="percentInput" type="text" [value]="task.completion / 100 | percent" (blur)="updateTask($event.target)" />
+    <input 
+        igxInput 
+        id="percentInput" 
+        type="number" 
+        [value]="task.completion" (blur)="updateTask($event.target)" />
     <label igxLabel for="percentInput">Task Completion</label>
 </div>
 ```
@@ -121,6 +89,42 @@ If the sample is configured properly, dragging the slider thumb should update th
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Continuous Slider 
+First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to `true`.  
+Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "volume".
+
+> [!NOTE]
+> Continuous slider doesn't have step indicators over the track and visible thumb labels during interaction.
+
+```html
+<!--sample.component.html-->
+
+<igx-slider
+    id="slider" 
+    [minValue]="10" 
+    [maxValue]="90" 
+    [continuous]=true 
+    [(ngModel)]="volume">
+</igx-slider>
+<label igxLabel for="slider">Volume: {{volume}}</label>
+```
+
+```typescript
+// sample.component.ts 
+
+// Set an initial value
+public volume = 20;
+```
+
+If the sample is configured properly, dragging the slider thumb should update the label below and the slider value should be limited between the specified minimum and maximum values:
+
+<div class="sample-container loading" style="height: 140px">
+    <iframe id="slide-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ####Range Slider
