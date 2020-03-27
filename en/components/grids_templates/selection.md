@@ -44,7 +44,7 @@ Property [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 - This lead to the following three variations:
  - Single selection - <kbd>mouse click</kbd> over the column cell.
  - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>mouse click</kbd> over the column cells.
- - Range column selection - holding <kbd>shift</kbd> + <kbd>mouse click</kbd> selects everyting in between.
+ - Range column selection - holding <kbd>shift</kbd> + <kbd>mouse click</kbd> selects everything in between.
 
 > Go to [Column selection topic](column_selection.md) for more information.
 

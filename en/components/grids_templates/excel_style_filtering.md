@@ -63,20 +63,20 @@ To turn on the grid excel filtering, two inputs should be set. The [`allowFilter
 ```
 }
 
-###Interaction
+### Interaction
 
-In order to open the filter menu for a particular column, the angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
+In order to open the filter menu for a particular column, the Angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons available for the features that are turned on.
 
-If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between each expression is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button.
+If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between the expressions is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button.
 
 To apply a filter with different expressions, you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button, which can clear the filter.
 
 
 <div class="divider--half"></div>
 
-###Configure Menu Features
+### Configure Menu Features
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that control them are as follows: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+Sorting, moving, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
