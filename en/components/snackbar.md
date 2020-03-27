@@ -132,7 +132,9 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 As a result, a message and three loading dots appear in the snackbar.
 
-<iframe id="snackbar-sample-iframe-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 170px">
+    <iframe id="snackbar-sample-5-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
+</div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
