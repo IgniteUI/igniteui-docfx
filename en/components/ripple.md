@@ -66,7 +66,7 @@ You can easily change the default ripple color using the `igxRipple`:
 By default, the ripple effect starts from the position of the click event. You can change this behavior using the [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) property and setting the center of the element as origin.
 
 ```html
-<button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
+<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
 <div class="sample-container loading" style="height: 100px">
     <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
@@ -76,7 +76,7 @@ By default, the ripple effect starts from the position of the click event. You c
 We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
 
 ```html
-<button igxButton="raised" igxRipple [igxRippleDuration]=2000>Click Me</button>
+<button igxButton="raised" igxRipple igxRippleDuration="2000">Click Me</button>
 ```
 <div class="sample-container loading" style="height: 100px">
     <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
@@ -86,7 +86,7 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
 Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) property to attach a ripple effect to a specific element inside a parent element.
 
 ```html
-<div class="parent" igxRipple="white" igxRippleTarget=".child" igxRippleCentered="true">
+<div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">
     ...
     <button class="sample-button child" igxButton="raised">Read More</button>
 </div>
@@ -125,7 +125,7 @@ The next step is to pass the custom ripple theme:
 @include igx-css-vars($custom-ripple-theme);
 ```
 
-#### Using mixins
+#### Using Component Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -139,54 +139,6 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
     }
 }
 ```
-
-#### Using color palettes
-
-In the approach, that was described above, the color value was hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and the [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-
-The `igx-palette` function generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$green-color: #217346;
-$black-color: #151515;
-
-$custom-ripple-palette: igx-palette(
-    $primary: $black-color,
-    $secondary: $green-color
-);
-```   
-
-After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
-
-```scss
-$custom-ripple-theme: igx-ripple-theme(
-    $color: igx-color($custom-ripple-palette, "secondary", 500)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
-
-#### Using schemas
-
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md), which is the recipe of a theme. 
-
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use [`light-ripple`]({environment:sassApiUrl}/index.html#variable-_light-ripple).   
-
-```scss
-//  Extending the ripple light schema
-$custom-ripple-schema: extend($_light-ripple, (
-    color: (igx-color("secondary", 500))
-));
-   
-// Defining ripple with the custom light schema
-$custom-ripple-theme: igx-ripple-theme(
-    $palette: $custom-ripple-palette,
-    $schema: $custom-ripple-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above. 
 
 >[!NOTE]
   > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
