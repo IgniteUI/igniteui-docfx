@@ -138,10 +138,6 @@ We will also use the following styles for our application:
 ```css
 /* richTooltip.component.css */
 
-.wrapper {
-    margin: 20px;
-}
-
 .location:hover {
     cursor: pointer;
 }
