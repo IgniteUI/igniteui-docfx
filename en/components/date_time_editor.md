@@ -69,19 +69,24 @@ To create a two-way data-binding, set an ngModel:
 
 
 #### Keyboard Navigation
-Date Time Editor Directive has intuitive keyboard navigation that makes it easy to jump trough different DateParts, increment, decrement, etc. without having to touch the mouse.
+Date Time Editor Directive has intuitive keyboard navigation that makes it easy to jump through different DateParts, increment, decrement, etc. without having to touch the mouse.
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. Jumps from current section to the same caret position of the next/previous section. On start/end sections, first jump to the other end of the same section following the direction of the arrow.
 
 - <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#isspinloop)
 
-- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor via a shortcut (as it is in Excel).
+- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor via a shortcut.
 
 
 ### Examples
 
 #### Display and input format
-Date Time Editor Directive support different display and input formats. Notice formats like shortDate, longDate, etc., can be used as displayFormat only:
+IgxDateTimeEditor support different display and input formats.
+
+For display, it uses Angular's [DatePipe](https://angular.io/api/common/DatePipe) which allows it to support pre-defined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by DatePipe, e.g. `EE/MM/yyyy`. Notice formats like shortDate, longDate, etc., can be used as `displayFormat` only.
+
+To set specific input format, pass it as string to the IgxDateTimeEditor directive. This will set both the expected user input format and [mask](mask.md) for the editor. 
+
 
 ```html
 <igx-input-group>
@@ -90,7 +95,7 @@ Date Time Editor Directive support different display and input formats. Notice f
 ```
 
 #### Min max value
-What is more, you can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
+You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
 ```typescript
 public minDate = new Date(2020, 1, 15);
 public maxDate = new Date(2020, 12, 1);
