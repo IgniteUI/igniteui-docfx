@@ -15,12 +15,14 @@ _language: ja
 
 ### Bottom Navigation デモ
 
-<div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/layouts/tabbar' width="100%" height="100%" seamless
+<div class="divider--half"></div>
+
+<div class="sample-container loading" style="height: 200px; width: 400px; border: 1px solid #D4D4D4;" >
+    <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -28,14 +30,7 @@ _language: ja
 
 #### 使用方法
 
-Bottom Navigation コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
-
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
+はじめに、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -60,24 +55,15 @@ export class AppModule {}
   <igx-tab-panel label="Tab 3">This is Tab 3 content.</igx-tab-panel>
 </igx-bottom-nav>
 ```
+すべて適切に設定できると、ブラウザ上でデモサンプルを確認することができます。
 
-以下は結果です:
+<div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-
-<div class="divider"></div>
-
-### タブのカスタマイズ
+### Bottom Navigation のカスタマイズ
 
 タブにアイコンを追加します。Bottom Navigation コントロールがマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。 
 
-最初に Material+Icons をメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
+最初にマテリアル アイコンをメイン アプリケーション フォルダーの 'styles.css' ファイルにインポートします。
 
 ```css
 // styles.css
@@ -118,14 +104,14 @@ public booksList: object[] = [
 
 ```html
 <igx-bottom-nav>
-  
+
   <igx-tab-panel label="Songs" icon="library_music">
     <div class="item" *ngFor="let song of songsList">
       <span class="item-line1">{{song.title}}</span><br/>
       <span class="item-line2">{{song.artist}}</span>
     </div>
   </igx-tab-panel>
-  
+
   <igx-tab-panel label="Movies" icon="video_library">
     <div class="item" *ngFor="let movie of moviesList">
       <span class="item-line1">{{movie.title}}</span><br/>
@@ -159,11 +145,15 @@ public booksList: object[] = [
     font-size: 12px;
     color: darkgray;
 }
+
+igx-tab-panel {
+    padding: 10px;
+}
 ```
 
 Bottom Navigation は以下のようになります。
 
-<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
+<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid #D4D4D4;">
     <iframe id="tabbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -173,7 +163,8 @@ Bottom Navigation は以下のようになります。
 
 <div class="divider--half"></div>
 
-タブのラベルおよびアイコンの変更を拡張する場合、各タブでカスタム テンプレートを作成することもできます。以下はその例です。
+タブのラベルおよびアイコンの変更を拡張する場合、各タブでカスタム テンプレートを作成することもできます。
+以下はその例です。
 
 ```html
 <igx-bottom-nav>
@@ -184,7 +175,7 @@ Bottom Navigation は以下のようになります。
                 <!-- your custom tab content goes here -->
             </div>
         </ng-template>
-        
+
         <h1>Tab content</h1>
     </igx-tab-panel>
 </igx-bottom-nav>
@@ -192,164 +183,7 @@ Bottom Navigation は以下のようになります。
 
 <div class="divider"></div>
 
-#### その他の Igx コントロールの使用
-
-その他 Ignite UI for Angular コンポーネントを Bottom Navigation と使用し、より高度なアプリケーションを実装できます。
-たとえば、Bottom Navigation のパネルの連絡先リストの作成には [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html)、各連絡先の可視化は、[`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) や [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) を使用できます。
-
-`IgxBottomNavModule` および `IgxListModule` コンポーネントを "app.module.ts" ファイルにインポートします。
-
-```typescript
-// app.module.ts
-
-...
-import { IgxAvatarModule } from 'igniteui-angular';
-import { IgxIconModule } from 'igniteui-angular';
-import { IgxListModule } from 'igniteui-angular';
-import { IgxBottomNavModule } from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxAvatarModule, IgxIconModule, IgxListModule, IgxBottomNavModule],
-    ...
-})
-export class AppModule {}
-```
-
-コンポーネントの typescript ファイルに連絡先のデータ ソースを作成します。
-
-```typescript
-...
-public contactsList: object[] = [{
-        avatar: "assets/images/avatar/1.jpg",
-        favorite: true,
-        key: "1",
-        link: "#",
-        phone: "770-504-2217",
-        text: "Terrance Orta"
-    }, {
-        avatar: "assets/images/avatar/2.jpg",
-        favorite: false,
-        key: "2",
-        link: "#",
-        phone: "423-676-2869",
-        text: "Richard Mahoney"
-    }, {
-        avatar: "assets/images/avatar/3.jpg",
-        favorite: false,
-        key: "3",
-        link: "#",
-        phone: "859-496-2817",
-        text: "Donna Price"
-    }, {
-        avatar: "assets/images/avatar/4.jpg",
-        favorite: false,
-        key: "4",
-        link: "#",
-        phone: "901-747-3428",
-        text: "Lisa Landers"
-    }, {
-        avatar: "assets/images/avatar/12.jpg",
-        favorite: true,
-        key: "5",
-        link: "#",
-        phone: "573-394-9254",
-        text: "Dorothy H. Spencer"
-    }, {
-        avatar: "assets/images/avatar/13.jpg",
-        favorite: false,
-        key: "6",
-        link: "#",
-        phone: "323-668-1482",
-        text: "Stephanie May"
-    }, {
-        avatar: "assets/images/avatar/14.jpg",
-        favorite: false,
-        key: "7",
-        link: "#",
-        phone: "401-661-3742",
-        text: "Marianne Taylor"
-    }];
-...
-```
-
-コンポーネントのテンプレート マークアップに最初のパネルにある [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を含む Bottom Navigation を追加して編集します。
-
-```html
-...
-<igx-bottom-nav>
-    <igx-tab-panel icon="phone">
-        <igx-list [allowRightPanning]="true" [allowLeftPanning]="true">
-            <igx-list-item [isHeader]="true">History</igx-list-item>
-            <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item"
-              *ngFor="let contact of contactsList">
-                <div class="item">
-                    <igx-avatar [src]="contact.avatar" roundShape="true"></igx-avatar>
-                    <div class="person">
-                        <p class="name">{{contact.text}}</p>
-                        <span class="phone">{{contact.phone}}</span>
-                    </div>
-                    <igx-icon>phone</igx-icon>
-                </div>
-            </igx-list-item>
-        </igx-list>
-    </igx-tab-panel>
-    <igx-tab-panel icon="supervisor_account">
-        <div class="tab-content">
-            <h3>Tab 2 Content</h3>
-        </div>
-    </igx-tab-panel>
-    <igx-tab-panel icon="format_list_bulleted">
-        <div class="tab-content">
-            <h3>Tab 3 Content</h3>
-        </div>
-    </igx-tab-panel>
-</igx-bottom-nav>
-...
-```
-
-アプリケーションのスタイルを設定するために CSS 定義も含める必要があります。
-
-```css
-.tab-content {
-    padding: 16px;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.item > [igxLabel],
-.item > .person {
-    position: absolute;
-    margin-left: 72px;
-}
-
-.person .name {
-    padding: 0;
-    margin: 0;
-}
-
-.person .phone {
-    font-size: 12px;
-    color: gray;
-}
-
-.item igx-icon {
-    color: lightgray;
-}
-
-.item igx-icon.favorite {
-    color: orange;
-}
-```
-
-このトピックの [Bottom Navigation デモ](#bottom-navigation-デモ) セクションで結果を確認できます。
-
-
-#### ルーター アウトレット コンテナとの統合
+### ルーター アウトレット コンテナとの統合
 
 Bottom Navigation コンポーネントの主な用途はコンテンツを含むパネルの定義ですが、タブ項目のみを定義する必要がある場合があります。
 
@@ -369,63 +203,58 @@ import { Component } from "@angular/core";
     styleUrls: ["bottomnav-routing.component.scss"],
     templateUrl: "bottomnav-routing.component.html"
 })
-export class BottomNavRoutingComponent {
-    constructor() { }
-}
+export class BottomNavRoutingComponent { }
 
 @Component({
-    template: "<h3>Tab 1 Content</h3>"
+    template: "<p>Item 1 Content</p>"
 })
-export class BottomNavRoutingView1Component {
-}
+export class BottomNavRoutingView1Component { }
 
 @Component({
-    template: "<h3>Tab 2 Content</h3>"
+    template: "<p>Item 2 Content</p>"
 })
-export class BottomNavRoutingView2Component {
-}
+export class BottomNavRoutingView2Component { }
 
 @Component({
-    template: "<h3>Tab 3 Content</h3>"
+    template: "<p>Item 3 Content</p>"
 })
-export class BottomNavRoutingView3Component {
-}
+export class BottomNavRoutingView3Component { }
 ```
 
 次のステップでは、`app-routing.module.ts` ファイルに適切なナビゲーション マッピングを作成します。
 
 ```typescript
-// app-routing.module.ts
+import { RouterModule, Routes } from "@angular/router";
+
 import {
-    BottomNavRoutingComponent,
-    BottomNavRoutingView1Component,
-    BottomNavRoutingView2Component,
-    BottomNavRoutingView3Component } from './bottomnav-routing.component';
+    TabbarRoutingComponent,
+    TabbarRoutingView1Component,
+    TabbarRoutingView2Component,
+    TabbarRoutingView3Component,
+} from './tabbar-routing.component';
 
-...
-
-const appRoutes = [
+const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/bottomnav-routing'
+        redirectTo: '/tabbar-routing'
     },
     {
-        path: 'bottomnav-routing',
-        component: BottomNavRoutingComponent,
+        path: "tabbar-routing",
+        component: TabbarRoutingComponent,
         children: [
-            { path: 'view1', component: BottomNavRoutingView1Component },
-            { path: 'view2', component: BottomNavRoutingView2Component },
-            { path: 'view3', component: BottomNavRoutingView3Component },
+            { path: "tabbar-view1", component: TabbarView1Component },
+            { path: "tabbar-view2", component: TabbarView2Component },
+            { path: "tabbar-view3", component: TabbarView3Component }
         ]
     }
 ];
 
 @NgModule({
-    exports: [RouterModule],
-    imports: [RouterModule.forRoot(appRoutes)]
+    exports: [ RouterModule ],
+    imports: [ RouterModule.forChild(routes) ]
 })
-export class AppRoutingModule { }
+export class TabbarRoutingModule { }
 ```
 
 すべてのナビゲーション ルートがセットアップされたので、BottomNavigation コンポーネントを宣言し、ルーティング用に構成する必要があります。
@@ -436,31 +265,37 @@ export class AppRoutingModule { }
 <router-outlet></router-outlet>
 
 <igx-bottom-nav>
-  <igx-tab label="Tab 1" icon="dashboard"
-    routerLink="view1"
-    routerLinkActive #rla1="routerLinkActive"
-    [isSelected]="rla1.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 1"
+    routerLink="tabbar-view1"
+    routerLinkActive
+    #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive"
+    ></igx-tab>
 
-  <igx-tab label="Tab 2" icon="check_circle_outline"
-    routerLink="view2"
-    routerLinkActive #rla2="routerLinkActive"
-    [isSelected]="rla2.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 2"
+    routerLink="tabbar-view2"
+    routerLinkActive
+    #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive"
+    ></igx-tab>
 
-  <igx-tab label="Tab 3" icon="radio_button_checked"
-    routerLink="view3"
-    routerLinkActive #rla3="routerLinkActive"
-    [isSelected]="rla3.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 3"
+    routerLink="tabbar-view3"
+    routerLinkActive
+    #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive"
+    ></igx-tab>
 </igx-bottom-nav>
 ```
 
-上記のコードは、3 つのタブ項目を持つ BottomNavigation コンポーネントを作成します。すべてのタブ項目には、ナビゲーションに使用されるルーティング リンクを指定するために使用される `RouterLink` ディレクティブが適用されています。これらのリンクのいずれかがアクティブになると、RouterLinkActive ディレクティブの isActive プロパティにバインドされるため、対応するタブ項目の isSelected プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
+上記のコードは、3 つのタブ項目を持つ BottomNavigation コンポーネントを作成します。すべてのタブ項目には、ナビゲーションに使用されるルーティング リンクを指定するために使用される `RouterLink` ディレクティブが適用されています。これらのリンクのいずれかがアクティブになると、`RouterLinkActive` ディレクティブの `isActive` プロパティにバインドされるため、対応するタブ項目の `isSelected` プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
 
 上記のアプローチは、BottomNavigation コンポーネントを使用したルーティングを示すために、次のサンプルで使用されています。
 
-<div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
+<div class="sample-container loading" style="height: 250px; width: 500px; border: 1px solid #D4D4D4;">
     <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -490,14 +325,20 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 > [!NOTE]
 > タブ パネルのコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
 
+#### テーマを含む
+
+<div class="divider"></div>
+
 最後にコンポーネントのテーマを**含めます**。
+
+`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
 @include igx-bottom-nav($dark-bottom-nav);
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
 
 ```scss
 :host {
@@ -507,6 +348,22 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 }
 ```
 
+<div class="divider"></div>
+
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+
+```scss
+@include igx-css-vars($dark-bottom-nav);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+
+```scss
+:host {
+    @include igx-css-vars($dark-bottom-nav);
+}
+```
 #### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
@@ -567,7 +424,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 
 #### デモ
 
-<div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
+<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" >
     <iframe id="tabbar-style-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-style' width="100%" height="100%" seamless
         frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -590,8 +447,8 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
 ### その他のリソース
-
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
