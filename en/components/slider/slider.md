@@ -281,14 +281,16 @@ In the following sample we disable all **secondary labels** by setting [`seconda
 
 ```html
 <igx-slider
-    [maxValue]="50"
+    [step]="10"
+    [type]="type"
+    [maxValue]="100"
     [continuous]="true"
     [showTicks]="true"
-    [primaryTicks]="6"
+    [primaryTicks]="3"
     [secondaryTicks]="4"
     [secondaryTickLabels]="false"
-    [tickLabelsOrientation]="labelsOrientation"
-    [(ngModel)]="priceRange"></igx-slider>
+    [tickLabelsOrientation]="labelsOrientation">
+    </igx-slider>
 ```
 We also rotate all viable labels by setting the [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) to [`BottomToTop`]({environment:angularApiUrl}/enums/ticklabelsorientation.html)
 ```
@@ -424,25 +426,37 @@ This is the final result from applying our new theme.
 
 #### Creating a component theme
 First we need to [create a custom palette](../themes/palette.md)
-Now let's create our component theme and pass that custom palette.
+Now let's create our component theme and pass that custom palette to it.
 ```scss
-// In slider-styling.component.scss
+// In app-slider-styling.component.scss
 
-// Create expansion panel theme.
-$custom-slider-theme: igx-expansion-panel-theme(
-    $palette: $my-color-palette,
+// Create slider theme.
+$custom-slider-theme: igx-slider-theme(
+    $track-color: #ff7400,
+    $track-hover-color: #ff7400,
+
+    $thumb-color: #ff7400,
+
+    $base-track-color: #ddd,
+    $base-track-hover-color: #ccc,
+
+    $tick-label-color: #b246c2,
+    $tick-label-color-tall: #ff7400,
+
+    $tick-color: #b246c2,
+    $tick-color-tall: #ff7400,
 );
 ```
 
 #### Applying the component theme
 Now to apply the component theme all that's left is to include `igx-css-vars` mixin and pass the `$custom-slider-theme` map.
 ```scss
-// In slider-styling.component.scss
+// In app-slider-styling.component.scss
 
 // Pass our custom-slider-theme to `igx-css-vars` mixin.
 // The `:host` here makes sure that all the theming will affect only this slider component.
 :host {
-  @include igx-css-vars($custom-panel-theme);
+  @include igx-css-vars($custom-slider-theme);
 }
 ```
 
