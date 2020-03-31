@@ -882,8 +882,6 @@
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
           new: true
-    - name: テーマの例
-      href: themes/examples.md
     - name: 印刷スタイル
       href: themes/printing-styles.md
 - name: 丸み付け
