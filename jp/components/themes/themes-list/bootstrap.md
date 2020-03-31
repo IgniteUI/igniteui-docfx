@@ -5,14 +5,14 @@
 ### Bootstrap Light テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-bootstrap-theme($bootstrap-palette);
 ```
 
 ### Bootstrap Dark テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-bootstrap-dark-theme($dark-bootstrap-palette);
 ```
 
