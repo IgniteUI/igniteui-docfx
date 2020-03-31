@@ -28,7 +28,7 @@ _language: ja
 | `$palette`        | map     | 未定義          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。                                         |
 | `$schema`         | map     | $light-schema      | コンポーネントのスタイル設定に基づいて使用されるスキーマ。                                                           |
 | `$exclude`        | list    | ( )                | グローバル テーマから除外されるコンポーネント テーマのリスト。                                               |
-| `$legacy-support` | boolean | `true`             | テーマ設定の方法を決定 - false に設定し、テーマは CSS 変数で設定します。                          |
+| `$legacy-support` | boolean | `false`             | テーマ設定の方法を決定 - true の場合、テーマはハードコーディングされた値で設定されます。                          |
 | `$roundness`      | Number  |  null              | すべてのコンポーネントのグローバルな丸み係数 (値は0〜1の任意の小数にすることができます) を設定します。   |
 | `$elevation`      | boolean | `true`             | エレベーションが構成されたコンポーネントのグローバル エレベーションを設定します。                                           |
 
@@ -132,11 +132,11 @@ $my-color-palette: igx-palette(
 ### ブラウザー サポート
 <div class="divider--half"></div>
 
-`$igx-legacy-support` の値は、コンポーネントのテーマが動作する方法を決定するため大変重要です。値を `true` に設定した場合、各コンポーネント スタイルのルールの値がビルド時にテーマで定義されたハード値に設定されます。`$igx-legacy-support` の値を`false` に設定した場合もスタイル ルールは `:root` スコープまたは一番近いブロック スコープで定義された CSS 変数を検索します。
+`$igx-legacy-support` の値は、コンポーネントのテーマの動作を決定するため大変重要です。値を `true` に設定した場合、各コンポーネントのスタイルのルールの値はビルド時にテーマで定義されたハードコーディングされた値に設定されます。`$igx-legacy-support` の値を`false` に設定した場合も、スタイル ルールは `:root` スコープまたは一番近いブロックのスコープで定義された CSS 変数を検索します。
 
-一般的なルールは、Internet Explorer 11 をサポートするかどうかに基づいて `$legacy-support` の値を設定します。IE11 をサポートする場合、`$legacy-support` 値を `true` (デフォルト) に設定します。それ以外の場合、値を `false` に設定すると、テーマで CSS 変数が必要です。
+一般的なルールは、Internet Explorer 11 をサポートするかどうかに基づいて `$legacy-support` の値を設定します。IE11 をサポートする場合、`$legacy-support` 値を `true` に設定します。それ以外の場合、値を `false` (デフォルト) に設定すると、テーマで CSS 変数が必要です。
 
-### API
+### API の概要
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
