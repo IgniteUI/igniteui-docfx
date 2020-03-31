@@ -76,7 +76,7 @@ By default, the ripple effect starts from the position of the click event. You c
 We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
 
 ```html
-<button igxButton="raised" igxRipple igxRippleDuration="2000">Click Me</button>
+<button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
 ```
 <div class="sample-container loading" style="height: 100px">
     <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
