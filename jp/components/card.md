@@ -7,30 +7,23 @@ _language: ja
 
 ##Card
 <p class="highlight">Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) は、テキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
-<div class="divider"></div>
 
 ###Card デモ
-<div class="sample-container loading" style="height: 690px">
-    <iframe id="card-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-0-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ###使用方法
+
 Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされるアクションが異なる同様のオブジェクトから成るコンテンツを表示できます。
 
 ####作業の開始
 
-Card コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
-
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに `IgxCardModule` をインポートします。
+**app.module.ts** ファイルに  `IgxCardModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,7 +38,7 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、最初のカード コンポーネントのテンプレートに、メディア画像、ヘッダー、コンテンツ、およびアクション領域を含むカードを表示するための次のコードを追加します。 
+次に、デモのカード テンプレートを表すために、以下のコードを追加します。
 
 ```html
 <!--card.component.html>-->
@@ -61,7 +54,7 @@ export class AppModule {}
     </igx-card-header>
 
     <igx-card-content>
-        <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough thatâ€™s among the worldâ€™s major commercial, financial and cultural centers.</p>
+        <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.</p>
     </igx-card-content>
 
     <igx-card-actions>
@@ -76,16 +69,7 @@ export class AppModule {}
 </igx-card>
 ```
 
-以下は結果です。
-
-<div class="sample-container loading" style="height: 486px">
-    <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-0-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-
-上記が確認できます。最初に `h3` 見出しのように要素をヘッダータイトルとしてタグしたい場合は、`igx-car-header` タグの間に配置し、`igxCardHeaderTitle` ディレクティブを要素に添付します。逆に、別の見出し要素を`サブタイトル`にしたい場合は、`igxCardHeaderSubtitle` をそれに添付します。
+上記を確認することができます。最初に `h3` 見出しのように要素をヘッダータイトルとしてタグ付けしたい場合は、`igx-card-header` タグの間に配置し、`igxCardHeaderTitle` ディレクティブを要素に添付します。逆に、別の見出し要素を `subtitle` にしたい場合は、`igxCardHeaderSubtitle` をその要素に添付します。
 
 カードに表示する画像やビデオはすべて、`igx-card-media` タグで囲みます。`igx-card-media` を使用すると、`width` や `height` 属性を使用して内側に配置されているコンテンツのサイズを変更できます。上の例では、`高さ`のみ指定し、幅を `自動` にすることにより、設定された高さを維持しながら画像をカードの表面全体に広げることが可能になります。
 
@@ -140,43 +124,11 @@ export class AppModule {}
 #### カードのアウトライン
 カードには `type` 属性があり、`default` (省略した場合は自動的に設定) または `outlined` に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
 
-以下はアウトラインを使用したカードの例です。
-
-```html
-<!--outlined-card.component.html>-->
-<igx-card type="outlined">
-    <igx-card-header>
-        <igx-card-media width="64px" height="64px">
-            <img [src]="card.imageUrl">
-        </igx-card-media>
-
-        <h5 igxCardHeaderTitle>{{card.title}}</h5>
-        <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
-    </igx-card-header>
-
-    <igx-divider></igx-divider>
-
-    <igx-card-actions layout="justify">
-        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon>{{icon}}</igx-icon>
-        </button>
-    </igx-card-actions>
-</igx-card>
-```
-
-この時点のカードは以下のようになります。
-<div class="sample-container loading" style="height: 168px">
-    <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-
 #### 水平レイアウト
 
 デフォルトでは、カードのすべてのセクション (ヘッダー、コンテンツ、メディア、アクション) は縦にレイアウトされています。垂直方向のスペースが多くある場合に便利です。カードのすべてのセクションを水平に配置する場合、カードの `horizontal` 属性を使用してレイアウトを設定できます。
 
-以下の例を参照してください。
+以下はアウトラインのある水平カードの例です。
 
 ```html
 <igx-card type="outlined" [horizontal]="horizontal">
@@ -214,6 +166,7 @@ export class AppModule {}
     flex-direction: column;
     align-items: flex-start;
     flex: 1 1 0%;
+
     igx-card-header {
         padding-bottom: 0;
     }
@@ -231,10 +184,9 @@ export class AppModule {}
     </button>
 </igx-card-actions>
 ```
+すべて適切に設定できると、結果は以下のようになります。 
 
-以下は横向きのカードの例です。
-
-<div class="sample-container loading" style="height: 202px">
+<div class="sample-container loading" style="height: 220px">
     <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -311,7 +263,7 @@ export class AppModule {}
 ```
 
 ### スタイル設定
-Cardのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+Card のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -328,13 +280,19 @@ $colorful-card: igx-card-theme(
 ```
 ご覧のとおり、`igx-card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
 
+#### テーマを含む
+
+<div class="divider"></div>
+
 最後のステップは、コンポーネントのテーマを**含める**ことです。
+
+`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
  @include igx-card($colorful-card);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -343,75 +301,23 @@ $colorful-card: igx-card-theme(
     }
 }
 ```
-#### カラーパレットの定義
 
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+<div class="divider"></div>
 
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #E7EB0B;
-$red-color: #F00B1E;
-$colorful-palette: igx-palette($primary: $red-color, $secondary: $yellow-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-$colorful-card: igx-card-theme(
-    $palette: $colorful-palette,
-    $background: igx-color($colorful-palette, "secondary", 100),
-    $header-text-color: igx-color($colorful-palette, "primary", 200),
-    $subtitle-text-color: igx-color($colorful-palette, "primary", 500),
-    $content-text-color: igx-color($colorful-palette, "primary", 700)
-);
+@include igx-css-vars($colorful-card);
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](themes/palette.md) のトピックを参照してください。
-
-#### スキーマの使用
-
-テーマ エンジンを使用して [スキーマ](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている2つの定義済みスキーマの 1 つを拡張します。この場合 - [`dark-card`]({environment:sassApiUrl}/index.html#variable-_dark-card)スキーマ:
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
-// Extending the dark-card schema
-$dark-card-schema: extend($_dark-card,
-    (
-        background:(
-            igx-color:("secondary", 100)
-        ),
-        header-text-color:(
-            igx-color:("primary", 500)
-        ),
-        subtitle-text-color:(
-            igx-color:("primary", 500)
-        ),
-        content-text-color:(
-            igx-color:("primary", 700)
-        )
-    )
-);
+:host {
+    @include igx-css-vars($colorful-card);
+}
 ```
-
-カスタム スキーマを適用するには、グローバル [`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-card: $dark-card-schema
-));
-
-// Defining the dark-card theme with the global dark schema
-$dark-card: igx-card-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-テーマを上記と同じ方法で含めることに注意してください。
 
 #### デモ
 
