@@ -877,9 +877,6 @@
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
           new: true
-    - name: Examples
-      href: themes/examples.md
-      new: false
     - name: Printing styles
       href: themes/printing-styles.md
       new: false
