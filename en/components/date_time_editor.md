@@ -133,7 +133,7 @@ Template-driven form example:
         <input #dateEditor="igxDateTimeEditor" type="text" [(ngModel)]="date" #formControl="ngModel" name="form"
             igxInput (valueChanged)="onValueChanged($event)" (validationFailed)="onValidationFailed($event)"
             [igxDateTimeEditor]="'dd/MM/yyyy'" [minValue]="minDate" [maxValue]="maxDate" required
-            [isSpinLoop]="true" />
+            [isSpinLoop]="false" />
         <igx-suffix>
             <button igxRipple igxRippleCentered="true" igxButton="icon" (click)="dateEditor.increment()">
                 <igx-icon>expand_less</igx-icon>
