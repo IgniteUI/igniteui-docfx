@@ -5,14 +5,14 @@ In order to switch from `Material` to `Bootstrap`, you can use one of the built-
 ### Bootstrap Light Theme
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-bootstrap-theme($bootstrap-palette);
 ```
 
 ### Bootstrap Dark Theme
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-bootstrap-dark-theme($dark-bootstrap-palette);
 ```
 

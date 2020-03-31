@@ -3,21 +3,21 @@ Material theme is the default theme for igniteUI for Angular. To use it include 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-theme($default-palette);
 ```
 
 ### Material Light Theme
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-light-theme($default-palette);
 ```
 
 ### Material Dark Theme
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-dark-theme($default-palette);
 ```
 
@@ -26,7 +26,7 @@ We create those mixins just for your convenience, otherwise, if you want to use 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
