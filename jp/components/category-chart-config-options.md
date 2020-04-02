@@ -2,7 +2,7 @@
 title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | 構成オプション | インフラジスティックス
 _description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
 _keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
-mentionedTypes: ['XamCategoryChart']
+mentionedTypes: ['CategoryChart','CategoryTransitionInMode']
 _language: ja
 ---
 
@@ -41,7 +41,7 @@ _language: ja
 
 マーカーは、カテゴリ チャート コンポーネントのプロット領域のデータ ポイント値を表示する視覚的要素です。値が主グリッド線と副グリッド線の間にある場合も指定したデータ ポイントの値をただちに識別できるようユーザーをサポートします。
 
-チャート マーカーの外観は、カテゴリ チャートの [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html)、`MarkerBrushes`、および `MarkerOutlines` プロパティによって処理されます。以下のコード例では、このプロパティを使用しています。
+チャート マーカーの外観は、カテゴリ チャートの [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html)、[`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markerbrushes)、および [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markeroutlines) プロパティによって処理されます。以下のコード例では、このプロパティを使用しています。
 
 ```html
 <igx-category-chart
@@ -81,11 +81,11 @@ _language: ja
 
 チャートでタイトルおよびサブタイトル情報がサイズ変更できます。
 
-デフォルトでアニメーションのトランジションは無効ですが、`IsTransitionInEnabled` オプションを true に設定してトランジションイン アニメーションを有効にできます。
+デフォルトでアニメーションのトランジションは無効ですが、[`isTransitionInEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#istransitioninenabled) オプションを true に設定してトランジションイン アニメーションを有効にできます。
 
 アニメーションのトランジショントはトランジション タイプ、データ ポイントに相対するスピード、およびイージング関数によって管理されるイージング トランジションを構成できます。
 
-トランジション タイプは、transitionInMode オプションを任意のトランジション名に設定して構成します。プロパティを `Auto` (デフォルト値) に設定し、シリーズ タイプに基づいてトランジション タイプを自動的に選択することもできます。
+トランジション タイプは、transitionInMode オプションを任意のトランジション名に設定して構成します。プロパティを [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorytransitioninmode.html#auto) (デフォルト値) に設定し、シリーズ タイプに基づいてトランジション タイプを自動的に選択することもできます。
 
 以下のコード例では、トランジションイン アニメーションを有効にし、チャートを右側からアコーディオン表示する方法を示します。
 
