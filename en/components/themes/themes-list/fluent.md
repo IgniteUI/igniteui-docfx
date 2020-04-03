@@ -8,14 +8,14 @@ We support Word and Excel palettes. To use them just pass one of the two maps `$
 ### Fluent Light Theme
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-fluent-theme($fluent-excel-palette);
 ```
 
 ### Fluent Dark Theme
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igc-core();
+@include igx-core();
 @include igx-fluent-dark-theme($fluent-excel-palette);
 ```
 
