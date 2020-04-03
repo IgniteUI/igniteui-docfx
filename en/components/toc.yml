@@ -1,5 +1,8 @@
 - name: General
   header: true
+- name: "Angular: A Complete Guide" 
+  href: general/angular-grid-overview-guide.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
@@ -11,7 +14,7 @@
   new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
-  new: false
+  new: true
   items:
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
@@ -24,7 +27,7 @@
       new: false
 - name: WPF to Angular guide
   href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
-  new: true
+  new: false
   items:
     - name: Create your first Angular app
       href: general/wpf_to_angular_guide/create_first_angular_app.md
@@ -51,6 +54,7 @@
       href: general/wpf_to_angular_guide/layout.md
       new: false
 - name: Framework & features
+  href: general/framework-and-features/framework-and-features.md
   new: true
   items:
     - name: SSR Rendering
@@ -122,17 +126,17 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: Row selection
           href: grid/row_selection.md
-          new: true
+          new: false
         - name: Cell selection
           href: grid/cell_selection.md
-          new: true
+          new: false
         - name: Selection-based Aggregates
           href: grid/selection_based_aggregates.md
-          new: true
+          new: false
     - name: Searching
       href: grid/search.md
       new: false
@@ -156,7 +160,7 @@
       new: false
     - name: Conditional Cell Styling
       href: grid/conditional_cell_styling.md
-      new: true
+      new: false
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
@@ -165,10 +169,10 @@
       new: false
     - name: Clipboard Interactions
       href: grid/clipboard_interactions.md
-      new: true
+      new: false
     - name: Sizing
       href: grid/sizing.md
-      new: true
+      new: false
     - name: Master-Detail Grid
       href: grid/master_detail.md
       new: true
@@ -211,7 +215,7 @@
       new: false
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
-      new: false
+      new: true
     - name: Advanced Filtering
       href: treegrid/advanced_filtering.md
       new: true
@@ -220,7 +224,7 @@
       new: false
     - name: Summaries
       href: treegrid/summaries.md
-      new: false
+      new: true
     - name: Column Moving
       href: treegrid/column_moving.md
       new: false
@@ -235,14 +239,14 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: true
+      new: false
       items:
         - name: Row selection
           href: treegrid/row_selection.md
-          new: true
+          new: false
         - name: Cell selection
           href: treegrid/cell_selection.md
-          new: true
+          new: false
     - name: Searching
       href: treegrid/search.md
       new: false
@@ -263,7 +267,7 @@
       new: false
     - name: Conditional Cell Styling
       href: treegrid/conditional_cell_styling.md
-      new: true
+      new: false
     - name: Aggregations
       href: treegrid/aggregations.md
       new: false
@@ -272,13 +276,13 @@
       new: false
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
-      new: true
+      new: false
     - name: Sizing
       href: treegrid/sizing.md
-      new: true
+      new: false
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
-  new: false
+  new: true
   items:
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
@@ -309,7 +313,7 @@
       new: false
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
-      new: false
+      new: true
     - name: Advanced Filtering
       href: hierarchicalgrid/advanced_filtering.md
       new: true
@@ -318,7 +322,7 @@
       new: false
     - name: Summaries
       href: hierarchicalgrid/summaries.md
-      new: false
+      new: true
     - name: Column Moving
       href: hierarchicalgrid/column_moving.md
       new: false
@@ -333,11 +337,11 @@
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
-          new: true
+          new: false
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -366,7 +370,7 @@
       new: false
     - name: Sizing
       href: hierarchicalgrid/sizing.md
-      new: true
+      new: false
 - name: List View
   href: list.md
 - name: Combo
@@ -378,23 +382,23 @@
       new: false
     - name: Remote Binding
       href: combo_remote.md
-      new: true
+      new: false
     - name: Templates
       href: combo_templates.md
-      new: false
+      new: true
     - name: Cascading Scenario
       href: combo_cascading.md
-      new: true
+      new: false
 - name: Spreadsheet
   href: spreadsheet_overview.md
-  new: true
+  new: false
   items:
     - name: Activation
       href: spreadsheet_activation.md
       new: false
     - name: Chart Adapter
       href: spreadsheet_chart_adapter.md
-      new: true
+      new: false
     - name: Clipboard
       href: spreadsheet_clipboard.md
       new: false
@@ -453,7 +457,7 @@
       items:
         - name: Axis Annotations
           href: data-chart-axis-annotations.md
-          new: true
+          new: false
         - name: Axis Settings
           href: data-chart-axis-settings.md
           new: false
@@ -652,7 +656,7 @@
       new: false
     - name: Synchronization
       href: data-chart-synchronization.md
-      new: true
+      new: false
     - name: Title and Subtitle
       href: data-chart-titles.md
       new: false
@@ -722,12 +726,12 @@
 #      new: false
 - name: Sparkline
   href: sparkline.md
-  new: true
+  new: false
 - name: Maps
   header: true
 - name: Treemap
   href: treemap-overview.md
-  new: true
+  new: false
 - name: Map
   href: geo-map.md
   new: false
@@ -752,19 +756,19 @@
       new: false
     - name: Displaying Bing Imagery
       href: geo-map-display-bing-imagery.md
-      new: true
+      new: false
     - name: Displaying Esri Imagery
       href: geo-map-display-esri-imagery.md
-      new: true
+      new: false
     - name: Displaying Heat Imagery
       href: geo-map-display-heat-imagery.md
-      new: true
+      new: false
     - name: Displaying OSM Imagery
       href: geo-map-display-osm-imagery.md
-      new: true
+      new: false
     - name: Navigating Map Content
       href: geo-map-navigation.md
-      new: true
+      new: false
     - name: Scatter Area Series
       href: geo-map-type-scatter-area-series.md
       new: false
@@ -847,23 +851,41 @@
   header: true
 - name: Themes
   href: themes/index.md
+  new: true
   items:
     - name: Palettes
       href: themes/palette.md
+      new: false
     - name: Schemas
       href: themes/schemas.md
       new: false
     - name: Typography
       href: themes/typography.md
+      new: false
     - name: Global Themes
       href: themes/global-theme.md
+      new: true
     - name: Component Themes
       href: themes/component-themes.md
       new: false
+    - name: Predefined Themes
+      new: true
+      items:
+        - name: Material
+          href: themes/themes-list/material.md
+          new: false
+        - name: Fluent
+          href: themes/themes-list/fluent.md
+          new: true
+        - name: Bootstrap
+          href: themes/themes-list/bootstrap.md
+          new: true
     - name: Examples
       href: themes/examples.md
+      new: false
     - name: Printing styles
       href: themes/printing-styles.md
+      new: false
 - name: Componets Roundness
   href: roundness.md
   new: true
@@ -879,13 +901,13 @@
   items:
     - name: Virtual Drop Down
       href: drop_down_virtual.md
-      new: true
+      new: false
 - name: Select
   href: select.md
   new: true
 - name: Autocomplete
   href: autocomplete.md
-  new: true
+  new: false
 - name: Button
   href: button.md
 - name: Button Group
@@ -914,7 +936,7 @@
   href: icon.md
 - name: Divider
   href: divider.md
-  new: true
+  new: false
 - name: Linear Progress
   href: linear_progress.md
 - name: Circular Progress
@@ -937,6 +959,7 @@
   items:
     - name: Slider ticks
       href: slider/slider_ticks.md
+      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -956,7 +979,7 @@
     new: false
   - name: Styling
     href: overlay_styling.md
-    new: true
+    new: false
 - name: Drag and Drop
   href: drag_drop.md
   new: true
@@ -975,6 +998,7 @@
   href: layout.md
 - name: Carousel
   href: carousel.md
+  new: true
 - name: Bottom Navigation
   href: tabbar.md
 - name: Tabs
@@ -986,12 +1010,12 @@
   href: avatar.md
 - name: Expansion Panel
   href: expansion_panel.md
-  new: true
+  new: false
 - name: Notifications
   header: true
 - name: Banner
   href: banner.md
-  new: true
+  new: false
 - name: Snackbar
   href: snackbar.md
 - name: Toast
@@ -1004,7 +1028,7 @@
   href: date_picker.md
 - name: Month Picker
   href: month_picker.md
-  new: true
+  new: false
 - name: Time Picker
   href: time_picker.md
   new: false
@@ -1021,11 +1045,11 @@
   new: false
 - name: Transaction Service
   href: transaction.md
-  new: true
+  new: false
   items:
     - name: Transaction Service class hierarchy
       href: transaction-classes.md
-      new: true
+      new: false
     - name: How to use the Transaction Service
       href: transaction-how-to-use.md
-      new: true
+      new: false
