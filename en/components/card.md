@@ -6,14 +6,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ##Card
 <p class="highlight">The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
-<div class="divider"></div>
 
 ###Card Demo
-<div class="sample-container loading" style="height: 690px">
-    <iframe id="card-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-0-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -23,14 +22,7 @@ Cards allow you to easily display content composed of different types of objects
 
 ####Getting Started
 
-To get started with the Card component, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxCardModule` inside our **app.module.ts** file:
+Import the `IgxCardModule` inside our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -45,7 +37,7 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then in the template of our first card component we can add the following code to display a card with a media image, header, content and actions area.
+Then to represent the demo card template we can add the following code.
 
 ```html
 <!--card.component.html>-->
@@ -76,16 +68,7 @@ Then in the template of our first card component we can add the following code t
 </igx-card>
 ```
 
-If all went well, you should see the following card in your browser:
-
-<div class="sample-container loading" style="height: 486px">
-    <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-0-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-You will notice a few things above. First when we want to _tag_ an elements as a header title, like the `h3` heading, we place it between the `igx-car-header` tags and attach the `igxCardHeaderTitle` directive to the element. Conversely, if we wanted to make another heading element a `subtitle` we would attach the `igxCardHeaderSubtitle` to it.
+You will notice a few things above. First when we want to _tag_ an elements as a header title, like the `h3` heading, we place it between the `igx-card-header` tags and attach the `igxCardHeaderTitle` directive to the element. Conversely, if we wanted to make another heading element a `subtitle` we would attach the `igxCardHeaderSubtitle` to it.
 
 Any image or video we want to show in the card, we wrap inside the `igx-card-media` tags. The `igx-card-media` allows us to size the content placed inside via the `width` and `height` attributes. In the example above we provided just `height`, which would leave the width to `auto`, thus allowing the image to stretch across the entire card surface, while maintaining the set height.
 
@@ -140,43 +123,11 @@ or, even this:
 #### Outlined cards
 The card has a `type` attribute you can set to either `default` (set automatically if omitted), or `outlined`. The `outlined` type removes any shadows from the card, replacing them with a thin border to separate the card from the background.
 
-Here's an example of an outlined card:
-
-```html
-<!--outlined-card.component.html>-->
-<igx-card type="outlined">
-    <igx-card-header>
-        <igx-card-media width="64px" height="64px">
-            <img [src]="card.imageUrl">
-        </igx-card-media>
-
-        <h5 igxCardHeaderTitle>{{card.title}}</h5>
-        <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
-    </igx-card-header>
-
-    <igx-divider></igx-divider>
-
-    <igx-card-actions layout="justify">
-        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
-            <igx-icon>{{icon}}</igx-icon>
-        </button>
-    </igx-card-actions>
-</igx-card>
-```
-
-At this point the card should look similar to the following:
-<div class="sample-container loading" style="height: 168px">
-    <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
 #### Horizontal Layout
 
 By default all sections of the card (header, content, media, actions) are layed out vertically. This is nice when we have a lot of vertical space. Say we wanted to lay out all the sections in the card horizontally. We can use the `horizontal` attribute of the card to set its layout.
 
-Take a look at this example:
+Here's an example of an outlined horizonal card:
 
 ```html
 <igx-card type="outlined" [horizontal]="horizontal">
@@ -232,10 +183,9 @@ You can set the `vertical` attribute of he actions area explicitly, thus overrid
     </button>
 </igx-card-actions>
 ```
+If everything went well, our card should look like this:
 
-Here's how our horizontal card looks:
-
-<div class="sample-container loading" style="height: 202px">
+<div class="sample-container loading" style="height: 220px">
     <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -274,7 +224,7 @@ Bellow is an example showing how you can create a semi-horizontal card, where we
 </igx-card>
 ```
 
-<div class="sample-container loading" style="height: 252px">
+<div class="sample-container loading" style="height: 270px">
     <iframe id="card-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -321,21 +271,27 @@ Following the simplest approach, we create a new theme that extends the [`igx-ca
 
 ```scss
 $colorful-card: igx-card-theme(
-    $background: #FD6BD93A,
-    $header-text-color: #F2F607,
-    $subtitle-text-color: #FA2509,
-    $content-text-color: #0A41F7
+    $background: #011627,
+    $header-text-color: #FEFEFE,
+    $subtitle-text-color: #ECAA53,
+    $content-text-color: #FEFEFE
 );
 ```
 As seen, the `igx-card-theme` exposes some useful parameters for basic styling of its items. 
 
-The last step is to **include** the component's theme.
+#### Including themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
  @include igx-card($colorful-card);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -344,75 +300,23 @@ The last step is to **include** the component's theme.
     }
 }
 ```
-#### Defining a color palette
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+<div class="divider"></div>
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #E7EB0B;
-$red-color: #F00B1E;
-$colorful-palette: igx-palette($primary: $red-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-$colorful-card: igx-card-theme(
-    $palette: $colorful-palette,
-    $background: igx-color($colorful-palette, "secondary", 100),
-    $header-text-color: igx-color($colorful-palette, "primary", 200),
-    $subtitle-text-color: igx-color($colorful-palette, "primary", 500),
-    $content-text-color: igx-color($colorful-palette, "primary", 700)
-);
+@include igx-css-vars($colorful-card);
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
-
-#### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - the [`dark-card`]({environment:sassApiUrl}/index.html#variable-_dark-card) schema:
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
-// Extending the dark-card schema
-$dark-card-schema: extend($_dark-card,
-    (
-        background:(
-            igx-color:("secondary", 100)
-        ),
-        header-text-color:(
-            igx-color:("primary", 500)
-        ),
-        subtitle-text-color:(
-            igx-color:("primary", 500)
-        ),
-        content-text-color:(
-            igx-color:("primary", 700)
-        )
-    )
-);
+:host {
+    @include igx-css-vars($colorful-card);
+}
 ```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-card: $dark-card-schema
-));
-
-// Defining the dark-card theme with the global dark schema
-$dark-card: igx-card-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 #### Demo
 

@@ -12,16 +12,26 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 If you've included the _`igniteui-angular.css`_ file in your application project, now is a good time to remove it. We are going to use our own _`my-app-theme.scss`_ file to generate a global theme for all components in our application.
 
 **Ignite UI for Angular** uses a global theme by default to theme the entire suite of components. You can, however, create themes scoped to components you have in your app, depending on your use case. For now, we will be including all of our themes in a single file.
-To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`; `igx-core` doesn't accept any arguments, `igx-theme` accepts a few: 
+To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`; both of those mixins accepts a few arguments: 
 
-| Name              |  Type   | Default            | Description                                                                           |
-| :---------------: | :-----: | :---------------:  | :-----------------------------------------------------------------------------------: |
-| `$palette`        | map     | undefined          | The palette map to be used to by the default themes of all components.                |
-| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                  |
-| `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                      |
-| `$legacy-support` | boolean | `true`             | Determines the theming strategy - if set to false, theming is done via CSS variables. |
+#### igx-core  
 
-<div class="divider"></div>
+| Name                 |  Type    | Default            | Description                                                                           |
+| :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
+| `$print-layout`      | boolean  | true               | include/exclude the styles for printing                                               |
+| `$direction`         | Keyword  | ltr                | Specifies the content direction for all components can be `ltr` or `rtl`              |
+
+
+#### igx-theme  
+
+| Name              |  Type   | Default            | Description                                                                                                    |
+| :---------------: | :-----: | :---------------:  | :------------------------------------------------------------------------------------------------------------: |
+| `$palette`        | map     | undefined          | The palette map to be used to by the default themes of all components.                                         |
+| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                                           |
+| `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                                               |
+| `$legacy-support` | boolean | `false`             | Determines the theming strategy - if set to true, theming is done via hard values. |
+| `$roundness`      | Number  |  null              | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1).   |
+| `$elevation`      | boolean | `true`             | Sets the global elevation for all components that come with elevation.
 
 Let's create a custom global theme that will use the primary and secondary colors of our company.
 
@@ -82,48 +92,49 @@ Here's a quick showcase of how you can create a light and dark theme for your ap
 ```
 Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
 
-### Switching from Material to Fluent theme
-Since version `8.2` our components support a new theme, built based on the [`Microsoft Fluent Design System`](https://www.microsoft.com/design/fluent/).  
-In order to switch from `material` to `fluent`, you have to use one of the newly created mixins.
+#### Available Themes
+Ignite UI for Angular gives you the option to pick from a set of predefined themes.
+The table below shows all the built-in themes that you can use right away.
 
-For the `light` version of the `fluent theme` using `excel color palette`, use the code below: 
+| Theme                                                                        | Mixin                                                                                             |  Schema                   |  color palette                                            | Available in version |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
+| [**Material (base)**](./themes-list/material.html)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
+| [**Material (light)**](./themes-list/material.html)                          |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-schema          ` | $default-palette                                          |      **6.2 +**       |
+| [**Material (dark)**](./themes-list/material.html)                           |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-schema           ` | $dark-palette                                             |      **6.2 +**       |
+| [**Fluent**](./themes-list/fluent.html)                                      |  [igx-fluent-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-theme)                 | `$light-fluent-schema   ` | $fluent-excel-palette <br> $fluent-word-palette           |      **8.2 +**       |
+| [**Fluent (dark)**](./themes-list/fluent.html)                               |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $fluent-excel-dark-palette <br> $fluent-word-dark-palette |      **8.2 +**       |
+| [**Bootstrap**](./themes-list/bootstrap.html)                                |  [igx-bootstrap-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-theme)            | `$light-bootstrap-schema` | $bootstrap-palette                                        |      **9.0 +**       |
+| [**Bootstrap (dark)**](./themes-list/bootstrap.html)                         |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $bootstrap-dark-palette                                   |      **9.0 +**       |
 
-```scss
-// Replace
-@include igx-theme($default-palette);
-// With   
-@include igx-fluent-theme($fluent-excel-palette);
-```
+> [!NOTE]
+> Note that all high-level theme mixins wrap the base `igx-theme` mixin.
 
-For the `dark` version of the `fluent theme` using `excel palette`, use the code below:
-
-
-```scss    
-
-// replace
-@include igx-dark-theme($default-palette);
-// With
-@include igx-fluent-dark-theme($fluent-excel-palette);
-```
-
-We also added a `Microsoft Word` palette. To use it just replace the `$fluent-excel-palette` with `$fluent-word-palette`:
+All theme mixins can be used as a starting point to create your own theme. Let's create a new theme by using the `igx-bootstrap-theme` mixin.
 
 ```scss
+// Import the IgniteUI themes library first
+@import '~igniteui-angular/lib/core/styles/themes/index';
 
-// for the light version
+$primary-color: #b71053;
+$secondary-color: #6c757d; 
 
-@include igx-fluent-theme($fluent-word-palette);
+$my-color-palette: igx-palette(
+    $primary: $primary-color,
+    $secondary: $secondary-color
+);
 
-// for the dark version
-@include igx-fluent-dark-theme($fluent-word-palette);
+// IMPORTANT: Make sure you always include igx-core first!
+@include igx-core();
+// Pass the color palette we generated to the igx-bootstrap-theme mixin
+@include igx-bootstrap-theme($my-color-palette);
 ```
 
 ### Browser Support
 <div class="divider--half"></div>
 
-The value of `$igx-legacy-support` is quite important as it determines how component themes will work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
+The value of `$igx-legacy-support` is quite important as it determines how component themes will work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
 
-The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true` (default), otherwise setting its value to `false` will force CSS variables for theming.
+The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming.
 
 ### API Overview
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
