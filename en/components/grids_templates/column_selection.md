@@ -24,11 +24,11 @@ _keywords: column selection, igniteui for angular, infragistics
 The **column selection feature** provides an easy way to select an entire column with a single click action. It **emphasizes** the importance of a particular column by focusing on the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows manipulation of the selection **state**, **data extraction** from the **selected** fractions and **data analysis** operations and visualizations.
 
 <div class="sample-container loading" style="height:570px">
-    <iframe id="grid-column-selection" data-src='{environment:demosBaseUrl}/grid/grid-column-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
+    <iframe id="@@igObjectRef-column-selection-iframe" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection' width="100%" height="100%" seamless frameborder="0" class="no-theming" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -41,11 +41,11 @@ All of the presented columns are [`selectable`]({environment:angularApiUrl}/clas
 > [`Multi Column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of it's children has that behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all it's descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)
 
 <div class="sample-container loading" style="height:570px">
-    <iframe id="grid-column-group-selection" data-src='{environment:demosBaseUrl}/grid/grid-column-group-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
+    <iframe id="@@igObjectRef-column-group-selection" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-group-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-group-selection" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -110,11 +110,11 @@ In order to style components for Internet Explorer 11, we have to use different 
 #### Demo
 
 <div class="sample-container loading" style="height:570px">
-    <iframe id="grid-column-selection-styles" data-src='{environment:demosBaseUrl}/grid/grid-column-selection-styles' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
+    <iframe id="@@igObjectRef-column-selection-styles" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-selection-styles-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-selection-styles" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
