@@ -6,6 +6,9 @@
 - name: Getting started
   href: general/getting_started.md
   new: false
+- name: Breaking Changes
+  href: general-breaking-changes-dv.md
+  new: true
 - name: Update guide
   href: general/update_guide.md
   new: false
