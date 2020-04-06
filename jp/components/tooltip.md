@@ -88,7 +88,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 </div>
 ```
 
-#### ツールチップをターゲットにアタッチします。
+#### ツールチップをターゲットにアタッチ
 ここまででターゲットとツールチップを定義しました。 ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
 
 ```html
@@ -113,8 +113,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 
 ### 高機能なツールチップ
 
-コンテンツのカスタマイズやスタイル設定が [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブで簡単にできます。
-ツールチップはマークアップの標準要素であるため、必要な要素を追加してコンテンツを改善や状況に応じたスタイル設定が可能です。
+コンテンツのカスタマイズやスタイル設定が [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブで簡単にできます。ツールチップはマークアップの標準要素であるため、必要な要素を追加してコンテンツを改善や状況に応じたスタイル設定が可能です。
 
 [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) を活用し、マップの特定の場所について詳細な情報を提供します。単純な div を使用してマップを表示し、ツールチップのロゴに [`IgxAvatar`](avatar.md)、マップの場所アイコンに [`IgxIcon`](icon.md) を使用します。この目的のためには、各モジュールを取得する必要があります。  
 
@@ -345,7 +344,7 @@ $dark-tooltip: igx-tooltip-theme(
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
 * [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
-Styles:
+スタイル:
 
 * [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
 * [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)

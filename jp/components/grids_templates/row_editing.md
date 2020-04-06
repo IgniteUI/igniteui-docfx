@@ -1,5 +1,5 @@
 ---
-title: Angular Grid 並べ替え | UI Grid | Ignite UI for Angular | Infragistics
+title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
