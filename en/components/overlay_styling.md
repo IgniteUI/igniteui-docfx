@@ -115,7 +115,7 @@ $my-overlay-theme: igx-overlay-theme(
 
 Now **all** modal overlays will have a purple tint to their background.
 
-### Scoped Overlay Styles
+#### Scoped Overlay Styles
 
 If we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#scoped-component-styles).
 When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay_main.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, z-index and viewport issues, we recommend using outlets for modal overlays only in higher level components:
