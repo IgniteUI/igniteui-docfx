@@ -35,7 +35,7 @@ _keywords: column selection, igniteui for angular, infragistics
 ### Basic usage
 
 #### Interactions
-All of the presented columns are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) by default. With that being said, in order to select a column, we just need to click on the targeted one, which mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
+All of the presented columns are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) by default. With that being said, in order to select a column, we just need to click on one, which will mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
 
 > [!NOTE]
 > [`Multi Column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of it's children has that behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all it's descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)
