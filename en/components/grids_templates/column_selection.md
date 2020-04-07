@@ -88,7 +88,7 @@ $custom-grid-theme: igx-grid-theme(
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
 
 #### Using CSS Variables
-The last step is to pass the custom `igx-grid` theme.
+The last step is to include the custom `igx-grid` theme.
 
 ```scss
 @include igx-css-vars($custom-grid-theme)
