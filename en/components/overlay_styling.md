@@ -11,7 +11,7 @@ To display the content above other elements, the service moves it into a special
 </p>
 <div class="divider--half"></div>
 
-## Styling Overlay Components
+### Styling Overlay Components
 
 In the most cases [global](themes/global-theme.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop_down.md#styling) by the global [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) function:
 
