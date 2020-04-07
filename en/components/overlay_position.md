@@ -19,7 +19,7 @@ Position strategies determine where the content is displayed in the provided `Ig
 
 ### Usage
 
-Position strategies allow you to display content in the overlay in various combinations. To start using different position strategies you should first include the necessary dependencies for each strategy used like this:
+Position strategies allow you to display content in the overlay in various combinations. To start using different position strategies, you should first include the necessary dependencies for each strategy used like this:
 
 ```typescript
 import {
