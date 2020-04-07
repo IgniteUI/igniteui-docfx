@@ -148,7 +148,8 @@ Positions the content as `GlobalPositionStrategy`. Instead of position related t
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-3. **Connected** - Positions the element based on the directions and start point passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`]({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults are:
+#### Connected
+Positions the element based on the directions and start point passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`]({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults are:
 
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
