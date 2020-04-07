@@ -95,7 +95,7 @@ The last step is to include the custom `igx-grid` theme.
 ```
 
 #### Overriding the Base Theme
-In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables.
+In order to style components for Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme to leak to other components, be sure that you have included the `:host` selector before `::ng-deep`.
