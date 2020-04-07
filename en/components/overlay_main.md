@@ -11,7 +11,7 @@ The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
 
-## Getting Started
+### Getting Started
 
 First we need to import the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) in the component and `inject` a reference to it in the component's constructor:
 ```typescript
