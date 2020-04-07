@@ -54,7 +54,7 @@ Then specify the positioning strategy to be used by the overlay. The position st
 </div>
 <div class="divider--half"></div>
 
-### Position strategy with predefined settings
+### Positioning Settings
 
 Each position strategy has its own position settings. This setting determines how the content will be shown. In the example below we are creating a new `PositionSettings` object. Using it we force the overlay to show the content starting from the top right point of the provided `target` - the `buttonElement`. The direction in which the content will be shown is set to top left. Then we create a new `ConnectedPositionStrategy` and pass it to `PositionSettings`.
 
