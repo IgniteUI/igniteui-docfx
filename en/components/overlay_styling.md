@@ -98,7 +98,7 @@ Now, the combo's list of items are properly rendered **inside** of our component
 Now that we've covered how `ViewEncapsulation` works along with the overlay's `outlet` property, we can take a look at how we can style the overlay's wrapper itself.
 The [`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
 
-### Global Styles
+#### Global Styles
 
 The easiest way to style the overlay modal is to include its theme in our app's global styles:
 
