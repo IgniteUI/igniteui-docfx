@@ -70,7 +70,7 @@ Before diving into the styling options, the core module and all component mixins
 ```
 
 >[!NOTE]
->Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated   independently. They both are dependent on the same `variables`.
+>Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated   independently. They depend on the same `variables`.
 
 With that being said, let's move on and change the **selection** and **hover** style.<br/>
 Following the simples approach let's define our custom **theme**.
