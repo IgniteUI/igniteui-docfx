@@ -51,7 +51,7 @@ To change the scrolling strategy, used by the overlay, override the [`scrollStra
 ```
 <div class="divider--half"></div>
 
-### Dependencies
+#### Dependencies
 
 To use the any of the scroll strategies, import it like this:
 
