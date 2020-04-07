@@ -34,11 +34,11 @@ export class MyOverlayComponent {
 
 The overlay service can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
-After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the `attach` function. This will generate a unique ID, which we can pass to the `show` function to display the component:
+After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the `attach` method. This will generate a unique ID, which we can pass to the `show` method to display the component:
 
 ```typescript
 
-// overlay-component.component.ts
+// my-overlay-component.component.ts
 import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
 export class MyOverlayComponent {
@@ -57,7 +57,7 @@ export class MyOverlayComponent {
 ```
 
 ```HTML
-<!-- overlay-component.component.html -->
+<!-- my-overlay-component.component.html -->
 <div class='content'>
 ...
 <button (click)="showInOverlay()">Show Overlay</button>
@@ -68,7 +68,7 @@ export class MyOverlayComponent {
 If we want to pass an already existing `ElementRef` from the page to the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html), we can do it as follows:
 
 ```HTML
-<!-- overlay-component.component.html -->
+<!-- my-overlay-component.component.html -->
 <div class='content'>
   <button (click)="showInOverlay()">Show Overlay</button>
 </div>
@@ -78,7 +78,7 @@ If we want to pass an already existing `ElementRef` from the page to the [`IgxOv
 ```
 
 ```typescript
-// overlay-component.component.ts
+// my-overlay-component.component.ts
 import { Inject, ViewChild } from '@angular/core'
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
@@ -126,7 +126,7 @@ The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#atta
 
 For example, if we want the content to be positioned relatively to an element, we can pass a different [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) for the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object first:
 ```typescript
-// overlay-component.component.ts
+// my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 ...
@@ -149,7 +149,7 @@ export class MyOverlayComponent {
 }
 ```
 ```HTML
-<!-- overlay-component.component.html -->
+<!-- my-overlay-component.component.html -->
 <div class='content'>
 ...
 <button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
@@ -167,7 +167,7 @@ All of the elements rendered by the overlay service have a unique ID, assigned t
 
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
-// overlay-component.component.ts
+// my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 ...
@@ -200,7 +200,7 @@ export class MyOverlayComponent {
 }
 ```
 ```HTML
-<!-- overlay-component.component.html -->
+<!-- my-overlay-component.component.html -->
 <div class='content'>
 ...
 <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
