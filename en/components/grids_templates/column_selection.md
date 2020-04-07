@@ -130,6 +130,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
+* [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection)
 * [selectedColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectedColumns)
 * [selectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectColumns)
 * [deselectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectColumns)
