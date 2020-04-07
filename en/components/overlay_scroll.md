@@ -7,7 +7,7 @@ _description: Explanation and example about the Overlay Service's IScrollStrateg
 
 The scroll strategy determines how the scrolling is handled in the provided `IgxOverlayService`. There are four scroll strategies:
 1. **NoOperation** - does nothing. 
-2. **Block** - the component do not scroll with the window. The event is canceled. It doesn't scroll.
+2. **Block** - the event is canceled and the component does not scroll with the window.
 3. **Close** - uses a tolerance and closes an expanded component upon scrolling if the tolerance is exceeded.
 4. **Absolute** - scrolls everything.
 
