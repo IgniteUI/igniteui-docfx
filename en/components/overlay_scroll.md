@@ -11,7 +11,7 @@ The scroll strategy determines how the scrolling is handled in the provided `Igx
 3. **Close** - uses a tolerance and closes an expanded component upon scrolling if the tolerance is exceeded.
 4. **Absolute** - scrolls everything.
 
-## Usage
+### Usage
 
 Every scroll strategy has the following methods:
  - [`initialize`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#initialize) - initializes the scroll strategy. It needs a reference of the document, the overlay service and the id of the component rendered
