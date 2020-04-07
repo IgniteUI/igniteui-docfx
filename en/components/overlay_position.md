@@ -132,7 +132,8 @@ To offset the content along the corresponding axis by a provided amount:
 
 There are five positioning strategies:
 
-1. **Global** - Positions the content, based on the directions passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). These are Left/Center/Right for [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) and Top/Middle/Bottom for [`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection). Defaults are:
+#### Global
+Positions the content, based on the directions passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). These are Left/Center/Right for [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) and Top/Middle/Bottom for [`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection). Defaults are:
 
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
