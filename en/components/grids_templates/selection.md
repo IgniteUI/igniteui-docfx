@@ -38,7 +38,7 @@ Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.
 
 > Go to [Cell selection topic](cell_selection.md) for more information.
 
-Property [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options per each **column**:
+The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options for each **column**:
 - false - the corresponding column selection will be disabled for the @@igComponent
 - true - the corresponding column selection will be enabled for the @@igComponent
 - This lead to the following three variations:
