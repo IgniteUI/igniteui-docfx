@@ -34,6 +34,8 @@ _keywords: column selection, igniteui for angular, infragistics
 
 ### Basic usage
 
+The column selection feature can be enabled through the [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input, which takes [GridSelectionMode]({environment:angularApiUrl}/enums/gridselectionmode.html) values.
+
 #### Interactions
 All of the presented columns are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) by default. With that being said, in order to select a column, we just need to click on one, which will mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
 
