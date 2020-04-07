@@ -94,7 +94,7 @@ The last step is to include the custom `igx-grid` theme.
 @include igx-css-vars($custom-grid-theme)
 ```
 
-#### Using mixins
+#### Overriding the Base Theme
 In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables.
 
 >[!NOTE]
