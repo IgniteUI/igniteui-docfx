@@ -64,7 +64,7 @@ The **API** provides some additional capabilities when it comes to the **non-vis
 More information regarding the API manipulations could be found in the [`API References`](#api-references) section.
 
 ### Styling
-Before going deeper in the style manpulations, the core module and all component mixins need to be imported.
+Before diving into the styling options, the core module and all component mixins need to be imported.
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
