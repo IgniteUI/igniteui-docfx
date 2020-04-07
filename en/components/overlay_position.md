@@ -140,7 +140,8 @@ Positions the content, based on the directions passed in through [`positionSetti
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-2. **Container** - Positions the content as `GlobalPositionStrategy`. Instead of position related to the screen `ContainerPositionStrategy` positions the content related to the provided in `OverlaySettings` `outlet`. Defaults are:
+#### Container
+Positions the content as `GlobalPositionStrategy`. Instead of position related to the screen `ContainerPositionStrategy` positions the content related to the provided in `OverlaySettings` `outlet`. Defaults are:
 
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
