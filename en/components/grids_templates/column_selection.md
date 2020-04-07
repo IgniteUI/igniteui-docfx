@@ -51,7 +51,7 @@ All of the presented columns are [`selectable`]({environment:angularApiUrl}/clas
 
 #### Keyboard combinations
 There are three scenarios for keyboard navigation of the **Column Selection** feature:
-- Single selection - <kbd>click</kbd> over the column cell if it is **selectable**.
+- Single column selection - <kbd>click</kbd> on the column header cell if it is **selectable**.
 - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> on every **selectable** header cell.
 - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
