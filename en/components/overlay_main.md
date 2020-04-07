@@ -236,7 +236,7 @@ The [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirectiv
 An example of how to pass configuration settings to the toggle's method is shown below:
 ```html
 <!-- In example.component.html -->
-<div class='example-div--container' style='width: 400px; height: 120px;'>
+<div>
     <button igxToggle (click)="callToggle()" class='example-div--button__initial'>Click me!</button>
     <div [class]="collapsed ? 'hidden ' : 'exmaple-div--toggleElement'" style='width: 100%; height: 100%;'>
         This content is toggle-able!
