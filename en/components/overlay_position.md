@@ -128,7 +128,7 @@ To offset the content along the corresponding axis by a provided amount:
     overlay.setOffset(this._overlayId, deltaX, deltaY);
 ```
 
-## Positioning strategies
+### Strategies Overview
 
 There are five positioning strategies:
 
