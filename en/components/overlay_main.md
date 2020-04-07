@@ -127,7 +127,7 @@ The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#atta
 For example, if we want the content to be positioned relative to an element, we can pass a different [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object first:
 ```typescript
 // my-overlay-component.component.ts
-// add an import for the definion of ConnectedPositioningStategy class
+// import the ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 ...
 export class MyOverlayComponent {
