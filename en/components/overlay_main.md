@@ -108,7 +108,7 @@ The first parameter in both overloads is mandatory and represents the content th
     - On close, it will re-attach the view back to it's original location in the DOM
 <div class="divider--half"></div>
 
-### Dynamic Attach - Components
+### Attaching Components
 In the below demo, we can pass the [IgxCard](card.md#card-demo) component through the Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to generate an ID. Then we call the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with the provided ID to dynamically attach the card to the DOM in a modal container.
 
 
