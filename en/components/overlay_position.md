@@ -85,7 +85,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
 </div>
 <div class="divider--half"></div>
 
-### Changing an existing position strategy
+#### Changing Strategies
 
 You can also change the positioning strategy, used by the overlay, by overriding the [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object that is passed to the overlay:
 
