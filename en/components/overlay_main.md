@@ -238,7 +238,7 @@ An example of how to pass configuration settings to the toggle's method is shown
 <!-- In example.component.html -->
 <div>
     <button igxToggle (click)="callToggle()">Click me!</button>
-    <div [class]="collapsed ? 'hidden ' : 'exmaple-div--toggleElement'" style='width: 100%; height: 100%;'>
+    <div [style.visibility]="collapsed ? 'hidden ' : 'visible'">
         This content is toggle-able!
     </div>
 </div>
