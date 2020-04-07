@@ -21,7 +21,7 @@ _keywords: column selection, igniteui for angular, infragistics
 }
 
 ## @@igComponent Column Selection
-The **column selection feature** provides an easy way to select an entire column with a single click action. It **emphasizes** the importance of a particular column by focusing on the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows manipulation of the selection **state**, **data extraction** from the **selected** fractions and **data analysis** operations and visualizations.
+<p class="highlight">The <b>column selection feature</b> provides an easy way to select an entire column with a single click. It <b>emphasizes</b> the importance of a particular column by focusing the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows for manipulation of the selection <b>state</b>, <b>data extraction</b> from the <b>selected</b> fractions and <b>data analysis</b> operations and visualizations.</p>
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-selection-iframe" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection' width="100%" height="100%" seamless frameborder="0" class="no-theming" onload="onSampleIframeContentLoaded(this);"></iframe>
