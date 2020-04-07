@@ -120,7 +120,7 @@ In the below demo, we can pass the [IgxCard](card.md#card-demo) component throug
 </div>
 <div class="divider--half"></div>
 
-### Configuring Overlay Settings
+### Overlay Settings
 
 The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method also accepts an object of the [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) type, which configures the way the content is shown. If no such object is provided, the Overlay Service will use its default settings to render the passed content.
 
