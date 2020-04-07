@@ -17,7 +17,7 @@ Position strategies determine where the content is displayed in the provided `Ig
 </div>
 <div class="divider--half"></div>
 
-## Usage
+### Usage
 
 Position strategies allow you to display content in the overlay in various combinations. To start using different position strategies you should first include the necessary dependencies for each strategy used like this:
 
