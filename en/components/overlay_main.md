@@ -278,6 +278,6 @@ If you show the overlay in an outlet, and if the outlet is a child of an element
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-## Additional Resources
+### Additional Resources
 * [Position strategies](overlay_position.md)
 * [Scroll strategies](overlay_scroll.md)
