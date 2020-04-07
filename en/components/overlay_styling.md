@@ -93,7 +93,7 @@ Now, the combo's list of items are properly rendered **inside** of our component
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
 </div>
 
-## Styling Overlay
+### Styling Overlay
 
 Now that we've covered how `ViewEncapsulation` works along with the overlay's `outlet` property, we can take a look at how we can style the overlay's wrapper itself.
 The [`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
