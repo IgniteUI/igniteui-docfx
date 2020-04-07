@@ -950,10 +950,6 @@
 - name: Slider
   href: slider/slider.md
   new: true
-  items:
-    - name: Slider ticks
-      href: slider/slider_ticks.md
-      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
