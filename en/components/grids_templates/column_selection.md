@@ -82,7 +82,7 @@ $custom-grid-theme: igx-grid-theme(
     $row-selected-hover-background: steelblue
 );
 ```
-[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) accepts several parameters but basically those are the three responsible for the respective styling:
+[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) accepts several parameters but those are the three responsible for changing the appearance of all selected columns:
 - **$row-selected-background** - sets the background of the selected fraction.
 - **$row-selected-text-color** - sets the text color of the selected fraction
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
