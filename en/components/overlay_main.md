@@ -159,7 +159,7 @@ export class MyOverlayComponent {
 Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
 <div class="divider--half"></div>
 
-### Hiding the overlay
+### Hiding the Overlay
 
 The [`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method removes the content from the overlay and, if applicable, re-attaches it to it's original location in the DOM. 
 
