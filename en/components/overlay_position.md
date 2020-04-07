@@ -102,7 +102,7 @@ You can also change the positioning strategy, used by the overlay, by overriding
 </div>
 <div class="divider--half"></div>
 
-### Changing existing position settings
+#### Changing Settings
 
 To change the position settings of an already existing strategy, override any of the settings in it:
 ```typescript
