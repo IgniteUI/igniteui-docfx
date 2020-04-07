@@ -25,7 +25,7 @@ this.scrollStrategy.detach();
 ```
 <div class="divider--half"></div>
 
-### Getting Started
+#### Getting Started
 The scroll strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called:
 ```typescript
     // Initializing and using overlay settings
@@ -59,8 +59,6 @@ To use the any of the scroll strategies, import it like this:
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
-
-### Demos 
 #### Scroll Strategies
 The scroll strategies can be passed to the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to determine how the overlay should handle scrolling.
 The demo below illustrates the difference between the separate [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html):
@@ -85,6 +83,6 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 </div>
 <div class="divider--half"></div>
 
-## API References
+### API References
 
 * [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)

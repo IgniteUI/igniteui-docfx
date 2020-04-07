@@ -30,7 +30,7 @@ export class MyOverlayComponent {
 ...
 ```
 
-### Displaying overlay content
+### Displaying Content
 
 The overlay service can be used to dynamically display a `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
@@ -100,8 +100,8 @@ The Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverla
   - `attach(component, settings?, moduleRef?)`
 
 The first parameter in both overloads is mandatory and represents the content that will be shown in the overlay. There are a couple of different scenarios how the content can be passed:
-  - A component definition (illustrated in the sample above) - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
-  - An `ElementRef` to an existing DOM element - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach when [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) is called, overlay will:
+  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
+  - An `ElementRef` to an existing DOM element (illustrated in the sample above) - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach when [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) is called, overlay will:
     - Get the reference to the passed view from Angular 
     - Detach the view from the DOM and leave an anchor in its place
     - Re-attach the view to the overlay, using the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method settings or falling back to the default overlay settings
@@ -206,7 +206,7 @@ export class MyOverlayComponent {
 <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
 </div>
 ```
-### Dynamic Attach - Settings
+### Attaching Settings
 
 Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`attach()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave and if the container is modal or not
 
