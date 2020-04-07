@@ -40,7 +40,7 @@ Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.
 
 The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options for each **column**:
 - false - the corresponding column selection will be disabled for the @@igxComponent
-- true - the corresponding column selection will be enabled for the @@igComponent
+- true - the corresponding column selection will be enabled for the @@igxComponent
 - This lead to the following three variations:
  - Single selection - <kbd>mouse click</kbd> over the column cell.
  - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>mouse click</kbd> over the column cells.
