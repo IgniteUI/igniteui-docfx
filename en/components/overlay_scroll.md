@@ -60,7 +60,7 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
 
-## Demos 
+### Demos 
 #### Scroll Strategies
 The scroll strategies can be passed to the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to determine how the overlay should handle scrolling.
 The demo below illustrates the difference between the separate [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html):
