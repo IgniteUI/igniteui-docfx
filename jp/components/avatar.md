@@ -116,7 +116,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ### スタイル設定
 
-スナックバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントmixins が存在する index ファイルをインポートする必要があります。
+Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する index ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

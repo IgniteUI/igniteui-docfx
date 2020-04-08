@@ -26,7 +26,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
 
 ツリー グリッドが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に `IgxTreeGridModule` をインポートする必要があります。
 
