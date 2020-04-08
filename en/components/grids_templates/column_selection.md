@@ -23,7 +23,15 @@ _keywords: column selection, igniteui for angular, infragistics
 ## @@igComponent Column Selection
 The Column selection feature provides an easy way to select an entire column with a single click. It emphasizes the importance of a particular column by focusing the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows for manipulation of the selection state, data extraction from the selected fractions and data analysis operations and visualizations.
 
-*_Contact Title_, _City_ and _Address_ columns are with disabled selection.
+@@if (igxName === 'IgxGrid') {
+*_Contact Title_, _City_ and _Address_ columns are with disabled column selection.
+}
+@@if (igxName === 'IgxTreeGrid') {
+*_Unit Price_ and _Discontinued_ are with disabled column selection.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+*_Photo_ and _Debut_ are with disabled column selection.
+}
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-selection-iframe" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection' width="100%" height="100%" seamless frameborder="0" class="no-theming" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -44,7 +52,15 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 > [!NOTE]
 > [`Multi Column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of its children has the selection behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all of its `selectable` descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
 
+@@if (igxName === 'IgxGrid') {
 *Under _Country Information_ Column Group only column _City_ and _Postal code_ are selectable.
+}
+@@if (igxName === 'IgxTreeGrid') {
+*Under _Personal Details_ Column Group only column _ID_ and _Title_ are selectable.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+*Under _Location_ Column Group only column _City_ is selectable.
+}
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-group-selection" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
