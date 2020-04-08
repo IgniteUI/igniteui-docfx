@@ -63,7 +63,7 @@ To turn on the grid excel filtering, two inputs should be set. The [`allowFilter
 ```
 }
 
-### Interaction
+### Interactions
 
 In order to open the filter menu for a particular column, the Angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons available for the features that are turned on.
 

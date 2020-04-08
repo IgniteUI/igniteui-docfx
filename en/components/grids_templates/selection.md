@@ -20,9 +20,9 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Selection Overview
+### @@igxComponent Selection Overview
 
-IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). The default selection mode of the grid is **Multi-cell selection** in conjunction with **Column Selection**, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
+IgniteUI for Angular @@igxComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). The default selection mode of the grid is **Multi-cell selection** in conjunction with **Column Selection**, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
 Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
@@ -38,9 +38,9 @@ Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.
 
 > Go to [Cell selection topic](cell_selection.md) for more information.
 
-Property [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options per each **column**:
-- false - the corresponding column selection will be disabled for the @@igComponent
-- true - the corresponding column selection will be enabled for the @@igComponent
+The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options for each **column**:
+- false - the corresponding column selection will be disabled for the @@igxComponent
+- true - the corresponding column selection will be enabled for the @@igxComponent
 - This lead to the following three variations:
  - Single selection - <kbd>mouse click</kbd> over the column cell.
  - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>mouse click</kbd> over the column cells.
