@@ -64,11 +64,11 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```
 }
 
-###インタラクション
+### インタラクション
 
-特定の列のフィルター メニューを開くには、ヘッダーのフィルター アイコンをクリックします。列でフィルタリング機能と並べ替え、ピン固定、移動、非表示が設定された場合、オンになっている機能のボタンが表示されます。
+In order to open the filter menu for a particular column, the angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
 
-フィルターが適用されていない場合、リストのすべての項目が選択されます￥。リストの上の入力からフィルターされます。データのフィルターは、リストで項目を選択/非選択して [Apply] ボタンをクリックします。リスト項目に適用したフィルタリングは、`equals` オペレーターでフィルター式を作成します。各式間のロジック オペレーターは [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) です。フィルターをクリアしたい場合、Select All をチェックして [Apply] ボタンを押します。 
+フィルターが適用されていない場合、リストのすべての項目が選択されます￥。リストの上の入力からフィルターされます。データのフィルターは、リストで項目を選択/非選択して [Apply] ボタンをクリックします。リスト項目に適用したフィルタリングは、`equals` オペレーターでフィルター式を作成します。各式間のロジック オペレーターは [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) です。フィルターをクリアしたい場合、Select All をチェックして [Apply] ボタンを押します。
 
 異なる式でフィルターを適用する場合、**Text フィルター** をクリックし、特定の列で使用できるフィルター演算子のサブメニューを開きます。いずれかを選択してカスタム フィルター ダイアログを開き、フィルターとロジック演算子を使用して式を追加できます。[clear] ボタンでフィルターをクリアできます。
 
@@ -77,7 +77,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ###メニュー機能の構成
 
-並べ替え、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。制御のための入力は、[`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) があります。
+Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that control them are as follows: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -97,11 +97,11 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプルの 'Product Name' と 'Discontinued' 列で 4 つすべての機能が有効です。 'Quantity Per Unit' で 4 機能すべてが無効、'Unit Price' で並べ替えと移動のみ有効、'Order Date' でピン固定と非表示のみ有効です。  
+以下のサンプルの **Product Name** と **Discontinued** 列で 4 つすべての機能が有効です。 **Quantity Per Unit** で 4 機能すべてが無効、**Unit Price** で並べ替えと移動のみ有効、**Order Date** でピン固定と非表示のみ有効です。
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true" 
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
@@ -213,6 +213,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
     <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
     <ng-template igxExcelStyleMoving>Moving Template</ng-template>
     <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
     </igx-column>
     <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
@@ -229,12 +230,13 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true" 
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
     <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
     <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
     <ng-template igxExcelStyleMoving>Moving Template</ng-template>
     <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
     <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
@@ -266,6 +268,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
     <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
     <ng-template igxExcelStyleMoving>Moving Template</ng-template>
     <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
     <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
@@ -433,7 +436,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
@@ -538,7 +541,7 @@ $black-color: #292826;
 
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
+また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
 $custom-grid: igx-grid-theme(
