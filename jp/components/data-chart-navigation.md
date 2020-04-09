@@ -54,11 +54,11 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 
 Angular データ チャート コンポーネントのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
--   `Panning`:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
--   `Zoom In`:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
--   `Zoom Out`:  キーボードの PageDown キーを使用するか、マウスホイールを回転させます。
--   `チャート プロット領域に合わせる`: キーボードの Home キー。これに対するマウス操作はありません。
--   `領域ズーム`: [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。
+-   **Panning**:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
+-   **Zoom In**:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
+-   **Zoom Out**:  キーボードの PageDown キーを使用するか、マウスホイールを回転させます。
+-   **チャート プロット領域に合わせる**: キーボードの Home キー。これに対するマウス操作はありません。
+-   **領域ズーム**: [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。
 
 ズーム操作とパン操作は、それぞれ [`dragModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#dragmodifier) プロパティと [`panModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#panmodifier) プロパティを設定し、修飾キーを使用して有効にすることもできます。これらのプロパティは以下の修飾キーに設定することができ、押すと対応する操作が有効になります。
 
@@ -69,7 +69,7 @@ Angular データ チャート コンポーネントのナビゲーションは�
 -   Apple キー
 -   None
 
-以下のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、`Shift` キーを押しながらズーム、`Alt` キーを押しながらパンのみ可能です。
+以下のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、**Shift** キーを押しながらズーム、**Alt** キーを押しながらパンのみ可能です。
 
 ```html
 <igx-data-chart #chart
