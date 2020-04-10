@@ -65,13 +65,13 @@ _language: ja
         </a>
         <a class="link" href="data-chart-type-stacked-100-bar-series.md">
             <div class="linkContent">
-                <h4>積層型 100D 棒チャート</h4>
+                <h4>積層型 100 棒チャート</h4>
                 <img src="../images/charts/data-chart-type-stacked-100-bar-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-stacked-100-column-series.md">
             <div class="linkContent">
-                <h4>積層型 100D 縦棒チャート</h4>
+                <h4>積層型 100 縦棒チャート</h4>
                 <img src="../images/charts/data-chart-type-stacked-100-column-series.png">
             </div>
         </a>

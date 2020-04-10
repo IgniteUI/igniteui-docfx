@@ -2,7 +2,7 @@
 title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | 大規模データ | インフラジスティックス
 _description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
 _keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
-mentionedTypes: ['XamCategoryChart']
+mentionedTypes: ['CategoryChart']
 _language: ja
 ---
 
@@ -26,9 +26,7 @@ Ignite UI for Angular カテゴリ チャート コンポネントは、以下�
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 
-> [!NOTE]
-> Angular:
-> コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
+コンポーネントにバインドするプロパティで大量のデータを保存する場合、`@Component` デコレーターで `changeDetection: ChangeDetectionStrategy.OnPush` を設定します。Angular の各変更検出のサイクルでデータ配列内の変更を確認しないようにする設定です。
 
 -   チャートに Angular が自動でデータ変更を通知する代わりに、バインドされたデータが変更された方法をコンポーネントに通知できます。
     -   デルタ通知の処理は、Angular が変更検出を実行する際に 100 万のレコードを含む配列のすべての変更を比較するより効果的に実行できます。
