@@ -119,7 +119,7 @@ If the `$legacy-support` variable in your theme is set to `true`, you have to st
 ```scss
 // styles.scss
 ...
-@include igx-drop-down($my-drop-down-theme);
+@include igx-overlay($my-overlay-theme);
 ```        
 
 Now **all** modal overlays will have a purple tint to their background.
