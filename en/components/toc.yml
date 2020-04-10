@@ -1,6 +1,6 @@
 - name: General
   header: true
-- name: "Angular: A Complete Guide" 
+- name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
   new: true
 - name: Getting started
@@ -134,6 +134,9 @@
         - name: Selection-based Aggregates
           href: grid/selection_based_aggregates.md
           new: false
+        - name: Column Selection
+          href: grid/column_selection.md
+          new: true
     - name: Searching
       href: grid/search.md
       new: false
@@ -244,6 +247,9 @@
         - name: Cell selection
           href: treegrid/cell_selection.md
           new: false
+        - name: Column Selection
+          href: treegrid/column_selection.md
+          new: true
     - name: Searching
       href: treegrid/search.md
       new: false
@@ -339,6 +345,9 @@
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
           new: false
+        - name: Column Selection
+          href: hierarchicalgrid/column_selection.md
+          new: true
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -950,10 +959,6 @@
 - name: Slider
   href: slider/slider.md
   new: true
-  items:
-    - name: Slider ticks
-      href: slider/slider_ticks.md
-      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
