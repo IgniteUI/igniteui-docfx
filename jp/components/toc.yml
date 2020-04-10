@@ -1000,6 +1000,9 @@
 - name: Expansion Panel
   href: expansion_panel.md
   new: false
+  name: Splitter
+  href: splitter.md
+  new: true
 - name: 通知
   header: true
 - name: Banner

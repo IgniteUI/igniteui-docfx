@@ -1001,6 +1001,9 @@
 - name: Expansion Panel
   href: expansion_panel.md
   new: false
+- name: Splitter
+  href: splitter.md
+  new: true
 - name: Notifications
   header: true
 - name: Banner
