@@ -99,18 +99,18 @@ Let's go ahead and try those along with other customizations from the `IgxCalend
 
 ```html
 <!-- app.component.html -->
+<igx-select #select [(ngModel)]="locale">
+    <igx-select-item *ngFor="let locale of locales" [value]="locale">
+        {{ locale }}
+    </igx-select-item>
+</igx-select>
+
 <igx-calendar #calendar
     [weekStart]="1"
     [locale]="locale"
     [formatOptions]="formatOptions"
     [formatViews]="formatViews">
 </igx-calendar>
-
-<igx-select #select [(ngModel)]="locale">
-    <igx-select-item *ngFor="let locale of locales" [value]="locale">
-        {{ locale }}
-    </igx-select-item>
-</igx-select>
 ```
 All property values should be set in the AppCоmponent file:
 
@@ -131,7 +131,7 @@ public ngOnInit() {
 
 If everything went well, we should now have a calendar with customized dates display, that also changes the locale representation, based on the user location. Let's have a look at it:
 
-<div class="sample-container loading" style="height: 520px">
+<div class="sample-container loading" style="height: 620px">
     <iframe id="calendar-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -205,12 +205,14 @@ These configurions should have the following result:
 #### Special dates
 The [`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) feature is using almost the same configuration principles as the `disabledDates`. The ability to select and focus `specialDates` is what differs them from the `disabled` ones.
 
-Lets add some `specialDates` to our `igxCalendar`. In order to do this, we have to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass an array of dates as a [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange):
+Let's add some `specialDates` to our `igxCalendar`. In order to do this, we have to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass an array of dates as a [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange):
 
 ```typescript
 export class CalendarSample7Component {
-    @ViewChild("calendar", { static: true }) public calendar: IgxCalendarComponent;
-    @ViewChild("alert", { static: true }) public dialog: IgxDialogComponent;
+    @ViewChild("calendar", { static: true })
+    public calendar: IgxCalendarComponent;
+    @ViewChild("alert", { static: true })
+    public dialog: IgxDialogComponent;
     public range = [];
 
     public selectPTOdays(dates: Date[]) {
@@ -367,7 +369,7 @@ The last step is to pass the custom calendar theme:
  @include igx-css-vars($custom-calendar-theme);
 ```
 
-#### Using mixins
+#### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -380,84 +382,6 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
   }
 }
 ```
-
-#### Using color palettes
-
-Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-The `igx-palette` function generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$blue-color: #345779;
-$light-gray-color: #fdfdfd;
-
-$custom-calendar-palette: igx-palette(
-    $primary: $blue-color,
-    $secondary: $light-gray-color
-);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-calendar-theme: igx-calendar-theme(
-  $header-background: igx-color($custom-calendar-palette, "primary", 500),
-  $content-background: igx-color($custom-calendar-palette, "secondary", 500),
-  $header-text-color: igx-color($custom-calendar-palette, "secondary", 50),
-  $date-current-text-color: igx-color($custom-calendar-palette, "primary", 50),
-  $date-selected-text-color: igx-color($custom-calendar-palette, "secondary", 50),
-  $date-current-bg-color: igx-color($custom-calendar-palette, "secondary", 50),
-  $picker-arrow-color: igx-color($custom-calendar-palette, "primary", 50),
-  $picker-arrow-hover-color: igx-color($custom-calendar-palette, "primary", 500),
-  $year-current-text-color: igx-color($custom-calendar-palette, "primary", 50),
-  $year-hover-text-color: igx-color($custom-calendar-palette, "primary", 50),
-  $month-current-text-color: igx-color($custom-calendar-palette, "primary", 50),
-  $month-hover-text-color: igx-color($custom-calendar-palette, "primary", 50),
-  $picker-text-color: igx-color($custom-calendar-palette, "primary", 50),
-  $picker-text-hover-color: igx-color($custom-calendar-palette, "primary", 500),
-  $date-selected-text-color: igx-color($custom-calendar-palette, "secondary", 500)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
-
-#### Using schemas
-
-You can build a robust and flexible structure that benefits from [`schemas`](themes/schemas.md).
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-calendar`]({environment:sassApiUrl}/index.html#variable-_light-calendar) schema: 
-
-```scss
-// Extending the light calendar schema
-$custom-calendar-schema: extend($_light-calendar,
-    (
-        header-background: (igx-color: ('primary', 500)),
-        content-background: (igx-color: ('secondary', 500)),
-        header-text-color: (igx-color: ('secondary', 50)),
-        date-current-text-color: (igx-color: ('primary', 50)),
-        date-selected-text-color: (igx-color: ('secondary', 50)),
-        date-current-bg-color: (igx-color: ('secondary', 50)),
-        picker-arrow-color: (igx-color: ('primary', 50)),
-        picker-arrow-hover-color: (igx-color: ('primary', 500)),
-        year-current-text-color: (igx-color: ('primary', 50)),
-        year-hover-text-color: (igx-color: ('primary', 50)),
-        month-current-text-color: (igx-color: ('primary', 50)),
-        month-hover-text-color: (igx-color: ('primary', 50)),
-        picker-text-color: (igx-color: ('primary', 50)),
-        picker-text-hover-color: (igx-color: ('primary', 500)),
-        date-selected-background: (igx-color: ('primary', 500)),
-        date-selected-text-color: (igx-color: ('secondary', 500))
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-calendar-theme: igx-calendar-theme(
-  $palette: $custom-calendar-palette,
-  $schema: $custom-calendar-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="calendar-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-styling-sample' width="100%" height="100%" 
