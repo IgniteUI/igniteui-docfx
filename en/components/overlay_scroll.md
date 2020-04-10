@@ -28,26 +28,26 @@ this.scrollStrategy.detach();
 #### Getting Started
 The scroll strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called:
 ```typescript
-    // Initializing and using overlay settings
-    const overlaySettings: OverlaySettings = {
-        positionStrategy: new GlobalPositionStrategy(),
-        scrollStrategy: new AbsoluteScrollStrategy(), //Passes the scroll strategy
-        modal: true,
-        closeOnOutsideClick: true
-    }
-    const overlayId = overlay.attach(dummyElement, overlaySettings); 
+// Initializing and using overlay settings
+const overlaySettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(),
+    scrollStrategy: new AbsoluteScrollStrategy(), //Passes the scroll strategy
+    modal: true,
+    closeOnOutsideClick: true
+}
+const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
 <div class="divider"></div>
 
 To change the scrolling strategy, used by the overlay, override the [`scrollStrategy`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
 ```typescript
-    // overlaySettings is an existing object of type OverlaySettings
-    // to override the scroll strategy
-    const newOverlaySettings = Object.assing({}, overlaySettings);
-    Object.assing(newOverlaySettings, {
-        scrollStrategy: new CloseScrollStrategy()
-    })
-    overlay.show(overlayId, newOverlaySettings); 
+// overlaySettings is an existing object of type OverlaySettings
+// to override the scroll strategy
+const newOverlaySettings = Object.assing({}, overlaySettings);
+Object.assing(newOverlaySettings, {
+    scrollStrategy: new CloseScrollStrategy()
+})
+overlay.show(overlayId, newOverlaySettings); 
 ```
 <div class="divider--half"></div>
 
@@ -84,5 +84,11 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 <div class="divider--half"></div>
 
 ### API References
-
 * [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
+
+### Additional Resources
+* [Overlay Main Topic](overlay_main.md)
+* [Position strategies](overlay_position.md)
+* [Styling Topic](overlay_styling.md)
+* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)

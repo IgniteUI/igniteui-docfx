@@ -151,7 +151,11 @@ To make sure the theme **does not** affect other components in our app, use the 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation and the `$legacy-support` is set to `true`, use the overlay's theme function and `penetrate` the encapsulation using `::ng-deep`
 
-## Additional Resources
-* [IgniteUI for Angular - Theme Library](themes/index.md)
+### API References
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
+### Additional Resources
+* [IgniteUI for Angular - Theme Library](themes/index.md)
 * [Overlay Main Topic](overlay_main.md)
+* [Position strategies](overlay_position.md)
+* [Scroll strategies](overlay_scroll.md)

@@ -11,6 +11,16 @@ The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
 
+#### Demo
+
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Getting Started
 
 First we need to import the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) in the component and `inject` a reference to it in the component's constructor:
@@ -60,7 +70,7 @@ export class MyOverlayComponent {
 <!-- my-overlay-component.component.html -->
 <div class='content'>
 ...
-<button (click)="showInOverlay()">Show Overlay</button>
+    <button (click)="showInOverlay()">Show Overlay</button>
 </div>
 
 ```
@@ -70,7 +80,7 @@ If we want to pass an already existing `ElementRef` from the page to the [`IgxOv
 ```HTML
 <!-- my-overlay-component.component.html -->
 <div class='content'>
-  <button (click)="showInOverlay()">Show Overlay</button>
+    <button (click)="showInOverlay()">Show Overlay</button>
 </div>
 <div>
     <img #exampleImage width='200px' src='../assets/example.png' title='Click Me!'>
@@ -203,7 +213,7 @@ export class MyOverlayComponent {
 <!-- my-overlay-component.component.html -->
 <div class='content'>
 ...
-<button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
+    <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
 </div>
 ```
 ### Attaching Settings
@@ -220,13 +230,14 @@ Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysett
 
 
 If **no** [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) are configured, the toggled element gets the **default display settings**:
+
 ```typescript
 defaultOverlaySettings = {
-        positionStrategy: new GlobalPositionStrategy(),
-        scrollStrategy: new NoOpScrollStrategy(),
-        modal: true,
-        closeOnOutsideClick: true
-    };
+    positionStrategy: new GlobalPositionStrategy(),
+    scrollStrategy: new NoOpScrollStrategy(),
+    modal: true,
+    closeOnOutsideClick: true
+};
 ```
 <div class="divider--half"></div>
 
@@ -271,13 +282,14 @@ export class ExampleComponent {
 ```
 <div class="divider--half"></div>
 
-### Asumptions and Limitations
+### Assumptions and Limitations
 If you show the overlay in an outlet, and if the outlet is a child of an element with transform, perspective or filter set in the CSS you won't be able to show the modal overlay. The reason for this is if one of the above mentioned CSS properties is set, the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).
 
-### API
+### API References
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### Additional Resources
-* [Position strategies](overlay_position.md)
-* [Scroll strategies](overlay_scroll.md)
+* [Position Strategies](overlay_position.md)
+* [Scroll Strategies](overlay_scroll.md)
+* [Styling Topic](overlay_styling.md)
