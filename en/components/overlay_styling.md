@@ -119,7 +119,7 @@ If the `$legacy-support` variable in your theme is set to `true`, you have to st
 ```scss
 // styles.scss
 ...
-@include igx-drop-down($my-drop-down-theme);
+@include igx-overlay($my-overlay-theme);
 ```        
 
 Now **all** modal overlays will have a purple tint to their background.
@@ -152,6 +152,7 @@ To make sure the theme **does not** affect other components in our app, use the 
 >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation and the `$legacy-support` is set to `true`, use the overlay's theme function and `penetrate` the encapsulation using `::ng-deep`
 
 ### API References
+* [IgniteUI for Angular - Theme Library](themes/index.md)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### Additional Resources

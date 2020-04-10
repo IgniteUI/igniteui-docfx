@@ -25,7 +25,7 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 
 ### @@igComponent Selection 概要
 
-Ignite UI for Angular @@ igComponentコンポーネントは、[行選択](row_selection.md)と[セル選択](cell_selection.md)の 2 つの異なる選択モードを提供します。グリッドのデフォルトの選択モードはマルチセル選択です。選択モードの変更または有効化は、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティと [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用します。
+IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). The default selection mode of the grid is **Multi-cell selection** in conjunction with **Column Selection**, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
 プロパティ [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
@@ -40,6 +40,16 @@ Ignite UI for Angular @@ igComponentコンポーネントは、[行選択](row_s
 - multiple - @@ igComponent の選択のデフォルト状態です。Multi - セルの選択は、マウスの左ボタンを連続してクリックした後、マウスをセル上にドラッグすることで利用できます。
 
 > 詳細については、[セル選択トピック](cell_selection.md)を参照してください。
+
+Property [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options per each **column**:
+- false - the corresponding column selection will be disabled for the @@igComponent
+- true - the corresponding column selection will be enabled for the @@igComponent
+- This lead to the following three variations:
+ - Single selection - <kbd>mouse click</kbd> over the column cell.
+ - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>mouse click</kbd> over the column cells.
+ - Range column selection - holding <kbd>shift</kbd> + <kbd>mouse click</kbd> selects everyting in between.
+
+> Go to [Column selection topic](column_selection.md) for more information.
 
 ### ショーケース アプリケーション
 
