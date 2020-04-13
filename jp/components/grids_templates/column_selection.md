@@ -56,8 +56,11 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 <div class="divider--half"></div>
 
 #### Keyboard combinations
-There are three scenarios for keyboard navigation of the **Column Selection** feature:
-- Single column selection - <kbd>click</kbd> on the column header cell if it is **selectable**.
+
+> [!NOTE]
+> The keyboard combinations are available only when the grid [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input is set to [`multiple`]({environment:angularApiUrl}/enums/gridselectionmode.html#multiple).
+
+There are two scenarios for keyboard navigation of the **Column Selection** feature:
 - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> on every **selectable** header cell.
 - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
