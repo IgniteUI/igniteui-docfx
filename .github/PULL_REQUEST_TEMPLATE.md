@@ -20,10 +20,10 @@ Closes #
 
 <br />
 
- - [ ] gollow SEO guidelines to fill topic's metadata ([SEO guidelines](https://infragisticsinc297.sharepoint.com/:w:/g/Groups/marketing/EWz9InT4FDlErHCumxsKGY4Bd8H03yhRWxDFk47luRz-_Q?e=S5wWcx))
+ - [ ] follow SEO guidelines to fill topic's metadata ([SEO guidelines](https://infragisticsinc297.sharepoint.com/:w:/g/Groups/marketing/EWz9InT4FDlErHCumxsKGY4Bd8H03yhRWxDFk47luRz-_Q?e=S5wWcx))
 
 <br />
 
- - [ ] don not resolve requested changes (leave that to the reviewer)
+ - [ ] do not resolve requested changes (leave that to the reviewer)
  - [ ] add `pending-localization` label when the review of the PR is done
  - [ ] add a member from the localization team to translate it
