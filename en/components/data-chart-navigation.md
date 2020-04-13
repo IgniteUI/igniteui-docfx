@@ -53,11 +53,11 @@ The following code snippet demonstrates how you can enable base UI navigation in
 
 Navigation in the Angular data chart component can happen with either the mouse or the keyboard once enabled. The following operations can be invoked using the following mouse or keyboard operations by default:
 
--   `Panning`: Using arrow keys on keyboard or holding the Shift key and clicking and dragging with the mouse.
--   `Zoom In`: Using the PageUp key on keyboard or rolling the mouse wheel up.
--   `Zoom Out`: Using the PageDown key on keyboard or rolling the mouse wheel down.
--   `Fit to Chart Plot Area`: Home key on the keyboard. There is no mouse operation for this.
--   `Area Zoom`: Click and drag mouse within the plot area with the [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) property set to its default, `DragZoom`.
+-   **Panning**: Using arrow keys on keyboard or holding the Shift key and clicking and dragging with the mouse.
+-   **Zoom In**: Using the PageUp key on keyboard or rolling the mouse wheel up.
+-   **Zoom Out**: Using the PageDown key on keyboard or rolling the mouse wheel down.
+-   **Fit to Chart Plot Area**: Home key on the keyboard. There is no mouse operation for this.
+-   **Area Zoom**: Click and drag mouse within the plot area with the [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) property set to its default, `DragZoom`.
 
 The zoom and pan operations can also be enabled by using modifier keys by setting the [`dragModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#dragmodifier) and [`panModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#panmodifier) properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be enabled:
 
