@@ -16,7 +16,7 @@ Closes #
  - [ ] check if sample is working and fully visible in the StackBlitz
  - [ ] check if code blocks match the code in StackBlitz demo
 
- - [ ] Follow SEO guidelines to fill topic's metadata
+ - [ ] Follow SEO guidelines to fill topic's metadata ([SEO guidelines](https://infragisticsinc297.sharepoint.com/:w:/g/Groups/marketing/EWz9InT4FDlErHCumxsKGY4Bd8H03yhRWxDFk47luRz-_Q?e=S5wWcx))
 
  - [ ] don not resolve requested changes (leave that to the reviewer)
  - [ ] add `pending-localization` label when review of the PR is done and add member from localization team to translate it.
