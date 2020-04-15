@@ -56,9 +56,11 @@ The Initialization of the **igxSplitter** is done by using the **igx-splitter** 
 #### Orientation
 
 The splitter can be vertical or horizontal, which is defined by the [`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) input. The default value is Vertical.
-
+```typescript
+public type = SplitterType.Horizontal;
+```
 ```html
-<igx-splitter [type]="SplitterType.Vertical">
+<igx-splitter [type]="type">
     <igx-splitter-pane>
         ...
     </igx-splitter-pane>
@@ -73,10 +75,10 @@ The splitter can be vertical or horizontal, which is defined by the [`type`]({en
 The **igxSplitterPane** contains several input properties. We can set the initial pane size by using the [`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) input property. The [`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) and [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) input properties can be used to set the minimum or maximum allowed size of the pane. Resizing beyond `minSize` and `maxSize` is not allowed.
 ```html
 <igx-splitter>
-    <igx-splitter-pane [size]='300px' [minSize]='100px'>
+    <igx-splitter-pane size='300px' minSize='100px'>
         ...
     </igx-splitter-pane>
-    <igx-splitter-pane [size]='300px' [maxSize]='500px'>
+    <igx-splitter-pane size='300px' maxSize='500px'>
         ...
     </igx-splitter-pane>
 </igx-splitter>
@@ -96,11 +98,14 @@ If we want to disallow resizing of a pane, we can set the [`resizable`]({environ
 #### Nested panes
 
 We can nest splitter components to create a more complex layout inside a splitter pane.
-
+```typescript
+public typeHorizontal = SplitterType.Horizontal;
+public typeVertical = SplitterType.Vertical;
+```
 ```html
-<igx-splitter style='height: 30vh;' [type]='SplitterType.Horizontal' >
+<igx-splitter style='height: 30vh;' [type]='typeHorizontal' >
     <igx-splitter-pane>
-        <igx-splitter [type]='SplitterType.Vertical' [style.width]='"100%"'>
+        <igx-splitter [type]='typeVertical' [style.width]='"100%"'>
             <igx-splitter-pane>
                 Pane1.1
             </igx-splitter-pane>
@@ -110,7 +115,7 @@ We can nest splitter components to create a more complex layout inside a splitte
         </igx-splitter>
     </igx-splitter-pane>
     <igx-splitter-pane>
-        <igx-splitter [type]='SplitterType.Vertical' [style.width]='"100%"'>
+        <igx-splitter [type]='typeVertical' [style.width]='"100%"'>
             <igx-splitter-pane>
                 Pane2.1
             </igx-splitter-pane>
