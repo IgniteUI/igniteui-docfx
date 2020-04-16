@@ -6,9 +6,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Time Picker
 <p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners, which is then mirrored in the input field. In addition, the user can edit the time value, using an editable masked input with a dropdown.</p>
-<div class="divider"></div>
+<div class="divider--half"></div>
 
-### Time Picker Demo
+#### Demo
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -19,14 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Usage
 
-To get started with the Time Picker component, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
+The first step is to import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -54,13 +47,8 @@ To add the time picker in a template, use the following code:
 <igx-time-picker ></igx-time-picker>
 ```
 
-And there we have it:
-<div class="sample-container loading" style="height:600px">
-    <iframe id="timepicker-sample-1-iframe" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+The output should be the same as the one in the demo.
+
 <div class="divider--half"></div>
 
 #### Setting value
@@ -68,7 +56,7 @@ And there we have it:
 Set a value using the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input. Just add a date:
 
 ```typescript
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 ```
 
 Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input in the template:
@@ -76,15 +64,6 @@ Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponen
 ```html
 <igx-time-picker [value]="date"></igx-time-picker>
 ```
-
-And there we have it:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
 
 To create a two-way data-binding, set `ngModel` like this:
 
@@ -107,16 +86,6 @@ The table below lists valid time display formats:
 | `mm` | Formats the minutes field with leading zero (00..59). |
 | `tt` | Represents the AM/PM field. |
 
-
-The result is as follows:
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="time-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-
 #### Change delta and spin mode
 
 To change the delta of the items, set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) input. To change the spin mode, use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) input:
@@ -124,15 +93,6 @@ To change the delta of the items, set the [`itemsDelta`]({environment:angularApi
 ```html
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
 ```
-
-And there we have it:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
 
 #### Validation
 
@@ -172,9 +132,11 @@ public onValidationFailed(timepicker){
 ```
 
 ```html
-<igx-time-picker format="HH:mm" [vertical]="true" [minValue]="min" [maxValue]="max" (onValidationFailed)="onValidationFailed($event)"></igx-time-picker>
+<igx-time-picker [itemsDelta]="{hours:1, minutes:5}" format="HH:mm tt" [vertical]="true" [minValue]="min" [maxValue]="max" (onValidationFailed)="onValidationFailed($event)"></igx-time-picker>
 <igx-toast #toast message="Value must be between 09:00 and 18:00"></igx-toast>
 ```
+
+A toast is added to show a message when an invalid time is selected. The range is (09:00~18:00). Also we changed the delta of the items and the time format so you can see how that looks like.
 
 And there we have it:
 <div class="sample-container loading" style="height: 540px;">
@@ -209,9 +171,9 @@ or just change the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercom
 <igx-time-picker mode="dropdown"></igx-time-picker>
 ```
 
-The user now will be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
+The user will now be able to type, edit or delete the time value in the input in both 12- and 24-hour formats. 
 
-**Dropdown Mode Keyboard Navigation**
+**Keyboard Navigation**
 
 When the mouse caret is positioned at the hours, minutes or AM/PM placeholders and pressing the <kbd>Up</kbd> arrow key or using `Mouse Wheel Up`, the hours/minutes are increased. Pressing the <kbd>Down</kbd> arrow key or `Mouse Wheel Down` is used for the reversed operation. 
 
@@ -233,7 +195,7 @@ And there we have it:
 </div>
 <div class="divider--half"></div>
 
-#### Templating Input Group
+#### Templated Input Group
 
 We have seen how to make use of the  API (properties, events, methods) so that we configure the time picker per our requirements and interact with it programmatically. Now we want to go further and customize its input group look.
 
@@ -259,10 +221,10 @@ In the following example we modify the default label "Time" and add a second ico
 </igx-time-picker>
 ```
 ```typescript
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 ```
 
-And there we have it:
+And here's our templated time picker:
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
 </div>
@@ -270,7 +232,7 @@ And there we have it:
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Templating Input Group - dropdown mode
+#### Templated Dropdown Mode
 
 All the information mentioned in the <a href="#templating-input-group">Templating Input Group</a> section can be applied when re-templating a dropdown mode time picker. The only requirement is that an HTML element should be passed to the `openDialog(target)`, and that element will be used as a positioning target for the drop down that is being spawned.
 
@@ -287,13 +249,13 @@ All the information mentioned in the <a href="#templating-input-group">Templatin
 </igx-time-picker>
 ```
 ```typescript
-public today: Date = new Date(Date.now());
+public today: Date = new Date();
 ```
 
 Note that `displayTime` property, exposed in the template context, is **read-only**. In the example above it is used in combination with the input element **blur** event in order to achieve two-way binding.
 
 ```typescript
-public today: Date = new Date(Date.now());
+public today: Date = new Date();
 
 public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
     const parts = inputValue.split(/[\s:]+/);
@@ -309,13 +271,7 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 }
 ```
 
-And there we have it, a re-templated time picker with dropdown and two-way binding support:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
 
 #### Custom button action
 The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports adding of custom actions buttons. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
@@ -340,18 +296,115 @@ In the example below, custom action buttons are added for 'CANCEL', 'OK' and 'NO
 // sample.component.ts
 ...
 public selectNow(timePicker: IgxTimePickerComponent) {
-    timePicker.value = new Date(Date.now());
+    timePicker.value = new Date();
     timePicker.close();
 }
 ...
 ```
 
-The result is as follows:
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="time-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" class="lazyload"></iframe>
+And there we have it, a re-templated time picker with dropdown, custom actions and two-way binding support:
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+### Styling
+
+To get started with styling the time picker, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the time picker.
+
+```scss
+$my-time-picker-theme: igx-time-picker-theme(
+  $text-color: #E4C8A5,
+  $hover-text-color: #ECAA53,
+  $selected-text-color: #ECAA53,
+  $header-background: #ECAA53,
+  $header-hour-text-color: #011627,
+  $header-time-period-color: #011627,
+  $background-color: #011627
+);
+```
+
+> [!NOTE]
+> In order to style any additional components that are used as part of the time picker window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
+
+Since the time picker window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the time picker window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+
+The items in our time picker **are not** descendants of our component `host` - they are currently being displayed in the default overlay outlet, at the end of the `document` body. Changing this is done by making use of the [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) property in the `overlaySettings`. The `outlet` controls where the overlay container should be rendered.
+
+Here, we can pass a reference to the element where we'd like our container to be:
+
+```html
+<igx-time-picker id="time-picker" [overlaySettings]="{ outlet: element }">
+</igx-time-picker>
+```
+
+```typescript
+export class TimepickerStylingComponent {
+    ...
+    constructor(public element: ElementRef) {
+    }
+}
+```
+
+Now, the time picker's items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
+
+> [!NOTE]
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+
+#### Including Themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **theme** like that:
+
+```scss
+ @include igx-time-picker($my-time-picker-theme);
+```
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-time-picker($my-time-picker-theme);
+    }
+}
+```
+
+<div class="divider"></div>
+
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+
+```scss
+@include igx-css-vars($my-time-picker-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+
+```scss
+:host {
+    @include igx-css-vars($my-time-picker-theme);
+}
+```
+
+#### Demo
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="time-picker-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
