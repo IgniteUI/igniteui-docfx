@@ -6,7 +6,7 @@ _keywords: angular splitter, igniteui for angular, infragistics
 
 ## Splitter
 
-The Ignite UI for Angular Splitter component provides a framework for a simple split layout splitting the view horizontally or vertically into multiple smaller areas called split panes.
+The Ignite UI for Angular Splitter component provides a framework for a simple layout splitting the view horizontally or vertically into multiple smaller areas called panes. The split panes are collapsible and contain buttons for the expand/collapse operations, which is demonstrated in the demo below.
 
 ### Demo
 <div class="sample-container loading" style="height: 450px">
