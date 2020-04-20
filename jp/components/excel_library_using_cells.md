@@ -15,10 +15,6 @@ Excel ワークシートの [`WorksheetCell`]({environment:dvApiBaseUrl}/product
 <div class="sample-container loading" style="height: 150px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
@@ -174,7 +170,7 @@ var workbook = new Workbook();
 var worksheet = workbook.worksheets().add("Sheet1");
 
 var cellFill = CellFill.createSolidFill("Blue");
-worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
+worksheet.rows(0).cells(0).cellFormat.fill = cellFill;
 ```
 
 セルで線状グラデーションと長方形グラデーションを使用して、色 (Excel セルの背景、罫線などの色) を指定できます。これらのグラデーションを付けられたワークブックを .xls ファイル形式で保存して、Excel 2007/2010 で開いたときはグラデーションを表示し、これらのファイルを Microsoft Excel 2003 で開くときは、最初のグラデーション境界からのベタ一色の色でセルが塗りつぶされるようにします。

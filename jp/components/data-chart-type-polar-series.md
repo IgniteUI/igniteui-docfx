@@ -61,7 +61,7 @@ _language: ja
 上記データ要件を満たすデータソースとして [SamplePolarData](data-chart-data-sources-polar.md) を使用できます。
 
 ```ts
-this.state = { dataSource: SamplePolarData.create() }
+public dataSource: any[] = SamplePolarData.create();
 ```
 
 ### モジュールの要件
