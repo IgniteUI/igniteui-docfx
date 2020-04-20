@@ -2,7 +2,7 @@
 title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | ツールチップ タイプ | インフラジスティックス
 _description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
 _keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
-mentionedTypes: ['XamCategoryChart', 'ToolTipType']
+mentionedTypes: ['CategoryChart', 'ToolTipType']
 _language: ja
 ---
 
