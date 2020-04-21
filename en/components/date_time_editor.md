@@ -10,7 +10,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 
-
 ```html
 <!--datetime-basic.component.html-->
 <igx-input-group>
@@ -19,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ```
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="datetime-basic-iframe" data-src="{environment:demosBaseUrl}/scheduling/datetime-basic" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="datetime-basic-iframe" src="{environment:demosBaseUrl}/scheduling/datetime-basic" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datetime-basic-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -114,7 +113,7 @@ public maxDate = new Date(2020, 12, 1);
 In the first scenario, if no specific DatePart is passed to the method, a default DatePart will increment/decrement, based on the specified `inputFormat` and the internal directive implementation.
 In the second scenario, you can explicitly specify what DatePart to manipulate as it may suite different requirements.
 You may compare both in the following sample:
-<div class="sample-container loading" style="height:400px">
+<div class="sample-container loading" style="height:150px">
     <iframe id="datetime-advanced-iframe" data-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -152,8 +151,6 @@ Template-driven form example:
 ### Styling 
 For details check out the [`Input Group styling guide`](input_group.md#styling).
 <div class="divider--half"></div>
-
-### Advanced Samples
 
 ### API References
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
