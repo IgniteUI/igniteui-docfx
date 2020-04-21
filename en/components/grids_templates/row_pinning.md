@@ -21,7 +21,7 @@ _keywords: lock row, ignite ui for angular, infragistics 
 }
 
 ### @@igComponent Row Pinning 
-A row or multiple rows can be pinned to the top or bottom of the Angular UI Grid. **Row Pinning** in Ignite UI for Angular allows the end users to lock rows in a particular order, this will allow them to see it while vertically scrolling the @@igComponent. The Material UI Grid has a built-in row pinning UI, which can be enabled via an `igxActionStrip` component to change the pin state of the rows. In addition, you can define a custom UI and change the pin state of the rows via the Row Pinning API.
+A row or multiple rows can be pinned to the top or bottom of the Angular UI Grid. **Row Pinning** in Ignite UI for Angular allows end users to pin rows in a particular order, duplicating them in a special area that is always visible even when the they scroll the @@igComponent vertically. The Material UI Grid has a built-in row pinning UI, which is enabled by initializing an `igxActionStrip` component in the context of @@igComponent. In addition, you can define a custom UI and change the pin state of the rows via the Row Pinning API.
 
 #### Demo
 
@@ -55,7 +55,7 @@ A row or multiple rows can be pinned to the top or bottom of the Angular UI Grid
 
 ### Row Pinning UI
 
-The built-in row pinning UI is enabled by adding a `igxActionStrip` component with the `GridPinningActions` component. The action strip can then be shown or hidden via its API and will display a pin icon via which the related row can be pinned or unpinned. 
+The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip can then be shown or hidden via its API and will display a pin or unpin button icon based on the state of the row it is shown for. An additional button icon that allows for the copy of a pinned row to be found in the scrollable area is shown for each pinned row as well.
 
 @@if (igxName === 'IgxGrid') {
 
@@ -204,7 +204,7 @@ public rowPinning(event) {
 ### Pinning Position
 
 You can change the row pinning position via the [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) configuration option. It allows you to set the row position to either Top or Bottom.
-When set to Bottom the rows are rendered at the bottom of the grid, after the unpinned rows. Unpinned rows can be scrolled vertically, while the pinned rows remain fixed on the bottom.
+When set to Bottom the rows are rendered at the bottom of the grid, after the unpinned rows. Unpinned rows can be scrolled vertically, while the pinned rows remain fixed at the bottom.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -236,7 +236,7 @@ You can define your custom UI and change the pin state of the rows via the relat
 #### Custom Row Pinning UI via extra column with icon
 
 Let's say that instead of an action strip you would like to show pin icons in the rows that the end user can click to change the particular row's pin state.
-This can be done by adding an extra column with a cell template with the custom icon.
+This can be done by adding an extra column with a cell template containing the custom icon.
 
 @@if (igxName === 'IgxGrid') {
 
@@ -456,7 +456,7 @@ The following sample demonstrates how to retain the pinned records to ensure tha
 ### Row Pinning Limitations
 
 * Only records that exist in the data source can be pinned.
-* Row pinning is not exported to excel. The grid is exported as if no row pinning is applied.
+* The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied.
 
 <div class="divider--half"></div>
 
