@@ -431,32 +431,13 @@ This would allow reordering the rows and moving them between the pinned and unpi
 }
 
 
-
-@@if (igxName === 'IgxGrid') {
-
-### Row Pinning and Remote Virtualization
-
-When remote virtualization is used, only the data that needs to be displayed in the grid is required to be provided in the `onDataChanging` event. The data can be retrieved from a remote service or from a local cache if it has already been loaded once. 
-
-The following sample demonstrates how to retain the pinned records to ensure that they remain in the grid data in a remote virtualization scenario.
-
-#### Demo
-
-<div class="sample-container loading" style="height:510px">
-    <iframe id="grid-remote-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-}
-
-
 ### Row Pinning Limitations
 
 * Only records that exist in the data source can be pinned.
 * The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied.
+* Because of how pinned rows are stored internally so that they may appear both in the pinned and unpinned areas of the grid, row pinning is not supported when records in the grid are fetched from a remote endpoint on demand (remote virtualization).
+* The copies of pinned rows in the scrollable area of the grid are an integral part of how other grid features achieve their functionality in the presence of pinned rows and therefore their creation cannot be disabled nor can they be removed.
+* As Row Selection works entirely with row Ids, selecting pinned rows selects their copies as well (and vise versa). Additionally, range selecting (e.g. using Shift + click) within the pinned area works the same as range selecting the rows within the the scrollable area and the selection then includes all rows in between even if they are not currently pinned. Getting the selected rows through the API only returns a single instance of each selected record.
 
 <div class="divider--half"></div>
 
