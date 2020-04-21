@@ -30,7 +30,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
 
 階層グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
 
