@@ -56,8 +56,11 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 <div class="divider--half"></div>
 
 #### Keyboard combinations
-There are three scenarios for keyboard navigation of the **Column Selection** feature:
-- Single column selection - <kbd>click</kbd> on the column header cell if it is **selectable**.
+
+> [!NOTE]
+> The keyboard combinations are available only when the grid [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input is set to [`multiple`]({environment:angularApiUrl}/enums/gridselectionmode.html#multiple).
+
+There are two scenarios for keyboard navigation of the **Column Selection** feature:
 - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> on every **selectable** header cell.
 - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
@@ -87,6 +90,8 @@ $custom-grid-theme: igx-grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
+    $header-selected-text-color: #ECAA53,
+    $header-selected-background: #011627,
     $expand-icon-color: #ECAA53,
     $expand-icon-hover-color: #B64B80
 );
@@ -97,14 +102,18 @@ $custom-grid-theme: igx-grid-theme(
 $custom-grid-theme: igx-grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
-    $row-selected-hover-background: #011627
+    $row-selected-hover-background: #011627,
+    $header-selected-text-color: #ECAA53,
+    $header-selected-background: #011627
 );
 ```
 }
-[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) accepts several parameters but those are the three responsible for changing the appearance of all selected columns:
+[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
 - **$row-selected-background** - sets the background of the selected fraction.
 - **$row-selected-text-color** - sets the text color of the selected fraction
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
+- **$header-selected-text-color** - sets the text color of the selected column header 
+- **$header-selected-background** - sets the background color of the selected column header.
 
 
 #### Using CSS Variables
