@@ -434,7 +434,7 @@ This would allow reordering the rows and moving them between the pinned and unpi
 ### Row Pinning Limitations
 
 * Only records that exist in the data source can be pinned.
-* The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied.
+* The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied. 
 * Because of how pinned rows are stored internally so that they may appear both in the pinned and unpinned areas of the grid, row pinning is not supported when records in the grid are fetched from a remote endpoint on demand (remote virtualization).
 * The copies of pinned rows in the scrollable area of the grid are an integral part of how other grid features achieve their functionality in the presence of pinned rows and therefore their creation cannot be disabled nor can they be removed.
 * As Row Selection works entirely with row Ids, selecting pinned rows selects their copies as well (and vise versa). Additionally, range selecting (e.g. using Shift + click) within the pinned area works the same as range selecting the rows within the the scrollable area and the selection then includes all rows in between even if they are not currently pinned. Getting the selected rows through the API only returns a single instance of each selected record.
