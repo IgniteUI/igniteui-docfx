@@ -352,7 +352,7 @@ The items in our time picker **are not** descendants of our component `host` - t
 Here, we can pass a reference to the element where we'd like our container to be:
 
 ```html
-<igx-time-picker id="time-picker" [overlaySettings]="{ outlet: element }">
+<igx-time-picker #picker [overlaySettings]="{ outlet: element }">
 </igx-time-picker>
 ```
 
