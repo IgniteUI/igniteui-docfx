@@ -44,7 +44,7 @@ To add the time picker in a template, use the following code:
 
 ```html
 <!--meeting.component.html-->
-<igx-time-picker ></igx-time-picker>
+<igx-time-picker></igx-time-picker>
 ```
 
 The output should be the same as the one in the demo.
@@ -119,21 +119,26 @@ export class AppModule {}
 public min: string = "09:00";
 public max: string = "18:00";
 
-@ViewChild("toast")
-private toast: ElementRef;    
+@ViewChild("toast", { static: true })
+private toast;
 
-public show(toast) {
-    toast.show();
-}
-
-public onValidationFailed(timepicker){
-    this.show(this.toast);
+public onValidationFailed() {
+    this.toast.show();
 }
 ```
 
 ```html
-<igx-time-picker [itemsDelta]="{hours:1, minutes:5}" format="HH:mm tt" [vertical]="true" [minValue]="min" [maxValue]="max" (onValidationFailed)="onValidationFailed($event)"></igx-time-picker>
+<igx-time-picker
+[itemsDelta]="{hours:1, minutes:5}"
+format="HH:mm tt"
+[vertical]="true"
+[minValue]="min"
+[maxValue]="max"
+(onValidationFailed)="onValidationFailed()"
+></igx-time-picker>
+
 <igx-toast #toast message="Value must be between 09:00 and 18:00"></igx-toast>
+
 ```
 
 A toast is added to show a message when an invalid time is selected. The range is (09:00~18:00). Also we changed the delta of the items and the time format so you can see how that looks like.
@@ -201,11 +206,15 @@ We have seen how to make use of the  API (properties, events, methods) so that w
 
 To do that, we need to decorate the nested ng-template inside the time picker with IgxTimePickerTemplate directive. ng-template context exposes the following members: [`openDialog`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#opendialog) method can be used to open the time picker dialog; [`displayTime`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displaytime) property contains the formatted value; [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) contains the real value. You could use those by declaring a variables in the ng-template element.
 
-In the following example we modify the default label "Time" and add a second icon as suffix. Below the input group we're using a label to display the real time picker value:
+In the following example we modify the default label "Time" and add a second icon as suffix. We also use `igx-hint` in the input group to display the real time picker value:
 
 ```html
 <igx-time-picker [value]="date">
-    <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
+    <ng-template
+        igxTimePickerTemplate
+        let-openDialog="openDialog"
+        let-value="value"
+        let-displayTime="displayTime">
         <igx-input-group (click)="openDialog()">
             <igx-prefix>
                 <igx-icon>home</igx-icon>
@@ -215,8 +224,8 @@ In the following example we modify the default label "Time" and add a second ico
             <igx-suffix>
                 <igx-icon>access_alarm</igx-icon>
             </igx-suffix>
+            <igx-hint>{{value}}</igx-hint>
         </igx-input-group>
-        <label>{{value}}</label>
     </ng-template>
 </igx-time-picker>
 ```
