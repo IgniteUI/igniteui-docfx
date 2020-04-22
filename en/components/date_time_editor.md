@@ -102,7 +102,7 @@ public maxDate = new Date(2020, 12, 1);
 
 ```html
 <igx-input-group>
-    <input type="text" igxInput igxDateTimeEditor [minValue]="minDate" [maxValue]="maxDate" [(ngModel)]="date" required/>
+    <input type="text" igxInput igxDateTimeEditor [minValue]="minDate" [maxValue]="maxDate" [(ngModel)]="date"/>
 </igx-input-group>
 
 ```
@@ -129,20 +129,9 @@ Template-driven form example:
 ```html
 <form>
     <igx-input-group>
-        <input #dateEditor="igxDateTimeEditor" type="text" [(ngModel)]="date" #formControl="ngModel" name="form"
-            igxInput (valueChanged)="onValueChanged($event)" (validationFailed)="onValidationFailed($event)"
-            [igxDateTimeEditor]="'dd/MM/yyyy'" [minValue]="minDate" [maxValue]="maxDate" required
-            [isSpinLoop]="false" />
-        <igx-suffix>
-            <button igxRipple igxRippleCentered="true" igxButton="icon" (click)="dateEditor.increment()">
-                <igx-icon>expand_less</igx-icon>
-            </button>
-        </igx-suffix>
-        <igx-suffix>
-            <button igxRipple igxRippleCentered="true" igxButton="icon" (click)="dateEditor.decrement()">
-                <igx-icon>expand_more</igx-icon>
-            </button>
-        </igx-suffix>
+        <input igxInput type="text" [(ngModel)]="date" name="form" required
+            (valueChanged)="onValueChanged($event)" (validationFailed)="onValidationFailed($event)"
+            [igxDateTimeEditor]="'dd/MM/yyyy'" [minValue]="minDate" [maxValue]="maxDate" [isSpinLoop]="false" />
     </igx-input-group>
 </form>
 <div class="divider--half"></div>
