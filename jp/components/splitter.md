@@ -6,7 +6,7 @@ _keywords: angular splitter, igniteui for angular, infragistics
 
 ## Splitter
 
-The Ignite UI for Angular Splitter component provides a framework for a simple layout splitting the view horizontally or vertically into multiple smaller areas called panes. The split panes are collapsible and contain buttons for the expand/collapse operations, which is demonstrated in the demo below.
+The Ignite UI for Angular Splitter component provides the ability to create layouts split into multiple vertically or horizontally arranged panes that may be expanded, collapsed and resized. These interactions are performed through UI exposed in the bars separating the panes. A simple Splitter layout is demonstrated in the demo below.
 
 ### Demo
 <div class="sample-container loading" style="height: 450px">
@@ -21,7 +21,7 @@ The Ignite UI for Angular Splitter component provides a framework for a simple l
 
 ### Usage
 
-To start using the **igxSplitter** first we need to import the **IgxSplitterModule** in our **app.module**:
+To start using the **igxSplitter** component first you need to import the **IgxSplitterModule** in your **app.module**:
 ```typescript
 // app.module.ts
 ...
@@ -35,7 +35,7 @@ import { IgxSplitterModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-After that we can add the markup for our component:
+After that you can add the markup for your component:
 ```html
 <!-- splitter.component.html -->
 <igx-splitter>
@@ -50,7 +50,7 @@ After that we can add the markup for our component:
     </igx-splitter-pane>
 </igx-splitter>
 ```
-The Initialization of the **igxSplitter** is done by using the **igx-splitter** tag. Multiple splitter panes can be defined under a single **igx-splitter**. The content of the pane is templatable and will be rendered in its own resizable container.
+**igxSplitter** is initialized with the **igx-splitter** tag. Multiple splitter panes can be defined under a single **igx-splitter** component. The content of the pane is templatable and will be rendered in its own resizable container.
 
 
 #### Orientation
@@ -72,7 +72,7 @@ public type = SplitterType.Horizontal;
 
 #### Configuring panes
 
-The **igxSplitterPane** contains several input properties. We can set the initial pane size by using the [`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) input property. The [`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) and [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) input properties can be used to set the minimum or maximum allowed size of the pane. Resizing beyond `minSize` and `maxSize` is not allowed.
+The **igxSplitterPane** component contains several input properties. You can set the initial pane size by using the [`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) input property. The [`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) and [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) input properties can be used to set the minimum or maximum allowed size of the pane. Resizing beyond `minSize` and `maxSize` is not allowed.
 ```html
 <igx-splitter>
     <igx-splitter-pane size='300px' minSize='100px'>
@@ -83,7 +83,7 @@ The **igxSplitterPane** contains several input properties. We can set the initia
     </igx-splitter-pane>
 </igx-splitter>
 ```
-If we want to disallow resizing of a pane, we can set the [`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) input property to **false**.
+You can also forbid the resizing of a pane by setting its [`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) input property to **false**.
 ```html
 <igx-splitter>
     <igx-splitter-pane [resizable]='false'>
@@ -97,7 +97,7 @@ If we want to disallow resizing of a pane, we can set the [`resizable`]({environ
 
 #### Nested panes
 
-We can nest splitter components to create a more complex layout inside a splitter pane.
+You can nest splitter components to create a more complex layout inside a splitter pane.
 ```typescript
 public typeHorizontal = SplitterType.Horizontal;
 public typeVertical = SplitterType.Vertical;
@@ -138,13 +138,13 @@ public typeVertical = SplitterType.Vertical;
 
 ### Keyboard navigation
 
-Keyboard navigation is available by default in the splitter component. When we focus a splitter bar and press one of the following key combinations, the described behavior is performed.
+Keyboard navigation is available by default in the splitter component. When you focus a splitter bar and press one of the following key combinations, the described behavior is performed.
 
 #### Key combinations
-- `Arrow Up` - Moves up the splitter bar in a vertical splitter
-- `Arrow Down` - Moves down the splitter bar in a vertical splitter
-- `Arrow Left` - Moves left the splitter bar in a horizontal splitter
-- `Arrow Right` - Moves right the splitter bar in a horizontal splitter
+- `Arrow Up` - Moves the splitter bar _up_ in a vertical splitter
+- `Arrow Down` - Moves the splitter bar _down_ in a vertical splitter
+- `Arrow Left` - Moves the splitter bar _left_ in a horizontal splitter
+- `Arrow Right` - Moves the splitter bar _right_ in a horizontal splitter
 - `Ctrl + Arrow Up` - Expands/Collapses a pane in a vertical splitter
 - `Ctrl + Arrow Down` - Expands/Collapses a pane in a vertical splitter
 - `Ctrl + Arrow Left` - Expands/Collapses a pane in a horizontal splitter
