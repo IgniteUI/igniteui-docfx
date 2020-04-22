@@ -6,7 +6,7 @@ _keywords: angular splitter, igniteui for angular, infragistics
 
 ## Splitter
 
-The Ignite UI for Angular Splitter component provides the ability to create layouts split into multiple vertically or horizontally arranged panes that may be expanded, collapsed and resized. These interactions are performed through UI exposed in the bars separating the panes. A simple Splitter layout is demonstrated in the demo below.
+The Ignite UI for Angular Splitter component provides the ability to create layouts, split into multiple vertically or horizontally arranged panes that may be resized, expanded and collapsed. These interactions are performed through UI exposed in the splitter bars between the panes. A simple Splitter layout is demonstrated in the demo below.
 
 ### Demo
 <div class="sample-container loading" style="height: 450px">
@@ -21,7 +21,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 ### Usage
 
-To start using the **igxSplitter** component first you need to import the **IgxSplitterModule** in your **app.module**:
+To start using the **igxSplitter** component, you first need to import the **IgxSplitterModule** in your **app.module**:
 ```typescript
 // app.module.ts
 ...
