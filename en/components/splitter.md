@@ -150,6 +150,45 @@ Keyboard navigation is available by default in the splitter component. When you 
 - `Ctrl + Arrow Left` - Expands/Collapses a pane in a horizontal splitter
 - `Ctrl + Arrow Right` - Expands/Collapses a pane in a horizontal splitter
 
+### Styling
+You can change the default styles of the **igxSplitter** component by creating a new theme for it.
+
+#### Demo
+This is the final result from applying your new theme.
+
+<div class="sample-container loading" style="height: 340px">
+    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
+#### Creating a component theme
+First you need to [create a custom palette](../themes/palette.md).
+Let's create the component theme and pass that custom palette to it.
+```scss
+// In app-splitter-styling.component.scss
+
+// Create custom splitter theme.
+$custom-splitter-theme: igx-splitter-theme(
+    $bar-color: #ff7400,
+    $handle-color: #ddd,
+    $expander-color: #ddd,
+    $focus-color: #ccc,
+);
+```
+
+#### Applying the component theme
+Now to apply the component theme all you need to do is to include `igx-css-vars` mixin and pass the `$custom-splitter-theme` map.
+```scss
+// In app-splitter-styling.component.scss
+
+// Pass our custom-splitter-theme to `igx-css-vars` mixin.
+// The `:host` here makes sure that all the theming will affect only this splitter component.
+:host {
+  @include igx-css-vars($custom-splitter-theme);
+}
+```
 
 ### API References
 <div class="divider--half"></div>
