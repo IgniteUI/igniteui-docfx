@@ -70,7 +70,7 @@ To create a two-way data-binding, set an ngModel:
 #### Keyboard Navigation
 Date Time Editor Directive has intuitive keyboard navigation that makes it easy to jump through different DateParts, increment, decrement, etc. without having to touch the mouse.
 
-- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. Jumps from current section to the same caret position of the next/previous section. On start/end sections, first jump to the other end of the same section following the direction of the arrow.
+- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. On <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Right</kbd> it goes to the end of the section. If at the end of the section it goes to the end of next section if any. Same in opposite direction.
 
 - <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#isspinloop)
 
