@@ -153,11 +153,10 @@ For details check out the [`Input Group styling guide`](input_group.md#styling).
 
 ### Additional Resources
 Related topics:
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Mask](mask.md)
 * [Label & Input](label_input.md)
-* [Combo](combo.md)
-* [Select](select.md)
-* [Display Density](display_density.md)
+* [Reactive Forms Integration](input_group_reactive_forms.md)
+
 
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
