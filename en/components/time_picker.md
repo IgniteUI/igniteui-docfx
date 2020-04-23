@@ -21,8 +21,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The first step is to import the `IgxTimePickerModule` in the **app.module.ts** file. 
 
-> [!NOTE]
-> The IgxTimePicker is also dependent on both the **BrowserAnimationsModule** and **HammerModule** for touch interactions. They need to be added to the AppModule as well.
+>[!NOTE]
+>The IgxTimePicker is also dependent on both the **BrowserAnimationsModule** and **HammerModule** for touch interactions. They need to be added to the AppModule as well.
 
 ```typescript
 // app.module.ts
@@ -101,7 +101,8 @@ To change the delta of the items, set the [`itemsDelta`]({environment:angularApi
 
 Set [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to limit the user input. You can handle the [`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) in order to notify the user if an invalid time is selected. 
 
->Note that the min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
+>[!NOTE]
+>The min/max values should follow the [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format):
 
 ```typescript
 // app.module.ts
@@ -185,7 +186,8 @@ The user will now be able to type, edit or delete the time value in the input in
 
 When the mouse caret is positioned at the hours, minutes or AM/PM placeholders and pressing the <kbd>Up</kbd> arrow key or using `Mouse Wheel Up`, the hours/minutes are increased. Pressing the <kbd>Down</kbd> arrow key or `Mouse Wheel Down` is used for the reversed operation. 
 
-> Note that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is false, the time scrolling will stop at the specified min/max hour/minute value.
+>[!NOTE]
+>If the time picker's [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set and [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) is false, the time scrolling will stop at the specified min/max hour/minute value.
 
 **Keyboard Operations:**
 
@@ -264,7 +266,8 @@ All the information mentioned in the <a href="#templating-input-group">Templatin
 public today: Date = new Date();
 ```
 
-Note that `displayTime` property, exposed in the template context, is **read-only**. In the example above it is used in combination with the input element **blur** event in order to achieve two-way binding.
+>[!NOTE]
+>The `displayTime` property, exposed in the template context, is **read-only**. In the example above it is used in combination with the input element **blur** event in order to achieve two-way binding.
 
 ```typescript
 public today: Date = new Date();
@@ -345,8 +348,8 @@ $my-time-picker-theme: igx-time-picker-theme(
 );
 ```
 
-> [!NOTE]
-> In order to style any additional components that are used as part of the time picker window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
+>[!NOTE]
+>In order to style any additional components that are used as part of the time picker window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
 Since the time picker window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the time picker window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
@@ -369,8 +372,8 @@ export class TimepickerStylingComponent {
 
 Now, the time picker's items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
-> [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+>[!NOTE]
+>In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
 #### Including Themes
 
