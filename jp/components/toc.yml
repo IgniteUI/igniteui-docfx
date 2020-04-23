@@ -57,7 +57,7 @@
       new: true
     - name: データ分析
       href: general/framework-and-features/data-analysis.md
-      new: true
+      updated: true
 - name: グリッドとリスト
   href: grids_and_lists.md
   header: true
