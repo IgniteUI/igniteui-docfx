@@ -266,7 +266,7 @@ class Country {
         this.name = name;
 
         this.population = pop;
-        this.ddpPerCapita = gdp;
+        this.gdpPerCapita = gdp;
         this.gdpTotal = gdp * pop;
         this.dptPerCapita = dpt;
         this.phonePer100 = phones;

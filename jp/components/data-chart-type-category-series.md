@@ -67,7 +67,7 @@ Angular データ チャート コンポーネントは、さまざまな軸タ�
 上記データ要件を満たすデータソースとして [SampleCategoryData](data-chart-data-sources-category.md) を使用できます。
 
 ```ts
-this.state = { dataSource: SampleCategoryData.create() }
+public dataSource: any[] = SampleCategoryData.create();
 ```
 
 ### モジュールの要件
