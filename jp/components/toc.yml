@@ -179,7 +179,7 @@
   new: true
   items:
     - name: ライブデータ/リアルタイム更新
-      href: grid/live_data.md
+      href: treegrid/live_data.md
       new: false
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
@@ -980,7 +980,7 @@
   new: true
 - name: Zoom Slider
   new: true
-  href: zoomslider_overview.md
+  href: zoomslider-overview.md
 - name: メニュー
   header: true
 - name: Navigation Drawer

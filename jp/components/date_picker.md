@@ -55,7 +55,6 @@ export class AppModule {}
 ```
 
 以下は結果です。
-
 <div class="sample-container loading" style="height: 550px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>
@@ -65,7 +64,6 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 #### 日付の設定
-
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#value) 入力を設定します。日付を追加します。
 
 ```typescript
@@ -83,7 +81,6 @@ public date: Date = new Date(Date.now());
 ```
 
 以下は結果です。
-
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="date-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" class="lazyload"></iframe>
 </div>
@@ -95,11 +92,12 @@ public date: Date = new Date(Date.now());
 双方向データ バインディングを作成するには、以下のように `ngModel` を設定します。
 
 ```html
+<!-- date-picker-sample.component.html -->
+
 <igx-date-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
 #### ボタンの追加
-
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、カレンダーで今日を選択する ‘今日’ ボタンをサポートします。'キャンセル 'ボタンも有効にできます。 
 
 ボタンを有効にするには、 [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) と [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) 入力を使用してボタン テキストを設定します。 
@@ -113,7 +111,6 @@ public date: Date = new Date(Date.now());
 #### マルチビュー モードの設定
 [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) 入力を使用して、カレンダーに表示される月数を設定します。現在の月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) を使用します。
 
-
 ボタンが表示されるサンプル:
 <div class="sample-container loading" style="height: 680px;">
     <iframe id="date-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>
@@ -124,7 +121,6 @@ public date: Date = new Date(Date.now());
 <div class="divider--half"></div>
 
 #### カスタム書式設定
-
 デフォルトで表示する値は指定した [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) に基づいて書式設定され、カスタム フォーマッタも使用できます。フォーマッタ関数の追加:
 
 ```typescript
@@ -203,7 +199,6 @@ public formatter = (date: Date) => {
 </div>
 <div class="divider--half"></div>
 
-
 #### 入力グループのテンプレート化
 
 Date Picker の入力グループをカスタマイズできます。そのために `IgxDatePickerTemplate`ディレクティブでデートピッカーに入れ子になった ng-template をデコレートする必要があります。ng-template コンテキストは、以下のメンバーを公開しています。 コンテキストは以下のメンバーを公開します。
@@ -272,6 +267,19 @@ public date: Date = new Date(Date.now());
 
 <div class="divider--half"></div>
 
+#### 日付範囲ピッカー
+以下のサンプルは、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) および  [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用して日付範囲ピッカーを作成する方法を示します。
+日付範囲ピッカーは、飛行機のチケットを注文するための Web フォームで使用されます。
+
+<div class="sample-container loading" style="height: 650px;">
+    <iframe id="date-picker-sample-9" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-9" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-9" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
+<div class="divider--half"></div>
+
 #### カスタム ボタン アクション
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、定義済みの 'Today' と 'Cancel' ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
@@ -313,7 +321,6 @@ public yearsView(datePicker: IgxDatePickerComponent) {
 <div class="divider--half"></div>
 
 ### インターナショナリゼーション
-
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) はロケールをサポートします。[`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) 入力を使用して設定できます。ヘッダー (`igxCalendarHeader`) およびサブヘッダー (`igxCalendarSubheader`) の  [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) テンプレートを使用してヘッダーおよびサブヘッダーの外観を設定できます。このテンプレートを使用する方法の詳細については、`IgxCalendarComponent` [ヘルプ](calendar.md)を参照してください。以下は日本ロケール定義を持つ日付ピッカーです。
 
 ```html
@@ -358,7 +365,6 @@ public yearsView(datePicker: IgxDatePickerComponent) {
     </ng-template>
 </igx-date-picker>
 ```
-
 **ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が [**IgxDatePickerComponent**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) の locale および format オプションに基づいて設定されるために必要です。
 
 ```typescript
@@ -380,9 +386,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 }
 ```
 
-
 以下は結果です。
-
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="date-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" class="lazyload"></iframe>
 </div>
@@ -391,7 +395,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 </div>
 <div class="divider--half"></div>
 
-### API
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
