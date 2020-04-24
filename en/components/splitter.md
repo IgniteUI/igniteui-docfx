@@ -9,11 +9,11 @@ _keywords: angular splitter, igniteui for angular, infragistics
 The Ignite UI for Angular Splitter component provides the ability to create layouts, split into multiple vertically or horizontally arranged panes that may be resized, expanded and collapsed. These interactions are performed through UI exposed in the splitter bars between the panes. A simple Splitter layout is demonstrated in the demo below.
 
 ### Demo
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="splitter-horizontal-iframe" src='{environment:dvDemosBaseUrl}/layouts/splitter-horizontal' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="splitter-horizontal-sample-iframe" src='{environment:dvDemosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-horizontal-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -128,11 +128,11 @@ public typeVertical = SplitterType.Vertical;
 ```
 
 #### Demo
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="splitter-nested-iframe" src='{environment:dvDemosBaseUrl}/layouts/splitter-nested' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="splitter-nested-sample-iframe" src='{environment:dvDemosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-nested-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -151,23 +151,16 @@ Keyboard navigation is available by default in the splitter component. When you 
 - `Ctrl + Arrow Right` - Expands/Collapses a pane in a horizontal splitter
 
 ### Styling
-You can change the default styles of the **igxSplitter** component by creating a new theme for it.
+To get started with styling the **igxSplitter** component, you need to import the `index` file, where all the theme functions and component mixins live:
 
-#### Demo
-This is the final result from applying your new theme.
-
-<div class="sample-container loading" style="height: 340px">
-    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-#### Creating a component theme
-First you need to [create a custom palette](../themes/palette.md).
-Let's create the component theme and pass that custom palette to it.
 ```scss
-// In app-splitter-styling.component.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+You can change the default styles of the splitter by creating a new theme that extends the [`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme).
+
+```scss
+// In splitter-styling-sample.component.scss
 
 // Create custom splitter theme.
 $custom-splitter-theme: igx-splitter-theme(
@@ -178,17 +171,38 @@ $custom-splitter-theme: igx-splitter-theme(
 );
 ```
 
-#### Applying the component theme
-Now to apply the component theme all you need to do is to include `igx-css-vars` mixin and pass the `$custom-splitter-theme` map.
-```scss
-// In app-splitter-styling.component.scss
+#### Using CSS variables 
 
-// Pass our custom-splitter-theme to `igx-css-vars` mixin.
-// The `:host` here makes sure that all the theming will affect only this splitter component.
+The next step is to pass the custom splitter theme:
+
+```scss
+@include igx-css-vars($custom-splitter-theme);
+```
+
+#### Using mixins
+
+In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
+
+If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+
+```scss
 :host {
-  @include igx-css-vars($custom-splitter-theme);
+    ::ng-deep {
+        // Pass the custom splitter theme to the `igx-splitter` mixin
+        @include igx-splitter($custom-splitter-theme);
+    }
 }
 ```
+
+#### Demo
+This is the final result from applying your new theme.
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### API References
 <div class="divider--half"></div>
