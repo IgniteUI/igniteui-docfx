@@ -1,22 +1,22 @@
 ---
-title: Ignite UI for Angular Frameworks and features 
-_description: Learn how to configure ARIA Acessibility and directionality of your application with Ignite UI for Angular
-_keywords: aria support, a11y, ignite ui for angular, infragistics
+title: Ignite UI for Angular フレームワーク & 機能
+_description: Ignite UI for Angular によって ARIA アクセシビリティと文字表記の方向を設定する方法を説明します。
+_keywords: aria support, aria サポート, a11y, ignite ui for angular, infragistics, インフラジスティックス
 ---
 
-## Frameworks and features
+## フレームワークと機能
 
-### Accessibility and Directionality
+### アクセシビリティと文字表記の方向
 
-This section shows the accessibility (ARIA) support of the framework as well as how easily manageable the `directionality` of the components is.
+このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
 
-#### Enabling right-to-left direction (RTL).
+#### 右から左方向 (RTL) の有効化
 
-`Ignite UI for Angular` library is susceptible to `directionality` manipulation only when setting `dir` attribute on either `html` or `body` tags. Also, keep in mind that runtime changes are not detected.
+`Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。また、ランタイムの変更は検出されないことに注意してください。
 
-With that being said, let's move to the following example:
+次の例に移動します。
 
-##### Step 1 - Setting the 'dir' attribute on both tags.
+##### 手順 1 - 両方のタグで ‘dir’ 属性を設定します。
 
 ```html
 <html dir="rtl">
@@ -26,15 +26,15 @@ With that being said, let's move to the following example:
 </html>
 ```
 
-The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
+上記の場合、`body` タグの内部属性タグが優先されます。
 
-##### Step 2 - Notifying the [theming engine](../../themes/index.md) for the respective direction.
+##### Step 2 - 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
 
-Setting the `$direciton` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
+そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direciton` パラメーターを設定します。
 
 ```scss 
 @include igx-core($direction: rtl);
 ```
 
-These are all the steps needed to adjust your content.
+コンテンツを調整する手順はこれですべてになります。
 
