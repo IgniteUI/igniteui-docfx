@@ -969,10 +969,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジションストラテジ
+  - name: 配置ストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロールストラテジ
+  - name: スクロール ストラテジ
     href: overlay_scroll.md
     new: false
   - name: スタイル設定
