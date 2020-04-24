@@ -1,5 +1,5 @@
 ﻿---
-title: Angular Data Grid | マテリアル テーブル | Ignite UI for Angular | Infragistics
+title: Angular Data Grid | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material Table に基づいた Ignite UI for Angular データ グリッドの使用方法について。さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
 _keywords: angular data grid, igniteui for angular, インフラジスティックス
 _language: ja

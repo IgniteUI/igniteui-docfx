@@ -1,5 +1,5 @@
 ---
-title: Angular Grid Excel スタイル フィルタリング |Ignite UI for Angular の |infragistics
+title: Angular Grid Excel スタイル フィルタリング | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルでデータ フィルターのように Excel を設定する方法を学びます。グリッド Excel フィルタリングがより使いやすくなりました。
 _keywords: Excel ライクなフィルター, igniteui for angular, インフラジスティックス
 _language: ja

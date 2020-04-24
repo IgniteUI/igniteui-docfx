@@ -1,6 +1,6 @@
 ﻿
 ---
-title: Angular 列グループの折りたたみ|Ignite UI for Angular |インフラジスティックス
+title: Angular 列グループの折りたたみ | Ignite UI for Angular | インフラジスティックス
 _description: 複数列ヘッダーで折りたたみ機能使用すると、現在の列の下にあるネストされた列のサブセットを折りたたみ、ネストされたヘッダーを表示して、要約した情報の例を示します。
 _keywords: 列ヘッダーの折りたたみ, ignite ui for angular, インフラジスティックス
 _language: ja

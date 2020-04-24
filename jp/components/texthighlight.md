@@ -1,5 +1,5 @@
 ---
-title: TextHighlight ディレクティブ - ネイティブ Angular |Ignite UI for Angular
+title: TextHighlight ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular TextHighlight ディレクティブは、テキスト部分のハイライトやアクティブ ハイライトがあります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular TextHighlight ディレクティブ, IgxTextHighlight ディレクティブ
 _language: ja
