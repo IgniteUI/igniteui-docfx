@@ -159,7 +159,7 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 -   `createRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
 
-作成可能なさまさまな塗りつぶしを表す派生タイプは以下の通りです:
+以下は、作成可能なさまさまな塗りつぶしを表す派生タイプです。
 
 -   [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
 
@@ -177,9 +177,9 @@ var cellFill = CellFill.createSolidFill("Blue");
 worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
 ```
 
-セルで線状グラデーションと長方形グラデーションを使用して、色 (Excel セルの背景、罫線などの色) を指定できます。これらのグラデーションを付けられたワークブックを .xls ファイル形式で保存して、Excel 2007/2010 で開いたとき、グラデーションを表示したいが、これらのファイルを Microsoft Excel 2003 で開くときは、最初のグラデーション境界からのベタ一色の色でセルが塗りつぶされるようにしたいです。
+セルで線状グラデーションと長方形グラデーションを使用して、色 (Excel セルの背景、罫線などの色) を指定できます。これらのグラデーションを付けられたワークブックを .xls ファイル形式で保存して、Excel 2007/2010 で開いたときはグラデーションを表示し、これらのファイルを Microsoft Excel 2003 で開くときは、最初のグラデーション境界からのベタ一色の色でセルが塗りつぶされるようにします。
 
-これらは、以下のように色を定義できる方法です:
+以下は色を定義する方法です。
 
 -   自動的な色 (WindowText システム カラー)
 
@@ -189,7 +189,7 @@ worksheet.rows(0).cells(0).cellFormat.Fill = cellFill;
 
 RGB またはテーマの色が使用される場合、色を明るくする、または暗くするためにオプションの濃淡を適用できます。この濃淡は Microsoft Excel 2007 UI では直接設定できませんが、ユーザーに表示されるカラー パレットのさまざまな色が濃淡が適用された実際的なテーマの色になります。
 
-各ワークブックは 12 の関連付けられたテーマの色があります。これらは以下の通りです:
+以下は各ワークブックと関連付けされた 12 色のテーマ色です。
 
 -   ライト 1
 
@@ -217,13 +217,13 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 -   これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
 
-色は、シールされた不変クラスである、[`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) インスタンスを作成することを可能にするさまざまなコンストラクターがあります。
+色は、シールされた不変クラスである [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) インスタンスを作成することを可能にするさまざまなコンストラクタがあります。
 
 [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
 
 [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
 
-.xlsx など新しいファイル形式で保存するときは、より新しい色の情報が直接ファイルに保存されます。.xls など古いファイル形式で保存するときは、パレットで最も近い色のインデックスが保存されます。さらに、古い形式には、新しい色の情報を示すために保存できる将来の機能レコードがあります。
+.xlsx など新しいファイル形式で保存するときは、より新しい色の情報が直接ファイルに保存されます。.xls など古いファイル形式で保存するときは、パレットで最も近い色のインデックスが保存されます。さらに、古い形式には、新しい色の情報を示すために保存できる機能レコードがあります。
 
 古い形式が Microsoft Excel 2003 以前のバージョンで開かれると機能が無視されますが Excel 2007 以降で開かれるとレコードが読み取られて色情報が標準形式レコードから以前読み込まれたインデックス付きの色を上書きします。
 
