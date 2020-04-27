@@ -99,6 +99,106 @@ The final result would be something like that:
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+#### Label Positioning
+
+You can position the label using the checkbox's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) property:
+
+```html
+<igx-checkbox labelPosition="before"></igx-checkbox>
+```
+
+If the `labelPosition` is not set, the label will be positioned after the checkbox.
+
+#### Indeterminate Checkbox
+
+In addition to the checked and unchecked states, there is a third state a checkbox can be in: **indeterminate**. In this state the checkbox is neither checked, nor unchecked. This is set using the checkbox's [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) property:
+
+```html
+<igx-checkbox [indeterminate]="true"></igx-checkbox>
+```
+
+We can create an app that has a list of tasks that need to be done and one master checkbox that's going to be checked only if all the tasks beloware completed. We're going to upgrade the previous sample. Starting with the template:
+
+```html
+<!-- app.component.html -->
+
+<igx-checkbox [readonly]="true" [(ngModel)]="masterCheckbox.checked" [(indeterminate)]="masterCheckbox.indeterminate" (click)="toggleAll()">
+All done
+</igx-checkbox>
+<igx-checkbox class="tasks" *ngFor="let task of tasks" [(ngModel)]="task.done">
+    {{ task.description }}
+</igx-checkbox>
+```
+
+Next, we're going to indent the subtasks, so it's more visual that they're dependable on each other.
+
+```scss
+// app.component.scss
+
+:host {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+}
+
+igx-checkbox {
+    margin-top: 16px;
+}
+
+igx-checkbox.tasks {
+    padding-left: 10px;
+}
+```
+
+And finally, we'll create the logic of our application:
+
+```ts
+// app.component.ts
+
+public tasks = [
+    { done: true, description: "Research" },
+    { done: true, description: "Implement" },
+    { done: false, description: "Test" }
+];
+
+public get masterCheckbox() {
+    return this.tasks.reduce(
+        (acc, curr, idx, arr) => {
+            acc.checked = acc.checked && curr.done;
+            acc.done = curr.done ? acc.done + 1 : acc.done;
+            acc.indeterminate = acc.done === arr.length ? false : !!acc.done;
+
+            return acc;
+        },
+        {
+            checked: true,
+            done: 0,
+            indeterminate: false
+        }
+    );
+}
+
+public toggleAll() {
+    if (this.masterCheckbox.checked) {
+        for (const task of this.tasks) {
+            task.done = false;
+        }
+    } else {
+        for (const task of this.tasks) {
+            task.done = true;
+        }
+    }
+}
+```
+After all that is done, our application should look like this:
+
+<div class="sample-container loading" style="height: 200px">
+    <iframe id="checkbox-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Styling
 
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
