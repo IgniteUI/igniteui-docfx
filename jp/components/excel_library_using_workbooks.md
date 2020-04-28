@@ -79,7 +79,7 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
--   IsProtected
+-   isProtected
 
 ブックが保護されているかどうかの確認この読み取り専用プロパティは、ワークブックに Protect メソッドのオーバーロードを使用して設定された保護がある場合、true を返します。
 
