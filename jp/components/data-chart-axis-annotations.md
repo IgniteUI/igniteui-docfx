@@ -40,7 +40,7 @@ Ignite UI for Angular データチャート コンポーネントでは、軸に
 
 ### コード例
 
-このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して $ ProductName$ データチャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) も黄色のテキスト色になるようにカスタマイズされています。
+このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して Ignite UI for Angular データチャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) も黄色のテキスト色になるようにカスタマイズされています。
 
 ```html
 <igx-data-chart [dataSource]="data" width="100%" height="500px">

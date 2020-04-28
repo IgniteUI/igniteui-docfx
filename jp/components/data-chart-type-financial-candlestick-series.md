@@ -2,13 +2,13 @@
 title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ファイナンシャル
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
 _keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
-mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
+mentionedTypes: ['XamDataChart', 'FinancialPriceSeries','PriceDisplayType','CategoryXAxis']
 _language: ja
 ---
 
 ## ファイナンシャル ローソク足チャート
 
-`Candlestick` モードの Ignite UI for Angular 金融価格チャートは、株価をプロットし、各日の株価の高値、安値、始値、終値を表示するために使用します。各データ ポイントは、上下の両方に垂直線で垂直列としてプロットされます。垂直の線は投資の高値と安値の間の範囲を示します。垂直線の上部はセッション中の最高価格を示し、垂直線の下部はセッション中の最低価格を示します。垂直列は、投資の始値と終値の間の範囲を示します。開始値と終了値の間で正の値がある場合はシリーズの [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) を使用して列が満たされ、負の値がある場合は Series の [`negativeBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#negativebrush) を使用して列が満たされます。
+[`Candlestick`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/pricedisplaytype.html#candlestick) モードの Ignite UI for Angular 金融価格チャートは、株価をプロットし、各日の株価の高値、安値、始値、終値を表示するために使用します。各データ ポイントは、上下の両方に垂直線で垂直列としてプロットされます。垂直の線は投資の高値と安値の間の範囲を示します。垂直線の上部はセッション中の最高価格を示し、垂直線の下部はセッション中の最低価格を示します。垂直列は、投資の始値と終値の間の範囲を示します。開始値と終了値の間で正の値がある場合はシリーズの [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) を使用して列が満たされ、負の値がある場合は Series の [`negativeBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#negativebrush) を使用して列が満たされます。
 
 ### サンプル
 
@@ -32,7 +32,7 @@ Angular データ チャートコンポーネントはさまざまなタイプ�
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースは、少なくともデータ項目を 1 つ含む必要があり、含まない場合はデータ チャートでファイナンシャル シリーズを描画しません。
--   すべてのデータ項目には、財務軸の `Label` プロパティ ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) にマッピングされるデータ列 (文字列または日時) が少なくとも1つ含まれている必要があります。
+-   すべてのデータ項目には、財務軸の [`label`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#label) プロパティ ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) にマッピングされるデータ列 (文字列または日時) が少なくとも1つ含まれている必要があります。
 -   すべてのデータ項目は、ファイナンシャル シリーズのプロパティ使用してマップされる 5 つの数値データ列を含む必要があります。 [`openMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#openmemberpath)、[`highMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#highmemberpath), [`lowMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#lowmemberpath)、[`closeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#closememberpath)、[`volumeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#volumememberpath)。
 
 上記データ要件を満たすデータソースとして [SampleFinancialData](data-chart-data-sources-financial.md) を使用できます。

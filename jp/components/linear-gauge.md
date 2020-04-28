@@ -12,8 +12,7 @@ Linear Gauge コンポーネントは、値とスケールまたは複数の範�
 
 ### サンプル
 
-Ignite UI for Angular Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
-また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
+Ignite UI for Angular Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
@@ -41,12 +40,13 @@ gauges パッケージをインストールするときに core パッケージ�
 ```ts
 // app.module.ts
 import { IgxLinearGaugeModule } from 'igniteui-angular-gauges';
-import { IgxLinearGauge } from 'igniteui-angular-gauges';
+import { IgxLinearGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
         IgxLinearGaugeModule,
+        IgxLinearGaugeComponent,
         // ...
     ]
 })
@@ -60,8 +60,8 @@ export class AppModule {}
 以下のコードは針およびスケールで 3 つの比較範囲を含むリニア ゲージを作成する方法を紹介します。
 
 ```html
- <igx-linear-gauge width="70px"
-                   height="300px"
+ <igx-linear-gauge width="700px"
+                   height="30px"
                    minimumValue = "5"
                    maximumValue = "55"
                    value = "43">
@@ -81,8 +81,6 @@ export class AppModule {}
 ```
 
 <div class="divider--half"></div>
-
-## 設定可能な要素
 
 ### 針
 
@@ -112,10 +110,10 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-ranges-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="linear-gauge-needle-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-needle-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
