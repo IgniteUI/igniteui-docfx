@@ -117,7 +117,7 @@ In addition to the checked and unchecked states, there is a third state a checkb
 <igx-checkbox [indeterminate]="true"></igx-checkbox>
 ```
 
-We can create an app that has a list of tasks that need to be done and one master checkbox that's going to be checked only if all the tasks beloware completed. We're going to upgrade the previous sample. Starting with the template:
+We can create an app that has a list of tasks that need to be done and one master checkbox that's going to be checked only if all the tasks are completed. Let's update the previous sample. Starting with the template:
 
 ```html
 <!-- app.component.html -->
