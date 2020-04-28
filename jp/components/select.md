@@ -1,5 +1,5 @@
 ---
-title: Angular Select |Material Select |IgniteUI for Angular |Infragistics
+title: Angular Select | Material Select | IgniteUI for Angular | インフラジスティックス
 _description: Angular Select の設定方法。マテリアル選択は、Angular ドロップダウン リストを備えた入力を提供し、Angular コンボボックスの単一項目選択を可能にします。
 _keywords:  angular select, igniteui for angular, インフラジスティックス
 _language: ja

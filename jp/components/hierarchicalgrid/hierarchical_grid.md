@@ -1,5 +1,5 @@
 ﻿---
-title: Angular 階層データグリッド |マテリアル テーブル|Ignite UI for Angular |Infragistics
+title: Angular 階層データグリッド | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
 _keywords: Angular データ グリッド, igniteui for angular, インフラジスティックス
 _language: ja
