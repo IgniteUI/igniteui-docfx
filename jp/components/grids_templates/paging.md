@@ -1,5 +1,5 @@
 ﻿---
-title: Angular Grid ソート|テンプレート |Ignite UI for Angular |Infragistics
+title: Angular Grid ソート | テンプレート | Ignite UI for Angular | インフラジスティックス
 _description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular pagination, igniteui for angular, infragistics
 _language: ja

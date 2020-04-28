@@ -28,7 +28,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-次に、**app.module.ts** ファイルに `IgxDatePickerModule` をインポートします。[**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)を使用するため、 **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
+次に、**app.module.ts** ファイルに `IgxDatePickerModule` をインポートします。Date Picker は [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)を使用するため、 **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -267,7 +267,20 @@ public date: Date = new Date(Date.now());
     <iframe id="date-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+
+<div class="divider--half"></div>
+
+#### 日付範囲ピッカー
+以下のサンプルは、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) および  [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用して日付範囲ピッカーを作成する方法を示します。
+日付範囲ピッカーは、飛行機のチケットを注文するための Web フォームで使用されます。
+
+<div class="sample-container loading" style="height: 650px;">
+    <iframe id="date-picker-sample-9" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-9" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-9" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>

@@ -1,7 +1,8 @@
 ---
-title: ツリーマップ |データ可視化ツール |Ignite UI for Angular |データ バインディング |インフラジスティックス
+title: ツリーマップ | データ可視化ツール | Ignite UI for Angular |データ バインディング |インフラジスティックス
 _description: Treemap を使用して、ストリップ、スクエア、スライスアンドダイスアルゴリズムをサポートする複数のレベルでデータポイントの相対的な重み付けをユーザーに表示します。
 mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
+_language: ja
 ---
 
 ### ツリーマップ

@@ -1,5 +1,5 @@
 ﻿---
-title: ページ レイアウト | IgniteUI for Angular | Infragistics
+title: ページ レイアウト | IgniteUI for Angular | インフラジスティックス
 _description: Angular アプリケーションのページ レイアウトをカスタマイズする方法を説明します。
 _keywords: ページ レイアウト, ignite ui for angular, インフラジスティックス
 _language: ja
