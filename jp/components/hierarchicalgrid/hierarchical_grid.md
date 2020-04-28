@@ -1,5 +1,5 @@
 ﻿---
-title: Angular 階層データグリッド |マテリアル テーブル|Ignite UI for Angular |Infragistics
+title: Angular 階層データグリッド | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
 _keywords: Angular データ グリッド, igniteui for angular, インフラジスティックス
 _language: ja
@@ -30,7 +30,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
 
 階層グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
 

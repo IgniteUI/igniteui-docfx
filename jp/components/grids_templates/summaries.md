@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 集計|グループ フッター | Ignite UI for Angular | Infragistics
+title: Angular Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
 _keywords: Angular Grid 集計, igniteui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 集計|グループ フッター | Ignite UI for Angular | Infragistics
+title: Angular Tree Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
 _keywords: Angular Hierarchical Grid 集計
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 集計|グループ フッター | Ignite UI for Angular | Infragistics
+title: Angular Hierarchical Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
 _keywords: Angular Hierarchical Grid 集計
 _language: ja

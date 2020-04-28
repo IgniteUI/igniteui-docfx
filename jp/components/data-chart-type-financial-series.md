@@ -40,7 +40,7 @@ _language: ja
 -   [`IgxAbsoluteVolumeOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxabsolutevolumeoscillatorindicatorcomponent.html) (AVO) は、2 つの平均出来高測定の差異を使用して計算されます。パーセンテージ ボリューム オシレーターに似ていますが、範囲が -100% から +100% まであります。インジケーターは、ボリューム トレンドの増加または減少を識別するために使用します。ユーザーは分析の期間を選択できます。
 -   [`IgxAccumulationDistributionIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaccumulationdistributionindicatorcomponent.html) (ADI) は、一般的に出来高に関連する指標によく使用されます。投資家が売買をするかどうかの差異を調べることによって、株式、証券、またはインデックスの時間上の需要と供給を評価します。
 -   [`IgxAverageDirectionalIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaveragedirectionalindexindicatorcomponent.html) |(ADX) はトレンドの強さを計測します。このインジケーターは、値動きの強さと方向を決定するために通常使用されます。
--   [`IgxAverageTrueRangeIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaveragetruerangeindicatorcomponent.html) |（ATR）は、一定期間内の証券の価格変動またはボラティリティの程度を測定します。このインジケーターは価格方向や期間ではなく、ただ価格移動の程度、つまり乱高下を測定しています。ATR (Average True Range) は、さまざまなベース (毎日、毎週、毎月など) で 14 日の期間を使用して頻繁に計算されています。Average True Range というのは最近 14 期間の TR 値の指数移動平均のことです。使用される実際の期間は、ユーザー設定によって変わります。
+-   [`IgxAverageTrueRangeIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaveragetruerangeindicatorcomponent.html) | (ATR) は、一定期間内の証券の価格変動またはボラティリティの程度を測定します。このインジケーターは価格方向や期間ではなく、ただ価格移動の程度、つまり乱高下を測定しています。ATR (Average True Range) は、さまざまなベース (毎日、毎週、毎月など) で 14 日の期間を使用して頻繁に計算されています。Average True Range というのは最近 14 期間の TR 値の指数移動平均のことです。使用される実際の期間は、ユーザー設定によって変わります。
 -   [`IgxBollingerBandWidthIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandwidthindicatorcomponent.html) |(BBW) は [`IgxBollingerBandsOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html) と一緒に使用されます。このインジケーターは、指定したポイントでボリンジャー バンドの幅を表します。変化が多い場合、バンドの幅がより大きくなります。狭い帯域幅 (低値) は標準偏差の減少を示します。広い帯域幅 (高値) は価格の標準偏差の増加を示します。[`IgxBollingerBandsOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html) のようなスケーリング係数をサポートするため、それらの値を一致させることができます。
 -   [`IgxChaikinVolatilityIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxchaikinvolatilityindicatorcomponent.html) (CHV) は、指定された期間中の高値と安値の差異の指数移動平均の変化割合を表示することによって、証券の乱高下を反映する財務指標です。
 -   [`IgxChaikinOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxchaikinoscillatorindicatorcomponent.html) は、蓄積/分配インジケーターでトレンドを識別するために使用される (COI) です。チャイキン オシレーターは、蓄積/分配インジケーターの 3 日間の指数移動平均（EMA）から蓄積/分配インジケーターの 10 日間の EMA を引いたものです。
@@ -48,7 +48,7 @@ _language: ja
 -   [`IgxDetrendedPriceOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdetrendedpriceoscillatorindicatorcomponent.html) (DPO) は、短期間のトレンドを識別するために、長期間の株価トレンドを制御するために設計された財務指標です。変位移動平均に基づきますが、モメンタム オシレーターではありません。
 -   [`IgxEaseOfMovementIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxeaseofmovementindicatorcomponent.html) (EOM) は、証券の価格を変更するために必要な出来高を識別するために使用される財務指標です。通常移動平均で平滑化されます。
 -   [`IgxFastStochasticOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfaststochasticoscillatorindicatorcomponent.html) (FSO) は、一定期間の高/低範囲に関連する終値を表示します。確率オシレーターには、ファスト、スロー、フルの 3 つのタイプがあります。このインジケーターはモメンタム インジケーターです。現在の終値を高値/安値の範囲に対して 0 ～ 100 のスケールを使用して関係を示します。これは、株価は高騰市況では 100 に近づき、 下降市場で 0 に近づくという前提に基づきます。このインジケーターは、買う拡散または売る拡散を識別するために使用されます。
--   [`IgxForceIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxforceindexindicatorcomponent.html) (FII) は、金融アナリストが株のトレンドがプラスかマイナスかを判断するために使用する価格と数量の変動要因です。勢力指数は、今日の終値から昨日の終値を引いて、その差に当日の出来高を掛けて計算されます。今日の終値が昨日の終値より高い場合、勢力指数は正の数になります。終値が昨日の終値より高い場合、勢力指数は正の数になります。
+-   [`IgxForceIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxforceindexindicatorcomponent.html) (FII) は、金融アナリストが株のトレンドがプラスかマイナスかを判断するために使用する価格と数量の変動要因です。勢力指数は、今日の終値から前日の終値を引いて、その差に当日の出来高を掛けて計算されます。今日の終値が前日の終値より高い場合、勢力指数は正の数になります。終値が前日の終値より低い場合、勢力指数は負の数になります。
 -   [`IgxFullStochasticOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfullstochasticoscillatorindicatorcomponent.html) (FSO) は、一定期間の高/低範囲に関連する終値を表示します。このインジケーターは [`IgxSlowStochasticOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxslowstochasticoscillatorindicatorcomponent.html) に似ていますが、期間のカスタマイズがあります。
 -   [`IgxMarketFacilitationIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarketfacilitationindexindicatorcomponent.html) (MFI) は、効率的に計測するために分析で株価と出来高を組み合わせます。計算は、安値と高値の差を出来高で割ります。
 -   [`IgxMassIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmassindexindicatorcomponent.html) (MII) は、トレンド反転を検出するために使用される財務指標です。価格範囲が大きくなった時に反落が起こるという前提に基づきます。計算は前のトレーディング範囲 (高値マイナス低値) を比較します。EMAs はその目的で使用されます。このインジケーターは、動きが大きい場合は増加し、動きが小さい場合は減少します。
@@ -56,7 +56,7 @@ _language: ja
 -   [`IgxMarketFacilitationIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarketfacilitationindexindicatorcomponent.html) (MFI) はモメンタム インジケーターで、相対力指数 (RSI) に似ています。MFI は証券のマネー フローのインおよびアウトの基準として使用され、トレンドの反転を予測するために使用できます。0 から 100 の範囲で、RSI のように変換される MFI。
 -   [`IgxMovingAverageConvergenceDivergenceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmovingaverageconvergencedivergenceindicatorcomponent.html) (MACD) は、ファイナンシャル サービスで広く使用される指標の１ つです。株価の強さの変化、方向、勢い、トレンドの長さの識別に使用されます。MACD は、終値の 2 つの指数移動平均間の差を取ることにより計算されます。違いはチャートで差異の移動平均と共に表されます。
 -   [`IgxNegativeVolumeIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnegativevolumeindexindicatorcomponent.html) (NVI) は、[`IgxPositiveVolumeIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpositivevolumeindexindicatorcomponent.html)とよく併用されます。このインジケーターは上げ相場を識別するために使用できます。この 2 つのインジケーターは、取引が少なく情報が少ない場合のスマートマネーの取引、または楽観的な売買が多い日の取引に基づいて計算されます。
--   この 2 つのインジケーターは、取引が少なく情報が少ない場合のスマートマネーの取引、または楽観的な売買が多い日の取引に基づいて計算されます。日のボリュームの合計は、今日の価格が昨日の価格より高いまたは安いかどうかに基づいて正の数または負の数に設定されます。より高い終値は正の値になり、より安い終値は負の値になります。この値は現在の合計値に計算されます。
+-   [`IgxOnBalanceVolumeIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxonbalancevolumeindicatorcomponent.html) (OBV) は、在庫の現在の販売数量の合計を計算し、この数量が特定の在庫の流入（購入）または流出（販売）のどちらであるかを表示します。日のボリュームの合計は、今日の価格が前日の価格より高いまたは安いかどうかに基づいて正の数または負の数に設定されます。より高い終値は正の値になり、より安い終値は負の値になります。この値は現在の合計値に計算されます。
 -   [`IgxPercentagePriceOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpercentagepriceoscillatorindicatorcomponent.html) (PPO) は、2 つの移動平均の差を表します。差異は、より大きな移動平均のパーセンテージとして表されます。エンドユーザーは分析期間を選択します。
 -   [`IgxPercentageVolumeOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpercentagevolumeoscillatorindicatorcomponent.html) (PVO) は、長期および短期で平滑化された出来高のパーセンテージ差異です。インジケーターは 0 の周りをホバーします。ユーザーは、さまざまな期間値を選択して分析できます。このインジケーターは、グラフィックスが表示される際に出来高のパターンを検出するのに便利です。増加する PVO は、ボリューム レベルの増加を示します。減らす PVO はボリューム レベルの減少を示します。
 -   [`IgxPositiveVolumeIndexIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpositivevolumeindexindicatorcomponent.html) (PVI) は、Negative Volume Index と併用され、上げ相場を識別するために使用できます。この 2 つのインジケーターは、取引が少なく情報が少ない場合のスマートマネーの取引、または楽観的な売買が多い日の取引に基づいて計算されます。
@@ -66,7 +66,7 @@ _language: ja
 -   [`IgxSlowStochasticOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxslowstochasticoscillatorindicatorcomponent.html) (SSO) は、一定期間の高/低範囲に関連する終値を表示します。このインジケーターは買いまたは売りのダイバージェンスを識別するために使用され、単純移動平均 (SMA) に 3 日間使用します。
 -   [`IgxStandardDeviationIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstandarddeviationindicatorcomponent.html) (SDI) は、株価または乱高下の統計的変動を測定します。個々の証券の終値と平均の終値との差は分散と呼ばれます。分散が大きくなると標準偏差が高くなるため、乱高下になります。分散が小さくなるほど (各終値と平均値の差異)、標準偏差は小さくなり、値の乱高下は小さくなります。
 -   [`IgxStochRSIIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstochrsiindicatorcomponent.html) (SRSI) は、指定された期間内で証券が過剰買いまたは過剰売りされた時に測定する財務指標です。値の範囲は 0 から 1 です。この指標は Stochastic Oscillator の数式を RelativeStrengthIndexIndicator(RSI) データに適用することによって計算されます。
--   TRIXIndicator (TRIX) は、証券の過剰買いまたは過剰売りを識別するために使用されるモメンタムの方法です。その他のオシレーターのように、TRIX スコアは 0 ぐらいです。正の値は証券の過剰買いを示し、負の値は過剰売りを示します。TRIX は、指定した時間期間の間に価格の 3 重の指数スムージング移動平均を使用して計算されます。単一線は、証券の価格が今後どのようになるかを示すために頻繁に使用されます。
+-   [`IgxTRIXIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtrixindicatorcomponent.html) (TRIX) は、証券の過剰買いまたは過剰売りを識別するために使用されるモメンタムの方法です。その他のオシレーターのように、TRIX スコアは 0 ぐらいです。正の値は証券の過剰買いを示し、負の値は過剰売りを示します。TRIX は、指定した時間期間の間に価格の 3 重の指数スムージング移動平均を使用して計算されます。単一線は、証券の価格が今後どのようになるかを示すために頻繁に使用されます。
 -   [`IgxTypicalPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtypicalpriceindicatorcomponent.html) (TPI) は、指定された期間で証券の高値、安値、および終値の算術的な平均を表す一般的な財務指標 (ピボット ポイント) です。
 -   [`IgxUltimateOscillatorIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxultimateoscillatorindicatorcomponent.html) (UOI) は、単一期間に基づく他のインジケーターに関連する乱高下およびノイズを削減するために、3 つの異なる期間の重み付けされた平均を使用する財務指標です。これは範囲限界インジケーターのため、スコアは 0 ~ 100 の間です。
 -   [`IgxWeightedCloseIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxweightedcloseindicatorcomponent.html) (WCI) は、その日の高値、安値、終値の平均を表す [`IgxTypicalPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtypicalpriceindicatorcomponent.html) に似ている財務指標です。ただし、このインジケーターは終値をより強調し、単純平均を計算する際に 2 回含まれます。
@@ -88,7 +88,7 @@ Angular データ チャート コンポーネントは、さまざまなタイ�
 上記データ要件を満たすデータソースとして [SampleFinancialData](data-chart-data-sources-financial.md) を使用できます。
 
 ```ts
-this.state = { dataSource: SampleFinancialData.create() }
+public dataSource: any[] = SampleFinancialData.create();
 ```
 
 ### モジュールの要件
@@ -106,12 +106,16 @@ import { IgxMedianPriceIndicator } from 'igniteui-angular-charts';
 // data chart's modules:
 
 import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
+import { IgxFinancialPriceSeriesModule } from 'igniteui-angular-charts';
 
 // in app.module.ts file
 @NgModule({
     imports: [
         // ...
         IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        IgxFinancialPriceSeriesModule,
         // ...
     ]
 })

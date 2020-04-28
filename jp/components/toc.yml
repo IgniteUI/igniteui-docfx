@@ -50,14 +50,15 @@
       new: false
 - name: フレームワーク & 機能
   href: general/framework-and-features/framework-and-features.md
-  new: true
+  new: false
   items:
     - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
-      new: true
+      new: false
     - name: データ分析
       href: general/framework-and-features/data-analysis.md
-      new: true
+      new: false
+      updated: true
 - name: グリッドとリスト
   href: grids_and_lists.md
   header: true
@@ -132,6 +133,9 @@
         - name: 選択に基づいた集計
           href: grid/selection_based_aggregates.md
           new: false
+        - name: 列選択
+          href: grid/column_selection.md
+          new: true
     - name: 検索
       href: grid/search.md
       new: false
@@ -179,7 +183,7 @@
   new: true
   items:
     - name: ライブデータ/リアルタイム更新
-      href: grid/live_data.md
+      href: treegrid/live_data.md
       new: false
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
@@ -242,6 +246,9 @@
         - name: セル選択
           href: treegrid/cell_selection.md
           new: false
+        - name: 列選択
+          href: treegrid/column_selection.md
+          new: true
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -337,6 +344,9 @@
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
           new: false
+        - name: 列選択
+          href: hierarchicalgrid/column_selection.md
+          new: true
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -380,7 +390,7 @@
       new: false
     - name: テンプレート
       href: combo_templates.md
-      new: false
+      new: true
     - name: カスケーディング
       href: combo_cascading.md
       new: false
@@ -388,30 +398,30 @@
   href: spreadsheet_overview.md
   new: false
   items:
-     - name: アクティブ化
-       href: spreadsheet_activation.md
-       new: false
-     - name: チャート アダプター
-       href: spreadsheet_chart_adapter.md
-       new: false
-     - name: クリップボード
-       href: spreadsheet_clipboard.md
-       new: false
-     - name: 条件付き書式
-       href: spreadsheet_conditional_formatting.md
-       new: false
-     - name: Spreadsheet の構成
-       href: spreadsheet_configuring.md
-       new: false
-     - name: コマンド
-       href: spreadsheet_commands.md
-       new: false
-     - name: データ検証
-       href: spreadsheet_data_validation.md
-       new: false
-     - name: ハイパーリンク
-       href: spreadsheet_hyperlinks.md
-       new: false
+    - name: アクティブ化
+      href: spreadsheet_activation.md
+      new: false
+    - name: チャート アダプター
+      href: spreadsheet_chart_adapter.md
+      new: false
+    - name: クリップボード
+      href: spreadsheet_clipboard.md
+      new: false
+    - name: 条件付き書式
+      href: spreadsheet_conditional_formatting.md
+      new: false
+    - name: Spreadsheet の構成
+      href: spreadsheet_configuring.md
+      new: false
+    - name: コマンド
+      href: spreadsheet_commands.md
+      new: false
+    - name: データ検証
+      href: spreadsheet_data_validation.md
+      new: false
+    - name: ハイパーリンク
+      href: spreadsheet_hyperlinks.md
+      new: false
 - name: チャート
   header: true
 - name: Category Chart
@@ -461,7 +471,7 @@
         #  new: true
         - name: 軸の位置
           href: data-chart-axis-locations.md
-          new: true
+          new: false
         - name: 軸共有
           href: data-chart-axis-sharing.md
           new: false
@@ -850,11 +860,13 @@
   items:
     - name: パレット
       href: themes/palette.md
+      new: false
     - name: スキーマ
       href: themes/schemas.md
       new: false
     - name: タイポグラフィ
       href: themes/typography.md
+      new: false
     - name: グローバルテーマ
       href: themes/global-theme.md
       new: true
@@ -875,6 +887,7 @@
           new: true
     - name: 印刷スタイル
       href: themes/printing-styles.md
+      new: false
 - name: 丸み付け
   href: roundness.md
   new: true
@@ -945,10 +958,6 @@
 - name: Slider
   href: slider/slider.md
   new: true
-  items:
-    - name: スライダー目盛り
-      href: 
-      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -960,10 +969,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジションストラテジ
+  - name: 配置ストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロールストラテジ
+  - name: スクロール ストラテジ
     href: overlay_scroll.md
     new: false
   - name: スタイル設定
@@ -973,8 +982,8 @@
   href: drag_drop.md
   new: true
 - name: Zoom Slider
-  new: true
-  href: zoomslider_overview.md
+  new: false
+  href: zoomslider-overview.md
 - name: メニュー
   header: true
 - name: Navigation Drawer
