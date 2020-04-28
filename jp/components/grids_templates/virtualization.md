@@ -1,20 +1,20 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: 仮想化ィレクティブ - ネイティブ Angular | Ignite UI for Angular 
+title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular 
 _description: Ignite UI for Angular Virtualization ディレクティブは大量データ セットの処理でスピードおよびパフォーマンスのための主な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。 
 _keywords: Ignite UI for Angular, UI controls, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular Components Suite, ネイティブ Angular コントロール, ネイティブ Angular Components Library, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular High Performance Data Table, Angular Virtualization Directive, Angular Data Table Virtualization, Virtualization, Angular Data Table パフォーマンス, Data Table パフォーマンス
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 仮想化ィレクティブ - ネイティブ Angular | Ignite UI for Angular 
+title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular 
 _description: Ignite UI for Angular Virtualization ディレクティブは大規模なデータ セットの処理でスピードおよびパフォーマンス向上のための主要な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table、Angular Virtualization Directive, Angular Tree Table Virtualization, Virtualization, Angular Tree Table パフォーマンス, Tree Table パフォーマンス
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 仮想化ィレクティブ - ネイティブ Angular | Ignite UI for Angular 
+title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular 
 _description: Ignite UI for Angular Virtualization ディレクティブは大規模なデータ セットの処理でスピードおよびパフォーマンス向上のための主要な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular Components Suite, ネイティブ Angular Controls, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Angular Virtualization Directive, Angular Hierarchical Table Virtualization, Virtualization, Angular Hierarchical Table パフォーマンス, Hierarchical Table パフォーマンス
 ---
