@@ -12,7 +12,7 @@ Angular Financial Chart コンポーネントで、ナビゲーション動作�
 
 ### サンプル
 
-<div class="sample-container loading" style="height: 550px">
+<div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -61,7 +61,7 @@ Angular Financial Chart コンポーネントでは、チャート ナビゲー�
 
 ### オーバーレイの構成
 
-オーバーレイはデフォルトで igxFinancialChart に表示されません。オーバーレイには、`BollingerBands` および `PriceChannel` の 2 種類があります。オーバーレイのデフォルト設定をカスタマイズできます。以下のコードはオーバーレイの色、アウトライン、および太さを設定します。
+オーバーレイはデフォルトで Angular Financial Chart に表示されません。オーバーレイには、`BollingerBands` および `PriceChannel` の 2 種類があります。オーバーレイのデフォルト設定をカスタマイズできます。以下のコードはオーバーレイの色、アウトライン、および太さを設定します。
 
 ```html
  <igx-financial-chart
@@ -110,7 +110,7 @@ Angular Financial Chart コンポーネントでは、チャート ナビゲー�
 
 ### トレンドラインの構成
 
-トレンドラインはデフォルトで igxFinancialChart に表示されません。トレンドラインが表示される場合、同じトレンドラインがすべてのチャート ペインに表示されます。トレンドラインのデフォルト設定をカスタマイズできます。
+トレンドラインはデフォルトでは Angular Financial Chart に表示されません。トレンドラインが表示される場合、同じトレンドラインがすべてのチャート ペインに表示されます。トレンドラインのデフォルト設定をカスタマイズできます。
 
 以下のコードはトレンドラインの色および太さを設定します。
 
