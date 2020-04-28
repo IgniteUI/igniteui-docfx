@@ -1,7 +1,8 @@
 ---
-title: ツリーマップ |データ可視化ツール |Ignite UI for Angular |データ バインディング |インフラジスティックス
+title: ツリーマップ | データ可視化ツール | Ignite UI for Angular |データ バインディング |インフラジスティックス
 _description: Treemap を使用して、ストリップ、スクエア、スライスアンドダイスアルゴリズムをサポートする複数のレベルでデータポイントの相対的な重み付けをユーザーに表示します。
-mentionedTypes: ['Treemap']
+mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
+_language: ja
 ---
 
 ### ツリーマップ
@@ -38,9 +39,9 @@ mentionedTypes: ['Treemap']
 
 Ignite UI for Angular ツリーマップ コンポーネントは、以下のタイプのアルゴリズムをサポートします。
 
--   `SliceAndDice`
--   `Squarified`
--   `Stripped`
+-   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice)
+-   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified)
+-   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped)
 
 型は [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) プロパティの設定により定義されます。[`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) プロパティが指定されていない場合は、既定では [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) 型が表示されます。データを表示するようになる時にはさまざまなタイル アルゴリズムがあります。すべてのアルゴリズムには、ユーザーのニーズに基づいて利点があります。最適なアスペクト比を得ることを目的とするものもあります。ノードは可能な限り長方形に近くなります。その他のアルゴリズムは、要素の初期順序を保持することを目的としています。データソース内で互いに近いオブジェクトは、ツリーマップ上で互いに近くに配置されます。
 
@@ -56,9 +57,9 @@ Ignite UI for Angular ツリーマップ コンポーネントは、以下のタ
 
 LayoutOrientation プロパティがレイアウト タイプ SliceAndDice および Strip と動作することに注意してください。
 
--   `Horizontal` – 子ノードは水平に積み重ねられます (SliceAndDice)。
+-   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#horizontal) – 子ノードは水平に積み重ねられます (SliceAndDice)。
 
--   `Vertical` – 子ノードは垂直に積み重ねられます (SliceAndDice)。
+-   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#vertical) – 子ノードは垂直に積み重ねられます (SliceAndDice)。
 
 ### 依存関係
 
