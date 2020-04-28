@@ -135,7 +135,7 @@ All done
 </igx-checkbox>
 ```
 
-Next, we're going to indent the subtasks, so it's more visual that they're dependable on each other.
+Next, we're going to indent the subtasks, so it's more visual that they are part of the same group.
 
 ```scss
 // app.component.scss
