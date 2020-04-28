@@ -122,7 +122,12 @@ We can create an app that has a list of tasks that need to be done and one maste
 ```html
 <!-- app.component.html -->
 
-<igx-checkbox [readonly]="true" [(ngModel)]="masterCheckbox.checked" [(indeterminate)]="masterCheckbox.indeterminate" (click)="toggleAll()">
+<igx-checkbox 
+    [readonly]="true" 
+    [(ngModel)]="masterCheckbox.checked" 
+    [(indeterminate)]="masterCheckbox.indeterminate" 
+    (click)="toggleAll()"
+>
 All done
 </igx-checkbox>
 <igx-checkbox class="tasks" *ngFor="let task of tasks" [(ngModel)]="task.done">
