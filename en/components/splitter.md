@@ -211,6 +211,7 @@ This is the final result from applying your new theme.
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
+* [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
