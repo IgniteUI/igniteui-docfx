@@ -1,5 +1,5 @@
 ﻿---
-title: Angular Data Grids と Lists コンポーネント | DataTable | Ignite UI for Angular | Infragistics
+title: Angular Data Grids と Lists コンポーネント | DataTable | Ignite UI for Angular | インフラジスティックス
 _description: 数百のデータ ポイント可視化においてもタイムラグのないスクロールを提供できるパワフルなグリッド機能を備えています。Ignite UI for Angular の Data Grid は、最適化と高速化を実現します。
 _keywords: angular data grid,infragistics, infragistics.com
 _language: ja

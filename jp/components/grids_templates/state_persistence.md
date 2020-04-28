@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid ステート パーシステンス|Ignite UI for Angular |インフラジスティックス
+title: Angular Grid ステート パーシステンス | Ignite UI for Angular |インフラジスティックス
 _description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxGridの状態の永続性を簡単に実現します。
 _keywords: ステート パーシステンス, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -8,14 +8,14 @@ _language: ja
 }
 <!-- @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Editing |Data Manipulation |Ignite UI for Angular
+title: Angular TreeGrid Editing |Data Manipulation | Ignite UI for Angular
 _description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Editing |Data Manipulation |Ignite UI for Angular
+title: Angular HierarchicalGrid Editing |Data Manipulation | Ignite UI for Angular
 _description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
 ---
@@ -91,7 +91,7 @@ public options =  { cellSelection: false; sorting: false; }
 #### デモ
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:800px">
+<div class="sample-container loading" style="height:960px">
     <iframe id="grid-state" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>

@@ -90,7 +90,7 @@ The usefullnes of thеse simple to use single-point API's allows you to achieve 
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:800px">
+<div class="sample-container loading" style="height:960px">
     <iframe id="grid-state" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
