@@ -45,6 +45,19 @@ Radio buttons can be displayed using the following code inside the component tem
 <igx-radio [(ngModel)]="selected" value="option2">Option 2</igx-radio>
 ```
 
+#### Label
+
+The `labelPosition` property can be used for changing the default position of the label in a radio component. Users can choose between `before` and `after` options. If not specified, the label will be placed after the radio button.
+
+```html
+<igx-radio [(ngModel)]="selected" value="option1" labelPosition="before">Option 1</igx-radio>
+<igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
+```
+
+<div class="sample-container loading" style="height: 90px">
+    <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+
 #### Properties
 Let's enhance the previous sample by adding four radio buttons, each responsible for applying a certain color as a background. We will bind the backgroundColor property of a div element to the component's selectedColor property. You will notice that selectedColor also participates in a two way binding relation through the `NgModel` directive, therefore its value is updated each time the user selects a different radio button (color).
 
