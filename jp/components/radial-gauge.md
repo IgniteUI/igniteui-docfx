@@ -16,11 +16,11 @@ Ignite UI for Angular Radial Gauge コンポーネントは、ゲージを表示
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="radial-gauge-animation-iframe" src='{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 375px">
+    <iframe id="radial-gauge-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-animation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -40,11 +40,13 @@ gauges パッケージをインストールするときに core パッケージ�
 ```ts
 // app.module.ts
 import { IgxRadialGaugeModule } from 'igniteui-angular-gauges';
+import { IgxRadialGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
         IgxRadialGaugeModule,
+        IgxRadialGaugeComponent
         // ...
     ]
 })
@@ -80,8 +82,6 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-## 構成可能な要素
-
 ### バッキング
 
 ゲージには、スケールの後ろ側に描かれた背景図形があり、図形はゲージの背景として動作します。
@@ -100,9 +100,7 @@ export class AppModule {}
     backingStrokeThickness=5
     backingOuterExtent=0.8
     backingInnerExtent=0.15
-
     scaleStartAngle=135 scaleEndAngle=45
-
     height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=80 interval=10>
@@ -131,7 +129,6 @@ export class AppModule {}
     scaleOversweepShape="Fitted"
     scaleStartExtent=0.45
     scaleEndExtent=0.575
-
     height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=80 interval=10>
@@ -156,7 +153,6 @@ export class AppModule {}
     labelInterval=10
     font="11px Verdana"
     fontBrush="DodgerBlue"
-
     height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=100 interval=10>
@@ -181,13 +177,11 @@ export class AppModule {}
     tickEndExtent=0.575
     tickStrokeThickness=2
     tickBrush="DodgerBlue"
-
     minorTickCount=4
     minorTickEndExtent=0.5
     minorTickStartExtent=0.575
     minorTickStrokeThickness=1
     minorTickBrush="DarkViolet"
-
     height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=80 interval=10>
@@ -211,7 +205,6 @@ export class AppModule {}
     height="300px" width="300px"
     minimumValue=0 value=50
     maximumValue=80 interval=10
-
     rangeBrushes ="red, yellow, green"
     rangeOutlines="red, yellow, green">
    <igx-radial-gauge-range
