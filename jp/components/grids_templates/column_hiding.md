@@ -1,24 +1,24 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列非表示|Ignite UI for Angular |Infragistics
+title: Angular Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
-_keywords: column hiding, ignite ui for angular, infragistics
+_keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列非表示|Ignite UI for Angular |Infragistics
+title: Angular Tree Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
-_keywords: column hiding, ignite ui for angular, infragistics
+_keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列非表示|Ignite UI for Angular|Infragistics
+title: Angular Hierarchical Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
-_keywords: column hiding, ignite ui for angular, infragistics
+_keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }

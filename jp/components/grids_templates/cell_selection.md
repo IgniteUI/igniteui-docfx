@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 複数セル選択 | Ignite UI for Angular | infragistics 
+title: Angular Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス
 _description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
