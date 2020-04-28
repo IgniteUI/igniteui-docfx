@@ -1,5 +1,5 @@
 ---
-title: Angular Grid Excel スタイル フィルタリング |Ignite UI for Angular の |infragistics
+title: Angular Grid Excel スタイル フィルタリング | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルでデータ フィルターのように Excel を設定する方法を学びます。グリッド Excel フィルタリングがより使いやすくなりました。
 _keywords: Excel ライクなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
@@ -66,7 +66,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ### インタラクション
 
-In order to open the filter menu for a particular column, the angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
+特定の列のフィルター メニューを開くには、ヘッダーの Angular フィルター アイコンをクリックします。列でフィルタリング機能と並べ替え、ピン固定、移動、選択、非表示が設定された場合、オンになっている機能のボタンが表示されます。
 
 フィルターが適用されていない場合、リストのすべての項目が選択されます￥。リストの上の入力からフィルターされます。データのフィルターは、リストで項目を選択/非選択して [Apply] ボタンをクリックします。リスト項目に適用したフィルタリングは、`equals` オペレーターでフィルター式を作成します。各式間のロジック オペレーターは [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) です。フィルターをクリアしたい場合、Select All をチェックして [Apply] ボタンを押します。
 
@@ -77,7 +77,7 @@ In order to open the filter menu for a particular column, the angular filter ico
 
 ###メニュー機能の構成
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that control them are as follows: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+並べ替え、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
