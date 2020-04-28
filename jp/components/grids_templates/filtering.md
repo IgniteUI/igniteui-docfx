@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular フィルター | Angular Grid フィルタリング | Ignite UI for Angular | Infragistics
+title: Angular フィルター | Angular Grid フィルタリング | Ignite UI for Angular | インフラジスティックス
 _description: Angular フィルターの使用は、便利な使い方が優れているが、角度グリッド フィルターが便利です。
 _keywords: angular filter, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular フィルター | Angular Tree Grid フィルタリング | Ignite UI for Angular | Infragistics
+title: Angular フィルター | Angular Tree Grid フィルタリング | Ignite UI for Angular | インフラジスティックス
 _description: 角度フィルターの使用を開始するには、便利な使い方が優れているが、角度グリッド フィルターが便利です。
 _keywords: angular filter, ignite ui for angular, infragistics
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular フィルター | Angular Hierarchical Grid フィルタリング | Ignite UI for Angular | Infragistics
+title: Angular フィルター | Angular Hierarchical Grid フィルタリング | Ignite UI for Angular | インフラジスティックス
 _description: 角度フィルターの使用を開始するには、便利な使い方が優れているが、角度グリッド フィルターが便利です。
 _keywords: angular filter, ignite ui for angular, infragistics
 _language: ja

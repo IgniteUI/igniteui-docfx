@@ -27,7 +27,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
-次に、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。注: タッチ操作を使用するために、IgxTimePicker は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
+次に、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。注: タッチ操作を使用するために、IgxTimePicker は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts

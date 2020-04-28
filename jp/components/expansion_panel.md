@@ -1,5 +1,5 @@
 ---
-title: Angular Panel |Expandable |Ignite UI for Angular |Infragistics
+title: Angular Panel | Expandable | Ignite UI for Angular | インフラジスティックス
 _description: Angular アコーディオン/マテリアル拡張パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
 _keywords: angular accordion, igniteui for angular, インフラジスティックス
 _language: ja

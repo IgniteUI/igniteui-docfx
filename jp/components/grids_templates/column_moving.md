@@ -1,8 +1,8 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | infragistics
+title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
 _description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャを使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
-_keywords: column order, igniteui for angular, infragistics
+_keywords: column order, igniteui for angular, infragistics, 列順序
 _language: ja
 ---
 }
