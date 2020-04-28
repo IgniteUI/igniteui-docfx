@@ -162,7 +162,7 @@ this.hierarchicalGrid.unpinRow("ALFKI");
 
 Note that the row ID is the primary key value, defined by the [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) of the grid, or the record instance itself. Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the row is already in the desired state.
 
-When pinned a row appears below the last pinned row until that moment. Changing the order of the pinned rows can be done by subscribing to the [`onRowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) property of the event arguments to the desired position index.
+A row is pinned below the last pinned row. Changing the order of the pinned rows can be done by subscribing to the [`onRowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) property of the event arguments to the desired position index.
 
 @@if (igxName === 'IgxGrid') {
 ```html
