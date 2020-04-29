@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Badge
-<p class="highlight">The Ignite UI for Angular Badge is an absolutely positioned element that is used to decorate avatars, navigation menus, or other components in the application when visual notification is needed. Badges usually are designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
+<p class="highlight">The Ignite UI for Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 <div class="divider"></div>
 
 #### Demo
@@ -81,7 +81,7 @@ If everything's done right, you should see the demo sample in your browser.
 
 #### Badge in List
 
-Let's extend the previous sample and create a list with contacts, similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we use the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.
+Let's extend the previous sample and create a list with contacts, similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we're using the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.
 
 To continue, include all needed modules and import them in the **app.module.ts** file.
 
@@ -102,7 +102,12 @@ import {
 export class AppModule {}
 ```
 
-Having all set up, let's show all the contacts in the [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component. The list contains the member name and its availability.
+>[!NOTE]
+>The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
+
+In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named *icon* and *type*.
+
+Next, we're adding the contacts in our template:
 
 ```html
 <!-- contacts.component.html -->
@@ -112,15 +117,20 @@ Having all set up, let's show all the contacts in the [`IgxListComponent`]({envi
     Team Members (4)
   </igx-list-item>
   <igx-list-item *ngFor="let member of members">
-    <div>
+    <div class="wrapper">
       <div>
+        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
+      </div>
+      <div class="contact-container">
         <span class="contact-name">{{ member.name }}</span>
-        <span>({{ member.status }})</span>
       </div>
     </div>
   </igx-list-item>
 </igx-list>
 ```
+
+We're going to create our members in the typescript file like this:
 
 ```typescript
 // contacts.component.ts
@@ -165,59 +175,7 @@ class Member {
 }
 ```
 
-Let's make the members' names thicker to achieve contrast between the names and the status.
-
-```scss
-.contact-name {
-  font-weight: 600;
-}
-```
-
-The final result should be a list with members' name and status should be displayed.
-
-<div class="sample-container loading" style="height: 280px">
-    <iframe id="badge-sample-1-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-<div class="divider--half"></div>
-
-Having just a list with names doesn't provide much useful visual information. Let's add an avatar in front of every chat member. To do this, put another div element in the [`igx-list-item`]({environment:angularApiUrl}/classes/igxlistitemcomponent.html), containing the [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html).
-
-The next step is to add the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) to show the contact state notification.
-
->[!NOTE]
->The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
-
-In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named *icon* and *type*.
-
-Modify the list items content as shown below adding a badge component inside the avatar component.
-
-
-```html
-<!-- contacts.component.html -->
-
-<igx-list>
-  <igx-list-item isHeader="true">
-    Team Members (4)
-  </igx-list-item>
-  <igx-list-item *ngFor="let member of members">
-    <div class="wrapper">
-      <div>
-        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
-        <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
-      </div>
-      <div style="margin-left: 20px; align-content: center;">
-        <span class="contact-name">{{ member.name }}</span>
-      </div>
-    </div>
-  </igx-list-item>
-</igx-list>
-```
-
-In order to position the badge in its parent container, create a custom CSS class *badge-style* and define the top and right positions, along with the rest of the styling.
+Position the badge in its parent container:
 
 ```css
 /* contacts.component.css */
@@ -243,7 +201,7 @@ In order to position the badge in its parent container, create a custom CSS clas
 
 ```
 
-If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge showing its current state.
+If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge, showing its current state.
 
 <div class="sample-container loading" style="height: 280px">
     <iframe id="badge-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
@@ -332,7 +290,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
-* [Type]({environment:angularApiUrl}/enums/type.html)
+* [IgxBadgeType]({environment:angularApiUrl}/enums/igxbadgetype.html)
 
 ### Additional Resources
 <div class="divider--half"></div>
