@@ -1,7 +1,7 @@
 ---
 title: Treemap | Data Visualization Tools | Ignite UI for Angular | Data Binding | Infragistics
 _description: Use the Treemap to show users relative weighting of data points at more than one level supporting strip, squarified, and slice-and-dice algorithms.
-mentionedTypes: ['Treemap']
+mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
 ---
 
 ### Treemap
@@ -38,9 +38,9 @@ Binding to the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignit
 
 The Ignite UI for Angular treemap component supports the following types algorithms:
 
--   `SliceAndDice`
--   `Squarified`
--   `Stripped`
+-   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice)
+-   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified)
+-   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped)
 
 The type is defined by setting the [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) property. If the [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) property is not specified, then by default, the [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) type is displayed. There are different tiling algorithms when it comes to displaying the data. All algorithms have their advantages depending on the user’s needs. Some aim to obtain the best aspect ratio – the nodes are as close to rectangles as possible. Other algorithms aim to preserve the initial order of the elements – object which are close to each other in the data source are arranged near each other on the treemap.
 
@@ -56,9 +56,9 @@ The type is defined by setting the [`TreemapLayoutType`]({environment:dvApiBaseU
 
 Note that the LayoutOrientation property works with the layout types SliceAndDice and Strip.
 
--   `Horizontal` – the child nodes are going to be stacked horizontally(SliceAndDice).
+-   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#horizontal) – the child nodes are going to be stacked horizontally(SliceAndDice).
 
--   `Vertical` – the child nodes are going to be stacked vertically (SliceAndDice).
+-   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
 
 ### Dependencies
 
