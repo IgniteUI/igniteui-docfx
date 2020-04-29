@@ -15,10 +15,6 @@ Infragistics Angular Excel ライブラリは、Workbook、Worksheet、Cell、Fo
 <div class="sample-container loading" style="height: 500px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-library-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
-    </button>
-</div>
 
 <div class="divider--half"></div>
 
@@ -47,7 +43,9 @@ import { IgxExcelModule } from 'igniteui-angular-excel';
 export class AppModule {}
 ```
 
-### Excel ライブラリの 5 つのモジュール
+### モジュールの実装
+
+Excel ライブラリには、アプリのバンドル サイズを制限するために使用できる 5 つのモジュールが含まれています。
 
 -   **IgxExcelCoreModule** – オブジェクトモデルを含み、Excel の基盤となります。
 -   **IgxExcelFunctionsModule** – Sum、Average、Min、Max、SumIfs、Ifs など、数式評価のほとんどのカスタム関数を含み、このモジュールがなくても数式が計算 ( “=SUM(A1:A5 などの数式を適用するなど) されてセルの Value を要求する場合は数式の解析で問題を発生しません。(注: 例外のスローではありません。数式の結果がエラーとなるため特定のエラーを表すオブジェクト)。
@@ -84,9 +82,9 @@ export class AppModule {}
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+> 以下のコードスニペットは、外部の [ExcelUtility](excel_utility.md) クラスを使用し [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存してロードします。
 
-[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、読み込み、保存メソッドを使用します。以下のコードは、読み込みや保存などの様々なメソッドを公開するクラスです。
+[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、実際の [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保存メソッドや static な `Workbook.load` メソッドを使用できます。
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";
@@ -104,7 +102,7 @@ ExcelUtility.save(workbook, "fileName");
 
 Excel Library のサイズに因り、ソースマップの生成を無効にすることを推奨します。
 
-`Angular.json` の変更:
+architect => build => options から serve の options で `vendorSourceMap` オプションを設定して `angular.json` を変更します。
 
 ```ts
 ...

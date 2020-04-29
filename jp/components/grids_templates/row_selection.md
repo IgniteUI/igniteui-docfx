@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Row Selection | Ignite UI for Angular | インフラジスティックス 
+title: Angular Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
 _description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Row 選択 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Tree Grid 行選択| Ignite UI for Angular | インフラジスティックス 
 _description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 階層 Grid Row 選択 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Hierarchical Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
 _description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja

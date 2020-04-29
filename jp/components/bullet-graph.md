@@ -2,8 +2,8 @@
 title: ブレット グラフ | データ プレゼンテーションと可視化 | Ignite UI for Angular | インフラジスティックス
 _description: Bullet Graph　コンポーネントは、データ範囲の表示、複数の測定値の比較に適しています。インフラジスティックス データ視覚化ツールを是非お試しください。
 _keywords: Bullet Graph, Ignite UI for Angular, Infragistics, ブレット グラフ, インフラジスティックス
-_language: ja
 mentionedTypes: ['XamBulletGraph']
+_language: ja
 ---
 
 ## ブレット グラフ
@@ -16,11 +16,11 @@ Angular Bullet Graph コンポーネントは、目盛り上でメジャーの�
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-animation-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 155px">
+    <iframe id="bullet-graph-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-animation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -43,12 +43,13 @@ gauges パッケージのインストール時に core パッケージもイン�
 ```ts
 // app.module.ts
 import { IgxBulletGraphModule } from 'igniteui-angular-gauges';
-import { IgxBulletGraph } from 'igniteui-angular-gauges';
+import { IgxBulletGraphComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
         IgxBulletGraphModule,
+        IgxBulletGraphComponent
         // ...
     ]
 })
@@ -70,22 +71,20 @@ export class AppModule {}
                    targetValue = "43">
         <igx-linear-graph-range startValue="0"
                                 endValue="15"
-                                Brush="#828181">
+                                brush="#828181">
         </igx-linear-graph-range>
-        <igx-linear-graph-range StartValue="15"
-                                EndValue="30"
-                                Brush="#AAAAAA">
+        <igx-linear-graph-range startValue="15"
+                                endValue="30"
+                                brush="#AAAAAA">
         </igx-linear-graph-range>
-        <igx-linear-graph-range StartValue="30"
-                                EndValue="55"
-                                Brush="#D0D0D0">
+        <igx-linear-graph-range startValue="30"
+                                endValue="55"
+                                brush="#D0D0D0">
         </igx-linear-graph-range>
  </igx-bullet-graph>
 ```
 
 <div class="divider--half"></div>
-
-## 構成可能な要素
 
 ### 比較メジャー
 
@@ -100,7 +99,6 @@ export class AppModule {}
     valueStrokeThickness=1
     valueInnerExtent=0.5
     valueOuterExtent=0.65
-
     targetValue=80
     targetValueBreadth=10
     targetValueBrush="LimeGreen"
@@ -108,7 +106,6 @@ export class AppModule {}
     targetValueStrokeThickness=1
     targetValueInnerExtent=0.3
     targetValueOuterExtent=0.85
-
     height="80px" width="400px"
     minimumValue=0 value=50
     maximumValue=100>
@@ -132,7 +129,6 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=80 interval=10
     maximumValue=100 targetValue=90
-
     rangeBrushes ="#C62828, #F96232, #FF9800"
     rangeOutlines="#C62828, #F96232, #FF9800">
     <igx-linear-graph-range
@@ -171,16 +167,15 @@ export class AppModule {}
 ```html
 <igx-bullet-graph
     height="80px" width="400px"
-    minimumValue=0 value=70 interval=10
+    minimumValue=0 value=70
     maximumValue=100 targetValue=90
-
+	interval=10
     tickBrush="DodgerBlue"
     ticksPreTerminal=0
     ticksPostInitial=0
     tickStrokeThickness=2
     tickStartExtent=0.2
     tickEndExtent=0.075
-
     minorTickCount=4
     minorTickBrush="DarkViolet"
     minorTickEndExtent=0.1
@@ -257,7 +252,6 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
-
     isScaleInverted=false
     scaleBackgroundBrush="DodgerBlue"
     scaleBackgroundOutline="DarkViolet"

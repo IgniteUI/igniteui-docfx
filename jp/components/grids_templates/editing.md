@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 編集|データの変更|Ignite UI for Angular|Infragistics
+title: Angular Grid 編集| データの変更 | Ignite UI for Angular| インフラジスティックス
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。 
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid 編集|データの変更|Ignite UI for Angular
+title: Angular TreeGrid 編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid 編集|データの変更|Ignite UI for Angular
+title: Angular HierarchicalGrid 編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
