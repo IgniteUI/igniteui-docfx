@@ -47,7 +47,7 @@ Radio buttons can be displayed using the following code inside the component tem
 
 #### Label
 
-The `labelPosition` property can be used for changing the default position of the label in a radio component. Users can choose between `before` and `after` options. If not specified, the label will be placed after the radio button.
+The `labelPosition` property can be used to change the default position of the label in the radio component. Users can choose between `before` and `after. If not specified, the label will be placed after the radio button.
 
 ```html
 <igx-radio [(ngModel)]="selected" value="option1" labelPosition="before">Option 1</igx-radio>
