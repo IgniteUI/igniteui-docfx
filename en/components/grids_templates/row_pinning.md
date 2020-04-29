@@ -20,13 +20,13 @@ _keywords: lock row, ignite ui for angular, infragistics 
 ---
 }
 
-### @@igComponent Row Pinning 
+### @@igComponent Row Pinning
 One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. **Row Pinning** in Ignite UI for Angular allows end-users to pin rows in a particular order, duplicating them in a special area that is always visible even when they scroll the @@igComponent vertically. The Material UI Grid has a built-in row pinning UI, which is enabled by initializing an `igxActionStrip` component in the context of @@igComponent. In addition, you can define custom UI and change the pin state of the rows via the Row Pinning API.
 
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:510px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="grid-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -35,16 +35,16 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:630px">
-    <iframe id="treegrid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:600px">
+    <iframe id="tree-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:510px">
+<div class="sample-container loading" style="height:600px">
     <iframe id="hierarchical-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -60,19 +60,18 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" [width]="'800px'" [height]="'500px'" [rowSelectable]="false" (mouseleave)="actionstrip.hide()">
-    <igx-column *ngFor="let c of columns" [sortable]="true" [field]="c.field" [header]="c.field"
-                        [width]="c.width" [pinned]='c.pinned' [hidden]='c.hidden' [editable]="true">
+<igx-grid #grid [data]="data" (mouseleave)="actionStrip.hide()">
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
         <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionstrip.show(cell.row)">
-                 <span>{{val}}</span>
+            <div (mouseover)="actionStrip.show(cell.row)">
+                <span>{{val}}</span>
             </div>
         </ng-template>
     </igx-column>
 
-    <igx-action-strip #actionstrip>
-        <igx-grid-pinning-actions [grid]="grid"></igx-grid-pinning-actions>
-        <igx-grid-editing-actions [grid]="grid"></igx-grid-editing-actions>
+    <igx-action-strip #actionStrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions></igx-grid-editing-actions>
     </igx-action-strip>
 </igx-grid>
 ```
@@ -80,42 +79,40 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #grid [data]="data" [width]="'800px'" [height]="'500px'" [rowSelectable]="false" (mouseleave)="actionstrip.hide()">
-    <igx-column *ngFor="let c of columns" [sortable]="true" [field]="c.field" [header]="c.field"
-                        [width]="c.width" [pinned]='c.pinned' [hidden]='c.hidden' [editable]="true">
+<igx-tree-grid #treeGrid [data]="data" (mouseleave)="actionStrip.hide()">
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
         <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionstrip.show(cell.row)">
-                 <span>{{val}}</span>
+            <div (mouseover)="actionStrip.show(cell.row)">
+                <span>{{val}}</span>
             </div>
         </ng-template>
     </igx-column>
 
-    <igx-action-strip #actionstrip>
-        <igx-grid-pinning-actions [grid]="grid"></igx-grid-pinning-actions>
-        <igx-grid-editing-actions [grid]="grid"></igx-grid-editing-actions>
+    <igx-action-strip #actionStrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions></igx-grid-editing-actions>
     </igx-action-strip>
 </igx-tree-grid>
-```   
+```
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #grid [data]="data" [width]="'800px'" [height]="'500px'" [rowSelectable]="false" (mouseleave)="actionstrip.hide()">
-    <igx-column *ngFor="let c of columns" [sortable]="true" [field]="c.field" [header]="c.field"
-                        [width]="c.width" [pinned]='c.pinned' [hidden]='c.hidden' [editable]="true">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" (mouseleave)="actionStrip.hide()">
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
         <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionstrip.show(cell.row)">
-                 <span>{{val}}</span>
+            <div (mouseover)="actionStrip.show(cell.row)">
+                <span>{{val}}</span>
             </div>
         </ng-template>
     </igx-column>
 
-    <igx-action-strip #actionstrip>
-        <igx-grid-pinning-actions [grid]="grid"></igx-grid-pinning-actions>
-        <igx-grid-editing-actions [grid]="grid"></igx-grid-editing-actions>
+    <igx-action-strip #actionStrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions></igx-grid-editing-actions>
     </igx-action-strip>
-</igx-tree-grid>
-```    
+</igx-hierarchical-grid>
+```
 }
 
 
@@ -166,7 +163,8 @@ A row is pinned below the last pinned row. Changing the order of the pinned rows
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onRowPinning)="rowPinning($event)"></igx-grid>
+<igx-grid #grid1 [data]="data" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+</igx-grid>
 ```
 
 ```typescript
@@ -177,7 +175,8 @@ public rowPinning(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onRowPinning)="rowPinning($event)"></igx-tree-grid>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+</igx-tree-grid>
 ```
 
 ```typescript
@@ -188,10 +187,8 @@ public rowPinning(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'800px'" 
-       (onRowPinning)="rowPinning($event)" #hierarchicalGrid>
-</igx-hierarchical-grid> 
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+</igx-hierarchical-grid>
 ```
 
 ```typescript
@@ -214,13 +211,13 @@ When set to Bottom pinned rows are rendered at the bottom of the grid, after the
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-tree-grid>
+<igx-tree-grid [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-tree-grid>
 ```
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-hierarchical-grid>
+<igx-hierarchical-grid [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-hierarchical-grid>
 ```
 }
 
@@ -241,27 +238,17 @@ This can be done by adding an extra column with a cell template containing the c
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid  #grid [data]="data" [pinning]='pinningConfig' [height]="'800px'" [width]="'1000px'" [autoGenerate]="false"
-        [primaryKey]="'ID'">
-        <igx-column width='70px' [filterable]='false'>
-            <ng-template igxCell let-cell="cell" let-val>
-                <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
-                    {{cell.row.pinned ? 'lock' : 'lock_open'}}
-                </igx-icon>
-            </ng-template>
-        </igx-column>
-        <igx-column [field]="'ID'" [header]="'ID'" width="100px" [groupable]='false'></igx-column>
-        <igx-column [field]="'CompanyName'" [header]="'Company Name'" width="100px" [groupable]='true'></igx-column>
-        <igx-column [field]="'ContactName'" [header]="'Contact Name'" width="100px" [minWidth]="'60px'"
-            [maxWidth]="'230px'" [groupable]='true'></igx-column>
-        <igx-column [field]="'ContactTitle'" [header]="'Contact Title'" width="100px" [groupable]='true'></igx-column>
-        <igx-column [field]="'Address'" [header]="'Address'" width="100px"></igx-column>
-        <igx-column [field]="'City'" [header]="'City'" width="100px" [groupable]='true'></igx-column>
-        <igx-column [field]="'Region'" [header]="'Region'" width="100px"></igx-column>
-        <igx-column [field]="'PostalCode'" [header]="'Postal Code'" width="100px"></igx-column>
-        <igx-column [field]="'Phone'" [header]="'Phone'" width="100px"></igx-column>
-        <igx-column [field]="'Fax'" [header]="'Fax'" width="100px"></igx-column>
-    </igx-grid>
+<igx-grid #grid [data]="data" [primaryKey]="'ID'">
+    <igx-column width="70px">
+        <ng-template igxCell let-cell="cell" let-val>
+            <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
+                {{cell.row.pinned ? 'lock' : 'lock_open'}}
+            </igx-icon>
+        </ng-template>
+    </igx-column>
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
+    </igx-column>
+</igx-grid>
 ```
 
 }
@@ -269,29 +256,17 @@ This can be done by adding an extra column with a cell template containing the c
 @@if (igxName === 'IgxTreeGrid') {
 
 ```html
-<div class="grid__wrapper">
-    <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" height="620px"
-        width="100%">
-        <igx-column width='70px' [filterable]='false'>
-            <ng-template igxCell let-cell="cell" let-val>
-                <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
-                    {{cell.row.pinned ? 'lock' : 'lock_open'}}
-                </igx-icon>
-            </ng-template>
-        </igx-column>
-        <igx-column [field]="'Name'" dataType="string" width="250px"></igx-column>
-        <igx-column [field]="'Title'" dataType="string" width="300px"></igx-column>
-        <igx-column [field]="'ID'" dataType="number" width="200px"></igx-column>
-        <igx-column [field]="'HireDate'" header="Hire Date" dataType="date" width="200px"></igx-column>
-        <igx-column [field]="'Age'" dataType="number" width="200px"></igx-column>
-        <igx-column [field]="'Address'" dataType="string" width="200px"></igx-column>
-        <igx-column [field]="'City'" dataType="string" width="200px"></igx-column>
-        <igx-column [field]="'Country'" dataType="string" width="200px"></igx-column>
-        <igx-column [field]="'Fax'" dataType="string" width="200px"></igx-column>
-        <igx-column [field]="'PostalCode'" header="Postal Code" dataType="string" width="200px"></igx-column>
-        <igx-column [field]="'Phone'" dataType="string" width="200px"></igx-column>
-    </igx-tree-grid>
-</div>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID">
+    <igx-column width="70px">
+        <ng-template igxCell let-cell="cell" let-val>
+            <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
+                {{cell.row.pinned ? 'lock' : 'lock_open'}}
+            </igx-icon>
+        </ng-template>
+    </igx-column>
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
+    </igx-column>
+</igx-tree-grid>
 ```
 
 }
@@ -299,28 +274,17 @@ This can be done by adding an extra column with a cell template containing the c
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ```html
-<igx-hierarchical-grid class="hierarchicalGrid" [data]="localdata" [autoGenerate]="false"
-    [height]="'500px'" [width]="'100%'" #hierarchicalGrid>
+<igx-hierarchical-grid [data]="localdata">
      <igx-column width='70px' [filterable]='false'>
-            <ng-template igxCell let-cell="cell" let-val>
-                <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
-                    {{cell.row.pinned ? 'lock' : 'lock_open'}}
-                </igx-icon>
-            </ng-template>
+        <ng-template igxCell let-cell="cell" let-val>
+            <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
+                {{cell.row.pinned ? 'lock' : 'lock_open'}}
+            </igx-icon>
+        </ng-template>
     </igx-column>
-    <igx-column field="CompanyName" header="Company Name" width="200px" [pinned]="true"></igx-column>
-    <igx-column field="ContactName" header="Contact Name" width="150px"></igx-column>
-    <igx-column field="ContactTitle" header="Contact Title" width="200px"></igx-column>
-    <igx-row-island [key]="'Orders'" [autoGenerate]="false">
-            <igx-column field="OrderDate" header="Order Date" [dataType]="'date'" width="150px"></igx-column>
-            <igx-column field="RequiredDate" header="Required Date" [dataType]="'date'" width="150px"></igx-column>
-            <igx-column field="ShippedDate" header="Shipped Date" [dataType]="'date'" width="150px"></igx-column>
-            <igx-column field="ShipVia" header="Ship Via" width="150px"></igx-column>
-        <igx-row-island [key]="'OrderDetails'" [autoGenerate]="false">
-                <igx-column field="UnitPrice" header="Unit Price" width="150px"></igx-column>
-                <igx-column field="Quantity" width="150px"></igx-column>
-                <igx-column field="Discount" width="150px"></igx-column>
-        </igx-row-island>
+    <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
+    </igx-column>
+    <igx-row-island [key]="'Orders'" [autoGenerate]="true">
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
@@ -330,42 +294,42 @@ On click of the custom icon the pin state of the related row can be changed usin
 
 ```typescript
 public togglePinning(row: IgxGridRowComponent, event) {
-        event.preventDefault();
-        if (row.pinned) {
-            row.unpin();
-        } else {
-            row.pin();
-        }
+    event.preventDefault();
+    if (row.pinned) {
+        row.unpin();
+    } else {
+        row.pin();
     }
+}
 ```
 
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:510px">
-    <iframe id="grid-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:600px">
+    <iframe id="grid-row-pinning-extra-column-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning-extra-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:630px">
-    <iframe id="treegrid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:600px">
+    <iframe id="tree-grid-row-pinning-extra-column-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-extra-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:600px">
+    <iframe id="hierarchical-grid-row-pinning-extra-column-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-extra-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
@@ -377,11 +341,11 @@ public togglePinning(row: IgxGridRowComponent, event) {
 Let's say that you want to be able to directly drag and drop a row between the pinned and unpinned rows to change its pin state.
 This can be achieved by enabling the row drag feature and pinning/unpinning the rows via the API on drop.
 
-First, the grid should be marked as a drop area using the `igxDrop` directive and the row drag functionality should be enabled via the `rowDraggable` option. 
+First, the grid should be marked as a drop area using the `igxDrop` directive and the row drag functionality should be enabled via the `rowDraggable` option.
 
 ```html
-<igx-grid  #grid [data]="data" [height]="'800px'" [width]="'1000px'" [autoGenerate]="true" [rowDraggable]="true"
-        [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
+<igx-grid [data]="data" [autoGenerate]="true" [rowDraggable]="true"
+    [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
 </igx-grid>
 ```
 
@@ -389,31 +353,31 @@ Then the `dropped` event can be used to handle the reorder and pin/unpin logic.
 
 ```typescript
 public onDropAllowed(args) {
-        const event = args.originalEvent;
-        let currRowPinnedIndex;
-        const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
+    const event = args.originalEvent;
+    let currRowPinnedIndex;
+    const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
         { x: event.clientX, y: event.clientY });
-        if (currRowIndex === -1) { return; }
+    if (currRowIndex === -1) { return; }
 
-        const currRowID = this.getCurrentRowID(this.grid.rowList.toArray(),
+    const currRowID = this.getCurrentRowID(this.grid.rowList.toArray(),
         { x: event.clientX, y: event.clientY });
 
-        const currentRow = this.grid.rowList.toArray().find((r) => r.rowID === currRowID);
-        if (currentRow.pinned) {
-            currRowPinnedIndex = this.grid.pinnedRows.indexOf(this.grid.pinnedRows.find((r) => r.rowID === currRowID));
-        }
-        // remove the row that was dragged and place it onto its new location
-        this.grid.deleteRow(args.dragData.rowID);
-        this.data.splice(currRowIndex, 0, args.dragData.rowData);
-        if (currentRow.pinned && !args.dragData.pinned) {
-            this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
-        } else if (!currentRow.pinned && args.dragData.pinned) {
-            this.grid.unpinRow(args.dragData.rowID);
-        } else if (currentRow.pinned && args.dragData.pinned) {
-            this.grid.unpinRow(args.dragData.rowID);
-            this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
-        }
+    const currentRow = this.grid.rowList.toArray().find((r) => r.rowID === currRowID);
+    if (currentRow.pinned) {
+        currRowPinnedIndex = this.grid.pinnedRows.indexOf(this.grid.pinnedRows.find((r) => r.rowID === currRowID));
     }
+    // remove the row that was dragged and place it onto its new location
+    this.grid.deleteRow(args.dragData.rowID);
+    this.data.splice(currRowIndex, 0, args.dragData.rowData);
+    if (currentRow.pinned && !args.dragData.pinned) {
+        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+    } else if (!currentRow.pinned && args.dragData.pinned) {
+        this.grid.unpinRow(args.dragData.rowID);
+    } else if (currentRow.pinned && args.dragData.pinned) {
+        this.grid.unpinRow(args.dragData.rowID);
+        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+    }
+}
 ```
 
 This would allow reordering the rows and moving them between the pinned and unpinned row collections.
@@ -434,12 +398,145 @@ This would allow reordering the rows and moving them between the pinned and unpi
 ### Row Pinning Limitations
 
 * Only records that exist in the data source can be pinned.
-* The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied. 
+* The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied.
 * Because of how pinned rows are stored internally so that they may appear both in the pinned and unpinned areas of the grid, row pinning is not supported when records in the grid are fetched from a remote endpoint on demand (remote virtualization).
 * The copies of pinned rows in the scrollable area of the grid are an integral part of how other grid features achieve their functionality in the presence of pinned rows and therefore their creation cannot be disabled nor can they be removed.
 * As Row Selection works entirely with row Ids, selecting pinned rows selects their copies as well (and vise versa). Additionally, range selection (e.g. using Shift + click) within the pinned area works the same way as selecting a range of rows within the scrollable area. The resulting selection includes all rows in between even if they are not currently pinned. Getting the selected rows through the API only returns a single instance of each selected record.
 
 <div class="divider--half"></div>
+
+### Styling
+
+The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
+
+In the below steps, we are going through the steps of customizing the @@igComponent's row pinning styling.
+
+#### Importing global theme
+
+To begin the customization of the row pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```
+
+#### Defining custom theme
+
+Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
+
+```scss
+$custom-theme: igx-grid-theme(
+    /* Pinning properties that affect styling */
+    $pinned-border-width: 5px,
+    $pinned-border-style: double,
+    $pinned-border-color: #FFCD0F,
+    $cell-active-border-color: #FFCD0F
+    /* add other features properties here... */
+);
+```
+
+#### Defining a custom color palette
+
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+`igx-palette` generates a color palette, based on provided primary and secondary colors.
+
+ ```scss
+$primary-color: #292826;
+$secondary-color: #ffcd0f;
+
+$custom-palette: igx-palette(
+  $primary: $primary-color,
+  $secondary: $secondary-color
+);
+```
+
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
+
+
+```scss
+$custom-theme: igx-grid-theme(
+    $pinned-border-width: 5px,
+    $pinned-border-style: double,
+    $pinned-border-color: igx-color($custom-palette, "secondary", 500),
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 500)
+);
+```
+
+The `$custom-theme` contains the same properties as the one in the previous section, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its primary and secondary colors, with a given color variant.
+
+#### Defining custom schemas
+
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.
+
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    pinned-border-width: 5px,
+    pinned-border-style: double,
+    pinned-border-color: igx-color:("secondary", 500),
+    cell-active-border-color: igx-color:("secondary", 500)
+));
+```
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.
+
+```scss
+$my-custom-schema: extend($light-schema, (
+    igx-grid: $custom-grid-schema
+));
+$custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+#### Applying the custom theme
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
+```scss
+@include igx-grid($custom-theme);
+```
+
+#### Scoped component theme
+
+In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
+
+This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
+ >[!NOTE]
+ >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >[!NOTE]
+ >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```
+#### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/grid/grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="tree-grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="hierarchical-grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
 
 ### API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
