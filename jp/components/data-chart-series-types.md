@@ -60,8 +60,8 @@ Angular データ チャート コンポーネントでシリーズは類似す�
 
 #### ファイナンシャル シリーズ
 
--   [FinancialPriceSeries (OHLC)](data-chart-type-financial-series.md)
--   [FinancialPriceSeries (Candlestick)](data-chart-type-financial-series.md)
+-   [Financial OHLC チャート](data-chart-type-financial-ohlc-series.md)
+-   [Financial Candlestick チャート](data-chart-type-financial-candlestick-series.md)
 
 #### ファイナンシャル オーバーレイ
 

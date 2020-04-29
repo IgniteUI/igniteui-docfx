@@ -52,7 +52,7 @@ Angular データ チャート コンポーネントはさまざまな軸タイ�
 上記データ要件を満たすデータソースとして [SampleRangeData](data-chart-data-sources-range.md) を使用できます。
 
 ```ts
-this.state = { dataSource: SampleRangeData.create() }
+public dataSource: any[] = SampleRangeData.create();
 ```
 
 ### モジュールの要件

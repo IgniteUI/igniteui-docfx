@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid の Excel エクスポート  |Ignite UI for Angular |Infragistics
+title: Angular Grid の Excel エクスポート | Ignite UI for Angular | インフラジスティックス
 _description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid を Excel へエクスポート|Ignite UI for Angular |Infragistics
+title: Angular Tree Grid を Excel へエクスポート | Ignite UI for Angular | インフラジスティックス
 _description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchica Grid を Excel へエクスポート|Ignite UI for Angular |Infragistics
+title: Angular Hierarchica Grid を Excel へエクスポート | Ignite UI for Angular | インフラジスティックス
 _description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja

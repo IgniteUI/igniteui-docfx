@@ -1,5 +1,5 @@
 ﻿---
-title: Angular ディレクティブ | IgniteUI for Angular | Infragistics
+title: Angular ディレクティブ | IgniteUI for Angular | インフラジスティックス
 _description: Angular 構造ディレクティブを使用して、カスタム条件に基づいて Angular コンポーネントの外観を設定します。
 _keywords: angular ディレクティブ, ignite ui for angular, インフラジスティックス
 _language: ja

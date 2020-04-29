@@ -4,7 +4,6 @@ _description: スプレッドシート コントロールを使用して、Excel
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
 mentionedTypes: ['Spreadsheet']
 _language: ja
-
 ---
 
 ## クリップボードでの作業
