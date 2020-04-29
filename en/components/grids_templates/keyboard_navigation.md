@@ -22,35 +22,77 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## @@igComponent Keyboard Navigation
 
-Keyboard navigation is available by default in any grid and aims at covering as many as possible features and scenarios for the end user. When you focus a specific cell and press one of the following key combinations, the described behavior is performed.
+Keyboard navigation is available by default in the @@igxName and aims at covering as many as possible features and scenarios for the end user. Now in order to improve the overall page navigation experience we reduced the tab stops in the grid. Currently we have only the following main tab stops:
+    - GroupBy / Toolbar area /if is enabled/;
+    - header of the grid;
+    - body of the grid;
+    - column summaries /if are enabled/;
+    - the paginator /if is enabled/;
 
-### Key combinations
-@@if (igxName === 'IgxHierarchicalGrid') {
- - `Arrow Up` - navigates one cell up, going up the grid hierarchy if necessary (no wrapping);
- - `Arrow Down` - navigates one cell down, going deeper into the grid hierarchy if necessary (no wrapping);}@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
- - `Arrow Up` - navigates one cell up (no wrapping);
- - `Arrow Down` - navigates one cell down (no wrapping);}
+> Note:
+> Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
+> By pressing `tab` key you are going through the following sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid
+> Paginator". Also keep in mind that if you add a focusable element in the grid template it will be added to the page tab sequence.
+
+### Header Navigation
+
+We inroduced a full keyboard navigation support in the grid headers, so is possible to navigate with the arrows keys through them. Also we provide a number of key combinations that trigger a different column functionality like filtering, sorting, grouping and etc.
+When you focus the header container of the grid and press one of the following key combinations, the described behavior is performed.
+
+#### Key Combinations
+
+ - `Arrow Up` - navigates one cell up in the headers (no wrapping); Available only when multi row layout or column groups are defined;
+ - `Arrow Down` - navigates one cell down in the headers (no wrapping); Available only when multi row layout or column groups are defined;
  - `Arrow Left` - navigates one cell left (no wrapping between lines);
  - `Arrow Right` - navigates one cell right (no wrapping between lines);
+ - `Ctrl + Arrow Left` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level;
+ - `Home` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level;
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level;
+ - `End` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level;
+ - `Alt + L` - opens Advanced filtering dialog if advanced filtering is enabled;
+ - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable;
+ - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting;
+ - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting;
+ - `Ctrl + Alt + Arrow Left` - group by the active column /if the column is marked as groupable/;
+ - `Ctrl + Alt + Arrow Right` - ungroup by the active column /if the column is marked as groupable/;
+ - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header if the column is not already collapsed;
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header if the column is not already expanded;
+ - `Space` - select the current column; If the column is already selected, it will remove the selection;
+
+### Body navigation
+
+ When you focus the body of the grid and press one of the following key combinations, the described behavior is performed.
+
+#### Key Combination
+
+ - `Arrow Up`- navigates one cell up @@if (igxName === 'IgxHierarchicalGrid') {, going up the grid hierarchy if necessary}(no wrapping);
+ - `Arrow Down`- navigates one cell down  @@if (igxName === 'IgxHierarchicalGrid') {, going deeper into the grid hierarchy if necessary}(no wrapping);
+ - `Arrow Left`- navigates one cell left (no wrapping between lines);
+ - `Arrow Right`- navigates one cell right (no wrapping between lines);
+ - `Ctrl + Arrow Left` - moves to leftmost cell in row;
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row;
  - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
  - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Ctrl + Arrow Left` -  moves to leftmost cell in row;
  - `Home` - moves to leftmost cell in row;
- - `Ctrl + Home` - moves to top left cell in the grid;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row;
- - `End` - moves to rightmost cell in row;
- - `Ctrl + End` - moves to bottom right cell in the grid;
+ - `End`- moves to rightmost cell in row;
+ - `Ctrl + Home` - moves to the top leftmost data cell in the grid;
+ - `Ctrl + End` - moves to bottom rightmost data cell in the grid;
  - `Page Up` - scrolls one page (view port) up;
- - `Page Down` -  scrolls one page (view port) down;
+ - `Page Down` - scrolls one page (view port) down;
  - `Enter` - enters edit mode;
  - `F2` - enters edit mode;
  - `Esc` - exits edit mode;
- - `Tab` - sequentially move the focus over the next cell on the row and if the last cell is reached move to next row; If next row is group row the whole row is focused, if it is data row, move focus over the first cell; When cell is in edit mode, will move the focus to next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Shift + Tab` - sequentially move focus to the previous cell on the row, if the first cell is reached move the focus to the previous row. If previous row is group row focus the whole row or if it is data row, focus the last cell of the row; when cell is in edit mode, will move the focus to the next editable cell in the row, and from the right-most editable cell to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Space` -  if the row is selectable, on keydown space triggers row selection;@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
- - `Alt + Arrow Left` over GroupRow - collapses the group row content if the row is not already collapsed;
- - `Alt + Arrow Right` over GroupRow - expands the group row content if the row is not already expanded;}
- - on mouse `wheel` -  blurs the focused element;
+ - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row eiditing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row;
+ - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row eiditing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
+ - `Space` - if the row is selectable, on keydown space triggers row selection;
+ - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content if the row is not already collapsed;
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content if the row is not already collapsed;
+
+
+### Demo
+
+
+
 
 ### Custom keyboard navigation
 Customizing the default behavior, that we described above when a certain key is pressed is one of the great benefits that our keyboard navigation feature provides. Like when `Enter key` or `Tab key` are pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API.
