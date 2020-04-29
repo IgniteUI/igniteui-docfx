@@ -36,7 +36,7 @@ Keyboard navigation is available by default in the @@igxName and aims at coverin
 
 ### Header Navigation
 
-We inroduced a full keyboard navigation support in the grid headers, so is possible to navigate with the arrows keys through them. Also we provide a number of key combinations that trigger a different column functionality like filtering, sorting, grouping and etc.
+We introduced a full keyboard navigation support in the grid headers, so now is possible to navigate with the arrows keys through them. Also we provide a number of key combinations that trigger a different column functionality like filtering, sorting, grouping and etc.
 When you focus the header container of the grid and press one of the following key combinations, the described behavior is performed.
 
 #### Key Combinations
@@ -82,9 +82,9 @@ When you focus the header container of the grid and press one of the following k
  - `Enter` - enters edit mode;
  - `F2` - enters edit mode;
  - `Esc` - exits edit mode;
- - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row eiditing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row;
- - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row eiditing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Space` - if the row is selectable, on keydown space triggers row selection;
+ - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row editing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row;
+ - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row editing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
+ - `Space` - if the row is selectable, on key down `space` triggers row selection;
  - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content if the row is not already collapsed;
  - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content if the row is not already collapsed;
 
