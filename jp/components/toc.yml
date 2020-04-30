@@ -984,6 +984,9 @@
 - name: Zoom Slider
   new: false
   href: zoomslider-overview.md
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: メニュー
   header: true
 - name: Navigation Drawer
