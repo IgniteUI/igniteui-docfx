@@ -409,9 +409,9 @@ This would allow reordering the rows and moving them between the pinned and unpi
 
 The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
 
-In the below steps, we are going through the steps of customizing the @@igComponent's row pinning styling.
+Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
 
-#### Importing global theme
+#### Importing the Styling Library
 
 To begin the customization of the row pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
 
@@ -419,12 +419,12 @@ To begin the customization of the row pinning feature, you need to import the `i
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### Defining custom theme
+#### Defining a Theme
 
 Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-grid-theme: igx-grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -434,87 +434,33 @@ $custom-theme: igx-grid-theme(
 );
 ```
 
-#### Defining a custom color palette
+#### Using CSS variables 
 
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-`igx-palette` generates a color palette, based on provided primary and secondary colors.
-
- ```scss
-$primary-color: #292826;
-$secondary-color: #ffcd0f;
-
-$custom-palette: igx-palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
-);
-```
-
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
-
+The last step is to pass the custom grid theme:
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500)
-);
+@include igx-css-vars($custom-grid-theme);
 ```
 
-The `$custom-theme` contains the same properties as the one in the previous section, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its primary and secondary colors, with a given color variant.
+#### Using mixins
 
-#### Defining custom schemas
+In order to style components for Internet Explorer 11, you have to use different approach, since it doesn't support CSS variables. 
 
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.
-
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    pinned-border-width: 5px,
-    pinned-border-style: double,
-    pinned-border-color: igx-color:("secondary", 500),
-    cell-active-border-color: igx-color:("secondary", 500)
-));
-```
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.
-
-```scss
-$my-custom-schema: extend($light-schema, (
-    igx-grid: $custom-grid-schema
-));
-$custom-theme: igx-grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-#### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
-```scss
-@include igx-grid($custom-theme);
-```
-
-#### Scoped component theme
-
-In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
-
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. However, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        // Pass the custom grid theme to the `igx-grid` mixin
+        @include igx-grid($custom-grid-theme);
     }
 }
 ```
+
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:540px">
     <iframe id="grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/grid/grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
@@ -522,7 +468,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:540px">
     <iframe id="tree-grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
@@ -530,7 +476,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:530px">
+<div class="sample-container loading" style="height:540px">
     <iframe id="hierarchical-grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
@@ -541,6 +487,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ### API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
