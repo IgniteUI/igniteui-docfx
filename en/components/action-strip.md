@@ -6,18 +6,23 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Action Strip
 <p class="highlight">
-[`igxActionStrip`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
-The Action Strip represents a template area for one or more actions. The Action Strip requires to be inside a relative container, as it is going to overlay it.
+The Ignite UI for Angular [`igxActionStrip`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html) represents a template area for one or more actions. The Action Strip is intended to provide additional UI and functionality for a specific container. This container should be relative, because the Action Strip attempts to overlay its relative parent. This provides an easy way to position the actions over the parent. Event though the parent is overlapped by the Action Strip the main interactions and user access to the container will remain available.
 </p>
 
 <div class="divider--half"></div>
 
 #### Demo
 
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
-### Getting Started
+### Usage
 In order to initialize and position correctly the Action Strip it needs to be inside relative container:
 
 ```html
@@ -41,6 +46,13 @@ When there is a need for too many actions, which are overlapping the main conten
     </igx-action-strip>
 </div>
 ```
+
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="action-strip-menu-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 #### Reusing the Action Strip
 
@@ -86,3 +98,48 @@ In the below steps, we are going through the steps of customizing the grid's Pin
 To begin the customization of the Pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
+```
+In order to create a new theme `igx-action-strip-theme` should be extended:
+```scss
+$custom-strip: igx-action-strip-theme(
+    $background: #011627,
+    $actions-background: #FEFEFE,
+    $color:  #ECAA53,
+    $delete-action: null,
+    $actions-border-radius: 1
+);
+```
+
+The last step is to include the component theme in our application.
+```scss
+@include igx-action-strip($custom-strip);
+```
+
+
+### API and Style References
+
+For more detailed information regarding the ActionStrip's API, refer to the following links:
+* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+
+The following built-in CSS styles helped us achieve this Action Strip layout:
+
+* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+
+Additional components and/or directives that can be used within Action Strip:
+
+* [`IgxActionStripMenuItemDirective`]({environment:angularApiUrl}/classes/igxmenuitemdirective.html)
+* [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxpinningactionscomponent.html)
+* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
+* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+
+
+<div class="divider"></div>
+
+###Additional Resources
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
