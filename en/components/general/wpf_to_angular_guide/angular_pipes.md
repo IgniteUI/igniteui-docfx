@@ -1,7 +1,7 @@
 ---
-title: Transform Data with Angular Pipes | IgniteUI for Angular | Infragistics
-_description: Learn how to transform data using Angular pipes which is similar to WPF converters.
-_keywords: transform data, ignite ui for angular, infragistics
+title: Transform Data with Angular Pipes | WPF to Angular Guide | Infragistics
+_description: Learn how Angular pipes can transform data from one value to another like wpf converters. Angular provides predefined pipes for common data transformations.
+_keywords: transform data with angular pipes, ignite ui for angular, infragistics
 ---
 
 ## Transform Data with Angular Pipes
