@@ -91,10 +91,17 @@ When the @@igxName body is focused and press one of the following key combinatio
  - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content if the row is not already collapsed;
  - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content if the row is not already collapsed;
 
+Having all that theory may be easily turned into practice with the demo below.
 
 ### Demo
-
-Having all that theory may be easily turned into practice with the demo below.
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-keyboardnav-guide-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-keyboardnav-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 
 ### Custom keyboard navigation
