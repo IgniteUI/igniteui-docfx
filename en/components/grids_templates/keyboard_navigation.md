@@ -22,12 +22,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## @@igComponent Keyboard Navigation
 
-Keyboard navigation is available by default in the @@igxName and aims at covering as many as possible features and scenarios for the end user. Now in order to improve the overall page navigation experience we reduced the tab stops in the grid. Currently we have only the following main tab stops:
-    - GroupBy / Toolbar area /if is enabled/;
-    - header of the grid;
-    - body of the grid;
-    - column summaries /if are enabled/;
-    - the paginator /if is enabled/;
+Keyboard navigation enhances the accessibility of the @@igxName by providing vast details of every element while navigating through them. This functionality comes with the @@igxName by the default, although the user has the freedom to override it by implementing a custom one.
+
+The tabulations of the @@igxName have been reduced so that it is fully compliant and convenient to use.
+Currently, the @@igxName introduces the following tab stops:
+* `GroupBy` or `Toolbar area` (if enabled);
+* @@igxName `header`;
+* @@igxName `body`;
+* `Column summaries` (if enabled);
+* @@igxName `paginator` (if enabled);
 
 >[!NOTE]
 > Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
@@ -53,8 +56,8 @@ When you focus the header container of the grid and press one of the following k
  - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable;
  - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting;
  - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting;
- - `Ctrl + Alt + Arrow Left` - group by the active column /if the column is marked as groupable/;
- - `Ctrl + Alt + Arrow Right` - ungroup by the active column /if the column is marked as groupable/;
+ - `Shift + Alt + Arrow Left` - group by the active column /if the column is marked as groupable/;
+ - `Shift + Alt + Arrow Right` - ungroup by the active column /if the column is marked as groupable/;
  - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header if the column is not already collapsed;
  - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header if the column is not already expanded;
  - `Space` - select the current column; If the column is already selected, it will remove the selection;
