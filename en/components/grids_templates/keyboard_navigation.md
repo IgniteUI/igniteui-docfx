@@ -29,7 +29,7 @@ Keyboard navigation is available by default in the @@igxName and aims at coverin
     - column summaries /if are enabled/;
     - the paginator /if is enabled/;
 
-> Note:
+>[!NOTE]
 > Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
 > By pressing `tab` key you are going through the following sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid
 > Paginator". Also keep in mind that if you add a focusable element in the grid template it will be added to the page tab sequence.
@@ -288,4 +288,3 @@ Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
