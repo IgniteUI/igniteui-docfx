@@ -24,7 +24,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 Keyboard navigation enhances the accessibility of the @@igxName by providing vast details of every element while navigating through them. This functionality comes with the @@igxName by the default, although the user has the freedom to override it by implementing a custom one.
 
-The tabulations of the @@igxName have been reduced so that it is fully compliant and convenient to use.
+The tabulations of the @@igxName has been reduced so that it is fully compliant and convenient to use.
 Currently, the @@igxName introduces the following tab stops:
 * `GroupBy` or `Toolbar area` (if enabled);
 * @@igxName `header`;
@@ -34,13 +34,13 @@ Currently, the @@igxName introduces the following tab stops:
 
 >[!NOTE]
 > Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
-> By pressing `tab` key you are going through the following sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid
-> Paginator". Also keep in mind that if you add a focusable element in the grid template it will be added to the page tab sequence.
+> Having that in mind, when pressing `tab` key leads to the following navigation sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid Paginator".
+> Also, if @@igxName template contains any focusable element, they will be included in the navigation sequence either.
 
 ### Header Navigation
 
-We introduced a full keyboard navigation support in the grid headers, so now is possible to navigate with the arrows keys through them. Also we provide a number of key combinations that trigger a different column functionality like filtering, sorting, grouping and etc.
-When you focus the header container of the grid and press one of the following key combinations, the described behavior is performed.
+It has been introduced a full *keyboard navigation* support in the @@igxName header so that it can be easily traversed with the arrow keys. Additionally, there are a number of key combinations that trigger a different column functionality like filtering, sorting, grouping and etc.
+When the @@igxName header container is focused and press one of the following key combinations, the described behavior is performed.
 
 #### Key Combinations
 
@@ -64,7 +64,7 @@ When you focus the header container of the grid and press one of the following k
 
 ### Body navigation
 
- When you focus the body of the grid and press one of the following key combinations, the described behavior is performed.
+When the @@igxName body is focused and press one of the following key combinations, the described behavior is performed.
 
 #### Key Combination
 
@@ -94,7 +94,7 @@ When you focus the header container of the grid and press one of the following k
 
 ### Demo
 
-
+Having all that theory may be easily turned into practice with the demo below.
 
 
 ### Custom keyboard navigation
