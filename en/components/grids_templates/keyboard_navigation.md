@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Data Grid Component
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
+title: Grid Keyboard Navigation | Ignite UI for Angular | Infragistics
+_description: Learn how to use Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
+_keywords: keyboard navigation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Component
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Grid control, Angular Tree Grid component, Angular High Performance Tree Grid, Tree Grid
+title: TreeGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
+_description: Learn how to use TreeGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
+_keywords: keyboard navigation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Component
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
+title: HierarchicalGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
+_description: Learn how to use HierarchicalGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
+_keywords: keyboard navigation, ignite ui for angular, infragistics
 ---
 }
 
 ## @@igComponent Keyboard Navigation
 
-Keyboard navigation enhances the accessibility of the @@igxName by providing vast details of every element while navigating through them. This functionality comes with the @@igxName by the default, although the user has the freedom to override it by implementing a custom one.
+The @@igComponent provides variety of keyboard interactions for the user. Keyboard navigation enhances the accessibility of the @@igxName by providing vast details of every element while navigating through each cell, row, column header or any other navigable element. This functionality comes with the @@igxName by the default, although the user has the freedom to override it by implementing a custom one.
 
 The tabulations of the @@igxName has been reduced so that it is fully compliant and convenient to use.
 Currently, the @@igxName introduces the following tab stops:
