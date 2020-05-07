@@ -93,6 +93,8 @@ When the @@igxName body is focused and press one of the following key combinatio
 
 Having all that theory may be easily turned into practice with the demo below.
 
+By focusing any navigable grid container an action list will be shown, that will guide you though some of the keyboard combinations above.
+
 ### Demo
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-keyboardnav-guide-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-keyboardnav-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
