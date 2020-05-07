@@ -56,5 +56,4 @@ Example:
 Currently the following components have only partial RTL support:
 
 * Grid (igx-grid)
-* Slider (igx-slider)
 * Tabs (igx-tabs)
