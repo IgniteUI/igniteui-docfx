@@ -4,28 +4,21 @@ _description: Display a progress bar and customize its appearance with endless c
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Linear Progress components, Angular Linear Progress controls
 ---
 
-##Linear Progress
+## Linear Progress
 <p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
-<div class="divider"></div>
+<div class="divider--half"></div>
 
-### Linear Progress Demo
-<div class="sample-container loading" style="height:550px">
-    <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+#### Demo
+<div class="sample-container loading" style="height:50px">
+    <iframe id="linear-progressbar-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
-To get started with the Linear Progress Bar Indicator component, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the **IgxProgressBarModule** in the **app.module.ts** file:
+To get started with the Linear Progress Bar Indicator component, you need to import the **IgxProgressBarModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 
@@ -40,129 +33,74 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-And now let's create a simple example in which we are going to simulate a continuous process, that is triggered on button click. In addition you can notice
-that the speed of loading depends on the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) attribute that we have set to our `igx-linear-bar`. In the first case our [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value is set to 200 and loads slower than in the second where it is set to 100 (default value). So let's see the code...
+To have a better understanding how everything works, let's create a simple example, like the one in the demo.
+
+Let's add a plain linear progress bar to our template:
 
 ```html
-...
-<section class="sample-content">
-    <h4 class="sample-title">Linear progress bar</h4>
-    <div class="linear-container">
-        <h5>Max value: 200</h5>
-        <igx-linear-bar [striped]="false" [max]="200" [value]="0"></igx-linear-bar>
-    </div>
-    <div class="linear-container">
-        <h5>Max value: 100</h5>
-        <igx-linear-bar [striped]="false" [max]="100" [value]="0" type="danger"></igx-linear-bar>
-    </div>
-</section>
-....
-<div class="button-container">
-    <p>Press the button to start updating the bars</p>
-    <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
-    </button>
-</div>
-...
+<igx-linear-bar [striped]="false" [max]="100" [value]="0"></igx-linear-bar>
 ```
+
+Create the logic that generates that visual loading:
+
 ```typescript
-  @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
-  public linearBars: QueryList<IgxLinearProgressBarComponent>;
+public interval: any;
 
-  public interval: any;
+@ViewChild(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
+public linearBar: IgxLinearProgressBarComponent;
 
-  public updateValue() {
-      this.linearBars.map((bar) => bar.value += this.randomIntFromInterval(1, 3));
-      const shouldStop = this.linearBars.toArray().every((bar) => bar.value >= bar.max);
-      if (shouldStop) {
-        this.interval = clearInterval(this.interval);
-      }
-  }
+public ngOnInit() {
+this.interval = setInterval(this.updateValue.bind(this), 60);
+}
 
-  public tick() {
-      if (this.interval) {
-          this.interval = clearInterval(this.interval);
-          return;
-      }
-      this.interval = setInterval(this.updateValue.bind(this), 60);
-  }
-
-  private randomIntFromInterval(min: number, max: number) {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+public updateValue() {
+    this.linearBar.value += 1;
+}
 ```
-If all went well, you should see something like the following in your browser:
-<div class="sample-container loading" style="height:500px">
-    <iframe id="linear-progressbar-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-And now let's enhance our example and create different types of loading bars, that can be striped or not.
+If all went well, you should see the demo sample in your browser.
+
+#### Progress Types
+
+You can set the type of your bar, using the [`type`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) attribute. There are five types of linear progress bars - `default`, `error`, `success`, `info` and `warning`.
+
+### Striped Progress
+Also, you can make the bar striped, using the [`striped`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) property and setting it to `true`.
+
+Let's see how to create the different types of loading bars, that can be striped or not.
 ```html
-...
-<section class="sample-content">
-    <h4 class="sample-title">Linear progress bar</h4>
-    <div class="linear-container">
-        <igx-linear-bar type="default"></igx-linear-bar>
-        <igx-linear-bar type="info" [striped]="true"></igx-linear-bar>
-        <igx-linear-bar type="success"></igx-linear-bar>
-        <igx-linear-bar type="warning" [striped]="true"></igx-linear-bar>
-        <igx-linear-bar type="danger"></igx-linear-bar>
-    </div>
-</section>
-<div class="button-container">
-    <p>Press the button to start updating the bars</p>
-    <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
-    </button>
+<div class="linear-container">
+    <igx-linear-bar type="default"></igx-linear-bar>
+    <igx-linear-bar type="success" [striped]="true"></igx-linear-bar>
+    <igx-linear-bar type="error"></igx-linear-bar>
+    <igx-linear-bar type="info" [striped]="true"></igx-linear-bar>
+    <igx-linear-bar type="warning"></igx-linear-bar>
 </div>
-<div class="button-container">
-    <p>Press the button to reset the bars</p>
-    <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="reset()" [disabled]="disable">
-        <igx-icon color="white" isActive="true">replay</igx-icon>
-    </button>
-</div>
-...
 ```
 
 ```typescript
-  @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
-  public linearBars: QueryList<IgxLinearProgressBarComponent>;
+public interval: any;
 
-  public disable = false;
-  public interval: any;
+@ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
+public linearBars: QueryList<IgxLinearProgressBarComponent>;
 
-  public updateValue() {
-    this.disable = true;
+public ngOnInit() {
+this.interval = setInterval(this.updateValue.bind(this), 60);
+}
+
+public updateValue() {
     this.linearBars.map((bar) => bar.value += this.randomIntFromInterval(1, 3));
     const shouldStop = this.linearBars.toArray().every((bar) => bar.value >= bar.max);
     if (shouldStop) {
-    this.disable = false;
     this.interval = clearInterval(this.interval);
     }
-  }
+}
 
-  public tick() {
-    if (this.interval) {
-        this.interval = clearInterval(this.interval);
-        this.disable = false;
-        return;
-    }
-    this.interval = setInterval(this.updateValue.bind(this), 60);
-  }
-
-  public reset() {
-    this.linearBars.toArray().forEach((bar) => bar.value = 0);
-  }
-
-  private randomIntFromInterval(min: number, max: number) {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+private randomIntFromInterval(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 ```
-So if we set up everything correctly, let's see what happened in the browser:
-<div class="sample-container loading" style="height:550px">
+So if we set up everything correctly, you should see this in your browser:
+<div class="sample-container loading" style="height:200px">
     <iframe id="linear-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" class="lazyload"></iframe>
 </div>
 <div>
@@ -170,93 +108,75 @@ So if we set up everything correctly, let's see what happened in the browser:
 </div>
 <div class="divider--half"></div>
 
-Finally let's make our sample even more exciting and good as we set the following attributes: [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign), [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility), [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) and [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text).
-And now let's see how our code looks:
+#### Indeterminate Progress
+If you want to track a process, which does not provide predetermined end condition, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
+
+#### Text Properties
+
+You can customise the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) property, to align the text left, center or right, you can hide the text, using the [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility) property, setting it to `false`, use the [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) property, setting it to `true`, to move the text on top of the bar, and create your custom text, using the [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) property.
+
+Let's get our previous sample and play a little bit with the text properties and also throw one indeterminate progress bar in there, so you can see how this looks like.
+
 ```html
-...
-<section class="sample-content">
-    <h4 class="sample-title">Linear progress bar</h4>
-        <div class="linear-container">
-        <h5>This is the default appearance of IgxLinearProgressBarComponent</h5>
-        <igx-linear-bar type="default"></igx-linear-bar>
-        <h5>Text is aligned CENTER</h5>
-        <igx-linear-bar type="info" [textTop]="false" [textAlign]="positionCenter" [striped]="true"></igx-linear-bar>
-        <h5>Text is aligned END</h5>
-        <igx-linear-bar type="success" [textTop]="false" [textAlign]="positionEnd"></igx-linear-bar>
-        <h5> Set your custom text</h5>
-        <igx-linear-bar type="warning" [text]="'Custom text'" [textAlign]="positionCenter" [striped]="true"></igx-linear-bar>
-        <h5>Text is set above the line</h5>
-        <igx-linear-bar type="danger" [textTop]="true"></igx-linear-bar>
-        <h5>Without text</h5>
-        <igx-linear-bar type="default" [textVisibility]="false"></igx-linear-bar>
-        </div>
-</section>
-<div class="button-container">
-    <p>Press the button to start updating the bars</p>
-    <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="tick()">
-        <igx-icon fontSet="material">{{changeIcon()}}</igx-icon>
-    </button>
+<div class="linear-container">
+    <igx-linear-bar type="default"></igx-linear-bar>
+    <igx-linear-bar
+        type="success"
+        class="indeterminate"
+        [indeterminate]="true"
+        [striped]="true"
+    ></igx-linear-bar>
+    <igx-linear-bar
+        type="error"
+        [textAlign]="positionEnd"
+        [text]="'Custom text'"
+    ></igx-linear-bar>
+    <igx-linear-bar
+        type="info"
+        [textVisibility]="false"
+        [striped]="true"
+    ></igx-linear-bar>
+    <igx-linear-bar
+        type="warning"
+        [textTop]="true"
+    ></igx-linear-bar>
 </div>
-<div class="button-container">
-    <p>Press the button to reset the bars</p>
-    <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="reset()" [disabled]="disable">
-        <igx-icon color="white" isActive="true">replay</igx-icon>
-    </button>
-</div>
-...
 ```
 
-And do not forget to first import [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) in your component.
+And do not forget to import [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) in your component if you're using the `textAlign` property.
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
 .....
-export class LinearProgressbarSample2Component implements OnInit {
-  @ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
-  public linearBars: QueryList<IgxLinearProgressBarComponent>;
+public interval: any;
+public positionCenter: IgxTextAlign;
+public positionEnd: IgxTextAlign;
 
-  public disable = false;
-  public interval: any;
-  public positionCenter: IgxTextAlign;
-  public positionEnd: IgxTextAlign;
+@ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
+public linearBars: QueryList<IgxLinearProgressBarComponent>;
 
-  public ngOnInit() {
-    this.positionCenter = IgxTextAlign.CENTER;
-    this.positionEnd = IgxTextAlign.END;
-  }
+public ngOnInit() {
+this.positionCenter = IgxTextAlign.CENTER;
+this.positionEnd = IgxTextAlign.END;
+this.interval = setInterval(this.updateValue.bind(this), 60);
+}
 
-  public updateValue() {
-    this.disable = true;
+public updateValue() {
     this.linearBars.map((bar) => bar.value += this.randomIntFromInterval(1, 3));
     const shouldStop = this.linearBars.toArray().every((bar) => bar.value >= bar.max);
     if (shouldStop) {
-    this.disable = false;
     this.interval = clearInterval(this.interval);
     }
-  }
+}
 
-  public tick() {
-    if (this.interval) {
-        this.interval = clearInterval(this.interval);
-        this.disable = false;
-        return;
-    }
-    this.interval = setInterval(this.updateValue.bind(this), 60);
-  }
-
-  public reset() {
-    this.linearBars.toArray().forEach((bar) => bar.value = 0);
-  }
-
-  private randomIntFromInterval(min: number, max: number) {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+private randomIntFromInterval(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 ```
 
-And now let's see it in the browser:
+Let's take a look at how this turned out:
 
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:200px">
     <iframe id="linear-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" class="lazyload"></iframe>
 </div>
 <div>
@@ -270,6 +190,62 @@ And now let's see it in the browser:
 > If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is defined greater than the [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) input, there is only one update, which gets **the value that is passed for progress update**.   
 <div class="divider--half"></div>
 
+#### Dynamic Progress
+
+You can dynamically change the progress value of the circular progress bar, using controls to change the value of the progress. We can achieve that by binding the value, using a custom variable:
+
+```html
+<div class="linear-container">
+    <igx-linear-bar
+        [value]="currentValue"
+        [max]="100"
+    ></igx-linear-bar>
+
+    <div class="button-container">
+        <button igxButton="icon" (click)="removeProgress()">
+            <igx-icon fontSet="material">remove</igx-icon>
+        </button>
+        <button igxButton="icon" (click)="addProgress()">
+            <igx-icon fontSet="material">add</igx-icon>
+        </button>
+    </div>
+</div>
+```
+
+Create the functions that add and remove value from the progress:
+
+```typescript
+public currentValue: number;
+
+public ngOnInit() {
+    this.currentValue = 0;
+}
+
+public addProgress() {
+    this.currentValue += 10;
+    if (this.currentValue > 100) {
+        this.currentValue = 100;
+    }
+}
+
+public removeProgress() {
+    this.currentValue -= 10;
+    if (this.currentValue < 0) {
+        this.currentValue = 0;
+    }
+}
+```
+
+After completing the steps above, it should look like this:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="linear-dynamic-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-dynamic-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Styling
 
 To get started with styling the linear progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
@@ -278,103 +254,59 @@ To get started with styling the linear progress bar, we need to import the `inde
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) and accepts the `$track-color`, `$fill-color-default`, `$fill-color-danger`, `$stripes-color` and `$text-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) and accepts the `$track-color`, `$fill-color-default` and `$text-color` parameters.
 
 ```scss
 $custom-theme: igx-progress-linear-theme(
-    $track-color: lightgray,
-    $fill-color-default:  rgb(22, 187, 238),
-    $fill-color-danger: rgb(22, 187, 238),
-    $stripes-color: rgba(0, 0, 0, 0.26),
-    $text-color: rgb(22, 187, 238)
+    $track-color: #D3D3D3,
+    $fill-color-default: #ECAA53,
+    $text-color: #ECAA53
 );
 ```
-The last step is to **include** the component mixins: 
+
+#### Including Themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
  @include igx-progress-linear($custom-theme);
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](./themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
- ```scss
+```scss
 :host {
-  ::ng-deep {
-    @include igx-progress-linear($custom-theme);
-  }
+     ::ng-deep {
+        @include igx-progress-linear($custom-theme);
+    }
 }
 ```
 
-#### Defining a color palette
+<div class="divider"></div>
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-$gray-color: lightgray;
-$blue-color: rgb(22, 187, 238);
-
-$custom-palette: igx-palette($primary: $gray-color, $secondary: $blue-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: igx-progress-linear-theme(
-    $track-color: igx-color($custom-palette, "primary", 500),
-    $fill-color-default: igx-color($custom-palette, "secondary", 500),
-    $fill-color-danger: igx-color($custom-palette, "secondary", 500),
-    $stripes-color: igx-color($custom-palette, "grays", 400),
-    $text-color: igx-color($custom-palette, "secondary", 500)
-);
+@include igx-css-vars($custom-theme);
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](./themes/palette.md) topic for detailed guidance on how to use them.
-
-#### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](./themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-progress-linear`]({environment:sassApiUrl}/index.html#variable-_light-progress-linear):  
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
-// Extending the light progress linear schema
-$custom-progress-schema: extend($_light-progress-linear,
-    (
-        track-color: (igx-color:('primary', 500)),
-        fill-color-default: (igx-color:('secondary', 500)),
-        fill-color-danger: (igx-color:('secondary', 500)),
-        stripes-color: (igx-color:('grays', 400)),
-        text-color: (igx-color:('secondary', 500))
-    )
-);
+:host {
+    @include igx-css-vars($custom-theme);
+}
 ```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-linear-bar: $custom-progress-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: igx-progress-linear-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 #### Demo
 
-<div class="sample-container loading" style="height:450px">
+<div class="sample-container loading" style="height:50px">
     <iframe id="linear-progressbar-styling-iframe" src='{environment:demosBaseUrl}/data-display/linear-progressbar-styling' width="100%" height="100%" 
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
