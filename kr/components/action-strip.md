@@ -28,7 +28,9 @@ In order to initialize and position correctly the Action Strip it needs to be in
 ```html
 <div style="position:relative;width:100px;height:100px;">
     <igx-action-strip>
-        <igx-icon (click)="clickHandler()">star</igx-icon>
+        <button igxButton (click)="makeTextBold()">
+            <igx-icon>format_bold</igx-icon>
+        </button>
     </igx-action-strip>
 <div>
 ```
@@ -41,8 +43,15 @@ When there is a need for too many actions, which are overlapping the main conten
 ```html
 <div style="position:relative;width:100px;height:100px;">
     <igx-action-strip>
-        <button *igxActionStripMenuItem igxButton="icon"><igx-icon>star</igx-icon></button>
-        <button *igxActionStripMenuItem igxButton="icon"><igx-icon>edit</igx-icon></button>
+        <button *igxActionStripMenuItem igxButton (click)="alignTextLeft()">
+            <igx-icon>format_align_left</igx-icon>
+        </button>
+        <button *igxActionStripMenuItem igxButton (click)="alignTextCenter()">
+            <igx-icon>format_align_center</igx-icon>
+        </button>
+        <button *igxActionStripMenuItem igxButton (click)="alignTextRight()">
+            <igx-icon>format_align_right</igx-icon>
+        </button>
     </igx-action-strip>
 </div>
 ```
@@ -109,11 +118,11 @@ To begin the customization of the Pinning feature, you need to import the `index
 In order to create a new theme `igx-action-strip-theme` should be extended:
 ```scss
 $custom-strip: igx-action-strip-theme(
-    $background: #011627,
-    $actions-background: #FEFEFE,
-    $color:  #ECAA53,
+    $background: rgba(150, 133, 143, 0.4),
+    $actions-background: rgba(109, 121, 147, 0.6),
+    $color:  null,
     $delete-action: null,
-    $actions-border-radius: 1
+    $actions-border-radius: 0
 );
 ```
 
@@ -122,7 +131,7 @@ The last step is to include the component theme in our application.
 @include igx-action-strip($custom-strip);
 ```
 
-<div class="sample-container loading" style="height: 600px;">
+<div class="sample-container loading" style="height: 400px;">
     <iframe id="action-strip-styling-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-styling" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
