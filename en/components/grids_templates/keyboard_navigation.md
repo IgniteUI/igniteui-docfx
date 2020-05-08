@@ -96,7 +96,8 @@ Having all that theory may be easily turned into practice with the demo below.
 By focusing any navigable grid container an action list will be shown, that will guide you though some of the keyboard combinations above.
 
 ### Demo
-<div class="sample-container loading" style="height:700px">
+@@if (igxName === "IgxGrid") {
+<div class="sample-container loading" style="height:470px">
     <iframe id="grid-keyboardnav-guide-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-keyboardnav-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -104,6 +105,27 @@ By focusing any navigable grid container an action list will be shown, that will
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+@@if (igxName === "IgxHierarchicalGrid") {
+<div class="sample-container loading" style="height:470px">
+    <iframe id="hgrid-keyboardnav-guide-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === "IgxTreeGrid") {
+<div class="sample-container loading" style="height:470px">
+    <iframe id="tgrid-keyboardnav-guide-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tgrid-keyboardnav-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
 
 ### Custom keyboard navigation
