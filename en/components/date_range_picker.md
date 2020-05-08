@@ -153,7 +153,7 @@ The last step is to pass the custom themes:
 
 ```scss
     @include igx-css-vars($custom-date-range-theme);
-    @include igx-css-vars($input-group-theme);
+    @include igx-css-vars($custom-input-group-theme);
     @include igx-css-vars($custom-calendar-theme);
 ```
 
@@ -176,7 +176,14 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 #### Scoping Styles
 Regarding scoping styles, you should refer to both styling sections [Overlay Scoped Component Styles](overlay_styling.md#scoped-component-styles) and [Input Group Scoping Styles](input_group.md#scoping-styles) as they provide more insights.
 
-<div class="divider--half"></div>
+<div class="sample-container loading" style="height:500px">
+    <iframe id="daterangepicker-styling-iframe" src='{environment:demosBaseUrl}/scheduling/daterangepicker-styling' width="100%" height="100%" 
+        seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### Advanced Demo
 <div class="sample-container loading" style="height:600px">
