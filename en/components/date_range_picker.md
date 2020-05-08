@@ -104,6 +104,7 @@ calendar navigation - link calendar
 <div class="divider--half"></div>
 
 ### Styling
+
 To get started with styling the `igxDateRangePicker`, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -176,8 +177,8 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 #### Scoping Styles
 Regarding scoping styles, you should refer to both styling sections [Overlay Scoped Component Styles](overlay_styling.md#scoped-component-styles) and [Input Group Scoping Styles](input_group.md#scoping-styles) as they provide more insights.
 
-<div class="sample-container loading" style="height:500px">
-    <iframe id="daterangepicker-styling-iframe" src='{environment:demosBaseUrl}/scheduling/daterangepicker-styling' width="100%" height="100%" 
+<div class="sample-container loading" style="height:600px">
+    <iframe id="daterangepicker-styling-iframe" src='{environment:demosBaseUrl}/scheduling/styled-daterangepicker' width="100%" height="100%" 
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
