@@ -104,7 +104,78 @@ calendar navigation - link calendar
 <div class="divider--half"></div>
 
 ### Styling
-For details check out the [`Input Group styling guide`](input_group.md#styling).
+To get started with styling the `igxDateRangePicker`, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Date Range Picker Component exposes `igx-date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the above will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group's and calendar's theme, we have to create new themes that extend the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker's own theme. We will use a single custom color palette to define the colors to use across all themes:
+
+```scss
+// COMMON
+$purple: #9E379F;
+$blue: #61AEDB;
+
+$custom-palette: igx-palette($primary: $blue, $secondary: $purple);
+
+$today-text: igx-color($custom-palette, "primary", 500);
+$text-color: igx-color($custom-palette, "secondary", 200);
+$color-focused: igx-color($custom-palette, "secondary", 500);
+
+// DATE-RANGE
+$custom-date-range-theme: igx-date-range-picker-theme(
+    $label-color: $color-focused
+);
+
+// INPUT GROUP
+$custom-input-group-theme: igx-input-group-theme(
+  $palette: $custom-palette,
+  $filled-text-color: $text-color,
+  $idle-text-color: $text-color,
+  $focused-text-color: $color-focused,
+  $hover-bottom-line-color: $color-focused,
+  $idle-bottom-line-color: $purple
+);
+
+// CALENDAR
+$roundness: 0.5;
+$custom-calendar-theme: igx-calendar-theme(
+    $palette: $custom-palette,
+    $date-current-text-color: $today-text,
+    $border-radius: $roundness,
+    $date-border-radius: $roundness
+);
+```
+
+#### Using CSS variables
+The last step is to pass the custom themes:
+
+```scss
+    @include igx-css-vars($custom-date-range-theme);
+    @include igx-css-vars($input-group-theme);
+    @include igx-css-vars($custom-calendar-theme);
+```
+
+#### Using Theme Overrides
+
+In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
+
+If the component is using the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+
+ ```scss
+:host {
+    ::ng-deep {
+        @include igx-date-range-picker($custom-date-range-theme);
+        @include igx-input-group($custom-input-group-theme);
+        @include igx-calendar($custom-calendar-theme);
+    }
+}
+```
+
+#### Scoping Styles
+Regarding scoping styles, you should refer to both styling sections [Overlay Scoped Component Styles](overlay_styling.md#scoped-component-styles) and [Input Group Scoping Styles](input_group.md#scoping-styles) as they provide more insights.
+
 <div class="divider--half"></div>
 
 ### Advanced Demo
@@ -115,6 +186,15 @@ For details check out the [`Input Group styling guide`](input_group.md#styling).
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="flight-booking-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+### API References
+<div class="divider--half"></div>
+
+* [IgxDateRangePickerComponent]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
+* [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ### Additional Resources
 Related topics:
