@@ -89,7 +89,7 @@ If you want to track a process, which does not provide predetermined end conditi
 ```
 
 >[!NOTE]
->You can hide the text of the circular progress bar setting the [`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textvisibility) property to `false`.
+>You can hide the text of the circular progress bar by setting the [`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textvisibility) property to `false`.
 
 The final result should be:
 
