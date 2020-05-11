@@ -234,7 +234,7 @@ public incrementProgress() {
     }
 }
 
-public removeProgress() {
+public decrementProgress() {
     this.currentValue -= 10;
     if (this.currentValue < 0) {
         this.currentValue = 0;
