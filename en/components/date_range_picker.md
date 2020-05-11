@@ -178,12 +178,12 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 Regarding scoping styles, you should refer to both styling sections [Overlay Scoped Component Styles](overlay_styling.md#scoped-component-styles) and [Input Group Scoping Styles](input_group.md#scoping-styles) as they provide more insights.
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="daterangepicker-styling-iframe" src='{environment:demosBaseUrl}/scheduling/styled-daterangepicker' width="100%" height="100%" 
+    <iframe id="styled-daterangepicker-iframe" src='{environment:demosBaseUrl}/scheduling/styled-daterangepicker' width="100%" height="100%" 
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="styled-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### Advanced Demo
