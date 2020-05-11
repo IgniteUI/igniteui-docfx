@@ -33,7 +33,7 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-To have a better understanding how everything works, let's create a simple example, like the one in the demo.
+To have a better understanding of how everything works, let's create a simple example, like the one in the demo.
 
 Let's add a plain linear progress bar to our template:
 
