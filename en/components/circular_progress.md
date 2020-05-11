@@ -114,10 +114,10 @@ You can dynamically change the value of the progress by using external controls 
     class="custom-size"
     >
     <div class="button-container">
-        <button igxButton="icon" (click)="removeProgress()">
+        <button igxButton="icon" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
         </button>
-        <button igxButton="icon" (click)="addProgress()">
+        <button igxButton="icon" (click)="incrementProgress()">
             <igx-icon fontSet="material">add</igx-icon>
         </button>
     </div>
@@ -168,6 +168,19 @@ Add some styles:
 
 One way to customize the progress bar is to use a color gradient instead of a solid color.
 This can be done in one of two ways - by using the [`IgxProgressBarGradientDirective`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#gradienttemplate) directive or by implementing a custom theme, albeit custom themes support up to two color stops.
+
+If you want to create a gradient with just two color stops, you can style your circular progress bar, using a custom theme. Create a list of colors and pass it to the `$progress-circle-color` parameter:
+
+```scss
+$colors: #695cf9,#ef017c;
+
+$custom-theme: igx-progress-circular-theme(
+    $progress-circle-color: $colors
+    
+);
+```
+
+You can learn more about styling the circular progress bar in the [`Styling Section`](./circular_progress.html#styling)
 
 To provide a gradient that has more than 2 color stops, we have to use the directive on an `ng-template` in our `igx-circular-bar` like that:
 
