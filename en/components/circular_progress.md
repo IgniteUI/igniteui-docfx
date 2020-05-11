@@ -148,7 +148,7 @@ public decrementProgress() {
 }
 ```
 
-Add some styles to align items:
+Add some styles:
 
 ```scss
 .custom-size {
