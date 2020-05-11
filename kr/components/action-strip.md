@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Action Strip
 <p class="highlight">
-The Ignite UI for Angular [`igxActionStrip`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html) represents a template area for one or more actions. The Action Strip is intended to provide additional UI and functionality for a specific container. This container should be relative, because the Action Strip attempts to overlay its relative parent. This provides an easy way to position the actions over the parent. Event though the parent is overlapped by the Action Strip the main interactions and user access to the container will remain available.
+The Ignite UI for Angular [`igxActionStrip`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html) represents a template area for one or more actions. The Action Strip is intended to provide additional UI and functionality for a specific element container. This container should be relative, because the Action Strip attempts to overlay it. This provides an easy way to position the actions over the parent. Even though the parent is overlapped by the Action Strip the main interactions and user access to the container will remain available.
 </p>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ In order to initialize and position correctly the Action Strip it needs to be in
 By default the Action Strip will be visible, but this can be controlled by the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
 
 #### Menu look and feel
-When there is a need for too many actions, which are overlapping the main content it is a good idea to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item marked with `*igxActionStripMenuItem` will be resulting a three-dot button, which toggles a dropdown containing those items.
+For scenarios with more than three actions, which are overlapping the main content it might be a good idea to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item in an Action Strip marked with `*igxActionStripMenuItem` will be resulting in a three-dot button, which toggles a dropdown containing those items.
 
 ```html
 <div style="position:relative;width:100px;height:100px;">
@@ -65,17 +65,19 @@ When there is a need for too many actions, which are overlapping the main conten
 
 #### Reusing the Action Strip
 
-Single Action Strip can be used for more than one elements. As long as the strips for those elements are not required for it to be visible simultaneously. 
+Single Action Strip can be used for more than one element. As long as the actions of those elements are not required to be visible simultaneously.
 The Action Strip can change the container element it is shown for.
 This is achieved by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
-The best way to achieve this is using the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and pass the `context` as parameter. The `context` should be an instance of a component and should have an accessible element property.
+The best way to change the `context` is by using the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and pass the `context` as parameter. The `context` should be an instance of a component and should have an accessible `element` property.
+
+>Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip into that `element` .
 
 
 ### Usage in Grids
 
 Action strip provides functionality and UI for IgxGrid.
 All that can be utilized with grid action components. 
-There are two default provided components:
+We are providing two default grid action components:
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI related to grid editing. It allows starting edit mode for cell or row, depending on rowEditable option of the grid and deleting rows.
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI related to grid pinning. It allows pinning rows and navigating from a pinned row to the disabled row.
 
