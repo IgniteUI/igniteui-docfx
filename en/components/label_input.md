@@ -102,6 +102,37 @@ and in our markup:
     <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 ```
+#### Focus & Text Selection
+
+You can add logic for forcing the `focus` on an input element using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
+
+```html
+   ...
+    <igx-input-group>
+        <input igxInput [igxFocus]="isFocused" name="fullName" type="text" />
+        <label igxLabel for="fullName">Full Name</label>
+    </igx-input-group>
+   ...
+```
+>[!NOTE]
+>To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
+
+If you want to select the entire text in an `igxInput` element on focus event you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
+
+```html
+   ...
+    <igx-input-group>
+        <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text" />
+        <label igxLabel for="fullName">Full Name</label>
+    </igx-input-group>
+    <igx-input-group>
+        <input igxInput [igxTextSelection]="true" name="email" type="text" />
+        <label igxLabel for="email">Email</label>
+    </igx-input-group>
+   ...
+```
+>[!NOTE]
+>To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
 
 ### Input Group
 You can read about the Input Group component in a separate topic [here](input_group.md).
