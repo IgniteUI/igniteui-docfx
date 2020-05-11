@@ -124,7 +124,7 @@ You can dynamically change the value of the progress by using external controls 
 </div>
 ```
 
-Add the functions that add and remove value from the progress:
+Add the methods that increment and decrement the value:
 
 ```typescript
 public currentValue: number;
