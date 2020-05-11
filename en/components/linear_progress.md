@@ -218,7 +218,7 @@ You can dynamically change the value of the progressbar by using external contro
 </div>
 ```
 
-Create the functions that add and remove value from the progress:
+Create the methods that increment and decrement the value:
 
 ```typescript
 public currentValue: number;
