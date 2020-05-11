@@ -88,15 +88,7 @@ this.interval = setInterval(this.updateValue.bind(this), 60);
 }
 
 public updateValue() {
-    this.linearBars.map((bar) => bar.value += this.randomIntFromInterval(1, 3));
-    const shouldStop = this.linearBars.toArray().every((bar) => bar.value >= bar.max);
-    if (shouldStop) {
-    this.interval = clearInterval(this.interval);
-    }
-}
-
-private randomIntFromInterval(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    this.linearBars.map(bar => bar.value += 1);
 }
 ```
 So if we set up everything correctly, you should see the following in your browser:
@@ -168,15 +160,7 @@ this.interval = setInterval(this.updateValue.bind(this), 60);
 }
 
 public updateValue() {
-    this.linearBars.map((bar) => bar.value += this.randomIntFromInterval(1, 3));
-    const shouldStop = this.linearBars.toArray().every((bar) => bar.value >= bar.max);
-    if (shouldStop) {
-    this.interval = clearInterval(this.interval);
-    }
-}
-
-private randomIntFromInterval(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    this.linearBars.map(bar => bar.value += 1);
 }
 ```
 
@@ -208,10 +192,10 @@ You can dynamically change the value of the progressbar by using external contro
     ></igx-linear-bar>
 
     <div class="button-container">
-        <button igxButton="icon" (click)="removeProgress()">
+        <button igxButton="icon" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
         </button>
-        <button igxButton="icon" (click)="addProgress()">
+        <button igxButton="icon" (click)="incrementProgress()">
             <igx-icon fontSet="material">add</igx-icon>
         </button>
     </div>
