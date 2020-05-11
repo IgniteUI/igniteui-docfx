@@ -66,7 +66,7 @@ You can set the type of your bar, using the [`type`]({environment:angularApiUrl}
 ### Striped Progress
 You can make the bar striped, using the [`striped`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) property and by setting it to `true`.
 
-Let's see how to create the different types of loading bars, that can be striped or not.
+Let's see how we can create different types of progress bars that can be both striped or not.
 ```html
 <div class="linear-container">
     <igx-linear-bar type="default"></igx-linear-bar>
