@@ -1,7 +1,7 @@
 ---
-title: Angular Directives | IgniteUI for Angular | Infragistics
-_description: Configure Angular components appearance based on custom conditions, simply by using the Angular structural directives.
-_keywords: angular directives, ignite ui for angular, infragistics
+title: Angular Structural Directives | ngIf, ngswitch | WPF to Angular Guide | Infragistics
+_description: Learn how to use structural directives in Angular 9 like ngIf, ngswitch & ngFor to add and remove elements to your view in your Angular application
+_keywords: angular structural directives, ignite ui for angular, infragistics
 ---
 
 ## Angular Structural Directives
