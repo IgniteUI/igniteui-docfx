@@ -64,7 +64,7 @@ this.data = [
 ];
 ```
 
-The following code demonstradtes how to bind the doughnut chart to the above data.
+The following code demonstrates how to bind the doughnut chart to the above data.
 
 ```html
  <igx-doughnut-chart height="100%" width="100%">
