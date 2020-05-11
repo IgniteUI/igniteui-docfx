@@ -12,7 +12,7 @@ The Ignite UI for Angular controls can be easily integrated into Reactive Forms 
 ### Demo
 The following sample demonstrates the [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls being part of the Reactive Forms.
 
-<div class="sample-container loading" style="height: 800px;">
+<div class="sample-container loading" style="height: 850px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
