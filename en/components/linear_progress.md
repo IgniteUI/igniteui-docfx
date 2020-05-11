@@ -99,7 +99,7 @@ private randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 ```
-So if we set up everything correctly, you should see this in your browser:
+So if we set up everything correctly, you should see the following in your browser:
 <div class="sample-container loading" style="height:200px">
     <iframe id="linear-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" class="lazyload"></iframe>
 </div>
