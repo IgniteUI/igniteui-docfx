@@ -133,7 +133,7 @@ public ngOnInit() {
     this.currentValue = 0;
 }
 
-public addProgress() {
+public incrementProgress() {
     this.currentValue += 10;
     if (this.currentValue > 100) {
         this.currentValue = 100;
