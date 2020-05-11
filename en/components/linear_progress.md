@@ -149,7 +149,7 @@ Let's update our previous sample by using the aforementioned text properties. We
 </div>
 ```
 
-And do not forget to import [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) in your component if you're using the `textAlign` property.
+And do not forget to import the [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) enumerator in your component if you're using the `textAlign` property.
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
