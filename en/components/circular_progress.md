@@ -78,7 +78,7 @@ If we set up everything correctly, we should have the demo sample in your browse
 
 #### Indeterminate Progress
 
-If you want to track a process, which does not provide predetermined end condition, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
+If you want to track a process that is not determined precisely, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 
 ```html
 <igx-circular-bar
