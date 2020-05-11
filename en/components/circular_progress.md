@@ -103,7 +103,7 @@ The final result should be:
 
 #### Dynamic Progress
 
-You can dynamically change the progress value of the circular progress bar, using controls to change the value of the progress. We can achieve that by binding the value with a custom variable:
+You can dynamically change the value of the progress by using external controls like buttons. To achieve this, we can bind the value to a class property:
 
 ```html
 <div class="sample-content">
