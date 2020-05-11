@@ -109,7 +109,7 @@ So if we set up everything correctly, you should see the following in your brows
 <div class="divider--half"></div>
 
 #### Indeterminate Progress
-If you want to track a process, which does not provide predetermined end condition, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
+If you want to track a process that is not determined precisely, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 
 #### Text Properties
 
