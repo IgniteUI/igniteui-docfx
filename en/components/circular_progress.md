@@ -169,7 +169,7 @@ Add some styles:
 One way to customize the progress bar is to use a color gradient instead of a solid color.
 This can be done in one of two ways - by using the [`IgxProgressBarGradientDirective`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#gradienttemplate) directive or by implementing a custom theme, albeit custom themes support up to two color stops.
 
-We can do that by adding a template in our `igx-circular-bar` like that:
+To provide a gradient that has more than 2 color stops, we have to use the directive on an `ng-template` in our `igx-circular-bar` like that:
 
 ```html
 <div class="sample-content">
