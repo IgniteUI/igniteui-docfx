@@ -113,7 +113,13 @@ If you want to track a process that is not determined precisely, you can set the
 
 #### Text Properties
 
-You can customise the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) property, to align the text left, center or right, you can hide the text, using the [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility) property, setting it to `false`, use the [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) property, setting it to `true`, to move the text on top of the bar, and create your custom text, using the [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) property.
+You can align the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) property. Permitted values are `left`, `center`, and `right`. 
+
+To hide the text, use the [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility) property and set its value to `false`.
+
+Set the [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) property to `true` to move the text above the bar. 
+
+The [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) property can be used to customize the value of the text itself.
 
 Let's get our previous sample and play a little bit with the text properties and also throw one indeterminate progress bar in there, so you can see how this looks like.
 
