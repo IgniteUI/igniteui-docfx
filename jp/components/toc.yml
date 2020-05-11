@@ -122,7 +122,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: grid/row_selection.md
@@ -163,6 +163,7 @@
     - name: キーボード ナビゲーション
       href: grid/keyboard_navigation.md
       new: false
+      updated: true
     - name: 複数行レイアウト
       href: grid/multi_row_layout.md
       new: false
@@ -238,7 +239,7 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: treegrid/row_selection.md
@@ -339,7 +340,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
