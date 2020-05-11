@@ -25,13 +25,13 @@ The DockManager is available for download as an npm package through ProGet feed.
 
 Follow the steps below to add the DockManager package to an Angular project and set up the project in order to use the DockManager inside the Angular components.
 
-Install the @infragistics/igniteui-dockmanager package
+Install the `@infragistics/igniteui-dockmanager` package
 
 ```cmd
 npm install @infragistics/igniteui-dockmanager
 ```
 
-Include the CUSTOM_ELEMENTS_SCHEMA schema in the AppModule:
+Include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
 
 ```typescript
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -42,7 +42,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 })
 export class AppModule {}
 ```
-Call the defineCustomElements() function in the main.ts file:
+Call the `defineCustomElements()` function in the `main.ts` file:
 
 ```typescript
 import { AppModule } from "./app/app.module";
