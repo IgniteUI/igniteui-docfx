@@ -10,30 +10,17 @@ The Ignite UI for Angular Input and Label directives are used to create single-l
 </p>
 <div class="divider--half"></div>
 
-### Label & Input Demo
+### Demo
 <div class="sample-container loading" style="height:100px">
-<iframe id="input-group-sample-2-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-2-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-1-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
-The default styling of the Label and Input directives follows the text fields specification in the Material Design
-[**guidelines**](https://material.io/guidelines/components/text-fields.html).
-
-> [!NOTE]
-> To use [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) and `igxLabel`, you have to wrap them in an `<igx-input-group>` container.
-
-To get started with the Input and Label directives, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxInputGroupModule` in our **app.module.ts** file:
+To get started with the Input and Label directives, first you need to import the `IgxInputGroupModule` in your **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -50,7 +37,10 @@ export class AppModule {}
 ```
 
 ### Label & Input
-HTML labels and inputs are the core building blocks of the HTML forms. Here is how you can use the `igxLabel` and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives:
+The default styling of the Label and Input directives follows the text fields specification in the Material Design
+[**guidelines**](https://material.io/guidelines/components/text-fields.html).
+
+To use the [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) and [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), you have to wrap them in an `<igx-input-group>` container:
 
 ```html
 <igx-input-group>
@@ -59,16 +49,10 @@ HTML labels and inputs are the core building blocks of the HTML forms. Here is h
 </igx-input-group>
 ```
 
-And the result is:
-<div class="sample-container loading" style="height:100px">
-<iframe id="input-group-sample-1-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div class="divider--half"></div>
-
-The [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directive could be applied to `<input>` and `<textarea>` HTML elements. We support both single-line and multi-line text fields.
+The `igxInput` directive could be applied to `<input>` and `<textarea>` HTML elements, in both single-line and multi-line text fields.
 
 #### Validation
-Ignite UI for Angular Input directive provides a Material-based styling when you have validation. Let's add [`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) attribute to our input:
+We can validate an `input` using the [`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) attribute. This will add an asterisk next to the label, indicating that this field must be completed. The input will turn green/red depending on whether the validation passes/fails.
 
 ```html
 <igx-input-group>
@@ -77,15 +61,16 @@ Ignite UI for Angular Input directive provides a Material-based styling when you
 </igx-input-group>
 ```
 
-In the demonstration of the code below you can see we receive an asterisk next to the label and the input turns green/red when we write in it depending on whether the validation passes/fails.
-
 <div class="sample-container loading" style="height:100px">
-<iframe id="input-group-sample-2-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="input-group-sample-2-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-2-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 #### Data Binding
-Ignite UI for Angular Input supports one-way and two-way data-binding. Let's add a two-way data-binding to our input. Here is the code in our component:
+The Ignite UI for Angular Input directive supports both one-way and two-way data-binding. The following code illustrates how to add a two-way data-binding using the `NgModel`:
 
 ```typescript
 public user = {
@@ -94,7 +79,7 @@ public user = {
 
 ```
 
-and in our markup:
+in our markup:
 
 ```html
 <igx-input-group>
@@ -104,18 +89,21 @@ and in our markup:
 ```
 
 ### Input Group
-You can read about the Input Group component in a separate topic [here](input_group.md).
+The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the separate topic [here](input_group.md).
 
 ### API References
+<div class="divider--half"></div>
+
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ### Additional Resources
-Related topics:
+<div class="divider--half"></div>
 
+Related topics:
 * [Input Group](input_group.md)
 
 Our community is active and always welcoming to new ideas.
-
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
