@@ -242,7 +242,7 @@ public decrementProgress() {
 }
 ```
 
-After completing the steps above, it should look like this:
+After completing the steps above, our progressbar should look like this:
 
 <div class="sample-container loading" style="height:200px">
     <iframe id="linear-dynamic-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample" class="lazyload"></iframe>
