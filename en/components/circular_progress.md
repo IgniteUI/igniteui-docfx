@@ -67,7 +67,7 @@ public updateValue() {
 
 ```
 
-If we set up everything correctly we should have the demo sample in your browser.
+If we set up everything correctly, we should have the demo sample in your browser.
 
 >[!NOTE]
 >The **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) event that outputs an object like this `{currentValue: 65, previousValue: 64}` on each step.
