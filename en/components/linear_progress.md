@@ -121,7 +121,7 @@ Set the [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomp
 
 The [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) property can be used to customize the value of the text itself.
 
-Let's get our previous sample and play a little bit with the text properties and also throw one indeterminate progress bar in there, so you can see how this looks like.
+Let's update our previous sample by using the aforementioned text properties. We will also throw an indeterminate progress bar in the mix.
 
 ```html
 <div class="linear-container">
