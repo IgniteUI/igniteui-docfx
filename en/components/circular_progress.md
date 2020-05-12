@@ -34,40 +34,17 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-To have a better understanding how everything works, let's create a simple example, like the one in the demo.
-
-Let's add a simple circular bar to our tempate:
+To have a better understanding how everything works, let's create a simple example, like the one in the demo:
 
 ```html
 <igx-circular-bar
-[max]="100"
+[value]="100"
 [animate]="true"
 class="custom-size"
 ></igx-circular-bar>
 ```
 
-Then we create the logic that generates that visual loading.
-
-```typescript
-...
-public interval: any;
-
-@ViewChild(IgxCircularProgressBarComponent, { static: true }) public circularBar: IgxCircularProgressBarComponent;
-
-public ngOnInit() {
-  this.interval = setInterval(this.updateValue.bind(this), 60);
-}
-
-public updateValue() {
-    this.circularBar.value += 1;
-    if (this.circularBar.value === this.circularBar.max) {
-      this.interval = clearInterval(this.interval);
-    }
-}
-
-```
-
-If we set up everything correctly, we should have the demo sample in your browser.
+After that, we should have the demo sample in your browser.
 
 >[!NOTE]
 >The **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) event that outputs an object like this `{currentValue: 65, previousValue: 64}` on each step.
