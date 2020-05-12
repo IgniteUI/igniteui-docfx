@@ -21,9 +21,9 @@ The Web Components Dock Manager is a component that uses panes to manage the app
 
 
 ### Setting Up
-The DockManager is available for download as an npm package through ProGet feed.
+The Dock Manager is available for download as an npm package through ProGet feed.
 
-Follow the steps below to add the DockManager package to an Angular project and set up the project in order to use the DockManager inside the Angular components.
+Follow the steps below to add the Dock Manager package to an Angular project and set up the project in order to use the Dock Manager inside the Angular components.
 
 Install the `@infragistics/igniteui-dockmanager` package
 
@@ -60,4 +60,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 defineCustomElements(window);
 ```
-For more information about DockManager's usage, check out this page
+For more information about Dock Manager's usage, check out this page
