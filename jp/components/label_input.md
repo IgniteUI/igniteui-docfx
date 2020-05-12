@@ -104,6 +104,47 @@ public user = {
 </igx-input-group>
 ```
 
+#### Focus & Text Selection
+
+You can add logic to force `focus` on input element using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
+
+```html
+   ...
+    <igx-input-group>
+        <input igxInput [igxFocus]="isFocused" name="fullName" type="text" />
+        <label igxLabel for="fullName">Full Name</label>
+    </igx-input-group>
+   ...
+```
+>[!NOTE]
+>To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
+
+If you want to select the entire text in `igxInput` element on focus event you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
+
+```html
+   ...
+    <igx-input-group>
+        <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text" />
+        <label igxLabel for="fullName">Full Name</label>
+    </igx-input-group>
+    <igx-input-group>
+        <input igxInput [igxTextSelection]="true" name="email" type="text" />
+        <label igxLabel for="email">Email</label>
+    </igx-input-group>
+   ...
+```
+>[!NOTE]
+>To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
+
+##### Demo
+<div class="sample-container loading" style="height: 100px">
+<iframe id="input-text-selection-frame" data-src='{environment:demosBaseUrl}/data-entries/input-text-selection' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-text-selection-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Input Group
 Input Group コンポーネントの詳細については[ここ](input_group.md)を参照してください。
 

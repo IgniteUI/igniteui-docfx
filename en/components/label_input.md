@@ -104,7 +104,7 @@ and in our markup:
 ```
 #### Focus & Text Selection
 
-You can add logic for forcing the `focus` on an input element using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
+You can add logic to force `focus` on input element using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
 
 ```html
    ...
@@ -115,9 +115,9 @@ You can add logic for forcing the `focus` on an input element using the [`igxFoc
    ...
 ```
 >[!NOTE]
->To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
+>To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
 
-If you want to select the entire text in an `igxInput` element on focus event you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
+If you want to select the entire text in `igxInput` element on focus event you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
 
 ```html
    ...
@@ -132,7 +132,16 @@ If you want to select the entire text in an `igxInput` element on focus event yo
    ...
 ```
 >[!NOTE]
->To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
+>To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
+
+##### Demo
+<div class="sample-container loading" style="height: 100px">
+<iframe id="input-text-selection-frame" data-src='{environment:demosBaseUrl}/data-entries/input-text-selection' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-text-selection-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ### Input Group
 You can read about the Input Group component in a separate topic [here](input_group.md).
