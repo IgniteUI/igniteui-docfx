@@ -1,7 +1,7 @@
 ---
-title: Dock Manager | Layout Controls | Ignite UI for Angular | Infragistics
-_description: 
-_keywords: dock manager, layout, igniteui for angular, infragistics
+title: Manage Angular Page Layout | Dock Manager | Ignite UI | Infragistics
+_description: Learn how our Dock Manager can help you in customizing the page layout of your Angular application by using unpinning, resizing, moving and hiding panes.
+_keywords: manage angular page layout, Ignite UI for Angular, Infragistics
 ---
 ## Dock Manager
 
