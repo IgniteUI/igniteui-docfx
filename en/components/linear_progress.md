@@ -33,31 +33,13 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-To have a better understanding of how everything works, let's create a simple example, like the one in the demo.
-
-Let's add a plain linear progress bar to our template:
+To have a better understanding of how everything works, let's create a simple example, like the one in the demo:
 
 ```html
-<igx-linear-bar [striped]="false" [max]="100" [value]="0"></igx-linear-bar>
+<igx-linear-bar [value]="100"></igx-linear-bar>
 ```
 
-Create the logic that generates that visual loading:
-
-```typescript
-public interval: any;
-
-@ViewChild(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
-public linearBar: IgxLinearProgressBarComponent;
-
-public ngOnInit() {
-this.interval = setInterval(this.updateValue.bind(this), 60);
-}
-
-public updateValue() {
-    this.linearBar.value += 1;
-}
-```
-If all went well, you should see the demo sample in your browser.
+After that, you should see the demo sample in your browser.
 
 #### Progress Types
 
@@ -67,30 +49,17 @@ You can set the type of your bar, using the [`type`]({environment:angularApiUrl}
 You can make the bar striped, using the [`striped`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) property and by setting it to `true`.
 
 Let's see how we can create different types of progress bars that can be both striped or not.
+
 ```html
 <div class="linear-container">
-    <igx-linear-bar type="default"></igx-linear-bar>
-    <igx-linear-bar type="success" [striped]="true"></igx-linear-bar>
-    <igx-linear-bar type="error"></igx-linear-bar>
-    <igx-linear-bar type="info" [striped]="true"></igx-linear-bar>
-    <igx-linear-bar type="warning"></igx-linear-bar>
+    <igx-linear-bar [value]="100" type="default"></igx-linear-bar>
+    <igx-linear-bar [value]="100" type="success" [striped]="true"></igx-linear-bar>
+    <igx-linear-bar [value]="100" type="error"></igx-linear-bar>
+    <igx-linear-bar [value]="100" type="info" [striped]="true"></igx-linear-bar>
+    <igx-linear-bar [value]="100" type="warning"></igx-linear-bar>
 </div>
 ```
 
-```typescript
-public interval: any;
-
-@ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
-public linearBars: QueryList<IgxLinearProgressBarComponent>;
-
-public ngOnInit() {
-this.interval = setInterval(this.updateValue.bind(this), 60);
-}
-
-public updateValue() {
-    this.linearBars.map(bar => bar.value += 1);
-}
-```
 So if we set up everything correctly, you should see the following in your browser:
 <div class="sample-container loading" style="height:200px">
     <iframe id="linear-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" class="lazyload"></iframe>
@@ -117,25 +86,32 @@ Let's update our previous sample by using the aforementioned text properties. We
 
 ```html
 <div class="linear-container">
-    <igx-linear-bar type="default"></igx-linear-bar>
+    <igx-linear-bar
+        type="default"
+        [value]="100"
+    ></igx-linear-bar>
     <igx-linear-bar
         type="success"
+        [value]="100"
         class="indeterminate"
         [indeterminate]="true"
         [striped]="true"
     ></igx-linear-bar>
     <igx-linear-bar
         type="error"
+        [value]="100"
         [textAlign]="positionEnd"
         [text]="'Custom text'"
     ></igx-linear-bar>
     <igx-linear-bar
         type="info"
+        [value]="100"
         [textVisibility]="false"
         [striped]="true"
     ></igx-linear-bar>
     <igx-linear-bar
         type="warning"
+        [value]="100"
         [textTop]="true"
     ></igx-linear-bar>
 </div>
@@ -145,23 +121,10 @@ And do not forget to import the [`IgxTextAlign`]({environment:angularApiUrl}/enu
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
-.....
-public interval: any;
-public positionCenter: IgxTextAlign;
-public positionEnd: IgxTextAlign;
+...
 
-@ViewChildren(IgxLinearProgressBarComponent, { read: IgxLinearProgressBarComponent })
-public linearBars: QueryList<IgxLinearProgressBarComponent>;
-
-public ngOnInit() {
-this.positionCenter = IgxTextAlign.CENTER;
-this.positionEnd = IgxTextAlign.END;
-this.interval = setInterval(this.updateValue.bind(this), 60);
-}
-
-public updateValue() {
-    this.linearBars.map(bar => bar.value += 1);
-}
+public positionCenter: IgxTextAlign = IgxTextAlign.CENTER;
+public positionEnd: IgxTextAlign = IgxTextAlign.END;
 ```
 
 Let's take a look at how this turned out:
