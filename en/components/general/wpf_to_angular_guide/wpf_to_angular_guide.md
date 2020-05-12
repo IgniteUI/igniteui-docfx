@@ -1,7 +1,7 @@
 ---
-title: WPF to Angular tutorial | IgniteUI for Angular | Infragistics
-_description: Learn how to switch from Angular to WPF, by comparing both frameworks. Get familiar with some similarities like binding, events and components.
-_keywords: angular tutorial, igniteui for angular, infragistics
+title: WPF to Angular Tutorial & Guide for Developers | Desktop to Web | Infragistics
+_description: Read our WPF to Angular tutorial that guides developers on making a smooth transition from a desktop to web framework. Learn more about Angular today!
+_keywords: wpf to angular tutorial, igniteui for angular, infragistics
 ---
 
 ## WPF to Angular tutorial

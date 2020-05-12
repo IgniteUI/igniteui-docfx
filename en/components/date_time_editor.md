@@ -125,6 +125,8 @@ You may compare both in the following sample:
 #### In Angular Forms
 The Date Time Editor Directive supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
+> Note: If needed, one can revert back to a valid state by handling `validationFailed` event and changing the `newValue` property of the available arguments. 
+
 Template-driven form example:
 ```html
 <form>
