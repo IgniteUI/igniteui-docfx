@@ -10,7 +10,7 @@ The Ignite UI for Angular controls can be easily integrated into Reactive Forms 
 </p>
 
 ### Demo
-The following sample demonstrates the [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls being part of the Reactive Forms.
+The following sample demonstrates the [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls when used in Reactive Forms.
 
 <div class="sample-container loading" style="height: 850px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -24,7 +24,7 @@ The following sample demonstrates the [`igx-input-group`]({environment:angularAp
 
 #### First Steps
 
-To get started with the Reactive Forms, first you have to import all needed modules for Ignite UI components as well as the `ReactiveFormsModule`:
+Before you get started with Reactive Forms, you need to import all required modules for the Ignite UI components as well as the `ReactiveFormsModule`:
 
 ```typescript
 // app.module.ts
@@ -41,11 +41,11 @@ import { ReactiveFormsModule } from "@angular/forms";
 export class AppModule {}
 ```
 
-For a complete introduction to the Reactive Forms, follow the [Angular tutorial](https://angular.io/guide/reactive-forms).
+For a complete introduction to Reactive Forms, follow the [Angular tutorial](https://angular.io/guide/reactive-forms).
 
 #### Create Form
 
-Use the `formGroup` property of the HTML `form` to set a model of the form, and then apply a `formControlName` to each of the input fields, which will correspond to individual model's properties.
+Use the `formGroup` property of the `form` element to set the model for the form. Next, add `formControlName` to each of the input fields, which will correspond to each individual model property.
 
 ```html
 <form class="input-group-form" [formGroup]="user" (ngSubmit)="onSubmit()">
@@ -76,7 +76,7 @@ Use the `formGroup` property of the HTML `form` to set a model of the form, and 
     </igx-combo>
     ...
 ```
-The object, set to the `formGroup` property, is the form model which needs to be of type `FormGroup`. Then, following Angular tutorial for Reactive Forms, we need a `FormBuilder` in our constructor in order to define and configure different form's fields:
+The object, assigned to the `formGroup` property, is the form model which needs to be of type `FormGroup`. Then, following the Angular tutorial for Reactive Forms, we need a `FormBuilder` in our constructor in order to define and configure the various form fields:
 
 ```typescript
 export class ReactiveFormsSampleComponent {
@@ -96,7 +96,7 @@ export class ReactiveFormsSampleComponent {
 }
 ```
 
-In that case the movie, the full name, the email and the genres form's fields are required and the form won't be submitted, unless they have values.
+In our case the `movie`, `fullName`, `email`, and `genres` form fields are required and the form won't be submitted, unless their values are set.
 
 ### API References
 <div class="divider--half"></div>
