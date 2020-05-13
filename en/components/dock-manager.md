@@ -61,7 +61,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 defineCustomElements();
 ```
 
-You are now ready to use the Dock Manager component in an Angular component template. To do this, simply use it by it's tag name:
+This is it, you are now ready to use the Dock Manager component in an Angular component template. To do so simply use its tag name:
 
 ```html
     <igc-dockmanager>
