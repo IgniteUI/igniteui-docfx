@@ -5,7 +5,7 @@ _keywords: manage angular page layout, Ignite UI for Angular, Infragistics
 ---
 ## Dock Manager
 
-The Web Components Dock Manager is a component that uses panes to manage the application’s layout and allows the end user to customize the UI by unpinning, resizing, moving and hiding panes.
+The Ignite UI Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
 
 ### Demo
 
