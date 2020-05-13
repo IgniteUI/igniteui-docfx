@@ -25,7 +25,7 @@ The Dock Manager is a standard [web component](https://developer.mozilla.org/en-
 
 Follow the steps below to add the Dock Manager package to an Angular project and set up the project in order to use the Dock Manager inside the Angular components.
 
-Install the `igniteui-dockmanager` package
+First, install the `igniteui-dockmanager` package
 
 ```cmd
 npm install igniteui-dockmanager
