@@ -1024,6 +1024,9 @@
   href: toast.md
 - name: スケジュール
   header: true
+- name: Date Time Editor
+  href: date_time_editor.md
+  new: true
 - name: Calendar
   href: calendar.md
 - name: Date Picker
