@@ -106,12 +106,12 @@ This can be utilized via grid action components and we are providing two default
 
 ### Styling
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.
+The Action Strip allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The Action Strip [theme]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme) exposes properties, which allow the customization of the Action Strip.
 
-In the below steps, we are going through the steps of customizing the grid's Pinning styling.
+In the below steps, we are going through the steps of customizing the Action Strip styling.
 
 #### Importing global theme
-To begin the customization of the Pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
+To begin the customization of the Action Strip, you need to import the `index` file, where all styling functions and mixins are located.
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
@@ -126,7 +126,15 @@ $custom-strip: igx-action-strip-theme(
 );
 ```
 
+#### Including themes
 The last step is to include the component theme in our application.
+
+If `$legacy-support` is set to `false`(default), include the component css variables like that:
+```scss
+@include igx-css-vars($custom-strip);
+```
+
+If `$legacy-support` is set to `true`, include the component theme like that:
 ```scss
 @include igx-action-strip($custom-strip);
 ```
