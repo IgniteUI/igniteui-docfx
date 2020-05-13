@@ -106,12 +106,7 @@ This can be utilized via grid action components and we are providing two default
 
 ### Styling
 
-The Action Strip allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The Action Strip [theme]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme) exposes properties, which allow the customization of the Action Strip.
-
-In the below steps, we are going through the steps of customizing the Action Strip styling.
-
-#### Importing global theme
-To begin the customization of the Action Strip, you need to import the `index` file, where all styling functions and mixins are located.
+To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
