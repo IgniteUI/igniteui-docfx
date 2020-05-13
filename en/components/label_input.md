@@ -98,7 +98,7 @@ You can add logic to force `focus` on input elements using the [`igxFocus`]({env
 </igx-input-group>
 ```
 >[!NOTE]
->To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
+>To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive, you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
 
 If you want the text in an input element, marked with `igxInput`, to be selected on focus, you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
 
