@@ -37,9 +37,7 @@ export class AppModule {}
 
 To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input_group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but cover common scenarios when dealing with form inputs as well.
 
-#### Binding
-
-##### Single Input
+#### Single Input
 A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
 
 Mentioning projection and Form integration
@@ -57,8 +55,7 @@ To create a two-way data-binding, set an ngModel:
 <igx-date-range [(ngModel)]="range"></igx-date-range>
 ```
 
-
-##### Seperate Start Date and End Date Inputs
+#### Seperate Inputs
 each with separate ngModel binding
 <div class="sample-container loading" style="height:600px">
     <iframe id="daterangepicker-start-end-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -68,27 +65,7 @@ each with separate ngModel binding
 </div>
 <div class="divider--half"></div>
 
-### Formatting
-
-displayFormat, inputFormat, formatter,
-
-angular locale id https://angular.io/api/core/LOCALE_ID - default local - default locale
-<div class="divider--half"></div>
-
-### Validation
-<div class="sample-container loading" style="height:600px">
-    <iframe id="daterangepicker-validation-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-validation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-
-### Templating
-Changing icon to be as a suffix of the end date. This will demonstrate the usage of the directives igxDateRangePrefixIcon and igxDateRangeSuffixIcon. No more prefix/suffixes will be added. (only code snippet)
-<div class="divider--half"></div>
-
-### Keyboard Navigation
+#### Keyboard Navigation
 
 Drop down only opens
 
@@ -101,6 +78,28 @@ editors navigation - link date editor
 
 calendar navigation - link calendar
 
+<div class="divider--half"></div>
+
+### Examples
+
+#### Formatting
+
+displayFormat, inputFormat, formatter,
+
+angular locale id https://angular.io/api/core/LOCALE_ID - this is the default locale
+<div class="divider--half"></div>
+
+#### Validation
+<div class="sample-container loading" style="height:600px">
+    <iframe id="daterangepicker-validation-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-validation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+#### Templating
+Changing icon to be as a suffix of the end date. This will demonstrate the usage of the directives igxDateRangePrefixIcon and igxDateRangeSuffixIcon. No more prefix/suffixes will be added. (only code snippet)
 <div class="divider--half"></div>
 
 ### Styling
