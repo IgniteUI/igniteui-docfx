@@ -31,7 +31,7 @@ Install the `igniteui-dockmanager` package
 npm install igniteui-dockmanager
 ```
 
-Include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
+Then, include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
 
 ```typescript
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
