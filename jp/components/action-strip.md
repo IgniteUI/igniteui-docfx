@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Action Strip
 <p class="highlight">
-The Ignite UI for Angular [`igxActionStrip`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html) represents a template area for one or more actions. The Action Strip is intended to provide additional UI and functionality for a specific element container. This container should be relative, because the Action Strip attempts to overlay it. This provides an easy way to position the actions over the parent. Even though the parent is overlapped by the Action Strip the main interactions and user access to the container will remain available.
+The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. And despite overlapped by an Action Strip, the main interactions and user access to it will remain available.
 </p>
 
 <div class="divider--half"></div>
@@ -23,10 +23,10 @@ The Ignite UI for Angular [`igxActionStrip`]({environment:angularApiUrl}/classes
 <div class="divider--half"></div>
 
 ### Usage
-In order to initialize and position correctly the Action Strip it needs to be inside relative container:
+To initialize and position the Action Strip correctly, it needs to be inside a relatively positioned container:
 
 ```html
-<div style="position:relative;width:100px;height:100px;">
+<div style="position:relative; width:100px; height:100px;">
     <igx-action-strip>
         <button igxButton (click)="makeTextBold()">
             <igx-icon>format_bold</igx-icon>
@@ -35,13 +35,13 @@ In order to initialize and position correctly the Action Strip it needs to be in
 <div>
 ```
 
-By default the Action Strip will be visible, but this can be controlled by the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
+By default, the Action Strip will be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
 
 #### Menu look and feel
-For scenarios with more than three actions, which are overlapping the main content it might be a good idea to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item in an Action Strip marked with `*igxActionStripMenuItem` will be resulting in a three-dot button, which toggles a dropdown containing those items.
+For scenarios where more than three action items will be shown, it is best to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item within the Action Strip marked with `*igxActionStripMenuItem` structural directive will be shown in a dropdown, revealed upon toggling the more button i.e. the three dots representing the last action.
 
 ```html
-<div style="position:relative;width:100px;height:100px;">
+<div style="position:relative; width:100px; height:100px;">
     <igx-action-strip>
         <button *igxActionStripMenuItem igxButton (click)="alignTextLeft()">
             <igx-icon>format_align_left</igx-icon>
@@ -65,21 +65,19 @@ For scenarios with more than three actions, which are overlapping the main conte
 
 #### Reusing the Action Strip
 
-Single Action Strip can be used for more than one element. As long as the actions of those elements are not required to be visible simultaneously.
-The Action Strip can change the container element it is shown for.
-This is achieved by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
-The best way to change the `context` is by using the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and pass the `context` as parameter. The `context` should be an instance of a component and should have an accessible `element` property.
+The same Action Strip can be used for more than one element as long as the actions need not be visible simultaneously for them.
+The Action Strip can change its container element, which is possible by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
+The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and passing the `context` as a parameter. The `context` should be an instance of a component and should have an accessible `element` property.
 
->Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip into that `element` .
+>Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
 
 
 ### Usage in Grids
 
-Action strip provides functionality and UI for IgxGrid.
-All that can be utilized with grid action components. 
-We are providing two default grid action components:
-- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI related to grid editing. It allows starting edit mode for cell or row, depending on rowEditable option of the grid and deleting rows.
-- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI related to grid pinning. It allows pinning rows and navigating from a pinned row to the disabled row.
+The Action Strip provides additional functionality and UI for the IgxGrid.
+This can be utilized via grid action components and we are providing two default ones:
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI elements related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI elements related to grid pinning. It allows you to quickly pin rows and navigate between pinned and disabled counterpart.
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
@@ -97,7 +95,7 @@ We are providing two default grid action components:
     </igx-action-strip>
 </igx-grid>
 ```
->Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, this component should also inherit `IgxGridActionsBaseDirective`.
+>Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -143,7 +141,7 @@ The last step is to include the component theme in our application.
 
 ### API and Style References
 
-For more detailed information regarding the ActionStrip's API, refer to the following links:
+For more detailed information regarding the Action Strip API, refer to the following links:
 * [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
