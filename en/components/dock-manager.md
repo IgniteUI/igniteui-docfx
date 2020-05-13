@@ -42,7 +42,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 })
 export class AppModule {}
 ```
-Call the `defineCustomElements()` function in the `main.ts` file:
+Next, one should call the `defineCustomElements()` function in the `main.ts` file:
 
 ```typescript
 import { AppModule } from "./app/app.module";
