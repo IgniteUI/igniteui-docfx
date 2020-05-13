@@ -123,7 +123,7 @@ $custom-strip: igx-action-strip-theme(
 
 The last step is to include the newly created component theme in our application.
 
-If `$legacy-support` is set to `false`(default), include the component css variables like that:
+When `$legacy-support` is set to `false`(default), include the component css variables like this:
 ```scss
 @include igx-css-vars($custom-strip);
 ```
