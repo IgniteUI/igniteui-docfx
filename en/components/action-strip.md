@@ -128,7 +128,7 @@ When `$legacy-support` is set to `false`(default), include the component css var
 @include igx-css-vars($custom-strip);
 ```
 
-If `$legacy-support` is set to `true`, include the component theme like that:
+When `$legacy-support` is set to `true`, include the component theme like this:
 ```scss
 @include igx-action-strip($custom-strip);
 ```
