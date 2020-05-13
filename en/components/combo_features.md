@@ -148,7 +148,7 @@ If the custom values are enabled, the missing item could be added using the UI o
 <div class="divider--half"></div>
 
 ## Search input focus
-`autoFocusSearch` property controls if the search input should receive focus when a combo is opened. When the property is `true` (by default), the combo's search box is focused on open. When set to `false`, the focus goes to the combo's items container, which can be used to prevent the software keyboard from activating on mobile devices when opening the combo.
+`autoFocusSearch` property controls if the search input should receive focus when a combo is opened. When the property is `true` (by default), the combo's search box is focused on open. When set to `false`, the focus goes to the combo's items container. For mobile devices, this can be used to prevent the software keyboard from popping up when opening the combo.
 
 ```html
 <igx-combo [autoFocusSearch]="false"></igx-combo>
