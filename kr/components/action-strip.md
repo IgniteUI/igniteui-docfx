@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Action Strip
 <p class="highlight">
-The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. Despite overlapped by an Action Strip, the main interactions and user access to it will remain available.
+The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. Despite overlapped by an Action Strip, the main interactions and user access to the target container remain available.
 </p>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ To initialize and position the Action Strip correctly, it needs to be inside a r
 By default, the Action Strip will be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
 
 #### Menu look and feel
-For scenarios where more than three action items will be shown, it is best to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item within the Action Strip marked with `*igxActionStripMenuItem` structural directive will be shown in a dropdown, revealed upon toggling the more button i.e. the three dots representing the last action.
+For scenarios where more than three action items will be shown, it is best to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item within the Action Strip marked with the `*igxActionStripMenuItem` structural directive will be shown in a dropdown, revealed upon toggling the more button i.e. the three dots representing the last action.
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
@@ -76,8 +76,8 @@ The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/ig
 
 The Action Strip provides additional functionality and UI for the IgxGrid.
 This can be utilized via grid action components and we are providing two default ones:
-- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI elements related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
-- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI elements related to grid pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterpart.
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI related to grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
@@ -106,16 +106,11 @@ This can be utilized via grid action components and we are providing two default
 
 ### Styling
 
-The Action Strip allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The Action Strip [theme]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme) exposes properties, which allow the customization of the Action Strip.
-
-In the below steps, we are going through the steps of customizing the Action Strip styling.
-
-#### Importing global theme
-To begin the customization of the Action Strip, you need to import the `index` file, where all styling functions and mixins are located.
+To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
-In order to create a new theme `igx-action-strip-theme` should be extended:
+Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
 $custom-strip: igx-action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
@@ -126,15 +121,14 @@ $custom-strip: igx-action-strip-theme(
 );
 ```
 
-#### Including themes
-The last step is to include the component theme in our application.
+The last step is to include the newly created component theme in our application.
 
-If `$legacy-support` is set to `false`(default), include the component css variables like that:
+When `$legacy-support` is set to `false`(default), include the component css variables like this:
 ```scss
 @include igx-css-vars($custom-strip);
 ```
 
-If `$legacy-support` is set to `true`, include the component theme like that:
+When `$legacy-support` is set to `true`, include the component theme like this:
 ```scss
 @include igx-action-strip($custom-strip);
 ```
@@ -156,7 +150,7 @@ The following built-in CSS styles helped us achieve this Action Strip layout:
 
 * [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
 
-Additional components and/or directives that can be used within Action Strip:
+Additional components and/or directives that can be used within the Action Strip:
 
 * [`IgxActionStripMenuItemDirective`]({environment:angularApiUrl}/classes/igxmenuitemdirective.html)
 * [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
