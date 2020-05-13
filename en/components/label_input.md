@@ -92,12 +92,10 @@ in our markup:
 You can add logic to force `focus` on input elements using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
 
 ```html
-   ...
-    <igx-input-group>
-        <input igxInput [igxFocus]="isFocused" name="fullName" type="text" />
-        <label igxLabel for="fullName">Full Name</label>
-    </igx-input-group>
-   ...
+<igx-input-group>
+    <input igxInput [igxFocus]="isFocused" name="fullName" type="text" />
+    <label igxLabel for="fullName">Full Name</label>
+</igx-input-group>
 ```
 >[!NOTE]
 >To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
