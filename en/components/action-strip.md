@@ -65,9 +65,9 @@ For scenarios where more than three action items will be shown, it is best to us
 
 #### Reusing the Action Strip
 
-The same Action Strip can be used for more than one element as long as the actions need not be visible simultaneously for them.
-The Action Strip can change its container element, which is possible by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
-The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and passing the `context` as a parameter. The `context` should be an instance of a component and should have an accessible `element` property.
+The same Action Strip instance can be used in multiple places in the document as long as the actions need not be visible simultaneously for them.
+The Action Strip can change its parent container, which is possible by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
+The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and passing the `context` as an argument. The `context` should be an instance of a component and should have an accessible `element` property of the `ElementRef` type.
 
 >Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
 
