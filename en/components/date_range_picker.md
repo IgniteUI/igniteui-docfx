@@ -6,7 +6,7 @@ _keywords:
 
 ## Range Date Picker Component
 
-The `igx-date-range-picker` component allows you to select a range of dates from a calendar UI or editable input fields.
+The `igx-date-range-picker` component allows you to choose a date range consists of start and end date. You can select a range from a calendar UI. The component provides an advanced setup exposing two editable input fields in addition.
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="basic-daterangepicker-iframe" src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -18,36 +18,44 @@ The `igx-date-range-picker` component allows you to select a range of dates from
 
 
 ### Usage
-To get started with the Ignite UI for Angular Date Range Picker Directive, let's first import the `IgxDateRangePickerModule` in the **app.module.ts** file:
+
+#### First Steps
+To get started with the Ignite UI for Angular Date Range Picker Component, let's first import the `IgxDateRangePickerModule` in the **app.module.ts** file.
+
+As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
 
 ...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
+import { HammerModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     ...
-    imports: [..., IgxDateRangePickerModule ],
+    imports: [..., IgxDateRangePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
 
+#### Display Date Range Picker
+To add a date range picker in its default `dialog mode`, use the following code:
 
-To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input_group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but cover common scenarios when dealing with form inputs as well.
+```html
+<igx-date-range-picker></igx-date-range-picker>
+```
 
-#### Single Input
-A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
-
-Mentioning projection and Form integration
+#### Single Read Only Input
+The default initialization setup produces a single readonly input:
 
 ```typescript
-public date = new Date();
+public range = { start: new Date(), end: new Date(new Date().setDate(new Date().getDate() + 5)) };
 ```
 
 ```html
-<igx-date-range value="range"></igx-date-range>
+<igx-date-range-picker value="range"></igx-date-range-picker>
 ```
 
 To create a two-way data-binding, set an ngModel:
@@ -55,8 +63,8 @@ To create a two-way data-binding, set an ngModel:
 <igx-date-range [(ngModel)]="range"></igx-date-range>
 ```
 
-#### Seperate Inputs
-each with separate ngModel binding
+#### Separate Editable Inputs
+This is an advanced setup allowing for two editable inputs to be projected. Utilizes `IgxDateStartComponent`, `IgxDateEndComponent` and `IgxDateTimeEditorDirective`.
 <div class="sample-container loading" style="height:600px">
     <iframe id="daterangepicker-start-end-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -82,6 +90,37 @@ calendar navigation - link calendar
 
 ### Examples
 
+? Mentioning projection and Form integration
+
+?
+#### Templating input icon
+
+The `IgxPickerToggleComponent` allows to template the default icon in the input through `igxPrefix` and `igxSuffix`.
+default template:
+```html
+<igx-date-range-picker>
+    <igx-picker-toggle igxSuffix>
+        <igx-icon>calendar_view_day</igx-icon>
+    </igx-picker-toggle>
+</igx-date-range-picker>
+```
+with projections:
+```html
+<igx-date-range-picker>
+    <igx-date-range-start>
+        ...
+        <igx-picker-toggle igxPrefix>
+            <igx-icon>calendar_view_day</igx-icon>
+        </igx-picker-toggle>
+        ...
+    </igx-date-range-start>
+    <igx-date-range-end>
+        ...
+    </igx-date-range-end>
+</igx-date-range-picker>
+```
+<div class="divider--half"></div>
+
 #### Formatting
 
 displayFormat, inputFormat, formatter,
@@ -101,6 +140,8 @@ angular locale id https://angular.io/api/core/LOCALE_ID - this is the default lo
 #### Templating
 Changing icon to be as a suffix of the end date. This will demonstrate the usage of the directives igxDateRangePrefixIcon and igxDateRangeSuffixIcon. No more prefix/suffixes will be added. (only code snippet)
 <div class="divider--half"></div>
+
+#### Dropdown mode
 
 ### Styling
 
