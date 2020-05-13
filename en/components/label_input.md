@@ -103,16 +103,15 @@ You can add logic to force `focus` on input elements using the [`igxFocus`]({env
 If you want the text in an input element, marked with `igxInput`, to be selected on focus, you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
 
 ```html
-   ...
-    <igx-input-group>
-        <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text" />
-        <label igxLabel for="fullName">Full Name</label>
-    </igx-input-group>
-    <igx-input-group>
-        <input igxInput [igxTextSelection]="true" name="email" type="text" />
-        <label igxLabel for="email">Email</label>
-    </igx-input-group>
-   ...
+<igx-input-group>
+    <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text" />
+    <label igxLabel for="fullName">Full Name</label>
+</igx-input-group>
+
+<igx-input-group>
+    <input igxInput [igxTextSelection]="true" name="email" type="text" />
+    <label igxLabel for="email">Email</label>
+</igx-input-group>
 ```
 >[!NOTE]
 >To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
