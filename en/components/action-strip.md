@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Action Strip
 <p class="highlight">
-The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. And despite overlapped by an Action Strip, the main interactions and user access to it will remain available.
+The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. Despite overlapped by an Action Strip, the main interactions and user access to it will remain available.
 </p>
 
 <div class="divider--half"></div>
@@ -77,7 +77,7 @@ The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/ig
 The Action Strip provides additional functionality and UI for the IgxGrid.
 This can be utilized via grid action components and we are providing two default ones:
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI elements related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
-- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI elements related to grid pinning. It allows you to quickly pin rows and navigate between pinned and disabled counterpart.
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI elements related to grid pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterpart.
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
