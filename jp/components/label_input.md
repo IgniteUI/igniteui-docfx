@@ -131,7 +131,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 </igx-input-group>
 ```
 >[!NOTE]
->To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
+>To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive, you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
 
 ##### Demo
 <div class="sample-container loading" style="height: 100px">
