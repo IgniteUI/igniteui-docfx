@@ -89,7 +89,7 @@ in our markup:
 ```
 #### Focus & Text Selection
 
-You can add logic to force `focus` on input element using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
+You can add logic to force `focus` on input elements using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
 
 ```html
    ...
