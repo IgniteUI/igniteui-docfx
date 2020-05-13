@@ -110,7 +110,7 @@ To customize the Action Strip, you first need to import the `index` file, where 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
-In order to create a new theme `igx-action-strip-theme` should be extended:
+Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
 $custom-strip: igx-action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
