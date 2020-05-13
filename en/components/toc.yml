@@ -124,7 +124,7 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: false
+      new: true
       items:
         - name: Row selection
           href: grid/row_selection.md
@@ -165,6 +165,7 @@
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: false
@@ -240,7 +241,7 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: false
+      new: new
       items:
         - name: Row selection
           href: treegrid/row_selection.md
@@ -341,7 +342,7 @@
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
       items:
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
