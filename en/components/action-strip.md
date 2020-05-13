@@ -121,8 +121,7 @@ $custom-strip: igx-action-strip-theme(
 );
 ```
 
-#### Including themes
-The last step is to include the component theme in our application.
+The last step is to include the newly created component theme in our application.
 
 If `$legacy-support` is set to `false`(default), include the component css variables like that:
 ```scss
