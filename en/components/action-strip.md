@@ -150,7 +150,7 @@ The following built-in CSS styles helped us achieve this Action Strip layout:
 
 * [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
 
-Additional components and/or directives that can be used within Action Strip:
+Additional components and/or directives that can be used within the Action Strip:
 
 * [`IgxActionStripMenuItemDirective`]({environment:angularApiUrl}/classes/igxmenuitemdirective.html)
 * [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
