@@ -73,18 +73,48 @@ This is an advanced setup allowing for two editable inputs to be projected. Util
 </div>
 <div class="divider--half"></div>
 
+#### Dropdown mode
+
+Calendar down of the `igx-date-range-picker` component has two modes - dialog(default) and dropdown. The define the dropdown mode, use the sample below:
+
+```html
+<igx-date-range mode="dropdown"></igx-date-range>
+```
+
+<div class="sample-container loading" style="height:600px">
+    <iframe id="daterangepicker-start-end-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-start-end-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 #### Keyboard Navigation
 
-Drop down only opens
+Keyboard navigation is available only for `dropdown` `mode` of the `igx-date-range-picker` component. Use the demo above the try the following keyboard combinations.
 
-Alt + Down Arrow - Opens the drop-down calendar and focuses it
-Alt + Up Arrow - Closes the drop-down and focuses the input field (start input in two inputs mode)
-Esc - Closes the drop-down and focuses the input field (start input in two inputs mode)
+When the focus and cursor are in a input then the [keyboard navigation](date_time_editor.md#keyboard-navigation) of the `igx-date-time-editor` directive is applicable also here:
 
+- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. On <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Right</kbd> it goes to the end of the section. If already there it goes to the end of next section if any. It works in a similar fashion in the opposite direction.
+- <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#isspinloop)
+- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
-editors navigation - link date editor
+To open `igx-date-range-picker` calendar:
 
-calendar navigation - link calendar
+- <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Opens the drop-down calendar and focuses it
+- <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
+- <kbd>Esc</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
+
+To navigate calendar use the same [keyboard navigation](calendar.md#keyboard-navigation) combinations, available for the `igx-calendar`:
+
+- <kbd>Enter</kbd> selects start and end dates
+- <kbd>PageUp</kbd> key to move to the previous month,
+- <kbd>PageDown</kbd> key to move to the next month,
+- <kbd>Shift</kbd> + <kbd>PageUp</kbd> keys to move to the previous year,
+- <kbd>Shift</kbd> + <kbd>PageDown</kbd> keys to move to the next year,
+- <kbd>Home</kbd> key to focus the first day of the current month  or first month in view
+- <kbd>End</kbd> key to focus the last day of the current month or last month in view
+- <kbd>Tab</kbd> key to navigate through the subheader buttons;
 
 <div class="divider--half"></div>
 
@@ -136,12 +166,6 @@ angular locale id https://angular.io/api/core/LOCALE_ID - this is the default lo
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-validation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
-
-#### Templating
-Changing icon to be as a suffix of the end date. This will demonstrate the usage of the directives igxDateRangePrefixIcon and igxDateRangeSuffixIcon. No more prefix/suffixes will be added. (only code snippet)
-<div class="divider--half"></div>
-
-#### Dropdown mode
 
 ### Styling
 
