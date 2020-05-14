@@ -64,6 +64,6 @@ defineCustomElements();
 You are now ready to use the Dock Manager component in an Angular component template. To do this, simply use it by it's tag name:
 
 ```html
-    <igc-dockmanager>
-    </igc-dockmanager>
+<igc-dockmanager>
+</igc-dockmanager>
 ```
