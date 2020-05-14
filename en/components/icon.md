@@ -75,7 +75,7 @@ You can set icons with content projection:
 
 #### Icon Size
 
-You can customize icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
+You can customize the icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
 
 ```scss
 .custom-size{
@@ -143,7 +143,7 @@ On the top of your `server.ts` file, add:
 
 ### Styling
 
-To get started with styling icons, we need to import the `index` file, where all the theme functions and component mixins live:
+To get started with styling the icons, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
