@@ -1,11 +1,11 @@
 ---
 title: Manage Angular Page Layout | Dock Manager | Ignite UI | Infragistics
-_description: Learn how our Dock Manager can help you in customizing the page layout of your Angular application by using unpinning, resizing, moving and hiding panes.
+_description: Learn how the Dock Manager lets you customize the layout of your Angular application via panes that can be pinned, resized, moved, and hidden.
 _keywords: manage angular page layout, Ignite UI for Angular, Infragistics
 ---
 ## Dock Manager
 
-The Web Components Dock Manager is a component that uses panes to manage the application’s layout and allows the end user to customize the UI by unpinning, resizing, moving and hiding panes.
+The Ignite UI Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
 
 ### Demo
 
@@ -23,15 +23,15 @@ The Web Components Dock Manager is a component that uses panes to manage the app
 ### Usage
 The Dock Manager is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
 
-Follow the steps below to add the Dock Manager package to an Angular project and set up the project in order to use the Dock Manager inside the Angular components.
+Follow the steps below to add the Dock Manager package to your Angular project and set it up in order to use the component.
 
-Install the `igniteui-dockmanager` package
+First, install the `igniteui-dockmanager` package
 
 ```cmd
 npm install igniteui-dockmanager
 ```
 
-Include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
+Then, include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
 
 ```typescript
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -42,7 +42,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 })
 export class AppModule {}
 ```
-Call the `defineCustomElements()` function in the `main.ts` file:
+Next, one should call the `defineCustomElements()` function in the `main.ts` file:
 
 ```typescript
 import { AppModule } from "./app/app.module";
@@ -61,7 +61,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 defineCustomElements();
 ```
 
-You are now ready to use the Dock Manager component in an Angular component template. To do this, simply use it by it's tag name:
+This is it, you are now ready to use the Dock Manager component in an Angular component template. To do so simply use its tag name:
 
 ```html
 <igc-dockmanager>
