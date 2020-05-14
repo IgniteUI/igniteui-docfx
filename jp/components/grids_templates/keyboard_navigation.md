@@ -1,20 +1,20 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid キーボード ナビゲーション |  Ignite UI for Angular | インフラジスティックス
+title: Grid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular で Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: TreeGrid キーボード ナビゲーション |  Ignite UI for Angular | インフラジスティックス
+title: TreeGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular で TreeGrid キーボードナ ビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: HierarchicalGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
+title: HierarchicalGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular で HierarchicalGrid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
 ---
