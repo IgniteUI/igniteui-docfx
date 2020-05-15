@@ -60,7 +60,7 @@ The paging area supports templating by the user, if a template reference is pass
 </@@igSelector>
 ```
 
-Paging can also be done programmatically through the @@igComponent API, using the [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) methods:
+Paging can also be done programmatically through the @@igComponent API, using the [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#page), [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) and [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data and you want to alter the pages count based on total remote records. Keep in mind that If you are using paging and all the data is passed to the grid, the value of totalRecords property will be set by default to the length of the provided data source. If totalRecords is set, it will take precedence over the default length based on the data source."
 
 ```typescript
 // Go to page 6
@@ -82,6 +82,9 @@ this.@@igObjectRef.perPage = 25;
 
 // Enables/disables paging
 this.@@igObjectRef.paging = false;
+
+//  Set the total number of records that are in the grid. Default value is the length of the provided data.
+this.@@igObjectRef.totalRecords = 30;
 ```
 
 @@if (igxName === 'IgxGrid') {
@@ -92,9 +95,9 @@ Integration between Paging and Group By is described in the [Group By](groupby.h
 
 ### Paginator Component
 A new component `igx-paginator` is introduced with 8.1.0 release. This component replaces the current pager and can be used as a standalone component as well.
-The `igx-paginator` exposes a couple of input properties that enable further customization of the paging.
+The `igx-paginator` exposes a couple of input and output properties that enable further customization of the paging.
 
-| Input           |      Description                           | 
+| Input           |      Description                           |
 |-----------------|:------------------------------------------:|
 | displayDensity  | Sets the display density of the paginator. |
 | dropdownEnabled | Sets the enabled state to the drop-down. |
@@ -106,6 +109,13 @@ The `igx-paginator` exposes a couple of input properties that enable further cus
 | selectLabel     | Sets the text before the select component. Default is 'Items per page' |
 | selectOptions   | Sets custom options for items per page. |
 | totalRecords    | Sets the total records count. |
+| resourceStrings | Sets the resource strings. By default it uses EN resource strings. |
+
+
+| Output          |      Description                           |
+|-----------------|:------------------------------------------:|
+| pageChange      |  the event is emitted when the current page is changed. |
+| perPageChange   |  the event is emitted when the number items per page is changed. |
 
 #### Usage
 The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
@@ -152,7 +162,7 @@ To get started with styling the paginator, we need to import the `index` file, w
 ```scss
 // custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 
@@ -179,7 +189,7 @@ $dark-button: igx-button-theme(
 
 In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
 
-The last step is to **include** the component mixins, each with its respective theme: 
+The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
 @include igx-grid-paginator($dark-grid-paginator);
@@ -218,7 +228,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette.
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -246,7 +256,7 @@ $dark-button: igx-button-theme(
 
  Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
 
 ```scss
 // Extending the dark paginator schema
@@ -329,9 +339,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>  
+<br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe"
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
@@ -343,9 +353,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>  
+<br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe"
         data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
