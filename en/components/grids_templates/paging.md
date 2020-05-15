@@ -60,7 +60,7 @@ The paging area supports templating by the user, if a template reference is pass
 </@@igSelector>
 ```
 
-Paging can also be done programmatically through the @@igComponent API, using the [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) methods:
+Paging can also be done programmatically through the @@igComponent API, using the [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#page), [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) and [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data, if your using paging and all the data is passed to the grid, the value of the property will be set by default to the length of the provided data source.
 
 ```typescript
 // Go to page 6
@@ -82,6 +82,9 @@ this.@@igObjectRef.perPage = 25;
 
 // Enables/disables paging
 this.@@igObjectRef.paging = false;
+
+//  Set the total number of records that are in the grid. Default value is the length of the provided data.
+this.@@igObjectRef.totalRecords = 30;
 ```
 
 @@if (igxName === 'IgxGrid') {
