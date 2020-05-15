@@ -34,8 +34,11 @@ Currently, the @@igxName introduces the following tab stops:
 
 >[!NOTE]
 > Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
-> Having that in mind, when pressing `tab` key leads to the following navigation sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid Paginator".
-> Also, if @@igxName template contains any focusable element, they will be included in the navigation sequence either.
+> Having that in mind, when pressing `tab` key leads to the following navigation sequence: `Toolbar` -> `Headers` -> `Body` -> `Summaries` -> `Footer / Paginator`.
+
+>[!NOTE]
+> Exposing any **focusable** element into the `@@igxName body` via template may introduce some **side effects** as the component does not handle/prevent the default
+> bahaviour of the browser. Therefore it is the user's responsibility to **prevent/modify** it.
 
 ### Header Navigation
 

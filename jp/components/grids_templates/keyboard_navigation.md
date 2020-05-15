@@ -34,8 +34,11 @@ Currently, the @@igxName introduces the following tab stops:
 
 >[!NOTE]
 > Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
-> Having that in mind, when pressing `tab` key leads to the following navigation sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid Paginator".
-> Also, if @@igxName template contains any focusable element, they will be included in the navigation sequence either.
+> Having that in mind, when pressing `tab` key leads to the following navigation sequence: `Toolbar` -> `Headers` -> `Body` -> `Summaries` -> `Footer / Paginator`.
+
+>[!NOTE]
+> Exposing any **focusable** element into the `@@igxName body` via template may introduce some **side effects** as the component does not handle/prevent the default
+> bahaviour of the browser. Therefore it is the user's responsibility to **prevent/modify** it.
 
 ### Header Navigation
 
@@ -109,9 +112,9 @@ By focusing any navigable grid container an action list will be shown, that will
 特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
 - [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event(keydown)= "onKeydown($ event)"を使用できます。
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) -
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
-- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
+- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) -
 現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
 - [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) -
 現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
