@@ -67,3 +67,5 @@ This is it, you are now ready to use the Dock Manager component in an Angular co
 <igc-dockmanager>
 </igc-dockmanager>
 ```
+
+For further information on the usage of the Dock Manager component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html).
