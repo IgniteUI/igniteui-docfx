@@ -56,10 +56,10 @@ When the @@igxName header container is focused and press one of the following ke
  - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable;
  - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting;
  - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting;
- - `Shift + Alt + Arrow Left` - group by the active column /if the column is marked as groupable/;
- - `Shift + Alt + Arrow Right` - ungroup by the active column /if the column is marked as groupable/;
- - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header if the column is not already collapsed;
- - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header if the column is not already expanded;
+@@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group by the active column **if the column is marked as groupable**;
+ - `Shift + Alt + Arrow Right` - ungroup by the active column **if the column is marked as groupable**;
+ - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header **if the column is not already collapsed**;
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header **if the column is not already expanded**;}
  - `Space` - select the current column; If the column is already selected, it will remove the selection;
 
 ### Body navigation
@@ -88,8 +88,10 @@ When the @@igxName body is focused and press one of the following key combinatio
  - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row editing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row;
  - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row editing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
  - `Space` - if the row is selectable, on key down `space` triggers row selection;
- - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content if the row is not already collapsed;
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content if the row is not already collapsed;
+@@if (igxName === "IgxGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content **if the row is not already collapsed**;
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content **if the row is not already collapsed**;
+ - `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the row is not already collapsed**;
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - collapses the row content **if the row is not already collapsed**;}
 
 Having all that theory may be easily turned into practice with the demo below.
 
@@ -131,9 +133,9 @@ By focusing any navigable grid container an action list will be shown, that will
 特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
 - [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event(keydown)= "onKeydown($ event)"を使用できます。
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) -
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
-- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
+- [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) -
 現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
 - [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) -
 現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
