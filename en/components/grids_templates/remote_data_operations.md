@@ -140,7 +140,7 @@ public ngAfterViewInit() {
         takeUntil(this.destroy$)
     ).subscribe(() => {
         this.processData();
-    });    
+    });
 }
 ```
 
@@ -359,6 +359,7 @@ In order to provide a custom loading template for the excel style filtering, we 
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 The paging feature can operate with remote data.
+If you want to use the default paging template you need to set the `totalRecords` property, so the grid to be able the calculate the total page number based on total remote records. Keep in mind that you still need to implement the fetching data from your remote service.
 Let's first declare our service that will be responsible for data fetching.
 We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 ```typescript
@@ -430,7 +431,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     public firstPage = true;
     public totalPages: number = 1;
     public totalCount = 0;
-    
+
     constructor(private remoteService: RemotePagingService) {}
 
     public ngOnInit() {
@@ -521,15 +522,15 @@ public paginate(page: number) {
 @ViewChild("customPager", { read: TemplateRef })
 public remotePager: TemplateRef<any>;
 public title = "gridPaging";
-    
+
 @ViewChild("layout1")
 public layout1: IgxRowIslandComponent;
 
 @ViewChild("hierarchicalGrid")
 public hierarchicalGrid: IgxHierarchicalGridComponent;
-    
+
 ...
-    
+
 public ngAfterViewInit() {
     this.hierarchicalGrid.isLoading = true;
     this.remoteService.getData(
