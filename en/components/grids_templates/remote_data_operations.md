@@ -110,6 +110,94 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+
+#### Infinite Scroll
+
+Stepping on the `IForOfState` interface, you could easily adjust your code in order to achieve an infinite scroll functionality.   
+
+To implement infinite scroll, you'd have to store the fetched data in a data structure. You are also going to need to keep a track on the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you will know whether the user has scrolled upwards and you'll need to show them an already fetched data from the cached data structure, or you will have to request for another data chunk.
+
+To begin, you'd have to use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of data. Bear in mind, that initially the `chunkSize` is 0 and you will have to determine it in the service that fetches the data.
+
+```typescript
+public ngAfterViewInit() {
+    ...
+    const loadState = { ...this.grid.virtualizationState };
+    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], loadState,
+    (request) => {
+        if (request.data) {
+            // increase totalItemCount a little above the visible grid size in order to be able to scroll
+            this.grid.totalItemCount = request.data.length + 3;
+        }
+    });
+    ...
+}
+```
+
+Then, you will need to bind to the `onDataPreLoad` output in order to make an appropriate request for the current state and set the `totalItemCount` property. This is the way in which the @@igComponent controlls the size of the scrollbar. For an infinite scroll, you'd need a scrollbar that goes a little beyond the actual items count, because if you assign to `totalItemCount` the exact amount of items, you won't be able to get the @@igComponent to scroll. 
+
+```typescript
+public handlePreLoad() {
+    const index = this.grid.virtualizationState.chunkSize +
+                            this.grid.virtualizationState.startIndex;
+    if (index > this._remoteService.cachedData.length && !this._endOfData) {
+        this.grid.isLoading = true;
+        const loadState = {
+            startIndex: index - 1,
+            chunkSize: this.grid.virtualizationState.chunkSize
+        };
+        this.processData(loadState, () => {
+            this.grid.isLoading = false;
+            this.grid.cdr.detectChanges();
+        });
+    } else {
+        this.processData(undefined, () => {
+            this.grid.isLoading = false;
+            this.grid.cdr.detectChanges();
+        });
+    }
+}
+```
+
+The `loadState` object describes the data, that would be requested from the server. We are using the `startIndex` and the `chunkSize` properties of the @@igComponent's [`virtualizationState`]({environment:angularApiUrl}/interfaces/iforofstate.html) to determine a starting point for the new data request.
+
+>[!NOTE]
+>While the first request will have equal `loadState` and `virtualizationState`, as the user scrolls, the `virtualizationState` will describe the visible scroll state of the grid and the `loadState` will be representing the next scroll, which is currently not visible.
+
+```typescript
+public processData(state?, callback?: () => void): void {
+    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], state,
+    (remoteData) => {
+            if (remoteData.data) {
+                const chunkLength = this.grid.virtualizationState.startIndex +
+                                    this.grid.virtualizationState.chunkSize + 3;
+                if (this._endOfData || remoteData.endOfData) {
+                    this.grid.totalItemCount = this._remoteService.cachedData.length;
+                    this._endOfData = true;
+                    this.grid.cdr.detectChanges();
+                } else if (chunkLength >= this.grid.totalItemCount) {
+                    this.grid.totalItemCount += remoteData.data.length;
+                    this.grid.cdr.detectChanges();
+                }
+                callback();
+            }
+    });
+}
+```
+
+Although the technique is called "infinite scroll", it is a frequent occasion that the data source reaches to an end. That's why, unless you are completely sure that your data source is really infinite, you will need to recognize if your data has reached to an ending.   
+Our suggestion is to employ a variable that checks the uniformity of the received data from the server. If the last received data has a smaller length than the data from the previous request, then you might suppose that the data is to end.
+
+
+#### Infinite Scroll Demo
+<div class="sample-container loading" style="height:510px">
+    <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Remote Sorting/Filtering
 
 To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
