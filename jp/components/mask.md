@@ -145,28 +145,25 @@ public clear() {
     <igx-input-group>
         <label igxLabel for="name">Name</label>
         <input igxInput  name="name" type="text" 
-               [igxTextSelection]="true"
-               [(ngModel)]="person.name" required />
+            [(ngModel)]="person.name" required />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-        <input igxInput  #dateInput  name="birthday" type="text" 
-               [igxTextSelection]="true" 
-               [igxFocus]="isFocused" 
-               [(ngModel)]="person.birthday"
-               (blur)="validateDate(dateInput, snackbar)" />
+        <input igxInput  #dateInput name="birthday" type="text"
+            [igxMask]="'00/00/0000'"
+            [(ngModel)]="person.birthday"
+            (blur)="validateDate(dateInput, snackbar)" />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-        <input igxInput  #ssn name="socialSecurityNumber" type="text" 
-               [igxMask]="'###-##-####'"
-               [igxTextSelection]="true"
-               [(ngModel)]="person.socialSecurityNumber"
-               (blur)="validateSSN(ssn, snackbar)" />
+        <input igxInput #ssn name="socialSecurityNumber" type="text"
+            [igxMask]="'###-##-####'"
+            [(ngModel)]="person.socialSecurityNumber"
+            (blur)="validateSSN(ssn, snackbar)" />
     </igx-input-group>
-	
+
     <igx-snackbar #snackbar></igx-snackbar>
 </form>
 
@@ -176,7 +173,6 @@ public clear() {
 // sample.component.ts
 
 public person: Person;
-public isFocused;
 
 constructor() {
     this.person = {
@@ -184,7 +180,6 @@ constructor() {
         name: "John Doe",
         socialSecurityNumber: ""
     };
-    this.isFocused = !!this.person.name;
 }
 
 public ngOnInit() {}
