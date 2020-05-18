@@ -3,6 +3,9 @@
 - name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
   new: true
+- name: Licensing
+  href: general/ignite-ui-licensing.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
