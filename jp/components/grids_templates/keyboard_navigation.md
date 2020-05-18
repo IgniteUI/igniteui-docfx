@@ -56,11 +56,11 @@ When the @@igxName header container is focused and press one of the following ke
  - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable;
  - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting;
  - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting;
+ - `Space` - select the current column; If the column is already selected, it will remove the selection;
 @@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group by the active column **if the column is marked as groupable**;
  - `Shift + Alt + Arrow Right` - ungroup by the active column **if the column is marked as groupable**;
  - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header **if the column is not already collapsed**;
  - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header **if the column is not already expanded**;}
- - `Space` - select the current column; If the column is already selected, it will remove the selection;
 
 ### Body navigation
 
@@ -92,6 +92,8 @@ When the @@igxName body is focused and press one of the following key combinatio
  - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content **if the row is not already collapsed**;
  - `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the row is not already collapsed**;
  - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - collapses the row content **if the row is not already collapsed**;}
+@@if (igxName === "IgxHierarchicalGrid") {- `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the **row island if the it is not already collapsed**;
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - collapses the **row island if the it is not already collapsed**;}
 
 Having all that theory may be easily turned into practice with the demo below.
 
