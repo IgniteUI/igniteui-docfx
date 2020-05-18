@@ -139,6 +139,17 @@ Template-driven form example:
 <div class="divider--half"></div>
 ```
 
+#### Text Selection
+You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
+
+```html
+<igx-input-group>
+    <input igxInput [igxDateTimeEditor]="'dd/MM/yyyy'" [igxTextSelection]="true"/>
+</igx-input-group>
+```
+
+> NOTE: In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxDateTimeEditor` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
+
 ### Styling 
 For details check out the [`Input Group styling guide`](input_group.md#styling).
 <div class="divider--half"></div>

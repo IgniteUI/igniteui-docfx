@@ -140,26 +140,23 @@ In addition to setting a mask to an input, you can validate the entered value as
     <igx-input-group>
         <label igxLabel for="name">Name</label>
         <input igxInput  name="name" type="text" 
-               [igxTextSelection]="true"
-               [(ngModel)]="person.name" required />
+            [(ngModel)]="person.name" required />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-        <input igxInput  #dateInput  name="birthday" type="text" 
-               [igxTextSelection]="true" 
-               [igxFocus]="isFocused" 
-               [(ngModel)]="person.birthday"
-               (blur)="validateDate(dateInput, snackbar)" />
+        <input igxInput  #dateInput name="birthday" type="text"
+            [igxMask]="'00/00/0000'"
+            [(ngModel)]="person.birthday"
+            (blur)="validateDate(dateInput, snackbar)" />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-        <input igxInput  #ssn name="socialSecurityNumber" type="text" 
-               [igxMask]="'###-##-####'"
-               [igxTextSelection]="true"
-               [(ngModel)]="person.socialSecurityNumber"
-               (blur)="validateSSN(ssn, snackbar)" />
+        <input igxInput #ssn name="socialSecurityNumber" type="text"
+            [igxMask]="'###-##-####'"
+            [(ngModel)]="person.socialSecurityNumber"
+            (blur)="validateSSN(ssn, snackbar)" />
     </igx-input-group>
 
     <igx-snackbar #snackbar></igx-snackbar>
@@ -221,6 +218,17 @@ export class Person {
       ) {  }
 }
 ```
+
+#### Text Selection
+You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
+
+```html
+<igx-input-group>
+    <input igxInput [igxMask]="'###-##-####'" [igxTextSelection]="true"/>
+</igx-input-group>
+```
+
+> NOTE: In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxMask` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 #### Apply additional formatting on focus and blur
 In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
