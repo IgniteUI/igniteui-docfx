@@ -1015,6 +1015,9 @@
 - name: Splitter
   href: splitter.md
   new: true
+- name: Dock Manager
+  href: dock-manager.md
+  new: true
 - name: Notifications
   header: true
 - name: Banner

@@ -62,7 +62,8 @@ _language: ja
 </@@igSelector>
 ```
 
-ページングはコードで @@igComponent API を使用して設定できます。[`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) メソッド:
+Paging can also be done programmatically through the @@igComponent API, using the [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#page), [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) and [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data and you want to alter the pages count based on total remote records. Keep in mind that If you are using paging and all the data is passed to the grid, the value of totalRecords property will be set by default to the length of the provided data source. If totalRecords is set, it will take precedence over the default length based on the data source."
+
 
 ```typescript
 // Go to page 6
@@ -84,6 +85,9 @@ this.@@igObjectRef.perPage = 25;
 
 // Enables/disables paging
 this.@@igObjectRef.paging = false;
+
+//  Set the total number of records that are in the grid. Default value is the length of the provided data.
+this.@@igObjectRef.totalRecords = 30;
 ```
 
 ### リモート ページング
@@ -100,7 +104,7 @@ this.@@igObjectRef.paging = false;
 8.1.0 リリースでは、新しいコンポーネント `igx-paginator` が導入されました。このコンポーネントは、現在のページャーを置き換え、スタンドアロン コンポーネントとしても使用できます。
 `igx-paginator` は、ページングを詳細なカスタマイズが可能な入力プロパティを公開します。
 
-| 入力           |      説明                           | 
+| 入力           |      説明                           |
 |-----------------|:------------------------------------------:|
 | displayDensity  | 改ページの表示密度を設定します。 |
 | dropdownEnabled | 有効状態をドロップダウンに設定します。 |
@@ -112,6 +116,12 @@ this.@@igObjectRef.paging = false;
 | selectLabel     | 選択コンポーネントの前にテキストを設定します。デフォルトは'ページごとの項目'です。 |
 | selectOptions   | ページごとの項目のカスタム オプションを設定します。 |
 | totalRecords    | 合計レコード数を設定します。 |
+
+
+| Output          |      Description                           |
+|-----------------|:------------------------------------------:|
+| pageChange      |  the event is emitted when the current page is changed. |
+| perPageChange   |  the event is emitted when the number items per page is changed. |
 
 #### 使用方法
 以下の例では、`igx-paginator` コンポーネントは `igx-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
@@ -159,7 +169,7 @@ this.@@igObjectRef.paging = false;
 ```scss
 // custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法で [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) を拡張し`$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
@@ -186,7 +196,7 @@ $dark-button: igx-button-theme(
 
 この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
-最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
 
 ```scss
 @include igx-grid-paginator($dark-grid-paginator);
@@ -225,7 +235,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
+[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -253,7 +263,7 @@ $dark-button: igx-button-theme(
 
 テーマ エンジンには [**スキーマ**](../themes/schemas.md)を使用できる利点があり、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用するための方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は ([`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ) の 1 つを拡張します。 
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は ([`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ) の 1 つを拡張します。
 
 ```scss
 // Extending the dark paginator schema
@@ -339,9 +349,9 @@ $dark-button: igx-button-theme(
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>  
+<br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe"
         data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
@@ -353,9 +363,9 @@ $dark-button: igx-button-theme(
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>  
+<br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" 
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe"
         data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>

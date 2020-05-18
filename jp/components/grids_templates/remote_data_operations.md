@@ -142,7 +142,7 @@ public ngAfterViewInit() {
         takeUntil(this.destroy$)
     ).subscribe(() => {
         this.processData();
-    });    
+    });
 }
 ```
 
@@ -243,7 +243,7 @@ public processData() {
 Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
 - **column**  - フィルタリング式ツリー。各列に基づいて削減されます。
 - **filteringExpressionsTree** - フィルタリング式ツリー。各列に基づいて削減されます。
-- **done** - 
+- **done** -
 サーバーから取得されたときに、新しく生成された列値で呼び出されるコールバック。
 
 開発者は、**列**と **filteringExpressionsTree** 引数によって提供される情報に基づいて、必要な一意の列値を手動で生成し、**done** コールバックを呼び出すことができます。
@@ -363,6 +363,7 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 はじめにデータ フェッチングを行うサービスを宣言します。
+If you want to use the default paging template you need to set the `totalRecords` property, so the grid to be able the calculate the total page number based on total remote records. Keep in mind that you still need to implement the fetching data from your remote service.
 ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
 ```typescript
 @Injectable()
@@ -433,7 +434,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     public firstPage = true;
     public totalPages: number = 1;
     public totalCount = 0;
-    
+
     constructor(private remoteService: RemotePagingService) {}
 
     public ngOnInit() {
@@ -528,7 +529,7 @@ public paginate(page: number) {
 @ViewChild("customPager", { read: TemplateRef })
 public remotePager: TemplateRef<any>;
 public title = "gridPaging";
-    
+
 @ViewChild("layout1")
 public layout1: IgxRowIslandComponent;
 
