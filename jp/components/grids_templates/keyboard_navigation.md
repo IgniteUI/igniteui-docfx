@@ -44,23 +44,23 @@ When the @@igxName header container is focused and press one of the following ke
 
 #### Key Combinations
 
- - `Arrow Up` - navigates one cell up in the headers (no wrapping); Available only when multi row layout or column groups are defined;
- - `Arrow Down` - navigates one cell down in the headers (no wrapping); Available only when multi row layout or column groups are defined;
- - `Arrow Left` - navigates one cell left (no wrapping between lines);
- - `Arrow Right` - navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Left` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level;
- - `Home` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level;
- - `End` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level;
- - `Alt + L` - opens Advanced filtering dialog if advanced filtering is enabled;
- - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable;
- - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting;
- - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting;
- - `Space` - select the current column; If the column is already selected, it will remove the selection;
-@@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group by the active column **if the column is marked as groupable**;
- - `Shift + Alt + Arrow Right` - ungroup by the active column **if the column is marked as groupable**;
- - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header **if the column is not already collapsed**;
- - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header **if the column is not already expanded**;}
+ - `Arrow Up` - navigates one cell up in the headers (no wrapping) Available only when multi row layout or column groups are defined
+ - `Arrow Down` - navigates one cell down in the headers (no wrapping) Available only when multi row layout or column groups are defined
+ - `Arrow Left` - navigates one cell left (no wrapping between lines)
+ - `Arrow Right` - navigates one cell right (no wrapping between lines)
+ - `Ctrl + Arrow Left` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level
+ - `Home` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level
+ - `End` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level
+ - `Alt + L` - opens Advanced filtering dialog if advanced filtering is enabled
+ - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable
+ - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting
+ - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting
+ - `Space` - select the current column; If the column is already selected, it will remove the selection
+@@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group by the active column **if the column is marked as groupable**
+ - `Shift + Alt + Arrow Right` - ungroup by the active column **if the column is marked as groupable**
+ - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header **if the column is not already collapsed**
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header **if the column is not already expanded**}
 
 ### Body navigation
 
@@ -68,32 +68,34 @@ When the @@igxName body is focused and press one of the following key combinatio
 
 #### Key Combination
 
- - `Arrow Up`- navigates one cell up @@if (igxName === 'IgxHierarchicalGrid') {, going up the grid hierarchy if necessary}(no wrapping);
- - `Arrow Down`- navigates one cell down  @@if (igxName === 'IgxHierarchicalGrid') {, going deeper into the grid hierarchy if necessary}(no wrapping);
- - `Arrow Left`- navigates one cell left (no wrapping between lines);
- - `Arrow Right`- navigates one cell right (no wrapping between lines);
- - `Ctrl + Arrow Left` - moves to leftmost cell in row;
- - `Ctrl + Arrow Right` - moves to rightmost cell in row;
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column;
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column;
- - `Home` - moves to leftmost cell in row;
- - `End`- moves to rightmost cell in row;
- - `Ctrl + Home` - moves to the top leftmost data cell in the grid;
- - `Ctrl + End` - moves to bottom rightmost data cell in the grid;
- - `Page Up` - scrolls one page (view port) up;
- - `Page Down` - scrolls one page (view port) down;
- - `Enter` - enters edit mode;
- - `F2` - enters edit mode;
- - `Esc` - exits edit mode;
- - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row editing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row;
- - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row editing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row;
- - `Space` - if the row is selectable, on key down `space` triggers row selection;
-@@if (igxName === "IgxGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content **if the row is not already collapsed**;
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - collapses the group row content **if the row is not already collapsed**;
- - `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the row is not already collapsed**;
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - collapses the row content **if the row is not already collapsed**;}
-@@if (igxName === "IgxHierarchicalGrid") {- `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the **row island if the it is not already collapsed**;
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - collapses the **row island if the it is not already collapsed**;}
+ - `Arrow Up`- navigates one cell up @@if (igxName === 'IgxHierarchicalGrid') {, going up the grid hierarchy if necessary}(no wrapping)
+ - `Arrow Down`- navigates one cell down  @@if (igxName === 'IgxHierarchicalGrid') {, going deeper into the grid hierarchy if necessary}(no wrapping)
+ - `Arrow Left`- navigates one cell left (no wrapping between lines)
+ - `Arrow Right`- navigates one cell right (no wrapping between lines)
+ - `Ctrl + Arrow Left` - moves to leftmost cell in row
+ - `Ctrl + Arrow Right` - moves to rightmost cell in row
+ - `Ctrl + Arrow Up` - navigates to the first cell in the current column
+ - `Ctrl + Arrow Down` - navigates to the last cell in the current column
+ - `Home` - moves to leftmost cell in row
+ - `End`- moves to rightmost cell in row
+ - `Ctrl + Home` - moves to the top leftmost data cell in the grid
+ - `Ctrl + End` - moves to bottom rightmost data cell in the grid
+ - `Page Up` - scrolls one page (view port) up
+ - `Page Down` - scrolls one page (view port) down
+ - `Enter` - enters edit mode
+ - `F2` - enters edit mode
+ - `Esc` - exits edit mode
+ - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row editing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row
+ - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row editing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row
+ - `Space` - if the row is selectable, on key down `space` triggers row selection
+@@if (igxName === "IgxGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content **if the row is not already collapsed**
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - expands the group row content **if the row is not already expanded**
+ - `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the row is not already collapsed**
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - expands the row content **if the row is not already expanded**}
+@@if (igxName === "IgxHierarchicalGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the **row island if it is not already collapsed**
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the **row island if it is not already expanded**}
+@@if (igxName === "IgxTreeGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the **current node if it is not already collapsed**
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the **current node if it is not already expanded**}
 
 Having all that theory may be easily turned into practice with the demo below.
 
