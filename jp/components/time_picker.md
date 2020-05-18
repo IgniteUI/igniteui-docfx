@@ -174,7 +174,7 @@ public mode = InteractionMode.DropDown;
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
 
-または、タイムピッカーで [`モード`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を以下のように変更します。
+または、タイムピッカーで [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を以下のように変更します。
 
 ```html
 <!--timePickerDropdown.component.html-->
@@ -249,7 +249,7 @@ public date: Date = new Date();
 
 #### ドロップダウン モードのテンプレート化
 
-<a href="#入力グループのテンプレート化"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
+<a href="#入力グループのテンプレート化">テンプレート入力グループ</a> セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
 ```html
 <igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">

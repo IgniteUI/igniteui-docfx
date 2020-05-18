@@ -79,7 +79,7 @@ public date: Date = new Date(Date.now());
 <div class="divider--half"></div>
 
 #### ドロップダウン モード
-デフォルトでデート ピッカーは読み取り専用モードで表示されます。ドロップダウン モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
+デフォルトで日付ピッカーは読み取り専用モードで表示されます。ドロップダウン モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
 
 ```html
 <!-- date-picker-sample.component.html -->
@@ -91,10 +91,10 @@ public date: Date = new Date(Date.now());
 
 | 入力 | タイプ | 説明 | 
 | ------------- |:-------------:|:-------------:| 
-| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | 日付の表示書式を設定します。有効な記号と含む書式を受け付けます。詳細については、[DatePipe](https://angular.io/api/common/DatePipe) をご覧ください。shortDate, mediumDate, longDate and fullDate など定義済みの書式オプションもサポートされます。 |
-| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`|日付エディター マスクの設定d、M、y 記号の数値表記や dd-MM-y などの任意のセパレーターの組み合わせを受け付けます。エディターは MMM、MMMM、MMMMM の文字表記を受け取りません。有効なマスクの日の部分は d と dd、月部分は M と MM、年部分は y、yy、yyyy となります。|
+| [`format`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#format) | `string` | 日付の表示書式を設定します。有効な記号と含む書式を受け付けます。詳細については、[DatePipe](https://angular.io/api/common/DatePipe) をご覧ください。shortDate、mediumDate、longDate および fullDate など定義済みの書式オプションもサポートされます。 |
+| [`mask`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mask)|`string`|日付エディター マスクの設定 d、M、y 記号の数値表記や dd-MM-y などの任意のセパレーターの組み合わせを受け付けます。エディターは MMM、MMMM、MMMMM の文字表記を受け取りません。有効なマスクの日の部分は d と dd、月部分は M と MM、年部分は y、yy、yyyy となります。|
 | [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#isspinloop) | `boolean` | エディターで <kbd>UP</kbd> および <kbd>DOWN</kbd> 矢印キーを使用するときに連続スピンループを構成します。false に設定された場合、最小/最大の日付/月に達すると、日付部分のスピンが停止します。デフォルトでスピン ループは無限ループです。 |
-| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | ロケール プロパティを設定する場合に Angular に含まれるロケールが en-US のみであることに注意してください。その他の日付をローカライズするためには対応するロケール データをインポートする必要があります。詳細については、[I18n](https://angular.io/guide/i18n#i18n-pipes) ガイドをご覧ください。|
+| [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) | `string` | `locale` プロパティを設定する場合に Angular に含まれるロケールが en-US のみであることに注意してください。その他の日付をローカライズするためには対応するロケール データをインポートする必要があります。詳細については、[I18n](https://angular.io/guide/i18n#i18n-pipes) ガイドをご覧ください。|
 
 
 > [!NOTE]
@@ -109,15 +109,15 @@ public date: Date = new Date(Date.now());
 
 ##### キーボード ナビゲーション
 * 日付ピッカー ドロップダウンを開く: 
-    * <kbd>SPACE</kbd>
-    * <kbd>ALT</kbd> + <kbd>DOWN</kbd> 
+    * <kbd>SPACE</kbd> キー
+    * <kbd>ALT</kbd> キー + <kbd>DOWN</kbd> キー
 *  日付ピッカー ドロップダウンを閉じる:
-    * <kbd>ESC</kbd>
-    * <kbd>ALT</kbd> + <kbd>UP</kbd> 
+    * <kbd>ESC</kbd> キー
+    * <kbd>ALT</kbd> キー + <kbd>UP</kbd> キー
 *  日付部分のインクリメント:
-    * 日付部分にフォーカス + <kbd>UP</kbd> 
+    * 日付部分にフォーカス + <kbd>UP</kbd> キー
 *  日付部分のデクリメント:
-    * 日付部分にフォーカス + <kbd>DOWN</kbd> 
+    * 日付部分にフォーカス + <kbd>DOWN</kbd> キー
 
 以下のサンプルでは、表示形式を longDate ('MMMM d, y') に設定し、日付エディター マスクを 'dd-MM-y' に設定します。
 
@@ -277,7 +277,7 @@ public formatter = (date: Date) => {
 <div class="divider--half"></div>
 
 #### ドロップダウン モード日付ピッカー
-<a href="#dialog-mode-date-picker"> テンプレート ダイアログ モードのデートピッカーセクションに記載されているすべての情報は、ドロップダウン日付ピッカーを再テンプレートするときにも適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
+<a href="#ダイアログ-モードの日付ピッカー">テンプレート ダイアログ モードの日付ピッカー</a> セクションに記載されているすべての情報は、ドロップダウン日付ピッカーを再テンプレートするときにも適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
 以下の例では、デフォルトのアイコンを変更し、入力要素の後ろに配置します。日付ピッカーの値を表示する入力グループの下にもラベルがあります。
 

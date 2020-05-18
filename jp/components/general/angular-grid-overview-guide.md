@@ -1,7 +1,8 @@
 ---
-title: Angular Grid と Angular アプリケーション開発: 完全ガイド 
+title: Angular Grid と Angular アプリケーション開発 - 完全ガイド 
 _description: 最新のデータ グリッドとチャートは複雑で、さまざまな機能が含まれています。完全なガイドでは Angular Grid とアプリケーション開発について説明します。
 _keywords: angular, angular アプリケーション開発, infragistics 
+_language: ja
 ---
 
 ## Angular Grid と Angular アプリケーション開発: 完全ガイド 
@@ -244,7 +245,7 @@ IgniteUI for Angular はコンポーネントのデザインを[マテリアル 
     data-src="../../images/general/ThemeingWidget1.gif" 
     data-srcset="../../images/general/ThemeingWidget1.gif 480w, ../../images/general/ThemeingWidget1.gif 768w, ../../images/general/ThemeingWidget1.gif 1100w" 
     alt="Theming widget example"
-    title="The Theming widget is using Ignite UI powerful theming framework.">
+    title="テーマ ウィジェットは、Ignite UI のパワフルなテーマ フレームワークを使用しています。">
 
 ### Ignite UI のデータ分析 
 
@@ -269,7 +270,7 @@ Grid コンポーネントは一般に、大量の表データを可視化する
     data-src="../../images/general/scrolling.gif" 
     data-srcset="../../images/general/scrolling.gif 480w, ../../images/general/scrolling.gif 768w, ../../images/general/scrolling.gif 1100w" 
     alt="Scrolling performance"
-    title="igxGrid virtual scrolling performance">
+    title="igxGrid 仮想スクロールのパフォーマンス">
 
 Grid で使用したい機能を簡単に見つけてナビゲートできます。また、アプリケーションをより魅力的にできます。 
 

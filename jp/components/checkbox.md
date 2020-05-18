@@ -100,7 +100,7 @@ igx-checkbox {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### Lラベル配置
+#### ラベル配置
 
 チェックボックスの [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) プロパティを使用してラベル位置を指定することができます。
 
@@ -112,7 +112,7 @@ igx-checkbox {
 
 #### 未確定状態のチェックボックス
 
-オンとオフに加えて、チェックボックスの 3 番目の状態があります:**未確定**。この状態では、チェックボックスはオンでもオフでもありません。チェックボックスの [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) プロパティを使用して設定します。
+オンとオフに加えて、チェックボックスの 3 番目の状態があります: **未確定**。この状態では、チェックボックスはオンでもオフでもありません。チェックボックスの [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) プロパティを使用して設定します。
 
 ```html
 <igx-checkbox [indeterminate]="true"></igx-checkbox>

@@ -49,10 +49,10 @@ Label および Input ディレクティブのデフォルト スタイル設定
 </igx-input-group>
 ```
 
-`igxInput` ディレクティブは <input> `および` <textarea> `単一行および複数行テキスト フィールドの HTML要素に適用できます。ラベルの隣にアスタリスクが追加され、このフィールドは必須入力であることを示します。入力は検証が成功/失敗したかどうかによって緑/赤に変わります。
+`igxInput` ディレクティブは `<input>` および `<textarea>` 単一行および複数行テキスト フィールドの HTML 要素に適用できます。
 
 #### 検証
-[`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) 属性を使用して `input` を検証できます。
+[`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) 属性を使用して `input` を検証できます。ラベルの隣にアスタリスクが追加され、このフィールドは必須入力であることを示します。入力は検証が成功/失敗したかどうかによって緑/赤に変わります。
 
 ```html
 <igx-input-group>

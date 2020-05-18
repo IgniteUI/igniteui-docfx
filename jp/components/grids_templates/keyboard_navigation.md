@@ -3,6 +3,7 @@
 title: Grid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular で Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -10,6 +11,7 @@ _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボ�
 title: TreeGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular で TreeGrid キーボードナ ビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +19,7 @@ _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボ�
 title: HierarchicalGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular で HierarchicalGrid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_language: ja
 ---
 }
 
@@ -106,13 +109,13 @@ _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボ�
 ### カスタム キーボード ナビゲーション
 特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event(keydown)= "onKeydown($ event)"を使用できます。
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` イベント `(keydown)="onKeydown($event)"` を使用できます。
 - [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
 - [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
 現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
 - [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) -
-現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
+現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
 
  @@if (igxName === 'IgxHierarchicalGrid') {
 > 注: [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) は現在のレベルでは使用できないため、子セルにアクセスすることはできません。
@@ -140,7 +143,7 @@ const cell = args.event.shiftKey ?
 this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
-- `Enter key` キーを押すと列ベースのナビゲーション(垂直)を実行します。
+- `Enter キー` を押すと列ベースのナビゲーション (垂直) を実行します。
 
 ```typescript
 if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
@@ -151,7 +154,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 ```
 
 カスタム キーボード ナビゲーションを確認するために以下の操作を試すことができます。
-- 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `tab キー` を押します。プロンプト メッセージが表示されます。
+- 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `Tab キー` を押します。プロンプト メッセージが表示されます。
 - セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
 > 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに `F2 キー`を使用できることに注意してください。
