@@ -57,8 +57,8 @@ When the @@igxName header container is focused and press one of the following ke
  - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting
  - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting
  - `Space` - select the current column; If the column is already selected, it will remove the selection
-@@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group by the active column **if the column is marked as groupable**
- - `Shift + Alt + Arrow Right` - ungroup by the active column **if the column is marked as groupable**
+@@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group the active column **if the column is marked as groupable**
+ - `Shift + Alt + Arrow Right` - ungroup the active column **if the column is marked as groupable**
  - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header **if the column is not already collapsed**
  - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header **if the column is not already expanded**}
 
@@ -88,14 +88,10 @@ When the @@igxName body is focused and press one of the following key combinatio
  - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row editing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row
  - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row editing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row
  - `Space` - if the row is selectable, on key down `space` triggers row selection
-@@if (igxName === "IgxGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - over GroupRow - collapses the group row content **if the row is not already collapsed**
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over GroupRow - expands the group row content **if the row is not already expanded**
- - `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the row is not already collapsed**
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - expands the row content **if the row is not already expanded**}
-@@if (igxName === "IgxHierarchicalGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the **row island if it is not already collapsed**
- - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the **row island if it is not already expanded**}
-@@if (igxName === "IgxTreeGrid") { - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the **current node if it is not already collapsed**
- - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the **current node if it is not already expanded**}
+ - `Alt + Arrow Left` or `Alt + Arrow Up` -  @@if (igxName === "IgxGrid") {over GroupRow - collapses the group row content **if the it is not already collapsed**} @@if (igxName === "IgxHierarchicalGrid") { collapses the row island **if it is not already collapsed**} @@if (igxName === "IgxTreeGrid") { collapses the current node **if it is not already collapsed**}
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - @@if (igxName === "IgxGrid") {over GroupRow - expands the group row content **if the it is not already expanded**} @@if (igxName === "IgxHierarchicalGrid") {expands the row island **if it is not already collapsed**} @@if (igxName === "IgxTreeGrid") {expands the current node **if it is not already expanded**}
+ @@if (igxName === "IgxGrid") {- `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the it is not already collapsed**
+ - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - expands the row content **if the it is not already expanded**}
 
 Having all that theory may be easily turned into practice with the demo below.
 
