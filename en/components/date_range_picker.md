@@ -216,18 +216,20 @@ To navigate calendar use the same [keyboard navigation](calendar.md#keyboard-nav
 
 #### Formatting
 
-Date Range picker supports different display and input formats. 
+Date Range picker supports different display and input formats.
 
-For display the formats that can be used are all defined by Angular [DatePipe](https://angular.io/api/common/DatePipe). Input Format doesn't support predefined format options, such as `shortDate` and `longDate`, but accepts a constructed format string using characters supported by the DatePipe, e.g. `MM/dd/yyyy`.
+The display format value can be one of the defined by Angular [DatePipe](https://angular.io/api/common/DatePipe). Input Format doesn't support predefined format options, such as `shortDate` and `longDate`, but accepts a constructed format string using characters supported by the DatePipe, e.g. `MM/dd/yyyy`.
 
-The `formatter` function can be used for defining a custom format, different from those above.
+The [`formatter`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#formatter) function can be used for defining a custom format, different from those above.
 
 When in the application the [Angular locale ID](https://angular.io/api/core/LOCALE_ID) token is used then RangeDatePicker is taking this into account as its default locale.
 
 #### Forms and Validation
 The Date Range Picker Component supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
-The [NgModel](https://angular.io/api/forms/NgModel) and `required` can be set on `RangeDatePicker` component like shown in the demo below. The value is of type `DateRange`. Validation happens on any of the following [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) values.
+The [NgModel](https://angular.io/api/forms/NgModel) and `required` can be set on `RangeDatePicker` component as well on the individual start and end date inputs. For the configuration with separate start and end inputs, model and `required` can be set both ways, but will not work if set at the same time - it should be either on the component or on the inputs.
+
+The value is of type `DateRange`. Validation happens on any of the following [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) events.
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="daterangepicker-validation-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -237,13 +239,17 @@ The [NgModel](https://angular.io/api/forms/NgModel) and `required` can be set on
 </div>
 <div class="divider--half"></div>
 
+Below you can find the three different configurations shown in the demo above.
+
+The first snippet setups model for a single read-only range component and it is done on a component level:
+
 ```html
 <igx-date-range-picker [(ngModel)]="range" required>
     <label igxLabel>Period</label>
 </igx-date-range-picker>
 ```
 
-The same configuration can be used when setting two separate inputs.
+The same configuration can be used when setting two separate inputs. Note that in those case validation also is applied for both inputs.
 
 ```html
 <igx-date-range-picker [(ngModel)]="range" required>
@@ -261,7 +267,7 @@ The same configuration can be used when setting two separate inputs.
 </igx-date-range-picker>
 ```
 
-When having two separate inputs then it is possible to set model and validation on the each individual input. This is shown in the example below. Note that you can do this either on component level or for individual inputs and cannot mix both.
+When having two separate inputs then it is possible to set model and `required` on each individual input. This is shown in the example below and note that validation is specific for each individual input.
 
 ```html
 <igx-date-range>
@@ -274,9 +280,25 @@ When having two separate inputs then it is possible to set model and validation 
 </igx-date-range>
 ```
 
+#### Min max value
+You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) properties to restrict input and control the validity of the ngModel.
+
+```typescript
+public minDate = new Date(2020, 1, 15);
+public maxDate = new Date(2020, 12, 1);
+```
+
+```html
+<igx-date-range-picker [(ngModel)]="range" required
+    [minValue]="minDate" [maxValue]="maxDate">
+</igx-date-range-picker>
+```
+
+Setting min and max values will disable calendar dates that are outside the minimum and maximum range.
+
 #### Templating
 
-By default when two editors are defined then the default separator is `to` preposition. The following example changes date separator to `-`:
+When two editors are defined then the default separator, the `to` preposition, can be templated. The following example changes date separator to `-`:
 
 ```html
 <igx-date-range>
