@@ -169,7 +169,7 @@ The demo shows that in that case `igx-date-range-start` can be defined as child 
 
 #### Dropdown mode
 
-The `igx-date-range-picker` component has two modes - dialog(default) and dropdown. The define the dropdown mode, use the snippet below:
+The `IgxDateRangePickerComponent` component has two modes - dialog(default) and dropdown. The define the dropdown mode, use the snippet below:
 
 ```html
 <igx-date-range mode="dropdown"></igx-date-range>
@@ -187,7 +187,7 @@ When in drop down mode the `Done` button is not available, but in both modes val
 
 #### Keyboard Navigation
 
-Keyboard navigation is available only for `dropdown` `mode` of the `igx-date-range-picker` component. Use the demo above to try the following keyboard combinations.
+Keyboard navigation is available only for `dropdown` `mode` of the `IgxDateRangePickerComponent` component. Use the demo above to try the following keyboard combinations.
 
 When the focus and cursor are in a input then the [keyboard navigation](date_time_editor.md#keyboard-navigation) of the `igx-date-time-editor` directive is applicable also here:
 
@@ -195,7 +195,7 @@ When the focus and cursor are in a input then the [keyboard navigation](date_tim
 - <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions.
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
-To open `igx-date-range-picker` calendar:
+To open `IgxDateRangePickerComponent` calendar:
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Opens the drop-down calendar and focuses it
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
@@ -396,7 +396,7 @@ Regarding scoping styles, you should refer to both styling sections [Overlay Sco
 </div>
 
 ### Application Demo
-In the demo below defines form for flight tickets that uses `igxDateRangePicker` component.
+The demo below defines form for flight tickets that uses `igxDateRangePicker` component. The dates should be selected otherwise [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display validation error. The selection of the dates is restricted using [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) of the `IgxDateRangePickerComponent`
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="flight-booking-iframe" src="{environment:demosBaseUrl}/scheduling/flight-booking" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
