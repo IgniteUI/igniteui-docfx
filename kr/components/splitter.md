@@ -6,7 +6,7 @@ _keywords: angular splitter, igniteui for angular, infragistics
 
 ## Splitter
 
-The Ignite UI for Angular Splitter component provides the ability to create layouts split into multiple vertically or horizontally arranged panes that may be expanded, collapsed and resized. These interactions are performed through UI exposed in the bars separating the panes. A simple Splitter layout is demonstrated in the demo below.
+The Ignite UI for Angular Splitter component provides the ability to create layouts, split into multiple vertically or horizontally arranged panes that may be resized, expanded and collapsed. These interactions are performed through UI exposed in the splitter bars between the panes. A simple Splitter layout is demonstrated in the demo below.
 
 ### Demo
 <div class="sample-container loading" style="height: 400px">
@@ -21,7 +21,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 ### Usage
 
-To start using the **igxSplitter** component first you need to import the **IgxSplitterModule** in your **app.module**:
+To start using the **igxSplitter** component, you first need to import the **IgxSplitterModule** in your **app.module**:
 ```typescript
 // app.module.ts
 ...
@@ -162,16 +162,17 @@ You can change the default styles of the splitter by creating a new theme that e
 ```scss
 // In splitter-styling-sample.component.scss
 
-// Create custom splitter theme.
-$custom-splitter-theme: igx-splitter-theme(
-    $bar-color: #ff7400,
-    $handle-color: #ddd,
-    $expander-color: #ddd,
-    $focus-color: #ccc,
+$splitter-theme: igx-splitter-theme(
+    $bar-color: #011627,
+    $handle-color: #ECAA53,
+    $expander-color: #ECAA53,
+    $border-radius: 0,
+    $focus-color: #ECAA53,
+    $size: 4px
 );
 ```
 
-#### Using CSS variables 
+#### Using CSS Variables 
 
 The next step is to pass the custom splitter theme:
 
@@ -179,7 +180,7 @@ The next step is to pass the custom splitter theme:
 @include igx-css-vars($custom-splitter-theme);
 ```
 
-#### Using mixins
+#### Using Theme Overrides
 
 In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
 
@@ -210,6 +211,7 @@ This is the final result from applying your new theme.
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
+* [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
