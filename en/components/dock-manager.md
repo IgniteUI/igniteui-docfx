@@ -10,10 +10,10 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
 ### Demo
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="dock-manager-overview-iframe" src='{environment:dvDemosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -68,4 +68,4 @@ This is it, you are now ready to use the Dock Manager component in an Angular co
 </igc-dockmanager>
 ```
 
-For further information on the usage of the Dock Manager component, you can check out [this topic]({environment:demosBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html).
+For further information on the usage of the Dock Manager component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html).
