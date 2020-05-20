@@ -169,7 +169,7 @@ When Date Range Picker has two separate inputs, for start and end dates, it does
 The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) component has two modes - dialog (default) and dropdown. To define the picker in dropdown mode, use the snippet below:
 
 ```html
-<igx-date-range mode="dropdown"></igx-date-range>
+<igx-date-range [mode]="'dropdown'"></igx-date-range>
 ```
 
 <div class="sample-container loading" style="height:500px">
@@ -183,13 +183,13 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 When in dropdown mode, the `Done` button is not available. In both modes value is set when dates are picked from the calendar.
 
 #### Keyboard Navigation
-> Note: Use the demos for [Drop down mode](#dropdown-mode) and [Separate Editable Inputs](#separate-editable-inputs) to try the keyboard combinations defined in that topic section.
+> Note: Use the demos for [Dropdown mode](#dropdown-mode) and [Separate Editable Inputs](separate-editable-inputs) to try the keyboard combinations defined in that topic section.
 
 To open/close [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) calendar, using keyboard, the [`mode`]([`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#mode)) should be `dropdown`.
 
-- <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Opens the drop-down calendar and focuses it
-- <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
-- <kbd>Esc</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
+- <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Opens the dropdown calendar and focuses it
+- <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Closes the dropdown and focuses the input field (start input in two inputs mode)
+- <kbd>Esc</kbd> - Closes the dropdown and focuses the input field (start input in two inputs mode)
 
 Keyboard navigation for the Date Range Picker calendar is available for all the modes and configurations. When calendar is opened it is focused and the following keyboard combinations can be used:
 
@@ -212,7 +212,7 @@ Date Range picker supports different display and input formats.
 
 The display format value can be one of the defined by Angular [DatePipe](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`.
 
-Input Format doesn't support predefined format options, such as `shortDate` and `longDate`, but accepts a constructed format string using characters supported by the DatePipe, e.g. `MM/dd/yyyy`. If there isn't input format defined then [Angular locale ID](https://angular.io/api/core/LOCALE_ID) token is used for a building an input format.
+Input Format accepts a constructed format string using characters supported by the DatePipe, e.g. `MM/dd/yyyy` but doesn't support predefined format options, such as `shortDate` and `longDate`. If there isn't input format defined then [Angular locale ID](https://angular.io/api/core/LOCALE_ID) token is used for a building an input format.
 
 ```html
 <igx-date-range-picker [(ngModel)]="range" required inputFormat="dd/MM/yyyy" displayFormat="dd/MM/yy">
