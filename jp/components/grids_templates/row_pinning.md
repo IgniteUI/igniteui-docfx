@@ -461,26 +461,26 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:540px">
-    <iframe id="grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/grid/grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="grid-row-pinning-styling" src='{environment:demosBaseUrl}/grid/grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:540px">
-    <iframe id="tree-grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="tree-grid-row-pinning-styling" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:540px">
-    <iframe id="hierarchical-grid-row-pinning-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="hierarchical-grid-row-pinning-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
