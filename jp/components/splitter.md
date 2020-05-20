@@ -1,27 +1,27 @@
 ---
-title: Angular Splitter | Split Panes |  Ignite UI for Angular | Infragistics
-_description: Use the Angular Splitter component to create a simple split layout splitting the view horizontally or vertically into multiple collapsible split panes.
-_keywords: angular splitter, igniteui for angular, infragistics
+title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス
+_description: Angular Splitter コンポーネントを使用して、ビューを水平または垂直に複数の縮小可能なスプリット ペインに分割する単純な分割レイアウトを作成します。
+_keywords: angular splitter, igniteui for angular, infragistics, インフラジスティックス
 ---
 
-## Splitter
+## スプリッター
 
-The Ignite UI for Angular Splitter component provides the ability to create layouts split into multiple vertically or horizontally arranged panes that may be expanded, collapsed and resized. These interactions are performed through UI exposed in the bars separating the panes. A simple Splitter layout is demonstrated in the demo below.
+Ignite UI for Angular Splitter コンポーネントはレイアウトを作成し、サイズ変更、展開、縮小が可能な複数の垂直方向または水平方向に配置されたペインに分割できます。これらの操作は、ペイン間のスプリッター バーで公開される UI によって実行されます。以下のデモでシンプルなスプリッター レイアウトを示します。
 
-### Demo
+### デモ
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-horizontal-sample-iframe" src='{environment:dvDemosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### Usage
+### 使用方法
 
-To start using the **igxSplitter** component first you need to import the **IgxSplitterModule** in your **app.module**:
+**igxSplitter** コンポーネントを初期化にするには、まず **IgxSplitterModule** を **app.module** にインポートします。
 ```typescript
 // app.module.ts
 ...
@@ -35,7 +35,7 @@ import { IgxSplitterModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-After that you can add the markup for your component:
+次に、コンポーネントのマークアップを追加します。
 ```html
 <!-- splitter.component.html -->
 <igx-splitter>
@@ -50,12 +50,12 @@ After that you can add the markup for your component:
     </igx-splitter-pane>
 </igx-splitter>
 ```
-**igxSplitter** is initialized with the **igx-splitter** tag. Multiple splitter panes can be defined under a single **igx-splitter** component. The content of the pane is templatable and will be rendered in its own resizable container.
+**igxSplitter** は **igx-splitter** タグで初期化されます。単一の **igx-splitter** コンポーネントの下に複数のスプリッター ペインを定義できます。ペインのコンテンツはテンプレート化可能で、サイズ変更可能なコンテナーに描画されます。
 
 
-#### Orientation
+#### 方向
 
-The splitter can be vertical or horizontal, which is defined by the [`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) input. The default value is Vertical.
+スプリッターは、[`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) 入力によって定義される垂直または水平にすることができます。デフォルト値は Vertical です。
 ```typescript
 public type = SplitterType.Horizontal;
 ```
@@ -70,9 +70,9 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
-#### Configuring panes
+#### ペインの構成
 
-The **igxSplitterPane** component contains several input properties. You can set the initial pane size by using the [`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) input property. The [`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) and [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) input properties can be used to set the minimum or maximum allowed size of the pane. Resizing beyond `minSize` and `maxSize` is not allowed.
+**igxSplitterPane** コンポーネントには、いくつかのプロパティが含まれています。[`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) プロパティを使用してペインの初期サイズを設定できます。[`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) および [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) プロパティを使用して、ペインの最小または最大サイズを設定できます。`minSize` および `maxSize` を超えるサイズ変更は許可されません。
 ```html
 <igx-splitter>
     <igx-splitter-pane size='300px' minSize='100px'>
@@ -83,7 +83,7 @@ The **igxSplitterPane** component contains several input properties. You can set
     </igx-splitter-pane>
 </igx-splitter>
 ```
-You can also forbid the resizing of a pane by setting its [`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) input property to **false**.
+[`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) プロパティを **false** に設定してペインのサイズ変更を禁止することもできます。
 ```html
 <igx-splitter>
     <igx-splitter-pane [resizable]='false'>
@@ -95,9 +95,9 @@ You can also forbid the resizing of a pane by setting its [`resizable`]({environ
 </igx-splitter>
 ```
 
-#### Nested panes
+#### ネストされたペイン
 
-You can nest splitter components to create a more complex layout inside a splitter pane.
+スプリッター コンポーネントをネストして、スプリッター ペイン内により複雑なレイアウトを作成できます。
 ```typescript
 public typeHorizontal = SplitterType.Horizontal;
 public typeVertical = SplitterType.Vertical;
@@ -127,63 +127,64 @@ public typeVertical = SplitterType.Vertical;
 </igx-splitter>
 ```
 
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-nested-sample-iframe" src='{environment:dvDemosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
-### Keyboard navigation
+### キーボード ナビゲーション
 
-Keyboard navigation is available by default in the splitter component. When you focus a splitter bar and press one of the following key combinations, the described behavior is performed.
+スプリッター コンポーネントではキーボード ナビゲーションがデフォルトで有効です。以下は、スプリッター バーをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
-#### Key combinations
-- `Arrow Up` - Moves the splitter bar _up_ in a vertical splitter
-- `Arrow Down` - Moves the splitter bar _down_ in a vertical splitter
-- `Arrow Left` - Moves the splitter bar _left_ in a horizontal splitter
-- `Arrow Right` - Moves the splitter bar _right_ in a horizontal splitter
-- `Ctrl + Arrow Up` - Expands/Collapses a pane in a vertical splitter
-- `Ctrl + Arrow Down` - Expands/Collapses a pane in a vertical splitter
-- `Ctrl + Arrow Left` - Expands/Collapses a pane in a horizontal splitter
-- `Ctrl + Arrow Right` - Expands/Collapses a pane in a horizontal splitter
+#### キーの組み合わせ
+- `上矢印` - 垂直スプリッターでスプリッター バーを上へ移動
+- `下矢印` - 垂直スプリッターでスプリッター バーを下へ移動
+- `左矢印` - 水平スプリッターでスプリッター バーを左へ移動
+- `右矢印` - 水平スプリッターでスプリッター バーを右へ移動
+- `Ctrl +上矢印` - 垂直スプリッターでペインを展開/縮小
+- `Ctrl +下矢印` - 垂直スプリッターでペインを展開/縮小
+- `Ctrl +左矢印` - 水平スプリッターでペインを展開/縮小
+- `Ctrl +右矢印` - 水平スプリッターでペインを展開/縮小
 
-### Styling
-To get started with styling the **igxSplitter** component, you need to import the `index` file, where all the theme functions and component mixins live:
+### スタイル設定
+**igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-You can change the default styles of the splitter by creating a new theme that extends the [`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme).
+スプリッターのデフォルトのスタイルを変更するには、[`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme) を拡張して新しいテーマを作成します。
 
 ```scss
 // In splitter-styling-sample.component.scss
 
-// Create custom splitter theme.
-$custom-splitter-theme: igx-splitter-theme(
-    $bar-color: #ff7400,
-    $handle-color: #ddd,
-    $expander-color: #ddd,
-    $focus-color: #ccc,
+$splitter-theme: igx-splitter-theme(
+    $bar-color: #011627,
+    $handle-color: #ECAA53,
+    $expander-color: #ECAA53,
+    $border-radius: 0,
+    $focus-color: #ECAA53,
+    $size: 4px
 );
 ```
 
-#### Using CSS variables 
+#### CSS 変数の使用 
 
-The next step is to pass the custom splitter theme:
+次に Splitter のカスタム テーマを渡します。
 
 ```scss
 @include igx-css-vars($custom-splitter-theme);
 ```
 
-#### Using mixins
+#### テーマ オーバーライドの使用
 
-In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
+Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
 
-If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を通す必要があります。一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -194,25 +195,27 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 }
 ```
 
-#### Demo
-This is the final result from applying your new theme.
+#### デモ
+これは、新しいテーマを適用した結果です。
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API References
+### API リファレンス
 <div class="divider--half"></div>
 
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
+* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+コミュニティに参加して新しいアイデアをご提案ください。
+
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

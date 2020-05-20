@@ -2,7 +2,8 @@
 ---
 title: Angular Grid 列固定 | 列のロック | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
-_keywords: lock column, ignite ui for angular, infragistics 
+_keywords: lock column, ignite ui for angular, infragistics
+_language: ja 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -10,6 +11,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 title: Angular Tree Grid 列固定 | 列のロック | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
 _keywords: lock column, ignite ui for angular, infragistics 
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +19,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 title: Angular Hierarchical Tree Grid 列固定 | 列のロック | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
 _keywords: lock column, ignite ui for angular, infragistics 
+_language: ja
 ---
 }
 
