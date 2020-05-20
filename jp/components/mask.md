@@ -144,26 +144,26 @@ public clear() {
 
     <igx-input-group>
         <label igxLabel for="name">Name</label>
-        <input igxInput name="name" type="text" required 
-        [(ngModel)]="person.name" />
+        <input igxInput name="name" type="text" 
+            [(ngModel)]="person.name" required />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-        <input igxInput #dateInput name="birthday" type="text" 
-            [igxMask]="'00/00/0000'" 
-            [(ngModel)]="person.birthday" 
+        <input igxInput #dateInput name="birthday" type="text"
+            [igxMask]="'00/00/0000'"
+            [(ngModel)]="person.birthday"
             (blur)="validateDate(dateInput, snackbar)" />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-        <input igxInput #ssn name="socialSecurityNumber" type="text" 
-        [igxMask]="'###-##-####'" 
-        [(ngModel)]="person.socialSecurityNumber" 
-        (blur)="validateSSN(ssn, snackbar)" />
+        <input igxInput #ssn name="socialSecurityNumber" type="text"
+            [igxMask]="'###-##-####'"
+            [(ngModel)]="person.socialSecurityNumber"
+            (blur)="validateSSN(ssn, snackbar)" />
     </igx-input-group>
-	
+
     <igx-snackbar #snackbar></igx-snackbar>
 </form>
 
@@ -173,7 +173,7 @@ public clear() {
 // sample.component.ts
 
 public person: Person;
-  
+
 constructor() {
     this.person = {
         birthday: null,
