@@ -11,6 +11,7 @@ _language: ja
 title: Angular Tree Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
 _description: Angular Tree Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
 _keywords: grid column resizing, igniteui for angular, infragistics
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -18,6 +19,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 title: Angular Hierarchical Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
 _description: Angular Hierarchical Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
 _keywords: grid column resizing, igniteui for angular, infragistics
+_language: ja
 ---
 }
 

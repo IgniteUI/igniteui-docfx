@@ -1,6 +1,9 @@
 ﻿- name: 概要
   header: true
   _language: "ja"
+- name: Angular - 完全ガイド
+  href: general/angular-grid-overview-guide.md
+  new: true
 - name: 作業の開始
   href: general/getting_started.md
   new: false
@@ -1024,6 +1027,9 @@
   href: toast.md
 - name: スケジュール
   header: true
+- name: Date Time Editor
+  href: date_time_editor.md
+  new: true
 - name: Calendar
   href: calendar.md
 - name: Date Picker
