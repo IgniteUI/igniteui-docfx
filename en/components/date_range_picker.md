@@ -6,7 +6,7 @@ _keywords: Angular Date Range Picker, Date Range Picker, Date Picker
 
 ## Date Range Picker Component
 
-The Ignite UI for Angular Date Range Component displays a month-view calendar that lets the user pick a date range, consisting of start and end date. The calendar can be displayed using a toggle, shown at the leftmost part of the component, and has two modes - dialog(default) and dropdown. In addition, the component provides an advanced setup option, exposing two editable input fields where you can edit the dates. It supports locales and custom date formatting.
+The Ignite UI for Angular Date Range Component displays a month-view calendar that lets the end-user select a date range by defining its start and end date. The calendar UI is shown either in a dialog(default) or as a dropdown upon user interaction with the calendar icon that is part of the input field. In addition, the component provides an advanced setup option, exposing two separate editable input fields. The component supports locales and custom date formatting.
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="basic-daterangepicker-iframe" src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -209,9 +209,9 @@ When two separate inputs are used, [keyboard navigation](date_time_editor.md#key
 
 The Date Range picker supports different display and input formats.
 
-The format of the value can be one of the listed Angular [DatePipe](https://angular.io/api/common/DatePipe) formats. This allows it to support predefined format options, such as `shortDate` and `longDate`.
+The display format of the value can be one of the listed Angular [DatePipe](https://angular.io/api/common/DatePipe) formats. This allows it to support predefined format options, such as `shortDate` and `longDate`.
 
-The `inputFormat` property accepts a constructed format string using characters supported by the DatePipe, e.g. `MM/dd/yyyy`, but doesn't support predefined format options, such as `shortDate` and `longDate`. If the `inputFormat` property is not specified then the [Angular locale ID](https://angular.io/api/core/LOCALE_ID) token is used when building the input format.
+The `inputFormat` property accepts a constructed format string using characters supported by the DatePipe, e.g. `MM/dd/yyyy`, but doesn't support predefined format options, such as `shortDate` and `longDate`. If the `inputFormat` property is not defined then the [Angular locale ID](https://angular.io/api/core/LOCALE_ID) token is used when building the input format.
 
 ```html
 <igx-date-range-picker [(ngModel)]="range" required inputFormat="dd/MM/yyyy" displayFormat="dd/MM/yy">
@@ -385,7 +385,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 ```
 
 #### Scoping Styles
-Regarding styles scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay_styling.md#scoped-component-styles) and [Input Group Scoping Styles](input_group.md#scoping-styles) as they provide more information.
+Regarding style scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay_styling.md#scoped-component-styles) and [Input Group Scoping Styles](input_group.md#scoping-styles) as they provide more information.
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="styled-daterangepicker-iframe" src='{environment:demosBaseUrl}/scheduling/styled-daterangepicker' width="100%" height="100%" 
