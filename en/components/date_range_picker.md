@@ -352,12 +352,11 @@ $custom-input-group-theme: igx-input-group-theme(
 );
 
 // CALENDAR
-$roundness: 0.5;
 $custom-calendar-theme: igx-calendar-theme(
     $palette: $custom-palette,
     $date-current-text-color: $today-text,
-    $border-radius: $roundness,
-    $date-border-radius: $roundness
+    $border-radius: 0.5,
+    $date-border-radius: 0.5
 );
 ```
 
