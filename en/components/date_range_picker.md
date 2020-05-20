@@ -191,7 +191,7 @@ To open/close the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/cl
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Closes the dropdown and focuses the input field (start input in two inputs mode)
 - <kbd>Esc</kbd> - Closes the dropdown and focuses the input field (start input in two inputs mode)
 
-Keyboard navigation for the Date Range Picker calendar is available for all the modes and configurations. When calendar is opened it is focused and the following keyboard combinations can be used:
+Keyboard navigation for the Date Range Picker calendar is available in all modes and configurations. When the calendar is opened it takes focus and the following keyboard combinations can be used:
 
 - <kbd>Enter</kbd> selects start and end dates
 - <kbd>PageUp</kbd>, <kbd>PageDown</kbd>, <kbd>Shift</kbd> + <kbd>PageUp</kbd>, <kbd>Shift</kbd> + <kbd>PageDown</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Tab</kbd> - to navigate the calendar
