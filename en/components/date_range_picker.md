@@ -62,19 +62,18 @@ To create a two-way data-binding, use `ngModel`:
 The Date Range component also allows configuring two separate inputs for start and end dates. This can be achieved by using the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) as children of the date range picker, like shown in the demo below.
 
 ```html
-<div class="date-range-picker-wrapper">
-    <igx-date-range-picker [(ngModel)]="range">
-        <igx-date-range-start>
-            <input igxInput igxDateTimeEditor type="text">
-            <igx-picker-toggle igxPrefix>
-                <igx-icon>calendar_today</igx-icon>
-            </igx-picker-toggle>
-        </igx-date-range-start>
-        <igx-date-range-end>
-            <input igxInput igxDateTimeEditor type="text">
-        </igx-date-range-end>
-    </igx-date-range-picker>
-</div>
+<igx-date-range-picker [(ngModel)]="range">
+    <igx-date-range-start>
+        <input igxInput igxDateTimeEditor type="text">
+        <igx-picker-toggle igxPrefix>
+            <igx-icon>calendar_today</igx-icon>
+        </igx-picker-toggle>
+    </igx-date-range-start>
+    <igx-date-range-end>
+        <input igxInput igxDateTimeEditor type="text">
+    </igx-date-range-end>
+</igx-date-range-picker>
+
 
 ```
 
