@@ -119,6 +119,9 @@
     - name: Column Pinning
       href: grid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: grid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: grid/column_resizing.md
       new: false
@@ -236,6 +239,9 @@
     - name: Column Pinning
       href: treegrid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: treegrid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: treegrid/column_resizing.md
       new: false
@@ -337,6 +343,9 @@
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: hierarchicalgrid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: hierarchicalgrid/column_resizing.md
       new: false
@@ -990,6 +999,9 @@
 - name: Zoom Slider
   new: false
   href: zoomslider-overview.md
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: Menus
   header: true
 - name: Navigation Drawer
