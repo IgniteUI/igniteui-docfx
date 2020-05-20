@@ -833,6 +833,9 @@
 - name: Drag and Drop
   href: drag_drop.md
   new: true
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: Menus
   header: true
 - name: Navigation Drawer
