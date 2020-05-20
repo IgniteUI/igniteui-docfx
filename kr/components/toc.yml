@@ -56,6 +56,9 @@
     - name: 열 핀 고정
       href: grid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: grid/row_pinning.md
+      new: true
     - name: 크기 조정
       href: grid/column_resizing.md
       new: false
