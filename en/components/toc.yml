@@ -3,6 +3,9 @@
 - name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
   new: true
+- name: Licensing
+  href: general/ignite-ui-licensing.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
@@ -1017,6 +1020,9 @@
   new: false
 - name: Splitter
   href: splitter.md
+  new: true
+- name: Dock Manager
+  href: dock-manager.md
   new: true
 - name: Notifications
   header: true
