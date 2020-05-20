@@ -3,6 +3,9 @@
 - name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
   new: true
+- name: Licensing
+  href: general/ignite-ui-licensing.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
@@ -127,7 +130,7 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: false
+      new: true
       items:
         - name: Row selection
           href: grid/row_selection.md
@@ -168,6 +171,7 @@
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: false
@@ -246,7 +250,7 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: false
+      new: new
       items:
         - name: Row selection
           href: treegrid/row_selection.md
@@ -350,7 +354,7 @@
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
       items:
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
@@ -1022,6 +1026,9 @@
   new: false
 - name: Splitter
   href: splitter.md
+  new: true
+- name: Dock Manager
+  href: dock-manager.md
   new: true
 - name: Notifications
   header: true
