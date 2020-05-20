@@ -183,7 +183,7 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 When in dropdown mode, the `Done` button is not available. In both modes value is set when dates are picked from the calendar.
 
 #### Keyboard Navigation
-> Note: Use the demos for [Drop down mode](#drop-down-mode) and [Separate Editable Inputs](separate-editable-inputs) to try the keyboard combinations defined in that topic section.
+> Note: Use the demos for [Drop down mode](#dropdown-mode) and [Separate Editable Inputs](#separate-editable-inputs) to try the keyboard combinations defined in that topic section.
 
 To open/close [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) calendar, using keyboard, the [`mode`]([`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#mode)) should be `dropdown`.
 
@@ -399,7 +399,7 @@ Regarding scoping styles, you should refer to both styling sections [Overlay Sco
 </div>
 
 ### Application Demo
-The demo below defines a form for flight tickets that uses [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). The dates should be selected otherwise an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted using [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
+The demo below defines a form for flight tickets that uses [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). The dates should be selected otherwise an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted using [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) properties of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="flight-booking-iframe" src="{environment:demosBaseUrl}/scheduling/flight-booking" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
