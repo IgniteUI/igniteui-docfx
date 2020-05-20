@@ -6,7 +6,7 @@ _keywords: Angular Date Range Picker, Date Range Picker, Date Picker
 
 ## Date Range Picker Component
 
-The Ignite UI for Angular Date Range Component displays a month-view calendar that lets the users pick a date range, consisting of start and end date. Calendar can be displayed using a calendar toggle that shows at the most left of the component. When the calendar [`mode`]([`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#mode)) is set to `dropdown`, an editable input is provided for modifying the date. In addition, the component provides an advanced setup option, exposing two editable input fields. It supports locales and custom date formatting.
+The Ignite UI for Angular Date Range Component displays a month-view calendar that lets the users pick a date range, consisting of start and end date. The calendar can be displayed using a calendar toggle that is shown at the most left of the component and has two modes - dialog(default) and dropdown. In addition, the component provides an advanced setup option, exposing two editable input fields, where you can edit the dates. It supports locales and custom date formatting.
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="basic-daterangepicker-iframe" src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -191,14 +191,14 @@ To open/close [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classe
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
 - <kbd>Esc</kbd> - Closes the drop-down and focuses the input field (start input in two inputs mode)
 
-Keyboard navigation for the Range Date Picker calendar is available for all the modes and configurations. When calendar is opened it is focused and the following keyboard combinations can be used:
+Keyboard navigation for the Date Range Picker calendar is available for all the modes and configurations. When calendar is opened it is focused and the following keyboard combinations can be used:
 
 - <kbd>Enter</kbd> selects start and end dates
 - <kbd>PageUp</kbd>, <kbd>PageDown</kbd>, <kbd>Shift</kbd> + <kbd>PageUp</kbd>, <kbd>Shift</kbd> + <kbd>PageDown</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Tab</kbd> - to navigate through calendar
 
 The [calendar keyboard navigation](calendar.md#keyboard-navigation) section contains all keyboard combinations that can be applied to the calendar.
 
-When two separate inputs are defined then [keyboard navigation](date_time_editor.md#keyboard-navigation) of the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive are also applicable for the Range Date Picker component:
+When two separate inputs are defined then [keyboard navigation](date_time_editor.md#keyboard-navigation) of the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive are also applicable for the Date Range Picker component:
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. On <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Right</kbd> it goes to the end of the section. If already there it goes to the end of next section if any. It works in a similar fashion in the opposite direction.
 - <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions.
