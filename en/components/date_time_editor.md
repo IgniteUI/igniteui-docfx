@@ -9,14 +9,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Date Time Editor Directive allows the user to set and edit the date and time in a chosen input element. The user can edit the date or time portion, using an editable masked input. Additionally, one can specify a desired display and input format, as well as min and max values to utilize validation</p>
 <div class="divider"></div>
 
-
-```html
-<!--datetime-basic.component.html-->
-<igx-input-group>
-    <input type="text" igxInput [igxDateTimeEditor]="'dd/MM/yyyy'" [(ngModel)]="date"/>
-</igx-input-group>
-```
-
 <div class="sample-container loading" style="height:100px">
     <iframe id="datetime-basic-iframe" src="{environment:demosBaseUrl}/scheduling/datetime-basic" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -54,7 +46,7 @@ public date = new Date();
 
 ```html
 <igx-input-group>
-    <input type="text" igxInput igxDateTimeEditor [value]="date"/>
+    <input type="text" igxInput igxDateTimeEditor [value]="date" />
 </igx-input-group>
 ```
 
