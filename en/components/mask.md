@@ -139,13 +139,13 @@ In addition to setting a mask to an input, you can validate the entered value as
 
     <igx-input-group>
         <label igxLabel for="name">Name</label>
-        <input igxInput  name="name" type="text" 
+        <input igxInput name="name" type="text" 
             [(ngModel)]="person.name" required />
     </igx-input-group>
 
     <igx-input-group>
         <label igxLabel for="email">Birthday</label>
-        <input igxInput  #dateInput name="birthday" type="text"
+        <input igxInput #dateInput name="birthday" type="text"
             [igxMask]="'00/00/0000'"
             [(ngModel)]="person.birthday"
             (blur)="validateDate(dateInput, snackbar)" />
@@ -167,7 +167,6 @@ In addition to setting a mask to an input, you can validate the entered value as
 // sample.component.ts
 
 public person: Person;
-public isFocused;
 
 constructor() {
     this.person = {
@@ -175,7 +174,6 @@ constructor() {
         name: "John Doe",
         socialSecurityNumber: ""
     };
-    this.isFocused = !!this.person.name;
 }
 
 public ngOnInit() {}
