@@ -82,9 +82,9 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 #### Display and input format
 IgxDateTimeEditor supports different display and input formats.
 
-For display, it uses Angular's [DatePipe](https://angular.io/api/common/DatePipe) which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the DatePipe, e.g. `EE/MM/yyyy`. Notice that formats like shortDate, longDate, etc., can be used as `displayFormat` only.
+It uses Angular's [DatePipe](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the DatePipe, e.g. `EE/MM/yyyy`. Notice that formats like shortDate, longDate, etc., can be used as `displayFormat` only.
 
-To set specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and [mask](mask.md) for the editor.
+To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor.
 
 
 ```html
@@ -125,7 +125,7 @@ You may compare both in the following sample:
 #### In Angular Forms
 The Date Time Editor Directive supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
-> Note: If needed, one can revert back to a valid state by handling `validationFailed` event and changing the `newValue` property of the available arguments.
+> Note: If needed, you can revert back to a valid state by handling the `validationFailed` event and changing the `newValue` property of the available arguments.
 
 Template-driven form example:
 ```html
