@@ -1051,6 +1051,9 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Date Range Picker
+  href: date_range_picker.md
+  new: true
 - name: Month Picker
   href: month_picker.md
   new: false
