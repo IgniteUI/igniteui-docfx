@@ -46,7 +46,7 @@ Next, one should call the `defineCustomElements()` function in the `main.ts` fil
 
 ```typescript
 import { AppModule } from "./app/app.module";
-import { defineCustomElements } from "@infragistics/igniteui-dockmanager/loader";
+import { defineCustomElements } from "igniteui-dockmanager/loader";
 import { enableProdMode } from '@angular/core';
 import { environment } from ".environments/environment";
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
