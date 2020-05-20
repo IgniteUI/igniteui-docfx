@@ -117,6 +117,9 @@
     - name: 列のピン固定
       href: grid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: grid/row_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: grid/column_resizing.md
       new: false
