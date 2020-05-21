@@ -93,7 +93,7 @@ If you are upgrading from trial to licensed package and you are not using the au
 
 So, if you've already adopted npm and you have an Ignite UI for Angular license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI for Angular.
 
-### [TODO] Using CLI 
+### [TODO] Using CLI
 
 **Describe** the Automatic migration
 
