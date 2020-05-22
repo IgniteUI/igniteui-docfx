@@ -12,7 +12,7 @@ Data analysis is the process of examining, transforming, and arranging data in a
 >This functionality will be introduced in **Ignite UI for Angular** as external package in order to ease the configuration and limit the required code at minimum
 
 ### Data Analysis with DockManager
-Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html) right pane. From there you can:
+Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager.md) right pane. From there you can:
  - Choose specific chart type and visualize it in separate pane.
  - Or use the `Data Analysis` context button to show different text formatting options.
 
@@ -23,7 +23,7 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
 [View sample]({environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager) in full-size.
 
 > [!NOTE]
-> The [Dock Manager Web component]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
+> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
 
 Keep in mind (sample related):
 - On new data selection chart data will be updated.
