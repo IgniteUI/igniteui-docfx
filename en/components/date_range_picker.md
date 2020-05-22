@@ -44,7 +44,7 @@ export class AppModule {}
 To add a date range picker in `dialog mode` (the default mode), use the following code:
 
 ```html
-<igx-date-range-picker value="range"></igx-date-range-picker>
+<igx-date-range-picker [value]="range"></igx-date-range-picker>
 ```
 
 ```typescript
