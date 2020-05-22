@@ -55,7 +55,7 @@
       new: false
 - name: Framework & features
   href: general/framework-and-features/framework-and-features.md
-  new: false
+  new: true
   items:
     - name: SSR Rendering
       href: general/framework-and-features/ssr-rendering.md
