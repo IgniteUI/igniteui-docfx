@@ -723,6 +723,64 @@ public ngAfterViewInit() {
 
 }
 
+@@if (igxName === 'IgxGrid') {
+
+### Remote Paging with Batch editing
+
+From the examples above should be clear how to set up the @@igxName with remote data. Now, let's enable batch editing for the grid following the [Batch Editing topic/guide](batch_editing.html).
+Before continuing with the sample it is good to clarify the current use case. When we perform the pagination on the server side the grid contains the data only for the current page and if we add new rows the newly added rows will be concatenated with the current data that grid contains. If we try to go to a page and the server returns no data for that page the grid data source will be consisted only from the newly added rows, which grid will paginate according to defined pagination settings(page, perPage).
+
+```typescript
+public ngOnInit() {
+  ...
+    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+        this.totalCount = data;
+        this._recordOnServer = data;
+        this._totalPagesOnServer = Math.floor(this.totalCount / this.perPage);
+        this.grid1.isLoading = false;
+    });
+    }
+```
+
+So in order to handle this use case properly we will implement a mix of remote and local pagination logic.
+First it is necessary to know the total number of the records that are on the server. Based on that information and how much records we would like the display per page we can calculate which is the last page with remote data and when to perform local pagination.
+
+```typescript
+
+public paginate(page: number) {
+    this.grid1.endEdit(true);
+    if (page > this._totalPagesOnServer) {
+        if (this.page !== this._totalPagesOnServer) {
+            const skipEl = this._totalPagesOnServer * this.perPage;
+            this.remoteService.getData(skipEl, this.perPage);
+        }
+        this.grid1.page = page - this._totalPagesOnServer;
+        this.page = page;
+        return;
+    } else {
+        this.grid1.page = 0;
+    }
+    this.page = page;
+    const skip = this.page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
+}
+
+```
+As you can see in the **paginate** method based on the calculated value `this._totalPagesOnServer` we perform either remote pagination or local pagination by changing the @@igComponent `page` property.
+
+
+#### Remote Paging with Batch Editing Demo
+
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="remote-paging-batch-editing-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-batch-editing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-batch-editing-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ### API References
 <div class="divider--half"></div>
 
