@@ -36,8 +36,11 @@ _language: ja
 
 >[!NOTE]
 > この動作変更のため、`tab` と `shift + tab` キーでセル間を移動することは @@igxName でサポートされなくなりました。
-> Tabキーを押すと、以下のナビゲーション シーケンスが実行されます。 Grid ツール バー -> Grid ヘッダー -> Grid 本体 -> 集計 -> フッター / Grid ページネーター
-> また、@@igxName テンプレートにフォーカス可能な要素が含まれる場合、それらもナビゲーション シーケンスに含まれます。
+> Having that in mind, when pressing `tab` key leads to the following navigation sequence: `Toolbar` -> `Headers` -> `Body` -> `Summaries` -> `Footer / Paginator`.
+
+>[!NOTE]
+> Exposing any **focusable** element into the `@@igxName body` via template may introduce some **side effects** as the component does not handle/prevent the default
+> behavior of the browser. Therefore it is the user's responsibility to **prevent/modify** it.
 
 ### ヘッダー ナビゲーション
 

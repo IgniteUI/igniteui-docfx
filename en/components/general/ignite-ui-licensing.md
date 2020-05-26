@@ -5,11 +5,11 @@ _keywords: npm package license, ignite ui license feed, licensing
 ---
 
 ## License Agreements
-It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) about the products you purchase.
+It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the products that you purchase and use. PLEASE NOTE: We have updated our license terms and subscription model. 
 
-If you are building a `commercial product` or your license [has expired](http://www.infragistics.com/renewal), you should [acquire a license](https://www.infragistics.com/how-to-buy/product-pricing). Then you will be able to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest available version of the Ignite UI for Angular package. If you have a valid Ignite UI for Angular license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
+If you are building a `commercial product` or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire an updated license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest version of the Ignite UI for Angular package. If you have a valid license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
-If you are building a `non-commercial product` we will provide you with a license after [contacting us](https://www.infragistics.com/about-us/contact-us).
+If you are building a `non-commercial product` [contact us](https://www.infragistics.com/about-us/contact-us) and we will provide you with the appropriate license. 
 
 ## Ignite UI for Angular npm packages - Using the Private npm feed
 Npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest way to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
@@ -29,11 +29,9 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 
 #### Now, to log in to ProGet using npm, run the adduser command and specify a ProGet user account and password:
 
-[TODO - Update snippets with the public feed when available]
 ```cmd
-npm adduser --registry=http://proget.infragistics.local:81/npm/IgniteUI/ --scope=@infragistics --always-auth
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
 ```
-
 
 #### After this is done, you will be logged in and you will be able to install the latest version of Ignite UI into your project:
 
@@ -93,7 +91,7 @@ If you are upgrading from trial to licensed package and you are not using the au
 
 So, if you've already adopted npm and you have an Ignite UI for Angular license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI for Angular.
 
-### [TODO] Using CLI 
+### [TODO] Using CLI
 
 **Describe** the Automatic migration
 
