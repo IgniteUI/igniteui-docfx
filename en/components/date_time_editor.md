@@ -6,16 +6,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 ## Date Time Editor Directive
-<p class="highlight">The Ignite UI for Angular Date Time Editor Directive allows the user to set and edit the date and time in a chosen input element. The user can edit the date or time portion, using an editable masked input. Additionally, one can specify a desired display and input format, as well as min and max values to utilize validation</p>
+<p class="highlight">The Ignite UI for Angular Date Time Editor Directive allows the user to set and edit the date and time in a chosen input element. The user can edit the date or time portion, using an editable masked input. Additionally, one can specify a desired display and input format, as well as min and max values to utilize validation.</p>
 <div class="divider"></div>
-
-
-```html
-<!--datetime-basic.component.html-->
-<igx-input-group>
-    <input type="text" igxInput [igxDateTimeEditor]="'dd/MM/yyyy'" [(ngModel)]="date"/>
-</igx-input-group>
-```
 
 <div class="sample-container loading" style="height:100px">
     <iframe id="datetime-basic-iframe" src="{environment:demosBaseUrl}/scheduling/datetime-basic" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -54,7 +46,7 @@ public date = new Date();
 
 ```html
 <igx-input-group>
-    <input type="text" igxInput igxDateTimeEditor [value]="date"/>
+    <input type="text" igxInput igxDateTimeEditor [value]="date" />
 </igx-input-group>
 ```
 
@@ -82,9 +74,9 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 #### Display and input format
 IgxDateTimeEditor supports different display and input formats.
 
-For display, it uses Angular's [DatePipe](https://angular.io/api/common/DatePipe) which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the DatePipe, e.g. `EE/MM/yyyy`. Notice that formats like shortDate, longDate, etc., can be used as `displayFormat` only.
+It uses Angular's [DatePipe](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the DatePipe, e.g. `EE/MM/yyyy`. Notice that formats like shortDate, longDate, etc., can be used as `displayFormat` only.
 
-To set specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and [mask](mask.md) for the editor. 
+To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor.
 
 
 ```html
@@ -125,7 +117,7 @@ You may compare both in the following sample:
 #### In Angular Forms
 The Date Time Editor Directive supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
-> Note: If needed, one can revert back to a valid state by handling `validationFailed` event and changing the `newValue` property of the available arguments. 
+> Note: If needed, you can revert back to a valid state by handling the `validationFailed` event and changing the `newValue` property of the available arguments.
 
 Template-driven form example:
 ```html
@@ -138,6 +130,17 @@ Template-driven form example:
 </form>
 <div class="divider--half"></div>
 ```
+
+#### Text Selection
+You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
+
+```html
+<igx-input-group>
+    <input igxInput [igxDateTimeEditor]="'dd/MM/yyyy'" [igxTextSelection]="true"/>
+</igx-input-group>
+```
+
+> NOTE: In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxDateTimeEditor` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 ### Styling 
 For details check out the [`Input Group styling guide`](input_group.md#styling).

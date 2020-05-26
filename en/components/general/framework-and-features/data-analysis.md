@@ -11,6 +11,25 @@ Data analysis is the process of examining, transforming, and arranging data in a
 >[!NOTE]
 >This functionality will be introduced in **Ignite UI for Angular** as external package in order to ease the configuration and limit the required code at minimum
 
+### Data Analysis with DockManager
+Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager.md) right pane. From there you can:
+ - Choose specific chart type and visualize it in separate pane.
+ - Or use the `Data Analysis` context button to show different text formatting options.
+
+<div class="sample-container loading" style="height: 580px;">
+    <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+[View sample]({environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager) in full-size.
+
+> [!NOTE]
+> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
+
+Keep in mind (sample related):
+- On new data selection chart data will be updated.
+- If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
+- If on new selection the data is not compatible for some of the charts - a warning "Incompatible data" will be shown.
+
 ### Data Analysis Button
 The data analysis button is the outlet to visualize your selected data in various ways:
 
@@ -29,7 +48,7 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
 >The chart creation option is only available when there are numeric values in the selected data.
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data" class="lazyload"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload"></iframe>
 </div>
 
 We currently support the following Chart types:
@@ -82,7 +101,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 #### Demo
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data" class="lazyload"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload"></iframe>
 </div>
 
 ### Useful resources

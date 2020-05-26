@@ -10,10 +10,10 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
 ### Demo
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="dock-manager-overview-iframe" src='{environment:dvDemosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -46,7 +46,7 @@ Next, one should call the `defineCustomElements()` function in the `main.ts` fil
 
 ```typescript
 import { AppModule } from "./app/app.module";
-import { defineCustomElements } from "@infragistics/igniteui-dockmanager/loader";
+import { defineCustomElements } from "igniteui-dockmanager/loader";
 import { enableProdMode } from '@angular/core';
 import { environment } from ".environments/environment";
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
