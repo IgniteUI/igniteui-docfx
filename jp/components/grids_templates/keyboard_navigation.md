@@ -1,112 +1,111 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Grid Keyboard Navigation | Ignite UI for Angular | Infragistics
-_description: Learn how to use Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
-_keywords: keyboard navigation, ignite ui for angular, infragistics
+title: Grid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular で Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
+_keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: TreeGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
-_description: Learn how to use TreeGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
-_keywords: keyboard navigation, ignite ui for angular, infragistics
+title: TreeGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular で TreeGrid キーボードナ ビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
+_keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: HierarchicalGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
-_description: Learn how to use HierarchicalGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
-_keywords: keyboard navigation, ignite ui for angular, infragistics
+title: HierarchicalGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular で HierarchicalGrid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
+_keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_language: ja
 ---
 }
 
-## @@igComponent Keyboard Navigation
+## @@igComponent キーボード ナビゲーション
 
-The @@igComponent provides variety of keyboard interactions for the user. Keyboard navigation enhances the accessibility of the @@igxName by providing vast details of every element while navigating through each cell, row, column header or any other navigable element. This functionality comes with the @@igxName by the default, although the user has the freedom to override it by implementing a custom one.
+@@igComponent は、さまざまなキーボード操作をユーザーに提供します。キーボード ナビゲーションは、各セル、行、列ヘッダー、またはその他のナビゲート可能な要素をナビゲートする際に各要素の詳細を提供することにより、@@igxName のアクセシビリティを向上させます。この機能はデフォルトで @@igxName に含まれていますが、ユーザーはカスタム機能を実装することで自由にオーバーライドできます。
 
-The tabulations of the @@igxName has been reduced so that it is fully compliant and convenient to use.
-Currently, the @@igxName introduces the following tab stops:
-* `GroupBy` or `Toolbar area` (if enabled);
-* @@igxName `header`;
-* @@igxName `body`;
-* `Column summaries` (if enabled);
-* @@igxName `paginator` (if enabled);
+@@igxName のタブが完全に準拠し、使いやすくなりました。現在、@@igxName には以下のタブ位置が導入されています。
+* `GroupBy` または `ツールバーの領域` (有効な場合)
+* @@igxName `ヘッダー`
+* @@igxName `本体`
+* `列集計` (有効な場合)
+* @@igxName `ページネーター` (有効な場合)
 
 >[!NOTE]
-> Due to this behavior change to navigate between the cells with `tab` and `shift + tab` key is no longer supported in the @@igxName.
-> Having that in mind, when pressing `tab` key leads to the following navigation sequence: "Grid Toolbar" -> "Grid Headers" -> "Grid Body" -> "Summaries" -> "Footer / Grid Paginator".
-> Also, if @@igxName template contains any focusable element, they will be included in the navigation sequence either.
+> この動作変更のため、`tab` と `shift + tab` キーでセル間を移動することは @@igxName でサポートされなくなりました。
+> Having that in mind, when pressing `tab` key leads to the following navigation sequence: `Toolbar` -> `Headers` -> `Body` -> `Summaries` -> `Footer / Paginator`.
 
-### Header Navigation
+>[!NOTE]
+> Exposing any **focusable** element into the `@@igxName body` via template may introduce some **side effects** as the component does not handle/prevent the default
+> behavior of the browser. Therefore it is the user's responsibility to **prevent/modify** it.
 
-It has been introduced a full *keyboard navigation* support in the @@igxName header so that it can be easily traversed with the arrow keys. Additionally, there are a number of key combinations that trigger a different column functionality like filtering, sorting, grouping and etc.
-When the @@igxName header container is focused and press one of the following key combinations, the described behavior is performed.
+### ヘッダー ナビゲーション
 
-#### Key Combinations
+矢印キーで簡単に移動できるように、@@igxName ヘッダーで完全なキーボード ナビゲーション サポートが導入されました。さらに、フィルタリング、並べ替え、グループ化などの異なる列機能をトリガーするキーの組み合わせがいくつかあります。以下は、@@igxName ヘッダー コンテナーをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
- - `Arrow Up` - navigates one cell up in the headers (no wrapping) Available only when multi row layout or column groups are defined
- - `Arrow Down` - navigates one cell down in the headers (no wrapping) Available only when multi row layout or column groups are defined
- - `Arrow Left` - navigates one cell left (no wrapping between lines)
- - `Arrow Right` - navigates one cell right (no wrapping between lines)
- - `Ctrl + Arrow Left` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level
- - `Home` - moves to leftmost cell in  the row; if there is MRL or MCH to the leftmost cell at the same level
- - `Ctrl + Arrow Right` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level
- - `End` - moves to rightmost cell in row; if there is MRL or MCH to the rightmost cell at the same level
- - `Alt + L` - opens Advanced filtering dialog if advanced filtering is enabled
- - `Ctrl + Shift + L` - opens the Excel style filter or default (row) filter if the column is filterable
- - `Ctrl + Arrow Up` - sorts the active column header in ASC order. If the column is already sorted in ASC, it will remove the sorting
- - `Ctrl + Arrow Down` - sorts the active column header in DSC order. If the column is already sorted in DSC, it will remove the sorting
- - `Space` - select the current column; If the column is already selected, it will remove the selection
-@@if (igxName === "IgxGrid") { - `Shift + Alt + Arrow Left` - group the active column **if the column is marked as groupable**
- - `Shift + Alt + Arrow Right` - ungroup the active column **if the column is marked as groupable**
- - `Alt + Arrow Left` or `Alt + Arrow Up` - collapses the column group header **if the column is not already collapsed**
- - `Alt + Arrow Right` or `Alt + Arrow Down` - expands the column group header **if the column is not already expanded**}
+#### キーの組み合わせ
 
-### Body navigation
+ - `上矢印` - ヘッダーで 1 つ上のセルへ移動 (ラッピングなし); 複数行レイアウトまたは列グループが定義されている場合のみ使用できます。
+ - `下矢印` - ヘッダーの 1 つ下のセルに移動 (ラッピングなし); 複数行レイアウトまたは列グループが定義されている場合のみ使用できます。
+ - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし)
+ - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし)
+ - `Ctrl + 左矢印` - 同じレベルの左端のセルに複数行レイアウトまたは複数列ヘッダーがある場合、行の左端のセルへ移動
+ - `Home` - 同じレベルの左端のセルに複数行レイアウトまたは複数列ヘッダーがある場合、行の左端のセルへ移動
+ - `Ctrl + 右矢印` - 同じレベルの右端のセルに複数行レイアウトまたは複数列ヘッダーがある場合、行の右端のセルへ移動
+ - `End` - 同じレベルの右端のセルに複数行レイアウトまたは複数列ヘッダーがある場合、行の右端のセルへ移動
+ - `Alt + L` - 詳細フィルタリングが有効な場合、詳細フィルタリング ダイアログを開きます。
+ - `Ctrl + Shift + L` - 列がフィルター可能な場合、Excel スタイル フィルターまたはデフォルト (行) フィルターを開きます。
+ - `Ctrl + 上矢印` - アクティブな列ヘッダーを昇順に並べ替えます。列が昇順で既に並べ替えられている場合、並べ替えを削除します。
+ - `Ctrl + 下矢印` - アクティブな列ヘッダーを降順に並べ替えます。列が降順で既に並べ替えられている場合、並べ替えを削除します。
+ - `Shift + Alt + 左矢印` - 列がグループ化可能としてマークされている場合、列をグループ化します。
+ - `Shift + Alt + 右矢印` - 列がグループ化可能としてマークされている場合、アクティブな列のグループ化を解除します。
+ - `Alt + 左矢印` または `Alt + 上矢印` - 列が縮小されていない場合、列グループ ヘッダーを縮小します。
+ - `Alt + 右矢印` または `Alt +下矢印` - 列がまだ展開されていない場合、列グループヘッダーを展開します。
+ - `Space` - 現在の列を選択します。列がすでに選択されている場合、選択を削除します。
 
-When the @@igxName body is focused and press one of the following key combinations, the described behavior is performed.
+### 本体ナビゲーション
 
-#### Key Combination
+以下は、@@igxName 本体をフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
- - `Arrow Up`- navigates one cell up @@if (igxName === 'IgxHierarchicalGrid') {, going up the grid hierarchy if necessary}(no wrapping)
- - `Arrow Down`- navigates one cell down  @@if (igxName === 'IgxHierarchicalGrid') {, going deeper into the grid hierarchy if necessary}(no wrapping)
- - `Arrow Left`- navigates one cell left (no wrapping between lines)
- - `Arrow Right`- navigates one cell right (no wrapping between lines)
- - `Ctrl + Arrow Left` - moves to leftmost cell in row
- - `Ctrl + Arrow Right` - moves to rightmost cell in row
- - `Ctrl + Arrow Up` - navigates to the first cell in the current column
- - `Ctrl + Arrow Down` - navigates to the last cell in the current column
- - `Home` - moves to leftmost cell in row
- - `End`- moves to rightmost cell in row
- - `Ctrl + Home` - moves to the top leftmost data cell in the grid
- - `Ctrl + End` - moves to bottom rightmost data cell in the grid
- - `Page Up` - scrolls one page (view port) up
- - `Page Down` - scrolls one page (view port) down
- - `Enter` - enters edit mode
- - `F2` - enters edit mode
- - `Esc` - exits edit mode
- - `Tab` - available only there is a cell in edit mode; sequentially move the focus to the next editable cell on the row and if the last cell is reached move to first editable cell of the next row; When the row editing is enabled from the right-most editable cell moves the focus to the `CANCEL` and `DONE` buttons, and from `DONE` button to the left-most editable cell within the currently edited row
- - `Shift + TabF2` - available only there is a cell in edit mode; sequentially move the focus yo the previous editable cell on the row, if the first cell is reached move the focus to the last editable cell of the previous row. When the row editing is enabled from from the right-most editable cell  moves the focus to the `CANCEL` and `DONE` buttons, and from the `DONE` button to the left-most editable cell within the currently edited row
- - `Space` - if the row is selectable, on key down `space` triggers row selection
- - `Alt + Arrow Left` or `Alt + Arrow Up` -  @@if (igxName === "IgxGrid") {over GroupRow - collapses the group row content **if the it is not already collapsed**} @@if (igxName === "IgxHierarchicalGrid") { collapses the row island **if it is not already collapsed**} @@if (igxName === "IgxTreeGrid") { collapses the current node **if it is not already collapsed**}
- - `Alt + Arrow Right` or `Alt + Arrow Down` - @@if (igxName === "IgxGrid") {over GroupRow - expands the group row content **if the it is not already expanded**} @@if (igxName === "IgxHierarchicalGrid") {expands the row island **if it is not already collapsed**} @@if (igxName === "IgxTreeGrid") {expands the current node **if it is not already expanded**}
- @@if (igxName === "IgxGrid") {- `Alt + Arrow Left` or `Alt + Arrow Up` - over master detailed row - collapses the row content **if the it is not already collapsed**
- - `Alt + Arrow Right` or `Alt + Arrow Down` - over master detailed row - expands the row content **if the it is not already expanded**}
+#### キーの組み合わせ
 
+ - `上矢印` - 1 つ上のセルへ移動 @@if (igxName === 'IgxHierarchicalGrid') {、必要に応じてグリッド上階層へ移動} (ラッピングなし)
+ - `下矢印` - 1 つ下のセルへ移動 @@if (igxName === 'IgxHierarchicalGrid') {、必要に応じてグリッド下階層へ移動} (ラッピングなし)
+ - `左矢印` - 1 つ左のセルへ移動 (行間のラッピングなし)
+ - `右矢印` - 1 つ右のセルへ移動 (行間のラッピングなし)
+ - `Ctrl + 左矢印` - 行の左端のセルへ移動
+ - `Ctrl + 右矢印` - 行の右端のセルへ移動
+ - `Ctrl + 上矢印` - 現在の列の最初のセルへ移動
+ - `Ctrl + 下矢印` - 現在の列の最後のセルへ移動
+ - `Home` - 行の左端のセルへ移動
+ - `End` - 行の右端のセルへ移動
+ - `Ctrl + Home` - グリッドの左上のデータ セルへ移動
+ - `Ctrl + End` - グリッドの右下のデータ セルへ移動
+ - `Page Up` - 1 ページ (ビューポート) 上へスクロール
+ - `Page Down` - 1 ページ (ビューポート) 下へスクロール
+ - `Enter` - 編集モードに入る
+ - `F2` - 編集モードに入る
+ - `Esc` - 編集モードを終了する
+ - `Tab` - 編集モードのセルがある場合のみ使用できます。フォーカスを行の次のセルへ順番に移動し、最後のセルのあとは次の行へ移動します。セルが編集モードの場合、フォーカスを次の編集可能なセルへ移動し、編集可能な一番右のセルから `CANCEL`、`DONE` ボタンへ移動し、`DONE` から編集可能な一番左のセルへ移動します。
+ - `Shift + TabF2` - 編集モードのセルがある場合のみ使用できます。最初のセルに達した場合、フォーカスを前の行の最後の編集可能なセルに移動します。行編集が有効な場合、編集可能な一番右のセルからフォーカスを `CANCEL` および `DONE` ボタンへ移動し、`DONE` ボタンから現在の編集行の一番左の編集可能なセルへ移動します。
+ - `Space` - 行が選択可能な場合、スペース キーを押下すると行選択をトリガーします。
+ - グループ化された行で `Alt + 左矢印` または `Alt + 上矢印` - 行が縮小されていない場合はグループ行コンテンツを縮小します。
+ - グループ化された行で `Alt + 左矢印` または `Alt + 下矢印` - 行が展開されていない場合はグループ行コンテンツを展開します。
 
+次のデモは上記の組み合わせを示します。
 
-Having all that theory may be easily turned into practice with the demo below.
+ナビゲーション可能なグリッド コンテナーにフォーカスすると、上記のキーボードの組み合わせをガイドするアクション リストが表示されます。
 
-By focusing any navigable grid container an action list will be shown, that will guide you though some of the keyboard combinations above.
-
-### Demo
-@@if (igxName === "IgxGrid") {
-<div class="sample-container loading" style="height:470px">
+### デモ
+<div class="sample-container loading" style="height:700px">
     <iframe id="grid-keyboardnav-guide-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-keyboardnav-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -134,13 +133,14 @@ By focusing any navigable grid container an action list will be shown, that will
 ### カスタム キーボード ナビゲーション
 特定のキーが押されたときに上記に示したデフォルトの動作をカスタマイズすることは、キーボード　ナビゲーション機能が提供する利点の 1 つです。`Enter キー`または `Tab キー`が押されたときと同じです。`次のセル`または`下のセル`に移動するようなアクションは、強力なキーボードナビゲーションAPIを使用して簡単に処理できます。
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` event(keydown)= "onKeydown($ event)"を使用できます。
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) -
+- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` イベント `(keydown)="onKeydown($event)"` を使用できます。
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - 
+
 このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
 - [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) -
 現在の位置に従って、特定の基準に一致する次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
 - [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) -
-現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。。
+現在の位置に従って、特定の基準に一致する前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) を返します。[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) メソッドの 3 番目のパラメータ－としてコールバック関数を渡すことができます。
 
  @@if (igxName === 'IgxHierarchicalGrid') {
 > 注: [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) は現在のレベルでは使用できないため、子セルにアクセスすることはできません。
@@ -168,7 +168,7 @@ const cell = args.event.shiftKey ?
 this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
-- `Enter key` キーを押すと列ベースのナビゲーション(垂直)を実行します。
+- `Enter キー` を押すと列ベースのナビゲーション (垂直) を実行します。
 
 ```typescript
 if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
@@ -179,7 +179,7 @@ if (type === "dataCell" && args.event.key.toLowerCase() === "enter") {
 ```
 
 カスタム キーボード ナビゲーションを確認するために以下の操作を試すことができます。
-- 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `tab キー` を押します。プロンプト メッセージが表示されます。
+- 数値列タイプのセルをダブルクリックし、セルが編集モードになったら、値を `7` に変更して `Tab キー` を押します。プロンプト メッセージが表示されます。
 - セルを選択して `Enter キー` を数回押します。列ベースのナビゲーションが適用されます。
 
 > 注: デフォルトの `Enter キー` 操作は上書きされ、編集モードに入るには代わりに `F2 キー`を使用できることに注意してください。
