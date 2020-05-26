@@ -113,80 +113,54 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 
 #### Infinite Scroll
 
-Stepping on the `IForOfState` interface, you could easily adjust your code in order to achieve an infinite scroll functionality.   
+Stepping on the `IForOfState` interface, you could easily adjust your code to achieve an infinite scroll functionality.   
 
-To implement infinite scroll, you'd have to store the fetched data in a data structure. You are also going to need to keep a track on the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you will know whether the user has scrolled upwards and you'll need to show them an already fetched data from the cached data structure, or you will have to request for another data chunk.
+To implement infinite scroll, you'd have to fetch the data page-by-page, i.e. not fetch all the data at once but rather in smaller pages, encompassing data to populate the current grid data view. The data, that's already fetched, will have to be stored in a data structure and you will need to determine the length of a chunk (page) and how many pages there are, i.e. how many records you have. To obtain the infinite scroll functionality, you will also have to keep a track of the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you will know whether the user has scrolled upwards and you'll need to show them an already fetched data from the cached data structure, or will have to request for another data chunk.
 
-To begin, you'd have to use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of data. Bear in mind, that initially the `chunkSize` is 0 and you will have to determine it in the service that fetches the data.
+To begin, you'd have to use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of data. There, you will need to set the `totalItemCount` property in order to resize the scrollbar accordingly.
 
 ```typescript
 public ngAfterViewInit() {
     ...
-    const loadState = { ...this.grid.virtualizationState };
-    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], loadState,
-    (request) => {
+    this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
         if (request.data) {
-            // increase totalItemCount a little above the visible grid size in order to be able to scroll
-            this.grid.totalItemCount = request.data.length + 3;
+            this.grid.totalItemCount = this.page * this.pageSize;
+            this.grid.data = this._remoteService.getCachedData({startIndex: 0, chunkSize: 10});
+            this.totalItems = request.data["@odata.count"];
+            this.totalPageCount = Math.ceil(this.totalItems / this.pageSize);
+            this.grid.isLoading = false;
         }
     });
     ...
 }
 ```
 
-Then, you will need to bind to the `onDataPreLoad` output in order to make an appropriate request for the current state and set the `totalItemCount` property. This is the way in which the @@igComponent controlls the size of the scrollbar. For an infinite scroll, you'd need a scrollbar that goes a little beyond the actual items count, because if you assign to `totalItemCount` the exact amount of items, you won't be able to get the @@igComponent to scroll. 
+After that, you will need to bind yourself to the `onDataPreLoad` output in order to make an appropriate request for the current virtualization state. In the event handler, you will basically have to determine whether to make a new request to the data source, or return data from the cached data structure.
 
 ```typescript
 public handlePreLoad() {
-    const index = this.grid.virtualizationState.chunkSize +
-                            this.grid.virtualizationState.startIndex;
-    if (index > this._remoteService.cachedData.length && !this._endOfData) {
+    const isLastChunk = this.grid.totalItemCount ===
+                        this.grid.virtualizationState.startIndex + this.grid.virtualizationState.chunkSize;
+    // when last chunk reached load another page of data
+    if (isLastChunk) {
+        if (this.totalPageCount === this.page) {
+            this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+            return;
+        }
+        this.page++;
         this.grid.isLoading = true;
-        const loadState = {
-            startIndex: index - 1,
-            chunkSize: this.grid.virtualizationState.chunkSize
-        };
-        this.processData(loadState, () => {
-            this.grid.isLoading = false;
-            this.grid.cdr.detectChanges();
+        this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+            if (request.data) {
+                this.grid.totalItemCount = Math.min(this.page * this.pageSize, this.totalItems);
+                this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+                this.grid.isLoading = false;
+            }
         });
     } else {
-        this.processData(undefined, () => {
-            this.grid.isLoading = false;
-            this.grid.cdr.detectChanges();
-        });
+        this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
     }
 }
 ```
-
-The `loadState` object describes the data, that would be requested from the server. We are using the `startIndex` and the `chunkSize` properties of the @@igComponent's [`virtualizationState`]({environment:angularApiUrl}/interfaces/iforofstate.html) to determine a starting point for the new data request.
-
->[!NOTE]
->While the first request will have equal `loadState` and `virtualizationState`, as the user scrolls, the `virtualizationState` will describe the visible scroll state of the grid and the `loadState` will be representing the next scroll, which is currently not visible.
-
-```typescript
-public processData(state?, callback?: () => void): void {
-    this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], state,
-    (remoteData) => {
-            if (remoteData.data) {
-                const chunkLength = this.grid.virtualizationState.startIndex +
-                                    this.grid.virtualizationState.chunkSize + 3;
-                if (this._endOfData || remoteData.endOfData) {
-                    this.grid.totalItemCount = this._remoteService.cachedData.length;
-                    this._endOfData = true;
-                    this.grid.cdr.detectChanges();
-                } else if (chunkLength >= this.grid.totalItemCount) {
-                    this.grid.totalItemCount += remoteData.data.length;
-                    this.grid.cdr.detectChanges();
-                }
-                callback();
-            }
-    });
-}
-```
-
-Although the technique is called "infinite scroll", it is a frequent occasion that the data source reaches to an end. That's why, unless you are completely sure that your data source is really infinite, you will need to recognize if your data has reached to an ending.   
-Our suggestion is to employ a variable that checks the uniformity of the received data from the server. If the last received data has a smaller length than the data from the previous request, then you might suppose that the data is to end.
 
 
 #### Infinite Scroll Demo
