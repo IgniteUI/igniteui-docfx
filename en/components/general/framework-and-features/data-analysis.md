@@ -4,6 +4,16 @@ _description: How to use chart integration functionality with Ignite UI for Angu
 _keywords: data analysis, ignite ui for angular, infragistics
 ---
 
+<style>
+    .stackblitz-btn::before {
+        background-image: url("../../../images/general/fullscreen-white-18dp.svg");
+    }
+
+    .stackblitz-btn[disabled]::before {
+        background-image: url("../../../images/general/fullscreen-white-18dp.svg");
+    }
+</style>
+
 ## Data Analysis
 
 Data analysis is the process of examining, transforming, and arranging data in a specific way to generate useful information based on it. It also allows for reaching certain outcomes and conclusions through analytical and logical reasoning.
@@ -20,7 +30,9 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
     <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
-[View sample]({environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager) in full-size.
+<div>
+<a class="stackblitz-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" target="_blank">View in full screen</a>
+</div>
 
 > [!NOTE]
 > The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
@@ -49,6 +61,10 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload"></iframe>
+</div>
+
+<div>
+<a class="stackblitz-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
 </div>
 
 We currently support the following Chart types:
@@ -102,6 +118,10 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload"></iframe>
+</div>
+
+<div>
+<a class="stackblitz-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
 </div>
 
 ### Useful resources
