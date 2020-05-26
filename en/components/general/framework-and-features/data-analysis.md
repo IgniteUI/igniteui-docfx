@@ -5,13 +5,50 @@ _keywords: data analysis, ignite ui for angular, infragistics
 ---
 
 <style>
-    .stackblitz-btn::before {
+    .full-screen-btn {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 13px;
+        font-weight: 400;
+        color: #fff;
+        border: 0;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        margin: 24px 0;
+        outline-style: none;
+        -webkit-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        background: #0099ff; 
+    }
+    .full-screen-btn:hover, .full-screen-btn:focus {
+        color: white;
+        -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); 
+    }
+    .full-screen-btn::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
         background-image: url("../../../images/general/fullscreen-white-18dp.svg");
+        background-size: 100%;
+        background-repeat: no-repeat; 
+    }
+    .full-screen-btn[disabled] {
+        color: rgba(0, 0, 0, 0.28);
+        background: #eee;
+        -webkit-box-shadow: none;
+        box-shadow: none; 
+    }
+    .full-screen-btn[disabled]::before {
+        background-image: url("../../../images/general/fullscreen-white-18dp.svg"); 
     }
 
-    .stackblitz-btn[disabled]::before {
-        background-image: url("../../../images/general/fullscreen-white-18dp.svg");
-    }
 </style>
 
 ## Data Analysis
@@ -31,7 +68,7 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
 </div>
 
 <div>
-<a class="stackblitz-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" target="_blank">View in full screen</a>
+<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" target="_blank">View in full screen</a>
 </div>
 
 > [!NOTE]
@@ -64,7 +101,7 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
 </div>
 
 <div>
-<a class="stackblitz-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
+<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
 </div>
 
 We currently support the following Chart types:
@@ -121,7 +158,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 </div>
 
 <div>
-<a class="stackblitz-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
+<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
 </div>
 
 ### Useful resources
