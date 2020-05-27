@@ -118,11 +118,11 @@ Both the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxd
 
 #### User Experience
 
-In the default configuration, with a single read-only input, the calendar can be opened by clicking anywhere in the input, including the calendar icon. When there are two separate inputs for start and end date since they are editable by default, the calendar can only be opened from the calendar icon.
+In a default configuration with a single read-only input, the calendar can be opened by clicking anywhere in the input, including the calendar icon. When there are two separate inputs for start and end date, the calendar can only be opened from the calendar icon, since both inputs are editable by default.
 
-When the calendar is visible, a range can be selected by choosing the start and end dates. Picking the start date will set the same value for the end date until a second date is chosen. Clicking on a day that represents the end of the current range, will result in deselecting that range end.
+When the calendar is visible, a range can be selected by choosing the start and end dates. Picking a date will set both start and end date, until a second date is chosen. If there is a selected range including more than one day, clicking any date from the calendar will result in selecting that date for both start and end date. Clicking on a day that represents both a start and an end of the current range, will result in deselecting that single date range.
 
-Start and end date are separated by `-` when shown in the component's read-only input. When defining different inputs for start and end, they are separated by the `to` preposition. The latter is localizable and can be overwritten via a template. See the [Templating](#templating) example below, for more details.
+Start and end date are separated by a hyphen `-` when shown in the component's read-only input. When defining different inputs for start and end, they are separated by the `to` preposition. The latter is localizable and can be overwritten via a template. See the [Templating](#templating) example below, for more details.
 
 ### Examples
 
@@ -146,7 +146,7 @@ In the default configuration, with a single read-only input, a default calendar 
 </igx-date-range-picker>
 ```
 
-When the Date Range Picker has two separate inputs, for start and end dates, it doesn't expose a calendar icon by default. The [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) should be manually added as a child of the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) or [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) like so:
+When a Date Range Picker has two separate inputs for start and end dates, it doesn't expose a calendar icon by default. The [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) should be manually added as a child of the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) or [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) like so:
 
 ```html
 <igx-date-range-picker>
@@ -182,7 +182,7 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 The range value is set when dates are picked from the calendar. You will notice that in dropdown mode, the `Done` button is not available.
 
 #### Keyboard Navigation
-> Note: Use the demos for [Dropdown mode](#dropdown-mode) and [Separate Editable Inputs](separate-editable-inputs) to try the keyboard combinations defined below.
+> Note: Use the demos for [Dropdown mode](#dropdown-mode) and [Display Separate Editable Inputs](#display-separate-editable-inputs) to try the keyboard combinations defined below.
 
 Opening and closing the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) calendar UI with the keyboard is available only for `dropdown` mode and can be triggered via the key combinations below:
 
@@ -207,7 +207,7 @@ When two separate inputs are used, [keyboard navigation](date_time_editor.md#key
 
 #### Formatting
 
-The Date Range picker supports different display and input formats.
+The Date Range Picker Component supports different display and input formats.
 
 The display format of the value can be one of the listed Angular [DatePipe](https://angular.io/api/common/DatePipe) formats. This allows it to support predefined format options, such as `shortDate` and `longDate`.
 
@@ -278,7 +278,7 @@ You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepic
 
 ```typescript
 public minDate = new Date(2020, 1, 15);
-public maxDate = new Date(2020, 12, 1);
+public maxDate = new Date(2020, 11, 1);
 ```
 
 ```html
@@ -300,7 +300,7 @@ public maxDate = new Date(2020, 12, 1);
 
 #### Templating
 
- When two editors are used the default separator (`to`), can be templated using the [`igxDateSeparator`]({environment:angularApiUrl}/classes/igxdateseparator.html) directive. Here is how to change the date separator to `-`:
+When two editors are used, the default `to` preposition can be replaced using the [`igxDateSeparator`]({environment:angularApiUrl}/classes/igxdateseparator.html) directive. Here is how to change the date separator to  a hyphen `-`:
 
 ```html
 <igx-date-range>
