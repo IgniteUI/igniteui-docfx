@@ -230,7 +230,7 @@ The [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareaco
 
 ![Dragging](../images/chip/dragging.gif)
 
-The chip can be dragged by the end-user in order to change it's position. The dragging is disabled by default, but can be enabled, using [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input. You need to handle the actual moving of the chip in the template manually. This is where the chip area comes in handy since it provides the [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event that returns the new order if a chip is dragged over another chip to take its place.
+The chip can be dragged by the end-user in order to change its position. The dragging is disabled by default but can be enabled using the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input property. You need to handle the actual chip reordering manually. This is where the chip area comes in handy since it provides the [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event that returns the new order when a chip is dragged over another chip.
 
 ```html
 <igx-chips-area (onReorder)="chipsOrderChanged($event)">
