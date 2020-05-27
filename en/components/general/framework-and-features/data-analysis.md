@@ -64,7 +64,7 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
  - Or use the `Data Analysis` context button to show different text formatting options.
 
 <div class="sample-container loading" style="height: 580px;">
-    <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
 </div>
 
 <div>
@@ -97,7 +97,7 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
 >The chart creation option is only available when there are numeric values in the selected data.
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
 <div>
@@ -154,7 +154,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 #### Demo
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
 <div>
