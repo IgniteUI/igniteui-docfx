@@ -224,7 +224,7 @@ You can customize the `remove icon`, using the [`removeIcon`]({environment:angul
 
 ### Chip Area
 
-The [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) is used, when handling more complex scenarios that require interaction between chips (dragging, selection, navigation etc.).
+The [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) is used when handling more complex scenarios that require interaction between chips (dragging, selection, navigation, etc.).
 
 #### Reorder Chips
 
