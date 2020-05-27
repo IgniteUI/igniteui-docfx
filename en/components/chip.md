@@ -281,7 +281,7 @@ The chip can be focused using the `Tab` key or by clicking on it. When the chips
 
 <div class="divider--half"></div>
 
-Here's an example for the chip area, using the `IgxAvatar` as a prefix and adding custom icons for the chips:
+Here's an example of the chip area using IgxAvatar as prefix and custom icons for all chips:
 
 ```html
 <igx-chips-area (onReorder)="chipsOrderChanged($event)">
