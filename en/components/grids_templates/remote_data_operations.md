@@ -728,7 +728,7 @@ public ngAfterViewInit() {
 ### Remote Paging with Batch editing
 
 From the examples above should be clear how to set up the @@igxName with remote data. Now, let's enable batch editing for the grid following the [Batch Editing topic/guide](batch_editing.html).
-Before continuing with the sample it is good to clarify the current use case. When we perform the pagination on the server side the grid contains the data only for the current page and if we add new rows the newly added rows will be concatenated with the current data that grid contains. If we try to go to a page and the server returns no data for that page the grid data source will be consisted only from the newly added rows, which grid will paginate according to defined pagination settings(page, perPage).
+Before continuing with the sample it is good to clarify the current use case. When pagination is done on the server, the grid contains the data only for the current page and if we add new rows the newly added rows from Batch Editing will be concatenated with the current data that grid contains.Therefore, if the server returns no data for a given page, the grid data source will be consisted only from the newly added rows, which grid will paginate according to defined pagination settings(page, perPage).
 
 ```typescript
 public ngOnInit() {
@@ -742,8 +742,8 @@ public ngOnInit() {
     }
 ```
 
-So in order to handle this use case properly we will implement a mix of remote and local pagination logic.
-First it is necessary to know the total number of the records that are on the server. Based on that information and how much records we would like the display per page we can calculate which is the last page with remote data and when to perform local pagination.
+In order to handle this use case properly, let's put some custom logic.
+First it is necessary to know the total number of the records that are on the server. Given that, we calculate the total number of data pages on the server (see `this._totalPagesOnServer `) and based on its value, we implement custom pagination logic.
 
 ```typescript
 
@@ -766,7 +766,8 @@ public paginate(page: number) {
 }
 
 ```
-As you can see in the **paginate** method based on the calculated value `this._totalPagesOnServer` we perform either remote pagination or local pagination by changing the @@igComponent `page` property.
+
+As you can see in the **paginate** method, custom pagination logic is performed, based on the `_totalPagesOnServer` value.
 
 
 #### Remote Paging with Batch Editing Demo
