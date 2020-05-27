@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a compact visual component that displays information in an oval. The chip component has various properties. It can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 50px; padding-top: 10px">
     <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
