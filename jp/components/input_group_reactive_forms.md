@@ -25,7 +25,7 @@ Ignite UI for Angular コントロールは、フォーム入力を処理する�
 
 #### はじめに
 
-リアクティブ フォームを開始する前に、Ignite UI コンポーネントに必要なモジュールと `ReactiveFormsModule` をインポートします。
+リアクティブ フォームを使用する前に、Ignite UI コンポーネントのすべてのモジュールと `ReactiveFormsModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -46,7 +46,7 @@ export class AppModule {}
 
 #### フォームの作成
 
-フォームのモデルを設定するには、`form` 要素の `formGroup` プロパティを使用します。次に、個々のモデル プロパティに対応する各入力フィールドに `formControlName` を追加します。
+フォームのモデルを設定するには、`form` 要素の `formGroup` プロパティを使用します。次に、各モデル プロパティに対応する各入力フィールドに `formControlName` を追加します。
 
 ```html
 <form class="input-group-form" [formGroup]="user" (ngSubmit)="onSubmit()">
