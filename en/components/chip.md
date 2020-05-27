@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Chip component provide compact elements 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Chip, Chip Component, ChipArea, ChipArea Component
 ---
 
-### Chip
+## Chip
 
 [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a compact visual component that displays information in an oval. The chip component has various properties. It can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.
 
