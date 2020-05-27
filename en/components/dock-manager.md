@@ -70,4 +70,4 @@ This is it, you are now ready to use the Dock Manager component in an Angular co
 
 For further information on the usage of the Dock Manager component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html).
 
-For more advanced example on the usage of the Dock Manager component hosting some Ignite UI for Angular components, you can check out [this sample](./general/framework-and-features/data-analysis.md#data-analysis-with-dockmanager).
+For a more advanced example of the usage of the Dock Manager component with panes hosting various Ignite UI for Angular components, see this version of the [data analysis sample](./general/framework-and-features/data-analysis.md#data-analysis-with-dockmanager).
