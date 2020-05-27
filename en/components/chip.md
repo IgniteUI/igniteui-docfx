@@ -91,7 +91,8 @@ Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}
 </igx-chip>
 ```
 
-To reorder the chips, you need to handle the event, using the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html).
+>[!NOTE]
+>To reorder the chips you need to handle the event using the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html).
 
 <div class="divider"></div>
 
