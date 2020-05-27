@@ -20,7 +20,7 @@ Infragistics Ignite UI Dock Manager WebComponent is available as a separate npm 
 
 > More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting_started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager WebComponent can be found [here](../dock-manager.md).
 
-### How to setup you environment to use the private npm feed?
+### How to setup your environment to use the private npm feed?
 
 #### First you need to setup the private registry and to associate this registry with the Infragistics scope. 
 
