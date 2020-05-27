@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Demo
 
-<div class="sample-container loading" style="height: 50px; padding-top: 10px">
+<div class="sample-container loading" style="height: 100px; padding-top: 10px">
     <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -62,7 +62,7 @@ Selection can be enabled by setting the [`selectable`]({environment:angularApiUr
 
 Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, a remove button is rendered at the end of the chip. When removing a chip, the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event is emitted.
 
-By default the chip does not remove itself from the template when the user wants to delete a chip. This needs to be handled manually.
+By default, the chip doesn't get automatically removed from the DOM tree upon clicking on the remove icon. Removal needs to be handled manually.
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" (onRemove)="chipRemoved($event)">
@@ -151,7 +151,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 If everything went well, you should see this in your browser:
 
-<div class="sample-container loading" style="height: 50px; padding-top: 10px">
+<div class="sample-container loading" style="height: 100px; padding-top: 10px">
     <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
