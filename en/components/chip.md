@@ -322,7 +322,7 @@ Resize the avatar to fit the chip:
     min-width: 2em;
 }
 ```
-Add the `chipList` and the functions, that handle the events:
+Add the `chipList` and the functions that handle the events:
 
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from "igniteui-angular";
