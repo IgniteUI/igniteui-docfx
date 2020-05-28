@@ -55,7 +55,7 @@ public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4,
 
 To create a two-way data-binding, use `ngModel`:
 ```html
-<igx-date-range [(ngModel)]="range"></igx-date-range>
+<igx-date-range-picker [(ngModel)]="range"></igx-date-range-picker>
 ```
 
 #### Projecting components
@@ -74,7 +74,7 @@ In addition, the Date Range Picker can be configured to project [`IgxPickerToggl
 ```
 
 #### Display Separate Editable Inputs
-The Date Range component also allows configuring two separate inputs for start and end date. This can be achieved by using the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) as children of the date range picker, as shown in the demo below:
+The Date Range Picker component also allows configuring two separate inputs for start and end date. This can be achieved by using the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) as children of the date range picker, as shown in the demo below:
 
 ```html
 <igx-date-range-picker [(ngModel)]="range">
@@ -87,7 +87,7 @@ The Date Range component also allows configuring two separate inputs for start a
 </igx-date-range-picker>
 ```
 - Both the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) extend the existing [`IgxInputGroupComponent`](input_group.md). For such a configuration to work, defining an [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) is required. In addition, all other components and directives available to the [`IgxInputGroupComponent`](input_group.md) can also be used.
-- Another thing worth mentioning is that in order to enable date editing for both inputs, you need to decorate them with [`igxDateTimeEditor`](date_time_editor.md) directive.
+- In order to enable date editing for both inputs, you need to decorate them with [`igxDateTimeEditor`](date_time_editor.md) directive.
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="daterangepicker-start-end-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -101,7 +101,7 @@ The Date Range component also allows configuring two separate inputs for start a
 
 In a default configuration, with a single read-only input, the calendar can be opened by clicking anywhere in the input, including the calendar icon. When there are two separate inputs for start and end date, the calendar can only be opened from the calendar icon, since both inputs are editable by default.
 
-When the calendar is visible, a range can be selected by choosing the start and end dates. Picking a date will set the start and end date, until a second date is chosen. If there is a selected range, clicking any other date from the calendar will start a new range selection. If a single date is selected, it will count as the start and end of the current range selection, clicking on any other date will start a new range selection while clicking on it will remove the range selection.
+When the calendar is visible, a range can be selected by choosing the start and end dates. Picking a date will set the start and end date, until a second date is chosen. If there is a selected range, clicking any other date from the calendar will start a new range selection. 
 
 Start and end date are separated by a hyphen when shown in the component's read-only input. When defining different inputs for start and end, they are separated by the `to` preposition. The latter can be localized or overwritten via a template. See the [Templating](#templating) example below, for more details.
 
@@ -149,7 +149,7 @@ When a Date Range Picker has two separate inputs, for start and end dates, it do
 The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) component has two modes - dialog (default) and dropdown. To switch to dropdown mode, do the following:
 
 ```html
-<igx-date-range [mode]="'dropdown'"></igx-date-range>
+<igx-date-range-picker [mode]="'dropdown'"></igx-date-range-picker>
 ```
 
 <div class="sample-container loading" style="height:500px">
@@ -237,14 +237,14 @@ The same configuration can be used when setting two separate inputs. Note that i
 When using two separate inputs, it is possible to set the model and required properties on each input. Note that validation is specific for each individual input.
 
 ```html
-<igx-date-range>
+<igx-date-range-picker>
     <igx-date-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
     </igx-date-start>
     <igx-date-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
     </igx-date-end>
-</igx-date-range>
+</igx-date-range-picker>
 ```
 
 <div class="sample-container loading" style="height:600px">
@@ -270,19 +270,19 @@ public maxDate = new Date(2020, 11, 1);
 ```
 
 ```html
-<igx-date-range [minValue]="minDate" [maxValue]="maxDate">
+<igx-date-range-picker [minValue]="minDate" [maxValue]="maxDate">
     <igx-date-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
     </igx-date-start>
     <igx-date-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
     </igx-date-end>
-</igx-date-range>
+</igx-date-range-picker>
 ```
 
 The `IgxDateRangePickerComponent` is also a validator which means it controls its validity internally using `minValue` and `maxValue`. You can also access both of them through `ngModel`:
 ```html
-<igx-date-range #dateRangePicker="ngModel" [(ngModel)]="range" required
+<igx-date-range-picker #dateRangePicker="ngModel" [(ngModel)]="range" required
     [minValue]="minDate" [maxValue]="maxDate">
     <igx-date-start>
         <input igxInput igxDateTimeEditor type="text">
@@ -290,7 +290,7 @@ The `IgxDateRangePickerComponent` is also a validator which means it controls it
     <igx-date-end>
         <input igxInput igxDateTimeEditor type="text">
     </igx-date-end>
-</igx-date-range>
+</igx-date-range-picker>
 
 <!-- minValue & maxValue will be true if the current range does not satisfy them -->
 <div *ngIf="dateRangePicker.minValue || dateRangePicker.maxValue">
@@ -303,7 +303,7 @@ The `IgxDateRangePickerComponent` is also a validator which means it controls it
 When two editors are used, the default separator can be replaced using the [`igxDateSeparator`]({environment:angularApiUrl}/classes/igxdateseparator.html) directive. Here is how to change the date separator to a hyphen `-`:
 
 ```html
-<igx-date-range>
+<igx-date-range-picker>
     <igx-date-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
     </igx-date-start>
@@ -311,7 +311,7 @@ When two editors are used, the default separator can be replaced using the [`igx
     <igx-date-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
     </igx-date-end>
-</igx-date-range>
+</igx-date-range-picker>
 ```
 
 ### Styling
