@@ -89,7 +89,7 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
 ```typescript
 public minDate = new Date(2020, 1, 15);
-public maxDate = new Date(2020, 12, 1);
+public maxDate = new Date(2020, 11, 1);
 ``` 
 
 ```html
