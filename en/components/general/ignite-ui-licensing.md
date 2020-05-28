@@ -7,14 +7,14 @@ _keywords: npm package license, ignite ui license feed, licensing
 ## License Agreements
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the products that you purchase and use. PLEASE NOTE: We have updated our license terms and subscription model. 
 
-If you are building a `commercial product` or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire an updated license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a valid license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
+If you are building a `commercial product` or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire a commercial license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a valid commercial license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
 If you are building a `non-commercial product` [contact us](https://www.infragistics.com/about-us/contact-us) and we will provide you with the appropriate license. 
 
 ## Ignite UI for Angular npm packages - Using the Private npm feed
 Npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest way to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
 
-Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps`](cli/step-by-step-guide.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.npmjs.com/package/igniteui-angular) of the product.
+Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps`](cli/step-by-step-guide.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
 Infragistics Ignite UI Dock Manager Web Component is available as a separate npm package and by installing it you will start using the [Ignite UI Dock Manager Web Component Trial version](https://www.npmjs.com/package/igniteui-dockmanager) of the product.
 
