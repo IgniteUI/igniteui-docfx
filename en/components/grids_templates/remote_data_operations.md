@@ -420,10 +420,8 @@ In order to provide a custom loading template for the excel style filtering, we 
 ### Remote Paging
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
-The paging feature can operate with remote data.
-If you want to use the default paging template you need to set the `totalRecords` property, so the grid to be able the calculate the total page number based on total remote records. Keep in mind that you still need to implement the fetching data from your remote service.
-Let's first declare our service that will be responsible for data fetching.
-We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
+The paging feature can operate with remote data. Let's first declare our service that will be responsible for data fetching. We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
+
 ```typescript
 @Injectable()
 export class RemotePagingService {
@@ -524,7 +522,86 @@ In this sample we will demonstrate how to display a certain number of root recor
 public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
-We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage). We are going to use the `<igx-paginator>` in order to ease our configuration.
+
+Now we can choose between set up our custom pagination template or use default, that the @@igComponent provides. Let's first take a look what is necessary to set up remote paging using default template.
+
+#### Remote paging with default template
+
+If you want to use the default paging template you need to set the `totalRecords` property, so the grid to be able the calculate the total page number based on total remote records. When performing a remote pagination we return to the grid only the data for the current page, so the grid should not try to paginate the provided data source. That's why we should set the `pagingMode` property to `GridPagingMode.remote`. Also it is necessary to be subscribed to  onPagingDone and perPageChange events in order to fetch the data from your remote service.
+
+@@if (igxName === 'IgxGrid') {
+```html
+    <igx-grid #grid1 [data]="data | async"  [paging]="true" (perPageChange)="paginate()" (onPagingDone)="pagingDone($event)" [pagingMode]="mode" [totalRecords]="totalCount">
+        <igx-column field="ID"></igx-column>
+        ...
+    </igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+   ```html
+    <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [paging]="true" [perPage]="10"
+         [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event)">
+        <igx-column field="Name"></igx-column>
+        ...
+    </igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+    <igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" (perPageChange)="getFirstPage()"
+        [pagingMode]="mode"  [totalRecords]="totalCount" (onPagingDone)="pagingDone($event)" #hierarchicalGrid>
+        <igx-column field="CustomerID"></igx-column>
+        ...
+    </igx-hierarchical-grid>
+```
+}
+
+
+```typescript
+...
+    public pagingDone(page) {
+        const skip = page.current * this.grid1.perPage;
+        this.remoteService.getData(skip, this.grid1.perPage);
+    }
+
+    public paginate() {
+        this.remoteService.getData(0, this.grid1.perPage);
+    }
+```
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:620px">
+    <iframe id="remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-default-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:580px">
+    <iframe id="remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+#### Remote Paging with custom template
+
+When we define a custom template is not necessary to define the @@igComponent properties like `pagingMode` or `totalRecords`. We need to create a custom pager template to get the data only for the requested page and to pass the correct `skip` and `top` parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage). We are going to use the `<igx-paginator>` in order to ease our configuration.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -641,7 +718,7 @@ public paginate(page: number) {
 The last step will be to declare our template for the gird.
 @@if (igxName === 'IgxGrid') {
 ```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
+<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" >
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
@@ -653,8 +730,7 @@ The last step will be to declare our template for the gird.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [paging]="true" [perPage]="perPage"
-    [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
     <igx-column field="CustomerID"></igx-column>
         <igx-column field="CompanyName"></igx-column>
         <igx-column field="ContactName"></igx-column>
@@ -683,8 +759,6 @@ The last step will be to declare our template for the gird.
 }
 
 After all the changes above, the following result will be achieved.
-
-#### Remote Paging Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:620px">
@@ -717,7 +791,7 @@ After all the changes above, the following result will be achieved.
 }
 
 @@if (igxName === 'IgxGrid') {
-### Remote Paging with custom template
+#### Remote Paging with custom paginator
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
 
