@@ -113,11 +113,11 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 
 #### Infinite Scroll
 
-Stepping on the `IForOfState` interface, you could easily adjust your code to achieve an infinite scroll functionality.   
+ A popular design for scenarios requiring fetching data by chunks from an end-point is the so-called infinite scroll. For data grids, it is characterised by continuous increase of the loaded data triggered by the end-user scrolling all the way to the bottom. The next paragraphs explain how you can use the available API to easily achieve infinite scrolling in `IgxGrid`.
 
-To implement infinite scroll, you'd have to fetch the data page-by-page, i.e. not fetch all the data at once but rather in smaller pages, encompassing data to populate the current grid data view. The data, that's already fetched, will have to be stored in a data structure and you will need to determine the length of a chunk (page) and how many pages there are, i.e. how many records you have. To obtain the infinite scroll functionality, you will also have to keep a track of the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you will know whether the user has scrolled upwards and you'll need to show them an already fetched data from the cached data structure, or will have to request for another data chunk.
+To implement infinite scroll, you have to fetch the data in chunks. The data that is already fetched should be stored locally and you have to determine the length of a chunk and how many chunks there are. You also have to keep a track of the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you can determine if the user scrolls up and you have to show them already fetched data or scrolls down and you have to fetch more data from the end-point.
 
-To begin, you'd have to use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of data. There, you will need to set the `totalItemCount` property in order to resize the scrollbar accordingly.
+The first thing to do is use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of the data. Setting the `totalItemCount` property is important, as it allows the grid to size its scrollbar correctly.
 
 ```typescript
 public ngAfterViewInit() {
@@ -135,7 +135,7 @@ public ngAfterViewInit() {
 }
 ```
 
-After that, you will need to bind yourself to the `onDataPreLoad` output in order to make an appropriate request for the current virtualization state. In the event handler, you will basically have to determine whether to make a new request to the data source, or return data from the cached data structure.
+Additionally, you have to subscribe to the `onDataPreLoad` output, so that you can provide the data needed by the grid when it tries to display a different chunk, rather than the currently loaded one. In the event handler, you have to determine whether to fetch new data or return data, that's already cached locally.
 
 ```typescript
 public handlePreLoad() {
