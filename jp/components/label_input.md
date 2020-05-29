@@ -88,9 +88,9 @@ public user = {
 </igx-input-group>
 ```
 
-#### Focus & Text Selection
+#### フォーカスとテキストの選択
 
-You can add logic to force `focus` on input elements using the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive. 
+[`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) ディレクティブを使用して、input 要素に `focus` を強制するロジックを追加できます。
 
 ```html
 <igx-input-group>
@@ -99,9 +99,9 @@ You can add logic to force `focus` on input elements using the [`igxFocus`]({env
 </igx-input-group>
 ```
 >[!NOTE]
->To use the [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) directive, you have to import the [`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html).
+>[`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) ディレクティブを使用するには、[`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html) をインポートする必要があります。
 
-If you want the text in an input element, marked with `igxInput`, to be selected on focus, you have to enable the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive.
+`igxInput` でマークされた input 要素内のテキストをフォーカス際に選択したい場合、[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) ディレクティブを有効にする必要があります。
 
 ```html
 <igx-input-group>
@@ -115,14 +115,14 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 </igx-input-group>
 ```
 >[!NOTE]
->To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive, you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
+>[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html)  ディレクティブを使用するには、[`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html) をインポートする必要があります。
 
-##### Demo
+##### デモ
 <div class="sample-container loading" style="height: 100px">
 <iframe id="input-text-selection-frame" data-src='{environment:demosBaseUrl}/data-entries/input-text-selection' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-text-selection-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-text-selection-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
