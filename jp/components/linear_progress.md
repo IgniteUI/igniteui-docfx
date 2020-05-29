@@ -19,7 +19,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
-Linear Progress Bar Indicator コンポーネントを初期化するには、 **IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+Linear Progress Bar Indicator コンポーネントを初期化するには、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
 ```typescript
 // app.module.ts
 
@@ -202,7 +202,7 @@ public decrementProgress() {
 
 ### スタイル設定
 
-リニア プログレスバーのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+リニア プログレスバーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

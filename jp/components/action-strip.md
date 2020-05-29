@@ -39,7 +39,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
 #### メニューのルック アンド フィール
-3 つ以上のアクション項目が表示される場合に、 [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、`[その他]` ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
+3 つ以上のアクション項目が表示される場合に、[`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、`[その他]` ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
 
 ```html
 <div style="position:relative; width:100px; height:100px;">

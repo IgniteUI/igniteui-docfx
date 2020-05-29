@@ -144,7 +144,7 @@ npm i xmlhttprequest
 
 ### スタイル設定
 
-アイコンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントの mixins が存在する `index` ファイルをインポートする必要があります。
+アイコンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

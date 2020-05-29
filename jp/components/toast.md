@@ -127,7 +127,7 @@ public show(toast) {
 
 ### スタイル設定
 
-Toast のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する index ファイルをインポートする必要があります。
+Toast のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -151,7 +151,7 @@ $custom-toast-theme: igx-toast-theme(
 @include igx-css-vars($custom-toast-theme);
 ```
 
-#### Mixin の使用
+#### ミックスインの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
