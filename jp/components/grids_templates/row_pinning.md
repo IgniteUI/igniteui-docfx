@@ -1,29 +1,32 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Row Pinning | Lock Row | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock rows with rich and easy to use API
-_keywords: lock row, ignite ui for angular, infragistics 
+title: Angular Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+_keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Row Pinning | Lock Row | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock rows with rich and easy to use API
-_keywords: lock row, ignite ui for angular, infragistics 
+title: Angular Tree Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+_keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Row Pinning | Lock Row | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock rows with rich and easy to use API
-_keywords: lock row, ignite ui for angular, infragistics 
+title: Angular Hierarchical Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+_keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
+_language: ja
 ---
 }
 
-### @@igComponent Row Pinning
-One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. **Row Pinning** in Ignite UI for Angular allows end-users to pin rows in a particular order, duplicating them in a special area that is always visible even when they scroll the @@igComponent vertically. The Material UI Grid has a built-in row pinning UI, which is enabled by initializing an `igxActionStrip` component in the context of @@igComponent. In addition, you can define custom UI and change the pin state of the rows via the Row Pinning API.
+### @@igComponent 行のピン固定
+単一または複数の行を Angular UI グリッドの上側または下側にピン固定できます。Ignite UI for Angular の**行ピン固定**を使用すると、エンドユーザーは特定の順序で行をピン固定し、@@igComponent を垂直にスクロールしても常に表示される特別な領域に行を複製できます。Material UI Grid には組み込みの行ピン固定 UI が含まれており、@@igComponent のコンテキストで `igxActionStrip` コンポーネントを初期化することで有効になります。その他、カスタム UI を定義し、行のピン固定 API を介して行のピン固定状態を変更できます。
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -31,7 +34,7 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -40,7 +43,7 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -49,13 +52,13 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
-### Row Pinning UI
+### 行のピン固定 UI
 
-The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip can then be shown or hidden via its API and will display a pin or unpin button icon based on the state of the row it is shown for. An additional action allowing to scroll the copy of the pinned row into view is shown for each pinned row as well.
+組み込みの行ピン固定 UI は、`GridPinningActions` コンポーネントと `igxActionStrip` コンポーネントを追加することで有効になります。アクション ストリップは、その API を介して表示または非表示にでき、表示される行の状態に基づいてピンまたはピン固定解除ボタンのアイコンを表示します。ピン固定された行のコピーをビューにスクロールする追加のアクションがピン固定された行ごとに表示されます。
 
 @@if (igxName === 'IgxGrid') {
 
@@ -116,9 +119,9 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 }
 
 
-#### Row Pinning API
+#### 行のピン固定 API
 
-Row pinning is controlled through the `pinned` input of the [`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html). Pinned rows are rendered at the top of the @@igComponent by default and stay fixed through vertical scrolling of the unpinned rows in the @@igComponent body.
+行のピン固定は、[`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html) の `pinned` 設定によって制御されます。デフォルトでピン固定行は @@igComponent の上側に固定して描画され、@@igComponent 本体のピン固定されていない行は垂直スクロールされます。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -136,7 +139,7 @@ this.hierarchicalGrid.getRowByIndex(0).pinned = true;
 ```
 }
 
-You may also use the @@igComponent's [`pinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinrow) or [`unpinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinrow) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin records by their ID:
+[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`pinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinrow) または [`unpinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinrow) メソッドを使用して ID によってレコードをピン固定またはピン固定解除できます。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -157,9 +160,9 @@ this.hierarchicalGrid.unpinRow("ALFKI");
 ```
 }
 
-Note that the row ID is the primary key value, defined by the [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) of the grid, or the record instance itself. Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the row is already in the desired state.
+注: 行の ID は、グリッドの [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) またはレコード インスタンス自体によって定義される主キー値です。両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因に行がすでにその状態になっていることがあります。
 
-A row is pinned below the last pinned row. Changing the order of the pinned rows can be done by subscribing to the [`onRowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) property of the event arguments to the desired position index.
+行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`onRowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowpinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -198,10 +201,10 @@ public rowPinning(event) {
 ```
 }
 
-### Pinning Position
+### ピン固定の位置
 
-You can change the row pinning position via the [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) configuration option. It allows you to set the pin area position to either Top or Bottom.
-When set to Bottom pinned rows are rendered at the bottom of the grid, after the unpinned rows. Unpinned rows can be scrolled vertically, while the pinned rows remain fixed at the bottom.
+[`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) 設定オプションを使用して、行のピン固定の位置を変更できます。ピン固定の位置を Top または Bottom のいずれかに設定できます。
+Bottom に設定すると、行がピン固定されていない行の後に、グリッドの一番下にレンダリングされます。ピン固定されていない行は垂直にスクロールできますが、ピン固定された行は下側に固定されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -226,14 +229,14 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 ```
 
 
-### Custom Row Pinning UI
+### カスタム行ピン固定 UI
 
-You can define your custom UI and change the pin state of the rows via the related API.
+カスタム UI を定義し、関連する API を介して行のピン状態を変更できます。
 
-#### Custom Row Pinning UI via extra column with icon
+#### アイコン付きの追加の列によるカスタム行ピン固定 UI
 
-Let's say that instead of an action strip you would like to show a pin icon in every row allowing the end-user to click and change a particular row's pin state.
-This can be done by adding an extra column with a cell template containing the custom icon.
+アクション ストリップの代わりに、すべての行にピンのアイコンを表示し、エンドユーザーが特定の行のピン状態をクリックして変更できます。
+カスタム アイコンを含むセル テンプレートの列を追加することで実行できます。
 
 @@if (igxName === 'IgxGrid') {
 
@@ -290,7 +293,7 @@ This can be done by adding an extra column with a cell template containing the c
 ```
 }
 
-On click of the custom icon the pin state of the related row can be changed using the row's API methods.
+カスタムアイコンをクリックすると、関連する行のピン状態は、行の API メソッドを使用して変更できます。
 
 ```typescript
 public togglePinning(row: IgxGridRowComponent, event) {
@@ -303,7 +306,7 @@ public togglePinning(row: IgxGridRowComponent, event) {
 }
 ```
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -311,7 +314,7 @@ public togglePinning(row: IgxGridRowComponent, event) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -320,7 +323,7 @@ public togglePinning(row: IgxGridRowComponent, event) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -329,19 +332,19 @@ public togglePinning(row: IgxGridRowComponent, event) {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
 
 @@if (igxName === 'IgxGrid') {
 
-#### Custom Row Pinning UI via row drag
+#### 行ドラッグによるカスタム行ピン固定 UI
 
-Let's say that you want to be able to directly drag and drop a row between the pinned and unpinned rows to change its pin state.
-This can be achieved by enabling the row drag feature and pinning/unpinning the rows via the API on drop.
+ピン状態を変更するために、ピン固定された行とピン固定されていない行の間に直接行をドラッグアンドドロップできるようにするとします。
+これは、行のドラッグ機能を有効にし、ドロップの際に API で行をピン固定/ピン固定解除することで実現できます。
 
-First, the grid should be marked as a drop area using the `igxDrop` directive and the row drag functionality should be enabled via the `rowDraggable` option.
+最初に、`igxDrop` ディレクティブによってグリッドをドロップ領域としてマークし、`rowDraggable` オプションで行のドラッグ機能を有効にします。
 
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [rowDraggable]="true"
@@ -349,7 +352,7 @@ First, the grid should be marked as a drop area using the `igxDrop` directive an
 </igx-grid>
 ```
 
-Then the `dropped` event can be used to handle the reorder and pin/unpin logic.
+次に、`dropped` イベントを使用して並べ替えとピン固定/ピン固定解除のロジックを処理できます。
 
 ```typescript
 public onDropAllowed(args) {
@@ -380,48 +383,48 @@ public onDropAllowed(args) {
 }
 ```
 
-This would allow reordering the rows and moving them between the pinned and unpinned row collections.
+これにより、行を並べ替えたり、ピン固定とピン固定解除の行コレクション間で移動できるようになります。
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-row-pinning-drag-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-drag-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-drag-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 }
 
 
-### Row Pinning Limitations
+### 行ピン固定の制限
 
-* Only records that exist in the data source can be pinned.
-* The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied.
-* Because of how pinned rows are stored internally so that they may appear both in the pinned and unpinned areas of the grid, row pinning is not supported when records in the grid are fetched from a remote endpoint on demand (remote virtualization).
-* The copies of pinned rows in the scrollable area of the grid are an integral part of how other grid features achieve their functionality in the presence of pinned rows and therefore their creation cannot be disabled nor can they be removed.
-* As Row Selection works entirely with row Ids, selecting pinned rows selects their copies as well (and vise versa). Additionally, range selection (e.g. using Shift + click) within the pinned area works the same way as selecting a range of rows within the scrollable area. The resulting selection includes all rows in between even if they are not currently pinned. Getting the selected rows through the API only returns a single instance of each selected record.
+* データソースに存在するレコードのみをピン固定できます。
+* 行のピン固定状態は Excel にエクスポートされません。グリッドは行のピン固定が適用されずにエクスポートされます。
+* ピン固定行が内部でグリッドのピン固定領域と非固定領域の両方に存在するよう保存される仕様上、グリッド内のレコードがオンデマンドでリモート エンドポイントから取得される場合 (リモート仮想化)、行のピン固定はサポートされません。
+* グリッドのスクロール可能領域におけるピン固定行のコピーは、ピン固定行が存在する状態で他のグリッド機能が動作するのに不可欠な役割を果たします。そのため、その生成を無効化または削除することはできません。
+* 行選択 は 行 ID のみで動作するため、ピン固定行を選択するとそのコピーも選択されます (逆も同様)。さらに、ピン固定領域での範囲選択 (Shift + クリックにより) は、スクロール可能な領域で行を範囲選択する場合と同じように機能します。結果として、間にある行はピン固定されていなくてもすべて選択されます。API を 介して選択した行を取得すると、選択した各レコードの単一のインスタンスのみを返します。
 
 <div class="divider--half"></div>
 
-### Styling
+### スタイル設定
 
-The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
+@@igxName は、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
-Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
+以下では、@@igComponent の行ピン固定スタイルをカスタマイズする手順を示します。
 
-#### Importing the Styling Library
+#### スタイル ライブラリのインポート
 
-To begin the customization of the row pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
+行ピン固定機能をカスタマイズするには、まずすべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### Defining a Theme
+#### テーマの定義
 
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
+次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-grid-theme: igx-grid-theme(
@@ -434,19 +437,19 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Using CSS variables 
+#### CSS 変数の使用
 
-The last step is to pass the custom grid theme:
+最後にカスタム グリッド テーマを設定します。
 
 ```scss
 @include igx-css-vars($custom-grid-theme);
 ```
 
-#### Using mixins
+#### ミックスインの使用
 
-In order to style components for Internet Explorer 11, you have to use different approach, since it doesn't support CSS variables. 
+Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
 
-If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. However, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。ただし、カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -457,14 +460,14 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 }
 ```
 
-#### Demo
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:540px">
     <iframe id="grid-row-pinning-styling" src='{environment:demosBaseUrl}/grid/grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -472,7 +475,7 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
     <iframe id="tree-grid-row-pinning-styling" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -480,30 +483,30 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
     <iframe id="hierarchical-grid-row-pinning-styling" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
-### API References
+### API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Resizing](column_resizing.md)
-* [Selection](selection.md)
+* [@@igComponent 概要](@@igMainTopic.md)
+* [仮想化とパフォーマンス](virtualization.md)
+* [ページング](paging.md)
+* [フィルタリング](filtering.md)
+* [並び替え](sorting.md)
+* [集計](summaries.md)
+* [列移動](column_moving.md)
+* [列のサイズ変更](column_resizing.md)
+* [選択](selection.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
