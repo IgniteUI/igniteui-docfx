@@ -150,7 +150,7 @@ public onColumnMovingEnd(event) {
 
 ### スタイル設定
 
-@@igComponent 列移動ヘッダーのスタイル設定は、すべてのテーマ関数とコンポーネント mixins のある `index` ファイルをインポートする必要があります。
+@@igComponent 列移動ヘッダーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
  ```scss
 // custom-grid-column-moving-style.component.scss

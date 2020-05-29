@@ -212,7 +212,7 @@ $custom-navbar-theme: igx-navbar-theme(
 @include igx-css-vars($custom-navbar-theme);
 ```
 
-#### Mixin の使用 
+#### ミックスインの使用 
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
 
