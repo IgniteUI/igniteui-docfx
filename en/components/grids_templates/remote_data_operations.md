@@ -727,8 +727,9 @@ public ngAfterViewInit() {
 
 ### Remote Paging with Batch editing
 
-From the examples above should be clear how to set up the @@igxName with remote data. Now, let's enable batch editing for the grid following the [Batch Editing topic/guide](batch_editing.html).
-Before continuing with the sample it is good to clarify the current use case. When pagination is done on the server, the grid contains the data only for the current page and if we add new rows the newly added rows from Batch Editing will be concatenated with the current data that grid contains.Therefore, if the server returns no data for a given page, the grid data source will be consisted only from the newly added rows, which grid will paginate according to defined pagination settings(page, perPage).
+With the examples so far we clarified how to set up the @@igxName with remote data. Now, let's focus on enabling batch editing for the grid by following the [Batch Editing topic/guide](batch_editing.html).
+
+Before continuing with the sample it is good to clarify the current use case. When pagination is done on the server, the grid contains the data only for the current page and if we add new rows the newly added rows (with Batch Editing) will be concatenated with the current data that the grid contains. Therefore, if the server returns no data for a given page, grid's data source will be consisted only from the newly added rows, which the grid will paginate based on the defined pagination settings (page, perPage).
 
 ```typescript
 public ngOnInit() {
@@ -742,8 +743,8 @@ public ngOnInit() {
     }
 ```
 
-In order to handle this use case properly, let's put some custom logic.
-First it is necessary to know the total number of the records that are on the server. Given that, we calculate the total number of data pages on the server (see `this._totalPagesOnServer `) and based on its value, we implement custom pagination logic.
+In order to handle this use case properly, we need to implement some custom logic.
+First, we have to know the total number of records that are on the server. Given that, we calculate the total number of data pages on the server (see `this._totalPagesOnServer `) and based on its value, we will implement the custom pagination logic.
 
 ```typescript
 
