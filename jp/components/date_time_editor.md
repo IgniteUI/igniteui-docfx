@@ -90,7 +90,7 @@ IgxDateTimeEditor は、さまざまな表示および入力の形式をサポ�
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) プロパティを指定して、ngModel の入力を制限し、有効性を制御できます。
 ```typescript
 public minDate = new Date(2020, 1, 15);
-public maxDate = new Date(2020, 12, 1);
+public maxDate = new Date(2020, 11, 1);
 ``` 
 
 ```html
