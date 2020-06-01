@@ -1,29 +1,30 @@
 ---
-title: Action Strip
-_description: The Action Strip represents a template area for one or more actions. The Action Strip requires to be inside a relative container, as it is going to overlay it.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
+title: アクション ストリップ
+_description: アクション ストリップは、1 つ以上のアクションのテンプレート領域を表します。アクション ストリップはオーバーレイするため、相対コンテナー内に配置する必要があります。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ActionStrip コンポーネント, Angular ActionStrip ディレクティブ, Angular ActionStrip コントロール
+_language: ja
 ---
 
 ## Action Strip
 <p class="highlight">
-The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. Despite overlapped by an Action Strip, the main interactions and user access to the target container remain available.
+Ignite UI for Angular Action Strip コンポーネントは、ホバーなどのユーザー操作の際に特定のターゲット コンテナーの上に追加の UI および機能を表示できる 1 つ以上のアクションを含むオーバーレイ領域を提供します。アクション ストリップはコンテナーをオーバーレイしようとして絶対的に配置されるため、コンテナーは相対的に配置する必要があります。主な操作とターゲットコ ンテナーへのユーザー アクセスはアクション ストリップでオーバーラップされますが、使用できます。
 </p>
 
 <div class="divider--half"></div>
 
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="action-strip-paragraph-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
-### Usage
-To initialize and position the Action Strip correctly, it needs to be inside a relatively positioned container:
+### 使用方法
+アクション ストリップを初期化して正しく配置するには、相対的に配置されたコンテナー内に配置する必要があります。
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
@@ -35,10 +36,10 @@ To initialize and position the Action Strip correctly, it needs to be inside a r
 <div>
 ```
 
-By default, the Action Strip will be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
+デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
-#### Menu look and feel
-For scenarios where more than three action items will be shown, it is best to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item within the Action Strip marked with the `*igxActionStripMenuItem` structural directive will be shown in a dropdown, revealed upon toggling the more button i.e. the three dots representing the last action.
+#### メニューのルック アンド フィール
+3 つ以上のアクション項目が表示される場合に、[`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、`[その他]` ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
@@ -60,24 +61,24 @@ For scenarios where more than three action items will be shown, it is best to us
     <iframe id="action-strip-menu-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### Reusing the Action Strip
+#### アクション ストリップの再利用
 
-The same Action Strip instance can be used in multiple places in the document as long as the actions need not be visible simultaneously for them.
-The Action Strip can change its parent container, which is possible by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
-The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and passing the `context` as an argument. The `context` should be an instance of a component and should have an accessible `element` property of the `ElementRef` type.
+同じアクション ストリップ インスタンスは、アクションを同時に表示する必要がない限り、ドキュメント内の複数の場所で使用できます。
+アクション ストリップは [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context) によって親コンテナーを変更できます。
+[`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API メソッドを使用し、`context` を引数として渡すことを推奨します。`context` はコンポーネントのインスタンスで、`ElementRef` 型のアクセス可能な `element` プロパティを持つ必要があります。
 
->Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
+>注: アクション ストリップを `element` に追加するために、`show` API メソッドは [Angular Renderer2](https://angular.io/api/core/Renderer2) を使用します。
 
 
-### Usage in Grids
+### グリッドでの使用
 
-The Action Strip provides additional functionality and UI for the IgxGrid.
-This can be utilized via grid action components and we are providing two default ones:
-- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
-- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI related to grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
+アクション ストリップは、IgxGrid の追加機能と UI を提供します。
+これはグリッド アクション コンポーネントで利用でき、2 つのデフォルト コンポーネントを提供します。
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - グリッド編集に関連する機能と UI を含みます。グリッドの `rowEditable` オプションの値と行の削除が許可されているかどうかに基づいて、セルまたは行の編集モードをすばやく切り替えることができます。
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - グリッドの行ピン固定に関連する機能と UI を含みます。行をすばやくピン固定し、ピン固定された行とその無効な行の間を移動できます。
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
@@ -95,22 +96,22 @@ This can be utilized via grid action components and we are providing two default
     </igx-action-strip>
 </igx-grid>
 ```
->Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
+>注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### Styling
+### スタイル設定
 
-To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
+アクション ストリップをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
-Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
+次に、`igx-action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 ```scss
 $custom-strip: igx-action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
@@ -121,14 +122,14 @@ $custom-strip: igx-action-strip-theme(
 );
 ```
 
-The last step is to include the newly created component theme in our application.
+最後に新しく作成されたコンポーネントのテーマをアプリケーションに含めます。
 
-When `$legacy-support` is set to `false`(default), include the component css variables like this:
+`$legacy-support` が `false` (デフォルト) に設定されている場合、css 変数を以下のように含めます。
 ```scss
 @include igx-css-vars($custom-strip);
 ```
 
-When `$legacy-support` is set to `true`, include the component theme like this:
+`$legacy-support` が `true` に設定されている場合、コンポーネントのテーマを以下のように含めます。
 ```scss
 @include igx-action-strip($custom-strip);
 ```
@@ -137,20 +138,20 @@ When `$legacy-support` is set to `true`, include the component theme like this:
     <iframe id="action-strip-styling-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-styling" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 
-### API and Style References
+### API と スタイル リファレンス
 
-For more detailed information regarding the Action Strip API, refer to the following links:
+アクション ストリップの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 
-The following built-in CSS styles helped us achieve this Action Strip layout:
+以下の定義済み CSS スタイルを使用してアクション ストリップ レイアウトを構成しました。
 
-* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+* [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
 
-Additional components and/or directives that can be used within the Action Strip:
+アクション ストリップで使用できるその他のコンポーネントとディレクティブ。
 
 * [`IgxActionStripMenuItemDirective`]({environment:angularApiUrl}/classes/igxmenuitemdirective.html)
 * [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
@@ -161,10 +162,10 @@ Additional components and/or directives that can be used within the Action Strip
 
 <div class="divider"></div>
 
-###Additional Resources
+###　その他のリソース
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

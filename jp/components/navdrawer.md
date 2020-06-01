@@ -323,7 +323,7 @@ import { RouterModule } from "@angular/router";
 <div class="divider--half"></div>
 
 ### スタイル設定
-Navigation drawer のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+Navigation drawer のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
