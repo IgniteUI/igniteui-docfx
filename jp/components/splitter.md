@@ -151,7 +151,7 @@ public typeVertical = SplitterType.Vertical;
 - `Ctrl +右矢印` - 水平スプリッターでペインを展開/縮小
 
 ### スタイル設定
-**igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+**igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

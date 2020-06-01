@@ -19,7 +19,6 @@ _language: ja
 <div class="divider--half"></div>
 
 ### 使用方法
-
 [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。
 
 Mask ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
@@ -63,7 +62,6 @@ export class AppModule {}
 | C | 任意のキーボード文字 |
 
 #### マスクを入力に適用
-
 以下の例では、内線を含む電話番号のマスクを入力に適用します。
 
 ```html
@@ -89,7 +87,6 @@ export class AppModule {}
 </div>
 
 #### 書式設定付き/Raw 値にバインド
-
 [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) が *false* に設定し、Raw 値が使用されます。
 
 ```html
@@ -133,7 +130,6 @@ public clear() {
 </div>
 
 #### マスク値を検証
-
 入力にマスクを設定し、入力した値を検証できます。以下の例は、Mask ディレクティブおよび Snack Bar コンポーネントを使用してマスクを実装し、無効なデータのための検証および通知を実装します。
 
 ```html
@@ -166,7 +162,6 @@ public clear() {
 
     <igx-snackbar #snackbar></igx-snackbar>
 </form>
-
 ```
 
 ```typescript
@@ -222,6 +217,17 @@ export class Person {
       ) {  }
 }
 ```
+
+#### テキスト選択
+[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label_input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
+
+```html
+<igx-input-group>
+    <input igxInput [igxMask]="'###-##-####'" [igxTextSelection]="true"/>
+</igx-input-group>
+```
+
+> 注: コンポーネントが正しく動作するためには、`igxMask` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
 #### focus と blur に追加の書式を適用
 デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
@@ -310,8 +316,8 @@ value = null;
 * [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ### その他のリソース
-
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

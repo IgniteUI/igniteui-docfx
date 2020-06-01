@@ -277,7 +277,7 @@ export class AppRoutingModule { }
 
 ### スタイル設定
 
-タブのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在するテーマ モジュールをインポートする必要があります。
+タブのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するテーマ モジュールをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
