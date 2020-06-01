@@ -110,6 +110,68 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+
+#### Infinite Scroll
+
+ A popular design for scenarios requiring fetching data by chunks from an end-point is the so-called infinite scroll. For data grids, it is characterised by continuous increase of the loaded data triggered by the end-user scrolling all the way to the bottom. The next paragraphs explain how you can use the available API to easily achieve infinite scrolling in `IgxGrid`.
+
+To implement infinite scroll, you have to fetch the data in chunks. The data that is already fetched should be stored locally and you have to determine the length of a chunk and how many chunks there are. You also have to keep a track of the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you can determine if the user scrolls up and you have to show them already fetched data or scrolls down and you have to fetch more data from the end-point.
+
+The first thing to do is use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of the data. Setting the `totalItemCount` property is important, as it allows the grid to size its scrollbar correctly.
+
+```typescript
+public ngAfterViewInit() {
+    ...
+    this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+        if (request.data) {
+            this.grid.totalItemCount = this.page * this.pageSize;
+            this.grid.data = this._remoteService.getCachedData({startIndex: 0, chunkSize: 10});
+            this.totalItems = request.data["@odata.count"];
+            this.totalPageCount = Math.ceil(this.totalItems / this.pageSize);
+            this.grid.isLoading = false;
+        }
+    });
+    ...
+}
+```
+
+Additionally, you have to subscribe to the `onDataPreLoad` output, so that you can provide the data needed by the grid when it tries to display a different chunk, rather than the currently loaded one. In the event handler, you have to determine whether to fetch new data or return data, that's already cached locally.
+
+```typescript
+public handlePreLoad() {
+    const isLastChunk = this.grid.totalItemCount ===
+                        this.grid.virtualizationState.startIndex + this.grid.virtualizationState.chunkSize;
+    // when last chunk reached load another page of data
+    if (isLastChunk) {
+        if (this.totalPageCount === this.page) {
+            this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+            return;
+        }
+        this.page++;
+        this.grid.isLoading = true;
+        this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+            if (request.data) {
+                this.grid.totalItemCount = Math.min(this.page * this.pageSize, this.totalItems);
+                this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+                this.grid.isLoading = false;
+            }
+        });
+    } else {
+        this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+    }
+}
+```
+
+
+#### Infinite Scroll Demo
+<div class="sample-container loading" style="height:510px">
+    <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Remote Sorting/Filtering
 
 To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
