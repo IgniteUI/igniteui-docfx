@@ -123,10 +123,11 @@ So, if you've already adopted npm and you have an Ignite UI for Angular license,
 
 You can acquire and use a access token through your [infragistics.com user account](https://account.infragistics.com/access-tokens), if you want to integrate a CI process in a repository and use it to access the Ignite UI for Angular licensed packages.
 
-Once generated the token can be used on build procedures, travis ci or local configurations: 
+Once generated the token can be used on Azure Pipelines build procedures, Travis CI or local configurations: 
 
-1. Generate a token from https://account.infragistics.com/access-tokens
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 150px)" 
+* Generate a token from https://account.infragistics.com/access-tokens
+
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 250px)" 
   src="../../images/general/generate-token.jpg"
   data-src="../../images/general/generate-token.jpg"
   alt="New Token Generated"
@@ -134,7 +135,7 @@ Once generated the token can be used on build procedures, travis ci or local con
 
 > Each token is with Base64 encoding.
 
-2. Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
+* Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
 
 ```cmd
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
@@ -158,29 +159,28 @@ npm config set always-auth true --scope:@infragistics
 npm config set _auth=$(token) --scope:@infragistics
 ```
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 150px)" 
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 450px)" 
   src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
   data-src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
   alt="Azure Pipelines CI yml update"
   title="Azure Pipelines CI yml update" />
 
-Add **npmRegistry** and **token** variables.
+Add **npm registry** and **token** variables.
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 400px)" 
-  src="../../images/general/azure-ci-add-token-variable-1.jpg"
-  data-src="../../images/general/azure-ci-add-token-variable-1.jpg"
-  alt="npm Registry and token variables"
-  title="npm Registry and token variables" />
-
-
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 400px)" 
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-new-variable-2.jpg"
   data-src="../../images/general/azure-ci-new-variable-2.jpg" 
   alt="Set npm Registry and token variables"
   title="Set npm Registry and token variables" />
 
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
+  src="../../images/general/azure-ci-add-token-variable-1.jpg"
+  data-src="../../images/general/azure-ci-add-token-variable-1.jpg"
+  alt="npm Registry and token variables"
+  title="npm Registry and token variables" />
+
 ### Travis CI Configuration
-Use [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
+We will follow almost the same approach here, the only difference would be that the configuration will be set on [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
 
 ```cmd
 before_install:
