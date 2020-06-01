@@ -10,14 +10,6 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Date Time Editor ディレクティブでは、選択された入力要素で日付と時刻を設定および編集できます。ユーザーは、編集可能なマスク入力によって日付または時間部分を編集できます。さらに、検証に最小値と最大値だけでなく、希望の表示形式および入力形式の設定を指定できます。</p>
 <div class="divider"></div>
 
-
-```html
-<!--datetime-basic.component.html-->
-<igx-input-group>
-    <input type="text" igxInput [igxDateTimeEditor]="'dd/MM/yyyy'" [(ngModel)]="date"/>
-</igx-input-group>
-```
-
 <div class="sample-container loading" style="height:100px">
     <iframe id="datetime-basic-iframe" src="{environment:demosBaseUrl}/scheduling/datetime-basic" width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -45,7 +37,7 @@ export class AppModule {}
 ```
 
 
-input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を[入力グループ](input_group.md)にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、 `igx-prefix`、`igx-suffix`、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
+input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を[入力グループ](input_group.md)にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、`igx-prefix`、`igx-suffix`、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
 
 #### バインディング 
 以下は、Date オブジェクトを [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value) として設定する基本的な構成シナリオです。
@@ -55,7 +47,7 @@ public date = new Date();
 
 ```html
 <igx-input-group>
-    <input type="text" igxInput igxDateTimeEditor [value]="date"/>
+    <input type="text" igxInput igxDateTimeEditor [value]="date" />
 </igx-input-group>
 ```
 
@@ -140,6 +132,17 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 <div class="divider--half"></div>
 ```
 
+#### テキスト選択
+[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label_input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
+
+```html
+<igx-input-group>
+    <input igxInput [igxDateTimeEditor]="'dd/MM/yyyy'" [igxTextSelection]="true"/>
+</igx-input-group>
+```
+
+> 注: コンポーネントが正しく動作するためには、`igxDateTimeEditor` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
+
 ### スタイル設定 
 詳細については、[`Input Group スタイル ガイド`](input_group.md#スタイル設定)を参照してください。
 <div class="divider--half"></div>
@@ -160,7 +163,7 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 * [Label および Input](label_input.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
 
-
 コミュニティに参加して新しいアイデアをご提案ください。
+
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

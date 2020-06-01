@@ -110,7 +110,7 @@ public selectedColor: string = this.colors[3].hex;
 
 #### スタイル設定
 
-ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

@@ -329,7 +329,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 ### スタイル設定
 
-タイム ピッカーのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+タイム ピッカーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

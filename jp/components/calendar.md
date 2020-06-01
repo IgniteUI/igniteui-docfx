@@ -21,7 +21,7 @@ _language: ja
 
 #### はじめに
 
-Calendar コンポーネントを初期化する前に、 `IgxCalendarModule` を **app.module.ts** ファイルにインポートします。
+Calendar コンポーネントを初期化する前に、`IgxCalendarModule` を **app.module.ts** ファイルにインポートします。
 
 注: タッチ操作のために、[**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
@@ -335,7 +335,7 @@ export class CalendarSample7Component {
 
 ### スタイル設定
 
-カレンダーのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+カレンダーのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

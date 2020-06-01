@@ -202,7 +202,7 @@ export class MyBannerComponent {
 > [!NOTE]
 > Google の [`マテリアル デザイン`](https://material.io/design/components/banners.html#anatomy) ガイドラインでは、バナーに表示するボタンは 2 つまでです。`IgxBannerComponent` は、`igx-banner-actions` タグの要素数を明示的に制限しませんが、マテリアル デザイン ガイドに従う場合は、最大 2 つの要素を使用することを強くお勧めします。
 
-閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`close()` のみの呼び出しが可能です。しかし、確認操作 (`'Turn On Wifi'`) は追加のロジックを必要とするため、コンポーネントで定義する必要があります。次に、`onNetworkStateChange` 監視可能な値を作成してサブスクライブします。最後に、変更するたびに `refreshBanner` メソッドを呼び出します。これにより、 `wifiState` に基づいてバナーを切り替えます。
+閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`close()` のみの呼び出しが可能です。しかし、確認操作 (`'Turn On Wifi'`) は追加のロジックを必要とするため、コンポーネントで定義する必要があります。次に、`onNetworkStateChange` 監視可能な値を作成してサブスクライブします。最後に、変更するたびに `refreshBanner` メソッドを呼び出します。これにより、`wifiState` に基づいてバナーを切り替えます。
 
 バナーのナビゲーション バーに WiFi アイコンが表示されます。`wifiState` が変更されるとサブスクリプションが発生するため、アイコンはバナーを切り替えるだけでなく、接続の状態に基づいて変化します。
 
@@ -233,7 +233,7 @@ export class MyBannerComponent {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、 `$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
 
 ```scss
 $custom-banner-theme: igx-banner-theme(
@@ -251,7 +251,7 @@ $custom-banner-theme: igx-banner-theme(
 @include igx-css-vars($custom-banner-theme);
 ```
 
-#### Mixin の使用
+#### ミックスインの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 

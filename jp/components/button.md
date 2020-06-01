@@ -204,7 +204,7 @@ public selectDensity(event) {
 
 ### スタイル設定
 
-ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -226,7 +226,7 @@ $custom-button-theme: igx-button-theme(
 
 カスタム テーマでは、`raised` ボタンにのみパラメーター値を提供しました。その他のタイプのボタンに実装するには、対応するパラメーターをターゲットにします。
 
-ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、 [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
+ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
 
 #### CSS 変数の使用 
 

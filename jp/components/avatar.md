@@ -116,7 +116,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ### スタイル設定
 
-Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する index ファイルをインポートする必要があります。
+Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -142,7 +142,7 @@ $custom-avatar-theme: igx-avatar-theme(
 @include igx-css-vars($custom-avatar-theme);
 ```
 
-#### Mixin の使用
+#### ミックスインの使用
 
 Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
 
