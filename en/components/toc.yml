@@ -288,6 +288,7 @@
     - name: Keyboard navigation
       href: treegrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: false
@@ -388,6 +389,7 @@
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
