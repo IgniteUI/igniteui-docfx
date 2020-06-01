@@ -123,7 +123,7 @@ So, if you've already adopted npm and you have an Ignite UI for Angular license,
 
 You can acquire and use a access token through your [infragistics.com user account](https://account.infragistics.com/access-tokens), if you want to integrate a CI process in a repository and use it to access the Ignite UI for Angular licensed packages.
 
-Once generated the token can be used on build procedures, travis ci or locally: 
+Once generated the token can be used on build procedures, travis ci or local configurations: 
 
 1. Generate a token from https://account.infragistics.com/access-tokens
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 150px)" 
@@ -132,7 +132,7 @@ Once generated the token can be used on build procedures, travis ci or locally:
   alt="New Token Generated"
   title="Generate new token" />
 
-> The token is with Base64 encoding.
+> Each token is with Base64 encoding.
 
 2. Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
 
@@ -189,7 +189,7 @@ before_install:
 - echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
-The token is considered as sensitive information, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
+The best way to define an environment variable depends on what type of information it will contain, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
 
 * encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
 * add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
