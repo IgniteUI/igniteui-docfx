@@ -119,6 +119,26 @@ If you are upgrading from trial to licensed package and you are not using the au
 So, if you've already adopted npm and you have an Ignite UI for Angular license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI for Angular.
 
 
-### [TODO] How to set up CI provider
+### Access Token Usage
 
-**Describe** a way to integrate a Public CI process in a repository, which uses a licensed package (with access token) or a way to acquire a access token through infragistics.com user account, which later will be used to access the licensed package.
+You can acquire and use a access token through your [infragistics.com user account](https://account.infragistics.com/access-tokens), if you want to integrate a CI process in a repository and use it to access the Ignite UI for Angular licensed packages.
+
+Once generated the token can be used on build procedures, travis ci or locally: 
+
+1. Generate a token from https://account.infragistics.com/access-tokens
+<img class="b-lazy responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 150px)" 
+  src="../../images/general/generate_token.jpg"
+  data-src="../../images/general/generate_token.jpg" 
+  data-srcset="../../images/general/generate_token.jpg 480w, ../../images/general/generate_token.jpg 768w, ../../images/general/generate_token.jpg 1100w" 
+  alt="New Token Generated"
+  title="Generate new token" />
+
+2. Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
+
+```cmd
+@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
+//packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
+//packages.infragistics.com/npm/js-licensed/:username:{YOUR_USERNAME}
+//packages.infragistics.com/npm/js-licensed/:always-auth=true
+```
+
