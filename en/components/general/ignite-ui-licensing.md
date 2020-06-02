@@ -1,7 +1,7 @@
 ---
 title: Ignite UI Licensing
 _description: Information on using the Licensed Ignite UI npm package
-_keywords: npm package license, ignite ui license feed, licensing 
+_keywords: npm package license, ignite ui license feed, licensing
 ---
 
 ## License Agreements
@@ -119,6 +119,77 @@ If you are upgrading from trial to licensed package and you are not using the au
 So, if you've already adopted npm and you have an Ignite UI for Angular license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI for Angular.
 
 
-### [TODO] How to set up CI provider
+## Access Token Usage
 
-**Describe** a way to integrate a Public CI process in a repository, which uses a licensed package (with access token) or a way to acquire a access token through infragistics.com user account, which later will be used to access the licensed package.
+You can also authenticate to our private npm feed using an access token, which you can acquire through your [infragistics.com user account](https://account.infragistics.com/access-tokens). The access token authentication is the preferred alternative when you want to integrate a CI process in a publicly accessible repository, which uses the Ignite UI for Angular licensed packages.
+
+The following information is on how to setup authentication to our private npm registry using an access token in local configuration, Azure Pipelines build procedures and Travis CI build process: 
+
+* Generate a token from https://account.infragistics.com/access-tokens
+
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 250px)" 
+  src="../../images/general/generate-token.jpg"
+  data-src="../../images/general/generate-token.jpg"
+  alt="New Token Generated"
+  title="Generate new token" />
+
+> Each token is with Base64 encoding.
+
+* Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
+
+```cmd
+@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
+//packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
+//packages.infragistics.com/npm/js-licensed/:username:{YOUR_USERNAME}
+//packages.infragistics.com/npm/js-licensed/:always-auth=true
+```
+
+### Azure Pipelines Configuration
+Update the azure-pipelines.yml with the following steps:
+
+```cmd
+npm config set @infragistics:registry $(npmRegistry)
+```
+
+```cmd
+npm config set always-auth true --scope:@infragistics
+```
+
+```cmd
+npm config set _auth=$(token) --scope:@infragistics
+```
+
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 450px)" 
+  src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
+  data-src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
+  alt="Azure Pipelines CI yml update"
+  title="Azure Pipelines CI yml update" />
+
+Add **npm registry** and **token** variables.
+
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
+  src="../../images/general/azure-ci-new-variable-2.jpg"
+  data-src="../../images/general/azure-ci-new-variable-2.jpg" 
+  alt="Set npm Registry and token variables"
+  title="Set npm Registry and token variables" />
+
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
+  src="../../images/general/azure-ci-add-token-variable-1.jpg"
+  data-src="../../images/general/azure-ci-add-token-variable-1.jpg"
+  alt="npm Registry and token variables"
+  title="npm Registry and token variables" />
+
+### Travis CI Configuration
+We will follow almost the same approach here, the only difference would be that the configuration will be set on [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
+
+```cmd
+before_install:
+- echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
+- echo "//packages.infragistics.com/npm/js-licensed/:_auth=$TOKEN" >> ~/.npmrc
+- echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
+```
+
+The best way to define an environment variable depends on what type of information it will contain, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
+
+* encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
+* add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
