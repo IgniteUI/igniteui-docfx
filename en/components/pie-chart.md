@@ -180,9 +180,13 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 
 ```html
 <igx-pie-chart [dataSource]="data"
-               width="700px"
-               height="500px"
-               selectionMode="multiple">
+            width="700px"
+            height="500px"
+            selectionMode="multiple"
+            selectedSliceStroke = "white"
+            selectedSliceFill= "rgb(143,143,143)"
+            selectedSliceOpacity =1.0
+            selectedSliceStrokeThickness=2>
 </igx-pie-chart>
 ```
 

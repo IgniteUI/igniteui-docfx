@@ -1,4 +1,4 @@
-﻿- name: 概要
+- name: 概要
   header: true
   _language: "ja"
 - name: Angular - 完全ガイド
@@ -128,7 +128,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: grid/row_selection.md
@@ -352,7 +352,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
@@ -910,7 +910,7 @@
   href: display_density.md
 - name: データ入力と表示
   header: true
-- name: Drop Down
+- name: ドロップダウン
   href: drop_down.md
   new: false
   items:

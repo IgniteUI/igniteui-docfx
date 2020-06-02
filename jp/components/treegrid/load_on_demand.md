@@ -22,7 +22,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 
 ### 使用方法
 
-ロードオンデマンド機能は、ツリーグリッド データソースの両方のタイプ ([`主キーと外部キー`](tree_grid.md#primary-and-foreign-keys)、または[`子コレクション`](tree_grid.md#child-collection)) と互換性があります。ツリー グリッドにルート レベルのデータをロードし、いずれかのデータソース タイプに必要なキーを指定するだけです。ツリーグリッドは、ユーザーが行を展開したときに子行をロードするためのコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します。
+ロードオンデマンド機能は、ツリーグリッド データソースの両方のタイプ ([`プライマリと外部キー`](tree_grid.md#プライマリと外部キー)、または[`子コレクション`](tree_grid.md#子コレクション)) と互換性があります。ツリー グリッドにルート レベルのデータをロードし、いずれかのデータソース タイプに必要なキーを指定するだけです。ツリーグリッドは、ユーザーが行を展開したときに子行をロードするためのコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します。
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
