@@ -19,6 +19,8 @@ The [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-point-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

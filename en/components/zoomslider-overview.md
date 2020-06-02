@@ -18,6 +18,7 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 ### Usage

@@ -19,6 +19,7 @@ Use the map component's [`IgxGeographicProportionalSymbolSeriesComponent`]({envi
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 The demo above shows the [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) series and how to specify data binding options of the series. Automatic marker selection is configured along with marker collision avoidance logic, and marker outline and fill colors are specified too.

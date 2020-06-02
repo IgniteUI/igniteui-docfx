@@ -11,9 +11,10 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
 
 ### Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -83,7 +84,7 @@ Now that the Excel Library module is imported, next step is to load a workbook.
 >
 > In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
 
-In order to load and save [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method.
+In order to load and save [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, as well as its static `Load` method.
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";

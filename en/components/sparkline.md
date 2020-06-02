@@ -21,6 +21,7 @@ The sparkline control has several visual elements and corresponding features tha
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 ### Dependencies

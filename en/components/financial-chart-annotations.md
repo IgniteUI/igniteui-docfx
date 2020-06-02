@@ -2,7 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart']
 ---
 
 ## Chart Annotations
@@ -17,12 +17,14 @@ This topic provides conceptual information about the annotations available on th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
 ### Crosshair Layer
 
-The Crosshair Layer provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.  The Crosshairs can also be configured to snap to data points by setting the `crosshairsSnapToData` property to true, otherwise the crosshairs will be interpolated between data points.  Annotations can also be enabled to display the crosshair's value along the axis.
+The Crosshair Layer provides crossing lines that meet at the actual value of every targeted series.  Crosshair types include: Horizontal, Vertical, and Both.  The Crosshairs can also be configured to snap to data points by setting the [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) property to true, otherwise the crosshairs will be interpolated between data points.  Annotations can also be enabled to display the crosshair's value along the axis.
 
 ```html
 <igx-financial-chart
@@ -52,7 +54,7 @@ The Final Value Layer provides a quick view along the axis of the ending value d
 
 The Callout Layer displays a callout at X/Y positions.
 
-> Note: When using the ordinal X axis mode, the `calloutsXMemberPath` should point to the numeric index of the item, otherwise `calloutsXMemberPath` should point to the time value.
+> Note: When using the ordinal X axis mode, the [`calloutsXMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) should point to the numeric index of the item, otherwise [`calloutsXMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) should point to the time value.
 
 ```html
 <igx-financial-chart

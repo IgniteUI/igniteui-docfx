@@ -11,7 +11,7 @@ Use the linear gauge component to see a simple display of a value compared again
 
 ### Demo
 
-The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
+The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
 The following sample demonstrates how setting multiple properties on the same linear gauge can transform it to completely different linear gauge.
 
@@ -21,6 +21,8 @@ The following sample demonstrates how setting multiple properties on the same li
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -114,6 +116,8 @@ This is the primary measure displayed by the linear gauge component and is visua
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-needle-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Ranges
@@ -146,6 +150,8 @@ The ranges are visual elements that highlight a specified range of values on a s
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Tick Marks
@@ -182,6 +188,8 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-tickmarks-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Labels
@@ -208,6 +216,8 @@ The labels indicate the measures on the scale.
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Backing
@@ -233,6 +243,8 @@ The backing element represents background and border of the linear gauge compone
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-backing-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Scale
@@ -261,6 +273,8 @@ The scale is a visual element that highlights the full range of values in the li
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Summary

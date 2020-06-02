@@ -19,6 +19,8 @@ This control is used for representing categorical data. It is most effective whe
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -102,6 +104,8 @@ Additionally you can use the `legendItemTemplate` and `legendItemBadgeTemplate` 
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -132,6 +136,8 @@ If you set `othersCategoryType` to Percent, then `othersCategoryThreshold` will 
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -151,6 +157,12 @@ The pie chart component supports explosion of individual pie slices as well as a
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -193,10 +205,11 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
-
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

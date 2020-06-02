@@ -17,6 +17,8 @@ The Angular financial chart component can bind easily to multiple data sources, 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 

@@ -17,6 +17,8 @@ In the Ignite UI for Angular category chart component, an Axis provides base pro
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -113,7 +115,7 @@ In the category chart component, the [`yAxisInterval`]({environment:dvApiBaseUrl
 The following code snippet demonstrates how to configure the interval on the y-axis.
 
 ```html
- <igx-category-chart
+<igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
@@ -123,7 +125,7 @@ The following code snippet demonstrates how to configure the interval on the y-a
     yAxisMinorInterval="20"
     yAxisMinorStroke="gray"
     yAxisMinorStrokeThickness="0.5">
- </igx-category-chart>
+</igx-category-chart>
 ```
 
 <div class="divider--half"></div>
@@ -136,7 +138,7 @@ The property accepts a numeric float value between 0 and 1. The value represents
    0 - no gap is rendered between series;
    1 - maximum available gap is rendered between series.
 
-To set the category chart with [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap) of `0.125` the following code can be used:
+To set the category chart with [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap) of 0.125 the following code can be used:
 
 ```html
 <igx-category-chart
@@ -161,7 +163,7 @@ The property accepts a numeric float value between -1 and 1. The value represent
 The following code example sets the [`xAxisOverlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisoverlap) to 0.
 
 ```html
- <igx-category-chart
+<igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"

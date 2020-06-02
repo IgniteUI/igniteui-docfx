@@ -18,6 +18,8 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -31,7 +33,7 @@ When installing the charts package, the core package must also be installed.
 
 ### Required Modules
 
-The Angular douhgnut chart component requires the following modules:
+The Angular doughnut chart component requires the following modules:
 
 ```ts
 // app.module.ts
@@ -64,7 +66,7 @@ this.data = [
 ];
 ```
 
-The following code demonstradtes how to bind the doughnut chart to the above data.
+The following code demonstrates how to bind the doughnut chart to the above data.
 
 ```html
  <igx-doughnut-chart height="100%" width="100%">
@@ -139,6 +141,8 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -165,6 +169,8 @@ The doughnut chart component exposes the API for setting the state of one or mor
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -193,6 +199,8 @@ You can change the exploded slices by changing the contents of the `ExplodedSlic
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -209,4 +217,6 @@ The doughnut chart component supports the use of a legend. The legend used is th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>

@@ -19,6 +19,7 @@ Use the map component's [`IgxGeographicSymbolSeriesComponent`]({environment:dvAp
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 ### Data Requirements
