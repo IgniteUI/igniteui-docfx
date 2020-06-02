@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+title: Angular 条件付きセル スタイル設定 | Ignite UI for Angular | インフラジスティックス 
 _description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+title: Angular 条件付きセル スタイル設定 | Ignite UI for Angular | インフラジスティックス 
 _description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 条件付きセル スタイル設定|Ignite UI for Angular |Infragistics 
+title: Angular 条件付きセル スタイル設定 | Ignite UI for Angular | インフラジスティックス 
 _description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja

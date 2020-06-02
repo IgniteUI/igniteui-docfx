@@ -34,19 +34,19 @@ _language: ja
         </a>
         <a class="link" href="data-chart-type-scatter-point-series.md">
             <div class="linkContent">
-                <h4>Scatter Marker Chart</h4>
+                <h4>散布マーカー チャート</h4>
                 <img src="../images/charts/data-chart-type-scatter-point-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-scatter-bubble-series.md">
             <div class="linkContent">
-                <h4>Scatter Bubble Chart</h4>
+                <h4>散布バブル チャート</h4>
                 <img src="../images/charts/data-chart-type-scatter-bubble-series.png">
             </div>
         </a>
         <a class="link" href="data-chart-type-polar-scatter-series.md">
             <div class="linkContent">
-                <h4>Polar Scatter Chart</h4>
+                <h4>極座標散布チャート</h4>
                 <img src="../images/charts/data-chart-type-polar-scatter-series.png">
             </div>
         </a>

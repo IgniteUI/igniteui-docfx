@@ -63,20 +63,20 @@ To turn on the grid excel filtering, two inputs should be set. The [`allowFilter
 ```
 }
 
-###Interaction
+### Interactions
 
-In order to open the filter menu for a particular column, the angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved or hidden along with the filtering functionality, there will be buttons for the features that are turned on.
+In order to open the filter menu for a particular column, the Angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons available for the features that are turned on.
 
-If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between each expression is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button. 
+If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between the expressions is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button.
 
 To apply a filter with different expressions, you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button, which can clear the filter.
 
 
 <div class="divider--half"></div>
 
-###Configure Menu Features
+### Configure Menu Features
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu. The inputs that control them are as follows: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+Sorting, moving, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -96,11 +96,11 @@ Sorting, moving, pinning and hiding features can be removed from the filter menu
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Quantity Per Unit' have all four disabled, 'Unit Price' has only sorting and moving and 'Order Date' has only pinning and hiding.
+In the sample below **Product Name** and **Discontinued** columns have all four features enabled, **Quantity Per Unit** have all four disabled, **Unit Price** has only sorting and moving and **Order Date** has only pinning and hiding and all are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable).
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true" 
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
@@ -212,6 +212,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
     <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
     <ng-template igxExcelStyleMoving>Moving Template</ng-template>
     <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
     </igx-column>
     <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
@@ -228,12 +229,13 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true" 
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
     <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
     <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
     <ng-template igxExcelStyleMoving>Moving Template</ng-template>
     <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
     <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
@@ -265,6 +267,7 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
     <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
     <ng-template igxExcelStyleMoving>Moving Template</ng-template>
     <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
     <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
@@ -432,7 +435,7 @@ To get started with styling the Excel Style Filtering dialog, we need to import 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 The excel style filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
 
@@ -537,7 +540,7 @@ $black-color: #292826;
 
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $custom-grid: igx-grid-theme(

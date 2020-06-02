@@ -1,5 +1,5 @@
 ## Default Theme
-Material theme is the default theme for igniteUI for Angular. To use it include `igx-theme()` mixins after the igx-core.  
+The Material theme is the default theme in Ignite UI for Angular. To use it include the `igx-theme` mixins after `igx-core`.  
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -35,8 +35,8 @@ $my-color-palette: igx-palette(
     // IMPORTANT, the primary and secondary colors are required
     $primary: $primary-color,
     $secondary: $secondary-color,
-    // The $grays will ensure that all the black text, borders, etc  will 
-    // become a shade of whites in order to be visible in the dark theme
+    // The $grays will ensure that all the black text, borders, etc will 
+    // become a shade of white in order to be visible against a dark background
     $grays: #fff 
     // Since all individual components use the $default-palette by default, if you don't specify the rest of the colors like $info and $error they will use their default values from the $default-palette
 );

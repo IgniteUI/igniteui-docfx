@@ -42,7 +42,7 @@ export class AppModule {}
  デモでは、[igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
-      <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
+    <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
         [filterable]="filterable"
         [disabled]="disabled">
@@ -94,6 +94,7 @@ export class ComboDemo implements OnInit {
 
 詳細については、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を[リモートデータにバインド](combo_remote.md)を参照してください。
 
+
 <div class="divider--half"></div>
 
 ## カスタム オーバーレイ設定
@@ -143,6 +144,15 @@ export class CustomOverlayCombo {
 
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
+```
+
+<div class="divider--half"></div>
+
+## 検索入力のフォーカス
+`autoFocusSearch` プロパティはコンボが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。プロパティが `true` の場合 (デフォルト)、コンボの検索ボックスは開いた状態でフォーカスされます。`false` に設定すると、フォーカスはコンボの項目コンテナーに移動します。モバイル デバイスでは、コンボを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
+
+```html
+<igx-combo [autoFocusSearch]="false"></igx-combo>
 ```
 
 <div class="divider--half"></div>

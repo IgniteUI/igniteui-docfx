@@ -53,7 +53,7 @@ Angular データ チャート コンポーネントはさまざまな軸タイ�
 上記データ要件を満たすデータソースとして [SampleShapeData](data-chart-data-sources-shape.md) を使用できます。
 
 ```ts
-this.state = { dataSource: SampleShapeData.create() }
+public dataSource: any[] = SampleShapeData.create();
 ```
 
 ### モジュールの要件

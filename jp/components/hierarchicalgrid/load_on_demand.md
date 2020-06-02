@@ -1,5 +1,5 @@
 ---
-title: Hierarchical Grid ロードオンデマンド - ネイティブ Angular |Ignite UI for Angular
+title: Hierarchical Grid ロードオンデマンド - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Hierarchical Grid は、展開された各子グリッドでロードオンデマンドに必要なツールを提供します。データ量が大幅に軽減されてユーザがデータを必要な場合のみ取得されます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネントs Library, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Data Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Data Table コントロール, Angular 高パフォーマンスe Hierarchical Grid, Angular 高パフォーマンス Hierarchical Data Table, Hierarchical Grid, Hierarchical Data Table
 _language: ja

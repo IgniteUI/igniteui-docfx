@@ -54,7 +54,8 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート�
  <!-- TODO -->
 }
 
-デフォルトで、@@igComponent は独自のロジックを使用してデータ操作を実行します。これらのタスクをリモートで実行し、@@igComponent で公開される特定の入力とイベントを使用して @@igComponent に結果のデータを供給できます。
+デフォルトで、@@igComponent は独自のロジックを使用してデータ操作を実行します。
+これらのタスクをリモートで実行し、@@igComponent で公開される特定の入力とイベントを使用して @@igComponent に結果のデータを供給できます。
 
 @@if (igxName === 'IgxGrid') {
 ### リモート仮想化
@@ -142,7 +143,7 @@ public ngAfterViewInit() {
         takeUntil(this.destroy$)
     ).subscribe(() => {
         this.processData();
-    });    
+    });
 }
 ```
 
@@ -243,7 +244,7 @@ public processData() {
 Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
 - **column**  - フィルタリング式ツリー。各列に基づいて削減されます。
 - **filteringExpressionsTree** - フィルタリング式ツリー。各列に基づいて削減されます。
-- **done** - 
+- **done** -
 サーバーから取得されたときに、新しく生成された列値で呼び出されるコールバック。
 
 開発者は、**列**と **filteringExpressionsTree** 引数によって提供される情報に基づいて、必要な一意の列値を手動で生成し、**done** コールバックを呼び出すことができます。
@@ -360,9 +361,9 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 
 ### リモート ページング
 
-
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 はじめにデータ フェッチングを行うサービスを宣言します。
+デフォルトのページング テンプレートを使用する場合、`totalRecords` プロパティを設定する必要があります。それにより、グリッドは合計リモート レコードに基づいて合計ページ番号を計算できます。注: リモート サービスからフェッチ データを実装する必要があります。
 ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
 ```typescript
 @Injectable()
@@ -433,7 +434,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     public firstPage = true;
     public totalPages: number = 1;
     public totalCount = 0;
-    
+
     constructor(private remoteService: RemotePagingService) {}
 
     public ngOnInit() {
@@ -455,9 +456,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 }
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
-
 ```html
 <igx-tree-grid #treeGrid ...
                [paging]="true" [perPage]="maxPerPage">
@@ -466,8 +465,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
-要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。
-ページ ボタンの有効化および無効化も設定します。
+要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -508,7 +506,6 @@ public paginate(page: number) {
     this.remoteService.getData(skip, top);
 }
 
-
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -528,7 +525,7 @@ public paginate(page: number) {
 @ViewChild("customPager", { read: TemplateRef })
 public remotePager: TemplateRef<any>;
 public title = "gridPaging";
-    
+
 @ViewChild("layout1")
 public layout1: IgxRowIslandComponent;
 
@@ -536,7 +533,8 @@ public layout1: IgxRowIslandComponent;
 public hierarchicalGrid: IgxHierarchicalGridComponent;
 
 ...
-    public ngAfterViewInit() {
+
+public ngAfterViewInit() {
     this.hierarchicalGrid.isLoading = true;
     this.remoteService.getData(
         { parentID: null, rootLevel: true, key: "Customers" }, 0, this.perPage).subscribe((data) => {
@@ -554,8 +552,6 @@ public paginate(page: number) {
 
     this.remoteService.getData(skip, top);
 }
-...
-
 
 ```
 }
@@ -674,7 +670,7 @@ public paginate(page: number) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-以下は、独自の `next `および `previous` ページ操作を実装するために定義したメソッドです。
+以下は、独自の `next` および `previous` ページ操作を実装するために定義したメソッドです。
 
 ```typescript
 @ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
@@ -722,14 +718,13 @@ public buttonDeselection(page: number, totalPages: number) {
 
 ...
 public ngAfterViewInit() {
+    this.grid1.isLoading = true;
     this.remoteService.getData(0, this.perPage);
-    this.@@igObjectRef.paginationTemplate = this.remotePager;
 }
 
 ```
 
 }
-
 
 ### API リファレンス
 <div class="divider--half"></div>

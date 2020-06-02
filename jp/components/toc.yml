@@ -1,6 +1,9 @@
 - name: 概要
   header: true
   _language: "ja"
+- name: Angular - 完全ガイド
+  href: general/angular-grid-overview-guide.md
+  new: true
 - name: 作業の開始
   href: general/getting_started.md
   new: false
@@ -50,13 +53,14 @@
       new: false
 - name: フレームワーク & 機能
   href: general/framework-and-features/framework-and-features.md
-  new: true
+  new: false
   items:
     - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
-      new: true
+      new: false
     - name: データ分析
       href: general/framework-and-features/data-analysis.md
+      new: false
       updated: true
 - name: グリッドとリスト
   href: grids_and_lists.md
@@ -113,6 +117,9 @@
     - name: 列のピン固定
       href: grid/column_pinning.md
       new: false
+    - name: 行のピン固定
+      href: grid/row_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: grid/column_resizing.md
       new: false
@@ -132,6 +139,9 @@
         - name: 選択に基づいた集計
           href: grid/selection_based_aggregates.md
           new: false
+        - name: 列選択
+          href: grid/column_selection.md
+          new: true
     - name: 検索
       href: grid/search.md
       new: false
@@ -159,6 +169,7 @@
     - name: キーボード ナビゲーション
       href: grid/keyboard_navigation.md
       new: false
+      updated: true
     - name: 複数行レイアウト
       href: grid/multi_row_layout.md
       new: false
@@ -226,6 +237,9 @@
     - name: 列のピン固定
       href: treegrid/column_pinning.md
       new: false
+    - name: 行のピン固定
+      href: treegrid/row_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: treegrid/column_resizing.md
       new: false
@@ -234,7 +248,7 @@
       new: false
     - name: 選択
       href: treegrid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: treegrid/row_selection.md
@@ -242,6 +256,9 @@
         - name: セル選択
           href: treegrid/cell_selection.md
           new: false
+        - name: 列選択
+          href: treegrid/column_selection.md
+          new: true
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -324,6 +341,9 @@
     - name: 列のピン固定
       href: hierarchicalgrid/column_pinning.md
       new: false
+    - name: 行のピン固定
+      href: hierarchicalgrid/row_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: hierarchicalgrid/column_resizing.md
       new: false
@@ -337,6 +357,9 @@
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
           new: false
+        - name: 列選択
+          href: hierarchicalgrid/column_selection.md
+          new: true
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -380,7 +403,7 @@
       new: false
     - name: テンプレート
       href: combo_templates.md
-      new: false
+      new: true
     - name: カスケーディング
       href: combo_cascading.md
       new: false
@@ -388,30 +411,30 @@
   href: spreadsheet_overview.md
   new: false
   items:
-     - name: アクティブ化
-       href: spreadsheet_activation.md
-       new: false
-     - name: チャート アダプター
-       href: spreadsheet_chart_adapter.md
-       new: false
-     - name: クリップボード
-       href: spreadsheet_clipboard.md
-       new: false
-     - name: 条件付き書式
-       href: spreadsheet_conditional_formatting.md
-       new: false
-     - name: Spreadsheet の構成
-       href: spreadsheet_configuring.md
-       new: false
-     - name: コマンド
-       href: spreadsheet_commands.md
-       new: false
-     - name: データ検証
-       href: spreadsheet_data_validation.md
-       new: false
-     - name: ハイパーリンク
-       href: spreadsheet_hyperlinks.md
-       new: false
+    - name: アクティブ化
+      href: spreadsheet_activation.md
+      new: false
+    - name: チャート アダプター
+      href: spreadsheet_chart_adapter.md
+      new: false
+    - name: クリップボード
+      href: spreadsheet_clipboard.md
+      new: false
+    - name: 条件付き書式
+      href: spreadsheet_conditional_formatting.md
+      new: false
+    - name: Spreadsheet の構成
+      href: spreadsheet_configuring.md
+      new: false
+    - name: コマンド
+      href: spreadsheet_commands.md
+      new: false
+    - name: データ検証
+      href: spreadsheet_data_validation.md
+      new: false
+    - name: ハイパーリンク
+      href: spreadsheet_hyperlinks.md
+      new: false
 - name: チャート
   header: true
 - name: Category Chart
@@ -461,7 +484,7 @@
         #  new: true
         - name: 軸の位置
           href: data-chart-axis-locations.md
-          new: true
+          new: false
         - name: 軸共有
           href: data-chart-axis-sharing.md
           new: false
@@ -875,9 +898,6 @@
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
           new: true
-    - name: テーマの例
-      href: themes/examples.md
-      new: false
     - name: 印刷スタイル
       href: themes/printing-styles.md
       new: false
@@ -920,7 +940,7 @@
   href: input_group.md
   new: false
   items:
-    - name: リアクティブフォーム
+    - name: リアクティブ フォーム
       href: input_group_reactive_forms.md
 - name: Mask
   href: mask.md
@@ -936,7 +956,7 @@
   href: linear_progress.md
 - name: Circular Progress
   href: circular_progress.md
-- name: 仮想スクロールディレクティブ
+- name: 仮想スクロール ディレクティブ
   href: for_of.md
 - name: Chip
   href: chip.md
@@ -951,10 +971,6 @@
 - name: Slider
   href: slider/slider.md
   new: true
-  items:
-    - name: スライダー目盛り
-      href: slider/slider_ticks.md
-      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -966,10 +982,10 @@
   href: overlay_main.md
   new: true
   items:
-  - name: ポジションストラテジ
+  - name: 配置ストラテジ
     href: overlay_position.md
     new: true
-  - name: スクロールストラテジ
+  - name: スクロール ストラテジ
     href: overlay_scroll.md
     new: false
   - name: スタイル設定
@@ -979,8 +995,11 @@
   href: drag_drop.md
   new: true
 - name: Zoom Slider
-  new: true
+  new: false
   href: zoomslider-overview.md
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: メニュー
   header: true
 - name: Navigation Drawer
@@ -1006,6 +1025,12 @@
 - name: Expansion Panel
   href: expansion_panel.md
   new: false
+- name: Splitter
+  href: splitter.md
+  new: true
+- name: Dock Manager
+  href: dock-manager.md
+  new: true
 - name: 通知
   header: true
 - name: Banner
@@ -1017,6 +1042,9 @@
   href: toast.md
 - name: スケジュール
   header: true
+- name: Date Time Editor
+  href: date_time_editor.md
+  new: true
 - name: Calendar
   href: calendar.md
 - name: Date Picker

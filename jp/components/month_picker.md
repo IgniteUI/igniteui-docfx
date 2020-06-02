@@ -6,7 +6,9 @@ _language: ja
 ---
 
 ## Month Picker
-<p class="highlight">Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。コンポーネントは、単一選択、表示形式のカスタマイズ、ローカライゼーションをサポートします。</p>
+<p class="highlight">
+    Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。コンポーネントは、単一選択、表示形式のカスタマイズ、ローカライゼーションをサポートします。
+</p>
 
 ### Month Picker デモ
 <div class="sample-container loading" style="height: 620px">
@@ -17,14 +19,8 @@ _language: ja
 </div>
 
 ### 使用方法
-Month Picker コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、アプリケーションの AppModule に `IgxCalendarModule` をインポートします。通常、これは **app.module.ts** ファイルです。注: タッチ操作を使用するために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
+はじめに、**app.module.ts** ファイルに  `IgxCalendarModule` をインポートします。注: タッチ操作のために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -67,7 +63,7 @@ import { IgxMonthPickerComponent } from "igniteui-angular";
 ```typescript
 // month-picker-sample.component.ts
 
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 ```
 
 ```html
@@ -96,20 +92,11 @@ public date: Date = new Date(Date.now());
 ```typescript
 // month-picker-sample.component.ts
 
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 public numericFormatOptions = {
-        month: "2-digit",
-        year: "numeric"
+        month: "2-digit"
 };
 ```
-
-以下は、マンスピッカーのデフォルトの書式オプションを変更する例です。
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="monthpicker-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
 
 #### ローカライズ
 [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) 入力を使用してマンスピッカーのローカライズをカスタマイズします。
@@ -123,16 +110,15 @@ public numericFormatOptions = {
 ```typescript
 // month-picker-sample.component.ts
 
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 public locale: "fr";
 public formatOptions = {
-        month: "long",
-        year: "numeric"
+        month: "long"
 };
 ```
 
-マンスピッカー コンポーネントのローカライズの例:
-<div class="sample-container loading" style="height: 620px">
+Month Picker コンポーネントのローカライズとスタイル設定の例:
+<div class="sample-container loading" style="height: 680px">
     <iframe id="monthpicker-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -160,6 +146,80 @@ public formatOptions = {
     - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
     - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
     - <kbd>Tab</kbd> キーは月を移動します。
+
+### スタイル設定
+Month Picker のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+Month Picker はカレンダーのテーマを使用するため、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して Month Picker の項目をスタイル設定します。
+
+```scss
+$my-calendar-theme: igx-calendar-theme(
+  $border-radius: 15px,
+  $content-background: #011627,
+  $picker-background-color: #011627,
+  $month-current-text-color: #ECAA53,
+  $month-hover-background: #ECAA53,
+  $year-current-text-color: #ECAA53,
+  $year-hover-text-color: #D37B08,
+  $picker-arrow-color: #ECAA53,
+  $picker-text-hover-color: #D37B08,
+  $picker-arrow-hover-color: #D37B08,
+  $picker-text-color: #ECAA53
+);
+```
+
+#### テーマを含む
+
+<div class="divider"></div>
+
+次にコンポーネントのテーマをアプリケーションに含めます。
+
+`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
+
+```scss
+ @include igx-calendar($my-calendar-theme);
+```
+>[!NOTE]
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-calendar($my-calendar-theme);
+    }
+}
+```
+
+<div class="divider"></div>
+
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+
+```scss
+@include igx-css-vars($my-calendar-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+
+```scss
+:host {
+    @include igx-css-vars($my-calendar-theme);
+}
+```
+
+すべて設定できると、結果は以下のようになります。
+
+#### デモ
+
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="monthpicker-styling-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-styling' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
 
 ### API リファレンス
 <div class="divider--half"></div>
