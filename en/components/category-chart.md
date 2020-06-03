@@ -5,7 +5,7 @@ _keywords: category chart, Ignite UI for Angular, infragistics
 mentionedTypes: ['CategoryChart', 'CategoryChartType']
 ---
 
-## Category Chart
+## Category Chart Overview
 
 The category chart component is a Ignite UI for Angular charting component that makes visualizing category data easy to do. The control simplifies the complexities of the data visualization domain into manageable API.
 
@@ -46,8 +46,10 @@ Another example of the intuitive behavior of the category chart component is tha
 
 When installing the chart package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 

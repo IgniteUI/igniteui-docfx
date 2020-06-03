@@ -6,7 +6,7 @@ mentionedTypes: ['XamDoughnutChart']
 
 ---
 
-## Doughnut Chart
+## Doughnut Chart Overview
 
 The Ignite UI for Angular doughnut chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
@@ -28,8 +28,10 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 
 When installing the charts package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 
@@ -82,7 +84,7 @@ The following code demonstrates how to bind the doughnut chart to the above data
 
 ### Multiple Rings
 
-The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data spirce, or they can share a common data source. For example, the following 2 data sources
+The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data item, or they can share a common data source. For example, the following 2 data sources
 are used to bind to multiple rings:
 
 ```ts

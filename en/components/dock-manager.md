@@ -1,10 +1,10 @@
 ---
 title: Dock Manager | Layout Controls | Ignite UI for Angular | Infragistics
-_description: 
+_description:
 _keywords: dock manager, layout, Ignite UI for Angular, Infragistics
 ---
 
-## Dock Manager
+## Dock Manager Overview
 
 The Angular Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
 
@@ -24,7 +24,9 @@ The Angular Dock Manager component provides means to manage the layout of your a
 
 To install the Dock Manager package execute the following command:
 
-**npm install --save igniteui-dockmanager**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-dockmanager
+</pre>
 
 Then it is necessary to import and call the `defineCustomElements()` function:
 

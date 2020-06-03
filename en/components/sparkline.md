@@ -5,7 +5,7 @@ _keywords: Sparkline, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamSparkline', 'SparklineDisplayType', 'TrendLineType']
 ---
 
-## Sparkline
+## Sparkline Overview
 
 The Ignite UI for Angular sparkline component is a lightweight charting control. It is intended for rendering within a small scale layout such as within a grid cell, but can also be rendered alone.
 
@@ -28,8 +28,10 @@ The sparkline control has several visual elements and corresponding features tha
 
 In order to use the Ignite UI for Angular sparkline component, the following packages need to be installed:
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 The sparkline component requires the import of the following modules:
 

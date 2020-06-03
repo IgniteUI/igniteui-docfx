@@ -5,7 +5,7 @@ _keywords: Radial Gauge, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamRadialGauge', 'XamRadialGaugeRange']
 ---
 
-## Radial Gauge
+## Radial Gauge Overview
 
 The radial gauge component provides a number of visual elements, like a needle, tick marks, ranges, and labels, in order to create a predefined shape and scale.
 
@@ -31,8 +31,10 @@ The following sample demonstrates how setting multiple properties on the same ra
 
 When installing the gauge package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-gauges**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-gauges
+</pre>
 
 ### Required Modules
 

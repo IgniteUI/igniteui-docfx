@@ -5,7 +5,7 @@ _keywords: map, Ignite UI for Angular, infragistics
 mentionedTypes: ['XamGeographicMap']
 ---
 
-## Map
+## Map Overview
 
 The Ignite UI for Angular map component allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.
 
@@ -32,9 +32,11 @@ The map provides customizable navigation behaviors for navigating map content us
 
 To use the geographic map component, you need to first install these packages:
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
--   **npm install --save igniteui-angular-maps**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+npm install --save igniteui-angular-maps
+</pre>
 
 ### Required Modules
 

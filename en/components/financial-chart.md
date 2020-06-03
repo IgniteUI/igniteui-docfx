@@ -5,7 +5,7 @@ _keywords: financial chart, Ignite UI for Angular, infragistics
 mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 ---
 
-## Financial Chart
+## Financial Chart Overview
 
 The Angular financial chart component is a charting component that makes it easy to visualize financial data by using a simple and intuitive API.
 
@@ -49,12 +49,14 @@ Refer to the [Financial Chart Panes](financial-chart-panes.md) topics for  infor
 
 When installing the chart package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 
-The Angular financial chart component requires the following modules:
+The Financial Chart component requires the following modules:
 
 ```ts
 // app.module.ts

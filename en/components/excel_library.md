@@ -5,7 +5,7 @@ _keywords: Excel library, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Workbook']
 ---
 
-## Excel Library
+## Excel Library Overview
 
 The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like Workbooks, Worksheets, Cells, Formulas and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
@@ -22,8 +22,10 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
 
 When installing the excel package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-excel**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-excel
+</pre>
 
 ### Required Modules
 
