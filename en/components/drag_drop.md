@@ -118,13 +118,13 @@ Drag the dialog using the handle.
 
 When an element is being dragged, there are no animations applied by default.
 
-You can apply transition animation to the `igxDrag` at any time, but it is advised to use it when dragging ends or the element is not currently dragged. This can be achieved by using the [`transitionToOrigin`](environment:angularApiUrl}/classes/igxdragdirective.html#transitiontoorigin) and the [`transitionTo`](environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) methods.
+You can apply transition animation to the `igxDrag` at any time, but it is advised to use it when dragging ends or the element is not currently dragged. This can be achieved by using the [`transitionToOrigin`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitiontoorigin) and the [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) methods.
 
 The `transitionToOrigin` method, as the name suggests, animates the currently dragged element or its ghost to the start position, where the dragging began. The `transitionTo` method animates the element to a specific location relative to the page (i.e. `pageX` and `pageY`) or to the position of a specified element. If the element is not being currently dragged, it will animate anyway or create ghost and animate it to the desired position.
 
 Both functions have arguments that you can set to customize the transition animation and set duration, timing function or delay. If specific start location is set it will animate the element starting from there.
 
-When the transition animation ends, if a ghost is created, it will be removed and the `igxDrag` directive will return to its initial state. If no ghost is created, it will keep its position. In both cases, then the [`transitioned`](environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) event will be triggered, depending on how long the animation lasts. If no animation is applied, it will be triggered instantly.
+When the transition animation ends, if a ghost is created, it will be removed and the `igxDrag` directive will return to its initial state. If no ghost is created, it will keep its position. In both cases, then the [`transitioned`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) event will be triggered, depending on how long the animation lasts. If no animation is applied, it will be triggered instantly.
 
 You can have other types of animations that involve element transformations. That can be done like any other element either using the Angular Animations or straight CSS Animations to either the base `igxDrag` element or its ghost. If you want to apply them to the ghost, you would need to define a custom ghost and apply animations to its element.
 
