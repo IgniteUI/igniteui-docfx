@@ -2,6 +2,7 @@
 title: Ignite UI のライセンス
 _description: Ignite UI npm ライセンス パッケージの使用に関する情報
 _keywords: npm package license, ignite ui license feed, licensing, npm パッケージ ライセンス, ignite ui ライセンス フィード, ライセンス
+_language: ja
 ---
 
 ## 使用許諾契約
@@ -141,7 +142,7 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 ```cmd
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
 //packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
-//packages.infragistics.com/npm/js-licensed/:username:{YOUR_USERNAME}
+//packages.infragistics.com/npm/js-licensed/:username={YOUR_USERNAME}
 //packages.infragistics.com/npm/js-licensed/:always-auth=true
 ```
 
