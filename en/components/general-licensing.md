@@ -38,13 +38,13 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 
 #### Now, to log in to our private feed using npm, run the adduser command and specify a user account and password:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
 </pre>
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm uninstall igniteui-dockmanager
 npm install @infragistics/igniteui-dockmanager
 </pre>
@@ -57,8 +57,30 @@ If you are upgrading from trial to licensed package:
 
 -   Add a **paths** mapping in the project **tsconfig.json**.
 
+```json
+{
+  /* ... */
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    /* ... */
+    "paths": {
+      "igniteui-dockmanager": ["./node_modules/@infragistics/igniteui-dockmanager"],
+      "igniteui-dockmanager/*": ["./node_modules/@infragistics/igniteui-dockmanager/*"],
+    }
+  }
+}
+```
 
 -   Change the themes imports like this:
+
+```ts
+@import '~igniteui-dockmanager/dist/collection/styles/igc.themes';
+
+// Should be changed to
+
+@import '~@infragistics/igniteui-dockmanager/dist/collection/styles/igc.themes';
+```
 
 So, if you've already adopted npm and you have an Ignite UI for Angular license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI for Angular.
 
@@ -70,34 +92,34 @@ The following information is on how to setup authentication to our private npm r
 
 -   Generate a token from <https://account.infragistics.com/access-tokens>
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 250px)"
+<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
   src="../images/general/generate-token.jpg"
   data-src="../images/general/generate-token.jpg"
   alt="New Token Generated"
   title="Generate new token" />
 
-> Each token is with Base64 encoding.
+> Note: each token is with Base64 encoding.
 
 -   Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```json
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
 //packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
 //packages.infragistics.com/npm/js-licensed/:username:{YOUR_USERNAME}
 //packages.infragistics.com/npm/js-licensed/:always-auth=true
-</pre>
+```
 
 ### Azure Pipelines Configuration
 
 Update the azure-pipelines.yml with the following steps:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm config set @infragistics:registry $(npmRegistry)
 npm config set always-auth true --scope:@infragistics
 npm config set _auth=$(token) --scope:@infragistics
 </pre>
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 450px)"
+<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
   src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
   data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
   alt="Azure Pipelines CI yml update"
@@ -105,13 +127,13 @@ npm config set _auth=$(token) --scope:@infragistics
 
 Add **npm registry** and **token** variables.
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)"
+<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
   src="../images/general/azure-ci-new-variable-2.jpg"
   data-src="../images/general/azure-ci-new-variable-2.jpg"
   alt="Set npm Registry and token variables"
   title="Set npm Registry and token variables" />
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)"
+<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
   src="../images/general/azure-ci-add-token-variable-1.jpg"
   data-src="../images/general/azure-ci-add-token-variable-1.jpg"
   alt="npm Registry and token variables"
@@ -121,12 +143,12 @@ Add **npm registry** and **token** variables.
 
 We will follow almost the same approach here, the only difference would be that the configuration will be set on [before\_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```json
 before_install:
 - echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
 - echo "//packages.infragistics.com/npm/js-licensed/:_auth=$TOKEN" >> ~/.npmrc
 - echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
-</pre>
+```
 
 The best way to define an environment variable depends on what type of information it will contain, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
 

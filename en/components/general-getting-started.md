@@ -58,7 +58,7 @@ Lastly,  -->
 
 If you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before). We have you covered! All you have to do is execute these commands:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-charts igniteui-angular-core
 npm install --save igniteui-angular-excel igniteui-angular-core
 npm install --save igniteui-angular-gauges igniteui-angular-core
@@ -69,7 +69,7 @@ npm install --save igniteui-angular-spreadsheet igniteui-angular-core
 
 Or
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 yarn add igniteui-angular-charts igniteui-angular-core
 yarn add igniteui-angular-excel igniteui-angular-core
 yarn add igniteui-angular-gauges igniteui-angular-core
@@ -92,7 +92,7 @@ We are now ready to use the Ignite UI for Angular map component in our markup! L
 
 Finally, we can run our new application by using one of the following commands:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm run-script start
 </pre>
 

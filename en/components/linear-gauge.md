@@ -31,7 +31,7 @@ The following sample demonstrates how setting multiple properties on the same li
 
 When installing the gauge package, the core package must also be installed.
 
-<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 </pre>
