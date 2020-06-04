@@ -22,12 +22,12 @@ Infragistics Ignite UI Dock Manager Web Component is available as a separate npm
 > More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting_started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
 
 ### Upgrading packages using our Angular Schematics or Ignite UI CLI
-If Ignite UI for Angular has been added to the project using [`ng add`](./getting_started.md) or the project has been created through our [schematics collection or Ignite UI CLI](./cli-overview.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages.
+If Ignite UI for Angular has been added to the project using [`ng add`](./getting_started.md) or the project has been created through our [schematics collection or Ignite UI CLI](./cli-overview.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
 
 >[!NOTE]
 > As the process changes packages, we recommend that you update your project first before switching to avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update_guide.md).
 
-Run the following schematic in your project:
+Depending on your project setup, either run the following schematic in your project:
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
@@ -38,6 +38,10 @@ ig upgrade-packages
 ```
 The schematic or command will take care of switching the package dependencies of the project and update source references.
 You'll be asked to login to our npm registry if not already setup.
+
+>[!NOTE]
+> If your project is using [`yarn`](https://yarnpkg.com/), make sure to run `upgrade-packages` with the `--skip-install` flag and execute `yarn install` after to properly update your `yarn.lock` as the upgrade command currently uses `npm` for the install.
+
 
 ### How to setup your environment to use the private npm feed
 
@@ -140,7 +144,7 @@ The following information is on how to setup authentication to our private npm r
 ```cmd
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
 //packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
-//packages.infragistics.com/npm/js-licensed/:username:{YOUR_USERNAME}
+//packages.infragistics.com/npm/js-licensed/:username={YOUR_USERNAME}
 //packages.infragistics.com/npm/js-licensed/:always-auth=true
 ```
 
