@@ -12,14 +12,15 @@ The Infragistics Angular Excel Engine enables you to save data to and load data 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
 ### Change Default Font
 
-First create a new instance of [`IWorkbookFont`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html). Next, add the new font to the `styles` collection of the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
+First create a new instance of [`IWorkbookFont`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html). Next, add the new font to the [`styles`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) collection of the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
 
 ```ts
 var workbook = new Workbook();
@@ -31,11 +32,11 @@ font.height = 16 * 20;
 
 ### Setting Workbook Properties
 
-Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object’s `documentProperties` property. The available properties are:
+Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object’s [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) property. The available properties are:
 
--   `author`
+-   `Author`
 
--   `title`
+-   `Title`
 
 -   `subject`
 
@@ -67,7 +68,7 @@ The protection is not enforced via the Infragistics Excel Engine's object model.
 
 Protection is applied to a workbook by invoking its `protect` method.
 
-When a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) is protected without a password, the end user may unprotect the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) in Excel without having to supply a password. To programatically unprotect a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html), one may use the `unprotect` method.
+When a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) is protected without a password, the end user may unprotect the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) in Excel without having to supply a password. To programmatically unprotect a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html), one may use the `unprotect` method.
 
 When a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) is protected, the values of the properties of the [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html) instance from this [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)'s `protection` property indicate the disabled operations.
 

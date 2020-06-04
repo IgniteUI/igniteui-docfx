@@ -17,6 +17,8 @@ The Angular financial chart component is capable of handling high volumes of dat
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 

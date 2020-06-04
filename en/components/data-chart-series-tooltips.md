@@ -17,6 +17,8 @@ The Angular data chart component has support for showing tooltips along with a c
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

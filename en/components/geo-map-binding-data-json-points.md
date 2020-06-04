@@ -19,6 +19,7 @@ With the Ignite UI for Angular map, you can plot geographic data loaded from var
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 ### Data Example

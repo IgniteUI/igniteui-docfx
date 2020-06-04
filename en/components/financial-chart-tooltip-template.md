@@ -17,6 +17,8 @@ The Angular financial chart component provides default tooltips for each type of
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-tooltip-template-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

@@ -20,6 +20,7 @@ By the default, the Ignite UI for Angular map component already displays geograp
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 ### Code Snippet

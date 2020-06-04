@@ -19,6 +19,7 @@ Use the map component's [`IgxGeographicHighDensityScatterSeriesComponent`]({envi
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 The demo above shows the [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.

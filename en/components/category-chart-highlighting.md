@@ -17,6 +17,8 @@ This topic provides conceptual information about the highlighting features of th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 

@@ -19,6 +19,8 @@ is similar to [Scatter Marker Series](data-chart-type-scatter-point-series.md) w
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-bubble-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

@@ -4,7 +4,7 @@ _description: Use the ZoomSlider within the data chart to easily display a subse
 mentionedTypes: ['ZoomSlider, XamDataChart']
 ---
 
-### Zoom Slider
+### Zoom Slider Overview
 
 The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart or CategoryChart.
 
@@ -17,6 +17,7 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="zoomslider-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -35,8 +36,10 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
 
 When installing the chart package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 

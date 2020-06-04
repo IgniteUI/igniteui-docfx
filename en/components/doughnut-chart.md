@@ -6,7 +6,7 @@ mentionedTypes: ['XamDoughnutChart']
 
 ---
 
-## Doughnut Chart
+## Doughnut Chart Overview
 
 The Ignite UI for Angular doughnut chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
@@ -18,6 +18,8 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -26,12 +28,14 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 
 When installing the charts package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:10px;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 
-The Angular douhgnut chart component requires the following modules:
+The Angular doughnut chart component requires the following modules:
 
 ```ts
 // app.module.ts
@@ -64,7 +68,7 @@ this.data = [
 ];
 ```
 
-The following code demonstradtes how to bind the doughnut chart to the above data.
+The following code demonstrates how to bind the doughnut chart to the above data.
 
 ```html
  <igx-doughnut-chart height="100%" width="100%">
@@ -80,7 +84,7 @@ The following code demonstradtes how to bind the doughnut chart to the above dat
 
 ### Multiple Rings
 
-The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data spirce, or they can share a common data source. For example, the following 2 data sources
+The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data item, or they can share a common data source. For example, the following 2 data sources
 are used to bind to multiple rings:
 
 ```ts
@@ -139,6 +143,8 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -165,6 +171,8 @@ The doughnut chart component exposes the API for setting the state of one or mor
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -193,6 +201,8 @@ You can change the exploded slices by changing the contents of the `ExplodedSlic
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -209,4 +219,6 @@ The doughnut chart component supports the use of a legend. The legend used is th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
