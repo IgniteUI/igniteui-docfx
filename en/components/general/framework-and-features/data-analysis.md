@@ -79,6 +79,28 @@ Keep in mind (sample related):
 - If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
 - If on new selection the data is not compatible for some of the charts - a warning "Incompatible data" will be shown.
 
+### Data Analysis Package
+
+You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#license-agreements), you will have access to the private feed. 
+
+Lets start with:
+
+- Installing the package in your application
+```cmd
+npm install @infragistics/igniteui-angular-extras
+```
+
+- After the package is installed go ahead and:
+  - Add the `IgxExtrasModule` to your app.module.ts
+  - Apply `igxChartIntegration`, `igxConditionalFormatting`, `igxContextMenu` directives to your grid
+
+```html
+<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu 
+    [data]="localData" [autoGenerate]="true" [paging]="true" >
+</igx-grid>
+```
+And that's it! You can not perform **cell range selection** and follow the data analysis flow.
+
 ### Data Analysis Button
 The data analysis button is the outlet to visualize your selected data in various ways:
 
