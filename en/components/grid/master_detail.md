@@ -49,7 +49,7 @@ Context of the template is the master record data, so that values from the maste
 
 ##### API
 
-The expansion states can be controlled via the [`expansionStates`](environment:angularApiUrl}/classes/igxgridcomponent.html#expansionStates) input of the `igxGrid`. States are stored in key-value pairs [row identifier, expansion state]. The property gets/sets the current expansion states and supports two-way binding:
+The expansion states can be controlled via the [`expansionStates`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expansionStates) input of the `igxGrid`. States are stored in key-value pairs [row identifier, expansion state]. The property gets/sets the current expansion states and supports two-way binding:
 
 ```html
   <igx-grid [(expansionStates)]='expansionState' >
