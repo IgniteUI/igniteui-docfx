@@ -72,12 +72,12 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
 </div>
 
 > [!NOTE]
-> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
+> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting data, go ahead and create a couple of charts and pin them (by dragging) to the available areas
 
 Keep in mind (sample related):
 - On new data selection chart data will be updated.
 - If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
-- If on new selection the data is not compatible for some of the charts - a warning "Incompatible data" will be shown.
+- If selected data is not compatible for any of the charts - an "Incompatible data" warning message will be shown.
 
 ### Data Analysis Package
 
@@ -99,7 +99,7 @@ npm install @infragistics/igniteui-angular-extras
     [data]="localData" [autoGenerate]="true" [paging]="true" >
 </igx-grid>
 ```
-And that's it! You can not perform **cell range selection** and follow the data analysis flow.
+And that's it! You can now perform **cell range selection** and follow the data analysis flow.
 
 ### Data Analysis Button
 The data analysis button is the outlet to visualize your selected data in various ways:
