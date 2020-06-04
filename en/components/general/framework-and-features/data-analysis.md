@@ -87,7 +87,7 @@ Lets start with:
 
 - Installing the package in your application
 ```cmd
-npm install @infragistics/igniteui-angular-extras
+npm install @infragistics/igniteui-angular-extras igniteui-angular-core igniteui-angular-charts
 ```
 
 - After the package is installed go ahead and:
