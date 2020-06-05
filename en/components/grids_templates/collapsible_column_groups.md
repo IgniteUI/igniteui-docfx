@@ -56,7 +56,7 @@ The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@
 
 *Collapsible Column Groups* is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. When a column group is collapsed, a subset of the columns will be shown to the end-user and the other child columns of the group will hide. Each collapsed/expanded column can be bound to the grid data source, or it may be unbound, thus calculated.
 
-In order to define a column group as `collapsible`, you need to set the property to `[collapsible]="true"` and also keep in mind that you need to define the property `visibleWhenCollapse` to at least two child columns: at least one column must be visible when the group is collapsed (`[visibleWhenCollapse]="true"`) and at least one column must be hidden when the group is expanded (`[visibleWhenCollapse]="false"`), otherwise the **collapsible functionality will be disabled**. If  `visibleWhenCollapse` is not specified for some of the child columns, then this column will be always visible no matter whether the parent state is expanded or collapsed.
+In order to define a column group as `collapsible`, you need to set the property to `[collapsible]="true"` and also keep in mind that you need to define the property `visibleWhenCollapsed` to at least two child columns: at least one column must be visible when the group is collapsed (`[visibleWhenCollapsed]="true"`) and at least one column must be hidden when the group is expanded (`[visibleWhenCollapsed]="false"`), otherwise the **collapsible functionality will be disabled**. If  `visibleWhenCollapsed` is not specified for some of the child columns, then this column will be always visible no matter whether the parent state is expanded or collapsed.
 
 So let's see the markup below:
 
@@ -84,7 +84,7 @@ And now let's sum up: every child column has tree states:
 -	Can be visible, when its parent is expanded;
 -	Can be visible, when its parent is collapsed;
 
-The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expand]="false"`.
+The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expanded]="false"`.
 
 ### Expand/Collapse indicator template
 
