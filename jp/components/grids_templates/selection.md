@@ -25,7 +25,7 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 
 ### @@igComponent Selection 概要
 
-Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row_selection.md)、[セル選択](cell_selection.md)、[列選択](column_selection.md)の 3 つの選択モードを提供します。グリッドのデフォルトの選択モードは、**列選択**と組み合わせた**複数セルの選択**です。 選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) 、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
+Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row_selection.md)、[セル選択](cell_selection.md)、[列選択](column_selection.md)の 3 つの選択モードを提供します。グリッドのデフォルトの選択モードは、**列選択**と組み合わせた**複数セルの選択**です。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
 
 プロパティ [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
