@@ -72,7 +72,8 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> **Note:** The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
+> [!NOTE] 
+> The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
@@ -105,6 +106,16 @@ public exportButtonHandler() {
 ```
 
 If all went well, you should see the @@igxName component and a button under it. When pressing the button, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format.
+
+#### Export All Data
+
+There are some cases when you might be using remote operations like *Paging* and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter_excel.html#excel-exporter) and pass the whole data collection, if available. Example:
+
+```ts
+public exportButtonHandler() {
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+}
+```
 
 #### Customizing the Exported Content
 

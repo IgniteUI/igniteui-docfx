@@ -16,9 +16,6 @@ First run the [**`ng update`**](https://angular.io/cli/update) command which wil
 ng update
 ```
 
-> [!NOTE]
-> We recommend commit all your changes before proceeding with the update. 
-
 To update the **Ignite UI for Angular** package run the following command:
 ```cmd
 ng update igniteui-angular
@@ -75,6 +72,17 @@ import { HammerModule } from "@angular/platform-browser";
     ]
 })
 ```
+
+Due to name changes made in some of the `Enumerations` we export, manual update is needed for their members. Here's a list of all changes made that require manual update:
+
+* AvatarType.`DEFAULT` -> IgxAvatarType.`CUSTOM`
+* Type.`DEFAULT` -> IgxBadgeType.`PRIMARY`
+* IgxCardType.`DEFAULT` -> IgxCardType.`ELEVATED`
+* IgxCardActionsLayout.`DEFAULT` -> IgxCardActionsLayout.`START`
+* IgxDividerType.`DEFAULT` -> IgxDividerType.`SOLID`
+* IgxProgressType.`DANGER` -> IgxProgressType.`ERROR`
+
+The `ng update` process will update all enumeration names, like `AvatarType`, `Type`, et al. to `IgxAvatarType` and `IgxBadgeType`, respectively. All other enumeration member names remain unchanged. 
 
 ### From 8.1.x to 8.2.x
 

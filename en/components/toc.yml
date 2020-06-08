@@ -9,6 +9,9 @@
 - name: Getting started
   href: general/getting_started.md
   new: false
+- name: Breaking Changes
+  href: general-breaking-changes-dv.md
+  new: true
 - name: Update guide
   href: general/update_guide.md
   new: false
@@ -130,7 +133,7 @@
       new: false
     - name: Selection
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: Row selection
           href: grid/row_selection.md
@@ -355,7 +358,7 @@
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
