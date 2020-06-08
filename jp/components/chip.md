@@ -7,92 +7,73 @@ _language: ja
 
 ### Chip
 
-[`IgxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) は情報を小さな楕円内に表示する視覚的なコンポーネントです。Chip は、テンプレート化、削除、選択が可能で複数の Chip の順序を変更して視覚的に接続することもできます。Chip は「チップ領域」と呼ばれるコンテナーに配置され、このコンテナーは Chip の間の操作を管理します。
+[Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
 
-#### デモ
+### デモ
 
-<div class="sample-container loading" style="height:650px">
-    <iframe id="chip-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 100px; padding-top: 10px">
+    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### Chip の初期化
+### 使用方法
 
-[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) はチップ要素のメイン クラスで [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップ領域のメイン クラスです。チップ領域はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要の複雑なシナリオの処理で使用されます。[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
+はじめに、**app.module.ts** ファイルに **IgxChipsModule** をインポートします。
+```typescript
+// app.module.ts
 
-[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) を [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) と使用した例:
+...
+import { IgxChipsModule } from 'igniteui-angular';
 
-```html
-<igx-chips-area>
-    <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
-        <span>{{chip.text}}</span>
-    </igx-chip>
-</igx-chips-area>
+@NgModule({
+    ...
+    imports: [..., IgxChipsModule],
+    ...
+})
+export class AppModule {}
 ```
 
-Chip の状態:
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
 
-![Default](../images/chip/default_chip.jpg) ![Hover](../images/chip/hover_chip.jpg) ![Focus](../images/chip/focused_chip.jpg)
-
-### 機能
+```html
+<igx-chip *ngFor="let chip of chipList" [id]="chip.id">
+    {{chip.text}}
+</igx-chip>
+```
 
 #### 選択
 
 ![Default Selection](../images/chip/selecting_default.gif)
 
-セクションは入力 [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) を設定して有効にできます。チップをクリックするか、チップを `Tab` キーによってフォーカスして `Space` キーを押すと選択できます。選択されたチップをクリックするか、チップがフォーカスされる場合に `Space` キーを押すと選択解除できます。
-
-イベント [`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) は、[`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) 変更の選択ステートが変更されたときに発生されます。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。インタラクションによって行わない場合は [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) をコードで設定します。[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` があります。
-
-デフォルトでアイコンがチップが選択されていることを示します。詳細なカスタマイズが可能で [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) 入力によって行うことができます。型 `TemplateRef` の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
-
-選択アイコンのカスタマイズ例:
-
-![Custom Selection](../images/chip/selecting_custom.gif)
+選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` になります。
 
 ```html
-<igx-chips-area #chipsArea>
-    <igx-chip *ngFor="let chip of chipList" [selectable]="'true'" [selectIcon]="mySelectIcon">
-        <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-        <span>{{chip.text}}</span>
-    </igx-chip>
-</igx-chips-area>
-<ng-template #mySelectIcon>
-    <igx-icon fontSet="fa-solid" name="fa-check-circle"></igx-icon>
-</ng-template>
+<igx-chip *ngFor="let chip of chipList" [selectable]="true">
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
 ```
 
 #### 削除
 
 ![Removing](../images/chip/removing_default.gif)
 
-削除は、[`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効な場合は、チップの最後に削除ボタンが描画されます。チップのフォーカス時に削除ボタンのクリックまたは `Delete` キーの押下などエンドユーザーがインタラクションを実行した場合、[`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントが発生されます。 
+削除は、[`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効な場合は、チップの最後に削除ボタンが描画されます。チップを削除すると、[`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントが発生します。
 
-チップはユーザーがチップを削除したい場合に自体をデフォルトでテンプレートから削除しません。[`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントを使用して手動で対応する必要があります。
-
-削除アイコンをカスタマイズする必要がある場合、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用できます。型 `TemplateRef` の値を取得してデフォルトの削除アイコンの代わりに描画します。つまり、チップ自体ですべて処理されている際も削除ボタンを自由にカスタマイズできます。
-
-![Remove icons](../images/chip/remove_icons.jpg)
-
-チップ削除の処理と削除アイコンのカスタマイズ例:
+デフォルトで、チップは削除アイコンをクリックしても DOM ツリーから自動的に削除されません。削除は手動で処理する必要があります。
 
 ```html
-<igx-chips-area #chipsArea>
-    <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" [removeIcon]="myRemoveIcon" (onRemove)="chipRemoved($event)">
-        <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-        <span>{{chip.text}}</span>
-    </igx-chip>
-</igx-chips-area>
-<ng-template #myRemoveIcon>
-    <igx-icon fontSet="fa-solid" name="fa-trash-alt"></igx-icon>
-</ng-template>
+<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" (onRemove)="chipRemoved($event)">
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
 ```
 
 ```typescript
-public chipRemoved(event) {
+public chipRemoved(event: IBaseChipEventArgs) {
     this.chipList = this.chipList.filter((item) => {
         return item.id !== event.owner.id;
     });
@@ -100,45 +81,92 @@ public chipRemoved(event) {
 }
 ```
 
-#### 移動/ドラッグ
+#### ドラッグ
 
-![Dragging](../images/chip/dragging.gif)
-
-ユーザーはドラッグしてチップの位置を変更できます。移動/ドラッグ機能はデフォルトで無効ですが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) オプションを使用して有効にできます。データソースでチップの移動を手動的に処理する必要がありますが、チップが別のチップの上にドラッグされて置き換わる場合に新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
+ドラッグは、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効にすると、チップをクリックしてドラッグできます。
 
 ```html
-<igx-chips-area (onReorder)="chipsOrderChanged($event)">
-    <igx-chip *ngFor="let chip of chipList" [draggable]="'true'">
-        <igx-icon igxPrefix>{{chipElem.icon}}</igx-icon>
-        {{chip.text}}
-    </igx-chip>
-</igx-chips-area>
+<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {chip.text}}
+</igx-chip>
 ```
 
-```typescript
-public chipsOrderChanged(event) {
-    const newChipList = [];
-    for (const chip of event.chipsArray) {
-        const chipItem = this.chipList.filter((item) => {
-            return item.id === chip.id;
-        })[0];
-        newChipList.push(chipItem);
+>[!NOTE]
+>チップの順序を並べ替えるには、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) を使用してイベントを処理する必要があります。
+
+<div class="divider"></div>
+
+**デモ サンプルを作成するには、上記の機能を使用します。**
+
+```html
+<igx-chip
+*ngFor="let chip of chipList"
+[id]="chip.id"
+[selectable]="true"
+[removable]="true"
+(onRemove)="chipRemoved($event)"
+>
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
+```
+
+次に、`chipList` と [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントを処理する関数を追加します。
+
+```ts
+import { IBaseChipEventArgs } from "igniteui-angular";
+...
+public chipList = [
+    {
+        text: "Country",
+        id: "1",
+        icon: "place"
+    },
+    {
+        text: "City",
+        id: "2",
+        icon: "location_city"
+    },
+    {
+        text: "Town",
+        id: "3",
+        icon: "store"
+    },
+    {
+        text: "First Name",
+        id: "4",
+        icon: "person_pin"
     }
-    this.chipList = newChipList;
+];
+
+private changeDetectionRef: any;
+
+public chipRemoved(event: IBaseChipEventArgs) {
+    this.chipList = this.chipList.filter((item) => {
+        return item.id !== event.owner.id;
+    });
+    this.changeDetectionRef.detectChanges();
 }
 ```
 
+すべて適切に設定できると、ブラウザーで以下が表示されます。
+
+<div class="sample-container loading" style="height: 100px; padding-top: 10px">
+    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
 #### Chip テンプレート
 
-[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の主要な構造は、`select icon`, `prefix`、`chip content`、`suffix` と `remove button` で構成されています。すべての要素のテンプレート化できます。
+[`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) のすべての要素がテンプレート化できます。
 
-チップのコンテンツは、チップの `prefix` および `suffix` を定義する要素以外のテンプレートに定義されるコンテンツです。コンテンツ タイプを定義できます。
-
-`prefix` と `suffix` は、テンプレート化可能な実際のチップ領域内の要素です。`IgxPrefix` と `IxgSuffix` それぞれのディレクティブを使用して指定できます。
+`IgxPrefix` と `IgxSuffix` ディレクティブを使用して、チップの `prefix` と `suffix` をテンプレート化できます。
 
 ![Prefix and Suffix](../images/chip/prefix_suffix.jpg)
-
-`prefix` と `suffix` 両方のアイコンを使用した例と `content` のテキスト:
 
 ```html
 <igx-chip>
@@ -148,7 +176,7 @@ public chipsOrderChanged(event) {
 </igx-chip>
 ```
 
-チップの描画を [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) してカスタマイズしディメンションを変更できます。デフォルトで `comfortable` に設定されます。チップ内すべてが相対位置を保持する際に `cosy` または `compact` に設定できます。 
+チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
 
 ![Density](../images/chip/density.jpg)
 
@@ -165,13 +193,71 @@ public chipsOrderChanged(event) {
 </igx-chip>
 ```
 
-以下はチップを更にカスタマイズした例です。
+`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
 
-![Advanced customizing](../images/chip/advanced_customizing.jpg)
+![Custom Selection](../images/chip/selecting_custom.gif)
+
+```html
+<igx-chip *ngFor="let chip of chipList" [selectable]="true" [selectIcon]="mySelectIcon">
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
+
+<ng-template #mySelectIcon>
+    <igx-icon>check_circle</igx-icon>
+</ng-template>
+```
+
+`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
+
+![Remove icons](../images/chip/remove_icons.jpg)
+
+```html
+<igx-chip *ngFor="let chip of chipList"  [removable]="true" [removeIcon]="myRemoveIcon">
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
+
+<ng-template #myRemoveIcon>
+    <igx-icon>delete</igx-icon>
+</ng-template>
+```
+
+### Chip Area
+
+[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要となる複雑なシナリオの処理で使用されます。
+
+#### Chip の並べ替え
+
+![Dragging](../images/chip/dragging.gif)
+
+チップの位置を変更するため、ユーザーによってドラッグができます。ドラッグはデフォルトで無効になっていますが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) 入力プロパティを使用して有効にできます。実際のチップの並べ替えは手動で処理する必要があります。チップが別のチップの上にドラッグされる場合に、新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
+
+```html
+<igx-chips-area (onReorder)="chipsOrderChanged($event)">
+    <igx-chip *ngFor="let chip of chipList" [draggable]="'true'">
+        <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+        {{chip.text}}
+    </igx-chip>
+</igx-chips-area>
+```
+
+```typescript
+public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
+    const newChipList = [];
+    for (const chip of event.chipsArray) {
+        const chipItem = this.chipList.filter((item) => {
+            return item.id === chip.id;
+        })[0];
+        newChipList.push(chipItem);
+    }
+    this.chipList = newChipList;
+}
+```
 
 #### キーボード ナビゲーション
 
-チップをフォーカスするには `Tab` キーを押すか、それをクリックします。チップを順序変更するにはキーボード ナビゲーションを使用します。
+チップをフォーカスするには `Tab` キーを押すか、それをクリックします。チップがチップ領域にある場合、キーボード ナビゲーションを使用して順序を変更することができます。
 
 - チップがフォーカスされた場合のキーボード コントロール:
 
@@ -194,123 +280,169 @@ public chipsOrderChanged(event) {
 
   - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
 
+<div class="divider--half"></div>
+
+以下は、IgxAvatar をプレフィックスとして使用し、すべてのチップにカスタム アイコンを使用するチップ領域の例です。
+
+```html
+<igx-chips-area (onReorder)="chipsOrderChanged($event)">
+    <igx-chip
+    *ngFor="let chip of chipList"
+    [id]="chip.id"
+    [selectable]="true"
+    [selectIcon]="mySelectIcon"
+    [removable]="true"
+    [removeIcon]="myRemoveIcon"
+    (onRemove)="chipRemoved($event)"
+    [draggable]="'true'">
+        <igx-avatar
+        class="chip-avatar-resized"
+        igxPrefix
+        [src]="chip.photo"
+        roundShape="true"
+        ></igx-avatar>
+        {{chip.name}}
+    </igx-chip>
+</igx-chips-area>
+
+<ng-template #mySelectIcon>
+    <igx-icon>check_circle</igx-icon>
+</ng-template>
+
+<ng-template #myRemoveIcon>
+    <igx-icon>delete</igx-icon>
+</ng-template>
+```
+
+チップに合わせてアバターのサイズを変更します。
+
+```scss
+.chip-avatar-resized {
+    width: 2em;
+    height: 2em;
+    min-width: 2em;
+}
+```
+`chipList` とイベントを処理する関数を追加します。
+
+```ts
+import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from "igniteui-angular";
+...
+public chipList = [
+    {
+        id: "770-504-2217",
+        name: "Terrance Orta",
+        photo: "https://www.infragistics.com/angular-demos/assets/images/men/27.jpg"
+    },
+    {
+        id: "423-676-2869",
+        name: "Richard Mahoney",
+        photo: "https://www.infragistics.com/angular-demos/assets/images/men/13.jpg"
+    },
+    {
+        id: "859-496-2817",
+        name: "Donna Price",
+        photo: "https://www.infragistics.com/angular-demos/assets/images/women/50.jpg"
+    }
+];
+
+private changeDetectionRef: any;
+
+public chipRemoved(event: IBaseChipEventArgs) {
+    this.chipList = this.chipList.filter((item) => {
+        return item.id !== event.owner.id;
+    });
+    this.changeDetectionRef.detectChanges();
+}
+
+public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
+    const newChipList = [];
+    for (const chip of event.chipsArray) {
+        const chipItem = this.chipList.filter((item) => {
+            return item.id === chip.id;
+        })[0];
+        newChipList.push(chipItem);
+    }
+    this.chipList = newChipList;
+}
+```
+
+すべてが適切に設定されていれば、ブラウザーで以下が表示されます。
+
+#### デモ
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="chip-area-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-area-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
 ### スタイル設定
-igxChip を使用すると、[Ignite UI for Angular Theme ライブラリ](./themes/component-themes.md)でスタイルを設定できます。チップの [テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme) は、チップの多様なカスタマイズを可能にする多数のプロパティを公開します。        
+チップのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
 
- #### グローバル テーマのインポート
-定義済みのチップ レイアウトのスタイリングを開始するには、すべてのスタイリング機能と mixin が配置されている `index` ファイルをインポートする必要があります。  
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```   
-
-#### カスタム テーマの定義
-次に、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) を拡張し、必要に応じてチップをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
-   
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+最も簡単な方法は、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)を拡張する新しいテーマを作成し、チップの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
 $custom-theme: igx-chip-theme(
-    $background: #494949,
-    $text-color: #e2e2e2,
-    $remove-icon-color: #e2e2e2,
-    $remove-icon-color-focus: #ffcd0f,
-    $hover-text-color: #f2f2f2,
-    $selected-background: #ffcd0f,
-    $selected-border-color: #ffcd0f,
-    $hover-selected-background: #ebbf11,
-    $focus-selected-background: #ffcd0f,
-    $border-radius: 5px
-);
-```   
-
-#### カスタム カラー パレットの定義
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
-
-```scss
-$black-color: #494949;
-$yellow-color: #ffcd0f;
-
-$custom-palette: igx-palette(
-    $primary: $black-color,
-    $secondary: $yellow-color
-);
-```   
-
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
-
-```scss
-$custom-theme: igx-chip-theme(
-    $background: igx-color($custom-palette, "primary", 500),
-    $text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $remove-icon-color: igx-contrast-color($custom-palette, "primary", 500),
-    $remove-icon-color-focus: igx-color($custom-palette, "secondary", 500),
-    $hover-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $selected-background: igx-color($custom-palette, "secondary", 500),
-    $selected-border-color: igx-color($custom-palette, "secondary", 500),
-    $hover-selected-background: igx-color($custom-palette, "secondary", 600),
-    $focus-selected-background: igx-color($custom-palette, "secondary", 500),
+    $background: #011627,
+    $hover-background:  #011627dc,
+    $focus-background: #0116276c,
+    $selected-background: #ECAA53,
+    $hover-selected-background: #ECAA53,
+    $focus-selected-background: #ECAA53,
+    $text-color: #FEFEFE,
+    $remove-icon-color: #f14545,
+    $remove-icon-color-focus: #da0000,
     $border-radius: 5px
 );
 ```
 
-#### カスタム スキーマの定義
-[**スキーマ**](./themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ** はテーマを作成させるための方法です。   
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマのいずれかを拡張します。この場合、`$_light_chip` を使用します。   
+#### テーマを含む
+
+<div class="divider"></div>
+
+最後にコンポーネントのテーマをアプリケーションに含めます。
+
+`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
-$custom-chip-schema: extend($_light-chip, (
-    background: (igx-color("primary", 500)),
-    text-color: (igx-contrast-color("primary", 500)),
-    hover-text-color: (igx-contrast-color("primary", 500)),
-    remove-icon-color: (igx-contrast-color("primary", 500)),
-    remove-icon-color-focus: (igx-contrast-color("secondary", 500)),
-    selected-background: (igx-color("secondary", 500)),
-    selected-border-color: (igx-color("secondary", 500)),
-    hover-selected-background: (igx-color("secondary", 600)),
-    focus-selected-background: (igx-color("secondary", 500)),
-    border-radius: 5px
-));
-```   
-カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
-
-```scss
-$my-custom-schema: extend($light-schema, (
-    igx-chip: $custom-chip-schema
-));
-
-$custom-theme: igx-chip-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
+ @include igx-chip($custom-theme);
 ```
-
-#### カスタム テーマの適用
-テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
-```scss
-@include igx-chip($custom-theme);
-```
-
-#### スコープ コンポーネント テーマ
-
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
-
-このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
-
- >[!NOTE]
- >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
- >[!NOTE]
- >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
-    ::ng-deep {
+     ::ng-deep {
         @include igx-chip($custom-theme);
     }
 }
-```   
+```
+
+<div class="divider"></div>
+
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+
+```scss
+@include igx-css-vars($custom-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+
+```scss
+:host {
+    @include igx-css-vars($custom-theme);
+}
+```
 
 #### デモ
-<div class="sample-container loading" style="height:650px">
+<div class="sample-container loading" style="height:100px">
     <iframe id="chip-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
