@@ -95,7 +95,7 @@ npm install @infragistics/igniteui-angular-extras
 npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angular-charts
 ```
 
-- After the packages installation go ahead and:
+- After the installation of the packages go ahead and:
   - Add the `IgxExtrasModule` to your app.module.ts
   - Apply `igxChartIntegration`, `igxConditionalFormatting`, `igxContextMenu` directives to your grid
 
