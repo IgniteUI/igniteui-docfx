@@ -87,10 +87,15 @@ Lets start with:
 
 - Installing the package in your application
 ```cmd
-npm install @infragistics/igniteui-angular-extras igniteui-angular-core igniteui-angular-charts
+npm install @infragistics/igniteui-angular-extras
 ```
 
-- After the package is installed go ahead and:
+- Installing the package peer dependencies
+```cmd
+npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angular-charts
+```
+
+- After the installation of the packages go ahead and:
   - Add the `IgxExtrasModule` to your app.module.ts
   - Apply `igxChartIntegration`, `igxConditionalFormatting`, `igxContextMenu` directives to your grid
 
