@@ -179,6 +179,9 @@ steps:
 
 ```
 
+> [!NOTE]
+> Based on the environment, you should set the following *.npmrc file* path. For Linux, use `$HOME/.npmrc`, and for Windows use `%userprofile%\.npmrc`.
+
 Now we need to add variables for the *npm registry*, *scope* and *token*. There are two ways to do so:
 
  #### [Define Variable Group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) from the Library page under Pipelines.
