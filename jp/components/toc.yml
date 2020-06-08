@@ -4,6 +4,9 @@
 - name: Angular - 完全ガイド
   href: general/angular-grid-overview-guide.md
   new: true
+- name: ライセンス
+  href: general/ignite-ui-licensing.md
+  new: true
 - name: 作業の開始
   href: general/getting_started.md
   new: false
@@ -53,7 +56,7 @@
       new: false
 - name: フレームワーク & 機能
   href: general/framework-and-features/framework-and-features.md
-  new: false
+  new: true
   items:
     - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
@@ -286,6 +289,7 @@
     - name: キーボードナビゲーション
       href: treegrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: false
@@ -386,6 +390,7 @@
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
       new: false
@@ -1049,6 +1054,9 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Date Range Picker
+  href: date_range_picker.md
+  new: true
 - name: Month Picker
   href: month_picker.md
   new: false

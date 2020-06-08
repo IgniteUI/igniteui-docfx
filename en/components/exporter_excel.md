@@ -39,7 +39,8 @@ import { IgxExcelExporterService } from "igniteui-angular";
 export class AppModule {}
 ```
 
-> **Note:** The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
+> [!Note] 
+> The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
