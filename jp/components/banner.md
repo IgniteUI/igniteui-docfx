@@ -5,31 +5,24 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 ## Banner
-
 <p class="highlight">
 Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム アクション ボタンやアイコンの表示を設定できます。</p>
-<div class="divider"></div>
 
-### Banner デモ
+### デモ
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="banner-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/banner-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 530px">
+    <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-## 使用方法
+### 使用方法
 
-Banner コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+#### はじめに
 
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに `IgxBannerModule` をインポートします。
+Banner コンポーネントを初期化にするには、まず `IgxBannerModule` を **app.module.ts** ファイルにインポートします。 
 
 ```typescript
 // app.module.ts
@@ -44,56 +37,48 @@ import { IgxBannerModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### ベーシック Banner
 
-Banner コンポーネントを表示するには、[`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) メソッドを呼び出してボタン クリックで呼び出します。Banner メッセージを構成するには、Banner コンテンツ内のテキストを渡します。指定した Banner 領域にテキストが表示され、表示時に Banner はデフォルト テンプレートを使用します。
+#### Banner の表示
+
+Banner コンポーネントを表示するには、ボタン クリックで[`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。 
 
 ```html
 <!--banner.component.html-->
 
+<igx-icon (click)="connectionBanner.open()">Refresh</igx-icon>
+...
 <igx-banner #connectionBanner>
     You are currently offline.
 </igx-banner>
-...
-<button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
+
 ```
 
-Banner は、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。Banner は、閉じるための最小限のユーザー操作 (1-2 クリックなど) を要求する非侵入型コンテンツ表示します。
+> [!NOTE]
+> `IgxBannerModule` には、バナーを閉じるデフォルトの `Dismiss` バナーボタンが含まれています。
 
-#### ベーシック Banner デモ
+### 例
 
-<div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-
-### Banner のテンプレート化
-
-[`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) は、マテリアル デザイン Banner ガイドラインにできるかぎり準拠しながら簡単にコンテンツをテンプレート化します。
+[`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) は、マテリアル デザイン バナー ガイドラインにできるかぎり準拠しながらコンテンツをテンプレート化します。
 
 #### Banner メッセージの変更
 
-`igx-banner` タグに渡されるコンテンツを変更して Banner に表示されるメッセージを変更できます。以下は、’Connection' Banner のコンテンツを変更してより多くの情報を提供します。
+`igx-banner` タグに渡されるコンテンツを変更することによりバナーに表示されるメッセージを設定できます。指定したバナー領域にテキストが表示され、表示時にバナーはデフォルト テンプレートを使用します。以下は、サンプル バナーのコンテンツを変更してより多くの情報を提供します。
 
 ```html
     <!--banner.component.html-->
     <igx-banner #connectionBanner>
         You have lost connection to the internet. This app is offline.
     </igx-banner>
-    ...
-    <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 #### アイコンの追加
 
-Banner コンテンツに [`igx-icon`](icon.md) を渡すことができ、常に Banner メッセージの最初に配置されます。
+[`Igx-icon`](icon.md) は、バナーのコンテンツに渡すことでバナーに表示できます。Icon は常にバナー メッセージの最初に配置されます。
 
 > [!NOTE]
-> 複数の `igx-icon` 要素が Banner の直接の子孫として挿入される場合、Banner はそれらすべてを最初に配置しようとします。`igx-icon` は 1 つのみ、直接渡すことに注意してください。Banner メッセージのアイコンを使用する場合、`span` タグでラップしてください。
+> 複数の `igx-icon` 要素がバナーの直接の子孫として挿入される場合、バナーはそれらすべてを最初に配置しようとします。`igx-icon` は 1 つのみ、直接渡すことに注意してください。
 
-`Igx-icon` を Banner に渡す場合、`igx-banner` のコンテンツに挿入してください。
+`igx-icon` をバナーに渡すには、それをバナーのコンテンツに挿入します。
 
 ```html
     <!--banner.component.html-->
@@ -104,14 +89,22 @@ Banner コンテンツに [`igx-icon`](icon.md) を渡すことができ、常�
     ...
 ```
 
-#### カスタム Banner ボタンの追加
+バナー メッセージで `igx-icon` を使用する場合、`span` タグでラップしてください。
 
-`IgxBannerModule` は、Banner ボタンをテンプレート化するためのディレクティブ ([`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html).) を公開します。このディレクティブを使用してデフォルト Banner ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。ほとんどのボタン インタラクションは Banner を閉じることであるため、`click` ハンドラーでBanner の `close()` メソッドを呼び出してください。
+```html
+    <!--banner.component.html-->
+    <igx-banner #connectionBanner>
+        You have lost connection to the internet. This app is offline.
+        <span>
+            <igx-icon>signal_wifi_off</igx-icon>
+        </span>
+    </igx-banner>
+    ...
+```
 
-> [!NOTE]
-> Google の [`マテリアル デザイン` ガイドライン](https://material.io/design/components/banners.html#anatomy) では、Banner に表示するボタンは 2 つまでです。`IgxBannerComponent` は、`igx-banner-actions` タグで 2 要素以上渡すことを明示的に制限**しません**が、マテリアル デザイン ガイドに従うことを推奨します。 
+#### バナー ボタンの変更
 
-Connection Banner のテンプレート化は、`igx-banner-actions` セレクターを使用するカスタム アクション ハンドラーを渡すことができます。
+`IgxBannerModule` は、バナー ボタンをテンプレート化するための [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html) ディレクティブを公開します。このディレクティブはデフォルト バナー ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。
 
 ```html
     <!--banner.component.html-->
@@ -119,73 +112,23 @@ Connection Banner のテンプレート化は、`igx-banner-actions` セレク�
         <igx-icon>signal_wifi_off</igx-icon>
         You have lost connection to the internet. This app is offline.
         <igx-banner-actions>
-            <button igxButton igxRipple (click)="connectionBanner.close()">Continue Offline</button>
-            <button igxButton igxRipple (click)="wifiState = true">Turn On Wifi</button>
+            <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
         </igx-banner-actions>
     </igx-banner>
-    ...
 ```
-
-閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`connectionBanner.close()` のみの呼び出しが可能です。確認操作 (`'Turn On Wifi'`) は追加のロジックを必要とするため、コンポーネントで定義します。`onNetworkStateChange` `Observable`を作成してサブスクライブし、変更するたびに `refreshBanner` メソッドを呼び出します。このメソッドは、`wifiState` に基づいてバナーを切り替えます。
-
-
-```typescript
-// banner.component.ts
-import { Component, OnInit, OnDestroy, ViewChild } from "@angular/core";
-import { IgxBannerComponent } from 'igniteui-angular'
-...
-export class MyBannerComponent implements OnInit, OnDestroy {
-    @ViewChild(IgxBannerComponent) public banner: IgxBannerComponent;
-    public onNetworkStateChange = new Subject(); // Emits when WiFi state is changed
-    private _wifiState = false;
-    public get wifiState(): boolean {
-        return this._wifiState;
-    }
-    public set wifiState(v: boolean) {
-        this._wifiState = v;
-        this.onNetworkStateChange.next();
-    }
-    ...
-    public ngOnInit() { // subscribe to the event;
-        this.banner.open();
-        this.onNetworkStateChange.subscribe(() => this.refreshBanner()); // call change handler
-    }
-
-    public ngOnDestroy(): void { // unsubscribe
-        this.onNetworkStateChange.complete();
-    }
-    ...
-    // Define change handler
-    public refreshBanner() {
-        if (!this.wifiState) {
-            this.banner.open();
-        } else {
-            if (!this.banner.collapsed) {
-                this.banner.close();
-            }
-        }
-    }
-}
-```
-
-サブスクリプションが `wifiState` に対するすべての変更を発生するため、デモ navbar のバナーが WiFi アイコンを使用して切り替えができるようになります。
-
-以下はテンプレート化したバナーのデモです。
-
-#### デモのテンプレート化
 
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### カスタム アニメーションの適用
+#### カスタム アニメーションの適用
 
-Banner コンポーネントは、[`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) にカスタム オープンの設定とアニメーションのクローズを許容する `Input` プロパティを公開します。カスタム アニメーションは、ユーザー定義または [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html) から渡すことができます。Banner で使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる[`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
-スライドインするために Banner が使用するアニメーションを変更します。
+スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 
 ```html
 <!--banner.component.html-->
@@ -209,16 +152,14 @@ export class MyBannerComponent {
 }
 ```
 
-#### アニメーション デモ
-
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-3" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### イベントにバインド
+#### イベントにバインド
 Banner コンポーネントは状態の変更時にイベントを発生します。[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) と [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) と [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) は Banner が閉じるときにエミットされます。*Ing* イベント (`onOpening`, `onClosing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`onOpening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
@@ -242,103 +183,171 @@ export class MyBannerComponent {
 > [!NOTE]
 > 上記が適用されるとオープニング イベントが常にキャンセルされるため、Banner が開くことはありません。
 
+### 高度な例
 
-## スタイル設定
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-banner** の外観を変更できます。[アニメーション サンプル](#アニメーション-デモ)に基づいて構築し、`igx-banner` コンポーネントを変更して、より際立ったメッセージを作成します。`Igx-banner` には `igx-button` が含まれているため、ボタン自体のスタイリングに固有の詳細については、[igx-button スタイリング ガイド](button.md#スタイル設定)を直接参照できます。
+2 つのカスタムボタンのバナーを作成しましょう。1 つは通知を閉じるためのボタンで、もう 1 つは接続をオンにするためのボタンです。`igx-banner-actions` セレクターを使用してカスタム アクション ハンドラーを渡すことができます。
 
-### テーマのインポート
-はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+```html
+<!--banner.component.html-->
+<igx-banner class="offline-banner" #connectionBanner [animationSettings]="animationSettings">
+    <igx-icon>signal_wifi_off</igx-icon>
+        You have lost connection to the internet. This app is offline.
+    <igx-banner-actions>
+        <button igxButton igxRipple (click)="connectionBanner.close()">Continue Offline</button>
+        <button igxButton igxRipple (click)="wifiState = true">Turn On Wifi</button>
+    </igx-banner-actions>
+</igx-banner>
+```
+
+> [!NOTE]
+> Google の [`マテリアル デザイン`](https://material.io/design/components/banners.html#anatomy) ガイドラインでは、バナーに表示するボタンは 2 つまでです。`IgxBannerComponent` は、`igx-banner-actions` タグの要素数を明示的に制限しませんが、マテリアル デザイン ガイドに従う場合は、最大 2 つの要素を使用することを強くお勧めします。
+
+閉じるオプション (`'Continue Offline'`) は詳細なロジックを必要としないため、`close()` のみの呼び出しが可能です。しかし、確認操作 (`'Turn On Wifi'`) は追加のロジックを必要とするため、コンポーネントで定義する必要があります。次に、`onNetworkStateChange` 監視可能な値を作成してサブスクライブします。最後に、変更するたびに `refreshBanner` メソッドを呼び出します。これにより、`wifiState` に基づいてバナーを切り替えます。
+
+バナーのナビゲーション バーに WiFi アイコンが表示されます。`wifiState` が変更されるとサブスクリプションが発生するため、アイコンはバナーを切り替えるだけでなく、接続の状態に基づいて変化します。
+
+```html
+<!--banner.component.html-->
+<igx-navbar title="Gallery">
+    <igx-icon (click)="wifiState = !wifiState">
+        {{ wifiState ? 'signal_wifi_4_bar' : 'signal_wifi_off' }}
+    </igx-icon>
+</igx-navbar>
+```
+
+最後に、WiFi の状態に関するメッセージを表示する `toast` を追加します。以下はテンプレート化したバナーのデモです。
+
+<div class="sample-container loading" style="height: 530px">
+    <iframe id="banner-advanced-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-advanced-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+
+### スタイル設定
+
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに index ファイルをインポートする必要があります。
 
 ```scss
 // in styles.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-### パレットと色の定義
-`index` ファイルをインポート後、 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、カスタムテーマで使用するいくつかの色変数を定義できます。コンポーネントで使用する 2 色のメイン カラーを指定できる独自のカラー[パレット](themes/palette.md)と組み合わせて、カスタム `igx-banner` スタイルにこれらを使用します。
-最初にカスタム パレットを定義し、メイン カラーを渡します。
-```scss
-// in styles.scss
-$my-primary-color:#fde71d;
-$my-secondary-color: #C0C0C0;
-$my-info-color: #ff0000;
+最も簡単な方法は、[`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
 
-$my-color-palette: igx-palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color,
-    $info: $my-info-color
-);
-```
-
-カスタム パレットと適用された色を確認するには、これらをテーマ関数に渡す必要があります。
-次に[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、定義済みの多数の `igx-banner-theme パラメーター`に色を渡します。これらの特定のパラメーターを変更してコンポーネントを希望する外観にできると仮定します。以前に作成した[パレット](themes/palette.md)を使用して、定義した色に基づいて新しい色を作成すると非常に便利です。
 ```scss
-// in styles.scss
 $custom-banner-theme: igx-banner-theme(
-    $palette: $my-color-palette,
-    $banner-message-color: igx-color($my-color-palette, "info"),
-    $banner-illustration-color: igx-color($my-color-palette, "info"),
-    $banner-background: igx-color($my-color-palette, "secondary", 200)
-);
-```
-`igx-banner` は `igx-button` を使用するため、これらもスタイル設定できます。したがって、`igx-banner` トピック外でドロップダウン テーマの全体的なスタイルを補完するために、次のようなカラーパレットを渡すカスタムボタン テーマを作成します。 
-```scss
-// in styles.scss
-$my-button-primary-color:#fde71d;
-$my-button-secondary-color: #09f;
-
-$my-button-color-palette: igx-palette(
-    $primary: $my-button-primary-color,
-    $secondary: $my-button-secondary-color
-);
-$custom-button-theme: igx-button-theme(
-    $palette: $my-button-color-palette
+    $banner-message-color: #151515,
+    $banner-background: #dedede,
+    $banner-illustration-color: #666666
 );
 ```
 
-### 適用
-あとは新しく作成したテーマを適切にスコープするだけです。
+#### CSS 変数の使用 
 
-#### グローバル
-新しく作成した `igx-banner` テーマをアプリで[`グローバル`](themes/component-themes.md#テーマの作成)に適用する場合、必要なのはアプリのルート スタイル ファイルにテーマを含めるだけです。
+最後にバナーのカスタム テーマを渡します。
+
 ```scss
-// in styles.scss
-// Pass our banner theme to the `igx-banner` mixin
-    @include igx-banner($custom-banner-theme);
-// Pass our button theme to the `igx-button` mixin
-    @include igx-button($custom-button-theme);
+@include igx-css-vars($custom-banner-theme);
 ```
-#### スコープ
-特定の `igx-banner` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用し、さらに、上記のすべての手順を styles.scss から component.scss ファイルへ移動してください。
 
- >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+#### ミックスインの使用
 
-一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
+
+コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
-// in component.scss
 :host {
     ::ng-deep {
-        // Pass our banner theme to the `igx-banner` mixin
+        // Pass the custom banner theme to the `igx-banner` mixin
         @include igx-banner($custom-banner-theme);
-        // Pass our button theme to the `igx-button` mixin
-        @include igx-button($custom-button-theme);
     }
 }
 ```
-### デモのスタイル設定
+
+#### カラー パレットの使用
+
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
+
+`igx-palette` 関数は渡された一次色と二次色に基づいてカラーパレットを生成します。
+
+```scss
+$white-color: #dedede;
+$black-color: #151515;
+
+$light-banner-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+```
+
+次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
+
+```scss
+$custom-banner-theme: igx-banner-theme(
+    $banner-message-color: igx-color($light-banner-palette, "secondary", 400),
+    $banner-background: igx-color($light-banner-palette, "primary", 400),
+    $banner-illustration-color: igx-color($light-banner-palette, "secondary", 100)
+);
+```
+
+>[!NOTE]
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palette.md) のトピックをご覧ください。
+
+#### スキーマの使用
+
+テーマ エンジンを使用して [`スキーマ`](./themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner)) の 1 つを拡張します。
+
+```scss
+//  Extending the banner schema
+$light-toast-schema: extend($_light-toast,
+    (
+        banner-message-color: (
+            igx-color: ("secondary", 400)
+        ),
+        banner-background: (
+            igx-color: ("primary", 400)
+        ),
+        banner-illustration-color: (
+            igx-color: ("secondary", 100)
+        )
+    )
+);
+
+// Defining banner with the global light schema
+$custom-banner-theme: igx-banner-theme(
+  $palette: $light-banner-palette,
+  $schema: $light-toast-schema
+);
+```
+
+上記と同じ方法でテーマを含める必要があることに注意してください。
 
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
-## API リファレンス
+### API リファレンス
+<div class="divider--half"></div>
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-banner-theme)
+
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
+
+* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+
+### その他のリソース
+<div class="divider--half"></div>
+
+コミュニティに参加して新しいアイデアをご提案ください。
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

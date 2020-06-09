@@ -1,8 +1,8 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | infragistics
+title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
 _description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャを使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
-_keywords: column order, igniteui for angular, infragistics
+_keywords: column order, igniteui for angular, infragistics, 列順序
 _language: ja
 ---
 }
@@ -150,7 +150,7 @@ public onColumnMovingEnd(event) {
 
 ### スタイル設定
 
-@@igComponent 列移動ヘッダーのスタイル設定は、すべてのテーマ関数とコンポーネント mixins のある `index` ファイルをインポートする必要があります。
+@@igComponent 列移動ヘッダーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
  ```scss
 // custom-grid-column-moving-style.component.scss

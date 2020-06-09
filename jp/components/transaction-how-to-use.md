@@ -1,5 +1,5 @@
 ---
-title: 一括編集 | Angular Crud | Ignite UI for Angular | Infragistics
+title: 一括編集 | Angular Crud | Ignite UI for Angular | インフラジスティックス
 _description: トランザクション サービスを使用して、Ignite UI Angular コンポーネントの一括編集を構成し、それらに対して CRUD 操作を実行する方法。
 _keywords:  batch editing, igniteui for angular, infragistics, 一括編集,
 _language: ja

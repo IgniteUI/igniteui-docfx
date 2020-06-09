@@ -7,9 +7,9 @@ _language: ja
 
 ## Time Picker
 <p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。またユーザーは、ドロップダウンで時間値の選択やマスク入力を使用した編集が可能です。</p>
-<div class="divider"></div>
+<div class="divider--half"></div>
 
-### Time Picker デモ
+#### デモ
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,14 +20,10 @@ _language: ja
 
 ### 使用方法
 
-Time Picker コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。注: タッチ操作を使用するために、IgxTimePicker は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらを AppModule にも追加する必要があります。
+>[!NOTE]
+>IgxTimePicker は、タッチ操作において、**BrowserAnimationsModule** と **HammerModule** に依存しています。これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -52,16 +48,11 @@ export class AppModule {}
 
 ```html
 <!--meeting.component.html-->
-<igx-time-picker ></igx-time-picker>
+<igx-time-picker></igx-time-picker>
 ```
 
-以下は結果です。
-<div class="sample-container loading" style="height:600px">
-    <iframe id="timepicker-sample-1-iframe" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+出力はデモと同じです。
+
 <div class="divider--half"></div>
 
 #### 値の設定
@@ -69,7 +60,7 @@ export class AppModule {}
 値を設定するには、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) 入力を使用します。日付を追加します。
 
 ```typescript
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 ```
 
 テンプレートで [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) 入力を使用します。
@@ -77,15 +68,6 @@ public date: Date = new Date(Date.now());
 ```html
 <igx-time-picker [value]="date"></igx-time-picker>
 ```
-
-以下は結果です。
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-<div class="divider--half"></div>
 
 双方向データ バインディングを使用するには、`ngModel` を以下のように使用します。
 
@@ -108,16 +90,6 @@ public date: Date = new Date(Date.now());
 | `mm` | 先行ゼロのある分フィールド (00..59) を書式設定します。 |
 | `tt` | AM/PM フィールドを表します。 |
 
-
-以下は結果です。
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="time-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-<div class="divider--half"></div>
-
 #### デルタおよびスピン モードの変更
 
 項目のデルタを変更するには、[`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) を設定します。スピン モードを変更するには、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を使用します。
@@ -126,20 +98,12 @@ public date: Date = new Date(Date.now());
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
 ```
 
-以下は結果です。
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
-<div class="divider--half"></div>
-
 #### 検証
 
 ユーザー入力を制限するために [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を設定できます。[`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) を処理して、無効な時間が選択された場合にユーザーを通知できます。
 
->注: 最小値/最大値が [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) と一致する必要があります。
+>[!NOTE]
+>最小値 / 最大値は [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) と一致する必要があります。
 
 ```typescript
 // app.module.ts
@@ -160,22 +124,29 @@ export class AppModule {}
 public min: string = "09:00";
 public max: string = "18:00";
 
-@ViewChild("toast")
-private toast: ElementRef;    
+@ViewChild("toast", { static: true })
+private toast;
 
-public show(toast) {
-    toast.show();
-}
-
-public onValidationFailed(timepicker){
-    this.show(this.toast);
+public onValidationFailed() {
+    this.toast.show();
 }
 ```
 
 ```html
-<igx-time-picker format="HH:mm" [vertical]="true" [minValue]="min" [maxValue]="max" (onValidationFailed)="onValidationFailed($event)"></igx-time-picker>
+<igx-time-picker
+[itemsDelta]="{hours:1, minutes:5}"
+format="HH:mm tt"
+[vertical]="true"
+[minValue]="min"
+[maxValue]="max"
+(onValidationFailed)="onValidationFailed()"
+></igx-time-picker>
+
 <igx-toast #toast message="Value must be between 09:00 and 18:00"></igx-toast>
+
 ```
+
+無効な時間が選択された際にメッセージを表示するトーストが追加されました。範囲は (09:00〜18:00) です。また、項目のデルタと時間形式を変更しました。
 
 以下は結果です。
 <div class="sample-container loading" style="height: 540px;">
@@ -203,20 +174,21 @@ public mode = InteractionMode.DropDown;
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
 
-または、タイムピッカーで [`モード`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を以下のように変更します。
+または、タイムピッカーで [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を以下のように変更します。
 
 ```html
 <!--timePickerDropdown.component.html-->
 <igx-time-picker mode="dropdown"></igx-time-picker>
 ```
 
-ユーザーは、12 時間と 24 時間形式で時間値を入力、編集、削除できます。 
+ユーザーは、12 時間と 24 時間形式で時間値を入力、編集、削除できます。  
 
-**キーボード ナビゲーションのドロップダウン モード**
+**キーボード ナビゲーション**
 
 マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>Up</kbd> の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>Down</kbd> または `マウスホイール ダウン`は反転操作に使用できます。
 
->注* タイムピッカーの [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を設定して [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を無効にし、時間スクローリングが指定した時間または分の値でブレークします。追加でユーザーは以下の操作も実行できます。
+>[!NOTE]
+>タイム ピッカーの [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が設定され、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) が false の場合、時間スクロールは指定した最小/最大の時/分の値で停止します。
 
 **キーボード操作**
 
@@ -240,11 +212,15 @@ API (プロパティ、イベント、メソッド) を使用して要件によ�
 
 タイムピッカー内にネストした ng-template を IgxTimePickerTemplate ディレクティブでデコレートする必要があります。ng-template コンテキストは、次のメンバーを公開します。[`openDialog`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#opendialog) メソッドはタイムピッカーダイアログに使用できます。[`displayTime`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displaytime) プロパティは書式設定の値を含みます。 [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) は実際の値を含みます。ng-template 要素で変数を宣言して使用することができます。
 
-以下の例では、デフォルトのラベル "Time" を変更して 2 つ目のアイコンをサフィックスとして追加します。ラベルを使用して実際のタイムピッカーの値を表示する入力グループです。
+以下の例では、デフォルトのラベル "Time" を変更して 2 つ目のアイコンを接尾辞として追加します。入力グループで `igx-hint` を使用して実際のタイム ピッカーの値を表示します。
 
 ```html
 <igx-time-picker [value]="date">
-    <ng-template igxTimePickerTemplate let-openDialog="openDialog" let-value="value" let-displayTime="displayTime">
+    <ng-template
+        igxTimePickerTemplate
+        let-openDialog="openDialog"
+        let-value="value"
+        let-displayTime="displayTime">
         <igx-input-group (click)="openDialog()">
             <igx-prefix>
                 <igx-icon>home</igx-icon>
@@ -254,16 +230,16 @@ API (プロパティ、イベント、メソッド) を使用して要件によ�
             <igx-suffix>
                 <igx-icon>access_alarm</igx-icon>
             </igx-suffix>
+            <igx-hint>{{value}}</igx-hint>
         </igx-input-group>
-        <label>{{value}}</label>
     </ng-template>
 </igx-time-picker>
 ```
 ```typescript
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 ```
 
-以下は結果です。
+以下はテンプレート化されたタイム ピッカーです。
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
 </div>
@@ -271,9 +247,9 @@ public date: Date = new Date(Date.now());
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### 入力グループのテンプレート - ドロップダウン モード
+#### ドロップダウン モードのテンプレート化
 
-<a href="#入力グループのテンプレート化"> テンプレート入力グループ</a>セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
+<a href="#入力グループのテンプレート化">テンプレート入力グループ</a> セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
 ```html
 <igx-time-picker #picker [value]="today" format="HH:mm" mode="dropdown">
@@ -288,13 +264,14 @@ public date: Date = new Date(Date.now());
 </igx-time-picker>
 ```
 ```typescript
-public today: Date = new Date(Date.now());
+public today: Date = new Date();
 ```
 
-テンプレート コンテキストで公開されている `displayTime` プロパティは**読み取り専用**です。上記の例では、双方向バインディングを実現するために、入力要素の  **blur** イベントと組み合わせて使用​​されています。
+>[!NOTE]
+>テンプレート コンテキストで公開されている `displayTime` プロパティは**読み取り専用**です。上記の例では、双方向バインディングを実現するために、入力要素の **blur** イベントと組み合わせて使用​​されています。
 
 ```typescript
-public today: Date = new Date(Date.now());
+public today: Date = new Date();
 
 public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
     const parts = inputValue.split(/[\s:]+/);
@@ -310,13 +287,7 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 }
 ```
 
-ドロップダウンと双方向バインディングをサポートする、再テンプレート化されたタイムピッカーです。
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
 
 #### カスタム ボタン アクション
 [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、`igxTimePickerActions` ディレクティブセレクタでマークされた `ng-template` でボタンをラップします。
@@ -341,18 +312,115 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 // sample.component.ts
 ...
 public selectNow(timePicker: IgxTimePickerComponent) {
-    timePicker.value = new Date(Date.now());
+    timePicker.value = new Date();
     timePicker.close();
 }
 ...
 ```
 
-以下は結果です。
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="time-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" class="lazyload"></iframe>
+ドロップダウン、カスタム アクションと双方向バインディングをサポートする、再テンプレート化されたタイムピッカーです。
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
+### スタイル設定
+
+タイム ピッカーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+[`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、タイム ピッカーのスタイルを設定できるさまざまなパラメーターを受け取ります。
+
+```scss
+$my-time-picker-theme: igx-time-picker-theme(
+  $text-color: #E4C8A5,
+  $hover-text-color: #ECAA53,
+  $selected-text-color: #ECAA53,
+  $header-background: #ECAA53,
+  $header-hour-text-color: #011627,
+  $header-time-period-color: #011627,
+  $background-color: #011627
+);
+```
+
+>[!NOTE]
+>タイム ピッカー ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ダイアログ ウィンドウのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
+
+タイム ピッカー ウィンドウは [`IgxOverlayService`](overlay_main.md) を使用するため、カスタム テーマがスタイルを設定するタイム ピッカー ウィンドウに適用されるように、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
+
+タイム ピッカー内の項目は、コンポーネント `ホスト`の子孫**ではありません**。現在、`ドキュメント`本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。これを変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナをレンダリングする場所を制御します。
+
+以下でコンテナを配置する要素への参照を渡すことができます。
+
+```html
+<igx-time-picker #picker [overlaySettings]="{ outlet: element }">
+</igx-time-picker>
+```
+
+```typescript
+export class TimepickerStylingComponent {
+    ...
+    constructor(public element: ElementRef) {
+    }
+}
+```
+
+タイム ピッカーの項目がコンポーネントのホスト**内**に適切にレンダリングされます。つまり、カスタム テーマが有効になります。
+
+>[!NOTE]
+>[`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay_main.md#スタイル設定)をご覧ください。
+
+#### テーマを含む
+
+<div class="divider"></div>
+
+最後にコンポーネントのテーマを**含めます**。
+
+`$legacy-support` が `true` に設定されている場合、**テーマ**を以下のように含めます。
+
+```scss
+ @include igx-time-picker($my-time-picker-theme);
+```
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-time-picker($my-time-picker-theme);
+    }
+}
+```
+
+<div class="divider"></div>
+
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+
+```scss
+@include igx-css-vars($my-time-picker-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+
+```scss
+:host {
+    @include igx-css-vars($my-time-picker-theme);
+}
+```
+
+#### デモ
+<div class="sample-container loading" style="height: 600px;">
+    <iframe id="time-picker-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

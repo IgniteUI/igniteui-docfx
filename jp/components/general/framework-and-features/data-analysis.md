@@ -12,6 +12,27 @@ _language: ja
 >[!NOTE]
 >この機能は、設定を簡単にし、コードを最小限に制限するために、**Ignite UI for Angular** の外部パッケージとして提供されます。
 
+### Data Analysis with DockManager
+Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager.md) right pane. From there you can:
+ - Choose specific chart type and visualize it in separate pane.
+ - Or use the `Data Analysis` context button to show different text formatting options.
+
+<div class="sample-container loading" style="height: 580px;">
+    <iframe id="data-analysis-dock-manager" class="no-theming" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+
+[View sample]({environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager) in full-size.
+
+> [!NOTE]
+> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
+
+
+Keep in mind (sample related):
+- On new data selection chart data will be updated.
+- If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
+- If on new selection the data is not compatible for some of the charts - a warning "Incompatible data" will be shown.
+
+
 ### データ分析ボタン
 データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
 
@@ -30,7 +51,7 @@ _language: ja
 >チャート作成オプションは、選択したデータに数値がある場合にのみ使用できます。
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data" class="lazyload"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
 以下のチャート タイプをサポートします。
@@ -83,7 +104,7 @@ _language: ja
 #### デモ
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data" class="lazyload"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
 ### 便利なリソース

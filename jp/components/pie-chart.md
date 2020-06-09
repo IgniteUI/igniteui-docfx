@@ -15,10 +15,10 @@ Ignite UI for Angular 円チャート コンポネントは、セクションに
 ### サンプル
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="pie-chart-data-sample-iframe" src='{environment:dvDemosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn"  data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -37,6 +37,7 @@ chart パッケージをインストールするときに core パッケージ�
 
 ```ts
 // app.module.ts
+
 import { IgxPieChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
@@ -79,8 +80,6 @@ var data = [
 
 <div class="divider--half"></div>
 
-## 構成可能な要素
-
 ### 凡例
 
 円チャートの隣に凡例を表示するには、ItemLegend を作成し、`Infragistics.Controls.Charts.Legend` プロパティに割り当てます。`legendLabelMemberPath` は、各円スライスの凡例項目を表示するために使用するデータ モデルのプロパティを指定します。
@@ -88,23 +87,25 @@ var data = [
 また、凡例項目の外観をカスタマイズするために `legendItemTemplate` と `legendItemBadgeTemplate` プロパティ、多数のフォント プロパティを使用できます。
 
 ```html
- <igx-pie-chart [dataSource]="data"
-                width="700px"
-                height="500px"
-                labelMemberPath="Company"
-                valueMemberPath="MarketShare"
-                legendLabelMemberPath="Company"
-                [legend]="PieChartLegend">
+<igx-pie-chart [dataSource]="data"
+               width="700px"
+               height="500px"
+               valueMemberPath="MarketShare"
+               labelMemberPath="Company"
+               legendLabelMemberPath="Company"
+               [legend]="PieChartLegend">
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 320px">
+<div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+
+<div class="divider--half"></div>
 
 ### その他の分類項目
 
@@ -126,13 +127,15 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
  </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 320px">
+<div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-others-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+
+<div class="divider--half"></div>
 
 ### 展開
 
@@ -147,13 +150,11 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 320px">
+<div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-</div>
+
+<div class="divider--half"></div>
 
 ### 選択
 
@@ -165,7 +166,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 
 -   Single - single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
 -   Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
--   手動 - Manual モードに設定すると、選択は無効化されます。
+-   Manual - Manual モードに設定すると、選択は無効化されます。
 
 円チャートには、選択機能に関連する 4 つのイベントがあります。
 
@@ -180,16 +181,23 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 
 ```html
 <igx-pie-chart [dataSource]="data"
-               width="700px"
-               height="500px"
-               selectionMode="multiple">
+            width="700px"
+            height="500px"
+            selectionMode="multiple"
+            selectedSliceStroke = "white"
+            selectedSliceFill= "rgb(143,143,143)"
+            selectedSliceOpacity =1.0
+            selectedSliceStrokeThickness=2>
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 320px">
+<div class="sample-container loading" style="height: 350px">
     <iframe id="pie-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
+
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+
+<div class="divider--half"></div>

@@ -5,7 +5,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Month Picker
-<p class="highlight">The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.</p>
+<p class="highlight">
+    The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.
+</p>
 
 ### Month Picker Demo
 <div class="sample-container loading" style="height: 620px">
@@ -16,14 +18,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 
 ### Usage
-To get started with the Month Picker component, first you need to install Ignite UI for Angular by typing the following command:
 
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
+The first step is to import the `IgxCalendarModule` inside our **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) also depends on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -66,7 +62,7 @@ Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/ig
 ```typescript
 // month-picker-sample.component.ts
 
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 ```
 
 ```html
@@ -95,20 +91,11 @@ Change the month picker display format, using the [`formatOptions`]({environment
 ```typescript
 // month-picker-sample.component.ts
 
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 public numericFormatOptions = {
-        month: "2-digit",
-        year: "numeric"
+        month: "2-digit"
 };
 ```
-
-Here is an example of modifying the default format options of the month picker:
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="monthpicker-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 
 #### Localization
 Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the month picker localization.
@@ -122,16 +109,15 @@ Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.h
 ```typescript
 // month-picker-sample.component.ts
 
-public date: Date = new Date(Date.now());
+public date: Date = new Date();
 public locale: "fr";
 public formatOptions = {
-        month: "long",
-        year: "numeric"
+        month: "long"
 };
 ```
 
-Here is an example of localizing the month picker component:
-<div class="sample-container loading" style="height: 620px">
+Here is an example of localizing and formatting the month picker component:
+<div class="sample-container loading" style="height: 680px">
     <iframe id="monthpicker-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -159,6 +145,80 @@ Here is an example of localizing the month picker component:
     - <kbd>End</kbd> key to focus the last month inside the months view,
     - <kbd>Enter</kbd> key to select the currently focused month and close the view,
     - <kbd>Tab</kbd> key to navigate through the months.
+
+### Styling
+To get started with styling the month picker, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+The month picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the month picker's items:
+
+```scss
+$my-calendar-theme: igx-calendar-theme(
+  $border-radius: 15px,
+  $content-background: #011627,
+  $picker-background-color: #011627,
+  $month-current-text-color: #ECAA53,
+  $month-hover-background: #ECAA53,
+  $year-current-text-color: #ECAA53,
+  $year-hover-text-color: #D37B08,
+  $picker-arrow-color: #ECAA53,
+  $picker-text-hover-color: #D37B08,
+  $picker-arrow-hover-color: #D37B08,
+  $picker-text-color: #ECAA53
+);
+```
+
+#### Including themes
+
+<div class="divider"></div>
+
+The next step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
+
+```scss
+ @include igx-calendar($my-calendar-theme);
+```
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+
+```scss
+:host {
+     ::ng-deep {
+        @include igx-calendar($my-calendar-theme);
+    }
+}
+```
+
+<div class="divider"></div>
+
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+
+```scss
+@include igx-css-vars($my-calendar-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+
+```scss
+:host {
+    @include igx-css-vars($my-calendar-theme);
+}
+```
+
+After everything's done, your component should look like this:
+
+#### Demo
+
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="monthpicker-styling-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-styling' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ### API References
 <div class="divider--half"></div>

@@ -9,24 +9,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ### Dialog Demo
-<div class="sample-container loading" style="height:300px">
-    <iframe id="dialog-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:200px">
+    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
 
-To get started with the Dialog Window component, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the **IgxDialogModule** in our **app.module.ts** file:
+The first step is to import the **IgxDialogModule** in our **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -43,13 +36,14 @@ export class AppModule {}
 ```
 <div class="divider--half"></div>
 
-#### Alert
+#### Alert Dialog
 
-To add alert, in the template of our email component we can add the following code to get the notification dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+To create an alert dialog, in the template of our email component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
 
 ```html
 <!--email.component.html-->
+<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
 
 <igx-dialog #alert
     title="Notification"
@@ -59,21 +53,18 @@ To add alert, in the template of our email component we can add the following co
 </igx-dialog>
 ```
 
-<div class="sample-container loading" style="height:250px">
-    <iframe id="dialog-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+If everything's done right, you should see the demo sample shown above in your browser.
+
 <div class="divider--half"></div>
 
 #### Standard Dialog
 
-To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
+To create a standard dialog, in the template of our file manager component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
 
 ```html
 <!--file-manager.component.html-->
+<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Confirmation Dialog</button>
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
@@ -94,34 +85,42 @@ To add standard dialog, in the template of our file manager component we can add
 
 #### Custom Dialog
 
-To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title),[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), [`closeOnOutsideSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#closeonoutsideselect) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) event.
-Also we can add two groups of label and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
+To create a custom dialog, in the template of our sign-in component, we add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
+We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
+<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Custom Dialog</button>
 
-<igx-dialog #form title="Sign In"
-    leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="form.close()"
-    (onRightButtonSelect)="signIn($event)"
-    rightButtonLabel="Sign In"
-    [closeOnOutsideSelect]="true">
+<igx-dialog #form [closeOnOutsideSelect]="true">
+    <igx-dialog-title>
+        <div class="dialog-container">
+            <igx-icon>vpn_key</igx-icon>
+            <div class="dialog-title">Sign In</div>
+        </div>
+    </igx-dialog-title>
+
     <form class="signInForm">
         <igx-input-group>
             <igx-prefix>
                 <igx-icon>person</igx-icon>
             </igx-prefix>
             <label igxLabel for="username">Username</label>
-            <input igxInput id="username" type="text" />
+            <input igxInput id="username" type="text"/>
         </igx-input-group>
         <igx-input-group>
             <igx-prefix>
                 <igx-icon>lock</igx-icon>
             </igx-prefix>
             <label igxLabel>Password</label>
-            <input igxInput id="password" type="password" />
+            <input igxInput id="password" type="password"/>
         </igx-input-group>
     </form>
+
+    <div igxDialogActions>
+        <button igxButton (click)="form.close()">CANCEL</button>
+        <button igxButton (click)="form.close()">SIGN IN</button>
+    </div>
 </igx-dialog>
 ```
 
@@ -133,36 +132,7 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 </div>
 <div class="divider--half"></div>
 
-#### Customized Title and Actions
-
-Dialog title area can be customized using `igxDialogTitle` directive or `igx-dialog-title` selector. The actions area can be customized using `igxDialogActions` directive or `igx-dialog-actions` selector.
-
-```html
-<!-- dialog.component.html -->
-
-<igx-dialog #dialog [closeOnOutsideSelect]="true" message="This will create a new social media account.">
-    <igx-dialog-title>
-        <div class="dialog-container">
-            <igx-icon>account_box</igx-icon>
-            <div class="dialog-title">Create a new account?</div>
-        </div>
-    </igx-dialog-title>
-    <div igxDialogActions class="dialog-container dialog-actions">
-        <button igxButton (click)="dialog.close()">CREATE</button>
-        <button igxButton (click)="dialog.close()">CANCEL</button>
-    </div>
-</igx-dialog>
-```
-
-<div class="sample-container loading" style="height:300px">
-    <iframe id="custom-dialog-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/custom-dialog-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
-
-#### Configure different Position and Animation Settings
+#### Position and Animation Settings
 
 There are two ways to change the position at which the `igxDialog` will be shown:
 
@@ -175,27 +145,21 @@ public positionSettingsOnOpen: PositionSettings = {
     horizontalStartPoint: HorizontalAlignment.Right,
     verticalStartPoint: VerticalAlignment.Middle,
 };
-
 public overlaySettings: OverlaySettings = {
     positionStrategy: new GlobalPositionStrategy(this.positionSettingsOnOpen),
     scrollStrategy: new NoOpScrollStrategy(),
     modal: false,
     closeOnOutsideClick: true
 };
-
 ....
-
-
 public openDialog() {
     this.alert.open(this.overlaySettings);
 }
 ....
-
 this.dialog.open(overlaySettings)
-
 ```
 
-- Use `positionSettings` @input. Example:
+- Use the `positionSettings` @input. Example:
 
 ```html
 <igx-dialog #alert title="Notification" [positionSettings]="positionSettings" >
@@ -214,8 +178,7 @@ public positionSettings: PositionSettings = {
 };
 ```
 
-> [!Note] The same approach should be used for the animation settings, use `openAnimation` and `closeAnimation` to define animation params like duration etc. 
-
+> [!Note] The same approach should be used for the animation settings, use the `openAnimation` and `closeAnimation` properties to define animation params like duration. 
 `params` object example:
 
 ```typescript
@@ -238,29 +201,19 @@ To get started with styling the dialog window, we need to import the `index` fil
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts the `$background`, `$title-color`, `$message-color`, `$border-radius` and `$shadow` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the dialog.
 
 ```scss
-$color-1: rgb(119, 119, 119);
-$color-2: #1c83e4;
-$color-3: rgb(16, 4, 51);
-
-$elevations-color: igx-elevations($color-1 , $color-2, $color-3);
-
 $my-dialog-theme: igx-dialog-theme(
-    $background: #000000,
-    $title-color: #1c83e4,
-    $message-color: #ffffff,
+    $background: #011627,
+    $title-color: #ECAA53,
+    $message-color: #FEFEFE,
     $border-radius: .3,
-    $shadow: igx-elevation($elevations-color, 14)
 );
 ```
 
 > [!NOTE]
-> As we see the `$shadow` parameter accepts `igx-elevation`, which is of type box-shadow. In order to learn more about various options for IgniteUI Shadows, you can take a look at this [link](shadows.md).
-
-> [!NOTE]
-> In order to style any additional components that are used as part of the dialog window's content (such as [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and placed under the dialog window's scope only (so it does not affect the rest of the application).
+> In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
 Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
@@ -273,95 +226,46 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 ```
 
 > [!NOTE]
-> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
-The last step is to **include** the component mixins: 
+#### Including Themes
+
+<div class="divider"></div>
+
+The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **theme** like that:
 
 ```scss
-@include igx-dialog($my-dialog-theme);
+ @include igx-dialog($my-dialog-theme);
 ```
-
 >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
- ```scss
+```scss
 :host {
-  ::ng-deep {
-    @include igx-dialog($my-dialog-theme);
-  }
+     ::ng-deep {
+        @include igx-dialog($my-dialog-theme);
+    }
 }
 ```
 
-#### Defining a color palette
+<div class="divider"></div>
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-$black-color: #000000;
-$light-blue-color: #1c83e4;
-$white-color: #ffffff;
-
-$custom-palette: igx-palette(
-    $primary: $black-color,
-    $secondary: $light-blue-color,
-    $info: $white-color
-);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$my-dialog-theme: igx-dialog-theme(
-    $background: igx-color($custom-palette, "primary", 500),
-    $title-color: igx-color($custom-palette, "secondary", 500),
-    $message-color: igx-color($custom-palette, "info", 500),
-    $border-radius: .3,
-    $shadow: igx-elevation($elevations-color, 14)
-);
+@include igx-css-vars($my-dialog-theme);
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
-
-#### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-dialog`]({environment:sassApiUrl}/index.html#variable-_light-dialog):  
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
-// Extending the light dialog schema
-$custom-dialog-schema: extend($_light-dialog,
-    (
-        background: igx-color($custom-palette, "primary", 500),
-        title-color: igx-color($custom-palette, "secondary", 500),
-        message-color: igx-color($custom-palette, "info", 500),
-        border-radius: .3,
-        shadow: igx-elevation($elevations-color, 14)
-    )
-);
+:host {
+    @include igx-css-vars($my-dialog-theme);
+}
 ```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-dialog: $custom-dialog-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$my-dialog-theme: igx-dialog-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 #### Demo
 <div class="sample-container loading" style="height:300px">
