@@ -152,39 +152,22 @@ The following information is on how to setup authentication to our private npm r
 Update the azure-pipelines.yml with the following steps:
 
 ```cmd
-pool:
-  vmImage: 'Ubuntu 16.04'
-
 steps:
 
-- script: echo "@infragistics:registry=$(npmRegistry)" >> ~/.npmrc
+- script: npm config set @infragistics:registry $(npmRegistry)
   displayName: 'Npm add registry'
 
-- script: echo "$(igScope):always-auth=true" >> ~/.npmrc
+- script: npm config set $(igScope):always-auth=true
   displayName: 'Npm config'
 
-- script: echo "$(igScope):_auth=$(token)" >> ~/.npmrc
+- script: npm config set $(igScope):_auth=$(token)
   displayName: 'Npm config auth'
-
-- script: npm install
-  displayName: 'Install dependencies'
-  env:
-    AZURE_PIPELINES: "true"
-
-- script: npm run lint
-  displayName: 'Run lint'
-
-- script: npm run build
-  displayName: 'Generate live editing and build samples'
-
 ```
-
-> [!NOTE]
-> Based on the environment, you should set the following *.npmrc file* path. For Linux, use `$HOME/.npmrc`, and for Windows use `%userprofile%\.npmrc`.
 
 Now we need to add variables for the *npm registry*, *scope* and *token*. There are two ways to do so:
 
- #### [Define Variable Group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) from the Library page under Pipelines.
+ #### Define Variable Group from the Library page under Pipelines.
+ [This article](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) explains how to use a variable group to store values that you want to control and make available across multiple pipelines.
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 
   src="../../images/general/azure-ci-variable-groups.jpg"
@@ -192,7 +175,9 @@ Now we need to add variables for the *npm registry*, *scope* and *token*. There 
   alt="Set npm Registry and token variables"
   title="Set npm Registry and token variables" />
 
- #### [Define the variables in the Pipeline Settings UI](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline) and reference them in your YAML file.
+ #### Define the variables in the Pipeline Settings UI and reference them in your YAML file.
+
+In the most common case, you [set the variables and use them](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline) within the YAML file.
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-new-variable-2.jpg"
@@ -222,9 +207,8 @@ The best way to define an environment variable depends on what type of informati
 * add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
 
 ### GitHub Actions Configuration
-Azure Pipelines and GitHub Actions both allow you to [create workflows](https://help.github.com/en/actions/migrating-to-github-actions/migrating-from-azure-pipelines-to-github-actions#migrating-script-steps) that automatically build, test, publish, release, and deploy code.
 
-Add the following scripts before the `npm i(ci)` script:
+Add the following scripts before the `npm i(ci)` step to your [CI workflow configuration](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions):
 
 ```cmd
 - run: echo "@infragistics:registry=$(npmRegistry)" >> ~/.npmrc
