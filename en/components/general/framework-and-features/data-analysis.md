@@ -72,12 +72,39 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
 </div>
 
 > [!NOTE]
-> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
+> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting data, go ahead and create a couple of charts and pin them (by dragging) to the available areas
 
 Keep in mind (sample related):
 - On new data selection chart data will be updated.
 - If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
-- If on new selection the data is not compatible for some of the charts - a warning "Incompatible data" will be shown.
+- If selected data is not compatible for any of the charts - an "Incompatible data" warning message will be shown.
+
+### Data Analysis Package
+
+You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#license-agreements), you will have access to the private feed. 
+
+Lets start with:
+
+- Installing the package in your application
+```cmd
+npm install @infragistics/igniteui-angular-extras
+```
+
+- Installing the package peer dependencies
+```cmd
+npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angular-charts
+```
+
+- After the installation of the packages go ahead and:
+  - Add the `IgxExtrasModule` to your app.module.ts
+  - Apply `igxChartIntegration`, `igxConditionalFormatting`, `igxContextMenu` directives to your grid
+
+```html
+<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu 
+    [data]="localData" [autoGenerate]="true" [paging]="true" >
+</igx-grid>
+```
+And that's it! You can now perform **cell range selection** and follow the data analysis flow.
 
 ### Data Analysis Button
 The data analysis button is the outlet to visualize your selected data in various ways:

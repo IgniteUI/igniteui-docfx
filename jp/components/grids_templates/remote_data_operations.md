@@ -113,6 +113,67 @@ public processData(reset) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+#### 無限スクロール
+
+ エンドポイントからデータを分割して取得するシナリオの一般的なデザインは、無限スクロールです。データ グリッドの場合、エンドユーザーが一番下までスクロールすることによってトリガーされたロードデータが連続的に増加します。次の段落では、利用可能な API を使用して、`IgxGrid` で無限スクロールを簡単に実現する方法を説明します。
+
+無限スクロールを実装するには、データを分割してフェッチする必要があります。すでにフェッチされたデータはローカルに保存し、チャンクの長さおよび数を決定する必要があります。また、グリッドで最後に表示されるデータ行インデックスを追跡する必要があります。このように、`startIndex` と `chunkSize` プロパティを使用して、ユーザーが上にスクロールして既にフェッチしたデータを表示するか、下にスクロールしてエンドポイントからさらにデータをフェッチする必要があるかを決定できます。
+
+最初に、データの最初のチャンクをフェッチするために `ngAfterViewInit` ライフサイクル フックを使用します。`totalItemCount` プロパティはグリッドがスクロールバーのサイズを正しく設定できるために重要です。
+
+```typescript
+public ngAfterViewInit() {
+    ...
+    this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+        if (request.data) {
+            this.grid.totalItemCount = this.page * this.pageSize;
+            this.grid.data = this._remoteService.getCachedData({startIndex: 0, chunkSize: 10});
+            this.totalItems = request.data["@odata.count"];
+            this.totalPageCount = Math.ceil(this.totalItems / this.pageSize);
+            this.grid.isLoading = false;
+        }
+    });
+    ...
+}
+```
+
+さらに、`onDataPreLoad` 出力にサブスクライブする必要があります。これにより、グリッドが現在ロードされているものではなく、異なるチャンクを表示しようとするときに必要なデータを提供できます。イベント ハンドラーで、ローカルに既にキャッシュされている新しいデータをフェッチするか、データを返すかを決定する必要があります。
+
+```typescript
+public handlePreLoad() {
+    const isLastChunk = this.grid.totalItemCount ===
+                        this.grid.virtualizationState.startIndex + this.grid.virtualizationState.chunkSize;
+    // when last chunk reached load another page of data
+    if (isLastChunk) {
+        if (this.totalPageCount === this.page) {
+            this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+            return;
+        }
+        this.page++;
+        this.grid.isLoading = true;
+        this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+            if (request.data) {
+                this.grid.totalItemCount = Math.min(this.page * this.pageSize, this.totalItems);
+                this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+                this.grid.isLoading = false;
+            }
+        });
+    } else {
+        this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+    }
+}
+```
+
+
+#### 無限スクロールのデモ
+<div class="sample-container loading" style="height:510px">
+    <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
 ### リモート並べ替え/フィルタリング
 
 リモート並べ替えとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
@@ -724,6 +785,65 @@ public ngAfterViewInit() {
 
 ```
 
+}
+
+@@if (igxName === 'IgxGrid') {
+
+### 一括編集のリモート ページング
+
+これまでの例で、リモート データで @@igxName を設定する方法を説明しました。次に、[一括編集のトピック](batch_editing.html)に従ってグリッドのバッチ編集を有効にします。
+
+サンプルを続行する前に、現在のユースケースを明確します。ページネーションを実行すると、グリッドには現在のページのデータのみが含まれます。新しい行を追加すると、(一括編集により) 新しく追加された行はグリッドに含まれる現在のデータと連結されます。したがって、サーバーが指定されたページのデータを返さない場合、グリッドのデータソースは新しく追加された行のみで構成され、グリッドは定義されたページ設定 (page、perPage) に基づいてページを作成します。
+
+```typescript
+public ngOnInit() {
+  ...
+    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+        this.totalCount = data;
+        this._recordOnServer = data;
+        this._totalPagesOnServer = Math.floor(this.totalCount / this.perPage);
+        this.grid1.isLoading = false;
+    });
+    }
+```
+
+このユースケースを適切に処理するには、カスタム ロジックを実装する必要があります。最初に、サーバー上にあるレコードの総数を知る必要があります。サーバーのデータ ページの総数を計算し (`this._totalPagesOnServer ` を参照)、その値に基づいてカスタム ページネーション ロジックを実装します。
+
+```typescript
+
+public paginate(page: number) {
+    this.grid1.endEdit(true);
+    if (page > this._totalPagesOnServer) {
+        if (this.page !== this._totalPagesOnServer) {
+            const skipEl = this._totalPagesOnServer * this.perPage;
+            this.remoteService.getData(skipEl, this.perPage);
+        }
+        this.grid1.page = page - this._totalPagesOnServer;
+        this.page = page;
+        return;
+    } else {
+        this.grid1.page = 0;
+    }
+    this.page = page;
+    const skip = this.page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
+}
+
+```
+
+**paginate** メソッドで示されるように、 `_totalPagesOnServer` 値に基づいてカスタム ページネーション ロジックが実行されます。
+
+
+#### デモ
+
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="remote-paging-batch-editing-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-batch-editing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-batch-editing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
 }
 
 ### API リファレンス
