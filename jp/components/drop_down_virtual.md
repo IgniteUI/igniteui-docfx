@@ -146,7 +146,7 @@ wrapping div (`drop-down-virtual-wrapper`) は、2 つのスクロールバー (
     <div class="drop-down-virtual-wrapper">
         <igx-drop-down-item
             *igxFor="let item of rData | async; index as index; scrollOrientation: 'vertical'; containerSize: itemsMaxHeight; itemSize: itemHeight;"
-            [value]="item" role="option" [disabled]="item.disabled" [index]="index">
+            [value]="item.ProductName" role="option" [disabled]="item.disabled" [index]="index">
             {{ item.ProductName }}
         </igx-drop-down-item>
     </div>
