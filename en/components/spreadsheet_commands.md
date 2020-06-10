@@ -2,7 +2,7 @@
 title: Spreadsheet | Grid Controls | Ignite UI for Angular | Commands | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
-mentionedTypes: ['Spreadsheet']
+mentionedTypes: ['Spreadsheet', 'SpreadsheetAction']
 ---
 
 ## Working with Commands
@@ -12,8 +12,9 @@ The Angular Spreadsheet component allows you to perform commands for activatinig
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-commands-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-commands-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 

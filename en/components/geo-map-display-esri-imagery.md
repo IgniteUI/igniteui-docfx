@@ -19,6 +19,7 @@ The [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 ### Code Snippet

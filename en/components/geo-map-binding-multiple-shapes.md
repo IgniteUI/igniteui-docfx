@@ -19,6 +19,7 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 This topic takes you step-by-step towards displaying multiple geographic series in the map component. All geographic series plot following geo-spatial data loaded from shape files using the `ShapeDataSource` class. Refer to the [Binding Shape Files](geo-map-binding-shp-file.md) topic for more information about `ShapeDataSource` object.

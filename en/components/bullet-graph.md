@@ -5,7 +5,7 @@ _keywords: Bullet Graph, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamBulletGraph']
 ---
 
-## Bullet Graph
+## Bullet Graph Overview
 
 The Angular bullet graph component allows for a linear and concise view of measures compared against a scale.
 
@@ -21,8 +21,9 @@ The following sample demonstrates how setting multiple properties on the same bu
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
-</div>
 
+
+</div>
 <div class="divider--half"></div>
 
 The bullet graph supports one scale, one set of tick marks and one set of labels. The bullet graph component also has built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#transitionduration) property.
@@ -32,8 +33,10 @@ The features of the bullet graph include configurable orientation and direction,
 
 When installing the gauge package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-gauges**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-gauges
+</pre>
 
 ### Required Modules
 
@@ -117,6 +120,8 @@ Performance value is the primary measure displayed by the component and it is vi
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Comparative Ranges
@@ -154,6 +159,8 @@ The ranges are visual elements that highlight a specified range of values on a s
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Tick Marks
@@ -189,6 +196,8 @@ The tick marks serve as a visual division of the scale into intervals in order t
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Labels
@@ -215,6 +224,8 @@ The labels indicate the measures on the scale.
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Backing
@@ -240,6 +251,8 @@ The backing element represents background and border of the bullet graph compone
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Scale
@@ -266,6 +279,8 @@ The scale is visual element that highlights the full range of values in the gaug
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Summary

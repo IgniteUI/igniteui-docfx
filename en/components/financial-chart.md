@@ -2,10 +2,10 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayType']
+mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 ---
 
-## Financial Chart
+## Financial Chart Overview
 
 The Angular financial chart component is a charting component that makes it easy to visualize financial data by using a simple and intuitive API.
 
@@ -17,6 +17,8 @@ The Angular financial chart component is a charting component that makes it easy
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -25,14 +27,14 @@ Once the user binds the data, the chart offers multiple ways in which the data c
 
 The financial chart component analyzes and selects data columns - Date/Time column to use for x-axis and Open, High, Low, Close, Volume columns or the first 5 numeric columns for y-axis. Beyond this, the user can specify the chart type to either Bar, Candle, Column, and Line. With its five main visual elements, a toolbar, a prices view, a volume view, an indicators view, and a navigation view, data has become more perceptible.
 
-You can explicitly specify the chart type by setting the [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to one of the following options:
+You can explicitly specify the chart type by setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) property to one of the following options:
 
 | Property                                                                                                                          | Description                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar)       | Specifies the bar series with markers at each data point                                                                                                                                                                                                                                                                                                                 |
 | [`Candle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) | Specifies the candle series                                                                                                                                                                                                                                                                                                                                              |
 | [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) | Specifies the column series                                                                                                                                                                                                                                                                                                                                              |
-| [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line)              | Specifies the line series                                                                                                                                                                                                                                                                                                                                                |
+| [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line)     | Specifies the line series                                                                                                                                                                                                                                                                                                                                                |
 | [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#auto)     | Specifies automatic selection of chart type based on Data Adapter which suggest one of above values based names and number of numeric columns in your data. For example, it will suggest [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) for data items with Open, High, Low, Close columns. |
 
 Refer to the [Financial Chart Panes](financial-chart-panes.md) topics for  information on other chart panes.
@@ -47,12 +49,14 @@ Refer to the [Financial Chart Panes](financial-chart-panes.md) topics for  infor
 
 When installing the chart package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 
-The Angular financial chart component requires the following modules:
+The Financial Chart component requires the following modules:
 
 ```ts
 // app.module.ts
@@ -74,7 +78,7 @@ export class AppModule {}
 
 Now that the financial chart module is imported, next step is to bind it to data.
 
-In order to create an `XamFinancialChart` control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```ts
 let data = [

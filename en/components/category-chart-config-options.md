@@ -12,11 +12,13 @@ There are many areas of the Ignite UI for Angular category chart component that 
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-config-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-marker-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-marker-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-marker-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 ### Configuring Chart Visuals
@@ -24,7 +26,7 @@ There are many areas of the Ignite UI for Angular category chart component that 
 As shown in the above demo, the brushes for the chart types can be configured. The following code example sets the chart type to waterfall and changes the default color of the brushes.
 
 ```html
- <igx-category-chart
+<igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
@@ -89,7 +91,7 @@ The transition type is configured by setting the transitionInMode option to the 
 The following code example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 
 ```html
- <igx-category-chart
+<igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"

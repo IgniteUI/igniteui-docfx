@@ -5,20 +5,9 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Data Chart (TODO add feature name)
+## Data Chart - Series Requirements
 
-The Data Chart is ... TODO ...
+<!--
+TODO port this topic without any samples
 
-### Demo
-
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
-<div class="divider--half"></div>
-
-TODO add content
+https://staging.infragistics.com/help/wpf/datachart-series-requirements -->
