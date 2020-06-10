@@ -119,7 +119,7 @@
       new: false
     - name: 列のピン固定
       href: grid/column_pinning.md
-      new: false
+      new: true
     - name: 行のピン固定
       href: grid/row_pinning.md
       new: true
