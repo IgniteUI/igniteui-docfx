@@ -1,8 +1,11 @@
-﻿- name: 概要
+- name: 概要
   header: true
   _language: "ja"
 - name: Angular - 完全ガイド
   href: general/angular-grid-overview-guide.md
+  new: true
+- name: ライセンス
+  href: general/ignite-ui-licensing.md
   new: true
 - name: 作業の開始
   href: general/getting_started.md
@@ -53,7 +56,7 @@
       new: false
 - name: フレームワーク & 機能
   href: general/framework-and-features/framework-and-features.md
-  new: false
+  new: true
   items:
     - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
@@ -117,7 +120,7 @@
     - name: 列のピン固定
       href: grid/column_pinning.md
       new: false
-    - name: Row Pinning
+    - name: 行のピン固定
       href: grid/row_pinning.md
       new: true
     - name: 列のサイズ変更
@@ -128,7 +131,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: grid/row_selection.md
@@ -237,6 +240,9 @@
     - name: 列のピン固定
       href: treegrid/column_pinning.md
       new: false
+    - name: 行のピン固定
+      href: treegrid/row_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: treegrid/column_resizing.md
       new: false
@@ -283,6 +289,7 @@
     - name: キーボードナビゲーション
       href: treegrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: クリップボード操作
       href: treegrid/clipboard_interactions.md
       new: false
@@ -338,6 +345,9 @@
     - name: 列のピン固定
       href: hierarchicalgrid/column_pinning.md
       new: false
+    - name: 行のピン固定
+      href: hierarchicalgrid/row_pinning.md
+      new: true
     - name: 列のサイズ変更
       href: hierarchicalgrid/column_resizing.md
       new: false
@@ -346,7 +356,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
@@ -380,6 +390,7 @@
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
       new: false
@@ -904,7 +915,7 @@
   href: display_density.md
 - name: データ入力と表示
   header: true
-- name: Drop Down
+- name: ドロップダウン
   href: drop_down.md
   new: false
   items:
@@ -934,7 +945,7 @@
   href: input_group.md
   new: false
   items:
-    - name: リアクティブフォーム
+    - name: リアクティブ フォーム
       href: input_group_reactive_forms.md
 - name: Mask
   href: mask.md
@@ -950,7 +961,7 @@
   href: linear_progress.md
 - name: Circular Progress
   href: circular_progress.md
-- name: 仮想スクロールディレクティブ
+- name: 仮想スクロール ディレクティブ
   href: for_of.md
 - name: Chip
   href: chip.md
@@ -1019,8 +1030,11 @@
 - name: Expansion Panel
   href: expansion_panel.md
   new: false
-  name: Splitter
+- name: Splitter
   href: splitter.md
+  new: true
+- name: Dock Manager
+  href: dock-manager.md
   new: true
 - name: 通知
   header: true
@@ -1040,6 +1054,9 @@
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Date Range Picker
+  href: date_range_picker.md
+  new: true
 - name: Month Picker
   href: month_picker.md
   new: false

@@ -73,9 +73,6 @@ The following features are currently **not** supported:
 
 IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
 
-#### TAB navigation
-* <kbd>TAB</kbd> and <kbd>Shift</kbd> + <kbd>TAB</kbd> - move to the next/previous cell in a row unaffected by the column layouts that are defined.  The navigation is done through all of the cells by focusing each one only once for each row, meaning that it should skip cell if it doesn't have the same `rowStart` as the currently selected cell. When the row is in edit mode, the navigation is restricted to the cells into that row and to the CANCEL and DONE buttons.
-
 #### Horizontal nagivation
 * <kbd>Arrow Left</kbd> or <kbd>Arrow Right</kbd> - move to the adjacent cell on the left/right within the current row unaffected by the column layouts that are defined. If the current cell spans on more than one row, <kbd>Arrow Left</kbd> and <kbd>Arrow Right</kbd> should navigate to the first cell on the left and right with the same `rowStart`, unless you have navigated to some other adjacent cell before. The navigation stores the starting navigation cell and navigates to the cells with the same `rowStart` if possible.
 * <kbd>Ctrl</kbd> + <kbd>Arrow Left</kbd> (<kbd>HOME</kbd>) or <kbd>Ctrl</kbd> + <kbd>Arrow Right</kbd> (<kbd>END</kbd>) - navigate to the start or end of the row and select the cell with accordance to the starting navigation cell.

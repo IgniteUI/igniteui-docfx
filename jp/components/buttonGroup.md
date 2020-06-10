@@ -232,7 +232,7 @@ public ngOnInit() {
 
 ### スタイル設定
 
-ボタン グループ のスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+ボタン グループ のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

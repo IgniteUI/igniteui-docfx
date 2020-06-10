@@ -7,14 +7,13 @@ _language: ja
 
 ## リアクティブ フォームの統合
 <p class="highlight">
-Ignite UI for Angular コントロールは簡単にリアクティブ フォームに統合できます。
+Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供する Reactive フォームで簡単に統合できます。
 </p>
-<div class="divider"></div>
 
 ### デモ
-以下のデモは、[`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールをリアクティブ フォームの一部に使用しています。
+次のサンプルは、リアクティブ フォームで使用される場合の [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)、[`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html)、および [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールを示しています。
 
-<div class="sample-container loading" style="height: 800px;">
+<div class="sample-container loading" style="height: 850px;">
     <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -24,31 +23,34 @@ Ignite UI for Angular コントロールは簡単にリアクティブ フォー
 
 ### 使用方法
 
-リアクティブ フォームの使用方法、必要なモジュールについては、Angular [チュートリアル](https://angular.io/guide/reactive-forms) をご覧ください。
+#### はじめに
 
-リアクティブ フォームを使用する前に Ignite UI コンポーネントのすべてのモジュールと **ReactiveFormsModule** をインポートします。
+リアクティブ フォームを使用する前に、Ignite UI コンポーネントのすべてのモジュールと `ReactiveFormsModule` をインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, IgxSelectModule } from "igniteui-angular";
+import { IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule } from "igniteui-angular";
 import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, IgxSelectModule, ReactiveFormsModule],
+    imports: [..., IgxIconModule, IgxInputGroupModule, IgxButtonModule, IgxRippleModule, IgxDatePickerModule, IgxTimePickerModule, IgxComboModule, igxSelectModule, ReactiveFormsModule],
     ...
 })
 export class AppModule {}
 ```
 
+リアクティブ フォームについては、[こちら](https://angular.io/guide/reactive-forms) を参照してください。
 
-リアクティブ フォームに HTML `form` の `formGroup` を使用してモデルを設定し、各モデルのプロパティに対応する `formControlName` を各入力フィールドに設定します。
+#### フォームの作成
+
+フォームのモデルを設定するには、`form` 要素の `formGroup` プロパティを使用します。次に、各モデル プロパティに対応する各入力フィールドに `formControlName` を追加します。
 
 ```html
 <form class="input-group-form" [formGroup]="user" (ngSubmit)="onSubmit()">
-    <h4 class="sample-title">Book your movie ticket</h4>
+    <h4>Book your movie ticket</h4>
     <igx-select #select name="movies" formControlName="movie">
         <igx-select-item-group *ngFor="let genre of genres" [label]="genre.type">
             <igx-select-item *ngFor="let movie of genre.movies" [value]="movie">
@@ -56,7 +58,9 @@ export class AppModule {}
             </igx-select-item>
         </igx-select-item-group>
         <label igxLabel for="movies">Movie</label>
-        <ng-template igxSelectToggleIcon><igx-icon fontSet="material">local_movies</igx-icon></ng-template>
+        <ng-template igxSelectToggleIcon>
+            <igx-icon fontSet="material">local_movies</igx-icon>
+        </ng-template>
     </igx-select>
     <igx-input-group>
         <input igxInput name="fullName" type="text" formControlName="fullName"/>
@@ -93,14 +97,25 @@ export class ReactiveFormsSampleComponent {
 }
 ```
 
-Movie, その場合、姓名、メールアドレス、ジャンル フォームのフィールドが必要となり、値がない場合は送信されません。
+この例では、`movie`、`fullName`、`email`、および `genres`のフィールドが必要となり、値がない場合は送信されません。
 
-## その他のリソース
+### API リファレンス
 <div class="divider--half"></div>
+
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+
+### その他のリソース
+<div class="divider--half"></div>
+
+関連トピック:
 
 * [Combo](combo.md)
 * [Select](select.md)
-* [テンプレート駆動フォームの統合](input_group.md)
+* [Input Group](input_group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

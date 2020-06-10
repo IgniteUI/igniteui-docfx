@@ -390,7 +390,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 <div class="divider--half"></div>
 
 ### スタイル設定
-日付ピッカーのスタイル設定には、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+日付ピッカーのスタイル設定には、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

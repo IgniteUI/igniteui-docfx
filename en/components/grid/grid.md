@@ -29,7 +29,7 @@ To get started with the Data Grid, first you need to install Ignite UI for Angul
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting_started.md) topic.
 
 The grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxGridModule` inside your `AppModule`:
 
@@ -55,7 +55,7 @@ Each of the components, directives and helper classes in the `IgxGridModule` can
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular'
+import { IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
@@ -131,6 +131,21 @@ Each of the columns of the grid can be templated separately. The column expects 
 </igx-column>
 ...
 ```
+
+>[!NOTE]
+>Whenever a header template is used along with grouping/moving functionality the *column header area* becomes **draggable** and you cannot access the custom elements part of the header template until you mark them as **not draggable**. Example below.
+
+```html
+<igx-column #col field="ProductName" header="Product Name" 
+    [groupable]="true" [movable]="true" [hasSummary]="true">
+    <ng-template igxHeader let-col>
+        <div class="text">{{col.field}}</div>
+        <igx-icon (click)="toggleSummary(col)" [attr.draggable]="false">functions
+        </igx-icon>
+    </ng-template>
+</igx-column>
+```
+As you can see, we are adding **draggable** attribute set to *false*.
 
 #### Cell template
 

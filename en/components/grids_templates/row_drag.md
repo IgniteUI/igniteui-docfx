@@ -223,7 +223,6 @@ We define a reference to each of our grids via the `ViewChild` decorator and the
 
 #### Templating the drag ghost
 The drag ghost can be templated using the `IgxRowDragGhost` directive, applied to a `<ng-template>` inside of the `@@igSelector`'s body:
-
 ```html
 <@@igSelector>
 ...
@@ -250,7 +249,6 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 </div>
 <div class="divider--half"></div>
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="tree-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -283,7 +281,6 @@ The drag ghost can be templated on every grid level, making it possible to have 
 ...
 </@@igSelector>
 ```
-
 <div class="sample-container loading" style="height:600px">
     <iframe id="hierarchical-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
@@ -292,7 +289,6 @@ The drag ghost can be templated on every grid level, making it possible to have 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
-
 }
 
 #### Templating the drag icon

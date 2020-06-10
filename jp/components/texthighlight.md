@@ -277,7 +277,7 @@ div テキストと IgxTextHighlight ディレクティブを追加します。�
 
 ### スタイル設定
 
-[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、指定された文字列のすべての発生の色と背景を変更してスタイル設定できます。まず、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、指定された文字列のすべての発生の色と背景を変更してスタイル設定できます。まず、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
