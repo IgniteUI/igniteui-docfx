@@ -6,13 +6,14 @@ _keywords: dock manager, layout, updating panes, Ignite UI for Angular, Infragis
 
 ## Updating Panes in Dock Manager
 
-The Angular Dock Manager component provides you with the layout for creating interactive content in your application using panes that can update based on actions of end-users.
+The Dock Manager component provides you with the layout for creating interactive content in your application using panes that can update based on actions of end-users.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 600px">
     <iframe id="dock-manager-updating-panes-iframe" src='{environment:dvDemosBaseUrl}/layouts/dock-manager-updating-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 <!-- <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>

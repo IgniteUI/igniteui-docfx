@@ -12,6 +12,14 @@ This topic provides information about breaking changes in Ignite UI for Angular 
 
 The data grid component and it's corresponding module's names have changed from "LiveGrid" to "DataGrid." The new code for importing the grid and it's corresponding module is:
 
+### Required Peer Dependency for Data Grid
+
+The data grid component requires the "inputs" package. 
+
+```ts
+**npm install --save {PackageInputs}**
+```
+
 ### Changed Import Statements
 
 Import statements have been simplified to use just package names instead of full paths to API classes and enums.

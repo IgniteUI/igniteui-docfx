@@ -6,13 +6,14 @@ _keywords: dock manager, layout, updating panes, Ignite UI for Angular, Infragis
 
 ## Embedding Frames in Dock Manager
 
-The Angular Dock Manager component provides you with the layout for embedding interactive content in your application using panes.
+The Dock Manager component provides you with the layout for embedding interactive content in your application using panes.
 
 ### Demo
 
 <div class="sample-container loading" style="height: 600px">
     <iframe id="dock-manager-embedding-frames-iframe" src='{environment:dvDemosBaseUrl}/layouts/dock-manager-embedding-frames' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 <!-- <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
