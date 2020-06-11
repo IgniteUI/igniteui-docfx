@@ -23,12 +23,12 @@ Infragistics Ignite UI Dock Manager Web コンポーネントは、別の npm �
 > Ignite UI for Angular npm パッケージの使用方法の詳細については、[このトピック](getting_started.md#installing-ignite-ui-for-angular)を参照してください。Ignite UI Dock Manager Web コンポーネントの詳細については、[こちら](../dock-manager.md) を参照してください。
 
 ### Angular Schematics または Ignite UI CLI を使用したパッケージのアップグレード
-Ignite UI for Angular が [`ng add`](./getting_started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが[ schematic コレクションまたは Ignite UI CLI](./cli-overview.md) を使用して作成された場合、`アップグレード パッケージ`を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。
+Ignite UI for Angular が [`ng add`](./getting_started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが[ schematic コレクションまたは Ignite UI CLI](./cli-overview.md) を使用して作成された場合、`アップグレード パッケージ`を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。プロジェクト パッケージの依存関係には、`@igniteui/angular-schematics` または `igniteui-cli` が含まれ、どちらも upgrade コマンドをサポートします。
 
 >[!NOTE]
 > パッケージが変更されるため、切り替える前にプロジェクトを更新することをお勧めします。このように、IgniteUI Angular の高いバージョンを使用せず、更新の移行のトラブルを防止します。[アップデート ガイド](./update_guide.md)を参照してください。
 
-プロジェクトで以下の schematic を実行します。
+プロジェクトのセットアップに応じて、プロジェクトで以下 の schematic を実行します。
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
@@ -40,15 +40,18 @@ ig upgrade-packages
 schematic またはコマンドはプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。
 まだセットアップされていない場合、NPM レジストリへのログインが要求されます。
 
+>[!NOTE]
+> プロジェクトが [`yarn`](https://yarnpkg.com/) を使用している場合は、`--skip-install` フラグを指定して `upgrade-packages` を実行します。その後、`yarn install` (現在 upgrade コマンドはインストールに `npm` を使用します) を実行して `yarn.lock` を適切に更新します。
+
+
 ### プライベート npm フィードを使用するための環境設定方法
 
 #### 最初にプライベート レジストリを構成し、レジストリを Infragistics スコープと関連付けます。 
 
 これにより公開用の npm レジストリおよびプライベート Infragistics レジストリからのパッケージを同時に使用できます。Infragistics アカウントにログインするユーザー名およびパスワードを入力する必要があります。Infragistics プロファイルに登録されるメールも入力してください。 
 
-
 >[!NOTE]
-> `npm`  はユーザー名で `「@」` の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、`「@」` 記号は既に含まれています。この制限を回避するには、 `「@」` 記号の代わりに `「!!」` (2 つの感嘆符) を使用します。 (two exclamation marks). たとえば、ユーザー名が `username@example.com` の場合、`username!!example.com` と入力します。
+> `npm`  はユーザー名で `「@」` の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、`「@」` 記号は既に含まれています。この制限を回避するには、 `「@」` 記号の代わりに `「!!」` (2 つの感嘆符) を使用します。たとえば、ユーザー名が `username@example.com` の場合、`username!!example.com` と入力します。
 
 #### npm を使用してプライベート フィードにログインするには、adduser コマンドを実行し、ユーザー アカウントとパスワードを指定します。
 
@@ -123,7 +126,7 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 
 ## アクセス トークンの使用
 
-アクセス トークンを使用してプライベート npm フィードの認証を受けることもできます。アクセストークンは [infragistics.comユーザー アカウント](https://jp.account.infragistics.com/access-tokens)で取得できます。アクセス トークン認証は、CI プロセスを Ignite UI for Angular ライセンス パッケージを使用する公開アクセス可能なリポジトリに統合する場合に推奨される代替方法です。
+アクセス トークンを使用してプライベート npm フィードの認証を受けることもできます。アクセストークンは [infragistics.com ユーザー アカウント](https://jp.account.infragistics.com/access-tokens)で取得できます。アクセス トークン認証は、CI プロセスを Ignite UI for Angular ライセンス パッケージを使用する公開アクセス可能なリポジトリに統合する場合に推奨される代替方法です。
 
 以下は、ローカル構成でアクセス トークンを使用してプライベート npm レジストリへの認証を設定する方法、Azure Pipelines のビルド手順、および Travis CI のビルド プロセスです。 
 
