@@ -23,12 +23,12 @@ Infragistics Ignite UI Dock Manager Web コンポーネントは、別の npm �
 > Ignite UI for Angular npm パッケージの使用方法の詳細については、[このトピック](getting_started.md#installing-ignite-ui-for-angular)を参照してください。Ignite UI Dock Manager Web コンポーネントの詳細については、[こちら](../dock-manager.md) を参照してください。
 
 ### Angular Schematics または Ignite UI CLI を使用したパッケージのアップグレード
-Ignite UI for Angular が [`ng add`](./getting_started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが[概略図コレクションまたは Ignite UI CLI](./cli-overview.md) を使用して作成された場合、`アップグレード パッケージ`を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。
+Ignite UI for Angular が [`ng add`](./getting_started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが[ schematic コレクションまたは Ignite UI CLI](./cli-overview.md) を使用して作成された場合、`アップグレード パッケージ`を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。
 
 >[!NOTE]
 > パッケージが変更されるため、切り替える前にプロジェクトを更新することをお勧めします。このように、IgniteUI Angular の高いバージョンを使用せず、更新の移行のトラブルを防止します。[アップデート ガイド](./update_guide.md)を参照してください。
 
-プロジェクトで以下の概略図を実行します。
+プロジェクトで以下の schematic を実行します。
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
@@ -37,7 +37,7 @@ ng g @igniteui/angular-schematics:upgrade-packages
 ```bash
 ig upgrade-packages
 ```
-概略図またはコマンドはプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。
+schematic またはコマンドはプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。
 まだセットアップされていない場合、NPM レジストリへのログインが要求されます。
 
 ### プライベート npm フィードを使用するための環境設定方法
