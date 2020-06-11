@@ -380,6 +380,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 |--- |--- |
 |Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
+|Hierarchy Limitations|The tree grid supports hierarchies up to 25 levels. Supporting bigger hierarchies requirers adding custom classes on application level.|
 
 > [!NOTE]
 > `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
