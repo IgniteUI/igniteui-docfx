@@ -20,10 +20,10 @@ Infragistics Ignite UI for Angular は npm パッケージで提供され、[`�
 
 Infragistics Ignite UI Dock Manager Web コンポーネントは、別の npm パッケージとして利用できます。インストールすると、製品の [Ignite UI Dock Manager Web コンポーネント トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
 
-> Ignite UI for Angular npm パッケージの使用方法の詳細については、[このトピック](getting_started.md#installing-ignite-ui-for-angular)を参照してください。Ignite UI Dock Manager Web コンポーネントの詳細については、[こちら](../dock-manager.md) を参照してください。
+> Ignite UI for Angular npm パッケージの使用方法の詳細については、[このトピック](getting_started.md#ignite-ui-for-angular-のインストール)を参照してください。Ignite UI Dock Manager Web コンポーネントの詳細については、[こちら](../dock-manager.md) を参照してください。
 
 ### Angular Schematics または Ignite UI CLI を使用したパッケージのアップグレード
-Ignite UI for Angular が [`ng add`](./getting_started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが[schematic コレクションまたは Ignite UI CLI](./cli-overview.md) を使用して作成された場合、`アップグレード パッケージ`を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。プロジェクト パッケージの依存関係には、`@igniteui/angular-schematics` または `igniteui-cli` が含まれ、どちらも upgrade コマンドをサポートします。
+Ignite UI for Angular が [`ng add`](./getting_started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが [schematic コレクションまたは Ignite UI CLI](./cli-overview.md) を使用して作成された場合、`upgrade-packages` を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。プロジェクト パッケージの依存関係には、`@igniteui/angular-schematics` または `igniteui-cli` が含まれ、どちらも upgrade コマンドをサポートします。
 
 >[!NOTE]
 > パッケージが変更されるため、切り替える前にプロジェクトを更新することをお勧めします。このように、IgniteUI Angular の高いバージョンを使用せず、更新の移行のトラブルを防止します。[アップデート ガイド](./update_guide.md)を参照してください。
