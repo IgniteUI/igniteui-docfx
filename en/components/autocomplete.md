@@ -5,12 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Autocomplete
-<p class="highlight">
-
-The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
-
-The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means the available capabilities of the dropdown component can be used, these include grouping, templates and disabling of items and groups.
-</p>
+<p class="highlight">The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.</p>
 <div class="divider"></div>
 
 ### Demo
@@ -64,7 +59,7 @@ Then add the `igxAutocomplete` directive, referencing the dropdown:
 </igx-drop-down>
 ```
 
-Add the list that will show in the dropdown. If you want to filter the list while typing, use the **PipeTransform** interface.
+Add the list that will be shown in the dropdown. If you want the list to be filtered while typing, use the **PipeTransform** interface.
 
 ```typescript
 import { Component, Pipe, PipeTransform } from "@angular/core";
@@ -90,6 +85,9 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 }
 ```
 
+>[!NOTE]
+>The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means that all capabilities of the dropdown component can be used in the autocomplete.
+
 #### Disabled Autocomplete
 
 You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) input:
@@ -104,7 +102,7 @@ You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({envir
 ```
 
 #### Autocomplete Settings
-The `igx-autocomplete` dropdown positioning, scrolling strategy and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) option. It allows values from type [`AutocompleteOverlaySettings`]({environment:angularApiUrl}/interfaces/autocompleteoverlaysettings.html).
+The `igx-autocomplete` dropdown positioning, scrolling strategy and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings).
 
 In the following example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
 
@@ -167,7 +165,7 @@ export class AutocompleteComponent {
 >[!NOTE]
 >The default positioning strategy is `AutoPositionStrategy` and the dropdown is opened according to the available space.
 
-Here's the sample with custom settings:
+If everything went right, you should see this in your browser:
 
 <div class="sample-container loading" style="height: 500px;">
     <iframe id="autocomplete-movie" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/movie" class="lazyload"></iframe>
@@ -182,7 +180,6 @@ Here's the sample with custom settings:
 <div class="divider--half"></div>
 
  - <kbd>⬆</kbd> / <kbd>⬇</kbd> or typing in the input will open the dropdown, if it's closed.
- - Typing in the input will open the dropdown, if it's closed.
  - <kbd>⬇</kbd> - will move to the next dropdown item.
  - <kbd>⬆</kbd> - will move to the previous dropdown item.
  - <kbd>ENTER</kbd> will confirm the already selected item and will close the dropdown.
