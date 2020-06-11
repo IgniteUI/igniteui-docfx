@@ -105,7 +105,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
     [data]="localData" [autoGenerate]="true" [paging]="true" >
 </igx-grid>
 ```
-以上です! セル範囲の選択**を実行し、データ分析フローを実行できます。
+以上です! **セル範囲の選択**を実行し、データ分析フローを実行できます。
 
 ### データ分析ボタン
 データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
