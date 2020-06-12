@@ -121,7 +121,7 @@
       new: false
     - name: Column Pinning
       href: grid/column_pinning.md
-      new: false
+      new: true
     - name: Row Pinning
       href: grid/row_pinning.md
       new: true
