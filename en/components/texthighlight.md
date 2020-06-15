@@ -82,92 +82,92 @@ Let's create a search box that we can use to highlight different parts of the te
 Then, we will add a div with text and the IgxTextHighlight directive. Note that, since we need to bind the value input to the text in the div, we will also use interpolation for the div's text.
 
 ```html
-    <div igxTextHighlight
-         [value]="html"
-         [groupName]="'group1'"
-         [containerClass]="'search-text'"
-         class="search-text">
-        {{html}}
-    </div>
+<div igxTextHighlight
+     [value]="html"
+     [groupName]="'group1'"
+     [containerClass]="'search-text'"
+     class="search-text">
+    {{html}}
+</div>
 ```
 
 In the .ts file of our component first we need to add the following fields, that are used for bindings in our component's template:
 
 ``` typescript
-    public html = "...";
+public html = "...";
 
-    @ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
-    public highlight: IgxTextHighlightDirective;
+@ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
+public highlight: IgxTextHighlightDirective;
 
-    public searchText: string = "";
-    public matchCount: number = 0;
-    public caseSensitive: boolean = false;
-    public index: number = 0;
+public searchText: string = "";
+public matchCount: number = 0;
+public caseSensitive: boolean = false;
+public index: number = 0;
 
 
-    public get canMoveHighlight() {
-        return this.matchCount > 1;
-    }
+public get canMoveHighlight() {
+    return this.matchCount > 1;
+}
 ```
 
 Then we need to add the following methods which will allow the user to apply the highlights for the text they have typed in the search box and to move the active highlight around.
 
 ``` typescript
-    public searchKeyDown(ev) {
-        if (this.searchText) {
-            if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
-                ev.preventDefault();
-                this.findNext();
-            } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
-                ev.preventDefault();
-                this.findPrev();
-            }
+public searchKeyDown(ev) {
+    if (this.searchText) {
+        if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+            ev.preventDefault();
+            this.findNext();
+        } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+            ev.preventDefault();
+            this.findPrev();
         }
     }
+}
 
-    public onTextboxChange() {
-        this.index = 0;
-        this.find(0);
-    }
+public onTextboxChange() {
+    this.index = 0;
+    this.find(0);
+}
 
-    public updateSearch() {
-        this.caseSensitive = !this.caseSensitive;
-        this.find(0);
-    }
+public updateSearch() {
+    this.caseSensitive = !this.caseSensitive;
+    this.find(0);
+}
 
-    public clearSearch() {
-        this.searchText = "";
-        this.find(0);
-    }
+public clearSearch() {
+    this.searchText = "";
+    this.find(0);
+}
 
-    private findNext() {
-        this.find(1);
-    }
+private findNext() {
+    this.find(1);
+}
 
-    private findPrev() {
-        this.find(-1);
-    }
+private findPrev() {
+    this.find(-1);
+}
 
-    private find(increment: number) {
-        if (this.searchText) {
-            this.matchCount = this.highlight.highlight(this.searchText, this.caseSensitive);
-            this.index += increment;
+private find(increment: number) {
+    if (this.searchText) {
+        this.matchCount = this.highlight.highlight(this.searchText, this.caseSensitive);
+        this.index += increment;
 
-            this.index = this.index < 0 ? this.matchCount - 1 : this.index;
-            this.index = this.index > this.matchCount - 1 ? 0 : this.index;
+        this.index = this.index < 0 ? this.matchCount - 1 : this.index;
+        this.index = this.index > this.matchCount - 1 ? 0 : this.index;
 
-            if (this.matchCount) {
-                IgxTextHighlightDirective.setActiveHighlight("group1", {
-                    columnIndex: 0,
-                    index: this.index,
-                    page: 0,
-                    rowIndex: 0
-                });
-            }
-        } else {
-            this.highlight.clearHighlight();
+        if (this.matchCount) {
+            IgxTextHighlightDirective.setActiveHighlight("group1", {
+                columnIndex: 0,
+                index: this.index,
+                page: 0,
+                rowIndex: 0
+            });
         }
+    } else {
+        this.highlight.clearHighlight();
     }
+}
 ```
 
 If the sample is configured properly, the final result should look like that:
@@ -186,76 +186,76 @@ If the sample is configured properly, the final result should look like that:
 The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) allows you to search across multiple elements which all share one active highlight. This is done by having the same [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupname) value across multiple TextHighlight directives. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two div elements. The [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) and [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) inputs are useful when you have multiple elements and in our case the second div has a different row value.
 
 ```html
-    <div igxTextHighlight
-         [groupName]="'group1'"
-         [row]="0"
-         [containerClass]="'search-text'"
-         [value]="firstParagraph"
-         class="search-text">
-        {{firstParagraph}}
-    </div>
-    <div igxTextHighlight
-         [groupName]="'group1'"
-         [row]="1"
-         [containerClass]="'search-text'"
-         [value]="secondParagraph"
-         class="search-text">
-        {{secondParagraph}}
-    </div>
+<div igxTextHighlight
+     [groupName]="'group1'"
+     [row]="0"
+     [containerClass]="'search-text'"
+     [value]="firstParagraph"
+     class="search-text">
+    {{firstParagraph}}
+</div>
+<div igxTextHighlight
+     [groupName]="'group1'"
+     [row]="1"
+     [containerClass]="'search-text'"
+     [value]="secondParagraph"
+     class="search-text">
+    {{secondParagraph}}
+</div>
 ```
 In the .ts file we have the `firstParagraph` and `secondParagraph` fields, which are bound to the respective value inputs of the text highlight directives. Also, we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
 
 ```typescript
-    public firstParagraph = "...";
+public firstParagraph = "...";
 
-    public secondParagraph = "...";
+public secondParagraph = "...";
 
-    @ViewChildren(IgxTextHighlightDirective)
-    public highlights;
+@ViewChildren(IgxTextHighlightDirective)
+public highlights;
 ```
 All the rest of the code in the .ts file is identical to the single element example with the exception of the find method. Changes to this method are necessary since we now have multiple elements, but the code there can be used regardless of the number of TextHighlight directives you have on your page.
 
 ```typescript
-    private find(increment: number) {
-        if (this.searchText) {
-            let count = 0;
-            const matchesArray = [];
+private find(increment: number) {
+    if (this.searchText) {
+        let count = 0;
+        const matchesArray = [];
 
-            this.highlights.forEach((h) => {
-                count += h.highlight(this.searchText, this.caseSensitive);
-                matchesArray.push(count);
-            });
+        this.highlights.forEach((h) => {
+            count += h.highlight(this.searchText, this.caseSensitive);
+            matchesArray.push(count);
+        });
 
-            this.matchCount = count;
+        this.matchCount = count;
 
-            this.index += increment;
-            this.index = this.index < 0 ? this.matchCount - 1 : this.index;
-            this.index = this.index > this.matchCount - 1 ? 0 : this.index;
+        this.index += increment;
+        this.index = this.index < 0 ? this.matchCount - 1 : this.index;
+        this.index = this.index > this.matchCount - 1 ? 0 : this.index;
 
-            if (this.matchCount) {
-                let row;
+        if (this.matchCount) {
+            let row;
 
-                for (let i = 0; i < matchesArray.length; i++) {
-                    if (this.index < matchesArray[i]) {
-                        row = i;
-                        break;
-                    }
+            for (let i = 0; i < matchesArray.length; i++) {
+                if (this.index < matchesArray[i]) {
+                    row = i;
+                    break;
                 }
-
-                const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
-
-                IgxTextHighlightDirective.setActiveHighlight("group1", {
-                    index: actualIndex,
-                    rowIndex: row
-                });
             }
-        } else {
-            this.highlights.forEach((h) => {
-                h.clearHighlight();
+
+            const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
+
+            IgxTextHighlightDirective.setActiveHighlight("group1", {
+                index: actualIndex,
+                rowIndex: row
             });
-            this.matchCount = 0;
         }
+    } else {
+        this.highlights.forEach((h) => {
+            h.clearHighlight();
+        });
+        this.matchCount = 0;
     }
+}
 ```
 
 <div class="sample-container loading" style="height: 400px;">
