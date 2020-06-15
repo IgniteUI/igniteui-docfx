@@ -290,6 +290,7 @@ The `$resting-background` and the `$resting-color` parameters will be applied to
 
 The last step is to **include** the newly created theme.
 
+If `$legacy-support` is set to `true`, include the component theme like that:
 ```scss
 @include igx-highlight($dark-highlight);
 ```
@@ -305,31 +306,14 @@ The last step is to **include** the newly created theme.
 }
 ```
 
-#### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$dark-highlight: igx-highlight-theme(
-    $resting-background: igx-color($dark-palette, "secondary", 400),
-    $resting-color: igx-color($dark-palette, "primary", 400),
-    $active-background: igx-color($dark-palette, "primary", 400),
-    $active-color: igx-color($dark-palette, "secondary", 400)
-);
+@include igx-css-vars($dark-highlight);
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>Keep in mind that by default the `$legacy-support` is set to `false`
 
 #### Custom styles
 
