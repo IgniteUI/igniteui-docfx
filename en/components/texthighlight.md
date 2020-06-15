@@ -203,7 +203,7 @@ The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
         {{secondParagraph}}
     </div>
 ```
-Then in the .ts file we have the `firstParagraph` and `secondParagraph` fields, which are bound to the respective value inputs of the text highlight directives. Also we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
+In the .ts file we have the `firstParagraph` and `secondParagraph` fields, which are bound to the respective value inputs of the text highlight directives. Also, we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
 
 ```typescript
     public firstParagraph = "...";
