@@ -5,6 +5,53 @@ _keywords: data analysis, ignite ui for angular, infragistics, データ分析, 
 _language: ja
 ---
 
+<style>
+    .full-screen-btn {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 13px;
+        font-weight: 400;
+        color: #fff;
+        border: 0;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        margin: 24px 0;
+        outline-style: none;
+        -webkit-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        background: #0099ff; 
+    }
+    .full-screen-btn:hover, .full-screen-btn:focus {
+        color: white;
+        -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); 
+    }
+    .full-screen-btn::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        background-image: url("../../../images/general/fullscreen-white-18dp.svg");
+        background-size: 100%;
+        background-repeat: no-repeat; 
+    }
+    .full-screen-btn[disabled] {
+        color: rgba(0, 0, 0, 0.28);
+        background: #eee;
+        -webkit-box-shadow: none;
+        box-shadow: none; 
+    }
+    .full-screen-btn[disabled]::before {
+        background-image: url("../../../images/general/fullscreen-white-18dp.svg"); 
+    }
+
+</style>
+
 ## データ分析  
 
 データ分析とは、特定の方法でデータを検査、変換、および整理し、それに基づいて役立つ情報を生成するプロセスです。また、分析的および論理的な推論で特定の結果と結論に達することもできます。
@@ -12,26 +59,53 @@ _language: ja
 >[!NOTE]
 >この機能は、設定を簡単にし、コードを最小限に制限するために、**Ignite UI for Angular** の外部パッケージとして提供されます。
 
-### Data Analysis with DockManager
-Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager.md) right pane. From there you can:
- - Choose specific chart type and visualize it in separate pane.
- - Or use the `Data Analysis` context button to show different text formatting options.
+### Dock Manager のデータ分析
+選択したデータに基づいて `Chart Types ビュー`を有効にするには、`セル範囲の選択`または`列の選択`を実行します。このビューは、[Dock Manager](../../dock-manager.md) の右ペインの一部です。以下のオプションを選択できます。
+ - 特定のチャート タイプを選択し、別のペインで可視化します。
+ - または、`Data Analysis` コンテキスト ボタンを使用して、さまざまなテキスト書式設定オプションを表示します。
 
 <div class="sample-container loading" style="height: 580px;">
-    <iframe id="data-analysis-dock-manager" class="no-theming" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
 </div>
 
-[View sample]({environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager) in full-size.
+<div>
+<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" target="_blank">全画面表示</a>
+</div>
 
 > [!NOTE]
-> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting your data, go ahead and create a couple of charts and pin them (by dragging) to the available pinnable areas.
+> [Dock Manager Web コンポーネント](../../dock-manager.md)は、ペインでアプリケーションのレイアウトを管理する方法を提供します。エンド ユーザーはペインをピン固定、サイズ変更、移動、非表示にすることでカスタマイズできます。データを選択した後、いくつかのチャートを作成し、利用可能な領域にドラッグしてピン固定します。
 
+以下に注意してください。
+- 新しいデータを選択すると、チャートのデータが更新されます。
+- 複数セルの範囲選択が適用される場合、`テキスト書式設定`機能のみが利用可能になります。
+- 選択したデータがいずれのチャートとも互換性がない場合、「互換性のないデータ」警告メッセージが表示されます。
 
-Keep in mind (sample related):
-- On new data selection chart data will be updated.
-- If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
-- If on new selection the data is not compatible for some of the charts - a warning "Incompatible data" will be shown.
+### データ分析パッケージ
 
+この機能を使用できるには、以下の手順を実行します。**Igniteui-angular-extras** パッケージは [プライベート npm フィード](https://packages.infragistics.com/npm/js-licensed/) でのみ利用できます。[有効な商用ライセンス](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#使用許諾契約)がある場合、プライベート フィードにアクセスできます。
+
+始めましょう:
+
+- パッケージをアプリケーションにインストールします。
+```cmd
+npm install @infragistics/igniteui-angular-extras
+```
+
+- パッケージのピア依存関係をインストールします。
+```cmd
+npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angular-charts
+```
+
+- パッケージのインストール後、以下を実行します。
+  - `IgxExtrasModule` を app.module.ts に追加します。
+  - `igxChartIntegration`、`igxConditionalFormatting`、`igxContextMenu` ディレクティブをグリッドに適用します。
+
+```html
+<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu 
+    [data]="localData" [autoGenerate]="true" [paging]="true" >
+</igx-grid>
+```
+以上です! **セル範囲の選択**を実行し、データ分析フローを実行できます。
 
 ### データ分析ボタン
 データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
@@ -51,7 +125,11 @@ Keep in mind (sample related):
 >チャート作成オプションは、選択したデータに数値がある場合にのみ使用できます。
 
 <div class="sample-container loading" style="height: 750px;">
-    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
+    <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
+</div>
+
+<div>
+<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">全画面表示</a>
 </div>
 
 以下のチャート タイプをサポートします。
@@ -106,6 +184,46 @@ Keep in mind (sample related):
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
+
+<div>
+<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">全画面表示</a>
+</div>
+
+### Data Analysis Package API
+ 
+#### IgxConditionalFormattingDirective
+<div class="divider--half"></div>
+
+| API | Description | Arguments |
+|---------|:-------------:|-----------:|
+| `ConditionalFormattingType` | An **enum**, which represents the conditional formatting types |
+| `IFormatColors` | An **interface**, which represents the formatting colors |
+| `formatter`: **string** | An **input** property, which sets/gets the current formatting type |
+| `formatColors` | An **input** property, which sets/gets the current formatting colors | `val`: *IFormatColors* |
+| `onFormattersReady`| An **event**, which emits the applicable `formatting types` for the selected data, when they are determined. |
+| `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
+| `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditonalFormatting.clearFormatting()** |
+
+#### IgxChartIntegrationDirective
+<div class="divider--half"></div>
+
+| API | Description | Arguments |
+|---------|-------------|-----------|
+| `CHART_TYPE` | An **enum**, representing the supported chart types |
+| `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component| 
+| `IOptions` | An **interface** for chart property options |
+| `chartFactory`| Creates a chart component, based on the provided chart type. Usage: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
+| `setChartComponentOptions` | Sets property options to a chart component. Usage: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: *CHART_TYPE*, `optionsType`: *OPTIONS_TYPE*, `options`: *IOptions* |
+| `getAvailableCharts` | Returns the enabled chart types |
+| `enableCharts` | Enables the provided chart types. By default all chart types are enabled | `types`: *CHART_TYPE* [ ] |
+| `disableCharts` | Disables the provided chart types | `types`: *CHART_TYPE* [ ] |
+| `onChartTypesDetermined` | An **event**, emitted when the chart types, applicable for the `chartData`, are determined. This event emits an object of type `IDeterminedChartTypesArgs`, which has 2 properties: <br /> `chartsAvailabilty`: *Map<CHART_TYPE, boolean>* - the enabled/disabled chart types, <br /> `chartsForCreation`: *CHART_TYPE[]* - the applicable chart types for the `chartData` |
+| `onChartCreationDone` | An event, emitted when a chart is created. This event emits the chart component, which is created |
+| `chartData`: **any[ ]** | An **input** property, which sets/gets the data for the charts | `selectedData`: **any[ ]** |
+| `useLegend`: **boolean** | An **input**, which enables/disables the legend usage for all chart types. By default it is set to **true** |
+| `defaultLabelMemberPath`: **string** | An **input** property, which sets/gets the default label member path for the charts. By default the label member path will be determined, based on the provided data. <br />( **if the provided data records have properties with string values, the first string property name of the first data record in the `chartData` will be selected as a label member path for the charts, if not, the label member path will have value *'Index'*.** ) <br/> |
+| `scatterChartYAxisValueMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default Y axis value member path will be the first numeric property name of the first data record in the `chartData`** | `path`: **string** |
+| `bubbleChartRadiusMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default radius member path will be the second numeric property name of the first data record in the `chartData`** | `path`: **string** |
 
 ### 便利なリソース
 
