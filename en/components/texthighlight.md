@@ -8,7 +8,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
 
-### TextHighlight Demo
+#### Demo   
+
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -19,32 +20,23 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 
 ### Usage
 
-To get started with the Ignite UI for Angular TextHighlight directive, first you need to install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
+To get started with the Ignite UI for Angular TextHighlight directive you need to import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
 
 ```typescript
 // app.module.ts
-
 ...
 import { IgxButtonModule, IgxInputGroupModule,
         IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxButtonModule, IgxInputGroupModule,
-                    IgxIconModule, IgxRippleModule, IgxTextHighlightModule],
+    imports: [IgxTextHighlightModule],
     ...
 })
 export class AppModule {}
 ```
 
-Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input_group.md) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
+Let's create a search box that we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input_group.md) component in which we will add a text input with buttons for clear matches, find next, find previous, and a button for specifying whether the search will be case-sensitive or not. Also it has a label for how many matches we have found.
 
 ```html
 <div class="search-container">
@@ -63,17 +55,17 @@ Then, lets create a search box which we can use to highlight different parts of 
                     <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
                 </button>
             </div>
-        </igx-suffix>
-
-        <igx-suffix *ngIf="searchText.length > 0">
-            <div>
-                <span *ngIf="matchCount > 0">
-                    {{ index + 1 }} of {{ matchCount }} results
+            <ng-container *ngIf="searchText.length > 0">
+                <span>
+                    <ng-container *ngIf="matchCount > 0">
+                        {{ index + 1 }} of {{ matchCount }} results
+                    </ng-container>
+                    <ng-container *ngIf="matchCount == 0">
+                        No results
+                    </ng-container>
                 </span>
-                <span *ngIf="matchCount == 0">
-                    No results
-                </span>
-            </div>
+            </ng-container>
+           
             <div class="searchButtons">
                 <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
                     <igx-icon fontSet="material">navigate_before</igx-icon>
@@ -210,7 +202,7 @@ The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
     {{secondParagraph}}
 </div>
 ```
-Then in the .ts file we have the firstParagraph and secondParagraph fields, which are bound to the respective value inputs of the text highlight directives. Also we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
+In the .ts file we have the `firstParagraph` and `secondParagraph` fields, which are bound to the respective value inputs of the text highlight directives. Also, we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
 
 ```typescript
 public firstParagraph = "...";
@@ -303,7 +295,7 @@ If `$legacy-support` is set to `true`, include the component theme like that:
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -322,49 +314,6 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 >[!NOTE]
 >Keep in mind that by default the `$legacy-support` is set to `false`
 
-#### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-highlight`]({environment:sassApiUrl}/index.html#variable-_dark-highlight) schema:
-
-```scss
- // Extending the dark highlight schema.
-$dark-highlight-schema: extend($_dark-highlight,
-    (
-        resting-background: (
-            igx-color: ("secondary", 400)
-        ),
-        resting-color: (
-            igx-color: ("primary", 400)
-        ),
-        active-background: (
-            igx-color: ("primary", 400)
-        ),
-        active-color: (
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-highlight: $dark-highlight-schema
-));
-
-// Defining highlight-theme with the global dark schema
-$dark-highlight: igx-highlight-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
-
 #### Custom styles
 
 Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) and provide an awesome experience to our users!
@@ -373,8 +322,6 @@ All we have to do is create a couple of css classes with some properties and att
 
 ```html
 <div igxTextHighlight
-     [value]="html"
-     [groupName]="'group1'"
      [cssClass]="'custom-highlight'"
      [activeCssClass]="'custom-active-highlight'">
     {{html}}
@@ -382,11 +329,13 @@ All we have to do is create a couple of css classes with some properties and att
 ```
 
 ```scss
+// cssClass
 .custom-highlight {
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    border: 1px solid #FFCD0F;
 }
+// activeCssClass
 .custom-active-highlight {
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
 }
 ```
 
@@ -396,12 +345,15 @@ As mentioned earlier, we can even combine them with a theme:
 :host {
     ::ng-deep {
        @include igx-highlight($dark-highlight);
-
+        
+       // cssClass
        .custom-highlight {
-            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+            border: 1px solid #FFCD0F;
        }
+        
+        // activeCssClass
        .custom-active-highlight {
-            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+            box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
         }
    }
 }
