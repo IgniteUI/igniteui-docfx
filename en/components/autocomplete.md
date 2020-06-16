@@ -89,7 +89,6 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 >The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means that all capabilities of the dropdown component can be used in the autocomplete.
 
 #### Disabled Autocomplete
-
 You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) input:
 
 ```html
@@ -189,7 +188,6 @@ If everything went right, you should see this in your browser:
 >When the autocomplete opens, then the first item on the list is automatically selected. The same is valid when the list is filtered.
 
 ### Compatibility support
-
 Applying the `igxAutocomplete` directive will decorate the element with the following ARIA attributes:
  - role="combobox" - role of the element, where the directive is applied.
  - aria-autocomplete="list" - indicates that input completion suggestions are provided in the form of list
@@ -205,18 +203,26 @@ The `drop-down` component, used as provider for suggestions, will expose the fol
  - aria-disabled="true"/"false" applied on `igx-drop-down-item`, `igx-drop-down-item-group` component containers when they are disabled.
 
 
+### Styling
+Every component has its own theme.
 
-## API Reference
+To get the `igxAutocomplete` styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
+
+Take a look at the [`igxInputGroup`](input_group.md#styling) and the [`igxDropdown`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
+
+### API Reference
 <div class="divider--half"></div>
 
 * [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [IgxDropDownComponent](drop_down.md)
+* [IgxDropDown](drop_down.md)
 * [IgxInputGroup](input_group.md)
 * [Template Driven Forms Integration](input_group.md)
 
