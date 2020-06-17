@@ -110,6 +110,68 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+
+#### Infinite Scroll
+
+ A popular design for scenarios requiring fetching data by chunks from an end-point is the so-called infinite scroll. For data grids, it is characterised by continuous increase of the loaded data triggered by the end-user scrolling all the way to the bottom. The next paragraphs explain how you can use the available API to easily achieve infinite scrolling in `IgxGrid`.
+
+To implement infinite scroll, you have to fetch the data in chunks. The data that is already fetched should be stored locally and you have to determine the length of a chunk and how many chunks there are. You also have to keep a track of the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you can determine if the user scrolls up and you have to show them already fetched data or scrolls down and you have to fetch more data from the end-point.
+
+The first thing to do is use the `ngAfterViewInit` lifecycle hook to fetch the first chunk of the data. Setting the `totalItemCount` property is important, as it allows the grid to size its scrollbar correctly.
+
+```typescript
+public ngAfterViewInit() {
+    ...
+    this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+        if (request.data) {
+            this.grid.totalItemCount = this.page * this.pageSize;
+            this.grid.data = this._remoteService.getCachedData({startIndex: 0, chunkSize: 10});
+            this.totalItems = request.data["@odata.count"];
+            this.totalPageCount = Math.ceil(this.totalItems / this.pageSize);
+            this.grid.isLoading = false;
+        }
+    });
+    ...
+}
+```
+
+Additionally, you have to subscribe to the `onDataPreLoad` output, so that you can provide the data needed by the grid when it tries to display a different chunk, rather than the currently loaded one. In the event handler, you have to determine whether to fetch new data or return data, that's already cached locally.
+
+```typescript
+public handlePreLoad() {
+    const isLastChunk = this.grid.totalItemCount ===
+                        this.grid.virtualizationState.startIndex + this.grid.virtualizationState.chunkSize;
+    // when last chunk reached load another page of data
+    if (isLastChunk) {
+        if (this.totalPageCount === this.page) {
+            this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+            return;
+        }
+        this.page++;
+        this.grid.isLoading = true;
+        this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
+            if (request.data) {
+                this.grid.totalItemCount = Math.min(this.page * this.pageSize, this.totalItems);
+                this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+                this.grid.isLoading = false;
+            }
+        });
+    } else {
+        this.grid.data = this._remoteService.getCachedData(this.grid.virtualizationState);
+    }
+}
+```
+
+
+#### Infinite Scroll Demo
+<div class="sample-container loading" style="height:510px">
+    <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 ### Remote Sorting/Filtering
 
 To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
@@ -140,7 +202,7 @@ public ngAfterViewInit() {
         takeUntil(this.destroy$)
     ).subscribe(() => {
         this.processData();
-    });    
+    });
 }
 ```
 
@@ -359,6 +421,7 @@ In order to provide a custom loading template for the excel style filtering, we 
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 The paging feature can operate with remote data.
+If you want to use the default paging template you need to set the `totalRecords` property, so the grid to be able the calculate the total page number based on total remote records. Keep in mind that you still need to implement the fetching data from your remote service.
 Let's first declare our service that will be responsible for data fetching.
 We will need the count of all the data items in order to calculate pages count and we will add this logic to our service.
 ```typescript
@@ -430,7 +493,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     public firstPage = true;
     public totalPages: number = 1;
     public totalCount = 0;
-    
+
     constructor(private remoteService: RemotePagingService) {}
 
     public ngOnInit() {
@@ -521,15 +584,15 @@ public paginate(page: number) {
 @ViewChild("customPager", { read: TemplateRef })
 public remotePager: TemplateRef<any>;
 public title = "gridPaging";
-    
+
 @ViewChild("layout1")
 public layout1: IgxRowIslandComponent;
 
 @ViewChild("hierarchicalGrid")
 public hierarchicalGrid: IgxHierarchicalGridComponent;
-    
+
 ...
-    
+
 public ngAfterViewInit() {
     this.hierarchicalGrid.isLoading = true;
     this.remoteService.getData(
@@ -720,6 +783,66 @@ public ngAfterViewInit() {
 
 ```
 
+}
+
+@@if (igxName === 'IgxGrid') {
+
+### Remote Paging with Batch editing
+
+With the examples so far we clarified how to set up the @@igxName with remote data. Now, let's focus on enabling batch editing for the grid by following the [Batch Editing topic/guide](batch_editing.html).
+
+Before continuing with the sample it is good to clarify the current use case. When pagination is done on the server, the grid contains the data only for the current page and if we add new rows the newly added rows (with Batch Editing) will be concatenated with the current data that the grid contains. Therefore, if the server returns no data for a given page, grid's data source will be consisted only from the newly added rows, which the grid will paginate based on the defined pagination settings (page, perPage).
+
+```typescript
+public ngOnInit() {
+  ...
+    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+        this.totalCount = data;
+        this._recordOnServer = data;
+        this._totalPagesOnServer = Math.floor(this.totalCount / this.perPage);
+        this.grid1.isLoading = false;
+    });
+    }
+```
+
+In order to handle this use case properly, we need to implement some custom logic.
+First, we have to know the total number of records that are on the server. Given that, we calculate the total number of data pages on the server (see `this._totalPagesOnServer `) and based on its value, we will implement the custom pagination logic.
+
+```typescript
+
+public paginate(page: number) {
+    this.grid1.endEdit(true);
+    if (page > this._totalPagesOnServer) {
+        if (this.page !== this._totalPagesOnServer) {
+            const skipEl = this._totalPagesOnServer * this.perPage;
+            this.remoteService.getData(skipEl, this.perPage);
+        }
+        this.grid1.page = page - this._totalPagesOnServer;
+        this.page = page;
+        return;
+    } else {
+        this.grid1.page = 0;
+    }
+    this.page = page;
+    const skip = this.page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
+}
+
+```
+
+As you can see in the **paginate** method, custom pagination logic is performed, based on the `_totalPagesOnServer` value.
+
+
+#### Remote Paging with Batch Editing Demo
+
+
+<div class="sample-container loading" style="height:620px">
+    <iframe id="remote-paging-batch-editing-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-batch-editing' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-batch-editing-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 ### API References

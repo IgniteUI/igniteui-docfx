@@ -1,7 +1,7 @@
 ---
-title: One-Way Data Binding in Angular | IgniteUI for Angular | Infragistics
-_description: Learn how to create one-way data binding in Angular when you migrate from WPF to Angular.
-_keywords: data binding, ignite ui for angular, infragistics
+title: One-Way Data Binding in Angular | WPF to Angular Guide | Infragistics
+_description: Learn about one-way data binding in Angular & how it's used to show information to the end user while staying synchronized with changes to the underlying data.
+_keywords: one-way data binding in angular, ignite ui for angular, infragistics
 ---
 
 ## One-way data binding in Angular

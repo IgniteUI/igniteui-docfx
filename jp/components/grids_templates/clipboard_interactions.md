@@ -1,16 +1,16 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid データ コピー|Ignite UI for Angular |Infragistics 
+title: Angular Grid データ コピー | Ignite UI for Angular | インフラジスティックス
 _description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
-_keywords: copy data, igniteui for angular, infragistics, コピー,
+_keywords: copy data, igniteui for angular, infragistics, データのコピー
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid データ コピー|Ignite UI for Angular |Infragistics 
+title: Angular Grid データ コピー| Ignite UI for Angular | インフラジスティックス
 _description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
-_keywords: copy data, igniteui for angular, infragistics, コピー,
+_keywords: copy data, igniteui for angular, infragistics, データのコピー
 _language: ja
 ---
 }

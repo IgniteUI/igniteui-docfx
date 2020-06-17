@@ -33,7 +33,7 @@ _language: kr
 | `Candle`                                                                                                                                 | 캔들 시리즈를 지정합니다.                                                                                                            |
 | [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) | 기둥 시리즈를 지정합니다.                                                                                                            |
 | `Line`                                                                                                                                   | 선 시리즈를 지정합니다                                                                                                              |
-| `auto`                                                                                                                                   | 데이터의 이름 및 수치 열 수를 기반으로 한 위의 값 중에서 제안하는 데이터 어댑터를 기반으로 차트 유형의 자동 선택을 지정합니다. 예를 들면, 열기, 높음, 낮음, 닫기 열이 있는 데이터 항목에 ‘바’를 제안합니다. |
+| `Auto`                                                                                                                                   | 데이터의 이름 및 수치 열 수를 기반으로 한 위의 값 중에서 제안하는 데이터 어댑터를 기반으로 차트 유형의 자동 선택을 지정합니다. 예를 들면, 열기, 높음, 낮음, 닫기 열이 있는 데이터 항목에 ‘바’를 제안합니다. |
 
 다른 차트 창에 대한 정보는 [금융 차트 창](financial-chart-panes.md) 항목을 참조하십시오.
 

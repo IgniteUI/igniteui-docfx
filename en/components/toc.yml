@@ -3,9 +3,15 @@
 - name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
   new: true
+- name: Licensing
+  href: general/ignite-ui-licensing.md
+  new: true
 - name: Getting started
   href: general/getting_started.md
   new: false
+- name: Breaking Changes
+  href: general-breaking-changes-dv.md
+  new: true
 - name: Update guide
   href: general/update_guide.md
   new: false
@@ -56,10 +62,11 @@
   items:
     - name: SSR Rendering
       href: general/framework-and-features/ssr-rendering.md
-      new: true
+      new: false
     - name: Data Analysis
       href: general/framework-and-features/data-analysis.md
-      new: true
+      new: false
+      updated: true
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
@@ -114,7 +121,10 @@
       new: false
     - name: Column Pinning
       href: grid/column_pinning.md
-      new: false
+      new: true
+    - name: Row Pinning
+      href: grid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: grid/column_resizing.md
       new: false
@@ -164,6 +174,7 @@
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: false
@@ -231,6 +242,9 @@
     - name: Column Pinning
       href: treegrid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: treegrid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: treegrid/column_resizing.md
       new: false
@@ -239,7 +253,7 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: false
+      new: new
       items:
         - name: Row selection
           href: treegrid/row_selection.md
@@ -277,6 +291,7 @@
     - name: Keyboard navigation
       href: treegrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: false
@@ -332,6 +347,9 @@
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: hierarchicalgrid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: hierarchicalgrid/column_resizing.md
       new: false
@@ -374,6 +392,7 @@
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
@@ -985,6 +1004,9 @@
 - name: Zoom Slider
   new: false
   href: zoomslider-overview.md
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -1010,6 +1032,12 @@
 - name: Expansion Panel
   href: expansion_panel.md
   new: false
+- name: Splitter
+  href: splitter.md
+  new: true
+- name: Dock Manager
+  href: dock-manager.md
+  new: true
 - name: Notifications
   header: true
 - name: Banner
@@ -1021,10 +1049,16 @@
   href: toast.md
 - name: Scheduling
   header: true
+- name: Date Time Editor
+  href: date_time_editor.md
+  new: true
 - name: Calendar
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Date Range Picker
+  href: date_range_picker.md
+  new: true
 - name: Month Picker
   href: month_picker.md
   new: false

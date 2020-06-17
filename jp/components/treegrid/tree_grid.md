@@ -1,5 +1,5 @@
 ﻿---
-title: Angular データ ツリー グリッド | マテリアル テーブル | Ignite UI for Angular | Infragistics
+title: Angular データ ツリー グリッド | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
 _keywords: angular group by, igniteui for angular, インフラジスティックス
 _language: ja
@@ -51,7 +51,7 @@ export class AppModule {}
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
 [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) と多数の機能を共有しますが、データを階層で表示する機能も追加されています。
-[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、各データオブジェクトの [child collection](#child-collection) または各データオブジェクトに[プライマリキーまたは外部キー](#primary-and-foreign-keys)を使用してデータ オブジェクト内の関係を定義できます。
+[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、各データオブジェクトの[子コレクション](#子コレクション)または各データオブジェクトに[プライマリキーまたは外部キー](#プライマリと外部キー)を使用してデータ オブジェクト内の関係を定義できます。
 
 ### ツリー セル
 
@@ -239,7 +239,7 @@ export class MyComponent implements OnInit {
 **ツリー セル**のインデントは、フィルタリング、並べ替え、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
 - **sorting** が列に適用された際にデータ行がレベルごとに並べ替えられます。ルートレベルの行はそれぞれの子に関係なく個々に並べ替えられます。各子コレクションは個々に並べ替えられます。
-- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex)　を持つ列は、常にツリー列です。
+- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) 0 を持つ列は、常にツリー列です。
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
 - エクスポートした Excel ワークシートは、ツリーグリッドでグループ化されるときにレコードをグループ化して階層に反映できます。すべてのレコードを展開した状態が保持および反映されます。
 - CSV レベルにエクスポートする際に展開した状態は無視されてすべてのデータがフラットでエクスポートされます。
@@ -375,7 +375,7 @@ $custom-theme: igx-grid-theme(
 </div>
 <div class="divider--half"></div>
 
-## 既知の問題と制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |

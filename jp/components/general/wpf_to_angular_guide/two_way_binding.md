@@ -1,5 +1,5 @@
 ﻿---
-title: 双方向バインディング | IgniteUI for Angular | Infragistics
+title: 双方向バインディング | IgniteUI for Angular | インフラジスティックス
 _description: WPF から Angular へ移行時に Angular で双方向のデータバインディングを作成する方法を説明します。
 _keywords: data binding, ignite ui for angular, インフラジスティックス
 _language: ja
