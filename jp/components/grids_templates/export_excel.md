@@ -60,7 +60,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 
 #### @@igComponent のデータのエクスポート
 
-Ignite UI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
+IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
 
 ```typescript
 // app.module.ts
@@ -75,7 +75,8 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> **注:** Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
+> [!NOTE] 
+> Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
 
 エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
@@ -108,6 +109,16 @@ public exportButtonHandler() {
 ```
 
 上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.xlsx"  ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
+
+#### すべてのデータのエクスポート
+
+ページングなどのリモート操作を使用している場合に、Grid がすべてのデータにアクセスできない場合があります。このような場合、[Excel Export サービス](../exporter_excel.html#excel-exporter)を使用してデータ コレクション全体を渡すことをお勧めします。例:
+
+```ts
+public exportButtonHandler() {
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+}
+```
 
 #### エクスポートするコンテンツのカスタマイズ
 
