@@ -208,11 +208,11 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
-    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
+    <ng-template igxExcelStyleSorting>Template area [Sorting]</ng-template>
+    <ng-template igxExcelStyleHiding>Template area [Hiding]</ng-template>
+    <ng-template igxExcelStyleMoving>Template area [Moving]</ng-template>
+    <ng-template igxExcelStylePinning>Template area [Pinning]</ng-template>
+    <ng-template igxExcelStyleSelecting>Template area [Selecting]</ng-template>
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
     </igx-column>
     <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
@@ -231,11 +231,11 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
-    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
+    <ng-template igxExcelStyleSorting>Template area [Sorting]</ng-template>
+    <ng-template igxExcelStyleHiding>Template area [Hiding]</ng-template>
+    <ng-template igxExcelStyleMoving>Template area [Moving]</ng-template>
+    <ng-template igxExcelStylePinning>Template area [Pinning]</ng-template>
+    <ng-template igxExcelStyleSelecting>Template area [Selecting]</ng-template>
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
     <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
@@ -263,11 +263,11 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
-    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
+    <ng-template igxExcelStyleSorting>Template area [Sorting]</ng-template>
+    <ng-template igxExcelStyleHiding>Template area [Hiding]</ng-template>
+    <ng-template igxExcelStyleMoving>Template area [Moving]</ng-template>
+    <ng-template igxExcelStylePinning>Template area [Pinning]</ng-template>
+    <ng-template igxExcelStyleSelecting>Template area [Selecting]</ng-template>
     <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
@@ -281,10 +281,10 @@ If you want to keep the sorting, moving, pinning and hiding features of the colu
     <igx-column field="Grammy Awards" [filterable]='true' [dataType]="'number'"></igx-column>
 
     <igx-row-island [key]="'Albums'" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter">
-        <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-        <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-        <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-        <ng-template igxExcelStylePinning>Pinning Template</ng-template>
+        <ng-template igxExcelStyleSorting>Template area [Sorting]</ng-template>
+        <ng-template igxExcelStyleHiding>Template area [Hiding]</ng-template>
+        <ng-template igxExcelStyleMoving>Template area [Moving]</ng-template>
+        <ng-template igxExcelStylePinning>Template area [Pinning]</ng-template>
         <igx-column field="Album" [filterable]='true'></igx-column>
         <igx-column field="Launch Date" [filterable]='true' [dataType]="'date'"></igx-column>
         <igx-column field="Billboard Review" [filterable]='true' [dataType]="'number'"></igx-column>
