@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Virtual Drop Down
 
-<p class="highlight">The Ignite UI for Angular Drop Down component can fully integrate usage of the [IgxForOf](for_of.md) directive in order to display a very large list of items for its selection</p>
+<p class="highlight">The Ignite UI for Angular Drop Down component can fully integrate with the [IgxForOf](for_of.md) directive in order to display a very large list of items for its selection.</p>
 
 ### Demo
 <div class="sample-container loading" style="height:320px">
@@ -21,8 +21,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 #### First Steps
 
-In order to configure the drop-down to display a list of virtual items, you need to fulfil some prerequisites.
-First, we need to import the `IgxForOfModule` in the module of the component that we will declare our drop-down.
+In order to configure the drop-down to display a list of virtual items, you need to fulfill some prerequisites.
+First, we need to import the `IgxForOfModule` in the module of the component that will declare our drop-down.
 
 ```typescript
 // app.module.ts
@@ -40,7 +40,7 @@ export class AppModule {}
 
 #### Template Configuration
 
-Next, we need to create the drop-down component's template, looping through the data using [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) instead of `*ngFor`. The `*igxFor` needs some additional configuration in order to properly display all of the items:
+Next, we need to create the drop-down component's template, looping through the data using [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) instead of `*ngFor`. The `*igxFor` directive needs some additional configuration in order to properly display all of the items:
 
 ```html
 <!-- drop-down-virtual.component.html -->
@@ -83,7 +83,7 @@ To preserve selection while scrolling, the drop-down item needs to have a refere
 
 #### Component Definition
 
-Inside of the component's constructor, we'll declare a moderately large list of items (containing both headers and disabled items) which will be displayed in the drop-down. We will also need to declare `itemHeight` and `itemsMaxHeight`:
+Inside of the component's constructor, we'll declare a moderately large list of items (containing both headers and disabled items), which will be displayed in the drop-down. We will also need to declare `itemHeight` and `itemsMaxHeight`:
 
 ```typescript
 // drop-drop-virtual.component.ts
@@ -128,7 +128,7 @@ The last part of the configuration is to set `overflow: hidden` to the wrapping 
 ```
 
 ### Remote Data
-The `igx-drop-down` supports loading chunks of remote data using the `igxFor` directive. The configuration is similar to the one using it with local items and the main difference is handling the loading of different data chunks.
+The `igx-drop-down` supports loading chunks of remote data using the `*igxFor` structural directive. The configuration is similar to the one with local items, the main difference being how data chunks are loaded.
 
 #### Template
 The drop-down template does not need to change much compared to the previous example - we still need to specify a wrapping div, style it accordingly and write out the complete configuration for the `*igxFor`. Since we'll be getting our data from a remote source, we need to specify that our data will be an observable and pass it through Angular's `async` pipe:
@@ -253,7 +253,7 @@ The result of the above configuration is a drop-down that dynamically loads the 
 
 ### Notes and Limitations
 
-Using the drop-down with a virtualized list of items enforce some limitations. Please be aware of the following when trying to set up a drop-down list using `*igxFor`:
+Using the drop-down with a virtualized list of items enforces some limitations. Please, be aware of the following when trying to set up a drop-down list using `*igxFor`:
  - The drop-down items that are being looped need to be passed in a wrapping element (e.g. `<div>`) which has the following css: `overflow: hidden` and `height` equal to `containerSize` in `px`
  - `<igx-drop-down-item-group>` cannot be used for grouping items when the list is virtualized. Use the `isHeader` propery instead
  - The `items` accessor will return only the list of non-header drop-down items that are currently in the virtualized view.
