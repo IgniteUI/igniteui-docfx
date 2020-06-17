@@ -152,24 +152,32 @@ The following information is on how to setup authentication to our private npm r
 Update the azure-pipelines.yml with the following steps:
 
 ```cmd
-npm config set @infragistics:registry $(npmRegistry)
+steps:
+
+- script: npm config set @infragistics:registry $(npmRegistry)
+  displayName: 'Npm add registry'
+
+- script: npm config set $(igScope):always-auth=true
+  displayName: 'Npm config'
+
+- script: npm config set $(igScope):_auth=$(token)
+  displayName: 'Npm config auth'
 ```
 
-```cmd
-npm config set always-auth true --scope:@infragistics
-```
+Now we need to add variables for the *npm registry*, *scope* and *token*. There are two ways to do so:
 
-```cmd
-npm config set _auth=$(token) --scope:@infragistics
-```
+ #### Define Variable Group from the Library page under Pipelines.
+ [This article](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) explains how to use a variable group to store values that you want to control and make available across multiple pipelines.
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 450px)" 
-  src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  data-src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  alt="Azure Pipelines CI yml update"
-  title="Azure Pipelines CI yml update" />
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 
+  src="../../images/general/azure-ci-variable-groups.jpg"
+  data-src="../../images/general/azure-ci-variable-groups.jpg" 
+  alt="Set npm Registry and token variables"
+  title="Set npm Registry and token variables" />
 
-Add **npm registry** and **token** variables.
+ #### Define the variables in the Pipeline Settings UI and reference them in your YAML file.
+
+In the most common case, you [set the variables and use them](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline) within the YAML file.
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-new-variable-2.jpg"
@@ -197,3 +205,15 @@ The best way to define an environment variable depends on what type of informati
 
 * encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
 * add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
+
+### GitHub Actions Configuration
+
+Add the following scripts before the `npm i(ci)` step to your [CI workflow configuration](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions):
+
+```cmd
+- run: echo "@infragistics:registry=$(npmRegistry)" >> ~/.npmrc
+- run: echo "$(igScope):always-auth=true" >> ~/.npmrc
+- run: echo "$(igScope):_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+```
+
+Define [*secrets* (encrypted environment variables)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) and use them in the GitHub actions workflow for sensitive information like the access token. 
