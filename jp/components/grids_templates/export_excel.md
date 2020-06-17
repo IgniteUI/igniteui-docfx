@@ -60,7 +60,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 
 #### @@igComponent のデータのエクスポート
 
-IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
+Ignite UI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
 
 ```typescript
 // app.module.ts
