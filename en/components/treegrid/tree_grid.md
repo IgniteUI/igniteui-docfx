@@ -382,6 +382,15 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 |Group By|Group By feature is not supported, because it is inherent to the tree grid.|
 
 > [!NOTE]
+> The tree grid has a depth limit of 25 levels. Supporting more levels requires adding custom CSS classes in the application. You may see an example of such CSS class below:
+
+```scss
+.igx-grid__tree-cell--padding-level-26 {
+    padding-left: 39rem;
+}
+```
+
+> [!NOTE]
 > `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
 
 <div class="divider--half"></div>
