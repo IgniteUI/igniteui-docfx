@@ -99,6 +99,7 @@ public grid: IgxGridComponent;
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
+
 #### 列の定義
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
@@ -131,6 +132,22 @@ public grid: IgxGridComponent;
 </igx-column>
 ...
 ```
+
+>[!NOTE]
+>グループ化/移動機能と一緒にヘッダー テンプレートを使用すると、*列ヘッダー領域*は**ドラッグ可能**になり、ヘッダー テンプレートのカスタム要素部分に**ドラッグ不可**としてマークするまでアクセスできません。以下は例です。
+
+```html
+<igx-column #col field="ProductName" header="Product Name" 
+    [groupable]="true" [movable]="true" [hasSummary]="true">
+    <ng-template igxHeader let-col>
+        <div class="text">{{col.field}}</div>
+        <igx-icon (click)="toggleSummary(col)" [attr.draggable]="false">functions
+        </igx-icon>
+    </ng-template>
+</igx-column>
+```
+**draggable** 属性を false に設定して追加しています。
+
 #### セル テンプレート
 
 `igxCell` は提供したテンプレートを列のすべてのセルに適用します。テンプレートで提供されるコンテキスト オブジェクトは暗示的に提供されたセル値およびセル オブジェクトです。以下のようにセルがコンテンツに応じて拡張するテンプレートを定義するために使用できます。
@@ -180,7 +197,7 @@ public grid: IgxGridComponent;
         <label for="price">
             Enter the new price tag
         </label>
-        <input name="price" type="number" [ngModel]="cell.editValue" />
+        <input name="price" type="number" [(ngModel)]="cell.editValue" />
     </ng-template>
 </igx-column>
 ```
@@ -581,7 +598,9 @@ export const DATA: any[] = [
 
 新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
+
 ### サイズ変更
+
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。
 
 ## 既知の制限
