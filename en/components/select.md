@@ -69,13 +69,14 @@ By default, the select component will use the selected item's element `innerText
 ```
 To see `text` property in action with a bit more complicated item template, check the below grouping sample [Select with Groups](#grouped-select).
 
-
 #### Input Properties
+
 The Select supports the following directives applicable to the [Input Group](input_group.md):
 
 - `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
 - `igx-prefix`/`igxPrefix`
 - `igx-suffix`/`igxSuffix` - Note the built-in toggle button suffix will always be displayed last.
+- `igx-hint`/`igxHint`
 
 ```html
 <igx-select [(ngModel)]="selected">
@@ -86,6 +87,7 @@ The Select supports the following directives applicable to the [Input Group](inp
     <igx-suffix *ngIf="selected">
         <igx-icon (click)="clearSelection($event)">clear</igx-icon>
     </igx-suffix>
+    <igx-hint>Choose a banana</igx-hint>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
