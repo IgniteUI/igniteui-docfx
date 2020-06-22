@@ -1,4 +1,4 @@
-- name: 概要
+﻿- name: 概要
   header: true
   _language: "ja"
 - name: Angular - 完全ガイド
@@ -119,7 +119,8 @@
       new: false
     - name: 列のピン固定
       href: grid/column_pinning.md
-      new: true
+      new: false
+      updated: true
     - name: 行のピン固定
       href: grid/row_pinning.md
       new: true
@@ -240,6 +241,7 @@
     - name: 列のピン固定
       href: treegrid/column_pinning.md
       new: false
+      updated: true
     - name: 行のピン固定
       href: treegrid/row_pinning.md
       new: true
@@ -345,6 +347,7 @@
     - name: 列のピン固定
       href: hierarchicalgrid/column_pinning.md
       new: false
+      updated: true
     - name: 行のピン固定
       href: hierarchicalgrid/row_pinning.md
       new: true

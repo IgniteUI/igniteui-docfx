@@ -55,7 +55,8 @@
       new: false
     - name: 열 핀 고정
       href: grid/column_pinning.md
-      new: true
+      new: false
+      updated: true
     - name: Row Pinning
       href: grid/row_pinning.md
       new: true
@@ -147,6 +148,7 @@
     - name: 열 핀 고정
       href: treegrid/column_pinning.md
       new: false
+      updated: true
     - name: 크기 조정
       href: treegrid/column_resizing.md
       new: false
@@ -229,6 +231,7 @@
     - name: 열 핀 고정
       href: hierarchicalgrid/column_pinning.md
       new: false
+      updated: true
     - name: 크기 조정
       href: hierarchicalgrid/column_resizing.md
       new: false

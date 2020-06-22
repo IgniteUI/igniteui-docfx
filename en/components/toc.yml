@@ -349,6 +349,7 @@
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
       new: false
+      updated: true
     - name: Row Pinning
       href: hierarchicalgrid/row_pinning.md
       new: true
