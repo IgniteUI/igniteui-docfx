@@ -259,7 +259,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
  - リストが仮想化されている場合、`<igx-drop-down-item-group>` を項目のグループ化に使用することはできません。代わりに `isHeader` プロパティを使用します。
  - `items` アクセサーは、現在仮想化ビューにあるヘッダー以外のロップダウン項目のリストのみを返します。
  - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) は、タイプ  `{ value: any, index: number }` です。
- - [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } ` に変更されます。`
+ - [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } ` に変更されます。
  - `dropdown.setSelectedItem` は、**データセット内の項目のインデックス**を使用して呼び出す必要があります。
  - ドロップダウン項目の `[selected]` 入力を設定しても、ドロップダウン選択内の項目はマークされません。
 
