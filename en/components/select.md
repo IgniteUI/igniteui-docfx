@@ -5,7 +5,7 @@ _keywords:  angular select, igniteui for angular, infragistics
 ---
 
 ## Select
-<p class="highlight">The [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the dropdown events.</p>
+<p class="highlight">The [SelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
 ### Demo
 <div class="sample-container loading" style="height: 300px;">
@@ -16,7 +16,7 @@ _keywords:  angular select, igniteui for angular, infragistics
 
 
 ### Usage
-To get started with the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
+To get started with the [SelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
 ```typescript
 // app.module.ts
 
@@ -31,7 +31,7 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then add the `igx-select` along with a list of items to choose from. We use the [`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
+Then add the `igx-select` along with a list of items to choose from. We use [`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>
@@ -42,7 +42,7 @@ Then add the `igx-select` along with a list of items to choose from. We use the 
 </igx-select>
 ```
 
-Another way to do it would be to use a collection of the items that we want to display, using the [ngForOf](https://angular.io/api/common/NgForOf) directive:
+Another way to do it would be to use a collection of items that we want to display using the [*ngFor](https://angular.io/api/common/NgForOf) structural directive:
 
 ```typescript
 public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
@@ -103,12 +103,12 @@ The Select supports the following directives applicable to the [Input Group](inp
 > [!NOTE]
 If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
-#### Grouped Select
+#### Group Select Items
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
 ```typescript
     public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
-            { label: "Fruits", items:[
+            { label: "Fruits", items: [
                     { type: "Apple", origin: "local" },
                     { type: "Orange", origin: "import" },
                     { type: "Banana", origin: "import"}
@@ -154,19 +154,19 @@ Then in your template file you can iterate over the objects and access their ite
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 #### Header & Footer
-Currently, there are no default header and footer templates for the Select. However, you can add a header or a footer template by marking them respectively with `IgxSelectHeader` or `IgxSelectFooter`. As these are custom templates, you should define the styling as well.
+Currently, there are no default header and footer templates for the Select. However, you can add a header or a footer template by marking them respectively with `IgxSelectHeader` or `IgxSelectFooter`. As these are custom templates, you should define their styling as well.
 
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
 
 ```html
     <igx-select>
         <label igxLabel>Pick your fruit</label>
-            <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
-                {{fruit.type}}
-                <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
-                <igx-icon *ngSwitchCase="'train'">train</igx-icon>
-                <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
-            </igx-select-item>
+        <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
+            {{fruit.type}}
+            <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
+            <igx-icon *ngSwitchCase="'train'">train</igx-icon>
+            <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
+        </igx-select-item>
         <ng-template igxSelectHeader>
             <div class="custom-select-header">
                 <span class="sample-template-heading">DELIVERY METHOD</span>
@@ -216,7 +216,7 @@ In this example, there are both header and footer ng-templates defined. In the h
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 #### Custom Toggle Button
-You can customize the default toggle button, using the `IgxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
+You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
 
 ```html
 <igx-select #select>
@@ -239,7 +239,7 @@ You can customize the default toggle button, using the `IgxSelectToggleIcon` dir
 - Select an item using the `Enter` or `Space` keys
 
 >[!NOTE]
->`igx-select` supports only a *single* selection of items.
+>`igx-select` supports only *single* selection of items.
 
 ### Custom Overlay Settings
 You can create custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). To do this you first define your template like so:
@@ -315,7 +315,7 @@ export class MyClass implements OnInit {
 }
 ```
 >[!NOTE]
->If you pass in your custom settings both as an argument in the `open` function and into the template, the `igx-select` will use the ones, provided in the `open` function. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
+>If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the ones provided in the `open` function. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
 
 ### Styling
 Every component has its own theme.
