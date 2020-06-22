@@ -16,7 +16,7 @@ _keywords:  angular select, igniteui for angular, infragistics
 
 
 ### Usage
-To get started with the [SelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
+To get started with the [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
 ```typescript
 // app.module.ts
 
