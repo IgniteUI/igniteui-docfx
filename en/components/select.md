@@ -5,7 +5,7 @@ _keywords:  angular select, igniteui for angular, infragistics
 ---
 
 ## Select
-<p class="highlight">The [SelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
+<p class="highlight">The [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
 ### Demo
 <div class="sample-container loading" style="height: 300px;">
@@ -107,40 +107,36 @@ If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.htm
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
 ```typescript
-    public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
-            { label: "Fruits", items: [
-                    { type: "Apple", origin: "local" },
-                    { type: "Orange", origin: "import" },
-                    { type: "Banana", origin: "import"}
-                ]
-            },
-            { label: "Vegetables", items: [
-                    { type: "Cucumber", origin: "local" },
-                    { type: "Potato", origin: "import" },
-                    { type: "Pepper", origin: "local" }
-                ]
-            }
-        ];
+public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
+    { label: "Fruits", items: [
+            { type: "Apple", origin: "local" },
+            { type: "Orange", origin: "import" },
+            { type: "Banana", origin: "import"}
+        ]
+    },
+    { label: "Vegetables", items: [
+            { type: "Cucumber", origin: "local" },
+            { type: "Potato", origin: "import" },
+            { type: "Pepper", origin: "local" }
+        ]
+    }
+];
 ```
 
 Then in your template file you can iterate over the objects and access their items accordingly:
 ```html
-<igx-select>
+<igx-select #select>
+    <label igxLabel>Select With Groups</label>
     <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
         <igx-select-item *ngFor="let item of group.items" [value]="item.type" [text]="item.type">
             {{item.type}}
-            <igx-icon 
+            <igx-icon
                 title="Local product"
-                class="icon"
-                color="green"
-                *ngIf="item.origin === 'local';else templateImport"
+                *ngIf="item.origin === 'local';
+                else templateImport"
             >local_shipping</igx-icon>
             <ng-template #templateImport>
-                <igx-icon
-                    title="Import product"
-                    class="icon"
-                    color="orange"
-                >flight</igx-icon>
+                <igx-icon title="Import product">flight</igx-icon>
             </ng-template>
         </igx-select-item>
     </igx-select-item-group>
@@ -159,54 +155,54 @@ Currently, there are no default header and footer templates for the Select. Howe
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
 
 ```html
-    <igx-select>
-        <label igxLabel>Pick your fruit</label>
-        <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
-            {{fruit.type}}
-            <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
-            <igx-icon *ngSwitchCase="'train'">train</igx-icon>
-            <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
-        </igx-select-item>
-        <ng-template igxSelectHeader>
-            <div class="custom-select-header">
-                <span class="sample-template-heading">DELIVERY METHOD</span>
-                <igx-buttongroup (click)="filter($event.target.title)">
-                        <button igxButton title="flight"><igx-icon title="flight">flight</igx-icon></button>
-                        <button igxButton title="train"><igx-icon title="train">train</igx-icon></button>
-                        <button igxButton title="boat"><igx-icon title="boat">directions_boat</igx-icon></button>
-                </igx-buttongroup>
+<igx-select>
+    <label igxLabel>Pick your fruit</label>
+    <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
+        {{fruit.type}}
+        <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
+        <igx-icon *ngSwitchCase="'train'">train</igx-icon>
+        <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
+    </igx-select-item>
+    <ng-template igxSelectHeader>
+        <div class="custom-select-header">
+            <span class="sample-template-heading">DELIVERY METHOD</span>
+            <igx-buttongroup (click)="filter($event.target.title)">
+                    <button igxButton title="flight"><igx-icon title="flight">flight</igx-icon></button>
+                    <button igxButton title="train"><igx-icon title="train">train</igx-icon></button>
+                    <button igxButton title="boat"><igx-icon title="boat">directions_boat</igx-icon></button>
+            </igx-buttongroup>
+        </div>
+    </ng-template>
+    <ng-template igxSelectFooter>
+        <div class="custom-select-footer">
+            <span class="sample-template-heading">TOTAL</span>
+            <div class="sample-template-icons">
+                <span class="sample-template-icons__item">
+                    <igx-icon
+                        title="flight"
+                        [class.important-icon]="selected === 'flight'"
+                    >flight</igx-icon>
+                    {{flightCount}}
+                </span>
+                <span class="sample-template-icons__item">
+                    <igx-icon
+                        title="train"
+                        [class.important-icon]="selected === 'train'"
+                    >train</igx-icon>
+                    {{trainCount}}
+                </span>
+                <span class="sample-template-icons__item">
+                    <igx-icon
+                        title="boat"
+                        [class.important-icon]="selected === 'boat'"
+                    >directions_boat
+                    </igx-icon>
+                    {{boatCount}}
+                </span>
             </div>
-        </ng-template>
-        <ng-template igxSelectFooter>
-            <div class="custom-select-footer">
-                <span class="sample-template-heading">TOTAL</span>
-                <div class="sample-template-icons">
-                    <span class="sample-template-icons__item">
-                        <igx-icon
-                            title="flight"
-                            [class.important-icon]="selected === 'flight'"
-                        >flight</igx-icon>
-                        {{flightCount}}
-                    </span>
-                    <span class="sample-template-icons__item">
-                        <igx-icon
-                            title="train"
-                            [class.important-icon]="selected === 'train'"
-                        >train</igx-icon>
-                        {{trainCount}}
-                    </span>
-                    <span class="sample-template-icons__item">
-                        <igx-icon
-                            title="boat"
-                            [class.important-icon]="selected === 'boat'"
-                        >directions_boat
-                        </igx-icon>
-                        {{boatCount}}
-                    </span>
-                </div>
-            </div>
-        </ng-template>
-    </igx-select>
+        </div>
+    </ng-template>
+</igx-select>
 ```
 
 <div class="sample-container loading" style="height: 610px;">
