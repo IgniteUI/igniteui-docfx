@@ -155,11 +155,10 @@ public columnPinning(event) {
 ```
 }
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ### Toolbar's Column Pinning UI
 
-The built-in Column Pinning UI is placed inside an [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) in the @@igComponent's toolbar. We can show/hide the Column Pinning UI by using this exact dropdown.
-For this purpose all we have to do is set both the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and the [`columnpinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) properties of the @@igComponent to true. If the toolbar is not enabled, enabling the [`columnpinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) property will have no effect.
+The built-in Column Pinning UI is placed inside an [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) in the @@igComponent's toolbar. You can show/hide the Column Pinning UI by using this exact dropdown.
+For this purpose all you have to do is set both the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and the [`columnpinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) properties of the @@igComponent to true. If the toolbar is not enabled, enabling the [`columnpinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) property will have no effect.
 
 ```html
 <!--columnPinning.component.html-->
@@ -170,7 +169,7 @@ For this purpose all we have to do is set both the [`showToolbar`]({environment:
     </@@igSelector>
 </div>
 ```
-The Column Pinning UI contains buttons, which allow to easily Pin/Unpin All pinnable columns. By using the [`pinAllText`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#pinAllText) and [`unpinAllText`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#unpinAllText) properties of the column pinning UI, we can set the text of the buttons. We can also pin or unpin all columns using the [`pinAllColumns`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#pinAllColumns) and [`unpinAllColumns`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#unpinAllColumns) methods, given that the Column Pinning UI has been enabled first.
+The Column Pinning UI contains buttons, which allow to easily Pin/Unpin All pinnable columns. By using the [`pinAllText`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#pinAllText) and [`unpinAllText`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#unpinAllText) properties of the column pinning UI, you can set the text of the buttons. You can also pin or unpin all columns using the [`pinAllColumns`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#pinAllColumns) and [`unpinAllColumns`]({environment:angularApiUrl}/classes/igxcolumnpinningcomponent.html#unpinAllColumns) methods, given that the Column Pinning UI has been enabled first.
 ```typescript
 // columnPinning.component.ts
 
@@ -180,7 +179,6 @@ public ngAfterViewInit() {
         this.grid1.toolbar.columnPinningUI.pinAllColumns();
 }
 ```
-}
 
 ### Pinning Position
 
