@@ -5,7 +5,7 @@ _keywords:  angular select, igniteui for angular, infragistics
 ---
 
 ## Select
-<p class="highlight">The [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the `igx-select` extends the`igx-drop-down`, you can handle all of the dropdown events.</p>
+<p class="highlight">The [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the dropdown events.</p>
 
 ### Demo
 <div class="sample-container loading" style="height: 300px;">
@@ -31,7 +31,7 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then add the `igx-select` along with a list of items to choose from. We use an [`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
+Then add the `igx-select` along with a list of items to choose from. We use the [`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>
@@ -154,7 +154,7 @@ Then in your template file you can iterate over the objects and access their ite
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 #### Header & Footer
-Currently, there are no default header and footer templates for the `igxSelect` component. However, you can add a header or a footer template by marking them respectively with `IgxSelectHeaderDirective` or `IgxSelectFooterDirective`. As these are custom templates, you should define the styling as well.
+Currently, there are no default header and footer templates for the Select. However, you can add a header or a footer template by marking them respectively with `IgxSelectHeader` or `IgxSelectFooter`. As these are custom templates, you should define the styling as well.
 
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
 
@@ -289,7 +289,7 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
-You can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the `igx-select`'s open function, where your template should look like this:
+You can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html#open)'s open function, where your template should look like this:
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items">
@@ -320,12 +320,12 @@ export class MyClass implements OnInit {
 ### Styling
 Every component has its own theme.
 
-To get the `IgxSelect` styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
+To get the Select styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
 
-Take a look at the [`igxInputGroup`](input_group.md#styling) and the [`igxDropdown`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
+Take a look at the [`Input Group`](input_group.md#styling) and the [`Drop Down`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
 
 > [!NOTE]
-> The [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) component uses the [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay_styling.md).
+> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay_styling.md).
 
 <div class="divider--half"></div>
 
