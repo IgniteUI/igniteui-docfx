@@ -121,7 +121,8 @@
       new: false
     - name: Column Pinning
       href: grid/column_pinning.md
-      new: true
+      new: false
+      updated: true
     - name: Row Pinning
       href: grid/row_pinning.md
       new: true
@@ -242,6 +243,7 @@
     - name: Column Pinning
       href: treegrid/column_pinning.md
       new: false
+      updated: true
     - name: Row Pinning
       href: treegrid/row_pinning.md
       new: true
