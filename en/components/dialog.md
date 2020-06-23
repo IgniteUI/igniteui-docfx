@@ -64,7 +64,7 @@ To create a standard dialog, in the template of our file manager component, we a
 
 ```html
 <!--file-manager.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Confirmation Dialog</button>
+<button igxButton="raised" igxRipple="white" (click)="dialog.open()">Show Confirmation Dialog</button>
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
