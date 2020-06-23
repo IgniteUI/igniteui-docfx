@@ -57,7 +57,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 </igx-select>
 ```
 
-By default, the select component will use the selected item's element `innerText` to be displayed in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when this item is selected. For example:
+By default, the Select component will use the `innerText` of the item element in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when this item is selected. For example:
 
 ```html
 <igx-select>
@@ -65,13 +65,12 @@ By default, the select component will use the selected item's element `innerText
         {{item.text}} ( {{item.count}} )
     </igx-select-item>
 </igx-select>
-
 ```
-To see `text` property in action with a bit more complicated item template, check the below grouping sample [Select with Groups](#grouped-select).
+To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#grouped-select).
 
 #### Input Properties
 
-The Select supports the following directives applicable to the [Input Group](input_group.md):
+The Select component supports the following directives applicable to the [Input Group](input_group.md):
 
 - `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
 - `igx-prefix`/`igxPrefix`
@@ -132,8 +131,7 @@ Then in your template file you can iterate over the objects and access their ite
             {{item.type}}
             <igx-icon
                 title="Local product"
-                *ngIf="item.origin === 'local';
-                else templateImport"
+                *ngIf="item.origin === 'local'; else templateImport"
             >local_shipping</igx-icon>
             <ng-template #templateImport>
                 <igx-icon title="Import product">flight</igx-icon>
@@ -150,7 +148,7 @@ Then in your template file you can iterate over the objects and access their ite
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 #### Header & Footer
-Currently, there are no default header and footer templates for the Select. However, you can add a header or a footer template by marking them respectively with `IgxSelectHeader` or `IgxSelectFooter`. As these are custom templates, you should define their styling as well.
+Currently, there are no default header and footer templates for the Select component. However, you can add a header or a footer template by marking them respectively with `igxSelectHeader` or `igxSelectFooter`. As these are custom templates, you should define their styling as well.
 
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
 
@@ -311,7 +309,7 @@ export class MyClass implements OnInit {
 }
 ```
 >[!NOTE]
->If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the ones provided in the `open` function. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
+>If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the one provided in the `open` function. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
 
 ### Styling
 Every component has its own theme.
