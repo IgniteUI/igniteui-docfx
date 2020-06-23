@@ -67,9 +67,7 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
     <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
 </div>
 
-<div>
-<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" target="_blank">View in full screen</a>
-</div>
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager")'>View in full screen</button>
 
 > [!NOTE]
 > The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting data, go ahead and create a couple of charts and pin them (by dragging) to the available areas
@@ -127,9 +125,7 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
-<div>
-<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
-</div>
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>View in full screen</button>
 
 We currently support the following Chart types:
 - [ColumnGrouped](../../data-chart-type-category-series.md), [AreaGrouped](../../data-chart-type-category-area-series.md), [LineGrouped](../../data-chart-type-category-line-series.md), [BarGrouped](../../data-chart-type-category-series.md)
@@ -184,9 +180,7 @@ Understanding conditional formatting - it allows for applying formatting such as
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
-<div>
-<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">View in full screen</a>
-</div>
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>View in full screen</button>
 
 ### Data Analysis Package API
  
