@@ -915,7 +915,7 @@
   href: display_density.md
 - name: データ入力と表示
   header: true
-- name: ドロップダウン
+- name: Drop Down
   href: drop_down.md
   new: false
   items:
