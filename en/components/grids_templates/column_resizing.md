@@ -120,6 +120,55 @@ public onResize(event) {
 ```
 }
 
+#### Resizing columns in pixels/percentages
+
+Depending on the user scenario, the column width may be defined in pixels or percentages. Both scenarios are supported by the Column Resizing feature as well as mixing widths in pixels and percentages. By default if a column does not have width set, it will fit the available space and its width will be set in pixels which will be reflected by the resizing.
+
+This means that the following configuration is possible:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+    <igx-column [field]="'ID'" width="10%" [resizable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
+    <igx-column [field]="'ContactTitle'" [resizable]="true"></igx-column>
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+    <igx-column [field]="'Title'" [resizable]="true" [width]="'10%'"></igx-column>
+    <igx-column [field]="'HireDate'" [resizable]="true" [width]="'100px'"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [resizable]="true"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [resizable]="true" [width]="'10%'"></igx-column>
+        <igx-column field="GrammyNominations" [resizable]="true" [width]="'100px'"></igx-column>
+        <igx-column field="GrammyAwards" [resizable]="true"></igx-column>
+        ...
+</igx-hierarchical-grid>
+```
+}
+
+>[!NOTE]
+> There is a slight difference in the way resizing works for columns set in pixels and percentages.
+    
+**Pixels**
+
+Resizing a column with width in pixels works as one will expect where the amount of pixels the mouse has moved will transform the column by the same amount.
+
+**Percentages**
+
+When a column width is set in percentages, the amount of pixels moved will translate to roughly how much percentages the user has moved relative to the grid width. This means that a column when resized may appear to snap to a certain size, because size in percentages can only be a whole number and there are usually some pixels lost when sizing a column to a grid's width this way.
+
+For example, a column width of 20% and width of 21% differ in the way that those sizes, based on the grid width, can be separated by a 10 pixels gap and anything in this range cannot be reflect by the resizing.
+
 #### Restrict column resizing
 
 You can also configure the minimum and maximum allowable column widths. This is done via the [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) inputs of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the boundaries defined by [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth).
@@ -134,6 +183,38 @@ You can also configure the minimum and maximum allowable column widths. This is 
 ```html
 <igx-column [field]="'Artist'" width="100px" [resizable]="true"
             [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+
+Configuring and mixing the minimum and maximum column width values with the predefined column widths is also possible. If the values set for minimum and maximum are set to percentages, the respective column size will be limited to those exact sized similar to pixels.
+
+This means that the following configurations can de done:
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'ID'" width="10%" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+
+or
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'ID'" width="100px" [resizable]="true"
+            [minWidth]="'5%'" [maxWidth]="'15%'"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'15%'"></igx-column>
 ```
 }
 
@@ -159,11 +240,6 @@ let column = this.@@igObjectRef.columnList.filter(c => c.field === 'Artist')[0];
 column.autosize();
 ```
 }
-
-#### Pinned columns resizing
-
-Pinned columns can also be resized. However, resizing is limited so that the overall width of the pinned columns container cannot become larger than 80% of the overall @@igComponent width.
-Again, if you try to autosize a pinned column and the new width will cause the pinned columns container to exceed those 80% of the overall @@igComponent width, auto sizing will be discarded. We just want to make sure that the unpinned columns are always visible and available to the user!
 
 ### Styling
 To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
