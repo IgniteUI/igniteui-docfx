@@ -370,11 +370,7 @@ If the value entered in a cell under the **Ordered** column is larger than the a
 export class MyTreeGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const row = this.data.find(e => e[this.grid.primaryKey] === event.cellID.rowID);
-        if (!row) {
-            return;
-        }
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Age") {
             if (event.newValue < 18) {
                 event.cancel = true;
@@ -399,7 +395,7 @@ export class MyHGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Debut") {
             if (event.newValue > today.getFullYear()) {
                 this.toast.message = "The debut date must be in the past!";
@@ -416,7 +412,7 @@ export class MyHGridEventsComponent {
     }
 }
 ```
-Since we're passing the grid as a second argument in the `handleCellEdit` calls, we're using the passed grid's columns to find to which column the cell belongs. With the above validation in place, when a user tries to change an artist's **Debut** year or an album's **Launch Date**, the grid will not allow any dates that are greater than today.
+Here, we are validating two columns. If the user tries to change an artist's **Debut** year or an album's **Launch Date**, the grid will not allow any dates that are greater than today.
 }
 
 The result of the above validation being applied to our `@@igSelector` can be seen in the below demo:
