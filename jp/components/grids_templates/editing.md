@@ -351,10 +351,9 @@ row.delete();
 export class MyGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const column = this.grid.columnList.find(e => e.index === event.cellID.columnID);
-        if (column.header === "Ordered") {
-            const rowData = this.grid.data
-            .find(entry => entry[this.grid.primaryKey] === event.cellID.rowID);
+        const column = event.column;
+        if (column.field === "Ordered") {
+            const rowData = event.rowData;
             if (!rowData) {
                 return;
             }
@@ -373,11 +372,7 @@ export class MyGridEventsComponent {
 export class MyTreeGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const row = this.data.find(e => e[this.grid.primaryKey] === event.cellID.rowID);
-        if (!row) {
-            return;
-        }
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Age") {
             if (event.newValue < 18) {
                 event.cancel = true;
@@ -402,7 +397,7 @@ export class MyHGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Debut") {
             if (event.newValue > today.getFullYear()) {
                 this.toast.message = "The debut date must be in the past!";
