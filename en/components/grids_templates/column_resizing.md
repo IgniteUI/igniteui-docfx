@@ -122,7 +122,7 @@ public onResize(event) {
 
 #### Resizing columns in pixels/percentages
 
-Depending on the user scenario, the column width may be defined in pixels or percentages. Both scenarios are supported by the Column Resizing feature as well as mixing widths in pixels and percentages. By default if a column does not have width set, it will fit the available space and its width will be set in pixels which will be reflected by the resizing.
+Depending on the user scenario, the column widths may be defined in pixels, percentages or a mix of both. All these scenarios are supported by the Column Resizing feature. By default if a column does not have width set, it fits the available space with width set in pixels.
 
 This means that the following configuration is possible:
 
@@ -158,16 +158,14 @@ This means that the following configuration is possible:
 
 >[!NOTE]
 > There is a slight difference in the way resizing works for columns set in pixels and percentages.
-    
+
 **Pixels**
 
-Resizing a column with width in pixels works as one will expect where the amount of pixels the mouse has moved will transform the column by the same amount.
+Resizing columns with widths in pixels works by directly adding or subtracting the horizontal amount of the mouse movement from the size of the column.
 
 **Percentages**
 
-When a column width is set in percentages, the amount of pixels moved will translate to roughly how much percentages the user has moved relative to the grid width. This means that a column when resized may appear to snap to a certain size, because size in percentages can only be a whole number and there are usually some pixels lost when sizing a column to a grid's width this way.
-
-For example, a column width of 20% and width of 21% differ in the way that those sizes, based on the grid width, can be separated by a 10 pixels gap and anything in this range cannot be reflect by the resizing.
+Resizing column with widths in percentages, the horizontal amount of the mouse movement in pixels is translated roughly to its percentage amount relative to the grid width. This means that a column may appear to snap to a certain size when resizing ends. Percentages sizes are only integers and there are usually some pixels lost when sizing a column in this way.
 
 #### Restrict column resizing
 
@@ -186,9 +184,9 @@ You can also configure the minimum and maximum allowable column widths. This is 
 ```
 }
 
-Configuring and mixing the minimum and maximum column width values with the predefined column widths is also possible. If the values set for minimum and maximum are set to percentages, the respective column size will be limited to those exact sized similar to pixels.
+Mixing the minimum and maximum column width value types (pixels or percentages) is allowed. If the values set for minimum and maximum are set to percentages, the respective column size will be limited to those exact sizes similar to pixels.
 
-This means that the following configurations can de done:
+This means the following configurations are possible:
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
