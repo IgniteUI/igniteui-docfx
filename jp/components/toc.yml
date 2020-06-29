@@ -1,4 +1,4 @@
-- name: 概要
+﻿- name: 概要
   header: true
   _language: "ja"
 - name: Angular - 完全ガイド
@@ -131,7 +131,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: grid/row_selection.md
@@ -356,7 +356,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: false
+      new: true
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
