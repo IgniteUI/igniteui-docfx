@@ -189,7 +189,7 @@
       new: true
     - name: State Persistence
       href: grid/state_persistence.md
-      new: true
+      updated: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -298,6 +298,9 @@
     - name: Sizing
       href: treegrid/sizing.md
       new: false
+    - name: State Persistence
+      href: treegrid/state_persistence.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -396,6 +399,9 @@
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
+    - name: State Persistence
+      href: hierarchicalgrid/state_persistence.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
