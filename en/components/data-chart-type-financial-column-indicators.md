@@ -12,7 +12,7 @@ Financial indicators are often used by traders to measure changes and to show tr
 ### Demo
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-financial-column-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-financial-column-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-column-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

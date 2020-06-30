@@ -16,7 +16,7 @@ The radial gauge component is a data visualization tool capable of displaying a 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="radial-gauge-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="radial-gauge-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="radial-gauge-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

@@ -10,7 +10,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 ### Demo
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
@@ -129,7 +129,7 @@ public typeVertical = SplitterType.Vertical;
 
 #### Demo
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz

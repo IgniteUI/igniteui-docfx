@@ -12,7 +12,7 @@ The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
 ### Demo
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 <div class="divider--half"></div>

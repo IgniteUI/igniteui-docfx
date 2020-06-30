@@ -17,7 +17,7 @@ The bullet graph component provides you with the ability to create attractive da
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
 <div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

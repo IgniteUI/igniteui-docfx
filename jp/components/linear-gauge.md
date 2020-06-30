@@ -17,7 +17,7 @@ Ignite UI for Angular Linear Gauge コンポーネントは、データをリニ
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <div class="sample-container loading" style="height: 155px">
-    <iframe id="linear-gauge-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-gauge-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
