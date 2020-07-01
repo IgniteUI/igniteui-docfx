@@ -128,7 +128,7 @@ For example, with the above settings, the Combo's list will display centered, us
 <div class="divider--half"></div>
 
 > [!Note]
-> `igxCombo` uses [**AutoPositionStrategy**]({environment:angularApiUrl}/classes/autopositionstrategy.html) as a default
+> `IgxComboComponent` uses [**AutoPositionStrategy**]({environment:angularApiUrl}/classes/autopositionstrategy.html) as a default
 [position strategy](overlay_position.md).
 
 ## Filtering
