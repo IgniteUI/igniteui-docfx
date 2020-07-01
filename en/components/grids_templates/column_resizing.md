@@ -122,7 +122,7 @@ public onResize(event) {
 
 #### Resizing columns in pixels/percentages
 
-Depending on the user scenario, the column widths may be defined in pixels, percentages or a mix of both. All these scenarios are supported by the Column Resizing feature. By default if a column does not have width set, it fits the available space with width set in pixels.
+Depending on the user scenario, the column width may be defined in pixels, percentages or a mix of both. All these scenarios are supported by the Column Resizing feature. By default if a column does not have width set, it fits the available space with width set in pixels.
 
 This means that the following configuration is possible:
 
@@ -161,11 +161,11 @@ This means that the following configuration is possible:
 
 **Pixels**
 
-Resizing columns with widths in pixels works by directly adding or subtracting the horizontal amount of the mouse movement from the size of the column.
+Resizing columns with width in pixels works by directly adding or subtracting the horizontal amount of the mouse movement from the size of the column.
 
 **Percentages**
 
-Resizing column with widths in percentages, the horizontal amount of the mouse movement in pixels is translated roughly to its percentage amount relative to the grid width. This means that a column may appear to snap to a certain size when resizing ends. Percentages sizes are only integers and there are usually some pixels lost when sizing a column in this way.
+When resizing columns with width in percentages, the horizontal amount of the mouse movement in pixels translates roughly to its percentage amount relative to the grid width. The columns remain responsive and any future grid resizing will still reflect on the columns as well.
 
 #### Restrict column resizing
 
