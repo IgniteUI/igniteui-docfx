@@ -17,6 +17,7 @@ Custom templates for different areas of the [igx-combo]({environment:angularApiU
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 ### Usage
@@ -88,7 +89,7 @@ Use selector `[igxComboHeader]`:
 <igx-combo>
     <ng-template igxComboHeader>
         <div class="header-class">Custom header</div>
-        <img src=""/>
+        <img src/>
     </ng-template>
 </igx-combo>
 ```
@@ -100,7 +101,7 @@ Use selector `[igxComboFooter]`:
 <igx-combo>
     <ng-template igxComboFooter>
         <div class="footer-class">Custom footer</div>
-        <img src=""/>
+        <img src/>
     </ng-template>
 </igx-combo>
 ```
