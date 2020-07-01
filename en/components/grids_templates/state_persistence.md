@@ -46,7 +46,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-* `Inheritance`
+* `RowIslands`
     * saving/restoring features for all child grids down the hierarchy
 * `Sorting`
 * `Filtering`
