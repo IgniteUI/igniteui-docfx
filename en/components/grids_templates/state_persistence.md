@@ -204,7 +204,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 #### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:960px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="grid-state" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -214,7 +214,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:960px">
+<div class="sample-container loading" style="height:1000px">
     <iframe id="tree-grid-state" src='{environment:demosBaseUrl}/tree-grid/tree-grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
@@ -224,7 +224,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:960px">
+<div class="sample-container loading" style="height:700px">
     <iframe id="hiergrid-state" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
