@@ -189,15 +189,15 @@ public onColumnInit(column: IgxColumnComponent) {
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 #### Restoring Child Grids
-Saving / Restoring state for the child grids is controlled by the [`inheritance`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#inheritance) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
+Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
 
 ``` html
-<!-- public options = {selection: false, sorting: false, inheritance: true} -->
+<!-- public options = {selection: false, sorting: false, rowIslands: true} -->
 <igx-grid [igxGridState]="options"></igx-grid>
 ```
 Then the `getState` API will return the state for all grids (root grid and child grids) features excluding `selection` and `sorting`. If later on the developer wants to restore only the `filtering` state for all grids, use:
 ```typescript
-this.state.setState(state, ['filtering', 'inheritance']);
+this.state.setState(state, ['filtering', 'rowiIslands']);
 ```
 }
 
