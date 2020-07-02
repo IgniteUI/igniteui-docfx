@@ -108,7 +108,7 @@ public options =  { cellSelection: false; sorting: false; }
 ```
 }
 
-Thеse simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state is is restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
+Thеse simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state will be restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
 
 ```typescript
   // app.component.ts
@@ -135,7 +135,7 @@ Thеse simple to use single-point API's allows to achieve a full state persisten
 
 #### Restoring columns
 
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default. Restoring any of therse can be achieved with code on application level. Let's show how to do this for templated columns:
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state_persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
 
 1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event:
 @@if (igxName === 'IgxGrid') {
