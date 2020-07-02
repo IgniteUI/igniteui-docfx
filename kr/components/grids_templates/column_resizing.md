@@ -124,6 +124,53 @@ public onResize(event) {
 ```
 }
 
+#### Resizing columns in pixels/percentages
+
+Depending on the user scenario, the column width may be defined in pixels, percentages or a mix of both. All these scenarios are supported by the Column Resizing feature. By default if a column does not have width set, it fits the available space with width set in pixels.
+
+This means that the following configuration is possible:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+    <igx-column [field]="'ID'" width="10%" [resizable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
+    <igx-column [field]="'ContactTitle'" [resizable]="true"></igx-column>
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+    <igx-column [field]="'Title'" [resizable]="true" [width]="'10%'"></igx-column>
+    <igx-column [field]="'HireDate'" [resizable]="true" [width]="'100px'"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [resizable]="true"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [resizable]="true" [width]="'10%'"></igx-column>
+        <igx-column field="GrammyNominations" [resizable]="true" [width]="'100px'"></igx-column>
+        <igx-column field="GrammyAwards" [resizable]="true"></igx-column>
+        ...
+</igx-hierarchical-grid>
+```
+}
+
+>[!NOTE]
+> There is a slight difference in the way resizing works for columns set in pixels and percentages.
+
+**Pixels**
+
+Resizing columns with width in pixels works by directly adding or subtracting the horizontal amount of the mouse movement from the size of the column.
+
+**Percentages**
+
+When resizing columns with width in percentages, the horizontal amount of the mouse movement in pixels translates roughly to its percentage amount relative to the grid width. The columns remain responsive and any future grid resizing will still reflect on the columns as well.
+
 #### 열 크기 조정 제한
 
 최소 및 최대 허용 열 너비를 구성할 수도 있습니다. 이는 [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)의 [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) 및 [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 입력을 통해 제어할 수 있습니다. 이 경우, 크기 조정 인디케이터의 드래그 조작은 열이 [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) 및 [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth)에 의해 정의된 범위 이외로 크기를 조정할 수 없음을 사용자에게 알리도록 제한됩니다.
@@ -143,6 +190,38 @@ public onResize(event) {
 
 > [!NOTE]
 > [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth)가 그보다 작은 값으로 설정된 경우에도 열 크기를 **88px** 미만으로 조정할 수 없습니다.
+
+Mixing the minimum and maximum column width value types (pixels or percentages) is allowed. If the values set for minimum and maximum are set to percentages, the respective column size will be limited to those exact sizes similar to pixels.
+
+This means the following configurations are possible:
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'ID'" width="10%" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+
+or
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'ID'" width="100px" [resizable]="true"
+            [minWidth]="'5%'" [maxWidth]="'15%'"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'15%'"></igx-column>
+```
+}
 
 #### 더블 클릭으로 자동 크기 열 조정
 
@@ -166,11 +245,6 @@ let column = this.@@igObjectRef.columnList.filter(c => c.field === 'Artist')[0];
 column.autosize();
 ```
 }
-
-#### 핀 고정된 열 크기 조정
-
-핀 고정된 열 크기를 조정할 수도 있습니다. 그러나, 핀 고정된 열 컨테이너의 전체 너비가 전체 @@igComponent 너비의 80%보다 커지지 않도록 크기 조정이 제한됩니다.
-핀 고정 열의 자동 크기 조정에서 새로운 너비에 대해 핀 고정 열 컨테이너가 전체 @@igComponent 너비의 80%를 초과하는 경우, 자동 크기 조정은 무시됩니다. 이는 핀 고정되어 있지 않은 열을 항상 표시하여 사용자가 사용할 수 있도록 하기 위함입니다.
 
 ### API 참조
 <div class="divider--half"></div>
