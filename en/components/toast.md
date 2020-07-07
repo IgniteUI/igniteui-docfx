@@ -74,11 +74,16 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 <igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
 ```
 
-If the sample is configured properly, the toast appears when the 'Show' button is clicked. For the first component auto hide feature is disabled and the toast disappears on 'Hide' button click.
-In the other two components you can see in action how to pass different messages through `show` method and use content projection.
+If the sample is configured properly, the toast will appear when the *Show button* is clicked. For the first component auto-hide feature is disabled and the toast will disappear on 'Hide' button click.
+In the other two components you can see in action how to pass different messages through the [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and use content projection.
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 #### Display Time
