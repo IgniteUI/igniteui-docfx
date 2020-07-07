@@ -48,7 +48,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 </div>
 ```
 If the sample is configured properly, you should see the demo sample. A snackbar appears displaying a text message when the button is clicked.
-As you can see in the code snippet above one way to set the massage displayed in the snackbar is to use the content projection. But if you need to switch the value programmatically based on some custom logic you can just pass the value as a parameter to the `show` method.
+As you can see in the code snippet above, one way to set the massage displayed in the snackbar is to use the content projection. But if you need to switch the value programmatically based on some custom logic you can just pass the value as a parameter to the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method.
 
 ```html
 <!--sample.component.html-->
@@ -80,7 +80,7 @@ public close(element) {
 }
 ```
 
-If the sample is configured properly, first snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar pass a different message through the show method and auto hide when display time passes. The third component pass a message as a param to the `show` method and add an icon using the content projection.
+If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and hide it when the *display time* ends. The third component passes a message as a param to the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and add an icon using the content projection.
 
 <div class="sample-container loading" style="height: 230px">
     <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
