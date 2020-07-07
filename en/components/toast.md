@@ -51,7 +51,7 @@ In order to display the toast component, use its [`show()`]({environment:angular
 
 If the sample is configured properly, a toast appears displaying a notification when the button is clicked.
 
-Another way to set the toast content is to directly pass the message as a parameter to the `show` method.
+Another way to set the toast content is to directly pass the message as a parameter to the [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method.
 
 ```html
 <!--sample.component.html-->
