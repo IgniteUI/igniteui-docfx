@@ -23,7 +23,6 @@ _language: ja
 ---
 }
 
-
 ### @@igComponent 列サイズ変更
 
 グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
@@ -123,6 +122,7 @@ public onResize(event) {
     }
 ```
 }
+
 #### ピクセル/パーセンテージで列のサイズを変更する
 
 ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。 これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
@@ -204,7 +204,7 @@ public onResize(event) {
 ```
 }
 
-or
+または
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
@@ -250,8 +250,7 @@ column.autosize();
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、
-`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
+最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
 
 ``` scss
 $custom-grid-theme: igx-grid-theme(
@@ -271,7 +270,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
 #### カラーパレットの定義
-上記のように色の値をハードコーディングする代わりに、[`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
