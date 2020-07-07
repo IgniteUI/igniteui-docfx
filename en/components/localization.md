@@ -83,13 +83,14 @@ Firstly the package that contains the resource strings should be installed:
 
 `npm install igniteui-angular-i18n --save-dev`
 
-Then in order to use Japanese and Korean resource strings, the following imports should be added to the application and the `changei18n` functions should be called:
+Then in order to use Japanese, Korean and Spanish resource strings, the following imports should be added to the application and the `changei18n` functions should be called:
 
 ```typescript
 // app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
 public ngOnInit(): void {
     ...
