@@ -89,7 +89,7 @@ The matrix below provides a high-level outline of the accessibility support prov
 
 **TABLE WITH ALL COMPONENTS**
 
-|Component|Section 508 Compliance||||||||||||||||
+|Component|Section||||||||||||||||
 |:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|
 ||<a data-tooltip="A text equivalent for every non-text element shall be provided (e.g., via 'alt', 'longdesc', or in element content).">(a)</a>|<a data-tooltip="Equivalent alternatives for any multimedia presentation shall be synchronized with the presentation">(b)</a><br/>|<a data-tooltip="Web pages shall be designed so that all information conveyed with color is also available without color, for example from context or markup">(c)</a><br/>|<a data-tooltip="Documents shall be organized so they are readable without requiring an associated style sheet">(d)</a><br/>|<a data-tooltip="Redundant text links shall be provided for each active region of a server-side image map">(e)</a><br/>|<a data-tooltip="Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape">(f)</a><br/>|<a data-tooltip="Row and column headers shall be identified for data tables">(g)</a><br/>|<a data-tooltip="Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers">(h)</a><br/>|<a data-tooltip="Frames shall be titled with text that facilitates frame identification and navigation">(i)</a><br/>|<a data-tooltip="Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz">(j)</a><br/>|<a data-tooltip="A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way">(k)</a><br/>|<a data-tooltip="When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by assistive technology.">(l)</a><br/>|<a data-tooltip="When a web page requires that an applet, plug-in or other application be present on the client system to interpret page content, the page must provide a link to a plug-in or applet that complies with §1194.21 (a)">(m)</a><br/>|<a data-tooltip="When electronic forms are designed to be completed online, the form shall allow people using assistive technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.">(n)</a><br/>|<a data-tooltip="A method shall be provided that permits users to skip repetitive navigation links.">(o)</a><br/>|<a data-tooltip="When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required">(p)</a><br/>|
 |**Grids**||||||||||✔*|||||||
@@ -106,7 +106,7 @@ The matrix below provides a high-level outline of the accessibility support prov
 | - Calendar|✔||✔|✔||||||✔*||❌||✔|||
 | - Card|✔||✔|✔||||||||✔||✔|||
 | - Carousel|✔||✔|||||||✔*||❌||✔||❌|
-| - checkbox|✔||✔|✔||||||||✔||✔|||
+| - Checkbox|✔||✔|✔||||||||✔||✔|||
 | - Chip|||✔|✔||||||✔*||✔||✔|||
 | - Circular progress|✔||✔|||||||✔*||✔||✔|||
 | - Combo|✔||✔|||||||✔*|✔|✔||✔|||
@@ -118,7 +118,7 @@ The matrix below provides a high-level outline of the accessibility support prov
 | - Expansion panel|✔||✔|✔||||||✔*||✔||✔|||
 | - Icon|||✔|||||||||❌|||||
 | - Input|✔||✔|✔||||||||✔||✔|||
-| - input group|✔||✔|✔||||||✔*||✔||✔|||
+| - Input group|✔||✔|✔||||||✔*||✔||✔|||
 | - Label|✔||✔|✔||||||||✔||✔|||
 | - Linear progress|✔||✔|||||||✔*||✔||✔|||
 | - List|✔||✔|✔||||||||✔||✔|||
@@ -135,7 +135,6 @@ The matrix below provides a high-level outline of the accessibility support prov
 | - Time picker|||✔|✔||||||✔*||❌||✔|||
 | - Toast|||✔|✔||||||✔*||❌||✔||❌|
 | - Tooltip|✔||✔|✔||||||✔*||❌||✔|||
-
 
 
 **LEGEND**
