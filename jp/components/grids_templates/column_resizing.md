@@ -23,7 +23,6 @@ _language: ja
 ---
 }
 
-
 ### @@igComponent 列サイズ変更
 
 グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
@@ -124,6 +123,53 @@ public onResize(event) {
 ```
 }
 
+#### ピクセル/パーセンテージで列のサイズを変更する
+
+ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。 これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
+
+つまり、次の構成が可能です。
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+    <igx-column [field]="'ID'" width="10%" [resizable]="true"></igx-column>
+    <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
+    <igx-column [field]="'ContactTitle'" [resizable]="true"></igx-column>
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+    <igx-column [field]="'Title'" [resizable]="true" [width]="'10%'"></igx-column>
+    <igx-column [field]="'HireDate'" [resizable]="true" [width]="'100px'"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [resizable]="true"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
+        <igx-column field="Artist" [resizable]="true" [width]="'10%'"></igx-column>
+        <igx-column field="GrammyNominations" [resizable]="true" [width]="'100px'"></igx-column>
+        <igx-column field="GrammyAwards" [resizable]="true"></igx-column>
+        ...
+</igx-hierarchical-grid>
+```
+}
+
+>[!NOTE]
+> ピクセルとパーセンテージで設定された場合で列のサイズ変更の動作は少々異なります。
+
+**ピクセル**
+
+幅がピクセルで設定された列のサイズ変更は、マウスの水平移動量を列のサイズに直接足したり引いたりして行なわれます。
+
+**パーセンテージ**
+
+幅がパーセンテージで設定された列のサイズを変更する場合、ピクセル単位のマウスの水平移動量は、ほぼグリッド幅に対するパーセンテージの量に変換されます。 列はレスポンシブな状態のまま、その後のグリッドのサイズ変更は列にも反映されます。
+
 #### 列のサイズ変更の制限
 
 列の最小幅および最大幅の構成も可能です。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)  の [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) と [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 入力で行うことができます。この場合、サイズ変更インジケーターのドラッグ操作が制限されます。列が  [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) および [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth). によって定義される範囲以外にサイズ変更できないことをユーザーに通知します。
@@ -138,6 +184,38 @@ public onResize(event) {
 ```html
 <igx-column [field]="'Artist'" width="100px" [resizable]="true"
             [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+
+列幅の最小値と最大値のタイプ (ピクセルまたはパーセンテージ) を混在させることができます。 最小値と最大値がパーセンテージに設定されている場合、それぞれの列サイズはピクセルと同様の正確なサイズに制限されます。
+
+つまり、次の構成が可能です。
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'ID'" width="10%" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+```
+}
+
+または
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'ID'" width="100px" [resizable]="true"
+            [minWidth]="'5%'" [maxWidth]="'15%'"></igx-column>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-column [field]="'Artist'" width="100px" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'15%'"></igx-column>
 ```
 }
 
@@ -164,11 +242,6 @@ column.autosize();
 ```
 }
 
-#### ピン固定列のサイズ変更
-
-ピン固定列もサイズ変更できます。ただし、ピン固定される列のコンテナーが @@igComponent 全体の幅の 80% より大きくできないため、サイズ変更が制限されます。
-ピン固定列の自動サイズ調整で、新しい幅がピン固定列コンテナーが @@igComponent 全体の幅の 80% より大きい場合、自動サイズ調整操作は無視されます。これは、ピン固定されていない列を常にユーザーに表示して利用可能にするためです。
-
 ### スタイル設定
 @@igComponent 列のサイズ変更行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
@@ -177,8 +250,7 @@ column.autosize();
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、
-`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
+最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
 
 ``` scss
 $custom-grid-theme: igx-grid-theme(
@@ -198,7 +270,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
 #### カラーパレットの定義
-上記のように色の値をハードコーディングする代わりに、[`igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
+上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
