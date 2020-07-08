@@ -92,6 +92,7 @@ Now, the combo's list of items are properly rendered **inside** of our component
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 </div>
 
 ### Styling The Overlay

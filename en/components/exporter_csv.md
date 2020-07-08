@@ -18,8 +18,8 @@ The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({en
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="csv-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -113,11 +113,11 @@ public exportButtonHandler() {
 ```
 
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="csv-export-sample-iframe2" data-src="{environment:demosBaseUrl}/services/export-csv-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="csv-export-sample-iframe2" data-src="{environment:demosBaseUrl}/services/export-csv-sample-1" width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="csv-export-sample-iframe2" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 
