@@ -48,8 +48,18 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
-
 If the sample is configured properly, you should see the demo sample. A snackbar appears displaying a text message when the button is clicked.
+As you can see in the code snippet above, one way to set the massage displayed in the snackbar is to use the content projection. But if you need to switch the value programmatically based on some custom logic you can just pass the value as a parameter to the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method.
+
+```html
+<!--sample.component.html-->
+
+<button igxButton="raised" (click)="snackbar.show('Message deleted')">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.show('Message deletion was not successful. Please try again')">Delete Message</button>
+<div>
+    <igx-snackbar #snackbar></igx-snackbar>
+</div>
+```
 
 #### Hide/Auto Hide
 Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) method, you can close the component in the code.
@@ -71,9 +81,9 @@ public close(element) {
 }
 ```
 
-If the sample is configured properly, a snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
+If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and hide it when the *display time* ends. The third component passes a message as a param to the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and add an icon using the content projection.
 
-<div class="sample-container loading" style="height: 170px">
+<div class="sample-container loading" style="height: 230px">
     <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 <div>
@@ -300,7 +310,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $dark-snackbar: igx-snackbar-theme(
@@ -318,7 +328,7 @@ $dark-snackbar: igx-snackbar-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-snackbar`]({environment:sassApiUrl}/index.html#variable-_dark-snackbar) schema: 
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-snackbar`]({environment:sassApiUrl}/index.html#variable-_dark-snackbar) schema:
 
 ```scss
 //  Extending the dark snackbar schema
