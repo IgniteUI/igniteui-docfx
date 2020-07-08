@@ -1,68 +1,114 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid ステート パーシステンス | Ignite UI for Angular |インフラジスティックス
-_description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxGridの状態の永続性を簡単に実現します。
-_keywords: ステート パーシステンス, ignite ui for angular, インフラジスティックス
-_language: ja
+title: Angular Grid State Persistence | Ignite UI for Angular | Infragistics
+_description: Easily achieve state persistence for the IgxGrid by using the API exposed by the IgxGridState directive.
+_keywords: state persistence, ignite ui for angular, infragistics
 ---
 }
-<!-- @@if (igxName === 'IgxTreeGrid') {
+@@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Editing |Data Manipulation | Ignite UI for Angular
+title: Angular Tree Grid State Persistence | Ignite UI for Angular | Infragistics
 _description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
-_keywords: state persistence, ignite ui for angular, infragistics
+_keywords: state persistence, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Editing |Data Manipulation | Ignite UI for Angular
-_description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
-_keywords: state persistence, ignite ui for angular, infragistics
+title: Angular Hierarchical Grid State Persistence | Ignite UI for Angular | Infragistics
+_description: Easily achieve state persistence for the IgxHierarchicalGrid by using the API exposed by the IgxGridState directive.
+_keywords: state persistence, ignite ui for angular, infragistics
 ---
-} -->
+}
 
-### @@igComponent ステート パーシステンス
+### @@igComponent State Persistence
 
-Angular @@igComponent コンポーネントの Ignite UI には、開発者がグリッドの状態を簡単に保存および復元できる IgxGridState ディレクティブが用意されています。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate)メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
+Тhe igxGridState directive allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) methods that developers can use to achieve state persistence in any scenario.
 
-#### API
+#### Features Supported
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive supports saving and restoring the state of the following features:
 
-[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウドなど) に保存する最も簡単な方法です。開発者がこの状態を復元する必要がある場合は、[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドに渡します。最初のオプションのメソッド パラメーターは serialize で、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) が元のオブジェクトを返すか、シリアル化された JSOn 文字列を返すかを決定します。
-開発者は、機能名、または機能名を 2 番目の引数として持つ配列を渡すことにより、特定の機能の状態のみを取得することを選択できます。
+@@if (igxName !== 'IgxHierarchicalGrid') {
+
+* `Sorting`
+* `Filtering`
+* `Advanced Filtering`
+* `Paging`
+* `Cell Selection`
+* `Row Selection`
+* `Column Selection`
+* `Row Pinning`
+* `Expansion`
+* `GroupBy`
+* `Columns`
+    * Columns order
+    * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
+    * Columns templates and functions are restored using application level code, see [Restoring Column](state_persistence.md#restoring-columns) section.
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+* `RowIslands`
+    * saving/restoring features for all child grids down the hierarchy
+* `Sorting`
+* `Filtering`
+* `Advanced Filtering`
+* `Paging`
+* `Cell Selection`
+* `Row Selection`
+* `Column Selection`
+* `Row Pinning`
+* `Expansion`
+* `Columns`
+    * Columns order
+    * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
+    * Columns templates and functions are restored using application level code, see [Restoring Column](state_persistence.md#restoring-columns) section.
+}
+
+> The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state_persistence.md#restoring-columns) section to see how to restore column templates.
+
+#### Usage
+
+[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - This method returns the grid state in a serialized JSON string, so developers can just take it and save it on any data storage (database, cloud, browser localStorage, etc). The method accepts first optional parameter `serialize`, which determines whether [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) will return an [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) object or a serialized JSON string.
+The developer may choose to get only the state for a certain feature/features, by passing in the feature name, or an array with feature names as a second argument.
 ```typescript
 // get all features` state in a serialized JSON string
-const gridState = this.state.getState();
+const gridState = state.getState();
 
-// get all features original state objects, as returned by the grid public API
-const gridState = this.state.getState(false);
+// get an `IGridState` object, containing all features original state objects, as returned by the grid public API
+const gridState: IGridState = state.getState(false);
 
 // get the sorting and filtering expressions
-const sortingFilteringStates = this.state.getState(false, ["sorting", "filtering"]);
+const sortingFilteringStates: IGridState = state.getState(false, ["sorting", "filtering"]);
 ```
 
-[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドは、シリアル化されたJSON文字列または [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) インターフェイスを実装するオブジェクトを引数として受け入れ、オブジェクト/JSON 文字列で見つかった各機能の状態を復元します。内部的には、IgxGridState ディレクティブはパブリック グリッド API で動作するため、アプリケーション自体から実行できないことを抽象化することはありません。代わりに、使いやすい単一の API で機能のプロパティ/状態を取得/設定するための API をラップする場合。
+[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - The [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) method accepts the serialized JSON string or [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) object as argument and will restore the state of each feature found in the object/JSON string.
 
 ```typescript
-public restoreGridState(gridState) {
-    this.state.setState(gridState);
-}
-
-public restoreSortingFiltering(sortingFilteringStates: IGridState) {
-    this.state.setState(sortingFilteringStates)
-}
+state.setState(gridState);
+state.setState(sortingFilteringStates)
 ```
 
-`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/classes/igridstateoptions.html) インターフェイスを実装するオブジェクトです。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。開発者が特定の機能を除外した場合、オブジェクトは [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドを取得し、それらの機能の状態は含まれません。
+`options` - The [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) object implements the [`IGridStateOptions`]({environment:angularApiUrl}/classes/igridstateoptions.html) interface, i.e. for every key, which is the name of a certain feature, there is the boolean value indicating if this feature state will be tracked. [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method will not put the state of these features in the returned value and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method will not restore state for it.
 
 ```typescript
 public options =  { cellSelection: false; sorting: false; }
 ```
+@@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [IgxGridState]="options"></igx-grid>
+<igx-grid [igxGridState]="options"></igx-grid>
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [igxGridState]="options"></igx-hierarchical-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [igxGridState]="options"></igx-tree-grid>
+```
+}
 
-
-これらのシンプルなシングル ポイント API を使用すると、わずか数行のコードで完全な状態維持機能を実現できます。**以下のコードをコピーして貼り付け** - ユーザーが現在のページを離れるたびに、ブラウザーの `sessionStorage` オブジェクトにグリッドの状態が保存されます。ユーザーがこのページに戻るたびに、グリッドはユーザーが設定したのと同じ状態に復元されます。必要なデータを取得するために、複雑で高度なフィルタリングや並べ替えの式を毎回設定する必要はなくなりました。一度実行して、以下のコードでユーザーに代わって処理してください。
+Thеse simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state will be restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
 
 ```typescript
   // app.component.ts
@@ -78,74 +124,152 @@ public options =  { cellSelection: false; sorting: false; }
 
   public saveGridState() {
       const state = this.state.getState() as string;
-      window.localStorage.setItem("grid1-state", state);
+      window.sessionStorage.setItem("grid1-state", state);
   }
 
   public restoreGridState() {
-      const state = window.localStorage.getItem("grid1-state");
+      const state = window.sessionStorage.getItem("grid1-state");
       this.state.setState(state);
   }
 ```
-状況に応じてステートをブラウザーの `localStorage` または `sessionStorage` オブジェクトに保存、またはデータベースやクラウドに保存し、サービスへ渡すことができます。
 
-#### デモ
+#### Restoring columns
+
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state_persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
+
+1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event:
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+    <igx-column [field]="'IsActive'" header="IsActive">
+        <ng-template igxCell #activeTemplate let-column let-val="val">
+            <igx-checkbox [checked]="val"></igx-checkbox>
+        </ng-template>
+    </igx-column>
+    ...
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+    <igx-column [field]="'IsActive'" header="IsActive">
+        <ng-template igxCell #activeTemplate let-column let-val="val">
+            <igx-checkbox [checked]="val"></igx-checkbox>
+        </ng-template>
+    </igx-column>
+    ...
+</igx-hierarchical-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+    <igx-column [field]="'IsActive'" header="IsActive">
+        <ng-template igxCell #activeTemplate let-column let-val="val">
+            <igx-checkbox [checked]="val"></igx-checkbox>
+        </ng-template>
+    </igx-column>
+    ...
+</igx-tree-grid>
+```
+}
+2. Query the template view in the component using @ViewChild or @ViewChildren decorator. In the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event handler, assign the template to the column `bodyTemplate` property:
+
+```typescript
+@ViewChild('activeTemplate', { static: true }) public activeTemplate: TemplateRef<any>;
+public onColumnInit(column: IgxColumnComponent) {
+   if (column.field === 'IsActive') {
+        column.bodyTemplate = this.activeTemplate;
+        column.summaries = MySummary;
+        column.filters = IgxNumberFilteringOperand.instance();
+   }
+}
+```
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+#### Restoring Child Grids
+Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
+
+``` html
+<!-- public options = {selection: false, sorting: false, rowIslands: true} -->
+<igx-grid [igxGridState]="options"></igx-grid>
+```
+Then the `getState` API will return the state for all grids (root grid and child grids) features excluding `selection` and `sorting`. If later on the developer wants to restore only the `filtering` state for all grids, use:
+```typescript
+this.state.setState(state, ['filtering', 'rowiIslands']);
+```
+}
+
+#### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:960px">
+<div class="sample-container loading" style="height:750px">
     <iframe id="grid-state" src='{environment:demosBaseUrl}/grid/grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
-#### 制限
-
-[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトをJSON文字列に変換します。ただし、関数をサポートしないため、[`IgxGridState`] ディレクティブは、columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter)、[`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters)、[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries)、[`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy)、[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) プロパティを無視します。アプリケーション レベルでそれらを追跡および復元するのは開発者です。[`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントでこれらを設定することをお勧めします。
-
-```typescript
-// app.component.ts
-public initColumns(column: IgxColumnComponent) {
-    if (column.field === 'Age') {
-        column.summaries = MySummary;
-        column.filters = IgxNumberFilteringOperand.instance();
-    }
-}
-```
-
-<!-- @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:950px">
-    <iframe id="treegrid-state" src='{environment:demosBaseUrl}/tree-grid/treegrid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:1000px">
+    <iframe id="treegrid-state" src='{environment:demosBaseUrl}/tree-grid/tree-grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
+
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:660px">
-    <iframe id="hierarchical-grid-state" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height:700px">
+    <iframe id="hierarchical-grid-state" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
-} -->
+}
+
+
+#### Limitations
+* @@if (igxName === 'IgxHierarchicalGrid') {
+When restoring all grid features at once (using `setState` API with no parameters), then column properties for the root grid might be resetted to default. If this happens, restore the columns or column selection feature separately after that:
+```typescript
+state.setState(gridState);
+state.setState(gridState.columns);
+state.setState(gridState.columnSelection);
+```
+}
+* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method uses JSON.stringify() method to convert the original objects to a JSON string. JSON.stringify() does not support Functions, thats why the [`IgxGridState`] directive will ignore the columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter), [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters), [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries), [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy), [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses), [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellstyles), [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#headertemplate) and [`bodyTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#bodytemplate) properties.
 <div class="divider--half"></div>
 
 
-### API リファレンス
+### API References
 
+@@if (igxName === 'IgxGrid') {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+* [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
+* [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
+}
+@@if (igxName === 'IgxTreeGrid') {
+* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+* [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
+}
 
-
-### その他のリソース
+### Additional Resources
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [選択](selection.md)
+* [@@igComponent overview](@@igMainTopic.md)
+* [Paging](paging.md)
+* [Filtering](filtering.md)
+* [Sorting](sorting.md)
+* [Selection](selection.md)
