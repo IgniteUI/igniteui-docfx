@@ -15,6 +15,9 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
+- name: Accessibility Compliance
+  href: general/accessibility-compliance.md
+  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: true
