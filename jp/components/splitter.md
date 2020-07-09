@@ -13,7 +13,9 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
     <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">codesandbox で表示
     </button>
 </div>
 
@@ -132,7 +134,9 @@ public typeVertical = SplitterType.Vertical;
     <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">codesandbox で表示
     </button>
 </div>
 
@@ -199,10 +203,11 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 これは、新しいテーマを適用した結果です。
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### API リファレンス

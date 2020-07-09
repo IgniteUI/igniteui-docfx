@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid State Persistence | Ignite UI for Angular | Infragistics
 _description: Easily achieve state persistence for the IgxGrid by using the API exposed by the IgxGridState directive.
@@ -211,6 +211,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
@@ -221,6 +222,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
     <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
@@ -232,6 +234,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
     <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }

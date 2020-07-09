@@ -1,4 +1,4 @@
-﻿---
+---
 title:  Tree Grid ロードオンデマンド - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid は、親行が展開されたときに必要な子データのみを読み込むことにより、取得およびレンダリングするデータ量が大幅に軽減されます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Tree Grid, Tree Table
@@ -17,6 +17,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
