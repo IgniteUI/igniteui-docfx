@@ -6,7 +6,7 @@ In order to switch from `Material` to `Bootstrap`, you can use one of the built-
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
-@include igx-bootstrap-theme($bootstrap-palette);
+@include igx-bootstrap-light-theme($light-bootstrap-palette);
 ```
 
 ### Bootstrap Dark Theme
@@ -17,5 +17,5 @@ In order to switch from `Material` to `Bootstrap`, you can use one of the built-
 ```
 
 ### API Overview
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
 * [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
