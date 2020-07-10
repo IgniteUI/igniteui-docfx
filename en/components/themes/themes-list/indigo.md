@@ -1,7 +1,7 @@
 ## Switching from Material to Indigo Theme
 Since version `10.1` our components include a new theme inspired by our own design language.
  
-In order to switch from `Material` to `Indigo`, you can use one of the build-in mixins.  
+In order to switch from `Material` to `Indigo`, you can use one of the built-in mixins.  
 
 ### Indigo Light Theme
 ```scss
