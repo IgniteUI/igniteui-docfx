@@ -140,31 +140,41 @@ public ngOnInit() {
 </div>
 
 ### イベント
-このサンプルを拡張します。ユーザーが 5 日以下の日付範囲を入力する必要があります。カレンダーの `selection` モードを "range" に設定し、範囲が無効な場合にユーザーに適切な選択を促すための通知を表示します。これを行うには、[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントを使用します。
+Let's explore the events emitted by the calendar:
+- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - emitted when selecting date(s) in the calendar.
+- [`onViewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onsviewdatechanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header
+- [`onActiveViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onactiveviewchanged) - emitted every time when the current month/year is changed - for example after navigating to the `next` or `previous` month.
 
 ```html
 <!-- app.component.html -->
-<igx-calendar #calendar
-    ...
-    selection="range"
-    (onSelection)="verifyRange($event)">
+<igx-calendar #calendar 
+    (onSelection)="onSelection($event)"
+    (onViewDateChanged)="viewDateChanged($event)"
+    (onActiveViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-
-`onSelection` イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択をユーザーに通知する場合、選択範囲を最初の日のみにするために [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) メソッドを使用してリセットします。
+The [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
 
 ```typescript
 // app.component.ts
 ...
-public verifyRange(dates: Date[]) {
+public onSelection(dates: Date[]) {
     if (dates.length > 5) {
-        this.calendar.selectDate(dates[0]);
-        this.dialog.open();
+        this.calendar.selectedDates = [];
+        // alert the user
     }
 }
+    public viewDateChanged(event: IViewDateChangeEventArgs) {
+        // use event.previousValue to get previous month/year that was presented.
+        // use event.currentValue to get current month/year that is presented.
+    }
+
+    public activeViewChanged(event: CalendarView) {
+        // use CalendarView[event] to get the current active view (DEFAULT, YEAR or DECADE)
+    }
 ```
 
-以下のデモでは、選択した範囲が 5 日間を超えると通知が表示されます。範囲の選択を試してください。
+Use the demo below to play around (change selection, navigate through months and years) and see the events logged real time:
 <div class="sample-container loading" style="height: 420px">
     <iframe id="calendar-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
