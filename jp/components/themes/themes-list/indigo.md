@@ -18,5 +18,5 @@
 ```
 
 ### API の概要
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)
