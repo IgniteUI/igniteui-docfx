@@ -83,7 +83,7 @@ In the next sample, we'll use a different positioning strategy so that the conte
 The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) provider. The `open`, `close` and `toggle` methods accept optional overlay settings that control how the content is displayed. If omitted, the default overlay settings are used as seen in the previous sample.
 
 >[!NOTE]
-> By defaut the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property is set to `true`. In order to disable this functionallity, the property has to be set to `false`.
+> By default, the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property is set to `true`. In order to disable this functionality, the property has to be set to `false`. Additionally, the [`closeOnEsc`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonesc) property defaults to `false`, so in order to make use of it, we have to set it to `true`.
 
 ```typescript
 // template.component.ts
@@ -99,6 +99,7 @@ The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApi
 
     public _overlaySettings = {
         closeOnOutsideClick: false,
+        closeOnEsc: true,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings)
     };
 
