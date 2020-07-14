@@ -345,7 +345,7 @@ class MySummary extends IgxNumberSummaryOperand {
  - top - 集計行はグループ列の子の前に表示されます。
  - bottom - 集計行はグループ列の子の後に表示されます。これがデフォルト値です。
 
-The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。 デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、グループ行が縮小されたときに、集計行は表示されたままになります。
+[`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。 デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、グループ行が縮小されたときに、集計行は表示されたままになります。
 
 > [!NOTE]
 > [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
@@ -374,7 +374,7 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
  - top - 集計行は子行のリストの前に表示されます。
  - bottom - 集計行は子行のリストの後に表示されます。これがデフォルト値です。
 
-The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。 デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、親行が縮小されたときに、集計行は表示されたままになります。
+[`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。 デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、親行が縮小されたときに、集計行は表示されたままになります。
 
 > [!NOTE]
 > [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
