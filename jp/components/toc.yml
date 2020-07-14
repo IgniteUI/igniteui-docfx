@@ -915,6 +915,9 @@
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
           new: true
+        - name: Indigo
+          href: themes/themes-list/indigo.md
+          new: true
     - name: 印刷スタイル
       href: themes/printing-styles.md
       new: false
