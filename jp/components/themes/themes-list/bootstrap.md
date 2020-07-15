@@ -6,7 +6,7 @@
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
-@include igx-bootstrap-theme($bootstrap-palette);
+@include igx-bootstrap-light-theme($light-bootstrap-palette);
 ```
 
 ### Bootstrap Dark テーマ
@@ -17,5 +17,5 @@
 ```
 
 ### API の概要
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)

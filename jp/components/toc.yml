@@ -16,6 +16,9 @@
 - name: アップデート ガイド
   href: general/update_guide.md
   new: false
+- name: アクセシビリティ準拠
+  href: general/accessibility-compliance.md
+  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: true
@@ -134,7 +137,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: grid/row_selection.md
@@ -188,7 +191,7 @@
     - name: Grid Master-Detail
       href: grid/master_detail.md
       new: true
-    - name: State Persistence
+    - name: 状態保持
       href: grid/state_persistence.md
       updated: true
 - name: Tree Grid
@@ -299,7 +302,7 @@
     - name: サイズ変更
       href: treegrid/sizing.md
       new: false
-    - name: State Persistence
+    - name: 状態保持
       href: treegrid/state_persistence.md
       new: true
 - name: Hierarchical Grid
@@ -400,7 +403,7 @@
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
       new: false
-    - name: State Persistence
+    - name: 状態保持
       href: hierarchicalgrid/state_persistence.md
       new: true
 - name: List View
@@ -911,6 +914,9 @@
           new: true
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
+          new: true
+        - name: Indigo
+          href: themes/themes-list/indigo.md
           new: true
     - name: 印刷スタイル
       href: themes/printing-styles.md

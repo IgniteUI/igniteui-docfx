@@ -84,13 +84,14 @@ this.grid.resourceStrings = newGridRes;
 
 `npm install igniteui-angular-i18n --save-dev`
 
-日本語のリソース文字列を使用するには、以下のインポートをアプリケーションに追加して `changei18n` 関数を呼び出します。
+日本語、韓国語またはスペイン語のリソース文字列を使用するには、以下のインポートをアプリケーションに追加して `changei18n` 関数を呼び出します。
 
 ```typescript
 // app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
 
 public ngOnInit(): void {
