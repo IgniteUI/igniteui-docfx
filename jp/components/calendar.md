@@ -142,15 +142,15 @@ public ngOnInit() {
 ### イベント
 Let's explore the events emitted by the calendar:
 - [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - emitted when selecting date(s) in the calendar.
-- [`onViewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onsviewdatechanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header
-- [`onActiveViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onactiveviewchanged) - emitted every time when the current month/year is changed - for example after navigating to the `next` or `previous` month.
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewvhanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
 
 ```html
 <!-- app.component.html -->
 <igx-calendar #calendar 
     (onSelection)="onSelection($event)"
-    (onViewDateChanged)="viewDateChanged($event)"
-    (onActiveViewChanged)="activeViewChanged($event)">
+    (viewDateChanged)="viewDateChanged($event)"
+    (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
 The [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
