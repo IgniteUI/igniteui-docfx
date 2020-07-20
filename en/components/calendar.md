@@ -143,31 +143,41 @@ If everything went well, we should now have a calendar with customized dates dis
 </div>
 
 #### Events
-Let's build on top of that sample a bit. We will require the user to enter a date range that does not exceed 5 days. We need to change the `selection` mode of the calendar to "range" and prompt the user to correct the selection, if the range is not valid. In order to do this, we will use the [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event:
+Let's explore the events emitted by the calendar:
+- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - emitted when selecting date(s) in the calendar.
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewchanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
 
 ```html
 <!-- app.component.html -->
-<igx-calendar #calendar
-    ...
-    selection="range"
-    (onSelection)="verifyRange($event)">
+<igx-calendar #calendar 
+    (onSelection)="onSelection($event)"
+    (viewDateChanged)="viewDateChanged($event)"
+    (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-
-The value passed in the `onSelection` event is the collection of dates selected, so we can read its length and base our logic upon it. While alerting the user for an invalid selection, we will also reset the selection to contain only the first date from the range using the [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) method:
+The [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
 
 ```typescript
 // app.component.ts
 ...
-public verifyRange(dates: Date[]) {
+public onSelection(dates: Date[]) {
     if (dates.length > 5) {
-        this.calendar.selectDate(dates[0]);
-        this.dialog.open();
+        this.calendar.selectedDates = [];
+        // alert the user
     }
 }
+    public viewDateChanged(event: IViewDateChangeEventArgs) {
+        // use event.previousValue to get previous month/year that was presented.
+        // use event.currentValue to get current month/year that is presented.
+    }
+
+    public activeViewChanged(event: CalendarView) {
+        // use CalendarView[event] to get the current active view (DEFAULT, YEAR or DECADE)
+    }
 ```
 
-In the following demo, an alert will be displayed, if the selected range exceeds 5 days. Let's try this out by playing around with different ranges:
+Use the demo below to play around (change selection, navigate through months and years) and see the events logged real time:
 <div class="sample-container loading" style="height: 420px">
     <iframe id="calendar-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
