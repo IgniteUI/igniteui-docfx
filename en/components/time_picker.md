@@ -121,8 +121,8 @@ export class AppModule {}
 
 // app.component.ts
 
-public min: string = "09:00";
-public max: string = "18:00";
+public min: string = "09:15:30 AM";
+public max: string = "06:15:30 PM";
 
 @ViewChild("toast", { static: true })
 private toast;
@@ -142,11 +142,11 @@ format="HH:mm tt"
 (onValidationFailed)="onValidationFailed()"
 ></igx-time-picker>
 
-<igx-toast #toast message="Value must be between 09:00 and 18:00"></igx-toast>
+<igx-toast #toast message="Value must be between 09:15:30 AM and 06:15:30 PM"></igx-toast>
 
 ```
 
-A toast is added to show a message when an invalid time is selected. The range is (09:00~18:00). Also we changed the delta of the items and the time format so you can see how that looks like.
+A toast is added to show a message when an invalid time is selected. The range is (09:15:30 AM~06:15:30 PM) and the time parts outside it will be grayed out. Also we changed the delta of the items and the time format so you can see how that looks like.
 
 And there we have it:
 <div class="sample-container loading" style="height: 540px;">
