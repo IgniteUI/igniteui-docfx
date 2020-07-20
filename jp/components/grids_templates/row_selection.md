@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
 _description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
@@ -35,6 +35,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -44,6 +45,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -53,6 +55,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -369,6 +372,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-numbering-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-template-numbering-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -378,6 +382,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -387,6 +392,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -399,6 +405,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-excel-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-template-excel-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -411,6 +418,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -420,6 +428,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -429,6 +438,7 @@ public getSelectedRows(args) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }

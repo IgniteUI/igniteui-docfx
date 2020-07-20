@@ -48,7 +48,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
 </iframe></div>
 
 #### Raised ボタン 
@@ -60,7 +60,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
 </iframe></div>
 
 #### Outlined ボタン
@@ -72,7 +72,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
 
 #### Icon ボタン
@@ -86,7 +86,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </iframe></div>
 
 #### フローティング アクション ボタン
@@ -100,7 +100,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </iframe></div>
 
 ### 例
@@ -114,7 +114,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
 </iframe></div> 
 
 #### Ripple
@@ -128,7 +128,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </iframe></div> 
 
 #### Span
@@ -142,7 +142,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </iframe></div>
 
 ### 密度の表示
@@ -199,6 +199,7 @@ public selectDensity(event) {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -257,6 +258,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 </iframe></div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 

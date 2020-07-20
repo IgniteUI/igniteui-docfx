@@ -1,4 +1,4 @@
-﻿---
+---
 title: オーバーレイ サービス - 配置ストラテジ
 _description: オーバーレイ サービスの IPositionStrategy インターフェイスとそれを実装するクラスに関する説明と例の紹介。
 _language: ja
@@ -15,6 +15,7 @@ _language: ja
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -99,6 +100,7 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -130,6 +132,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -147,6 +150,7 @@ overlay.show(overlayId, { positionStrategy: myPositionStrategy });
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 

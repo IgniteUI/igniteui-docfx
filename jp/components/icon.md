@@ -1,4 +1,4 @@
-﻿---
+---
 title: Icon コンポーネント
 _description: Ignite UI for Angular Icon コンポーネントを使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール
@@ -11,10 +11,12 @@ _language: ja
 ### デモ
 
 <div class="sample-container loading" style="height: 75px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
     </button>
 </div>
 
@@ -48,7 +50,7 @@ export class AppModule {}
 <igx-icon color="#e41c77">home</igx-icon>
 ```
 <div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
+    <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
 #### アイコンの無効化
@@ -59,7 +61,7 @@ export class AppModule {}
 <igx-icon [isActive]="false">volume_off</igx-icon>
 ```
 <div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-4-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
+    <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
 </iframe></div>
 
 #### コンテンツ プロジェクション
@@ -71,7 +73,7 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-5-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
+    <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
 </iframe></div>
 
 #### アイコンのサイズ
@@ -86,7 +88,7 @@ CSS を使用してアイコンをカスタマイズできます。アイコン 
 }
 ```
 <div class="sample-container loading" style="height: 80px">
-    <iframe id="icon-sample-2-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
+    <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
 </iframe></div>
 
 ### SVG アイコン
@@ -113,10 +115,12 @@ public ngOnInit() {
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe id="svg-icon-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
+    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
 </iframe></div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
+    </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
     </button>
 </div>
 
@@ -188,6 +192,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### 6.2.0 の重大な変更

@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス
 _description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
@@ -32,6 +32,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -42,6 +43,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -67,6 +69,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -76,6 +79,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -275,6 +279,7 @@ $custom-grid-theme: igx-grid-theme(
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -286,8 +291,9 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    </button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>
 </div>
 }
@@ -300,8 +306,9 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    </button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>
 </div>
 }

@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 状態保持 | Ignite UI for Angular | インフラジスティックス 
 _description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxGrid の状態の永続性を簡単に実現します。

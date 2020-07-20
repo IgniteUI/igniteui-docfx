@@ -1,4 +1,4 @@
-﻿---
+---
 title: 階層グリッド - グループ化 | グループ行 | Ignite UI for Angular| インフラジスティックス
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
@@ -17,6 +17,7 @@ Angular Material テーブルまたは UI グリッドの Group by 動作は、�
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### 初期のグループ化状態
@@ -118,6 +119,7 @@ export interface IGroupByRecord {
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### 集計でグループ化
@@ -286,6 +288,7 @@ $custom-theme: igx-grid-theme(
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### 既知の制限

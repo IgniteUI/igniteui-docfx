@@ -18,6 +18,7 @@ _language: ja
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### 使用方法
@@ -89,7 +90,7 @@ export class AppModule {}
 <igx-combo>
     <ng-template igxComboHeader>
         <div class="header-class">Custom header</div>
-        <img src=""/>
+        <img src/>
     </ng-template>
 </igx-combo>
 ```
@@ -101,7 +102,7 @@ export class AppModule {}
 <igx-combo>
     <ng-template igxComboFooter>
         <div class="footer-class">Custom footer</div>
-        <img src=""/>
+        <img src/>
     </ng-template>
 </igx-combo>
 ```

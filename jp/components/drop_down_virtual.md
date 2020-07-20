@@ -1,4 +1,4 @@
-﻿---
+---
 title: ドロップダウン コンポーネント
 _description: Angular 仮想化 Drop Down の Ignite UI を使用して、単一の項目選択をサポートする非常に大きな項目のリストを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール, Angular コントロール Large Item List, Angular コントロール Singe Selection
@@ -11,10 +11,11 @@ _language: ja
 
 ### デモ
 <div class="sample-container loading" style="height:320px">
-    <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -245,10 +246,11 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。
 
 <div class="sample-container loading" style="height:400px">
-    <iframe id="dropdown-remote-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-remote' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-remote-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-remote' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 

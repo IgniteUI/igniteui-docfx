@@ -17,6 +17,7 @@ _language: ja
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -89,6 +90,7 @@ public close(element) {
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### 表示時間
@@ -145,11 +147,12 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 結果としてメッセージと 3 つのローディング ドットがスナックバーに表示されます。
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
 </div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 
 </div>
 
@@ -230,11 +233,12 @@ public restore() {
 ```
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
 </div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### スタイル設定
@@ -366,10 +370,11 @@ $dark-snackbar: igx-snackbar-theme(
 #### デモ
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="snackbar-style-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-style" class="lazyload no-theming"></iframe>
+    <iframe id="snackbar-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-style" class="lazyload no-theming"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 <div class="divider--half"></div>

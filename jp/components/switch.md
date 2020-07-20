@@ -11,10 +11,11 @@ _language: ja
 
 #### デモ
 <div class="sample-container loading" style="height:200px">
-    <iframe id="switch-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="switch-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="switch-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -87,9 +88,10 @@ igx-switch {
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 200px">
-    <iframe id="switch-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="switch-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="switch-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### ラベル位置
