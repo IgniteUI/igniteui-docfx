@@ -130,6 +130,9 @@ export class CustomOverlayCombo {
 
 <div class="divider--half"></div>
 
+> [!Note]
+> `IgxComboComponent` は [**AutoPositionStrategy**]({environment:angularApiUrl}/classes/autopositionstrategy.html) をデフォルトの[配置ストラテジ](overlay_position.md)として使用します。
+
 ## フィルタリング
 コンボのフィルタリングがデフォルトで有効になります。以下のコードで無効にできます。
 
