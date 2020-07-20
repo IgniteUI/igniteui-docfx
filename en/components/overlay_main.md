@@ -239,7 +239,8 @@ defaultOverlaySettings = {
     positionStrategy: new GlobalPositionStrategy(),
     scrollStrategy: new NoOpScrollStrategy(),
     modal: true,
-    closeOnOutsideClick: true
+    closeOnOutsideClick: true,
+    closeOnEscape: false
 };
 ```
 <div class="divider--half"></div>
