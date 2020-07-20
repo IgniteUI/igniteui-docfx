@@ -49,8 +49,18 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
-
 サンプルが正しく構成された場合、デモ サンプルが表示されます。ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
+以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。 ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドに渡すだけです。
+
+```html
+<!--sample.component.html-->
+
+<button igxButton="raised" (click)="snackbar.show('Message deleted')">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.show('Message deletion was not successful. Please try again')">Delete Message</button>
+<div>
+    <igx-snackbar #snackbar></igx-snackbar>
+</div>
+```
 
 #### 非表示/自動的に隠す
 開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) メソッドを使用して、コードでコンポーネントを閉じることができます。
@@ -72,10 +82,10 @@ public close(element) {
 }
 ```
 
-サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。
+サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを介して別のメッセージを渡し、*表示時間*が終了すると非表示にします。 3 番目のコンポーネントは、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
 
-<div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 230px">
+    <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
