@@ -190,7 +190,7 @@ If the sample is configured properly, you should see the following in your brows
 
 #### Add Custom Title
 
-If we want to provide a custom content for a navbar's title, we can achieve this by using `igx-navbar-title` or `igxNavbarTitle` directive. They will replace the default navbar's title provided by `title` input property. The sample below has a custom title containing an `img` element:
+If we want to provide a custom content for a navbar's title, we can achieve this by using `igx-navbar-title` or `igxNavbarTitle` directive. They will replace the default navbar's title provided by `title` input property. The sample below has a custom title containing a link with an image:
 
 ```html
 <!--navbar.component.html-->
