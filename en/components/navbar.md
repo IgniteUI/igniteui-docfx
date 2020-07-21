@@ -190,7 +190,7 @@ If the sample is configured properly, you should see the following in your brows
 
 #### Add Custom Title
 
-If we want to provide a custom content for a navbar's title, we can achieve this by using `igx-navbar-title` or `igxNavbarTitle` directive. They will replace the default navbar's title provided by `title` input property. The sample below has a custom title with div and img nodes inside:
+If we want to provide a custom content for a navbar's title, we can achieve this by using `igx-navbar-title` or `igxNavbarTitle` directive. They will replace the default navbar's title provided by `title` input property. The sample below has a custom title containing an `img` element:
 
 ```html
 <!--navbar.component.html-->
@@ -198,10 +198,9 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 <div class="sample-column">
     <igx-navbar actionButtonIcon="menu" [isActionButtonVisible]="true">
         <div igxNavbarTitle>
-            <div>Custom Title </div>
             <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
                 <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
-                     width="120px" height="50px" alt="" style="margin-left: 5px; margin-top: 5px;">
+                     width="120px" height="50px" alt="" style="margin-top: 7px;">
             </a>
         </div>
 
