@@ -1,7 +1,7 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Open Street Maps | Infragistics
 _description: The Map allows you to display imagery from Open Street Maps. View the demo and usage for more
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, imagery tiles, OpenStreetMap
 mentionedTypes: ['XamGeographicMap']
 ---
 

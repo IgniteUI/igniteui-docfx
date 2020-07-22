@@ -1,13 +1,13 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Esri Maps | Infragistics
 _description: The Map allows you to display imagery from Esri Street Maps. View the demo and usage for more
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, imagery tiles, Esri, Arc GIS
 mentionedTypes: ['XamGeographicMap']
 ---
 
 ## Displaying Imagery from Esri Maps
 
-The [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html) is a free geographic imagery mapping service created by Esri. It provides over 40 styles of geographic imagery tiles of the world. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
+The [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html) is a free geographic imagery mapping service created by <a href="https://www.esri.com/" target="_blank">Esri</a> company. It provides over 40 styles of geographic imagery tiles of the world and some thematic tiles for the USA. This geographic imagery service can be accessed directly on <a href="https://services.arcgisonline.com/ArcGIS/rest/services" target="_blank">www.arcgisonline.com</a> web site.
 
 ### Demo
 
@@ -24,7 +24,7 @@ The [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 ### Code Snippet
 
-The following code snippet shows how to display geographic imagery from Esri Maps in [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html).
+The following code snippet shows how to display geographic imagery tiles from Esri imagery servers in [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html) class.
 
 ```html
 <igx-geographic-map #map
@@ -38,11 +38,27 @@ The following code snippet shows how to display geographic imagery from Esri Map
 import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 import { IgxArcGISOnlineMapImagery } from 'igniteui-angular-maps';
 // ...
-public map: IgxGeographicMapComponent;
+public geoMap: IgxGeographicMapComponent;
 
 const tileSource = new IgxArcGISOnlineMapImagery();
 tileSource.mapServerUri = "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer";
-this.map.backgroundContent = tileSource;
+
+this.geoMap.backgroundContent = tileSource;
 ```
 
-Also, you can use the [EsriUtility](geo-map-resources-esri.md) which defines all styles of Esri Maps.
+### Esri Utility
+
+Alternatively, you can use the [EsriUtility](geo-map-resources-esri.md) which defines all styles provided by Esri imagery servers.
+
+```ts
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+import { IgxArcGISOnlineMapImagery } from 'igniteui-angular-maps';
+import { EsriUtility, EsriStyle } from './EsriUtility';
+// ...
+public geoMap: IgxGeographicMapComponent;
+
+const tileSource = new IgxArcGISOnlineMapImagery();
+tileSource.mapServerUri = EsriUtility.getUri(EsriStyle.WorldOceansMap);
+
+this.geoMap.backgroundContent = tileSource;
+```

@@ -7,53 +7,66 @@ mentionedTypes: ['XamDataChart']
 
 ## Point Charts
 
+The Ignite UI for Angular provides the following types of point charts:
+
 <section class="feature__container">
     <style>
-        .linkContent {
+        .linkContent,
+        .linkContent:hover {
             display: flex;
             flex-flow: column;
             align-items: center;
+            box-shadow: none;
         }
         .link {
             display: inline-block;
             font-size: 1.0rem;
+            color: #0099ff;
+            cursor: pointer;
+            padding-top: 1.0rem;
+            margin-right: 1.0rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,.15);
         }
-        img {
-            width: 350px;
-            height: 350px;
-            margin-top: -20px;
+        .link:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,.25);
+        }
+        .img {
+            width: 250px;
+            height: 250px;
+            box-shadow: none;
         }
     </style>
     <body>
-        <a class="link" href="data-chart-type-category-point-series.md">
+        <div class="link" href="data-chart-type-category-point-series.md">
             <div class="linkContent" >
-                <h4>Point Chart</h4>
-                <img src="../images/charts/data-chart-type-category-point-series.png">
+                <div>Point Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-point-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-scatter-point-series.md">
+        </div>
+        <div class="link" href="data-chart-type-scatter-point-series.md">
             <div class="linkContent">
-                <h4>Scatter Marker Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-point-series.png">
+                <div>Scatter Marker Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-point-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-scatter-bubble-series.md">
+        </div>
+        <div class="link" href="data-chart-type-scatter-bubble-series.md">
             <div class="linkContent">
-                <h4>Scatter Bubble Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-bubble-series.png">
+                <div>Scatter Bubble Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-bubble-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-polar-scatter-series.md">
+        </div>
+        <div class="link" href="data-chart-type-polar-scatter-series.md">
             <div class="linkContent">
-                <h4>Polar Scatter Chart</h4>
-                <img src="../images/charts/data-chart-type-polar-scatter-series.png">
+                <div>Polar Scatter Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-polar-scatter-series.png">
             </div>
-        </a>
-        <!-- <a class="link" href="data-chart-type-scatter-hd-series.md">
+        </div>
+        <!-- <div class="link" href="data-chart-type-scatter-hd-series.md">
             <div class="linkContent">
-                <h4>Scatter High Density Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-hd-series.png">
+                <div>Scatter High Density Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-hd-series.png">
             </div>
-        </a> -->
+        </div> -->
     </body>
 </section>

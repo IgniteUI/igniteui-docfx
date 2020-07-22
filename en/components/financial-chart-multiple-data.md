@@ -22,7 +22,9 @@ The Angular financial chart component can bind easily to multiple data sources, 
 </div>
 <div class="divider--half"></div>
 
-The financial chart component can plot multiple data sources as long as your each data source is added to an array. The following code snippet demonstrates how to create a multiple data sources.
+The financial chart component can plot multiple data sources as long as your each data source is added to an array. The financial chart component cannot plot multiple data sources on the XAxis in Time mode if the number of items in the data sources is not the same. The control also will not align items of multiple data sources. As a result, developers should align data items by inserting null items where one data source does not have corresponding items with another data source.
+
+The following code snippet demonstrates how to create a multiple data sources.
 
 ```ts
 let dataSource1: any = [

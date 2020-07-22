@@ -74,8 +74,8 @@ The following code demonstrates how to bind the pie chart to the above data.
 
 ```html
 <igx-pie-chart [dataSource]="data"
-               width="700px"
-               height="500px"
+               width="100%"
+               height="100%"
                labelMemberPath="Company"
                valueMemberPath="MarketShare">
 </igx-pie-chart>
@@ -91,8 +91,8 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 
 ```html
 <igx-pie-chart [dataSource]="data"
-               width="700px"
-               height="500px"
+               width="100%"
+               height="100%"
                valueMemberPath="MarketShare"
                labelMemberPath="Company"
                legendLabelMemberPath="Company"
@@ -122,8 +122,8 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 ```html
 <igx-pie-chart [dataSource]="data"
-               width="700px"
-               height="500px"
+               width="100%"
+               height="100%"
                labelMemberPath="Company"
                valueMemberPath="MarketShare"
                othersCategoryThreshold="2"
@@ -150,8 +150,8 @@ The pie chart component supports explosion of individual pie slices as well as a
 
 ```html
 <igx-pie-chart [dataSource]="data"
-               width="700px"
-               height="500px"
+               width="100%"
+               height="100%"
                allowSliceExplosion="true"
                sliceClick="piechart_SliceClick">
 </igx-pie-chart>
@@ -194,8 +194,8 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 
 ```html
 <igx-pie-chart [dataSource]="data"
-            width="700px"
-            height="500px"
+            width="100%"
+            height="100%"
             selectionMode="multiple"
             selectedSliceStroke = "white"
             selectedSliceFill= "rgb(143,143,143)"
@@ -209,6 +209,44 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    </button>
+
+
+</div>
+
+<div class="divider--half"></div>
+
+### Animation
+
+You can animate the pie chart smoothly by setting the `radiusFactor` property, which will scale the chart's radius. Also set the `startAngle` property to angle the chart such that it keep increasing the chart angle while rotating.
+
+In the code below, the radiusFactor is increasing the chart by 0.25% of the size, and startAngle is rotating the chart by 1 degree. When radiusFactor and startAngle reached to its maximum limit the animation is stopped by reset the animation flag and clear the interval.
+
+```ts
+window.setInterval(() => this.tick(), 15);
+
+public tick(): void {        
+    if (this.isAnimating) {
+        if (this.chart.radiusFactor < 1.0)
+            this.chart.radiusFactor += 0.0025;
+
+        if (this.chart.startAngle < 360)
+            this.chart.startAngle++;
+
+        if (this.chart.radiusFactor >= 1.0 &&
+            this.chart.startAngle >= 360) {
+            this.isAnimating = false;
+            window.clearInterval(this.interval);
+        }
+    }
+}
+```
+
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="pie-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-animation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 
 

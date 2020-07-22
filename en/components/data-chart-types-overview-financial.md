@@ -7,59 +7,72 @@ mentionedTypes: ['XamDataChart']
 
 ## Financial Charts
 
+The Ignite UI for Angular provides the following types of financial charts:
+
 <section class="feature__container">
     <style>
-        .linkContent {
+        .linkContent,
+        .linkContent:hover {
             display: flex;
             flex-flow: column;
             align-items: center;
+            box-shadow: none;
         }
         .link {
             display: inline-block;
             font-size: 1.0rem;
+            color: #0099ff;
+            cursor: pointer;
+            padding-top: 1.0rem;
+            margin-right: 1.0rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,.15);
         }
-        img {
-            width: 350px;
-            height: 350px;
-            margin-top: -20px;
+        .link:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,.25);
+        }
+        .img {
+            width: 250px;
+            height: 250px;
+            box-shadow: none;
         }
     </style>
     <body>
-        <a class="link" href="data-chart-type-financial-candlestick-series.md">
+        <div class="link" href="data-chart-type-financial-candlestick-series.md">
             <div class="linkContent">
-                <h4>Financial Candlestick Chart</h4>
-                <img src="../images/charts/data-chart-type-financial-candlestick-series.png">
+                <div>Financial Candlestick Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-financial-candlestick-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-financial-ohlc-series.md">
+        </div>
+        <div class="link" href="data-chart-type-financial-ohlc-series.md">
             <div class="linkContent">
-                <h4>Financial OHLC Chart</h4>
-                <img src="../images/charts/data-chart-type-financial-ohlc-series.png">
+                <div>Financial OHLC Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-financial-ohlc-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-financial-overlays.md">
+        </div>
+        <div class="link" href="data-chart-type-financial-overlays.md">
             <div class="linkContent">
-                <h4>Financial Overlays</h4>
-                <img src="../images/charts/data-chart-type-financial-overlays.png">
+                <div>Financial Overlays</div>
+                <img class="img" src="../images/charts/data-chart-type-financial-overlays.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-financial-area-indicators.md">
+        </div>
+        <div class="link" href="data-chart-type-financial-area-indicators.md">
             <div class="linkContent">
-                <h4>Financial Area Indicators</h4>
-                <img src="../images/charts/data-chart-type-financial-area-indicators.png">
+                <div>Financial Area Indicators</div>
+                <img class="img" src="../images/charts/data-chart-type-financial-area-indicators.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-financial-column-indicators.md">
+        </div>
+        <div class="link" href="data-chart-type-financial-column-indicators.md">
             <div class="linkContent">
-                <h4>Financial Column Indicators</h4>
-                <img src="../images/charts/data-chart-type-financial-column-indicators.png">
+                <div>Financial Column Indicators</div>
+                <img class="img" src="../images/charts/data-chart-type-financial-column-indicators.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-financial-line-indicators.md">
+        </div>
+        <div class="link" href="data-chart-type-financial-line-indicators.md">
             <div class="linkContent">
-                <h4>Financial Line Indicators</h4>
-                <img src="../images/charts/data-chart-type-financial-line-indicators.png">
+                <div>Financial Line Indicators</div>
+                <img class="img" src="../images/charts/data-chart-type-financial-line-indicators.png">
             </div>
-        </a>
+        </div>
     </body>
 </section>

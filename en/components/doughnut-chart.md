@@ -115,7 +115,7 @@ this.Seasons = [
 ```
 
 ```html
- <igx-doughnut-chart width="700px" height="500px">
+ <igx-doughnut-chart width="100%" height="100%">
         <igx-ring-series name="Months"
             [dataSource]="Months"
             labelsPosition="Center"
@@ -218,6 +218,44 @@ The doughnut chart component supports the use of a legend. The legend used is th
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    </button>
+
+
+</div>
+
+### Animation
+
+You can animate the doughnut chart by setting the `radiusFactor` property, which will scales the chart's radius.
+Also set the `startAngle` property to angle the chart such that it keep increasing the chart angle while rotating.
+
+In the code below, the radiusFactor is increasing the chart by 0.25% of the size, and startAngle is rotating the chart by 1 degree. When radiusFactor and startAngle reached to its maximum limit the animation is stopped by reset the animation flag and clear the interval.
+
+```ts
+window.setInterval(() => this.tick(), 15);
+public tick(): void {
+    if (this.isAnimating) {
+        if (this.chartSeries.radiusFactor < 1.0)
+            this.chartSeries.radiusFactor += 0.0025;
+
+        if (this.chartSeries.startAngle < 360)
+            this.chartSeries.startAngle++;
+
+        if (this.chartSeries.radiusFactor >= 1.0 &&
+            this.chartSeries.startAngle >= 360) {
+            this.isAnimating = false;
+            window.clearInterval(this.interval);
+        }
+    }
+}
+```
+
+### Animation Demo
+
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-animation-iframe" data-demos-base-url="environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 
 

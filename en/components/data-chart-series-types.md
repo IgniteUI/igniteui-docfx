@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart']
 
 ## Series
 
-In the Angular data chart component, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
+In the Angular data chart component, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, and Stacked Series.
 
 In addition to these series, you can add [Series Annotations](data-chart-series-annotations.md) and [Series Highlighting](data-chart-series-highlighting.md) in the Angular data chart component.
 
@@ -40,6 +40,8 @@ The following list shows all types of the series in each of their groups. Click 
 -   [Radial Line Chart](data-chart-type-radial-series.md)
 -   [Radial Column Chart](data-chart-type-radial-series.md)
 -   [Radial Pie Chart](data-chart-type-radial-series.md)
+-   [Doughnut Chart](doughnut-chart.md)
+-   [Pie Chart](pie-chart.md)
 
 #### Range Charts
 

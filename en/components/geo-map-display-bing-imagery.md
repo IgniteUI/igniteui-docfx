@@ -1,7 +1,7 @@
 ---
 title: Map | Data Visualization Tools | Ignite UI for Angular | Bing Maps | Infragistics
 _description: The Map allows you to display imagery from Bing Maps. View the demo and usage for more
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, infragistics, imagery tiles, Bing Maps
 mentionedTypes: ['XamGeographicMap', 'BingMapsMapImagery']
 ---
 
@@ -24,7 +24,7 @@ The [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angu
 
 ### Code Snippet
 
-The following code snippet shows how to display geographic imagery from Bing Maps in [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbingmapsmapimagery.html).
+The following code snippet shows how to display geographic imagery tiles from Bing Maps in [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbingmapsmapimagery.html) class.
 
 ```html
 <igx-geographic-map #map
@@ -39,9 +39,13 @@ import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 import { IgxBingMapsMapImagery } from 'igniteui-angular-maps';
 // ...
 const tileSource = new IgxBingMapsMapImagery();
-let tileUri = tileSource.actualBingImageryRestUri;
+tileSource.apiKey = "YOUR_BING_MAPS_API_KEY";
+tileSource.imageryStyle = BingMapsImageryStyle.AerialWithLabels; // or
+tileSource.imageryStyle = BingMapsImageryStyle.Aerial; // or
+tileSource.imageryStyle = BingMapsImageryStyle.Road;
 
 // resolving BingMaps uri based on HTTP protocol of hosting website
+let tileUri = tileSource.actualBingImageryRestUri;
 const isHttpSecured = window.location.toString().startsWith("https:");
 if (isHttpSecured) {
     tileUri = tileUri.replace("http:", "https:");
