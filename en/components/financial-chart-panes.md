@@ -2,7 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Panes
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart', 'FinancialChartYAxisMode']
 ---
 
 ## Chart Panes
@@ -17,6 +17,8 @@ The Angular financial chart component has multiple panes to display financial da
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-panes-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -33,7 +35,7 @@ The following panes are available in the Angular financial chart component:
 Financial Indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed below the price pane because they do not share the same Y-Axis scale.
 
 By default the indicator panes are not displayed. The toolbar allows the end user to select which indicator to display at run time.
-In order to display an indicator pane initially, the `indicatorTypes` property must be set to a least one type of indicator, as demonstrated in the following code:
+In order to display an indicator pane initially, the [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes) property must be set to a least one type of indicator, as demonstrated in the following code:
 
 ```html
  <igx-financial-chart
@@ -74,7 +76,7 @@ Note that is recommended to use line chart type if plotting multiple data source
 
 ### Zoom Pane
 
-This pane controls the zoom of all the displayed panes. This pane is displayed by default. It can be turned off by setting the `ZoomSliderType` to `none` as demonstrated in the following code:
+This pane controls the zoom of all the displayed panes. This pane is displayed by default. It can be turned off by setting the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) to `none` as demonstrated in the following code:
 
 ```html
  <igx-financial-chart
@@ -85,7 +87,7 @@ This pane controls the zoom of all the displayed panes. This pane is displayed b
  </igx-financial-chart>
 ```
 
-Note that you should set the `ZoomSliderType` option to the same value as the [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
+Note that you should set the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) option to the same value as the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) option is set to. This way, the zoom slider will show correct preview of the price pane. The following code demonstrates how to do this:
 
 ```html
  <igx-financial-chart

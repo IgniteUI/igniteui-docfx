@@ -19,14 +19,15 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 The following table explains properties of the `ShapeDataSource` class for loading shape files.
 
-| Property          | Type   | Description                                                                                              |
-| ----------------- | ------ | -------------------------------------------------------------------------------------------------------- |
-| `ShapefileSource` | string | Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.                           |
-| `DatabaseSource`  | string | Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items. |
+| Property                                                                                                                                              | Type   | Description                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------- |
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#shapefilesource) | string | Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.                           |
+| [`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#databasesource)   | string | Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items. |
 
 <!-- TODO add for WPF only: -->
 

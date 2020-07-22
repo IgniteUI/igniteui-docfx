@@ -2,7 +2,7 @@
 title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Performance
 _description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
 _keywords: financial chart, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayType', 'FinancialChartVolumeType', 'MarkerType', 'FinancialChartXAxisMode', 'FinancialChartZoomSliderType' ]
+mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType', 'FinancialChartVolumeType', 'MarkerType', 'FinancialChartXAxisMode', 'FinancialChartZoomSliderType', 'FinancialChartYAxisMode', 'DomainChart' ]
 ---
 
 ## Chart Performance
@@ -17,6 +17,8 @@ The Angular financial chart component has very good performance of rendering a l
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-performance-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
@@ -56,20 +58,20 @@ Also, you should consider the following features of the financial chart when opt
 
 ### Chart Type
 
-Setting the [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) option can have the following impact on chart performance:
+Setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) option can have the following impact on chart performance:
 
--   [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) chart type and it is recommended when rendering data items with single numeric value.
+-   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) - is the least expensive chart type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) chart type and it is recommended when rendering data items with single numeric value.
 -   [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) - is more expensive to render than the [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) chart type and it is recommended when rendering data items with OHLC  numeric values.
 -   [`Candle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) - is more expensive to render than the [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) chart type and it is also recommended when rendering data items with OHLC  numeric values.
 
 ### Volume Type
 
-Setting the `VolumeType` option can have the following impact on chart performance:
+Setting the [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#volumetype) option can have the following impact on chart performance:
 
--   [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
--   [`area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) - is more expensive to render than the [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) volume type.
--   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) volume type and it is recommended when rendering volume data of 1-3 stocks.
+-   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) - is the least expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+-   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartvolumetype.html#area) - is more expensive to render than the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) volume type.
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) - is more expensive to render than the [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartvolumetype.html#area) volume type and it is recommended when rendering volume data of 1-3 stocks.
 -   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartvolumetype.html#none) - does not display the volume pane.
 
 ### Marker Type
@@ -78,11 +80,11 @@ Setting the [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular
 
 ### Legend Visibility
 
-Setting the `IsLegendVisible` option to `false` will increase performance since the legend will not be drawn.
+Setting the [`isLegendVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#islegendvisible) option to `false` will increase performance since the legend will not be drawn.
 
 ### Zoom Slider Type
 
-Setting the `ZoomSliderType` option to `none` will improve chart performance and enable more vertical space for other indicators and the volume pane.
+Setting the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) option to `none` will improve chart performance and enable more vertical space for other indicators and the volume pane.
 
 ### Chart Panes
 
@@ -90,39 +92,38 @@ Setting a lot of panes using [`FinancialIndicatorType`]({environment:dvApiBaseUr
 
 ### X-Axis Mode
 
-Setting the `XAxisMode` option can have the following impact on chart performance:
+Setting the [`xAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#xaxismode) option can have the following impact on chart performance:
 
 -   [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) - is the least expensive x-axis mode to use in the financial chart and it is recommended when rendering of break in data range (e.g. weekends or holidays) is not important.
 -   [`Time`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#time) - is more expensive expensive than the [`Ordinal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartxaxismode.html#ordinal) to use in the financial chart. It is recommended when rendering of break in data range (e.g. weekends or holidays) is  required.
 
 ### Y-Axis Mode
 
-Setting the `YAxisMode` option to `numeric` is recommended for higher performance, as fewer operations are needed than using `PercentChange` mode.
+Setting the [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismode) option to `numeric` is recommended for higher performance, as fewer operations are needed than using [`PercentChange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialchartyaxismode.html#percentchange) mode.
 
 ### Annotations
 
-Enabling the Callout Annotations (`calloutsVisible`) or Final Value Annotations (`finalValueAnnotationsVisible`) will decrease performance of the financial chart.
+Enabling the Callout Annotations ([`calloutsVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsvisible)) or Final Value Annotations ([`finalValueAnnotationsVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#finalvalueannotationsvisible)) will decrease performance of the financial chart.
 
 ### Axis Visuals
 
 By default, the financial chart is already optimized for the best performance and enabling additional visuals of the chart might decrease performance, for example the following options:
 
--   `XAxisInterval`
--   `YAxisInterval`
--   `XAxisTitle`
--   `YAxisTitle`
--   `XAxisTick`
--   `YAxisTick`
--   `XAxisMajor`
--   `YAxisMajor`
--   `XAxisMinor`
--   `YAxisMinor`
--   `XAxisLabel`
--   `YAxisLabel`
--   `XAxisStroke`
--   `YAxisStroke`
--   `XAxisStrip`
--   `YAxisStrip`
+-   [`xAxisTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxistitle)
+-   [`yAxisTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxistitle)
+-   [`xAxisTickStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxistickstroke)
+-   [`yAxisTickStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxistickstroke)
+-   [`xAxisMajorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxismajorstroke)
+-   [`yAxisMajorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxismajorstroke)
+-   [`xAxisMinorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxisminorstroke)
+-   [`yAxisMinorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxisminorstroke)
+-   [`xAxisLabel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxislabel)
+-   [`yAxisLabel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxislabel)
+-   [`xAxisStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxisstroke)
+-   [`yAxisStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxisstroke)
+-   [`xAxisStrip`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#xaxisstrip)
+-   [`yAxisStrip`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxisstrip)
+-   [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval)
 
 <div class="divider--half"></div>
 

@@ -12,8 +12,9 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
 ### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -25,7 +26,7 @@ The following is a list of the supported predefined sparkline types.
 -   Column
 -   Stacked (Win/Loss)
 
-The following code demonstrates how to programmtically add Sparklines to a Worksheet via the sparklineGroups collection:
+The following code demonstrates how to programmatically add Sparklines to a Worksheet via the sparklineGroups collection:
 
 ```ts
 var workbook: Workbook;

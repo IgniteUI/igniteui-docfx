@@ -2,7 +2,7 @@
 title: Excel Library| Data Spreadsheet | Ignite UI for Angular | Infragistics
 _description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
-mentionedTypes: ['Workbook']
+mentionedTypes: ['Workbook', 'WorksheetTable', 'Worksheet', 'SortSettings']
 ---
 
 ## Using Tables
@@ -12,16 +12,16 @@ The Infragistics Angular Excel Engine's [`WorksheetTable`]({environment:dvApiBas
 <!--### Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>-->
 
 <div class="divider--half"></div>
 
 ### Adding a Table to a Worksheet
 
-Worksheet tables in the Infragistics Angular Excel Engine are represented by the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `Add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html) object.
+Worksheet tables in the Infragistics Angular Excel Engine are represented by the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) object and are added in the worksheet's [`tables`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#tables) collection. In order to add a table, you need to invoke the `Add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html) object.
 
-The following code demonstrates how you can add a table with headers to a [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) spanning a region of A1 to G10, where A1 to G1 will be the column headers:
+The following code demonstrates how you can add a table with headers to a [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#worksheet) spanning a region of A1 to G10, where A1 to G1 will be the column headers:
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
@@ -30,7 +30,7 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 worksheet.tables().add("A1:G10", true);
 ```
 
-Once you have added a table, you can modify it by adding or deleting rows and columns by calling the `insertColumns`, `insertDataRows`, `deleteColumns`, or `deleteDataRows` methods on the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html). You can also set a new table range by using the `resize` method of the table.
+Once you have added a table, you can modify it by adding or deleting rows and columns by calling the [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#insertcolumns), [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#insertdatarows), [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#deletecolumns), or [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#deletedatarows) methods on the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html). You can also set a new table range by using the [`resize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#resize) method of the table.
 
 The following code snippet shows the usage of these methods:
 
@@ -59,7 +59,7 @@ table.resize("A1:G15");
 
 Filtering is done by applying a filter on a column in the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html). When the filter is applied on a column, all filters in the table will be reevaluated to determine which rows meet the criteria of all filters applied.
 
-If the data in the table is subsequently changed or you change the `hidden` property of the rows, the filter conditions will not automatically reevaluate. The filter conditions in a table are only reapplied when table column filters are added, removed, modified, or when the `reapplyFilters` method is called on the table.
+If the data in the table is subsequently changed or you change the `Hidden` property of the rows, the filter conditions will not automatically reevaluate. The filter conditions in a table are only reapplied when table column filters are added, removed, modified, or when the [`reapplyFilters`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#reapplyfilters) method is called on the table.
 
 The following are the filter types available to the columns of your [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html):
 
@@ -87,9 +87,9 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 
 Sorting is done by setting a sorting condition on a table column. When a sorting condition is set on a column, all sorting conditions in the table will be reevaluated to determine the order of the cells in the table. When cells need to be moved to meet their sort criteria, the entire row of cells in the table is moved as a unit.
 
-If the data in the table is subsequently changed, the sort conditions do not automatically reevaluate. The sort conditions in a table are only reapplied when sort conditions are added, removed, modified, or when the `reapplySortConditions` method is called on the table. When sorting conditions are reevaluated, only the visible cells are sorted. All cells in hidden rows are kept in place.
+If the data in the table is subsequently changed, the sort conditions do not automatically reevaluate. The sort conditions in a table are only reapplied when sort conditions are added, removed, modified, or when the [`reapplySortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#reapplysortconditions) method is called on the table. When sorting conditions are reevaluated, only the visible cells are sorted. All cells in hidden rows are kept in place.
 
-In addition to accessing sort conditions from the table columns, they are also exposed off the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html)'s `sortSettings` property's `sortConditions` collection. This is an ordered collection of columns/sort condition pairs. The order of this collection is the precedence of the sorting.
+In addition to accessing sort conditions from the table columns, they are also exposed off the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html)'s [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) property's [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#sortconditions) collection. This is an ordered collection of columns/sort condition pairs. The order of this collection is the precedence of the sorting.
 
 The following sort condition types are available to set on columns:
 
@@ -98,7 +98,7 @@ The following sort condition types are available to set on columns:
 -   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - Sort cells based on whether their fill is a specific pattern or gradient.
 -   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - Sort cells based on whether their font is a specific color.
 
-There is also a `caseSensitive` property on the `sortSettings` of the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) to determine whether strings should be sorted case sensitively or not.
+There is also a [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#casesensitive) property on the [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) of the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) to determine whether strings should be sorted case sensitively or not.
 
 The following code snippet demonstrates how to apply an [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) to a [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html):
 

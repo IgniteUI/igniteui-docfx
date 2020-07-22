@@ -4,13 +4,9 @@ _description: Use the Treemap to show users relative weighting of data points at
 mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
 ---
 
-### Treemap
+### Treemap Overview
 
-Treemaps display hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
-
-When the color and size dimensions are correlated in some way with the tree structure, one can often easily see patterns that would be difficult to spot in other ways. A second advantage of treemaps is that, by construction, they make efficient use of space. As a result, they can legibly display thousands of items on the screen simultaneously.
-
-Treemaps are not designed to convey numerical quantities; the intent is to show relative rankings. Treemaps can be more effective than pie charts and other forms of area charts that often do a poor job of classifying data points and communicating the relative differences of their values.
+The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 
 ### Demo
 
@@ -20,9 +16,15 @@ Treemaps are not designed to convey numerical quantities; the intent is to show 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="tree-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
+
+When the color and size dimensions are correlated in some way with the tree structure, one can often easily see patterns that would be difficult to spot in other ways. A second advantage of treemaps is that, by construction, they make efficient use of space. As a result, they can legibly display thousands of items on the screen simultaneously.
+
+Treemaps are not designed to convey numerical quantities; the intent is to show relative rankings. Treemaps can be more effective than pie charts and other forms of area charts that often do a poor job of classifying data points and communicating the relative differences of their values.
 
 ### Required Data
 
@@ -64,8 +66,10 @@ Note that the LayoutOrientation property works with the layout types SliceAndDic
 
 When installing the chart package, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
 ### Required Modules
 

@@ -19,6 +19,7 @@ Use the map component's [`IgxGeographicShapeSeriesComponent`]({environment:dvApi
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 The [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) works a lot like the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) except that geo-spatial data is rendered with polygons instead of polylines.

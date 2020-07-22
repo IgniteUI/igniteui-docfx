@@ -21,6 +21,7 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 When a `ShapeDataSource` loads its shape files, it converts that data into `ShapeFileRecord` objects. These objects can be retrieved from the `GetPointData()` method of the `ShapeDataSource` and can then be used to create a heat-map through usage of a [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) object with a [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) assigned to its `TileGenerator` property. This [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) can then be used in a geographic tile series as its `TileImagery` source.
