@@ -141,6 +141,90 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
+### Custom Group By
+
+The igxGrid allows defining custom grouping per column or per grouping expression, which allow grouping the data based on a custom condition. This is useful when you need to  group by complex objects or for custom application specific scenarios.
+
+> [!NOTE]
+> In order to implement custom grouping the data first needs to be sorted appropriately. Due to this you may need to also apply a custom sorting strategy that extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html). After the data is sorted the custom groups can be determined by specifying a [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) for the column or for the specific grouping expression.
+
+The sample below demonstrates custom grouping by `Date`, where the date values are sorted and grouped by Day, Week, Month or Year based on the selected grouping mode.
+
+#### Demo
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-groupby-custom-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-custom-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-custom-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+
+The sample defines custom sorting strategies for the different date conditions.
+Each custom strategy extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) and defines the [`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) method, which is the custom compare function used when sorting the values. Additionally it extracts the values from the date needed for the comparison.
+
+```typescript
+class BaseSortingStrategy extends DefaultSortingStrategy {
+
+    public getParsedDate(date: any) {
+        return {
+            day: date.getDay(),
+            month: date.getMonth() + 1,
+            year: date.getFullYear()
+        };
+    }
+
+    compareValues(a: any, b: any) {
+        const dateA = this.getParsedDate(a);
+        const dateB = this.getParsedDate(b);
+        return dateA.year < dateB.year ? -1 : dateA.year > dateB.year ? 1 : dateA.month  < dateB.month ? -1 : dateA.month > dateB.month ? 1 : 0;
+    }
+}
+
+class DaySortingStrategy extends BaseSortingStrategy {
+    compareValues(a: any, b: any) {
+        const dateA = this.getParsedDate(a);
+        const dateB = this.getParsedDate(b);
+        return dateA.year < dateB.year ? -1 : dateA.year > dateB.year ? 1 : dateA.month  < dateB.month ? -1 : dateA.month > dateB.month ? 1 :
+                dateA.day < dateB.day ? -1 : dateA.day > dateB.day ? 1 : 0;
+    }
+}
+
+class WeekSortingStrategy extends BaseSortingStrategy {
+
+    public getWeekOfDate(a: any) {
+       return parseInt(new DatePipe("en-US").transform(a, 'w'), 10);
+    }
+
+    compareValues(a: any, b: any) {
+        const dateA = this.getParsedDate(a);
+        const dateB = this.getParsedDate(b);
+        const weekA = this.getWeekOfDate(a);
+        const weekB = this.getWeekOfDate(b);
+        return dateA.year < dateB.year ? -1 : dateA.year > dateB.year ? 1 : weekA < weekB ? -1 : weekA > weekB ? 1 : 0;
+    }
+}
+
+```
+
+A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) function is defined for the grouping expressions, which determines the items belonging to the same group based on the selected grouping mode. Values in the sorted data for which this function returns 0 are marked as part of the same group.
+
+```typescript
+ groupingComparer: (a, b) => {
+                    const dateA = this.sortingStrategy.getParsedDate(a);
+                    const dateB = this.sortingStrategy.getParsedDate(b);
+                    if (this.groupByMode === 'Month') {
+                        return dateA.month === dateB.month ? 0 : -1;
+                    } else if (this.groupByMode === "Year") {
+                        return dateA.year === dateB.year ? 0 : -1;
+                    } else if (this.groupByMode === "Week") {
+                       return this.sortingStrategy.getWeekOfDate(a) === this.sortingStrategy.getWeekOfDate(b) ? 0 : -1;
+                    }
+                    return dateA.day === dateB.day && dateA.month === dateB.month ? 0 : -1;
+                }
+```
+
+
 ### Styling
 
 The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
