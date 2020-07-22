@@ -92,6 +92,19 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 });
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
+
+#### Known Limitations
+> [!NOTE] 
+> Exporting large Excel files may be slow because of an [issue](https://github.com/Stuk/jszip/issues/617) in the [JSZip](https://www.npmjs.com/package/jszip) library. Until the issue is resolved, in order to speed up the Excel Exporter you could import a [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) in your application.
+
+```cmd
+npm install --save setimmediate
+```
+
+```ts
+import 'setimmediate';
+```
+
 #### API References
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
