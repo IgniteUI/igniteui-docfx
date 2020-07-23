@@ -45,7 +45,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 * IgxDropdown
     * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
     
-    * The example below shows how to style a dropdown item with an icon and text content so that they are vertically aligned.
+    * The following example demonstrates how to style a dropdown item with an icon and text content so that they are vertically aligned.
     
     ```html
     <igx-drop-down-item>
