@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 編集|データの変更|Ignite UI for Angular|Infragistics
+title: Angular Grid 編集| データの変更 | Ignite UI for Angular| インフラジスティックス
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。 
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid 編集|データの変更|Ignite UI for Angular
+title: Angular TreeGrid 編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid 編集|データの変更|Ignite UI for Angular
+title: Angular HierarchicalGrid 編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
@@ -25,7 +25,7 @@ _language: ja
 
 ### @@igComponent セル編集とセル テンプレート
 
-Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のための優れたデータ操作機能と強力な API を提供します。デフォルトで @@igComponent はセル編集を使用し、デフォルトのセル編集テンプレートによって、列のデータ型に基づいてさまざまなエディターが表示されます。さらに、データ更新アクション用の独自のカスタム テンプレートを定義したり、変更をコミット/破棄したりするためのデフォルトの動作をオーバーライドすることもできます。
+Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のための優れたデータ操作機能と強力な API を提供します。デフォルトで @@igComponent はセル編集を使用し、デフォルトのセル編集テンプレートによって、列のデータ型に基づいてさまざまなエディターが表示されます。さらに、データ更新アクション用の独自のカスタム テンプレートを定義したり、変更を確定/破棄したりするためのデフォルトの動作をオーバーライドすることもできます。
 
 #### デモ
 
@@ -75,11 +75,11 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
  - `Enter` キーの押下;
  - `F2` キーの押下;
 
-**変更をコミットしない場合**も以下の方法で編集モードを終了できます。
+**変更を確定しない場合**も以下の方法で編集モードを終了できます。
  - `Escape` キーの押下;
- - *sorting*、*filtering*、*searching*、*hiding* 操作の実行時。
+ - *sorting*、*filtering*、*hiding*、および *hiding* 操作の実行時。
 
-変更を**コミット**しない場合も以下の方法で編集モードを終了できます。
+変更を**確定**しない場合も以下の方法で編集モードを終了できます。
  - `Enter` キーの押下;
  - `F2` キーの押下;
  - `Tab` キーの押下;
@@ -120,7 +120,6 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ...
 ```
 }
-更新するセルが @@igComponent の表示コンテナ外にある場合、新しい値は送信されないことに注意してください。
 
 セルを更新するその他の方法として [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) メソッドで直接更新する方法があります。
 
@@ -161,9 +160,11 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 }
 
+更新するセル ([`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) を参照) が @@igComponent の表示コンテナ外にある場合、新しい値は送信されないことに注意してください。
+
 #### セル編集テンプレート
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html) を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcell.html#editvalue) に適切にバインドする必要があります。
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcell.html#editvalue) に適切にバインドする必要があります。
 
 ```html
 <igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
@@ -176,8 +177,9 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 > [!NOTE]
 > 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcell.html#editvalue) に加えられた変更は、終了時に適切な[編集イベント](#編集イベント)をトリガーし、[トランザクション状態](batch_editing.md)に適用されます (トランザクションが有効な場合)。
 
-> [!NOTE]
-> セル編集テンプレート ディレクティブ (`igxCellEditor`) は、[セル テンプレート(`igxCell`)](../grid/grid.md#セル編集テンプレート) とは異なります。前者は、**編集モード**の列のセルの表示方法を処理し、編集されたセルの**編集値**を制御します。後者は、**編集モード外**での列のセルの表示方法を制御します。
+> [!NOTE] 
+> セルテンプレート [`igxCell`](../grid/grid.md#セルテンプレート) は、編集モード外での列のセルの表示方法を制御します。
+> `igxCellEditor` セル編集テンプレート ディレクティブは、編集モードでの列のセルの表示方法を処理し、編集されたセルの編集値を制御します。
 
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#列の構成)のドキュメントを参照してください。
@@ -316,7 +318,7 @@ row.delete();
 
 ### 編集イベント
 
-グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row_editing.md)および**セルの編集**のライフサイクル-編集の開始、コミット、またはキャンセル時に発生します。
+グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row_editing.md)および**セルの編集**のライフサイクル-編集の開始、確定、またはキャンセル時に発生します。
 
 イベントは次のように分類できます。
 
@@ -324,10 +326,10 @@ row.delete();
 |-------|-------------|-----------|-------------|
 | [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | セルが**編集モードに入る**と発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | `[rowEditing]` が有効な場合、行が**編集モードに入る**と起動します (`onCellEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | セルの値が**確定**されたときに発生します (Enter の押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | セルがその値を**コミットせず**に編集モードを終了すると起動します (`Esc` キーの押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | 編集モードの値の行が**コミット**されたときに発生します (行編集オーバーレイの`完了`ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | 行が値を**コミットせず**に編集モードを終了するときに発生します (行編集オーバーレイの`キャンセル`ボタンをクリックなど) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | セルの値が**確定する**前に発生します (`Enter` の押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | セルがその値を**確定せず**に編集モードを終了すると起動します (`Esc` キーの押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | 編集モードの値の行が**確定する**前に発生します (行編集オーバーレイの`完了`ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | 行が値を**確定せず**に編集モードを終了するときに発生します (行編集オーバーレイの`キャンセル`ボタンをクリックなど) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 
 上記のイベントはすべてキャンセルできます。たとえば、`onCellEditEnter` がキャンセルされた場合、セルは編集モードになりません。
 
@@ -344,17 +346,16 @@ row.delete();
 </@@igSelector>
 ```
 
-`onCellEdit` は、セルの値がコミットされる直前に発生します。`handleCellEdit` の定義では、アクションを実行する前に特定の列を確認する必要があります。
+`onCellEdit` は、セルの値が確定される直前に発生します。`handleCellEdit` の定義では、アクションを実行する前に特定の列を確認する必要があります。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class MyGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const column = this.grid.columnList.find(e => e.index === event.cellID.columnID);
-        if (column.header === "Ordered") {
-            const rowData = this.grid.data
-            .find(entry => entry[this.grid.primaryKey] === event.cellID.rowID);
+        const column = event.column;
+        if (column.field === "Ordered") {
+            const rowData = event.rowData;
             if (!rowData) {
                 return;
             }
@@ -373,11 +374,7 @@ export class MyGridEventsComponent {
 export class MyTreeGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const row = this.data.find(e => e[this.grid.primaryKey] === event.cellID.rowID);
-        if (!row) {
-            return;
-        }
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Age") {
             if (event.newValue < 18) {
                 event.cancel = true;
@@ -402,7 +399,7 @@ export class MyHGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Debut") {
             if (event.newValue > today.getFullYear()) {
                 this.toast.message = "The debut date must be in the past!";
@@ -419,7 +416,7 @@ export class MyHGridEventsComponent {
     }
 }
 ```
-`handleCellEdit` 呼び出しの 2 番目の引数としてグリッドを渡すため、渡されたグリッドの列を使用して、セルが属する列を見つけます。上記の検証が行われている場合、ユーザーがアーティストの**デビュー**年またはアルバムの**発売日**を変更しようとした際に、グリッドは今日よりも後の日付を許可しません。
+ここでは、2 つの列を検証しています。ユーザーがアーティストの**デビュー年**またはアルバムの**発売日**を変更しようとした際に、グリッドは今日よりも後の日付を許可しません。
 }
 
 以下は、上記の検証が `@@igSelector` に適用された結果のデモです。
@@ -581,4 +578,4 @@ $custom-grid-theme: igx-grid-theme(
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
-* [検索](search.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}

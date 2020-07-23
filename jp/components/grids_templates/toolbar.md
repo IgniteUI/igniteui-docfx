@@ -1,5 +1,5 @@
 ---
-title: Angular Grid ツール バー | マテリアル テーブル |Ignite UI for Angular |infragistics 
+title: Angular Grid ツール バー | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス 
 _description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
 _keywords: Angular ツール バー, igniteui for angular, infragistics
 _language: ja

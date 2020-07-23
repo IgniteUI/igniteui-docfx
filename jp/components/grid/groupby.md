@@ -1,5 +1,5 @@
 ﻿---
-title: 階層グリッド - グループ化|Column Group|Ignite UI for Angular|infragistics
+title: 階層グリッド - グループ化 | グループ行 | Ignite UI for Angular| インフラジスティックス
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja

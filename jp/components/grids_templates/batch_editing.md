@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 一括編集 | Angular CRUD | Ignite UI for Angular | Infragistics
+title: Angular Grid 一括編集 | Angular CRUD | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基になるデータに影響を与えずにデータを操作できます。
 _keywords: angular crud, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 一括編集|Angular CRUD |Ignite UI for Angular |Infragistics
+title: Angular Tree Grid 一括編集 | Angular CRUD | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。
 _keywords: angular crud, ignite ui for angular, infragistics
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Grid 一括編集|Angular CRUD |Ignite UI for Angular |Infragistics
+title: Angular HierarchicalGrid Grid 一括編集 | Angular CRUD | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。
 _keywords: angular crud, ignite ui for angular, infragistics
 _language: ja

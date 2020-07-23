@@ -14,27 +14,22 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Bottom Navigation Demo
 
-<div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
-    <iframe id="tabbar-sample-iframe" src='{environment:demosBaseUrl}/layouts/tabbar' width="100%" height="100%" seamless
+<div class="divider--half"></div>
+
+<div class="sample-container loading" style="height: 200px; width: 400px; border: 1px solid #D4D4D4;" >
+    <iframe id="tabbar-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless
         frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div>
 
 ### Usage
 
-To get started with the Bottom Navigation component, install Ignite UI for Angular by typing the following command:
-
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The next step is to import the `IgxBottomNavModule` in the **app.module.ts** file:
+The first step is to import the `IgxBottomNavModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -59,19 +54,11 @@ Then, modify the component's template to include the Bottom Navigation and add t
   <igx-tab-panel label="Tab 3">This is Tab 3 content.</igx-tab-panel>
 </igx-bottom-nav>
 ```
-If all went well, you should see the following in your browser:
+If all went well, you should see the demo sample in your browser.
 
-<div class="sample-container loading" style="height: 200px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<div class="divider--half"></div>
 
-<div class="divider"></div>
-
-#### Customizing Tabs
+### Customizing Bottom Navigation
 
 Let's modify the tabs and make them more appealing by including icons. The Bottom Navigation control is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy for you to adopt them in your application.
@@ -159,16 +146,20 @@ Finally add the CSS classes used by the DIV and SPAN elements of the template to
     font-size: 12px;
     color: darkgray;
 }
+
+igx-tab-panel {
+    padding: 10px;
+}
 ```
 
 After these modifications our Bottom Navigation should look similar to this:
 
-<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid #D4D4D4;">
+    <iframe id="tabbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div>
@@ -193,163 +184,7 @@ Here is an example:
 
 <div class="divider"></div>
 
-#### Embedding Other Igx Controls
-
-You can combine other Ignite UI for Angular components with the Bottom Navigation to achieve more complex applications.
-For example you may use the [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) to create a list of contacts in a Bottom Navigation's panel and also visualize each contact using [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html).
-
-This time you will need to include both the `IgxBottomNavModule` and `IgxListModule` in your "app.module.ts" file:
-
-```typescript
-// app.module.ts
-
-...
-import { IgxAvatarModule } from 'igniteui-angular';
-import { IgxIconModule } from 'igniteui-angular';
-import { IgxListModule } from 'igniteui-angular';
-import { IgxBottomNavModule } from 'igniteui-angular';
-
-@NgModule({
-    ...
-    imports: [..., IgxAvatarModule, IgxIconModule, IgxListModule, IgxBottomNavModule],
-    ...
-})
-export class AppModule {}
-```
-
-Let's start the application by creating a data source of the contacts in the component typescript file:
-
-```typescript
-...
-public contactsList: object[] = [{
-        avatar: "assets/images/avatar/1.jpg",
-        favorite: true,
-        key: "1",
-        link: "#",
-        phone: "770-504-2217",
-        text: "Terrance Orta"
-    }, {
-        avatar: "assets/images/avatar/2.jpg",
-        favorite: false,
-        key: "2",
-        link: "#",
-        phone: "423-676-2869",
-        text: "Richard Mahoney"
-    }, {
-        avatar: "assets/images/avatar/3.jpg",
-        favorite: false,
-        key: "3",
-        link: "#",
-        phone: "859-496-2817",
-        text: "Donna Price"
-    }, {
-        avatar: "assets/images/avatar/4.jpg",
-        favorite: false,
-        key: "4",
-        link: "#",
-        phone: "901-747-3428",
-        text: "Lisa Landers"
-    }, {
-        avatar: "assets/images/avatar/12.jpg",
-        favorite: true,
-        key: "5",
-        link: "#",
-        phone: "573-394-9254",
-        text: "Dorothy H. Spencer"
-    }, {
-        avatar: "assets/images/avatar/13.jpg",
-        favorite: false,
-        key: "6",
-        link: "#",
-        phone: "323-668-1482",
-        text: "Stephanie May"
-    }, {
-        avatar: "assets/images/avatar/14.jpg",
-        favorite: false,
-        key: "7",
-        link: "#",
-        phone: "401-661-3742",
-        text: "Marianne Taylor"
-    }];
-...
-```
-
-Edit the component's template markup by adding the following Bottom Navigation with an [`IgxListComponent`]({environment:angularApiUrl}/classes/igxlistcomponent.html) in its first panel:
-
-```html
-...
-<igx-bottom-nav>
-    <igx-tab-panel icon="phone">
-        <igx-list [allowRightPanning]="true" [allowLeftPanning]="true">
-            <igx-list-item [isHeader]="true">History</igx-list-item>
-            <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item"
-              *ngFor="let contact of contactsList">
-                <div class="item">
-                    <igx-avatar [src]="contact.avatar" roundShape="true"></igx-avatar>
-                    <div class="person">
-                        <p class="name">{{contact.text}}</p>
-                        <span class="phone">{{contact.phone}}</span>
-                    </div>
-                    <igx-icon>phone</igx-icon>
-                </div>
-            </igx-list-item>
-        </igx-list>
-    </igx-tab-panel>
-    <igx-tab-panel icon="supervisor_account">
-        <div class="tab-content">
-            <h3>Tab 2 Content ...</h3>
-        </div>
-    </igx-tab-panel>
-    <igx-tab-panel icon="format_list_bulleted">
-        <div class="tab-content">
-            <h3>Tab 3 Content ...</h3>
-        </div>
-    </igx-tab-panel>
-</igx-bottom-nav>
-...
-```
-
-And don't forget to include the following CSS definitions in order for the application to look correctly:
-
-```css
-.tab-content {
-    padding: 16px;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.item > [igxLabel],
-.item > .person {
-    position: absolute;
-    margin-left: 72px;
-}
-
-.person .name {
-    padding: 0;
-    margin: 0;
-}
-
-.person .phone {
-    font-size: 12px;
-    color: gray;
-}
-
-.item igx-icon {
-    color: lightgray;
-}
-
-.item igx-icon.favorite {
-    color: orange;
-}
-```
-
-You can see the result of the code above at the beginning of this article in the [Bottom Navigation Demo](#bottom-navigation-demo) section.
-
-#### Integration With Router Outlet Container
+### Integration With Router Outlet Container
 
 Despite the primary usage of the Bottom Navigation component is to define panels with content, there may be cases in which you may need to define tab items only.
 
@@ -369,63 +204,58 @@ import { Component } from "@angular/core";
     styleUrls: ["bottomnav-routing.component.scss"],
     templateUrl: "bottomnav-routing.component.html"
 })
-export class BottomNavRoutingComponent {
-    constructor() { }
-}
+export class BottomNavRoutingComponent { }
 
 @Component({
-    template: "<h3>Tab 1 Content</h3>"
+    template: "<p>Item 1 Content</p>"
 })
-export class BottomNavRoutingView1Component {
-}
+export class BottomNavRoutingView1Component { }
 
 @Component({
-    template: "<h3>Tab 2 Content</h3>"
+    template: "<p>Item 2 Content</p>"
 })
-export class BottomNavRoutingView2Component {
-}
+export class BottomNavRoutingView2Component { }
 
 @Component({
-    template: "<h3>Tab 3 Content</h3>"
+    template: "<p>Item 3 Content</p>"
 })
-export class BottomNavRoutingView3Component {
-}
+export class BottomNavRoutingView3Component { }
 ```
 
 The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
-// app-routing.module.ts
+import { RouterModule, Routes } from "@angular/router";
+
 import {
-    BottomNavRoutingComponent,
-    BottomNavRoutingView1Component,
-    BottomNavRoutingView2Component,
-    BottomNavRoutingView3Component } from './bottomnav-routing.component';
+    TabbarRoutingComponent,
+    TabbarRoutingView1Component,
+    TabbarRoutingView2Component,
+    TabbarRoutingView3Component,
+} from './tabbar-routing.component';
 
-...
-
-const appRoutes = [
+const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/bottomnav-routing'
+        redirectTo: '/tabbar-routing'
     },
     {
-        path: 'bottomnav-routing',
-        component: BottomNavRoutingComponent,
+        path: "tabbar-routing",
+        component: TabbarRoutingComponent,
         children: [
-            { path: 'view1', component: BottomNavRoutingView1Component },
-            { path: 'view2', component: BottomNavRoutingView2Component },
-            { path: 'view3', component: BottomNavRoutingView3Component },
+            { path: "tabbar-view1", component: TabbarView1Component },
+            { path: "tabbar-view2", component: TabbarView2Component },
+            { path: "tabbar-view3", component: TabbarView3Component }
         ]
     }
 ];
 
 @NgModule({
-    exports: [RouterModule],
-    imports: [RouterModule.forRoot(appRoutes)]
+    exports: [ RouterModule ],
+    imports: [ RouterModule.forChild(routes) ]
 })
-export class AppRoutingModule { }
+export class TabbarRoutingModule { }
 ```
 
 Now that we have all navigation routes setup, we need to declare the BottomNavigation component and configure it for routing.
@@ -436,23 +266,29 @@ Also, make sure to add a router-outlet for rendering the view components' output
 <router-outlet></router-outlet>
 
 <igx-bottom-nav>
-  <igx-tab label="Tab 1" icon="dashboard"
-    routerLink="view1"
-    routerLinkActive #rla1="routerLinkActive"
-    [isSelected]="rla1.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 1"
+    routerLink="tabbar-view1"
+    routerLinkActive
+    #rla1="routerLinkActive"
+    [isSelected]="rla1.isActive"
+    ></igx-tab>
 
-  <igx-tab label="Tab 2" icon="check_circle_outline"
-    routerLink="view2"
-    routerLinkActive #rla2="routerLinkActive"
-    [isSelected]="rla2.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 2"
+    routerLink="tabbar-view2"
+    routerLinkActive
+    #rla2="routerLinkActive"
+    [isSelected]="rla2.isActive"
+    ></igx-tab>
 
-  <igx-tab label="Tab 3" icon="radio_button_checked"
-    routerLink="view3"
-    routerLinkActive #rla3="routerLinkActive"
-    [isSelected]="rla3.isActive">
-  </igx-tab>
+    <igx-tab
+    label="Item 3"
+    routerLink="tabbar-view3"
+    routerLinkActive
+    #rla3="routerLinkActive"
+    [isSelected]="rla3.isActive"
+    ></igx-tab>
 </igx-bottom-nav>
 ```
 
@@ -460,12 +296,12 @@ The above code creates a BottomNavigation component with three tab items. All ta
 
 The described approach above is used by the following sample to demonstrate routing using the BottomNavigation component:
 
-<div class="sample-container loading" style="height: 500px; width: 500px; border: 1px solid gray;">
-    <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 250px; width: 500px; border: 1px solid #D4D4D4;">
+    <iframe id="tabbar-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 ### Styles
@@ -490,14 +326,20 @@ If we take a look at the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index
 > [!NOTE]
 > In order to style any additional components that are used as part of a tab panel's content, an additional theme should be created that is specific to the respective component.
 
+#### Including themes
+
+<div class="divider"></div>
+
 The last step is to **include** the component theme in our application.
+
+If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
 @include igx-bottom-nav($dark-bottom-nav);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -507,6 +349,22 @@ The last step is to **include** the component theme in our application.
 }
 ```
 
+<div class="divider"></div>
+
+If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+
+```scss
+@include igx-css-vars($dark-bottom-nav);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+
+```scss
+:host {
+    @include igx-css-vars($dark-bottom-nav);
+}
+```
 #### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
@@ -567,13 +425,13 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 #### Demo
 
-<div class="sample-container loading" style="height: 600px; width: 400px; border: 1px solid gray;" >
+<div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" >
     <iframe id="tabbar-style-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-style' width="100%" height="100%" seamless
         frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-style-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 

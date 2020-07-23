@@ -64,7 +64,7 @@ ng add igniteui-angular
 npm i -g @igniteui/angular-schematics
 ```
 
-または:
+または
 
 ```cmd
 npm install -g igniteui-cli 

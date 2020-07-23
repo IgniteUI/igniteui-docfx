@@ -16,6 +16,7 @@ In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxfo
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 ### Dependencies
@@ -212,6 +213,7 @@ In the example above, an `even` class is assigned to every even div element.
 |Limitation|Description|
 |--- |--- |
 | Scroll position of components that use `igxForOf` is not preserved in projected container | When a component that uses `igxForOf` directive is in a `<ng-content>`, or other projected container, its scrollbar position won't be preserved, even though the data position would be. That's because the DOM elements are detached and later re-attached to the DOM tree and as a result, losing the scrollbar scroll position. The affected controls that use `igxForOf` internally are: `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`, `igxCombo`. <br/>Some possible workarounds are: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an `ngIf`. The component will be destroyed and then re-created, losing all internal states;</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually, for example using `MutationObserver`</li></ul>
+| `scrollTo` method does not work correctly when the content size of the rendered templates changes post initialization | When the elements inside the template have a size, that changes runtime after initialization (for example as a result of content projection, remote request resolution etc.), then the `scrollTo` method will not be able to scroll to the correct index. The method will scroll to the position of the index before the runtime size change occurs, hence the location will not be correct after the size is changed later. A possible workaround is to use templates that do not change their size based on their content if the content is loaded later.
 
 ## API References
 

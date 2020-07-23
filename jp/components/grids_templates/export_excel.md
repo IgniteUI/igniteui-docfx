@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid の Excel エクスポート  |Ignite UI for Angular |Infragistics
+title: Angular Grid の Excel エクスポート | Ignite UI for Angular | インフラジスティックス
 _description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid を Excel へエクスポート|Ignite UI for Angular |Infragistics
+title: Angular Tree Grid を Excel へエクスポート | Ignite UI for Angular | インフラジスティックス
 _description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchica Grid を Excel へエクスポート|Ignite UI for Angular |Infragistics
+title: Angular Hierarchica Grid を Excel へエクスポート | Ignite UI for Angular | インフラジスティックス
 _description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -75,7 +75,8 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> **注:** Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
+> [!NOTE] 
+> Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
 
 エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
@@ -108,6 +109,16 @@ public exportButtonHandler() {
 ```
 
 上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.xlsx"  ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
+
+#### すべてのデータのエクスポート
+
+ページングなどのリモート操作を使用している場合に、Grid がすべてのデータにアクセスできない場合があります。このような場合、[Excel Export サービス](../exporter_excel.html#excel-exporter)を使用してデータ コレクション全体を渡すことをお勧めします。例:
+
+```ts
+public exportButtonHandler() {
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+}
+```
 
 #### エクスポートするコンテンツのカスタマイズ
 

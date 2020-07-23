@@ -6,10 +6,11 @@ _language: ja
 ---
 
 ## Calendar
-<p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。アプリケーションで日付情報を 3 つの方法で表示できます。ユーザーが単一の日付、複数の日付、または日付の範囲を選択できます。</p>
+<p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)であり、日付情報を簡単に表示できます。ユーザーは、単一選択、複数選択、または範囲選択の 3 つの選択モードから選択できます。</p>
 
 ### Calendar デモ
-<div class="sample-container loading" style="height: 730px">
+<div class="divider--half"></div>
+<div class="sample-container loading" style="height: 500px">
     <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-5' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -17,14 +18,12 @@ _language: ja
 </div>
 
 ### 使用方法
-Calendar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+#### はじめに
 
-次に、アプリケーションの AppModule に `IgxCalendarModule`をインポートします。通常、これは **app.module.ts** ファイルです。注: [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** に依存関係があるため、AppModule にも追加する必要があります。
+Calendar コンポーネントを初期化する前に、`IgxCalendarModule` を **app.module.ts** ファイルにインポートします。
+
+注: タッチ操作のために、[**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -40,60 +39,80 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-カレンダー API の型を宣言する前に [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を AppComponent ファイルにインポートします。エディターが自動的にインポートすることが可能です。
+> [!WARNING]
+> [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl Web API](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) を使用します。
+対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
-```typescript
-import { IgxCalendarComponent } from 'igniteui-angular';
-...
+#### 単一選択のカレンダー
 
-@ViewChild('calendar', { read: IgxCalendarComponent }) public calendar: IgxCalendarComponent;
-```
-
-> [!Note]
-> 注: [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI を使用します。
-> 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
-
-### 選択
-[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) をインスタンス化するには、セレクター要素をテンプレートに追加します。カレンダーで現在の月が表示され、単一選択モードが使用されます。その他の選択モードに変更するには、[`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) プロパティを `multi` または `range` に設定します。
+`IgxCalendarComponent` をインスタンス化するには、セレクター要素をテンプレートに追加します。単一選択カレンダー モードで現在の月を表示します。
 
 ```html
 <!-- app.component.html -->
 <!-- Single selection mode -->
 <igx-calendar></igx-calendar>
+```
+
+### 例 
+
+#### 複数選択
+
+[`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) プロパティを使用してデフォルトのモードを簡単に変更できます。
+
+```html
+<!-- app.component.html -->
 <!-- Multi selection mode -->
 <igx-calendar selection="multi"></igx-calendar>
+```
+
+<div class="sample-container loading" style="height: 420px">
+    <iframe id="calendar-sample-1-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
+#### 範囲選択
+
+同じ方法に従って、範囲選択モードに切り替えることができます。
+
+```html
+<!-- app.component.html -->
 <!-- Range selection mode -->
 <igx-calendar selection="range"></igx-calendar>
 ```
 
-選択が `multi` または `range` の場合、カレンダー ヘッダーは描画されません。
-
-<div class="sample-container loading" style="height: 730px">
-    <iframe id="calendar-sample-1-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 420px">
+    <iframe id="calendar-sample-8-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-8' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-8-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### ローカライズと書式設定
+> [!NOTE]
+> 選択が `multi` または `range` の場合、カレンダー ヘッダーは描画されません。
 
-カレンダーにおいてローカライズや書式設定はとても重要な要素です。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) では、その機能が [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions)、および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティによって制御してカスタマイズ化されます。
-<br>
-これらの設定に加え、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API のその他のカスタマイズ機能も使用できます。EFTA (欧州自由貿易連合) 国内からページへアクセスする場合、カレンダーを対応するカルチャで表示する必要があります。最初に週の開始日を制御する [`weekstart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart) を設定し、デフォルト値が 0 (日曜日) であるため、値を 1 に設定します。
+#### ローカライズおよび書式設定
 
-以下のマークアップは、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions) および [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews) プロパティをバインドして表示書式設定をカスタマイズします。最後に、[`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale) プロパティをユーザーの選択した場所に基づいて値にバインドします。
+カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。`IgxCalendarComponent` でこれらは以下のプロパティによって制御およびカスタマイズします - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews), [`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart).
+
+これらの設定に加え、`IgxCalendarComponent API` のその他のカスタマイズ機能も使用できます。最初に週の開始日を制御する `weekStart` を設定します。デフォルト値が 0 (日曜日) であるため、値を 1 (月曜日) に設定します。以下のマークアップで表示書式設定をカスタマイズするために、`formatOptions` および `formatViews` プロパティもバインドしています。最後に、`locale` プロパティをユーザーの選択した場所に基づいて値にバインドします。
 
 ```html
 <!-- app.component.html -->
+<igx-select #select [(ngModel)]="locale">
+    <igx-select-item *ngFor="let locale of locales" [value]="locale">
+        {{ locale }}
+    </igx-select-item>
+</igx-select>
+
 <igx-calendar #calendar
-    weekstart="1"
+    [weekStart]="1"
     [locale]="locale"
     [formatOptions]="formatOptions"
     [formatViews]="formatViews">
 </igx-calendar>
-<select id="locations" (change)="changeLocale($event)">...</select>
 ```
-
 すべてのプロパティ値が AppComponent ファイルに設定されます。
 
 ```typescript
@@ -102,165 +121,73 @@ import { IgxCalendarComponent } from 'igniteui-angular';
 
 public formatOptions: any;
 public formatViews: any;
-public locale: string;
-public select: HTMLSelectElement;
+public locales = ["EN", "DE", "FR", "AR", "ZH"];
+public locale = "EN";
 
 public ngOnInit() {
-    this.select = document.getElementById("locations") as HTMLSelectElement;
-    this.locale = this.select.value;
     this.formatOptions = { day: "2-digit", month: "long", weekday: "long", year: "numeric" };
     this.formatViews = { day: true, month: true, year: true };
 }
-
-// change the calendar locale
-public changeLocale(event) {
-    this.locale = event.target.value;
-}
 ```
 
-カスタマイズされた日付を持つカレンダーが表示され、ユーザーの場所に基づいてロケール表現を変更します。以下は結果です。
+すべて適切に設定できると、カスタマイズされた日付を持つカレンダーが表示され、ユーザーの場所に基づいてロケール表現が変更されます。以下は結果です。
 
-<div class="sample-container loading" style="height: 570px">
+<div class="sample-container loading" style="height: 620px">
     <iframe id="calendar-sample-2-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### イベント
-このサンプルを拡張します。ユーザーが 5 日以下の日付範囲を入力する必要があります。カレンダーの [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) モードを range に設定し、範囲が無効な場合にユーザーに選択を変更するための通知を表示する [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントを使用します。
+Let's explore the events emitted by the calendar:
+- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - emitted when selecting date(s) in the calendar.
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewvhanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
 
 ```html
 <!-- app.component.html -->
-<igx-calendar #calendar
-    ...
-    selection="range"
-    (onSelection)="verifyRange($event)">
+<igx-calendar #calendar 
+    (onSelection)="onSelection($event)"
+    (viewDateChanged)="viewDateChanged($event)"
+    (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-
-[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択をユーザーに通知する場合、選択を範囲の最初の日のみを含むために [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) メソッドを使用してリセットします。
+The [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
 
 ```typescript
 // app.component.ts
 ...
-public verifyRange(dates: Date[]) {
+public onSelection(dates: Date[]) {
     if (dates.length > 5) {
-        this.calendar.selectDate(dates[0]);
-        this.dialog.open();
+        this.calendar.selectedDates = [];
+        // alert the user
     }
 }
+    public viewDateChanged(event: IViewDateChangeEventArgs) {
+        // use event.previousValue to get previous month/year that was presented.
+        // use event.currentValue to get current month/year that is presented.
+    }
+
+    public activeViewChanged(event: CalendarView) {
+        // use CalendarView[event] to get the current active view (DEFAULT, YEAR or DECADE)
+    }
 ```
 
-以下で範囲の選択動作を確認できます。
-
-<div class="sample-container loading" style="height: 460px">
+Use the demo below to play around (change selection, navigate through months and years) and see the events logged real time:
+<div class="sample-container loading" style="height: 420px">
     <iframe id="calendar-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### テンプレート
+#### 日付の無効化
+このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) 機能の使用について説明します。これには、異なる単一の日付または範囲を配列に追加し、`disabledDates` 記述子に渡すことができます。
 
-[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) API (プロパティ、イベント、メソッド) を使用して要件によってカレンダーを構成し、コードで操作する方法を説明しました。次にヘッダーおよびサブヘッダーのテンプレート機能を使用して外観をカスタマイズします。
+[`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) は無効にする範囲を指定するために使用します。
 
-カスタマイズは、カレンダーの ng-template を **igxCalendarHeader** または **igxCalendarSubheader** ディレクティブでデコレートし、返されたコンテキストを使用して日付の表示をカスタマイズします。
-**igxCalendarHeader** ディレクティブでデコレートされるテンプレートは、カレンダーの選択が単一に設定された場合のみ描画されます。**igxCalendarSubheader** はすべての選択モードで利用可能です。
-
-この例ではヘッダーに完全な日付を表示し、サブヘッダーに曜日を含むためにデフォルト テンプレートを変更します。
-
-```html
-<!-- app.component.html-->
-<igx-calendar>
-    <!-- Modify the header to display the month (in titlecase), day and weekday -->
-    <ng-template igxCalendarHeader let-parts>
-        {{ parts.month.combined | titlecase }} {{parts.day.combined }} {{ parts.weekday.combined }}
-    </ng-template>
-    <ng-template igxCalendarSubheader let-parts>
-        <span class="date__el" (click)="parts.monthView()">{{ parts.month.combined }}</span>
-        <span class="date__el" (click)="parts.yearView()">{{ parts.year.combined }}</span>
-    </ng-template>
-</igx-calendar>
-```
-
-> [!NOTE]
-> Internet Explorer および Edge ブラウザーの場合、両方のブラウザーがこの機能を提供する Intl API を実装しないため、日付部分は空の文字列です。 ([formatToParts](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts) を参照)
-
-このブラウザーをサポートするには、[ngIf](https://angular.io/api/common/NgIf#using-non-inlined-then-template) ディレクティブを使用する代わりのテンプレートを使用します。
-
-```html
-<!-- app.component.html-->
-<igx-calendar #component locale="fr">
-    <div *ngIf="formatParts; else parseTemplate">
-        <ng-template igxCalendarHeader let-parts>
-            {{ parts.month.combined | titlecase }} {{ parts.day.combined }} {{ parts.weekday.combined }}
-        </ng-template>
-        <ng-template igxCalendarSubheader let-parts>
-            <span class="date__el" (click)="parts.monthView()">{{ parts.month.combined }}</span>
-            <span class="date__el" (click)="parts.yearView()">{{ parts.year.combined }}</span>
-        </ng-template>
-    </div>
-
-    <!-- Parse template for browsers not supporting Intl parts-->
-    <ng-template #parseTemplate>
-        <ng-template igxCalendarHeader let-parts>
-            {{ getDatePart(parts, component, 'month') | titlecase }} {{ getDatePart(parts, component, 'day') }} {{ getDatePart(parts, component, 'weekday') }}
-        </ng-template>
-        <ng-template igxCalendarSubheader let-parts>
-            <span class="date__el" (click)="parts.monthView()">{{ getDatePart(parts, component, 'month') }}</span>
-            <span class="date__el" (click)="parts.yearView()">{{ getDatePart(parts, component, 'year') }}</span>
-        </ng-template>
-    </ng-template>
-</igx-calendar>
-```
-
-**ngIf** は、使用するテンプレートを制御するために **formatParts** 式の値を評価します。代わりの **#parseTemplate** テンプレートを参照します。{} にある式は評価された値を返す **getDatePart** メソッドを起動します。この場合、書式設定された日付部分 (年、曜日、月など) を返します。**getDatePart** に渡されたパラメーターは、書式設定が [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) の locale および format オプションに基づいて設定されるために必要です。
-
-```typescript
-// app.component.ts
-public intlDateTimeFormat = new Intl.DateTimeFormat() as any;
-public formatParts: boolean = this.intlDateTimeFormat.formatToParts;
-
-public getDatePart(val: any, component: any, datePart: string) {
-    const date = val.date as Date;
-    const locale = component.locale;
-    const formatOptions: Intl.DateTimeFormatOptions = {};
-    formatOptions[datePart] = component.formatOptions[datePart];
-
-    return date.toLocaleString(locale, formatOptions);
-
-    // instead of toLocaleString we can use Intl.DateTimeFormat.format as well:
-    // const partFormatter = new Intl.DateTimeFormat(locale, formatOptions);
-    // return partFormatter.format(date);
-}
-```
-
-この条件付きテンプレート化および日付解析を実装後、ブラウザーの間の書式設定が統一されます。
-
-<div class="sample-container loading" style="height: 570px">
-    <iframe id="calendar-sample-4-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-
-### 日付の無効化
-このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) 機能の使用について説明します。異なる`単一の日付`または`範囲`の要素を配列に追加し、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) 記述子に渡すことができます。
-
-```typescript
-this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, [
-    new Date(2018, 8, 2),
-    new Date(2018, 8, 8)
-])];
-```
-
-[`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) は無効にする範囲を指定するために使用します。たとえば、[`DateRangeType.Between`]({environment:angularApiUrl}/enums/daterangetype.html#between) は配列の特定の 2 つの日付間を無効にします。上記のコード スニペット。
-以下の API の表は、使用可能なすべての [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) 値です。
-
-この機能は、選択およびフォーカスが可能な日付を制限する必要がある場合に使用します。
-
-特定の範囲の日付を無効にするサンプルを作成します。
+現在の月の 3 日から 8 日の日付を無効にするサンプルを作成します。
 
 ```typescript
 export class CalendarSample6Component {
@@ -272,13 +199,12 @@ export class CalendarSample6Component {
     ];
 
     public ngOnInit() {
-        this.calendar.disabledDates = [new DateRangeDescriptor(DateRangeType.Between, this.range)];
+        this.calendar.disabledDates = [{ type: DateRangeType.Specific, dateRange: this.range }];
     }
 }
-
 ```
 
-以下は結果です。
+これらの構成の結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 480px">
     <iframe id="calendar-sample-6-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
@@ -287,27 +213,26 @@ export class CalendarSample6Component {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
+#### 特別な日付
+[`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) 機能は、`disabledDates` とほとんど同じ構成を使用します。`disabled` と異なる点は `specialDates` を選択してフォーカスする機能です。
 
-### 特定の日付
-
-[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) 機能は、[`Disabled dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) とほとんど同じ構成を使用します。違いは、日付の `styling` と `interaction` です。また [`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) の選択やフォーカスが可能です。
-
-[`Special dates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) を [`igxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) に追加し、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) の [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成して [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange) で日付の配列を渡します。
+`igxCalendar` に `specialDates` を追加します。これを行うには、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) タイプの [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成し、日付の配列を [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange) として渡します。
 
 ```typescript
 export class CalendarSample7Component {
-    @ViewChild("calendar") public calendar: IgxCalendarComponent;
-    @ViewChild(IgxSnackbarComponent) public snackbar: IgxSnackbarComponent;
+    @ViewChild("calendar", { static: true })
+    public calendar: IgxCalendarComponent;
+    @ViewChild("alert", { static: true })
+    public dialog: IgxDialogComponent;
     public range = [];
 
-    ...
     public selectPTOdays(dates: Date[]) {
         this.range = dates;
     }
 
     public submitPTOdays(eventArgs) {
         this.calendar.specialDates =
-            [new DateRangeDescriptor(DateRangeType.Specific, this.range)];
+            [{ type: DateRangeType.Specific, dateRange: this.range }];
 
         this.range.forEach((item) => {
             this.calendar.selectDate(item);
@@ -319,21 +244,20 @@ export class CalendarSample7Component {
 ```
 
 ```html
-<article class="sample-column calendar-wrapper">
-    <span>Request Time Off</span>
-    <igx-calendar #calendar
-        selection="multi"
-        (onSelection)="selectPTOdays($event)">
-    </igx-calendar>
-    <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
-</article>
+ <igx-calendar #calendar weekStart="1"
+               selection="multi" 
+               (onSelection)="selectPTOdays($event)">
+</igx-calendar>
+<igx-dialog #alert title="Request Time Off" 
+            leftButtonLabel="OK" 
+            (onLeftButtonSelect)="alert.close()">
+</igx-dialog>
+<button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
 ```
 
-選択した日付配列を使用して `Special dates` 記述子を定義します。
+以下のデモでは、休暇要求オプションのカレンダーを示します。
 
-結果:
-
-<div class="sample-container loading" style="height: 540px">
+<div class="sample-container loading" style="height: 450px">
     <iframe id="calendar-sample-7-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -343,18 +267,34 @@ export class CalendarSample7Component {
 ### ビュー
 `IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
 - Days ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
-- Months ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
-- Years ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
-<div class="sample-container loading" style="height: 540px">
-    <iframe id="calendar-views-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-views' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 420px">
+    <iframe id="calendar-days-view-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-days-view' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-views-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-days-view-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
+- Months ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
+
+<div class="sample-container loading" style="height: 520px">
+    <iframe id="calendar-months-view-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-months-view' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-months-view-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
+- Years ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
+
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="calendar-years-view-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-years-view' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-years-view-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### キーボード ナビゲーション
-[**igxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) コンポーネントにフォーカスがある場合、以下を使用してナビゲーションできます。
+`igxCalendar` コンポーネントにフォーカスがある場合、以下を使用してナビゲーションできます。
 - <kbd>PageUp</kbd> キーは前の月に移動します。
 - <kbd>PageDown</kbd> キーは次の月に移動します。
 - <kbd>Shift</kbd> + <kbd>PageUp</kbd> キーは前の年に移動します。
@@ -372,34 +312,29 @@ export class CalendarSample7Component {
 サブヘッダーの`年`ボタンのフォーカス時:
 - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは10 年ビューを開きます。
 
-現在月の日のフォーカス時:
+現在月の`日`のフォーカス時:
 - 矢印キーで日を移動します。
 - 矢印キーで前/翌月に移動します。
 - 現在の月の最終日から次の日または現在の月の最初の日から前に移動すると、表示されている次の月または前の月にフォーカスが移動します。
 - 現在の月の最終日から次の日または現在の月の最初の日から前に移動すると、表示されている次の月または前の月にフォーカスが移動します。
 - <kbd>Enter</kbd> キーを使用して、現在フォーカスされている日を選択します。
 
-月ビュー内の月のフォーカス時:
+月ビュー内の`月`のフォーカス時:
 - 矢印キーで月を移動します。
 - <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
 - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
 - <kbd>Enter</kbd> キーは、現在フォーカスされている月を選択してビューと閉じます。
 
-10 年ビュー内の年のフォーカス時:
+10 年ビュー内の`年`のフォーカス時:
 - 矢印キーで年を移動します。
 - <kbd>Enter</kbd> キーは、現在フォーカスされている年を選択してビューと閉じます。
 
 >[!NOTE]
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
-<div class="divider--half"></div>
-
 
 ### マルチビュー カレンダー
-[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) 入力を使用して、表示される月の数が設定されます。
-設定される最大値に制限はなく、月はフレックス コンテナに水平に表示されます。マルチ ビューカレンダーを表示する場合、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays) を使用して、現在の月に属さない日を非表示にできます。マルチビュー カレンダーは、3 種類すべての選択をサポートしています。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
-
-結果:
+マルチ ビューカレンダーは、3 種類すべての選択をサポートしています。[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) 入力を使用して、表示される月の数を設定します。これは、フレックス コンテナーに水平に表示されます。設定される最大値に制限はありません。マルチ ビューカレンダーを使用する場合、現在の月に属さない日を非表示にできます。非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays)プ ロパティを使用します。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
 
 <div class="sample-container loading" style="height: 540px">
     <iframe id="multiview-calendar" data-src='{environment:demosBaseUrl}/scheduling/multiview-calendar' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
@@ -410,137 +345,56 @@ export class CalendarSample7Component {
 
 ### スタイル設定
 
-カレンダーのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+カレンダーのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、`$header-background` `$content-background`、`$header-text-color`、`$date-current-text-color`, `$picker-arrow-color`、`$picker-arrow-hover-color`、`$year-current-text-color`、`$year-hover-text-color`、`$month-current-text-color`、`$month-hover-text-color`、`$picker-text-color`、および `$picker-text-hover-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$my-calendar-theme: igx-calendar-theme(
+$custom-calendar-theme: igx-calendar-theme(
   $header-background: #345779,
   $content-background: #fdfdfd,
   $header-text-color: #ffffff,
   $date-current-text-color: #2dabe8,
   $picker-arrow-color: #2dabe8,
-  $picker-arrow-hover-color: #000000,
+  $date-selected-text-color: #fdfdfd,
+  $date-current-bg-color: #fdfdfd,
+  $picker-arrow-hover-color:  #345779,
   $year-current-text-color: #2dabe8,
   $year-hover-text-color: #2dabe8,
   $month-current-text-color: #2dabe8,
   $month-hover-text-color: #2dabe8,
   $picker-text-color: #2dabe8,
-  $picker-text-hover-color: #000000
+  $picker-text-hover-color:  #345779
 );
 ```
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+
+#### CSS 変数の使用
+
+最後に Calendar のカスタム テーマを設定します。
 
 ```scss
- @include igx-calendar($my-calendar-theme);
+ @include igx-css-vars($custom-calendar-theme);
 ```
 
->[!NOTE]
- >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+#### テーマ オーバーライドの使用
+
+Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
+
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
  ```scss
 :host {
   ::ng-deep {
-    @include igx-calendar($my-calendar-theme);
+    @include igx-calendar($custom-calendar-theme);
   }
 }
 ```
 
-#### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$blue-color: #345779;
-$light-gray-color: #fdfdfd;
-
-$my-custom-palette: igx-palette(
-    $primary: $blue-color,
-    $secondary: $light-gray-color
-);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
-
-```scss
-$my-calendar-theme: igx-calendar-theme(
-  $header-background: igx-color($my-custom-palette, "primary", 500),
-  $content-background: igx-color($my-custom-palette, "secondary", 500),
-  $header-text-color: igx-color($my-custom-palette, "secondary", 50),
-  $date-current-text-color: igx-color($my-custom-palette, "primary", 50),
-  $picker-arrow-color: igx-color($my-custom-palette, "primary", 50),
-  $picker-arrow-hover-color: igx-color($my-custom-palette, "grays", 900),
-  $year-current-text-color: igx-color($my-custom-palette, "primary", 50),
-  $year-hover-text-color: igx-color($my-custom-palette, "primary", 50),
-  $month-current-text-color: igx-color($my-custom-palette, "primary", 50),
-  $month-hover-text-color: igx-color($my-custom-palette, "primary", 50),
-  $picker-text-color: igx-color($my-custom-palette, "primary", 50),
-  $picker-text-hover-color: igx-color($my-custom-palette, "grays", 900),
-  $date-selected-background: igx-color($my-custom-palette, "primary", 500),
-  $date-selected-text-color: igx-color($my-custom-palette, "secondary", 500)
-);
-```
-
->[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。 使い方の詳細については [`パレット`](./themes/palette.md) のトピックを参照してください。
-
-#### スキーマの使用
-
-テーマ エンジンを使用して [**スキーマ**](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ [`_light-badge`]({environment:sassApiUrl}/index.html#variable-_light-calendar) の 1 つを拡張します。  
-
-```scss
-// Extending the light calendar schema
-$custom-calendar-schema: extend($_light-calendar,
-    (
-        header-background: (igx-color: ('primary', 500)),
-        content-background: (igx-color: ('secondary', 500)),
-        header-text-color: (igx-color: ('secondary', 50)),
-        date-current-text-color: (igx-color: ('primary', 50)),
-        picker-arrow-color: (igx-color: ('primary', 50)),
-        picker-arrow-hover-color: (igx-color: ('grays', 900)),
-        year-current-text-color: (igx-color: ('primary', 50)),
-        year-hover-text-color: (igx-color: ('primary', 50)),
-        month-current-text-color: (igx-color: ('primary', 50)),
-        month-hover-text-color: (igx-color: ('primary', 50)),
-        picker-text-color: (igx-color: ('primary', 50)),
-        picker-text-hover-color: (igx-color: ('grays', 900)),
-        date-selected-background: (igx-color: ('primary', 500)),
-        date-selected-text-color: (igx-color: ('secondary', 500))
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル  ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-calendar: $custom-calendar-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$my-calendar-theme: igx-calendar-theme(
-  $palette: $my-custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
-
-#### デモ
-
-<div class="sample-container loading" style="height:550px">
+<div class="sample-container loading" style="height:500px">
     <iframe id="calendar-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-styling-sample' width="100%" height="100%" 
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -557,10 +411,9 @@ $my-calendar-theme: igx-calendar-theme(
 * [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
 * [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 
-<div class="divider--half"></div>
-
 ### その他のリソース
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
