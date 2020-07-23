@@ -278,6 +278,13 @@ public onCommit(): void {
 }
 
 ```
+If we are using the [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) we can also use an overload of the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method which expects primaryKey and childDataKey as arguments.
+
+```typescript
+public onCommit(): void {
+    this.transactions.commit(this.wishlist, primaryKey, childDataKey);
+}
+````
 
 ### Clear pending transactions
 
