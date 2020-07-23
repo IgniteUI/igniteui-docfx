@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid ソート|データ ソート|Ignite UI for Angular|infragistics
+title: Angular Grid ソート | データ ソート | Ignite UI for Angular| インフラジスティックス
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid ソート|データ ソート|Ignite UI for Angular|infragistics
+title: Angular Tree Grid ソート | データ ソート | Ignite UI for Angular| インフラジスティックス
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid ソート|データ ソート|Ignite UI for Angular|“infragistics”
+title: Angular Hierarchical Grid ソート | データ ソート | Ignite UI for Angular|“infragistics”
 _description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使って並べ替え可能な列の組み合わせを構成する方法。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
@@ -129,7 +129,7 @@ public ngOnInit() {
 
 ### スタイル設定
 
-並べ替え動作のスタイル設定は、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+並べ替え動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

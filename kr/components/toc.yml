@@ -55,7 +55,10 @@
       new: false
     - name: 열 핀 고정
       href: grid/column_pinning.md
-      new: false
+      new: true
+    - name: Row Pinning
+      href: grid/row_pinning.md
+      new: true
     - name: 크기 조정
       href: grid/column_resizing.md
       new: false
@@ -830,6 +833,9 @@
 - name: Drag and Drop
   href: drag_drop.md
   new: true
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: Menus
   header: true
 - name: Navigation Drawer

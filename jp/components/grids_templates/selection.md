@@ -1,6 +1,6 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Data Selection |Ignite UI for Angular |infragistics 
+title: Angular Grid データ選択 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI Angular Material Table のデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Data Selection |Ignite UI for Angular |infragistics 
+title: Angular Tree Grid データ選択 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI Angular Material Table のデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid データ選択|Ignite UI for Angular |infragistics 
+title: Angular Hierarchical Grid データ選択 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI Angular Material Table のデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
 
@@ -25,7 +25,7 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 
 ### @@igComponent Selection 概要
 
-Ignite UI for Angular @@ igComponentコンポーネントは、[行選択](row_selection.md)と[セル選択](cell_selection.md)の 2 つの異なる選択モードを提供します。グリッドのデフォルトの選択モードはマルチセル選択です。選択モードの変更または有効化は、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティと [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用します。
+Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row_selection.md)、[セル選択](cell_selection.md)、[列選択](column_selection.md)の 3 つの選択モードを提供します。グリッドのデフォルトの選択モードは、**列選択**と組み合わせた**複数セルの選択**です。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
 
 プロパティ [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
@@ -40,6 +40,16 @@ Ignite UI for Angular @@ igComponentコンポーネントは、[行選択](row_s
 - multiple - @@ igComponent の選択のデフォルト状態です。Multi - セルの選択は、マウスの左ボタンを連続してクリックした後、マウスをセル上にドラッグすることで利用できます。
 
 > 詳細については、[セル選択トピック](cell_selection.md)を参照してください。
+
+[`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用して、**列**ごとに以下のオプションを指定できます。
+- false - 対応する列選択は @@igComponent に対して無効になります。
+- true - 対応する列選択は @@igComponent に対して有効になります。
+- 以下の 3 つのバリエーションがあります:
+ - 単一選択 - 列セルを<kbd>マウス クリック</kbd>。
+ - 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>。
+ - 列の範囲選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>マウス クリック</kbd>、その間のすべての列が選択されます。
+
+> 詳細については、[列選択トピック](column_selection.md) を参照してください。
 
 ### ショーケース アプリケーション
 

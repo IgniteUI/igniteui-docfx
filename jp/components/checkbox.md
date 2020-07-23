@@ -9,28 +9,19 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。</p>
 <div class="divider"></div>
 
-### Checkbox デモ
-
-<div class="sample-container loading" style="height: 200px">
-<iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+#### デモ
+<div class="sample-container loading" style="height: 100px">
+<iframe id="checkbox-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/checkbox-sample-1' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
+チェックボックス コンポーネントは、選択/選択解除の状態の選択ができます。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
-チェックボックス コンポーネントは、選択/選択解除の状態の選択ができます。デフォルト スタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
-
-Ignite UI for Angular Checkbox を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールします。
-
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに  `IgxCheckboxModule` をインポートします。
+はじめに、**app.module.ts** ファイルに `IgxCheckboxModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -46,24 +37,17 @@ import { IgxCheckboxModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-簡易なチェックボックスを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
+デモのチェックボックスを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
 <igx-checkbox [checked]="true">
-    simple checkbox
+    Simple checkbox
 </igx-checkbox>
 ```
-
-以下は結果です:
-
-<div class="sample-container loading" style="height: 100px">
-<iframe data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
 
 #### Checkbox プロパティ
 
 チェックボックス プロパティをデータにバインドし、上記のコードを拡張します。たとえば、description および done の 2 つのプロパティを持つタスク オブジェクトの配列がある場合では、チェックボックス コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) プロパティをその元となるタスク オブジェクトの done プロパティにバインドできます。同様に、[`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) プロパティを description にバインドします。
-
 オプションに [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) イベントをバインドし、イベント ハンドラー メソッドでカスタム ロジックを追加できます。
 
 ```typescript
@@ -81,7 +65,6 @@ statusChanged()
     // event handler logic
 }
 ```
-
 各タスクにチェックボックスを追加し、対応するプロパティ バインディングを設定してコンポーネント テンプレートを拡張します。
 
 ```html
@@ -92,77 +75,196 @@ statusChanged()
 </igx-checkbox>
 ```
 
-結果は以下のようになります。
+スタイルを追加します。
+
+```scss
+//task.component.scss
+
+:host {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+}
+
+igx-checkbox {
+    margin-top: 16px;
+}
+```
+
+以下は結果です。
 
 <div class="sample-container loading" style="height: 200px">
-<iframe data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="checkbox-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+
+#### ラベル配置
+
+チェックボックスの [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) プロパティを使用してラベル位置を指定することができます。
+
+```html
+<igx-checkbox labelPosition="before"></igx-checkbox>
+```
+
+`labelPosition` が設定されていない場合、ラベルはチェックボックスの後に配置されます。
+
+#### 未確定状態のチェックボックス
+
+オンとオフに加えて、チェックボックスの 3 番目の状態があります: **未確定**。この状態では、チェックボックスはオンでもオフでもありません。チェックボックスの [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) プロパティを使用して設定します。
+
+```html
+<igx-checkbox [indeterminate]="true"></igx-checkbox>
+```
+
+実行する必要があるタスクのリストと、すべてのタスクが完了した場合にのみチェックされるマスター チェックボックスのアプリを作成できます。上記のサンプルを更新しましょう。まず、テンプレート:
+
+```html
+<!-- app.component.html -->
+
+<igx-checkbox 
+    [readonly]="true" 
+    [(ngModel)]="masterCheckbox.checked" 
+    [(indeterminate)]="masterCheckbox.indeterminate" 
+    (click)="toggleAll()"
+>
+すべて完了しました。
+</igx-checkbox>
+<igx-checkbox class="tasks" *ngFor="let task of tasks" [(ngModel)]="task.done">
+    {{ task.description }}
+</igx-checkbox>
+```
+
+次に、同じグループの一部であることを表示するには、サブタスクをインデントします。
+
+```scss
+// app.component.scss
+
+:host {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+}
+
+igx-checkbox {
+    margin-top: 16px;
+}
+
+igx-checkbox.tasks {
+    padding-left: 10px;
+}
+```
+
+最後に、アプリケーションのロジックを作成します。
+
+```ts
+// app.component.ts
+
+public tasks = [
+    { done: true, description: "Research" },
+    { done: true, description: "Implement" },
+    { done: false, description: "Test" }
+];
+
+public get masterCheckbox() {
+    return this.tasks.reduce(
+        (acc, curr, idx, arr) => {
+            acc.checked = acc.checked && curr.done;
+            acc.done = curr.done ? acc.done + 1 : acc.done;
+            acc.indeterminate = acc.done === arr.length ? false : !!acc.done;
+
+            return acc;
+        },
+        {
+            checked: true,
+            done: 0,
+            indeterminate: false
+        }
+    );
+}
+
+public toggleAll() {
+    if (this.masterCheckbox.checked) {
+        for (const task of this.tasks) {
+            task.done = false;
+        }
+    } else {
+        for (const task of this.tasks) {
+            task.done = true;
+        }
+    }
+}
+```
+すべて設定できると、アプリケーションは以下のようになります。
+
+<div class="sample-container loading" style="height: 200px">
+    <iframe id="checkbox-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### スタイル設定
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、**igx-checkbox** の外観を変更できます。
 
-#### テーマのインポート
-はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-// in styles.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+``` 
 
-#### パレットの定義
-2 つのメイン テーマ カラーを指定できる独自のカラー [パレット](themes/palette.md)を使用します。さらに、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) パラメーターで公開されるいくつかのパラメーター、つまり `$border-radius`、`$label-color`、`$empty-color` を設定します。
-最初にカスタム パレットを定義します。
-```scss
-// in styles.scss
-$my-primary-color: #f5e492;
-$my-secondary-color: #09f;
+チェックボックスはカレンダーのテーマを使用するため、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
 
-$my-color-palette: igx-palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color
-);
-```
-
-カスタム パレットが適用されていることを確認するには、テーマ関数に渡す必要があります。
-そのため、1 つの大胆な動きで[`カスタム テーマを作成`](themes/component-themes.md#テーマの作成)し、さらに 3 つの特定のパラメーターも渡します。これらを変更するだけで、コンポーネントを思いどおりに見せるには十分すぎると判断したとします。
 ```scss
 // in styles.scss
 $custom-checkbox-theme: igx-checkbox-theme(
-    $palette: $my-color-palette,
     $border-radius: 10px,
-    $label-color: $my-secondary-color,
-    $empty-color: $my-secondary-color
+    $label-color: #011627,
+    $empty-color: #ECAA53,
+    $fill-color: #ECAA53,
+    $tick-color: #011627,
 );
 ```
 
-#### 適用
-あとは新しく作成したテーマを適切にスコープするだけです。
+#### テーマを含む
 
-##### グローバル
-アプリに新しく作成した `igx-checkbox` を[`グローバル`](themes/component-themes.md#creating-themes)に適用する場合、アプリのルート スタイル ファイルにテーマを含めるだけです。
+<div class="divider"></div>
+
+最後にコンポーネントのテーマをアプリケーションに含めます。
+
+`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
+
 ```scss
-// in styles.scss
-// Pass our checkbox theme to the `igx-checkbox` mixin
-    @include igx-checkbox($custom-checkbox-theme);
+ @include igx-checkbox($custom-checkbox-theme);
 ```
-
-##### スコープ
-特定の `igx-checkbox` のスタイルをアプリ内の他のスタイルと異なるようにする必要がある場合があります。これには、`:host`、`::ng-deep` などの Angular 固有の擬似クラス セレクターを使用する必要があります。さらに、styles.scss で指定する上記のスタイルはすべて、代わりに component.scss ファイルで定義する必要があります。
-
- >[!NOTE]
- >コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化)  ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
-一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
-// in component.scss
 :host {
-    ::ng-deep {
-        // Pass our checkbox theme to the `igx-checkbox` mixin
+     ::ng-deep {
         @include igx-checkbox($custom-checkbox-theme);
     }
 }
 ```
-#### デモのスタイル設定
+
+<div class="divider"></div>
+
+`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+
+```scss
+@include igx-css-vars($custom-checkbox-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+
+```scss
+:host {
+    @include igx-css-vars($custom-checkbox-theme);
+}
+```
+#### Demo
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="checkbox-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" class="lazyload no-theming"></iframe>
@@ -181,8 +283,8 @@ $custom-checkbox-theme: igx-checkbox-theme(
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ### その他のリソース
-
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

@@ -37,7 +37,7 @@ Angular データ チャート コンポーネントにはさまざまな種類�
 上記データ要件を満たすデータソースとして [SamplePolarData](data-chart-data-sources-scatter.md) を使用できます。
 
 ```ts
-this.state = { dataSource: SampleScatterData.create() }
+public dataSource: any[] = SampleScatterData.create();
 ```
 
 ### モジュールの要件

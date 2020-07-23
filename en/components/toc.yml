@@ -1,7 +1,10 @@
 - name: General
   header: true
-- name: "Angular: A Complete Guide" 
+- name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
+  new: true
+- name: Licensing
+  href: general/ignite-ui-licensing.md
   new: true
 - name: Getting started
   href: general/getting_started.md
@@ -12,6 +15,9 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
+- name: Accessibility Compliance
+  href: general/accessibility-compliance.md
+  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: true
@@ -55,7 +61,7 @@
       new: false
 - name: Framework & features
   href: general/framework-and-features/framework-and-features.md
-  new: false
+  new: true
   items:
     - name: SSR Rendering
       href: general/framework-and-features/ssr-rendering.md
@@ -118,7 +124,10 @@
       new: false
     - name: Column Pinning
       href: grid/column_pinning.md
-      new: false
+      new: true
+    - name: Row Pinning
+      href: grid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: grid/column_resizing.md
       new: false
@@ -138,6 +147,9 @@
         - name: Selection-based Aggregates
           href: grid/selection_based_aggregates.md
           new: false
+        - name: Column Selection
+          href: grid/column_selection.md
+          new: true
     - name: Searching
       href: grid/search.md
       new: false
@@ -165,6 +177,7 @@
     - name: Keyboard navigation
       href: grid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Multi Row Layout
       href: grid/multi_row_layout.md
       new: false
@@ -232,6 +245,9 @@
     - name: Column Pinning
       href: treegrid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: treegrid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: treegrid/column_resizing.md
       new: false
@@ -240,7 +256,7 @@
       new: false
     - name: Selection
       href: treegrid/selection.md
-      new: false
+      new: new
       items:
         - name: Row selection
           href: treegrid/row_selection.md
@@ -248,6 +264,9 @@
         - name: Cell selection
           href: treegrid/cell_selection.md
           new: false
+        - name: Column Selection
+          href: treegrid/column_selection.md
+          new: true
     - name: Searching
       href: treegrid/search.md
       new: false
@@ -275,6 +294,7 @@
     - name: Keyboard navigation
       href: treegrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Clipboard Interactions
       href: treegrid/clipboard_interactions.md
       new: false
@@ -330,6 +350,9 @@
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
       new: false
+    - name: Row Pinning
+      href: hierarchicalgrid/row_pinning.md
+      new: true
     - name: Column Resizing
       href: hierarchicalgrid/column_resizing.md
       new: false
@@ -343,6 +366,9 @@
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
           new: false
+        - name: Column Selection
+          href: hierarchicalgrid/column_selection.md
+          new: true
         # Not yet fully implemented for igxHGrid
         # - name: Cell selection
         #  href: grid/cell_selection.md
@@ -369,6 +395,7 @@
     - name: Keyboard navigation
       href: hierarchicalgrid/keyboard_navigation.md
       new: false
+      updated: true
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
@@ -881,9 +908,6 @@
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
           new: true
-    - name: Examples
-      href: themes/examples.md
-      new: false
     - name: Printing styles
       href: themes/printing-styles.md
       new: false
@@ -957,10 +981,6 @@
 - name: Slider
   href: slider/slider.md
   new: true
-  items:
-    - name: Slider ticks
-      href: slider/slider_ticks.md
-      new: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -987,6 +1007,9 @@
 - name: Zoom Slider
   new: false
   href: zoomslider-overview.md
+- name: Action Strip
+  new: true
+  href: action-strip.md
 - name: Menus
   header: true
 - name: Navigation Drawer
@@ -1012,6 +1035,12 @@
 - name: Expansion Panel
   href: expansion_panel.md
   new: false
+- name: Splitter
+  href: splitter.md
+  new: true
+- name: Dock Manager
+  href: dock-manager.md
+  new: true
 - name: Notifications
   header: true
 - name: Banner
@@ -1023,10 +1052,16 @@
   href: toast.md
 - name: Scheduling
   header: true
+- name: Date Time Editor
+  href: date_time_editor.md
+  new: true
 - name: Calendar
   href: calendar.md
 - name: Date Picker
   href: date_picker.md
+- name: Date Range Picker
+  href: date_range_picker.md
+  new: true
 - name: Month Picker
   href: month_picker.md
   new: false

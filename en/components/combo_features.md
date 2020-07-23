@@ -18,6 +18,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -123,6 +124,7 @@ For example, with the above settings, the Combo's list will display centered, us
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div>
@@ -143,6 +145,15 @@ If the custom values are enabled, the missing item could be added using the UI o
 
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
+```
+
+<div class="divider--half"></div>
+
+## Search input focus
+Combo `autoFocusSearch` property controls if the search input should receive focus when a combo is opened. When the property is `true` (by default), the combo's search box is focused on open. When set to `false`, the focus goes to the combo's items container. For mobile devices, this can be used to prevent the software keyboard from popping up when opening the combo.
+
+```html
+<igx-combo [autoFocusSearch]="false"></igx-combo>
 ```
 
 <div class="divider--half"></div>

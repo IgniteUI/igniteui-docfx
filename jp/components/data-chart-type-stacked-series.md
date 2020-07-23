@@ -95,7 +95,6 @@ import { IgxStacked100ColumnSeries } from 'igniteui-angular-charts';
 import { IgxStacked100LineSeries } from 'igniteui-angular-charts';
 import { IgxStacked100SplineAreaSeries } from 'igniteui-angular-charts'
 import { IgxStacked100SplineSeries } from 'igniteui-angular-charts';
-import { IgxStacked100SplineAreaSeries } from 'igniteui-angular-charts';
 // data chart's modules:
 
 import { IgxDataChartCoreModule } from 'igniteui-angular-charts';

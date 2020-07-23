@@ -5,27 +5,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Ripple
-<p class="highlight">With the Ignite UI for Angular Ripple directive, you can create a ripple animation effect to give users feedback when they’re trying to click or touch regions that aren’t configured to receive that input. Set this directive to a relatively positioned element to create an animation in response to a touch or a mouse click.</p>
-<div class="divider"></div>
+<p class="highlight">The Ignite UI for Angular Ripple component creates an animation in response to a touch or a mouse click.</p>
 
-### Ripple Demo
-<div class="sample-container loading" style="height: 558px">
-    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+### Demo
+<div class="divider--half"></div>
+<div class="sample-container loading" style="height: 100px">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+</iframe></div>
 <div class="divider--half"></div>
 
-### Dependencies
-To get started with the Ripple Directive, first you need to install Ignite UI for Angular by typing the following command:
+### Usage
 
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+#### First Steps
 
-The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxRippleModule` inside your `AppModule`:
+The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxRippleModule` inside your **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -47,167 +40,117 @@ export class AppModule {}
 The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
 for other browsers.
 
-### Usage
+
 #### Adding Ripple Effect
 
-Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) to add a ripple effect to the specified element. It will add a ripple effect with the default color.
+Use the `igxRipple` directive to add a ripple effect to the specified element:
 
 ```html
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
-<div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
-</iframe></div>
+
+### Examples 
 
 #### Custom Color
 
-You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html). In this sample, we set white color to the ripple.
+You can easily change the default ripple color using the `igxRipple`:
 
 ```html
 <button igxButton="raised" igxRipple="white">White</button>
 ```
-<div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
+<div class="sample-container loading" style="height: 100px">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
 </iframe></div>
 
 #### Centered Ripple Effect 
-The ripple effect starts from the position of the click event. You can change this behavior using [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) and setting the center of the element as origin.
+By default, the ripple effect starts from the position of the click event. You can change this behavior using the [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) property and setting the center of the element as origin.
 
 ```html
-<button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
+<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
-<div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
-</iframe></div>
-
-#### Ripple Target
-Use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to attach a ripple effect to a specific element inside a parent element.
-
-```html
-<div class="parent-div" igxRipple="blue" igxRippleTarget=".child-div" igxRippleCentered="true">
-  Parent Div
-  <div class="child-div">
-    Child Div
-  </div>
-</div>
-```
-Notice that if you click on the parent or the child divs the ripple effect will only appear inside the child div. The child div position has to be set to **relative**.
-<div class="sample-container loading" style="height: 168px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
+<div class="sample-container loading" style="height: 100px">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
 </iframe></div>
 
 #### Ripple Duration
-Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) to change the duration of the ripple animation. The default is 600 miliseconds. In this sample the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) is set to 2000 miliseconds.
+We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
 
 ```html
-<div [igxRippleDuration]=2000 igxRipple="white">
-  <p>Long Ripple Animation</p>
+<button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
+```
+<div class="sample-container loading" style="height: 100px">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+</iframe></div>
+
+#### Ripple Target
+Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) property to attach a ripple effect to a specific element inside a parent element.
+
+```html
+<div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">
+    ...
+    <button class="sample-button child" igxButton="raised">Read More</button>
 </div>
 ```
-<div class="sample-container loading" style="height: 148px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+Notice that no matter whether you click on the parent or the child element, the ripple effect will only appear on the button.
+
+<div class="sample-container loading" style="height: 350px">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
 </iframe></div>
 
 > [!NOTE]
-> Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
+> The child element, which you want to target with the `igxRippleTarget` property, has to be relatively positioned.
+
 
 ### Styling
-The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
 
-#### Importing global theme
-To begin styling of the predefined ripple color, you need to import the `index` file, where all styling functions and mixins are located.  
+First, in order to use the functions exposed by the theme engine, we need to import the `index` file, where all styling functions and mixins are located, into our style file: 
+      
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```   
 
-#### Defining custom theme
 You can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
-$custom-theme: igx-ripple-theme(
-  $color: #FFCD0F
+$custom-ripple-theme: igx-ripple-theme(
+  $color: #217346
 );
-```   
+```  
 
-#### Defining a custom color palette
-In the approach, that was described above, the color value was hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+#### Using CSS variables 
+
+The next step is to pass the custom ripple theme:
 
 ```scss
-$black-color: #494949;
-$yellow-color: #ffcd0f;
-
-$custom-palette: igx-palette(
-    $primary: $black-color,
-    $secondary: $yellow-color
-);
-```   
-
-After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
-
-```scss
-$custom-theme: igx-ripple-theme(
-    $color: igx-color($custom-palette, "secondary", 500)
-);
+@include igx-css-vars($custom-ripple-theme);
 ```
 
-#### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_ripple`.   
+#### Using Component Theme Overrides
 
-```scss
-$custom-ripple-schema: extend($_dark-ripple, (
-    color: (igx-color("secondary", 500))
-));
-```   
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
-```scss
-$my-custom-schema: extend($dark-schema, (
-    igx-ripple: $custom-ripple-schema
-));
-
-$custom-theme: igx-ripple-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-#### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
-```scss
-@include igx-ripple($custom-theme);
-```
-
-#### Scoped component theme
-
-In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
-
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
-
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+If the component is using the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
     ::ng-deep {
-        @include igx-ripple($custom-theme);
+        // Pass the custom ripple theme to the `igx-ripple` mixin
+        @include igx-ripple($custom-ripple-theme);
     }
 }
-```    
+```
 
 >[!NOTE]
   > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
 
 #### Demo
-<div class="sample-container loading" style="height:700px">
+<div class="sample-container loading" style="height:200px">
     <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 
