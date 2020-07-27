@@ -144,10 +144,10 @@ public ngOnInit() {
 </div>
 
 ### イベント
-Let's explore the events emitted by the calendar:
-- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - emitted when selecting date(s) in the calendar.
-- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
-- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewvhanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
+カレンダーが発するイベントを見てみましょう：
+- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - カレンダーで日付を選択すると発生します。
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - 提示された月/年が変更されるたびに発生します。たとえば、`next` または `previous` の月に移動した後。
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewvhanged) - アクティブなビューが変更された後に発生します。たとえば、ユーザーがヘッダーの `month` または `year` セクションをクリックした後。
 
 ```html
 <!-- app.component.html -->
@@ -157,7 +157,7 @@ Let's explore the events emitted by the calendar:
     (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-The [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
+[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントは入力検証ロジックを構築するのに適しています。以下のコードを使用して、選択が 5 日を超えた場合にユーザーに警告し、選択をリセットします。
 
 ```typescript
 // app.component.ts
@@ -178,7 +178,7 @@ public onSelection(dates: Date[]) {
     }
 ```
 
-Use the demo below to play around (change selection, navigate through months and years) and see the events logged real time:
+以下のデモを試して (選択を変更し、月と年を移動し)、リアルタイムで記録されたイベントを確認してください。
 <div class="sample-container loading" style="height: 420px">
     <iframe id="calendar-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>

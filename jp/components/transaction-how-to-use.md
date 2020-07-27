@@ -279,6 +279,13 @@ public onCommit(): void {
 }
 
 ```
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を使用している場合は、primaryKey と childDataKey を引数として期待する [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドのオーバー読み込みを使用することもできます。
+
+```typescript
+public onCommit(): void {
+    this.transactions.commit(this.wishlist, primaryKey, childDataKey);
+}
+````
 
 ### 保留されたトランザクションのクリア
 
