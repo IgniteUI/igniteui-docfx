@@ -46,11 +46,13 @@ export class AppModule {}
     <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
         [filterable]="filterable"
+        [showSearchCaseIcon]="showSearchCaseIcon"
         [disabled]="disabled">
     </igx-combo>
 </div>
 <div class="switch-container">
     <igx-switch [(ngModel)]="filterable">Enable Filtering</igx-switch><br />
+    <igx-switch *ngIf="filterable" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch><br />
     <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch><br />
     <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch><br />
     <igx-switch [(ngModel)]="disabled">Disabled</igx-switch>
@@ -61,6 +63,7 @@ export class AppModule {}
     @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
 
     public filterable = true;
+    public showSearchCaseIcon = true;
     public customValues = true;
     public disabled = false;
 
@@ -138,6 +141,12 @@ export class CustomOverlayCombo {
 
 ```html
 <igx-combo [filterable]="false"></igx-combo>
+```
+
+フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、 [showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showSearchCaseIcon) プロパティを true に設定します。
+
+```html
+<igx-combo [showSearchCaseIcon]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>
