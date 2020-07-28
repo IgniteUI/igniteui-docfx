@@ -83,8 +83,8 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### 表示期間
