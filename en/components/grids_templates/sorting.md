@@ -70,7 +70,7 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 ```
 
 #### Sorting Indicators
-Having a big amount of sorted columns could be really confusing if there is no indication of the order, in which these columns are sorted. 
+Having a certain amount of sorted columns could be really confusing if there is no indication of the order, in which these columns are sorted. 
 
 The **@@igxName** provides a solution for this problem by indicating the index of each sorted column.
 
