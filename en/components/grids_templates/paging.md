@@ -198,7 +198,7 @@ In order to change the resource string to a specific Paging component, you can u
 public ngOnInit(): void {
     requestAnimationFrame(() => {
         this.paginator.resourceStrings = this.paginatorResourceStrings;
-    })
+    });
 }
 ```
 
