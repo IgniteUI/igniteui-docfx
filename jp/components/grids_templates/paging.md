@@ -110,7 +110,6 @@ this.@@igObjectRef.totalRecords = 30;
 | pagerEnabled    | 有効状態をページャーに設定します。 |
 | pagerHidden     | 非表示状態をページャーに設定します。 |
 | perPage         | ページごとに表示される項目数を設定します。 |
-| selectLabel     | 選択コンポーネントの前にテキストを設定します。デフォルトは'ページごとの項目'です。 |
 | selectOptions   | ページごとの項目のカスタム オプションを設定します。 |
 | totalRecords    | 合計レコード数を設定します。 |
 | resourceStrings | リソース文字列を設定します。デフォルトで EN リソースを使用します。 |
@@ -131,7 +130,7 @@ this.@@igObjectRef.totalRecords = 30;
 
 <ng-template #pager>
     <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
-            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden" [selectLabel]="'Records per page:'"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
             [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
     </igx-paginator>
 </ng-template>
