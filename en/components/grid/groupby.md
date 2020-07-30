@@ -177,7 +177,11 @@ class BaseSortingStrategy extends DefaultSortingStrategy {
     compareValues(a: any, b: any) {
         const dateA = this.getParsedDate(a);
         const dateB = this.getParsedDate(b);
-        return dateA.year < dateB.year ? -1 : dateA.year > dateB.year ? 1 : dateA.month  < dateB.month ? -1 : dateA.month > dateB.month ? 1 : 0;
+        return dateA.year < dateB.year ?
+            -1 : dateA.year > dateB.year ?
+            1 : dateA.month  < dateB.month ?
+            -1 : dateA.month > dateB.month ?
+            1 : 0;
     }
 }
 
@@ -185,8 +189,13 @@ class DaySortingStrategy extends BaseSortingStrategy {
     compareValues(a: any, b: any) {
         const dateA = this.getParsedDate(a);
         const dateB = this.getParsedDate(b);
-        return dateA.year < dateB.year ? -1 : dateA.year > dateB.year ? 1 : dateA.month  < dateB.month ? -1 : dateA.month > dateB.month ? 1 :
-                dateA.day < dateB.day ? -1 : dateA.day > dateB.day ? 1 : 0;
+        return dateA.year < dateB.year ?
+            -1 : dateA.year > dateB.year ?
+            1 : dateA.month  < dateB.month ?
+            -1 : dateA.month > dateB.month ?
+            1 : dateA.day < dateB.day ?
+            -1 : dateA.day > dateB.day ?
+            1 : 0;
     }
 }
 
@@ -201,27 +210,30 @@ class WeekSortingStrategy extends BaseSortingStrategy {
         const dateB = this.getParsedDate(b);
         const weekA = this.getWeekOfDate(a);
         const weekB = this.getWeekOfDate(b);
-        return dateA.year < dateB.year ? -1 : dateA.year > dateB.year ? 1 : weekA < weekB ? -1 : weekA > weekB ? 1 : 0;
+        return dateA.year < dateB.year ?
+            -1 : dateA.year > dateB.year ?
+            1 : weekA < weekB ?
+            -1 : weekA > weekB ?
+            1 : 0;
     }
 }
-
 ```
 
 A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) function is defined for the grouping expressions, which determines the items belonging to the same group based on the selected grouping mode. Values in the sorted data for which this function returns 0 are marked as part of the same group.
 
 ```typescript
  groupingComparer: (a, b) => {
-                    const dateA = this.sortingStrategy.getParsedDate(a);
-                    const dateB = this.sortingStrategy.getParsedDate(b);
-                    if (this.groupByMode === 'Month') {
-                        return dateA.month === dateB.month ? 0 : -1;
-                    } else if (this.groupByMode === "Year") {
-                        return dateA.year === dateB.year ? 0 : -1;
-                    } else if (this.groupByMode === "Week") {
-                       return this.sortingStrategy.getWeekOfDate(a) === this.sortingStrategy.getWeekOfDate(b) ? 0 : -1;
-                    }
-                    return dateA.day === dateB.day && dateA.month === dateB.month ? 0 : -1;
-                }
+    const dateA = this.sortingStrategy.getParsedDate(a);
+    const dateB = this.sortingStrategy.getParsedDate(b);
+    if (this.groupByMode === 'Month') {
+        return dateA.month === dateB.month ? 0 : -1;
+    } else if (this.groupByMode === "Year") {
+        return dateA.year === dateB.year ? 0 : -1;
+    } else if (this.groupByMode === "Week") {
+        return this.sortingStrategy.getWeekOfDate(a) === this.sortingStrategy.getWeekOfDate(b) ? 0 : -1;
+    }
+    return dateA.day === dateB.day && dateA.month === dateB.month ? 0 : -1;
+}
 ```
 
 
