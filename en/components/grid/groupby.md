@@ -143,12 +143,12 @@ The grouping UI supports the following keyboard interactions:
 
 ### Custom Group By
 
-The igxGrid allows defining custom grouping per column or per grouping expression, which allow grouping the data based on a custom condition. This is useful when you need to  group by complex objects or for custom application specific scenarios.
+igxGrid allows defining custom grouping per column or per grouping expression, which provides grouping based on a custom condition. This is useful when you need to group by complex objects or for other application specific scenarios.
 
 > [!NOTE]
-> In order to implement custom grouping the data first needs to be sorted appropriately. Due to this you may need to also apply a custom sorting strategy that extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html). After the data is sorted the custom groups can be determined by specifying a [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) for the column or for the specific grouping expression.
+> In order to implement custom grouping the data first needs to be sorted appropriately. Due to this you may also need to apply a custom sorting strategy that extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html). After the data is sorted the custom groups can be determined by specifying a [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) for the column or for the specific grouping expression.
 
-The sample below demonstrates custom grouping by `Date`, where the date values are sorted and grouped by Day, Week, Month or Year based on the selected grouping mode.
+The sample below demonstrates custom grouping by `Date`, where the date values are sorted and grouped by Day, Week, Month or Year based on user-selected grouping mode.
 
 #### Demo
 
