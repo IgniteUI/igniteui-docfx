@@ -222,6 +222,8 @@ export class GridBatchEditingSampleComponent {
     }
 
     public undo() {
+        /* exit edit mode */
+        this.gridRowEditTransaction.endEdit(/* commit the edit transaction */ false);
         this.gridRowEditTransaction.transactions.undo();
     }
 
@@ -273,6 +275,8 @@ export class TreeGridBatchEditingSampleComponent {
     }
 
     public undo() {
+        /* exit edit mode */
+        this.treeGrid.endEdit(/* commit the edit transaction */ false);
         this.treeGrid.transactions.undo();
     }
 
@@ -335,12 +339,16 @@ export class HierarchicalGridBatchEditingSampleComponent {
         return this.rowIslandShipments.transactions.canRedo;
     }
     public productsUndo() {
+        /* exit edit mode */
+        this.parentGridProducts.endEdit(/* commit the edit transaction */ false);
         this.parentGridProducts.transactions.undo();
     }
     public productsRedo() {
         this.parentGridProducts.transactions.redo();
     }
     public shipmentsUndo() {
+        /* exit edit mode */
+        this.rowIslandShipments.endEdit(/* commit the edit transaction */ false);
         this.rowIslandShipments.transactions.undo();
     }
     public shipmentsRedo() {
@@ -362,28 +370,8 @@ export class HierarchicalGridBatchEditingSampleComponent {
 ```
 }
 
-The transactions API won't handle end of edit and you'd need to do it by yourself. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) in the respective method, just as for instance:
-@@if (igxName === 'IgxGrid') {
-```typescript 
-public undo() {
-    this.gridRowEditTransaction.endEdit(/* commit the edit transaction */ false);
-}
-``` 
-}
-@@if (igxName === 'IgxTreeGrid') {
-```typescript
-public undo() {
-    this.treeGrid.endEdit(/* commit the edit transaction */ false);
-}
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```typescript
-public productsUndo() {
-    this.parentGridProducts.endEdit(/* commit the edit transaction */ false);
-}
-```
-}
+> [!NOTE] 
+> The transactions API won't handle end of edit and you'd need to do it by yourself. Otherwise, the grid would stay in edit mode. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) in the respective method.
 
 @@if (igxName === 'IgxTreeGrid') {
 Deleting a parent node in the grid has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) property of the grid. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
