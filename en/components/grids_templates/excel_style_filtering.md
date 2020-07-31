@@ -442,7 +442,7 @@ In order to configure the Excel style filtering component, you should set its [`
 
 ### External Outlet
 
-The Grid's [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) creates separate stacking contexts for all grids in the DOM. This ensures that all sibling elements of the grid will render as intended, without overlapping one another.
+The @@igComponent's [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) creates separate stacking context for each grid in the DOM. This ensures that all descendant elements of the grid will render as intended, without overlapping one another.
 However, elements that go outside of the grid (e.g. Excel Style filter) will conflict with outside elements with the same `z-index` (e.g. having two grids one under another) resulting in false rendering. The solution for this issue is to set the [`outlet`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#outlet) property to an external outlet directive which allows the overlay elements to always appear on top.
 
 #### Demo
