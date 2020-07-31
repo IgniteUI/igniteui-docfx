@@ -98,6 +98,18 @@ We can create a floating action button and use an icon to display:
 </button>
 ```
 
+To create an extended FAB, simply add text to it:
+
+```html
+<button class="btn" igxButton="fab">
+    <span>like</span>
+    <igx-icon fontSet="material">favorite</igx-icon>
+</button>
+```
+
+>[!NOTE]
+>In the template, the text of the extended FAB has to be placed before the icon.
+
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </iframe></div>
