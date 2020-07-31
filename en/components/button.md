@@ -98,7 +98,7 @@ We can create a floating action button and use an icon to display:
 </button>
 ```
 
-To create an extended FAB, simply add text to it:
+To create an extended FAB, you can add any element prior to the `igx-icon`:
 
 ```html
 <button class="btn" igxButton="fab">
@@ -108,7 +108,7 @@ To create an extended FAB, simply add text to it:
 ```
 
 >[!NOTE]
->In the template, the text of the extended FAB has to be placed before the icon.
+>To get the extended FAB text styled properly, use `<span>`, `<div>` or `<p>` tags.
 
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
