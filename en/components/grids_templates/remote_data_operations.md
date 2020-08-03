@@ -638,7 +638,6 @@ When we define a *custom paging template* it's not necessary to define the @@igC
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(perPage)]="perPage"
-        [selectLabel]="'Records per page:'"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
         (pageChange)="paginate($event)">
@@ -679,7 +678,6 @@ public paginate(page: number) {
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(perPage)]="perPage"
-        [selectLabel]="'Records per page:'"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
         (pageChange)="paginate($event)">
@@ -726,7 +724,6 @@ public paginate(page: number) {
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(perPage)]="perPage"
-        [selectLabel]="'Records per page:'"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
         (pageChange)="paginate($event)">
