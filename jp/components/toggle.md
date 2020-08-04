@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## トグル
+## Toggle
 
 <p class="highlight">Ignite UI for Angular の Toggle ディレクティブは、ユーザーが簡単に開閉できるボックスにコンテンツをラップします。</p>
 

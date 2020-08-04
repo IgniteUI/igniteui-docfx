@@ -141,7 +141,7 @@ export class TransactionBasePipe implements PipeTransform {
 <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE’ トランザクションが作成されます。 
+`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE' トランザクションが作成されます。 
 
 ```typescript
 public onEdit(): void {
@@ -176,7 +176,7 @@ public isEdited(id): boolean {
 ```
 
 
-`onDelete` イベント ハンドラー内でボタンが押されると、「DELETE」トランザクションが作成されます。 
+`onDelete` イベント ハンドラー内でボタンが押されると、'DELETE' トランザクションが作成されます。 
 
 ```typescript
 public onDelete(): void {
@@ -300,3 +300,11 @@ public onClear(): void {
     this.transactions.clear();
 }
 
+```
+
+### その他のリソース
+<div class="divider--half"></div>
+
+* [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+* [トランザクション サービス](transaction.md)
+* [トランザクション サービス クラス階層](transaction-classes.md)
