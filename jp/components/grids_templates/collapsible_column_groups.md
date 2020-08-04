@@ -1,4 +1,4 @@
-﻿
+
 ---
 title: Angular 列グループの折りたたみ | Ignite UI for Angular | インフラジスティックス
 _description: 複数列ヘッダーで折りたたみ機能使用すると、現在の列の下にあるネストされた列のサブセットを折りたたみ、ネストされたヘッダーを表示して、要約した情報の例を示します。
@@ -18,6 +18,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -28,6 +29,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -38,6 +40,7 @@ _language: ja
 </div>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-collapsible-column-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-collapsible-column-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }

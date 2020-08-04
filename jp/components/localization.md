@@ -15,6 +15,7 @@ _language: ja
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### 使用方法
@@ -84,13 +85,14 @@ this.grid.resourceStrings = newGridRes;
 
 `npm install igniteui-angular-i18n --save-dev`
 
-日本語のリソース文字列を使用するには、以下のインポートをアプリケーションに追加して `changei18n` 関数を呼び出します。
+日本語、韓国語またはスペイン語のリソース文字列を使用するには、以下のインポートをアプリケーションに追加して `changei18n` 関数を呼び出します。
 
 ```typescript
 // app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
 
 public ngOnInit(): void {

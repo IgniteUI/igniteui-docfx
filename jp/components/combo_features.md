@@ -19,6 +19,7 @@ Combo コントロールは、データと値のバインディング、**[カ�
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -124,9 +125,13 @@ export class CustomOverlayCombo {
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 <div class="divider--half"></div>
+
+> [!Note]
+> `IgxComboComponent` は [**AutoPositionStrategy**]({environment:angularApiUrl}/classes/autopositionstrategy.html) をデフォルトの[配置ストラテジ](overlay_position.md)として使用します。
 
 ## フィルタリング
 コンボのフィルタリングがデフォルトで有効になります。以下のコードで無効にできます。

@@ -15,7 +15,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on codesandbox
     </button>
 </div>
 <div class="divider--half"></div>
@@ -78,7 +80,7 @@ We can also change the background through the `background` property or set a col
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ####Avatar displaying image
@@ -94,7 +96,7 @@ To get an avatar that displays an image, all you have to do is set the image sou
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ####Avatar displaying icon
@@ -110,7 +112,7 @@ Analogically, the avatar can display an icon via the [`icon`]({environment:angul
 You should see something like this:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="avatar-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ### Styling
@@ -159,10 +161,12 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:120px">
-    <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
+    </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on codesandbox
     </button>
 </div>
 <div class="divider--half"></div>

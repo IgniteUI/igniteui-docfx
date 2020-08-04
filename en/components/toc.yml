@@ -15,6 +15,9 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
+- name: Accessibility Compliance
+  href: general/accessibility-compliance.md
+  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: true
@@ -109,7 +112,7 @@
       new: true
     - name: Sorting
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: Group By
       href: grid/groupby.md
       new: false
@@ -190,7 +193,7 @@
       new: true
     - name: State Persistence
       href: grid/state_persistence.md
-      new: true
+      updated: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -233,7 +236,7 @@
       new: true
     - name: Sorting
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: Summaries
       href: treegrid/summaries.md
       new: true
@@ -300,6 +303,9 @@
     - name: Sizing
       href: treegrid/sizing.md
       new: false
+    - name: State Persistence
+      href: treegrid/state_persistence.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -339,7 +345,7 @@
       new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: true
@@ -399,6 +405,9 @@
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
+    - name: State Persistence
+      href: hierarchicalgrid/state_persistence.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -908,10 +917,13 @@
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
           new: true
+        - name: Indigo
+          href: themes/themes-list/indigo.md
+          new: true
     - name: Printing styles
       href: themes/printing-styles.md
       new: false
-- name: Componets Roundness
+- name: Components Roundness
   href: roundness.md
   new: true
 - name: Shadows

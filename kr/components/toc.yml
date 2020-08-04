@@ -743,7 +743,7 @@
       new: false
     - name: Examples
       href: themes/examples.md
-- name: Componets Roundness
+- name: Components Roundness
   href: roundness.md
   new: true
 - name: Shadows

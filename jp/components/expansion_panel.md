@@ -15,6 +15,7 @@ _language: ja
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 はじめに、**app.module** に **IgxExpansionPanelModule** をインポートする必要があります。
@@ -110,10 +111,11 @@ export class ExpansionPanelComponent {
 
 以下は結果です。
 <div class="sample-container loading" style="height: 320px;">
-    <iframe id="expansion-sample-2-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" class="lazyload"></iframe>
+    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### コンポーネントのカスタマイズ
@@ -164,10 +166,11 @@ export class ExpansionPanelComponent {
 
 以下は上記の変更の結果です。
 <div class="sample-container loading" style="height: 460px;">
-    <iframe id="expansion-sample-3-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
+    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 
@@ -175,10 +178,11 @@ export class ExpansionPanelComponent {
 
 ### デモ
 <div class="sample-container loading" style="height: 440px;">
-    <iframe id="expansion-styling" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
+    <iframe id="expansion-styling" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### パレットおよび色
@@ -309,10 +313,11 @@ export class ExpansionPanelComponent {
 
 以下は結果です。
 <div class="sample-container loading" style="height: 380px;">
-    <iframe id="expansion-sample-5-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
+    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### 複数パネルの場合
@@ -383,10 +388,11 @@ export class ExpansionPanelComponent {
 ```
 以下は結果です。
 <div class="sample-container loading" style="height: 480px;">
-    <iframe id="expansion-sample-4-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" class="lazyload"></iframe>
+    <iframe id="expansion-sample-4-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-4-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-4-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ## API リファレンス

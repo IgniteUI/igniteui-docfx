@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
 _description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
@@ -33,6 +33,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -44,6 +45,7 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -55,6 +57,7 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
@@ -66,6 +69,21 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
 
+#### Sorting Indicators
+Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order. 
+
+The **@@igxName** provides a solution for this problem by indicating the index of each sorted column.
+
+@@if(igxName === "IgxGrid"){
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sorting-indicators-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-sorting-indicators' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+}
 #### Sorting through the API
 
 You can sort any column or a combination of columns through the @@igComponent API using the @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) method:
@@ -231,6 +249,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -242,6 +261,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -253,6 +273,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sorting-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 

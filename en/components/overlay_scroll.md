@@ -67,6 +67,7 @@ The demo below illustrates the difference between the separate [`scrollStrategie
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -80,6 +81,7 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 

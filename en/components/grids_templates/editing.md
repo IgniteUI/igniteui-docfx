@@ -33,6 +33,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -42,6 +43,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -51,6 +53,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 <div class="divider--half"></div>
@@ -117,7 +120,6 @@ You can also modify the cell value through the @@igxName API but only if primary
 ...
 ```
 }
-Please notice that if the cell you want to update is outside @@igComponent's display container the new value will not be submitted.
 
 Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method of [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html):
 
@@ -158,6 +160,8 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```
 }
 
+Please notice that if the cell you want to update, via reference to [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html), is outside @@igComponent's display container the new value will not be submitted.
+
 #### Cell Editing Templates
 
 If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
@@ -173,8 +177,9 @@ If you want to provide a custom template which will be applied when a cell is in
 > [!NOTE]
 > Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 
-> [!NOTE]
-> The cell editing template directive (`igxCellEditor`) is different from the [cell template(`igxCell`)](../grid/grid.md#cell-template) - the former handles how a column's cells **in edit mode** are displayed an controls the edited cell's **edit value**, the latter control how a column's cell's are show when **outside of edit mode**.
+> [!NOTE] 
+> The cell template [`igxCell`](../grid/grid.md#cell-template) controls how a column's cells are shown when outside of edit mode.  
+> The cell editing template directive `igxCellEditor`, handles how a column's cells in edit mode are displayed and controls the edited cell's edit value.
 
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
@@ -321,9 +326,9 @@ The events can be broken down as follows:
 |-------|-------------|-----------|-------------|
 | [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | Fires when a cell **enters edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | If `[rowEditing]` is enabled, fires when a row **enters edit mode** (after `onCellEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | Fires when a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | Fires just before a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | Fires when a cell exits edit mode **without committing** its value (e.g. by pressing `Escape`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | Fires when a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | Fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | Fires when a row exits edit mode **without committing** its values (e.g. by clicking the `Cancel` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 
 All of the above events can be cancelled. For example, if `onCellEditEnter` is cancelled, the cell will never enter edit mode.
@@ -348,10 +353,9 @@ The `onCellEdit` emits whenever **any** cell's value is about to be committed. I
 export class MyGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const column = this.grid.columnList.find(e => e.index === event.cellID.columnID);
-        if (column.header === "Ordered") {
-            const rowData = this.grid.data
-            .find(entry => entry[this.grid.primaryKey] === event.cellID.rowID);
+        const column = event.column;
+        if (column.field === "Ordered") {
+            const rowData = event.rowData;
             if (!rowData) {
                 return;
             }
@@ -370,11 +374,7 @@ If the value entered in a cell under the **Ordered** column is larger than the a
 export class MyTreeGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs): void {
-        const row = this.data.find(e => e[this.grid.primaryKey] === event.cellID.rowID);
-        if (!row) {
-            return;
-        }
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Age") {
             if (event.newValue < 18) {
                 event.cancel = true;
@@ -399,7 +399,7 @@ export class MyHGridEventsComponent {
     ...
     public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
-        const column = this.grid.columnList.find(col => col.index === event.cellID.columnID);
+        const column = event.column;
         if (column.field === "Debut") {
             if (event.newValue > today.getFullYear()) {
                 this.toast.message = "The debut date must be in the past!";
@@ -416,7 +416,7 @@ export class MyHGridEventsComponent {
     }
 }
 ```
-Since we're passing the grid as a second argument in the `handleCellEdit` calls, we're using the passed grid's columns to find to which column the cell belongs. With the above validation in place, when a user tries to change an artist's **Debut** year or an album's **Launch Date**, the grid will not allow any dates that are greater than today.
+Here, we are validating two columns. If the user tries to change an artist's **Debut** year or an album's **Launch Date**, the grid will not allow any dates that are greater than today.
 }
 
 The result of the above validation being applied to our `@@igSelector` can be seen in the below demo:
@@ -427,6 +427,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -436,6 +437,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -445,6 +447,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-editing-events-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
@@ -530,6 +533,7 @@ In addition to the steps above, we can also style the controls that are used for
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -539,6 +543,7 @@ In addition to the steps above, we can also style the controls that are used for
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -548,6 +553,7 @@ In addition to the steps above, we can also style the controls that are used for
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-editing-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 <div class="divider--half"></div>

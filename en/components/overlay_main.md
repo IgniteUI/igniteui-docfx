@@ -18,6 +18,7 @@ The overlay service is fully integrated in the toggle directive.
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -127,6 +128,7 @@ In the below demo, we can pass the [IgxCard](card.md#card-demo) component throug
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -221,10 +223,11 @@ export class MyOverlayComponent {
 Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`attach()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave and if the container is modal or not
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" class="lazyload"></iframe>
+    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -236,7 +239,8 @@ defaultOverlaySettings = {
     positionStrategy: new GlobalPositionStrategy(),
     scrollStrategy: new NoOpScrollStrategy(),
     modal: true,
-    closeOnOutsideClick: true
+    closeOnOutsideClick: true,
+    closeOnEscape: false
 };
 ```
 <div class="divider--half"></div>

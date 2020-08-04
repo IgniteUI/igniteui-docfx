@@ -22,6 +22,7 @@ _language: ja
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -32,6 +33,7 @@ _language: ja
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -42,6 +44,7 @@ _language: ja
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -419,6 +422,7 @@ $button-theme: igx-button-theme(
 <br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -429,8 +433,9 @@ $button-theme: igx-button-theme(
 </div>
 <br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    </button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>
 </div>
 }
@@ -442,8 +447,9 @@ $button-theme: igx-button-theme(
 </div>
 <br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+    </button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="treegrid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>
 </div>
 }
