@@ -171,7 +171,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 );
 ```
 
-最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
+最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
 
 ```scss
 @include igx-grid($dark-grid-column-moving-theme);

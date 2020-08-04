@@ -162,13 +162,13 @@ this.@@igObjectRef.totalRecords = 30;
 ### ローカライズ
 最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、入力プロパティ [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) を使用します。次の手順に従います。 
 
-**ステップ 1** - `IPaginatorResourceStrings`  インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします：
+**手順 1** - `IPaginatorResourceStrings`  インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:
 
 ```ts
 import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
 ```
 
-**ステップ 2** - ページング リソース文字列を定義します:
+**手順 2** - ページング リソース文字列を定義します:
 
 ```ts
 private paginatorResourceStrings: IPaginatorResourceStrings = {
@@ -182,7 +182,7 @@ private paginatorResourceStrings: IPaginatorResourceStrings = {
 ```
 
 
-**ステップ 3** - app.module レベルでコンポーネントのグローバル i18n を変更するために、オブジェクトをパラメーターとして [changei18n]({environment:angularApiUrl}/#changei18n) 関数に渡します。これにより、アプリケーションのすべてのページング コンポーネントのリソース文字列が変更されます:
+**手順 3** - app.module レベルでコンポーネントのグローバル i18n を変更するために、オブジェクトをパラメーターとして [changei18n]({environment:angularApiUrl}/#changei18n) 関数に渡します。これにより、アプリケーションのすべてのページング コンポーネントのリソース文字列が変更されます:
 
 ```ts
 public ngOnInit(): void {
@@ -215,7 +215,7 @@ public ngOnInit(): void {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法で [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) を拡張し`$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
+最も簡単な方法で [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -240,7 +240,7 @@ $dark-button: igx-button-theme(
 
 この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
-最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
+最後の手順は、それぞれのテーマを持つコンポーネント mixin を**含める**ことです。
 
 ```scss
 @include igx-grid-paginator($dark-grid-paginator);
@@ -250,7 +250,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->igx-button mixins を `.igx-grid-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>igx-button mixin を `.igx-grid-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが[`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を貫通する必要があります。
