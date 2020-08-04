@@ -96,10 +96,9 @@ $my-type-scale: igx-type-scale($h1: $h1-style);
 
 タイポグラフィ mixin は、ネイティブ h1-h6 と p 要素の外観を含むアプリケーションのグローバル タイポグラフィ スタイルを定義します。
 
-現在 3 引数を受け付けます。
+現在 2 引数を受け付けます。
 - `$font-family` - グローバル フォント ファミリがアプリケーションで使用されます。
 - `$type-scale` - デフォルト タイプ スケールがアプリケーションで使用されます。
-- `$base-color` - 基本テキスト カラーがアプリケーションで使用されます。
 
 デフォルト タイポグラフィを上書きする場合、`igx-core` mixin の後に `igx-typography` mixin を含む必要があります。上記で定義したタイプ スケール `$my-type-scale` の利点を活用するためにデフォルト タイプ スケールにしました。
 
@@ -107,7 +106,6 @@ $my-type-scale: igx-type-scale($h1: $h1-style);
 @include igx-typography(
     $font-family: "'Roboto', sans-serif",
     $type-scale: $my-type-scale,
-    $base-color: #484848
 );
 ```
 
