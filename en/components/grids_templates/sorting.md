@@ -69,6 +69,21 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
 
+#### Sorting Indicators
+Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order. 
+
+The **@@igxName** provides a solution for this problem by indicating the index of each sorted column.
+
+@@if(igxName === "IgxGrid"){
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sorting-indicators-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-sorting-indicators' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+}
 #### Sorting through the API
 
 You can sort any column or a combination of columns through the @@igComponent API using the @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) method:

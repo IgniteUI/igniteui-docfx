@@ -541,7 +541,6 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(perPage)]="perPage"
-        [selectLabel]="'Records per page:'"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
         (pageChange)="paginate($event)">
@@ -582,7 +581,6 @@ public paginate(page: number) {
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(perPage)]="perPage"
-        [selectLabel]="'Records per page:'"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
         (pageChange)="paginate($event)">
@@ -629,7 +627,6 @@ public paginate(page: number) {
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(perPage)]="perPage"
-        [selectLabel]="'Records per page:'"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
         (pageChange)="paginate($event)">
