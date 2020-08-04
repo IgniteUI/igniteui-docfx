@@ -95,6 +95,19 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
+#### 既知の制限
+> [!NOTE] 
+> [JSZip](https://www.npmjs.com/package/jszip) のライブラリの [問題](https://github.com/Stuk/jszip/issues/617) が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
+
+
+```cmd
+npm install --save setimmediate
+```
+
+```ts
+import 'setimmediate';
+```
+
 ### API リファレンス
 
 以下は、その他の Excel Exporter サービスの API です。
