@@ -1,4 +1,4 @@
-﻿---
+---
 title: Excel からの貼り付け | 選択したデータのエクスポート| Ignite UI for Angular | インフラジスティックス 
 _description: API を使用して最小限のコードで Excel からのデータ貼り付けや選択したグリッド データを簡単にエクスポートできます。
 _keywords: export selected, igniteui for angular, infragistics
@@ -27,8 +27,8 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-paste-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-paste-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-paste-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider"></div>
 

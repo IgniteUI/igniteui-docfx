@@ -15,6 +15,7 @@ _language: ja
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -79,11 +80,12 @@ export class AppModule {}
 サンプルを正しく構成した場合、書式マスクが適用される入力が表示されます。
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
 </div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### 書式設定付き/Raw 値にバインド
@@ -122,11 +124,12 @@ public clear() {
 ```
 
 <div class="sample-container loading" style="height: 160px">
-    <iframe id="mask-sample3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-3" class="lazyload"></iframe>
+    <iframe id="mask-sample3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-3" class="lazyload"></iframe>
 </div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### マスク値を検証
@@ -277,11 +280,12 @@ inputFormat = new InputFormatPipe();
 '%' 記号が blur の値に追加されて (ユーザーが入力以外をクリックした場合など) 入力がフォーカスを取得すると削除されます。
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-4" class="lazyload"></iframe>
+    <iframe id="mask-sample4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-4" class="lazyload"></iframe>
 </div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### プレースホルダーの追加
@@ -300,11 +304,12 @@ value = null;
 ```
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample5-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-5" class="lazyload"></iframe>
+    <iframe id="mask-sample5-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-5" class="lazyload"></iframe>
 </div>
 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### API リファレンス

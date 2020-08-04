@@ -2,9 +2,10 @@
 title: Dialog Window コンポーネント
 _description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール
+_language: ja
 ---
 
-##ダイアログ ウィンドウ
+## ダイアログ ウィンドウ
 <p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な規格の警告メッセージを提供できます。</p>
 <div class="divider"></div>
 
@@ -13,7 +14,8 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
     <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -38,7 +40,7 @@ export class AppModule {}
 
 #### 通知ダイアログ
 
-通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。
+通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。 
 
 ```html
 <!--email.component.html-->
@@ -58,8 +60,7 @@ export class AppModule {}
 
 #### 標準ダイアログ
 
-標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message) を設定する必要があります。 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) と [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理する必要があります。
+標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) および [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理します。 
 
 ```html
 <!--file-manager.component.html-->
@@ -75,16 +76,17 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height:250px">
-    <iframe id="dialog-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="dialog-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
 #### カスタム ダイアログ
 
-カスタム ダイアログを作成するには、サインイン コンポーネントのテンプレートに以下のコードを追加します。ダイアログのタイトル領域は `igxDialogTitle` ディレクティブまたは ` igx-dialog-title` セレクターを使ってカスタマイズできます。アクション領域は `igxDialogActions` ディレクティブまたは ` igx-dialog-actions` セレクターを使ってカスタマイズできます。
+カスタム ダイアログを作成するには、サインイン コンポーネントのテンプレートに以下のコードを追加します。ダイアログのタイトル領域は `igxDialogTitle` ディレクティブまたは `igx-dialog-title` セレクターを使ってカスタマイズできます。アクション領域は `igxDialogActions` ディレクティブまたは `igx-dialog-actions` セレクターを使ってカスタマイズできます。
 [**igxLabel**](input_group.md) および [**igxInput**](input_group.md) ディレクティブで装飾された label と input を含む 2 つの入力グループを追加します。
 
 ```html
@@ -124,14 +126,15 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height:300px">
-    <iframe id="dialog-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="dialog-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
-#### 位置とアニメーション設定
+#### 位置とアニメーション設定 
 
 `igxDialog` が表示される位置を変更するには、2 つの方法があります。
 
@@ -177,7 +180,8 @@ public positionSettings: PositionSettings = {
 };
 ```
 
-> [!Note] 同じアプローチをアニメーション設定に使用する必要があります。`openAnimation` と `closeAnimation` プロパティを使用して、期間などのアニメーション パラメーターを定義します。
+> [!Note] 
+> 同じアプローチをアニメーション設定に使用する必要があります。`openAnimation` と `closeAnimation` プロパティを使用して、期間などのアニメーション パラメーターを定義します。
 
 `params` オブジェクトの例:
 
@@ -201,7 +205,7 @@ params: {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、ダイアログをスタイル設定するいくつかのパラメーターを受け取る方法です。
+[`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、ダイアログのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
 $my-dialog-theme: igx-dialog-theme(
@@ -215,7 +219,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > ダイアログ ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ダイアログ ウィンドウのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
 
-ダイアログウィンドウは [`IgxOverlayService`](overlay_main.md) を使用するため、スタイル設定するツールチップにカスタム テーマが適用されるよう、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
+ダイアログウィンドウは [`IgxOverlayService`](overlay_main.md) を使用するため、カスタム テーマがスタイルを設定するダイアログ ウィンドウに届くように、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 
 ```html
 <div igxOverlayOutlet>
@@ -226,13 +230,13 @@ $my-dialog-theme: igx-dialog-theme(
 ```
 
 > [!NOTE]
-> [`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、この[リンク](overlay_main.md#スタイル設定)をご覧ください。
+> [`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay_main.md#スタイル設定)をご覧ください。
 
 #### テーマを含む
 
 <div class="divider"></div>
 
-最後にコンポーネントのテーマをアプリケーションに含めます。
+最後にコンポーネントのテーマを**含めます**。
 
 `$legacy-support` が `true` に設定されている場合、**テーマ**を以下のように含めます。
 
@@ -240,7 +244,7 @@ $my-dialog-theme: igx-dialog-theme(
  @include igx-dialog($my-dialog-theme);
 ```
 >[!NOTE]
- >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
 ```scss
 :host {
@@ -259,7 +263,7 @@ $my-dialog-theme: igx-dialog-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {
@@ -272,7 +276,8 @@ $my-dialog-theme: igx-dialog-theme(
     <iframe id="dialog-styling-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 

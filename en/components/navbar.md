@@ -104,7 +104,7 @@ If all went well, you should see the following in your browser:
 
 #### Add Custom Action Icon
 
-What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar? We can easily achieve this by using the `igx-action-icon` directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
+What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar? We can easily achieve this by using the `igx-navbar-action` directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
 
 ```css
 /* navbar.component.css */
@@ -126,14 +126,14 @@ What if we want to use a custom action icon for our app navigation instead of th
     <igx-icon>favorite</igx-icon>
     <igx-icon>more_vert</igx-icon>
 
-    <igx-action-icon>
+    <igx-navbar-action>
         <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
-    </igx-action-icon>
+    </igx-navbar-action>
 </igx-navbar>
 ```
 
 > [!NOTE]
-> If [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
+> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
 
 Finally, this is how our navbar should look like with its custom action icon:
 
@@ -185,6 +185,42 @@ If the sample is configured properly, you should see the following in your brows
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+<div class="divider--half"></div>
+
+#### Add Custom Title
+
+If we want to provide a custom content for a navbar's title, we can achieve this by using `igx-navbar-title` or `igxNavbarTitle` directive. They will replace the default navbar's title provided by `title` input property. The sample below has a custom title containing a link with an image:
+
+```html
+<!--navbar.component.html-->
+
+<div class="sample-column">
+    <igx-navbar actionButtonIcon="menu" [isActionButtonVisible]="true">
+        <div igxNavbarTitle>
+            <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
+                <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
+                     width="120px" height="50px" alt="" style="margin-top: 7px;">
+            </a>
+        </div>
+
+        <igx-icon>search</igx-icon>
+        <igx-icon>favorite</igx-icon>
+        <igx-icon>more_vert</igx-icon>
+    </igx-navbar>
+</div>
+```
+
+> [!NOTE]
+> If [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) or [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) is provided, the default [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) will not be used.
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%" 
+    data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -312,7 +348,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxActionIconDirective]({environment:angularApiUrl}/classes/igxactionicondirective.html)
+* [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
+* [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
 * [IgxNavbarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
 
 Additional components and/or directives with relative APIs that were used:

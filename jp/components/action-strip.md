@@ -19,6 +19,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -62,6 +63,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 #### アクション ストリップの再利用
@@ -103,6 +105,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 ### スタイル設定
@@ -139,6 +142,7 @@ $custom-strip: igx-action-strip-theme(
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
 
