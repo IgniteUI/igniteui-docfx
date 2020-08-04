@@ -459,7 +459,7 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="tree-grid-outlet-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-outlet-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
