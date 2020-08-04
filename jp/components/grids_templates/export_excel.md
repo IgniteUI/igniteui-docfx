@@ -139,13 +139,24 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 
 @@igComponent コンポーネントのデータ エクスポートでは、行フィルタリングおよび列の非表示などの機能に応じて @@igComponent で表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
-@@if (igxName === 'IgxGrid') {
 #### 既知の制限
 
+@@if (igxName === 'IgxGrid') {
 |制限|説明|
 |--- |--- |
 |グループ化したデータのエクスポート|複数列でグループ化されたグリッド データをエクスポートすると、Excel の出力結果ではグループ化されていないフラットなコレクションになります。|
 }
+
+> [!NOTE] 
+> [JSZip](https://www.npmjs.com/package/jszip) のライブラリの [問題](https://github.com/Stuk/jszip/issues/617) が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
+
+```cmd
+npm install --save setimmediate
+```
+
+```ts
+import 'setimmediate';
+```
 
 #### API リファレンス
 
