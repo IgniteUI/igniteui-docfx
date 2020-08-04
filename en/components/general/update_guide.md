@@ -41,6 +41,20 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+### From 10.0.x to 10.1.x
+* IgxGrid
+    * The `selectedRows()` method has been reworked to be a `selectedRows` input property. This breaking change allows a user to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
+    * Binding of the `selectedRows` input could look something like this:
+    ```typescript
+    public mySelectedRows = [0, 1, 2];
+    ```
+    ```html
+    <igx-grid [data]="myData" rowSelection="multiple"
+        primaryKey="ID" [selectedRows]="mySelectedRows">
+        <!-- ... -->
+    </igx-grid>
+    ```
+
 ### From 8.x.x to 9.0.x
 
 Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added (please, refer to the following document for details: https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) . Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
