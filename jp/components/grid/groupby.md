@@ -35,9 +35,9 @@ public ngOnInit() {
 
 グループ式は、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) インターフェイスを実装します。
 
-#### グループ化 API
+#### API でグループ化
 
-グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true`に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
+グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true` に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
 
 ```html
 <igx-grid [data]="data">
@@ -107,7 +107,7 @@ export interface IGroupByRecord {
     <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
 </ng-template>
 ```
-### ページングによるグループ化
+### ページングでグループ化
 
 グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。展開または折りたたみ操作を行うと、ページングでページ数が再計算され、必要に応じてページ インデックスが調整されます。
 複数のページにまたがるグループは、ページ間で分割されます。グループ行は、開始ページでのみ表示され、後続のページでは繰り返されません。グループ行の要約情報はグループ全体に基づいて計算され、ページングの影響を受けません。
@@ -143,9 +143,105 @@ export interface IGroupByRecord {
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
 
+### カスタム グループ化
+
+igxGrid では、列ごとまたはグループ化式ごとにカスタム グループを定義できます。これにより、カスタム条件に基づいてグループ化が提供されます。これは、複雑なオブジェクトごとにグループ化する必要がある場合、または他のアプリケーション固有のシナリオで役立ちます。
+
+> [!NOTE]
+> カスタム グループ化を実装するには、まずデータを適切にソートする必要があります。このため、ベース [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張するカスタムの並べ替えストラテジを適用する必要がある場合もあります。 データが並べ替えられた後、列または特定のグループ化式に [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) を指定することにより、カスタム グループを決定できます。
+
+以下のサンプルは、`Date` によるカスタム グループ化を示しています。日付の値は、ユーザーが選択したグループ化モードに基づいて、日、週、月、または年で並べ替えられおよびグループ化されています。
+
+#### デモ
+
+<div class="sample-container loading" style="height:605px">
+    <iframe id="grid-sample-groupby-custom-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-custom-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-custom-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+</div>
+
+このサンプルでは、さまざまな日付条件のカスタム並べ替えストラテジを定義しています。
+各カスタム ストラテジ、ベースの [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張し、 [`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) メソッドを定義します。 値を並べ替えるときに使用されるカスタム比較関数です。さらに、比較に必要な日付から値を抽出します。
+
+```typescript
+class BaseSortingStrategy extends DefaultSortingStrategy {
+
+    public getParsedDate(date: any) {
+        return {
+            day: date.getDay(),
+            month: date.getMonth() + 1,
+            year: date.getFullYear()
+        };
+    }
+
+    compareValues(a: any, b: any) {
+        const dateA = this.getParsedDate(a);
+        const dateB = this.getParsedDate(b);
+        return dateA.year < dateB.year ?
+            -1 : dateA.year > dateB.year ?
+            1 : dateA.month  < dateB.month ?
+            -1 : dateA.month > dateB.month ?
+            1 : 0;
+    }
+}
+
+class DaySortingStrategy extends BaseSortingStrategy {
+    compareValues(a: any, b: any) {
+        const dateA = this.getParsedDate(a);
+        const dateB = this.getParsedDate(b);
+        return dateA.year < dateB.year ?
+            -1 : dateA.year > dateB.year ?
+            1 : dateA.month  < dateB.month ?
+            -1 : dateA.month > dateB.month ?
+            1 : dateA.day < dateB.day ?
+            -1 : dateA.day > dateB.day ?
+            1 : 0;
+    }
+}
+
+class WeekSortingStrategy extends BaseSortingStrategy {
+
+    public getWeekOfDate(a: any) {
+       return parseInt(new DatePipe("en-US").transform(a, 'w'), 10);
+    }
+
+    compareValues(a: any, b: any) {
+        const dateA = this.getParsedDate(a);
+        const dateB = this.getParsedDate(b);
+        const weekA = this.getWeekOfDate(a);
+        const weekB = this.getWeekOfDate(b);
+        return dateA.year < dateB.year ?
+            -1 : dateA.year > dateB.year ?
+            1 : weekA < weekB ?
+            -1 : weekA > weekB ?
+            1 : 0;
+    }
+}
+```
+
+[`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) 関数がグループ化式に対して定義され、選択されたグループ化モードに基づいて同じグループに属するアイテムを決定します。この関数が 0 を返すソートされた値は、同じグループの一部としてマークされます。
+
+```typescript
+ groupingComparer: (a, b) => {
+    const dateA = this.sortingStrategy.getParsedDate(a);
+    const dateB = this.sortingStrategy.getParsedDate(b);
+    if (this.groupByMode === 'Month') {
+        return dateA.month === dateB.month ? 0 : -1;
+    } else if (this.groupByMode === "Year") {
+        return dateA.year === dateB.year ? 0 : -1;
+    } else if (this.groupByMode === "Week") {
+        return this.sortingStrategy.getWeekOfDate(a) === this.sortingStrategy.getWeekOfDate(b) ? 0 : -1;
+    }
+    return dateA.day === dateB.day && dateA.month === dateB.month ? 0 : -1;
+}
+```
+
+
 ### スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
