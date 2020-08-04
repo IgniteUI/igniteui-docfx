@@ -35,9 +35,9 @@ public ngOnInit() {
 
 グループ式は、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) インターフェイスを実装します。
 
-#### グループ化 API
+#### API でグループ化
 
-グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true`に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
+グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true` に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
 
 ```html
 <igx-grid [data]="data">
@@ -107,7 +107,7 @@ export interface IGroupByRecord {
     <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
 </ng-template>
 ```
-### ページングによるグループ化
+### ページングでグループ化
 
 グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。展開または折りたたみ操作を行うと、ページングでページ数が再計算され、必要に応じてページ インデックスが調整されます。
 複数のページにまたがるグループは、ページ間で分割されます。グループ行は、開始ページでのみ表示され、後続のページでは繰り返されません。グループ行の要約情報はグループ全体に基づいて計算され、ページングの影響を受けません。
@@ -143,14 +143,14 @@ export interface IGroupByRecord {
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
 
-### カスタム Group By
+### カスタム グループ化
 
 igxGrid では、列ごとまたはグループ化式ごとにカスタム グループを定義できます。これにより、カスタム条件に基づいてグループ化が提供されます。これは、複雑なオブジェクトごとにグループ化する必要がある場合、または他のアプリケーション固有のシナリオで役立ちます。
 
 > [!NOTE]
 > カスタム グループ化を実装するには、まずデータを適切にソートする必要があります。このため、ベース [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張するカスタムの並べ替えストラテジを適用する必要がある場合もあります。 データが並べ替えられた後、列または特定のグループ化式に [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) を指定することにより、カスタム グループを決定できます。
 
-以下のサンプルは、 `Date` によるカスタム グループ化を示しています。日付の値は、ユーザーが選択したグループ化モードに基づいて、日、週、月、または年で並べ替えられおよびグループ化されています。
+以下のサンプルは、`Date` によるカスタム グループ化を示しています。日付の値は、ユーザーが選択したグループ化モードに基づいて、日、週、月、または年で並べ替えられおよびグループ化されています。
 
 #### デモ
 
@@ -241,7 +241,7 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 
 ### スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
