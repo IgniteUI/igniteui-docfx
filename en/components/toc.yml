@@ -112,7 +112,7 @@
       new: true
     - name: Sorting
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: Group By
       href: grid/groupby.md
       new: false
@@ -235,7 +235,7 @@
       new: true
     - name: Sorting
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: Summaries
       href: treegrid/summaries.md
       new: true
@@ -343,7 +343,7 @@
       new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: true

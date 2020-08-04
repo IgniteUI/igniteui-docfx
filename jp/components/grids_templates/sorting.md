@@ -68,6 +68,22 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
 
+#### 並べ替えインジケーター
+ソートされた列数が一定数以上ある場合、並べ替え順の指定がないと混乱する可能性があります。 
+
+**@@igxName** は、ソートされた各列のインデックスを示すことにより、この問題の解決策を提供します。
+
+@@if(igxName === "IgxGrid"){
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-sorting-indicators-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-sorting-indicators' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<br/>
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+</div>
+}
+
 #### API での並べ替え
 
 @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) メソッドを使用して列、複数の列の組み合わせを並べ替えできます。
