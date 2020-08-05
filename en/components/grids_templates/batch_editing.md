@@ -184,22 +184,28 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <app-hierarchical-grid-with-transactions>
-    <igx-hierarchical-grid #parentGridProducts [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
-        [rowEditable]="true">
-        <igx-row-island #rowIslandShipments [key]="'Shipments'" [primaryKey]="'ShipmentID'" [rowEditable]="true">
+    <igx-hierarchical-grid igxPreventDocumentScroll #hierarchicalGrid class="hgrid" [data]="localdata" [primaryKey]="'Artist'"
+        [rowEditable]="true" [height]="'580px'" [width]="'100%'">
+        <igx-column field="Artist" header="Artist" [editable]="false" [dataType]="'string'"></igx-column>
+        <igx-column field="HasGrammyAward" header="Has Grammy Award?" [editable]="true" [dataType]="'boolean'">
+        </igx-column>
+        ...
+        <igx-row-island [key]="'Albums'" #layout1 [primaryKey]="'Album'" [rowEditable]="true" [showToolbar]="true">
+            ...
+            <ng-template igxToolbarCustomContent let-grid="grid">
+                <button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo(grid)">Undo</button>
+                <button igxButton [disabled]="!grid.transactions.canRedo" (click)="redo(grid)">Redo</button>
+            </ng-template>
         </igx-row-island>
-    </igx--hierarchical-grid>
+    </igx-hierarchical-grid>
 </app-hierarchical-grid-with-transactions>
 ...
-<button igxButton [disabled]="!productsUndoEnabled" (click)="productsUndo()">Undo Products</button>
-<button igxButton [disabled]="!productsRedoEnabled" (click)="productsRedo()">Redo Products</button>
-<button igxButton [disabled]="!shipmentsUndoEnabled" (click)="shipmentsUndo()">Undo Shipments</button>
-<button igxButton [disabled]="!shipmentsRedoEnabled" (click)="shipmentsRedo()">Redo Shipments</button>
-...
-<button igxButton (click)="productsCommit()">Commit Products</button>
-<button igxButton (click)="productsDiscard()">Discard Products</button>
-<button igxButton (click)="shipmentsCommit()">Commit Shipments</button>
-<button igxButton (click)="shipmentsDiscard()">Discard Shipments</button>
+<div class="buttons-row">
+    <div class="buttons-wrapper">
+        <button igxButton [disabled]="!undoEnabledParent" (click)="undo(hierarchicalGrid)">Undo Parent</button>
+        <button igxButton [disabled]="!redoEnabledParent" (click)="redo(hierarchicalGrid)">Redo Parent</button>
+    </div>
+</div>
 ...
 
 ```
@@ -323,48 +329,55 @@ The following code demonstrates the usage of the [`transactions`]({environment:a
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    @ViewChild("parentGridProducts", { read: IgxHierarchicalGridComponent }) public parentGridProducts: IgxHierarchicalGridComponent;
-    @ViewChild("rowIslandShipments", { read: IgxRowIslandComponent }) public rowIslandShipments: IgxRowIslandComponent;
+    @ViewChild("layout1", { static: true })
+    private layout1: IgxRowIslandComponent;
+
+    @ViewChild("hierarchicalGrid", { static: true })
+    private hierarchicalGrid: IgxHierarchicalGridComponent;
+    
     ...
-    public get productsUndoEnabled(): boolean {
-        return this.parentGridProducts.transactions.canUndo;
+    
+    public get undoEnabledParent(): boolean {
+        return this.hierarchicalGrid.transactions.canUndo;
     }
-    public get productsRedoEnabled(): boolean {
-        return this.parentGridProducts.transactions.canRedo;
+
+    public get redoEnabledParent(): boolean {
+        return this.hierarchicalGrid.transactions.canRedo;
     }
-    public get shipmentsUndoEnabled(): boolean {
-        return this.rowIslandShipments.transactions.canUndo;
+
+    public get hasTransactions(): boolean {
+        return this.hierarchicalGrid.transactions.getAggregatedChanges(false).length > 0 || this.hasChildTransactions;
     }
-    public get shipmentsRedoEnabled(): boolean {
-        return this.rowIslandShipments.transactions.canRedo;
+
+    public get hasChildTransactions(): boolean {
+        return this.layout1.hgridAPI.getChildGrids()
+            .find(c => c.transactions.getAggregatedChanges(false).length > 0) !== undefined;
     }
-    public productsUndo() {
+    
+    ...
+    
+    public undo(grid: IgxHierarchicalGridComponent) {
         /* exit edit mode */
-        this.parentGridProducts.endEdit(/* commit the edit transaction */ false);
-        this.parentGridProducts.transactions.undo();
+        grid.endEdit(/* commit the edit transaction */ false);
+        grid.transactions.undo();
     }
-    public productsRedo() {
-        this.parentGridProducts.transactions.redo();
+
+    public redo(grid: IgxHierarchicalGridComponent) {
+        grid.transactions.redo();
     }
-    public shipmentsUndo() {
-        /* exit edit mode */
-        this.rowIslandShipments.endEdit(/* commit the edit transaction */ false);
-        this.rowIslandShipments.transactions.undo();
+
+    public commit() {
+        this.hierarchicalGrid.transactions.commit(this.localdata);
+        this.layout1.hgridAPI.getChildGrids().forEach((grid) => {
+            grid.transactions.commit(grid.data);
+        });
     }
-    public shipmentsRedo() {
-        this.rowIslandShipments.transactions.redo();
-    }
-    public productsCommit() {
-        this.parentGridProducts.transactions.commit(this.data);
-    }
-    public productsDiscard() {
-        this.parentGridProducts.transactions.clear();
-    }
-     public shipmentsCommit() {
-        this.rowIslandShipments.transactions.commit(this.data);
-    }
-    public shipmentsDiscard() {
-        this.rowIslandShipments.transactions.clear();
+
+    public discard() {
+        this.hierarchicalGrid.transactions.clear();
+        this.layout1.hgridAPI.getChildGrids().forEach((grid) => {
+            grid.transactions.clear();
+        });
     }
 }
 ```
