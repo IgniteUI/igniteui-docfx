@@ -458,6 +458,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
 * [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
 * [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
 * [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
