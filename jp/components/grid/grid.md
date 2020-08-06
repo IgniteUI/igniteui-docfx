@@ -80,7 +80,7 @@ public grid: IgxGridComponent;
 > [!NOTE]
 > [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
 
-[**Angular**](https://angular.io/) のほとんどのスタイルは [Autoprefixer](https://www.npmjs.com/package/autoprefixer) プラグインで暗示的にプレフィックスされてます。 
+[**Angular**](https://angular.io/) のほとんどのスタイルは [Autoprefixer](https://www.npmjs.com/package/autoprefixer) プラグインで暗示的にプレフィックスされてます。
 
 ただし、**グリッド レイアウト**のプレフィックスでは、[Autoprefixer](https://www.npmjs.com/package/autoprefixer) **グリッド プロパティ** をコメント `/* autoprefixer grid:on */` で有効にする必要があります。
 
@@ -94,7 +94,7 @@ public grid: IgxGridComponent;
 
     /* autoprefixer grid:on */
  ...
- ``` 
+ ```
 
 ### 列の構成
 
@@ -138,7 +138,7 @@ public grid: IgxGridComponent;
 >グループ化/移動機能と一緒にヘッダー テンプレートを使用すると、*列ヘッダー領域*は**ドラッグ可能**になり、ヘッダー テンプレートのカスタム要素部分に**ドラッグ不可**としてマークするまでアクセスできません。以下は例です。
 
 ```html
-<igx-column #col field="ProductName" header="Product Name" 
+<igx-column #col field="ProductName" header="Product Name"
     [groupable]="true" [movable]="true" [hasSummary]="true">
     <ng-template igxHeader let-col>
         <div class="text">{{col.field}}</div>
@@ -255,7 +255,7 @@ public initColumns(column: IgxGridColumn) {
 
 ### データ構造
 
-[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラットデータ**のみ取得します。描画に固有のデータ構造はフォームにあります。 
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラットデータ**のみ取得します。描画に固有のデータ構造はフォームにあります。
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -283,7 +283,7 @@ const OBJECT_ARRAY = [{
         .
         .
         .
-        ObjectKeyN: valueN 
+        ObjectKeyN: valueN
     }];
 
 ```
@@ -426,13 +426,56 @@ export class MyComponent implements OnInit {
 
 現在、グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
 
-#### ネスト データ
+#### Nested data
 
-以下は、階層データを **IgxGrid** へバインドする方法です。
-    - ネストされたデータを含むセルの`値`
-    - カスタム列テンプレート
+There are mainly two ways to bind a more complex data source to the grid.
+The grid supports binding through a "path" of properties in the data record.
+Take a look at the following data model:
+```typescript
+interface AminoAcid {
+    name: string;
+    abbreviation: {
+        short: string;
+        long: string;
+    }
+    weight: {
+        molecular: number;
+        residue: number;
+    },
+    formula: {
+        molecular: string;
+        residue: string;
+    }
+    ...
+}
+```
+For example, in order to display the weights of a given amino acid in the grid the following snippet will suffice
+```html
+<igx-column field="weight.molecular"></igx-column>
+<igx-column field="weight.residue"></igx-column>
+```
+Refer to the sample below for additional information. This type of binding supports all
+the default functionality that you would expect from the grid.
+That is all sorting and filtering operations work out of the box without any additional
+configuration. Same goes for grouping and editing operations with or without transactions as well as the ability to template the cells of the bound column.
 
-以下は使用するデータです。
+>[!WARNING]
+>The grids **do not** support this kind of binding for `primary key`, `foreign key` and `child key` properties where applicable.
+
+<div class="sample-container loading" style="height:460px">
+    <iframe id="grid-nested-data-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding-2' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+<div class="divider--half"></div>
+
+The other way to bind and visualize complex data in the **IgxGrid** is to:
+    - use the `value` of the cell, that contains the nested data
+    - and interpolate it in a custom column template
+
+Below is the data that we are going to use:
 
 ```typescript
 export const EMPLOYEE_DATA = [
@@ -519,7 +562,7 @@ export const EMPLOYEE_DATA = [
 
 #### フラット データ
 
-フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。 
+フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
 
 グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
 
@@ -548,7 +591,7 @@ export const DATA: any[] = [
 <igx-column field="Address" header="Address" width="25%" editable="true">
                 <ng-template #compositeTemp igxCell let-cell="cell">
                     <div class="address-container">
-                    // In the Address column combine the Country, City and PostCode values of the corresponding data record 
+                    // In the Address column combine the Country, City and PostCode values of the corresponding data record
                         <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
                         <br/>
                         <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
