@@ -113,7 +113,7 @@
       new: true
     - name: 並べ替え
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: グループ化
       href: grid/groupby.md
       new: false
@@ -236,7 +236,7 @@
       new: true
     - name: 並べ替え
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: treegrid/summaries.md
       new: true
@@ -344,7 +344,7 @@
       new: true
     - name: 並べ替え
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: true
