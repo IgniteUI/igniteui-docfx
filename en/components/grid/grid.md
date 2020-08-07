@@ -1,6 +1,6 @@
 ---
 title: Angular Data Grid | Material Table | Ignite UI for Angular | Infragistics
-_description: Learn how to use Ignite UI angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events 
+_description: Learn how to use Ignite UI angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events
 _keywords: angular data grid, igniteui for angular, infragistics
 ---
 
@@ -79,7 +79,7 @@ The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#a
 > [!NOTE]
 > The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
 
-In [**Angular**](https://angular.io/) most of the styles are prefixed implicitly thanks to the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) plugin. 
+In [**Angular**](https://angular.io/) most of the styles are prefixed implicitly thanks to the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) plugin.
 
 For prefixing **grid layouts** however, you need to enable the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) **grid property** with the comment `/* autoprefixer grid:on */`.
 
@@ -93,7 +93,7 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
 
     /* autoprefixer grid:on */
  ...
- ``` 
+ ```
 
 ### Columns configuration
 
@@ -137,7 +137,7 @@ Each of the columns of the grid can be templated separately. The column expects 
 >Whenever a header template is used along with grouping/moving functionality the *column header area* becomes **draggable** and you cannot access the custom elements part of the header template until you mark them as **not draggable**. Example below.
 
 ```html
-<igx-column #col field="ProductName" header="Product Name" 
+<igx-column #col field="ProductName" header="Product Name"
     [groupable]="true" [movable]="true" [hasSummary]="true">
     <ng-template igxHeader let-col>
         <div class="text">{{col.field}}</div>
@@ -181,7 +181,7 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
-When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch_editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls. 
+When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch_editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
 
 If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **not** be properly updated in the grid's underlying data source. When dealing with cell editing with a custom template, it is strongly advised to use the cell's **cell editing template**.
 
@@ -255,7 +255,7 @@ The code above will make the **ProductName** column sortable and editable and wi
 
 ### Data structure
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form: 
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form:
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -283,14 +283,14 @@ const OBJECT_ARRAY = [{
         .
         .
         .
-        ObjectKeyN: valueN 
+        ObjectKeyN: valueN
     }];
 
 ```
 >[!WARNING]
 >**The key values must not contain neither arrays or other objects**.
 
->If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.** 
+>If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
 
 ### Data binding
 
@@ -428,9 +428,52 @@ Currently, the Grid columns don't support composite keys, although you can still
 
 #### Nested data
 
-In order to bind hierarchical data to **IgxGrid** you may use:
-    - the `value` of the cell, that contains the nested data
-    - a custom column template
+There are mainly two ways to bind a more complex data source to the grid.
+The grid supports binding through a "path" of properties in the data record.
+Take a look at the following data model:
+```typescript
+interface AminoAcid {
+    name: string;
+    abbreviation: {
+        short: string;
+        long: string;
+    }
+    weight: {
+        molecular: number;
+        residue: number;
+    },
+    formula: {
+        molecular: string;
+        residue: string;
+    }
+    ...
+}
+```
+For example, in order to display the weights of a given amino acid in the grid the following snippet will suffice
+```html
+<igx-column field="weight.molecular"></igx-column>
+<igx-column field="weight.residue"></igx-column>
+```
+Refer to the sample below for additional information. This type of binding supports all
+the default functionality that you would expect from the grid.
+That is all sorting and filtering operations work out of the box without any additional
+configuration. Same goes for grouping and editing operations with or without transactions as well as the ability to template the cells of the bound column.
+
+>[!WARNING]
+>The grids **do not** support this kind of binding for `primary key`, `foreign key` and `child key` properties where applicable.
+
+<div class="sample-container loading" style="height:460px">
+    <iframe id="grid-nested-data-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding-2' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+<div class="divider--half"></div>
+
+The other way to bind and visualize complex data in the **IgxGrid** is to:
+    - use the `value` of the cell, that contains the nested data
+    - and interpolate it in a custom column template
 
 Below is the data that we are going to use:
 
@@ -548,7 +591,7 @@ The custom template:
 <igx-column field="Address" header="Address" width="25%" editable="true">
                 <ng-template #compositeTemp igxCell let-cell="cell">
                     <div class="address-container">
-                    // In the Address column combine the Country, City and PostCode values of the corresponding data record 
+                    // In the Address column combine the Country, City and PostCode values of the corresponding data record
                         <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
                         <br/>
                         <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
