@@ -161,7 +161,7 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 ||||
 |---|---|---|
 |<span class="greenCheck" />|コントロール/コンポーネントは、この特定の領域でユーザー補助に完全に対応しています。||
-|<span class="greenCheck" />*|コントロール/コンポーネントは、この特定の領域で特定の構成を実装した後にアクセスできます。|例 1: ガイドライン 2.2. For certain components additional actions and time parameters should be set; 例 2: ガイドライン 2.3. *NoopAnimationsModule* ユーティリティ モジュールを使用してアニメーションの無効化を許可します。|
+|<span class="greenCheck" />*|コントロール/コンポーネントは、この特定の領域で特定の構成を実装した後にアクセスできます。|例 1: ガイドライン 2.2. 特定のコンポーネントでは、追加のアクションと時間パラメーターを設定する必要があります。例 2: ガイドライン 2.3. *NoopAnimationsModule* ユーティリティ モジュールを使用してアニメーションの無効化を許可します。|
 |<span class="redCheck" />|コントロール/コンポーネント: 一部の種類のアクションを実行しない限り、完全にはユーザー補助に対応しません。||
 |'空白'|この特定の規則はコントロールに適用されません。||
 

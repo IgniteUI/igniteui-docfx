@@ -165,10 +165,11 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
   displayName: 'Npm config auth'
 ```
 
-Now we need to add variables for the *npm registry*, *scope* and *token*. There are two ways to do so:
+次に、*npm registry*、*scope* および *token* の変数を追加する必要があります。2 つの方法があります。 
 
- #### Define Variable Group from the Library page under Pipelines.
- [This article](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) explains how to use a variable group to store values that you want to control and make available across multiple pipelines.
+ #### パイプラインのライブラリ ページで変数グループを定義する方法
+
+ [この記事](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&amp;tabs=yaml) は、変数グループを使用して複数のパイプラインで制御および利用できる値を保存する方法を説明します。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 
   src="../../images/general/azure-ci-variable-groups.jpg"
@@ -176,9 +177,9 @@ Now we need to add variables for the *npm registry*, *scope* and *token*. There 
   alt="npm Registry および token 変数の設定"
   title="npm Registry および token 変数の設定" />
 
- #### Define the variables in the Pipeline Settings UI and reference them in your YAML file.
+ #### パイプラインの設定 UI で変数を定義し、YAML ファイルで参照する方法
 
-In the most common case, you [set the variables and use them](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline) within the YAML file.
+最も一般的なケースでは、[変数を設定して YAML ファイル内で使用します](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline)。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-new-variable-2.jpg"
@@ -207,9 +208,9 @@ before_install:
 * 暗号化して [.travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml) に追加します。
 * [リポジトリ設定](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)に追加します。
 
-### GitHub Actions Configuration
+### GitHub Actions の構成
 
-Add the following scripts before the `npm i(ci)` step to your [CI workflow configuration](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions):
+`npm i(ci)` 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions) に追加します: 
 
 ```cmd
 - run: echo "@infragistics:registry=$(npmRegistry)" >> ~/.npmrc
@@ -217,4 +218,4 @@ Add the following scripts before the `npm i(ci)` step to your [CI workflow confi
 - run: echo "$(igScope):_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
 ```
 
-Define [*secrets* (encrypted environment variables)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) and use them in the GitHub actions workflow for sensitive information like the access token. 
+[*シークレット* (暗号化された環境変数)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) を定義してアクセス トークンなどの機密情報に対して GitHub Actions ワークフローでそれらを使用します。
