@@ -17,7 +17,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <div style="display:inline-block;width:45%;text-align:center;">
       <img src="../../images/general/nodejs.svg"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
-      <a target="_blank" href="https://nodejs.org/en/download/"
+      <a target="_blank" href="https://nodejs.org/en/download/" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
         DOWNLOAD NODE
       </a>
@@ -25,7 +25,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <div style="display:inline-block;width:45%;text-align:center;">
       <img src="../../images/general/vs-code.svg"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
-      <a target="_blank" href="https://code.visualstudio.com/download"
+      <a target="_blank" href="https://code.visualstudio.com/download" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
         DOWNLOAD VS CODE
       </a>

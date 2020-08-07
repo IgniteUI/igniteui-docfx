@@ -362,15 +362,6 @@ The result of the configuration can be seem below:
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
-The following sample demonstrates how to configure row reordering in the grid. Holding onto the drag icon will allow you to move a row anywhere in the grid.
-<div class="sample-container loading" style="height:830px">
-    <iframe id="grid-row-reorder" data-src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-</div>
 <div class="divider--half"></div>
 }
 
@@ -383,17 +374,7 @@ The following sample demonstrates how to configure row reordering in the grid. H
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
-<div class="divider--half"></div>
 
-The following sample demonstrates how to configure row reordering in the tree grid. Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
-<div class="sample-container loading" style="height:560px">
-    <iframe id="tree-grid-row-reorder-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-</div>
 <div class="divider--half"></div> 
 }
 
@@ -406,23 +387,14 @@ The following sample demonstrates how to configure row reordering in the tree gr
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
-<div class="divider--half"></div>
 
-The following sample demonstrates how to configure row reordering in the hierarchical grid.
-Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
-<div class="sample-container loading" style="height:560px">
-    <iframe id="hierarchical-grid-row-reorder-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-</div>
 <div class="divider--half"></div> 
 }
 
-@@if (igxName === 'IgxGrid') {
 ### Application Demo
+@@if (igxName === 'IgxGrid') {
+
+#### Using Row Drag Events
 The following demo demonstrates how to use row drag event information to change both states of a custom component, where the row is dropped, and the source grid itself.
 Try to drag moons from the grid and drop them to their corresponding planets. Row drag ghost background is dynamically changed, depending on the hovered planet. If you succeed then the row in the grid will be selected and dragging will be disabled for it. Clicking planets will give you useful information.
 
@@ -437,14 +409,239 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 
 > [!NOTE] 
 > The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
-
-<div class="divider--half"></div>
 }
+
+#### Row Reordering Demo
+With the help of the grid's row drag events and the `igxDrop` directive, you can create a grid that allows you to reorder rows by dragging them.
+
+Since all of the actions will be happening _inside_ of the grid's body, that's where you have to attach the `igxDrop` directive:
+
+@@if (igxName === 'IgxGrid') {
+```html
+    <igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
+        ...
+    </igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+    <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+    [primaryKey]="'ID'" (onRowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
+    ...
+    </igx-tree-grid>
+    
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+    <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
+    [rowDraggable]="true" (onRowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
+    ...
+    </igx-hierarchical-grid>
+}
+
+
+> [!NOTE]
+> Make sure that there is a `primaryKey` specified for the grid! The logic needs an unique identifier for the rows so they can be properly reordered
+
+Once `rowDraggable` is enabled and a drop zone has been defined, you need to implement a simple handler for the drop event. When a row is dragged, check the following:
+@@if (igxName === 'IgxGrid') {
+  - Was the row dropped inside of the grid?
+  - If so, on which _other_ row was the dragged row dropped?
+  - Once you've found the _target_ row, swap the records' places in the `data` array
+}
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+  - Is the row expanded? If so, collapse it.
+  - Was the row dropped inside of the grid?
+  - If so, on which _other_ row was the dragged row dropped?
+  - Once you've found the _target_ row, swap the records' places in the `data` array
+  - Was the row initially selected? If so, mark it as selected.
+}
+
+Below, you can see this implemented in the component's `.ts` file:
+
+@@if (igxName === 'IgxGrid') {
+```typescript
+export class GridRowReorderComponent {
+    ...
+    public onDropAllowed(args) {
+        const event = args.originalEvent;
+        const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
+            { x: event.clientX, y: event.clientY });
+        if (currRowIndex === -1) { return; }
+        this.grid.deleteRow(args.dragData.rowID);
+        this.data.splice(currRowIndex, 0, args.dragData.rowData);
+    }
+
+    private getCurrentRowIndex(rowList, cursorPosition) {
+        for (const row of rowList) {
+            const rowRect = row.nativeElement.getBoundingClientRect();
+            if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
+                cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
+                return this.data.indexOf(this.data.find((r) => r.ID === row.rowData.ID));
+            }
+        }
+
+        return -1;
+    }
+}
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+    export class TreeGridRowReorderComponent {
+    ...
+    public rowDragStart(args: any): void {
+        const targetRow: IgxTreeGridRowComponent = args.dragData;
+        if (targetRow.expanded) {
+            this.treeGrid.collapseRow(targetRow.rowID);
+        }
+    }
+
+    public dropInGrid(args: IDropDroppedEventArgs): void {
+        const draggedRow: IgxTreeGridRowComponent = args.dragData;
+        const event = args.originalEvent;
+        const cursorPosition: Point = { x: event.clientX, y: event.clientY };
+        this.moveRow(draggedRow, cursorPosition);
+    }
+
+    private moveRow(draggedRow: IgxTreeGridRowComponent, cursorPosition: Point): void {
+        const row: IgxTreeGridRowComponent = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
+        if (!row) { return; }
+        if (row.rowData.ParentID === -1) {
+            this.performDrop(draggedRow, row).ParentID = -1;
+        } else {
+            if (row.rowData.ParentID === draggedRow.rowData.ParentID) {
+                this.performDrop(draggedRow, row);
+            } else {
+                const rowIndex = this.getRowIndex(draggedRow.rowData);
+                this.localData[rowIndex].ParentID = row.rowData.ParentID;
+            }
+        }
+        if (draggedRow.selected) {
+            this.treeGrid.selectRows([this.treeGrid.rowList.toArray()
+                .find((r) => r.rowData.ID === draggedRow.rowData.ID).rowID], false);
+        }
+
+        this.localData = [...this.localData];
+    }
+
+    private performDrop(
+        draggedRow: IgxTreeGridRowComponent, targetRow: IgxTreeGridRowComponent) {
+        const draggedRowIndex = this.getRowIndex(draggedRow.rowData);
+        const targetRowIndex: number = this.getRowIndex(targetRow.rowData);
+        if (draggedRowIndex === -1 || targetRowIndex === -1) { return; }
+        this.localData.splice(draggedRowIndex, 1);
+        this.localData.splice(targetRowIndex, 0, draggedRow.rowData);
+        return this.localData[targetRowIndex];
+    }
+
+    private getRowIndex(rowData: any): number {
+        return this.localData.indexOf(rowData);
+    }
+
+    private catchCursorPosOnElem(rowListArr: IgxTreeGridRowComponent[], cursorPosition: Point)
+        : IgxTreeGridRowComponent {
+        for (const row of rowListArr) {
+            const rowRect = row.nativeElement.getBoundingClientRect();
+            if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
+                cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
+                return row;
+            }
+        }
+
+        return null;
+    }
+}
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+    export class HGridRowReorderComponent {
+    ...
+    public rowDragStart(args: any): void {
+        const targetRow: IgxHierarchicalRowComponent = args.dragData;
+        if (targetRow.expanded) {
+            targetRow.toggle();
+        }
+    }
+
+    public rowDrop(args: IDropDroppedEventArgs): void {
+        const targetRow = args.dragData;
+        const event = args.originalEvent;
+        const cursorPosition: Point = { x: event.clientX, y: event.clientY };
+        this.moveRow(targetRow, cursorPosition);
+    }
+
+    private moveRow(draggedRow: IgxHierarchicalRowComponent, cursorPosition: Point): void {
+        const parent: IgxHierarchicalGridComponent = draggedRow.grid;
+        const rowIndex: number = this.getTargetRowIndex(parent.rowList.toArray(), cursorPosition);
+        if (rowIndex === -1) { return; }
+        draggedRow.delete();
+        parent.data.splice(rowIndex, 0, draggedRow.rowData);
+        if (draggedRow.selected) {
+            parent.selectRows([parent.rowList.toArray()
+                .find((r) => r.rowData.id === draggedRow.rowData.id).rowID], false);
+        }
+    }
+
+    private getTargetRowIndex(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point): number {
+        const targetElem: IgxHierarchicalRowComponent = this.catchCursorPosOnElem(rowListArr, cursorPosition);
+        return rowListArr.indexOf(rowListArr.find((r) => r.rowData.id === targetElem.rowData.id));
+    }
+
+    private catchCursorPosOnElem(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point)
+        : IgxHierarchicalRowComponent {
+        for (const row of rowListArr) {
+            const rowRect = row.nativeElement.getBoundingClientRect();
+            if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
+                cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
+                return row;
+            } else if (row === rowListArr[rowListArr.length - 1] && cursorPosition.y > rowRect.bottom) {
+                return row;
+            }
+        }
+    }
+}
+```
+}
+
+With these few easy steps, you've configured a grid that allows reordering rows via drag/drop! You can see the above code in action in the following demo.
+@@if (igxName === 'IgxGrid') {
+Holding onto the drag icon will allow you to move a row anywhere in the grid:
+<div class="sample-container loading" style="height:830px">
+    <iframe id="grid-row-reorder" data-src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-row-reorder-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="hierarchical-grid-row-reorder-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+}
+<div class="divider--half"></div>
 
 ### Limitations
 
 Currently, there are no known limitations for the `rowDraggable` directive.
-
 
 ### API References
 
