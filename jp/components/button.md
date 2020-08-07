@@ -99,6 +99,18 @@ export class AppModule {}
 </button>
 ```
 
+拡張 FAB を作成するには、`igx-icon` の前に任意の要素を追加できます。
+
+```html
+<button class="btn" igxButton="fab">
+    <span>like</span>
+    <igx-icon fontSet="material">favorite</igx-icon>
+</button>
+```
+
+>[!NOTE]
+>拡張 FAB テキストを適切にスタイルするには、`<span>`、`<div>` または `<p>` タグを使用します。
+
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </iframe></div>
