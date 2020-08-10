@@ -90,7 +90,7 @@ Then in order to use Japanese, Korean and Spanish resource strings, the followin
 // app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
-import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsKO } from 'igniteui-angular-i18n';
 import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
 public ngOnInit(): void {
