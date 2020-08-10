@@ -106,7 +106,7 @@
       new: false
     - name: Excel Style Filtering
       href: grid/excel_style_filtering.md
-      new: false
+      updated: true
     - name: Advanced Filtering
       href: grid/advanced_filtering.md
       new: true
@@ -229,7 +229,7 @@
       new: false
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
-      new: true
+      updated: true
     - name: Advanced Filtering
       href: treegrid/advanced_filtering.md
       new: true
@@ -337,7 +337,7 @@
       new: false
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      updated: true
     - name: Advanced Filtering
       href: hierarchicalgrid/advanced_filtering.md
       new: true
