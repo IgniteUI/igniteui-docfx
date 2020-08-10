@@ -134,7 +134,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object.
+When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object. These properties are described in the table below.
 
 #### Known Limitations
 
