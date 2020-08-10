@@ -33,6 +33,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="@@igObjectRef-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -54,6 +55,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="@@igObjectRef-column-group-selection" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-group-selection" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -146,6 +148,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="@@igObjectRef-column-selection-styles" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-selection-styles" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>

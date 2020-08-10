@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid ステート パーシステンス | Ignite UI for Angular |インフラジスティックス
 _description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxGridの状態の永続性を簡単に実現します。
@@ -96,6 +96,7 @@ public options =  { cellSelection: false; sorting: false; }
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -120,6 +121,7 @@ public initColumns(column: IgxColumnComponent) {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
@@ -129,6 +131,7 @@ public initColumns(column: IgxColumnComponent) {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 } -->

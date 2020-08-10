@@ -13,10 +13,11 @@ _language: ja
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -191,10 +192,11 @@ export class AppComponent  {
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
+    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 Drawer は `flex-basis` をホスト要素に適用すると、残りのコンテンツが残りの幅に合わせます。
@@ -239,10 +241,11 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 ```
 
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" class="lazyload"></iframe>
+    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -314,10 +317,11 @@ import { RouterModule } from "@angular/router";
 上記の手順が完了した後に、アプリは以下のようになります。
 
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-routing-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" class="lazyload"></iframe>
+    <iframe id="nav-drawer-routing-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-routing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-routing-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-routing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -380,10 +384,11 @@ $custom-theme: igx-navdrawer-theme(
 ```
 
 <div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-styling-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" class="lazyload"></iframe>
+    <iframe id="nav-drawer-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>

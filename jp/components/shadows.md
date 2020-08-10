@@ -1,4 +1,4 @@
-﻿---
+---
 title: エレベーション/シャドウ
 _description:
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
@@ -233,7 +233,8 @@ $myboringCard: igx-card-theme(
     <iframe id="card-sample-shadow-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/card-sample-shadow" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 

@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 列固定 | 列のロック | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルの Ignite UI のピン留め機能で列をロック、また API で簡単に列の並べ替えを実装できます。
@@ -34,6 +34,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -43,6 +44,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -52,6 +54,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -192,6 +195,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -202,6 +206,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -212,6 +217,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -317,6 +323,7 @@ public toggleColumn(col: IgxColumnComponent) {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -326,6 +333,7 @@ public toggleColumn(col: IgxColumnComponent) {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -335,6 +343,7 @@ public toggleColumn(col: IgxColumnComponent) {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -452,7 +461,8 @@ $custom-theme: igx-grid-theme(
     <iframe id="grid-pinning-styling" data-src='{environment:demosBaseUrl}/grid/grid-pinning-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pinning-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 

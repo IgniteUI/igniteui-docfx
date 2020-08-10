@@ -1,4 +1,4 @@
-﻿---
+---
 title: Angular Grid フィルタリング | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material テーブルでデータの高度なフィルターを設定する方法。グリッドの高度なフィルタリングがより使いやすくなりました。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
@@ -17,6 +17,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -26,6 +27,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -35,6 +37,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -124,6 +127,7 @@ ngAfterViewInit(): void {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -134,6 +138,7 @@ ngAfterViewInit(): void {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -144,6 +149,7 @@ ngAfterViewInit(): void {
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchicalgrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
@@ -467,28 +473,31 @@ $custom-drop-down: igx-drop-down-theme(
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
-    <iframe id="grid-advanced-filtering-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-advanced-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="grid-advanced-filtering-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-advanced-filtering-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:510px">
-    <iframe id="treegrid-advanced-filtering-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="treegrid-advanced-filtering-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:630px">
-    <iframe id="hierarchical-grid-advanced-filtering-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="hierarchical-grid-advanced-filtering-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-advanced-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }

@@ -12,9 +12,10 @@ _language: ja
 
 #### デモ
 <div class="sample-container loading" style="height: 90px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -56,7 +57,7 @@ export class AppModule {
 ```
 
 <div class="sample-container loading" style="height: 90px">
-    <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### プロパティ
@@ -102,9 +103,10 @@ public selectedColor: string = this.colors[3].hex;
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="radio-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radio-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -152,9 +154,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 <div class="sample-container loading" style="height: 220px">
-    <iframe id="radio-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-styling-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="radio-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -165,9 +168,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 #### デモ
 <div class="sample-container loading" style="height: 360px">
-    <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>

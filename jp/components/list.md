@@ -16,6 +16,7 @@ _language: ja
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -77,9 +78,10 @@ export class AppModule {}
 空のリストは以下のようになります:
 
 <div class="sample-container loading" style="height: 100px">
-<iframe id="list-sample-5-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-5' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-5-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -106,9 +108,10 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 300px">
-<iframe id="list-sample-6-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-6' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-6-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-6' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -130,9 +133,10 @@ export class AppModule {}
 以下は結果です:
 
 <div class="sample-container loading" style="height: 200px">
-<iframe id="list-sample-2-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-2-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
@@ -183,9 +187,10 @@ public contacts = [{
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 400px">
-<iframe id="list-sample-3-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-3-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
@@ -322,9 +327,10 @@ public selectDensity(event) {
 結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 477px">
-<iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -435,9 +441,10 @@ public leftPanPerformed(args) {
 次にリスト項目をパンニングします。
 
 <div class="sample-container loading" style="height: 500px">
-<iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -526,9 +533,10 @@ public leftPanPerformed(args) {
 以下は上記コードの結果です。
 
 <div class="sample-container loading" style="height: 365px">
-<iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>

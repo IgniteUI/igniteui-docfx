@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid データ コピー | Ignite UI for Angular | インフラジスティックス
 _description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
@@ -26,6 +26,7 @@ _language: ja
     <iframe id="grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -35,6 +36,7 @@ _language: ja
     <iframe id="tree-grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>

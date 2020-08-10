@@ -18,7 +18,8 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
     <iframe id="action-strip-paragraph-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -61,7 +62,8 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
     <iframe id="action-strip-menu-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### アクション ストリップの再利用
@@ -102,7 +104,8 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -138,7 +141,8 @@ $custom-strip: igx-action-strip-theme(
     <iframe id="action-strip-styling-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-styling" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 
