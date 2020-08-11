@@ -16,8 +16,8 @@ _language: ja
     <iframe id="snackbar-sample-1-iframe" src='{environment:demosBaseUrl}/notifications/snackbar-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -86,11 +86,11 @@ public close(element) {
 サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを介して別のメッセージを渡し、*表示時間*が終了すると非表示にします。 3 番目のコンポーネントは、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
 
 <div class="sample-container loading" style="height: 230px">
-    <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### 表示時間
@@ -151,9 +151,8 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### リストの Snackbar
@@ -237,8 +236,8 @@ public restore() {
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -373,8 +372,8 @@ $dark-snackbar: igx-snackbar-theme(
     <iframe id="snackbar-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-style" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="snackbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
