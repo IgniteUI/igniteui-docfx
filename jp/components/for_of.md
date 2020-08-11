@@ -17,8 +17,8 @@ Ignite UI for Angular では、大規模なデータをテンプレート化す�
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### 依存関係

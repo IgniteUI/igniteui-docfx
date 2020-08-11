@@ -212,8 +212,8 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -223,8 +223,8 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -234,8 +234,8 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
