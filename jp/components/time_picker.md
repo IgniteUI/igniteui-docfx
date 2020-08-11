@@ -77,7 +77,7 @@ public date: Date = new Date();
 ```
 
 #### 書式の設定
-時間の書式を設定するには、[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) オプションを使用します。
+時間の書式を設定するには、[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) の [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) オプションを使用します。
 
 以下の表は、使用可能な時間表示書式です。
 
@@ -187,7 +187,7 @@ public mode = InteractionMode.DropDown;
 
 **キーボード ナビゲーション**
 
-マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>Up</kbd> の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>Down</kbd> または `マウスホイール ダウン`は反転操作に使用できます。
+マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>上矢印</kbd>の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>下矢印</kbd>または `マウスホイール ダウン`は反転操作に使用できます。
 
 >[!NOTE]
 >タイム ピッカーの [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が設定され、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) が false の場合、時間スクロールは指定した最小/最大の時/分の値で停止します。
