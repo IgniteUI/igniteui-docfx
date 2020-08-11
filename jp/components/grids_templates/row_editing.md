@@ -459,6 +459,7 @@ $button-theme: igx-button-theme(
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
 * [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
 * [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
 * [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
