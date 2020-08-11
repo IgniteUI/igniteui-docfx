@@ -304,14 +304,14 @@ The `IgxDateRangePickerComponent` is also a validator which means it controls it
 
 #### Templating
 
-When two editors are used, the default separator can be replaced using the [`igxDateSeparator`]({environment:angularApiUrl}/classes/igxdateseparator.html) directive. Here is how to change the date separator to a hyphen `-`:
+When two editors are used, the default separator can be replaced using the [`igxDateRangeSeparator`]({environment:angularApiUrl}/classes/igxdaterangeseparatordirective.html) directive. Here is how to change the date separator to a hyphen `-`:
 
 ```html
 <igx-date-range-picker>
     <igx-date-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
     </igx-date-start>
-    <ng-template igxDateSeparator>-</ng-template>
+    <ng-template igxDateRangeSeparator>-</ng-template>
     <igx-date-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
     </igx-date-end>
