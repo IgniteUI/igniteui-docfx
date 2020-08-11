@@ -162,7 +162,7 @@ igxGrid では、列ごとまたはグループ化式ごとにカスタム グ�
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-custom-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 
-このサンプルでは、さまざまな日付条件のカスタムソート ストラテジを定義しています。
+このサンプルでは、さまざまな日付条件のカスタム ソート ストラテジを定義しています。
 各カスタム ストラテジ、ベースの [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張し、 [`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) メソッドを定義します。 値をソートするときに使用されるカスタム比較関数です。さらに、比較に必要な日付から値を抽出します。
 
 ```typescript

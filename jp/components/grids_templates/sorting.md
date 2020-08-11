@@ -141,7 +141,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxGrid') {
 
 #### リモート ソート
-@@igComponent はリモートソートをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
+@@igComponent はリモート ソートをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
 
 <div class="divider--half"></div>
 }

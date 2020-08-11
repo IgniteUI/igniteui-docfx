@@ -122,8 +122,8 @@ export class AppModule {}
 
 // app.component.ts
 
-public min: string = "09:00";
-public max: string = "18:00";
+public min: string = "09:15:30 AM";
+public max: string = "06:15:30 PM";
 
 @ViewChild("toast", { static: true })
 private toast;
@@ -143,11 +143,11 @@ format="HH:mm tt"
 (onValidationFailed)="onValidationFailed()"
 ></igx-time-picker>
 
-<igx-toast #toast message="Value must be between 09:00 and 18:00"></igx-toast>
+<igx-toast #toast message="Value must be between 09:15:30 AM and 06:15:30 PM"></igx-toast>
 
 ```
 
-無効な時間が選択された際にメッセージを表示するトーストが追加されました。範囲は (09:00〜18:00) です。また、項目のデルタと時間形式を変更しました。
+無効な時間が選択された際にメッセージを表示するトーストが追加されました。範囲は (午前 09:15:30 〜 午後 06:15:30) で、それ以外の時間部分はグレー表示されます。また、項目のデルタと時間形式を変更しました。
 
 以下は結果です。
 <div class="sample-container loading" style="height: 540px;">

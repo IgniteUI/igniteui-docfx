@@ -105,7 +105,7 @@
     - name: フィルタリング
       href: grid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: grid/excel_style_filtering.md
       new: false
     - name: 高度なフィルタリング
@@ -228,7 +228,7 @@
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: treegrid/excel_style_filtering.md
       new: true
     - name: 高度なフィルタリング
@@ -336,7 +336,7 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
       new: true
     - name: 高度なフィルタリング

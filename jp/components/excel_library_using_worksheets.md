@@ -168,7 +168,7 @@ worksheet.displayOptions.magnificationInNormalView = 300;
 
 列または行にワークシート レベル オブジェクトでソートの条件を設定することによってソートが実行されます。列または行を昇順または降順にソートすることができます。
 
-これには、シートの `sortSettings` プロパティを使用して取得できる [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの [`WorksheetSortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetsortsettings.html) に領域とソートタイプを指定します。
+これには、シートの `sortSettings` プロパティを使用して取得できる [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの [`WorksheetSortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetsortsettings.html) に領域とソート タイプを指定します。
 
 シートのソート条件は、ソート条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがワークシートで呼び出されるときに限り再適用されます。列または行を領域でソートします。'Rows' はデフォルトのソート タイプです。
 

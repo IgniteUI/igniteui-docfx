@@ -48,7 +48,7 @@ Angular データ チャート コンポーネントはさまざまな軸タイ�
 
 -   データソースはデータ項目の配列やリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、スキャッタシェイプシリーズの [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある1つのシェイプデータ列(XまたはY座標の配列)を含める必要があります ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
+-   すべてのデータ項目には、スキャッタシェイプシリーズの [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある1つのシェイプデータ列 (X または Y 座標の配列) を含める必要があります ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
 
 上記データ要件を満たすデータソースとして [SampleShapeData](data-chart-data-sources-shape.md) を使用できます。
 

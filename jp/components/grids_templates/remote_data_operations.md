@@ -1,7 +1,7 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular リモート データ操作 | Angular Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
-_description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_description: リモート フィルタリング、リモート ソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,7 +9,7 @@ _language: ja
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular リモート データ操作 | Angular Tree Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
-_description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_description: リモート フィルタリング、リモート ソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -17,7 +17,7 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular リモート データ操作 | Angular Hierarchical Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
-_description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_description: リモート フィルタリング、リモート ソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -25,7 +25,7 @@ _language: ja
 
 ### @@igComponent リモート データ操作の概要
 
-Ignite UI for Angular @@igComponent は、リモート仮想化、リモートソート、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
+Ignite UI for Angular @@igComponent は、リモート仮想化、リモート ソート、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
 
 @@if (igxName === 'IgxGrid') {
 #### デモ
