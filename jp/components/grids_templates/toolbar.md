@@ -268,7 +268,7 @@ public toolbarExportingHandler(args) {
 > `grid` - ツールバーを含む [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) への参照。
 > `toolbar` - [`Infragistics.Web.Mvc.dll`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) への参照を追加します。
 
-以下のサンプルは、列ヘッダーをクリックして並べ替えセットをクリアするためのボタンをツールバーに追加する方法です。
+以下のサンプルは、列ヘッダーをクリックしてソート セットをクリアするためのボタンをツールバーに追加する方法です。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">

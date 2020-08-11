@@ -84,22 +84,22 @@ var table = worksheet.tables().add("A1:G10", true);
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 ```
 
-### テーブルの並べ替え
+### テーブルのソート
 
-テーブル列で並べ替え条件を設定すると並べ替えが実行されます。並べ替え条件が列で設定されると、テーブルのセルの順番を決定するためにテーブルのすべての並べ替え条件が再評価されます。並べ替えの基準を満たすためにセルを移動させる必要があるとき、テーブルのセルの行全体が 1 つの単位として移動されます。
+テーブル列でソート条件を設定するとソートが実行されます。ソート条件が列で設定されると、テーブルのセルの順番を決定するためにテーブルのすべてのソート条件が再評価されます。ソートの基準を満たすためにセルを移動させる必要があるとき、テーブルのセルの行全体が 1 つの単位として移動されます。
 
-テーブルのデータが後で変更される場合、並べ替え条件は自動的に再評価されません。テーブルの並べ替え条件は、並べ替え条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがテーブルで呼び出されるときに限り再適用されます。並べ替え条件が再評価されると、表示されたセルのみが並べ替えられます。非表示行のすべてのセルは適切に維持されます。
+テーブルのデータが後で変更される場合、ソート条件は自動的に再評価されません。テーブルのソート条件は、ソート条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがテーブルで呼び出されるときに限り再適用されます。ソート条件が再評価されると、表示されたセルのみがソートられます。非表示行のすべてのセルは適切に維持されます。
 
-テーブル列から並べ替え条件へアクセスする以外に [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の `sortSettings` プロパティの `sortConditions` コレクションからも公開されます。これは、列/並べ替え条件のペアの順番に並べられたコレクションです。このコレクション内の順序は並べ替えの優先順位です。
+テーブル列からソート条件へアクセスする以外に [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の `sortSettings` プロパティの `sortConditions` コレクションからも公開されます。これは、列/ソート条件のペアの順番に並べられたコレクションです。このコレクション内の順序はソートの優先順位です。
 
-列に設定可能な並べ替え条件タイプは以下のとおりです。
+列に設定可能なソート条件タイプは以下のとおりです。
 
--   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - セル値に基づいてセルを昇順または降順に並べ替えます。
--   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - テキストまたは表示値に基づいて定義された順序でセルを並べ替えます。この並べ替え方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。
--   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルを並べ替えます。
--   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - フォントが特定の色であるかどうかによってセルを並べ替えます。
+-   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - セル値に基づいてセルを昇順または降順にソートします。
+-   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - テキストまたは表示値に基づいて定義された順序でセルをソートします。このソート方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。
+-   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルをソートします。
+-   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - フォントが特定の色であるかどうかによってセルをソートします。
 
-また WorksheetTable の `sortSettings` の `caseSensitive` プロパティは、文字列が大文字と小文字を区別して並べ替えできるかどうかを開発者が設定できます。
+また WorksheetTable の `sortSettings` の `caseSensitive` プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
 
 以下のコード スニペットは、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) に [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) を適用する方法です。
 

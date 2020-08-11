@@ -119,11 +119,11 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-480.gif 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-sorting-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Sort columns in the Angular Data Grid.">
-      <a href="grid/sorting.md" class="feature__more-details">データ グリッドの並べ替え</a>
+      <a href="grid/sorting.md" class="feature__more-details">データ グリッドのソート</a>
     </div>
     <div class="feature__details">
-      <h3 id="sorting">[並べ替え](grid/sorting.md)</h3>
-      <p>並べ替えを列レベルで実行できるため、グリッドで並べ可能な列と並べ替え無効な列を組み合わせることができます。</p>
+      <h3 id="sorting">[ソート](grid/sorting.md)</h3>
+      <p>ソートを列レベルで実行できるため、グリッドで並べ可能な列とソート無効な列を組み合わせることができます。</p>
     </div>
   </div>
 
@@ -187,7 +187,7 @@ _language: ja
     </div>
     <div class="feature__details">
       <h3 id="multi-column-headers">[複数列ヘッダー](grid/multi_column_headers.md)</h3>
-      <p>複数列ヘッダーを有効にすると共通ヘッダーで列をグループ化できます。各列グループは、その他のグループや列と組み合わせることができ、ピン固定、グループ内でインタラクティブに列移動、グループの並べ替えや非表示など多数の機能が使用できます。</p>
+      <p>複数列ヘッダーを有効にすると共通ヘッダーで列をグループ化できます。各列グループは、その他のグループや列と組み合わせることができ、ピン固定、グループ内でインタラクティブに列移動、グループのソートや非表示など多数の機能が使用できます。</p>
     </div>
   </div>
 
@@ -309,7 +309,7 @@ _language: ja
     </div>
     <div class="feature__details">
       <h3 id="column-moving">[列移動](grid/column_moving.md)</h3>
-      <p>列の移動、並べ替え、体系化が可能です。</p>
+      <p>列の移動、ソート、体系化が可能です。</p>
     </div>
   </div>
 

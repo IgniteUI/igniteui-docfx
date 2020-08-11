@@ -168,7 +168,6 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 次に、*npm registry*、*scope* および *token* の変数を追加する必要があります。2 つの方法があります。 
 
  #### パイプラインのライブラリ ページで変数グループを定義する方法
-
  [この記事](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&amp;tabs=yaml) は、変数グループを使用して複数のパイプラインで制御および利用できる値を保存する方法を説明します。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 

@@ -188,7 +188,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [セル選択](cell_selection.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)

@@ -111,7 +111,7 @@
     - name: 高度なフィルタリング
       href: grid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: grid/sorting.md
       updated: true
     - name: グループ化
@@ -234,7 +234,7 @@
     - name: 高度なフィルタリング
       href: treegrid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: treegrid/sorting.md
       updated: true
     - name: 集計
@@ -342,7 +342,7 @@
     - name: 高度なフィルタリング
       href: hierarchicalgrid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: hierarchicalgrid/sorting.md
       updated: true
     - name: 集計

@@ -412,7 +412,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 ### スタイル設定
 
-並べ替え動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -586,7 +586,7 @@ $custom-theme: igx-grid-summary-theme(
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)

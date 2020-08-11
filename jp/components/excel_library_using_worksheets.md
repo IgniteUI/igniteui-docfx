@@ -8,7 +8,7 @@ _language: ja
 
 ## ワークシートの使用
 
-Angular Excel Engine の [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。[`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) は、フィルター、並べ替え、セル書式のカスタマイズができます。
+Angular Excel Engine の [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。[`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) は、フィルター、ソート、セル書式のカスタマイズができます。
 
 ### サンプル
 
@@ -114,7 +114,7 @@ worksheet.columns(0).cellFormat.locked = false;
 | [`applyFontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applyfontcolorfilter)                 |      フォントの色に基づいてセルを絞り込むフィルターを表します。このフィルターには 1 つの色を指定します。この色のフォントのセルがデータ範囲に表示されることになります。他のセルはすべて非表示になります。     |
 | [`applyIconFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applyiconfilter)                           |                                       条件付き書式アイコンに基づいてセルを絞り込むフィルターを表します。                                      |
 | [`applyRelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applyrelativedaterangefilter) |                               フィルターの適用日を基点とした相対日付によって日付セルの範囲を絞り込むことのできるフィルターです。                              |
-| [`applyTopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applytoporbottomfilter)             |                                    並べ替えられた値リストの上位または下位にあるセルを表示できるフィルターです。                                    |
+| [`applyTopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applytoporbottomfilter)             |                                    ソートされた値リストの上位または下位にあるセルを表示できるフィルターです。                                    |
 | [`applyYearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applyyeartodatefilter)               |                             日付セルの範囲を現在の年の開始日からフィルターの評価実施日までの期間に絞り込むことのできるフィルターです。                            |
 | [`applyCustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applycustomfilter)                       |      1 つ、ないし 2 つのカスタム条件に基づいてデータを絞り込むことのできるフィルターです。この 2 つの絞り込み条件は論理積 (and) または論理和 (or) 演算子と組み合わせて使用できます。      |
 
@@ -164,13 +164,13 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.magnificationInNormalView = 300;
 ```
 
-### ワークシート レベルの並べ替え
+### ワークシート レベルのソート
 
-列または行にワークシート レベル オブジェクトで並べ替えの条件を設定することによって並べ替えが実行されます。列または行を昇順または降順に並べ替えることができます。
+列または行にワークシート レベル オブジェクトでソートの条件を設定することによってソートが実行されます。列または行を昇順または降順にソートすることができます。
 
-これには、シートの `sortSettings` プロパティを使用して取得できる [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの [`WorksheetSortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetsortsettings.html) に領域と並べ替えタイプを指定します。
+これには、シートの `sortSettings` プロパティを使用して取得できる [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの [`WorksheetSortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetsortsettings.html) に領域とソートタイプを指定します。
 
-シートの並べ替え条件は、並べ替え条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがワークシートで呼び出されるときに限り再適用されます。列または行を領域で並べ替えます。'Rows' はデフォルトの並べ替えタイプです。
+シートのソート条件は、ソート条件が追加、削除、変更される時に、または `reapplySortConditions` メソッドがワークシートで呼び出されるときに限り再適用されます。列または行を領域でソートします。'Rows' はデフォルトのソート タイプです。
 
 以下のコード スニペットは、ワークシートのセル領域を適用する方法を示します。
 
@@ -193,7 +193,7 @@ worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new Ordere
 -   列の挿入、削除、書式設定。
 -   行の挿入、削除、書式設定。
 -   ハイパーリンクの挿入。
--   データの並べ替え。
+-   データのソート。
 -   ピボット テーブルの使用
 
 [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトで `unprotect` メソッドを呼び出してワークシートの保護を削除できます。
