@@ -108,7 +108,7 @@ public exportButtonHandler() {
 
 ```
 
-上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.xlsx"  ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
+上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで ExportedDataFile.xlsx ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
 
 #### すべてのデータのエクスポート
 

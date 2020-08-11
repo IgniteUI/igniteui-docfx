@@ -131,7 +131,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 このプロパティを負の値 (-1まで) に設定すると、カテゴリが互いから離れてしまい、それらの間にギャップが生じます。
 
-このプロパティを正の値 （最大 1） に設定すると、カテゴリが互いに重なります。値が 1 の場合、チャートはカテゴリを互いの上に表示します。
+このプロパティを正の値 (最大 1) に設定すると、カテゴリが互いに重なります。値が 1 の場合、チャートはカテゴリを互いの上に表示します。
 
 以下のコードスニペットは、x 軸の [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
 

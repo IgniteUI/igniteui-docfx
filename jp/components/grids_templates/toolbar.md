@@ -80,7 +80,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
 > 階層下に Hierarchical Grid をエクスポートまたはその子グリッドがエクスポートされて、エクスポートされるデータは行のフラットなコレクションで、
-> 該当のグリッドに属します　(子グリッドはエクスポートされるデータに含まれません)。
+> 該当のグリッドに属します (子グリッドはエクスポートされるデータに含まれません)。
 }
 
 各ボタン テキストを設定するプロパティについては、以下の API セクションを確認してください。
@@ -401,7 +401,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマの 1 つを拡張します。この場合、[`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ。
 

@@ -99,7 +99,7 @@ SVG 画像はアイコンとして使用できます。はじめに [`IgxIconSer
 
 * 同じ名前のアイコンが 2 つある場合に同じフォント セット SVG アイコンが優先順位に従って表示されます。
 * SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
-* 追加のポリフィル スクリプトがインターネット　エクスプローラーで必要な場合があります。
+* 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
 
 ```typescript
 constructor(private iconService: IgxIconService) { }
@@ -128,7 +128,7 @@ public ngOnInit() {
 
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/><br/>
-`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。)　
+`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。) 
 <br/><br/>
 これを避けるためには、以下の順序に従って下さい。
 <ol>

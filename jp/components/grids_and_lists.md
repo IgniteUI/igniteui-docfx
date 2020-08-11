@@ -108,7 +108,7 @@ _language: ja
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-hiding-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Column hiding in the Angular Data Grid.">
-    　　<a href="grid/column_hiding.md" class="feature__more-details">データ グリッドに列ヘッダーを設定</a>
+      <a href="grid/column_hiding.md" class="feature__more-details">データ グリッドに列ヘッダーを設定</a>
 	</div>
     <div class="feature__details">
       <h3 id="cell-hiding">[列の非表示](grid/column_hiding.md)</h3>

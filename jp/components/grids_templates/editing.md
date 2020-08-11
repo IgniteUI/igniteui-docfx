@@ -340,7 +340,7 @@ row.delete();
 
 #### 編集イベントでのセル検証
 グリッドの編集イベントを使用して、ユーザーがグリッドを操作する方法を変更できます。
-この例では、[`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md)　を使用してカスタム エラーメッセージを表示します。
+この例では、[`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md) を使用してカスタム エラー メッセージを表示します。
 
 最初に必要なことは、グリッドのイベントにバインドすることです。
 
