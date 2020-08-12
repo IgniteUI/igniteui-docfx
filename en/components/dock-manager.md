@@ -17,6 +17,8 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox
+    </button>
 </div>
 
 <div class="divider--half"></div>

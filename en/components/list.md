@@ -17,6 +17,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -85,6 +86,7 @@ If all went great, this is how our empty list should look like:
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 Sometimes there may be a delay in your data loading. In this case you can set the list's [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isloading) property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the [`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) directive:
@@ -115,6 +117,7 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 #### Add List Items
@@ -140,6 +143,7 @@ If all went well, you should see the following in your browser:
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 Let's up our game a bit and enhance our list items. Say we want to create a list of contacts with a name and a phone number displayed under the name.
@@ -195,6 +199,7 @@ After all that our list should now look like that:
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 #### Adding Avatar and Icons
@@ -335,6 +340,7 @@ And here's the result of all that work:
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -449,6 +455,7 @@ Now try panning the list items for yourself:
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -542,6 +549,7 @@ The result from the above code is
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 

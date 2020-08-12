@@ -25,6 +25,7 @@ The @@igComponent component in Ignite UI for Angular is able to handle thousands
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
 </div>
 
 ## API References

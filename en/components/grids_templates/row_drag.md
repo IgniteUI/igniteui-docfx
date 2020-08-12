@@ -34,6 +34,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
@@ -45,6 +46,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -57,6 +59,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-row-drag-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -250,6 +253,7 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -261,6 +265,7 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -293,6 +298,7 @@ The drag ghost can be templated on every grid level, making it possible to have 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -360,6 +366,7 @@ The result of the configuration can be seem below:
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div>
@@ -373,6 +380,7 @@ The result of the configuration can be seem below:
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div> 
@@ -386,6 +394,7 @@ The result of the configuration can be seem below:
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div> 
@@ -405,6 +414,7 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 > [!NOTE] 

@@ -34,6 +34,7 @@ While browsers natively provide content search functionality, most of the time t
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -45,6 +46,7 @@ While browsers natively provide content search functionality, most of the time t
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 }

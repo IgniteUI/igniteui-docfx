@@ -211,6 +211,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
@@ -222,6 +223,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 
@@ -233,6 +235,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-state" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 }
 

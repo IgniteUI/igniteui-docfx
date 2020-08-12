@@ -16,6 +16,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -107,6 +108,7 @@ The final result would be something like that:
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 #### Styling
@@ -158,6 +160,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -172,6 +175,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 

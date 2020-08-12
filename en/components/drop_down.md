@@ -15,6 +15,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -159,6 +160,8 @@ If the sample is configured properly, a list of countries should be displayed as
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
 </div>
 
 #### Grouping hierarchical data
@@ -238,6 +241,8 @@ You can see the results in the sample below:
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
 </div>
 
 #### Drop Down as menu
@@ -301,6 +306,8 @@ export class MyMenuComponent {
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
 </div>
 
 #### Navigation directive
@@ -362,6 +369,7 @@ export class InputDropDownComponent {
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -447,6 +455,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div>
