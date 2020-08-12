@@ -15,8 +15,8 @@ Angular pagination in the @@igComponent is configurable via the [`paging`]({envi
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -25,8 +25,8 @@ Angular pagination in the @@igComponent is configurable via the [`paging`]({envi
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -35,8 +35,8 @@ Angular pagination in the @@igComponent is configurable via the [`paging`]({envi
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -141,8 +141,8 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider--half"></div>
@@ -380,8 +380,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -393,9 +393,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
 }
@@ -408,9 +408,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
 }

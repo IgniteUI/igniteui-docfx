@@ -35,8 +35,8 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -46,8 +46,8 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -58,8 +58,8 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -144,7 +144,7 @@ export class @@igxNameRowDragComponent {
 
 #### ドロップ エリア イベント ハンドラー
 
-テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop`の [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) イベントを宣言する必要があります。
+テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop` の [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) イベントを宣言する必要があります。
 
 はじめに、`enter` と `leave` ハンドラーを見てみましょう。これらのメソッドでは、ドラッグの **ghost** のアイコンを変更して、行をドロップできる領域の上にあることをユーザーに示すことができます。
 
@@ -252,8 +252,8 @@ export class @@igxNameRowDragComponent {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -264,8 +264,8 @@ export class @@igxNameRowDragComponent {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -297,8 +297,8 @@ export class @@igxNameRowDragComponent {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -366,18 +366,18 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-以下のサンプルは、グリッドで行の並べ替えを構成する方法を示します。ドラッグ アイコンを押下しながら、グリッド内で好きな場所に行を移動できます。
+以下のサンプルは、グリッドで行のソートを構成する方法を示します。ドラッグ アイコンを押下しながら、グリッド内で好きな場所に行を移動できます。
 <div class="sample-container loading" style="height:830px">
     <iframe id="grid-row-reorder" data-src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -388,19 +388,19 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-以下のサンプルは、ツリー グリッドで行の並べ替えを構成する方法を示します。行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
+以下のサンプルは、ツリー グリッドで行のソートを構成する方法を示します。行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
 <div class="sample-container loading" style="height:560px">
     <iframe id="tree-grid-row-reorder-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div> 
 }
@@ -411,20 +411,20 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-以下のサンプルでは、階層グリッドで行の並べ替えを構成する方法を示します。
+以下のサンプルでは、階層グリッドで行のソートを構成する方法を示します。
 行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
 <div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-row-reorder-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div> 
 }
@@ -439,8 +439,8 @@ enum DragIcon {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">codesandboxb で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-1" data-demos-base-url="{environment:demosBaseUrl}">stackblitzb で表示</button>
 </div>
 
 > [!NOTE] 

@@ -13,8 +13,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <iframe id="checkbox-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/checkbox-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -97,8 +97,8 @@ The final result would be something like that:
     <iframe id="checkbox-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Label Positioning
@@ -203,8 +203,8 @@ After all that is done, our application should look like this:
     <iframe id="checkbox-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### Styling
@@ -272,8 +272,8 @@ If `$legacy-support` is set to `false`(default), include the component **css var
     <iframe id="checkbox-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider--half"></div>

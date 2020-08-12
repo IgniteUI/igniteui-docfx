@@ -14,8 +14,8 @@ _language: ja
     <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -77,13 +77,13 @@ public date: Date = new Date();
 ```
 
 #### 書式の設定
-時間の書式を設定するには、[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) オプションを使用します。
+時間の書式を設定するには、[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) の [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) オプションを使用します。
 
 以下の表は、使用可能な時間表示書式です。
 
 | 書式 | 説明 |
 |:-------:|:-----------|
-| `h` | 先行ゼロのない 12 時間形式 (1..12)　で時間フィールドを書式設定します。 | 
+| `h` | 先行ゼロのない 12 時間形式 (1..12) で時間フィールドを書式設定します。 | 
 | `hh` | 先行ゼロのある 12 時間形式 (01..12) で時間フィールドを書式設定します。 | 
 | `H` | 先行ゼロがない 24 時間形式 (0..23) で時間フィールドを書式設定します。 | 
 | `HH` | 先行ゼロがある 24 時間形式 (00..23) の時フィールドを書式設定します。 | 
@@ -122,8 +122,8 @@ export class AppModule {}
 
 // app.component.ts
 
-public min: string = "09:00";
-public max: string = "18:00";
+public min: string = "09:15:30 AM";
+public max: string = "06:15:30 PM";
 
 @ViewChild("toast", { static: true })
 private toast;
@@ -143,19 +143,19 @@ format="HH:mm tt"
 (onValidationFailed)="onValidationFailed()"
 ></igx-time-picker>
 
-<igx-toast #toast message="Value must be between 09:00 and 18:00"></igx-toast>
+<igx-toast #toast message="Value must be between 09:15:30 AM and 06:15:30 PM"></igx-toast>
 
 ```
 
-無効な時間が選択された際にメッセージを表示するトーストが追加されました。範囲は (09:00〜18:00) です。また、項目のデルタと時間形式を変更しました。
+無効な時間が選択された際にメッセージを表示するトーストが追加されました。範囲は (午前 09:15:30 〜 午後 06:15:30) で、それ以外の時間部分はグレー表示されます。また、項目のデルタと時間形式を変更しました。
 
 以下は結果です。
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -187,7 +187,7 @@ public mode = InteractionMode.DropDown;
 
 **キーボード ナビゲーション**
 
-マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>Up</kbd> の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>Down</kbd> または `マウスホイール ダウン`は反転操作に使用できます。
+マウス キャレットは、時、分、AM/PM プレースホルダーに配置できます。<kbd>上矢印</kbd>の押下またはマウス ホイールアップした後に時または分が増加します。<kbd>下矢印</kbd>または `マウスホイール ダウン`は反転操作に使用できます。
 
 >[!NOTE]
 >タイム ピッカーの [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が設定され、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) が false の場合、時間スクロールは指定した最小/最大の時/分の値で停止します。
@@ -204,8 +204,8 @@ public mode = InteractionMode.DropDown;
     <iframe id="timepicker-dropdown-iframe" data-src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -247,8 +247,8 @@ public date: Date = new Date();
     <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 #### ドロップダウン モードのテンプレート化
@@ -327,8 +327,8 @@ public selectNow(timePicker: IgxTimePickerComponent) {
     <iframe id="time-picker-sample-6" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -393,7 +393,7 @@ export class TimepickerStylingComponent {
  @include igx-time-picker($my-time-picker-theme);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。
+>コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -425,8 +425,8 @@ export class TimepickerStylingComponent {
     <iframe id="time-picker-styling" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 

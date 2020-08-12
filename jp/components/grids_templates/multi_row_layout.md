@@ -12,9 +12,9 @@ _language: ja
     <iframe id="grid-multi-row-layout-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>	
 </div>	
 <br/>	
-<div>	
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>	
 </div>	
 
 
@@ -106,8 +106,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### レイアウトの構成
@@ -116,7 +116,7 @@ _language: ja
 列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) を計算して設定するのが難しい場合があります。  特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
 
 * 設定全体の行数を設定します。すべてのレイアウトは同じ行数である必要があります。
-* `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグして並べ替えます。
+* `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグしてソートします。
 * 各レイアウトに特定の設定を列数と幅に合わせて設定します。設定は現在選択されているレイアウトを参照します。
 * レイアウト プレビューで列セルのサイズを変更して、より多くの列/行にまたがるようにしたり、`削除`ボタンを使用して列セルを消去したりできます。
 * プレビューで列チップをドラッグして列を設定します。
@@ -130,7 +130,7 @@ _language: ja
 </div>
 
 ### スタイル設定
-igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGrid を使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。     
 
@@ -227,7 +227,7 @@ $my-custom-schema: extend($light-schema, (
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが[`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。 
 
@@ -245,8 +245,8 @@ $my-custom-schema: extend($light-schema, (
     <iframe id="grid-multi-row-layout-styling" data-src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-row-layout-styling" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
  ### API リファレンス	
@@ -264,7 +264,7 @@ $my-custom-schema: extend($light-schema, (
 * [@@igComponent 概要](@@igMainTopic.md)	
 * [仮想化とパフォーマンス](virtualization.md)	
 * [ページング](paging.md)	
-* [並べ替え](sorting.md)	
+* [ソート](sorting.md)	
 * [列のサイズ変更](column_resizing.md)	
 * [選択](selection.md)	
 

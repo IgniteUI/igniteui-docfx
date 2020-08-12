@@ -34,8 +34,8 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -44,8 +44,8 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
     <iframe id="treegrid-selection-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -54,8 +54,8 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
     <iframe id="hierarchical-grid-selection-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -130,7 +130,7 @@ public handleRowSelection(event) {
 
 #### 複数選択
 
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で複数行選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multiple` に設定します。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用して複数行を選択できます。選択はスクロール、ページング、および並べ替えとフィルター、などのデータ操作で保持されます。行を選択するには、セルをクリックするか、セルにフォーカスがあるときにスペースキーを押します。1 つの行を選択し、Shift キーを押しながら別の行をクリックすると、行の範囲全体が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。Ctrl キーを押しながらクリックすると、行が切り替わり、前の選択が保持されます。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で複数行選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multiple` に設定します。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用して複数行を選択できます。選択はスクロール、ページング、およびソートとフィルターリング、などのデータ操作で保持されます。行を選択するには、セルをクリックするか、セルにフォーカスがあるときにスペースキーを押します。1 つの行を選択し、Shift キーを押しながら別の行をクリックすると、行の範囲全体が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。Ctrl キーを押しながらクリックすると、行が切り替わり、前の選択が保持されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -371,8 +371,8 @@ public getSelectedRows(args) {
     <iframe id="grid-selection-template-numbering-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-numbering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-numbering-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-template-numbering-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-numbering-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -381,8 +381,8 @@ public getSelectedRows(args) {
     <iframe id="tree-grid-selection-template-numbers-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -391,8 +391,8 @@ public getSelectedRows(args) {
     <iframe id="hierarchical-grid-selection-template-numbers-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-selection-template-numbers-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -404,8 +404,8 @@ public getSelectedRows(args) {
     <iframe id="grid-selection-template-excel-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-excel' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-excel-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-template-excel-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-template-excel-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -417,8 +417,8 @@ public getSelectedRows(args) {
     <iframe id="grid-conditional-row-selectors-iframe" src='{environment:demosBaseUrl}/grid/grid-conditional-row-selectors' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -427,8 +427,8 @@ public getSelectedRows(args) {
     <iframe id="treegrid-conditional-row-selectors-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -437,8 +437,8 @@ public getSelectedRows(args) {
     <iframe id="hierarchical-grid-conditional-row-selectors-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-conditional-row-selectors-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }

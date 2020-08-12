@@ -16,9 +16,9 @@ _language: ja
     <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
@@ -165,9 +165,9 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
     <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>

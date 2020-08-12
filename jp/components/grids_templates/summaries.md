@@ -35,8 +35,8 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -45,8 +45,8 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -55,8 +55,8 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -83,7 +83,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
  - earliest
  - latest
 
-[`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) プロパティを `true` に設定すると **@@igComponent 集計** が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを `number` または `date` に設定します。
+[`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) プロパティを `true` に設定すると **@@igComponent 集計**が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを `number` または `date` に設定します。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
@@ -312,8 +312,8 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-alldata-summaries-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -322,8 +322,8 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -332,8 +332,8 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-allData-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 
@@ -363,8 +363,8 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-groupby-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-groupby-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-groupby-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -391,8 +391,8 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-child-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-child-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-child-summary-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
 <div class="divider--half"></div>
@@ -412,7 +412,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 ### スタイル設定
 
-並べ替え動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -438,7 +438,7 @@ $custom-theme: igx-grid-summary-theme(
 ```
 
 >[!NOTE]
- >コンポーネントが[`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
  ```scss
 :host {
@@ -480,9 +480,9 @@ $custom-theme: igx-grid-summary-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
+テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary) の 1 つを拡張します。:
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary) の 1 つを拡張します。
 
 ```scss
 // Extending the light grid summary schema
@@ -527,8 +527,8 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-groupby-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-groupby-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-groupby-summary-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -539,8 +539,8 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-summary-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-summary-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-summary-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -551,8 +551,8 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-summary-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-summary-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-summary-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -586,7 +586,7 @@ $custom-theme: igx-grid-summary-theme(
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)

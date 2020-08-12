@@ -35,8 +35,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -46,8 +46,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -236,7 +236,7 @@ public updateExactSearch() {
 
 #### 永続化
 
-@@igComponent のフィルターや並べ替え、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティの変更時も強調表示が保持されます。
+@@igComponent のフィルターやソート、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティの変更時も強調表示が保持されます。
 
 #### アイコンの追加
 
@@ -397,7 +397,7 @@ public clearSearch() {
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
 * [ページング](paging.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)

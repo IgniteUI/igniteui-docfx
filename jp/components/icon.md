@@ -14,9 +14,9 @@ _language: ja
     <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
     </button>
 </div>
 
@@ -99,7 +99,7 @@ SVG 画像はアイコンとして使用できます。はじめに [`IgxIconSer
 
 * 同じ名前のアイコンが 2 つある場合に同じフォント セット SVG アイコンが優先順位に従って表示されます。
 * SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
-* 追加のポリフィル スクリプトがインターネット　エクスプローラーで必要な場合があります。
+* 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
 
 ```typescript
 constructor(private iconService: IgxIconService) { }
@@ -118,9 +118,9 @@ public ngOnInit() {
     <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
 </iframe></div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
     </button>
 </div>
 
@@ -128,7 +128,7 @@ public ngOnInit() {
 
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/><br/>
-`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。)　
+`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。) 
 <br/><br/>
 これを避けるためには、以下の順序に従って下さい。
 <ol>
@@ -175,7 +175,7 @@ $custom-icon-theme: igx-icon-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -191,8 +191,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### 6.2.0 の重大な変更

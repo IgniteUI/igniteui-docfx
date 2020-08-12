@@ -13,9 +13,9 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
     <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -134,9 +134,9 @@ public typeVertical = SplitterType.Vertical;
     <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -188,7 +188,7 @@ $splitter-theme: igx-splitter-theme(
 
 Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を通す必要があります。一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -206,8 +206,8 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
     <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### API リファレンス

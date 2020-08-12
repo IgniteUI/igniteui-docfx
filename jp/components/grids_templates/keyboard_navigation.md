@@ -46,7 +46,7 @@ _language: ja
 
 ### ヘッダー ナビゲーション
 
-**@@igxName** ヘッダーのキーボード ナビゲーションが完全にサポートされるようになりました。列ヘッダーは矢印キーで簡単にトラバースできます。さらに、**フィルタリング**、**並べ替え**、**グループ化**などの列操作をトリガーするキーの組み合わせがいくつかあります。
+**@@igxName** ヘッダーのキーボード ナビゲーションが完全にサポートされるようになりました。列ヘッダーは矢印キーで簡単にトラバースできます。さらに、**フィルタリング**、**ソート**、**グループ化**などの列操作をトリガーするキーの組み合わせがいくつかあります。
 **@@igxName** ヘッダー コンテナーがフォーカスされている場合、以下のキー組み合わせを使用できます。
 
 #### キーの組み合わせ
@@ -61,8 +61,8 @@ _language: ja
  - <kbd>End</kbd> - 行の右端のセルへ移動; 複数行レイアウトまたは複数列ヘッダーが有効な場合、同じレベルの右端のセルへ移動
  - <kbd>Alt + L</kbd> - 詳細フィルタリングが有効な場合、詳細フィルタリング ダイアログを開きます。
  - <kbd>Ctrl + Shift + L</kbd> - 列がフィルター可能な場合、Excel スタイル フィルターまたはデフォルト (行) フィルターを開きます。
- - <kbd>Ctrl + Arrow Up</kbd> - アクティブな列ヘッダーを昇順に並べ替えます。列が昇順で既に並べ替えられている場合、並べ替え状態を削除します。
- - <kbd>Ctrl + Arrow Down</kbd> - アクティブな列ヘッダーを降順に並べ替えます。列が降順で既に並べ替えられている場合、並べ替え状態を削除します。
+ - <kbd>Ctrl + Arrow Up</kbd> - アクティブな列ヘッダーを昇順にソートします。列が昇順で既にソートされている場合、ソート状態を削除します。
+ - <kbd>Ctrl + Arrow Down</kbd> - アクティブな列ヘッダーを降順にソートします。列が降順で既にソートされている場合、ソート状態を削除します。
  - <kbd>Space</kbd> - 列を選択します。列がすでに選択されている場合、選択を解除します。
 @@if (igxName === "IgxGrid") { - <kbd>Shift + Alt + 左矢印</kbd> - 列がグループ化可能としてマークされている場合、列をグループ化します。
  - <kbd>Shift + Alt + 右矢印</kbd> - 列がグループ化可能としてマークされている場合、列のグループ化を解除します。
@@ -109,8 +109,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -120,8 +120,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -131,8 +131,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tgrid-keyboardnav-guide-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -232,8 +232,8 @@ public customKeydown(args: IGridKeydownEventArgs) {
     <iframe id="grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -261,8 +261,8 @@ public customKeydown(args: IGridKeydownEventArgs) {
     <iframe id="hgrid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hgrid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hgrid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -289,8 +289,8 @@ public customKeydown(args: IGridKeydownEventArgs) {
     <iframe id="tree-grid-custom-keyboard-navigation-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-custom-keyboard-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 }
 
@@ -316,7 +316,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 * [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)

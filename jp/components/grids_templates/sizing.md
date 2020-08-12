@@ -56,7 +56,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/width-null-scroll-v2.jpg" style="width: 80%"/>
 
-* グリッドに並べ替えの親要素があり、overflow セットがない場合、すべての列が表示されます。それ以外の場合、親要素に overflow `auto` または `scroll` がある場合、その親要素のスクロールバーはネイティブにレンダリングされます。次の例では、視覚化を容易にするために親の高さが大きくなっています。
+* グリッドにソートの親要素があり、overflow セットがない場合、すべての列が表示されます。それ以外の場合、親要素に overflow `auto` または `scroll` がある場合、その親要素のスクロールバーはネイティブにレンダリングされます。次の例では、視覚化を容易にするために親の高さが大きくなっています。
 
     <img src="../../images/grid_sizing/width-null-parent-scroll-v2.jpg" style="width: 80%"/>
 
