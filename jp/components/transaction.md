@@ -8,7 +8,7 @@ _language: ja
 
 ## トランザクション サービス
 
-[`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用できる組み込み可能なミドルウェアです。
+[`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用できる組み込み可能なミドルウェアです ([Angular DI により](https://angular.io/guide/dependency-injection))。
     <img src="https://cdn-images-1.medium.com/max/800/1*O-6DidcFW_XCSqgKRfXf_Q.png"
         style="display:flex;max-height:400px;margin:auto auto 20px auto;" />
 
@@ -26,7 +26,7 @@ _language: ja
 * [igxHierarchicalGrid 一括編集とトランザクション](hierarchicalgrid/batch_editing.md)
 * [igxTreeGrid 一括編集とトランザクション](treegrid/batch_editing.md)
 
-トランザクション サービスが提供する利点に関する詳細については、[Building a transaction service for managing large scale editing experiences](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e) ブログ (英語) をご覧ください。
+[`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html)が提供する利点に関する詳細については、[Building a transaction service for managing large scale editing experiences](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e) ブログ (英語) をご覧ください。
 
 ### その他のリソース
 <div class="divider--half"></div>
@@ -37,4 +37,4 @@ _language: ja
 * [Grid 一括編集](grid/batch_editing.md)
 * [Tree Grid 一括編集](treegrid/batch_editing.md)
 * [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)
-* ["Building a transaction service for managing large scale editing experiences」 ブログ](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e) (英語)
+* [「Building a transaction service for managing large scale editing experiences」 ブログ](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e) (英語)

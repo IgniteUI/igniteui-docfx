@@ -1,6 +1,6 @@
 ---
 title: ブレット グラフ | データ プレゼンテーションと可視化 | Ignite UI for Angular | インフラジスティックス
-_description: Bullet Graph　コンポーネントは、データ範囲の表示、複数の測定値の比較に適しています。インフラジスティックス データ視覚化ツールを是非お試しください。
+_description: Bullet Graph コンポーネントは、データ範囲の表示、複数の測定値の比較に適しています。インフラジスティックス データ視覚化ツールを是非お試しください。
 _keywords: Bullet Graph, Ignite UI for Angular, Infragistics, ブレット グラフ, インフラジスティックス
 mentionedTypes: ['XamBulletGraph']
 _language: ja
