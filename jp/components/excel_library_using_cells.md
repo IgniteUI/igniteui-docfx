@@ -253,9 +253,9 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトに関連付けされ、`associatedMergedCellsRegion` プロパティからアクセスできるようになります。[`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトも結果としてセルと同じ値およびセル書式になります。
 
-領域または領域内の任意のセルの値（またはセル書式）を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
+領域または領域内の任意のセルの値 (またはセル書式) を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
 
-結合されたセル領域を作成するには、セルの範囲を [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
+結合されたセル領域を作成するには、セルの範囲を [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列 (左上隅のセル) のインデックス、および終了する行と列 (右下隅のセル) のインデックスを決定します。
 
 ```ts
 var workbook = new Workbook();

@@ -14,7 +14,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>
@@ -83,7 +85,7 @@ In the next sample, we'll use a different positioning strategy so that the conte
 The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) provider. The `open`, `close` and `toggle` methods accept optional overlay settings that control how the content is displayed. If omitted, the default overlay settings are used as seen in the previous sample.
 
 >[!NOTE]
-> By defaut the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property is set to `true`. In order to disable this functionallity, the property has to be set to `false`.
+> By default, the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property is set to `true`. In order to disable this functionality, the property has to be set to `false`. Additionally, the [`closeOnEscape`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonescape) property defaults to `false`, so in order to make use of it, we have to set it to `true`.
 
 ```typescript
 // template.component.ts
@@ -99,6 +101,7 @@ The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApi
 
     public _overlaySettings = {
         closeOnOutsideClick: false,
+        closeOnEscape: true,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings)
     };
 
@@ -114,7 +117,9 @@ This is how our toggle should look like now:
     <iframe id="toggle-iframe" src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>
@@ -145,7 +150,9 @@ After these changes the toggle should work exactly in the same way.
     <iframe id="toggle-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>
@@ -174,7 +181,9 @@ If all went well, it will look like this:
     <iframe id="toggle-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>
@@ -197,7 +206,9 @@ public offsetToggle() {
     <iframe id="toggle-sample-4-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>

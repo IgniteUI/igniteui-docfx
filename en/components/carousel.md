@@ -13,7 +13,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="carousel-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
     </button>
@@ -197,9 +199,9 @@ This carousel is going to contain slides with forms and images:
     <iframe id="carousel-with-components-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-with-components-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-with-components-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-with-components-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-with-components-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
@@ -229,9 +231,9 @@ The demo below demonstrates the different types of animations, which the carouse
     <iframe id="carousel-animations-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-animations-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-animations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-animations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-animations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 
@@ -333,9 +335,9 @@ These configurions will have the following result:
 <iframe id="carousel-no-navigation-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-no-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-no-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-no-navigation-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
 </div>
 

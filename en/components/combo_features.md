@@ -17,8 +17,8 @@ The following demo demonstrates some of the combo features that are enabled/disa
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -45,11 +45,13 @@ The demo uses [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponen
     <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
         [filterable]="filterable"
+        [showSearchCaseIcon]="showSearchCaseIcon"
         [disabled]="disabled">
     </igx-combo>
 </div>
 <div class="switch-container">
     <igx-switch [(ngModel)]="filterable">Enable Filtering</igx-switch><br />
+    <igx-switch *ngIf="filterable" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch><br />
     <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch><br />
     <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch><br />
     <igx-switch [(ngModel)]="disabled">Disabled</igx-switch>
@@ -60,6 +62,7 @@ The demo uses [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponen
     @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
 
     public filterable = true;
+    public showSearchCaseIcon = true;
     public customValues = true;
     public disabled = false;
 
@@ -123,17 +126,27 @@ For example, with the above settings, the Combo's list will display centered, us
     <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider--half"></div>
+
+> [!Note]
+> `IgxComboComponent` uses [**AutoPositionStrategy**]({environment:angularApiUrl}/classes/autopositionstrategy.html) as a default
+[position strategy](overlay_position.md).
 
 ## Filtering
 By default filtering in the combo is enabled. It can be disabled using the following code:
 
 ```html
 <igx-combo [filterable]="false"></igx-combo>
+```
+
+Filtering options can be further enhanced by enabling the search case sensitivity. To display the case-sensitive icon in the search input, set the [showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showSearchCaseIcon) property to true.
+
+```html
+<igx-combo [showSearchCaseIcon]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>

@@ -13,6 +13,7 @@ With only a few lines of code, users can easily localize the strings in Ignite U
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
@@ -90,7 +91,7 @@ Then in order to use Japanese, Korean and Spanish resource strings, the followin
 // app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
-import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsKO } from 'igniteui-angular-i18n';
 import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
 public ngOnInit(): void {

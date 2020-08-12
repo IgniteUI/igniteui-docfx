@@ -45,11 +45,11 @@ Ignite UI for Angular ツリーマップ コンポーネントは、以下のタ
 
 型は [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) プロパティの設定により定義されます。[`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) プロパティが指定されていない場合は、既定では [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) 型が表示されます。データを表示するようになる時にはさまざまなタイル アルゴリズムがあります。すべてのアルゴリズムには、ユーザーのニーズに基づいて利点があります。最適なアスペクト比を得ることを目的とするものもあります。ノードは可能な限り長方形に近くなります。その他のアルゴリズムは、要素の初期順序を保持することを目的としています。データソース内で互いに近いオブジェクトは、ツリーマップ上で互いに近くに配置されます。
 
--   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
+-   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによってソートされます。
 
 -   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice) レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
 
--   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) レイアウトのタイル アルゴリズムでは、SliceAndDice より縦横比がより正確で、Squarified より適切に並べ替えされます。
+-   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) レイアウトのタイル アルゴリズムでは、SliceAndDice より縦横比がより正確で、Squarified より適切にソートされます。
 
 ### レイアウトの方向
 
