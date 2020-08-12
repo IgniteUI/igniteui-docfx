@@ -19,7 +19,6 @@ This mode is useful when you need to display master-detail style data in a hiera
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-master-detail-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
 </div>
 
 

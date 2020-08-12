@@ -18,8 +18,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
 </div>
 
 ### Usage
@@ -121,8 +119,6 @@ This is how our toggle should look like now:
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
 </div>
 
 #### Automatic Toggle Actions
@@ -154,8 +150,6 @@ After these changes the toggle should work exactly in the same way.
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
 </div>
 
 >[!NOTE]
@@ -185,8 +179,6 @@ If all went well, it will look like this:
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
     </button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
 </div>
 
 #### Offsetting the Toggle Container
@@ -209,8 +201,6 @@ public offsetToggle() {
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
-    </button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
     </button>
 </div>
 

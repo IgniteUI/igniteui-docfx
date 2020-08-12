@@ -17,8 +17,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     </button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
     </button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
-    </button>
 </div>
 
 
