@@ -358,7 +358,7 @@ public togglePinning(row: IgxGridRowComponent, event) {
 </igx-grid>
 ```
 
-次に、`dropped` イベントを使用して並べ替えとピン固定/ピン固定解除のロジックを処理できます。
+次に、`dropped` イベントを使用してソートとピン固定/ピン固定解除のロジックを処理できます。
 
 ```typescript
 public onDropAllowed(args) {
@@ -389,7 +389,7 @@ public onDropAllowed(args) {
 }
 ```
 
-これにより、行を並べ替えたり、ピン固定とピン固定解除の行コレクション間で移動できるようになります。
+これにより、行をソートしたり、ピン固定とピン固定解除の行コレクション間で移動できるようになります。
 
 #### デモ
 

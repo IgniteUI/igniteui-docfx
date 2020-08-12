@@ -26,7 +26,7 @@ _language: ja
 ### @@igComponent Excel を Excel サービスへエクスポート
 
 <p class="highlight">
-Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式ではフィルタリングや並べ替えなどの機能が使用でき、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して最初の引数として @@igxName コンポーネントを渡し、グリッドを簡単にエクスポートします。</p>
+Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式ではフィルタリングやソートなどの機能が使用でき、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して最初の引数として @@igxName コンポーネントを渡し、グリッドを簡単にエクスポートします。</p>
 
 <div class="divider"></div>
 
@@ -108,7 +108,7 @@ public exportButtonHandler() {
 
 ```
 
-上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.xlsx"  ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
+上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで ExportedDataFile.xlsx ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
 
 #### すべてのデータのエクスポート
 

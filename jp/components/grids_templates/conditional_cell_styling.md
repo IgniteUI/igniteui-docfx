@@ -364,7 +364,7 @@ editDone(evt) {
 * [編集](editing.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)

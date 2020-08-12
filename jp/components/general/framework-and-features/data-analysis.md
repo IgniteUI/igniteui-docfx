@@ -142,7 +142,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 ### セルの条件付き書式 
 グリッドに数千行のデータがある場合、生の情報を検査するだけでパターンと傾向を分析することは容易ではありません。チャートやスパークラインと同様に、`条件付き書式`は、データを可視化し、理解しやすくする別の方法を提供します。 
 
-条件付き書式は範囲選択の`値`に基づいて、色やデータ バーなどの書式設定をセルに適用できます。[以下のサンプル](#デモ) は、グリッドを構成して`条件付き書式`を適用する方法を示します。どの条件`ルール`が表示されるかは、`条件付き書式の選択タイプ`によって異なります。以下は定義済みスタイル (プリセット) があります。これを使用すると、条件付き書式をデータにすばやく適用できます。範囲の書式設定は、異なる範囲で書式設定を行った場合、またはクリア ボタンを使用してクリアにされます。クリア ボタンは、書式設定が適用されている場合にのみアクティブになります。
+条件付き書式は範囲選択の`値`に基づいて、色やデータ バーなどの書式設定をセルに適用できます。[以下のサンプル](#デモ)は、グリッドを構成して`条件付き書式`を適用する方法を示します。どの条件`ルール`が表示されるかは、`条件付き書式の選択タイプ`によって異なります。以下は定義済みスタイル (プリセット) があります。これを使用すると、条件付き書式をデータにすばやく適用できます。範囲の書式設定は、異なる範囲で書式設定を行った場合、またはクリア ボタンを使用してクリアにされます。クリア ボタンは、書式設定が適用されている場合にのみアクティブになります。
 
 #### 数の範囲選択
 - `Data Bars` - データバーは、売れ筋商品や売れ残り商品など、高値と低値を識別する場合などに役立ちます。このプリセットにより、選択したセルの範囲の値を簡単に可視化できます。長いバーはより高い値を表します。値が 0 のセルにはデータバーがありません。他のすべてのセルは比例的に塗りつぶされます。正の値は`緑色`で、負の値は`赤色`です。
@@ -189,41 +189,41 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 <a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">全画面表示</a>
 </div>
 
-### Data Analysis Package API
+### データ分析パッケージ API
  
 #### IgxConditionalFormattingDirective
 <div class="divider--half"></div>
 
-| API | Description | Arguments |
-|---------|:-------------:|-----------:|
-| `ConditionalFormattingType` | An **enum**, which represents the conditional formatting types |
-| `IFormatColors` | An **interface**, which represents the formatting colors |
-| `formatter`: **string** | An **input** property, which sets/gets the current formatting type |
-| `formatColors` | An **input** property, which sets/gets the current formatting colors | `val`: *IFormatColors* |
-| `onFormattersReady`| An **event**, which emits the applicable `formatting types` for the selected data, when they are determined. |
-| `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
-| `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditonalFormatting.clearFormatting()** |
+| API | 説明 | 引数 |
+|---------|:-------------:|:-----------:|
+| `ConditionalFormattingType` | 条件付き書式タイプを表す**列挙体** |
+| `IFormatColors` | 書式設定色を表す**インターフェース** |
+| `formatter`: **string** | 現在の書式タイプを設定/取得する**入力**プロパティ |
+| `formatColors` | 現在の書式色を設定/取得する**入力**プロパティ | `val`: *IFormatColors* |
+| `onFormattersReady`| 選択されたデータに適用可能な`書式タイプ`が決定されたときにそれらを発生する**イベント**。 |
+| `formatCells` | 選択したセルに条件付き書式を適用します。使用方法: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
+| `clearFormatting` | 選択されたセルの条件付き書式を削除します。使用方法: <br /> **this.conditonalFormatting.clearFormatting()** |
 
 #### IgxChartIntegrationDirective
 <div class="divider--half"></div>
 
-| API | Description | Arguments |
+| API | 説明 | 引数 |
 |---------|-------------|-----------|
-| `CHART_TYPE` | An **enum**, representing the supported chart types |
-| `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component| 
-| `IOptions` | An **interface** for chart property options |
-| `chartFactory`| Creates a chart component, based on the provided chart type. Usage: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
-| `setChartComponentOptions` | Sets property options to a chart component. Usage: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: *CHART_TYPE*, `optionsType`: *OPTIONS_TYPE*, `options`: *IOptions* |
-| `getAvailableCharts` | Returns the enabled chart types |
-| `enableCharts` | Enables the provided chart types. By default all chart types are enabled | `types`: *CHART_TYPE* [ ] |
-| `disableCharts` | Disables the provided chart types | `types`: *CHART_TYPE* [ ] |
-| `onChartTypesDetermined` | An **event**, emitted when the chart types, applicable for the `chartData`, are determined. This event emits an object of type `IDeterminedChartTypesArgs`, which has 2 properties: <br /> `chartsAvailabilty`: *Map<CHART_TYPE, boolean>* - the enabled/disabled chart types, <br /> `chartsForCreation`: *CHART_TYPE[]* - the applicable chart types for the `chartData` |
-| `onChartCreationDone` | An event, emitted when a chart is created. This event emits the chart component, which is created |
-| `chartData`: **any[ ]** | An **input** property, which sets/gets the data for the charts | `selectedData`: **any[ ]** |
-| `useLegend`: **boolean** | An **input**, which enables/disables the legend usage for all chart types. By default it is set to **true** |
-| `defaultLabelMemberPath`: **string** | An **input** property, which sets/gets the default label member path for the charts. By default the label member path will be determined, based on the provided data. <br />( **if the provided data records have properties with string values, the first string property name of the first data record in the `chartData` will be selected as a label member path for the charts, if not, the label member path will have value *'Index'*.** ) <br/> |
-| `scatterChartYAxisValueMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default Y axis value member path will be the first numeric property name of the first data record in the `chartData`** | `path`: **string** |
-| `bubbleChartRadiusMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default radius member path will be the second numeric property name of the first data record in the `chartData`** | `path`: **string** |
+| `CHART_TYPE` | サポートされているチャートの種類を表す**列挙型** |
+| `OPTIONS_TYPE` | チャート コンポーネントに適用できる、サポートされているオプション タイプを表す**列挙型**| 
+| `IOptions` | チャート プロパティ オプションの**インターフェイス** |
+| `chartFactory`| 指定されたチャート タイプに基づいて、チャート コンポーネントを作成します。使用方法: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
+| `setChartComponentOptions` | プロパティ オプションをチャート コンポーネントに設定します。使用方法: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: *CHART_TYPE*, `optionsType`: *OPTIONS_TYPE*, `options`: *IOptions* |
+| `getAvailableCharts` | 有効なチャート タイプを返します |
+| `enableCharts` | 指定されたチャート タイプを有効にします。デフォルトでは、すべてのチャート タイプが有効です | `types`: *CHART_TYPE* [ ] |
+| `disableCharts` | 指定されたチャート タイプを無効にします | `types`: *CHART_TYPE* [ ] |
+| `onChartTypesDetermined` | `chartData` に適用可能なチャート タイプが決定されると発生する**イベント**。このイベントは、2 つのプロパティがある `IDeterminedChartTypesArgs` タイプのオブジェクトを発行します: <br /> `chartsAvailabilty`: *Map<CHART_TYPE, boolean>* - 有効/無効されたチャート タイプ、<br /> `chartsForCreation`: *CHART_TYPE[]* - `chartData` に適用可能なチャート タイプ。 |
+| `onChartCreationDone` | チャートが作成されたときに発生するイベント。このイベントは、作成されたチャート コンポーネントを発行します|
+| `chartData`: **any[ ]** | チャートのデータを設定/取得する**入力**プロパティ| `selectedData`: **any[ ]** |
+| `useLegend`: **boolean** | すべてのチャート タイプの凡例の使用を有効/無効にする**入力**。デフォルトで **true** に設定されます|
+| `defaultLabelMemberPath`: **string** | チャートのデフォルト ラベルのメンバー パスを設定/取得する**入力**プロパティ。デフォルトでは、ラベルのメンバー パスが指定されたデータに基づいて決定されます。<br />(**提供されたデータ レコードに文字列値を持つプロパティがある場合、`chartData` の最初のデータレコードの最初の文字列プロパティ名がチャートのラベルのメンバー パスとして選択されます。そうでない場合、ラベルのメンバー パスは値 *'Index'* になります**)。<br/> |
+| `scatterChartYAxisValueMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。**設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの最初の数値プロパティ名になります** | `path`: **string** |
+| `bubbleChartRadiusMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの 2 番目の数値プロパティ名になります | `path`: **string** |
 
 ### 便利なリソース
 
