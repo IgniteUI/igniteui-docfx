@@ -30,7 +30,7 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 ##### Step 2 - 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
 
-そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direciton` パラメーターを設定します。
+そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
 
 ```scss 
 @include igx-core($direction: rtl);

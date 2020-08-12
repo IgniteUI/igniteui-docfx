@@ -15,6 +15,9 @@
 - name: Update guide
   href: general/update_guide.md
   new: false
+- name: Accessibility Compliance
+  href: general/accessibility-compliance.md
+  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: true
@@ -914,7 +917,7 @@
     - name: Printing styles
       href: themes/printing-styles.md
       new: false
-- name: Componets Roundness
+- name: Components Roundness
   href: roundness.md
   new: true
 - name: Shadows

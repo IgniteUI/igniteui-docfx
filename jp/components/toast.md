@@ -41,16 +41,25 @@ export class AppModule {}
 ```
 
 #### Toast の表示
-Toast コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを呼び出します。[`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) 入力を使用して通知を設定します。
+Toast コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
 
 ```html
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.show()">Show notification</button>
-<igx-toast #toast message="Notification displayed"></igx-toast>
+<igx-toast #toast >Notification displayed</igx-toast>
 ```
 
 サンプルが正しく構成された場合、ボタン クリック時に通知を表示する Toast が表示されます。
+
+Toast コンテンツを設定する別の方法は、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドに直接渡すことです。
+
+```html
+<!--sample.component.html-->
+
+<button igxButton="raised" (click)="toast.show('Notification displayed')">Show notification</button>
+<igx-toast #toast ></igx-toast>
+```
 
 ### 例
 
@@ -66,9 +75,14 @@ Toast コンポーネントを表示するには、ボタン クリックで [`s
 ```
 
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
+他の 2 つのコンポーネントでは、[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
-<div class="sample-container loading">
-    <iframe id="toast-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 #### 表示期間

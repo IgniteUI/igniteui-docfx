@@ -14,6 +14,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="autocomplete-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 <div class="divider--half"></div>
 
@@ -167,10 +168,11 @@ export class AutocompleteComponent {
 If everything went right, you should see this in your browser:
 
 <div class="sample-container loading" style="height: 500px;">
-    <iframe id="autocomplete-movie" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/movie" class="lazyload"></iframe>
+    <iframe id="autocomplete-movie" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/movie" class="lazyload"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-movie" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="autocomplete-movie" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
 <div class="divider--half"></div>

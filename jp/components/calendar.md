@@ -94,7 +94,7 @@ export class AppModule {}
 
 #### ローカライズおよび書式設定
 
-カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。`IgxCalendarComponent` でこれらは以下のプロパティによって制御およびカスタマイズします - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews), [`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart).
+カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。`IgxCalendarComponent` でこれらは以下のプロパティによって制御およびカスタマイズします - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions)、[`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews)、[`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart)。
 
 これらの設定に加え、`IgxCalendarComponent API` のその他のカスタマイズ機能も使用できます。最初に週の開始日を制御する `weekStart` を設定します。デフォルト値が 0 (日曜日) であるため、値を 1 (月曜日) に設定します。以下のマークアップで表示書式設定をカスタマイズするために、`formatOptions` および `formatViews` プロパティもバインドしています。最後に、`locale` プロパティをユーザーの選択した場所に基づいて値にバインドします。
 
@@ -139,32 +139,42 @@ public ngOnInit() {
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### イベント
-このサンプルを拡張します。ユーザーが 5 日以下の日付範囲を入力する必要があります。カレンダーの `selection` モードを "range" に設定し、範囲が無効な場合にユーザーに適切な選択を促すための通知を表示します。これを行うには、[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントを使用します。
+#### イベント
+カレンダーが発するイベントを見てみましょう:
+- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - カレンダーで日付を選択すると発生します。
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - 提示された月/年が変更されるたびに発生します。たとえば、`次` または `前` の月に移動した後。
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewvhanged) - アクティブなビューが変更された後に発生します。たとえば、ユーザーがヘッダーの `月` または `年` セクションをクリックした後。
 
 ```html
 <!-- app.component.html -->
-<igx-calendar #calendar
-    ...
-    selection="range"
-    (onSelection)="verifyRange($event)">
+<igx-calendar #calendar 
+    (onSelection)="onSelection($event)"
+    (viewDateChanged)="viewDateChanged($event)"
+    (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-
-`onSelection` イベントに渡した値が選択した日付のコレクションで、その長さに基づいてロジックを実行します。無効な選択をユーザーに通知する場合、選択範囲を最初の日のみにするために [`selectDate`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selectdate) メソッドを使用してリセットします。
+[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) イベントは入力検証ロジックを構築するのに適しています。以下のコードを使用して、選択が 5 日を超えた場合にユーザーに警告し、選択をリセットします。
 
 ```typescript
 // app.component.ts
 ...
-public verifyRange(dates: Date[]) {
+public onSelection(dates: Date[]) {
     if (dates.length > 5) {
-        this.calendar.selectDate(dates[0]);
-        this.dialog.open();
+        this.calendar.selectedDates = [];
+        // alert the user
     }
 }
+    public viewDateChanged(event: IViewDateChangeEventArgs) {
+        // use event.previousValue to get previous month/year that was presented.
+        // use event.currentValue to get current month/year that is presented.
+    }
+
+    public activeViewChanged(event: CalendarView) {
+        // use CalendarView[event] to get the current active view (DEFAULT, YEAR or DECADE)
+    }
 ```
 
-以下のデモでは、選択した範囲が 5 日間を超えると通知が表示されます。範囲の選択を試してください。
+以下のデモを試して (選択を変更し、月と年を移動し)、リアルタイムで記録されたイベントを確認してください。
 <div class="sample-container loading" style="height: 420px">
     <iframe id="calendar-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
