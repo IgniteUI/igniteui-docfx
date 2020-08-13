@@ -218,7 +218,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して、[スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
 
@@ -308,7 +308,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)

@@ -38,7 +38,7 @@ IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({envir
 @@if (igxName === 'IgxHierarchicalGrid') {
 IgxHierarchicalGrid の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxHierarchicalTransactionService の概要と実装方法の詳細を確認してください。
 
-[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされると [`'IgxHierarchicalTransactionServiceFactory'`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。 
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされると [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。 
 
 以下は、IgxHierarchicalGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }

@@ -65,7 +65,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 }
 
 ### @@igComponent の設定
-@@igComponent を作成してからデータをバインドします。列でフィルタリングと並べ替えも有効にします。
+@@igComponent を作成してからデータをバインドします。列でフィルタリングとソートも有効にします。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -348,8 +348,8 @@ export class AppModule {}
 
 列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
 
-- **Alphabetical** (列をアルファベット順で並べ替え)
-- **DisplayOrder** (列をグリッドで表示される順序によって並べ替え)
+- **Alphabetical** (列をアルファベット順でソート)
+- **DisplayOrder** (列をグリッドで表示される順序によってソート)
 
 このオプションにラジオ ボタンを追加します。[**IgxRadio**](../radio_button.md) モジュールを追加します。
 
@@ -532,7 +532,7 @@ $custom-button: igx-button-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 ```scss
 // Extending the dark column actions schema
