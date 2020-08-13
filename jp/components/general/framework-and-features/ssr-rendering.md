@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, Universal, サーバー側レンダリング
 
 すべての Angular アプリケーションがクライアントのブラウザーで実行されるため、[First Meaningful Paint (FMP)](https://web.dev/first-meaningful-paint) のパフォーマンスが低下する場合があります (ブラウザーが最初にページの主要コンテンツをレンダリングする場合など)。 サーバー ページの完全な HTML を生成できるため、[Angular Universal](https://angular.io/guide/universal) が役に立ちます。サーバーでクライアント サイドのページを HTML にレンダリングし、後でクライアントでブートストラップします。操作方法について説明します。
 
-> [FMP](https://web.dev/first-meaningful-paint)）は、ページの主要コンテンツがユーザーに表示されるタイミングを測定します。[FCP](https://web.dev/first-contentful-paint) メトリックは、ユーザーがページに移動した後ブラウザーが DOM コンテンツの最初の部分をレンダリングする時間を測定します。詳細については、[Lighthouse パフォーマンス スコアリング](https://web.dev/performance-scoring) を参照してください。
+> [FMP](https://web.dev/first-meaningful-paint) は、ページの主要コンテンツがユーザーに表示されるタイミングを測定します。[FCP](https://web.dev/first-contentful-paint) メトリックは、ユーザーがページに移動した後ブラウザーが DOM コンテンツの最初の部分をレンダリングする時間を測定します。詳細については、[Lighthouse パフォーマンス スコアリング](https://web.dev/performance-scoring) を参照してください。
 
 
 

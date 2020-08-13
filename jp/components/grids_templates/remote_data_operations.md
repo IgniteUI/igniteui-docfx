@@ -1,7 +1,7 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular リモート データ操作 | Angular Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
-_description: リモート フィルタリング、リモート並べ替え、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_description: リモート フィルタリング、リモート ソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,7 +9,7 @@ _language: ja
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular リモート データ操作 | Angular Tree Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
-_description: リモート フィルタリング、リモート並べ替え、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_description: リモート フィルタリング、リモート ソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -17,7 +17,7 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular リモート データ操作 | Angular Hierarchical Grid リモート データ操作 | Ignite UI for Angular | インフラジスティックス
-_description: リモート フィルタリング、リモート並べ替え、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
+_description: リモート フィルタリング、リモート ソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angular Material テーブルのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -25,7 +25,7 @@ _language: ja
 
 ### @@igComponent リモート データ操作の概要
 
-Ignite UI for Angular @@igComponent は、リモート仮想化、リモート並べ替え、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
+Ignite UI for Angular @@igComponent は、リモート仮想化、リモート ソート、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
 
 @@if (igxName === 'IgxGrid') {
 #### デモ
@@ -178,9 +178,9 @@ public handlePreLoad() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### リモート並べ替え/フィルタリング
+### リモート ソート/フィルタリング
 
-リモート並べ替えとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
+リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
 
 また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
@@ -212,7 +212,7 @@ public ngAfterViewInit() {
 }
 ```
 
-リモート並べ替えとフィルタリングが提供される場合、グリッドの組み込みの並べ替えとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
+リモート ソートとフィルタリングが提供される場合、グリッドの組み込みのソートとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
@@ -231,7 +231,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 >[!NOTE]
 >リモー トデータが要求された場合、フィルタリング操作が大文字と小文字を区別します。
 
-#### リモート並べ替え/フィルタリングのデモ
+#### リモート ソート/フィルタリングのデモ
 
 このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
 }
@@ -867,7 +867,7 @@ public paginate(page: number) {
 * [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [ページング](paging.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)

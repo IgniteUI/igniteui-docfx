@@ -8,7 +8,7 @@ _language: ja
 ## Excel Exporter
 
 <p class="highlight">
-Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) または [**IgxTreeGrid**](treegrid/tree_grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングや並べ替えなどの機能が使用できます。</p>
+Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) または [**IgxTreeGrid**](treegrid/tree_grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングやソートなどの機能が使用できます。</p>
 <div class="divider"></div>
 
 #### Excel Exporter デモ
@@ -97,7 +97,7 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 
 #### 既知の制限
 > [!NOTE] 
-> [JSZip](https://www.npmjs.com/package/jszip) のライブラリがの [問題](https://github.com/Stuk/jszip/issues/617) が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
+> [JSZip](https://www.npmjs.com/package/jszip) のライブラリがの[問題](https://github.com/Stuk/jszip/issues/617)が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
 
 ```cmd
 npm install --save setimmediate

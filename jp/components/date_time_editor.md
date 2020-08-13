@@ -64,9 +64,9 @@ public date = new Date();
 #### キーボード ナビゲーション
 Date Time Editor ディレクティブには直感的なキーボード ナビゲーション機能があり、マウス操作なしでさまざまな DatePart を移動、インクリメント、デクリメントなどができます。
 
-- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>左矢印</kbd> / <kbd>右矢印</kbd>  -日付セクション間を移動します。<kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>右矢印</kbd>でセクションの最後に移動します。既に最後にある場合、次のセクション (存在する場合) の最後に移動します。反対方向も同様です。
+- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>左矢印</kbd> / <kbd>右矢印</kbd> - 日付セクション間を移動します。<kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>右矢印</kbd>でセクションの最後に移動します。既に最後にある場合、次のセクション (存在する場合) の最後に移動します。反対方向も同様です。
 
-- <kbd>上矢印</kbd> / <kbd>下矢印</kbd> -日付部分を増減します。関連する [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#isspinloop) を参照してください。
+- <kbd>上矢印</kbd> / <kbd>下矢印</kbd> - 日付部分を増減します。関連する [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#isspinloop) を参照してください。
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - エディターの現在の日時を設定します。
 

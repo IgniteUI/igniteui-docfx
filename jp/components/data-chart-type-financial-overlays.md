@@ -8,7 +8,7 @@ _language: ja
 
 ## ファイナンシャル オーバーレイ
 
-ファイナンシャル オーバーレイは、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのオーバーレイは、同じY軸スケールを共有するため、通常 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) の前に表示されます。対照的に、財務指標は [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) と同じ Y 軸スケールを共有しないため、通常、財務指標は [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) またはオーバーレイの上または下にプロットされます。ただし、チャート コントロールは同じプロット領域でオーバーレイとインジケーターをサポートします。複数軸の使用や軸を共有することもできます。
+ファイナンシャル オーバーレイは、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのオーバーレイは、同じ Y 軸スケールを共有するため、通常 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) の前に表示されます。対照的に、財務指標は [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) と同じ Y 軸スケールを共有しないため、通常、財務指標は [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) またはオーバーレイの上または下にプロットされます。ただし、チャート コントロールは同じプロット領域でオーバーレイとインジケーターをサポートします。複数軸の使用や軸を共有することもできます。
 
 ### サンプル
 

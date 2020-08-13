@@ -7,7 +7,7 @@ _language: ja
 
 ## データグリッド
 
-<p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、並べ替え、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
+<p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
 ### デモ
 
@@ -98,7 +98,7 @@ public grid: IgxGridComponent;
 
 ### 列の構成
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
 
 #### 列の定義
@@ -251,7 +251,7 @@ public initColumns(column: IgxGridColumn) {
 }
 ```
 
-上記のコードは **ProductName** 列の並べ替えや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
+上記のコードは **ProductName** 列のソートや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
 
 ### データ構造
 
@@ -426,11 +426,11 @@ export class MyComponent implements OnInit {
 
 現在、グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
 
-#### Nested data
+#### ネスト データ
 
-There are mainly two ways to bind a more complex data source to the grid.
-The grid supports binding through a "path" of properties in the data record.
-Take a look at the following data model:
+より複雑なデータソースをグリッドにバインドするには、主に 2 つの方法があります。
+グリッドは、データ レコード内のプロパティのパスを介したバインディングをサポートします。
+次のデータ モデルを見てください:
 ```typescript
 interface AminoAcid {
     name: string;
@@ -449,33 +449,31 @@ interface AminoAcid {
     ...
 }
 ```
-For example, in order to display the weights of a given amino acid in the grid the following snippet will suffice
+たとえば、グリッド内の特定のアミノ酸の重みを表示するには、次のスニペットで十分です。
 ```html
 <igx-column field="weight.molecular"></igx-column>
 <igx-column field="weight.residue"></igx-column>
 ```
-Refer to the sample below for additional information. This type of binding supports all
-the default functionality that you would expect from the grid.
-That is all sorting and filtering operations work out of the box without any additional
-configuration. Same goes for grouping and editing operations with or without transactions as well as the ability to template the cells of the bound column.
+詳しくは、以下のサンプルを参照してください。このバインディングのタイプは、グリッドに期待されるすべてのデフォルト機能をサポートします。
+つまり、追加の構成を行わなくても、すべてのソートおよびフィルタリング操作がそのまま使用できます。トランザクションの有無に関係なく、グループ化と編集の操作、およびバインドされた列のセルをテンプレート化する機能についても同様です。
 
 >[!WARNING]
->The grids **do not** support this kind of binding for `primary key`, `foreign key` and `child key` properties where applicable.
+>グリッドは、`primary key`、`foreign key` および `child key` プロパティのこの種のバインディングを**サポートしていません**。
 
 <div class="sample-container loading" style="height:460px">
     <iframe id="grid-nested-data-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding-2' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 </div>
 <div class="divider--half"></div>
 
-The other way to bind and visualize complex data in the **IgxGrid** is to:
-    - use the `value` of the cell, that contains the nested data
-    - and interpolate it in a custom column template
+**IgxGrid** で複雑なデータをバインドして視覚化するもう 1 つの方法は、次のとおりです。
+    - ネストされたデータを含むセルの値を使用します。
+    - カスタム列テンプレートでそれを補間します。
 
-Below is the data that we are going to use:
+以下は使用するデータです。
 
 ```typescript
 export const EMPLOYEE_DATA = [
@@ -680,7 +678,7 @@ export const DATA: any[] = [
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [列のピン固定](column_pinning.md)

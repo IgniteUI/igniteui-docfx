@@ -166,7 +166,7 @@ $custom-strip: igx-action-strip-theme(
 
 <div class="divider"></div>
 
-###　その他のリソース
+### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
