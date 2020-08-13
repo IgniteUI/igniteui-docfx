@@ -106,13 +106,13 @@
       new: false
     - name: Excel Style Filtering
       href: grid/excel_style_filtering.md
-      new: false
+      updated: true
     - name: Advanced Filtering
       href: grid/advanced_filtering.md
       new: true
     - name: Sorting
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: Group By
       href: grid/groupby.md
       new: false
@@ -229,13 +229,13 @@
       new: false
     - name: Excel Style Filtering
       href: treegrid/excel_style_filtering.md
-      new: true
+      updated: true
     - name: Advanced Filtering
       href: treegrid/advanced_filtering.md
       new: true
     - name: Sorting
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: Summaries
       href: treegrid/summaries.md
       new: true
@@ -337,13 +337,13 @@
       new: false
     - name: Excel Style Filtering
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      updated: true
     - name: Advanced Filtering
       href: hierarchicalgrid/advanced_filtering.md
       new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: true
@@ -913,6 +913,9 @@
           new: true
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
+          new: true
+        - name: Indigo
+          href: themes/themes-list/indigo.md
           new: true
     - name: Printing styles
       href: themes/printing-styles.md

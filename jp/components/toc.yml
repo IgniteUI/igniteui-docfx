@@ -16,6 +16,9 @@
 - name: アップデート ガイド
   href: general/update_guide.md
   new: false
+- name: アクセシビリティ準拠
+  href: general/accessibility-compliance.md
+  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: true
@@ -102,15 +105,15 @@
     - name: フィルタリング
       href: grid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: grid/excel_style_filtering.md
       new: false
     - name: 高度なフィルタリング
       href: grid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: グループ化
       href: grid/groupby.md
       new: false
@@ -134,7 +137,7 @@
       new: false
     - name: 選択
       href: grid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: grid/row_selection.md
@@ -188,9 +191,9 @@
     - name: Grid Master-Detail
       href: grid/master_detail.md
       new: true
-    - name: ステート パーシステンス
+    - name: 状態保持
       href: grid/state_persistence.md
-      new: true
+      updated: true
 - name: Tree Grid
   href: treegrid/tree_grid.md
   new: true
@@ -225,15 +228,15 @@
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: treegrid/excel_style_filtering.md
       new: true
     - name: 高度なフィルタリング
       href: treegrid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: treegrid/summaries.md
       new: true
@@ -299,6 +302,9 @@
     - name: サイズ変更
       href: treegrid/sizing.md
       new: false
+    - name: 状態保持
+      href: treegrid/state_persistence.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical_grid.md
   new: true
@@ -330,15 +336,15 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
       new: true
     - name: 高度なフィルタリング
       href: hierarchicalgrid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: true
@@ -397,6 +403,9 @@
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
       new: false
+    - name: 状態保持
+      href: hierarchicalgrid/state_persistence.md
+      new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -905,6 +914,9 @@
           new: true
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
+          new: true
+        - name: Indigo
+          href: themes/themes-list/indigo.md
           new: true
     - name: 印刷スタイル
       href: themes/printing-styles.md

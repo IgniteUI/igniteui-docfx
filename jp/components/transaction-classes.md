@@ -28,7 +28,7 @@ _language: ja
 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) には元に戻すスタックがないため、元に戻す/やり直しの機能は提供されません。
 
 以下のトピックには、行編集を有効にするために [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を使用する方法の詳細な例が含まれます。
-* [グリッドの行編集テンプレート](grid/row_editing.md)
+* [Grid 行編集](grid/row_editing.md)
 * [Tree Grid 行編集](treegrid/row_editing.md)
 * [Hierarchical Grid 行編集](hierarchicalgrid/row_editing.md)
 

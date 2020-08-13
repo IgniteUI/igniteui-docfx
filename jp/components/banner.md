@@ -1,4 +1,4 @@
-﻿---
+---
 title: Banner コンポーネント
 _description: Ignite UI for Angular Banner コンポーネントは、簡単に非侵入型メッセージをオプション操作と統合できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Banner コンポーネント, Angular Banner コントロール
@@ -11,10 +11,11 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
 ### デモ
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
+    <iframe id="banner-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -40,7 +41,7 @@ export class AppModule {}
 
 #### Banner の表示
 
-Banner コンポーネントを表示するには、ボタン クリックで[`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。 
+Banner コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。 
 
 ```html
 <!--banner.component.html-->
@@ -118,15 +119,16 @@ Banner コンポーネントを表示するには、ボタン クリックで[`o
 ```
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-2" class="lazyload"></iframe>
+    <iframe id="banner-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-2" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 #### カスタム アニメーションの適用
 
-Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる[`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
 スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 
@@ -153,10 +155,11 @@ export class MyBannerComponent {
 ```
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-3-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-3" class="lazyload"></iframe>
+    <iframe id="banner-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-3" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 #### イベントにバインド
@@ -218,10 +221,11 @@ export class MyBannerComponent {
 最後に、WiFi の状態に関するメッセージを表示する `toast` を追加します。以下はテンプレート化したバナーのデモです。
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-advanced-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample" class="lazyload"></iframe>
+    <iframe id="banner-advanced-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-advanced-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="banner-advanced-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-advanced-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 ### スタイル設定
@@ -255,7 +259,7 @@ $custom-banner-theme: igx-banner-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化をペネトレーションする必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -294,7 +298,7 @@ $custom-banner-theme: igx-banner-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [`スキーマ`](./themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。
+テーマ エンジンを使用して[`スキーマ`](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner)) の 1 つを拡張します。
 
 ```scss
@@ -326,7 +330,8 @@ $custom-banner-theme: igx-banner-theme(
     <iframe id="banner-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
