@@ -17,7 +17,6 @@ _keywords: state persistence, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid State Persistence | Ignite UI for Angular | Infragistics
 _description: Easily achieve state persistence for the IgxHierarchicalGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
-
 ---
 }
 
@@ -136,7 +135,6 @@ Thеse simple to use single-point API's allows to achieve a full state persisten
 
 #### Restoring columns
 
-
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state_persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
 
 1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event:
@@ -191,17 +189,14 @@ public onColumnInit(column: IgxColumnComponent) {
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 #### Restoring Child Grids
-
 Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
 
 ``` html
 <!-- public options = {selection: false, sorting: false, rowIslands: true} -->
-
 <igx-grid [igxGridState]="options"></igx-grid>
 ```
 Then the `getState` API will return the state for all grids (root grid and child grids) features excluding `selection` and `sorting`. If later on the developer wants to restore only the `filtering` state for all grids, use:
 ```typescript
-
 this.state.setState(state, ['filtering', 'rowiIslands']);
 ```
 }
@@ -220,7 +215,6 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-
 <div class="sample-container loading" style="height:1000px">
     <iframe id="treegrid-state" src='{environment:demosBaseUrl}/tree-grid/tree-grid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -232,7 +226,6 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <div class="sample-container loading" style="height:700px">
     <iframe id="hierarchical-grid-state" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-state' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
