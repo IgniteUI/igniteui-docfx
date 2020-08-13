@@ -631,7 +631,7 @@ $custom-button: igx-button-theme(
 以下は、列非表示 UI のその他の API です。
 
 * [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
+* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
