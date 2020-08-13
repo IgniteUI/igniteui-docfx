@@ -279,7 +279,7 @@ export class AppModule {}
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns">
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns">
     </igx-column-actions>
 </div>
 <div class="gridContainer">
@@ -340,7 +340,7 @@ export class AppModule {}
 <div class="columnHidingContainer">
     <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns"
                        title="Column Hiding" filterColumnsPrompt="Type here to search">
-    </igx-column-hiding>
+    </igx-column-actions>
 </div>
 ```
 
@@ -440,8 +440,8 @@ export class AppModule {}
 </div>
 <br/>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox　で開く</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で開く</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -482,10 +482,10 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 ```
 
 >[!NOTE]
->`.Igx-column-hiding` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>`.igx-column-actions` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {

@@ -141,6 +141,7 @@ _language: ja
 ### カスタム キーボード ナビゲーション
 特定のキーまたはキーの組み合わせのデフォルトの動作をオーバーライドすることができるは、**キーボード ナビゲーション**機能の利点の 1 つです。たとえば、<kbd>Enter</kbd> キーまたは <kbd>Tab</kbd> キーを押して次のセルまたは下のセルへ移動します。この以外のナビゲーションシナリオでも、**キーボード ナビゲーション**の API で簡単に実現できます。
 
+
 | API | 説明 | 引数 |
 |---------|-------------|-----------|
 | [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ongridkeydown) | 上記のキー押下やキー押下の組み合わせのいずれかが実行されたときに発生されるイベント。キャンセルできます。その他のキーの押下/組み合わせには、デフォルトの `onkeydown`イベントを使用します。 | [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) |
@@ -150,7 +151,6 @@ _language: ja
 | [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getPreviousCell)| `rowIndex` と ` visibileColumnIndex` で前のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) オブジェクトを返します。コールバック関数は、[`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getPreviousCell) メソッドの 3 番目のパラメーターとして渡すことができます。コールバック関数は、パラメーターとして `IgxColumnComponent` を受け取り、指定された条件が満たされた場合に `boolean` 値を返します: <br />*const prevEditableCell = grid.getPreviousCell(0, 4, (col) => col.editable);* | `currentRowIndex`: number, `currentVisibleColumnIndex`: number, `callback`: (`IgxColumnComponent`) => boolean |
 <br />
  @@if (igxName === 'IgxHierarchicalGrid') {
-
 >[!NOTE]
 >[`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getnextcell) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) は現在のレベルで使用し、上位または下位レベルのセルにアクセスできません。
 }
