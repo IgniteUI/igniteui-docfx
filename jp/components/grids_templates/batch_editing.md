@@ -225,6 +225,8 @@ export class GridBatchEditingSampleComponent {
     }
 
     public undo() {
+        /* exit edit mode */
+        this.gridRowEditTransaction.endEdit(/* commit the edit transaction */ false);
         this.gridRowEditTransaction.transactions.undo();
     }
 
@@ -276,6 +278,8 @@ export class TreeGridBatchEditingSampleComponent {
     }
 
     public undo() {
+        /* exit edit mode */
+        this.treeGrid.endEdit(/* commit the edit transaction */ false);
         this.treeGrid.transactions.undo();
     }
 
@@ -364,6 +368,9 @@ export class HierarchicalGridBatchEditingSampleComponent {
 }
 ```
 }
+
+> [!NOTE] 
+> トランザクション API は編集の終了を処理しないので、自分で行う必要があります。そうしないと、グリッドは編集モードのままになります。これを行う 1 つの方法は、それぞれのメソッドで [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) を呼び出すことです。
 
 @@if (igxName === 'IgxTreeGrid') {
 グリッド内の親ノードの削除にはいくつかの特徴があります。階層データを使用している場合、親を削除すると子も削除されます。フラットデータを使用している場合、グリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) プロパティを使用して必要な動作を設定できます。このプロパティは、親が削除されたときに子レコードを削除するかどうかを示します (デフォルトでは true に設定されています)。
