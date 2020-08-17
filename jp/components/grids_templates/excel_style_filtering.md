@@ -78,9 +78,9 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-###メニュー機能の構成
+### メニュー機能の構成
 
-ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -453,6 +453,44 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 ```
 }
 
+### External Outlet
+
+The @@igComponent's [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) creates separate stacking context for each grid in the DOM. This ensures that all descendant elements of the grid will render as intended, without overlapping one another.
+However, elements that go outside of the grid (e.g. Excel Style filter) will conflict with outside elements with the same `z-index` (e.g. having two grids one under another) resulting in false rendering. The solution for this issue is to set the [`outlet`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#outlet) property to an external outlet directive which allows the overlay elements to always appear on top.
+
+#### デモ
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-outlet-iframe" src='{environment:demosBaseUrl}/grid/grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-outlet-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-outlet-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-outlet-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-outlet-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-outlet-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-outlet-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-outlet-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-outlet-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
 
 ### スタイル設定
 
