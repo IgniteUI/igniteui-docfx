@@ -42,6 +42,23 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+### 10.0.x から 10.1.x の場合:
+
+* IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
+    * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、 `IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`  `IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレート]ディレクティブの使用に関する詳細は、この [トピック](../grid/excel_style_filtering.md#templates) をご覧ください。
+* IgxGrid
+    * The `selectedRows()` method has been reworked to be a `selectedRows` input property. This breaking change allows a user to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
+    * Binding of the `selectedRows` input could look something like this:
+    ```typescript
+    public mySelectedRows = [0, 1, 2];
+    ```
+    ```html
+    <igx-grid [data]="myData" rowSelection="multiple"
+        primaryKey="ID" [selectedRows]="mySelectedRows">
+        <!-- ... -->
+    </igx-grid>
+    ```
+
 ### 8.x.x から 9.0.x の場合:
 
 Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。

@@ -210,26 +210,37 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-列のソート、移動、固定、および非表示の機能を維持しながら、エクセル スタイルのフィルター メニューから項目を削除する場合は、操作ごとにグリッドにテンプレートを追加できます。
+### テンプレート
+
+列機能を無効にせずに Excel スタイル フィルター メニューをさらにカスタマイズする場合は、カスタム テンプレートを使用できます。Excel スタイル フィルター メニューには、テンプレート化のための 2 つのディレクティブがあります:
+- [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationsdirective.html) - ソート、移動、固定などのすべての列操作で領域を再テンプレート化します。
+- [`IgxExcelStyleFilterOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylefilteroperationsdirective.html) - すべてのフィルター固有の操作で領域を再テンプレート化します。
+
+これらの領域の 1 つだけ、または両方を再テンプレート化できます。これらのディレクティブ内にカスタム コンテンツを配置したり、組み込みの Excel スタイル フィルタリング コンポーネントを使用できます。
+
+次のコードは、[`igx-excel-style-header`]({environment:angularApiUrl}/classes/igxexcelstyleheadercomponent.html)、[`igx-excel-style-sorting`]({environment:angularApiUrl}/classes/igxexcelstylesortingcomponent.html) および [`igx-excel-style-search`]({environment:angularApiUrl}/classes/igxexcelstylesearchcomponent.html) コンポーネントを使用してカスタム Excel スタイル フィルター メニューを定義する方法を示しています。
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
-    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
-    <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [movable]="true" [dataType]="'number'">
-    </igx-column>
-    <igx-column field="OrderDate" header="Order Date" [sortable]="false" [movable]="false" [dataType]="'date'" [formatter]="formatDate">
-    </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [movable]="true" [dataType]="'boolean'">
-    </igx-column>
+
+    <igx-grid-excel-style-filtering [minHeight]="'380px'" [maxHeight]="'500px'">
+        <igx-excel-style-column-operations>
+            <igx-excel-style-header
+                [showPinning]="true"
+                [showHiding]="true"
+            >
+            </igx-excel-style-header>
+
+            <igx-excel-style-sorting></igx-excel-style-sorting>
+        </igx-excel-style-column-operations>
+
+        <igx-excel-style-filter-operations>
+            <igx-excel-style-search></igx-excel-style-search>
+        </igx-excel-style-filter-operations>
+    </igx-grid-excel-style-filtering>
+    
+    ...
 </igx-grid>
 ```
 
@@ -238,30 +249,24 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
-    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
-    <igx-column field="ID" header="Product ID" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
-        <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
-        </ng-template>
-    </igx-column>
-    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
-    </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
-        <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
-        </ng-template>
-    </igx-column>
+
+    <igx-grid-excel-style-filtering [minHeight]="'380px'" [maxHeight]="'500px'">
+        <igx-excel-style-column-operations>
+            <igx-excel-style-header
+                [showPinning]="true"
+                [showHiding]="true"
+            >
+            </igx-excel-style-header>
+
+            <igx-excel-style-sorting></igx-excel-style-sorting>
+        </igx-excel-style-column-operations>
+
+        <igx-excel-style-filter-operations>
+            <igx-excel-style-search></igx-excel-style-search>
+        </igx-excel-style-filter-operations>
+    </igx-grid-excel-style-filtering>
+
+    ...
 </igx-tree-grid>
 ```
 
@@ -270,46 +275,42 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
-    <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-    <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-    <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-    <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-    <ng-template igxExcelStyleSelecting>Selecting Template</ng-template>
-    <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
-    <igx-column field="Photo" [filterable]='false'>
-        <ng-template igxCell let-cell="cell">
-            <div class="cell__inner_2">
-                <img [src]="cell.value" class="photo" />
-            </div>
-        </ng-template>
-    </igx-column>
-    <igx-column field="Debut" [filterable]='true' [disablePinning]="true" [disableHiding]="true"></igx-column>
-    <igx-column field="Grammy Nominations" [filterable]='true' [dataType]="'number'" [sortable]="false" [movable]="false"></igx-column>
-    <igx-column field="Grammy Awards" [filterable]='true' [dataType]="'number'"></igx-column>
+    
+    <igx-grid-excel-style-filtering [minHeight]="'380px'" [maxHeight]="'500px'">
+        <igx-excel-style-column-operations>
+            <igx-excel-style-header
+                [showPinning]="true"
+                [showHiding]="true"
+            >
+            </igx-excel-style-header>
+
+            <igx-excel-style-sorting></igx-excel-style-sorting>
+        </igx-excel-style-column-operations>
+
+        <igx-excel-style-filter-operations>
+            <igx-excel-style-search></igx-excel-style-search>
+        </igx-excel-style-filter-operations>
+    </igx-grid-excel-style-filtering>
+
+    ...
 
     <igx-row-island [key]="'Albums'" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter">
-        <ng-template igxExcelStyleSorting>Sorting Template</ng-template>
-        <ng-template igxExcelStyleHiding>Hiding Template</ng-template>
-        <ng-template igxExcelStyleMoving>Moving Template</ng-template>
-        <ng-template igxExcelStylePinning>Pinning Template</ng-template>
-        <igx-column field="Album" [filterable]='true'></igx-column>
-        <igx-column field="Launch Date" [filterable]='true' [dataType]="'date'"></igx-column>
-        <igx-column field="Billboard Review" [filterable]='true' [dataType]="'number'"></igx-column>
-        <igx-column field="US Billboard 200" [filterable]='true' [dataType]="'number'"></igx-column>
-    <igx-row-island [key]="'Songs'" [autoGenerate]="false" >
-            <igx-column field="No."></igx-column>
-            <igx-column field="Title"></igx-column>
-            <igx-column field="Released"></igx-column>
-            <igx-column field="Genre"></igx-column>
-    </igx-row-island>
-    </igx-row-island>
+        <igx-grid-excel-style-filtering [minHeight]="'380px'" [maxHeight]="'500px'">
+            <igx-excel-style-column-operations>
+                <igx-excel-style-header
+                    [showPinning]="true"
+                    [showHiding]="true"
+                >
+                </igx-excel-style-header>
 
-    <igx-row-island [key]="'Tours'" [autoGenerate]="false">
-        <igx-column field="Tour"></igx-column>
-        <igx-column field="Started on"></igx-column>
-        <igx-column field="Location"></igx-column>
-        <igx-column field="Headliner"></igx-column>
-    </igx-row-island>
+                <igx-excel-style-sorting></igx-excel-style-sorting>
+            </igx-excel-style-column-operations>
+
+            <igx-excel-style-filter-operations>
+                <igx-excel-style-search></igx-excel-style-search>
+            </igx-excel-style-filter-operations>
+        </igx-grid-excel-style-filtering>
+        ....
 </igx-hierarchical-grid>
 ```
 
@@ -318,8 +319,8 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:900px">
-    <iframe id="grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height:700px">
+    <iframe id="grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -328,8 +329,8 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:900px">
-    <iframe id="tree-grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height:700px">
+    <iframe id="tree-grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -338,8 +339,8 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:900px">
-    <iframe id="hierarchical-grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+<div class="sample-container loading" style="height:700px">
+    <iframe id="hierarchical-grid-sample-3-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
@@ -347,6 +348,17 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
+
+以下は、使用可能な Excel スタイルフィルタリング コンポーネントの完全なリストです:
+- [`igx-excel-style-header`]({environment:angularApiUrl}/classes/igxexcelstyleheadercomponent.html)
+- [`igx-excel-style-sorting`]({environment:angularApiUrl}/classes/igxexcelstylesortingcomponent.html)
+- [`igx-excel-style-moving`]({environment:angularApiUrl}/classes/igxexcelstylemovingcomponent.html)
+- [`igx-excel-style-pinning`]({environment:angularApiUrl}/classes/igxexcelstylepinningcomponent.html)
+- [`igx-excel-style-hiding`]({environment:angularApiUrl}/classes/igxexcelstylehidingcomponent.html)
+- [`igx-excel-style-selecting`]({environment:angularApiUrl}/classes/igxexcelstyleselectingcomponent.html)
+- [`igx-excel-style-clear-filters`]({environment:angularApiUrl}/classes/igxexcelstyleclearfilterscomponent.html)
+- [`igx-excel-style-conditional-filter`]({environment:angularApiUrl}/classes/igxexcelstyleconditionalfiltercomponent.html)
+- [`igx-excel-style-search`]({environment:angularApiUrl}/classes/igxexcelstylesearchcomponent.html)
 
 <div class="divider--half"></div>
 
