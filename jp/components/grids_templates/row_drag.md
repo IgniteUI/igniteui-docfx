@@ -84,7 +84,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 この例では、あるグリッドから別のグリッドに行をドラッグし、それを最初のデータソースから削除し、それを 2 番目のデータソースに追加します。
 }
 
-#### ドロップエリア
+#### ドロップ エリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
 [`igxDrop` ディレクティブ](../drag_drop.md) を使用して、行をドロップする場所を定義できます。
@@ -103,8 +103,8 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```html
-<div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (\leave)="onLeaveAllowed($event)"
-(onDrop)="onDropAllowed($event)">	(dropped)="onDropAllowed($event)">
+<div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)"
+(dropped)="onDropAllowed($event)">
     <igx-icon>delete</igx-icon>
     <div>Drag a row here to delete it</div>
 </div>
@@ -194,7 +194,7 @@ enum DragIcon {
 ```typescript
 export class @@igxNameRowDragComponent {
     ...
-	    public onDropAllowed(args: IDropDroppedEventArgs) {
+    public onDropAllowed(args: IDropDroppedEventArgs) {
         const draggedRow: @@igxNameGridRowComponent = args.dragData;
         draggedRow.delete();
     }
@@ -221,15 +221,14 @@ export class @@igxNameRowDragComponent {
 
 次のように `ViewChild` デコレータを使用して各グリッドに refenrece を定義し、ドロップを処理します。
 - 削除される行のデータを含む行を `targetGrid` に追加します。
-- `sourceGrid` からドラッグした行を削除します
+- `sourceGrid` からドラッグした行を削除します。
 }
 
 > [!NOTE]
 > イベント引数 (`args.dragData.rowData`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
 #### ドラッグ ゴーストのテンプレート化
-ドラッグゴーストは、`@@igSelector` のボディ内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
-
+ドラッグゴーストは、`@@igSelector` の本文内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
 ```html
 <@@igSelector>
 ...
@@ -257,7 +256,6 @@ export class @@igxNameRowDragComponent {
 </div>
 <div class="divider--half"></div>
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="tree-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -291,7 +289,6 @@ export class @@igxNameRowDragComponent {
 ...
 </@@igSelector>
 ```
-
 <div class="sample-container loading" style="height:600px">
     <iframe id="hierarchical-grid-multiple-row-drag" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
@@ -301,12 +298,11 @@ export class @@igxNameRowDragComponent {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multiple-row-drag" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
-
 }
 
 #### ドラッグ アイコンのテンプレート化
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
-`igxDragIndicatorIcon` を使用して `@@igSelector` のボディ内にテンプレートを渡して変更できます。
+`igxDragIndicatorIcon` を使用して `@@igSelector` の本文内にテンプレートを渡して変更できます。
 ```html
 <@@igSelector>
 ...
@@ -316,7 +312,6 @@ export class @@igxNameRowDragComponent {
 ...
 </@@igSelector>
 ```
-
 
 新しいアイコン テンプレートの設定後、`DragIcon enum` の `DEFAULT` アイコンも調整する必要があるため、`changeIcon` メソッドによって適切に変更されます。
 ```typescript
@@ -420,7 +415,7 @@ enum DragIcon {
 }
 
 #### 行の並べ替えデモ
-グリッドの行ドラッグ イベントと `igx Drop` ディレクティブを使用して、ドラッグよる行の並べ替えるが可能なグリッドを作成できます。
+グリッドの行ドラッグ イベントと `igxDrop` ディレクティブを使用して、ドラッグよる行の並べ替えるが可能なグリッドを作成できます。
 
 すべてのアクションはグリッド本体の _内側_ で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
 
