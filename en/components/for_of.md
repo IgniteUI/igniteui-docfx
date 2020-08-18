@@ -87,11 +87,11 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 <igx-list>
     <div [style.width]="'100%'" [style.overflow]="'hidden'" [style.position]="'relative'">
         <igx-list-item
-            [style.width]="'calc(100% - 18px)'"
+            [style.width]="'240px'"
             *igxFor="let item of data | igxFilter: fo;
                     scrollOrientation : 'horizontal'; 
-                    containerSize: '200px'; 
-                    itemSize: '50px'">
+                    containerSize: '800px'; 
+                    itemSize: '240px'">
             <div class="contact">
                 <span class="name">{{item.name}}</span>
             </div>
