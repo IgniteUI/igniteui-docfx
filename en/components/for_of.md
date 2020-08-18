@@ -6,7 +6,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Virtual For Directive
 
-In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) is an alternative to `ngForOf` for templating large amounts of data. The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) uses virtualization behind the scenes to optimize DOM rendering and memory consumption. Virtualization works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The directive is creating scrollable containers and renders small chunks of the data. It is used inside [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and it can be used to build virtual [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html).
+<p class="highlight">The Ignite UI for Angular igxForOf directive is an alternative to ngForOf for templating large amounts of data. It uses virtualization behind the scenes to optimize DOM rendering and memory consumption.</p>
+<div class="divider"></div>
 
 ### Demo
 
@@ -16,20 +17,14 @@ In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxfo
 <br/>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 </div>
 
-### Dependencies
+### Usage
 
-To get started with the [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive install Ignite UI for Angular by typing the following command:
+#### First Steps
 
-```cmd
-ng add igniteui-angular
-```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
-
-The [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive is exported as an `NgModule`, thus all you need to do in your application is to import the _IgxForOfModule_
-inside your `AppModule`:
+The [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxForOfModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -46,9 +41,9 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Usage
+#### Add igxFor
 
-Now that we have the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) module imported, let’s get started with a basic configuration of the **igxFor** that binds to local data:
+Now that we have the module imported, let’s get started with a basic configuration of the `igxFor` that binds to local data:
 
 ```html
 <span #container>
@@ -56,46 +51,65 @@ Now that we have the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdi
 </span>
 ```
 
-
-
 The **data** property is an array that provides the virtualized data.
 
 
-The directive can be used to virtualize the data in vertical, horizontal or both directions.
-### Vertical virtualization
+### Examples
+
+The `igxFor` directive can be used to virtualize the data in vertical, horizontal or both directions.
+
+Virtualization works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The `igxFor` directive is creating scrollable containers and renders small chunks of the data. It is used inside the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and it can be used to build a virtual [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html).
+
+#### Vertical virtualization
 
 ```html
-<table style='height: 500px; overflow: hidden; position: relative;'>
-    <ng-template igxFor let-item [igxForOf]="data" #virtDirVertical
-        [igxForScrollOrientation]="'vertical'"
-        [igxForContainerSize]='"500px"'
-        [igxForItemSize]='"50px"'
-        let-rowIndex="index">
-            <tr style='height:50px;'>{{rowIndex}} : {{item.text}}</tr>
-    </ng-template>
-</table>
+<igx-list>
+    <div [style.height]="'500px'" [style.overflow]="'hidden'" [style.position]="'relative'">
+        <igx-list-item
+            [style.width]="'calc(100% - 18px)'"
+            *igxFor="let item of data | igxFilter: fo;
+                    scrollOrientation : 'vertical';
+                    containerSize: '500px'; 
+                    itemSize: '50px'">
+            <div class="contact">
+                <span class="name">{{item.name}}</span>
+            </div>
+        </igx-list-item>
+    </div>
+</igx-list>
 ```
 
-### Horizontal virtualization
+***Note:*** It is strongly advised that the parent container of the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) template has the following CSS rules applied: `height` for vertical and `width` for horizontal, `overflow: hidden` and `position: relative`. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
+
+#### Horizontal virtualization
 
 ```html
-<table>
-    <tbody style='display: grid; position: relative;'>
-    <tr style='width:500px; height:118px; overflow: hidden;'>
-        <ng-template igxFor let-item [igxForOf]="data" #virtDirHorizontal
-            [igxForScrollOrientation]="'horizontal'"
-            [igxForContainerSize]='"500px"'
-            let-rowIndex="index">
-                <td  [style.width.px]='item.width' style='height:100px;'>{{rowIndex}} : {{item.text}}</td>
-            </ng-template>
-    </tr>
-    </tbody>
-</table>
+<igx-list>
+    <div [style.width]="'100%'" [style.overflow]="'hidden'" [style.position]="'relative'">
+        <igx-list-item
+            [style.width]="'calc(100% - 18px)'"
+            *igxFor="let item of data | igxFilter: fo;
+                    scrollOrientation : 'horizontal'; 
+                    containerSize: '200px'; 
+                    itemSize: '50px'">
+            <div class="contact">
+                <span class="name">{{item.name}}</span>
+            </div>
+        </igx-list-item>
+    </div>
+</igx-list>
 ```
 
-***Note:*** It is strongly advised that the parent container of the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) template for has the related dimension set (`height` for vertical and `width` for horizontal),  `overflow: hidden` and `position: relative` CSS rules applied. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
+<div class="sample-container loading" style="height: 240px">
+<iframe id="igx-for-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-display/igx-for-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="igx-for-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="igx-for-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+</div>
+<div class="divider--half"></div>
 
-### Horizontal and vertical virtualization
+#### Horizontal and vertical virtualization
 
 ```html
 <table #container [style.width]='width' [style.height]='height' [style.overflow]='"hidden"' [style.position]='"relative"'>
@@ -114,13 +128,18 @@ The directive can be used to virtualize the data in vertical, horizontal or both
     </ng-template>
 </table>
 ```
-### igxFor bound to remote service
 
-The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive can be bound to remote service. You need to use `Observable` property - `remoteData`(in the following case). Also the `chunkLoading` event should be utilized to trigger the requests to the data.
+The `igxFor` directivе is used to virtualize data in both vertical and horizontal directions inside the `igxGrid`. 
+
+Follow the [Grid Virtualization](virtualization.md) topic for more detailed information and demos.
+
+#### igxFor bound to remote service
+The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive can be bound to a remote service using the `Observable` property - `remoteData` (in the following case). The `chunkLoading` event should also be utilized to trigger the requests for data.
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
-    <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
+    <ng-template igxFor let-item [igxForOf]="remoteData | async"
+        (onChunkPreload)="chunkLoading($event)"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='"500px"'
         [igxForItemSize]='"50px"'
@@ -131,17 +150,21 @@ The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxf
 </div>
 ```
 
-Also there is a requirement to set the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) property in the instance of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof).
+***Note:*** There is a requirement to set the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) property in the instance of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof).
+
 ```typescript
 this.virtDirRemote.totalItemCount = data["@odata.count"];
 ```
 
-In order access the directive instance from the component it should be marked as `ViewChild`:
+In order to access the directive instance from the component, it should be marked as `ViewChild`:
+
 ```typescript
 @ViewChild("virtDirRemote", { read: IgxForOfDirective })
 public virtDirRemote: IgxForOfDirective<any>;
 ```
-And after the request to load the first chunk, the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) can be set:
+
+After the request for loading the first chunk, the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) can be set:
+
 ```typescript
 public ngAfterViewInit() {
     this.remoteService.getData(this.virtDirRemote.state, (data) => {
@@ -149,7 +172,9 @@ public ngAfterViewInit() {
     });
 }
 ```
-When requesting data you can take advantage of [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize). But note, that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk(the best value is [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) initially divided by [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)).
+
+When requesting data you can take advantage of the [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) properties. Note that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk (the best value is the initial [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) divided by the [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)).
+
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
     var dataState = data;
@@ -180,7 +205,9 @@ private buildUrl(dataState: any): string {
     return `${this.url}${qS}`;
 }
 ```
-And every time the [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) event is thrown the new chunk of data should be requested:
+
+Every time the [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) event is thrown, a new chunk of data should be requested:
+
 ```typescript
 chunkLoading(evt) {
     if(this.prevRequest){
@@ -191,10 +218,10 @@ chunkLoading(evt) {
     });
 }
 ```
+
 ### Local Variables
 
-The `igxFor` directive includes the following helper properties in its context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection.
-The following code snippet demonstrates how to use the `even` property in an `ng-template`.
+The `igxFor` directive includes the following helper properties in its context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection. The following code snippet demonstrates how to use the `even` property in an `ng-template`. Аn `even` class will be assigned to every even div element:
 
 ```html
 <ng-template igxFor let-item 
@@ -206,16 +233,23 @@ The following code snippet demonstrates how to use the `even` property in an `ng
     </div>
 </ng-template>
 ```
-In the example above, an `even` class is assigned to every even div element.
 
-## Known Limitations
+### Known Limitations
 
 |Limitation|Description|
 |--- |--- |
 | Scroll position of components that use `igxForOf` is not preserved in projected container | When a component that uses `igxForOf` directive is in a `<ng-content>`, or other projected container, its scrollbar position won't be preserved, even though the data position would be. That's because the DOM elements are detached and later re-attached to the DOM tree and as a result, losing the scrollbar scroll position. The affected controls that use `igxForOf` internally are: `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`, `igxCombo`. <br/>Some possible workarounds are: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an `ngIf`. The component will be destroyed and then re-created, losing all internal states;</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually, for example using `MutationObserver`</li></ul>
 | `scrollTo` method does not work correctly when the content size of the rendered templates changes post initialization | When the elements inside the template have a size, that changes runtime after initialization (for example as a result of content projection, remote request resolution etc.), then the `scrollTo` method will not be able to scroll to the correct index. The method will scroll to the position of the index before the runtime size change occurs, hence the location will not be correct after the size is changed later. A possible workaround is to use templates that do not change their size based on their content if the content is loaded later.
 
-## API References
+### API References
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+
+### Additional Resources
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
