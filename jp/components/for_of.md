@@ -7,7 +7,7 @@ _language: ja
 
 ## 仮想スクロール ディレクティブ
 
-Ignite UI for Angular では、大規模なデータをテンプレート化するために `ngForOf`　の代わりに [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) を使用することができます。[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナ ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナを作成して、データの小さい部分を描画します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) で使用され、仮想化された [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を作成するために使用できます。
+Ignite UI for Angular では、大規模なデータをテンプレート化するために `ngForOf` の代わりに [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) を使用することができます。[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) は、DOM 描画およびメモリ使用を最適化するために仮想化を使用します。仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナ ビューポートで切り替えます。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。ディレクティブはスクロール可能なコンテナを作成して、データの小さい部分を描画します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) で使用され、仮想化された [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を作成するために使用できます。
 
 
 ### デモ
@@ -17,8 +17,8 @@ Ignite UI for Angular では、大規模なデータをテンプレート化す�
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 ### 依存関係

@@ -26,8 +26,8 @@ _language: ja
     <iframe id="grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -36,8 +36,8 @@ _language: ja
     <iframe id="tree-grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -56,13 +56,13 @@ _language: ja
 
 
 ### 制限
-- カットとコピーの両方のイベントは、Internet Explorer では本来サポートされていません。例外は発生される ** paste ** イベント(IE 11)ですが、イベントの `clipboardData` プロパティを公開していません。
+- カットとコピーの両方のイベントは、Internet Explorer では本来サポートされていません。例外は発生される **paste** イベント(IE 11)ですが、イベントの `clipboardData` プロパティを公開していません。
 > [!NOTE] 
 > IE 11のセルを`コピー`するためには、キーボード選択を使用できます。複数セルを選択するには `Shift キー` を押しながらコピーするには `Ctrl + C` を押します。
 
 - グリッドが編集モードの間、コピー動作は無効になります。
 - この機能の現在のバージョンは、グリッドからのコピー動作のみをカバーします。今後、グリッドの動作内で`貼り付け`を公開する予定です。
-@@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excelから貼り付け](paste_excel.md) トピックをご覧ください 。}
+@@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excel から貼り付け](paste_excel.md)トピックをご覧ください 。}
 
 ### API の使用
 次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) プロパティを公開します。
