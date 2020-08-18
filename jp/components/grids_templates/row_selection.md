@@ -255,7 +255,7 @@ public handleRowSelectionChange(args) {
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、デフォルトですべてのデータ行の選択を解除する `deselectAll(onlyFilteredData)` メソッドを提供しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみを選択解除します。ただし、false パラメーターを指定してメソッドを呼び出すと、`deselectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータをクリアします。
 
 #### 選択した行を取得する方法
-現在選択されている行を確認する必要がある場合は、`selectedRows()` ゲッターを使用して行 ID を取得できます。
+現在選択されている行を確認する必要がある場合は、`selectedRows` ゲッターを使用して行 ID を取得できます。
 
 ```typescript
 
@@ -264,7 +264,7 @@ public getSelectedRows() {
 }
 ```
 
-さらに、 `selectedRows` に行 ID を割り当てると、グリッドの選択状態を変更できます。
+さらに、`selectedRows` に行 ID を割り当てると、グリッドの選択状態を変更できます。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -344,7 +344,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 #### ヘッダー テンプレート 
 @@igComponent 内でカスタムヘッダーセレクターテンプレートを作成するには、`igxHeadSelector` ディレクティブで `<ng-template>` を宣言します。テンプレートから、ヘッダーの状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
 
-`selectedCount` プロパティは現在選択されている行数を示し、`totalCount` は@@igComponent に合計の行数を示します。
+`selectedCount` プロパティは現在選択されている行数を示し、`totalCount` は @@igComponent に合計の行数を示します。
 ```html
 <ng-template igxHeadSelector let-headContext>
     {{ headContext.selectedCount }} / {{ headContext.totalCount  }}
