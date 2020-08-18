@@ -305,14 +305,14 @@ public maxDate = new Date(2020, 11, 1);
 
 #### テンプレート化
 
-2 つのエディターを使用する場合、[`igxDateSeparator`]({environment:angularApiUrl}/classes/igxdateseparator.html) ディレクティブを使用してデフォルトのセパレーターを置き換えることができます。以下は日付のセパレーターをハイフン `-` に変更する方法を示します。
+2 つのエディターを使用する場合、[`igxDateRangeSeparator`]({environment:angularApiUrl}/classes/igxdaterangeseparatordirective.html) ディレクティブを使用してデフォルトのセパレーターを置き換えることができます。以下は日付のセパレーターをハイフン `-` に変更する方法を示します。
 
 ```html
 <igx-date-range-picker>
     <igx-date-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
     </igx-date-start>
-    <ng-template igxDateSeparator>-</ng-template>
+    <ng-template igxDateRangeSeparator>-</ng-template>
     <igx-date-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
     </igx-date-end>
