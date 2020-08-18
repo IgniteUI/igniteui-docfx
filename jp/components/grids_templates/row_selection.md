@@ -255,15 +255,59 @@ public handleRowSelectionChange(args) {
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、デフォルトですべてのデータ行の選択を解除する `deselectAll(onlyFilteredData)` メソッドを提供しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみを選択解除します。ただし、false パラメーターを指定してメソッドを呼び出すと、`deselectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータをクリアします。
 
 #### 選択した行を取得する方法
-現在選択されている行を確認する必要がある場合は、`selectedRows()` メソッドを使用して行 ID を取得できます。
+現在選択されている行を確認する必要がある場合は、`selectedRows()` ゲッターを使用して行 ID を取得できます。
 
 ```typescript
 
-public getSelectedRows(args) {
-    const currentSelection = this.@@igObjectRef.selectedRows(); // return array of row ids
+public getSelectedRows() {
+    const currentSelection = this.@@igObjectRef.selectedRows; // return array of row IDs
 }
 ```
 
+さらに、 `selectedRows` に行 ID を割り当てると、グリッドの選択状態を変更できます。
+
+@@if (igxName === 'IgxGrid') {
+```typescript
+public mySelectedRows = [1, 2, 3]; // an array of row IDs
+```
+```html
+<igx-grid primaryKey="ProductID" rowSelection="multiple" [mySelectedRows]="selectedRows" [data]="data">
+    <igx-column [field]="'ProductID'"></igx-column>
+    <igx-column [field]="'ProductName'"></igx-column>
+    <igx-column [field]="'UnitsInStock'"></igx-column>
+</igx-grid>
+```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+public mySelectedRows = ['Johnathan Winchester', 'Ana Sanders']; // an array of row IDs
+```
+```html
+<igx-tree-grid primaryKey="ID" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+    <igx-column [field]="'Name'"></igx-column>
+    <igx-column [field]="'Title'"></igx-column>
+</igx-tree-grid>
+```
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+// arrays of row IDs
+public mySelectedRows = ['Naomi Yepes', 'Ahmad Nazeri'];
+public childSelectedRows = ['Initiation', 'Emergency'];
+```
+```html
+<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+    <igx-column field="Artist"></igx-column>
+    <igx-row-island [key]="'Albums'" rowSelection="multiple">
+        <igx-column field="Album"></igx-column>
+        <igx-column field="LaunchDate"></igx-column>
+    </igx-row-island>
+</igx-hierarchical-grid>
+```
+}
 
 ### 行セレクター テンプレート
 @@igComponent でヘッダーおよび行セレクターをテンプレート化し、さまざまなシナリオに役立つ機能を提供するコンテキストにアクセスすることもできます。
