@@ -959,6 +959,9 @@
   href: badge.md
 - name: Icon
   href: icon.md
+  items:
+    - name: Material Icons Extended
+      href: material_icons_extended.md
 - name: Divider
   href: divider.md
   new: false
