@@ -31,8 +31,8 @@ _language: ja
     <iframe id="grid-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -42,8 +42,8 @@ _language: ja
     <iframe id="treegrid-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -68,8 +68,8 @@ _language: ja
     <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -78,8 +78,8 @@ _language: ja
     <iframe id="tree-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -203,7 +203,7 @@ expectedData = [
 ### 機能の統合
 マルチセル選択はインデックス ベースです (DOM 要素選択)。
 
-- `並べ替え` - 並べ替えが実行されると、選択は解除されません。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。昇順または降順で並べ替えている間、現在選択されているセルはそのままになります。
+- `ソート` - ソートが実行されると、選択は解除されません。昇順または降順でソートしている間、現在選択されているセルはそのままになります。
 - `ページング` - ページング時に選択されたセルはクリアされます。選択はページを超えては持続されません。選択はページを超えては持続されません。
 - `フィルタリング` - フィルタリングが実行されると、選択は解除されません。フィルタリングがクリアされている場合は、最初に選択されたセルが返されます。
 - `サイズ変更` - 列のサイズを変更すると、選択したセルはクリアされません。
@@ -278,8 +278,8 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -291,9 +291,9 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
-    </button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }
@@ -306,9 +306,9 @@ $custom-grid-theme: igx-grid-theme(
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
-    </button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }

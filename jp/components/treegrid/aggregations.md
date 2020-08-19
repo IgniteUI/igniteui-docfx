@@ -15,8 +15,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -25,7 +25,7 @@ _language: ja
 
 #### 実装
 
-サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**Category**、**Type**、**Contract** で表形式のデータをグループ化します。  並べ替え後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**Price**、**Change**、**Change(%)** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
+サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**Category**、**Type**、**Contract** で表形式のデータをグループ化します。ソート後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**Price**、**Change**、**Change(%)** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
 以下はテンプレートでパイプを使用した例です。
 

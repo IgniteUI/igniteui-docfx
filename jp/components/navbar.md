@@ -14,8 +14,8 @@ _language: ja
     <iframe id="nav-bar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -98,14 +98,14 @@ export class AppModule {}
     <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-1' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 #### カスタム アクション アイコンの追加
 
-アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム アクション アイコンを使用したい場合、`igx-action-icon` ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。`igx-action-icon` ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。これには Font Awesome ホーム アイコンを使用します。
+アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム アクション アイコンを使用したい場合、`igx-navbar-action` ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。`igx-navbar-action` ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。これには Font Awesome ホーム アイコンを使用します。
 
 ```css
 /* navbar.component.css */
@@ -127,14 +127,14 @@ export class AppModule {}
     <igx-icon>favorite</igx-icon>
     <igx-icon>more_vert</igx-icon>
 
-    <igx-action-icon>
+    <igx-navbar-action>
         <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
-    </igx-action-icon>
+    </igx-navbar-action>
 </igx-navbar>
 ```
 
 > [!NOTE]
-> [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されます。 
+> [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) または [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されません。 
 
 以下はカスタム アクション アイコンをした場合の navbar の外観です。
 
@@ -142,8 +142,8 @@ export class AppModule {}
     <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -184,8 +184,44 @@ export class NavbarSample3Component {
     <iframe id="navbar-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-3' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
+#### カスタムのタイトルを追加する
+
+Navbar のタイトルにカスタム コンテンツを提供する場合は、 `igx-navbar-title` または `igxNavbarTitle` ディレクティブを使用ます。これらは、`title` 入力プロパティによって提供されるデフォルトの navbar のタイトルを置き換えます。以下のサンプルには、画像付きのリンクを含むカスタム タイトルがあります。
+
+```html
+<!--navbar.component.html-->
+
+<div class="sample-column">
+    <igx-navbar actionButtonIcon="menu" [isActionButtonVisible]="true">
+        <div igxNavbarTitle>
+            <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
+                <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
+                     width="120px" height="50px" alt="" style="margin-top: 7px;">
+            </a>
+        </div>
+
+        <igx-icon>search</igx-icon>
+        <igx-icon>favorite</igx-icon>
+        <igx-icon>more_vert</igx-icon>
+    </igx-navbar>
+</div>
+```
+
+> [!NOTE]
+> [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。 
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%" 
+    data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -220,7 +256,7 @@ $custom-navbar-theme: igx-navbar-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -304,8 +340,8 @@ $cutom-navbar-theme: igx-navbar-theme(
     <iframe id="nav-bar-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-style' class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -313,7 +349,8 @@ $cutom-navbar-theme: igx-navbar-theme(
 <div class="divider--half"></div>
 
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxActionIconDirective]({environment:angularApiUrl}/classes/igxactionicondirective.html)
+* [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
+* [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
 * [IgxNavbarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:

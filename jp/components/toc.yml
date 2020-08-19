@@ -105,15 +105,15 @@
     - name: フィルタリング
       href: grid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: grid/excel_style_filtering.md
-      new: false
+      updated: true
     - name: 高度なフィルタリング
       href: grid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: グループ化
       href: grid/groupby.md
       new: false
@@ -228,15 +228,15 @@
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: treegrid/excel_style_filtering.md
-      new: true
+      updated: true
     - name: 高度なフィルタリング
       href: treegrid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: treegrid/summaries.md
       new: true
@@ -336,15 +336,15 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
-    - name: Excel スタイルフィルタリング
+    - name: Excel スタイル フィルタリング
       href: hierarchicalgrid/excel_style_filtering.md
-      new: true
+      updated: true
     - name: 高度なフィルタリング
       href: hierarchicalgrid/advanced_filtering.md
       new: true
-    - name: 並べ替え
+    - name: ソート
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: true
@@ -365,7 +365,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md

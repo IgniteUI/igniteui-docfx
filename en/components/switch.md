@@ -13,8 +13,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="switch-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="switch-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -89,8 +89,9 @@ And the final result should be something like that:
 <div class="sample-container loading" style="height: 200px">
     <iframe id="switch-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="switch-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 #### Label Positioning
@@ -165,6 +166,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
     <iframe id="switch-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/switch-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="switch-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 

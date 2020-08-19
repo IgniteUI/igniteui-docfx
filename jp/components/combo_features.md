@@ -18,8 +18,8 @@ Combo コントロールは、データと値のバインディング、**[カ�
     <iframe id="combo-features-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -40,17 +40,19 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
- デモでは、[igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
+デモでは、[igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用して [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) プロパティ値を切り替えます。グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) を対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 ```html
 <div class="combo-container">
     <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
         [filterable]="filterable"
+        [showSearchCaseIcon]="showSearchCaseIcon"
         [disabled]="disabled">
     </igx-combo>
 </div>
 <div class="switch-container">
     <igx-switch [(ngModel)]="filterable">Enable Filtering</igx-switch><br />
+    <igx-switch *ngIf="filterable" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch><br />
     <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch><br />
     <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch><br />
     <igx-switch [(ngModel)]="disabled">Disabled</igx-switch>
@@ -61,6 +63,7 @@ export class AppModule {}
     @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
 
     public filterable = true;
+    public showSearchCaseIcon = true;
     public customValues = true;
     public disabled = false;
 
@@ -93,7 +96,7 @@ export class ComboDemo implements OnInit {
 > [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) が省略された場合、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) エンティティが代わりに使用されます。
 
 
-詳細については、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を[リモートデータにバインド](combo_remote.md)を参照してください。
+詳細については、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) を[リモート データにバインド](combo_remote.md)を参照してください。
 
 
 <div class="divider--half"></div>
@@ -124,8 +127,8 @@ export class CustomOverlayCombo {
     <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-overlay-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
@@ -138,6 +141,12 @@ export class CustomOverlayCombo {
 
 ```html
 <igx-combo [filterable]="false"></igx-combo>
+```
+
+フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、 [showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showSearchCaseIcon) プロパティを true に設定します。
+
+```html
+<igx-combo [showSearchCaseIcon]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>
