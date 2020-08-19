@@ -6,24 +6,20 @@ _language: ja
 ---
 
 ## Select
-Ignite UI for Angular Select コンポーネントは、特殊な配置が可能な項目ドロップダウンリストから単一のアイテムを選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づく選択を含む、迅速な項目リスト ナビゲーションを提供します。
+<p class="highlight">[Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
 
-## 選択のデモ
-<div class="sample-container loading" style="height: 430px;">
+### デモ
+<div class="sample-container loading" style="height: 300px;">
     <iframe id="select-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox  で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz  で表示</button>
+</div>
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 
-## 使用方法
-[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
-
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に `IgxSelectModule` をインポートする必要があります。
+### 使用方法
+[Select]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネントを初期化にするには、まず **IgxSelectModule** を **app.module** ファイルにインポートします。
 ```typescript
 // app.module.ts
 
@@ -38,9 +34,8 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に `<igx-select>` といくつかのアイテムを定義します。[`IgxSelectItemComponent`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して `igx-select` を実行する項目を表示することに注意してください。
+次に選択する項目のリストと共に `igx-select` を追加します。[`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して、`igx-select` に含まれる項目を表示します。
 ```html
-<!-- define items declaratively -->
 <igx-select>
     <label igxLabel>Simple Select</label>
     <igx-select-item value="Orange">Orange</igx-select-item>
@@ -50,7 +45,7 @@ export class AppModule {}
 </igx-select>
 ```
 
-その他 [ngForOf](https://angular.io/api/common/NgForOf) ディレクティブに表示したい項目のコレクションを使用する方法があります。
+その他 [*ngFor](https://angular.io/api/common/NgForOf) 構造ディレクティブに表示したい項目のコレクションを使用する方法があります。
 
 ```typescript
 public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
@@ -64,9 +59,8 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
     </igx-select-item>
 </igx-select>
 ```
-さらに、上記のサンプルは、`ngModel` を介した双方向のデータ バインディングを示しています。さらに、[`Angular Forms`](#angular-フォームの選択) の Select コンポーネントを使用できます。
 
-デフォルトでは、select コンポーネントは選択した項目の要素 `innerText` を使用して入力フィールドに表示されます。複雑な項目テンプレートの場合、 `text` プロパティを明示的に設定して、項目が選択された場合入力フィールドに何を表示するかを指定できます。例：
+デフォルトでは、Select コンポーネントは入力フィールドの item 要素の `innerText` を使用します。複雑な項目テンプレートの場合、`text` プロパティを明示的に設定して、項目が選択された場合入力フィールドに何を表示するかを指定できます。例:
 
 ```html
 <igx-select>
@@ -74,17 +68,17 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
         {{item.text}} ( {{item.count}} )
     </igx-select-item>
 </igx-select>
-
 ```
-もう少し複雑な項目テンプレートで `text` プロパティを確認するには、以下のグループ化サンプル[グループ選択](#グループ選択)を参照してください。
+より複雑な項目テンプレートで `text` プロパティを確認するには、以下のグループ化サンプル [グループ選択](#grouped-select) を参照してください。
 
+#### 入力プロパティ
 
-### ラベル、プレフィックス、サフィックス
-Select は、[入力グループ](input_group.md)に適用可能な次のディレクティブをサポートしています。
+Select コンポーネントは、[入力グループ](input_group.md)に適用可能な次のディレクティブをサポートしています。
 
 - `igxLabel` - Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
 - `igx-prefix`/`igxPrefix`
 - `igx-suffix`/`igxSuffix` - 組み込みのトグル ボタンサフィックスが常に最後に表示されることに注意してください。
+- `igx-hint`/`igxHint`
 
 ```html
 <igx-select [(ngModel)]="selected">
@@ -95,6 +89,7 @@ Select は、[入力グループ](input_group.md)に適用可能な次のディ�
     <igx-suffix *ngIf="selected">
         <igx-icon (click)="clearSelection($event)">clear</igx-icon>
     </igx-suffix>
+    <igx-hint>Choose a banana</igx-hint>
     <igx-select-item *ngFor="let item of items" [value]="item">
         {{item}}
     </igx-select-item>
@@ -104,14 +99,128 @@ Select は、[入力グループ](input_group.md)に適用可能な次のディ�
 <div class="sample-container loading" style="height: 350px;">
     <iframe id="select-input-directives-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-input-directives" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}"> codesandbox で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示</button>
+</div>
 
 > [!NOTE]
-Selectコンポーネントに[`プレースホルダー`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder)が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
+Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
 
-### Toggle ボタンのテンプレート
-デフォルトの矢印は、`igxSelectToggleIcon` ディレクティブでマークされたネスト形式のテンプレートに置き換え、または `TemplateRef` を [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) プロパティに設定できます。
+#### 選択項目のグループ化
+項目グループを視覚的に分離するために、Select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
+これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
+```typescript
+public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
+    { label: "Fruits", items: [
+            { type: "Apple", origin: "local" },
+            { type: "Orange", origin: "import" },
+            { type: "Banana", origin: "import"}
+        ]
+    },
+    { label: "Vegetables", items: [
+            { type: "Cucumber", origin: "local" },
+            { type: "Potato", origin: "import" },
+            { type: "Pepper", origin: "local" }
+        ]
+    }
+];
+```
+
+次にテンプレート ファイルでこれらのオブジェクトを反復して項目へ適切にアクセスします。
+```html
+<igx-select #select>
+    <label igxLabel>Select With Groups</label>
+    <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
+        <igx-select-item *ngFor="let item of group.items" [value]="item.type" [text]="item.type">
+            {{item.type}}
+            <igx-icon
+                title="Local product"
+                *ngIf="item.origin === 'local'; else templateImport"
+            >local_shipping</igx-icon>
+            <ng-template #templateImport>
+                <igx-icon title="Import product">flight</igx-icon>
+            </ng-template>
+        </igx-select-item>
+    </igx-select-item-group>
+</igx-select>
+```
+
+<div class="sample-container loading" style="height: 400px;">
+    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}"> codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示</button>
+</div>
+
+#### ヘッダーとフッター
+現在 Select コンポーネントにデフォルトのヘッダーとフッターのテンプレートはありません。ただし、ヘッダーまたはフッター テンプレートを追加するには、`igxSelectHeader` または `igxSelectFooter` でそれぞれマークします。これらはカスタム テンプレートであるため、スタイル設定も定義する必要があります。
+
+以下の例では、ヘッダーとフッターの両方の ng テンプレートが定義されています。ヘッダーには、[`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) で実装された基本的なフィルタリングがあります。フッターには、配信方法に基づいて、すべての項目の静的な集計が含まれます。
+
+```html
+<igx-select>
+    <label igxLabel>Pick your fruit</label>
+    <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
+        {{fruit.type}}
+        <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
+        <igx-icon *ngSwitchCase="'train'">train</igx-icon>
+        <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
+    </igx-select-item>
+    <ng-template igxSelectHeader>
+        <div class="custom-select-header">
+            <span class="sample-template-heading">DELIVERY METHOD</span>
+            <igx-buttongroup (click)="filter($event.target.title)">
+                    <button igxButton title="flight"><igx-icon title="flight">flight</igx-icon></button>
+                    <button igxButton title="train"><igx-icon title="train">train</igx-icon></button>
+                    <button igxButton title="boat"><igx-icon title="boat">directions_boat</igx-icon></button>
+            </igx-buttongroup>
+        </div>
+    </ng-template>
+    <ng-template igxSelectFooter>
+        <div class="custom-select-footer">
+            <span class="sample-template-heading">TOTAL</span>
+            <div class="sample-template-icons">
+                <span class="sample-template-icons__item">
+                    <igx-icon
+                        title="flight"
+                        [class.important-icon]="selected === 'flight'"
+                    >flight</igx-icon>
+                    {{flightCount}}
+                </span>
+                <span class="sample-template-icons__item">
+                    <igx-icon
+                        title="train"
+                        [class.important-icon]="selected === 'train'"
+                    >train</igx-icon>
+                    {{trainCount}}
+                </span>
+                <span class="sample-template-icons__item">
+                    <igx-icon
+                        title="boat"
+                        [class.important-icon]="selected === 'boat'"
+                    >directions_boat
+                    </igx-icon>
+                    {{boatCount}}
+                </span>
+            </div>
+        </div>
+    </ng-template>
+</igx-select>
+```
+
+<div class="sample-container loading" style="height: 610px;">
+    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}"> codesandbox で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示</button>
+</div>
+
+#### カスタム切り替えボタン
+`igxSelectToggleIcon` ディレクティブを使用するか、あるいは [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) プロパティに `TemplateRef` を設定して、デフォルトの切り替えボタンをカスタマイズできます。
+
 ```html
 <igx-select #select>
     ...
@@ -122,295 +231,21 @@ Selectコンポーネントに[`プレースホルダー`]({environment:angularA
 <igx-select>
 ```
 
-## 機能
-### アクションの選択
-#### 開く
-キーボードで `igx-select` にフォーカスしても開きません。
-フォーカスを `igx-select` に設定し、 `Space`, `Enter` または `ALT + 上矢印/下矢印` キーで開きます。
-- `igx-select` はマウスを左クリック、またはドロップダウン ボタンを左クリックで開きます。
-
-#### 閉じる
-`igx-drop-down` が開いている場合、以下のいずれかで閉じることができます。
-- ドロップダウン リストから項目を選択
-- `ALT + 上矢印/下矢印` キーの押下
-- `Enter`、`Space`、`Esc`、`Tab` のいずれかを押下
-- ドロップダウン ボタン上でマウスを左クリック、またはドロップダウン以外を左クリックしてドロップダウンを閉じることもできます。
-
 ### キーボード ナビゲーション
-`igx-select` には直感的なキーボード ナビゲーションがあり、マウスを使用せずに簡単に項目を選択できます。
 
-- ドロップダウン リストが開いているときの移動先に残っている項目がある場合は、`上矢印/下矢印`キーで項目を移動できます。更に `Home` または `End` を押すとリストの最初と最後の項目に移動します。
-- ドロップダウン リストが開いたときに対応するキーを押して特定の文字で始まる各項目に移動できます。大文字小文字を区別して一致するすべての項目間をフォーカスします￥。
-- ドロップダウン リストを開いたときに、必要な項目の最初の数文字を入力してすばやく特定の項目に移動できます。
-    - *入力スピードが関係することに注意してください。*
-- ドロップダウン リストが開いているときは、`Home` と `End` のキーを使用して項目を移動できます。
-- ドロップダウン リストが開いている場合、`上矢印/下矢印` キーによる移動は選択した項目から開始されます。そうでない場合は、リストの最初の項目から開始します。
-- ドロップダウンリストがクローズいているときは、`上矢印/下矢印`キーで項目間を循環できます。
-- ドロップダウン リストが閉じたときに、特定の項目で始まるすべての項目へ移動することもできます。ドロップダウン リストが開いている場合も同様に動作します。
-- ドロップダウン リストを閉じたときに、最初の数文字を入力してすばやく特定の項目に移動できます。ドロップダウンが開いたときと動作は同じです。
-- ドロップダウンが閉じたときに文字キーの移動は、大文字と小文字を区別しません。
-- ドロップダウンが閉じている場合、一致する項目のない文字の押下時は文字キー ナビゲーションは選択を変更しません。
-
-### 項目の選択
-ドロップダウン リストから項目を選択する方法:
-- 左マウス クリック
-- 各項目がフォーカスされたときの`Enter` キー。
-- 各項目がフォーカスされたときの `Space` キー。
-- コードで値 value プロパティを設定。
-- 項目の `selected` プロパティの設定。
-- ドロップダウン リストの最初に有効な項目がフォーカスされます。
-- 入力ボックスに選択したアイテムの値が入力されます。
-- 選択した項目を変更したときに入力ボックスのテキストが更新されます。
-- 入力ボックスは、フォーカスされていても選択されてない項目のテキストでは生成されません。
-- 項目は選択されていても値が設定されていない、または一致する項目がない場合、入力ボックスにテキストは追加されません。
-- 値プロパティを存在しない項目に設定時に選択がクリアされます。
-- 無効な項目は選択できません。
-- 選択オプションが削除されると選択も削除されます。
-- 重複する値を持つ項目がある場合、最初の項目が選択されます。
+- 選択がフォーカスされているときに `Space`、`Enter`、または `ALT + 上矢印/下矢印`キーをクリックして、`igx-select` を開きます。
+- `ALT + 上矢印/下矢印`の組み合わせ、または `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを使用して、`igx-select` を閉じます。
+- `上矢印/下矢印`キーを使用して項目間を移動します。
+- `Home` または `End` キーを使用して、リストの最初と最後の項目へ移動します。
+- 特定の文字で始まるリスト項目を移動するには、対応するキーを押します。
+- 必要な項目の最初の数文字を入力してすばやく特定の項目に移動できます。
+- `Enter` キーまたは `Space` キーを使用して項目を選択します。
 
 >[!NOTE]
-> `igx-select` は、アイテムの単一選択のみをサポートします。
+>`igx-select` は項目の*単一*選択のみをサポートします。
 
-### イベント発生
-`igx-select` が `igx-drop-down` を拡張するため、以下を含むイベントも使用できます。
-
-#### Opened イベント
-- 現在ドロップ ダウンが展開されているかどうかを指定します。
-
-`onOpened` イベントを使用できます。
-```html
-<igx-select (onOpened)="handleOpened($event)">
-    <igx-select-item [value]="Apple">Apple</igx-select-item>
-</igx-select>
-```
-
-#### 始値/終値のイベント
-- エミット先:
-    - 入力クリック
-    - トグル ボタン クリックの選択 (アプリのシナリオ)
-- キー操作でトリガー
-
- `onOpening` と `onClosing` イベントがアニメーションの再生が完了する前 (ドロップダウンが完全に**開く**または**閉じる**前) に発生されます。イベント ハンドラー関数で `cancel` プロパティを `true` に設定してキャンセルできます。
-
-```html
-<igx-select (onOpening)="handleOpening($event)" (onClosing)="handleClosing($event)">
-    <igx-select-item [value]="Apple">Apple</igx-select-item>
-</igx-select>
-```
-
-#### 選択イベント
-- 項目の選択が変更されたとき (新しいアイテムを選択しようとしたとき) に生成されます。選択が完了する前、つまり新しいアイテムが選択される前に発行されます。
-- マウスクリックで項目が選択されたときにエミットされます。
-- `Enter`、`Space` キーで項目が選択されたときにエミットされます。
-- 値プロパティの設定時にエミットされます。
-- 項目の `selected` プロパティの設定時にエミットされます。
-
-```html
-<igx-select (onSelection)="handleSelection($event)">
-    <igx-select-item [value]="Apple">Apple</igx-select-item>
-    <igx-select-item [value]="Pear">Pear</igx-select-item>
-</igx-select>
-```
-
-#### Closed イベント
-- ドロップダウンが完全に閉じたときにコンポーネントの外側をクリックしてエミットされます。
-
-`onClosed` イベントを使用できます。
-```html
-<igx-select (onClosed)="handleClosed($event)">
-    <igx-select-item [value]="Apple">Apple</igx-select-item>
-</igx-select>
-```
-
-class 内にすべての handler 関数を置きます。
-```typescript
-export class MyClass {
-    /* --- */
-    private handleOpening(event: CancelableEventArgs): void {
-        // do something
-    }
-    /* --- */
-    private handleSelection(event: ISelectionEventArgs): void {
-        // do something
-    }
-    /* --- */
-    private handleClosed(event: any): any {
-        // do something
-        // return something
-    }
-    /* --- */
-    private handleClosing(event: CancelableEventArgs): void {
-        // cancel the closing event
-        event.cancel = true;
-    }
-    /* --- */
-}
-```
-- 上記の例はデモのみを目的としており、いかなるコードの基準に従うものではありません。
-
-### ポジション ストラテジ
-`igx-select` には、` SelectPositioningStrategy` と呼ばれる独自の配置ストラテジがあります。
-[*ConnectedPositioningStrategy*]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) を拡張し、`igx-select` を入力フィールドに応じてさまざまな方法でドロップダウンリストに配置します。つまり、ドロップダウンは常にそれ自体を配置するため、入力テキストが選択した項目のテキストと一致します。
-
-以下の例は、`SelectPositioningStrategy` を使用してカスタム オーバーレイ設定を定義するため、はじめに [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) と一緒にインポートする必要があります。
-```typescript
-import { SelectPositioningStrategy, OverlaySettings } from 'igniteui-angular';
-```
-
-[*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを初期化して [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) に渡す必要があります。最後にポジション ストラテジのコンストラクタは、テンプレートから `IgxSelectComponent` を参照する [*ViewChild*](https://angular.io/api/core/ViewChild) に渡します。
-
-以下のようになります。
-```typescript
-@ViewChild(IgxSelectComponent)
-public select: IgxSelectComponent;
-
-public customOverlaySettings: OverlaySettings = {
-    positionStrategy: new SelectPositioningStrategy(
-        this.select
-    ),
-    scrollStrategy: new AbsoluteScrollStrategy()
-};
-```
-上記のように `customOverlaySettings` オブジェクトにある `scrollStrategy` プロパティもあります。これにより、ドロップダウンのスクロール機能が正しく動作します。このスクロールは、リストのすべての項目の合計の高さがドロップダウンの高さを超えるたびに表示されます。
-
-その他の重要な点は `igx-select` がデフォルトで `SelectPositioningStrategy` を使用する点です。
-> [さまざまな配置ストラテジ]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)を `positionStrategy` プロパティに渡すことができます。
-
-### グループ選択
-項目グループを視覚的に分離するために、select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
-これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
-```typescript
-    public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
-            { label: "Fruits", items:[
-                    { type: "Apple", origin: "local" },
-                    { type: "Orange", origin: "import" },
-                    { type: "Banana", origin: "import"}
-                ]
-            },
-            { label: "Vegetables", items: [
-                    { type: "Cucumber", origin: "local" },
-                    { type: "Potato", origin: "import" },
-                    { type: "Pepper", origin: "local" }
-                ]
-            }
-        ];
-```
-
-次にテンプレート ファイルでこれらのオブジェクトを反復してプロパティへ適切にアクセスします。
-```html
-<igx-select>
-    <igx-select-item-group *ngFor="let group of greengrocery" [label]="group.label">
-        <igx-select-item *ngFor="let item of group.items" [value]="item.type" [text]="item.type">
-            {{item.type}}
-            <igx-icon title="Local product" class="icon" color="green" *ngIf="item.origin === 'local';else templateImport">local_shipping</igx-icon>
-            <ng-template #templateImport>
-                <igx-icon title="Import product" class="icon" color="orange">flight</igx-icon>
-            </ng-template>
-        </igx-select-item>
-    </igx-select-item-group>
-</igx-select>
-```
-
-<div class="sample-container loading" style="height: 470px;">
-    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
-</div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-
-### ヘッダーとフッターの選択
-現在 `igxSelect` コンポーネントにデフォルトのヘッダーとフッターのテンプレートはありませんが、独自のヘッダーとまたはフッター テンプレートを定義して、それぞれ `IgxSelectHeaderDirective` または `IgxSelectFooterDirective` でマークすることができます。これらはカスタム テンプレートであるため、スタイル設定も定義する必要があります。
-
-以下の例では、ヘッダーとフッターの両方の ng テンプレートが定義されています。ヘッダーには、[`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) で実装された基本的なフィルタリングがあります。フッターには、配信方法に基づいて、すべての項目の静的な集計が含まれます。
-
-```html
-    <igx-select>
-        <label igxLabel>Pick your fruit</label>
-            <igx-select-item *ngFor="let fruit of fruits" [value]="fruit.type" [text]="fruit.type" [ngSwitch]="fruit.delivery">
-                {{fruit.type}}
-                <igx-icon *ngSwitchCase="'flight'">flight</igx-icon>
-                <igx-icon *ngSwitchCase="'train'">train</igx-icon>
-                <igx-icon *ngSwitchCase="'boat'">directions_boat</igx-icon>
-            </igx-select-item>
-        <ng-template igxSelectHeader>
-            <div class="custom-select-header">
-                <span class="sample-template-heading">DELIVERY METHOD</span>
-                <igx-buttongroup (click)="filter($event.target.title)">
-                        <button igxButton title="flight"><igx-icon title="flight">flight</igx-icon></button>
-                        <button igxButton title="train"><igx-icon title="train">train</igx-icon></button>
-                        <button igxButton title="boat"><igx-icon title="boat">directions_boat</igx-icon></button>
-                </igx-buttongroup>
-            </div>
-        </ng-template>
-        <ng-template igxSelectFooter>
-            <div class="custom-select-footer">
-                <span class="sample-template-heading">TOTAL</span>
-                <div class="sample-template-icons">
-                    <span class="sample-template-icons__item">
-                        <igx-icon title="flight" [class.important-icon]="selected === 'flight'">flight</igx-icon>
-                        {{flightCount}}
-                    </span>
-                    <span class="sample-template-icons__item">
-                        <igx-icon title="train" [class.important-icon]="selected === 'train'">train</igx-icon>
-                        {{trainCount}}
-                    </span>
-                    <span class="sample-template-icons__item">
-                        <igx-icon title="boat" [class.important-icon]="selected === 'boat'">directions_boat</igx-icon>
-                        {{boatCount}}
-                    </span>
-                </div>
-            </div>
-        </ng-template>
-    </igx-select>
-```
-
-<div class="sample-container loading" style="height: 610px;">
-    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
-</div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-
-### Angular フォームの選択
-`Select` コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで`必要な`バリデーターを使用する方法を示しています。
-
-テンプレート駆動フォームの例:
-```html
-<form>
-    <igx-select [(ngModel)]="selected" required>
-        <label igxLabel>Pick a fruit</label>
-        <igx-select-item *ngFor="let fruit of fruits" [value]="fruit">
-            {{item}}
-        </igx-select-item>
-    </igx-select>
-</form>
-```
-
-TwoWay バインディングを使用するため、クラスは以下のようになります。
-```typescript
-export class MyClass {
-    public fruits: string[] = ["Orange", "Apple", "Banana", "Mango"];
-    public selected: string = "Apple";
-}
-```
-
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="select-form-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-form" class="lazyload"></iframe>
-</div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-form-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-
-> [!NOTE]
-`必要`なアスタリスク`*`も表示する場合は、ラベルセットが必要です。
-
-### カスタム オーバーレイ設定の選択
-`igx-select` では [*OverlaySettings*]({environment:angularApiUrl}/interfaces/overlaysettings.html) のいずれにもバインドしませんが、カスタムな設定を作成して渡すことができます。
-
-<div class="sample-container loading" style="height: 260px;">
-    <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
-</div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-
-テンプレートを以下のように定義します。
+### カスタム オーバーレイ設定
+カスタム [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成できます。テンプレートを以下のように定義します。
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
     <igx-select-item *ngFor="let item of items">
@@ -447,13 +282,20 @@ export class MyClass implements OnInit {
     }
 }
 ```
-[*ConnectedPositioningStrategy*]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) に直接渡す [*PositionSettings*]({environment:angularApiUrl}/interfaces/positionsettings.html) オブジェクトを作成しましたが必須ではありません。ただし、カスタム ポジショニングを定義するためにストラテジのデフォルト設定をオーバーライドします。
+[ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) に直接渡す [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html) オブジェクトを作成しましたが必須ではありません。ただし、カスタム ポジショニングを定義するためにストラテジのデフォルト設定をオーバーライドします。
 
-- [*ngOnInit*](https://angular.io/api/core/OnInit) フックの内側にすべて設定できます。コンポーネントの生成時にテンプレートに自動的に反映します。
+- [ngOnInit](https://angular.io/api/core/OnInit) フックの内側にすべて設定できます。コンポーネントの生成時にテンプレートに自動的に反映します。
 
-> [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを `igx-select` のオープン関数に渡せることにも注意してください。  
+<div class="sample-container loading" style="height: 260px;">
+    <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}"> codesandbox で表示</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}"> stackblitz で表示</button>
+</div>
 
-テンプレートは以下のようになります。
+
+テンプレートを以下のようにカスタマイズされた [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html#open) の open 関数に渡すこともできます。
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items">
@@ -463,7 +305,8 @@ export class MyClass implements OnInit {
 
 <button (click)="onClick($event)"></button>
 ```
-クラスは以下のようになります。
+
+クラスには以下があります。
 ```typescript
 export class MyClass implements OnInit {
     /* -- */
@@ -477,79 +320,36 @@ export class MyClass implements OnInit {
     /* -- */
 }
 ```
-- テンプレートと同様に関数 `open` の引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` で提供されるものを使用することに注意してください。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
+>[!NOTE]
+>テンプレートと同様に関数 `open` の引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` で提供されるものを使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
-## スタイル設定
-[Ignite UI for Angular テーマ ](themes/index.md)を使用して、**igx-select** の外観を変更できます。 
-`igx-select` は igx-drop-down を拡張するため、既存の `igx-drop-down` スタイル設定を活用できます。詳細については [igx-drop-down スタイル ガイド](drop_down.md#スタイル設定)をご覧ください。
-さらに、`IgxInputGroup` には `IgxInputGroup` も含まれているため、入力グループのスタイル設定は `IgxSelect` コンポーネントに影響します。詳細については、[igx-input-group スタイル ガイド](input_group.md#スタイル設定) スタイル ガイドを参照できます。
+### スタイル設定
+各コンポーネントには独自のテーマがあります。
 
-### コード スニペット
-以下を使用します。
-```scss
-// in component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-$my-primary-color:#FFC314;
-$my-secondary-color: #7344df;
-$my-info-color: #ffffff;
+Select のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) と [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) の両方を使用する必要があります。
 
-$my-color-palette: igx-palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color,
-    $info: $my-info-color
-);
-
-$custom-select-theme: igx-drop-down-theme(
-    $background-color: igx-color($my-color-palette, "secondary", 100),
-    $header-text-color: igx-color($my-color-palette, "secondary", 600),
-    $item-text-color: igx-color($my-info-color, "info"),
-
-    $selected-item-background: igx-color($my-color-palette, "secondary", 400),
-    $selected-item-text-color: igx-color($my-color-palette, "info"),
-    $selected-hover-item-background: igx-color($my-color-palette, "secondary", 400),
-    $selected-hover-item-text-color: igx-color($my-color-palette, "info"),
-    $selected-focus-item-background: igx-color($my-color-palette, "secondary", 400),
-    $selected-focus-item-text-color: igx-color($my-color-palette, "info"),
-
-    $focused-item-background: igx-color($my-color-palette, "secondary", 300),
-    $focused-item-text-color: igx-color($my-color-palette, "info"),
-
-    $hover-item-background: igx-color($my-color-palette, "info"),
-    $hover-item-text-color: igx-color($my-color-palette, "secondary", 600)
-);
-
-// Pass our custom-select-theme to the `igx-drop-down` mixin
-    @include igx-drop-down($custom-select-theme);
-```
+これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input_group.md#styling) および [`Drop Down`](drop_down.md#styling) のスタイル設定セクションを参照してください。
 
 > [!NOTE]
-> [**IgxSelect**]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネントは、[IgxOverlay](overlay_main.md) を使用して、`igx-select-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay_styling.md)を確認してください。
-
-### デモ
-<div class="sample-container loading" style="height:450px">
-    <iframe id="select-styling-iframe" src='{environment:demosBaseUrl}/data-entries/select-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+> [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay_main.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay_styling.md)を確認してください。
 
 <div class="divider--half"></div>
 
-## API リファレンス 
-[**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
-[**IgxSelectItemComponent**]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
-[**IgxDropDownComponent**]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
-[**IgxDropDownItemComponent**]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
-[**OverlaySettings**]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
-[**ConnectedPositioningStrategy**]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
-[**GlobalPositionStrategy**]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
-[**AbsoluteScrollStrategy**]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
-[**PositionSettings**]({environment:angularApiUrl}/interfaces/positionsettings.html)
+### API リファレンス
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
+* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
+* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
+* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
+* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
+* [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
-## その他のリソース
-[**NgModel**](https://angular.io/api/forms/NgModel)
-[**ViewChild**](https://angular.io/api/core/ViewChild)
-[**ngForOf**](https://angular.io/api/common/NgForOf)
+### その他のリソース
+* [NgModel](https://angular.io/api/forms/NgModel)
+* [ViewChild](https://angular.io/api/core/ViewChild)
+* [ngForOf](https://angular.io/api/common/NgForOf)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

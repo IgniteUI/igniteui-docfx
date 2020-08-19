@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Demo
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 100px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
 </iframe></div>
 <div class="divider--half"></div>
 
@@ -59,7 +59,7 @@ You can easily change the default ripple color using the `igxRipple`:
 <button igxButton="raised" igxRipple="white">White</button>
 ```
 <div class="sample-container loading" style="height: 100px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
 </iframe></div>
 
 #### Centered Ripple Effect 
@@ -69,7 +69,7 @@ By default, the ripple effect starts from the position of the click event. You c
 <button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
 <div class="sample-container loading" style="height: 100px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
 </iframe></div>
 
 #### Ripple Duration
@@ -79,7 +79,7 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
 <button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
 ```
 <div class="sample-container loading" style="height: 100px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
 </iframe></div>
 
 #### Ripple Target
@@ -94,7 +94,7 @@ Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirecti
 Notice that no matter whether you click on the parent or the child element, the ripple effect will only appear on the button.
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
 </iframe></div>
 
 > [!NOTE]
@@ -149,6 +149,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 

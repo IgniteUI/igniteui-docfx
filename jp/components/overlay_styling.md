@@ -1,4 +1,4 @@
-﻿---
+---
 title: オーバーレイ スタイリング
 _description: IgniteUI for Angular Overlay Service は、表示される要素にスタイルを適切に適用およびスコープする方法についての詳細なチュートリアル。
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
@@ -7,7 +7,6 @@ _language: ja
 
 ## オーバーレイ スタイリング
 <p class="highlight">
-
 [`IgxOverlayService`](overlay_main.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop_down.md)、[コンボ](combo.md)、[日付ピッカー](date_picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
 他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
 </p>
@@ -75,7 +74,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 以下でコンテナを配置する要素への参照を渡すことができます。
 
 ```html
-<igx-combo [data]="items" valueKey="name" displayKey="name" [overlaySettings]="{ outlet: element }">
+<igx-combo [data]="items" valueKey="name" displayKey="name" [overlaySettings]="{ outlet: element, modal: true }">
 </igx-combo>
 ```
 
@@ -90,10 +89,11 @@ export class OverlayStylingComponent {
 コンボのアイテムのリストがコンポーネントのホスト**内**に適切にレンダリングされます。つまり、カスタムテーマが有効になります。
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-styling-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe class="lazyload no-theming" id="overlay-styling-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### オーバーレイのスタイル設定
@@ -107,10 +107,8 @@ export class OverlayStylingComponent {
 
 ```scss
 //  styles.scss
-$background-purple: #5443b84a;
-
 $my-overlay-theme: igx-overlay-theme(
-    $background-color: $background-purple
+  $background-color: rgba(0, 153, 255, 0.3)
 );
 
 @include igx-css-vars($my-overlay-theme);

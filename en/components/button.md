@@ -47,7 +47,7 @@ Use the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.htm
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
 </iframe></div>
 
 #### Raised Button 
@@ -59,7 +59,7 @@ All you have to do to create a raised button is to change the value of the `igxB
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
 </iframe></div>
 
 #### Outlined Button
@@ -71,7 +71,7 @@ Analogically, we can switch to outlined type:
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
 
 #### Icon Button
@@ -85,7 +85,7 @@ We can also use icons as buttons:
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </iframe></div>
 
 #### Floating Action Button
@@ -98,8 +98,20 @@ We can create a floating action button and use an icon to display:
 </button>
 ```
 
+To create an extended FAB, you can add any element prior to the `igx-icon`:
+
+```html
+<button class="btn" igxButton="fab">
+    <span>like</span>
+    <igx-icon fontSet="material">favorite</igx-icon>
+</button>
+```
+
+>[!NOTE]
+>To get the extended FAB text styled properly, use `<span>`, `<div>` or `<p>` tags.
+
 <div class="sample-container loading" style="height: 100px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </iframe></div>
 
 ### Examples
@@ -113,7 +125,7 @@ The `disabled` property can be used to make a button unclickable:
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
 </iframe></div> 
 
 #### Ripple
@@ -127,7 +139,7 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </iframe></div> 
 
 #### Span
@@ -141,7 +153,7 @@ We can also use the `igxButton` directive to turn elements like `span` and `div`
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </iframe></div>
 
 ### Display Density
@@ -197,6 +209,7 @@ If all went well, you should see something like the following in the browser:
     <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
@@ -255,6 +268,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
     <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" class="lazyload no-theming">
 </iframe></div>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
