@@ -88,7 +88,7 @@ export class AppModule {}
 #### Input タイプ
 [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用して [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) に異なるスタイルを適用できます。現在サポートされている入力タイプは、line (デフォルト)、box、border、bootstrap、fluent、search および fluent search です。`bootstrap`、`fluent` と `fluent-search` タイプは `Bootstrap` と `Fluent` テーマのために特に作成されました。スタイル設定の結果:
 
-<div class="sample-container loading" style="height:870px">
+<div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
