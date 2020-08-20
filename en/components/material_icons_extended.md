@@ -55,9 +55,6 @@ export class SampleComponent implements OnInit {
   public allIcons = [
     ...health,
     ...programming,
-    ...finance,
-    ...logos,
-    ...socialMedia
   ];
   //...
   addIcons() {
