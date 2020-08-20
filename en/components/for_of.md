@@ -65,12 +65,11 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 ```html
 <igx-list>
     <div [style.height]="'500px'" [style.overflow]="'hidden'" [style.position]="'relative'">
-        <igx-list-item
-            [style.width]="'calc(100% - 18px)'"
+        <igx-list-item [style.width]="'calc(100% - 18px)'"
             *igxFor="let item of data | igxFilter: fo;
-                    scrollOrientation : 'vertical';
-                    containerSize: '500px'; 
-                    itemSize: '50px'">
+                     scrollOrientation : 'vertical';
+                     containerSize: '500px'; 
+                     itemSize: '50px'">
             <div class="contact">
                 <span class="name">{{item.name}}</span>
             </div>
@@ -85,13 +84,12 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 
 ```html
 <igx-list>
-    <div [style.width]="'100%'" [style.overflow]="'hidden'" [style.position]="'relative'">
-        <igx-list-item
-            [style.width]="'240px'"
+    <div [style.width]="'880px'" [style.overflow]="'hidden'" [style.position]="'relative'">
+        <igx-list-item [style.width]="'220px'"
             *igxFor="let item of data | igxFilter: fo;
-                    scrollOrientation : 'horizontal'; 
-                    containerSize: '800px'; 
-                    itemSize: '240px'">
+                     scrollOrientation : 'horizontal'; 
+                     containerSize: '880px'; 
+                     itemSize: '220px'">
             <div class="contact">
                 <span class="name">{{item.name}}</span>
             </div>
@@ -112,17 +110,24 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 #### Horizontal and vertical virtualization
 
 ```html
-<table #container [style.width]='width' [style.height]='height' [style.overflow]='"hidden"' [style.position]='"relative"'>
-    <ng-template #scrollContainer igxFor let-rowData [igxForOf]="data"
+<table #container [style.width]='width' 
+    [style.height]='height'
+    [style.overflow]='"hidden"'
+    [style.position]='"relative"'>
+    <ng-template #scrollContainer igxFor let-rowData
+        [igxForOf]="data"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='height'
         [igxForItemSize]='"50px"'>
         <tr [style.display]="'flex'" [style.height]="'50px'">
-            <ng-template #childContainer igxFor let-col [igxForOf]="cols"
+            <ng-template #childContainer igxFor let-col
+                [igxForOf]="cols"
                 [igxForScrollOrientation]="'horizontal'"
                 [igxForScrollContainer]="parentVirtDir"
                 [igxForContainerSize]='width'>
-                    <td [style.min-width]='col.width + "px"'>{{rowData[col.field]}}</td>
+                    <td [style.min-width]='col.width + "px"'>
+                        {{rowData[col.field]}}
+                    </td>
             </ng-template>
         </tr>
     </ng-template>
@@ -197,8 +202,9 @@ private buildUrl(dataState: any): string {
     if (dataState) {
         const skip = dataState.startIndex;
             requiredChunkSize =  dataState.chunkSize === 0 ?
-                // Set initial chunk size, the best value is igxForContainerSize initially divided by igxForItemSize
-                10 : dataState.chunkSize;
+            // Set initial chunk size, the best value is igxForContainerSize
+            // initially divided by igxForItemSize
+            10 : dataState.chunkSize;
         const top = requiredChunkSize;
         qS += `$skip=${skip}&$top=${top}&$count=true`;
     }
@@ -224,13 +230,10 @@ chunkLoading(evt) {
 The `igxFor` directive includes the following helper properties in its context: `even`, `odd`, `first` and `last`. They are used to identify the current element position in the collection. The following code snippet demonstrates how to use the `even` property in an `ng-template`. Аn `even` class will be assigned to every even div element:
 
 ```html
-<ng-template igxFor let-item 
-    [igxForOf]="data" 
-    [igxForScrollOrientation]="'vertical'"
-    let-isEven="even">
-    <div [ngClass]="{even: isEven}">
-   
-    </div>
+<ng-template igxFor let-item let-isEven="even"
+             [igxForOf]="data" 
+             [igxForScrollOrientation]="'vertical'" >
+    <div [ngClass]="{even: isEven}"></div>
 </ng-template>
 ```
 
