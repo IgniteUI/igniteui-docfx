@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 ## Material Icons Extended
-<p class="highlight">The Ignite UI for Angular provides a nice set of icons that extends the material icon set</p>
+<p class="highlight">The Ignite UI Material Icons Extended is a subset of icons that extends the material icon set by Google.</p>
 
 ### Demo
 <div class="sample-container loading" style="height: 750px">
