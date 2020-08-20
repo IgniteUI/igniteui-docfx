@@ -78,7 +78,7 @@ To use the icons in your component template:
 <igx-icon fontSet="imx-icons" name="github"></igx-icon>
 ```
 
-For more info and other types of usages, goo to our * [GitHub repo](https://github.com/IgniteUI/material-icons-extended).
+For more information and other types of usage, go to our [GitHub Repository](https://github.com/IgniteUI/material-icons-extended).
 
 ### Additional Resources
 <div class="divider--half"></div>
