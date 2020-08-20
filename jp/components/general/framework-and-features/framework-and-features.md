@@ -28,7 +28,7 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 上記の場合、`body` タグの内部属性タグが優先されます。
 
-##### Step 2 - 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
+##### 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
 
 そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
 
@@ -38,21 +38,21 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 コンテンツを調整する手順はこれですべてになります。
 
-### RTL Support 
-Most of the components in the framework now have full **right-to-left (RTL)** support via the newly included RTL themes.
+### RTL サポート 
+フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。
 
-For **CSS-based** projects add `node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` to your `angular.json` styles collection.
+**CSS ベース**のプロジェクトの場合、`node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` を `angular.json` スタイル コレクションに追加します。
 
-For **Sass-based** projects pass `$direction` to the `igx-core` mixin in your root stylesheet.
+**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `igx-core` mixin に `$direction` を渡します。
 
-Example:
+例:
 
 ```scss
 // $direction defaults to ltr if it's omitted.
 @include igx-core($direction: rtl);
 ```
 
-Currently the following components have only partial RTL support:
+現在、以下コンポーネントは RTL 機能の一部をサポートしています。
 
 * Grid (igx-grid)
 * Tabs (igx-tabs)
