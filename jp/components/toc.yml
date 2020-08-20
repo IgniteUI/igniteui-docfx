@@ -365,7 +365,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md

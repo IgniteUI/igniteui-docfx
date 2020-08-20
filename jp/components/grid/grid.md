@@ -184,6 +184,9 @@ public grid: IgxGridComponent;
 
 `ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集) を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
 
+> [!NOTE]
+> グリッドは、数値、文字列、日付、およびブール列タイプのデフォルトの処理を公開します。例えば、ブール列タイプの場合に列はデフォルトで true/false の代わりに`チェック`または`閉じる`アイコンを表示します。
+
 セル内のデータが `[(ngModel)]` でバインドされていて、値の変更が処理されない場合、新しい値はグリッドの基になるデータソースで適切に更**されません**。カスタム テンプレートを使用してセルの編集を行う場合は、セルの**セル編集テンプレート**を使用することを強くお勧めします。
 
 適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド[編集イベント サイクル](editing.md#編集イベント) を正しく渡します。
@@ -464,8 +467,8 @@ interface AminoAcid {
     <iframe id="grid-nested-data-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding-2' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
