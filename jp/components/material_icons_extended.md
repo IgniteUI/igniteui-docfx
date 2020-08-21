@@ -7,18 +7,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Material Icons Extended
 <p class="highlight">The Ignite UI for Angular provides a nice set of icons that extends the material icon set</p>
 
-### Demo
-<div class="sample-container loading" style="height: 750px">
-    <iframe id="material-icons-extended-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="material-icons-extended-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="material-icons-extended-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
+<div class="sample-container loading" style="height: 700px">
+    <iframe id="material-icons-extended-iframe" seamless class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-
-<div class="divider--half"></div>
 
 ### Installation
 
@@ -40,7 +31,7 @@ export class SampleComponent implements OnInit {
 
   ngOnInit(): void {
     // Register a single icon
-    this.iconService.addSvgIcon(github.name, github.value, "imx-icons");
+    this.iconService.addSvgIconFromText(github.name, github.value, "imx-icons");
   }
 }
 ```
@@ -62,7 +53,7 @@ export class SampleComponent implements OnInit {
   //...
   addIcons() {
     for (let icon of this.allIcons) {
-      this.iconService.addSvgIcon(icon.name, icon.value, "imx-icons");
+      this.iconService.addSvgIconFromText(icon.name, icon.value, "imx-icons");
     }
   }
 
