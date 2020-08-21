@@ -22,24 +22,24 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 
 ### @@igComponent Editing
 
-Ignite UI for Angular @@igComponent component provides really easy way to perform data manipulation operations like create, update and delete records. Modifying data can be achieved in one of the three ways: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md) and [Batch Editing](batch_editing.md). In addition, @@igComponent gives you a powerful public API which allows to customize the way these operations are performed. By default in the @@igComponent is enabled `cell editing` mode and different editors will be shown based on the data type of each of the columns and also ,you can define your own custom templates.
+Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. Modifying of data can be achieved through: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md), and [Batch Editing](batch_editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. **Cell editing** mode is enabled by default and different editors will be shown based on the column data type. Also, defining a custom edit templates is achievable by using [igxCellEditor directive](cell_editing.md#cell-editing-templates) and a couple of [igxRow directives](row_editing.md#customizing-row-editing-overlay).
 
 #### Setup
-In order to specify which edit mode should be enabled, the @@igComponent exposes the following properties [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable). Both of the properties are from boolean type.
+In order to specify which edit mode should be enabled, the @@igComponent exposes the following boolean properties - [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable).
 
-Property `editable` enables you to specify the following options:
+Property **editable** enables you to specify the following options:
 - **false** - the editing for the corresponding column will be disabled; /default value/
 - **true** - the editing for the corresponding column will be enabled;
 
 >Keep in mind that if the column is not editable, you can still modify its value through the public API exposed by the @@igComponent.
 
-Property `rowEditable` enables you to specify the following options:
+Property **rowEditable** enables you to specify the following options:
 - **false** - the row editing in the corresponding grid will be disabled; /default value/
 - **true** - the row editing in the corresponding grid will be enabled;
 
 In the @@igComponent if you set rowEditable property to true, and editable property is not explicitly defined for any column, the editing will be enabled for all the columns except the *primary key*.
 
-`Batch editing` in the grid can be enabled for both `cell editing` and `row editing` modes. In order to set up batch editing it is necessary to provide to the grid a  *TransactionService*.
+**Batch editing** in the grid can be enabled for both **cell editing** and **row editing** modes. In order to set up batch editing it is necessary to provide to the grid a  *TransactionService*.
 - *Cell and Batch Editing* - in this scenario every singe modification of each cell is preserved separately and undo/ redo operations are available on cell level;
 - *Row and Batch Editing* - in this scenario the modifications are preserved on row level so undo/ redo operations will not be working for each cell that is modified but for the bunch of cell from each row.
 
