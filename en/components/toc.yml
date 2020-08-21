@@ -89,14 +89,18 @@
     - name: Editing
       href: grid/editing.md
       new: false
-    - name: Row Editing
-      href: grid/row_editing.md
-      new: false
+      items:
+        - name: Cell Editing
+          href: grid/cell_editing.md
+          new: false
+        - name: Row Editing
+          href: grid/row_editing.md
+          new: false
+        - name: Batch Editing
+          href: grid/batch_editing.md
+          new: false
     - name: Row Drag
       href: grid/row_drag.md
-      new: false
-    - name: Batch Editing
-      href: grid/batch_editing.md
       new: false
     - name: Paging
       href: grid/paging.md
@@ -212,14 +216,18 @@
     - name: Editing
       href: treegrid/editing.md
       new: false
-    - name: Row Editing
-      href: treegrid/row_editing.md
-      new: false
+      items:
+        - name: Cell Editing
+          href: treegrid/cell_editing.md
+          new: false
+        - name: Row Editing
+          href: treegrid/row_editing.md
+          new: false
+        - name: Batch Editing
+          href: treegrid/batch_editing.md
+          new: false
     - name: Row Drag
       href: treegrid/row_drag.md
-      new: false
-    - name: Batch Editing
-      href: treegrid/batch_editing.md
       new: false
     - name: Paging
       href: treegrid/paging.md
@@ -320,14 +328,18 @@
     - name: Editing
       href: hierarchicalgrid/editing.md
       new: false
-    - name: Row Editing
-      href: hierarchicalgrid/row_editing.md
-      new: false
+      items:
+        - name: Cell Editing
+          href: hierarchicalgrid/cell_editing.md
+          new: false
+        - name: Row Editing
+          href: hierarchicalgrid/row_editing.md
+          new: false
+        - name: Batch Editing
+          href: hierarchicalgrid/batch_editing.md
+          new: false
     - name: Row Drag
       href: hierarchicalgrid/row_drag.md
-      new: false
-    - name: Batch Editing
-      href: hierarchicalgrid/batch_editing.md
       new: false
     - name: Paging
       href: hierarchicalgrid/paging.md
