@@ -637,6 +637,11 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 
+### Known Limitations
+
+> [!NOTE] 
+> Some browsers such as Firefox fail to parse regional specific decimal separators by considering them grouping separators, thus resulting in them being invalid. When inputting such values for a numeric column filter value, only the valid part of the number will be applied to the filtering expression. For further information, refer to the Firefox [issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1199665).
+
 ### API References
 <div class="divider--half"></div>
 
