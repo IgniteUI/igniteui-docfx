@@ -204,7 +204,7 @@ export class CalendarSample6Component {
     ];
 
     public ngOnInit() {
-        this.calendar.disabledDates = [{ type: DateRangeType.Specific, dateRange: this.range }];
+        this.calendar.disabledDates = [{ type: DateRangeType.Between, dateRange: this.range }];
     }
 }
 ```
