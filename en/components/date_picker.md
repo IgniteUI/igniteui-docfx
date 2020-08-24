@@ -160,10 +160,10 @@ Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickerco
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker monthsViewNumber="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
        
 <label>Drop Down Mode</label>
-<igx-date-picker mode="dropdown" monthsViewNumber="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
 ```
 
 The following sample demonstrates the usage of the date picker's modes, buttons, and two-way data binding:
