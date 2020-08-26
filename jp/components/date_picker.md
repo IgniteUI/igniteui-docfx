@@ -161,10 +161,10 @@ public date: Date = new Date(Date.now());
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker monthsViewNumber="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
        
 <label>Drop Down Mode</label>
-<igx-date-picker mode="dropdown" monthsViewNumber="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
 ```
 
 以下のサンプルは、日付ピッカーのモード、ボタン、および双方向データ バインディングの使用方法を示します。
