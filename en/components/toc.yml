@@ -108,12 +108,13 @@
     - name: Filtering
       href: grid/filtering.md
       new: false
-    - name: Excel Style Filtering
-      href: grid/excel_style_filtering.md
-      updated: true
-    - name: Advanced Filtering
-      href: grid/advanced_filtering.md
-      new: true
+      items:
+      - name: Excel Style Filtering
+        href: grid/excel_style_filtering.md
+        updated: true
+      - name: Advanced Filtering
+        href: grid/advanced_filtering.md
+        new: true
     - name: Sorting
       href: grid/sorting.md
       updated: true
@@ -235,12 +236,13 @@
     - name: Filtering
       href: treegrid/filtering.md
       new: false
-    - name: Excel Style Filtering
-      href: treegrid/excel_style_filtering.md
-      updated: true
-    - name: Advanced Filtering
-      href: treegrid/advanced_filtering.md
-      new: true
+      items:
+      - name: Excel Style Filtering
+        href: treegrid/excel_style_filtering.md
+        updated: true
+      - name: Advanced Filtering
+        href: treegrid/advanced_filtering.md
+        new: true
     - name: Sorting
       href: treegrid/sorting.md
       updated: true
@@ -347,12 +349,13 @@
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: false
-    - name: Excel Style Filtering
-      href: hierarchicalgrid/excel_style_filtering.md
-      updated: true
-    - name: Advanced Filtering
-      href: hierarchicalgrid/advanced_filtering.md
-      new: true
+      items:
+      - name: Excel Style Filtering
+        href: hierarchicalgrid/excel_style_filtering.md
+        updated: true
+      - name: Advanced Filtering
+        href: hierarchicalgrid/advanced_filtering.md
+        new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       updated: true
