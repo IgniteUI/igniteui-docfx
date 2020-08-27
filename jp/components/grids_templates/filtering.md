@@ -641,6 +641,11 @@ $custom-input-group: igx-input-group-theme(
 </div>
 }
 
+### 既知の制限
+
+> [!NOTE] 
+> Firefox などの一部のブラウザーは、地域固有の小数点区切り文字をグループ化区切りと見なすため解析できず、無効になります。数値列フィルター値にそのような値を入力すると、数値の有効な部分のみがフィルター式に適用されます。詳細については、Firefox [問題](https://bugzilla.mozilla.org/show_bug.cgi?id=1199665)を参照してください。
+
 ### API リファレンス
 <div class="divider--half"></div>
 
