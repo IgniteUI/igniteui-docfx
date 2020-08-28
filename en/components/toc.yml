@@ -1063,7 +1063,7 @@
   href: splitter.md
   new: true
 - name: Dock Manager
-  href: dock-manager.md
+  href: dock-manager-overview.md
   new: true
 - name: Notifications
   header: true

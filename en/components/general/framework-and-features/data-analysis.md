@@ -59,7 +59,7 @@ Data analysis is the process of examining, transforming, and arranging data in a
 >This functionality will be introduced in **Ignite UI for Angular** as external package in order to ease the configuration and limit the required code at minimum
 
 ### Data Analysis with DockManager
-Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager.md) right pane. From there you can:
+Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager-overview.md) right pane. From there you can:
  - Choose specific chart type and visualize it in separate pane.
  - Or use the `Data Analysis` context button to show different text formatting options.
 
@@ -70,7 +70,7 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager")'>View in full screen</button>
 
 > [!NOTE]
-> The [Dock Manager Web component](../../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting data, go ahead and create a couple of charts and pin them (by dragging) to the available areas
+> The [Dock Manager Web component](../../dock-manager-overview.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting data, go ahead and create a couple of charts and pin them (by dragging) to the available areas
 
 Keep in mind (sample related):
 - On new data selection chart data will be updated.

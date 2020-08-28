@@ -1064,7 +1064,7 @@
   href: splitter.md
   new: true
 - name: Dock Manager
-  href: dock-manager.md
+  href: dock-manager-overview.md
   new: true
 - name: 通知
   header: true
