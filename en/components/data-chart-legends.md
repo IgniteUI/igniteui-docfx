@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Legends
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Legends | Infragistics
+_description: Infragistics' Angular charts control's legend displays contextual information related to data plotted. Check out our Ignite UI for Angular graph legends!
+_keywords: Angular charts, data chart, legend, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'Infragistics.Controls.Charts.Legend']
 ---
 
-## Legends
+# Angular Legends
 
 Legends help end-users identify visuals of data chart series with contextual information related to data plotted in the Angular data chart component. Most data charts should have at least one legend in order to make it easier to understand data displayed in the plot area, however, it is not a requirement and the data chart can render without any legends, as it does by default.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-legends-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ Legends help end-users identify visuals of data chart series with contextual inf
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-legends-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Legend Overview
+## Legend Overview
 
 By default, the Angular data chart component does not display legends for any series in the data chart. If you want to show a common legend for multiple series, you need to add a legend object to your application and then set it to the Legend property of the data chart.
 

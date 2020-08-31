@@ -1,17 +1,17 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Bubble
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Scatter Bubble Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create scatter bubble charts. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, scatter bubble charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','BubbleSeries']
 
 ---
 
-## Scatter Bubble Chart
+# Angular Scatter Bubble Chart
 
 This topic explains, with code examples, how to use scatter [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) in the Angular data chart component. This series
 is similar to [Scatter Marker Series](data-chart-type-scatter-point-series.md) which use the Cartesian (x, y) coordinate system to plot data. This series displays the data as a collection of scaled bubbles, each having a pair of numeric X/Y values that determines its location and 3rd value that determines its size.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,15 +19,17 @@ is similar to [Scatter Marker Series](data-chart-type-scatter-point-series.md) w
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-bubble-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) and [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) can be used with [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html).
 
-### Required Data
+## Required Data
 
 The [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) has the following data requirements:
 
@@ -41,7 +43,7 @@ You can use the [SampleScatterStats](data-chart-data-sources-stats.md) as data s
 public dataSource: any[] = SampleScatterStats.getCountries();
 ```
 
-### Required Modules
+## Required Modules
 
 The scatter bubble series requires the following modules:
 
@@ -73,7 +75,7 @@ import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of data chart with [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) and bind it to the data source.
 
@@ -96,7 +98,7 @@ This code demonstrates how to create an instance of data chart with [`IgxBubbleS
  </igx-data-chart>
 ```
 
-### Bubble Shapes
+## Bubble Shapes
 
 You can customize appearance of [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) using the [Markers](data-chart-series-markers.md) properties as well as to change shape of bubbles to one of predefined shapes, for example:
 
@@ -116,7 +118,7 @@ series1.markerBrush = "White";
 series1.markerOutline = "Blue";
 ```
 
-### Bubble Radius Scale
+## Bubble Radius Scale
 
 The [`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusscale) is an optional feature of [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) that determines the sizes of bubbles. This feature is implemented through the[`IgxSizeScaleComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html) object. When the radius scale is set, the smallest bubble will be equal to [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue), the largest bubble will be equal to [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue), and all the remaining bubbles will be scaled accordingly. The size scale can be either linear or logarithmic. When the radius scale is not set, each bubble’s size is equal to the value of data column mapped to [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) property
 
@@ -129,7 +131,7 @@ series1.radiusMemberPath = "GdpPerCapita";
 series1.radiusScale = sizeScale;
 ```
 
-### Bubble Fill Scale
+## Bubble Fill Scale
 
 The [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillscale) is an optional feature which determines the color pattern within a single [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html). This series supports the following fill scales:
 

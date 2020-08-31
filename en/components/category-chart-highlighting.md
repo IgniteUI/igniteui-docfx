@@ -1,15 +1,15 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Highlighting | Infragistics
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics
+title: Angular Charts and Graphs | Data Visualization Tools | Highlighting | Infragistics
+_description: Infragistics' Angular charts control allows you to highlight areas of the graph. Learn about Ignite UI for Angular highlighing features!
+_keywords: Angular charts, category chart, Highlight Layers, Highlighting, Ignite UI for Angular, Infragistics
 mentionedTypes: ['CategoryChart']
 ---
 
-## Highlighting
+# Angular Highlighting
 
 This topic provides conceptual information about the highlighting features of the Ignite UI for Angular category chart component.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,12 +17,14 @@ This topic provides conceptual information about the highlighting features of th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
-### Highlight Layers
+## Highlight Layers
 
-The category chart component can enable three types of highlighting when hovering over items.
+The Ignite UI for Angular category chart component can enable three types of highlighting when hovering over items.
 
 1.  Series Highlighting will highlight the single data point when the pointer is positioned over it.
 
