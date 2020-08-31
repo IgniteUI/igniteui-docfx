@@ -1,31 +1,34 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | Overview | Infragistics |
-_description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+title: Angular Spreadsheet | Tables and Spreadsheet Component | Infragistics
+_description: Our Angular spreadsheet controls help you embed Excel document and editing experiences right into your application. Improve your data visualization today!
+_keywords: Excel Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
 ---
 
-## Angular Spreadsheet
+# Angular Spreadsheet Overview
 
 The Angular Spreadsheet component allows visualizing and editing of spreadsheet data. Features include activation, cell editing, conditional formatting, selection, clipboard.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
-When installing the spreadsheet package, the core and excel package must also be installed.
+When installing the Angular spreadsheet component, the core and excel package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-excel**
--   **npm install --save igniteui-angular-spreadsheet**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-excel
+npm install --save igniteui-angular-spreadsheet
+</pre>
 
-### Required Modules
+## Required Modules
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) requires the following modules:
 
@@ -46,9 +49,9 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-Now that the spreadsheet module is imported, next is the basic configuration of the spreadsheet.
+Now that the Angular spreadsheet module is imported, next is the basic configuration of the spreadsheet.
 
 ```html
 <igx-spreadsheet #spreadsheet height="500px" width="100%">
@@ -59,7 +62,7 @@ Now that the spreadsheet module is imported, next is the basic configuration of 
 >
 > In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
 
-The following demonstrates how to load a workbook into the spreadsheet
+The following demonstrates how to load a workbook into the Angular spreadsheet
 
 ```ts
 import { IgxSpreadsheetComponent } from 'igniteui-angular-spreadsheet';

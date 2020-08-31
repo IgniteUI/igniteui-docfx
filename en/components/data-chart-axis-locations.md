@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Axis Location
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Axis Location | Infragistics
+_description: With the Infragistics' Angular charts control you can specify axis location in relation to the chart plot area. Create a Ignite UI for Angular graph with two axis!
+_keywords: Angular charts, data chart, axis locations, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Axis Locations
+# Angular Axis Locations
 
  For all axes have, you can specify axis location in relationship to chart plot area. This especially important when using more than two axes in the same data chart or when [Sharing Axis](data-chart-axis-sharing.md) between multiple series.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,13 +17,15 @@ mentionedTypes: ['XamDataChart']
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Code Example
+## Code Example
 
-This code demonstrates how to create data chart with two [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) that will be placed on left/right sides and two [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) that will be stacked on one another.
+This code demonstrates how to create Ignite UI for Angular data chart with two [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) that will be placed on left/right sides and two [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) that will be stacked on one another.
 
 ```html
    <igx-data-chart

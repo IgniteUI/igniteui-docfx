@@ -1,15 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Data Utility | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+title: Angular Map | World Utility | Data Source | Infragistics
+_description: Use Infragistics' Angular JavaScript map data utility to generate geographic data. View Ignite UI for Angular map demos!
+_keywords: Angular map, map data, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap']
 ---
 
-## World Utility
+# Angular World Utility
 
-The resource topic provides implementation of utility that helps with generating geographic data.
+The resource topic provides implementation of utility that helps with generating Angular geographic data.
 
-### Code Snippet
+## Code Snippet
 
 ```ts
 export default class WorldUtils {

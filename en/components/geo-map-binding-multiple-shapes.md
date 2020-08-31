@@ -1,15 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Multiple Series | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+title: Angular Map | Data Visualization Tools | Binding Multiple Data Shapes | Infragistics
+_description: Use Infragistics' Angular to add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. View Ignite UI for Angular map tutorials!
+_keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, data binding
 mentionedTypes: ['XamGeographicMap']
 ---
 
-## Binding and Overlaying Multiple Shape Files
+# Angular Binding and Overlaying Multiple Shape Files
 
 In the Ignite UI for Angular map, you can add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. For example, [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) for plotting geographic locations of ports, the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) for plotting routes between ports, and the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) for plotting shapes of countries.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-multiple-shapes-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-shapes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,7 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-multiple-shapes-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -29,7 +30,7 @@ This topic takes you step-by-step towards displaying multiple geographic series 
 
 You can use geographic series in above or other combinations to plot desired data.
 
-### Importing Components
+## Importing Components
 
 First, let's import required components and modules:
 
@@ -41,7 +42,7 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
-### Creating Series
+## Creating Series
 
 Next, we need to create a map with a few Geographic Series that will later load different type of shapefile.
 
@@ -100,7 +101,7 @@ Next, we need to create a map with a few Geographic Series that will later load 
     </ng-template>
 ```
 
-### Loading Shapefiles
+## Loading Shapefiles
 
 Next, in constructor of your page, add a `ShapeDataSource` for each shapefile that you want to display in the geographic map component.
 
@@ -122,7 +123,7 @@ sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
 sdsLocations.dataBind();
 ```
 
-### Processing Polygons
+## Processing Polygons
 
 Process shapes data loaded in `ShapeDataSource` with of countries of the world and assign it to [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) object.
 
@@ -151,7 +152,7 @@ public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
 }
 ```
 
-### Processing Polyline
+## Processing Polyline
 
 Process shapes data loaded in `ShapeDataSource` with communication routes between major cities and assign it to [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object.
 
@@ -182,7 +183,7 @@ public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
 }
 ```
 
-### Processing Points
+## Processing Points
 
 Process shapes data loaded in `ShapeDataSource` with locations of major cities and assign it to [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object.
 
@@ -213,7 +214,7 @@ public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
 }
 ```
 
-### Map Background
+## Map Background
 
 Also, you might want to hide geographic imagery from the map background content if your shape files provided sufficient geographic context (e.g. shape of countries) for your application.
 
@@ -224,7 +225,7 @@ public geoMap: IgxGeographicMapComponent;
 this.geoMap.backgroundContent = {};
 ```
 
-### Summary
+## Summary
 
 For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project.
 
