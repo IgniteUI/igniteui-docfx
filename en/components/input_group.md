@@ -84,8 +84,25 @@ This is how the phone field with hint looks:
 </div>
 <div class="divider--half"></div>
 
-#### Input Types
+#### Input Types & Input Group Type Token
 The input group styles can be altered by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input group component supports the following types: `line` (default if type is not specified), `border`, `box`, and `search`. The `line`, `border`, and `box` types are made specifically for the `Material Design` themes. Setting those types with other themes will not have any effect on how the input group looks.
+An example of setting a specific type declaratively:
+```html
+<igx-input-group type="border">
+```
+
+Using the [InputGroupToken]({environment:angularApiUrl}/index.html#inputgrouptoken) injection token allows to specify a type on an application level for all input-group instances. It provides an easy way to style all related components at once.
+To set the type, use the [InputGroupToken]({environment:angularApiUrl}/index.html#inputgrouptoken) injection token to create a DI provider.
+
+```typescript
+providers: [{provide: InputGroupToken, useValue: 'box' }]
+```
+
+>Note:
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [InputGroupToken]({environment:angularApiUrl}/index.html#inputgrouptoken), thus a token value can be overridden on a component level if the type property is set explicitly.  
+>Most of the `igniteui-angular` form controls use input-group component internally, or allow for a custom template. Setting a global token will affect these components as well.
+
+
 
 <div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
