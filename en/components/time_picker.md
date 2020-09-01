@@ -332,7 +332,7 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 <div class="divider--half"></div>
 
 #### Custom label
-By placing a `<label>` inside the tag of the component the default label can be changed to a custom one:
+By placing an `igxlabel` inside a `<label>` tag nested in the component, the default label can be changed to a custom one:
 
 ````html
 <!-- timepicker-label.component.html -->
@@ -341,7 +341,7 @@ By placing a `<label>` inside the tag of the component the default label can be 
 </igx-time-picker>
 ````
 
-Here's how the custom label will look like:
+Here's what the custom label will look like:
 
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-label" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-label" class="lazyload"></iframe>
