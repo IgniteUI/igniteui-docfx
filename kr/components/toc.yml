@@ -35,12 +35,16 @@
     - name: 페이징
       href: grid/paging.md
       new: false
-    - name: 필터링
-      href: grid/filtering.md
+    - name: Filtering
+      href: grid/filtering-overview.md
       new: false
-    - name: Excel 스타일 필터링
-      href: grid/excel_style_filtering.md
-      new: false
+      items:
+      - name: Quick 필터링
+        href: grid/filtering.md
+        new: false
+      - name: Excel 스타일 필터링
+        href: grid/excel_style_filtering.md
+        new: false
     - name: 정렬
       href: grid/sorting.md
       new: false
@@ -129,12 +133,16 @@
     - name: 페이징
       href: treegrid/paging.md
       new: false
-    - name: 필터링
-      href: treegrid/filtering.md
+    - name: Filtering
+      href: treegrid/filtering-overview.md
       new: false
-    - name: Excel 스타일 필터링
-      href: treegrid/excel_style_filtering.md
-      new: false
+      items:
+      - name: Quick 필터링
+        href: treegrid/filtering.md
+        new: false
+      - name: Excel 스타일 필터링
+        href: treegrid/excel_style_filtering.md
+        new: false
     - name: 정렬
       href: treegrid/sorting.md
       new: false
@@ -211,12 +219,16 @@
     - name: 페이징
       href: hierarchicalgrid/paging.md
       new: false
-    - name: 필터링
-      href: hierarchicalgrid/filtering.md
+    - name: Filtering
+      href: hierarchicalgrid/filtering-overview.md
       new: false
-    - name: Excel 스타일 필터링
-      href: hierarchicalgrid/excel_style_filtering.md
-      new: false
+      items:
+      - name: Quick 필터링
+        href: hierarchicalgrid/filtering.md
+        new: false
+      - name: Excel 스타일 필터링
+        href: hierarchicalgrid/excel_style_filtering.md
+        new: false
     - name: 정렬
       href: hierarchicalgrid/sorting.md
       new: false
