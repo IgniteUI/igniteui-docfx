@@ -91,15 +91,15 @@ An example of setting a specific type declaratively:
 <igx-input-group type="border">
 ```
 
-Using the [InputGroupToken]({environment:angularApiUrl}/index.html#inputgrouptoken) injection token allows to specify a type on an application level for all input-group instances. It provides an easy way to style all related components at once.
-To set the type, use the [InputGroupToken]({environment:angularApiUrl}/index.html#inputgrouptoken) injection token to create a DI provider.
+Using the [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) injection token allows to specify a type on an application level for all input-group instances. It provides an easy way to style all related components at once.
+To set the type, use the [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) injection token to create a DI provider.
 
 ```typescript
-providers: [{provide: InputGroupToken, useValue: 'box' }]
+providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
 ```
 
 >Note:
->[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [InputGroupToken]({environment:angularApiUrl}/index.html#inputgrouptoken), thus a token value can be overridden on a component level if the type property is set explicitly.  
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
 >Most of the `igniteui-angular` form controls use input-group component internally, or allow for a custom template. Setting a global token will affect these components as well.
 
 
