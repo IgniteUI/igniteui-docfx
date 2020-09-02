@@ -23,7 +23,7 @@ Property **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#fil
 - **quickFilter** - a simplistic filtering UI; /default value/
 - **excelStyleFilter** - an Excel-like filtering UI;
 
-Property **[filterable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterable)** enables you to specify the following options:
+Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)** enables you to specify the following options:
 - **true** - the filtering for the corresponding column will be enabled; /default value/
 - **false** - the filtering for the corresponding column will be disabled;
 
