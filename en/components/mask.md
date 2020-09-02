@@ -219,7 +219,6 @@ Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularAp
 public value = 100;
 public displayFormat = new DisplayFormatPipe();
 public inputFormat = new InputFormatPipe();
-}
 ```
 ```html
 <igx-input-group>
