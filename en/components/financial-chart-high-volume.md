@@ -1,15 +1,15 @@
 ---
-title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | High Volume Data
-_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+title: Angular Financial Chart | High Volume Data | Infragistics
+_description: Learn how to optimize the performance of the Infragistics' Angular financial chart control. Improve the Ignite UI for Angulargraph's performance!
+_keywords: Angular charts, financial chart, stock chart, performance, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamFinancialChart']
 ---
 
-## Binding High Volume Data
+# Angular Binding High Volume Data
 
 The Angular financial chart component is capable of handling high volumes of data. The following demo binds 20 years of data, with 1 hour intervals and displays the stock prices using line chart type.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ The Angular financial chart component is capable of handling high volumes of dat
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 

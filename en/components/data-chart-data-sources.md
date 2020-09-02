@@ -1,13 +1,13 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Data Source
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Data Source | Infragistics
+_description: Use Infragistics' Angular charts control to create many different chart types such as column, area, bar, pie, doughnut and more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, Ignite UI for Angular, Infragistics, data sources
 mentionedTypes: ['XamDataChart']
 ---
 
-## Data Sources
+# Angular Data Sources
 
-In the Angular data chart component, all series require specific numer and type of data columns to render correctly. This topic provides examples of how to implement data source for each group of series.
+In the Angular data chart component, all series require specific number and type of data columns to render correctly. This topic provides examples of how to implement data source for each group of series.
 
 -   [SampleCategoryData](data-chart-data-sources-category.md) for [Category Series](data-chart-type-category-series.md)
 -   [SampleFinancialData](data-chart-data-sources-financial.md) for [Financial Series](data-chart-type-financial-series.md)
