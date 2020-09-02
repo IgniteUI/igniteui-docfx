@@ -38,8 +38,8 @@ Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 To enable the [Advanced filtering](advanced_filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
 
 ```html
-<igx-hierarchical-grid [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
-</igx-hierarchical-grid>
+<@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+</@@igSelector>
 ```
 
 >[!NOTE]
