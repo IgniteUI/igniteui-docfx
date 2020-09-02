@@ -166,6 +166,22 @@ private notify(snackbar, message, input) {
 #### Text Selection
 You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
 
+Import the `IgxTextSelectionModule` in your **app.module.ts** file:
+
+```typescript
+...
+import { ..., IgxTextSelectionModule } from 'igniteui-angular';
+
+@NgModule({
+    ...
+    imports: [..., IgxTextSelectionModule]
+    ...
+})
+export class AppModule {}
+```
+
+Then add this to the template:
+
 ```html
 <igx-input-group>
     <input igxInput [igxMask]="'###-##-####'" [igxTextSelection]="true"/>
@@ -216,7 +232,6 @@ public inputFormat = new InputFormatPipe();
     [focusedValuePipe]="inputFormat"
     [displayValuePipe]="displayFormat"/>
 </igx-input-group>
-
 ```
 
 As a result, a '%' sign should be appended to the value on blur (i.e. when the user clicks outside the input) and will be removed once the input gets focus!
