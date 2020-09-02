@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Axis Settings
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Axis Settings | Infragistics
+_description: Infragistics' Angular charts control allows full control over configuring axis labels, titles, tickmarks, range, gridline, gap and overlap. Learn about our Ignite UI for Angular graph axis!
+_keywords: Angular charts, data chart, axis settings, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 ---
 
-## Axis Settings
+# Angular Axis Settings
 
 In the Ignite UI for Angular data chart component, an axis provides base properties for specifying the appearance of axis main lines, tickmarks, titles, and axis labels.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-axis-settings-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-settings' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,13 +17,15 @@ In the Ignite UI for Angular data chart component, an axis provides base propert
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-settings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Axis Labels
+## Axis Labels
 
-The data chart compoment allows you full control over configuring, formatting, and styling the font of the labels displayed on an axis in your chart. You can change the rotation angle, margin, horizontal and vertical alignment, color, padding, and visibility of these labels.
+The Ignite UI for Angular data chart component allows you full control over configuring, formatting, and styling the font of the labels displayed on an axis in your chart. You can change the rotation angle, margin, horizontal and vertical alignment, color, padding, and visibility of these labels.
 
 The following code example shows how to style the labels on a category x-axis in the data chart:
 
@@ -37,11 +39,11 @@ The following code example shows how to style the labels on a category x-axis in
 </igx-category-x-axis>
 ```
 
-### Axis Titles
+## Axis Titles
 
 The axis title feature of the data chart component allows you to add contextual information to the axes of the data chart. You can customize the look and feel of the axis titles in many different ways such as applying different font styles, margins, and alignments.
 
-The following code example shows how to set and customize the titles on a category x-axis in the chart:
+The following code example shows how to set and customize the titles on a Ignite UI for Angular category x-axis in the chart:
 
 ```html
 <igx-category-x-axis #xAxis
@@ -53,7 +55,7 @@ The following code example shows how to set and customize the titles on a catego
 </igx-category-x-axis>
 ```
 
-### Axis Tickmarks
+## Axis Tickmarks
 
 Tick marks display points on the axes in the Angular data chart component. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness, and color of the tick marks on an axis in the data chart component.
 
@@ -68,7 +70,7 @@ The following code example shows how to set and customize the color, length, and
 </igx-category-x-axis>
 ```
 
-### Axis Range
+## Axis Range
 
 In the Angular data chart component, you can define a range minimum and range maximum value of a numeric or time axis. The range minimum is the lowest value of the axis and the range maximum is the highest value of the axis. These are set by setting the [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) and [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#maximumvalue) options on the corresponding axes.
 
@@ -84,7 +86,7 @@ The following code snippet demonstrates changing an axis range in the data chart
 </igx-numeric-y-axis>
 ```
 
-### Axis Gridlines
+## Axis Gridlines
 
 In the Angular data chart component, the [`interval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#interval) property of an axis determines how frequently the major gridlines and axis labels are rendered on that axis. Similarly, the [`minorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#minorinterval) property specifies how frequently minor gridlines are rendered between those major gridlines.
 
@@ -106,11 +108,11 @@ The following code snippet demonstrates how to configure the intervals on the ax
 </igx-numeric-y-axis>
 ```
 
-### Axis Gap
+## Axis Gap
 
 The [`gap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#gap) property on the category axes of the Angular data chart component determines the amount of space between series of the data chart.
 
-This property accepts a numeric value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between the series. Setting this property to 0 would mean there is no gap rendered between the series, and setting it 1 woudl render the maximum available gap.
+This property accepts a numeric value between 0 and 1. The value represents a relative width of the gap out of the available number of pixels between the series. Setting this property to 0 would mean there is no gap rendered between the series, and setting it 1 would render the maximum available gap.
 
 The following sample code demonstrates setting an x-axis gap:
 
@@ -122,7 +124,7 @@ The following sample code demonstrates setting an x-axis gap:
 </igx-category-x-axis>
 ```
 
-### Axis Overlap
+## Axis Overlap
 
 The axis [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) feature of the category axes of the Angular data chart component allows setting the overlap of the rendered categories.
 

@@ -1,25 +1,25 @@
 ---
-title: Icon Component
-_description: Ignite UI for Angular extends the material icons set to provide the designers and developers a wide range of icons to choose from. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls, Material icons extended
+title: 拡張されたマテリアル アイコン
+_description: Ignite UI for Angular は、マテリアル アイコン セットを拡張して、デザイナーや開発者に幅広いアイコンを提供しています。 
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール、ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール, 拡張されたマテリアル アイコン
 ---
 
-## Material Icons Extended
-<p class="highlight">The Ignite UI for Angular provides a nice set of icons that extends the material icon set</p>
+## 拡張されたマテリアル アイコン
+<p class="highlight">Ignite UI for Angular は、マテリアル アイコン セットを拡張する素晴らしいアイコン セットを提供します。</p>
 
 <div class="sample-container loading" style="height: 700px">
     <iframe id="material-icons-extended-iframe" seamless class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
-### Installation
+### インストール
 
 ```sh
 npm install @igniteui/material-icons-extended
 ```
 
-### Usage
+### 使用方法
 
-First, let's see how we can register a single icon in our component:
+まず、コンポーネントに単一のアイコンを登録する方法を見てみましょう。
 
 ```typescript
 import { Component, OnInit } from "@angular/core";
@@ -36,7 +36,7 @@ export class SampleComponent implements OnInit {
 }
 ```
 
-Now, let's see how to register multiple icons/categories:
+次に、複数のアイコン/カテゴリを登録する方法を見てみましょう。
 
 ```typescript
 //...
@@ -46,9 +46,6 @@ export class SampleComponent implements OnInit {
   public allIcons = [
     ...health,
     ...programming,
-    ...finance,
-    ...logos,
-    ...socialMedia
   ];
   //...
   addIcons() {
@@ -63,20 +60,20 @@ export class SampleComponent implements OnInit {
 }
 ```
 
-To use the icons in your component template:
+コンポーネント テンプレートでアイコンを使用するには:
 
 ```html
 <igx-icon fontSet="imx-icons" name="github"></igx-icon>
 ```
 
-For more info and other types of usages, goo to our * [GitHub repo](https://github.com/IgniteUI/material-icons-extended).
+詳細とその他の使用方法については、[GitHub リポジトリ](https://github.com/IgniteUI/material-icons-extended)にアクセスしてください。
 
-### Additional Resources
+### その他のリソース
 <div class="divider--half"></div>
 
 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

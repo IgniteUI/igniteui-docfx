@@ -1,18 +1,18 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Highlighting
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools |  Highlighting | Infragistics
+_description: Infragistics' Angular charts control allows you to highlight areas of the graph. Learn about Ignite UI for Angular highlighing features!
+_keywords: Angular charts, data chart, highlighting, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Highlighting
+# Angular Highlighting
 
-The Angular data chart component allows you to highlight the plotted series in the data chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers. 
+The Angular data chart component allows you to highlight the plotted series in the data chart to visualize the item or series that the mouse is hovering over or by using the highlighting layers.
 
 > [!NOTE]
 > Please note that highlighting is not currently supported for stacked series.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,6 +20,8 @@ The Angular data chart component allows you to highlight the plotted series in t
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -31,14 +33,14 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 @NgModule({
-    imports: [ 
-        IgxDataChartInteractivityModule, 
+    imports: [
+        IgxDataChartInteractivityModule,
         IgxDataChartAnnotationModule,
     ]
 })
 ```
 
-### Highlighting Series Visuals
+## Highlighting Series Visuals
 
 The series highlighting feature of the Angular data chart component allows you to either highlight single items or entire series. For example, if you are using a line series, the highlighting will highlight the entire shape of the line as it is all one single shape. However, highlights can be applied to each single item in a series such as a column series.
 
@@ -69,7 +71,7 @@ The following code snippet demonstrates how to enable highlighting on series in 
 </igx-data-chart>
 ```
 
-### Highlight Series Categories
+## Highlight Series Categories
 
 The category highlight layer targets a category axis, or all category axes in the Angular data chart component. If the axis contains any series that are aligned between major gridlines of the axis, for example, a column series, this will render a shape that fills the current category.
 
@@ -107,7 +109,7 @@ The following is a code snippet demonstrating how to add a category highlight la
 </igx-data-chart>
 ```
 
-### Highlighting Series Items
+## Highlighting Series Items
 
 The category item highlight layer highlights items in series using category axis by either drawing a banded shape or rendering a marker at that position.
 

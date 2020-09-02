@@ -1,16 +1,16 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Trendlines
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Trendline | Infragistics
+_description: Use the trendlines of the Infragistics' Angular charts to indentify a trend in data bound to a series. Check out the Ignite UI for Angular graph's trendlines feature!
+_keywords: Angular charts, data chart, trendlines, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'AreaSeries', 'BarSeries','ColumnSeries', 'PointSeries','SplineSeries','StepAreaSeries','WaterfallSeries']
 
 ---
 
-## Trendlines
+# Angular Trendlines
 
 The Angular data chart component has support for trendlines, which help to identify a trend in data bound to a series.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,8 @@ The Angular data chart component has support for trendlines, which help to ident
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-trendlines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

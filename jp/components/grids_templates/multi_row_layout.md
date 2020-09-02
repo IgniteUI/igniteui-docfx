@@ -130,7 +130,7 @@ _language: ja
 </div>
 
 ### スタイル設定
-igxGrid を使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。     
 

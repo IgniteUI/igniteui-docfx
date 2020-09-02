@@ -1,15 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Map Navigation | Infragistics
-_description: The Map allows you to navigate using geographic coordinates or relative window coordinates.
-_keywords: map, Ignite UI for Angular, infragistics
+title: Angular Map | Data Visualization Tools | Map Navigation | Infragistics
+_description: Navigate Infragistics' Angular map by panning right and left and zooming horizontally and vertically using mouse or touch. Learn about Ignite UI for Angular map's navigation capabilities!
+_keywords: Angular map, navigations, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap']
 ---
 
-## Navigating Map Content
+# Angular Navigating Map Content
 
 Navigation in the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control is enabled by default and it allows zooming and panning of the map content. However, this behavior can be changed using the [`zoomable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html#zoomable) property. It is important to know that the map allows only synchronized zooming - scaling the map content with preserved aspect ratio. As result, it is not possible to scale the map content vertically without scaling it also horizontally and vice versa.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-navigation-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,12 @@ Navigation in the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/produ
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+    
 </div>
 
 <div class="divider--half"></div>
 
-### Geographic Coordinates
+## Geographic Coordinates
 
 You navigate map content within geographic region bound by these coordinates:
 
@@ -30,7 +31,7 @@ You navigate map content within geographic region bound by these coordinates:
 
 This code snippet shows how navigate the map using geographic coordinates:
 
-### Window Coordinates
+## Window Coordinates
 
 Also, you can navigate map content within window rectangle bound by these relative coordinates:
 
@@ -39,7 +40,7 @@ Also, you can navigate map content within window rectangle bound by these relati
 
 This code snippet shows how navigate the map using relative window coordinates:
 
-### Properties
+## Properties
 
 The following table summarizes properties that can be used in navigation of the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control:
 

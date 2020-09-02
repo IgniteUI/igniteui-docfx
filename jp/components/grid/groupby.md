@@ -241,7 +241,7 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 
 ### スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
