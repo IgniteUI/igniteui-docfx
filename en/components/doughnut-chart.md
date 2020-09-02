@@ -1,16 +1,16 @@
 ---
-title: Doughnut Chart | Hierarchical Data Visualization | Ignite UI for Angular | Infragistics
-_description: Use the doughnut chart component to display multiple variables in concentric rings for hierarchical data visualization. View the demo for more information.
-_keywords: doughnut chart, Ignite UI for Angular, infragistics
+title: Angular Doughnut Chart | Hierarchical Data Visualization  | Infragistics
+_description: Use the Infragistics' Angular doughnut chart control to display multiple variables in concentric rings for hierarchical data visualization. View Ignite UI for Angular doughnut chart demos for more information!
+_keywords: Angular charts, doughnut chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, multiple rings
 mentionedTypes: ['XamDoughnutChart']
 
 ---
 
-## Doughnut Chart
+# Angular Doughnut Chart Overview
 
 The Ignite UI for Angular doughnut chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,20 +18,24 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
-When installing the charts package, the core package must also be installed.
+When installing the charts component, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
-### Required Modules
+## Required Modules
 
-The Angular douhgnut chart component requires the following modules:
+The Angular doughnut chart component requires the following modules:
 
 ```ts
 // app.module.ts
@@ -49,7 +53,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 Now that the doughnut chart module is imported, next step is to bind it to data.
 In order to create the component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
@@ -64,7 +68,7 @@ this.data = [
 ];
 ```
 
-The following code demonstradtes how to bind the doughnut chart to the above data.
+The following code demonstrates how to bind the doughnut chart to the above data.
 
 ```html
  <igx-doughnut-chart height="100%" width="100%">
@@ -78,9 +82,9 @@ The following code demonstradtes how to bind the doughnut chart to the above dat
 
 <div class="divider--half"></div>
 
-### Multiple Rings
+## Multiple Rings
 
-The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data spirce, or they can share a common data source. For example, the following 2 data sources
+The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data item, or they can share a common data source. For example, the following 2 data sources
 are used to bind to multiple rings:
 
 ```ts
@@ -111,7 +115,7 @@ this.Seasons = [
 ```
 
 ```html
- <igx-doughnut-chart width="700px" height="500px">
+ <igx-doughnut-chart width="100%" height="100%">
         <igx-ring-series name="Months"
             [dataSource]="Months"
             labelsPosition="Center"
@@ -131,7 +135,7 @@ this.Seasons = [
  </igx-doughnut-chart>
 ```
 
-### Multiple Rings Demo
+## Multiple Rings Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-rings-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -139,11 +143,13 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Slice Selection
+## Slice Selection
 
 The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
 
@@ -157,7 +163,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 **Modifying the contents of the SelectedSlices collection** - You can change the selected slice by changing the contents of the `SelectedSlices` collection. The doughnut chart holds references to all the slices allowing you to modify their `IsSelected` property directly to the Slice objects.
 
-### Slice Selection Demo
+## Slice Selection Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -165,11 +171,13 @@ The doughnut chart component exposes the API for setting the state of one or mor
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Slice Explosion
+## Slice Explosion
 
 The doughnut chart component slices explode either programmatically or by user interaction.
 
@@ -185,7 +193,7 @@ The doughnut chart component holds references to all the slices allowing you to 
 **Modifying the contents of the ExplodedSlices collection**
 You can change the exploded slices by changing the contents of the `ExplodedSlices` collection.
 
-### Slice Explosion Demo
+## Slice Explosion Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -193,15 +201,17 @@ You can change the exploded slices by changing the contents of the `ExplodedSlic
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Legend
+## Legend
 
 The doughnut chart component supports the use of a legend. The legend used is the ItemLegend which is connected though the series of the chart.
 
-### Legend Demo
+## Legend Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -209,4 +219,44 @@ The doughnut chart component supports the use of a legend. The legend used is th
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
+</div>
+
+## Animation
+
+You can animate the doughnut chart by setting the `radiusFactor` property, which will scales the chart's radius.
+Also set the `startAngle` property to angle the chart such that it keep increasing the chart angle while rotating.
+
+In the code below, the radiusFactor is increasing the chart by 0.25% of the size, and startAngle is rotating the chart by 1 degree. When radiusFactor and startAngle reached to its maximum limit the animation is stopped by reset the animation flag and clear the interval.
+
+```ts
+window.setInterval(() => this.tick(), 15);
+public tick(): void {
+    if (this.isAnimating) {
+        if (this.chartSeries.radiusFactor < 1.0)
+            this.chartSeries.radiusFactor += 0.0025;
+
+        if (this.chartSeries.startAngle < 360)
+            this.chartSeries.startAngle++;
+
+        if (this.chartSeries.radiusFactor >= 1.0 &&
+            this.chartSeries.startAngle >= 360) {
+            this.isAnimating = false;
+            window.clearInterval(this.interval);
+        }
+    }
+}
+```
+
+## Animation Demo
+
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-animation-iframe" data-demos-base-url="environment:dvDemosBaseUrl}">View on StackBlitz
+    </button>
+
+
 </div>
