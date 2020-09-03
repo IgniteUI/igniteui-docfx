@@ -18,7 +18,17 @@ The Ignite UI for Angular Combo Component provides easy filtering, single and mu
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-<div class="divider--half"></div>
+
+### Features
+
+The combo control exposes the following features:
+    - Data Binding - local data and [remote data](combo_remote.md)
+    - [Value Binding](combo_features.md#value-binding)
+    - [Filtering](combo_features.md#filtering)
+    - [Grouping](combo_features.md#grouping)
+    - [Custom Values](combo_features.md#custom-values)
+    - [Templates](combo_templates.md)
+    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
 
 ### Usage
 
@@ -73,7 +83,7 @@ In our case, we want the combo to display the `name` of each city and the combo 
 
 #### Two-Way Binding
 
-The combo component fully supports two-way data-binding with `[(ngModel)]` as well usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
+The combo component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
 
 In the following example, the cities Sofia and London will initially be selected. Any further changes in the combo's selection will reflect on the `selectedCities` array.
 
@@ -201,6 +211,41 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 </div>
 <div class="divider--half"></div>
 
+### Keyboard Navigation
+
+When igxCombo is closed and focused:
+- `ArrowDown` or `Alt` + `ArrowDown` will open the combo drop down and will move focus to the search input.
+
+When igxCombo is opened and search input is focused:
+- `ArrowUp` or `Alt` + `ArrowUp` will close the combo drop down and will move focus to the closed combo.
+
+- `ArrowDown` will move focus from the search input to the first list item. If the list is empty and custom values are enabled will move it to the Add new item button.
+  
+> [!NOTE]
+> Any other key stroke will be handled by the input.
+
+When igxCombo is opened and list item is focused:
+- `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
+
+- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input.
+
+- `End` will move to the last list item.
+
+- `Home` will move to the first list item.
+
+- `Space` will select/deselect the active list item.
+
+- `Enter` will confirm the already selected items and will close the list.
+
+- `Esc` will close the list.
+
+When igxCombo is opened, allow custom values are enabled and add item button is focused:
+
+- `Enter` will add a new item with valueKey and displayKey equal to the text in the search input and will select the new item.
+
+- `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
+
+
 ### Styling
 
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
@@ -286,57 +331,11 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 
 <div class="divider--half"></div>
 
-### Features
-
-Combo control exposes the following features:
-    - Data Binding - local data and [remote data](combo_remote.md)
-    - [Value Binding](combo_features.md#value-binding)
-    - [Filtering](combo_features.md#filtering)
-    - [Grouping](combo_features.md#grouping)
-    - [Custom Values](combo_features.md#custom-values)
-    - [Templates](combo_templates.md)
-    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
-
-
-### Keyboard Navigation
-
-When igxCombo is closed and focused:
-- `ArrowDown` or `Alt` + `ArrowDown` will open the combo drop down and will move focus to the search input.
-
-When igxCombo is opened and search input is focused:
-- `ArrowUp` or `Alt` + `ArrowUp` will close the combo drop down and will move focus to the closed combo.
-
-- `ArrowDown` will move focus from the search input to the first list item. If the list is empty and custom values are enabled will move it to the Add new item button.
-  
-> [!NOTE]
-> Any other key stroke will be handled by the input.
-
-When igxCombo is opened and list item is focused:
-- `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
-
-- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input.
-
-- `End` will move to the last list item.
-
-- `Home` will move to the first list item.
-
-- `Space` will select/deselect the active list item.
-
-- `Enter` will confirm the already selected items and will close the list.
-
-- `Esc` will close the list.
-
-When igxCombo is opened, allow custom values are enabled and add item button is focused:
-
-- `Enter` will add a new item with valueKey and displayKey equal to the text in the search input and will select the new item.
-
-- `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
-
 ### Known Issues
 
-- Combo input that displays the selected items is not editable. However, due to browser specifics in IE and FireFox, the cursor is visible.
+- The combo input that displays the selected items is not editable. However, due to browser specifics in IE and FireFox, the cursor is visible.
 - Backspace works in disabled combo in IE.
-- Combo is not having input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
+- The combo does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
 > [!NOTE]
 > The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
