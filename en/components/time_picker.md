@@ -90,6 +90,28 @@ The table below lists valid time display formats:
 | `mm` | Formats the minutes field with leading zero (00..59). |
 | `tt` | Represents the AM/PM field. |
 
+#### Custom label
+By placing an `igxlabel` inside a `<label>` tag nested in the component, the default label can be changed to a custom one:
+
+````html
+<!-- timepicker-label.component.html -->
+<igx-time-picker>
+    <label igxLabel>Meeting Start</label>
+</igx-time-picker>
+````
+
+Here's what the custom label will look like:
+
+<div class="sample-container loading" style="height: 540px;">
+    <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+
 #### Change delta and spin mode
 
 To change the delta of the items, set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) input. To change the spin mode, use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) input:
@@ -330,26 +352,6 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
-
-#### Custom label
-By placing an `igxlabel` inside a `<label>` tag nested in the component, the default label can be changed to a custom one:
-
-````html
-<!-- timepicker-label.component.html -->
-<igx-time-picker>
-    <label igxLabel>Custom label</label>
-</igx-time-picker>
-````
-
-Here's what the custom label will look like:
-
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-label" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-label" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-label" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-label" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 
 ### Styling
 
