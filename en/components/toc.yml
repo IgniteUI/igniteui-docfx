@@ -106,14 +106,18 @@
       href: grid/paging.md
       new: false
     - name: Filtering
-      href: grid/filtering.md
+      href: grid/filtering-overview.md
       new: false
-    - name: Excel Style Filtering
-      href: grid/excel_style_filtering.md
-      updated: true
-    - name: Advanced Filtering
-      href: grid/advanced_filtering.md
-      new: true
+      items:
+        - name: Quick Filtering
+          href: grid/filtering.md
+          new: false
+        - name: Excel Style Filtering
+          href: grid/excel_style_filtering.md
+          updated: true
+        - name: Advanced Filtering
+          href: grid/advanced_filtering.md
+          new: true
     - name: Sorting
       href: grid/sorting.md
       updated: true
@@ -233,14 +237,18 @@
       href: treegrid/paging.md
       new: false
     - name: Filtering
-      href: treegrid/filtering.md
+      href: treegrid/filtering-overview.md
       new: false
-    - name: Excel Style Filtering
-      href: treegrid/excel_style_filtering.md
-      updated: true
-    - name: Advanced Filtering
-      href: treegrid/advanced_filtering.md
-      new: true
+      items:
+      - name: Quick Filtering
+        href: treegrid/filtering.md
+        new: false
+      - name: Excel Style Filtering
+        href: treegrid/excel_style_filtering.md
+        updated: true
+      - name: Advanced Filtering
+        href: treegrid/advanced_filtering.md
+        new: true
     - name: Sorting
       href: treegrid/sorting.md
       updated: true
@@ -345,14 +353,18 @@
       href: hierarchicalgrid/paging.md
       new: false
     - name: Filtering
-      href: hierarchicalgrid/filtering.md
+      href: hierarchicalgrid/filtering-overview.md
       new: false
-    - name: Excel Style Filtering
-      href: hierarchicalgrid/excel_style_filtering.md
-      updated: true
-    - name: Advanced Filtering
-      href: hierarchicalgrid/advanced_filtering.md
-      new: true
+      items:
+      - name: Quick Filtering
+        href: hierarchicalgrid/filtering.md
+        new: false
+      - name: Excel Style Filtering
+        href: hierarchicalgrid/excel_style_filtering.md
+        updated: true
+      - name: Advanced Filtering
+        href: hierarchicalgrid/advanced_filtering.md
+        new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       updated: true
