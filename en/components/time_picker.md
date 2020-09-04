@@ -100,16 +100,7 @@ By placing an `igxlabel` inside a `<label>` tag nested in the component, the def
 </igx-time-picker>
 ````
 
-Here's what the custom label will look like:
-
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
+You can see what the custom label will look like in the validation sample found in the Validation section.
 
 
 #### Change delta and spin mode
@@ -156,13 +147,14 @@ public onValidationFailed() {
 
 ```html
 <igx-time-picker
-[itemsDelta]="{hours:1, minutes:5}"
-format="HH:mm tt"
-[vertical]="true"
-[minValue]="min"
-[maxValue]="max"
-(onValidationFailed)="onValidationFailed()"
-></igx-time-picker>
+	[itemsDelta]="{hours:1, minutes:5}"
+	format="HH:mm tt"
+	[vertical]="true"
+	[minValue]="min"
+	[maxValue]="max"
+	(onValidationFailed)="onValidationFailed()">
+	<label igxLabel>Meeting Start</label>
+</igx-time-picker>
 
 <igx-toast #toast message="Value must be between 09:15:30 AM and 06:15:30 PM"></igx-toast>
 
