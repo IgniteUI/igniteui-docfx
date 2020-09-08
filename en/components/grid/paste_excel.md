@@ -4,7 +4,7 @@ _description: Configure the Angular Grid to paste data from excel, by using rich
 _keywords: export selected, igniteui for angular, infragistics
 ---
 
-### Grid Paste from Excel demonstration
+# Grid Paste from Excel demonstration
 
 The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
 

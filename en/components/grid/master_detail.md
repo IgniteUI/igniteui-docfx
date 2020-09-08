@@ -4,7 +4,7 @@ _description: Learn how to define expandable detail view template for rows in th
 _keywords: master detail, igniteui for angular, infragistics
 ---
 
-### Grid Master-Detail
+# Grid Master-Detail
 
 The `igxGrid` component supports specifying a detail template that displays additional details for a particular row by expanding/collapsing its content. When specified each record acts as a master, which upon expansion shows a customizable details template with contextual data for the current record.
 

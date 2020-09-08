@@ -4,7 +4,7 @@ _description: Use the ZoomSlider within the data chart to easily display a subse
 mentionedTypes: ['ZoomSlider, XamDataChart']
 ---
 
-### Zoom Slider
+# Angular Zoom Slider Overview
 
 The ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart or CategoryChart.
 

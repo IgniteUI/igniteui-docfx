@@ -20,7 +20,7 @@ _keywords: angular remote data operations, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Remote Data Operations Overview
+# @@igComponent Remote Data Operations Overview
 
 The Ignite UI for Angular @@igComponent supports remote data operations such as remote virtualization, remote sorting, remote filtering and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
 

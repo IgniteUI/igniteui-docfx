@@ -4,7 +4,7 @@ _description: The igx-combo exposes API that allows to bind a combo to a remote 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls, Angular Combo Remote Binding
 ---
 
-## Combo Remote Binding
+# Combo Remote Binding
 <p class="highlight">
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) exposes API that allows to bind a combo to a remote service and retrieve data on demand.
 </p>

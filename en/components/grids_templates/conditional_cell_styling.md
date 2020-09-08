@@ -20,7 +20,7 @@ _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Conditional Cell Styling
+# @@igComponent Conditional Cell Styling
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of cells** based on custom rules.
 
 - By setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.

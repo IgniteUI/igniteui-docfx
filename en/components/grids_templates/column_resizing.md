@@ -20,7 +20,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Column Resizing
+# @@igComponent Column Resizing
 
 With deferred grid column resizing, the user will see a temporary resize indicator while the Angular drag resizing operation is in effect. The new grid column width is applied once the drag operation has ended.
 

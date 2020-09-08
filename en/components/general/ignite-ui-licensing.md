@@ -4,7 +4,7 @@ _description: Information on using the Licensed Ignite UI npm package
 _keywords: npm package license, ignite ui license feed, licensing
 ---
 
-## License Agreements
+# License Agreements
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the products that you purchase and use.
 PLEASE NOTE: We have updated our license terms and subscription model.
 

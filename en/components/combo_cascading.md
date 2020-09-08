@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: en
 ---
 
-## Cascading Scenario
+# Cascading Scenario
 <p class="highlight">
 
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) and [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) exposes events, properties and methods that allows users to easily construct cascading scenarios, either using one of the controls or both of them.

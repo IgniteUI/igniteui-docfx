@@ -4,7 +4,7 @@ _description: Learn how to create a user interface in an Angular application wit
 _keywords: create user interface with an angular component, ignite ui for angular, infragistics
 ---
 
-## Create User Interface with an Angular component
+# Create User Interface with an Angular component
 
 > [!Video https://www.youtube.com/embed/z1SZUezpRXY]
 

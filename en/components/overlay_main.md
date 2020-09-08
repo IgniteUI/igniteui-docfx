@@ -4,7 +4,7 @@ _description: Provides a service which enables developers to position content ab
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Overlay Service component
 ---
 
-## Overlay
+# Overlay
 <p class="highlight">
 The overlay service provides an easy and quick way to dynamically render content in the foreground of an app. The content to be rendered, also the way it renders (e.g. placement, animations, scroll and click behaviors) are highly configurable and able to match all of the possible scenarios. 
 The overlay service is fully integrated in the toggle directive.

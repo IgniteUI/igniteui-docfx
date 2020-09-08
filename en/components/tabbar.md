@@ -4,7 +4,7 @@ _description: Display tabs for any occasion and implement a completely tabbed us
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Bottom Nav component, Angular Bottom Navigation controls
 ---
 
-## Bottom Navigation
+# Bottom Navigation
 
 <p class="highlight">The Ignite UI for Angular Bottom Navigation component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom.</p>
 <div class="divider"></div>
