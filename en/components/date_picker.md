@@ -151,6 +151,18 @@ We can also create a two-way data-binding using an `ngModel`:
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
+#### Custom label
+By placing an `igxlabel` inside a `<label>` tag nested in the component, the default label can be changed to a custom one:
+
+````html
+<!-- datepicker-label.component.html -->
+<igx-date-picker>
+    <label igxLabel>Meeting Start</label>
+</igx-date-picker>
+````
+
+You can see what the custom label will look like in the multi view mode sample found in next section.
+
 #### Multi View mode
 The multiview date picker supports both the `dropdown` and the `dialog` modes.
 
@@ -160,7 +172,9 @@ Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickerco
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true">
+	<label igxLabel> Meeting Start</label>
+</igx-date-picker>
        
 <label>Drop Down Mode</label>
 <igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
