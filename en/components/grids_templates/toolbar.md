@@ -249,7 +249,7 @@ The following sample demonstrates how to customize the exported files:
 Sometimes when the grid has a lot of data, exporting that data to Excel or CSV can take some time. That's why we added the exporting indicator at the bottom of the toolbar, which tells whether an exporting is in progress. If the exporting process takes longer than 500ms, the indicator will appear at the bottom of the toolbar and hide once the exporting finishes. The sample below contains big amount of data, in order to increase the time needed for data export which will cause exporting indicator to appear:
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height: 350px;">
+<div class="sample-container loading" style="height: 370px;">
     <iframe id="excel-export-sample1-iframe" src="{environment:demosBaseUrl}/grid/exporting-visualization"
     width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -260,7 +260,7 @@ Sometimes when the grid has a lot of data, exporting that data to Excel or CSV c
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height: 350px;">
+<div class="sample-container loading" style="height: 370px;">
     <iframe id="excel-export-sample2-iframe" src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization"
     width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
