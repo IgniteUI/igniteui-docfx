@@ -4,7 +4,7 @@ _description: Learn how to configure Excel like angular filter of data with the 
 _keywords: excel like filter, igniteui for angular, infragistics
 ---
 
-### @@igComponent Excel Style Filtering
+# @@igComponent Excel Style Filtering
 
 The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
 

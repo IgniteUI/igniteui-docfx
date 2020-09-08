@@ -4,7 +4,7 @@ _description: Ignite UI for Angular controls can be easily integrated in Reactiv
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Reactive Forms, Angular Forms
 ---
 
-## Reactive Forms Integration
+# Reactive Forms Integration
 <p class="highlight">
 The Ignite UI for Angular controls can be easily integrated into Reactive Forms that provide a model-driven approach for handling form inputs.
 </p>

@@ -4,7 +4,7 @@ _description: The igxAutocomplete directive provides a way to enhance a text inp
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Autocomplete components, Angular Autocomplete directives, Angular Autocomplete controls
 ---
 
-## Autocomplete
+# Autocomplete
 <p class="highlight">The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.</p>
 <div class="divider"></div>
 

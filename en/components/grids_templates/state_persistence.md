@@ -20,7 +20,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent State Persistence
+# @@igComponent State Persistence
 
 Тhe igxGridState directive allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) methods that developers can use to achieve state persistence in any scenario.
 

@@ -20,7 +20,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Sorting Overview
+# @@igComponent Sorting Overview
 
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
 

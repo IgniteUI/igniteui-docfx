@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Toggle directive allows the users to ope
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Toggle directives, Angular Toggle controls, Angular Toggle Component,
 ---
 
-## Toggle
+# Toggle
 
 <p class="highlight">The Ignite UI for Angular Toggle directive allows the users to wrap some content into a box which can be easily opened and closed.</p>
 

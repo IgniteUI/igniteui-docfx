@@ -4,7 +4,7 @@ _description: Configure angular group by that allows visualizing of data records
 _keywords: angular group by, igniteui for angular, infragistics
 ---
 
-### Grid Group By
+# Grid Group By
 
 A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 

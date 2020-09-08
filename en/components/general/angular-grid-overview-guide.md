@@ -4,7 +4,7 @@ _description: Modern data grids & charts can be complex and include a range of f
 _keywords: angular, angular app development, infragistics 
 ---
 
-## Angular Grid and Angular App Development: A Complete Guide 
+# Angular Grid and Angular App Development: A Complete Guide 
 
 ### What is an Angular Data Grid? 
 

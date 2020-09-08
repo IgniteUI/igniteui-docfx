@@ -5,7 +5,7 @@ _keywords: data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 ---
 
-## Financial Series
+# Financial Series
 
 <!-- This topic explains various types of financial series in the Angular data chart component. Financial series is a group of the simplest and most common form of data chart series that take financial data such as stock prices and render it as collection of OHLC bars or candlesticks along a horizontal line (e.g. `FinancialPriceSeries`). -->
 
