@@ -4,7 +4,7 @@ _description: Learn how to use Ignite UI angular data grid, based on Angular Mat
 _keywords: angular data grid, igniteui for angular, infragistics
 ---
 
-## Data Grid Overview and Configuration
+# Data Grid Overview and Configuration
 
 <p class="highlight">The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 

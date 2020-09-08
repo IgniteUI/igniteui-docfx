@@ -3,7 +3,7 @@ title: Overlay Service - Scroll Strategies
 _description: Explanation and example about the Overlay Service's IScrollStrategy interface and the classes that implement it.
 ---
 
-## Scroll Strategies
+# Scroll Strategies
 
 The scroll strategy determines how the scrolling is handled in the provided `IgxOverlayService`. There are four scroll strategies:
 1. **NoOperation** - does nothing. 

@@ -4,7 +4,7 @@ _description: Learn how to use structural directives in Angular 9 like ngIf, ngs
 _keywords: angular structural directives, ignite ui for angular, infragistics
 ---
 
-## Angular Structural Directives
+# Angular Structural Directives
 
 > [!Video https://www.youtube.com/embed/vQe7R78Od8k]
 

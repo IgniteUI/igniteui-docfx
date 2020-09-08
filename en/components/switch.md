@@ -4,7 +4,7 @@ _description: Ignite UI for Angular Switch component enables developers to use b
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Switch components, Angular Switch controls
 ---
 
-## Switch
+# Switch
 <p class="highlight">The Ignite UI for Angular Switch component is a binary choice selection component that behaves similarly to the switch component in iOS.</p>
 <div class="divider"></div>
 

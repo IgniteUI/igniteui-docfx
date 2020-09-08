@@ -4,7 +4,7 @@ _description: Understand how to use the Ignite UI for Angular Toolbar for essent
 _keywords: angular toolbar, igniteui for angular, infragistics
 ---
 
-### @@igComponent Toolbar container for UI operations
+# @@igComponent Toolbar container for UI operations
 
 The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc and supports Angular events.
 

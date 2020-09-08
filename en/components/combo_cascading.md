@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: en
 ---
 
-## Cascading Scenario
+# Cascading Scenario
 <p class="highlight">
 The Ignite UI for Angular Combo and Select components expose events, properties and methods that allow users to easily construct cascading scenarios, either using one of the controls or both of them.
 </p>

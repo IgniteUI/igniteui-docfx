@@ -4,7 +4,7 @@ _description: Learn how to customize the page layout of your Angular application
 _keywords: angular page layout elements, ignite ui for angular, infragistics
 ---
 
-## Page Layout
+# Page Layout
 
 In WPF, in order to layout the elements in your application, you need to put them inside a [`Panel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.panel?view=netframework-4.8). The panel is a container element that controls the arrangement of its child elements. In Angular, in order to customize the page layout and its child elements, you have to use CSS. Let us go through some of the most popular panels in WPF and see how we can achieve similar layout with CSS.
 
