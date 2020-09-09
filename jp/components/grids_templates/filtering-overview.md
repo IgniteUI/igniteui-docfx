@@ -6,7 +6,7 @@ _keywords: angular filter, ignite ui for angular, infragistics, Angular フィ�
 
 # @@igComponent のフィルタリング概要
 
-IgniteUI for Angular @@igComponent コンポーネントは、[Quick filtering](filtering.md)、[Excel style filtering](excel_style_filtering.md)、および [Advanced filtering](advanced_filtering.md) の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。
+IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング](filtering.md)、[Excel スタイル フィルタリング](excel_style_filtering.md)、および[高度なフィルタリング](advanced_filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。
 
 #### 設定
 フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。

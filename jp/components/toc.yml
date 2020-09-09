@@ -109,7 +109,7 @@
     - name: フィルタリング
       href: grid/filtering-overview.md
       new: false
-    - items:
+      items:
         - name: クイック フィルタリング
           href: grid/filtering.md
           new: false
@@ -165,6 +165,7 @@
     - name: ツールバー
       href: grid/toolbar.md
       new: false
+      updated: true
     - name: Excel エクスポート
       href: grid/export_excel.md
       new: false
@@ -238,18 +239,18 @@
       href: treegrid/paging.md
       new: false
     - name: フィルタリング
-      href: treegrid/filteringーoverview.md
+      href: treegrid/filtering-overview.md
       new: false
-    - items:
-        - name: クイック フィルタリング
-          href: treegrid/filtering.md
-          new: false
-        - name: Excel スタイル フィルタリング
-          href: treegrid/excel_style_filtering.md
-          updated: true
-        - name: 高度なフィルタリング
-          href: treegrid/advanced_filtering.md
-          new: true
+      items:
+      - name: クイック フィルタリング
+        href: treegrid/filtering.md
+        new: false
+      - name: Excel スタイル フィルタリング
+        href: treegrid/excel_style_filtering.md
+        updated: true
+      - name: 高度なフィルタリング
+        href: treegrid/advanced_filtering.md
+        new: true
     - name: ソート
       href: treegrid/sorting.md
       updated: true
@@ -290,6 +291,7 @@
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
+      updated: true
     - name: Excel エクスポート
       href: treegrid/export_excel.md
       new: false
@@ -356,16 +358,16 @@
     - name: フィルタリング
       href: hierarchicalgrid/filtering-overview.md
       new: false
-    - items:
-        - name: クイック フィルタリング
-          href: hierarchicalgrid/filtering.md
-          new: false
-        - name: Excel スタイル フィルタリング
-          href: hierarchicalgrid/excel_style_filtering.md
-          updated: true
-        - name: 高度なフィルタリング
-          href: hierarchicalgrid/advanced_filtering.md
-          new: true
+      items:
+      - name: クイック フィルタリング
+        href: hierarchicalgrid/filtering.md
+        new: false
+      - name: Excel スタイル フィルタリング
+        href: hierarchicalgrid/excel_style_filtering.md
+        updated: true
+      - name: 高度なフィルタリング
+        href: hierarchicalgrid/advanced_filtering.md
+        new: true
     - name: ソート
       href: hierarchicalgrid/sorting.md
       updated: true
