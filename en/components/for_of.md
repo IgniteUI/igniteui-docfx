@@ -4,7 +4,7 @@ _description: Ignite UI for Angular now exposes a virtual igxFor directive simil
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Virtualization, Performance, Virtual directive, Virtual For
 ---
 
-## Virtual For Directive
+# Virtual For Directive
 
 In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) is an alternative to `ngForOf` for templating large amounts of data. The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) uses virtualization behind the scenes to optimize DOM rendering and memory consumption. Virtualization works similarly to Paging by slicing the data into smaller chucks which are swapped from a container viewport while the user scrolls the data horizontally/vertically. The difference with the Paging is that virtualization mimics the natural behavior of the scrollbar. The directive is creating scrollable containers and renders small chunks of the data. It is used inside [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and it can be used to build virtual [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html).
 

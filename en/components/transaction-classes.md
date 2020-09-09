@@ -4,7 +4,7 @@ _description: Learn about the hierarchy of the Transaction Service class, that a
 _keywords: batch editing, igniteui for angular, infragistics
 ---
 
-## Transaction Service class hierarchy
+# Transaction Service class hierarchy
 
 ### Transaction, State, Transaction Log
 

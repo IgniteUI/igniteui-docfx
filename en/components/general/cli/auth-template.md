@@ -4,7 +4,7 @@ _description: Angular Authentication Project Template guide.
 _keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Authentication Project Template
+# Authentication Project Template
 
 There are multiple versions of a project (called project templates) to choose from when using either the [`new` command](../cli-overview.md#create-new-project) or the [Step by step mode](step-by-step-guide.md).
 

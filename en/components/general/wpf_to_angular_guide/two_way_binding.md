@@ -4,7 +4,7 @@ _description: Learn how two-way data binding in Angular is used to display infor
 _keywords: two-way data binding in Angular, ignite ui for angular, infragistics
 ---
 
-## Two-way data binding in Angular
+# Two-way data binding in Angular
 
 > [!Video https://www.youtube.com/embed/MrjTTDEj7cA]
 
