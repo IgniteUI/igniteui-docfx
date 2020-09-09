@@ -5,31 +5,25 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Mask
+# Mask
 
 **テキスト入力フィールド**に [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
 
-### Mask デモ
-<div class="sample-container loading" style="height: 330px">
-    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+### デモ
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
 </div>
+
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
 [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。
 
-Mask ディレクティブを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
-
-```cmd
-ng add igniteui-angular
-```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
-
-次に、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。
+はじめに、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -77,16 +71,7 @@ export class AppModule {}
 </igx-input-group>
 ```
 
-サンプルを正しく構成した場合、書式マスクが適用される入力が表示されます。
-
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
-</div>
-
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+正しく構成されていれば、ブラウザ上でデモサンプルを確認することができます。
 
 #### 書式設定付き/Raw 値にバインド
 [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) が *false* に設定し、Raw 値が使用されます。
@@ -119,7 +104,11 @@ public socialSecurityNumber: string = "123-45-6789";
 public includeLiterals: boolean = true;
 
 public clear() {
-    this.socialSecurityNumber = "";
+    if (this.includeLiterals === false){
+        this.socialSecurityNumber = "123-45-6789";
+    } else {
+        this.socialSecurityNumber = "";
+    }
 }
 ```
 
@@ -138,49 +127,17 @@ public clear() {
 ```html
 <!--sample.component.html-->
 
-<form class="mask-sample" action="/" method="POST">
-    <h4 class="form-title">Personal Data</h4>
+<igx-input-group>
+    <label igxLabel for="birthday">Birthday</label>
+    <input igxInput #dateInput [igxMask]="'00/00/0000'" [igxTextSelection]="true" name="birthday" type="text"
+        (blur)="validateDate(dateInput, snackbar)" />
+</igx-input-group>
 
-    <igx-input-group>
-        <label igxLabel for="name">Name</label>
-        <input igxInput name="name" type="text" 
-            [(ngModel)]="person.name" required />
-    </igx-input-group>
-
-    <igx-input-group>
-        <label igxLabel for="email">Birthday</label>
-        <input igxInput #dateInput name="birthday" type="text"
-            [igxMask]="'00/00/0000'"
-            [(ngModel)]="person.birthday"
-            (blur)="validateDate(dateInput, snackbar)" />
-    </igx-input-group>
-
-    <igx-input-group>
-        <label igxLabel for="socialSecurityNumber">Social Security Number</label>
-        <input igxInput #ssn name="socialSecurityNumber" type="text"
-            [igxMask]="'###-##-####'"
-            [(ngModel)]="person.socialSecurityNumber"
-            (blur)="validateSSN(ssn, snackbar)" />
-    </igx-input-group>
-
-    <igx-snackbar #snackbar></igx-snackbar>
-</form>
+<igx-snackbar #snackbar></igx-snackbar>
 ```
 
 ```typescript
 // sample.component.ts
-
-public person: Person;
-
-constructor() {
-    this.person = {
-        birthday: null,
-        name: "John Doe",
-        socialSecurityNumber: ""
-    };
-}
-
-public ngOnInit() {}
 
 public validateDate(dateInput, snackbar) {
     if (!this.isDateValid(dateInput.value)) {
@@ -188,19 +145,8 @@ public validateDate(dateInput, snackbar) {
     }
 }
 
-public validateSSN(ssnInput, snackbar) {
-    if (!this.isSSNValid(ssnInput.value)) {
-        this.notify(snackbar, "Invalid SSN", ssnInput);
-    }
-}
-
 private isDateValid(date) {
     return (new Date(date).toLocaleString() !== "Invalid Date");
-}
-
-private isSSNValid(ssn) {
-    const ssnPattern = /^[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}$/;
-    return (ssn.match(ssnPattern));
 }
 
 private notify(snackbar, message, input) {
@@ -209,20 +155,33 @@ private notify(snackbar, message, input) {
 }
 ```
 
-```typescript
-// person.ts
-
-export class Person {
-    constructor(
-        public name: string,
-        public socialSecurityNumber: string,
-        public birthday: Date
-      ) {  }
-}
-```
+<div class="sample-container loading" style="height: 120px">
+    <iframe id="mask-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
 
 #### テキスト選択
 [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label_input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
+
+**app.module.ts** ファイルに  `IgxToastModule` をインポートします:
+
+```typescript
+...
+import { ..., IgxTextSelectionModule } from 'igniteui-angular';
+
+@NgModule({
+    ...
+    imports: [..., IgxTextSelectionModule]
+    ...
+})
+export class AppModule {}
+```
+
+次に、以下をテンプレートに追加します:
 
 ```html
 <igx-input-group>
@@ -230,32 +189,27 @@ export class Person {
 </igx-input-group>
 ```
 
-> 注: コンポーネントが正しく動作するためには、`igxMask` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
+これが前のサンプルでどのように機能するかを確認できます。
+
+>[!NOTE]
+>コンポーネントが正しく動作するためには、`igxMask` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
 #### focus と blur に追加の書式を適用
 デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
  表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
 ```typescript
-@Pipe({ name: 'displayFormat' })
+@Pipe({ name: "displayFormat" })
 export class DisplayFormatPipe implements PipeTransform {
-    transform(value: any): string {
-        let val = value;
-        if (val.indexOf('%') === -1) {
-            val += '%';
-        }
-        return val;
+    public transform(value: any): string {
+        return value + " %";
     }
 }
 
-@Pipe({ name: 'inputFormat' })
+@Pipe({ name: "inputFormat" })
 export class InputFormatPipe implements PipeTransform {
-    transform(value: any): string {
-        let val = value;
-        if (val.indexOf('%') !== -1) {
-            val = val.replace(new RegExp('%', 'g'), '');
-        }
-        return val;
+    public transform(value: any): string {
+        return value;
     }
 }
 ```
@@ -263,17 +217,20 @@ export class InputFormatPipe implements PipeTransform {
 [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティに各パイプのインスタンスを渡します。
 
 ```typescript
-value = 1230;
-displayFormat = new DisplayFormatPipe();
-inputFormat = new InputFormatPipe();
+public value = 100;
+public displayFormat = new DisplayFormatPipe();
+public inputFormat = new InputFormatPipe();
 ```
 ```html
 <igx-input-group>
     <label igxLabel for="email">Increase</label>
-    <input igxInput type="text" [(ngModel)]="value"
-                                [igxMask]="'00.00'"
-                                [focusedValuePipe]="inputFormat"
-                                [displayValuePipe]="displayFormat"/>
+    <input igxInput
+    type="text"
+    [(ngModel)]="value"
+    [igxMask]="'000'"
+    [igxTextSelection]="true"
+    [focusedValuePipe]="inputFormat"
+    [displayValuePipe]="displayFormat"/>
 </igx-input-group>
 ```
 
@@ -297,9 +254,11 @@ value = null;
 ```html
 <igx-input-group>
     <label igxLabel>Date</label>
-    <input igxInput type="text" [(ngModel)]="value"
-                                [igxMask]="'00/00/0000'"
-                                [placeholder]="'dd/mm/yyyy'"/>
+    <input igxInput
+    type="text"
+    [(ngModel)]="value"
+    [igxMask]="'00/00/0000'"
+    [placeholder]="'dd/mm/yyyy'"/>
 </igx-input-group>
 ```
 
