@@ -164,7 +164,6 @@
     - name: Toolbar
       href: grid/toolbar.md
       new: false
-      updated: true
     - name: Export to Excel
       href: grid/export_excel.md
       new: false
@@ -290,7 +289,6 @@
     - name: Toolbar
       href: treegrid/toolbar.md
       new: false
-      updated: true
     - name: Export to Excel
       href: treegrid/export_excel.md
       new: false
