@@ -85,9 +85,9 @@ This is how the phone field with hint looks:
 <div class="divider--half"></div>
 
 #### Input Types
-The [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) could be styled differently using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input types that we currently support are: line (the default one), box, border, bootstrap, fluent, search and fluent search. The `bootstrap`, `fluent` and `fluent-search` types are made specifically for the `Bootstrap` and `Fluent` themes. This is how they look:
+The input group styles can be altered by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input group component supports the following types: `line` (default if type is not specified), `border`, `box`, and `search`. The `line`, `border`, and `box` types are made specifically for the `Material Design` themes. Setting those types with other themes will not have any effect on how the input group looks.
 
-<div class="sample-container loading" style="height:870px">
+<div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>
