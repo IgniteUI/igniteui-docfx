@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-### @@igComponent のフィルタリング概要
+### @@igComponent のクイック フィルタリング概要
 
 Angular グリッド フィルタリングを使用すると、指定した基準を満たすレコードのみの表示が可能です。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
