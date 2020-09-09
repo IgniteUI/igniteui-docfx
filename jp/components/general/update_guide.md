@@ -21,7 +21,7 @@ ng update
 ```cmd
 ng update igniteui-angular
 ```
-`Igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
