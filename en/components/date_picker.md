@@ -157,7 +157,7 @@ By placing an `igxlabel` inside a `<label>` tag nested in the component, the def
 ````html
 <!-- datepicker-label.component.html -->
 <igx-date-picker>
-    <label igxLabel>Meeting Start</label>
+    <label igxLabel>Custom label</label>
 </igx-date-picker>
 ````
 
@@ -173,7 +173,7 @@ Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickerco
 
 <label>Dialog Mode</label>
 <igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true">
-	<label igxLabel> Meeting Start</label>
+	<label igxLabel>Custom label</label>
 </igx-date-picker>
        
 <label>Drop Down Mode</label>
