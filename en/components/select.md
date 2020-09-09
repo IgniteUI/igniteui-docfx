@@ -4,7 +4,7 @@ _description: Learn how to configure an Angular select. The Material select prov
 _keywords:  angular select, igniteui for angular, infragistics
 ---
 
-## Select
+# Select
 <p class="highlight">The [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
 ### Demo

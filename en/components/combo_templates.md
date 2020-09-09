@@ -4,11 +4,10 @@ _description: Custom templates for different areas of the igx-combo component ca
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Templates, Angular Combo Templates
 ---
 
-## Combo Templates
+# Combo Templates
 <p class="highlight">
-Custom templates for different areas of the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component can be defined, including items, header, footer, empty list and adding button.
+The Ignite UI for Angular Combo Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
 </p>
-<div class="divider"></div>
 
 ### Demo
 
@@ -21,155 +20,126 @@ Custom templates for different areas of the [igx-combo]({environment:angularApiU
 </div>
 
 ### Usage
-To get started with the Ignite UI for Angular Combo import the `IgxComboModule` in the **app.module.ts** file:
+To get started with the Combo component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
 
 ```typescript
-// app.module.ts
-
-...
 import { IgxComboModule } from 'igniteui-angular';
 
 @NgModule({
-    ...
-    imports: [..., IgxComboModule],
-    ...
+    imports: [
+        ...
+        IgxComboModule,
+        ...
+    ]
 })
 export class AppModule {}
 ```
 
-Defining templates for item, header, footer and empty one is achieved using predefined reference names (see the topic below for detailed information):
+### Template Types
+When defining `igx-combo` templates, you need to reference them using the following predefined reference names:
 
-```html
-<igx-combo #templateCombo [data]="lData" [valueKey]="'field'" >
-
-    <ng-template igxComboItem let-display let-key="valueKey">
-        <div class="item">
-            <span class="state">{{ display[key] }} - </span>
-            <span class="region">{{ display.region }}</span>
-        </div>
-    </ng-template>
-
-    <ng-template igxComboHeader>
-        <div class="header-class">State - Region</div>
-    </ng-template>
-
-    <ng-template igxComboFooter>
-        <div class="footer-class">Infragistics 2018</div>
-    </ng-template>
-
-    <igx-combo>
-        <ng-template igxComboEmpty>
-            <span class="empty-class">No available states</span>
-        </ng-template>
-    </igx-combo>
-</igx-combo>
-```
-
-## Template types
-When defining one of the templates below, you need to reference them using the following predefined names:
-
-### Item template
+#### Item template
 Use selector `[igxComboItem]`:
 
 ```html
-<igx-combo>
-	<ng-template igxComboItem let-display let-key="valueKey">
-		<div class="item">
-			<span class="state">State: {{ display[key] }}</span>
-			<span class="region">Region: {{ display.region }}</span>
-		</div>
-	</ng-template>
+<igx-combo #templateCombo [data]="lData" [valueKey]="'field'" >
+    <ng-template igxComboItem let-display let-key="valueKey">
+        <div class="item">
+            <span class="state">{{ display[key] }}</span>
+            <span class="region">{{ display.region }}</span>
+        </div>
+    </ng-template>
 </igx-combo>
 ```
 
-### Header template
+#### Header template
 Use selector `[igxComboHeader]`:
 
 ```html
 <igx-combo>
     <ng-template igxComboHeader>
-        <div class="header-class">Custom header</div>
-        <img src/>
+        <div class="header-class">State - Region</div>
     </ng-template>
 </igx-combo>
 ```
 
-### Footer template
+#### Footer template
 Use selector `[igxComboFooter]`:
 
 ```html
 <igx-combo>
     <ng-template igxComboFooter>
-        <div class="footer-class">Custom footer</div>
-        <img src/>
+        <div class="footer-class">Infragistics 2018</div>
     </ng-template>
 </igx-combo>
 ```
 
-### Empty template
+#### Empty template
 Use selector `[igxComboEmpty]`:
 
 ```html
 <igx-combo>
     <ng-template igxComboEmpty>
-        <span>List is empty</div>
+        <span class="empty-class">No available states</span>
     </ng-template>
 </igx-combo>
 ```
 
-### Add template
+#### Add template
 Use selector `[igxComboAddItem]`:
 
 ```html
 <igx-combo>
     <ng-template igxComboAddItem>
-        <span>Add town</span>
+        <button igxButton="flat">
+            Add Location
+        </button>
     </ng-template>
 </igx-combo>
 ```
 
-### Toggle Icon Template
+#### Toggle Icon Template
 Use selector `[igxComboToggleIcon]`:
 
 ```html
 <igx-combo>
     <ng-template igxComboToggleIcon let-collapsed>
-        <igx-icon>{{ collapsed ? 'remove_circle' : 'remove_circle_outline'}}</igx-icon>
+        <igx-icon>{{ collapsed ? 'expand_more' : 'expand_less'}}</igx-icon>
     </ng-template>
 </igx-combo>
 ```
 
-### Clear Icon Template
+#### Clear Icon Template
 Use selector `[igxComboClearIcon]`:
 
 ```html
 <igx-combo>
     <ng-template igxComboClearIcon>
-        <igx-icon>music_off</igx-icon>
+        <igx-icon>cancel</igx-icon>
     </ng-template>
 </igx-combo>
 ```
 
-<div class="divider--half"></div>
+### Templating Combo Input
+When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` selectors, change how the respective buttons appear in the combo input. Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `igxLabel`). The code snippet below illustrates how to add an appropriate label and prefix to the combo input:
 
-### Templating combo input
-The above-mentioned selectors, `[igxComboClearIcon]` and `[igxComboToggleIcon]`, used with templates will change how the respective buttons appear in the combo input. 
-Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `[igxLabel]`). The code snippet below illustrates how to add an appropriate label and `igx-prefix` to the combo input, as well as changing the `clear` button icon:
 ```html
-    <igx-combo [data]="myMusic">
-        ...
-        <label igxLabel>Genres</label>
-        <igx-prefix><igx-icon>music_note</igx-icon></igx-prefix>
-        <ng-template igxComboClearIcon>
-            <igx-icon>music_off</igx-icon>
-        </ng-template>
-        ...
+    <igx-combo>
+        <label igxLabel>Locations</label>
+        <igx-prefix><igx-icon>pin_drop</igx-icon></igx-prefix>
     </igx-combo>
 ```
 
-## Additional Resources
+### API Summary
 <div class="divider--half"></div>
 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Combo Component](combo.md)
 * [Combo Features](combo_features.md)
 * [Combo Remote Binding](combo_remote.md)
 * [Template Driven Forms Integration](input_group.md)

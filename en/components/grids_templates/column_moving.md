@@ -20,7 +20,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 }
 
-### @@igComponent Column Moving Overview
+# @@igComponent Column Moving Overview
 
 The @@igComponent component in Ignite UI for Angular provides **column moving** to allow columns reordering via standard drag/drop mouse or touch gestures.
 

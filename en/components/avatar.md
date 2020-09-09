@@ -4,7 +4,7 @@ _description: Ignite UI for Angular Avatar control enables users to add images, 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Avatar component, Angular Avatar control
 ---
 
-##Avatar
+#Avatar
 
 <p class="highlight">The Ignite UI for Angular Avatar component helps adding initials, images, or material icons to your application.</p>
 <div class="divider"></div>

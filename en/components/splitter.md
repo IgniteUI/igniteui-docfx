@@ -4,7 +4,7 @@ _description: Use the Angular Splitter component to create a simple split layout
 _keywords: angular splitter, igniteui for angular, infragistics
 ---
 
-## Splitter
+# Splitter
 
 The Ignite UI for Angular Splitter component provides the ability to create layouts, split into multiple vertically or horizontally arranged panes that may be resized, expanded and collapsed. These interactions are performed through UI exposed in the splitter bars between the panes. A simple Splitter layout is demonstrated in the demo below.
 

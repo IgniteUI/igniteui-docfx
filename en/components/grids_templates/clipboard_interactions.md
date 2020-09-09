@@ -13,7 +13,7 @@ _keywords: copy data, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Clipboard Interactions
+# @@igComponent Clipboard Interactions
 Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
 
 #### Demo

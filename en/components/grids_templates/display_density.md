@@ -20,7 +20,7 @@ _keywords: material density, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Display Density
+# @@igComponent Display Density
 
 **@@igxName** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
 

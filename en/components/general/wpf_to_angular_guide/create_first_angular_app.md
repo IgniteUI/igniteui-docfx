@@ -4,7 +4,7 @@ _description: Learn how to create your first Angular 9 application when you migr
 _keywords: create angular application, ignite ui for angular, infragistics
 ---
 
-## Create an Angular application
+# Create an Angular application
 
 > [!Video https://www.youtube.com/embed/dhjrAPPad54]
 

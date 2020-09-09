@@ -4,7 +4,7 @@ _description: Developers can unify and use various icon and font sets interchang
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls
 ---
 
-## Icon
+# Icon
 <p class="highlight">The Ignite UI for Angular Icon component unifies icon/font sets so developers can use them interchangeably and add material icons to markup.</p>
 
 ### Demo
