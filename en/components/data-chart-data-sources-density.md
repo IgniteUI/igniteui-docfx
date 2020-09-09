@@ -1,11 +1,11 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Data Source
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Data Source | Infragistics
+_description: Use Infragistics' Angular charts control to create high density scatter series. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, high density scatter, Ignite UI for Angular, Infragistics, data source
 mentionedTypes: ['XamDataChart', 'PolarBase']
 ---
 
-## Sample Data Source for Scatter HD Series
+# Angular Sample Data Source for Scatter HD Series
 
 This topic provides an example on how to implement data source for [Scatter HD Series](data-chart-type-polar-series.md)
 

@@ -4,7 +4,7 @@ _description: A detailed walkthrough that explains how to properly apply and sco
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Overlay Styling
+# Overlay Styling
 <p class="highlight">
 [`IgxOverlayService`](overlay_main.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop_down.md), [Combo](combo.md), [Date Picker](date_picker.md) and more - so it is important to understand how the overlay displays content.
 To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#scoped-component-styles).

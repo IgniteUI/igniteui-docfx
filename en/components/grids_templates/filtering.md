@@ -20,7 +20,7 @@ _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Filtering Overview
+# @@igComponent Quick Filtering Overview
 
 Angular grid filtering enables you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 

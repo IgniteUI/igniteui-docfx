@@ -4,7 +4,7 @@ _description: Provides button group functionality to developers and also allows 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Button Group components, Angular Button Group controls, Angular Buttons components, Angular Buttons controls
 ---
 
-## Button Group
+# Button Group
 <p class="highlight">The Ignite UI for Angular Button Group component is used to organize buttons into styled button groups with horizontal/vertical alignment, single/multiple selection and toggling.</p>
 
 ### Demo

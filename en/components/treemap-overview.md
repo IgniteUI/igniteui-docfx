@@ -1,18 +1,15 @@
 ---
-title: Treemap | Data Visualization Tools | Ignite UI for Angular | Data Binding | Infragistics
-_description: Use the Treemap to show users relative weighting of data points at more than one level supporting strip, squarified, and slice-and-dice algorithms.
+title: Angular Treemap | Data Visualization Tools | Orientation | Layout | Data Binding | Infragistics
+_description: Use Infragistics' Angular Treemap control show relative weighting of data points at more than one level supporting strip, squarified, and slice-and-dice algorithms. Learn about Ignite UI for Angular treemap!
+_keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
 ---
 
-### Treemap
+# Angular Treemap Overview
 
-Treemaps display hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
+The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 
-When the color and size dimensions are correlated in some way with the tree structure, one can often easily see patterns that would be difficult to spot in other ways. A second advantage of treemaps is that, by construction, they make efficient use of space. As a result, they can legibly display thousands of items on the screen simultaneously.
-
-Treemaps are not designed to convey numerical quantities; the intent is to show relative rankings. Treemaps can be more effective than pie charts and other forms of area charts that often do a poor job of classifying data points and communicating the relative differences of their values.
-
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 600px">
     <iframe id="tree-map-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/tree-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,11 +17,17 @@ Treemaps are not designed to convey numerical quantities; the intent is to show 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="tree-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Data
+When the color and size dimensions are correlated in some way with the tree structure, one can often easily see patterns that would be difficult to spot in other ways. A second advantage of treemaps is that, by construction, they make efficient use of space. As a result, they can legibly display thousands of items on the screen simultaneously.
+
+Treemaps are not designed to convey numerical quantities; the intent is to show relative rankings. Treemaps can be more effective than pie charts and other forms of area charts that often do a poor job of classifying data points and communicating the relative differences of their values.
+
+## Required Data
 
 Binding to the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) contains the following data requirements:
 
@@ -34,7 +37,7 @@ Binding to the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignit
 -   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#valuememberpath) property.
 -   To categorize data into organized tiles you can optionally use [`parentIdMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#parentidmemberpath) and [`idMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#idmemberpath).
 
-### Layout Types
+## Layout Types
 
 The Ignite UI for Angular treemap component supports the following types algorithms:
 
@@ -50,7 +53,7 @@ The type is defined by setting the [`TreemapLayoutType`]({environment:dvApiBaseU
 
 -   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) layout tiling algorithm has a better aspect ratio than the SliceAndDice and keeps a better order than Squarified.
 
-### Layout Orientation
+## Layout Orientation
 
 [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layoutorientation) property enables the user to set the direction in which the nodes of the hierarchy will be expanded.
 
@@ -60,14 +63,16 @@ Note that the LayoutOrientation property works with the layout types SliceAndDic
 
 -   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
 
-### Dependencies
+## Dependencies
 
-When installing the chart package, the core package must also be installed.
+When installing the chart component, the core package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
-### Required Modules
+## Required Modules
 
 The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules:
 
@@ -85,7 +90,7 @@ import { IgxTreemapComponent } from 'igniteui-angular-charts';
 export class AppModule {}
 ```
 
-### Code Snippet
+## Code Snippet
 
 The following code demonstrates how to setup the Treemap.
 
@@ -104,7 +109,7 @@ The following code demonstrates how to setup the Treemap.
 </igx-treemap>
 ```
 
-### Fill Scale
+## Fill Scale
 
 The following code demonstrates how to set fill scale on the Treemap.
 

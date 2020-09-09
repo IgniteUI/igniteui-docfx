@@ -4,7 +4,7 @@ _description: With Ignite UI for Angular Toast component, users can provide quic
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toast component, Angular Toast control
 ---
 
-## Toast
+# Toast
 <p class="highlight">The Ignite UI for Angular Toast component provides information and warning messages that are non-interactive and cannot be dismissed by the user. Notifications can be displayed at the bottom, the middle, or the top of the page.</p>
 <div class="divider"></div>
 

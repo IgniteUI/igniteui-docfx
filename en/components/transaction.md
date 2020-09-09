@@ -4,8 +4,7 @@ _description: Start using Ignite UI Angular transaction service to easily implem
 _keywords: batch editing, igniteui for angular, infragistics
 ---
 
-
-## Transaction Service
+# Transaction Service
 
 The [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) is an injectable middleware (through [Angular's DI](https://angular.io/guide/dependency-injection)) that a component may use to accumulate changes without immediately affecting the underlying data.
     <img src="https://cdn-images-1.medium.com/max/800/1*O-6DidcFW_XCSqgKRfXf_Q.png"

@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Theming component is developed in SASS w
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
 ---
 
-## Component Themes
+# Component Themes
 <div class="highlight">Component themes allow you to change the styles of specific component instances by overriding the globally defined theme.</div>
 <div class="divider"></div>
 
