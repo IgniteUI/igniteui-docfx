@@ -4,7 +4,7 @@ _description: Users can export their data for editing or offline presentation ca
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, CSV Export, TSV Export
 ---
 
-## CSV Exporter
+# CSV Exporter
 
 <p class="highlight">
 The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid/grid.md).

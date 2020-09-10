@@ -1,15 +1,15 @@
 ---
-title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics | Chart Types
-_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
-_keywords: financial chart, Ignite UI for Angular, infragistics
-mentionedTypes: ['XamFinancialChart']
+title: Angular Financial Chart | Axis Types | Infragistics
+_description: Learn how to configure Infragistics' Angular charts control axis such as axis interval, axis lables, axis modes, axis range, axis scale, axis tickmarkts and axis titles. View our Ignite UI for Angular financial graph demos!
+_keywords: Angular charts, financial chart, stock chart, financial axis, Ignite UI for Angular, Axis type , Infragistics
+mentionedTypes: ['FinancialChart']
 ---
 
-## Chart Axis Types
+# Angular Chart Axis Types
 
 In the Angular financial chart component, an axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-axis-types-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,15 +17,17 @@ In the Angular financial chart component, an axis provides base properties for s
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
 By default, you do not need to explicitly set the labels. The financial chart component will use the first appropriate property that it finds within the data you provided and will use that for the labels.
 
-### Axis Interval
+## Axis Interval
 
-In the Financial Chart control, the `YAxisInterval` property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the `YAxisMinorInterval` property specifies how frequently minor gridlines are rendered on an axis.
+In the Financial Chart control, the [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval) property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminorinterval) property specifies how frequently minor gridlines are rendered on an axis.
 
 The following code snippet demonstrates how to configure intervals on the y-axis.
 
@@ -42,7 +44,7 @@ The following code snippet demonstrates how to configure intervals on the y-axis
 
 <div class="divider--half"></div>
 
-### Axis Labels
+## Axis Labels
 
 The Angular financial chart component allows you full control over configuring and formatting the labels displayed on your chart. You can change the rotation angle, margin, horizontal/vertical alignment, opacity, padding and visibility.
 
@@ -53,7 +55,7 @@ The following code example shows how to style labels on the x-axis using style p
     xAxisLabelTextStyle="8pt Verdana"
     xAxisLabelTextColor="Gray"
     xAxisLabelTopMargin="5"
-    xAxisLabeleAngle="0"
+    xAxisLabelAngle="0"
     yAxisLabelTextStyle="8pt Verdana"
     yAxisLabelTextColor="Gray"
     yAxisLabelLeftMargin="5"
@@ -66,7 +68,7 @@ The following code example shows how to style labels on the x-axis using style p
 
 <div class="divider--half"></div>
 
-### Axis Modes
+## Axis Modes
 
 The Angular financial chart component allows you to set different modes on the x-axis and the y-axis.
 For the x-axis you can choose between the following modes:
@@ -93,9 +95,9 @@ The following code example shows how to set the modes for the axes:
 
 <div class="divider--half"></div>
 
-### Axis Range
+## Axis Range
 
-In the Angular financial chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the financial chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s `YAxisMinimumValue` property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s `YAxisMaximumValue` property.
+In the Angular financial chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the financial chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminimumvalue) property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismaximumvalue) property.
 
 The following sample code demonstrates how to change the axis range on the y-axis.
 
@@ -111,12 +113,12 @@ The following sample code demonstrates how to change the axis range on the y-axi
 
 <div class="divider--half"></div>
 
-### Axis Scale
+## Axis Scale
 
 In the Angular financial chart component, you can control if the data in the chart is mapped logarithmically along the y-axis, this is done by setting the following properties:
 
--   `YAxisIsLogarithmic` - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
--   `YAxisLogarithmBase` - The base value to use in the log function when mapping the position of data items along the y-axis.
+-   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
+-   [`yAxisLogarithmBase`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - The base value to use in the log function when mapping the position of data items along the y-axis.
     This is effective only when yAxisIsLogarithmic is true.
 
 The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.
@@ -133,7 +135,7 @@ The following code snippet demonstrates how to set the color, length and thickne
 
 <div class="divider--half"></div>
 
-### Axis Tickmarks
+## Axis Tickmarks
 
 Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis. You can change the length, thickness and color of the x-axis and y-axis labels.
 
@@ -152,7 +154,7 @@ The following code snippet demonstrates how to set the color, length and thickne
 
 <div class="divider--half"></div>
 
-### Axis Titles
+## Axis Titles
 
 The axis title feature of the financial chart component allows you to add contextual information to the x and y axes of the chart. You can customize the look and feel of the financial chart's x-axis and y-axis titles in many different ways such as applying different font styles, margins, and alignment.
 

@@ -4,7 +4,7 @@ _description: Learn how Angular pipes can transform data from one value to anoth
 _keywords: transform data with angular pipes, ignite ui for angular, infragistics
 ---
 
-## Transform Data with Angular Pipes
+# Transform Data with Angular Pipes
 
 > [!Video https://www.youtube.com/embed/Gmz5kio50FE]
 

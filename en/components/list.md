@@ -4,7 +4,7 @@ _description: Using any template, display data within rows seamlessly and intuit
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular List View components, Angular List View controls
 ---
 
-## List View
+# List View
 
 <p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
 <div class="divider"></div>

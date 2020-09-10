@@ -4,7 +4,7 @@ _description: Learn how to configure advanced filter of data with the Angular Ma
 _keywords: advanced filter, igniteui for angular, infragistics
 ---
 
-### @@igComponent Advanced Filtering
+# @@igComponent Advanced Filtering
 
 The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent.
 

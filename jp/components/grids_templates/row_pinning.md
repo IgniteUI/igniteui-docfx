@@ -417,7 +417,7 @@ public onDropAllowed(args) {
 
 ### スタイル設定
 
-@@igxName は、[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+@@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下では、@@igComponent の行ピン固定スタイルをカスタマイズする手順を示します。
 

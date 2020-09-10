@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Theming component is developed in SASS w
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
 ---
 
-## Global Themes
+# Global Themes
 <div class="highlight">The global theme allows you to quickly generate a theme that uses your custom color palette. The color palette will be propagated to all components that don't have custom themes created for them.</div>
 <div class="divider"></div>
 

@@ -4,7 +4,7 @@ _description: Configure Angular pagination and create custom pages in the Angula
 _keywords: angular pagination, igniteui for angular, infragistics
 ---
 
-### @@igComponent Paging Functionality
+# @@igComponent Paging Functionality
 Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
 
 #### Demo

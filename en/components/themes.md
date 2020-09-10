@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Theming component was developed through 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
 ---
 
-## Themes
+# Themes
 
 With only a few lines of code, users can easily change the theming for their components. Being developed through SASS, the API use is low-difficulty and offers restyling of one component, multiple components, or the entire suite.
 

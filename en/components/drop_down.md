@@ -4,7 +4,7 @@ _description: Use Ignite UI for Angular Drop Down component to display a list of
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls
 ---
 
-## Drop Down
+# Drop Down
 <p class="highlight">The Ignite UI for Angular Drop Down component displays a scrollable list of items which may be visually grouped. Clicking or tapping an item selects it and closes the drop down</p>
 <div class="divider"></div>
 

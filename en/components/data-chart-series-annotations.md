@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Annotations
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Annotations | Infragistics
+_description: Infragistics' Angular charts control allows you to add annotations to your chart series, such as Callout layer, crosshair layer and final value layer. Improve your graphs and visualizations with Ignite UI for Angular
+_keywords: Angular charts, data chart, annotations, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Series Annotations
+# Angular Series Annotations
 
 The Angular data chart component supports layers that allow you to display contextual information about the points plotted in your data chart as annotations. This can help to show more information to your end-users that cannot be seen by simply looking at the series.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,15 +17,17 @@ The Angular data chart component supports layers that allow you to display conte
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-annotations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Callout Layer
+## Callout Layer
 
 The callout layer displays annotations from existing or new data on the Angular data chart component. The annotations appear next to the given data values in the data source.
 
-Use the callout annotations to display additional information, such as notes or specific details about datapoints, that you would like to point out to your users.
+Use the callout annotations to display additional information, such as notes or specific details about data points, that you would like to point out to your users.
 
 You can configure the callouts to target a specific series if you want to have multiple callouts layers present with different configurations. This can be done be setting the `TargetSeries` property.
 
@@ -56,7 +58,7 @@ The following code snippet demonstrates how to add a callout layer to the Angula
 </igx-data-chart>
 ```
 
-### Crosshair Layer
+## Crosshair Layer
 
 The crosshair layer renders as crossing lines intersecting at the actual value of every series that they are configured to target with each series rendering a separate set of lines.
 
@@ -86,7 +88,7 @@ The following code snippet shows how to add a crosshair layer to the Angular dat
 </igx-data-chart>
 ```
 
-### Final Value Layer
+## Final Value Layer
 
 The final value layer displays annotations along the data chart’s axes that represent the final value of a series on the Angular data chart component.
 

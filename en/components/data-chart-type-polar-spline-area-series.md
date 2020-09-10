@@ -1,34 +1,36 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar Spline Area Chart
-_description: Create a polar spline area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Polar Spline Area Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create polar spine area charts. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, polar spine area charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'PolarSplineAreaSeries']
 ---
 
-## Polar Spline Area Chart
+# Angular Polar Spline Area Chart
 
 The Ignite UI for Angular polar spline area chart belongs to a group of polar charts and has a shape of a filled region enclosed by a collection of spline lines connecting data points which are located at the polar (angle/radius) coordinates. The [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) uses the same concepts of data plotting as the [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) but wraps data points around a circle rather than stretching them along a horizontal line. Like with other series types, multiple [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) can be plotted in the same data chart and they can be overlaid on each other to show the differences and similarities between data sets.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
+<div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
-</div> -->
+
+
+</div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html).
 
 -   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
 -   [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)
 
-### Required Data
+## Required Data
 
 The [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) has the following data requirements:
 
@@ -44,7 +46,7 @@ You can use the [SamplePolarData](data-chart-data-sources-polar.md) as data sour
 public dataSource: any[] = SamplePolarData.create();
 ```
 
-### Required Modules
+## Required Modules
 
 Creation of the [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) requires the following modules:
 
@@ -72,7 +74,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 })
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html) and bind it to a data source.
 

@@ -4,7 +4,7 @@ _description: Create an intuitive calendar for applications to display date info
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Calendar components, Angular Calendar controls
 ---
 
-## Calendar
+# Calendar
 <p class="highlight">The Ignite UI for Angular Calendar component, developed as a native [Angular component](https://angular.io/guide/architecture#components), provides easy and intuitive ways to display date information. Users can choose from three different selection modes - a single selection, a multi selection or a range selection.</p>
 
 ### Demo

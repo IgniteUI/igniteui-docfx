@@ -3,7 +3,7 @@ title: Overlay Service - Positioning Strategies
 _description: Explanation and example about the Overlay Service's IPositionStrategy interface and the classes that implement it.
 ---
 
-## Positioning Strategies
+# Positioning Strategies
 
 Position strategies determine where the content is displayed in the provided `IgxOverlayService`. By default, the content is positioned in the middle of the screen.
 

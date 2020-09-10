@@ -47,7 +47,7 @@ ng update @angular/cli
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、`IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`  `IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレートディレクティブの使用に関する詳細は、この[トピック](../grid/excel_style_filtering.md#テンプレート)をご覧ください。
 * IgxGrid
-    * `selectedRows()` メソッドは、`selectedRows` 入力プロパティに変更されました。この重大な変更により、ユーザーは実行時にグリッドの選択状態を簡単に変更できます。行の事前選択もサポートされています。`selectedRows()` メソッドが呼び出されるすべてのインスタンスは、括弧なしで書き換える必要があります。
+    * `selectedRows()` メソッドは、`selectedRows`入力プロパティに変更されました。この重大な変更により、ユーザーは実行時にグリッドの選択状態を簡単に変更できます。行の事前選択もサポートされています。`selectedRows()` メソッドが呼び出されるすべてのインスタンスは、括弧なしで書き換える必要があります。
     * `selectedRows` 入力のバインディングは次のようになります:
     ```typescript
     public mySelectedRows = [0, 1, 2];
@@ -59,6 +59,31 @@ ng update @angular/cli
     </igx-grid>
     ```
 
+### 9.0.x から 10.0.x の場合:
+* IgxDropdown
+    * ドロップダウン項目の表示プロパティが `flex` から `block` に変更されました。これは、切り捨てられたテキストをデフォルトで有効にするために行われました。この変更により、ドロップダウン項目のコンテンツにテキスト以外のものが含まれる場合、レイアウトはアプリケーション レベルで処理する必要があります。
+
+    * 次の例は、アイコンとテキスト コンテンツでドロップダウン アイテムをスタイルし、垂直配置させる方法を示しています。
+
+    ```html
+    <igx-drop-down-item>
+        <div class="my-styles">
+            <igx-icon>alarm</igx-icon>
+            <span>item text</span>
+        </div>
+    </igx-drop-down-item>
+    ```
+    ```scss
+    .my-styles {
+        display: flex;
+        align-items: center;
+        
+        span {
+          margin-left: 8px;
+        }
+    } 
+    ```
+    
 ### 8.x.x から 9.0.x の場合:
 
 Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。

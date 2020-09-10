@@ -1,15 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Data Models | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+title: Angular Map | Data Visualization Tools | Binding Geographic Data Models | Infragistics
+_description: Use Infragistics' Angular JavaScript map to display geo-spatial data from shape files and/or geographic locations from data models on geographic imagery maps. View Ignite UI for Angular map demos!
+_keywords: Angular map, binding data models, Ignite UI for Angular, Infragistics, data binding
 mentionedTypes: ['XamGeographicMap', GeographicScatterAreaSeries, GeographicHighDensityScatterSeries, GeographicProportionalSymbolSeries, GeographicScatterAreaSeries, GeographicContourLineSeries, GeographicShapeSeries, GeographicPolylineSeries  ]
 ---
 
-## Binding Geographic Data Models
+# Angular Binding Geographic Data Models
 
 The Ignite UI for Angular map component is designed to display geo-spatial data from shape files and/or geographic locations from data models on geographic imagery maps. The `ItemsSource` property of geographic series is used for the purpose of binding to data models. This property can be bound an array of custom objects.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-data-model-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,7 @@ The Ignite UI for Angular map component is designed to display geo-spatial data 
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-model-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -33,7 +34,7 @@ The following table summarized data structures required for each type of geograp
 | [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)                           | [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriesbasecomponent.html#shapememberpath)                                                                                                                                                                                                                                                                                                                                                                                                | Specifies the name of data column of `ItemsSource` items that contains the geographic points of shapes. This property must be mapped to an array of arrays of objects with x and y properties.     |
 | [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)                     | [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriesbasecomponent.html#shapememberpath)                                                                                                                                                                                                                                                                                                                                                                                                | Specifies the name of data column of `ItemsSource` items that contains the geographic coordinates of lines. This property must be mapped to an array of arrays of objects with x and y properties. |
 
-### Code Snippet
+## Code Snippet
 
 The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) to a custom data model that contains geographic locations of some cities of the world stored using longitude and latitude coordinates. Also, we use the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) to plot shortest geographic path between these locations using the [WorldUtility](geo-map-resources-world-util.md)
 
@@ -46,7 +47,7 @@ The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`](
     </igx-geographic-map>
 </div>
 
-<ng-template let-series="series" let-item="item" #pointSeriestemplate>
+<ng-template let-series="series" let-item="item" #pointSeriesTemplate>
         <div>
             <span [style.color]="series.brush">
                 {{item.country}}
@@ -85,8 +86,8 @@ export class MapBindingDataModelComponent implements AfterViewInit {
 
     @ViewChild ("map")
     public map: IgxGeographicMapComponent;
-    @ViewChild("pointSeriestemplate")
-    public pointSeriestemplate: TemplateRef<object>;
+    @ViewChild("pointSeriesTemplate")
+    public pointSeriesTemplate: TemplateRef<object>;
     @ViewChild("polylineSeriesTooltipTemplate")
     public polylineSeriesTooltipTemplate: TemplateRef<object>;
     public flights: any[];
@@ -135,7 +136,7 @@ export class MapBindingDataModelComponent implements AfterViewInit {
         symbolSeries.markerBrush  = "White";
         symbolSeries.markerOutline = flight.color;
         symbolSeries.thickness = 1;
-        symbolSeries.tooltipTemplate = this.pointSeriestemplate;
+        symbolSeries.tooltipTemplate = this.pointSeriesTemplate;
 
         this.map.series.add(symbolSeries);
     }

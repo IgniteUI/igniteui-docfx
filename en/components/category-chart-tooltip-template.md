@@ -1,15 +1,15 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Tooltip Templates | Infragistics
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics
+title: Angular Charts and Graphs | Data Visualization Tools | Tooltip Templates | Infragistics
+_description: Use Infragistics' Angular chart's tooltips to display important data. View our Ignite UI for Angular graph tutorials!
+_keywords: Angular charts, category chart, tooltip template, Ignite UI for Angular, Infragistics
 mentionedTypes: ['CategoryChart']
 ---
 
-## Tooltip Templates
+# Angular Tooltip Templates
 
 The Angular category chart component provides default tooltips for each type of series. The default tooltips displays all the information relevant to the particular series item for example series title, data values, axis values. They are styled to match the series' style. If default tooltips are not sufficient, tooltip templates can be configured to customize the tooltip content and look and feel.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-tooltip-template-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ The Angular category chart component provides default tooltips for each type of 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-template-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -31,7 +33,7 @@ The tooltip content is customized by creating a template for the tooltip as demo
       <span> Oil :{{item.Oil | number}}<br/></span>
       <span> Gas :{{item.Gas | number}}<br/></span>
       <span> Nuclear :{{item.Nuclear | number}}<br/></span>
-      <span> Hyrdo :{{item.Hydro | number}}<br/></span>
+      <span> Hydro :{{item.Hydro | number}}<br/></span>
     </div>
 </ng-template>
 

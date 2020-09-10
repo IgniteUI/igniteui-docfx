@@ -4,7 +4,7 @@ _description: How to configure batch editing for Ignite UI Angular components an
 _keywords: batch editing, igniteui for angular, infragistics
 ---
 
-## How to use the Transaction service
+# How to use the Transaction service
 
 You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
 

@@ -20,7 +20,7 @@ _keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Column Hiding
+# @@igComponent Column Hiding
 
 The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) with an [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) which allows users to perform column hiding directly through the **UI** or by using the Angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
 

@@ -20,7 +20,7 @@ _keywords: lock row, ignite ui for angular, infragistics 
 ---
 }
 
-### @@igComponent Row Pinning
+# @@igComponent Row Pinning
 One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. **Row Pinning** in Ignite UI for Angular allows end-users to pin rows in a particular order, duplicating them in a special area that is always visible even when they scroll the @@igComponent vertically. The Material UI Grid has a built-in row pinning UI, which is enabled by initializing an `igxActionStrip` component in the context of @@igComponent. In addition, you can define custom UI and change the pin state of the rows via the Row Pinning API.
 
 #### Demo

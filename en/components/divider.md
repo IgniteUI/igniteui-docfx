@@ -4,7 +4,7 @@ _description: Ignite UI for Angular Divider component enables users to separate 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Divider component, Angular Divider control
 ---
 
-## Divider
+# Divider
 
 <p class="highlight">The divider component enables users to separate content both horizontally and vertically.</p>
 <div class="divider"></div>
