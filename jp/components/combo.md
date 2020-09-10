@@ -141,7 +141,7 @@ export class MyCombo {
 }
 ```
 
-Using the selection API, you can also change the combo's selected items without user interaction with the control - via a button click, as a response to an Observable changing, etc. For example, we can implement a button that selects a set of cities, using the [selectItems()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectitems) method:
+選択 API を使用すると、コントロールのユーザー操作なしで、コンボの選択された項目を変更できます - ボタン クリックを介して、Observable 変更への応答としてなどです。 たとえば、[selectItems()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectitems) メソッドを使用して複数の都市を選択するボタンを実装できます。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>
@@ -171,7 +171,7 @@ export class MyExampleCombo {
 </igx-combo>
 ```
 
-In the following example, when a city is added or removed from the selection, a handler that updates the statistic visualization is fired:
+以下の例では、都市が選択に追加または選択から削除されると、統計の可視化を更新するハンドラーが発生します。
 
 ```typescript
 export class MyExampleCombo {
@@ -214,37 +214,37 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 
 ### キーボード ナビゲーション
 
-When igxCombo is closed and focused:
-- `ArrowDown` or `Alt` + `ArrowDown` will open the combo drop down and will move focus to the search input.
+igxCombo を閉じてフォーカスされている場合:
+- `下矢印`または `Alt` キー + `下矢印`はコンボ ドロップダウンを開き、検索入力にフォーカスを移動します。
 
-When igxCombo is opened and search input is focused:
-- `ArrowUp` or `Alt` + `ArrowUp` will close the combo drop down and will move focus to the closed combo.
+igxCombo を開いて検索入力にフォーカスがある場合:
+- `上矢印`または `Alt` キー + `上矢印`はコンボ ドロップダウンを閉じ、フォーカスを閉じたコンボに移動します。
 
-- `ArrowDown` will move focus from the search input to the first list item. If the list is empty and custom values are enabled will move it to the Add new item button.
+- `下矢印`は、フォーカスを検索入力から最初のリスト項目に移動します。リストが空でカスタム値が有効な場合、新しい項目の追加ボタンに移動します。
   
 > [!NOTE]
-> Any other key stroke will be handled by the input.
+> その他のキー ストロークは入力によって処理されます。
 
-When igxCombo is opened and list item is focused:
-- `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
+igxCombo を開いてリスト項目にフォーカスがある場合:
+- `下矢印`は次のリスト項目に移動します。アクティブな項目がリストの最後の項目で、カスタム値が有効な場合、フォーカスは [項目の追加] ボタンに移動します。
 
-- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input.
+- `上矢印`は前のリスト項目に移動します。アクティブな項目がリストの最初の項目である場合、フォーカスは検索入力に戻ります。
 
-- `End` will move to the last list item.
+- `End` キーは最後のリスト項目に移動します。
 
-- `Home` will move to the first list item.
+- `Home` キーは最初のリスト項目に移動します。
 
-- `Space` will select/deselect the active list item.
+- `Space` キーはアクティブなリスト項目を選択/選択解除します。
 
-- `Enter` will confirm the already selected items and will close the list.
+- `Enter` キーはすでに選択した項目を確定し、リストを閉じます。
 
-- `Esc` will close the list.
+- `Esc` キーはリストを閉じます。
 
-When igxCombo is opened, allow custom values are enabled and add item button is focused:
+igxCombo を開くと、カスタム値が有効になり、項目の追加ボタンがフォーカスされます。
 
-- `Enter` will add a new item with valueKey and displayKey equal to the text in the search input and will select the new item.
+- `Enter` キーは、検索入力のテキストと等しい valueKey と displayKey を持つ新しい項目を追加し、その項目を選択します。
 
-- `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
+- `上矢印` - フォーカスは最後のリスト項目に戻るか、あるいはリストが空の場合、検索入力に移動します。
 
 
 ### スタイル設定
@@ -262,7 +262,7 @@ $custom-combo-theme: igx-combo-theme(
 );
 ```
 
-[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。 It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes that extend theirs and scoping them under the respective classes will let you drill deeper and change the combo styles more: 
+[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。テーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボのスタイル設定を変更できます。 
 
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
