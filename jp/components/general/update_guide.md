@@ -59,6 +59,31 @@ ng update @angular/cli
     </igx-grid>
     ```
 
+### 9.0.x から 10.0.x の場合:
+* IgxDropdown
+    * ドロップダウン項目の表示プロパティが `flex` から `block` に変更されました。これは、切り捨てられたテキストをデフォルトで有効にするために行われました。この変更により、ドロップダウン項目のコンテンツにテキスト以外のものが含まれる場合、レイアウトはアプリケーション レベルで処理する必要があります。
+
+    * 次の例は、アイコンとテキスト コンテンツでドロップダウン アイテムをスタイルし、垂直配置させる方法を示しています。
+
+    ```html
+    <igx-drop-down-item>
+        <div class="my-styles">
+            <igx-icon>alarm</igx-icon>
+            <span>item text</span>
+        </div>
+    </igx-drop-down-item>
+    ```
+    ```scss
+    .my-styles {
+        display: flex;
+        align-items: center;
+        
+        span {
+          margin-left: 8px;
+        }
+    } 
+    ```
+    
 ### 8.x.x から 9.0.x の場合:
 
 Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
