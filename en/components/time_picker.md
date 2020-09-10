@@ -100,7 +100,7 @@ By placing an `igxlabel` inside a `<label>` tag nested in the component, the def
 </igx-time-picker>
 ````
 
-You can see what the custom label will look like in the validation sample found in the Validation section.
+You can see what the custom label will look like in the validation sample found in the [Validation section](#validation).
 
 
 #### Change delta and spin mode
