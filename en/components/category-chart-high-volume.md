@@ -1,15 +1,15 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | High Volume Data | Infragistics
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics
+title: Angular Charts and Graphs | Data Visualization Tools | High Volume Data | Infragistics
+_description: Learn how to optimize the performance of the Infragistics' Angular charts control. Improve the Ignite UI for Angulargraph's performance!
+_keywords: Angular charts, category chart, performance,Ignite UI for Angular, Infragistics, data binding
 mentionedTypes: ['CategoryChart']
 ---
 
-## High Volume Data
+# Angular High Volume Data
 
-The Ignite UI for Angular category chart component is capable of handling high volumes of data, ranging into the millions of data points, as demonstated in the following demo.
+The Ignite UI for Angular category chart component is capable of handling high volumes of data, ranging into the millions of data points, as shown in the following demo.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ The Ignite UI for Angular category chart component is capable of handling high v
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Performance Optimizations
+## Performance Optimizations
 
 There are several chart features and Angular specific features that affect performance of the chart and they should be considered when optimizing performance in your application.
 

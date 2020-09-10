@@ -4,7 +4,7 @@ _description: Users can export their data for editing or offline presentation ca
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
 ---
 
-### Excel Exporter
+# Excel Exporter
 
 <p class="highlight">
 The Ignite UI for Angular Excel Exporter service can export data in Microsoft® Excel® format from raw data (array) or from the following components: [**IgxGrid**](grid/grid.md) and [**IgxTreeGrid**](treegrid/tree_grid.md). The exporting functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc.</p>

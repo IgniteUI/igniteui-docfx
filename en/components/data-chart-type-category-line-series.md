@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Line Chart
-_description: Create a line chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Line Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create line charts. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, line chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Line Chart
+# Angular Line Chart
 
 The Ignite UI for Angular line chart belongs to a group of category charts and it is rendered using a collection of points connected by straight line segments. Values are represented on the y-axis and categories are displayed on the x-axis. [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The Angular line chart is identical to the Angular spline chart in all aspects except that line connecting data points do not have spline interpolation and smoothing for improved presentation of data.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ The Ignite UI for Angular line chart belongs to a group of category charts and i
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html).
 
@@ -30,13 +32,13 @@ The Angular data chart component provides various types of axes but only the fol
 -   [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
 -   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
-### Required Data
+## Required Data
 
 The [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html).
--   All data items must contain at least one data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))
+-   All data items must contain at least one data column (string or date time) which should be mapped to the [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) property of the category axis (e.g. [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))
 -   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html).
 
 You can use the [SampleCategoryData](data-chart-data-sources-category.md) as data source which meets above data requirements.
@@ -45,7 +47,7 @@ You can use the [SampleCategoryData](data-chart-data-sources-category.md) as dat
 public dataSource: any[] = SampleCategoryData.create();
 ```
 
-### Required Modules
+## Required Modules
 
 Creation of the [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) requires the following modules:
 
@@ -70,7 +72,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 })
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) and bind it to a data source.
 

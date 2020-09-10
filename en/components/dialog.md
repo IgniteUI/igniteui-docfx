@@ -4,7 +4,7 @@ _description: Whether building informative dialogs or data manipulation windows,
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dialog Window components, Angular Dialog Window controls
 ---
 
-##Dialog Window
+#Dialog Window
 <p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
 <div class="divider"></div>
 

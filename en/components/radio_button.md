@@ -4,7 +4,7 @@ _description: With Ignite UI for Angular Radio Button and Radio Group controls, 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Radio Button components, Angular Radio Button controls, Angular Radio Group component, Angular Radio Group control
 ---
 
-## Radio & Radio Group
+# Radio & Radio Group
 
 ### Radio Button
 <p class="highlight">The Ignite UI for Angular Radio Button component allows the user to select a single option from an available set of options that are listed side by side.</p>

@@ -1,15 +1,15 @@
 ---
-title: Financial Chart | Data Visualization Tools | Ignite UI for Angular | Infragistics } Binding to Multiple Data Sources
-_description: Use the financial chart component to visualize financial data using a simple API. View the demo, dependencies, usage and toolbar for more information.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+title: Angular Financial Chart | Binding Multiple Data Sources | Infragistics
+_description: Learn how Infragistics' Angular financial chart control can bind easily to muliple data sources. Check out Ignite UI for Angular financial graph's tutorials!
+_keywords: Angular charts, financial chart, stock chart, binding to data, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamFinancialChart']
 ---
 
-## Binding Multiple Sources
+# Angular Binding Multiple Sources
 
 The Angular financial chart component can bind easily to multiple data sources, as shown in the following demo.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,10 +17,14 @@ The Angular financial chart component can bind easily to multiple data sources, 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
-The financial chart component can plot multiple data sources as long as your each data source is added to an array. The following code snippet demonstrates how to create a multiple data sources.
+The financial chart component can plot multiple data sources as long as your each data source is added to an array. The financial chart component cannot plot multiple data sources on the XAxis in Time mode if the number of items in the data sources is not the same. The control also will not align items of multiple data sources. As a result, developers should align data items by inserting null items where one data source does not have corresponding items with another data source.
+
+The following code snippet demonstrates how to create a multiple data sources.
 
 ```ts
 let dataSource1: any = [

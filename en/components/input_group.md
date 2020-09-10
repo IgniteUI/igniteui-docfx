@@ -4,7 +4,7 @@ _description: The Input Groups component in Ignite UI for Angular allows for eas
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 ---
 
-## Input Group
+# Input Group
 <p class="highlight">The Ignite UI for Angular controls can easily be used in Reactive Forms that provide a model-driven approach for handling form inputs.</p>
 <div class="divider--half"></div>
 
@@ -85,9 +85,9 @@ This is how the phone field with hint looks:
 <div class="divider--half"></div>
 
 #### Input Types
-The [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) could be styled differently using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input types that we currently support are: line (the default one), box, border, bootstrap, fluent, search and fluent search. The `bootstrap`, `fluent` and `fluent-search` types are made specifically for the `Bootstrap` and `Fluent` themes. This is how they look:
+The input group styles can be altered by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input group component supports the following types: `line` (default if type is not specified), `border`, `box`, and `search`. The `line`, `border`, and `box` types are made specifically for the `Material Design` themes. Setting those types with other themes will not have any effect on how the input group looks.
 
-<div class="sample-container loading" style="height:870px">
+<div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
 <div>

@@ -4,7 +4,7 @@ _description: Learn how to configure ARIA Acessibility and directionality of you
 _keywords: aria support, a11y, ignite ui for angular, infragistics
 ---
 
-## Frameworks and features
+# Frameworks and features
 
 ### Accessibility and Directionality
 

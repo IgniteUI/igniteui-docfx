@@ -4,7 +4,7 @@ _description: How to use Angular Universal rendering with Ignite UI for Angular.
 _keywords: Ignite UI for Angular, Universal, Server-side rendering
 ---
 
-## Server-side Rendering with Angular Universal
+# Server-side Rendering with Angular Universal
 
 This topic aims at describing what Server-side Rendering is and how to configure it within Ignite UI for Angular application. 
 

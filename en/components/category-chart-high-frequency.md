@@ -1,15 +1,15 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Real Time Data | Infragistics
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics
+title: Angular Charts and Graphs | Data Visualization Tools | Real Time Data | Infragistics
+_description: Render millions of data points using Infragistics' Angular charts control at super fast speed. Check out the Ignite UI for Angular graph's high performance!
+_keywords: Angular charts, category chart, performance, Ignite UI for Angular, Infragistics, data binding
 mentionedTypes: ['CategoryChart']
 ---
 
-## Real Time Data
+# Angular Real Time Data
 
 The Ignite UI for Angular category chart component is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px;">
     <iframe id="category-chart-high-frequency-iframe" align="center" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency' height="100%" width="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ The Ignite UI for Angular category chart component is capable of handling high v
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Performance Optimizations
+## Performance Optimizations
 
 There are several chart features and Angular specific features that affect performance of the chart and they should be considered when optimizing performance in your application.
 

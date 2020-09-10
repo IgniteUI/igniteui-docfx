@@ -4,7 +4,7 @@ _description: Learn how to configure the Ignite UI for Angular slider tick marks
 _keywords: tick marks, igniteui for angular, infragistics
 ---
 
-### Usage
+# Usage
 
 
 ### API References

@@ -254,7 +254,7 @@ export class MyComponent implements OnInit {
 
 ### スタイル設定
 
-[Ignite UI for Angular Theme ライブラリ](../themes/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
+[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
 
 Tree Grid (ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント mixins が含まれる `index` ファイルをインポートする必要があります。
 

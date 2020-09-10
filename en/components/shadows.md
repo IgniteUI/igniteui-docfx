@@ -4,7 +4,7 @@ _description:
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-### Shadows
+# Shadows
 
 Shadows are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation.
 

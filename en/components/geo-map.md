@@ -1,15 +1,15 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Infragistics
-_description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+title: Angular Map | Data Visualization Tools | Map Overview | Infragistics
+_description: Use Infragistics' Angular JavaScript map to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps. View the Ignite UI for Angular map demos!
+_keywords: Angular map, geographic map, imagery tiles, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap']
 ---
 
-## Map
+# Angular Map Overview
 
 The Ignite UI for Angular map component allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,6 +19,7 @@ The Ignite UI for Angular map component allows you to display data that contains
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 The map component allows you to render geographic imagery from Bing Maps™, and Open Street Maps. The map provides plotting of tens of thousands of data points, and updates them every few milliseconds so that the control can handle your real-time feeds.
@@ -27,15 +28,17 @@ The map's [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-a
 
 The map provides customizable navigation behaviors for navigating map content using mouse, keyboard, or code-behind.
 
-### Dependencies
+## Dependencies
 
-To use the geographic map component, you need to first install these packages:
+To use the Angular geographic map component, you need to first install these packages:
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
--   **npm install --save igniteui-angular-maps**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+npm install --save igniteui-angular-maps
+</pre>
 
-### Required Modules
+## Required Modules
 
 The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules, however the Ig$DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
 
@@ -80,7 +83,7 @@ export class MapOverviewComponent implements AfterViewInit {
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 Now that the map module is imported, next step is to create geographic map. The following code demonstrates how to do this and enable zooming in the map.
 

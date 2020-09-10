@@ -1,110 +1,123 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Area Chart
-_description: Create an area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Area Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create area charts such as area chart, spline area chart, stacked area chart and many more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, area charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Area Charts
+# Angular Area Charts
+
+The Ignite UI for Angular provides the following types of area charts:
 
 <section>
     <style>
-        .linkContent {
+        .linkContent,
+        .linkContent:hover {
             display: flex;
             flex-flow: column;
             align-items: center;
+            box-shadow: none;
         }
         .link {
             display: inline-block;
             font-size: 1.0rem;
+            color: #0099ff;
+            cursor: pointer;
+            padding-top: 1.0rem;
+            margin-right: 1.0rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,.15);
         }
-        img {
+        .link:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,.25);
+        }
+        .img {
             width: 250px;
             height: 250px;
-            margin-top: -20px;
+            box-shadow: none;
         }
     </style>
     <body>
-        <a class="link" href="data-chart-type-category-area-series.md">
+        <div class="link" href="data-chart-type-category-area-series.md">
             <div class="linkContent">
-                <h4>Area Chart</h4>
-                <img src="../images/charts/data-chart-type-category-area-series.png">
+                <div>Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-category-spline-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-category-spline-area-series.md">
             <div class="linkContent">
-                <h4>Spline Area Chart</h4>
-                <img src="../images/charts/data-chart-type-category-spline-area-series.png">
+                <div>Spline Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-spline-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-category-step-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-category-step-area-series.md">
             <div class="linkContent">
-                <h4>Step Area Chart</h4>
-                <img src="../images/charts/data-chart-type-category-step-area-series.png">
+                <div>Step Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-step-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-range-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-range-area-series.md">
             <div class="linkContent">
-                <h4>Range Area Chart</h4>
-                <img src="../images/charts/data-chart-type-range-area-series.png">
+                <div>Range Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-range-area-series.png">
             </div>
-        </a>
+        </div>
         <br>
-        <a class="link" href="data-chart-type-stacked-area-series.md">
+        <div class="link" href="data-chart-type-stacked-area-series.md">
             <div class="linkContent">
-                <h4>Stacked Area Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-area-series.png">
+                <div>Stacked Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-stacked-spline-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-stacked-spline-area-series.md">
             <div class="linkContent">
-                <h4>Stacked Spline Area Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-area-series.png">
+                <div>Stacked Spline Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-stacked-100-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-stacked-100-area-series.md">
             <div class="linkContent">
-                <h4>Stacked 100 Area Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-100-area-series.png">
+                <div>Stacked 100 Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-100-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-stacked-100-spline-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-stacked-100-spline-area-series.md">
             <div class="linkContent">
-                <h4>Stacked 100 Spline Area Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-100-area-series.png">
+                <div>Stacked 100 Spline Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-100-area-series.png">
             </div>
-        </a>
+        </div>
         <br>
-        <a class="link" href="data-chart-type-scatter-area-series.md">
+        <div class="link" href="data-chart-type-scatter-area-series.md">
             <div class="linkContent">
-                <h4>Scatter Area Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-area-series.png">
+                <div>Scatter Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-scatter-polygon-series.md">
+        </div>
+        <div class="link" href="data-chart-type-scatter-polygon-series.md">
             <div class="linkContent">
-                <h4>Scatter Polygon Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-polygon-series.png">
+                <div>Scatter Polygon Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-polygon-series.png">
             </div>
-        </a>
+        </div>
         <br>
-        <a class="link" href="data-chart-type-polar-area-series.md">
+        <div class="link" href="data-chart-type-polar-area-series.md">
             <div class="linkContent">
-                <h4>Polar Area Chart</h4>
-                <img src="../images/charts/data-chart-type-polar-area-series.png">
+                <div>Polar Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-polar-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-polar-spline-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-polar-spline-area-series.md">
             <div class="linkContent">
-                <h4>Polar Spline Area Chart</h4>
-                <img src="../images/charts/data-chart-type-polar-spline-area-series.png">
+                <div>Polar Spline Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-polar-spline-area-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-radial-area-series.md">
+        </div>
+        <div class="link" href="data-chart-type-radial-area-series.md">
             <div class="linkContent">
-                <h4>Radial Area Chart</h4>
-                <img src="../images/charts/data-chart-type-radial-area-series.png">
+                <div>Radial Area Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-radial-area-series.png">
             </div>
-        </a>
+        </div>
     </body>
 </section>

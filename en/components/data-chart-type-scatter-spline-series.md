@@ -1,17 +1,17 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Spline
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Scatter Spline Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create scatter spline charts. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, scatter spline charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'ScatterSplineSeries']
 ---
 
-## Scatter Spline Chart
+# Angular Scatter Spline Chart
 
 The Ignite UI for Angular scatter point chart belongs to a group of scatter charts that use the Cartesian (x, y) coordinate system to plot data. This series is rendered as a collection of markers connected with a spline, each having a pair of numeric X/Y values that determines its location in the Cartesian coordinate system.
 
 The [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) draws attention to uneven intervals or clusters of data. They can highlight the deviation of collected data from predicted results and they are often used to plot scientific and statistical data. The [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) organizes and plots data chronologically (even if the data is not in chronological order before binding) on X-Axis and Y-Axis.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-scatter-spline-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-spline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,18 +19,20 @@ The [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/igni
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-spline-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html).
 
 -   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
 -   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
-### Required Data
+## Required Data
 
 The [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) has the following data requirements:
 
@@ -44,7 +46,7 @@ You can use the [SampleScatterStats](data-chart-data-sources-stats.md) as data s
 public dataSource: any[] = SampleScatterStats.getCountries();
 ```
 
-### Required Modules
+## Required Modules
 
 Creation of the [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) requires the following modules:
 
@@ -71,7 +73,7 @@ import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) and bind it to a data source.
 
@@ -92,7 +94,7 @@ This code demonstrates how to create an instance of the Ignite UI for Angular da
  </igx-data-chart>
 ```
 
-### Series Appearance
+## Series Appearance
 
 You can customize appearance of marker using the [Markers](data-chart-series-markers.md) properties as well as changing [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) and [`thickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness) of line visuals between markers. This code snippet below demonstrate how to use these properties.
 

@@ -1,19 +1,19 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Series
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Series | Infragistics
+_description: Use Infragistics' Angular charts control to create column charts, line charts, area charts, pie charts and more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, chart types, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Series
+# Angular Series
 
-In the Angular data chart component, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Stacked Series, and Shape Series.
+In the Angular data chart component, series are classified into groups of similar series: Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, and Stacked Series.
 
 In addition to these series, you can add [Series Annotations](data-chart-series-annotations.md) and [Series Highlighting](data-chart-series-highlighting.md) in the Angular data chart component.
 
 The following list shows all types of the series in each of their groups. Click on a name of a series to navigate to a help topic that provides details on how to use a given series in the Angular data chart component.
 
-#### Category Charts
+### Category Charts
 
 -   [Area Chart](data-chart-type-category-series.md)
 -   [Bar Chart](data-chart-type-category-series.md)
@@ -26,7 +26,7 @@ The following list shows all types of the series in each of their groups. Click 
 -   [Step Line Chart](data-chart-type-category-series.md)
 -   [Waterfall Chart](data-chart-type-category-series.md)
 
-#### Polar Charts
+### Polar Charts
 
 -   [Polar Area Chart](data-chart-type-polar-series.md)
 -   [Polar Line Chart](data-chart-type-polar-series.md)
@@ -34,19 +34,21 @@ The following list shows all types of the series in each of their groups. Click 
 -   [Polar Spline Chart](data-chart-type-polar-series.md)
 -   [Polar Spline Area Chart](data-chart-type-polar-series.md)
 
-#### Radial Charts
+### Radial Charts
 
 -   [Radial Area Chart](data-chart-type-radial-series.md)
 -   [Radial Line Chart](data-chart-type-radial-series.md)
 -   [Radial Column Chart](data-chart-type-radial-series.md)
 -   [Radial Pie Chart](data-chart-type-radial-series.md)
+-   [Doughnut Chart](doughnut-chart.md)
+-   [Pie Chart](pie-chart.md)
 
-#### Range Charts
+### Range Charts
 
 -   [Range Area Chart](data-chart-type-range-series.md)
 -   [Range Column Chart](data-chart-type-range-series.md)
 
-#### Scatter Charts
+### Scatter Charts
 
 -   [Scatter Area Chart](data-chart-type-scatter-area-series.md)
 -   [Scatter Bubble Chart](data-chart-type-scatter-bubble-series.md)
@@ -57,17 +59,17 @@ The following list shows all types of the series in each of their groups. Click 
 -   [Scatter Polygon Chart](data-chart-type-shape-series.md)
 -   [Scatter Polyline Chart](data-chart-type-shape-series.md)
 
-#### Financial Charts
+### Financial Charts
 
 -   [Financial OHLC Chart](data-chart-type-financial-ohlc-series.md)
 -   [Financial Candlestick Chart](data-chart-type-financial-candlestick-series.md)
 
-#### Financial Overlays
+### Financial Overlays
 
 -   [Bollinger Bands Overlay](data-chart-type-financial-series.md)
 -   [Price Channel Overlay](data-chart-type-financial-series.md)
 
-#### Financial Indicators
+### Financial Indicators
 
 -   [AbsoluteVolumeOscillatorIndicator](data-chart-type-financial-series.md)
 -   [AccumulationDistributionIndicator](data-chart-type-financial-series.md)

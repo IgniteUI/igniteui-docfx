@@ -4,7 +4,7 @@ _description: Learn how to configure in row data manipulations with Ignite UI fo
 _keywords: row editing, igniteui for angular, infragistics
 ---
 
-## @@igComponent Row Editing
+# @@igComponent Row Editing
 
 The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified. 
 

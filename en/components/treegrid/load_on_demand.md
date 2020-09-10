@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Tree Grid provides the necessary tools t
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid, Tree Table
 ---
 
-### Tree Grid Load On Demand
+# Tree Grid Load On Demand
 
 The Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) can be rendered in such way that it requires the minimal amount of data to get from the server so the user could see it as quickly as possible. Then, only after the user expands a row, the children for that particular parent row will be loaded. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
 

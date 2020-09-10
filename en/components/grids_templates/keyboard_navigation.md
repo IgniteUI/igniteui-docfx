@@ -20,7 +20,7 @@ _keywords: keyboard navigation, ignite ui for angular, infragistics
 ---
 }
 
-## @@igComponent Keyboard Navigation
+# @@igComponent Keyboard Navigation
 
  Keyboard navigation in the **@@igxName** provides a rich variety of keyboard interactions for the user. It enhances the accessibility of the **@@igxName** and allows to navigate through any type of elements inside (cell, row, column header, toolbar, footer, etc.). This functionality is enabled by default, and the developer has the option to override any of the default behaviors in an easy way.
 
