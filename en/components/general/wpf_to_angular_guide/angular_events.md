@@ -4,7 +4,7 @@ _description: Learn about Angular event binding and how to create your own Angul
 _keywords: handling angular events, ignite ui for angular, infragistics
 ---
 
-## Handling Angular Events
+# Handling Angular Events
 
 > [!Video https://www.youtube.com/embed/V1Futz4W400]
 

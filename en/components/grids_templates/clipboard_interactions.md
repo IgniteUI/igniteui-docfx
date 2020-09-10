@@ -13,7 +13,7 @@ _keywords: copy data, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Clipboard Interactions
+# @@igComponent Clipboard Interactions
 Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
 
 #### Demo
@@ -24,8 +24,8 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
     <iframe id="grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -34,8 +34,8 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
     <iframe id="tree-grid-clipboard-operations-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-clipboard-operations-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }

@@ -20,9 +20,9 @@ _keywords: column hiding, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Column Hiding
+# @@igComponent Column Hiding
 
-The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html), which allows users to perform column hiding directly through the **UI** or by using the angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
+The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) with an [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) which allows users to perform column hiding directly through the **UI** or by using the Angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
 
 #### Demo
 
@@ -32,8 +32,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -43,8 +43,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -54,8 +54,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchicalgrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -152,7 +152,7 @@ We will also add a title to our toolbar by using the [`toolbarTitle`]({environme
 ```html
 <!--columnHiding.component.html-->
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers">
+    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true" [columnHiding]="true" toolbarTitle="Singers">
     ...
  </igx-hierarchical-grid>
 </div>
@@ -211,7 +211,7 @@ The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#h
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers" 
+    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true" [columnHiding]="true" toolbarTitle="Singers" 
     columnHidingTitle="Column Hiding" hiddenColumnsText="Hidden">
  </igx-hierarchical-grid>
 </div>
@@ -233,9 +233,10 @@ In order to use the expanded set of functionalities for the column hiding UI, we
 You can see the result of the code from above at the beginning of this article in the [Column Hiding Demo](#demo) section.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ### Custom Column Hiding UI
 
-Let's say we want to manually define our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) and put it anywhere we want on our page. This can be easily done by simply creating an instance of the component in our markup. In order to do this, let's first grab the `IgxColumnHidingModule`.
+Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsModule`.
 
 ```typescript
 // app.module.ts
@@ -243,25 +244,25 @@ Let's say we want to manually define our [`IgxColumnHidingComponent`]({environme
 ...
 import {
     ...
-    IgxColumnHidingModule 
+    IgxColumnActionsModule 
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxColumnHidingModule],
+    imports: [..., IgxColumnActionsModule],
 })
 export class AppModule {}
 ```
 
-Now let's create our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)! In our application, we will place it next to the grid (which is not the case with the toolbar's column hiding UI, where the component is inside a dropdown by design). We will also set the [`columns`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columns) property of the component to the columns of our @@igComponent and include some custom styles to make our application look even better!
+Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html). In our application, we will place it next to the grid (which is not the case with the toolbar's column hiding UI, where the component is inside a dropdown by design). We will also set the [`columns`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columns) property of the component to the columns of our @@igComponent and include some custom styles to make our application look even better!
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns">
-    </igx-column-hiding>
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns">
+    </igx-column-actions>
 </div>
 <div class="gridContainer">
     <@@igSelector #@@igObjectRef [data]="data" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
@@ -275,8 +276,8 @@ Now let's create our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/cl
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns">
-    </igx-column-hiding>
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns">
+    </igx-column-actions>
 </div>
 <div class="gridContainer">
     <@@igSelector #@@igObjectRef [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
@@ -306,7 +307,7 @@ Now let's create our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/cl
     border: 1px gray;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(50, 50, 50, 0.25);
-    igx-column-hiding {
+    igx-column-actions {
         height: 460px;
     }
 }
@@ -328,21 +329,21 @@ Now let's create our [`IgxColumnHidingComponent`]({environment:angularApiUrl}/cl
 
 #### Add title and filter prompt
 
-A couple more things we can do in order to enrich the user experience of our column hiding component is to set the [`title`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#title) and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#filtercolumnsprompt) properties! The [`title`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#title) is displayed on the top and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#filtercolumnsprompt) is the prompt text that is displayed in the filter input of our column hiding UI.
+A couple more things we can do in order to enrich the user experience of our column hiding component is to set the [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) properties. The [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) is displayed on the top and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) is the prompt text that is displayed in the filter input of our column hiding UI.
 
 ```html
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns"
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns"
                        title="Column Hiding" filterColumnsPrompt="Type here to search">
-    </igx-column-hiding>
+    </igx-column-actions>
 </div>
 ```
 
 #### Add column display order options
 
-We can also allow the user to choose the display order of the columns in the column hiding UI. For this purpose we will use the [`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columndisplayorder) property, which is an enumeration type property and has the following options:
+We can also allow the user to choose the display order of the columns in the column hiding UI. For this purpose we will use the [`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) property, which is an enumeration type property and has the following options:
 
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the @@igComponent)
@@ -425,8 +426,8 @@ If all went well, this is how our column hiding UI component should look like:
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -436,8 +437,8 @@ If all went well, this is how our column hiding UI component should look like:
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -445,22 +446,22 @@ If all went well, this is how our column hiding UI component should look like:
 
 ### Styling
 
-To get started with styling the column hiding component, we need to import the index file, where all the theme functions and component mixins live:
+To get started with styling the column actions component, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-By using the simplest approach, we create a new theme that extends the [`igx-column-hiding-theme`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme) and accepts the `$title-color` and the `$background-color` parameters.
+By using the simplest approach, we create a new theme that extends the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 
 ```scss
-$custom-column-hiding-theme: igx-column-hiding-theme(
+$custom-column-actions-theme: igx-column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
 ```
 
-As seen, the `igx-column-hiding-theme` only controls colors for the column hiding container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
+As seen, the `igx-column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
 
 ```scss
 $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
@@ -471,14 +472,14 @@ In this example we only changed the text-color of the flat buttons and the butto
 The last step is to **include** the component mixins, each with its respective theme: 
 
 ```scss
-@include igx-column-hiding($custom-column-hiding-theme);
-.igx-column-hiding {
+@include igx-column-actions($custom-column-actions-theme);
+.igx-column-actions {
     @include igx-button($custom-button);
 }
 ```
 
 >[!NOTE]
->We scope the **igx-button** mixin within `.igx-column-hiding`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
+>We scope the **igx-button** mixin within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
  >[!NOTE]
  >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
@@ -486,8 +487,8 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include igx-column-hiding($custom-column-hiding-theme);
-        .igx-column-hiding {
+        @include igx-column-actions($custom-column-actions-theme);
+        .igx-column-actions {
             @include igx-button($custom-button);
         }
     }
@@ -510,7 +511,7 @@ $custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
-$custom-column-hiding-theme: igx-column-hiding-theme(
+$custom-column-actions-theme: igx-column-actions-theme(
     $palette: $custom-palette,
     $title-color: igx-color($custom-palette, "secondary", 400),
     $background-color: igx-color($custom-palette, "primary", 200)
@@ -531,8 +532,8 @@ $custom-button: igx-button-theme(
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
 ```scss
-// Extending the dark column hiding schema
-$custom-column-hiding-schema: extend($_dark-column-hiding,
+// Extending the dark column actions schema
+$custom-column-actions-schema: extend($_dark-column-actions,
     (
         title-color:(
             igx-color: ("secondary", 400)
@@ -560,12 +561,12 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-column-hiding: $custom-column-hiding-schema,
+    igx-column-actions: $custom-column-actions-schema,
     igx-button: $custom-button-schema
 ));
 
-// Defining column-hiding-theme with the global dark schema
-$custom-column-hiding-theme: igx-column-hiding-theme(
+// Defining column-actions-theme with the global dark schema
+$custom-column-actions-theme: igx-column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
@@ -587,8 +588,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -598,8 +599,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -609,8 +610,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchicalgrid-column-hiding-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -626,8 +627,8 @@ In this article we learned how to use the built-in column hiding UI in the @@igC
 
 The column hiding UI has a few more APIs to explore, which are listed below.
 
-* [IgxColumnHidingComponent]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
-* [IgxColumnHidingComponent Styles]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
+* [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
+* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
 
 Additional components and/or directives with relative APIs that were used:
 

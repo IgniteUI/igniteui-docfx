@@ -4,7 +4,7 @@ _description: Use the Angular Splitter component to create a simple split layout
 _keywords: angular splitter, igniteui for angular, infragistics
 ---
 
-## Splitter
+# Splitter
 
 The Ignite UI for Angular Splitter component provides the ability to create layouts, split into multiple vertically or horizontally arranged panes that may be resized, expanded and collapsed. These interactions are performed through UI exposed in the splitter bars between the panes. A simple Splitter layout is demonstrated in the demo below.
 
@@ -13,9 +13,9 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
     <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -134,9 +134,9 @@ public typeVertical = SplitterType.Vertical;
     <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -206,8 +206,8 @@ This is the final result from applying your new theme.
     <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ### API References

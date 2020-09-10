@@ -14,8 +14,8 @@ _language: ja
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### 使用方法
@@ -91,7 +91,7 @@ this.grid.resourceStrings = newGridRes;
 // app.component.ts
 
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
-import { IgxResourceStringsKR } from 'igniteui-angular-i18n';
+import { IgxResourceStringsKO } from 'igniteui-angular-i18n';
 import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
 

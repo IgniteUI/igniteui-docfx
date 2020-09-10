@@ -90,30 +90,38 @@
     - name: 編集
       href: grid/editing.md
       new: false
-    - name: 行編集
-      href: grid/row_editing.md
-      new: false
+      items:
+        - name: セル編集
+          href: grid/cell_editing.md
+          new: false
+        - name: 行編集
+          href: grid/row_editing.md
+          new: false
+        - name: 一括編集
+          href: grid/batch_editing.md
+          new: false
     - name: 行ドラッグ
       href: grid/row_drag.md
-      new: false
-    - name: 一括編集
-      href: grid/batch_editing.md
       new: false
     - name: ページング
       href: grid/paging.md
       new: false
     - name: フィルタリング
-      href: grid/filtering.md
+      href: grid/filtering-overview.md
       new: false
-    - name: Excel スタイルフィルタリング
-      href: grid/excel_style_filtering.md
-      new: false
-    - name: 高度なフィルタリング
-      href: grid/advanced_filtering.md
-      new: true
-    - name: 並べ替え
+      items:
+        - name: クイック フィルタリング
+          href: grid/filtering.md
+          new: false
+        - name: Excel スタイル フィルタリング
+          href: grid/excel_style_filtering.md
+          updated: true
+        - name: 高度なフィルタリング
+          href: grid/advanced_filtering.md
+          new: true
+    - name: ソート
       href: grid/sorting.md
-      new: false
+      updated: true
     - name: グループ化
       href: grid/groupby.md
       new: false
@@ -157,6 +165,7 @@
     - name: ツールバー
       href: grid/toolbar.md
       new: false
+      updated: true
     - name: Excel エクスポート
       href: grid/export_excel.md
       new: false
@@ -213,30 +222,38 @@
     - name: 編集
       href: treegrid/editing.md
       new: false
-    - name: 行編集
-      href: treegrid/row_editing.md
-      new: false
+      items:
+        - name: セル編集
+          href: treegrid/cell_editing.md
+          new: false
+        - name: 行編集
+          href: treegrid/row_editing.md
+          new: false
+        - name: 一括編集
+          href: treegrid/batch_editing.md
+          new: false
     - name: 行ドラッグ
       href: treegrid/row_drag.md
-      new: false
-    - name: 一括編集
-      href: treegrid/batch_editing.md
       new: false
     - name: ページング
       href: treegrid/paging.md
       new: false
     - name: フィルタリング
-      href: treegrid/filtering.md
+      href: treegrid/filtering-overview.md
       new: false
-    - name: Excel スタイルフィルタリング
-      href: treegrid/excel_style_filtering.md
-      new: true
-    - name: 高度なフィルタリング
-      href: treegrid/advanced_filtering.md
-      new: true
-    - name: 並べ替え
+      items:
+      - name: クイック フィルタリング
+        href: treegrid/filtering.md
+        new: false
+      - name: Excel スタイル フィルタリング
+        href: treegrid/excel_style_filtering.md
+        updated: true
+      - name: 高度なフィルタリング
+        href: treegrid/advanced_filtering.md
+        new: true
+    - name: ソート
       href: treegrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: treegrid/summaries.md
       new: true
@@ -274,6 +291,7 @@
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
+      updated: true
     - name: Excel エクスポート
       href: treegrid/export_excel.md
       new: false
@@ -321,30 +339,38 @@
     - name: 編集
       href: hierarchicalgrid/editing.md
       new: false
-    - name: 行編集
-      href: hierarchicalgrid/row_editing.md
-      new: false
+      items:
+        - name: セル編集
+          href: hierarchicalgrid/cell_editing.md
+          new: false
+        - name: 行編集
+          href: hierarchicalgrid/row_editing.md
+          new: false
+        - name: 一括編集
+          href: hierarchicalgrid/batch_editing.md
+          new: false
     - name: 行ドラッグ
       href: hierarchicalgrid/row_drag.md
-      new: false
-    - name: 一括編集
-      href: hierarchicalgrid/batch_editing.md
       new: false
     - name: ページング
       href: hierarchicalgrid/paging.md
       new: false
     - name: フィルタリング
-      href: hierarchicalgrid/filtering.md
+      href: hierarchicalgrid/filtering-overview.md
       new: false
-    - name: Excel スタイルフィルタリング
-      href: hierarchicalgrid/excel_style_filtering.md
-      new: true
-    - name: 高度なフィルタリング
-      href: hierarchicalgrid/advanced_filtering.md
-      new: true
-    - name: 並べ替え
+      items:
+      - name: クイック フィルタリング
+        href: hierarchicalgrid/filtering.md
+        new: false
+      - name: Excel スタイル フィルタリング
+        href: hierarchicalgrid/excel_style_filtering.md
+        updated: true
+      - name: 高度なフィルタリング
+        href: hierarchicalgrid/advanced_filtering.md
+        new: true
+    - name: ソート
       href: hierarchicalgrid/sorting.md
-      new: false
+      updated: true
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: true
@@ -365,7 +391,7 @@
       new: false
     - name: 選択
       href: hierarchicalgrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: hierarchicalgrid/row_selection.md
@@ -969,6 +995,9 @@
   href: badge.md
 - name: Icon
   href: icon.md
+  items:
+    - name: Material Icons Extended
+      href: material_icons_extended.md
 - name: Divider
   href: divider.md
   new: false

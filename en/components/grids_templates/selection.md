@@ -20,7 +20,7 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent  Selection Overview
+# @@igComponent Selection Overview
 
 IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). The default selection mode of the grid is **Multi-cell selection** in conjunction with **Column Selection**, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
@@ -149,8 +149,8 @@ The template we are going to use to combine the grid with the context menu:
     <iframe class="lazyload" id="grid-context-menu-iframe" data-src='{environment:demosBaseUrl}/grid/grid-contextmenu-sample' width="100%" height="100%" seamless frameborder="0"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }

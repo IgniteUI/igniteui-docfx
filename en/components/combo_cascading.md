@@ -5,33 +5,29 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: en
 ---
 
-## Cascading Scenario
+# Cascading Scenario
 <p class="highlight">
-
-The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) and [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) exposes events, properties and methods that allows users to easily construct cascading scenarios, either using one of the controls or both of them.
+The Ignite UI for Angular Combo and Select components expose events, properties and methods that allow users to easily construct cascading scenarios, either using one of the controls or both of them.
 </p>
-<div class="divider"></div>
 
 ### Demo
-
-The following sample demonstrates a scenario where two [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components are used:
+The following sample demonstrates a scenario where the [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components are used together:
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
 ### Usage
-To get started import the `IgxComboModule`, `IgxSelectModule` in the **app.module.ts** file:
+
+#### First Steps
+To get started, first you need to import the `IgxComboModule` and the `IgxSelectModule` in your **app.module.ts** file:
 
 ```typescript
-// app.module.ts
-
-...
 import { IgxComboModule, IgxSelectModule } from 'igniteui-angular';
 
 @NgModule({
@@ -42,7 +38,8 @@ import { IgxComboModule, IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-The sample below uses an [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) and two [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) components. The API of the both components are used to get selected item from one and load data source for the next either select or combo, clear selection or reset data source.
+#### Template Configuration
+The APIs of both components are used to get the selected item from one and load data source for the next component either select or combo, as well as clear selection and reset data source.
 
 ```html
 <igx-select type="box" #cntr placeholder="Choose Country..."
@@ -60,6 +57,7 @@ The sample below uses an [igx-combo]({environment:angularApiUrl}/classes/igxcomb
 
 ```
 
+#### Component Definition
 ```typescript
 import { Component } from "@angular/core";
 import { data } from "./local-data";
@@ -88,20 +86,29 @@ export class CascadingCombos {
 
     public selectProvince(args) {
         this.townData = this.data[this.location.country][args.newSelection.value];
-        this.location.towns = [this.townData[0]];
+        this.location.towns = [];
     }
 }
 ```
 
-## Additional Resources
+### API Summary
 <div class="divider--half"></div>
 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+
+Additional components and/or directives with relative APIs that were used:
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+
+### Additional Resources
+<div class="divider--half"></div>
+
+* [Combo Component](combo.md)
 * [Combo Features](combo_features.md)
 * [Combo Remote Binding](combo_remote.md)
 * [Combo Templates](combo_templates.md)
 * [Template Driven Forms Integration](input_group.md)
 * [Reactive Forms Integration](input_group_reactive_forms.md)
-* [IgxOverlay]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 Our community is active and always welcoming to new ideas.
 

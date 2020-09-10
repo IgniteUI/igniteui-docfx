@@ -1,30 +1,32 @@
 ---
-title: Category Chart | Data Visualization Tools | Ignite UI for Angular | Configuration Options | Infragistics
-_description: Use the category chart component to analyze and  automatically choose the best chart type to represent data. Learn about our chart types for visualization.
-_keywords: category chart, Ignite UI for Angular, infragistics
+title: Angular Charts and Graphs | Data Visualization Tools | Configuration Options | Infragistics
+_description: Learn how to use Infragistics' Angular charts control features such as setting markers, titles, subtitles and animations.  View our Ignite UI for Angular graph demos!
+_keywords: Angular charts, category chart, annotations, Ignite UI for Angular, Infragistics
 mentionedTypes: ['CategoryChart','CategoryTransitionInMode']
 ---
 
-## Configuration Options
+# Angular Configuration Options
 
 There are many areas of the Ignite UI for Angular category chart component that can be customized, such as the markers, chart titles and subtitles, and the chart types.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-config-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-marker-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-marker-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-config-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-marker-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
-### Configuring Chart Visuals
+## Configuring Chart Visuals
 
 As shown in the above demo, the brushes for the chart types can be configured. The following code example sets the chart type to waterfall and changes the default color of the brushes.
 
 ```html
- <igx-category-chart
+<igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"
@@ -36,7 +38,7 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 </igx-category-chart>
 ```
 
-### Configuring Chart Markers
+## Configuring Chart Markers
 
 Markers are visual elements that display the values of data points in the category chart component's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
 
@@ -53,7 +55,7 @@ The appearance of chart markers is managed through the [`MarkerType`]({environme
 </igx-category-chart>
 ```
 
-### Configuring Chart Titles and Subtitles
+## Configuring Chart Titles and Subtitles
 
 The title and subtitle feature of the category chart component allows you to add information to the top section of the chart.
 When adding a title or subtitle to the chart, the content of the chart automatically resizes allowing for the title and subtitle information.
@@ -74,7 +76,7 @@ You can customize the look and feel of the category chart’s subtitle and title
 </igx-category-chart>
 ```
 
-### Transition In Animations
+## Transition In Animations
 
 This feature allows you to animate the series as it loads a new data source. The available animation differs depending on the type of series involved. For example, the column series animates by rising from the x-axis, a line series animates by drawing from the y-axis.
 
@@ -89,7 +91,7 @@ The transition type is configured by setting the transitionInMode option to the 
 The following code example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 
 ```html
- <igx-category-chart
+<igx-category-chart
     [dataSource]="data"
     width="700px"
     height="500px"

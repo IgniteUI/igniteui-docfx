@@ -4,14 +4,13 @@ _description: Learn how to configure in row data manipulations with Ignite UI fo
 _keywords: row editing, igniteui for angular, infragistics
 ---
 
-### @@igComponent Row Editing and Usage
+# @@igComponent Row Editing
 
-Row editing allows updating of several cells in the row, before submitting, at once, all those changes. Grid Row Editing as part of the Angular CRUD is happening in row in the UI grid. Leverages the pending changes functionality of the new transaction provider.
-
+The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified. 
 
 #### Demo
 
-The following sample demonstrates how to enable row editing in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row will not update row value until confirmed, using the Done button, or discarded, using the Cancel one.
+The following sample demonstrates how to enable row editing in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row won't  update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -20,8 +19,8 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -31,8 +30,8 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -42,8 +41,8 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -51,7 +50,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 > [!NOTE]
 > When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
-### Usage
+### Row Editing Usage
 
 To get started import the `@@igxNameModule` in the **app.module.ts** file:
 
@@ -420,8 +419,8 @@ After styling the banner and buttons, we also define a custom style for [the cel
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -432,9 +431,9 @@ After styling the banner and buttons, we also define a custom style for [the cel
 </div>
 <br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
 }
@@ -446,9 +445,9 @@ After styling the banner and buttons, we also define a custom style for [the cel
 </div>
 <br/>  
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="treegrid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="treegrid-row-edit-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
     </button>
 </div>
 }
@@ -458,6 +457,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
 * [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
 * [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
 * [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
 * [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)

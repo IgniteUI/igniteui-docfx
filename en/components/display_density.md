@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular provides a way of setting display densit
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, density, display density
 ---
 
-## Display Density
+# Display Density
 
 Display density configuration can significantly improve the visual representation of large amount of data. In Ignite UI for Angular, we provide a pre-defined set of options – comfortable, compact and cosy.
 
@@ -15,8 +15,8 @@ Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displayde
     <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
