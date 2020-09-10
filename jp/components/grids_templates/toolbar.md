@@ -244,7 +244,35 @@ public toolbarExportingHandler(args) {
 </div>
 <div class="divider"></div>
 }
+
+#### エクスポート インジケーター
+
+グリッドに大量のデータがある場合、そのデータを Excel または CSV にエクスポートするには時間がかかることがあります。そのため、エクスポートが進行中かどうかを示すエクスポート インジケーターをツールバーの下部に追加しました。エクスポート プロセスに 500 ミリ秒以上かかる場合、インジケーターはツールバーの下部に表示され、エクスポートが完了すると非表示になります。以下のサンプルには、エクスポート インジケーターが表示されるデータ エクスポートに必要な時間を増やすために大量のデータが含まれています。
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height: 370px;">
+    <iframe id="excel-export-sample1-iframe" src="{environment:demosBaseUrl}/grid/exporting-visualization"
+    width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-export-sample1-iframe" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
 }
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height: 370px;">
+    <iframe id="excel-export-sample2-iframe" src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization"
+    width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-export-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+}
+
 #### カスタム コンテンツ テンプレート
 
 ツールバーにアプリケーション固有の UI (カスタム ボタンなど) を追加する場合、ng-template を作成して [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブでマークします。以下のコード スニペットはカスタム テンプレートを定義する方法を示します。
