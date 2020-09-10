@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-### @@igComponent 列移動の概要
+# @@igComponent 列移動の概要
 
 The @@igComponent component in Ignite UI for Angular provides the **Column Moving** feature to allow columns reordering via standard drag/drop mouse or touch gestures, or by using the Column Moving API. Column moving works both with pinned and unpinned columns and with Multi Column Headers. Moving a column into the pinned area pins the column and vice versa, moving a column outside of the pinned area unpins the column.
 > [!NOTE]
@@ -41,7 +41,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 </ng-template>
 ```
 
-#### デモ
+## デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -77,7 +77,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 <div class="divider--half"></div>
 }
 
-#### 概要
+## 概要
 **列移動**は各列レベルで有効にできます。つまり、[**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) に移動可能な列と移動不可の列の両方を含むことができます。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) 入力によって制御されます。
 
 @@if (igxName === 'IgxGrid') {
@@ -97,7 +97,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 }
 
-#### API
+## API
 In addition to the drag and drop functionality, the Column Moving feature also provides two API methods to allow moving a column/reordering columns programmatically: 
 
 [`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - Moves a column before or after another column (a target). The first parameter is the column to be moved, and the second parameter is the target column. Also accepts an optional third parameter `position` (representing a `DropPosition`({environment:angularApiUrl}/enums/dropposition.html) value), which determines whether to place the column before or after the target column.
@@ -120,7 +120,7 @@ idColumn.move(3);
 
 Note that when using the API, only the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
 
-#### イベント
+## イベント
 列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`onColumnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingstart)、[`onColumnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmoving)、[`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) があります。
 [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
@@ -174,7 +174,7 @@ public onColumnMovingEnd(event) {
 ```
 }
 
-### スタイル設定
+## スタイル設定
 
 @@igComponent 列移動ヘッダーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -211,7 +211,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 }
 ```
 
-#### カラーパレットの定義
+## カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -239,7 +239,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 > [!NOTE]
 > igx-color および igx-palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palette.md)のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -279,7 +279,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 テーマを上記と同じ方法で含めることに注意してください。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

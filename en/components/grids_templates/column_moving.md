@@ -39,7 +39,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 </ng-template>
 ```
 
-#### Demo
+## Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -75,7 +75,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 <div class="divider--half"></div>
 }
 
-#### Overview
+## Overview
 
 **Column moving** feature is enabled on a per-column level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) can have a mix of movable and immovable columns. This is done via the [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
 
@@ -96,7 +96,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 ```
 }
 
-#### API
+## API
 In addition to the drag and drop functionality, the Column Moving feature also provides two API methods to allow moving a column/reordering columns programmatically: 
 
 [`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - Moves a column before or after another column (a target). The first parameter is the column to be moved, and the second parameter is the target column. Also accepts an optional third parameter `position` (representing a `DropPosition`({environment:angularApiUrl}/enums/dropposition.html) value), which determines whether to place the column before or after the target column.
@@ -119,7 +119,7 @@ idColumn.move(3);
 
 Note that when using the API, only the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
 
-#### Events
+## Events
 
 There are several events related to the column moving to provide a means for tapping into the columns' drag and drop operations. These are [`onColumnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingstart), [`onColumnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmoving) and [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend). 
 You can subscribe to the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event of the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
@@ -174,7 +174,7 @@ public onColumnMovingEnd(event) {
 ```
 }
 
-### Styling
+## Styling
 
 To get started with styling the @@igComponent column moving headers, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -211,7 +211,7 @@ The last step is to **include** the component mixins with its respective theme:
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -239,7 +239,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 > [!NOTE]
 > The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palette.html) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/schemas.html). A **schema** is a recipe of a theme.
 
@@ -279,7 +279,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 Don't forget to include the theme in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

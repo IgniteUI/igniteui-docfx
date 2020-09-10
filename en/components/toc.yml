@@ -130,6 +130,7 @@
     - name: Column Moving
       href: grid/column_moving.md
       new: false
+      updated: true
     - name: Column Pinning
       href: grid/column_pinning.md
       new: true
@@ -259,6 +260,7 @@
     - name: Column Moving
       href: treegrid/column_moving.md
       new: false
+      updated: true
     - name: Column Pinning
       href: treegrid/column_pinning.md
       new: false
@@ -376,6 +378,7 @@
     - name: Column Moving
       href: hierarchicalgrid/column_moving.md
       new: false
+      updated: true
     - name: Column Pinning
       href: hierarchicalgrid/column_pinning.md
       new: false
