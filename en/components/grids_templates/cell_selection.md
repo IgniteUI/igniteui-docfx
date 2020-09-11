@@ -20,7 +20,7 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-### @@igComponent Selection
+# @@igComponent Selection
 The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
 
 @@if (igxName === 'IgxGrid') {

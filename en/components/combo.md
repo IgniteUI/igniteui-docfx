@@ -4,7 +4,7 @@ _description: The igx-combo provides a powerful input, combining features of the
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
 ---
 
-## Combo
+# Combo
 <p class="highlight">
 The Ignite UI for Angular Combo Component provides easy filtering, single and multiple selection of items, grouping and adding custom values to a dropdown list.
 </p>

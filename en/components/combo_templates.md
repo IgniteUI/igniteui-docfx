@@ -4,7 +4,7 @@ _description: Custom templates for different areas of the igx-combo component ca
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Templates, Angular Combo Templates
 ---
 
-## Combo Templates
+# Combo Templates
 <p class="highlight">
 The Ignite UI for Angular Combo Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
 </p>

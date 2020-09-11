@@ -4,7 +4,7 @@ _description: Ignite UI for Angular Circular Progress Indicator component allows
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Circular Progress components, Angular Circular Progress controls
 ---
 
-## Circular Progress
+# Circular Progress
 <p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
 <div class="divider"></div>
 
