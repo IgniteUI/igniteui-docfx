@@ -1,11 +1,11 @@
 ---
-title: Angular Charts and Graphs | Data Visualization Tools | Infragistics
-_description: Infragistics' Angular charts component helps you select the best chart to display your data. Improve your graphs and visualization with Ignite UI for  Angular!
-_keywords: Angular charts, category chart, Ignite UI for Angular, Infragistics
+title: Angular Category Chart | Charting Component for Data | Infragistics
+_description: Use the Angular category chart component to analyze and automatically choose the best chart type to represent data. Get started today!
+_keywords: category chart, angular component, ignite ui for angular, angular charts, charting component
 mentionedTypes: ['CategoryChart', 'CategoryChartType']
 ---
 
-# Angular Category Chart Overview
+# Angular Category Chart
 
 The Angular category chart component make it easy to organize and visualize category data . The Angular control simplifies the complexities of the data visualization domain into manageable API.
 
@@ -24,7 +24,7 @@ The Angular category chart component make it easy to organize and visualize cate
 
 <div class="divider--half"></div>
 
- A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The Angular component will analyze the data and  automatically choose the best chart type to represent the data.
+ A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The Angular component will analyze the data and automatically choose the best chart type to represent the data.
 
 By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property is set to [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto), the control will use a column chart for a small data sets or a line chart for larger data sets.
 
@@ -40,11 +40,11 @@ However, you can also explicitly specify the chart type by setting the [`chartTy
 -   [`StepLine`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)
 -   [`Waterfall`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#waterfall)
 
-Another example of the intuitive behavior of the Angular category chart component is that you do not need to explicitly set the labels. The category chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
+Another example of the intuitive behavior of the category chart component from Ignite UI for Angular is that you do not need to explicitly set the labels. The category chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
 ## Dependencies
 
-When installing the chart package, the core package must also be installed.
+When installing the Angular chart package, the core package must also be installed.
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
@@ -77,7 +77,7 @@ It's also possible to load a more minimal configuration of category chart whereb
 
 Now that the category chart module is imported, next step is to bind it to data.
 
-In order to create a Angular category chart component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
+In order to create an Angular category chart component, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
 
 ```ts
 var data = [
@@ -103,7 +103,7 @@ The following code demonstrates how to bind the category chart to the above data
 ## Chart Types
 
 You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property.
-Below are listed all of the types that the category chart supports.
+Below are listed all of the types that the Angular category chart supports.
 
 > [!NOTE]
 > Special case is the [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) setting of that property. If [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) is used the chart will analyze assigned data and will assign the most suitable chart type.

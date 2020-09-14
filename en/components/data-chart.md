@@ -1,13 +1,13 @@
 ---
-title: Angular  Data Chart | Data Visualization Tools & Tables | Infragistics
-_description: Our Angular data chart component helps you create composite chart views with multiple instances of visual elements. Improve your data visualization today!
-_keywords: Angular charts, data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Charting Component | Data Visualization | Infragistics
+_description: Effortlessly create an Angular data chart that displays multiple instances of visual elements to create composite chart views. Get started today!
+_keywords: data chart, angular component, angular charts, ignite ui for angular, charting component
 mentionedTypes: ['XamDataChart', 'SeriesType']
 ---
 
 # Angular Data Chart
 
-The Angular data chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this data chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
+The Ignite UI for Angular data chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this Angular component, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 
 ## Demo
 
@@ -15,8 +15,8 @@ The Angular data chart is a charting component that provides modular design of a
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+</button>
 
 
 </div>
@@ -25,7 +25,7 @@ The Angular data chart is a charting component that provides modular design of a
 
 ## Dependencies
 
-When installing the data chart package, the core package must also be installed.
+When installing the Angular data chart package, the core package must also be installed.
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
@@ -67,7 +67,7 @@ The Angular data chart component supports over 65 types of series including [Cat
 
 ## Supported Axes
 
-The Angular data chart component supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series.   Refer to the [Series](data-chart-series-types.md) and [Axis](data-chart-axis-types.md) topics, for more information on how to use these types of axis.
+The Angular charting component supports various types of axis that are intended to use with specific type of series. The following table lists which axes can be used with type of series. Refer to the [Series](data-chart-series-types.md) and [Axis](data-chart-axis-types.md) topics, for more information on how to use these types of axis in your Angular charts.
 
 | Axis Type          | Supported Series Types                                                                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -84,7 +84,7 @@ The Angular data chart component supports various types of axis that are intende
 
 ## Usage
 
-Now that the data chart modules are imported, next step is to bind chart to data. All series require specific number and type of data columns to render correctly and you can find a data source for each type of series in the [Data Sources](data-chart-data-sources.md) topic.
+Now that the Angular data chart modules are imported, next step is to bind chart to data. All series require specific number and type of data columns to render correctly and you can find a data source for each type of series in the [Data Sources](data-chart-data-sources.md) topic.
 
 The following code snippet demonstrates how to create scatter [`bubble`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) and bind it to [SampleScatterStats](data-chart-data-sources-stats.md) data.
 
@@ -111,7 +111,7 @@ The following code snippet demonstrates how to create scatter [`bubble`]({enviro
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 
 -   [Axis Types](data-chart-axis-types.md)
 -   [Axis Sharing](data-chart-axis-sharing.md)
