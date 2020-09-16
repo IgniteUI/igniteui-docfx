@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | トレンドライン
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | トレンドライン | インフラジスティックス
+_description: インフラジスティックスの $Platform Short$ チャートのトレンドラインを使用して、シリーズにバインドされたデータのトレンドを識別します。Ignite UI for Angular グラフのトレンドライン機能をお試しください!
+_keywords: Angular charts, data chart, trendlines, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, トレンドライン, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'AreaSeries', 'BarSeries','ColumnSeries', 'PointSeries','SplineSeries','StepAreaSeries','WaterfallSeries']
 _language: ja
 ---
 
-## トレンドライン
+# Angular トレンドライン
 
 Angular データ チャート コンポーネントは、シリーズにバインドされたデータの傾向を識別するのに役立つトレンドラインをサポートしています。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,8 @@ Angular データ チャート コンポーネントは、シリーズにバイ�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-trendlines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

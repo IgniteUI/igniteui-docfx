@@ -1,12 +1,12 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | データ ソース
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して、高密度散布シリーズを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, high density scatter, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, 高密度散布, インフラジスティックス, データソース
 mentionedTypes: ['XamDataChart', 'PolarBase']
 _language: ja
 ---
 
-## 散布図 - HD シリーズのサンプル データソース
+# Angular 散布図 - HD シリーズのサンプル データソース
 
 このトピックでは、[散布 HD シリーズ](data-chart-type-polar-series.md) のデータソースを実装する方法の例を示します。
 

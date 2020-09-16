@@ -1,12 +1,12 @@
 ---
-title: Excel ユーティリティ | データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
-_description: Excel ユーティリティは、Microsoft Excel ファイルの読み込みと保存ができます。
-_keywords: Excel Utility, Excel library, Ignite UI for Angular, Infragistics, Excel ユーティリティ, Excel ライブラリ, インフラジスティックス
+title: Angular Excel ライブラリ | Excel ユーティリティ | インフラジスティックス
+_description: インフラジスティックスの Angular Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Ignite UI for Angular Excel ライブラリを使用して Excel からアプリケーションにデータを簡単に転送できる方法について説明します。
+_keywords: excel library, Ignite UI for Angular, Infragistics, saving files, loading files, WorkbookFormat, Excel ライブラリ, ファイルの保存, ファイルの読み込み, インフラジスティックス
 mentionedTypes: ['Workbook', 'WorkbookFormat', 'WorkbookSaveOptions']
 _language: ja
 ---
 
-## Excel ユーティリティ
+# Angular Excel ユーティリティ
 
 [Excel ライブラリ](excel_library.md) には、Microsoft Excel ファイルの読み込みや保存が可能なユーティリティ関数があります。
 

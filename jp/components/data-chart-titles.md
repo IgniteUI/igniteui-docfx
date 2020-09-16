@@ -1,23 +1,25 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | タイトルとサブタイトル
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | タイトルとサブタイトル | インフラジスティックス
+_description: インフラジスティックスの Angular チャートのタイトルとサブタイトルを使用して、上部セクションに情報を追加します。Ignite UI for Angular グラフのタイトルとサブタイトル機能をお試しください!
+_keywords: Angular charts, data chart, chart title, chart subtitle, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, チャート サブタイトル, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## タイトルとサブタイトル
+# Angular タイトルとサブタイトル
 
-Angular データ チャート コンポーネントの `title` と `subtitle` の機能は、チャート コントロールの一番上のセクションに情報を追加できます。チャートにタイトルまたはサブタイトルを追加すると、チャートの内容は自動的にサイズ変更され、指定したタイトルとサブタイトルの情報が表示されます。
+Angular データ チャート コンポーネントの [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) と [`subtitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#subtitle) の機能は、チャート コントロールの一番上のセクションに情報を追加できます。チャートにタイトルまたはサブタイトルを追加すると、チャートの内容は自動的にサイズ変更され、指定したタイトルとサブタイトルの情報が表示されます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-titles-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-titles' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-chart-titles-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-titles' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-titles-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-chart-titles-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
