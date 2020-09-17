@@ -1,12 +1,12 @@
 ---
-title: Angular Data Grid | Material Table | Ignite UI for Angular | Infragistics
-_description: Learn how to use Ignite UI angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events
-_keywords: angular data grid, igniteui for angular, infragistics
+title: Angular Data Grid | Angular Grid & Diagram Component | Infragistics
+_description: Create a touch-responsive Angular component with a variety of events using the Ignite UI for Angular data grid. Enhance your data visualization today!
+_keywords: angular data grid, angular component, ignite ui for angular, angular grid, angular diagram component
 ---
 
-# Data Grid Overview and Configuration
+# Angular Data Grid Overview and Configuration
 
-<p class="highlight">The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
+<p class="highlight">The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 
 ### Demo
 
@@ -25,14 +25,14 @@ _keywords: angular data grid, igniteui for angular, infragistics
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
 
-To get started with the Data Grid, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Angular data grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting_started.md) topic.
 
-The grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxGridModule` inside your `AppModule`:
+The Angular grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxGridModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -63,7 +63,7 @@ import { IgxGridComponent } from 'igniteui-angular';
 public grid: IgxGridComponent;
 ```
 
-### Usage
+## Usage
 
 Now that we have the grid module imported, let’s get started with a basic configuration of the **igx-grid** that binds to local data:
 
@@ -75,7 +75,7 @@ The **id** property is a string value and is the unique identifier of the grid w
 
 The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
-### Styling Configuration
+## Styling Configuration
 > [!NOTE]
 > The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
 
@@ -95,12 +95,12 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
  ...
  ```
 
-### Columns configuration
+# Columns configuration
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
 
 
-#### Defining columns
+### Defining columns
 
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
@@ -117,7 +117,7 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 </igx-grid>
 ```
 
-Each of the columns of the grid can be templated separately. The column expects `ng-template` tags decorated with one of the grid module directives.
+Each of the columns of the grid can be templated separately. The column expects `ng-template`  Angular grid module directives.
 
 #### Header template
 
@@ -148,7 +148,7 @@ Each of the columns of the grid can be templated separately. The column expects 
 ```
 As you can see, we are adding **draggable** attribute set to *false*.
 
-#### Cell template
+### Cell template
 
 `igxCell` applies the provided template to all cells in the column. The context object provided in the template consists of the cell value provided implicitly and the cell object itself. It can be used to define a template where the cells can grow according to their content, as in the below example.
 
@@ -181,16 +181,16 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
-When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch_editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
+When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the Angular grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch_editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
 
 > [!NOTE]
 > The grid exposes a default handling for number, string, date and boolean column types. For example, the column will display `check` or `close` icon, instead of true/false by default, for boolean column type.
 
-If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **not** be properly updated in the grid's underlying data source. When dealing with cell editing with a custom template, it is strongly advised to use the cell's **cell editing template**.
+If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **not** be properly updated in the Angular grid's underlying data source. When dealing with cell editing with a custom template, it is strongly advised to use the cell's **cell editing template**.
 
 When properly implemented, the cell editing template also ensures that the cell's `editValue` will correctly pass through the grid [editing event cycle](editing.md#editing-events).
 
-#### Cell editing template
+### Cell editing template
 
 The column also accepts one last template that will be used when a cell is in edit mode. As with the other column templates, the provided context object is again the cell value and the cell object itself. Of course in order to make the edit-mode template accessible to end users, you need
 to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property of the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) to `true`.
@@ -208,7 +208,7 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 
 Make sure to check the API for the [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) in order to get accustomed with the provided properties you can use in your templates.
 
-#### Column template API
+### Column template API
 
 Each of the column templates can be changed programmatically at any point through the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) object itself. For example in the code below, we have declared two templates for our user data. In our TypeScript code we'll get references to the templates themselves and then based on some condition we will render the appropriate template for the column in our application.
 
@@ -256,7 +256,7 @@ public initColumns(column: IgxGridColumn) {
 
 The code above will make the **ProductName** column sortable and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
 
-### Data structure
+## Data structure
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form:
 
@@ -295,9 +295,9 @@ const OBJECT_ARRAY = [{
 
 >If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
 
-### Data binding
+## Data binding
 
-Before going any further with the grid we want to change the grid to bind to remote data service, which is the common scenario in large-scale applications. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which will handle the fetching of data from the server.
+Before going any further with the grid we want to change the Angular grid to bind to remote data service, which is the common scenario in large-scale applications. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which will handle the fetching of data from the server.
 
 Let's implement our service in a separate file
 
@@ -423,15 +423,15 @@ and in the template of the component:
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
 
-### Complex data binding
+## Complex data binding
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
 
-Currently, the Grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
+Currently, the Angular data grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
 
-#### Nested data
+### Nested data
 
-There are mainly two ways to bind a more complex data source to the grid.
+There are mainly two ways to bind a more complex data source to the Angular grid.
 The grid supports binding through a "path" of properties in the data record.
 Take a look at the following data model:
 ```typescript
@@ -563,11 +563,11 @@ And the result from this configuration is:
 </div>
 <div class="divider--half"></div>
 
-#### Flat data
+### Flat data
 
 The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property of the [IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html).
 
-Since the grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property provides you this opportunity.
+Since the Angular grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property provides you this opportunity.
 
 Below is the data that we are going to use:
 ```typescript
@@ -643,12 +643,12 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
-### State persistence
+## State persistence
 
 Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
 
 
-### Sizing
+## Sizing
 
 See the [Grid Sizing](sizing.md) topic.
 
