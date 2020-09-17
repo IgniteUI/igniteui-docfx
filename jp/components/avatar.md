@@ -63,7 +63,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ```html
 <igx-avatar initials="JS"
-            roundShape="true"
+            [roundShape]="true"
             size="medium">
 </igx-avatar>
 ```
@@ -73,7 +73,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 // avatar.component.scss
 
 .igx-avatar {
-    background:  #e41c77;
+    background: #e41c77;
     color: #000000;
 }
 
@@ -89,7 +89,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ```html
 <igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
-            roundShape="true"
+            [roundShape]="true"
             size="large">
 </igx-avatar>
 ```
@@ -105,7 +105,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ```html
 <igx-avatar icon="person"
-            roundShape="true"
+            [roundShape]="true"
             size="small">
 </igx-avatar>
 ```
