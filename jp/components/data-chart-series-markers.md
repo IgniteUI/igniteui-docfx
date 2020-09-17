@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | マーカー
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | マーカー | インフラジスティックス
+_description: インフラジスティックスの $Platform Short$ チャートのマーカーを使用して、値が主グリッド線と副グリッド線の間にある場合でもデータ 　ポイントを識別します。Ignite UI for Angular グラフのマーク機能をお試しください!
+_keywords: Angular charts, data chart, markers, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, マーカー, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'MarkerSeries']
 _language: ja
 ---
 
-## マーカー
+# Angular マーカー
 
 Angular データ チャート コンポーネントのプロット領域では、マーカーはデータポイントの位置に表示される視覚的要素です。マーカーは、値が主グリッド線と副グリッド線の間にある場合でも、データポイントを容易に識別できるできるようユーザーをサポートします。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,11 +18,13 @@ Angular データ チャート コンポーネントのプロット領域では�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### サポートされるシリーズ
+## サポートされるシリーズ
 
 チャートシリーズのほとんどはマーカーをサポートしています。それらは以下のとおりです。
 
@@ -35,7 +37,7 @@ Angular データ チャート コンポーネントのプロット領域では�
     -   [散布図 - 折れ線シリーズ](data-chart-type-scatter-point-series.md)
     -   [散布図 - スプライン シリーズ](data-chart-type-scatter-point-series.md)
 
-### マーカー プロパティ
+## マーカー プロパティ
 
 上記のシリーズは、[`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) プロパティを使用して変更可能な 12 種類のマーカーをサポートしています。また、[`markerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) と [`markerOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) プロパティをそれぞれ使用して、塗りつぶしと線を変更することもできます。
 
@@ -51,7 +53,7 @@ Angular データ チャート コンポーネントのプロット領域では�
 
 <!-- TODO add this section when we add MarkerTemplate
 
-### マーカー テンプレート
+## マーカー テンプレート
 
 
 `MarkerTemplate` プロパティを使用してカスタム形状を指定できます。

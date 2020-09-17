@@ -1,16 +1,16 @@
 ---
-title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | ツールチップ タイプ
-_description: 簡単な API を使用して財務データを視覚化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+title: Angular ファイナンシャル チャート | ツールチップ タイプ | インフラジスティックス
+_description: インフラジスティックスの Angular ファイナンシャル チャートのツールチップを使用して重要なデータを表示します。Ignite UI for Angular グラフ チュートリアルを是非お試しください!
+_keywords: Angular charts, financial chart, stock chart, tooltips, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, ツールチップ, インフラジスティックス
 mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
-## ツールチップ タイプ
+# Angular ツールチップ タイプ
 
 このトピックでは、Angular Financial Chart コンポーネントのツールチップ タイプについて説明します。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-tooltip-types-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,10 +18,12 @@ _language: ja
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-tooltip-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
-### ツールチップ タイプ
+## ツールチップ タイプ
 
 Angular Financial Chart コンポーネントは以下の方法でツールチップの表示を設定できます。
 

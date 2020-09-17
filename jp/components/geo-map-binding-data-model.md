@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 地理的データ モデル | インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | 地理的データ モデルのバインディング | インフラジスティックス
+_description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
+_keywords: Angular map, binding data models, Ignite UI for Angular, Infragistics, data binding, Angular マップ, データ モデルのバインディング, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap', GeographicScatterAreaSeries, GeographicHighDensityScatterSeries, GeographicProportionalSymbolSeries, GeographicScatterAreaSeries, GeographicContourLineSeries, GeographicShapeSeries, GeographicPolylineSeries  ]
 _language: ja
 ---
 
-## 地理的データ モデルをバインディング
+# Angular 地理的データ モデルをバインディング
 
 Ignite UI for Angular マップ コンポーネントは、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示するように設計されています。地理的シリーズの `ItemsSource` プロパティは、データ モデルへのバインディングのために使用されます。このプロパティは、カスタム オブジェクトの配列にバインドできます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-data-model-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,6 +19,7 @@ Ignite UI for Angular マップ コンポーネントは、シェイプ ファ�
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-model-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -34,7 +35,7 @@ Ignite UI for Angular マップ コンポーネントは、シェイプ ファ�
 | [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)                           | [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriesbasecomponent.html#shapememberpath)                                                                                                                                                                                                                                                                                                                                                                                                | 図形の地理的ポイントを含む ItemsSource 項目のデータ列の名前を指定します。このプロパティは、x プロパティと y プロパティを持つオブジェクトの配列の配列にマップする必要があります。 |
 | [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)                     | [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriesbasecomponent.html#shapememberpath)                                                                                                                                                                                                                                                                                                                                                                                                | 線の地理的座標を含む ItemsSource 項目のデータ列の名前を指定します。このプロパティは、x プロパティと y プロパティを持つオブジェクトの配列の配列にマップする必要があります。    |
 
-### コード スニペット
+## コード スニペット
 
 以下のコードは、[`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) を、経度と緯度の座標を使用して格納された世界の一部の都市の地理的位置を含むカスタム データ モデルにバインドする方法を示します。また、[WorldUtility](geo-map-resources-world-util.md) を使用してこれらの場所間の最短の地理的経路をプロットするために [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。
 
@@ -47,7 +48,7 @@ Ignite UI for Angular マップ コンポーネントは、シェイプ ファ�
     </igx-geographic-map>
 </div>
 
-<ng-template let-series="series" let-item="item" #pointSeriestemplate>
+<ng-template let-series="series" let-item="item" #pointSeriesTemplate>
         <div>
             <span [style.color]="series.brush">
                 {{item.country}}
@@ -86,8 +87,8 @@ export class MapBindingDataModelComponent implements AfterViewInit {
 
     @ViewChild ("map")
     public map: IgxGeographicMapComponent;
-    @ViewChild("pointSeriestemplate")
-    public pointSeriestemplate: TemplateRef<object>;
+    @ViewChild("pointSeriesTemplate")
+    public pointSeriesTemplate: TemplateRef<object>;
     @ViewChild("polylineSeriesTooltipTemplate")
     public polylineSeriesTooltipTemplate: TemplateRef<object>;
     public flights: any[];
@@ -136,7 +137,7 @@ export class MapBindingDataModelComponent implements AfterViewInit {
         symbolSeries.markerBrush  = "White";
         symbolSeries.markerOutline = flight.color;
         symbolSeries.thickness = 1;
-        symbolSeries.tooltipTemplate = this.pointSeriestemplate;
+        symbolSeries.tooltipTemplate = this.pointSeriesTemplate;
 
         this.map.series.add(symbolSeries);
     }

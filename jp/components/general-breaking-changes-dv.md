@@ -1,20 +1,44 @@
 ---
-title: 重大な変更 | Ignite UI for Angular | Angular | インフラジスティックス
+title: Angular 重大な変更 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular の重大な変更とコードを最新の API に更新する方法について説明します。
-_keywords: Breaking Changes, Ignite UI for Angular, Angular, Infragistics, 重大な変更, インフラジスティックス
+_keywords: Breaking Changes, Ignite UI for Angular, Infragistics, 重大な変更, インフラジスティックス
 _language: ja
 ---
 
-## Ignite UI for Angular の重大な変更
+# Ignite UI for Angular の重大な変更
 
 このトピックでは、Ignite UI for Angular の重大な変更に関する情報と、古いコードを最新の API に更新する方法について説明します。
 
-### import ステートメントの変更
+## PropertyPath の名称変更
+
+データ グリッド コンポーネントの `propertyPath` プロパティ名が `field` に変更されました。これは、すべての Column タイプ、GroupDescription、SortDescription および SummaryDescription に適用します。
+
+> [!NOTE]
+> これらの重大な変更は、グリッド パッケージの **{PackageVerChangedFields}** バージョンで導入されました。
+
+## Live Grid の名称変更
+
+Data Grid コンポーネントおよび対応するモジュールの名前が 「LiveGrid」 から 「DataGrid」 に変更されました。
+
+> [!NOTE]
+> これらの重大な変更は、パッケージおよびコンポーネントの **{PackageVerRenamedGrid}** バージョンで導入されました。
+
+グリッドとそれに対応するモジュールをインポートする新しいコードは以下のとおりです。
+
+## Data Grid の必須ピア依存関係
+
+Data Grid コンポーネントには 「inputs」 パッケージが必要です。
+
+```ts
+**npm install --save {PackageInputs}**
+```
+
+## Import ステートメントの変更
 
 Import ステートメントは、API クラスと列挙型へのフル パスではなくパッケージ名のみを使用するように簡素化されました。
 
 > [!NOTE]
-> これらの重大な変更は、パッケージおよびコンポーネントの 8.2.12 バージョン で導入されました。
+> これらの重大な変更は、パッケージおよびコンポーネントの **8.2.12** バージョン で導入されました。
 
 | 影響されるパッケージ                                                                                                                     | 影響されるコンポーネント                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -23,11 +47,14 @@ Import ステートメントは、API クラスと列挙型へのフル パス�
 | <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [地理マップ](geo-map.md)、 [ツリーマップ](treemap-overview.md)                                                                                                                                         |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [ブレット グラフ](bullet-graph.md)、 [リニア ゲージ](linear-gauge.md)、 [ラジアル ゲージ](radial-gauge.md)                                                                                                       |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | [カテゴリ チャート](category-chart.md)、 [データ チャート](data-chart.md)、 [ドーナツ チャート](doughnut-chart.md)、 [ファイナンシャル チャート](financial-chart.md)、 [円チャート](pie-chart.md)、 [ズーム スライダー](zoomslider-overview.md) |
+| <a href="https://www.npmjs.com/package/igniteui-angular-grids/v/8.2.12" target="_blank">igniteui-angular-grids</a>             | [Data Grid](data-grid.md)                                                                                                                                                                  |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | すべてのクラスと列挙型                                                                                                                                                                                |
 
-### 変更後のコード
+## 変更後のコード
 
 API クラスと列挙型へのフル パスの代わりにパッケージ名のみを使用できます。
+
+注: Data Grid コンポーネントとそれに対応するモジュールの名前も変更されました。
 
 ```ts
 // gauges:
@@ -51,7 +78,7 @@ import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 ```
 
-### 変更前のコード
+## 変更前のコード
 
 以前は、API クラスと列挙型への完全なパスを使用してインポートする必要がありました。.
 
