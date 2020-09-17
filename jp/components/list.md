@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## List View
+## Angular List ビュー
 
 <p class="highlight">Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。</p>
 <div class="divider"></div>
 
-### List デモ
+## List デモ
 
 <div class="sample-container loading" style="height: 477px">
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,14 +21,14 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
+Angular list コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
 
-Ignite UI for Angular List を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Angular list コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular
@@ -115,7 +115,7 @@ export class AppModule {}
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### リスト項目の追加
+### リスト項目の追加
 
 リストが空の場合にテンプレートは便利ですが、次は項目を追加します。以下のコードを追加すると項目の簡易なリストを作成できます。
 
@@ -140,7 +140,7 @@ export class AppModule {}
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-リスト項目にカスタム マークアップおよびスタイルを適用します。たとえば、名前の下に電話番号が表示される連絡先のリストを作成する場合、コンポーネントの typescript ファイルで連絡先のリストを定義します。
+リスト項目にカスタム マークアップおよびスタイルを適用します。たとえば、名前の下に電話番号が表示される連絡先の Angular リストを作成する場合、コンポーネントの typescript ファイルで連絡先のリストを定義します。
 
 ```typescript
 // contacts.component.ts
@@ -194,7 +194,7 @@ public contacts = [{
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### アバターおよびアイコンの追加
+### アバターおよびアイコンの追加
 
 その他のコンポーネントを [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) と共に使用してエクスペリエンスの向上や機能拡張が可能です。名前や電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するための星アイコンを右側に追加できます。要素を追加するには、[**IgxAvatar**](avatar.md) および [**IgxIcon**](icon.md) モジュールを app.module.ts ファイルにインポートします。
 
@@ -335,9 +335,9 @@ public selectDensity(event) {
 </div>
 <div class="divider--half"></div>
 
-#### リスト項目パンニング
+### リスト項目パンニング
 
-連絡先や電話番号のリストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
+連絡先や電話番号の Angular リストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
 [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) はリスト項目パンニングに最適です。
 以下の手順に沿って作成します。
 - [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) またはそのいずれかを使用してパンニングを有効にします。
@@ -449,9 +449,9 @@ public leftPanPerformed(args) {
 </div>
 <div class="divider--half"></div>
 
-### フィルタリング
+## フィルタリング
 リストで連絡先を名前によって検索する機能を追加します。これはフィルタリング パイプを使用して実装できます。
-コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
+Angular コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
 
 ```html
 <!--contacts.component.html-->
@@ -509,7 +509,7 @@ public leftPanPerformed(args) {
 
 <div class="divider"></div>
 
-### テーマの適用
+## List コンポーネントにテーマの適用
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
 
@@ -546,15 +546,15 @@ public leftPanPerformed(args) {
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)を参照してください。
 
-### API まとめ
+## API まとめ
 
-この記事では List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
+この記事では Angular List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-使用したその他のコンポーネント:
+使用したその他の Angular コンポーネント:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
@@ -563,7 +563,7 @@ public leftPanPerformed(args) {
 
 <div class="divider"></div>
 
-### 追加のリソース
+## 追加のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
