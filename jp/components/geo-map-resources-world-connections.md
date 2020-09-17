@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | データ ユーティリティ | インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | ワールド コネクション | データソース | インフラジスティックス
+_description: インフラジスティックスの Angular JavaScript マップ データ ユーティリティを使用して、空港の位置、飛行経路、および地理的なグリッド線を生成します。Ignite UI for Angular マップのサンプルを是非お試しください!
+_keywords: Angular map, map data, Ignite UI for Angular, Infragistics, Angular マップ, マップ データ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## ワールド コネクション
+# Angular ワールド コネクション
 
-リソース トピックは、空港の位置、飛行経路、および地理的なグリッド線を生成するためのデータユーティリティの実装を提供します。これらのデータソースを独自の地理データを作成するための参照点として使用できます。このユーティリティは [WorldUtil](geo-map-resources-world-util.md) と [WorldLocations](geo-map-resources-world-locations.md) スクリプトに依存していることに注意してください。
+リソース　トピックは、空港の位置、飛行経路、および地理的なグリッド線を生成するためのデータユーティリティの実装を提供します。これらのデータソースを独自の地理データを作成するための参照点として使用できます。このユーティリティは [WorldUtil](geo-map-resources-world-util.md) と [WorldLocations](geo-map-resources-world-locations.md) スクリプトに依存していることに注意してください。
 
-### コード スニペット
+## コード スニペット
 
 ```ts
 import WorldLocations from "./WorldLocations";

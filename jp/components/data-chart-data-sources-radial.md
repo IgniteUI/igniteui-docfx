@@ -1,12 +1,12 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | データ ソース
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
+_description: ンフラジスティックスの Angular チャート コントロールを使用して、ラジアル領域、ラジアル折れ線、ラジアル散布などのラジアル チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, radial, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, ラジアル, インフラジスティックス, データソース
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## ラジアル シリーズのサンプル データソース
+# Angular ラジアル シリーズのサンプル データソース
 
 このトピックでは、[ラジアル シリーズ](data-chart-type-radial-series.md) のデータソースを実装する方法の例を示します。
 

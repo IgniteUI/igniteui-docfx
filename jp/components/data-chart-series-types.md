@@ -1,20 +1,20 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | シリーズ
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | シリーズーリズ  | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して、縦棒チャート、折れ線チャート、エリア チャート、円チャートなどを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, chart types, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, チャート タイプ, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## シリーズ
+# Angular シリーズ
 
-Angular データ チャート コンポーネントでシリーズは類似するシリーズの以下のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ、図形シリーズ。
+Angular データ チャート コンポーネントでシリーズは類似するシリーズの以下のグループに分類されます。カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、エリア シリーズ、散布図シリーズ、積層シリーズ。
 
 これらのシリーズに加えて、Angular データ チャート コンポーネントに[シリーズ注釈](data-chart-series-annotations.md)と[シリーズ ハイライト](data-chart-series-highlighting.md)を追加できます。
 
 以下のリストは、各グループのすべてのシリーズ タイプを示します。Angular データ チャート コンポーネントで各シリーズを使用する方法についてのヘルプは、シリーズの名前をクリックしてください。
 
-#### カテゴリ シリーズ
+### カテゴリ シリーズ
 
 -   [AreaSeries](data-chart-type-category-series.md)
 -   [BarSeries](data-chart-type-category-series.md)
@@ -27,7 +27,7 @@ Angular データ チャート コンポーネントでシリーズは類似す�
 -   [StepLineSeries](data-chart-type-category-series.md)
 -   [WaterfallSeries](data-chart-type-category-series.md)
 
-#### 極座標シリーズ
+### 極座標シリーズ
 
 -   [PolarAreaSeries](data-chart-type-polar-series.md)
 -   [PolarLineSeries](data-chart-type-polar-series.md)
@@ -35,19 +35,21 @@ Angular データ チャート コンポーネントでシリーズは類似す�
 -   [PolarSplineSeries](data-chart-type-polar-series.md)
 -   [PolarSplineAreaSeries](data-chart-type-polar-series.md)
 
-#### ラジアル シリーズ
+### ラジアル シリーズ
 
 -   [RadialAreaSeries](data-chart-type-radial-series.md)
 -   [RadialLineSeries](data-chart-type-radial-series.md)
 -   [RadialColumnSeries](data-chart-type-radial-series.md)
 -   [RadialPieSeries](data-chart-type-radial-series.md)
+-   [ドーナツ チャート](doughnut-chart.md)
+-   [円チャート](pie-chart.md)
 
-#### エリア シリーズ
+### エリア シリーズ
 
 -   [RangeAreaSeries](data-chart-type-range-series.md)
 -   [RangeColumnSeries](data-chart-type-range-series.md)
 
-#### 散布図シリーズ
+### 散布図シリーズ
 
 -   [Scatter Area シリーズ](data-chart-type-scatter-area-series.md)
 -   [Scatter Bubble シリーズ](data-chart-type-scatter-bubble-series.md)
@@ -58,17 +60,17 @@ Angular データ チャート コンポーネントでシリーズは類似す�
 -   [Scatter Polygon シリーズ](data-chart-type-shape-series.md)
 -   [Scatter Polyline シリーズ](data-chart-type-shape-series.md)
 
-#### ファイナンシャル シリーズ
+### ファイナンシャル シリーズ
 
 -   [Financial OHLC チャート](data-chart-type-financial-ohlc-series.md)
 -   [Financial Candlestick チャート](data-chart-type-financial-candlestick-series.md)
 
-#### ファイナンシャル オーバーレイ
+### ファイナンシャル オーバーレイ
 
 -   [BollingerBandsOverlay](data-chart-type-financial-series.md)
 -   [PriceChannelOverlay](data-chart-type-financial-series.md)
 
-#### 財務指標
+### 財務指標
 
 -   [AbsoluteVolumeOscillatorIndicator](data-chart-type-financial-series.md)
 -   [AccumulationDistributionIndicator](data-chart-type-financial-series.md)

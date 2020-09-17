@@ -1,18 +1,18 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 散布多角形
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 散布ポリゴン チャート | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して散布ポリゴン チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, scatter polygon charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 散布ポリゴン チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries']
 _language: ja
 ---
 
-## 散布ポリゴン チャート
+# Angular 散布ポリゴン チャート
 
  Ignite UI for Angular 散布ポリライン チャートは、形状の配列 (X または Y 座標の配列) を取得するシェイプ チャートのグループに属します。このシリーズは、その形状の配列をデカルト (x, y) システムのポリゴンのコレクションとしてレンダリングします。
 
 散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-scatter-polygon-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,18 +20,20 @@ _language: ja
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-polygon-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 軸の要件
+## 軸の要件
 
 Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
 -   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
 -   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
-### Required Data
+## Required Data
 
 [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) には以下のデータ要件があります。
 
@@ -45,7 +47,7 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 public dataSource: any[] = SampleShapeData.create();
 ```
 
-### モジュールの要件
+## モジュールの要件
 
 [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) は以下のモジュールが必要です。
 
@@ -72,7 +74,7 @@ import { IgxDataChartShapeModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### コード例
+## コード例
 
 このコードは、[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 
