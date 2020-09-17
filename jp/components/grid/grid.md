@@ -5,7 +5,7 @@ _keywords: angular data grid, igniteui for angular, インフラジスティッ�
 _language: ja
 ---
 
-## Angular Data Grid の概要と構成
+## Angular データ グリッドの概要と構成
 
 <p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
@@ -427,7 +427,7 @@ export class MyComponent implements OnInit {
 
 [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) の主な目的は**フラット データ**を処理することですが、これはより複雑なデータを扱うことが不可能であることを意味するものではありません。
 
-現在、Angular グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
+現在、Angular データ グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
 
 ### ネスト データ
 
