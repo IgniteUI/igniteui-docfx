@@ -152,7 +152,7 @@ We can also create a two-way data-binding using an `ngModel`:
 ```
 
 #### Custom label
-By placing an `igxlabel` inside a `<label>` tag nested in the component, the default label can be changed to a custom one:
+Using the `igxLabel` directive, the default label can be changed to a custom one:
 
 ````html
 <!-- datepicker-label.component.html -->
