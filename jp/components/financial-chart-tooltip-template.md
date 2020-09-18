@@ -1,16 +1,16 @@
 ---
-title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | ツールチップ テンプレート
-_description: 簡単な API を使用して財務データを視覚化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+title: Angular ファイナンシャル チャート | ツールチップ テンプレート | インフラジスティックス
+_description: インフラジスティックスの Angular ファイナンシャル チャートのツールチップを使用して重要なデータを表示します。Ignite UI for Angular グラフ チュートリアルを是非お試しください!
+_keywords: Angular charts, financial chart, stock chart, tooltip templates, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, ツールチップ テンプレート, インフラジスティックス
 mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
-## ツールチップ テンプレート
+# Angular ツールチップ テンプレート
 
-Angular Financial Chart コンポーネントは、シリーズの種類ごとに既定のツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルトのツールチップが適切でない場合、 ツールチップのコンテンツおよびルック アンド フィールをカスタマイズできます。
+Angular Financial Chart コンポーネントは、シリーズの種類ごとに既定のツールチップを提供します。デフォルト ツールチップは特定のシリーズ項目に関連するすべての情報を表示します。これはシリーズ タイトル、データ値、および軸値を含みます。シリーズのスタイルと一致します。デフォルトのツールチップが適切でない場合、ツールチップのコンテンツおよびルック アンド フィールをカスタマイズできます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-tooltip-template-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-tooltip-template' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,8 @@ Angular Financial Chart コンポーネントは、シリーズの種類ごと�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-tooltip-template-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

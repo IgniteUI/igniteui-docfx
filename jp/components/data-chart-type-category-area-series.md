@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | エリア チャート
-_description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示するエリア チャートを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | エリア チャート | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用してエリア チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, area chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, エリア チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## エリア チャート
+# Angular エリア チャート
 
-Ignite UI for Angular エリア チャートはカテゴリ チャートのグループに属し、線の下の領域が塗りつぶされた線セグメントで接続されたポイントのコレクションを使用して描画されます。値は Y 軸に表示され、カテゴリは X 軸に表示されます。[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) は時間毎のデータの変化や複数の項目を比較する場合に用いられ、プロットされた値の合計を表示することで全体に対するデータ間の関係も表します。Angular エリア チャートは、データ ポイントをつなぐ線にスプライン補間とデータの表示を改善するスムージングがないこと以外は、Angular スプライン エリア チャートと同じです。
+Ignite UI for Angular エリア チャートはカテゴリ チャートのグループに属し、線の下の領域が塗りつぶされた線セグメントで接続されたポイントのコレクションを使用して描画されます。値はy軸に表示され、カテゴリはx軸に表示されます。[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) は時間毎のデータの変化や複数の項目を比較する場合に用いられ、プロットされた値の合計を表示することで全体に対するデータ間の関係も表します。Angular エリア チャートは、データ ポイントをつなぐ線にスプライン補間とデータの表示を改善するスムージングがないこと以外は、Angular スプライン エリア チャートと同じです。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,11 +18,13 @@ Ignite UI for Angular エリア チャートはカテゴリ チャートのグ�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 軸の要件
+## 軸の要件
 
 Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
@@ -31,13 +33,13 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 -   [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)
 -   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
 
-### データの要件
+## データの要件
 
 [`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) がレンダリングされません。
--   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 (文字列または日時) を少なくとも 1 列含める必要があります
+-   すべてのデータ項目には、財務軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) など) の [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
 -   すべてのデータ項目には、[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) の `ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
 
 上記データ要件を満たすデータソースとして [SampleCategoryData](data-chart-data-sources-category.md) を使用できます。
@@ -46,7 +48,7 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 public dataSource: any[] = SampleCategoryData.create();
 ```
 
-### モジュールの要件
+## モジュールの要件
 
 [`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) は以下のモジュールが必要です。
 
@@ -71,7 +73,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 })
 ```
 
-### コード例
+## コード例
 
 このコードは、[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 

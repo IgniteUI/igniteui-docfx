@@ -1,16 +1,16 @@
 ---
-title: カテゴリ チャート | データ可視化ツール | Ignite UI for Angular | ツールチップ タイプ | インフラジスティックス
-_description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
-_keywords: category chart, Ignite UI for Angular, Infragistics, カテゴリ チャート, インフラジスティックス
+title: Angular チャートおよびグラフ | データ可視化ツール | ツールチップ タイプ | インフラジスティックス
+_description: インフラジスティックスの Angular チャートのツールチップを使用して、重要なデータを表示します。インフラジスティックスの Ignite UI for Angular グラフ チュートリアルを是非お試しください!
+_keywords: Angular charts, category chart, tooltip, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, ツールチップ, インフラジスティックス
 mentionedTypes: ['CategoryChart', 'ToolTipType']
 _language: ja
 ---
 
-## ツールチップ タイプ
+# Angular ツールチップ タイプ
 
 Ignite UI for Angular カテゴリ チャート コンポネントには、さまざまなツールチップ タイプがあります。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-tooltip-types-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,10 +18,12 @@ Ignite UI for Angular カテゴリ チャート コンポネントには、さ�
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
-### ツールチップ タイプ
+## ツールチップ タイプ
 
 カテゴリ チャート コンポネントは以下の方法でツールチップの表示を設定できます。
 

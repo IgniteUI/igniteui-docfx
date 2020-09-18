@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 複数シリーズ|インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | 複数のデータ図形のバインディング | インフラジスティックス
+_description: インフラジスティックスの Angular を使用して、複数の地理的シリーズオブジェクトを追加し、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。Ignite UI for Angular マップ チュートリアルを是非お試しください!
+_keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, data binding, Angular マップ, シェープ ファイル, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## 複数のシェイプ ファイルのバインドとオーバーレイ
+# Angular 複数のシェイプ ファイルのバインドとオーバーレイ
 
 Ignite UI for Angular マップでは、複数の地理的シリーズオブジェクトを追加して、複数のシェープファイルを地理空間データでオーバーレイすることができます。たとえば、港湾の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、港湾間のルートをプロットするための [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)、国の形状をプロットするための [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) などがあります。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-multiple-shapes-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-shapes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,6 +19,7 @@ Ignite UI for Angular マップでは、複数の地理的シリーズオブジ�
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-multiple-shapes-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -30,7 +31,7 @@ Ignite UI for Angular マップでは、複数の地理的シリーズオブジ�
 
 目的のデータをプロットするために、地理的シリーズを上記の組み合わせまたは他の組み合わせで使用できます。
 
-### コンポーネントのインポート
+## コンポーネントのインポート
 
 まず、必要なコンポーネントとモジュールをインポートします。
 
@@ -42,7 +43,7 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
-### シリーズの作成
+## シリーズの作成
 
 次に、後で異なるタイプのシェープ ファイルをロードする地理的シリーズでマップを作成します。
 
@@ -101,7 +102,7 @@ import { IgxShapeDataSource } from 'igniteui-angular-core';
     </ng-template>
 ```
 
-### シェープファイルの読み込み
+## シェープファイルの読み込み
 
 次に、ページのコンストラクターで、地理マップコンポーネントに表示する各シェープファイルの `ShapeDataSource` を追加します。
 
@@ -123,7 +124,7 @@ sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
 sdsLocations.dataBind();
 ```
 
-### ポリゴンの処理
+## ポリゴンの処理
 
 世界の国々の`ShapeDataSource` に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
 
@@ -152,7 +153,7 @@ public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
 }
 ```
 
-### ポリラインの処理
+## ポリラインの処理
 
 `ShapeDataSource` に読み込まれた形状データを処理し、主要都市間の通信ルートを使用して、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトに割り当てます。
 
@@ -183,7 +184,7 @@ public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
 }
 ```
 
-### ポイントの処理
+## ポイントの処理
 
 `ShapeDataSource` に読み込まれた世界各国の形状データを処理し、[`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトに割り当てます。
 
@@ -214,7 +215,7 @@ public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
 }
 ```
 
-### マップ背景
+## マップ背景
 
 また形状ファイルがアプリケーションのために十分な地理的文脈 (国の形状など) を提供した際に、地図背景コンテンツで地理的画像を非表示にしたい場合があります。
 
@@ -225,7 +226,7 @@ public geoMap: IgxGeographicMapComponent;
 this.geoMap.backgroundContent = {};
 ```
 
-### 概要
+## 概要
 
 上記すべてのコード スニペットを以下のコード ブロックにまとめて、プロジェクトに簡単にコピーできます。
 
