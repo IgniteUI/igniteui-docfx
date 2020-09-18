@@ -4,7 +4,7 @@ _description: The Date Range Picker component allows you to choose a date range 
 _keywords: Angular Date Range Picker, Date Range Picker, Date Picker
 ---
 
-## Date Range Picker Component
+# Date Range Picker Component
 
 The Ignite UI for Angular Date Range Picker Component displays a month-view calendar that lets the end-user select a date range by defining its start and end date. The calendar's UI is shown either in a dialog (default) or as a dropdown upon user interaction with the calendar icon that is part of the input field. In addition, the component provides an advanced setup option, exposing two separate editable input fields. The component supports locales and custom date formatting.
 

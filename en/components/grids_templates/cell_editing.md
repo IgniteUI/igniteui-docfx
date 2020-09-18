@@ -20,7 +20,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent cell editing and edit templates
+# @@igComponent cell editing and edit templates
 
 Ignite UI for Angular @@igComponent component provides a great data manipulation capabilities and powerful API for Angular CRUD operations. By default the @@igComponent is using **in cell** editing and different editors will be shown based on the column data type, thanks to the **default cell editing template**. In addition, you can define your own custom templates for update-data actions and to override the default behavior for committing and discarding any changes.
 

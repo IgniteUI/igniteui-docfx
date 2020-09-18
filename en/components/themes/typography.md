@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700 
 ---
 
-## Typography
+# Typography
 <p class="highlight">The Ignite UI for Angular Typography Sass module allows you to modify the typography for the entire application, specific typographic scale, or specific components.</p>
 <div class="divider"></div>
 

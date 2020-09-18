@@ -4,7 +4,7 @@ _description: Start using angular filter to return data with Ignite UI for Angul
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 
-### @@igComponent Filtering Overview
+# @@igComponent Filtering Overview
 
 IgniteUI for Angular @@igComponent component provides three different filtering types - [Quick filtering](filtering.md), [Excel style filtering](excel_style_filtering.md) and [Advanced filtering](advanced_filtering.md) which enable you to display only the records which meet specified criteria.
 

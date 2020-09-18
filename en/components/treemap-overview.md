@@ -5,7 +5,7 @@ _keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular
 mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
 ---
 
-## Angular Treemap Overview
+# Angular Treemap Overview
 
 The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 

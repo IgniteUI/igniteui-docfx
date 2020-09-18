@@ -4,7 +4,7 @@ _description: Learn about one-way data binding in Angular & how it's used to sho
 _keywords: one-way data binding in angular, ignite ui for angular, infragistics
 ---
 
-## One-way data binding in Angular
+# One-way data binding in Angular
 
 > [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
 
