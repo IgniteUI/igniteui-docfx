@@ -1,24 +1,25 @@
 ---
-title: Excel ライブラリ | データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
-_description: Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Excel からアプリケーションへデータを簡単に転送できます。
-_keywords: Excel library, Ignite UI for Angular, Infragistics, Excel ライブラリ, インフラジスティックス
+title: Angular Excel ライブラリ | スパークラインの使用 | インフラジスティックス
+_description: インフラジスティックスの Angular Excel ライブラリのスパークライン チャートを使用して、ワークシートのセル領域全体のデータ トレンドを視覚化します。Ignite UI for Angular Excel エンジン チュートリアルを是非お試しください!
+_keywords: Excel library, sparkline chart, Ignite UI for Angular, Infragistics, Excel ライブラリ, スパークライン チャート, インフラジスティックス
 mentionedTypes: ['Workbook']
 _language: ja
 ---
 
-## スパークラインを使用した作業
+# Angular スパークラインを使用した作業
 
 Infragistics Angular Excel Library は、Excel ワークシートにスパークラインを追加する機能があります。これらを使用して、ワークシートのデータ セルの領域全体のデータの傾向を簡単に視覚的に表現することができます。たとえば、特定のセル領域の Excel データを単純な縦棒チャートまたは折れ線チャートとして視覚化したい場合は、この機能を使用すると役立ちます。
 
-### デモ
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
-### サポートされるスパークライン
+## サポートされるスパークライン
 
 以下はサポートされる定義済スパークラインのタイプです。
 

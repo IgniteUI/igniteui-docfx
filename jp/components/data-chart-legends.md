@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 凡例
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 凡例 | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールの凡例は、プロットされたデータに関連するコンテキスト情報を表示します。Ignite UI for Angular グラフ凡例をお試しください!
+_keywords: Angular charts, data chart, legend, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 凡例, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'Infragistics.Controls.Charts.Legend']
 _language: ja
 ---
 
-## 凡例
+# Angular 凡例
 
 凡例は、エンドユーザーが Angular データ チャート コンポネントにプロットされたデータに関連するコンテキスト情報を使用してデータ チャートシリーズの表示を識別するのに役立ちます。プロットエリアに表示されるデータを理解しやすくするために、ほとんどのデータ チャートには凡例が少なくとも 1 つ必要ですが、必須ではなく、データ チャートはデフォルトで凡例なしで表示できます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-legends-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,11 +18,13 @@ _language: ja
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-legends-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 凡例概要
+## 凡例概要
 
 デフォルトでは、Angular データ チャート コンポネントはデータ チャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、凡例 オブジェクトをアプリケーションに追加してから、それをデータ チャートの Legend プロパティに設定する必要があります。
 
