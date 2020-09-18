@@ -1,13 +1,13 @@
 ---
-title: Date Picker Component
-_description: Add the functionality to select a date from a calendar to your web application with Ignite UI for Angular Date Picker control.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Date Picker components, Angular Date Picker controls
+title: Angular Date Picker | Date Picker | Infragistics
+_description: Learn how to use a functionality to select a date from a calendar to your web application with Ignite UI for Angular Date Picker control.
+_keywords: angular date picker, angular component, ignite ui for angular
 ---
 
-# Date Picker
+# Angular Date Picker
 <p class="highlight">The Ignite UI for Angular Date Picker Component displays a month-view calendar that lets the users to pick a single date or provides an editable input for modifying the date in a dropdown mode. It supports locales and custom date formatting.</p>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 550px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>
@@ -17,10 +17,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
+## Usage
 
-### Usage
-
-#### First Steps
+### First Steps
 To get started with the Date Picker component, first you need to import the `IgxDatePickerModule` in our **app.module.ts** file. 
 
 As the picker uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
@@ -41,7 +40,7 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Display Date Picker
+### Display Date Picker
 To add a date picker in its default `dialog mode`, use the following code:
 
 ```html
@@ -50,9 +49,9 @@ To add a date picker in its default `dialog mode`, use the following code:
 <igx-date-picker></igx-date-picker>
 ```
 
-### Examples
+## Examples
 
-#### Setting date
+### Setting date
 To set a date to the `IgxDatePickerComponent`, first add a date using the following code:
 
 ```typescript
@@ -79,7 +78,7 @@ The result is as follows:
 </div>
 <div class="divider--half"></div>
 
-#### Dropdown mode
+### Dropdown mode
 By default, the date picker is displayed in a read-only dialog mode. To change it to editable dropdown mode, set the [`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) input to [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown).
 
 ```html
@@ -108,7 +107,7 @@ The editable drop-down date picker provides the following outputs to handle the 
 | [`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | [`IDatePickerDisabledDateEventArgs`]({environment:angularApiUrl}/interfaces/idatepickerdisableddateeventargs.html) | Fires when the user types/spins a disabled date in the date picker editor. |
 | [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | [`IDatePickerValidationFailedEventArgs`]({environment:angularApiUrl}/interfaces/idatepickervalidationfailedeventargs.html) | Fires when the user types/spins invalid date in the date picker editor. |
 
-##### Keyboard Navigation
+### Keyboard Navigation
 * To open the date picker drop-down: 
     * <kbd>SPACE</kbd> key
     * <kbd>ALT</kbd> + <kbd>DOWN</kbd> keys
@@ -138,7 +137,27 @@ In the next sample we will set the display format to longDate (equivalent to 'MM
 </div>
 <div class="divider--half"></div>
 
-#### Adding buttons
+### Week numbers
+
+You can now use [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showWeekNumbers) input to show the week numbers for both Calendar and DatePicker components.
+
+```html
+<igx-date-picker [showWeekNumbers]="true">
+</igx-date-picker>
+```
+
+The following demo illustrates a Date picker with enabled week numbers:
+
+<div class="sample-container loading" style="height: 550px;">
+    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
+### Adding buttons
 The `IgxDatePickerComponent` can display 'today' and 'cancel' buttons.
 
 To enable them in a template, use the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) and the [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) inputs.
@@ -151,8 +170,8 @@ We can also create a two-way data-binding using an `ngModel`:
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
-#### Multi View mode
-The multiview date picker supports both the `dropdown` and the `dialog` modes.
+### Multi-view mode
+The multi-view date picker supports both the `dropdown` and the `dialog` modes.
 
 Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) input to set the number of displayed months in the calendar. To hide the days that do not belong to the current month, use the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) property.
 
@@ -176,7 +195,7 @@ The following sample demonstrates the usage of the date picker's modes, buttons,
 </div>
 <div class="divider--half"></div>
 
-#### Custom action buttons
+### Custom action buttons
 The `IgxDatePickerComponent` supports predefined 'Today' and ‘Cancel’ buttons, but custom actions buttons can be added as well. To do that, wrap the buttons in an `ng-template`, marked with the `igxDatePickerActions` directive selector.
 
 In the example below, two custom action buttons are included to switch to months and years calendar view.
@@ -214,7 +233,7 @@ public yearsView(datePicker: IgxDatePickerComponent) {
 </div>
 <div class="divider--half"></div>
 
-#### Custom formatting
+### Custom formatting
 By default, the display value is formatted based on the specified [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) property. You could use your own formatter, though, by adding a formatter function:
 
 ```typescript
@@ -246,9 +265,9 @@ Here is the formatted date:
 </div>
 <div class="divider--half"></div>
 
-### Templating 
+## Templating 
 
-#### Dialog Mode Date Picker
+### Dialog Mode Date Picker
 
 The Date Picker's input group look can be customized using some of the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) properties, exposed by the `ng-template` context. To do that, first we need to wrap the input group in an `ng-template` and decorate it with the `IgxDatePickerTemplate` directive. Then we can declare variables inside the `ng-template` element.
 
@@ -282,7 +301,7 @@ Here is the retemplated input group:
 </div>
 <div class="divider--half"></div>
 
-#### Dropdown Mode Date Picker
+### Dropdown Mode Date Picker
 All the information mentioned in the <a href="#dialog-mode-date-picker">Templating Dialog Mode Date Picker</a> section can also be applied when re-templating a dropdown date picker. The only requirement is to pass an HTML element to the `openDialog(target)` so this element can be used as a positioning target for the drop down that is being spawned.
 
 In the following example we change the default icon and move it to the end of the input. There is also a label below the input group displaying the date picker value:
@@ -315,7 +334,7 @@ In the following example we change the default icon and move it to the end of th
 
 <div class="divider--half"></div>
 
-### Internationalization
+## Internationalization
 The localization of the `IgxDatePickerComponent` can be controlled through its [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) input. Using the `igxCalendarHeader` and the `igxCalendarSubheader` templates, provided by the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), you can specify the look of your header and subheader. More information on how to use these templates can be found in the [**IgxCalendarComponent**](calendar.md) topic.
 
 Here is how a date picker with Japanese locale definition would look like:
@@ -397,7 +416,7 @@ The result is as follows:
 </div>
 <div class="divider--half"></div>
 
-### Styling
+## Styling
 To get started with styling the date picker, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -425,7 +444,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 );
 ```
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The last step is to pass the custom date picker theme: 
 
@@ -433,7 +452,7 @@ The last step is to pass the custom date picker theme:
 @include igx-css-vars($custom-datepicker-theme);
 ```
 
-#### Using Theme Overrides
+### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -457,7 +476,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datepicker-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
@@ -466,7 +485,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
