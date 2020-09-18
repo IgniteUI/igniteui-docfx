@@ -164,7 +164,7 @@ By placing an `igxlabel` inside a `<label>` tag nested in the component, the def
 You can see what the custom label will look like in the multi view mode sample found in next section.
 
 > [!NOTE]
-> Currently the `label` and `labelVisibility` properties are in the process of being deprecated. During this period if `labelVisibility` is set to `false` and a custom label is not provided then a default label `Date` will be set. The label can be removed by setting no text between the `<label igxLabel></label>` tags.
+> Currently the `label` and `labelVisibility` properties are in the process of being deprecated. During this period if `labelVisibility` is set to `false` and a custom label is not provided then a default label `Date` will be set. The label can be removed by setting no text between in the label: `<label igxLabel></label>`.
 
 #### Multi View mode
 The multiview date picker supports both the `dropdown` and the `dialog` modes.
