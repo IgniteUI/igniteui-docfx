@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 地理図形ファイル | インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェイプ ファイルからロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | 地理的シェープ ファイルのバインディング | インフラジスティックス
+_description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルから地理空間データを読み込みます。Ignite UI for Angular マップのサンプルを是非お試しください!
+_keywords: Angular map, shapefiles, Ignite UI for Angular, Infragistics, data binding, Angular マップ, シェープファイル, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
 ---
 
-## シェープ ファイルを地理的データにバインディング
+# Angular シェープ ファイルを地理的データにバインディング
 
 Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのコレクションに変換します。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,14 +20,15 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 以下の表は、シェイプ ファイルを読み込むための `ShapeDataSource` クラスのプロパティを説明します。
 
-| プロパティ             | 型      | 概要                                                    |
-| ----------------- | ------ | ----------------------------------------------------- |
-| `ShapefileSource` | string | シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。 |
-| `DatabaseSource`  | string | たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。     |
+| プロパティ                                                                                                                                                 | 型      | 概要                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------- |
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#shapefilesource) | string | シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。 |
+| [`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#databasesource)   | string | たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。     |
 
 <!-- TODO add for WPF only: -->
 
@@ -35,11 +36,11 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 両方のソース プロパティが null 以外の値に設定されると、`ShapeDataSource` オブジェクトの ImportAsync メソッドが起動し、シェイプ ファイルを取得して読み込み、最終的に変換を実行します。この操作が完了すると、`ShapeDataSource` は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトで生成され、シェイプ ファイルから地理空間データを読み込んで変換するプロセスが完了したことを通知するために、`ImportCompleted` イベントが起動されます。
 
-### シェープファイルの読み込み
+## シェープファイルの読み込み
 
 以下のコードは、世界の主要都市の場所を含むシェイプ ファイルを読み込むための `ShapeDataSource` オブジェクトのインスタンスを作成します。また、xamGeographicMap コントロールにデータをバインドするための前提条件として `ImportCompleted` イベントを処理する方法も示します。
 
-### シェープファイルをバインド
+## シェープファイルをバインド
 
 Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
 
@@ -53,7 +54,7 @@ Map コンポーネントでは、Geographic Series は、シェイプ ファイ
 
 このデータ構造は、適切なデータ列がマップされている限り、ほとんどの地理的シリーズでの使用に適しています。
 
-### コード スニペット
+## コード スニペット
 
 このコード例は、シェープ ファイルが `ShapeDataSource` を使用して読み込まれたことを前提としています。
 以下のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を `ShapeDataSource` にバインドし、すべての [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトの `Points` プロパティをマップします。

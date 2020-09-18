@@ -1,16 +1,16 @@
 ---
-title: ファイナンシャル チャート | データ可視化ツール | Ignite UI for Angular | インフラジスティックス | 大規模データのバインド
-_description: 簡単な API を使用して財務データを可視化するには、ファイナンシャル チャート コンポーネントを使用します。
-_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
+title: Angular ファイナンシャル チャート | 大規模データ | インフラジスティックス
+_description: インフラジスティックスの Angular ファイナンシャル チャート コントロールのパフォーマンスを最適化する方法について説明します。Ignite UI for Angular チャートのパフォーマンスを向上させます。
+_keywords: Angular charts, financial chart, stock chart, performance, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, パフォーマンス, インフラジスティックス
 mentionedTypes: ['XamFinancialChart']
 _language: ja
 ---
 
-## 大規模データのバインド
+# Angular 大規模データのバインド
 
 Angular Financial Chart  コンポーネントは大量のデータを処理できます。以下のデモは 20 年間分のデータをバインドし、折れ線チャートで 1 時間間隔の在庫価格を示します。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,8 @@ Angular Financial Chart  コンポーネントは大量のデータを処理で�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 

@@ -90,6 +90,19 @@ The table below lists valid time display formats:
 | `mm` | Formats the minutes field with leading zero (00..59). |
 | `tt` | Represents the AM/PM field. |
 
+#### Custom label
+By placing an `igxlabel` inside a `<label>` tag nested in the component, the default label can be changed to a custom one:
+
+````html
+<!-- timepicker-label.component.html -->
+<igx-time-picker>
+    <label igxLabel>Meeting Start</label>
+</igx-time-picker>
+````
+
+You can see what the custom label will look like in the validation sample found in the [Validation section](#validation).
+
+
 #### Change delta and spin mode
 
 To change the delta of the items, set the [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) input. To change the spin mode, use the [`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) input:
@@ -134,13 +147,14 @@ public onValidationFailed() {
 
 ```html
 <igx-time-picker
-[itemsDelta]="{hours:1, minutes:5}"
-format="HH:mm tt"
-[vertical]="true"
-[minValue]="min"
-[maxValue]="max"
-(onValidationFailed)="onValidationFailed()"
-></igx-time-picker>
+	[itemsDelta]="{hours:1, minutes:5}"
+	format="HH:mm tt"
+	[vertical]="true"
+	[minValue]="min"
+	[maxValue]="max"
+	(onValidationFailed)="onValidationFailed()">
+	<label igxLabel>Meeting Start</label>
+</igx-time-picker>
 
 <igx-toast #toast message="Value must be between 09:15:30 AM and 06:15:30 PM"></igx-toast>
 
