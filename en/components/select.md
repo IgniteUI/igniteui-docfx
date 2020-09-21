@@ -267,12 +267,12 @@ export class MyClass implements OnInit {
             closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: scaleInTop,
-            target: this.select.inputGroup.element.nativeElement,
+            openAnimation: scaleInTop,            
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
         this.customOverlaySettings = {
+            target: this.select.inputGroup.element.nativeElement,
             positionStrategy: new ConnectedPositioningStrategy(
                 positionSettings
             ),
