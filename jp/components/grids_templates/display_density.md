@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title:  Grid の表示密度 - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid コントロールは、列のデータ型に基づいて編集可能な列のデフォルト セル テンプレートを提供します。
@@ -36,6 +36,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -46,6 +47,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -56,6 +58,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchicalgrid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-displayDensity-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -76,9 +79,9 @@ this.@@igObjectRef.displayDensity = "cosy";
 ...
 ```
 各オプションを @@igComponent に反映する方法を紹介します。表示密度オプション間で切り替える際に各 @@igComponent 要素の高さとそのパディングが変更されます。カスタムの列 [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) を適用する場合、左右のパディングより大きくする必要があることに注意してください。
- - **comfortable** - これはデフォルトのグリッド表示密度です。密度が最も低く、行の高さが 50px です。左と右のパディングが `24px`; 最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `48px` です。
- - **cosy** - 中密度で、行の高さは `40px` です。左と右のパディングが `16px` で最小列[`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `32px` です。
- - **compact** - これは最高密度で行の高さは `32px` です。左と右のパディングが `12px` で最小列[`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `24px` です。
+ - **comfortable** - これはデフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。左と右のパディングが `24px`; 最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `80px` です。
+ - **cosy** - 中密度で、行の高さは `40px` です。左と右のパディングが `16px` で最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `64px` です。
+ - **compact** - これは最高密度で行の高さは `32px` です。左と右のパディングが `12px` で最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `56px` です。
 
 > [!NOTE]
 > 現在サイズはオーバーライド**できません**。
@@ -309,7 +312,7 @@ public selectDensity(event) {
 * [編集](editing.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)

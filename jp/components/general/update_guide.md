@@ -21,7 +21,7 @@ ng update
 ```cmd
 ng update igniteui-angular
 ```
-`Igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
@@ -42,6 +42,47 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+### 10.0.x から 10.1.x の場合:
+
+* IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
+    * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、`IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`  `IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレートディレクティブの使用に関する詳細は、この[トピック](../grid/excel_style_filtering.md#テンプレート)をご覧ください。
+* IgxGrid
+    * `selectedRows()` メソッドは、`selectedRows`入力プロパティに変更されました。この重大な変更により、ユーザーは実行時にグリッドの選択状態を簡単に変更できます。行の事前選択もサポートされています。`selectedRows()` メソッドが呼び出されるすべてのインスタンスは、括弧なしで書き換える必要があります。
+    * `selectedRows` 入力のバインディングは次のようになります:
+    ```typescript
+    public mySelectedRows = [0, 1, 2];
+    ```
+    ```html
+    <igx-grid [data]="myData" rowSelection="multiple"
+        primaryKey="ID" [selectedRows]="mySelectedRows">
+        <!-- ... -->
+    </igx-grid>
+    ```
+
+### 9.0.x から 10.0.x の場合:
+* IgxDropdown
+    * ドロップダウン項目の表示プロパティが `flex` から `block` に変更されました。これは、切り捨てられたテキストをデフォルトで有効にするために行われました。この変更により、ドロップダウン項目のコンテンツにテキスト以外のものが含まれる場合、レイアウトはアプリケーション レベルで処理する必要があります。
+
+    * 次の例は、アイコンとテキスト コンテンツでドロップダウン アイテムをスタイルし、垂直配置させる方法を示しています。
+
+    ```html
+    <igx-drop-down-item>
+        <div class="my-styles">
+            <igx-icon>alarm</igx-icon>
+            <span>item text</span>
+        </div>
+    </igx-drop-down-item>
+    ```
+    ```scss
+    .my-styles {
+        display: flex;
+        align-items: center;
+        
+        span {
+          margin-left: 8px;
+        }
+    } 
+    ```
 ### 8.x.x から 9.0.x の場合:
 
 Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
@@ -73,6 +114,7 @@ import { HammerModule } from "@angular/platform-browser";
     ]
 })
 ```
+
 エクスポートで名前が変更された `Enumeration` があるため、メンバーを手動で更新する必要があります。以下は、手動の更新が必要なすべての変更のリストです。
 
 * AvatarType.`DEFAULT` -> IgxAvatarType.`CUSTOM`
@@ -201,7 +243,7 @@ import { HammerModule } from "@angular/platform-browser";
 
 ### 7.3.x から 8.0.x の場合:
 * アップデート中に以下のエラーが発生した場合、`パッケージ "@angular/compiler-cli" は "typescript" と互換性のないピア依存関係を持っているため (">=3.1.1 <3.3" が必要で、"3.4.5" をインストールします。)`、最初に `@angular/core` パッケージを更新する必要があります。このエラーは [Angular CLI](https://github.com/angular/angular-cli/issues/13095) の既知の問題に関連しています
-* `igniteui-angular` パッケージの更新中に次のエラーが表示された場合、`パッケージ "igniteui-angular"は "web-animations-js"と互換性のないピア依存関係を持っているため ("^2.3.1" が必要で、 "2.3.2-pr208"をインストールします。)`、`ng update igniteui-angular --force` を使用して更新する必要があります。これは、`igniteui-angular` を更新する前に `@angular/core` と `@angular/cli` を更新した場合に発生する場合があります。
+* `igniteui-angular` パッケージの更新中に次のエラーが表示された場合、`パッケージ "igniteui-angular" は "web-animations-js" と互換性のないピア依存関係を持っているため ("^2.3.1" が必要で、"2.3.2-pr208" をインストールします。)`、`ng update igniteui-angular --force` を使用して更新する必要があります。これは、`igniteui-angular` を更新する前に `@angular/core` と `@angular/cli` を更新した場合に発生する場合があります。
 
 ### 7.2.x または 7.3.x から 7.3.4 の場合:
 * `IgxGrid`、`IgxTreeGrid`、または `IgxHierarchicalGrid` メソッドを使用する場合は、`condition` パラメーターがオプションではなくなったことに注意してください。`filterGlobal` メソッドが無効な条件で呼び出されると、すべての列の既存のフィルターは消去されません。

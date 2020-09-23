@@ -1,4 +1,4 @@
-﻿---
+---
 title: カスケーディング
 _description: igx-combo と igx-select は、ユーザーが一方または両方のコントロールを使用してカスケード シナリオを簡単に構築できるようにするイベント、プロパティ、およびメソッドを公開します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール、Angular カスケーディング Combo, Angular Select, Angular カスケーディング
@@ -7,40 +7,39 @@ _language: ja
 
 ## カスケーディング
 <p class="highlight">
- [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
+Ignite UI for Angular の Combo と Select コンポーネントは、コントロールの一方または両方を使用して簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 </p>
-<div class="divider"></div>
 
 ### デモ
-
-以下のサンプルは、2 つの [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントを使用しています。
+以下のサンプルは、[igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントが一緒に使用されています。
 
 <div class="sample-container loading" style="height: 540px;">
     <iframe id="cascading-combos-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/cascading-combos" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="cascading-combos-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ### 使用方法
-はじめに `IgxComboModule`, `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
+
+#### はじめに
+まず `IgxComboModule` と `IgxSelectModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
-// app.module.ts
-
-...
-import { IgxComboModule, IgxDropDownModule } from 'igniteui-angular';
+import { IgxComboModule, IgxSelectModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxComboModule, IgxDropDownModule ],
+    imports: [..., IgxComboModule, IgxSelectModule],
     ...
 })
 export class AppModule {}
 ```
 
-以下のサンプルは、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) と 2 つの [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネント、それらに対応する入力要素を使用しています。両コンポーネントの API は、選択された項目を取得してドロップダウンまたはコンボのいずれかにデータソースを読み込み、選択をクリアまたはデータソースをリセットします。
+#### テンプレートの構成
+両方のコンポーネントの API は、選択された項目を取得し、次の Select または Combo のコンポーネントのデータソースを読み込み、選択をクリアしてデータソースをリセットします。
 
 ```html
 <igx-select type="box" #cntr placeholder="Choose Country..."
@@ -58,6 +57,7 @@ export class AppModule {}
 
 ```
 
+#### コンポーネント定義
 ```typescript
 import { Component } from "@angular/core";
 import { data } from "./local-data";
@@ -86,20 +86,29 @@ export class CascadingCombos {
 
     public selectProvince(args) {
         this.townData = this.data[this.location.country][args.newSelection.value];
-        this.location.towns = [this.townData[0]];
+        this.location.towns = [];
     }
 }
 ```
 
-## その他のリソース
+### API まとめ
 <div class="divider--half"></div>
 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+
+その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+
+### その他のリソース
+<div class="divider--half"></div>
+
+* [コンボ コンポーネント](combo.md)
 * [コンボ機能](combo_features.md)
 * [コンボ リモート バインディング](combo_remote.md)
 * [コンボ テンプレート](combo_templates.md)
 * [テンプレート駆動フォームの統合](input_group.md)
 * [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [IgxOverlay]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -1,12 +1,12 @@
 ---
-title: データ チャート| 可視化ツール | Ignite UI for Angular | インフラジスティックス|データ ソース
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して、柱状、エリア、棒、円、ドーナツなど、さまざまな種類のチャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, Ignite UI for Angular, Infragistics, data sources, Angular チャート, データ チャート, インフラジスティックス, データソース
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## データ ソース
+# Angular データ ソース
 
 Angular データ チャート コンポーネントでは、すべてのシリーズを正しく表示するために特定の数値とデータ列の型を必要とします。このトピックでは、シリーズの各グループにデータソースを実装する方法の例を示します。
 

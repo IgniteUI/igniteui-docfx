@@ -1,4 +1,4 @@
-﻿---
+---
 title: Angular Grid ソート | テンプレート | Ignite UI for Angular | インフラジスティックス
 _description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular pagination, igniteui for angular, infragistics
@@ -16,6 +16,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -25,6 +26,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
@@ -34,6 +36,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -107,7 +110,6 @@ this.@@igObjectRef.totalRecords = 30;
 | pagerEnabled    | 有効状態をページャーに設定します。 |
 | pagerHidden     | 非表示状態をページャーに設定します。 |
 | perPage         | ページごとに表示される項目数を設定します。 |
-| selectLabel     | 選択コンポーネントの前にテキストを設定します。デフォルトは'ページごとの項目'です。 |
 | selectOptions   | ページごとの項目のカスタム オプションを設定します。 |
 | totalRecords    | 合計レコード数を設定します。 |
 | resourceStrings | リソース文字列を設定します。デフォルトで EN リソースを使用します。 |
@@ -128,7 +130,7 @@ this.@@igObjectRef.totalRecords = 30;
 
 <ng-template #pager>
     <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
-            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden" [selectLabel]="'Records per page:'"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
             [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
     </igx-paginator>
 </ng-template>
@@ -140,6 +142,7 @@ this.@@igObjectRef.totalRecords = 30;
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
@@ -156,6 +159,53 @@ this.@@igObjectRef.totalRecords = 30;
 独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。[このセクション](remote_data_operations.md#カスタム-テンプレートのリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 }
 
+### ローカライズ
+最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、入力プロパティ [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) を使用します。次の手順に従います。 
+
+**手順 1** - `IPaginatorResourceStrings`  インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:
+
+```ts
+import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
+```
+
+**手順 2** - ページング リソース文字列を定義します:
+
+```ts
+private paginatorResourceStrings: IPaginatorResourceStrings = {
+    igx_paginator_label: "Records per page:",
+    igx_paginator_first_page_button_text: "Custom first page text",
+    igx_paginator_last_page_button_text: "Custom last page text",
+    igx_paginator_next_page_button_text: "Custom next page text",
+    igx_paginator_previous_page_button_text: "Custom previous page text",
+    igx_paginator_pager_text: "out of"
+};
+```
+
+
+**手順 3** - app.module レベルでコンポーネントのグローバル i18n を変更するために、オブジェクトをパラメーターとして [changei18n]({environment:angularApiUrl}/#changei18n) 関数に渡します。これにより、アプリケーションのすべてのページング コンポーネントのリソース文字列が変更されます:
+
+```ts
+public ngOnInit(): void {
+    changei18n(this.paginatorResourceStrings as any);
+}
+```
+
+リソース文字列を特定のページング コンポーネントに変更するには、@ ViewChild を使用して、ページが再描画される前に呼び出されるコールバックを使用して、`requestAnimationFrame` メソッド内で目的の [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) を設定します。新しくインスタンス化されたオブジェクトを [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) プロパティに設定すると、指定されたコンポーネントのインスタンスのみがローカライズされます。
+```ts
+@ViewChild("paginator", { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;
+...
+
+public ngOnInit(): void {
+    requestAnimationFrame(() => {
+        this.paginator.resourceStrings = this.paginatorResourceStrings;
+    });
+}
+```
+
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox デモ</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz デモ</button>
+</div>
+
 ### スタイル設定
 
 ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
@@ -165,7 +215,7 @@ this.@@igObjectRef.totalRecords = 30;
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法で [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) を拡張し`$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
+最も簡単な方法で [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
 $dark-grid-paginator: igx-grid-paginator-theme(
@@ -190,7 +240,7 @@ $dark-button: igx-button-theme(
 
 この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
-最後のステップは、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
+最後の手順は、それぞれのテーマを持つコンポーネント mixin を**含める**ことです。
 
 ```scss
 @include igx-grid-paginator($dark-grid-paginator);
@@ -200,10 +250,10 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->igx-button mixins を `.igx-grid-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>igx-button mixin を `.igx-grid-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
- >コンポーネントが[`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を貫通する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -326,10 +376,11 @@ $dark-button: igx-button-theme(
 #### デモ
 
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -338,12 +389,13 @@ $dark-button: igx-button-theme(
 @@if (igxName === 'IgxHierarchicalGrid'){
 #### デモ
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }
@@ -352,12 +404,13 @@ $dark-button: igx-button-theme(
 @@if (igxName === 'IgxTreeGrid'){
 #### デモ
 <div class="sample-container loading" style="height:560px">
-    <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示
     </button>
 </div>
 }
@@ -373,7 +426,7 @@ $dark-button: igx-button-theme(
 * [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column_moving.md)
 * [列ピン固定](column_pinning.md)

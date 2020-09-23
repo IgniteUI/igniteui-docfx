@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 一括編集 | Angular CRUD | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular のグリッド UI 編集および Material UI テーブルを使用した Angular CRUD を使用して、基になるデータに影響を与えずにデータを操作できます。
@@ -36,9 +36,9 @@ IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({envir
 以下は、IgxTreeGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxHierarchicalTransactionService の概要と実装方法の詳細を確認してください。
+IgxHierarchicalGrid の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxHierarchicalTransactionService の概要と実装方法の詳細を確認してください。
 
-[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされると [`'IgxHierarchicalTransactionServiceFactory'`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。 
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) と [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) を使用した場合も各アイランドに個別のトランザクション ログを累積させるには、代わりにサービス ファクトリが必要です。エクスポートされると [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として利用できます。 
 
 以下は、IgxHierarchicalGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
@@ -53,6 +53,7 @@ IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({envir
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -65,6 +66,7 @@ IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({envir
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -75,6 +77,7 @@ IgxTreeGrid の一括編集機能は、[`HierarchicalTransactionService`]({envir
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -121,7 +124,7 @@ export class GridWithTransactionsComponent { }
 ```typescript
 import { Component, ViewChild } from "@angular/core";
 import { IgxGridComponent, IgxGridTransaction, IgxToggleDirective,
-    IgxTransactionService, IgxTreeGridComponent } from "igniteui-angular";
+    IgxHierarchicalTransactionService, IgxTreeGridComponent } from "igniteui-angular";
 
 @Component({
     providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
@@ -184,22 +187,28 @@ export class HierarchicalGridWithTransactionsComponent { }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <app-hierarchical-grid-with-transactions>
-    <igx-hierarchical-grid #parentGridProducts [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
-        [rowEditable]="true">
-        <igx-row-island #rowIslandShipments [key]="'Shipments'" [primaryKey]="'ShipmentID'" [rowEditable]="true">
+    <igx-hierarchical-grid igxPreventDocumentScroll #hierarchicalGrid class="hgrid" [data]="localdata" [primaryKey]="'Artist'"
+        [rowEditable]="true" [height]="'580px'" [width]="'100%'">
+        <igx-column field="Artist" header="Artist" [editable]="false" [dataType]="'string'"></igx-column>
+        <igx-column field="HasGrammyAward" header="Has Grammy Award?" [editable]="true" [dataType]="'boolean'">
+        </igx-column>
+        ...
+        <igx-row-island [key]="'Albums'" #layout1 [primaryKey]="'Album'" [rowEditable]="true" [showToolbar]="true">
+            ...
+            <ng-template igxToolbarCustomContent let-grid="grid">
+                <button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo(grid)">Undo</button>
+                <button igxButton [disabled]="!grid.transactions.canRedo" (click)="redo(grid)">Redo</button>
+            </ng-template>
         </igx-row-island>
-    </igx--hierarchical-grid>
+    </igx-hierarchical-grid>
 </app-hierarchical-grid-with-transactions>
 ...
-<button igxButton [disabled]="!productsUndoEnabled" (click)="productsUndo()">Undo Products</button>
-<button igxButton [disabled]="!productsRedoEnabled" (click)="productsRedo()">Redo Products</button>
-<button igxButton [disabled]="!shipmentsUndoEnabled" (click)="shipmentsUndo()">Undo Shipments</button>
-<button igxButton [disabled]="!shipmentsRedoEnabled" (click)="shipmentsRedo()">Redo Shipments</button>
-...
-<button igxButton (click)="productsCommit()">Commit Products</button>
-<button igxButton (click)="productsDiscard()">Discard Products</button>
-<button igxButton (click)="shipmentsCommit()">Commit Shipments</button>
-<button igxButton (click)="shipmentsDiscard()">Discard Shipments</button>
+<div class="buttons-row">
+    <div class="buttons-wrapper">
+        <button igxButton [disabled]="!undoEnabledParent" (click)="undo(hierarchicalGrid)">Undo Parent</button>
+        <button igxButton [disabled]="!redoEnabledParent" (click)="redo(hierarchicalGrid)">Redo Parent</button>
+    </div>
+</div>
 ...
 
 ```
@@ -222,6 +231,8 @@ export class GridBatchEditingSampleComponent {
     }
 
     public undo() {
+        /* exit edit mode */
+        this.gridRowEditTransaction.endEdit(/* commit the edit transaction */ false);
         this.gridRowEditTransaction.transactions.undo();
     }
 
@@ -273,6 +284,8 @@ export class TreeGridBatchEditingSampleComponent {
     }
 
     public undo() {
+        /* exit edit mode */
+        this.treeGrid.endEdit(/* commit the edit transaction */ false);
         this.treeGrid.transactions.undo();
     }
 
@@ -319,48 +332,62 @@ export class TreeGridBatchEditingSampleComponent {
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    @ViewChild("parentGridProducts", { read: IgxHierarchicalGridComponent }) public parentGridProducts: IgxHierarchicalGridComponent;
-    @ViewChild("rowIslandShipments", { read: IgxRowIslandComponent }) public rowIslandShipments: IgxRowIslandComponent;
+    @ViewChild("layout1", { static: true })
+    private layout1: IgxRowIslandComponent;
+
+    @ViewChild("hierarchicalGrid", { static: true })
+    private hierarchicalGrid: IgxHierarchicalGridComponent;
+    
     ...
-    public get productsUndoEnabled(): boolean {
-        return this.parentGridProducts.transactions.canUndo;
+    
+    public get undoEnabledParent(): boolean {
+        return this.hierarchicalGrid.transactions.canUndo;
     }
-    public get productsRedoEnabled(): boolean {
-        return this.parentGridProducts.transactions.canRedo;
+
+    public get redoEnabledParent(): boolean {
+        return this.hierarchicalGrid.transactions.canRedo;
     }
-    public get shipmentsUndoEnabled(): boolean {
-        return this.rowIslandShipments.transactions.canUndo;
+
+    public get hasTransactions(): boolean {
+        return this.hierarchicalGrid.transactions.getAggregatedChanges(false).length > 0 || this.hasChildTransactions;
     }
-    public get shipmentsRedoEnabled(): boolean {
-        return this.rowIslandShipments.transactions.canRedo;
+
+    public get hasChildTransactions(): boolean {
+        return this.layout1.hgridAPI.getChildGrids()
+            .find(c => c.transactions.getAggregatedChanges(false).length > 0) !== undefined;
     }
-    public productsUndo() {
-        this.parentGridProducts.transactions.undo();
+    
+    ...
+    
+    public undo(grid: IgxHierarchicalGridComponent) {
+        /* exit edit mode */
+        grid.endEdit(/* commit the edit transaction */ false);
+        grid.transactions.undo();
     }
-    public productsRedo() {
-        this.parentGridProducts.transactions.redo();
+
+    public redo(grid: IgxHierarchicalGridComponent) {
+        grid.transactions.redo();
     }
-    public shipmentsUndo() {
-        this.rowIslandShipments.transactions.undo();
+
+    public commit() {
+        this.hierarchicalGrid.transactions.commit(this.localdata);
+        this.layout1.hgridAPI.getChildGrids().forEach((grid) => {
+            grid.transactions.commit(grid.data);
+        });
     }
-    public shipmentsRedo() {
-        this.rowIslandShipments.transactions.redo();
-    }
-    public productsCommit() {
-        this.parentGridProducts.transactions.commit(this.data);
-    }
-    public productsDiscard() {
-        this.parentGridProducts.transactions.clear();
-    }
-     public shipmentsCommit() {
-        this.rowIslandShipments.transactions.commit(this.data);
-    }
-    public shipmentsDiscard() {
-        this.rowIslandShipments.transactions.clear();
+
+    public discard() {
+        this.hierarchicalGrid.transactions.clear();
+        this.layout1.hgridAPI.getChildGrids().forEach((grid) => {
+            grid.transactions.clear();
+        });
     }
 }
 ```
 }
+
+> [!NOTE] 
+> トランザクション API は編集の終了を処理しないので、自分で行う必要があります。そうしないと、グリッドは編集モードのままになります。これを行う 1 つの方法は、それぞれのメソッドで [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) を呼び出すことです。
 
 @@if (igxName === 'IgxTreeGrid') {
 グリッド内の親ノードの削除にはいくつかの特徴があります。階層データを使用している場合、親を削除すると子も削除されます。フラットデータを使用している場合、グリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) プロパティを使用して必要な動作を設定できます。このプロパティは、親が削除されたときに子レコードを削除するかどうかを示します (デフォルトでは true に設定されています)。
@@ -382,7 +409,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-[igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
+* [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
 }
 
 ### その他のリソース

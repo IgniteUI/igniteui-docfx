@@ -4,7 +4,7 @@ _description: Information on updating to a newer version of the Ignite UI for An
 _keywords: Ignite UI for Angular, update, npm package, version, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Update Guide
+# Update Guide
 
 In the Ignite UI for Angular [versioning](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) the first number always matches the major version of Angular the code supports and the second is dedicated for major version releases. Breaking changes may be introduced between major releases.
 A comprehensive list of changes for each release of **Ignite UI for Angular** can be found in the product [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md)
@@ -41,7 +41,25 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+
+### From 10.0.x to 10.1.x
+
+* IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
+    * Since we have removed the `IgxExcelStyleSortingTemplateDirective`, `IgxExcelStyleHidingTemplateDirective`, `IgxExcelStyleMovingTemplateDirective`, `IgxExcelStylePinningTemplateDirective` and `IgxExcelStyleSelectingTemplateDirective` directives for re-templating some parts of the Excel style filter menu you could use the newly added directives for re-templating the column operations and filter operations areas - `IgxExcelStyleColumnOperationsTemplateDirective` and `IgxExcelStyleFilterOperationsTemplateDirective`. We have also exposed all internal components of the Excel style filter menu in order to be used inside the templates. You could find more information about using the new template directives in this [topic](../grid/excel_style_filtering.md#templates).
+* IgxGrid
+    * The `selectedRows()` method has been reworked to be a `selectedRows` input property. This breaking change allows a user to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
+    * Binding of the `selectedRows` input could look something like this:
+    ```typescript
+    public mySelectedRows = [0, 1, 2];
+    ```
+    ```html
+    <igx-grid [data]="myData" rowSelection="multiple"
+        primaryKey="ID" [selectedRows]="mySelectedRows">
+        <!-- ... -->
+    </igx-grid>
+
 ### From 9.0.x to 10.0.x
+
 * IgxDropdown
     * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
     
@@ -64,7 +82,6 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
           margin-left: 8px;
         }
     } 
-    ```
 
 ### From 8.x.x to 9.0.x
 

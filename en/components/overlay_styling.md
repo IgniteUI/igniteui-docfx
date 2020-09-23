@@ -4,7 +4,7 @@ _description: A detailed walkthrough that explains how to properly apply and sco
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-## Overlay Styling
+# Overlay Styling
 <p class="highlight">
 [`IgxOverlayService`](overlay_main.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop_down.md), [Combo](combo.md), [Date Picker](date_picker.md) and more - so it is important to understand how the overlay displays content.
 To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#scoped-component-styles).
@@ -73,7 +73,7 @@ The items in our combo's list **are not** descendants of our component `host` - 
 Here, we can pass a reference to the element where we'd like our container to be:
 
 ```html
-<igx-combo [data]="items" valueKey="name" displayKey="name" [overlaySettings]="{ outlet: element }">
+<igx-combo [data]="items" valueKey="name" displayKey="name" [overlaySettings]="{ outlet: element, modal: true }">
 </igx-combo>
 ```
 
@@ -88,11 +88,11 @@ export class OverlayStylingComponent {
 Now, the combo's list of items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-styling-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe class="lazyload no-theming" id="overlay-styling-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
 </div>
 
 ### Styling The Overlay
@@ -106,10 +106,8 @@ The easiest way to style the overlay modal is to include its theme in our app's 
 
 ```scss
 //  styles.scss
-$background-purple: #5443b84a;
-
 $my-overlay-theme: igx-overlay-theme(
-    $background-color: $background-purple
+  $background-color: rgba(0, 153, 255, 0.3)
 );
 
 @include igx-css-vars($my-overlay-theme);

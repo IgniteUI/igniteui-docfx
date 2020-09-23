@@ -3,22 +3,22 @@
  
 `Material` から `Fluent` へ切り替えるには、定義済みの mixins の 1 つを使用できます。
 
-Word および Excel パレットをサポートしています。使用するには、2 つのマップ `$ fluent-excel-palette` または `$ fluent-word-palette` のいずれかを mixin テーマに渡すだけです。
+Word および Excel パレットをサポートしています。使用するには、2 つのマップ `$ light-fluent-excel-palette` または `$ light-fluent-word-palette` のいずれかを mixin テーマに渡すだけです。
 
 ### Fluent Light テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
-@include igx-fluent-theme($fluent-excel-palette);
+@include igx-fluent-light-theme($light-fluent-excel-palette);
 ```
 
 ### Fluent Dark テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
-@include igx-fluent-dark-theme($fluent-excel-palette);
+@include igx-fluent-dark-theme($dark-fluent-excel-palette);
 ```
 
 ### API の概要
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)

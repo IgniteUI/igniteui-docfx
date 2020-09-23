@@ -4,7 +4,7 @@ _description: With Ignite UI for Angular Ripple directive, developers can define
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Ripple components, Angular Ripple controls
 ---
 
-## Ripple
+# Ripple
 <p class="highlight">The Ignite UI for Angular Ripple component creates an animation in response to a touch or a mouse click.</p>
 
 ### Demo
@@ -149,8 +149,8 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 

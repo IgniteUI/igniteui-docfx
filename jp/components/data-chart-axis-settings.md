@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 軸設定
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 軸設定 | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールにより、軸ラベル、タイトル、目盛り、範囲、グリッド線、ギャップ、オーバーラップの構成を完全に制御できます。Ignite UI for Angular グラフ軸について説明します。
+_keywords: Angular charts, data chart, axis settings, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 軸設定, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 _language: ja
 ---
 
-## 軸設定
+# Angular 軸設定
 
 Ignite UI for Angular データ チャート コンポーネントでは、軸は軸線、目盛、タイトル、や軸のラベルのこの外観を設定する基本プロパティを提供します。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-axis-settings-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-settings' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,13 +18,15 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-settings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 軸ラベル
+## 軸ラベル
 
-データ チャート コンポーネントは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。これらのラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
+Ignite UI for Angular データ チャート コンポーネントは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。これらのラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
 
 以下のコード例は、データ チャートのカテゴリ X 軸のラベルのスタイルを設定する方法を示しています。
 
@@ -38,11 +40,11 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 </igx-category-x-axis>
 ```
 
-### 軸タイトル
+## 軸タイトル
 
 データ チャート コンポーネントの軸タイトル機能を使用すると、データ チャートの軸にコンテキスト情報を追加できます。さまざまなフォントスタイル、マージン、および配置を適用するなど、さまざまな方法で軸タイトルの外観をカスタマイズできます。
 
-以下のコード例は、チャートのカテゴリ X 軸のタイトルを設定およびカスタマイズする方法を示しています。
+以下のコード例は、チャートの Ignite UI for Angular カテゴリ X 軸のタイトルを設定およびカスタマイズする方法を示しています。
 
 ```html
 <igx-category-x-axis #xAxis
@@ -54,7 +56,7 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 </igx-category-x-axis>
 ```
 
-### 軸目盛
+## 軸目盛
 
 目盛りは、Angular データ チャート コンポーネントの軸上に点を表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。データ チャート コンポーネントでは、軸上の目盛りの長さ、太さ、および色を変更できます。
 
@@ -69,7 +71,7 @@ Ignite UI for Angular データ チャート コンポーネントでは、軸�
 </igx-category-x-axis>
 ```
 
-### 軸の範囲
+## 軸の範囲
 
 Angular データ チャート コンポーネントでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは対応する軸で [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) と [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#maximumvalue) オプションを設定することによって設定されます。
 
@@ -85,7 +87,7 @@ Angular データ チャート コンポーネントでは、数値軸または�
 </igx-numeric-y-axis>
 ```
 
-### 軸グリッド線
+## 軸グリッド線
 
 Angular データ チャート コンポーネントでは、軸の [`interval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#interval) プロパティによって、主グリッド線と軸ラベルをその軸に描画する頻度が決まります。同様に、[`minorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#minorinterval) プロパティは、それらの主グリッド線の間に副グリッド線が描画される頻度を指定します。
 
@@ -107,7 +109,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 </igx-numeric-y-axis>
 ```
 
-### 軸間隔
+## 軸間隔
 
 データ チャート コンポーネントのカテゴリ軸の [`gap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#gap) プロパティは、一連のデータ チャート間のスペースの量を決定します。
 
@@ -123,7 +125,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 </igx-category-x-axis>
 ```
 
-### 軸の重複
+## 軸の重複
 
 データ チャート コンポーネントのカテゴリ軸の軸 [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
 

@@ -153,30 +153,38 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 以下の手順で azure-pipelines.yml を更新します。
 
 ```cmd
-npm config set @infragistics:registry $(npmRegistry)
+手順:
+
+- script: npm config set @infragistics:registry $(npmRegistry)
+  displayName: 'Npm add registry'
+
+- script: npm config set $(igScope):always-auth=true
+  displayName: 'Npm config'
+
+- script: npm config set $(igScope):_auth=$(token)
+  displayName: 'Npm config auth'
 ```
 
-```cmd
-npm config set always-auth true --scope:@infragistics
-```
+次に、*npm registry*、*scope* および *token* の変数を追加する必要があります。2 つの方法があります。 
 
-```cmd
-npm config set _auth=$(token) --scope:@infragistics
-```
+ #### パイプラインのライブラリ ページで変数グループを定義する方法
+ [この記事](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&amp;tabs=yaml) は、変数グループを使用して複数のパイプラインで制御および利用できる値を保存する方法を説明します。
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 450px)" 
-  src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  data-src="../../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  alt="Azure Pipelines CI yml の更新"
-  title="Azure Pipelines CI yml の更新" />
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 
+  src="../../images/general/azure-ci-variable-groups.jpg"
+  data-src="../../images/general/azure-ci-variable-groups.jpg" 
+  alt="npm Registry および token 変数の設定"
+  title="npm Registry および token 変数の設定" />
 
-**npm registry** および **token** 変数を追加します。
+ #### パイプラインの設定 UI で変数を定義し、YAML ファイルで参照する方法
+
+最も一般的なケースでは、[変数を設定して YAML ファイル内で使用します](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline)。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-new-variable-2.jpg"
   data-src="../../images/general/azure-ci-new-variable-2.jpg" 
-  alt="npm registry および token 変数の設定"
-  title="npm registry および token 変数の設定" />
+  alt="npm Registry および token 変数の設定"
+  title="npm Registry および token 変数の設定" />
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-add-token-variable-1.jpg"
@@ -198,3 +206,15 @@ before_install:
 
 * 暗号化して [.travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml) に追加します。
 * [リポジトリ設定](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)に追加します。
+
+### GitHub Actions の構成
+
+`npm i(ci)` 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions) に追加します: 
+
+```cmd
+- run: echo "@infragistics:registry=$(npmRegistry)" >> ~/.npmrc
+- run: echo "$(igScope):always-auth=true" >> ~/.npmrc
+- run: echo "$(igScope):_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+```
+
+[*シークレット* (暗号化された環境変数)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) を定義してアクセス トークンなどの機密情報に対して GitHub Actions ワークフローでそれらを使用します。

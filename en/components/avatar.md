@@ -4,7 +4,7 @@ _description: Ignite UI for Angular Avatar control enables users to add images, 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Avatar component, Angular Avatar control
 ---
 
-##Avatar
+#Avatar
 
 <p class="highlight">The Ignite UI for Angular Avatar component helps adding initials, images, or material icons to your application.</p>
 <div class="divider"></div>
@@ -15,9 +15,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ export class AppModule {}
 
 The Avatar can be either square or circular, with three size options (small, medium and large). It can be used for displaying initials, images or icons.
 
-####Avatar displaying initials
+#### Avatar displaying initials
 To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
 
 ```html
@@ -62,7 +62,7 @@ Let's enhance our avatar by making it circular and bigger in size.
 
 ```html
 <igx-avatar initials="JS"
-            roundShape="true"
+            [roundShape]="true"
             size="medium">
 </igx-avatar>
 ```
@@ -72,7 +72,7 @@ We can also change the background through the `background` property or set a col
 // avatar.component.scss
 
 .igx-avatar {
-    background:  #e41c77;
+    background: #e41c77;
     color: #000000;
 }
 
@@ -83,12 +83,12 @@ If all went well, you should see something like the following in the browser:
     <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-####Avatar displaying image
+#### Avatar displaying image
 To get an avatar that displays an image, all you have to do is set the image source via the `src` property.
 
 ```html
 <igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
-            roundShape="true"
+            [roundShape]="true"
             size="large">
 </igx-avatar>
 ```
@@ -99,12 +99,12 @@ If all went well, you should see something like the following in the browser:
     <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-####Avatar displaying icon
+#### Avatar displaying icon
 Analogically, the avatar can display an icon via the [`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) property. Currently all icons from the material icon set are supported.
 
 ```html
 <igx-avatar icon="person"
-            roundShape="true"
+            [roundShape]="true"
             size="small">
 </igx-avatar>
 ```
@@ -164,9 +164,9 @@ If all went well, you should see something like the following in the browser:
     <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        view on stackblitz
     </button>
 </div>
 <div class="divider--half"></div>

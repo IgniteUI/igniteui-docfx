@@ -20,6 +20,7 @@ Ignite UI for Angular グリッドコンポーネントの [`igxTransactionServi
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -54,7 +55,7 @@ export class TransactionBaseComponent { }
 
 #### コンポーネントにトランザクション サービスを注入する
 
-`ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enumをインポートする必要があります。
+`ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum をインポートする必要があります。
 
 ```typescript
 import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
@@ -140,7 +141,7 @@ export class TransactionBasePipe implements PipeTransform {
 <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE’ トランザクションが作成されます。 
+`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE' トランザクションが作成されます。 
 
 ```typescript
 public onEdit(): void {
@@ -175,7 +176,7 @@ public isEdited(id): boolean {
 ```
 
 
-`onDelete` イベント ハンドラー内でボタンが押されると、「DELETE」トランザクションが作成されます。 
+`onDelete` イベント ハンドラー内でボタンが押されると、'DELETE' トランザクションが作成されます。 
 
 ```typescript
 public onDelete(): void {
@@ -278,6 +279,13 @@ public onCommit(): void {
 }
 
 ```
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を使用している場合は、primaryKey と childDataKey を引数として期待する [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドのオーバー読み込みを使用することもできます。
+
+```typescript
+public onCommit(): void {
+    this.transactions.commit(this.wishlist, primaryKey, childDataKey);
+}
+````
 
 ### 保留されたトランザクションのクリア
 
@@ -292,3 +300,11 @@ public onClear(): void {
     this.transactions.clear();
 }
 
+```
+
+### その他のリソース
+<div class="divider--half"></div>
+
+* [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+* [トランザクション サービス](transaction.md)
+* [トランザクション サービス クラス階層](transaction-classes.md)

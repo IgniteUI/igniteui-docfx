@@ -4,7 +4,7 @@ _description:
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, printing styles, @media print 
 ---
 
-## Printing styles
+# Printing styles
 <p class="highlight">The Ignite UI for Angular theming engine provides some default printing styles, which make sure that our components have at least the bare minimum to look decent when they are printed on a paper</p>
 <div class="divider--half"></div>
 

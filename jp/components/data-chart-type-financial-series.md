@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ファイナンシャル
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | ファイナンシャル ローソク足 | ファイナンシャル OHLC | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して、ローソク足や OHLC などのファイナンシャル チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, financial charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ファイナンシャル チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 _language: ja
 ---
 
-## ファイナンシャル シリーズ
+# Angular ファイナンシャル シリーズ
 
 このトピックは、Angular データ チャート コンポーネントのファイナンシャル シリーズのさまざまなタイプを説明します。ファイナンシャル シリーズはシンプルで最も一般的なチャート シリーズ フォームのグループで、株価などの財務データを取得し、OHLC バーやろうそく足のコレクションとして水平線と一緒に描画します ([`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) など)。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,22 +18,24 @@ _language: ja
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### ファイナンシャル シリーズのタイプ
+## ファイナンシャル シリーズのタイプ
 
 データ チャートは、2 つのファイナンシャル オーバーレイ、30 種類以上の財務指標、高値、低値、始値、終値などの価格をプロットする [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) をサポートします。[`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html#displaytype) プロパティを使用して OHLC バーやろうそく足で株価を表示できます。シリーズは、物価トレンドの変化の測定や検証のために多数のその他の財務指標と組み合わせてよく使用されます。
 
-### ファイナンシャル オーバーレイ
+## ファイナンシャル オーバーレイ
 
 ファイナンシャル オーバーレイは通常 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) の背面に表示して、株価の傾向を表します。オーバーレイは、Y-Axis 値の同じスケールを使用するため、[`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) をプロットする同じ Data Chart でプロットできます。以下のリストは、ファイナンシャルオーバーレイのすべてのタイプを表示します。
 
 -   [`IgxBollingerBandsOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html) (BBO) は、価格の標準偏差に基づいて価格変動を幅に取り入れます。バンドは標準偏差が増加すると幅が広くなり、標準偏差が減少すると幅が狭くなります。また、バンドは移動平均で平滑化されます。標準偏差およびユーザーが調整可能な平滑化期間は別にして、BollingerBandsOverlay 幅のスケールに影響を及ぼすユーザーが調整可能な乗数もあります。、
 -   [`IgxPriceChannelOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpricechanneloverlaycomponent.html) (PCO) は、価格変動または平行線で価格の経時変化です。下の線はトレンド ラインで低い価格に描画されます。上の線はチャネル ラインで高値に基づきます。チャネルは任意の期間のトレンド方向を示します。価格チャネルまたはトレンドは、上、下または横が可能です。
 
-### 財務指標
+## 財務指標
 
 財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのインジケーターは、同じ Y 軸スケールを共有しないため、通常 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) を使ってチャートの上と下の別のチャートに表示されます。ただし、チャート コントロールは同じプロット領域で価格シリーズとインジケーターの描画をサポートします。複数軸の使用や軸を共有することもできます。詳細については、[軸共有と複数軸](data-chart-axis-sharing.md)のトピックを参照してください。更にすべての財務指標に [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html#displaytype) プロパティがあり、インジケーターをライン、柱状、エリアを使用して描画するかどうかを決定します。以下のリストは、ファイナンシャル インジケーターのすべてのタイプを表示します。
 
@@ -72,17 +74,17 @@ _language: ja
 -   [`IgxWeightedCloseIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxweightedcloseindicatorcomponent.html) (WCI) は、その日の高値、安値、終値の平均を表す [`IgxTypicalPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtypicalpriceindicatorcomponent.html) に似ている財務指標です。ただし、このインジケーターは終値をより強調し、単純平均を計算する際に 2 回含まれます。
 -   [`IgxWilliamsPercentRIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwilliamspercentrindicatorcomponent.html) (WPRI) は、ストキャスティクス オシレーターに類似しています。ただし、スケールは 0 ~ -100 の範囲です。過剰買いセキュリティおよび過剰売りセキュリティを識別する場合に便利です。このインジケーターは、期間の最高値と現在の終値の差異と期間の最高値から最安値を減算した結果を除算して計算されます。
 
-### 軸の要件
+## 軸の要件
 
 Angular データ チャート コンポーネントは、さまざまなタイプの軸を提供しますが、すべてのファイナンシャル シリーズは `Y-Axis` として [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)、`X-Axis` として [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)、[`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)、または [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html) のみ使用できます。
 
-### データの要件
+## データの要件
 
 以下は、ファイナンシャル シリーズ、インジケーター、オーバーレイのデータ要件です。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースは、少なくともデータ項目を 1 つ含む必要があり、含まない場合はチャートでファイナンシャル シリーズを描画しません。
--   すべてのデータ項目は、ファイナンシャル軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)) の `Label` プロパティにマッピングされるべき少なくとも 1 つのデータ列 (文字列または日時) を含む必要があります。
+-   すべてのデータ項目は、ファイナンシャル軸 ([`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)) の [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) プロパティにマッピングされるべき少なくとも 1 つのデータ列 (文字列または日時) を含む必要があります。
 -   すべてのデータ項目は、ファイナンシャル シリーズのプロパティを使用してマッピングされる 5 つの数値データ列を含む必要があります。[`openMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#openmemberpath)、[`highMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#highmemberpath)、[`lowMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#lowmemberpath)、[`closeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#closememberpath)、[`volumeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#volumememberpath)。
 
 上記データ要件を満たすデータソースとして [SampleFinancialData](data-chart-data-sources-financial.md) を使用できます。
@@ -91,7 +93,7 @@ Angular データ チャート コンポーネントは、さまざまなタイ�
 public dataSource: any[] = SampleFinancialData.create();
 ```
 
-### モジュールの要件
+## モジュールの要件
 
 ファイナンシャル シリーズには以下のモジュールが必要です。
 
@@ -121,7 +123,7 @@ import { IgxFinancialPriceSeriesModule } from 'igniteui-angular-charts';
 })
 ```
 
-### コード例
+## コード例
 
 このコードは [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html)、[`IgxBollingerBandsOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html)、[`IgxMedianPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmedianpriceindicatorcomponent.html) でデータ チャートのインスタンスを作成する方法を示します。これらのシリーズは同じ  X-Axis と Y-Axis を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[軸共有と複数軸](data-chart-axis-sharing.md) トピックを参照してください。
 

@@ -19,6 +19,7 @@ _language: ja
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -136,9 +137,9 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 
 ## 機能の統合
 
-- すべてのデータ変更操作は行変更操作を終了し、現在の行の変更をサブミットします。並べ替え、変更、フィルタリング条件、ページングなどが含まれます。
+- すべてのデータ変更操作は行変更操作を終了し、現在の行の変更をサブミットします。ソート、変更、フィルタリング条件、ページングなどが含まれます。
 
-- 行編集が終了した後に集計が更新されます。同様に並べ替えやフィルタリングなどの他の機能が有効になります。
+- 行編集が終了した後に集計が更新されます。同様にソートやフィルタリングなどの他の機能が有効になります。
 
 
 ## 行編集オーバーレイのカスタマイズ

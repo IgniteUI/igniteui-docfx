@@ -1,85 +1,98 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Bar and Column Chart
-_description: Create an area chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Bar and Column Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create bar and column charts such as bar chart, stacked column chart, waterfall chart and many more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
 
-## Bar and Column Charts
+# Angular Bar and Column Charts
+
+The Ignite UI for Angular provides the following types of column charts:
 
 <section class="feature__container">
     <style>
-        .linkContent {
+        .linkContent,
+        .linkContent:hover {
             display: flex;
             flex-flow: column;
             align-items: center;
+            box-shadow: none;
         }
         .link {
             display: inline-block;
             font-size: 1.0rem;
+            color: #0099ff;
+            cursor: pointer;
+            padding-top: 1.0rem;
+            margin-right: 1.0rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,.15);
         }
-        img {
+        .link:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,.25);
+        }
+        .img {
             width: 250px;
             height: 250px;
-            margin-top: -20px;
+            box-shadow: none;
         }
     </style>
     <body>
-        <a class="link" href="data-chart-type-category-bar-series.md">
+        <div class="link" href="data-chart-type-category-bar-series.md">
             <div class="linkContent">
-                <h4>Bar Chart</h4>
-                <img src="../images/charts/data-chart-type-category-bar-series.png">
+                <div>Bar Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-bar-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-category-column-series.md">
+        </div>
+        <div class="link" href="data-chart-type-category-column-series.md">
             <div class="linkContent">
-                <h4>Column Chart</h4>
-                <img src="../images/charts/data-chart-type-category-column-series.png">
+                <div>Column Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-column-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-range-column-series.md">
+        </div>
+        <div class="link" href="data-chart-type-range-column-series.md">
             <div class="linkContent">
-                <h4>Range Column Chart</h4>
-                <img src="../images/charts/data-chart-type-range-column-series.png">
+                <div>Range Column Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-range-column-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-category-waterfall-series.md">
+        </div>
+        <div class="link" href="data-chart-type-category-waterfall-series.md">
             <div class="linkContent">
-                <h4>Waterfall Chart</h4>
-                <img src="../images/charts/data-chart-type-category-waterfall-series.png">
+                <div>Waterfall Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-category-waterfall-series.png">
             </div>
-        </a>
+        </div>
         <br>
-        <a class="link" href="data-chart-type-stacked-bar-series.md">
+        <div class="link" href="data-chart-type-stacked-bar-series.md">
             <div class="linkContent">
-                <h4>Stacked Bar Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-bar-series.png">
+                <div>Stacked Bar Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-bar-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-stacked-column-series.md">
+        </div>
+        <div class="link" href="data-chart-type-stacked-column-series.md">
             <div class="linkContent">
-                <h4>Stacked Column Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-column-series.png">
+                <div>Stacked Column Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-column-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-stacked-100-bar-series.md">
+        </div>
+        <div class="link" href="data-chart-type-stacked-100-bar-series.md">
             <div class="linkContent">
-                <h4>Stacked 100 Bar Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-100-bar-series.png">
+                <div>Stacked 100 Bar Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-100-bar-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-stacked-100-column-series.md">
+        </div>
+        <div class="link" href="data-chart-type-stacked-100-column-series.md">
             <div class="linkContent">
-                <h4>Stacked 100 Column Chart</h4>
-                <img src="../images/charts/data-chart-type-stacked-100-column-series.png">
+                <div>Stacked 100 Column Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-stacked-100-column-series.png">
             </div>
-        </a>
+        </div>
         <br>
-        <a class="link" href="data-chart-type-radial-column-series.md">
+        <div class="link" href="data-chart-type-radial-column-series.md">
             <div class="linkContent">
-                <h4>Radial Column Chart</h4>
-                <img src="../images/charts/data-chart-type-radial-column-series.png">
+                <div>Radial Column Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-radial-column-series.png">
             </div>
-        </a>
+        </div>
     </body>
 </section>

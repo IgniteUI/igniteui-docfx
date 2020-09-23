@@ -1,19 +1,19 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ハイライト
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 強調表示 | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用すると、グラフの領域を強調表示できます。$Product Name$ 強調表示機能について説明します。
+_keywords: Angular charts, data chart, highlighting, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 強調表示, インフラジスティックス 
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## ハイライト
+# Angular ハイライト
 
-Angular データ チャート コンポネントを使用すると、データ チャートにプロットされたシリーズを強調表示し、マウスが移動している項目またはシリーズを視覚化、または強調表示レイヤーを使用して視覚化できます。 
+Angular データ チャート コンポネントを使用すると、データ チャートにプロットされたシリーズを強調表示し、マウスが移動している項目またはシリーズを視覚化、または強調表示レイヤーを使用して視覚化できます。
 
 > [!NOTE]
 > 注: ハイライトは、積層型シリーズで現在サポートされていません。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -21,6 +21,8 @@ Angular データ チャート コンポネントを使用すると、データ 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -32,14 +34,14 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 @NgModule({
-    imports: [ 
-        IgxDataChartInteractivityModule, 
+    imports: [
+        IgxDataChartInteractivityModule,
         IgxDataChartAnnotationModule,
     ]
 })
 ```
 
-### シリーズ ビジュアルをハイライト
+## シリーズ ビジュアルをハイライト
 
 Angular データ チャート コンポネントのシリーズ ハイライト機能を使用すると、単一のアイテムまたはシリーズ全体を強調表示できます。たとえば、折れ線シリーズを使用している場合、ハイライトは線の形状全体を 1 つの単一形状として強調表示します。ただし、列シリーズなどのシリーズの各項目にハイライトを適用することはできます。
 
@@ -70,7 +72,7 @@ Angular データ チャート コンポネントのシリーズ ハイライト
 </igx-data-chart>
 ```
 
-### シリーズ カテゴリをハイライト
+## シリーズ カテゴリをハイライト
 
 カテゴリ軸または Angular データ チャート コンポネント内のすべてのカテゴリ軸に対する注釈レイヤーを表します。軸に、軸の主グリッド線の間に配置されるシリーズ、たとえば列シリーズなどが含まれる場合、現在のカテゴリを塗りつぶすシェイプが描画されます。
 
@@ -108,7 +110,7 @@ Angular データ チャート コンポネントのシリーズ ハイライト
 </igx-data-chart>
 ```
 
-### シリーズ項目をハイライト
+## シリーズ項目をハイライト
 
 カテゴリ項目ハイライト レイヤーは、縞模様の図形またはマーカーをその位置で描画することにより、カテゴリ軸を使用してシリーズの項目を強調表示します。
 

@@ -99,17 +99,19 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 | テーマ                                                                        | Mixin                                                                                             |  スキーマ                   |  カラーパレット                                            | 利用可能バージョン |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
 | [**Material (base)**](./themes-list/material.html)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
-| [**Material (light)**](./themes-list/material.html)                          |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-schema          ` | $default-palette                                          |      **6.2 +**       |
-| [**Material (dark)**](./themes-list/material.html)                           |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-schema           ` | $dark-palette                                             |      **6.2 +**       |
-| [**Fluent**](./themes-list/fluent.html)                                      |  [igx-fluent-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-theme)                 | `$light-fluent-schema   ` | $fluent-excel-palette <br> $fluent-word-palette           |      **8.2 +**       |
-| [**Fluent (dark)**](./themes-list/fluent.html)                               |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $fluent-excel-dark-palette <br> $fluent-word-dark-palette |      **8.2 +**       |
-| [**Bootstrap**](./themes-list/bootstrap.html)                                |  [igx-bootstrap-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-theme)            | `$light-bootstrap-schema` | $bootstrap-palette                                        |      **9.0 +**       |
-| [**Bootstrap (dark)**](./themes-list/bootstrap.html)                         |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $bootstrap-dark-palette                                   |      **9.0 +**       |
+| [**Material (light)**](./themes-list/material.html)                          |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
+| [**Material (dark)**](./themes-list/material.html)                           |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
+| [**Fluent**](./themes-list/fluent.html)                                      |  [igx-fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
+| [**Fluent (dark)**](./themes-list/fluent.html)                               |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
+| [**Bootstrap**](./themes-list/bootstrap.html)                                |  [igx-bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
+| [**Bootstrap (dark)**](./themes-list/bootstrap.html)                         |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
+| [**Indigo**](./themes-list/indigo.html)                                |  [igx-indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
+| [**Indigo (dark)**](./themes-list/indigo.html)                         |  [igx-indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
 
 > [!NOTE]
 > すべてのハイレベルなテーマ mixin は、基本の `igx-theme` mixin をラップすることに注意してください。
 
-すべてのテーマ mixin は、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` mixin を使用して、新しいテーマを作成しましょう。
+すべてのテーマ mixin は、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-light-theme` mixin を使用して、新しいテーマを作成しましょう。
 
 ```scss
 //最初に Ignite UI テーマ ライブラリをインポートします。
@@ -126,7 +128,7 @@ $my-color-palette: igx-palette(
 //重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
 //生成したカラーパレットを igx-bootstrap-theme mixin に渡します。
-@include igx-bootstrap-theme($my-color-palette);
+@include igx-bootstrap-light-theme($my-color-palette);
 ```
 
 ### ブラウザー サポート

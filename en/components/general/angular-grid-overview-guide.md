@@ -1,10 +1,10 @@
 ---
-title: Angular Grid and Angular App Development - A Complete Guide 
+title: A Complete Guide to Angular Grid and Angular App Development
 _description: Modern data grids & charts can be complex and include a range of functionalities. Learn about Angular Grids & Angular App Development with our complete guide!
 _keywords: angular, angular app development, infragistics 
 ---
 
-## Angular Grid and Angular App Development: A Complete Guide 
+# A Complete Guide to Angular Grid and Angular App Development
 
 ### What is an Angular Data Grid? 
 

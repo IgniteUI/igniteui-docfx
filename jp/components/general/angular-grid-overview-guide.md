@@ -11,11 +11,11 @@ _language: ja
 
 Angular データ グリッドは、一連の行と列で表データを表示するために使用されるコンポーネントです。テーブルとも呼ばれるデータ グリッドは、Microsoft Excel などの一般的なソフトウェアでデスクトップの世界でよく知られています。グリッドはデスクトップ プラットフォームで長い間利用されてきますが、最近 Angular UI などの Web ア プリ UI の一部になりました。  
 
-最新のグリッドは複雑で、データ バインディング、編集、Excel のようなフィルタリング、カスタム並べ替え、グループ化、行の並べ替え、行と列の固定、行の集計、Excel、CSV、PDF 形式のエクスポートなど、さまざまな機能が含まれる場合があります。  
+最新のグリッドは複雑で、データ バインディング、編集、Excel のようなフィルタリング、カスタム ソート、グループ化、行のソート、行と列の固定、行の集計、Excel、CSV、PDF 形式のエクスポートなど、さまざまな機能が含まれる場合があります。  
 
 ### Angular Data Grid の利点 
 
-Angular データ グリッドは、大量のデータをすばやく保存して並べ替える必要がある場合に重要です。これには、大量の高速データを頻繁に使用する金融や保険などの業界が含まれます。  これらの企業の成功は、データ グリッドの機能とパフォーマンスに依存します。たとえば、在庫をマイクロ秒単位で決定する場合、データグ リッドが遅延時間やちらつきのない状態で実行する必要があります。 
+Angular データ グリッドは、大量のデータをすばやく保存してソートする必要がある場合に重要です。これには、大量の高速データを頻繁に使用する金融や保険などの業界が含まれます。これらの企業の成功は、データ グリッドの機能とパフォーマンスに依存します。たとえば、在庫をマイクロ秒単位で決定する場合、データグ リッドが遅延時間やちらつきのない状態で実行する必要があります。 
 
 ### Ignite UI - Angular アプリ開発のフレームワーク 
 
@@ -69,7 +69,7 @@ Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用す�
     </igx-column>
 </igx-grid>
 ```
-グリッド自体は、グリッドの列コレクションを定義し、並べ替えやページングなどの列ごとの機能を有効にするために使用される IgxColumnComponent などのさまざまなコンポーネントで構成されます。 
+グリッド自体は、グリッドの列コレクションを定義し、ソートやページングなどの列ごとの機能を有効にするために使用される IgxColumnComponent などのさまざまなコンポーネントで構成されます。 
 
 グリッドの各列は別のテンプレートを持つことができます。列にグリッド モジュール ディレクティブの 1 つでデコレートした ng-template タグが必要です。 
 
@@ -182,9 +182,9 @@ export class MyComponent implements OnInit {
 ```
 チャート コンポーネントにデータソースを設定すると、すべてのシリーズに適用されますが、データチャートに追加された各シリーズに異なるデータソースを設定することもできます。 
 
-### 並べ替え、フィルタリング、ページネーション 
+### ソート、フィルタリング、ページネーション 
 
-Angular データ グリッドは、簡単な並べ替え、フィルタリング、ページネーションをサポートします。豊富な API と直感的な機能のセットアップにより、Ignite UI for Angular コンポーネントを簡単に使用できます。 
+Angular データ グリッドは、簡単なソート、フィルタリング、ページネーションをサポートします。豊富な API と直感的な機能のセットアップにより、Ignite UI for Angular コンポーネントを簡単に使用できます。 
 
 ```html
 <igx-grid #grid1 (onSortingDone)="removeSorting($event)"
@@ -202,7 +202,7 @@ Angular データ グリッドは、簡単な並べ替え、フィルタリン�
 
  - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-のフィルタリング概要 "Grid のフィルタリング概要")。  
 
- - 並べ替え、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
+ - ソート、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
 
  - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html "高度なフィルタリングの概要")。 
 
@@ -257,7 +257,7 @@ Ignite Angular UI ツールセットには[データ分析機能](https://jp.inf
 
 ### コード生成とデザインのためのツール 
 
-Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design システム") の一部で、[Indigo.Design UI Kit](https://jp.infragistics.com/products/indigo-design/help/creating-an-artboard.html "はじめてのアートボード作成") を使用して Sketch で作成したデザインから[ネイティブな Angular コード](https://jp.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio プラグイン")を生成できます。さまざまな編集およびフィルタリングモードをサポートするモバイル対応またはデータ密度の高いグリッドを生成できます。また、並べ替え、ページング、集計、グループ化などの一般的なグリッド機能の多くを使用することもできます。さらに、各列で移動、サイズ変更、非表示、ピン固定などのさまざまな操作を指定して、デザイン時に高度なデータ操作シナリオを実現し、数分で実行できる完璧なピクセルのユーザー インターフェイスを実現できます。 
+Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design システム") の一部で、[Indigo.Design UI Kit](https://jp.infragistics.com/products/indigo-design/help/creating-an-artboard.html "はじめてのアートボード作成") を使用して Sketch で作成したデザインから[ネイティブな Angular コード](https://jp.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio プラグイン")を生成できます。さまざまな編集およびフィルタリングモードをサポートするモバイル対応またはデータ密度の高いグリッドを生成できます。また、ソート、ページング、集計、グループ化などの一般的なグリッド機能の多くを使用することもできます。さらに、各列で移動、サイズ変更、非表示、ピン固定などのさまざまな操作を指定して、デザイン時に高度なデータ操作シナリオを実現し、数分で実行できる完璧なピクセルのユーザー インターフェイスを実現できます。 
 
 ### パフォーマンスのベンチマーク 
 

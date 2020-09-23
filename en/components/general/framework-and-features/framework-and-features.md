@@ -4,7 +4,7 @@ _description: Learn how to configure ARIA Acessibility and directionality of you
 _keywords: aria support, a11y, ignite ui for angular, infragistics
 ---
 
-## Frameworks and features
+# Frameworks and features
 
 ### Accessibility and Directionality
 
@@ -30,7 +30,7 @@ The precedence takes the inner tag which in the above case is the attribute at t
 
 ##### Step 2 - Notifying the [theming engine](../../themes/index.md) for the respective direction.
 
-Setting the `$direciton` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
+Setting the `$direction` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
 
 ```scss 
 @include igx-core($direction: rtl);

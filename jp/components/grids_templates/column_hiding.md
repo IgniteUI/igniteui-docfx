@@ -25,7 +25,7 @@ _language: ja
 
 ### グリッドの列非表示
 
-Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) は、ユーザーが UI を介して直接、または Angle コンポーネントを使用した列の非表示が可能です。Material UI Grid には組み込み列非表示 **UI** があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
+Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーが **UI** を介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
 #### デモ
 
@@ -35,6 +35,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -45,6 +46,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -55,6 +57,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchicalgrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -62,7 +65,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 }
 
 ### @@igComponent の設定
-@@igComponent を作成してからデータをバインドします。列でフィルタリングと並べ替えも有効にします。
+@@igComponent を作成してからデータをバインドします。列でフィルタリングとソートも有効にします。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -152,7 +155,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 ```html
 <!--columnHiding.component.html-->
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers">
+    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true" [columnHiding]="true" toolbarTitle="Singers">
     ...
  </igx-hierarchical-grid>
 </div>
@@ -211,7 +214,7 @@ Ignite UI for Angular @@igComponent の[`IgxColumnHidingComponent`]({environment
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers" 
+    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true" [columnHiding]="true" toolbarTitle="Singers" 
     columnHidingTitle="Column Hiding" hiddenColumnsText="Hidden">
  </igx-hierarchical-grid>
 </div>
@@ -233,9 +236,10 @@ public ngAfterViewInit() {
 このトピックのはじめにあるコードの結果は、[列非表示のデモ](#デモ)セクションで確認できます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ### カスタム列の非表示 UI
 
-[`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) を手動で定義してページのどこかに配置する場合を仮定します。マークアップでコンポーネントのインスタンスを作成して簡単に行うことができます。これには `IgxColumnHidingModule` を使用します。
+[`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を手動で定義し、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) を追加して、その目的がわかるようにして、ページの任意の場所に配置します。ただし、最初に、`IgxColumnActionsModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -243,25 +247,25 @@ public ngAfterViewInit() {
 ...
 import {
     ...
-    IgxColumnHidingModule 
+    IgxColumnActionsModule 
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxColumnHidingModule],
+    imports: [..., IgxColumnActionsModule],
 })
 export class AppModule {}
 ```
 
-次に [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html) を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの [`columns`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columns) プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
+次に [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの [`columns`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columns) プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns">
-    </igx-column-hiding>
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns">
+    </igx-column-actions>
 </div>
 <div class="gridContainer">
     <@@igSelector #@@igObjectRef [data]="data" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
@@ -275,8 +279,8 @@ export class AppModule {}
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns">
-    </igx-column-hiding>
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns">
+    </igx-column-actions>
 </div>
 <div class="gridContainer">
     <@@igSelector #@@igObjectRef [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%" height="500px" columnWidth="200px">
@@ -306,7 +310,7 @@ export class AppModule {}
     border: 1px gray;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(50, 50, 50, 0.25);
-    igx-column-hiding {
+    igx-column-actions {
         height: 460px;
     }
 }
@@ -328,24 +332,24 @@ export class AppModule {}
 
 #### タイトルおよびフィルター プロンプトの追加
 
-列非表示コンポーネント機能を拡張するために [`title`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#title) および [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#filtercolumnsprompt) プロパティを設定します。[`title`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#title) は一番上に表示され、[`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#filtercolumnsprompt) は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
+列非表示コンポーネント機能を拡張するために [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) および [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) プロパティを設定します。[`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) は一番上に表示され、[`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
 
 ```html
 <!--columnHiding.component.html-->
 
 <div class="columnHidingContainer">
-    <igx-column-hiding #columnHidingUI [columns]="@@igObjectRef.columns"
+    <igx-column-actions igxColumnHiding #columnHidingUI [columns]="@@igObjectRef.columns"
                        title="Column Hiding" filterColumnsPrompt="Type here to search">
-    </igx-column-hiding>
+    </igx-column-actions>
 </div>
 ```
 
 #### 列の表示順序オプションの追加
 
-列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columndisplayorder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
+列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
 
-- **Alphabetical** (列をアルファベット順で並べ替え)
-- **DisplayOrder** (列をグリッドで表示される順序によって並べ替え)
+- **Alphabetical** (列をアルファベット順でソート)
+- **DisplayOrder** (列をグリッドで表示される順序によってソート)
 
 このオプションにラジオ ボタンを追加します。[**IgxRadio**](../radio_button.md) モジュールを追加します。
 
@@ -425,6 +429,7 @@ export class AppModule {}
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -435,7 +440,8 @@ export class AppModule {}
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz　で開く</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
@@ -443,22 +449,22 @@ export class AppModule {}
 
 ### スタイル設定
 
-列非表示コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
+列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単なアプローチを使用して、[`igx-column-hiding-theme`]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
+最も簡単なアプローチを使用して、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
 
 ```scss
-$custom-column-hiding-theme: igx-column-hiding-theme(
+$custom-column-actions-theme: igx-column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
 ```
 
-ご覧のように `igx-column-hiding-theme` は列非表示コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
+ご覧のように `igx-column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
 $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
@@ -469,23 +475,23 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 最後にそれぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
 
 ```scss
-@include igx-column-hiding($custom-column-hiding-theme);
-.igx-column-hiding {
+@include igx-column-actions($custom-column-actions-theme);
+.igx-column-actions {
     @include igx-button($custom-button);
 }
 ```
 
 >[!NOTE]
->`.Igx-column-hiding` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。
+>`.igx-column-actions` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`ペネトレーション`する必要があります。
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
     ::ng-deep {
-        @include igx-column-hiding($custom-column-hiding-theme);
-        .igx-column-hiding {
+        @include igx-column-actions($custom-column-actions-theme);
+        .igx-column-actions {
             @include igx-button($custom-button);
         }
     }
@@ -508,7 +514,7 @@ $custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-column-hiding-theme: igx-column-hiding-theme(
+$custom-column-actions-theme: igx-column-actions-theme(
     $palette: $custom-palette,
     $title-color: igx-color($custom-palette, "secondary", 400),
     $background-color: igx-color($custom-palette, "primary", 200)
@@ -526,11 +532,11 @@ $custom-button: igx-button-theme(
 
 #### スキーマの使用
 
-テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 ```scss
-// Extending the dark column hiding schema
-$custom-column-hiding-schema: extend($_dark-column-hiding,
+// Extending the dark column actions schema
+$custom-column-actions-schema: extend($_dark-column-actions,
     (
         title-color:(
             igx-color: ("secondary", 400)
@@ -558,12 +564,12 @@ $custom-button-schema: extend($_dark-button,
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-column-hiding: $custom-column-hiding-schema,
+    igx-column-actions: $custom-column-actions-schema,
     igx-button: $custom-button-schema
 ));
 
-// Defining column-hiding-theme with the global dark schema
-$custom-column-hiding-theme: igx-column-hiding-theme(
+// Defining column-actions-theme with the global dark schema
+$custom-column-actions-theme: igx-column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
@@ -585,6 +591,7 @@ $custom-button: igx-button-theme(
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -595,6 +602,7 @@ $custom-button: igx-button-theme(
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-column-hiding-toolbar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -605,6 +613,7 @@ $custom-button: igx-button-theme(
 </div>
 <br/>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchicalgrid-column-hiding-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchicalgrid-column-hiding-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
@@ -621,8 +630,8 @@ $custom-button: igx-button-theme(
 
 以下は、列非表示 UI のその他の API です。
 
-* [IgxColumnHidingComponent]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
-* [IgxColumnHidingComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
+* [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
+* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
