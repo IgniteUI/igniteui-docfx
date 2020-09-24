@@ -1,7 +1,7 @@
 ---
-title: List View コンポーネント
-_description: Ignite UI for Angular List View コンポーネントを使用すると、ネイティブ Angular フレームワークで行にデータを任意のテンプレートを使用して表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular List View コンポーネント, Angular List View コントロール
+title: Angular List コンポーネント | List モジュール | データ視覚化 | インフラジスティックス
+_description: テンプレートを使用すると、Angular List ビュー コンポーネントを使用して、行内のデータをシームレスかつ直感的に表示できます。Ignite UI for Angular を今すぐ使い始めましょう!
+_keywords: angular list, angular コンポーネント, ignite ui for angular, angular list モジュール, angular list コンポーネント
 _language: ja
 ---
 
