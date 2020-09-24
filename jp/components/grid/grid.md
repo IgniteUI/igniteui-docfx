@@ -1,7 +1,7 @@
 ---
-title: Angular Data Grid | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material Table に基づいた Ignite UI for Angular データ グリッドの使用方法について。さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: angular data grid, igniteui for angular, インフラジスティックス
+title: Angular データ グリッド | Angular グリッド & 図コンポーネント | インフラジスティックス
+_description: Ignite UI for Angular データ グリッドを使用して、さまざまなイベントを含むタッチ レスポンシブな Angular コンポーネントを作成します。今すぐデータ視覚化を強化しましょう!
+_keywords: angular データ グリッド, angular コンポーネント, ignite ui for angular, angular グリッド, angular 図コンポーネント
 _language: ja
 ---
 
@@ -118,7 +118,7 @@ public grid: IgxGridComponent;
 </igx-grid>
 ```
 
-グリッドの各列は別のテンプレートを持つことができます。列にグリッド モジュール ディレクティブの 1 つでデコレートした `ng-template` タグが必要です。
+グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
 
 #### ヘッダー テンプレート
 
