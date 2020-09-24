@@ -152,7 +152,7 @@ export class MyOverlayComponent {
         if (!this._overlayId) {
             this._overlayId = this.overlayService.attach(MyDynamicComponent, {
                 target: this.myAnchorButton.nativeElement,
-                positionStrategy: new ConnectedPositioningStrategy({})
+                positionStrategy: new ConnectedPositioningStrategy()
             });
         }
         this.overlayService.show(this._overlayId);
