@@ -5,7 +5,7 @@ _keywords: angular データ グリッド, angular コンポーネント, ignite
 _language: ja
 ---
 
-## Angular データ グリッドの概要と構成
+# Angular データ グリッドの概要と構成
 
 <p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
