@@ -84,7 +84,7 @@ const overlaySettings: OverlaySettings = {
     // Set the target where content should be shown
         target: this.buttonElement.nativeElement
     // Pass in the positioning strategy
-    positionStrategy: new ConnectedPositioningStrategy({})
+    positionStrategy: new ConnectedPositioningStrategy()
 };
 const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
