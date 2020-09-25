@@ -1,18 +1,18 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | ヒート画像マップ | インフラジスティックス
-_description: マップを使用すると、ヒート画像マップを表示できます。詳細については、サンプルおよび使用方法を参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | インフラジスティックス
+_description: インフラジスティックスの Angular JavaScript マップを使用してヒートマップ画像を表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
+_keywords: Angular map, heat map imagery, Ignite UI for Angular, Infragistics, Angular マップ, ヒートマップ画像, インフラジスティックス
 mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
 ---
 
-## ヒート画像の表示
+# Angular ヒート画像の表示
 
-Ignite UI for Angular マップ コントロールには、Shape ファイルをタイル シリーズにロードして地理空間データをロードすることにより、ShapeDataSource によって生成される ShapeFileRecords を使用して、ヒートマップ画像を表示する機能があります。
+Ignite UI for Angular マップ コントロールには、Shape ファイルをタイル シリーズにロードして地理空間データをロードすることにより、`ShapeDataSource` によって生成される `ShapeFileRecords` を使用して、ヒートマップ画像を表示する機能があります。
 
 このトピックを読み進めるための前提条件として、[シェープ ファイルを地理的データにバインディング](geo-map-binding-shp-file.md)をお読みください。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-display-heat-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-heat-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -21,6 +21,7 @@ Ignite UI for Angular マップ コントロールには、Shape ファイルを
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-display-heat-imagery-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -32,7 +33,7 @@ Ignite UI for Angular マップ コントロールには、Shape ファイルを
 
 [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) は対数スケールも使用できます。これを使用する場合は、[`useLogarithmicScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#uselogarithmicscale) プロパティを `true` に設定できます。
 
-### Web Worker
+## Web Worker
 
 また、[`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) は、Web Worker が、別のスレッドでシェイプ ファイルからタイル イメージをロードする際の重いリフティングをサポートしています。これにより、ヒートマップ機能を使用する際に地理マップのパフォーマンスが大幅に向上します。ジェネレーターでWebワーカーを使用するには、[`useWebWorkers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#usewebworkers) プロパティを `true` に設定し、[`webWorkerInstance`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html#webworkerinstance) プロパティを Web Worker のインスタンスに設定できます。
 
@@ -52,7 +53,7 @@ HeatTileGeneratorWebWorker.start();
 export default {} as typeof Worker & (new () => Worker);
 ```
 
-### 依存関係
+## 依存関係
 
 <!-- Angular -->
 
@@ -63,7 +64,7 @@ import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
 import { IgxTileGeneratorMapImagery } from 'igniteui-angular-maps';
 ```
 
-### ヒートマップの作成
+## ヒートマップの作成
 
 以下のコードスニペットは、人口ベースのヒートマップを Ignite UI for Angular マップ コンポーネントに表示する方法を示しています。
 

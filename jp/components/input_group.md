@@ -85,8 +85,25 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### Input タイプ
+#### Input タイプと Input グループ タイプ トークン
 入力グループのスタイルは、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用して変更できます。サポートされている入力グループ コンポーネントは、`line` (タイプが指定されていない場合のデフォルト)、`border`、 `box` および `search` です。`line`、`border` および `box` タイプは、マテリアル デザイン テーマ専用に作成されています。これらのタイプを他のテーマで設定しても、入力グループの外観には影響しません。
+
+特定の型を宣言的に設定する例:
+```html
+<igx-input-group type="border">
+```
+
+[IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) インジェクション トークンを使用すると、すべての入力グループ インスタンスのタイプをアプリケーション レベルで指定できます。すべての関連コンポーネントを一度に簡単にスタイル設定できます。
+タイプを設定するには、[IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) インジェクション トークンを使用して DI プロバイダーを作成します。
+
+```typescript
+providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
+```
+
+>注:
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。  
+>`igniteui-angular` フォーム コントロールのほとんどは、内部で input-group コンポーネントを使用するか、カスタム テンプレートを使用します。グローバル トークンの設定は、これらのコンポーネントにも影響します。
+
 
 <div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>

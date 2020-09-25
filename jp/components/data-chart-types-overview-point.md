@@ -1,60 +1,73 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ポイント チャート
-_description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示するエリア チャートを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | ポイント チャート | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャートコ ントロールを使用して、散布マーカー チャート、散布バブル チャート、極座標散布チャートなどのポイント チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, point charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ポイント チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## Point Charts
+# Angular ポイント チャート
+
+Ignite UI for Angular は以下のタイプのポイント チャートを提供します。
 
 <section class="feature__container">
     <style>
-        .linkContent {
+        .linkContent,
+        .linkContent:hover {
             display: flex;
             flex-flow: column;
             align-items: center;
+            box-shadow: none;
         }
         .link {
             display: inline-block;
             font-size: 1.0rem;
+            color: #0099ff;
+            cursor: pointer;
+            padding-top: 1.0rem;
+            margin-right: 1.0rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,.15);
         }
-        img {
-            width: 350px;
-            height: 350px;
-            margin-top: -20px;
+        .link:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,.25);
+        }
+        .img {
+            width: 250px;
+            height: 250px;
+            box-shadow: none;
         }
     </style>
     <body>
-        <a class="link" href="data-chart-type-category-point-series.md">
+        <div class="link" href="data-chart-type-category-point-series.md">
             <div class="linkContent" >
-                <h4>ポイント チャート</h4>
-                <img src="../images/charts/data-chart-type-category-point-series.png">
+                <div>ポイント チャート</div>
+                <img class="img" src="../images/charts/data-chart-type-category-point-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-scatter-point-series.md">
+        </div>
+        <div class="link" href="data-chart-type-scatter-point-series.md">
             <div class="linkContent">
-                <h4>散布マーカー チャート</h4>
-                <img src="../images/charts/data-chart-type-scatter-point-series.png">
+                <div>散布マーカー チャート</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-point-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-scatter-bubble-series.md">
+        </div>
+        <div class="link" href="data-chart-type-scatter-bubble-series.md">
             <div class="linkContent">
-                <h4>散布バブル チャート</h4>
-                <img src="../images/charts/data-chart-type-scatter-bubble-series.png">
+                <div>散布バブル チャート</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-bubble-series.png">
             </div>
-        </a>
-        <a class="link" href="data-chart-type-polar-scatter-series.md">
+        </div>
+        <div class="link" href="data-chart-type-polar-scatter-series.md">
             <div class="linkContent">
-                <h4>極座標散布チャート</h4>
-                <img src="../images/charts/data-chart-type-polar-scatter-series.png">
+                <div>極座標散布チャート</div>
+                <img class="img" src="../images/charts/data-chart-type-polar-scatter-series.png">
             </div>
-        </a>
-        <!-- <a class="link" href="data-chart-type-scatter-hd-series.md">
+        </div>
+        <!-- <div class="link" href="data-chart-type-scatter-hd-series.md">
             <div class="linkContent">
-                <h4>Scatter High Density Chart</h4>
-                <img src="../images/charts/data-chart-type-scatter-hd-series.png">
+                <div>Scatter High Density Chart</div>
+                <img class="img" src="../images/charts/data-chart-type-scatter-hd-series.png">
             </div>
-        </a> -->
+        </div> -->
     </body>
 </section>

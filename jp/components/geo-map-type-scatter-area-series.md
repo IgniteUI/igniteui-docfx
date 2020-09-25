@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | 散布エリア シリーズ | インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | 散布エリア シリーズ | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular 散布エリア シリーズを使用して、各ポイントに割り当てられた数値を使い、経度および緯度データの三角測量に基づいて、色付きのエリア サーフェスを描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
+_keywords: Angular map, scatter area series, Ignite UI for Angular, Infragistics, Angular マップ, 散布エリア シリーズ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap','GeographicScatterAreaSeries','CustomPaletteColorScale']
 _language: ja
 ---
 
-## 散布エリア シリーズの使用
+# Angular 散布エリア シリーズの使用
 
-マップ コンポーネントの [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) を使用して、各ポイントに割り当てられた数値を持つ経度と緯度のデータの三角形分割に基づいて、地理的背景で色付きの表面を描画します。このタイプの地理的シリーズは、気象温度、降水量、人口分布、大気汚染などの地理的位置によって定義される散乱データのレンダリングに使用できます。
+Angular マップ コンポーネントの [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) を使用して、各ポイントに割り当てられた数値を持つ経度と緯度のデータの三角形分割に基づいて、地理的背景で色付きの表面を描画します。このタイプの地理的シリーズは、気象温度、降水量、人口分布、大気汚染などの地理的位置によって定義される散乱データのレンダリングに使用できます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-scatter-area-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,16 +20,17 @@ _language: ja
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
 [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) は [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。
 
-### データ要件
+## データ要件
 
 マップコンポーネントの他の種類の地理的シリーズと同様に、[`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、項目ソースの各項目にはデータ列が 3 つあり、2 つは地理的な経度および緯度座標を保管し、1 つのデータ列は地理的位置に関連した値を保管します。地理的シリーズの [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#longitudememberpath)、[`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#latitudememberpath) および [`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath) プロパティはこれらのデータ列を識別します。
 [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) は、三角測量が [`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource) プロパティに設定されていない場合、ItemsSource の項目で組み込みのデータ三角測量を自動的に実行します。ただし、三角測量の計算は非常に時間のかかるプロセスであるため、このプロパティのために TriangulationSource を指定すると、ランタイム パフォーマンスがよくなります。特にデータ項目が多数ある場合には顕著です。
 
-### データ バインディング
+## データ バインディング
 
 以下の表に、データ バインドに使用される GeographicScatterAreaSeries のプロパティをまとめています。
 
@@ -44,7 +45,7 @@ _language: ja
 | [`triangleVertexMemberPath2`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglevertexmemberpath2) | 文字列    | 各三角形に対して ItemsSource の最初の頂点のインデックスを含む、[`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource) 項目のプロパティ名。このプロパティを設定することは義務ではありません。カスタムの三角測量ロジックが提供されない場合はデフォルトで取得されます。 |
 | [`triangleVertexMemberPath3`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglevertexmemberpath3) | 文字列    | 各三角形に対して ItemsSource の最初の頂点のインデックスを含む、[`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource) 項目のプロパティ名。このプロパティを設定することは義務ではありません。カスタムの三角測量ロジックが提供されない場合はデフォルトで取得されます。 |
 
-### カラー スケール
+## カラー スケール
 
 [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) の ColorScale プロパティを使用して、ポイントの色の値を解決し、地理的シリーズの面を塗りつぶします。色は、ピクセル単位の三角ラスタライザーを三角測量データに適用することによって、サーフェスの図形の周りをなめらかに補間します。サーフェスの描画がピクセル単位であるため、カラー スケールはブラシではなく色を使用します。
 提供される [`IgxCustomPaletteColorScaleComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) クラスはほとんどのカラーリングのニーズを満たすはずですが、ColorScale ベースのクラスはカスタムのカラリング ロジックのアプリケーションによって継承できます。
@@ -58,7 +59,7 @@ _language: ja
 | [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#maximumvalue)           | double                                                                                                                                                   | 色を割り当てるための最大値。指定した値がこの値より大きい場合は透明になります。 |
 | [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#minimumvalue)           | double                                                                                                                                                   | 色を割り当てるための最小値。指定した値がこの値より小さい場合は透明になります。 |
 
-### コード スニペット
+## コード スニペット
 
 以下のコードは、[`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) を世界の表面温度を表す三角測量データにバインドする方法を示しています。
 
@@ -80,7 +81,7 @@ _language: ja
         </span>
         <br/>
         <span>
-                Longitutde: {{item.lon}}
+                Longitude: {{item.lon}}
         </span>
         <br/>
         <span>
