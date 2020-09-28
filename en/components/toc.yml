@@ -398,13 +398,12 @@
         - name: Row selection
           href: hierarchicalgrid/row_selection.md
           new: false
+        - name: Cell selection
+          href: hierarchicalgrid/cell_selection.md
+          new: true
         - name: Column Selection
           href: hierarchicalgrid/column_selection.md
           new: true
-        # Not yet fully implemented for igxHGrid
-        # - name: Cell selection
-        #  href: grid/cell_selection.md
-        #  new: true
     # Not yet fully implemented for igxHGrid
     # - name: Searching
     #   href: hierarchicalgrid/search.md
