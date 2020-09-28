@@ -21,7 +21,8 @@ _keywords: data select, igniteui for angular, infragistics
 }
 
 # @@igComponent Selection
-The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option. But let's dive deeper in each of these options.
+The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option.
+@@if (igxName === 'IgxHierarchicalGrid') { In the Hierarchical Grid you can specify the cell selection mode on grid level. So for example in the parent grid multi-cell selection can be enabled, but in child grids cell selection mode can be single or disabled. }But let's dive deeper in each of these options.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -44,13 +45,24 @@ The selection feature enables rich data select capabilities in the Material UI b
 </div>
 <div class="divider--half"></div>
 }
-
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="hGrid-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hGrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hGrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
 #### @@igComponent Мultiple-cell Selection
 
+@@if (igxName === 'IgxHierarchicalGrid') {
+This is the default cell selection mode in both parent and child grids. Please keep in mind that you can make cell selection one grid at a time, you can not make cross grid range selection or to have a selected cells in multiple grids. Each key combination related to range selection and mouse drag functionality can be used only in the same grid.
+}
 How to select cells:
-- By `Mouse drag` - Rectangular data selectoion of cells would be performed.
+- By `Mouse drag` - Rectangular data selection of cells would be performed.
 - By `Ctrl key` press + `Mouse drag` - Multiple range selections would be performed. Any other existing cell selection will be persisted.
 - Instant multi-cell selection by using Shift key. Select single cell and select another single cell by holding the Shift key. Cell range between the two cells will be selected. Keep in mind that if another second cell is selected while holding `Shift key` the cell selection range will be updated based on the first selected cell position (starting point).
 - Keyboard multi-cell selection by using the `Arrow keys` while holding `Shift key`. Multi-cell selection range will be created based on the focused cell.
@@ -58,9 +70,9 @@ How to select cells:
 - Clicking with the `Left Mouse key` while holding `Ctrl key` will add single cell ranges into the selected cells collection.
 - Continuous multiple cell selection is available, by clicking with the mouse and dragging.
 
+@@if (igxName === 'IgxGrid') {
 #### Demo
 
-@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -71,6 +83,8 @@ How to select cells:
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
+#### Demo
+
 <div class="sample-container loading" style="height:700px">
     <iframe id="tree-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -80,7 +94,7 @@ How to select cells:
 </div>
 <div class="divider--half"></div>
 }
-}
+
 
 #### @@igComponent Single Selection
 
