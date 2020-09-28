@@ -131,6 +131,7 @@
     - name: 列移動
       href: grid/column_moving.md
       new: false
+      updated: true
     - name: 列のピン固定
       href: grid/column_pinning.md
       new: true
@@ -165,6 +166,7 @@
     - name: ツールバー
       href: grid/toolbar.md
       new: false
+      updated: true
     - name: Excel エクスポート
       href: grid/export_excel.md
       new: false
@@ -259,6 +261,7 @@
     - name: 列移動
       href: treegrid/column_moving.md
       new: false
+      updated: true
     - name: 列のピン固定
       href: treegrid/column_pinning.md
       new: false
@@ -290,6 +293,7 @@
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
+      updated: true
     - name: Excel エクスポート
       href: treegrid/export_excel.md
       new: false
@@ -375,6 +379,7 @@
     - name: 列移動
       href: hierarchicalgrid/column_moving.md
       new: false
+      updated: true
     - name: 列のピン固定
       href: hierarchicalgrid/column_pinning.md
       new: false
