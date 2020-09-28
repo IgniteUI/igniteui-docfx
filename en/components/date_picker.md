@@ -164,7 +164,10 @@ Using the `igxLabel` directive, the default label can be changed to a custom one
 You can see what the custom label will look like in the multi view mode sample found in next section.
 
 > [!NOTE]
-> Currently the `label` property is in the process of being deprecated. The label can be removed by setting no text in the label: `<label igxLabel></label>`.
+> The label can be removed by setting no text in the label: `<label igxLabel></label>`.
+
+> [!NOTE]
+> Currently the `label` property is in the process of being deprecated.
 
 #### Multi View mode
 The multiview date picker supports both the `dropdown` and the `dialog` modes.
