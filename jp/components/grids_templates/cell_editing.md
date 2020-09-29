@@ -312,25 +312,6 @@ row.delete();
 
 <div class="divider--half"></div>
 
-### 編集イベント
-
-グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row_editing.md)および**セルの編集**のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
-
-イベントは次のように分類できます。
-
-| イベント | 説明 | 引数 | キャンセル可能 |
-|-------|-------------|-----------|-------------|
-| [`onCellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditenter) | セルが**編集モードに入る**ときに発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter) | `[rowEditing]` が有効な場合、行が**編集モードに入る**ときに発生します (`onCellEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) | セルの値が**確定する**前に発生します (`Enter` の押下など) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#celleditdone) | セルが編集され、セルの値が**コミットされた**後に発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
-| [`onCellEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelleditcancel) | セルがその値を**コミットせず**に編集モードを終了するときに発生します (`Esc` キーの押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`onRowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit) | 編集モードの値の行が**確定する**前に発生します (行編集オーバーレイの`完了`ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | 行が編集され、新しい行の値が**コミットされた**後に発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`onRowEditCancel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel) | 行が値を**コミットせず**に編集モードを終了するときに発生します (行編集オーバーレイの`キャンセル` ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-
-上記のイベントのほとんどはキャンセルできます。たとえば、`onCellEditEnter` がキャンセルされた場合、セルは編集モードになりません。
-
 #### 編集イベントでのセル検証
 グリッドの編集イベントを使用して、ユーザーがグリッドを操作する方法を変更できます。
 この例では、[`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md) を使用してカスタム エラーメッセージを表示します。
