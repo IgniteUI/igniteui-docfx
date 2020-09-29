@@ -152,6 +152,24 @@ public date: Date = new Date(Date.now());
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
+#### カスタム ラベル
+`igxLabel` ディレクティブを使用して、デフォルトのラベルをカスタム ラベルに変更できます:
+
+````html
+<!-- datepicker-label.component.html -->
+<igx-date-picker>
+    <label igxLabel>Custom label</label>
+</igx-date-picker>
+````
+
+次のセクションにあるマルチ ビュー モードのサンプルで、カスタム ラベルの外観を確認できます。
+
+> [!NOTE]
+> ラベルの間にテキストを設定しないことで、ラベルを削除できます: `<label igxLabel></label>`。
+
+> [!NOTE]
+> 現在、`label` プロパティと `labelVisibility` プロパティは非推奨となる予定です。
+
 #### マルチ ビュー モード
 マルチビューの Date Picker は、`dropdown` と `dialog` モードの両方をサポートします。
 
@@ -161,7 +179,9 @@ public date: Date = new Date(Date.now());
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true">
+	<label igxLabel>Custom label</label>
+</igx-date-picker>
        
 <label>Drop Down Mode</label>
 <igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
