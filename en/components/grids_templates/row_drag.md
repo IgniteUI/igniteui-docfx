@@ -1,22 +1,22 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid Row Drag
+title: Grid Row Drag | Angular Grid & Diagram Component | Infragistics
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
+_keywords: angular drag component, material component, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Row Drag
+title: Tree Grid Row Drag | Angular Grid & Diagram Component | Infragistics
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Row Drag, Row Dragging, Tree Grid Row Drag, Tree Table Row Drag
+_keywords: angular drag component, material component, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Row Drag
+title: Hierarchical Grid Row Drag | Angular Grid & Diagram Component | Infragistics
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Row Drag, Row Dragging, Hierarchical Grid Row Drag, Hierarchical Table Row Drag
+_keywords: angular drag component, material component, ignite ui for angular, infragistics
 ---
 }
 
@@ -24,7 +24,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -61,7 +61,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 <div class="divider--half"></div>
 }
 
-### Configuration
+## Configuration
 
 In order to enable row-dragging for your `@@igSelector`, all you need to do is set the grid's [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) to **`true`**. Once this is enabled, a row-drag handle will be displayed on each row. This handle can be used to initiate row dragging.
 
@@ -81,7 +81,7 @@ In this example, we'll handle dragging a row from a grid to a designated area an
 In this example, we'll handle dragging a row from one grid to another, removing it from the first data source and adding it to the second.
 }
 
-#### Drop Areas
+### Drop Areas
 
 Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
 We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag_drop.md).
@@ -139,7 +139,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-#### Drop Area Event Handlers
+### Drop Area Event Handlers
 
 Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter), [`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave) and [`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) events in our component's `.ts` file.
 
@@ -224,7 +224,7 @@ We define a reference to each of our grids via the `ViewChild` decorator and the
 > [!NOTE]
 > When using row data from the event arguments (`args.dragData.rowData`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you must clone the data you need, if you want to distinguish it from the one in the source grid.
 
-#### Templating the drag ghost
+### Templating the drag ghost
 The drag ghost can be templated using the `IgxRowDragGhost` directive, applied to a `<ng-template>` inside of the `@@igSelector`'s body:
 ```html
 <@@igSelector>
@@ -240,7 +240,7 @@ The drag ghost can be templated using the `IgxRowDragGhost` directive, applied t
 
 The result of the configuration can be seem below in a `@@igSelector` with row dragging and multiple selection enabled. The demo shows the count of the currently dragged rows:
 
-##### Example Demo
+#### Example Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -297,7 +297,7 @@ The drag ghost can be templated on every grid level, making it possible to have 
 <div class="divider--half"></div>
 }
 
-#### Templating the drag icon
+### Templating the drag icon
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
 ```html
@@ -319,7 +319,7 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-#### Styling the drop area
+### Styling the drop area
 Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
 ```css
 .drop-area {
@@ -351,7 +351,7 @@ Once our drop handlers are properly configured, we're good to go!
 The result of the configuration can be seem below:
 }
 
-##### Example Demo
+#### Example Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -391,10 +391,10 @@ The result of the configuration can be seem below:
 <div class="divider--half"></div> 
 }
 
-### Application Demo
+## Application Demo
 @@if (igxName === 'IgxGrid') {
 
-#### Using Row Drag Events
+### Using Row Drag Events
 The following demo demonstrates how to use row drag event information to change both states of a custom component, where the row is dropped, and the source grid itself.
 Try to drag moons from the grid and drop them to their corresponding planets. Row drag ghost background is dynamically changed, depending on the hovered planet. If you succeed then the row in the grid will be selected and dragging will be disabled for it. Clicking planets will give you useful information.
 
@@ -411,7 +411,7 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 > The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
 }
 
-#### Row Reordering Demo
+### Row Reordering Demo
 With the help of the grid's row drag events and the `igxDrop` directive, you can create a grid that allows you to reorder rows by dragging them.
 
 Since all of the actions will be happening _inside_ of the grid's body, that's where you have to attach the `igxDrop` directive:
@@ -639,18 +639,18 @@ Notice that we also have row selection enabled and we preserve the selection whe
 }
 <div class="divider--half"></div>
 
-### Limitations
+## Limitations
 
 Currently, there are no known limitations for the `rowDraggable` directive.
 
-### API References
+## API References
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
 * [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
 * [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent Overview](@@igMainTopic.md)

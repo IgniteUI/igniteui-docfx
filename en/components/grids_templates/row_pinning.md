@@ -23,7 +23,7 @@ _keywords: lock row, ignite ui for angular, infragistics 
 # @@igComponent Row Pinning
 One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. **Row Pinning** in Ignite UI for Angular allows end-users to pin rows in a particular order, duplicating them in a special area that is always visible even when they scroll the @@igComponent vertically. The Material UI Grid has a built-in row pinning UI, which is enabled by initializing an `igxActionStrip` component in the context of @@igComponent. In addition, you can define custom UI and change the pin state of the rows via the Row Pinning API.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -56,7 +56,7 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 </div>
 }
 
-### Row Pinning UI
+## Row Pinning UI
 
 The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip can then be shown or hidden via its API and will display a pin or unpin button icon based on the state of the row it is shown for. An additional action allowing to scroll the copy of the pinned row into view is shown for each pinned row as well.
 
@@ -119,7 +119,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 }
 
 
-#### Row Pinning API
+## Row Pinning API
 
 Row pinning is controlled through the `pinned` input of the [`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html). Pinned rows are rendered at the top of the @@igComponent by default and stay fixed through vertical scrolling of the unpinned rows in the @@igComponent body.
 
@@ -201,7 +201,7 @@ public rowPinning(event) {
 ```
 }
 
-### Pinning Position
+## Pinning Position
 
 You can change the row pinning position via the [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) configuration option. It allows you to set the pin area position to either Top or Bottom.
 When set to Bottom pinned rows are rendered at the bottom of the grid, after the unpinned rows. Unpinned rows can be scrolled vertically, while the pinned rows remain fixed at the bottom.
@@ -229,11 +229,11 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 ```
 
 
-### Custom Row Pinning UI
+## Custom Row Pinning UI
 
 You can define your custom UI and change the pin state of the rows via the related API.
 
-#### Custom Row Pinning UI via extra column with icon
+### Via extra column with icon
 
 Let's say that instead of an action strip you would like to show a pin icon in every row allowing the end-user to click and change a particular row's pin state.
 This can be done by adding an extra column with a cell template containing the custom icon.
@@ -342,7 +342,7 @@ public togglePinning(row: IgxGridRowComponent, event) {
 
 @@if (igxName === 'IgxGrid') {
 
-#### Custom Row Pinning UI via row drag
+### Via row drag
 
 Let's say that you want to be able to directly drag and drop a row between the pinned and unpinned rows to change its pin state.
 This can be achieved by enabling the row drag feature and pinning/unpinning the rows via the API on drop.
@@ -402,7 +402,7 @@ This would allow reordering the rows and moving them between the pinned and unpi
 }
 
 
-### Row Pinning Limitations
+## Row Pinning Limitations
 
 * Only records that exist in the data source can be pinned.
 * The row pinning state is not exported to excel. The grid is exported as if no row pinning is applied.
@@ -412,13 +412,13 @@ This would allow reordering the rows and moving them between the pinned and unpi
 
 <div class="divider--half"></div>
 
-### Styling
+## Styling
 
 The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
 
 Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
 
-#### Importing the Styling Library
+### Importing the Styling Library
 
 To begin the customization of the row pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
 
@@ -426,7 +426,7 @@ To begin the customization of the row pinning feature, you need to import the `i
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### Defining a Theme
+### Defining a Theme
 
 Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
 
@@ -441,7 +441,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The last step is to pass the custom grid theme:
 
@@ -449,7 +449,7 @@ The last step is to pass the custom grid theme:
 @include igx-css-vars($custom-grid-theme);
 ```
 
-#### Using mixins
+### Using mixins
 
 In order to style components for Internet Explorer 11, you have to use different approach, since it doesn't support CSS variables. 
 
@@ -464,7 +464,7 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 }
 ```
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:540px">
@@ -494,12 +494,12 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 </div>
 }
 
-### API References
+## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
