@@ -1,30 +1,30 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
+title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
+title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
+title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 
-# @@igComponent Multi Column Headers Overview
+# @@igComponent Multi-column Headers Overview
 
-[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
+[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi-column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -57,7 +57,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 </div>
 }
 
-The declaration of `Multi column header` could be achieved by wrapping a set of columns into [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) component with [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) title passed.
+The declaration of `Multi-column header` could be achieved by wrapping a set of columns into [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) component with [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) title passed.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -194,7 +194,7 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 ```
 }
 
-### Multi Column Header Template
+## Multi-column Header Template
 
 Each of the column groups of the grid can be templated separately. The column group expects `ng-template` tag decorated with the `igxHeader` directive.
 The `ng-template` is provided with the column group object as a context.
@@ -269,7 +269,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 </div>
 }
 
-### Styling
+## Styling
 
 To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -305,7 +305,7 @@ The last step is to **include** the component mixins:
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -333,7 +333,7 @@ $custom-theme: igx-grid-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -372,7 +372,7 @@ $custom-theme: igx-grid-theme(
 Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="multi-column-headers-styling-iframe" src='{environment:demosBaseUrl}/grid/multi-column-headers-styling' width="100%" height="100%" 
@@ -385,7 +385,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="treegrid-multi-column-headers-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -397,7 +397,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="hierarchical-grid-multi-column-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -409,7 +409,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
@@ -417,7 +417,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

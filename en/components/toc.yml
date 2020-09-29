@@ -172,7 +172,7 @@
     - name: Paste from Excel
       href: grid/paste_excel.md
       new: false
-    - name: Multi Column Headers
+    - name: Multi-column Headers
       href: grid/multi_column_headers.md
       new: false
     - name: Collapsible Column Groups
@@ -188,7 +188,7 @@
       href: grid/keyboard_navigation.md
       new: false
       updated: true
-    - name: Multi Row Layout
+    - name: Multi-row Layout
       href: grid/multi_row_layout.md
       new: false
     - name: Clipboard Interactions
@@ -296,7 +296,7 @@
     - name: Export to Excel
       href: treegrid/export_excel.md
       new: false
-    - name: Multi Column Headers
+    - name: Multi-column Headers
       href: treegrid/multi_column_headers.md
       new: false
     - name: Collapsible Column Groups
@@ -411,7 +411,7 @@
     - name: Toolbar
       href: hierarchicalgrid/toolbar.md
       new: false
-    - name: Multi Column Headers
+    - name: Multi-column Headers
       href: hierarchicalgrid/multi_column_headers.md
       new: false
     - name: Collapsible Column Groups

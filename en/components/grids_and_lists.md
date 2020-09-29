@@ -1,14 +1,14 @@
 ---
 title: Angular Data Grids and Lists Components | DataTable | Ignite UI for Angular | Infragistics
 _description: Find powerful grid features for no-lag scrolling through millions of data points. Ignite UI for Angular’s Data Grid is built for optimization and speed.
-_keywords: angular data grid,infragistics, infragistics.com
+_keywords: angular data grid, infragistics, infragistics.com
 ---
 
 <div class="feature feature--hero">
   <div class="feature__details">
     <h1 id="the-fastest-data-angular-data-grid" class="h2">The Fastest Angular Data Grid</h1>
     <p>Ignite UI for Angular’s [Data Grid](grid/grid.md) is built for optimization, speed, high-performance, and smooth handling of large data sets. With an updated virtualization directive and powerful grid features, your virtualized data grid is ready for no-lag scrolling through millions of data points.</p>
-    <a class="cta-btn" href="https://www.infragistics.com/products/ignite-ui-angular/download">get started for free</a>
+    <a class="cta-btn no-external-icon" href="https://www.infragistics.com/products/ignite-ui-angular/download">get started for free</a>
   </div>
   <div class="feature__image feature__image--right">
     <img src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid.svg" alt="Ignite UI for Angular's Data Grid optimized for speed and performance.">

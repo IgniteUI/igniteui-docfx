@@ -1,7 +1,7 @@
 ﻿---
-title: 그리드 - 다중 행 레이아웃 - 네이티브 Angular | Ignite UI for Angular
-_description: Multi row layout allow positioning and sizing the columns in a more powerful and flexible way. Every single column layout is a representation of a complete grid layout which consists of column fields.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Table, Angular Data Grid component, Angular Data Table component, Angular Data Grid control, Angular Data Table control, Angular Grid component, Angular Table component, Angular Grid control, Angular Table control, Angular High Performance Grid, Angular High Performance Data Table, Multi Row Layout, Angular Multi Row Layout, Angular Data Table Multi Row Layout, Grid Layout, Angular Grid Layout, Column Layout, ColumnLayout, igxColumnLayout
+title: 그리드 - 다중 행 레이아웃 - 네이티브 Angular | Ignite UI for Angular | Infragistics
+_description: Start using Multi-row layout for positioning and sizing the columns in a more powerful and flexible way. Every single column layout is a representation of a complete grid layout which consists of column fields.
+_keywords: angular multi-row layout, material row layout, ignite ui for angular
 _language: kr
 ---
 

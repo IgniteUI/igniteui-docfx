@@ -8,7 +8,7 @@ _keywords: angular group by, igniteui for angular, infragistics
 
 A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -18,7 +18,7 @@ A Group by behavior in an Angular Material table or UI grid creates grouped data
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Initial Grouping State
+## Initial Grouping State
 
 It is possible to define initial grouping of the grid by assigning an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
 
@@ -33,7 +33,7 @@ public ngOnInit() {
 
 Grouping expressions implement the [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) interface.
 
-#### Group By API
+## Group By API
 
 Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) property to `true`.
 
@@ -83,7 +83,7 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
 
-#### Group Row Templates
+## Group Row Templates
 
 The group row without its expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record template is rendered against has the following signature:
 
@@ -107,12 +107,12 @@ As an example, the following template would make the group rows summary more ver
 ```
 
 
-### Group By with Paging
+## Group By with Paging
 
 Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process. Any expand or collapse operation forces Paging to recalculate the page count and adjust the page index if necessary.
 Groups that span multiple pages are split between them. The group row is visible only on the page it starts on and is not repeated on subsequent pages. Summary information for group rows is calculated based on the whole group and is unaffected by Paging.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -122,11 +122,11 @@ Groups that span multiple pages are split between them. The group row is visible
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Group By with Summaries
+## Group By with Summaries
 
 Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic.
 
-#### Keyboard Navigation
+## Keyboard Navigation
 
 The grouping UI supports the following keyboard interactions:
 
@@ -141,7 +141,7 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
-### Custom Group By
+## Custom Group By
 
 igxGrid allows defining custom grouping per column or per grouping expression, which provides grouping based on a custom condition. This is useful when you need to group by complex objects or for other application specific scenarios.
 
@@ -150,7 +150,7 @@ igxGrid allows defining custom grouping per column or per grouping expression, w
 
 The sample below demonstrates custom grouping by `Date`, where the date values are sorted and grouped by Day, Week, Month or Year based on user-selected grouping mode.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-custom-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -237,13 +237,13 @@ A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpressio
 ```
 
 
-### Styling
+## Styling
 
 The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
-#### Importing global theme
+### Importing global theme
 
 To begin the customization of the Group By feature, you need to import the `index` file, where all styling functions and mixins are located.
 
@@ -251,7 +251,7 @@ To begin the customization of the Group By feature, you need to import the `inde
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### Defining custom theme
+### Defining custom theme
 
 Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme), because it's used in the Group By feature.
 
@@ -283,7 +283,7 @@ $custom-chips-theme: igx-chip-theme(
 );
 ```
 
-#### Defining a custom color palette
+### Defining a custom color palette
 
 In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
@@ -319,7 +319,7 @@ $custom-chips-theme: igx-chip-theme(
     $hover-text-color: igx-contrast-color($custom-palette, "primary", 600)
 );
 ```
-#### Defining custom schemas
+### Defining custom schemas
 You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme. 
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
 ```scss
@@ -347,7 +347,7 @@ $custom-theme: igx-grid-theme(
 );
 ```
 
-#### Applying the custom theme
+### Applying the custom theme
 
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 ```scss
@@ -355,7 +355,7 @@ The easiest way to apply your theme is with a `sass` `@include` statement in the
 @include igx-chip($custom-chips-theme);
 ```
 
-#### Scoped component theme
+### Scoped component theme
 
 In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
 
@@ -375,7 +375,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 }
 ```
 
-#### Demo   
+### Demo   
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="grid-sample-groupby-styling" data-src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -385,13 +385,13 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Known Limitations
+## Known Limitations
 
 |Limitation|Description|
 |--- |--- |
 |Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
 
-### API References
+## API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -401,7 +401,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 * [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)

@@ -25,7 +25,7 @@ _keywords: material density, igniteui for angular, infragistics
 **@@igxName** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
 
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:620px">
@@ -61,7 +61,7 @@ _keywords: material density, igniteui for angular, infragistics
 <div class="divider--half"></div>
 }
 
-### Usage
+## Usage
 
 As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity):
 
@@ -292,7 +292,7 @@ And now we can extend our sample and add [`rowHeight`]({environment:angularApiUr
  ```
 <div class="divider--half"></div>
 
-### API References
+## API References
 
 <div class="divider--half"></div>
 
@@ -302,7 +302,7 @@ And now we can extend our sample and add [`rowHeight`]({environment:angularApiUr
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 
 * [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
