@@ -10,7 +10,7 @@ The `igxGrid` component supports specifying a detail template that displays addi
 
 This mode is useful when you need to display master-detail style data in a hierarchical structure.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-master-detail-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,7 +22,7 @@ This mode is useful when you need to display master-detail style data in a hiera
 </div>
 
 
-#### Configuration
+## Configuration
 
 To configure the `igxGrid` to display in master-detail mode you need to specify a template inside the grid, marked with the `igxGridDetail` directive:
 
@@ -48,7 +48,7 @@ Context of the template is the master record data, so that values from the maste
 ```
 
 
-##### API
+## API
 
 The expansion states can be controlled via the [`expansionStates`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expansionStates) input of the `igxGrid`. States are stored in key-value pairs [row identifier, expansion state]. The property gets/sets the current expansion states and supports two-way binding:
 
@@ -65,7 +65,7 @@ Additional API methods for controlling the expansion states are also exposed:
 - [`expandRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandRow)
 - [`collapseRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseRow)
 
-#### Keyboard navigation
+## Keyboard navigation
 
 - When focus is on a detail row:
 
@@ -78,7 +78,7 @@ Additional API methods for controlling the expansion states are also exposed:
     - `Alt + Arrow Right/ Down` - expands the row.
     - `Alt + Arrow Left/Down` - collapses the row.
 
-#### Known Issues and Limitations
+## Known Issues and Limitations
 
 
 |Known Limitations| Description|

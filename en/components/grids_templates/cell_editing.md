@@ -24,7 +24,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 
 Ignite UI for Angular @@igComponent component provides a great data manipulation capabilities and powerful API for Angular CRUD operations. By default the @@igComponent is using **in cell** editing and different editors will be shown based on the column data type, thanks to the **default cell editing template**. In addition, you can define your own custom templates for update-data actions and to override the default behavior for committing and discarding any changes.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -58,9 +58,9 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 }
 <div class="divider--half"></div>
 
-#### Cell Editing
+## Cell Editing
 
-##### Editing through UI
+### Editing through UI
 
 
 You can enter edit mode for specific cell, when an editable cell is focused in one of the following ways:
@@ -83,7 +83,7 @@ You can exit edit mode and **commit** the changes in one of the following ways:
 > [!NOTE]
 > The cell remains in edit mode when you scroll vertically or horizontally or click outside the @@igComponent. This is valid for both cell editing and row editing.
 
-##### Editing through API
+### Editing through API
 
 You can also modify the cell value through the @@igxName API but only if primary key is defined:
 
@@ -156,7 +156,7 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 
 Please notice that if the cell you want to update, via reference to [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html), is outside @@igComponent's display container the new value will not be submitted.
 
-#### Cell Editing Templates
+### Cell Editing Templates
 
 You can see and learn more for default cell editing templates in the [general editing topic](editing.md#editing-templates).
 
@@ -180,14 +180,14 @@ If you want to provide a custom template which will be applied when a cell is in
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
 
-### CRUD operations
+## CRUD operations
 
 > [!NOTE]
 > Please keep in mind that when you perform some **CRUD operation** all of the applied pipes like **filtering**, **sorting** and **grouping** will be re-applied and your view will be automatically updated.
 
 The [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides a straightforward API for basic CRUD operations.
 
-#### Adding a new record
+### Adding a new record
 
 The @@igComponent component exposes the [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addrow) method which will add the provided data to the data source itself.
 
@@ -221,7 +221,7 @@ public addRow() {
 ```
 }
 
-#### Updating data in the @@igComponent
+### Updating data in the @@igComponent
 
 Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and/or a row value through their respective `update` methods.
 
@@ -274,7 +274,7 @@ row.update(newData);
 ```
 }
 
-#### Deleting data from the @@igComponent
+### Deleting data from the @@igComponent
 
 Please keep in mind that [`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleterow) method will remove the specified row only if primary key is defined.
 
@@ -312,7 +312,7 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 
 <div class="divider--half"></div>
 
-### Editing Events
+## Editing Events
 
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and **Cell Editing** life cycle - when starting, committing or canceling editing.
 
@@ -331,7 +331,7 @@ The events can be broken down as follows:
 
 Most of the above events can be cancelled. For example, if `onCellEditEnter` is cancelled, the cell will never enter edit mode.
 
-#### Cell validation on edit event
+### Cell validation on edit event
 Using the grid's editing events we can alter how the user interacts with the grid.
 In this example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll prevent it from reaching the data source by cancelling the event (`event.cancel = true`). We'll also display a custom error message using [`IgxToast`](../toast.md).
 
@@ -450,7 +450,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 }
 
 
-### Styling
+## Styling
 
 The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
@@ -458,7 +458,7 @@ In the below steps, we are going to go over how you can style the grid's cell in
 
 In order to use the [Ignite UI Theming Library](../themes/component-themes.md), we must first import the theme `index` file in our global styles:
 
-#### Importing style library
+### Importing style library
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -466,7 +466,7 @@ In order to use the [Ignite UI Theming Library](../themes/component-themes.md), 
 ```
 Now we can make use of all of the functions exposed by the Ignite UI for Angular theme engine.
 
-#### Defining a palette
+### Defining a palette
 
 After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palette.md):
 
@@ -477,7 +477,7 @@ $blue: #4567bb;
 $color-palette: igx-palette($primary: $white, $secondary: $blue);
 ```
 
-#### Defining themes
+### Defining themes
 
 We can now define the theme using our palette. The cells are styled by the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme), so we can use that to generate a theme for our @@igxName:
 
@@ -490,7 +490,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Applying the theme
+### Applying the theme
 
 The easiest way to apply our theme is with a `sass` `@include` statement in the global styles file:
 
@@ -500,7 +500,7 @@ The easiest way to apply our theme is with a `sass` `@include` statement in the 
 
 This way, the theme will apply to **all** grids in our application. If we wish to apply this custom styling only to a specific component, we need to scope the theme.
 
-#### Scoped component theme
+### Scoped component theme
 
 In order for the custom theme to affect only our specific component, we can move all of the styles we just defined from the global styles file to our custom component's style file (including the [import](#importing-style-library) of the `index` file).
 
@@ -520,7 +520,7 @@ This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Com
 }
 ```
 
-#### Styling Demo
+### Styling Demo
 
 In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling)
 
@@ -556,7 +556,7 @@ In addition to the steps above, we can also style the controls that are used for
 }
 <div class="divider--half"></div>
 
-### API References
+## API References
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -570,7 +570,7 @@ In addition to the steps above, we can also style the controls that are used for
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

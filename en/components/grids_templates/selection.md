@@ -48,10 +48,10 @@ The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncompone
 
 > Go to [Column selection topic](column_selection.md) for more information.
 
-### Showcase Application
+## Showcase Application
 
 @@if (igxName === 'IgxGrid'){
-#### Grid Context Menu
+### Grid Context Menu
 
 Using the [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) event you can add a custom context menu to facilitate your work with **IgxGrid**. With a **right click** on the grid's body, the event emits the cell on which it is triggered. The **context menu** will operate with the emitted cell.
 
@@ -155,14 +155,14 @@ The template we are going to use to combine the grid with the context menu:
 <div class="divider--half"></div>
 }
 
-### API References
+## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

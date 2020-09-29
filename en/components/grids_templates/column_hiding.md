@@ -22,9 +22,9 @@ _keywords: column hiding, ignite ui for angular, infragistics
 
 # @@igComponent Column Hiding
 
-The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) with an [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) which allows users to perform column hiding directly through the **UI** or by using the Angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
+The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) with an [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) which allows users to perform column hiding directly through the user interface or by using the Angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -61,7 +61,7 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 
 }
 
-### @@igComponent setup
+## @@igComponent Setup
 Let's start by creating our @@igComponent and binding it to our data. We will also enable both filtering and sorting for the columns.
 
 @@if (igxName === 'IgxGrid') {
@@ -142,7 +142,7 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 ```
 }
 
-### Toolbar's Column Hiding UI
+## Toolbar's Column Hiding UI
 
 The built-in Column Hiding UI is placed inside an [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) in the @@igComponent's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
 For this purpose all we have to do is set both the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and the [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) properties of the @@igComponent to true. If the toolbar is not enabled, enabling the [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) property will have no effect.
@@ -234,7 +234,7 @@ You can see the result of the code from above at the beginning of this article i
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### Custom Column Hiding UI
+## Custom Column Hiding UI
 
 Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsModule`.
 
@@ -327,7 +327,7 @@ Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/c
 ```
 }
 
-#### Add title and filter prompt
+### Add title and filter prompt
 
 A couple more things we can do in order to enrich the user experience of our column hiding component is to set the [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) properties. The [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) is displayed on the top and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) is the prompt text that is displayed in the filter input of our column hiding UI.
 
@@ -341,7 +341,7 @@ A couple more things we can do in order to enrich the user experience of our col
 </div>
 ```
 
-#### Add column display order options
+### Add column display order options
 
 We can also allow the user to choose the display order of the columns in the column hiding UI. For this purpose we will use the [`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) property, which is an enumeration type property and has the following options:
 
@@ -386,7 +386,7 @@ Now all we have to do is bind the [`checked`]({environment:angularApiUrl}/classe
 </div>
 ```
 
-#### Disable hiding of a column
+### Disable hiding of a column
 We can easily prevent the user from being able to hide columns through the column hiding UI by simply setting their [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) property to true.
 
 @@if (igxName === 'IgxGrid') {
@@ -444,7 +444,7 @@ If all went well, this is how our column hiding UI component should look like:
 }
 }
 
-### Styling
+## Styling
 
 To get started with styling the column actions component, we need to import the index file, where all the theme functions and component mixins live:
 
@@ -495,7 +495,7 @@ The last step is to **include** the component mixins, each with its respective t
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -527,7 +527,7 @@ $custom-button: igx-button-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -580,7 +580,7 @@ $custom-button: igx-button-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -616,7 +616,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 }
 
-### API References
+## API References
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 In this article we learned how to use the built-in column hiding UI in the @@igComponent's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](../radio_button.md) button.
@@ -658,7 +658,7 @@ Styles:
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
