@@ -12,7 +12,7 @@ _language: ja
 
 ## List デモ
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
@@ -36,6 +36,7 @@ ng add igniteui-angular
 Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
 
 次に app.module.ts ファイルに `IgxListModule` をインポートします。
+
 ```typescript
 // app.module.ts
 
@@ -50,7 +51,9 @@ import { IgxListModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-連絡先コンポーネントのテンプレートでリストを作成できます。項目がない場合は、空のリストのデフォルト テンプレートを使用できます。[`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
+連絡先コンポーネントのテンプレートでリストを作成できます。
+項目がない場合は、空のリストのデフォルト テンプレートを使用できます。
+[`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
 
 ```html
 <!--contacts.component.html-->
@@ -176,8 +179,8 @@ public contacts = [{
     連絡先
   </igx-list-item>
   <igx-list-item *ngFor="let contact of contacts">
-    <span class="name">{{ contact.name }}</span>
-    <span class="phone">{{ contact.phone }}</span>
+    <h4 igxListLineTitle>{{ contact.name }}</h4>
+    <p igxListLineSubTitle>{{ contact.phone }}</p>
   </igx-list-item>
 </igx-list>
 ```
@@ -326,7 +329,7 @@ public selectDensity(event) {
 
 結果は以下のようになります。
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -450,7 +453,9 @@ public leftPanPerformed(args) {
 <div class="divider--half"></div>
 
 ## フィルタリング
+
 リストで連絡先を名前によって検索する機能を追加します。これはフィルタリング パイプを使用して実装できます。
+
 Angular コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
 
 ```html
@@ -507,8 +512,6 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 </igx-list-item>
 ```
 
-<div class="divider"></div>
-
 ## List コンポーネントにテーマの適用
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
@@ -546,7 +549,7 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)を参照してください。
 
-## API まとめ
+## API リファレンス
 
 この記事では Angular List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
@@ -563,7 +566,7 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 
 <div class="divider"></div>
 
-## 追加のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
