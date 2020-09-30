@@ -24,7 +24,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 
 With deferred grid column resizing, the user will see a temporary resize indicator while the Angular drag resizing operation is in effect. The new grid column width is applied once the drag operation has ended.
 
-#### @@igComponent Column Resizing Demo
+### @@igComponent Column Resizing Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -123,7 +123,7 @@ public onResize(event) {
 ```
 }
 
-#### Resizing columns in pixels/percentages
+## Resizing columns in pixels/percentages
 
 Depending on the user scenario, the column width may be defined in pixels, percentages or a mix of both. All these scenarios are supported by the Column Resizing feature. By default if a column does not have width set, it fits the available space with width set in pixels.
 
@@ -170,7 +170,7 @@ Resizing columns with width in pixels works by directly adding or subtracting th
 
 When resizing columns with width in percentages, the horizontal amount of the mouse movement in pixels translates roughly to its percentage amount relative to the grid width. The columns remain responsive and any future grid resizing will still reflect on the columns as well.
 
-#### Restrict column resizing
+## Restrict column resizing
 
 You can also configure the minimum and maximum allowable column widths. This is done via the [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) inputs of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). In this case the resize indicator drag operation is restricted to notify the user that the column cannot be resized outside the boundaries defined by [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) and [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth).
 
@@ -219,7 +219,7 @@ or
 ```
 }
 
-#### Auto-size columns on double click
+## Auto-size columns on double click
 
 Each column can be **auto sized** by double clicking the right side of the header - the column will be sized to the longest currently visible cell value, including the header itself. This behavior is enabled by default, no additional configuration is needed. However, the column will not be auto-sized in case [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) is set on that column and the new width exceeds that [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value. In this case the column will be sized according to preset [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) value.
 
@@ -242,7 +242,7 @@ column.autosize();
 ```
 }
 
-### Styling
+## Styling
 To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
@@ -269,7 +269,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 Instead of hard-coding the color values, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
 `igx-palette` generates a color palette based on the specified primary and secondary color:
@@ -293,7 +293,7 @@ $custom-grid-theme: igx-grid-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please, refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
 Extend the predefined schema provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
@@ -331,7 +331,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 Don't forget to include the theme in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -365,14 +365,14 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 }
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

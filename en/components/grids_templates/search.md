@@ -1,21 +1,21 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid search | search data | Ignite UI for Angular | Infragistics 
-_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
-_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
-_description: Learn how to perform grid seach with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
+_description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
 ---
 }
@@ -24,7 +24,7 @@ _keywords: Content search, ignite ui for angular, infragistics
 
 While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -52,9 +52,9 @@ While browsers natively provide content search functionality, most of the time t
 <!-- TODO -->
 }
 
-### Usage
+## Usage
 
-#### Grid setup
+### Grid setup
 Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
 
 @@if (igxName === 'IgxGrid') {
@@ -127,7 +127,7 @@ public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
 
-#### Search input box
+### Search input box
 
 Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
@@ -146,7 +146,7 @@ The methods from above return a **number** value (the number of times the @@igCo
 <input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)" />
 ```
 
-#### Display results count
+### Display results count
 Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
 
 - The `@@igObjectRef.lastSearchInfo.matchInfoCache.length` value will give us the total results count.
@@ -165,7 +165,7 @@ Let's also display the position of the current occurrence, along with the total 
 </div>
 ```
 
-#### Add search buttons
+### Add search buttons
 
 In order to freely search and navigate among our search results, let's create a couple of buttons by invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods inside the buttons' respective click event handlers.
 
@@ -178,7 +178,7 @@ In order to freely search and navigate among our search results, let's create a 
 </div>
 ```
 
-#### Add keyboard search
+### Add keyboard search
 
 We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods depending on which key the user has pressed.
 
@@ -203,7 +203,7 @@ public searchKeyDown(ev) {
 }
 ```
 
-#### Case sensitive and Exact match
+### Case sensitive and Exact match
 
 Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) method.
 
@@ -231,11 +231,11 @@ public updateExactSearch() {
 }
 ```
 
-#### Persistence
+### Persistence
 
 What if we would like to filter and sort our @@igComponent or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the @@igComponent's [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property.
 
-#### Adding icons
+### Adding icons
 
 By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
 To do this, let's go and grab the [**IgxInputGroup**](../input_group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) and the [**IgxChip**](../chip.md) modules.
@@ -343,7 +343,7 @@ On the right in our input group, let's create three separate containers with the
 </igx-suffix>
 ```
 
-### Known Limitations
+## Known Limitations
 
 |Limitation|Description|
 |--- |--- |
@@ -351,7 +351,7 @@ On the right in our input group, let's create three separate containers with the
 |Remote Virtualization| The search will not work properly when using remote virtualization|
 |Cells with cut off text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
 
-### API References
+## API References
 
 In this article we implemented our own search bar for the @@igComponent with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
@@ -387,7 +387,7 @@ Styles:
 * [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

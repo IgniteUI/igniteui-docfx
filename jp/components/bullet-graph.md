@@ -1,16 +1,16 @@
 ---
-title: ブレット グラフ | データ プレゼンテーションと可視化 | Ignite UI for Angular | インフラジスティックス
-_description: Bullet Graph コンポーネントは、データ範囲の表示、複数の測定値の比較に適しています。インフラジスティックス データ視覚化ツールを是非お試しください。
-_keywords: Bullet Graph, Ignite UI for Angular, Infragistics, ブレット グラフ, インフラジスティックス
+title: Angular ブレット グラフ | データ可視化ツール | インフラジスティックス
+_description: インフラジスティックスの Angular ブレット グラフ コントロールを使用すると、範囲を表示し、複数の測定値を比較するダッシュボードを作成できます。インフラジスティックス データ視覚化ツールを是非お試しください!
+_keywords: Angular Bullet Graph, animation, labels, needle, scales, ranges, tick marks, Infragistics, ブレット グラフ, インフラジスティックス, Angular ブレット グラフ, アニメーション, ラベル, ニードル, スケール, 範囲, 目盛, インフラジスティックス
 mentionedTypes: ['XamBulletGraph']
 _language: ja
 ---
 
-## ブレット グラフ
+# Angular ブレット グラフの概要
 
 Angular Bullet Graph コンポーネントは、目盛り上でメジャーの比較を簡潔にリニアで表示します。
 
-### サンプル
+## サンプル
 
 ブレット グラフ コンポーネントは、きれいなデータ表現を作成するための多数の機能をサポートします。ブレット グラフは、目標に対する進捗状況、評価の範囲、複数の測定比較を表現する際に最も効率的で効果的なグラフの 1 つです。ブレット グラフは、水平または垂直のわずかな領域で、ゴールに至る進捗、評価の範囲、複数の測定比較を表現するための最も効率的で効果的な方法の 1 つです。
 
@@ -22,21 +22,24 @@ Angular Bullet Graph コンポーネントは、目盛り上でメジャーの�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
-</div>
 
+
+</div>
 <div class="divider--half"></div>
 
-このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。
+このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。
 ブレット グラフの機能には構成可能な向きや方向、視覚要素やツールチップなどがあります。
 
-### 依存関係
+## 依存関係
 
 gauges パッケージのインストール時に core パッケージもインストールする必要があります。
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-gauges**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-gauges
+</pre>
 
-### 必要なモジュール
+## 必要なモジュール
 
 [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) は、以下のモジュールが必要です。
 
@@ -58,7 +61,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 以下のコードは、ブレット グラフ コンポーネントを作成し、パフォ―マンス バーと比較目盛マーカー、および 3 つの比較範囲をスケールに構成します。
 
@@ -86,7 +89,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 比較メジャー
+## 比較メジャー
 
 ブレットグラフは、パフォーマンス値とターゲット値の 2 つのメジャーを表示できます。
 
@@ -118,9 +121,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### 比較範囲
+## 比較範囲
 
 範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
@@ -155,9 +160,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### 目盛
+## 目盛
 
 目盛は、ブレット グラフを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
 
@@ -169,7 +176,7 @@ export class AppModule {}
     height="80px" width="400px"
     minimumValue=0 value=70
     maximumValue=100 targetValue=90
-	interval=10
+    interval=10
     tickBrush="DodgerBlue"
     ticksPreTerminal=0
     ticksPostInitial=0
@@ -190,15 +197,17 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### ラベル
+## ラベル
 
 ラベルはスケールのメジャーを示します。
 
 ```html
 <igx-bullet-graph
-   height="80px" width="400px"
+    height="80px" width="400px"
     minimumValue=0 value=70 interval=10
     maximumValue=100 targetValue=90
     labelInterval=10
@@ -216,9 +225,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### バッキング
+## バッキング
 
 バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
 
@@ -241,9 +252,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### スケール
+## スケール
 
 スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
@@ -267,9 +280,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### まとめ
+## まとめ
 
 上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
 

@@ -1,18 +1,18 @@
 ---
-title: リニア ゲージ | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
-_description: リニア ゲージ コンポーネントを使用して、シンプルで簡潔なビューでデータを可視化します。構成可能な要素、依存関係、コードスニペットについて説明します。
-_keywords: linear gauge, Ignite UI for Angular, infragistics, リニア ゲージ, インフラジスティックス
+title: Angular リニア ゲージ | データ可視化ツール | インフラジスティックス
+_description: インフラジスティックスの Angular リニア ゲージ コントロールを使用して、シンプルで簡潔なビューでデータを可視化します。Ignite UI for Angular リニア ゲージの設定可能な要素について説明します。
+_keywords: linear gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks, リニア ゲージ, インフラジスティックス, アニメーション, ラベル, 針, スケール, 範囲, 目盛
 mentionedTypes: ['XamLinearGauge']
 _language: ja
 ---
 
-## リニア ゲージ
+# Angular リニア ゲージの概要
 
-Linear Gauge コンポーネントは、値とスケールまたは複数の範囲に対する比較を表示します。
+Angular Linear Gauge コンポーネントは、値とスケールまたは複数の範囲に対する比較を表示します。
 
-### サンプル
+## サンプル
 
-Ignite UI for Angular Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、`transitionDuration` プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
+Ignite UI for Angular Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
@@ -22,18 +22,22 @@ Ignite UI for Angular Linear Gauge コンポーネントは、データをリニ
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 依存関係
+## 依存関係
 
-gauges パッケージをインストールするときに core パッケージもインストールする必要があります。
+Angular gauge コンポーネントをインストールするときに core パッケージもインストールする必要があります。
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-gauges**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-gauges
+</pre>
 
-### 必要なモジュール
+## 必要なモジュール
 
 [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) は、以下のモジュールが必要です。
 
@@ -55,7 +59,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 以下のコードは針およびスケールで 3 つの比較範囲を含むリニア ゲージを作成する方法を紹介します。
 
@@ -82,7 +86,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 針
+## 針
 
 これは、コンポーネントで表示されるプライマリ メジャーでバーで可視化されます。あるいは以下で示す図形のほとんどすべてをカスタマイズすることもできます。
 
@@ -115,9 +119,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-needle-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### 範囲
+## 範囲
 
 範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
@@ -147,9 +153,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### 目盛
+## 目盛
 
 目盛は、リニア ゲージを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
 
@@ -183,9 +191,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-tickmarks-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### ラベル
+## ラベル
 
 ラベルはスケールのメジャーを示します。
 
@@ -209,9 +219,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### バッキング
+## バッキング
 
 バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
 
@@ -234,9 +246,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-backing-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### スケール
+## スケール
 
 スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
@@ -262,9 +276,11 @@ export class AppModule {}
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
-### まとめ
+## まとめ
 
 上記すべてのコード スニペットを以下のコード ブロックにまとめています。プロジェクトに簡単にコピーしてブレットグラフのすべての機能を再現できます。
 

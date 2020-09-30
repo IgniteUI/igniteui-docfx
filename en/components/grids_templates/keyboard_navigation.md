@@ -41,15 +41,15 @@ Currently, the @@igxName introduces the following tab stops:
 > Exposing any **focusable** element into the **@@igxName** body via template may introduce **side effects** in the keyboard navigation, since the default
 > browser behavior is not prevented. It is the developer's responsibility to prevent or modify it appropriately.
 
-### Header Navigation
+## Header Navigation
 
 A full *keyboard navigation* support in the **@@igxName** header is now introduced. Column headers can be easily traversed with the arrow keys. Additionally, there are a number of key combinations that trigger actions on the columns like **filtering**, **sorting**, **grouping** and etc.
 When the **@@igxName** header container is focused, the following key combinations are available:
 
-#### Key Combinations
+### Key Combinations
 
- - <kbd>Arrow Up</kbd> navigates one cell up in the headers (no looping). Available only when Multi Row Layout (MRL) or Multi Column Headers (MCH) are defined
- - <kbd>Arrow Down</kbd> navigates one cell down in the headers (no wrapping). Available only when Multi Row Layout (MRL) or Multi Column Headers (MCH) are defined
+ - <kbd>Arrow Up</kbd> navigates one cell up in the headers (no looping). Available only when Multi-row Layout (MRL) or Multi-column Headers (MCH) are defined
+ - <kbd>Arrow Down</kbd> navigates one cell down in the headers (no wrapping). Available only when Multi-row Layout (MRL) or Multi-column Headers (MCH) are defined
  - <kbd>Arrow Left</kbd> navigates one cell left (no looping)
  - <kbd>Arrow Right</kbd> navigates one cell right (no wrapping between lines)
  - <kbd>Ctrl + Arrow Left</kbd> navigates to the leftmost cell in the row; if MRL or MCH are enabled, navigates to the leftmost cell at the same level
@@ -66,11 +66,11 @@ When the **@@igxName** header container is focused, the following key combinatio
  - <kbd>Alt + Arrow Left</kbd> or <kbd>Alt + Arrow Up</kbd> collapses the column group header, if the header is not already collapsed
  - <kbd>Alt + Arrow Right</kbd> or `Alt + Arrow Down</kbd> expands the column group header, if the header is not already expanded}
 
-### Body navigation
+## Body navigation
 
 When the **@@igxName** body is focused, the following key combinations are available:
 
-#### Key Combination
+### Key Combination
 
  - <kbd>Arrow Up</kbd>- navigates one cell up @@if (igxName === 'IgxHierarchicalGrid') {, or one level up the grid hierarchy if necessary }(no wrapping)
  - <kbd>Arrow Down</kbd> navigates one cell down @@if (igxName === 'IgxHierarchicalGrid') {, or one level down the grid hierarchy if necessary}(no wrapping)
@@ -99,7 +99,7 @@ When the **@@igxName** body is focused, the following key combinations are avail
 
 Practice all of the above mentioned actions in the demo sample below. Focus any navigable grid element and a list with some of the available actions for the element will be shown to guide you through.
 
-### Demo
+## Demo
 @@if (igxName === "IgxGrid") {
 <div class="sample-container loading" style="height:470px">
     <iframe id="grid-keyboardnav-guide-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-keyboardnav-guide' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -135,7 +135,7 @@ Practice all of the above mentioned actions in the demo sample below. Focus any 
 }
 
 
-### Custom keyboard navigation
+## Custom keyboard navigation
 Overriding the default behavior for a certain key or keys combination is one of the benefits that the **Keyboard Navigation** feature provides. For example: press the <kbd>Enter</kbd> or <kbd>Tab</kbd> key to navigate to the next cell or the cell below. This or any other navigation scenario is easily achieved by the **Keyboard Navigation** API:
 
 
@@ -292,17 +292,17 @@ Use the demo below to try out the custom scenarios that we just implemented:
 </div>
 }
 
-### Known Limitations
+## Known Limitations
 
 |Limitation|Description|
 |--- |--- |
 | Navigating inside а grid with scrollable parent container. | If the grid is positioned inside a scrollable parent container and the user navigates to a grid cell that is out of view, parent container will not be scrolled.|
 
-### API References
+## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxHierarchicalGrid') {* [Grid Keyboard Navigation](../grid/keyboard_navigation.md)}

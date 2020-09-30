@@ -25,7 +25,7 @@ _keywords: angular remote data operations, ignite ui for angular, infragistics
 The Ignite UI for Angular @@igComponent supports remote data operations such as remote virtualization, remote sorting, remote filtering and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -37,7 +37,7 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -57,7 +57,7 @@ By default, the @@igComponent uses its own logic for performing data operations.
 You can perform these tasks remotely and feed the resulting data to the @@igComponent by taking advantage of certain inputs and events, which are exposed by the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
-### Remote Virtualization
+## Remote Virtualization
 
 The [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
 
@@ -102,7 +102,7 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 >[!NOTE]
 >The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
 
-#### Remote Virtualization Demo
+### Remote Virtualization Demo
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -114,7 +114,7 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 </div>
 
 
-#### Infinite Scroll
+## Infinite Scroll
 
  A popular design for scenarios requiring fetching data by chunks from an end-point is the so-called infinite scroll. For data grids, it is characterised by continuous increase of the loaded data triggered by the end-user scrolling all the way to the bottom. The next paragraphs explain how you can use the available API to easily achieve infinite scrolling in `IgxGrid`.
 
@@ -166,7 +166,7 @@ public handlePreLoad() {
 ```
 
 
-#### Infinite Scroll Demo
+### Infinite Scroll Demo
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -176,7 +176,7 @@ public handlePreLoad() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Remote Sorting/Filtering
+## Remote Sorting/Filtering
 
 To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
 
@@ -229,7 +229,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 >[!NOTE]
 >When remote data is requested, the filtering operation is case-sensitive.
 
-#### Remote Sorting/Filtering Demo
+### Remote Sorting/Filtering Demo
 
 You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
 }
@@ -291,17 +291,17 @@ The remote filtering will have to be performed over the flat collection directly
 >[!NOTE]
 >When remote data is requested, the filtering operation is case-sensitive.
 
-#### Remote Filtering Demo
+### Remote Filtering Demo
 
 You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->
-### Unique Column Values Strategy
+## Unique Column Values Strategy
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### Unique Column Values Strategy
+### Unique Column Values Strategy
 }
 
 The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In case of remote filtering, the grid data does not contain all the data from the server. In order to provide the unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input. This input is actually a method that provides three arguments:
@@ -330,7 +330,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
-#### Unique Column Values Strategy Demo
+### Unique Column Values Strategy Demo
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -357,7 +357,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
-#### Unique Column Values Strategy Demo
+### Unique Column Values Strategy Demo
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="tree-grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -399,7 +399,7 @@ this.remoteValuesService.getColumnData(
 }
 ```
 
-#### Unique Column Values Strategy Demo
+### Unique Column Values Strategy Demo
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -532,7 +532,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 
 Now we can choose between setting-up our own *custom paging template* or using the default one that the @@igComponent provides. Let's first take a look what is necessary to set-up remote paging by using the *default paging template*.
 
-#### Remote paging with default template
+### Remote paging with default template
 
 If you want to use the *default paging template* you need to set the [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) property, only then the grid will be able to calculate the *total page number* based on total remote records. When performing a remote pagination we pass to the grid only the data for the current page, so the grid will not try to paginate the provided data source. That's why we should set the [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) property to *GridPagingMode.remote*. Also it is necessary to subscribe to [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) or [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) events in order to fetch the data from your remote service, it depends on the use case which event will be used.
 
@@ -628,7 +628,7 @@ public paginate() {
 <div class="divider--half"></div>
 }
 
-#### Remote Paging with custom template
+### Remote Paging with custom template
 
 When we define a *custom paging template* it's not necessary to define the @@igComponent properties like [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) or [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords), as we did for the *custom paging with default template*. We need to create a custom pager template to get the data only for the requested page and to pass the correct **skip** and **top** parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage). We are going to use the `<igx-paginator>` in order to ease our example configuration.
 
@@ -820,7 +820,7 @@ After all the changes above, the following result will be achieved.
 }
 
 @@if (igxName === 'IgxGrid') {
-#### Remote Paging with custom paginator
+### Remote Paging with custom paginator
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
 
@@ -950,13 +950,13 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 </div>
 }
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

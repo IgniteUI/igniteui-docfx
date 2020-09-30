@@ -1,15 +1,15 @@
 
 ---
 title: Angular Collapsible Column Groups | Ignite UI for Angular | Infragistics
-_description: Collapsible multi-column headers make it possible to collapse some subset of the nested columns under the current one and to show some nested headers, which will give you a shorten informtion for example.
-_keywords: collpasible column headers, ignite ui for angular, infragistics
+_description: Collapsible multi-column headers make it possible to collapse some subset of the nested columns under the current one and to show some nested headers, which will give you a shorten information for example.
+_keywords: collapsible column headers, ignite ui for angular, infragistics
 ---
 
 # Grid Collapsible Column Groups Overview
 
 Multi-column headers allow you to have multiple levels of nested columns and column groups, also they provide you the ability to mark each column group as **collapsible**. **Collapsible multi-column headers** make it possible to collapse/expand, e.g. to show and hide the nested headers under the current one, which will give you a shortened/summarized information for example.
 
-##### Demo
+#### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -44,7 +44,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 <div class="divider--half"></div>
 }
 
-### Setup
+## Setup
 
 To get started with the IgxGrid and the **Collapsible multi-column headers** , first you need to install Ignite UI for Angular by typing the following command:
 
@@ -55,7 +55,7 @@ For a complete introduction to the Ignite UI for Angular, read the [*getting sta
 
 The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi_column_headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
 
-### Usage
+## Usage
 
 *Collapsible Column Groups* is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. When a column group is collapsed, a subset of the columns will be shown to the end-user and the other child columns of the group will hide. Each collapsed/expanded column can be bound to the grid data source, or it may be unbound, thus calculated.
 
@@ -89,7 +89,7 @@ And now let's sum up: every child column has tree states:
 
 The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expanded]="false"`.
 
-### Expand/Collapse indicator template
+## Expand/Collapse indicator template
 
 Default expand indicator for the igxGrid is the following:
 
@@ -100,7 +100,7 @@ Default collapse indicator for the igxGrid is the following:
 <img src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
 Also if you need to change the default expand/collapse indicator we introduce you two easy ways to do it.
-##### By input property
+### By input property
 
 You can define custom expand/collapse template and provide it to each of the collapsible column groups using **collapsibleIndicatorTemplate** input property. Check the markup below:
 
@@ -117,7 +117,7 @@ You can define custom expand/collapse template and provide it to each of the col
     </igx-column-group>
 </igx-column-group>
 ```
-##### Using igxCollapsibleIndicator directive
+### Using igxCollapsibleIndicator directive
 
 Another way to achieve this behavior is to use the igxCollapsibleIndicator directive as shown in the example below:
 
@@ -141,14 +141,14 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 > hidden and you have a group defined where the same column should be shown, the column will be shown.
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)

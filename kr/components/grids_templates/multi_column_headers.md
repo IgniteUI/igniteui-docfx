@@ -1,28 +1,28 @@
 ﻿@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
+title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
+title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi Column Headers | Ignite UI for Angular | Infragistics
+title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 
-### @@igComponent Multi Column Headers Overview
+### @@igComponent Multi-column Headers Overview
 
-[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
+[`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each Multi-column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
 
 #### 데모
 
@@ -54,7 +54,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 </div>
 }
 
-`Multi column header`의 선언은 열 집합을 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) 컴포넌트에 [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) 제목을 전달하여 래핑합니다.
+`Multi-column header`의 선언은 열 집합을 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) 컴포넌트에 [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) 제목을 전달하여 래핑합니다.
 
 @@if (igxName === 'IgxGrid') {
 ```html

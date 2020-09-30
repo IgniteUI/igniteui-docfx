@@ -8,7 +8,7 @@ _keywords: excel like filter, igniteui for angular, infragistics
 
 The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">
@@ -43,7 +43,7 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular Mat
 
 <div class="divider--half"></div>
 
-###Usage
+## Usage
 
 To turn on the grid excel filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) should be set to `excelStyleFilter`.
 
@@ -66,7 +66,7 @@ To turn on the grid excel filtering, two inputs should be set. The [`allowFilter
 ```
 }
 
-### Interactions
+## Interactions
 
 In order to open the filter menu for a particular column, the Angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons available for the features that are turned on.
 
@@ -77,7 +77,7 @@ To apply a filter with different expressions, you can click the **Text filter**,
 
 <div class="divider--half"></div>
 
-### Configure Menu Features
+## Configure Menu Features
 
 Sorting, moving, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
@@ -209,7 +209,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 
 <div class="divider--half"></div>
 
-### Templates
+## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
 - [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationsdirective.html) - re-templates the area with all column operations like sorting, moving, pinning, etc.
@@ -361,16 +361,16 @@ Here is the full list of Excel style filtering components that you could use:
 
 <div class="divider--half"></div>
 
-### Unique Column Values Strategy
+## Unique Column Values Strategy
 
 The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. These values can be provided manually and loaded on demand, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#unique-column-values-strategy) topic.
 
 
-### External Excel Style filtering
+## External Excel Style filtering
 
 As you see at the demos above the default appearance of the Excel Style filtering dialog is inside the @@igComponent. So this dialog is only visible when configuring the fitlers. There is a way to make that dialog stay always visible - it can be used outside of the grid as a standalone component. In the demo below, the Excel style filtering is declared separately of the @@igComponent.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:670px">
@@ -408,7 +408,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 <div class="divider--half"></div>
 
-#### Usage
+### Usage
 
 In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
@@ -452,12 +452,12 @@ In order to configure the Excel style filtering component, you should set its [`
 ```
 }
 
-### External Outlet
+## External Outlet
 
 The @@igComponent's [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) creates separate stacking context for each grid in the DOM. This ensures that all descendant elements of the grid will render as intended, without overlapping one another.
 However, elements that go outside of the grid (e.g. Excel Style filter) will conflict with outside elements with the same `z-index` (e.g. having two grids one under another) resulting in false rendering. The solution for this issue is to set the [`outlet`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#outlet) property to an external outlet directive which allows the overlay elements to always appear on top.
 
-#### Demo
+### Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-outlet-iframe" src='{environment:demosBaseUrl}/grid/grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -491,7 +491,7 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 </div>
 }
 
-### Styling
+## Styling
 
 To get started with styling the Excel Style Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -590,7 +590,7 @@ The last step is to **include** the component mixins, each with its respective t
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -650,7 +650,7 @@ $custom-drop-down: igx-drop-down-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -800,7 +800,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">
@@ -835,14 +835,14 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

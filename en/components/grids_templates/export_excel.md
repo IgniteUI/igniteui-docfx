@@ -27,7 +27,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <div class="divider"></div>
 
-#### Excel Exporter Demo
+### Excel Exporter Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height: 300px;">
@@ -55,7 +55,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <div class="divider--half"></div>
 
-#### Exporting @@igComponent's Data
+## Exporting @@igComponent's Data
 
 To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the app.module.ts file and add the service to the `providers` array:
 
@@ -107,7 +107,7 @@ public exportButtonHandler() {
 
 If all went well, you should see the @@igxName component and a button under it. When pressing the button, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format.
 
-#### Export All Data
+## Export All Data
 
 There are some cases when you might be using remote operations like *Paging* and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter_excel.html#excel-exporter) and pass the whole data collection, if available. Example:
 
@@ -117,7 +117,7 @@ public exportButtonHandler() {
 }
 ```
 
-#### Customizing the Exported Content
+## Customizing the Exported Content
 
 In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
@@ -135,7 +135,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 ```
 
 When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object.
-#### Known Limitations
+## Known Limitations
 
 @@if (igxName === 'IgxGrid') {
 |Limitation|Description|
@@ -154,7 +154,7 @@ npm install --save setimmediate
 import 'setimmediate';
 ```
 
-#### API References
+## API References
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
 
@@ -168,7 +168,7 @@ Additional components that were used:
 
 <div class="divider"></div>
 
-#### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
