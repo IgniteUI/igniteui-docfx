@@ -47,7 +47,8 @@ The selection feature enables rich data select capabilities in the Material UI b
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-#### @@igComponent Мultiple-cell Selection
+## Selection types
+### @@igComponent Multiple-cell Selection
 
 How to select cells:
 - By `Mouse drag` - Rectangular data selectoion of cells would be performed.
@@ -82,25 +83,25 @@ How to select cells:
 }
 }
 
-#### @@igComponent Single Selection
+### @@igComponent Single Selection
 
 When you set the `[cellSelection]="'single'"`, this allows you to have only one selected cell in the grid at a time. Also the mode `mouse drag` will not work and instead of selecting a cell, this will make default text selection.
 
 > When single cell is selected [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event is emitted, no matter if the `selection mode` is `single` or `multiple`. In multi-cell selection mode when you select a range of cells [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) event is emitted.
 
-#### @@igComponent None selection
+### @@igComponent None selection
 If you want to disable cell selection you can just set `[cellSelection]="'none'"` property. In this mode when you click over the cell or try to navigate with keyboard, the cell is **not selected**, only the `activation style` is applied and it is going to be lost when you scroll or click over other element on the page. The only way for you to define selection is by using the API methods that are described below.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### Keyboard navigation interactions
+## Keyboard navigation interactions
 
-##### While Shift key is pressed
+### While Shift key is pressed
 - <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to add above cell to the current selection.
 - <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to add below cell to the current selection.
 - <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to add left cell to the current selection.
 - <kbd>Shift</kbd> + <kbd>Arrow Right</kbd> to add right cell to the current selection.
 
-##### While Ctrl + Shift keys are pressed
+### While Ctrl + Shift keys are pressed
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> to select all cells above the focused cell in the column.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> to select all cells below the focused cell in the column.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Left</kbd> to select all cells till the start of the row.
@@ -111,10 +112,10 @@ If you want to disable cell selection you can just set `[cellSelection]="'none'"
 > [!NOTE]
 > Continuous scroll is possible only within Grid's body.
 
-### Api usage
+## Api usage
 Below are the methods that you can use in order to select ranges, clear selection or get selected cells data.
 
-#### Select range
+### Select range
 
 [`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectrange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value.
 
@@ -131,11 +132,11 @@ this.grid1.selectRange(range);
 > [!NOTE]
 > Select range is additive operation. It will not clear your previous selection.
 
-#### Clear cell selection
+### Clear cell selection
 
 [`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearcellselection) will clear the current cell selection.
 
-#### Get selected data
+### Get selected data
 
 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) will return array of the selected data in format depending on the selection. Examples below:
 
@@ -197,7 +198,7 @@ expectedData = [
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 
 
-### Features integration
+## Features integration
 The multi-cell selection is index based (DOM elements selection).
 
 - `Sorting` - When sorting is performed selection will not be cleared. It will leave currently selected cells the same while sorting ascending or descending.
@@ -210,11 +211,11 @@ The multi-cell selection is index based (DOM elements selection).
 
 }
 
-### Styling Guidelines
+## Styling Guidelines
 
 The theme engine exposes properties that allows us to style the `range of selected cells`.
 
-#### Import theme
+### Import theme
 
 To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -223,7 +224,7 @@ To get started with styling the selection, we need to import the `index` file, w
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-#### Define colors
+### Define colors
 
 Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
 ```scss
@@ -232,7 +233,7 @@ Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl
     $border-yellow: #f2c43c;
 ```
 
-#### Create custom theme
+### Create custom theme
 
 Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
 
@@ -244,7 +245,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Apply theme
+### Apply theme
 
 Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
 
@@ -268,7 +269,7 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
 With the custom theme applied, the selected grid cells are highlighted with our selected colors:
 
 @@if (igxName === 'IgxGrid'){
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
@@ -282,7 +283,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -297,7 +298,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 
 
 @@if (igxName === 'IgxTreeGrid'){
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:620px">
     <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -311,14 +312,14 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 }
 
 
-### API References
+## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

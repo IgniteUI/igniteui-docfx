@@ -24,7 +24,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 
 Тhe igxGridState directive allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) methods that developers can use to achieve state persistence in any scenario.
 
-#### Features Supported
+## Supported Features
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive supports saving and restoring the state of the following features:
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
@@ -65,7 +65,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 
 > The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state_persistence.md#restoring-columns) section to see how to restore column templates.
 
-#### Usage
+## Usage
 
 [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - This method returns the grid state in a serialized JSON string, so developers can just take it and save it on any data storage (database, cloud, browser localStorage, etc). The method accepts first optional parameter `serialize`, which determines whether [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) will return an [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) object or a serialized JSON string.
 The developer may choose to get only the state for a certain feature/features, by passing in the feature name, or an array with feature names as a second argument.
@@ -108,7 +108,7 @@ public options =  { cellSelection: false; sorting: false; }
 ```
 }
 
-Thеse simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state will be restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
+The simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state will be restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
 
 ```typescript
   // app.component.ts
@@ -133,7 +133,7 @@ Thеse simple to use single-point API's allows to achieve a full state persisten
   }
 ```
 
-#### Restoring columns
+## Restoring columns
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state_persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
 
@@ -188,7 +188,7 @@ public onColumnInit(column: IgxColumnComponent) {
 ```
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### Restoring Child Grids
+## Restoring Child Grids
 Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
 
 ``` html
@@ -201,7 +201,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 ```
 }
 
-#### Demo
+## Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:763px">
@@ -237,7 +237,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 }
 
 
-#### Limitations
+## Limitations
 * @@if (igxName === 'IgxHierarchicalGrid') {
 When restoring all grid features at once (using `setState` API with no parameters), then column properties for the root grid might be resetted to default. If this happens, restore the columns or column selection feature separately after that:
 ```typescript
@@ -250,7 +250,7 @@ state.setState(gridState.columnSelection);
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 
 @@if (igxName === 'IgxGrid') {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
@@ -265,7 +265,7 @@ state.setState(gridState.columnSelection);
 * [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
 }
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

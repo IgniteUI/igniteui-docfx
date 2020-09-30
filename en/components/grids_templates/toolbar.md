@@ -8,7 +8,7 @@ _keywords: angular toolbar, igniteui for angular, infragistics
 
 The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc and supports Angular events.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
@@ -67,7 +67,7 @@ The toolbar is shown using the @@igComponent's [`showToolbar`]({environment:angu
 ```
 }
 
-#### Features
+## Features
 
 The toolbar can be configured to allow column hiding, column pinning and exporting data to MS Excel and CSV. 
 You can enable each feature independently by setting its dedicated boolean property to true:
@@ -171,7 +171,7 @@ import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular
 export class AppModule {}
 ```
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### Customizing the Export
+## Customizing the Export
 
 In addition to simply switching on and off the toolbar features, the export process can be further configured in the [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options.
 
@@ -244,7 +244,7 @@ The following sample demonstrates how to customize the exported files:
 <div class="divider"></div>
 }
 
-#### Exporting Indicator
+## Exporting Indicator
 
 Sometimes when the grid has a lot of data, exporting that data to Excel or CSV can take some time. That's why we added the exporting indicator at the bottom of the toolbar, which tells whether an exporting is in progress. If the exporting process takes longer than 500ms, the indicator will appear at the bottom of the toolbar and hide once the exporting finishes. The sample below contains big amount of data, in order to increase the time needed for data export which will cause exporting indicator to appear:
 
@@ -272,7 +272,7 @@ Sometimes when the grid has a lot of data, exporting that data to Excel or CSV c
 }
 }
 
-#### Custom Content Template
+## Custom Content Template
 
 If you need to add some application specific UI to the toolbar (like custom buttons for example) you may create an ng-template and mark it with the [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive. The following code snippet demonstrates how to define such custom template:
 
@@ -331,7 +331,7 @@ The following sample demonstrates how to add an additional button to the toolbar
 <div class="divider"></div>
 }
 
-### Styling
+## Styling
 
 To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
 
@@ -394,7 +394,7 @@ The last step is to **include** the newly created themes. The button theme will 
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -426,7 +426,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -486,7 +486,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
@@ -522,7 +522,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider"></div>
 }
 
-### API References
+## API References
 
 The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
@@ -551,7 +551,7 @@ Styles:
 
 * [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
