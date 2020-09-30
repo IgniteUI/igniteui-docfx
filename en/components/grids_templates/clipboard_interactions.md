@@ -16,7 +16,7 @@ _keywords: copy data, igniteui for angular, infragistics
 # @@igComponent Clipboard Interactions
 Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
 
-#### Demo
+### Demo
 
 
 @@if (igxName === 'IgxGrid') {
@@ -40,7 +40,7 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
 <div class="divider--half"></div>
 }
 
-### Functionality
+## Functionality
 Copy behavior is working with the default interaction defined by the browser and operating system. Thus for the copy and paste behaviors, these are:
 
 - Windows/Unix based
@@ -53,7 +53,7 @@ Copy behavior is working with the default interaction defined by the browser and
   - Copy action through the browser menu
 
 
-### Limitations
+## Limitations
 - Both the **cut** and **copy** events are not natively supported in Internet Explorer. The exception is the
 **paste** event (IE 11) which is emitted but does not expose the `clipboardData` property in the event. 
 > [!NOTE] 
@@ -63,7 +63,7 @@ Copy behavior is working with the default interaction defined by the browser and
 - The current version of this feature covers only the `copy` from grid behavior. Later on we plan to expose `paste` within grid behavior.
 @@if (igxName === 'IgxGrid') { You can use a custom paste handler in order to configure `paste` behavior, have a look at our [Paste from Excel topic](paste_excel.md). }
 
-### API Usage
+## API Usage
 We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) @Input property, which handles the following options:
 - [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) Enables/disables copying of selected cells.
 - [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) Include the associated headers when copying.
@@ -75,7 +75,7 @@ We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcompon
 
 - [`onGridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) Emitted when a copy operation is executed. Fired only if copy behavior is enabled through the [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

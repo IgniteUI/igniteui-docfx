@@ -8,18 +8,18 @@ _keywords: Data aggregation, selection, ignite ui for angular, infragistics
 
 With the sample, illustrated beyond, you may see how multiple selection is being used, alongside with custom summary functions, to display aggregates based on the selected values in the grid footer.
 
-#### Overview
+## Topic Overview
 
 To achieve the selection-based aggregates functionality, you can use our [`Grid Selection`]({environment:angularApiUrl}/components/grid/selection.html) feature, together with the [`Grid Summaries`]({environment:angularApiUrl}/components/grid/summaries.html).    
 The Summaries are allowing for customization of the basic Summary feature functionality through extending one of the base classess, [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html), depending on the column data type and your needs.  
 
-#### Selection
+## Selection
 To start working with the data in the selected grid range, you will have to subscribe to events that are notifying of changes in the grid selection. That can be done by subscribing to the [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) event and to the [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event. You need to bind to both of them because the Selection feature differentiates between selecting a single cell and selecting a range of cells.     
 
 In the events subscription logic, you can extract the selected data using the grid's [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) function and pass the selected data to the custom summary operand.
 
 
-#### Summary
+## Summary
 Within the custom summary class, you'd have to be differentiating the types of data in the grid. For instance, in the scenario below, there are four different columns, whose type of data is suitable for custom summaries. These are the Unit Price, the Units in Stock, Discontinued status and the Order Date.   
 The `operate` method of the derived class of the `IgxSummaryOperand`, is where you will process the data, starting by casing it in different categories based on the data types:
 
@@ -37,7 +37,7 @@ After that, you'd have to put the aggregated data in the same array, which would
 For the visualization of the data, you might want to use the `<igx-grid-footer>`, which in a combination with the `custom-summaries` class will give the natural look of the Summary.
 
 
-#### Demo
+### Demo
 Change the selection to see summaries of the currently selected range.   
 
 <div class="sample-container loading" style="height: 560px;">
@@ -48,13 +48,13 @@ Change the selection to see summaries of the currently selected range.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API References
+## API References
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)    
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>    
 
 * [Grid overview](grid.md)    

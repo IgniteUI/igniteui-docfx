@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | データ ユーティリティ | インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | ESRI マップのリソース | インフラジスティックス
+_description: インフラジスティックスの Angular を使用して ESRI Maps からの画像を表示します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
+_keywords: Angular map, ESRI, Ignite UI for Angular, Infragistics, imagery tile source, map background, Angular マップ, ESRI, インフラジスティックス, 画像タイル ソース, マップ背景
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## Esri ユーティリティ
+# Angular Esri ユーティリティ
 
 リソース トピックは、Esri Maps が [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で提供する [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html) の使用に役立つユーティリティの実装を提供します。
 
-### コード スニペット
+## コード スニペット
 
 ```ts
 export class EsriUtility {

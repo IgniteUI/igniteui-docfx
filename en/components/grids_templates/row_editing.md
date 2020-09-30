@@ -8,7 +8,7 @@ _keywords: row editing, igniteui for angular, infragistics
 
 The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified. 
 
-#### Demo
+### Demo
 
 The following sample demonstrates how to enable row editing in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row won't  update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
 
@@ -50,7 +50,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 > [!NOTE]
 > When a row is in edit mode, then clicking on a cell on another row will act like the Done button is pressed - submit all the changes of the previous row. If the new cell that gets focus is editable, then the new row also enters edit mode, while if the cell is not editable, then only the previous row exits edit mode.
 
-### Row Editing Usage
+## Row Editing Usage
 
 To get started import the `@@igxNameModule` in the **app.module.ts** file:
 
@@ -231,7 +231,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 > [!NOTE]
 > The @@igComponent uses internally a provider [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) that holds pending cell changes, until row state submitted or cancelled.
 
-### Positioning
+## Positioning
 
 - Default position of the overlay will be below the row that is in edit mode
 
@@ -239,7 +239,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 - Once shown - top or bottom, overlay will maintain this position during scrolling, until the overlay is closed.
 
-### Behavior
+## Behavior
 
 - If row is in edit mode, then editing will continue, if a cell from the same row is clicked.
 
@@ -258,7 +258,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - Each modified cell gets edited style until row edit is finished. This is the behavior, when @@igComponent is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
 
 
-### Keyboard Navigation
+## Keyboard Navigation
 
 - `Enter` and `F2` enters row edit mode
 
@@ -267,7 +267,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
 
 
-### Feature Integration
+## Feature Integration
 
 - Any data changing operation will terminate row editing operations and will submit current row changes. This will include operations like sorting, changing grouping and filtering criteria, paging, etc.
 
@@ -277,9 +277,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - Expanding and collapsing grouped rows will not terminate editing for the current row.
 }
 
-### Customizing Row Editing Overlay
+## Customizing Row Editing Overlay
 
-#### Customizing Text
+### Customizing Text
 
 Customizing the text of the row editing overlay is possible using the `igxRowEditTextDirective`.
 The `rowChangesCount` property is exposed and it holds the count of the changed cells.
@@ -290,7 +290,7 @@ The `rowChangesCount` property is exposed and it holds the count of the changed 
 </ng-template>
  ```
 
-#### Customizing Buttons
+### Customizing Buttons
 Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
 If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
 
@@ -301,7 +301,7 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 
-### Styling
+## Styling
 
 Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can greatly alter the Row Editing overlay. 
 The Row Editing overlay is a composite element - its UI is comprised of a couple of other components:
@@ -311,7 +311,7 @@ The Row Editing overlay is a composite element - its UI is comprised of a couple
 In the below example, we will make use of those two components' styling options, ([button styling](../button.md#styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
 We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](editing.md#styling).
 
-#### Import theme
+### Import theme
 
 The easiest way to style the Row Editing banner is to define styles in our `app`'s global style file (typically `styles.scss`).
 The first thing we need to do is import the `themes/index` file - this gives us access to all the powerful tools of the Ignite UI for Angular Sass framework:
@@ -339,7 +339,7 @@ We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#
 
 Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) for generating our colors.
 
-#### Include the theme
+### Include the theme
 
 All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner):
 
@@ -349,7 +349,7 @@ All we have to do now is apply the theme with a Sass `@include` statement. We pa
 
 This will apply our custom banner theme to the Row Editing overlay. However, since we defined these in the global styles file, these styles will also apply to **all** banners in our application.
 
-#### Component styles
+### Component styles
 
 Since the Row Editing overlay makes use of a lot of other components' themes, styling it via the global styles can affect other parts of our application (e.g. banners, buttons, etc.). The best way to prevent that is to scope our banner theme. We can define our styles (including the [`theme/index` import](#import-theme)) in the component containing our @@igSelector.
 
@@ -369,7 +369,7 @@ Since the Row Editing overlay makes use of a lot of other components' themes, st
 
 With the above syntax, our custom banner theme properly applies to the grid's Row Editing overlay.
 
-#### Custom Templates
+### Custom Templates
 
 To further customize our Row Editing overlay, we can pass a custom template so we can style the `Done` and `Cancel` buttons separately:
 
@@ -409,7 +409,7 @@ $button-theme: igx-button-theme(
 
 We scope our `@include` statement in `.custom-buttons` so that it is only applied to the `Done`and `Cancel` buttons.
 
-#### Demo
+### Demo
 
 After styling the banner and buttons, we also define a custom style for [the cell in edit mode](editing.md#styling). The result of all the combined styles can be seen below:
 
@@ -452,7 +452,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 </div>
 }
 
-### API References
+## API References
 
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
 * [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
@@ -465,7 +465,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 * [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent Overview](@@igMainTopic.md)

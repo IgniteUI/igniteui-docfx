@@ -3,7 +3,7 @@
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
-_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
+_keywords: angular データグリッド, angular grid 更新, angular ライブデータ
 _language: ja
 ---
 }
@@ -12,7 +12,7 @@ _language: ja
 ---
 title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
-_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
+_keywords: angular データグリッド, angular grid 更新, angular ライブデータ
 _language: ja
 ---
 }

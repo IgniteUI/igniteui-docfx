@@ -1,6 +1,6 @@
 ---
 title: Paste from Excel | Export Selected Data | Ignite UI for Angular | infragistics 
-_description: Configure the Angular Grid to paste data from excel, by using rich and performand API with less code, and use the rich API do export selected grid data easily.
+_description: Configure the Angular Grid to paste data from excel, by using rich and performant API with less code, and use the rich API do export selected grid data easily.
 _keywords: export selected, igniteui for angular, infragistics
 ---
 
@@ -8,7 +8,7 @@ _keywords: export selected, igniteui for angular, infragistics
 
 The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
 
-#### Paste from Excel Demo
+## Paste from Excel Demo
 
 This sample demonstrates how to implement pasting from Excel into the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) Material UI table.
 To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
@@ -31,7 +31,7 @@ The new data after the paste is decorated in Italic.
 </div>
 <div class="divider"></div>
 
-#### Usage
+## Usage
 
 You should add the `paste-handler` directive (you can find its code in the next section) to the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) and handle its `onDataProcessed` event. The `onDataProcessed` event has one parameter that gives you access to the Excel data in the form of an array. For reference see the `addRecords` and `updateRecords` methods.
 
@@ -136,7 +136,7 @@ You should add the `paste-handler` directive (you can find its code in the next 
 ```
 <div class="divider"></div>
 
-#### Paste Handler Directive
+## Paste Handler Directive
 
 This is the `paste-handler` implementation. The code creates a DOM `textarea` element which is used to receive the pasted data from the clipboard. When the data is pasted in the `textarea` the directive parses it into an array and then emits a custom event `onDataProcessed` passing the parsed data.
 
@@ -219,10 +219,10 @@ export class PasteHandler {
 
 ```
 
-### API References
+## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Excel Exporter](export_excel.md) - Use the Excel Exporter service to export data to Excel from IgxGrid. It also provides the option to only export the selected data from the IgxGrid. The exporting functionality is encapsulated in the IgxExcelExporterService class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the IgxExcelExporterService's export method and pass the IgxGrid component as first argument.

@@ -1,16 +1,16 @@
 ---
-title: カテゴリ チャート|データ可視化ツール|Ignite UI for Angular|リアルタイムのデータ|インフラジスティックス
-_description: カテゴリ チャート コンポネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。視覚化のチャート タイプについて説明します。
-_keywords: カテゴリ チャート, Ignite UI for Angular, Infragistics
+title: Angular チャートおよびグラフ | データ可視化ツール | リアルタイム データ | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して数百万のデータ ポイントを超高速でレンダリングします。Ignite UI for Angular グラフの高パフォーマンスをお試しください!
+_keywords: Angular charts, category chart, performance, Ignite UI for Angular, Infragistics, data binding, Angular チャート, カテゴリ チャート, パフォーマンス, インフラジスティックス、データ バインディング
 mentionedTypes: ['CategoryChart']
 _language: ja
 ---
 
-## リアルタイムのデータ
+# Angular リアルタイムのデータ
 
 Ignite UI for Angular カテゴリ チャート コンポネントは、以下のサンプルのように数百万に及ぶデータ ポイントを含む大量のデータを処理し、数ミリ秒ごとに更新できます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px;">
     <iframe id="category-chart-high-frequency-iframe" align="center" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency' height="100%" width="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,11 +18,13 @@ Ignite UI for Angular カテゴリ チャート コンポネントは、以下�
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### パフォーマンスの最適化
+## パフォーマンスの最適化
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。
 

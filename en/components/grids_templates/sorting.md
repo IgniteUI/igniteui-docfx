@@ -24,7 +24,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -69,7 +69,7 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
 
-#### Sorting Indicators
+## Sorting Indicators
 Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order. 
 
 The **@@igxName** provides a solution for this problem by indicating the index of each sorted column.
@@ -84,7 +84,8 @@ The **@@igxName** provides a solution for this problem by indicating the index o
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sorting-indicators-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
-#### Sorting through the API
+
+## Sorting through the API
 
 You can sort any column or a combination of columns through the @@igComponent API using the @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) method:
 
@@ -120,7 +121,7 @@ this.@@igObjectRef.clearSort();
 > [!NOTE]
 > The sorting operation **DOES NOT** change the underlying data source of the @@igComponent.
 
-#### Initial sorting state
+## Initial sorting state
 
 It is possible to set the initial sorting state of the @@igComponent by passing an array of sorting expressions to the [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressions) property of the @@igComponent.
 
@@ -139,14 +140,14 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-#### Remote Sorting
+## Remote Sorting
 
 The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
 
 <div class="divider--half"></div>
 }
 
-### Styling
+## Styling
 
 To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -179,7 +180,7 @@ The last step is to **include** the component mixins:
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -204,7 +205,7 @@ $custom-theme: igx-grid-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -240,7 +241,7 @@ $custom-theme: igx-grid-theme(
 Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-styling' width="100%" height="100%" 
@@ -253,7 +254,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="tree-grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -265,7 +266,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -277,12 +278,12 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 
-### API References
+## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

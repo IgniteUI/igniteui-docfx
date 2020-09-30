@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | ジオグラフィック CSV データ | インフラジスティックス
-_description: マップは、ビューモデルの地理的位置や CSV ファイルからロードされた地理的位置を含むデータを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | データ可視化ツール | CSV データのバインディング | インフラジスティックス
+_description: インフラジスティックスの Angular マップを使用して、ビュー モデルの地理的位置や CSV ファイルからロードされた地理的位置を含むデータの表示方法について説明します。Ignite UI for Angular マップのサンプルを是非お試しください!
+_keywords: Angular map, plot data, Ignite UI for Angular, Infragistics, data binding, Angular マップ, プロット データ, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## CSV ファイルを地理的な場所にバインド
+# Angular CSV ファイルを地理的な場所にバインド
 
 Ignite UI for Angular Map コンポーネントを使用すると、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、カンマ区切り値 (CSV) ファイルから地理的な場所を読み込むことができます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-data-csv-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,9 +20,10 @@ Ignite UI for Angular Map コンポーネントを使用すると、さまざま
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### データ例
+## データ例
 
 CSVファイルからのデータの例:
 
@@ -32,9 +33,9 @@ New York,40.7856,-74.0093,New Jersey,NJ,Hudson,21057,54227
 Dundee,42.5236,-76.9775,New York,NY,Yates,579,1650
 ```
 
-### コード スニペット
+## コード スニペット
 
-以下のコードは、マップコンポーネント内の GeographicHighDensityScatterSeries を、ロードされた CSV ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
+以下のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) を、ロードされた CSV ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
 
 ```html
 <div className="sampleRoot" >
