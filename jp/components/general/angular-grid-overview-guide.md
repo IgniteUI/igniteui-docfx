@@ -1,11 +1,11 @@
 ---
-title: Angular Grid と Angular アプリケーション開発 - 完全ガイド 
+title: Angular Grid と Angular アプリケーション開発の完全ガイド 
 _description: 最新のデータ グリッドとチャートは複雑で、さまざまな機能が含まれています。完全なガイドでは Angular Grid とアプリケーション開発について説明します。
 _keywords: angular, angular アプリケーション開発, infragistics 
 _language: ja
 ---
 
-## Angular Grid と Angular アプリケーション開発: 完全ガイド 
+# Angular Grid と Angular アプリケーション開発の完全ガイド 
 
 ### Angular Data Grid の概要 
 
