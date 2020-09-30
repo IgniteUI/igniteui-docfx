@@ -5,7 +5,7 @@ _keywords: angular, angular アプリケーション開発, infragistics
 _language: ja
 ---
 
-## Angular Grid と Angular アプリケーション開発の完全ガイド 
+# Angular Grid と Angular アプリケーション開発の完全ガイド 
 
 ### Angular Data Grid の概要 
 
