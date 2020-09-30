@@ -190,6 +190,7 @@ public date: Date = new Date(Date.now());
 > 現在、`label` プロパティは非推奨となる予定です。
 
 ### マルチ ビュー モード
+
 マルチビューの Date Picker は、`dropdown` と `dialog` モードの両方をサポートします。
 
 [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) 入力を使用して、カレンダーに表示される月数を設定します。現在月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) プロパティを使用します。
