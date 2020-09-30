@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 축 위치
+# Angular 축 위치
 
  모든 축에 대해 차트 플롯 영역과 관련하여 축 위치를 지정할 수 있습니다. 이는 동일한 차트에서 2개 이상의 축을 사용하거나 여러 시리즈 간에 [축을 공유](data-chart-axis-sharing.md)하는 경우에 특히 중요합니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 코드 예제
+## 코드 예제
 
 이 코드는 2개의 [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)가 왼쪽/오른쪽에 배치되고, 2개의 [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)가 서로 쌓이는 데이터 차트를 생성하는 방법을 보여 줍니다.
 
@@ -62,7 +64,7 @@ _language: kr
  </igx-data-chart>
 ```
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

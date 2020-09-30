@@ -1,14 +1,14 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Infragistics
+title: Angular Map | Data Visualization Tools | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, Infragistics
 ---
 
-## Map
+# Angular Map
 
 The Ignite UI for Angular map component allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -26,17 +26,24 @@ The map's [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-a
 
 The map provides customizable navigation behaviors for navigating map content using mouse, keyboard, or code-behind.
 
-### Dependencies
+<!-- Angular, React, WebComponents -->
+
+## Dependencies
 
 To use the geographic map component, you need to first install these packages:
 
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 -   **npm install --save igniteui-angular-maps**
+    <!-- end: Angular, React, WebComponents -->
 
-### Required Modules
+## Required Modules
 
-The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules:
+The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   GeographicMapModule
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
@@ -54,6 +61,6 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 Now that the map module is imported, next step is to create geographic map. The following code demonstrates how to do this and enable zooming in the map.

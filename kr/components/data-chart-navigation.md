@@ -5,18 +5,20 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 탐색
+# Angular 탐색
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서는 탐색이 기본적으로 비활성화되어 있습니다. 활성화로 설정되면 프로그래밍 방식 또는 UI를 통해 차트를 확대/축소하고 이동할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -31,7 +33,7 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 })
 ```
 
-### 차트 UI 탐색 개요
+## 차트 UI 탐색 개요
 
 UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 따라 차트의 [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) 및/또는 [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) 속성을 true로 설정해야 합니다. 이렇게 하면 마우스 휠을 사용해 차트를 확대/축소할 수 있습니다.
 
@@ -49,7 +51,7 @@ UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 �
 </igx-data-chart>
 ```
 
-### 마우스 및 키보드를 사용한 차트 탐색
+## 마우스 및 키보드를 사용한 차트 탐색
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 탐색은 마우스나 키보드가 활성화된 상태에서 실행됩니다. 다음 조작은 기본적으로 다음의 마우스 또는 키보드 조작을 사용하여 호출할 수 있습니다:
 
@@ -83,7 +85,7 @@ UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 �
 </igx-data-chart>
 ```
 
-<!-- ### Chart Navigation with Overview Plus Detail Pane
+<!-- ## Chart Navigation with Overview Plus Detail Pane
 
 In the `XamDataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
 
@@ -110,7 +112,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 </IgrDataChart>
 ``` -->
 
-### 코드를 통한 차트 탐색
+## 코드를 통한 차트 탐색
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 차트에서 확대/축소 또는 이동 조작이 발생할 때마다 업데이트되는 여러 탐색 속성을 제공합니다. 이러한 각 속성을 설정하여 차트를 프로그래밍 방식으로 확대/축소 또는 이동할 수도 있습니다. 다음은 이러한 속성 목록입니다:
 
