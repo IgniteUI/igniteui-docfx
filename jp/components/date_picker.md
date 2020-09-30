@@ -18,7 +18,6 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-
 ## 使用方法
 
 ### はじめに
@@ -86,7 +85,7 @@ public date: Date = new Date(Date.now());
 ```html
 <!-- date-picker-sample.component.html -->
 
-<igx-date-picker mode="editable"></igx-date-picker>
+<igx-date-picker mode="dropdown"></igx-date-picker>
 ```
 
 日付ピッカーは、以下の日付ピッカー入力を設定して更にカスタマイズできます。
@@ -172,6 +171,24 @@ public date: Date = new Date(Date.now());
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
+#### カスタム ラベル
+`igxLabel` ディレクティブを使用して、デフォルトのラベルをカスタム ラベルに変更できます:
+
+````html
+<!-- datepicker-label.component.html -->
+<igx-date-picker>
+    <label igxLabel>Custom label</label>
+</igx-date-picker>
+````
+
+次のセクションにあるマルチ ビュー モードのサンプルで、カスタム ラベルの外観を確認できます。
+
+> [!NOTE]
+> ラベルの間にテキストを設定しないことで、ラベルを削除できます: `<label igxLabel></label>`。
+
+> [!NOTE]
+> 現在、`label` プロパティは非推奨となる予定です。
+
 ### マルチ ビュー モード
 マルチビューの Date Picker は、`dropdown` と `dialog` モードの両方をサポートします。
 
@@ -181,8 +198,10 @@ public date: Date = new Date(Date.now());
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
-       
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true">
+	<label igxLabel>Custom label</label>
+</igx-date-picker>
+
 <label>Drop Down Mode</label>
 <igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
 ```

@@ -401,7 +401,7 @@
           new: false
         - name: セル選択
           href: hierarchicalgrid/cell_selection.md
-          new: true          
+          new: true
         - name: 列選択
           href: hierarchicalgrid/column_selection.md
           new: true
