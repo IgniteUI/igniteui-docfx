@@ -6,7 +6,7 @@ _keywords: angular group by, igniteui for angular, infragistics
 
 # Grid Group By
 
-A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API.
+A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API. When row selection is enabled groupby row selector would be rendered on the most left part of each groupby row. In case the **rowSelection** property is set to single the checkboxes would be disabled and would only serve as an indicator of the group into which the selection is placed. If the **rowSelection** property is set to multiple clicking over the groupby row selectors would select all records belonging to this group.
 
 ### Demo
 
@@ -83,7 +83,9 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
 
-## Group Row Templates
+## Templating
+
+### Group Row Templates
 
 The group row without its expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record template is rendered against has the following signature:
 
@@ -106,6 +108,39 @@ As an example, the following template would make the group rows summary more ver
 </ng-template>
 ```
 
+### Group Row Selector Templates
+
+As mentioned above the group row without its expand/collapse UI is fully templatable. To create a custom groupby row selector template, within the Grid, declare an `<ng-template>` with `igxGroupByRowSelector` directive. From the template you can access the implicitly provided context variable, with properties that give you information about the groupby-row's state.
+
+The `selectedCount` property shows how many of the group records are currently selected while `totalCount` shows how many records belong to the group.
+
+```html
+<ng-template igxGroupByRowSelector let-groupByRowContext>
+    {{ groupByRowContext.selectedCount }} / {{ groupByRowContext.totalCount  }}
+</ng-template>
+```
+
+The `groupRow` property property returns a reference to the group row.
+
+```html
+<ng-template igxGroupByRowSelector let-groupByRowContext>
+    <div (click)="handleGroupByRowSelectorClick($event, groupByRowContext.groupRow)">Handle groupRow</div>
+</ng-template>
+```
+
+The `selectedCount` and `totalCount` properties can be used to determine if the groupby row selector should be checked or partially checked (indeterminate).
+
+```html
+<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+    <!-- ... -->
+    <ng-template igxGroupByRowSelector let-context>
+        <igx-checkbox
+            [checked]=" context.selectedCount > 0 && context.selectedCount === context.totalCount"
+            [indeterminate]="context.selectedCount > 0 && context.selectedCount !== context.totalCount">
+        </igx-checkbox>
+    </ng-template>
+</igx-grid>
+```
 
 ## Group By with Paging
 
@@ -133,6 +168,7 @@ The grouping UI supports the following keyboard interactions:
 - For group rows (focus should be on the row or the expand/collapse cell)
    - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - Expands the group
    - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - Collapses the group
+   - <kbd>SPACE</kbd> - selects the group row and all rows in the group, if <kbd>rowSelection</kbd> property is set to multiple
 
 - For group [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) components in the group by area (focus should be on the chip)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
