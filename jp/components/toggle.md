@@ -99,13 +99,13 @@ export class Class {
     };
 
     public _overlaySettings = {
+        target: this.igxButton.nativeElement,
         closeOnOutsideClick: false,
         closeOnEscape: true,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings)
     };
 
     public toggle() {
-        this._overlaySettings.positionStrategy.settings.target = this.igxButton.nativeElement;
         this.igxToggle.toggle(this._overlaySettings);
     }
 ```
@@ -154,7 +154,7 @@ export class Class {
 </div>
 
 >[!NOTE]
-> デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。 さらに、このディレクティブはホスト要素を配置ストラテジの [`ターゲット`]({environment:angularApiUrl}/interfaces/positionsettings.html#target)として設定します。
+> デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。 さらに、このディレクティブはホスト要素をオーバーレイ設定 [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) として設定します。
 
 #### 自動トグル サービス プロバイダー
 
