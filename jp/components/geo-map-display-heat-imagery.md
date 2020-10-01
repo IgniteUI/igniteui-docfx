@@ -66,7 +66,7 @@ import { IgxTileGeneratorMapImagery } from 'igniteui-angular-maps';
 
 ## ヒートマップの作成
 
-以下のコードスニペットは、人口ベースのヒートマップを Ignite UI for Angular マップ コンポーネントに表示する方法を示しています。
+以下のコード スニペットは、人口ベースのヒートマップを Ignite UI for Angular マップ コンポーネントに表示する方法を示しています。
 
 <!-- Angular -->
 

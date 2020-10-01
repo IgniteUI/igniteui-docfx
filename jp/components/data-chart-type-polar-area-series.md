@@ -49,7 +49,13 @@ public dataSource: any[] = SamplePolarData.create();
 
 ## モジュールの要件
 
-[`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) は以下のモジュールが必要です。
+[`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html) を作成するには、以下のモジュールが必要です<!-- Angular, React, WebComponents -->。<!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartPolarModule
+-   DataChartPolarCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:

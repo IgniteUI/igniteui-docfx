@@ -24,6 +24,8 @@ Angular データ チャートは、軸、マーカー、凡例、および注�
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 データ チャート パッケージをインストールするときに core パッケージもインストールする必要があります。
@@ -33,9 +35,17 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## モジュールの要件
 
-Angular データチャート コンポーネントは以下のモジュールを要求します。
+Angular データ チャート コンポーネントを作成するには、以下のモジュールが必要です<!-- Angular, React, WebComponents -->。<!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule
+-   DataChartScatterCoreModule,
+-   DataChartScatterModule,
+-   NumberAbbreviatorModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
@@ -87,7 +97,7 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 データチャートモジュールがインポートされたので、以下のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[Data Sources](data-chart-data-sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
 
-以下のコードスニペットは、散布 [`bubble`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) を作成し、それを [SampleScatterStats](data-chart-data-sources-stats.md) データにバインドする方法を示しています。
+以下のコード スニペットは、散布 [`bubble`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) を作成し、それを [SampleScatterStats](data-chart-data-sources-stats.md) データにバインドする方法を示しています。
 
 > [!NOTE]
 >

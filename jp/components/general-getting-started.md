@@ -9,6 +9,8 @@ _language: ja
 
 Ignite UI for Angular は、最新のデスクトップ ブラウザー対応の高パフォーマンス HTML 5 および TypeScript アプリケーションを構築するために設計された Angular コンポーネントのコンプリート セットです。
 
+<!-- Angular, React, WebComponents -->
+
 ## コンピューターのセットアップ
 
 Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むすべての Angular アプリケーションを実行するためにシステムでセットアップする必要のあるステップが 2 つあります。最初にシステムに NodeJS と Visual Studio Code をインストールします。Angular を使用した最新の Web 開発には NodeJS が必要で、これはブラウザーで実行されている ASP.NET アプリケーションのようなもので、サーバーに ASP.NET ランタイムを配備する必要があります。また Angular アプリケーションを構築するための開発環境は、 Visual Studio Code が最も適しているため、作業を開始する前に Node.js と Visual Studio Code をインストールします。
@@ -31,6 +33,10 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
       </a>
     </div>
 </div>
+
+<!-- end: Angular, React, WebComponents -->
+
+<!-- Angular, React -->
 
 ## 既存アプリの更新
 
@@ -61,21 +67,3 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 ## モジュールのインポート
 
 はじめに、使いたいコンポーネントの必要なモジュールをインポートします。[**GeographicMap**](geo-map.md) に対してこれを行います。
-
-## コンポーネントの使用
-
-マークアップに Ignite UI for Angular マップ コンポーネントを使用する準備が整いました。以下のように定義します。
-
-## アプリケーションの実行
-
-以下のコマンドを使用して新しいアプリケーションを実行できます。
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-npm run-script start
-</pre>
-
-コマンドを実行した後、プロジェクトがローカルでビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで Ignite UI for Angular コンポーネントを使用できるようになります。
-
-以下の画像は、上記を実行した結果です。
-
-<img src="../images/general/geo-map.png" />

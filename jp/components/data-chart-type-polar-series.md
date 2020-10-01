@@ -12,6 +12,8 @@ _language: ja
 
 極座標シリーズでは、データの不均等な散らばりやデータの塊に注意が向けられます。これらは科学的なデータ (風の方向と速度、磁場の強さと方向、太陽系内の物体の位置など) をプロットするためによく使用され、予測結果と収集データの偏差を強調することができます。
 
+<!-- Angular, React, WebComponents -->
+
 ## サンプル
 
 <div class="sample-container loading" style="height: 500px">
@@ -25,6 +27,7 @@ _language: ja
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## 極座標シリーズのタイプ
 
@@ -68,7 +71,13 @@ public dataSource: any[] = SamplePolarData.create();
 
 ## モジュールの要件
 
-極座標シリーズを使用するには、ロード中にアプリに以下のモジュールをインポートする必要があります。
+極座標シリーズを作成するには、以下のモジュールが必要です<!-- Angular, React, WebComponents -->。<!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartPolarModule
+-   DataChartPolarCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:

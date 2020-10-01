@@ -19,6 +19,8 @@ Infragistics Angular Excel ライブラリは、Workbook、Worksheet、Cell、Fo
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 excel パッケージをインストールするときに core パッケージもインストールする必要があります。
@@ -28,9 +30,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
 </pre>
 
-## 必要なモジュール
+<!-- end: Angular, React, WebComponents -->
 
-excel ライブラリは、以下のモジュールが必要です。
+## モジュールの要件
+
+Angular Excel ライブラリを作成するには、以下のモジュールが必要です<!-- Angular, React, WebComponents -->。<!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   ExcelModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
@@ -85,7 +92,7 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 
 > [!NOTE]
 >
-> 以下のコードスニペットは、外部の [ExcelUtility](excel_utility.md) クラスを使用し [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存してロードします。
+> 以下のコード スニペットは、外部の [ExcelUtility](excel_utility.md) クラスを使用し [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存してロードします。
 
 [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、実際の [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保存メソッドや static な `Load` メソッドを使用できます。
 
