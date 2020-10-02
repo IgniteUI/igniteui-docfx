@@ -9,7 +9,7 @@ _keywords: angular data grid, infragistics, infragistics.com
         text-align:center;
     }
 
-    h2#key-features{
+add    h2#key-features, h2#faqs{
         visibility: hidden;
     }
 
@@ -66,23 +66,27 @@ _keywords: angular data grid, infragistics, infragistics.com
         justify-content: center;
     }
 
-
-    @media only screen and (max-width: 556x){
-      div#list-features-included {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            display: -webkit-box;
-        }
-    }
-
     @media only screen and (max-width: 767px){
-        .features-gifs--wrapper {
+         .features-gifs--wrapper {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
         }
+
+        div#list-features-included {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        div#list-features-included ul {
+            margin-left: auto;
+            width: 70%;
+            margin-right: auto;
+        }
+        
 
        div#features-gifs div.features-gifs--content{
             width: 100%;
@@ -91,11 +95,78 @@ _keywords: angular data grid, infragistics, infragistics.com
        div#features-gifs div.features-gifs--content:last-child {
             border-left: none;
         }
+       div.support-section:last-child:last-child {
+            border-left: none;
+        }
+       div#support-section-wrapper{
+            flex-flow: column;
+        }
     }
 
     div#features-gifs  div.features-gifs--content img{
         padding: 15px 0;
     }
+
+    div#support-section-wrapper{
+        display: flex;
+    }
+
+    div.support-section{
+        padding: 1.25rem;
+        text-align: left;
+    }
+
+    div.support-section:last-child{
+        border-left: 1px solid #ccc;
+    }
+#faqs-accordion-wrapper {
+    display: flex;
+    flex-flow: column;
+}
+
+.faqs-accordion {
+  display: inline-flex;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.faqs-accordion-content {
+    padding: 0 2.5rem;
+    border-top: 1px solid;
+}
+
+.faqs-accordion-panel {
+  padding: 0 18px;
+  background: transparent;
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: 5px;
+  transition: max-height 0.2s ease-out;
+}
+
+.faqs-accordion-panel ul{
+  margin-bottom: 15px;
+}
+
+.faqs-accordion:before {
+    font-family: Material Icons;
+    content: "keyboard_arrow_down";
+    font-size: 25px;
+    width: 30px;
+    height: 25px;
+}
+
+.faqs-accordion.active:before {
+    font-family: Material Icons;
+    content: "keyboard_arrow_up";
+    font-size: 25px;
+    width: 30px;
+    height: 25px;
+}
 
 
 </style>
@@ -194,81 +265,81 @@ The Ignite UI Angular Data Grid can handle unlimited rows and columns of data, w
 </div>
 
 <div id="features-gifs">
-    <div class="features-gifs--wrapper">
-        <div class="features-gifs--content">
-            <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of filtering capabilities within Angular Data Grid" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif?v=201811121733" alt="Animation of filtering capabilities within Angular Data Grid">
-            <br>
-            <span  class="h3">
-                <strong>Angular Grid Paging, Sorting, Filtering, & Searching</strong>
-            </span>
-            <br>
-            Allow users to navigate your data set with our default pager or create your own template to give your own paging experience. With complete support for single and multi-column sorting, full-text search on the grid, and several advanced filtering options, including data-type based Microsoft Excel-style Filtering.
+        <div class="features-gifs--wrapper">
+            <div class="features-gifs--content">
+                <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of filtering capabilities within Angular Data Grid" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif?v=201811121733" alt="Animation of filtering capabilities within Angular Data Grid">
+                <br>
+                <span  class="h3">
+                    <strong>Angular Grid Paging, Sorting, Filtering, & Searching</strong>
+                </span>
+                <br>
+                Allow users to navigate your data set with our default pager or create your own template to give your own paging experience. With complete support for single and multi-column sorting, full-text search on the grid, and several advanced filtering options, including data-type based Microsoft Excel-style Filtering.
+            </div>
+            <div class="features-gifs--content">
+                <img class="b-lazy b-loaded responsive-img" title="Inline editing on a cell" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-inline-grid-editing-1100.jpg?v=201808021304" alt="Inline editing on a cell within Angular Data Grid Component">
+                <span  class="h3">
+                    <strong>Inline Angular Grid Editing</strong>
+                </span>
+                <br>
+                We provide you default cell templates for editable columns which are based on the data type of the column. You can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.
+            </div>
         </div>
-        <div class="features-gifs--content">
-            <img class="b-lazy b-loaded responsive-img" title="Inline editing on a cell" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-inline-grid-editing-1100.jpg?v=201808021304" alt="Inline editing on a cell within Angular Data Grid Component">
-            <span  class="h3">
-                <strong>Inline Angular Grid Editing</strong>
-            </span>
-            <br>
-            We provide you default cell templates for editable columns which are based on the data type of the column. You can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.
+        <div class="features-gifs--wrapper">
+            <div class="features-gifs--content">
+                <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid">
+                <span  class="h3">
+                    <strong>Keyboard Navigation & Row/Cell Selection in the Angular Grid</strong>
+                </span>
+                <br>
+                Ensure accessibility compliance and improve usability, enabling Excel-like keyboard navigation in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. Learn about our most recent enhancements to this feature.
+            </div>
+            <div class="features-gifs--content">
+                <img class="b-lazy b-loaded responsive-img" title="Icon representation for ARIA support" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg?v=201808021304" alt="Icon representation for ARIA support on the Angular Data Grid Component">
+                <span  class="h3">
+                    <strong>Angular Grid Accessibility & ARIA Support</strong>
+                </span>
+                <br>
+                Each of our Angular components in Ignite UI for Angular has been implemented according to the latest accessibility guidelines and specifications. Our Angular components have been tested using OS or Browser provided accessibility technology – screen readers. Our team ensures not only that the guidelines are implemented, but also that the actual content delivered to visually impaired or blind people is actually consumable and user-friendly for them. The Ignite UI for Angular data grid is fully accessible with a11y Keyboard accessibility, ARIA, and accessible color palette. Learn more.
+            </div>
         </div>
-    </div>
-    <div class="features-gifs--wrapper">
-        <div class="features-gifs--content">
-            <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid">
-            <span  class="h3">
-                <strong>Keyboard Navigation & Row/Cell Selection in the Angular Grid</strong>
-            </span>
-            <br>
-            Ensure accessibility compliance and improve usability, enabling Excel-like keyboard navigation in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. Learn about our most recent enhancements to this feature.
+        <div class="features-gifs--wrapper">
+            <div class="features-gifs--content">
+                <img class="b-lazy b-loaded responsive-img" title="Grid of data with column grouping, pinning and summary features enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg?v=201808021304" alt="Grid of data with column grouping, pinning and summary features enabled for Angular Data Grid component">
+                <span  class="h3">
+                    <strong>Column Grouping, Pinning, Summaries, & Moving in the Angular Grid</strong>
+                </span>
+                <br>
+                Group columns or pre-set column groups via mouse interaction, touch or our API, with support for built-in column summaries or custom summary templates. Enable users to interactively hide or move columns, with full support for interactive column pinning, during move, drag, and reorder operations.
+            </div>
+            <div class="features-gifs--content">
+                <img class="b-lazy b-loaded responsive-img" title="Grid of data with Multi-Column Headers feature enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg?v=201808021304" alt="Grid of data with Multi-Column Headers feature enabled on the Angular Data Grid component">
+                <span  class="h3">
+                    <strong>Multi-Column Headers in the Angular Grid</strong>
+                </span>
+                <br>
+                Enable multi-column headers, allowing you to group columns under a common header. Every column group could be a representation of combinations between other groups or columns, with full support for column pinning, interactive column moving within groups, sorting, and hiding groups.
+            </div>
         </div>
-        <div class="features-gifs--content">
-            <img class="b-lazy b-loaded responsive-img" title="Icon representation for ARIA support" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg?v=201808021304" alt="Icon representation for ARIA support on the Angular Data Grid Component">
-            <span  class="h3">
-                <strong>Angular Grid Accessibility & ARIA Support</strong>
-            </span>
-            <br>
-            Each of our Angular components in Ignite UI for Angular has been implemented according to the latest accessibility guidelines and specifications. Our Angular components have been tested using OS or Browser provided accessibility technology – screen readers. Our team ensures not only that the guidelines are implemented, but also that the actual content delivered to visually impaired or blind people is actually consumable and user-friendly for them. The Ignite UI for Angular data grid is fully accessible with a11y Keyboard accessibility, ARIA, and accessible color palette. Learn more.
+        <div class="features-gifs--wrapper">
+            <div class="features-gifs--content">
+                <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of different grids design showing the themeing and templating capabilities" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif?v=201808021304" alt="Animation of different grids design showing the themeing and templating capabilities of the Angular Data Grid">
+                <span  class="h3">
+                    <strong>Theming, Styling, & Templating in the Angular Grid</strong>
+                </span>
+                <br>
+                With Ignite UI for Angular you can customize cell appearance with CSS or re-template any cell with ng-template to give any cell render appearance. With full support for Material Design, you can customize your branded experience with our simple-to-use theming engine.
+            </div>
+            <div class="features-gifs--content">
+                <img class="b-lazy b-loaded responsive-img" title="Icon representation of Microsoft Excel-like features" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Icon representation of Microsoft Excel-like features on the Angular Data Grid">
+                <span  class="h3">
+                    <strong>Excel Library for the Angular Grid</strong>
+                </span>
+                <br>
+                Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular Excel library includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.
+            </div>
         </div>
-    </div>
-    <div class="features-gifs--wrapper">
-        <div class="features-gifs--content">
-            <img class="b-lazy b-loaded responsive-img" title="Grid of data with column grouping, pinning and summary features enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg?v=201808021304" alt="Grid of data with column grouping, pinning and summary features enabled for Angular Data Grid component">
-            <span  class="h3">
-                <strong>Column Grouping, Pinning, Summaries, & Moving in the Angular Grid</strong>
-            </span>
-            <br>
-            Group columns or pre-set column groups via mouse interaction, touch or our API, with support for built-in column summaries or custom summary templates. Enable users to interactively hide or move columns, with full support for interactive column pinning, during move, drag, and reorder operations.
-        </div>
-        <div class="features-gifs--content">
-            <img class="b-lazy b-loaded responsive-img" title="Grid of data with Multi-Column Headers feature enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg?v=201808021304" alt="Grid of data with Multi-Column Headers feature enabled on the Angular Data Grid component">
-            <span  class="h3">
-                <strong>Multi-Column Headers in the Angular Grid</strong>
-            </span>
-            <br>
-            Enable multi-column headers, allowing you to group columns under a common header. Every column group could be a representation of combinations between other groups or columns, with full support for column pinning, interactive column moving within groups, sorting, and hiding groups.
-        </div>
-    </div>
-    <div class="features-gifs--wrapper">
-        <div class="features-gifs--content">
-            <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of different grids design showing the themeing and templating capabilities" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif?v=201808021304" alt="Animation of different grids design showing the themeing and templating capabilities of the Angular Data Grid">
-            <span  class="h3">
-                <strong>Theming, Styling, & Templating in the Angular Grid</strong>
-            </span>
-            <br>
-            With Ignite UI for Angular you can customize cell appearance with CSS or re-template any cell with ng-template to give any cell render appearance. With full support for Material Design, you can customize your branded experience with our simple-to-use theming engine.
-        </div>
-        <div class="features-gifs--content">
-            <img class="b-lazy b-loaded responsive-img" title="Icon representation of Microsoft Excel-like features" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Icon representation of Microsoft Excel-like features on the Angular Data Grid">
-            <span  class="h3">
-                <strong>Excel Library for the Angular Grid</strong>
-            </span>
-            <br>
-            Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular Excel library includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.
-        </div>
-    </div>
 </div>
-
+<div class="divider"></div>
 <div class="center-text">
     <span  class="h2">
         <strong>Download the Fastest Angular Grid Today!</strong>
@@ -314,6 +385,155 @@ The Ignite UI Angular Data Grid can handle unlimited rows and columns of data, w
     <li>ARIA/a11y Support</li>
 </ul>
 </div>
+
+<div class="divider"></div>
+
+<div id="support-section-wrapper">
+    <div class="support-section">
+    <div class="center-text">
+        <span  class="h2">
+            <strong>Ignite UI for Angular Supported Browsers</strong>
+        </span>
+    </div>
+<div class="divider--half"></div>
+   The Angular Data Grid is supported on all modern web browsers, including:
+<div class="divider--half"></div>
+        <ul>
+            <li>Chrome</li>
+            <li>Edge / Edge Chromium</li>
+            <li>Firefox</li>
+            <li>Safari</li>
+            <li>Internet Explorer 11 with polyfills</li>
+        </ul>
+    </div>
+    <div class="support-section">
+    <div class="center-text">
+        <span  class="h2">
+            <strong>Ignite UI for Angular Support Options</strong>
+        </span>
+    </div>
+<div class="divider--half"></div>
+There are multiple options to get access to our award-winning support at Infragistics for the Angular product.
+<div class="divider--half"></div>
+        <ul>
+            <li>Start at the Angular Support home page</li>
+            <li>Read the Angular Documentation and experiment with Angular Samples</li>
+            <li>Read the Angular Blogs to stay up to date</li>
+            <li>Submit a Angular Support Case</li>
+            <li>Learn from the Angular Reference Applications</li>
+        </ul>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="center-text">
+    <span  class="h2">
+        <strong>Ignite UI for Angular Trial License and Commercial</strong>
+    </span>
+    <div class="divider--half"></div>
+Ignite UI for Angular is a commercially licensed product available via a subscription model. You can try the Ignite UI for Angular product for free when you register for a 30-day trial. When you are done with your Trial Period, you can purchase a license from our web site or by calling sales in your region.
+</div>
+
+<div class="divider"></div>
+
+## FAQs
+<div class="center-text">
+    <span  class="h2">
+        <strong>Frequently Asked Questions</strong>
+    </span>
+    <div class="divider"></div>
+</div>
+
+<div id="faqs-accordion-wrapper">
+    <div class="faqs-accordion-content">
+        <div class="faqs-accordion h4">Why should I choose the Infragistics Ignite UI for Angular Data Grid?</div>
+        <div class="divider--half"></div>
+        <div class="faqs-accordion-panel">
+            <ul>
+                <li>Virtualized Rows and Columns so you can load millions of records</li>
+                <li>Inline Editing with Cell, Row, and Batch Update options</li>
+                <li>Excel-style Filtering and full Excel Keyboard Navigation capability</li>
+                <li>Interactive Outlook-style Grouping</li>
+                <li>Column Summaries based on any data in a grid cell or column</li>
+                <li>Export to Excel, including Data Visualization</li>
+                <li>Display Density to adjust the height and sizing of the rows</li>
+                <li>Column templates like Sparkline Column and Image Column</li>
+            </ul>
+        </div>
+    </div>
+    <div class="faqs-accordion-content">
+    <div class="faqs-accordion h4">What is the Pricing for the Infragistics Ignite UI for Angular Data Grid?</div>
+    <div class="divider--half"></div>
+    <div class="faqs-accordion-panel">
+Ignite UI for Angular is a commercially licensed product available via a subscription model. A single developer license starts at $749 USD for a one-year subscription, which includes one year of standard support and product updates. This subscription includes the Angular Grid, plus Angular Charts and dozens on other Angular UI Controls.
+<div class="divider--half"></div>
+We also offer discounts for multi-year licenses. Please refer to our Pricing page for more information on pricing.
+<div class="divider--half"></div>
+If you are developing applications on multiple platforms, consider our complete app development package, Infragistics Ultimate, which include desktop platforms like WPF and Windows Forms, plus all modern web toolsets for Angular, Web Components, ASP.NET MVC and ASP.NET Core.
+    </div>
+    </div>
+    <div class="faqs-accordion-content">
+        <div class="faqs-accordion h4">Can I purchase the Infragistics Ignite UI for Angular Data Grid control separately?</div>
+        <div class="divider--half"></div>
+        <div class="faqs-accordion-panel">
+        No, you cannot purchase the Angular Data Grid separately. It is part of a the Ignite UI for Angular product, which includes dozens of UI controls and components, plus over 60 charts, including Angular Financial Charting. If you are interested in other modern web platforms like Angular, ASP.NET MVC, Web Components or ASP.NET Blazor, check out our Ignite UI product bundle, which gives you every web platform for only $100 more on your subscription. That is hundreds of controls, components, and data visualizations for 1 very low price.
+        </div>
+    </div>
+    <div class="faqs-accordion-content">
+        <div class="faqs-accordion h4">Can I purchase the Infragistics Ignite UI for Angular Data Grid control separately?</div>
+        <div class="divider--half"></div>
+        <div class="faqs-accordion-panel">
+        To get started with the Angular Data Grid, follow the steps in the getting started guide. We also maintain a library of sample applications, which are designed to not only inspire but are best practices guides for Angular development.
+        </div>
+    </div>
+</div>
+
+<script>
+    (function(){
+        var acc = document.getElementsByClassName("faqs-accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+    })()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
