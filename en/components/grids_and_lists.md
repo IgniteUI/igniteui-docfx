@@ -13,7 +13,7 @@ h2#key-features, h2#faqs{
     visibility: hidden;
 }
 
-h3#quick-and-easy-to-customize-build-and-implement, h3#features-included{
+h3#quick-and-easy-to-customize-build-and-implement, h3#angular-grid-features{
     visibility: hidden;
 }
 
@@ -193,10 +193,23 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 
 <div class="divider--half"></div>
 
+## Angular Grid Example
+<div class="divider--half"></div>
+
 <div class="sample-container loading" style="height: 500px">
     <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
     </iframe>
 </div>
+
+<div class="divider"></div>
+
+## What is an Angular Data Grid? 
+
+An Angular data grid is a component used to display tabular data in a series of rows and columns. Data grids, also known as tables, are well known in the desktop world with popular software such as Microsoft Excel. While grids have been available on desktop platforms for a long time, they have recently become part of web app UIs, such as Angular UI. Modern grids can be complex and may include a range of functionalities, including data binding, editing, Excel-like filtering, custom sorting, grouping, row reordering, row and column freezing, row aggregation, and exporting to Excel, CSV, and pdf formats.
+
+## Why Use an Angular Data Grid? 
+
+Angular data grids are essential in use cases where lots of data must be stored and sorted through quickly. This can include industries such as financial or insurance that use high-volume, high-velocity data frequently.  Often the success of these companies is dependent on the functionality and performance of these data grids. When stock decisions need to be made in microseconds, for example, it’s imperative that the data grid performs with no lag time or flicker. 
 
 <div class="divider"></div>
 
@@ -346,18 +359,21 @@ The Ignite UI Angular Data Grid can handle unlimited rows and columns of data, w
 </div>
 <div class="divider"></div>
 
-### Features included
+### Angular Grid Features
 <div class="center-text">
     <span  class="h2">
         <strong>Download the Fastest Angular Grid Today!</strong>
     </span>
     <div class="divider--half"></div>
     <a class="cta-btn no-external-icon ui-btn--sm" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">download now</a>
+    <br>
+    30 days free trial. No credit card required.
     <div class="divider"></div>
     <span  class="h2">
-        <strong>Features included</strong>
+        <strong>Angular Grid Features</strong>
     </span>
 </div>
+  <div class="divider"></div>
 <div id="list-features-included">
 <ul>
     <li>[Inline Editing](grid/editing.md)</li>
@@ -447,7 +463,7 @@ Ignite UI for Angular is a commercially licensed product available via a subscri
 ## FAQs
 <div class="center-text">
     <span  class="h2">
-        <strong>Frequently Asked Questions</strong>
+        <strong>Frequently Asked Questions About Ignite UI for Angular</strong>
     </span>
     <div class="divider"></div>
 </div>
