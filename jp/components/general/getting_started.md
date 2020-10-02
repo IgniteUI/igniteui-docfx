@@ -1,15 +1,15 @@
 ---
-title: 作業の開始
+title: 作業の開始 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular はネイティブ Angular UI コンポーネントのセットです。機能豊かなマテリアル デザイン アプリケーションをすばやくビルドできます。 
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_keywords: ignite ui for angular, 作業の開始, angular コンポーネント
 _language: ja
 ---
 
-## Ignite UI で作業を開始
+# Ignite UI で作業を開始
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-### 前提条件
+## 前提条件
 
 1. NodeJS をインストールします。
 2. Visual Studio Code をインストールします。
@@ -34,11 +34,11 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### Ignite UI for Angular のインストール
+## Ignite UI for Angular のインストール
 
 Ignite UI for Angular は、Angular CLI または Ignite UI CLI を使用してインストールできます。
 
-#### Angular CLI のクイック スタート
+### Angular CLI のクイック スタート
 
 Angular CLI は、`ng add` コマンドでプロジェクトに外部ライブラリのサポートを提供します。このコマンドは、ライブラリの `npm` パッケージをワークスペースにインストールし、そのライブラリを使用するように現在の作業ディレクトリにプロジェクトを設定します。
 
@@ -57,7 +57,7 @@ ng add igniteui-angular
 
 インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。 これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
 
-#### Angular Schematics & Ignite UI CLI のクイック スタート
+### Angular Schematics & Ignite UI CLI のクイック スタート
 アプリケーションをゼロから作成し、Ignite UI for Angular コンポーネントを使用するように構成するには、Ignite UI for Angular Schematics または Ignite UI CLI を使用できます。最初の手順には、以下のように各パッケージをグローバルにインストールします。
 
 ```cmd

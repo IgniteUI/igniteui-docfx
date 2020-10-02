@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-## @@igComponent 列選択
+# @@igComponent 列選択
 列選択機能は、シングルク リックで列全体を選択する簡単な方法を提供します。特定の列の重要性を強調するために、ヘッダー セルとその下のすべてにフォーカスします。この機能は豊富な [`API`]({environment:angularApiUrl}) を備えて選択状態の操作、選択した部分からのデータ抽出、データ分析操作、可視化が可能になります。
 
 *Contact Title、City、および Address 列の選択が無効になっています。
@@ -38,11 +38,11 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 基本的な使用方法
+## 基本的な使用方法
 
 列選択機能は、[GridSelectionMode]({environment:angularApiUrl}/enums/gridselectionmode.html) 値を受け取る [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) 入力によって有効にすることができます。
 
-#### インタラクション
+## インタラクション
 デフォルトの選択モードは `none` です。`single` または `multiple` に設定されると、すべての列は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) になります。列を選択するには、列をクリックして [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) としてマークします。列が選択不可な場合、ホバー時に選択スタイルはヘッダーに適用されません。
 
 > [!NOTE]
@@ -60,7 +60,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-#### キーボードの組み合わせ
+## キーボードの組み合わせ
 
 > [!NOTE]
 > キーボードの組み合わせは、グリッドの [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) 入力が [`multiple`]({environment:angularApiUrl}/enums/gridselectionmode.html#multiple) に設定されている場合にのみ使用できます。
@@ -69,7 +69,7 @@ _language: ja
 - 複数列選択 - <kbd>Ctrl</kbd> キーを押しながら、すべての**選択可能な**ヘッダー セルを<kbd>クリック</kbd>。
 - 範囲列の選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>クリック</kbd>、間にあるすべての**選択可能な**列を選択します。
 
-#### API 操作
+## API 操作
 **API** は、**非表示**列に関していくつかの追加機能を提供し、対応する **setter** を設定することにより、すべての**非表示**列を [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) としてマークできます。
 
 > [!NOTE]
@@ -77,7 +77,7 @@ _language: ja
 
 API 操作の詳細については、[`API リファレンス`](#api-references) セクションを参照してください。
 
-### スタイル設定
+## スタイル設定
 スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント mixins をインポートする必要があります。
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -121,14 +121,14 @@ $custom-grid-theme: igx-grid-theme(
 - **$header-selected-background** - 選択した列ヘッダーの背景色を設定します。
 
 
-#### CSS 変数の使用
+### CSS 変数の使用
 最後にカスタム `igx-grid` テーマを含めます。
 
 ```scss
 @include igx-css-vars($custom-grid-theme)
 ```
 
-#### 基本テーマのオーバーライド
+### 基本テーマのオーバーライド
 Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
 
 >[!NOTE]
@@ -141,7 +141,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
     }
 }
 ```
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-selection-styles" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
@@ -153,7 +153,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 </div>
 <div class="divider--half"></div>
 
-### <a name="api-references"></a>API リファレンス
+# <a name="api-references"></a>API リファレンス
 <div class="divider--half"></div>
 以下は、列選択 UI のその他の API です。
 
@@ -181,7 +181,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
 * [onColumnsSelectionChange]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onColumnsSelectionChange)
 
-### その他のリソース
+## その他のリソース
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [選択](selection.md)

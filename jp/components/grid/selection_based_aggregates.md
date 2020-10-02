@@ -5,22 +5,22 @@ _keywords: データ集計, 選択, ignite ui for angular, インフラジステ
 ---
 
 
-### 選択に基づいた集計
+# 選択に基づいた集計
 
 以下のサンプルでは、グリッドのフッターで選択した値に基づいて、カスタム集計関数と共に集計を表示する際の複数選択の動作を確認できます。
 
-#### 概要
+## トピックの概要
 
 選択に基づいた集計機能を実現するには、[`グリッド選択`]({environment:angularApiUrl}/components/grid/selection.html)機能と[`グリッド集計`]({environment:angularApiUrl}/components/grid/summaries.html)を使用できます。    
 集計では、列のデータ タイプとニーズに応じて、[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、 [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、 [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかの基本クラスを拡張することにより、基本的な集計機能をカスタマイズできます。  
 
-#### 選択
+## 選択
 選択したグリッド範囲のデータの操作を開始するには、グリッド選択の変更を通知するイベントにサブスクライブする必要があります。これは、[`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) と [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントにサブスクライブすることで実行できます。選択機能では、単一のセル選択とセル範囲の選択が区別されるため、両方にバインドする必要があります。     
 
 イベント サブスクリプション ロジックでは、グリッドの [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) 関数を使用して選択したデータを抽出し、選択したデータをカスタム集計オペランドに渡すことができます。
 
 
-#### まとめ
+## まとめ
 カスタム集計クラス内では、グリッドのデータ タイプを差別化する必要があります。たとえば、以下のシナリオでは、4 つの異なる列があり、それぞれのデータ タイプがカスタム集計に適しています。それらは、Unit Price、Units in Stock、 Discontinued status、Order Date です。   
 `IgxSummaryOperand` の派生クラスの `operate` メソッドでデータを処理します。データ タイプに基づいて、さまざまなカテゴリにデータを入れていきます。
 
@@ -38,7 +38,7 @@ const dates = data.filter(rec => isDate(rec));
 データを可視化には、`<igx-grid-footer>`を使用することができ、`custom-summaries` クラスと組み合わせて集計を表示します。
 
 
-#### デモ
+### デモ
 選択を変更して、現在選択されている範囲の概要を表示します。     
 
 <div class="sample-container loading" style="height: 560px;">
@@ -49,13 +49,13 @@ const dates = data.filter(rec => isDate(rec));
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API リファレンス
+## API リファレンス
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)    
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>    
 
 * [Grid の概要](grid.md)    

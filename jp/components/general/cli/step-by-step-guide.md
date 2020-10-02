@@ -1,7 +1,7 @@
 ﻿---
-title: ステップバイステップ ガイド
+title: ステップバイステップ ガイド | Ignite UI for Angular | インフラジスティックス
 _description: ステップバイステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: angular cli, ignite ui for angular, インフラジスティックス
 ---
 
 ## ステップバイステップ ガイド

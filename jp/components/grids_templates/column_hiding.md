@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### グリッドの列非表示
+# @@igComponent の列非表示
 
-Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーが **UI** を介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
+Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーがユーザー インターフェイスを介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -64,7 +64,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 }
 
-### @@igComponent の設定
+## @@igComponent の設定
 @@igComponent を作成してからデータをバインドします。列でフィルタリングとソートも有効にします。
 
 @@if (igxName === 'IgxGrid') {
@@ -145,7 +145,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```
 }
 
-### ツールバーの列非表示 UI
+## ツールバーの列非表示 UI
 
 定義済みの列非表示 UI は、@@igComponent のツールバーの [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
 これには、@@igComponent の [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) プロパティを true に設定します。ツールバーが有効でない場合、[`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) プロパティが有効かどうかは影響しません。
@@ -237,7 +237,7 @@ public ngAfterViewInit() {
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### カスタム列の非表示 UI
+## カスタム列の非表示 UI
 
 [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を手動で定義し、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) を追加して、その目的がわかるようにして、ページの任意の場所に配置します。ただし、最初に、`IgxColumnActionsModule` をインポートする必要があります。
 
@@ -330,7 +330,7 @@ export class AppModule {}
 ```
 }
 
-#### タイトルおよびフィルター プロンプトの追加
+### タイトルおよびフィルター プロンプトの追加
 
 列非表示コンポーネント機能を拡張するために [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) および [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) プロパティを設定します。[`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) は一番上に表示され、[`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
 
@@ -344,7 +344,7 @@ export class AppModule {}
 </div>
 ```
 
-#### 列の表示順序オプションの追加
+### 列の表示順序オプションの追加
 
 列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
 
@@ -389,7 +389,7 @@ export class AppModule {}
 </div>
 ```
 
-#### 列の非表示の無効化
+### 列の非表示の無効化
 列の [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) プロパティを true に設定すると、ユーザーが列非表示 UI によって列を非表示にできません。
 
 @@if (igxName === 'IgxGrid') {
@@ -447,7 +447,7 @@ export class AppModule {}
 }
 }
 
-### スタイル設定
+## スタイル設定
 
 列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在するインデックス ファイルをインポートする必要があります。
 
@@ -498,7 +498,7 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -530,7 +530,7 @@ $custom-button: igx-button-theme(
 >[!NOTE]
 >`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -583,7 +583,7 @@ $custom-button: igx-button-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -619,7 +619,7 @@ $custom-button: igx-button-theme(
 <div class="divider--half"></div>
 }
 
-### API リファレンス
+## API リファレンス
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 このトピックでは、@@igComponent のツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定しました。[**IgxRadio**](../radio_button.md) ボタンなどその他の Ignite UI for Angular コンポーネントも使用しています。
@@ -661,7 +661,7 @@ $custom-button: igx-button-theme(
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

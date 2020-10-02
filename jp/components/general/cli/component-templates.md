@@ -1,7 +1,7 @@
 ﻿---
-title: コンポーネントおよびシナリオ CLI テンプレート
-_description: Ignite UI for Angularで利用可能なすべての CLI テンプレート一覧
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+title: コンポーネントおよびシナリオ CLI テンプレート | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular フレームワークで利用可能なすべての CLI テンプレート一覧をご覧ください。
+_keywords: igniteui for angular | angular schematics | テンプレート | インフラジスティックス
 _language: ja
 ---
 

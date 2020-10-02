@@ -1,5 +1,5 @@
 ---
-title: Ignite UI for Angular のデータ分析
+title: データ分析機能 | Angular Universal | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular でチャート統合の機能を使用して最適なビジネス目標を達成するためのデータ分析手段を提供する方法。
 _keywords: data analysis, ignite ui for angular, infragistics, データ分析, インフラジスティックス
 _language: ja
@@ -52,14 +52,14 @@ _language: ja
 
 </style>
 
-## データ分析  
+# データ分析  
 
 データ分析とは、特定の方法でデータを検査、変換、および整理し、それに基づいて役立つ情報を生成するプロセスです。また、分析的および論理的な推論で特定の結果と結論に達することもできます。
 
 >[!NOTE]
 >この機能は、設定を簡単にし、コードを最小限に制限するために、**Ignite UI for Angular** の外部パッケージとして提供されます。
 
-### Dock Manager のデータ分析
+## Dock Manager のデータ分析
 選択したデータに基づいて `Chart Types ビュー`を有効にするには、`セル範囲の選択`または`列の選択`を実行します。このビューは、[Dock Manager](../../dock-manager.md) の右ペインの一部です。以下のオプションを選択できます。
  - 特定のチャート タイプを選択し、別のペインで可視化します。
  - または、`Data Analysis` コンテキスト ボタンを使用して、さまざまなテキスト書式設定オプションを表示します。
@@ -80,7 +80,7 @@ _language: ja
 - 複数セルの範囲選択が適用される場合、`テキスト書式設定`機能のみが利用可能になります。
 - 選択したデータがいずれのチャートとも互換性がない場合、「互換性のないデータ」警告メッセージが表示されます。
 
-### データ分析パッケージ
+## データ分析パッケージ
 
 この機能を使用できるには、以下の手順を実行します。**Igniteui-angular-extras** パッケージは [プライベート npm フィード](https://packages.infragistics.com/npm/js-licensed/) でのみ利用できます。[有効な商用ライセンス](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#使用許諾契約)がある場合、プライベート フィードにアクセスできます。
 
@@ -107,7 +107,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 ```
 以上です! **セル範囲の選択**を実行し、データ分析フローを実行できます。
 
-### データ分析ボタン
+## データ分析ボタン
 データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
 
 ![](../../../images/general/data-analysis-button.png)
@@ -116,7 +116,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 ボタンは、選択範囲の**右下**にあるすべての範囲選択でレンダリングされ、選択範囲がインアクティブになると非表示になります。ボタンは、選択範囲の右下にあるすべての範囲選択でレンダリングされ、選択範囲がインアクティブになると非表示になります。
 
-### チャートと統合
+## チャートと統合
 このセクションでは、エンドユーザーがグリッドの選択したデータに基づいてチャートを可視化し、必要に応じて異なるチャート タイプを選択できる、チャート作成機能とグリッドの統合を紹介します。
 
 チャートは、セルの範囲を選択し、分析の表示ボタンをクリックすると表示されます。
@@ -139,12 +139,12 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 - ScatterPoint、ScatterBubble、ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
 - [円チャート](../../pie-chart.md)
 
-### セルの条件付き書式 
+## セルの条件付き書式 
 グリッドに数千行のデータがある場合、生の情報を検査するだけでパターンと傾向を分析することは容易ではありません。チャートやスパークラインと同様に、`条件付き書式`は、データを可視化し、理解しやすくする別の方法を提供します。 
 
 条件付き書式は範囲選択の`値`に基づいて、色やデータ バーなどの書式設定をセルに適用できます。[以下のサンプル](#デモ)は、グリッドを構成して`条件付き書式`を適用する方法を示します。どの条件`ルール`が表示されるかは、`条件付き書式の選択タイプ`によって異なります。以下は定義済みスタイル (プリセット) があります。これを使用すると、条件付き書式をデータにすばやく適用できます。範囲の書式設定は、異なる範囲で書式設定を行った場合、またはクリア ボタンを使用してクリアにされます。クリア ボタンは、書式設定が適用されている場合にのみアクティブになります。
 
-#### 数の範囲選択
+### 数の範囲選択
 - `Data Bars` - データバーは、売れ筋商品や売れ残り商品など、高値と低値を識別する場合などに役立ちます。このプリセットにより、選択したセルの範囲の値を簡単に可視化できます。長いバーはより高い値を表します。値が 0 のセルにはデータバーがありません。他のすべてのセルは比例的に塗りつぶされます。正の値は`緑色`で、負の値は`赤色`です。
 
 
@@ -170,7 +170,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 - `Empty`- `未定義の値`のすべてのセルをマークします。
 
-#### テキストの範囲選択
+### テキストの範囲選択
 - `Text contains` - `左上に上位の選択されたセル`のセル値を含むすべてのセルをマークします。例:
 
 ![](../../../images/general/contains-formatting.png)
@@ -179,7 +179,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 - `Unique values` - 一意のすべてのセル値がマークされます(`青色`の背景色)。
 - `Empty`- `未定義の値`のすべてのセルをマークします。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
@@ -189,9 +189,9 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 <a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">全画面表示</a>
 </div>
 
-### データ分析パッケージ API
+## データ分析パッケージ API
  
-#### IgxConditionalFormattingDirective
+### IgxConditionalFormattingDirective
 <div class="divider--half"></div>
 
 | API | 説明 | 引数 |
@@ -204,7 +204,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 | `formatCells` | 選択したセルに条件付き書式を適用します。使用方法: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
 | `clearFormatting` | 選択されたセルの条件付き書式を削除します。使用方法: <br /> **this.conditonalFormatting.clearFormatting()** |
 
-#### IgxChartIntegrationDirective
+### IgxChartIntegrationDirective
 <div class="divider--half"></div>
 
 | API | 説明 | 引数 |
@@ -225,7 +225,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 | `scatterChartYAxisValueMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。**設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの最初の数値プロパティ名になります** | `path`: **string** |
 | `bubbleChartRadiusMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの 2 番目の数値プロパティ名になります | `path`: **string** |
 
-### 便利なリソース
+## 便利なリソース
 
 <div class="divider--half"></div>
 

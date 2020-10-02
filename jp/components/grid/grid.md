@@ -9,7 +9,7 @@ _language: ja
 
 <p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +21,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 依存関係
+## 依存関係
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -96,7 +96,7 @@ public grid: IgxGridComponent;
  ...
  ```
 
-# 列の構成
+## 列の構成
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
@@ -120,7 +120,7 @@ public grid: IgxGridComponent;
 
 グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
 
-#### ヘッダー テンプレート
+### ヘッダー テンプレート
 
 `igxHeader` は列ヘッダーを対象とし、列オブジェクトをコンテキストとして提供します。
 
@@ -429,7 +429,7 @@ export class MyComponent implements OnInit {
 
 現在、Angular データ グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
 
-### ネスト データ
+### ネスト データの使用
 
 より複雑なデータソースを Angular グリッドにバインドするには、主に 2 つの方法があります。
 グリッドは、データ レコード内のプロパティのパスを介したバインディングをサポートします。
@@ -561,7 +561,7 @@ export const EMPLOYEE_DATA = [
 </div>
 <div class="divider--half"></div>
 
-### フラット データ
+### フラット データの使用
 
 フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
 
