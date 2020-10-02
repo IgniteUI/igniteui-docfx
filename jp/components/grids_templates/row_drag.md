@@ -1,33 +1,33 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: グリッド行のドラッグ
+title: グリッド行のドラッグ | Angular グリッド & 図コンポーネント | インフラジスティックス
 _description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチな階層グリッドが実現できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Row Drag, Row Dragging, Data Grid Row Drag, Data Table Row Drag
+_keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: ツリー グリッド行ドラッグ
+title: ツリー グリッド行ドラッグ | Angular グリッド & 図コンポーネント | インフラジスティックス
 _description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブ、データリッチなツリー データ グリッドで階層およびリスト ビューなどの機能があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Row Drag, Row Dragging, Tree Grid Row Drag, Tree Table Row Drag
+_keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 階層グリッドの行ドラッグ
+title: 階層グリッドの行ドラッグ | Angular グリッド & 図コンポーネント | インフラジスティックス
 _description: Ignite UI for Angular Hierarchical Grid コントロールは、高速でタッチ レスポンシブが有効なデータ リッチなツリーグリッドです。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Data Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Row Drag, Row Dragging, Hierarchical Grid Row Drag, Hierarchical Table Row Drag
+_keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-### @@igComponent 行ドラッグ
+# @@igComponent 行ドラッグ
 
 Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelector` コンポーネントで初期化されて、[`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) 入力で設定できます。行ドラッグを有効にすると、ユーザーは行ドラッグ ハンドルを使用して行のドラッグを開始できます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -64,7 +64,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 <div class="divider--half"></div>
 }
 
-### 構成
+## 構成
 
 `@@igSelector` の行ドラッグを有効にするには、グリッドの [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) を **`true`** に設定します。これが有効になると、行ドラッグ ハンドルが各行に表示されます。このハンドルは行ドラッグを開始するために使用できます。
 
@@ -84,7 +84,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 この例では、あるグリッドから別のグリッドに行をドラッグし、それを最初のデータソースから削除し、それを 2 番目のデータソースに追加します。
 }
 
-#### ドロップ エリア
+### ドロップ エリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
 [`igxDrop` ディレクティブ](../drag_drop.md) を使用して、行をドロップする場所を定義できます。
@@ -142,7 +142,7 @@ export class @@igxNameRowDragComponent {
 }
 ```
 
-#### ドロップ エリア イベント ハンドラー
+### ドロップ エリア イベント ハンドラー
 
 テンプレートでドロップ領域を定義したら、コンポーネントの `.ts` ファイルで `igxDrop` の [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter)、[`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave)、[`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) イベントを宣言する必要があります。
 
@@ -243,7 +243,7 @@ export class @@igxNameRowDragComponent {
 
 以下は、行ドラッグと複数選択を有効にした `@@igSelector` で確認できる設定の結果です。以下のデモでは、現在ドラッグされている行の数を示します。
 
-##### デモ
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -300,7 +300,7 @@ export class @@igxNameRowDragComponent {
 <div class="divider--half"></div>
 }
 
-#### ドラッグ アイコンのテンプレート化
+### ドラッグ アイコンのテンプレート化
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
 `igxDragIndicatorIcon` を使用して `@@igSelector` の本文内にテンプレートを渡して変更できます。
 ```html
@@ -322,7 +322,7 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-#### ドロップ エリアのスタイル
+### ドロップ エリアのスタイル
 ドロップ ハンドラが正しく設定されたら、次にドロップ領域をスタイル設定します。
 ```css
 .drop-area {
@@ -394,10 +394,10 @@ enum DragIcon {
 <div class="divider--half"></div> 
 }
 
-### アプリケーション デモ
+## アプリケーション デモ
 @@if (igxName === 'IgxGrid') {
 
-#### 行ドラッグ イベントの使用
+### 行ドラッグ イベントの使用
 以下のデモは、行ドラッグ イベント情報を使用して、行がドロップされたカスタム コンポーネントとソース グリッド自体の両方の状態を変更する方法を示しています。
 グリッドから月をドラッグして、それらを対応する惑星にドロップしてみてください。行ドラッグ ゴーストの背景は、ホバーされた惑星に応じて動的に変更されます。成功するとグリッド内の行が選択され、ドラッグは無効になります。惑星をクリックすると役に立つ情報が得られます。
 
@@ -414,7 +414,7 @@ enum DragIcon {
 > 上記のデモで使用した行ドラッグ ゴーストに適用されるクラスは ::ng-deep 修飾子を使用しています。行ドラッグは内部グリッド機能であり、CSS カプセル化のためにアプリケーションレベルでアクセスできないためです。
 }
 
-#### 行の並べ替えデモ
+### 行の並べ替えデモ
 グリッドの行ドラッグ イベントと `igxDrop` ディレクティブを使用して、ドラッグよる行の並べ替えるが可能なグリッドを作成できます。
 
 すべてのアクションはグリッド本体の _内側_ で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
@@ -642,18 +642,18 @@ export class GridRowReorderComponent {
 }
 <div class="divider--half"></div>
 
-### 制限
+## 制限
 
 現在、`rowDraggable` ディレクティブに既知の制限はありません。
 
-### API リファレンス
+## API リファレンス
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
 * [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
 * [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
