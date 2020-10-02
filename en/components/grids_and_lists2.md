@@ -9,7 +9,7 @@ _keywords: angular data grid, infragistics, infragistics.com
         text-align:center;
     }
 
-add    h2#key-features, h2#faqs{
+    h2#key-features, h2#faqs{
         visibility: hidden;
     }
 
