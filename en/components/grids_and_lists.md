@@ -222,7 +222,7 @@ Angular data grids are essential in use cases where lots of data must be stored 
 <div class="divider--half"></div>
 
 <div class="center-text">
-The Ignite UI for Angular Data Grid is not just for high-volume and real-time data. It is a feature-rich Angular grid that gives you capabilities that you would never be able to accomplish with such little code on your own.
+The Ignite UI for Angular Data Grid is not just for high-volume and real-time data. It is a feature-rich Angular grid that gives you capabilities that you would never be able to accomplish with so little code on your own.
 This example demonstrates a few of the data grid’s key features:
 </div>
 
@@ -299,7 +299,7 @@ The Ignite UI Angular Data Grid can handle unlimited rows and columns of data, w
                     <strong>Inline Angular Grid Editing</strong>
                 </h3>
                 <div class="divider--half"></div>
-                We provide you default cell templates for editable columns which are based on the data type of the column. You can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.
+                We provide you default [cell templates for editable columns](grid/grid.md#cell-editing-template) which are based on the data type of the column. You can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.
             </div>
         </div>
         <div class="features-gifs--wrapper">
@@ -500,7 +500,7 @@ If you are developing applications on multiple platforms, consider our complete 
         <div class="faqs-accordion h4">Can I purchase the Infragistics Ignite UI for Angular Data Grid control separately?</div>
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
-        No, you cannot purchase the Angular Data Grid separately. It is part of a the <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular">Ignite UI for Angular product</a> product, which includes dozens of UI controls and components, plus over 60 charts, including Angular Financial Charting. If you are interested in other modern web platforms like Angular, ASP.NET MVC, Web Components or ASP.NET Blazor, check out our <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui">Ignite UI product bundle</a>, which gives you every web platform for only $100 more on your subscription. That is hundreds of controls, components, and data visualizations for 1 very low price.
+        No, you cannot purchase the Angular Data Grid separately. It is part of a the <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular">Ignite UI for Angular product</a>, which includes dozens of UI controls and components, plus over 60 charts, including Angular Financial Charting. If you are interested in other modern web platforms like Angular, ASP.NET MVC, Web Components or ASP.NET Blazor, check out our <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui">Ignite UI product bundle</a>, which gives you every web platform for only $100 more on your subscription. That is hundreds of controls, components, and data visualizations for a very low price.
         </div>
     </div>
     <div class="faqs-accordion-content">
