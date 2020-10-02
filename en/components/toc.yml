@@ -70,9 +70,6 @@
       href: general/framework-and-features/data-analysis.md
       new: false
       updated: true
-- name: Grids & Lists 2
-  href: grids_and_lists2.md
-  header: true
 - name: Grids & Lists
   href: grids_and_lists.md
   header: true
