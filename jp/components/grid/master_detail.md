@@ -5,13 +5,13 @@ _keywords: マスターと詳細, igniteui for angular, インフラジスティ
 _language: ja
 ---
 
-### Grid Master-Detail
+# Grid Master-Detail
 
 `igxGrid` コンポーネントは、コンテンツを展開/縮小することで特定の行の追加の詳細を表示する detail テンプレートの指定をサポートします。指定した場合、各レコードは master として機能し、展開すると、現在のレコードのコンテキスト データを含むカスタマイズ可能な詳細テンプレートが表示されます。
 
 このモードは、master-detail スタイル データを階層構造で表示する必要がある場合に役立ちます。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-master-detail-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,7 +23,7 @@ _language: ja
 </div>
 
 
-#### 構成
+## 構成
 
 Master-detail モードで表示するように `igxGrid` を設定するには、`igxGridDetail` ディレクティブでマークされたグリッド内のテンプレートを指定する必要があります。
 
@@ -49,7 +49,7 @@ Master-detail モードで表示するように `igxGrid` を設定するには�
 ```
 
 
-##### API
+## API
 
 展開状態は、 `igxGrid` の [`expansionStates`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expansionStates) 入力で制御できます。状態はキーと値のペア [行識別子、展開状態] に保存されます。このプロパティは、展開状態を取得/設定し、双方向バインディングをサポートします。
 
@@ -66,7 +66,7 @@ Master-detail モードで表示するように `igxGrid` を設定するには�
 - [`expandRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#expandRow)
 - [`collapseRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#collapseRow)
 
-#### キーボード ナビゲーション
+## キーボード ナビゲーション
 
 - 詳細行にフォーカスがある場合:
 
@@ -79,7 +79,7 @@ Master-detail モードで表示するように `igxGrid` を設定するには�
     - `Alt + 右矢印/下矢印` - 行を展開します。
     - `Alt + 左矢印/下矢印` - 行を縮小します。
 
-#### 既知の問題と制限
+## 既知の問題と制限
 
 
 |既知の制限| 説明|

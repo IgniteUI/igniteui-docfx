@@ -137,7 +137,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
-たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、最初に [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
+たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) と [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、最初に [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
 ```typescript
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
@@ -152,9 +152,8 @@ export class MyOverlayComponent {
     public showInOverlay() {
         if (!this._overlayId) {
             this._overlayId = this.overlayService.attach(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({
-                    target: this.myAnchorButton.nativeElement
-                })
+                target: this.myAnchorButton.nativeElement,
+                positionStrategy: new ConnectedPositioningStrategy()
             });
         }
         this.overlayService.show(this._overlayId);
@@ -196,8 +195,8 @@ export class MyOverlayComponent {
             //  generate ID
             if (!this._overlayId) {
                 this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                    target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
-                        target: this.myAnchorButton.nativeElement,
                         closeOnOutsideClick: false, // overlay will not close on outside clicks
                         modal: false // overlay content will not be rendered in a modal dialog
                     }) // The attach method returns an ID that can be used to reference the shown content
