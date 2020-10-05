@@ -1,7 +1,7 @@
 ---
-title: Angular Data Grid | Angular Grid & Diagram Component | Infragistics
+title: Angular Data Grid | Angular Material Table | Infragistics
 _description: Create a touch-responsive Angular component with a variety of events using the Ignite UI for Angular data grid. Enhance your data visualization today!
-_keywords: angular data grid, angular component, ignite ui for angular, angular grid, angular diagram component
+_keywords: angular data grid, angular grid, angular material table, ignite ui for angular
 ---
 
 # Angular Data Grid Overview and Configuration
