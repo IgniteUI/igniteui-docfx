@@ -5,11 +5,11 @@ _keywords: Excel ライクなフィルター, igniteui for angular, インフラ
 _language: ja
 ---
 
-### @@igComponent Excel スタイル フィルタリング
+# @@igComponent Excel スタイル フィルタリング
 
 グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">
@@ -44,7 +44,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-###使用方法
+## 使用方法
 
 Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。  [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を  `excelStyleFilter` に設定してください。
 
@@ -67,7 +67,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```
 }
 
-### インタラクション
+## インタラクション
 
 特定の列のフィルター メニューを開くには、ヘッダーの Angular フィルター アイコンをクリックします。列でフィルタリング機能とソート、ピン固定、移動、選択、非表示が設定された場合、オンになっている機能のボタンが表示されます。
 
@@ -78,7 +78,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-### メニュー機能の構成
+## メニュー機能の構成
 
 ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
@@ -210,7 +210,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-### テンプレート
+## テンプレート
 
 列機能を無効にせずに Excel スタイル フィルター メニューをさらにカスタマイズする場合は、カスタム テンプレートを使用できます。Excel スタイル フィルター メニューには、テンプレート化のための 2 つのディレクティブがあります:
 - [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationsdirective.html) - ソート、移動、固定などのすべての列操作で領域を再テンプレート化します。
@@ -362,16 +362,16 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-### 一意の列値ストラテジ
+## 一意の列値ストラテジ
 
 Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。これらの値は手動で提供し、ロード オン デマンドすることができます。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#一意の列値ストラテジ)で説明されています。
 
 
-### 外部の Excel スタイル フィルタリング
+## 外部の Excel スタイル フィルタリング
 
 上記デモで示されるように、Excel スタイル フィルタリング ダイアログのデフォルトの外観は @@igComponent 内にあります。このダイアログは、フィルターを構成するときにのみ表示されます。ダイアログはグリッドの外部でスタンドアロン コンポーネントとして使用すると、常に表示になります。以下のデモでは、Excel スタイル フィルタリングが @@igComponent とは別に宣言されます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:670px">
@@ -409,7 +409,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <div class="divider--half"></div>
 
-#### 使用方法
+### 使用方法
 
 Excel スタイル フィルタリング コンポーネントを設定するには、[`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) プロパティを @@igComponent 列の 1 つに設定する必要があります。上記のサンプルで、[`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) プロパティは @@igComponent 列を表示する IgxSelectComponent の値にバインドされています。
 
@@ -453,12 +453,12 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 ```
 }
 
-### 表示要素が重なる場合のアウトレット設定
+## 表示要素が重なる場合のアウトレット設定
 
 @@igComponent の [`z-index`](https://developer.mozilla.org/ja-JP/docs/Web/CSS/z-index) は、DOM の各グリッドに個別の重ね合わせコンテキストを作成します。これにより、グリッドのすべての子孫要素が互いに重ね合うことなく意図したとおりに描画されます。
 ただし、グリッドの外側にある要素 (Excel スタイル フィルターなど) は、同じ `z-index` を持つ外側の要素 (たとえば、2 つのグリッドが上下に重ねる) と競合し、誤った描画が発生します。この問題の解決策は、[`outlet`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#outlet) プロパティを外部のアウトレット ディレクティブに設定し、オーバーレイ要素が常に上に表示されるようにすることです。
 
-#### デモ
+### デモ
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-outlet-iframe" src='{environment:demosBaseUrl}/grid/grid-external-outlet' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -492,7 +492,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 </div>
 }
 
-### スタイル設定
+## スタイル設定
 
 ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -591,7 +591,7 @@ $custom-drop-down: igx-drop-down-theme(
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -651,7 +651,7 @@ $custom-drop-down: igx-drop-down-theme(
 >[!NOTE]
 >`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -801,7 +801,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 テーマを上記と同じ方法で含めることに注意してください。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">
@@ -836,14 +836,14 @@ $custom-drop-down: igx-drop-down-theme(
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

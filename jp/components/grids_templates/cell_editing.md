@@ -20,11 +20,11 @@ _keywords: データ操作, ignite ui for angular, インフラジスティッ�
 ---
 }
 
-### @@igComponent セル編集とセル テンプレート
+# @@igComponent セル編集とセル テンプレート
 
 Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のための優れたデータ操作機能と強力な API を提供します。デフォルトで @@igComponent は**セル編集**を使用し、**デフォルトのセル編集テンプレート**によって、列のデータ型に基づいてさまざまなエディターが表示されます。さらに、データ更新アクション用の独自のカスタム テンプレートを定義したり、変更をコミット/破棄したりするためのデフォルトの動作をオーバーライドすることもできます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -58,9 +58,9 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 }
 <div class="divider--half"></div>
 
-#### セルの編集
+## セルの編集
 
-##### UI を介した編集
+### UI を介した編集
 
 
 編集可能なセルがフォーカスされたときに以下のいずれかの方法で特定のセルを編集モードにすることができます。
@@ -83,7 +83,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 > [!NOTE]
 > セルは、垂直/水平方向へのスクロールや @@igComponent 以外をクリックした場合も編集モードのままです。セル編集と行編集両方で有効です。
 
-##### API を介した編集
+### API を介した編集
 
 プライマリキーが定義されている場合のみ @@igxName API でもセル値を変更することができます。
 
@@ -156,7 +156,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) への参照を介して更新するセルが @@igComponent の表示コンテナー外にある場合、新しい値は送信されません。
 
-#### セル編集テンプレート
+### セル編集テンプレート
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。
 
@@ -180,14 +180,14 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](grid.md#列の構成)のドキュメントを参照してください。
 
-### CRUD 操作
+## CRUD 操作
 
 > [!NOTE]
 > **CRUD 操作**を実行した場合、**filtering**、**sorting**、**grouping** などのパイプが再適用されるため、ビューが自動的に更新されることに注意してください。
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は基本的な CRUD 操作のための簡易な API を提供します。
 
-#### 新しいレコードの追加
+### 新しいレコードの追加
 
 @@igComponent コンポーネントは、提供したデータをデータ ソースに追加する [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addrow) メソッドを公開します。
 
@@ -221,7 +221,7 @@ public addRow() {
 ```
 }
 
-#### データを @@igComponent で更新
+### データを @@igComponent で更新
 
 @@igComponent のデータ更新は、**グリッドでプライマリキーが定義されている場合のみ** [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) と [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) メソッドで行うことができます。セルと行の値またはそのいずれかを各 `update` メソッドで直接更新できます。
 
@@ -274,7 +274,7 @@ row.update(newData);
 ```
 }
 
-#### @@igComponent からデータを削除
+### @@igComponent からデータを削除
 
 [`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleterow) メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
 
@@ -312,7 +312,7 @@ row.delete();
 
 <div class="divider--half"></div>
 
-### 編集イベント
+## 編集イベント
 
 グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row_editing.md)および**セルの編集**のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
 
@@ -331,7 +331,7 @@ row.delete();
 
 上記のイベントのほとんどはキャンセルできます。たとえば、`onCellEditEnter` がキャンセルされた場合、セルは編集モードになりません。
 
-#### 編集イベントでのセル検証
+### 編集イベントでのセル検証
 グリッドの編集イベントを使用して、ユーザーがグリッドを操作する方法を変更できます。
 この例では、[`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md) を使用してカスタム エラーメッセージを表示します。
 
@@ -450,7 +450,7 @@ export class MyHGridEventsComponent {
 }
 
 
-### スタイル設定
+## スタイル設定
 
 @@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
@@ -458,7 +458,7 @@ export class MyHGridEventsComponent {
 
 [Ignite UI Theming ライブラリ](../themes/component-themes.md)を使用するには、まずグローバル スタイルでテーマ `index` ファイルをインポートする必要があります。
 
-#### スタイル ライブラリのインポート
+### スタイル ライブラリのインポート
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -466,7 +466,7 @@ export class MyHGridEventsComponent {
 ```
 以上で Ignite UI for Angular テーマ エンジンによって公開されているすべての機能を使用できます。
 
-#### パレットの定義
+### パレットの定義
 
 インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palette.md) でパレットを作成しましょう。
 
@@ -477,7 +477,7 @@ $blue: #4567bb;
 $color-palette: igx-palette($primary: $white, $secondary: $blue);
 ```
 
-#### テーマの定義
+### テーマの定義
 
 これで、パレットを使用してテーマを定義できます。セルは [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
@@ -490,7 +490,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### テーマを適用
+### テーマを適用
 
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
@@ -500,7 +500,7 @@ $custom-grid-theme: igx-grid-theme(
 
 これにより、テーマはアプリケーションの**すべて**のグリッドに適用されます。このカスタム スタイルを特定のコンポーネントにのみ適用する場合は、テーマのスコープを設定する必要があります。
 
-#### スコープ コンポーネント テーマ
+### スコープ コンポーネント テーマ
 
 カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#スタイル-ライブラリのインポート) を含む)。
 
@@ -520,7 +520,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 ```
 
-#### デモのスタイル設定
+### デモのスタイル設定
 
 上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#スタイル設定)、[`igx-datepicker`](../date_picker.md#スタイル設定) および [`igx-checkbox`](../checkbox.md#スタイル設定))。
 
@@ -556,7 +556,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -570,7 +570,7 @@ $custom-grid-theme: igx-grid-theme(
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

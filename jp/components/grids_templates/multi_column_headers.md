@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent 複数列ヘッダーの概要
+# @@igComponent 複数列ヘッダーの概要
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -60,7 +60,7 @@ _language: ja
 </div>
 }
 
-`Multi column header` の宣言は列セットを [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) コンポーネントと渡された [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) タイトルにラップして行います。
+`Multi-column header` の宣言は列セットを [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) コンポーネントと渡された [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) タイトルにラップして行います。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -155,7 +155,7 @@ _language: ja
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は列の一番上の親レベルでのみ可能です。ネストした `column groups` や `columns` のピン固定はできません。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみです。<br />
-> `Columns/column-groups` が現在の `group` でラップされない場合 (**一番上のレベル** `columns` の場合)、表示列全体の移動はできません。
+> `columns/column-groups` が現在の `group` でラップされない場合 (**一番上のレベル** `columns` の場合)、表示列全体の移動はできません。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -197,7 +197,7 @@ _language: ja
 ```
 }
 
-### 複数列ヘッダー テンプレート
+## 複数列ヘッダー テンプレート
 
 グリッドの各列グループは個別のテンプレートを持つことができます。列グループは、`igxHeader` ディレクティブで装飾された `ng-template` タグを必要とします。
 `ng-template` は、列グループ オブジェクトと共にコンテキストとして提供されています。
@@ -272,7 +272,7 @@ _language: ja
 </div>
 }
 
-### スタイル設定
+## スタイル設定
 
 ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -308,7 +308,7 @@ $custom-theme: igx-grid-theme(
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -336,7 +336,7 @@ $custom-theme: igx-grid-theme(
 >[!NOTE]
 >`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -375,7 +375,7 @@ $custom-theme: igx-grid-theme(
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
 @@if (igxName === 'IgxGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="multi-column-headers-styling-iframe" src='{environment:demosBaseUrl}/grid/multi-column-headers-styling' width="100%" height="100%" 
@@ -388,7 +388,7 @@ $custom-theme: igx-grid-theme(
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="treegrid-multi-column-headers-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -400,7 +400,7 @@ $custom-theme: igx-grid-theme(
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="hierarchical-grid-multi-column-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -412,7 +412,7 @@ $custom-theme: igx-grid-theme(
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
@@ -420,7 +420,7 @@ $custom-theme: igx-grid-theme(
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
@@ -438,4 +438,3 @@ $custom-theme: igx-grid-theme(
 
 * [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
-

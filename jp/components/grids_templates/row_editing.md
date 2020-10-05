@@ -5,11 +5,11 @@ _keywords: row editing, igniteui for angular, インフラジスティックス�
 _language: ja
 ---
 
-## @@igComponent 行編集
+# @@igComponent 行編集
 
-Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。 
+@@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。 
 
-#### デモ
+### デモ
 
 以下の手順では、@@igComponent で行編集を有効にする方法を示します。セル値を変更してから同じ行の他のセルをクリックまたはナビゲーションした場合も **[完了]** ボタンを使用して確定するまで行値を更新しません。または **[キャンセル]** ボタンを使用して破棄します。
 
@@ -51,7 +51,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 > [!NOTE]
 > 行が編集モードにある場合、他の行のセルをクリックすると [完了] ボタンが押されたように動作し、前の行の変更をすべての変更をサブミットします。フォーカスのある新しいセルが編集可能かどうか、新しい行が編集モードに入るかどうか、セルが編集できない場合は前の行のみ編集モードを終了します。
 
-### 行編集の使用
+## 行編集の使用
 
 `@@igxNameModule` を **app.module.ts** ファイルにインポートします。
 
@@ -232,7 +232,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 > [!NOTE]
 > @@igComponent は、保留中のセル変更を保持するプロバイダー [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を行ステートをサブミットまたはキャンセルするまで内部使用します。
 
-### 配置
+## 配置
 
 - オーバーレイのデフォルトの位置は編集モードで行の下にあります。
 
@@ -240,7 +240,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 - 一番上または下に表示されると、オーバーレイは閉じられるまでスクロール時にこの位置を保持します。
 
-### 動作
+## 動作
 
 - 行が編集モードの場合、編集が継続します。同じ行のセルがクリックされたかどうか。
 
@@ -259,7 +259,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - 編集した各セルは行編集が終了するまで変更スタイルを取得します。@@igComponent がトランザクションで提供されない場合の動作です。トランザクションが有効な場合、すべての変更がコミットされるまでセル編集スタイルが適用されます。
 
 
-### キーボード ナビゲーション
+## キーボード ナビゲーション
 
 - `Enter` と `F2` で行編集モードに入ります。
 
@@ -268,7 +268,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - `Tab` で行の編集可能なセルから次のセルへフォーカスを移動、右端の編集可能なセルから [キャンセル] と [完了] ボタンへ移動します。[完了] ボタンからのナビゲーションは現在の編集行内で編集可能なセルへ移動します。
 
 
-### 機能の統合
+## 機能の統合
 
 - すべてのデータ変更操作は行変更操作を終了し、現在の行の変更をサブミットします。ソート、グループの変更、フィルタリング条件、ページングなどが含まれます。
 
@@ -278,9 +278,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - グループ行の展開と縮小は現在の行の編集を終了しません。
 }
 
-### 行編集オーバーレイのカスタマイズ
+## 行編集オーバーレイのカスタマイズ
 
-#### テキストのカスタマイズ
+### テキストのカスタマイズ
 
 `igxRowEditTextDirective` を使用した行編集オーバーレイのテキストのカスタマイズが可能です。
 `rowChangesCount` プロパティが公開されて変更されたセルのカウントを保持します。
@@ -291,7 +291,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </ng-template>
  ```
 
-#### ボタンのカスタマイズ
+### ボタンのカスタマイズ
 `igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
 キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
@@ -302,7 +302,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </ng-template>
  ```
 
-### スタイル設定
+## スタイル設定
 
 [Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、行編集オーバーレイを大幅に変更できます。 
 行編集オーバーレイは複合要素です。UI は、他の 2 つのコンポーネントで構成されています。
@@ -312,7 +312,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#スタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
 次に、現在のセルのエディターと背景をより明確にするためにスタイルを設定します。セル スタイリングの詳細については、[こちら](editing.md#スタイル設定)をご覧ください。
 
-#### テーマのインポート
+### テーマのインポート
 
 行編集バナーのスタイルを設定する最も簡単な方法は、`アプリ`のグローバル スタイル ファイル (通常 `styles.scss`) でスタイルを定義することです。
 はじめに `themes/index` ファイルをインポートすることにより、Ignite UI for Angular Sass フレームワークの強力なツールへアクセスできるようになります。
@@ -340,7 +340,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (テーマ ライブラリによって公開) と共に使用しています。
 
-#### テーマを含む
+### テーマを含む
 
 次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner) で渡します。
 
@@ -350,7 +350,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 これにより、カスタム バナー テーマが行編集オーバーレイに適用されます。ただし、グローバル スタイル ファイルで定義したため、これらのスタイルはアプリケーションの**すべて**のバナーにも適用されます。
 
-#### コンポーネント スタイル
+### コンポーネント スタイル
 
 行編集オーバーレイは他の多くのコンポーネントのテーマを利用するため、グローバル スタイルでスタイル設定するとアプリケーションの他の部分 (バナー、ボタンなど) に影響を与える可能性があります。回避策としては、バナー テーマのスコープがあります。@@igSelector を含むコンポーネントでスタイル ([`theme/index`インポート](#テーマのインポート)を含む) を定義できます。
 
@@ -370,7 +370,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 上記の構文で、カスタム バナー テーマはグリッドの行編集オーバーレイに適切に適用されます。
 
-#### カスタム テンプレート
+### カスタム テンプレート
 
 行編集オーバーレイをさらにカスタマイズするには、`[完了]` ボタンと `[キャンセル]` ボタンを別々にスタイル設定できるようにカスタム テンプレートを渡します。
 
@@ -410,7 +410,7 @@ $button-theme: igx-button-theme(
 
 `@include` ステートメントを` .custom-buttons` でスコープ設定して、`[完了]` ボタンと`[キャンセル]` ボタンにのみ適用されるようにします。
 
-#### デモ
+### デモ
 
 バナーとボタンのスタイルを設定後、[編集モードのセル](editing.md#スタイル設定)のカスタム スタイルも定義します。以下は、すべてのスタイルを組み合わせた結果です。
 
@@ -453,7 +453,7 @@ $button-theme: igx-button-theme(
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
 * [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
@@ -466,7 +466,7 @@ $button-theme: igx-button-theme(
 * [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

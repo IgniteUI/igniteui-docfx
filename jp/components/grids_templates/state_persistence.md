@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent 状態の保持
+# @@igComponent 状態の保持
 
 igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
 
-#### サポートされている機能
+## サポートされている機能
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブは、以下の機能の状態の保存および復元をサポートします。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
@@ -68,7 +68,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 
 > [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはテンプレートを処理しません。列テンプレートの復元方法については、「[列の復元](state_persistence.md#列の復元)」セクションを参照してください。
 
-#### 使用方法
+## 使用方法
 
 [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウド、ブラウザーの localStorage など) に保存できます。このメソッドは最初のオプションのパラメーター `serialize` を受け取り、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) が [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) オブジェクトを返すか、シリアル化された JSON 文字列を返すかを決定します。
 開発者は、機能名、または機能名を 2 番目の引数として持つ配列を渡すことにより、特定の機能の状態のみを取得することを選択できます。
@@ -136,7 +136,7 @@ public options =  { cellSelection: false; sorting: false; }
   }
 ```
 
-#### 列の復元
+## 列の復元
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトで列テンプレート、列フォーマッタなどを保持しません ([`制限`](state_persistence.md#制限)を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。テンプレート化された列でこれを行う方法を示します。
 
@@ -191,7 +191,7 @@ public onColumnInit(column: IgxColumnComponent) {
 ```
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### 子グリッドの復元
+## 子グリッドの復元
 子グリッドの状態の保存/復元は、[`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) プロパティによって制御され、デフォルトで有効に設定されています。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、ルート グリッドと階層のすべての子グリッドの両方の機能を保存/復元するために同じオプションを使用します。たとえば、以下のオプションを渡す場合:
 
 ``` html
@@ -204,7 +204,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 ```
 }
 
-#### デモ
+## デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:750px">
@@ -240,7 +240,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 }
 
 
-#### 制限
+## 制限
 * @@if (igxName === 'IgxHierarchicalGrid') {
 パラメーターなしで `setState` API を使用してすべてのグリッド機能を一度に復元する場合、ルート グリッドの列プロパティがデフォルトにリセットされる場合があります。その場合は、後で列または列の選択機能を復元してください。
 ```typescript
@@ -253,7 +253,7 @@ state.setState(gridState.columnSelection);
 <div class="divider--half"></div>
 
 
-### API リファレンス
+## API リファレンス
 
 @@if (igxName === 'IgxGrid') {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
@@ -268,7 +268,7 @@ state.setState(gridState.columnSelection);
 * [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
 }
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

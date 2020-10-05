@@ -39,7 +39,7 @@ _language: ja
 <div class="divider"></div>
 
 #### Connected
-[`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) から渡された方向と開始点に基づいて要素を配置します。開始点 ([`Point`]({environment:angularApiUrl}/classes/point.html)) または `HTMLElement` を配置決めのベースとして渡すことができます。デフォルトは:
+[`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) からの開始点と [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) から渡された方向に基づいて要素を配置します。開始点 ([`Point`]({environment:angularApiUrl}/classes/point.html)) または `HTMLElement` を配置決めのベースとして渡すことができます。デフォルトは:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
@@ -85,11 +85,10 @@ import {
 ```typescript
 // Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
-    // Pass in the positioning strategy
-    positionStrategy: new ConnectedPositioningStrategy({
-        // Set the target where content should be shown
+    // Set the target where content should be shown
         target: this.buttonElement.nativeElement
-    })
+    // Pass in the positioning strategy
+    positionStrategy: new ConnectedPositioningStrategy()
 };
 const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
@@ -110,7 +109,6 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 
 ```typescript
 const positionSettings: PositionSettings = {
-    target: buttonElement.nativeElement,
     horizontalStartPoint: HorizontalAlignment.Right,
     verticalStartPoint: VerticalAlignment.Top,
     horizontalDirection: HorizontalAlignment.Left,
@@ -121,6 +119,7 @@ const strategy = new ConnectedPositioningStrategy(positionSettings);
 
 // Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
+    target: buttonElement.nativeElement,
     // Pass in the positioning strategy
     positionStrategy: strategy
 };
@@ -161,10 +160,10 @@ overlay.show(overlayId, { positionStrategy: myPositionStrategy });
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
 Object.assign(overlaySettings.positionStrategy.settings, {
-    target: dummyHTMLElement,
     horizontalStartPoint: HorizontalAlignment.Left,
     horizontalDirection: HorizontalAlignment.Left
 });
+overlaySettings.target = dummyHTMLElement;
 // the element will now start to the left of the target (dummyHTMLElement)
 // and will align itself to the left
 overlay.show(overlayId, overlaySettings);

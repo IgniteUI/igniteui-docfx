@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent 列サイズ変更
+# @@igComponent 列サイズ変更
 
 グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
 
-#### @@igComponent 列サイズ変更のデモ
+### @@igComponent 列サイズ変更のデモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -126,7 +126,7 @@ public onResize(event) {
 ```
 }
 
-#### ピクセル/パーセンテージで列のサイズを変更する
+## ピクセル/パーセンテージで列のサイズを変更する
 
 ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。 これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
 
@@ -173,7 +173,7 @@ public onResize(event) {
 
 幅がパーセンテージで設定された列のサイズを変更する場合、ピクセル単位のマウスの水平移動量は、ほぼグリッド幅に対するパーセンテージの量に変換されます。 列はレスポンシブな状態のまま、その後のグリッドのサイズ変更は列にも反映されます。
 
-#### 列のサイズ変更の制限
+## 列のサイズ変更の制限
 
 列の最小幅および最大幅の構成も可能です。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)  の [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) と [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 入力で行うことができます。この場合、サイズ変更インジケーターのドラッグ操作が制限されます。列が  [`minWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#minwidth) および [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth). によって定義される範囲以外にサイズ変更できないことをユーザーに通知します。
 
@@ -222,7 +222,7 @@ public onResize(event) {
 ```
 }
 
-#### ダブルクリックで列の自動サイズ調整
+## ダブルクリックで列の自動サイズ調整
 
 各列ヘッダーの右側をダブルクリックして列を**自動サイズ調整**することができます。列は、現在表示されているヘッダーを含む一番長いセル値にサイズ設定されます。この動作はデフォルトで有効なため、追加で構成する必要はありません。ただし、[`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) がその列に設定された際に新しい幅が [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 値より大きい場合、列は自動サイズ調整されません。この場合、列が [`maxWidth`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#maxwidth) 値に設定されます。
 
@@ -245,7 +245,7 @@ column.autosize();
 ```
 }
 
-### スタイル設定
+## スタイル設定
 @@igComponent 列のサイズ変更行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
@@ -272,7 +272,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
 `igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
@@ -296,7 +296,7 @@ $custom-grid-theme: igx-grid-theme(
 >[!NOTE]
 >`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている定義済みスキーマ、ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) スキーマを拡張します。
@@ -334,7 +334,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 テーマを上記と同じ方法で含めることに注意してください。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -368,14 +368,14 @@ $custom-grid-theme: igx-grid-theme(
 <div class="divider--half"></div>
 }
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
