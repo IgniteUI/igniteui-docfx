@@ -1,14 +1,14 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Imagery | Infragistics
+title: Angular Map | Data Visualization Tools | Geographic Imagery | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, Infragistics
 ---
 
-## Geographic Imagery
+# Angular Geographic Imagery
 
 Geographic imagery is a detailed representation of the world from a top view perspective. It can consist of an aerial-satellite map or road maps in a multi-scale imagery tiles structure. The geographic map component can display geographic imagery in order to provide end-users with rich and interactive world maps and geographic context for geo-spatial data.
 
-### Types of geographic imagery
+## Types of geographic imagery
 
 The map component can display geographic imagery tiles from three supported mapping services or from other mapping services that can be easily implemented in an application.
 
@@ -21,7 +21,7 @@ The following table summarizes supported and custom geographic imagery sources f
 
 <!-- | Map Quest |Provides custom geographic imagery from Map Quest service with configurable options to display the following map styles:<ul><li>Satellite Map Style</li><li>Road Map Style</li></ul> -->
 
-### Map Background Content
+## Map Background Content
 
 The map component's `BackgroundContent` property is used to display all supported types of geographic imagery sources. For each imagery source, there is an imagery class used for rendering corresponding geographic imagery tiles.
 
@@ -40,6 +40,6 @@ In addition, the `BackgroundContent` property can be set to any object that inhe
 
 In the map component, map background content is always rendered behind all geographic series. In other words, geographic imagery tiles are always rendered first and any geographic series in the map component's [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) property is rendered on top of the geographic imagery tiles. This is especially important when displaying multiple geographic series in the same plot area of the map component because geographic imagery tiles can quickly get buried in the map view.
 
-### Code Snippet
+## Code Snippet
 
 This code example explicitly sets `BackgroundContent` of the map component to the [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) object which provides geographic imagery tile from the Open Street Maps.

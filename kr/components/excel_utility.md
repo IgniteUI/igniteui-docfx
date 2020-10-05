@@ -1,11 +1,11 @@
 ---
-title: Excel Utility | Data Spreadsheet | Ignite UI for Angular | Infragistics
+title: Angular Excel Utility | Data Spreadsheet | Infragistics
 _description: Use the Excel Utility to load and save Microsoft Excel files using Excel Library.
 _keywords: Excel Utility, Excel library, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Workbook', 'WorkbookFormat', 'WorkbookSaveOptions']
 ---
 
-## Excel Utility
+# Angular Excel Utility
 
 This topic provides utility function for loading and saving Microsoft Excel files using [Excel Library](excel_library.md)
 

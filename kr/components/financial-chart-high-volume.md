@@ -1,15 +1,15 @@
 ---
-제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics | 대용량 데이터
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Infragistics | 대용량 데이터
 _description: 재무 차트 구성 요소를 사용하여 간단한 API를 사용하여 재무 데이터를 시각화하십시오. 자세한 정보는 데모, 종속성, 사용법 및 도구 모음을보십시오.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+_keywords: financial chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## 대용량 데이터
+# Angular 대용량 데이터
 
 `XamFinancialChart` 제어는 대량의 데이터를 처리할 수 있습니다. 다음 데모는 20년간의 데이터를 바인딩하고 선형 차트를 사용하여 1시간 간격으로 주가를 표시합니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
@@ -50,7 +52,7 @@ export class AppComponent {
 
 <div class="divider--half"></div>
 
-### 추가 리소스
+## 추가 리소스
 
 <div class="divider--half"></div>
 
