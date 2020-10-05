@@ -6,11 +6,11 @@ _keywords: 列ヘッダーの折りたたみ, ignite ui for angular, インフ�
 _language: ja
 ---
 
-### グリッド列グループの折りたたみ
+# グリッド列グループの折りたたみ
 
 複数列ヘッダーを使用すると、複数レベルのネストされた列と列グループを使用できるため、各列グループを**折りたたみ可能**としてマークできます。**折りたたみ可能な複数列ヘッダー**では、折りたたみ/展開が可能です。現在のヘッダーの下にネストされたヘッダーを表示および非表示にします。これにより、たとえば短縮/要約された情報を示すことができます。
 
-##### デモ
+#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -45,7 +45,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-### 構成
+## 構成
 
 IgxGrid および縮小可能な複数列ヘッダーを使用するには、まず以下のコマンドを入力して、Ignite UI for Angular をインストールする必要があります。
 
@@ -56,7 +56,7 @@ Ignite UI for Angular については、[*はじめに*](general/getting_started
 
 次に app.module.ts ファイルに @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} をインポートします。そのため、[*複数列グループ*](./multi_column_headers.md)のトピックを簡単に確認することを強くお勧めします。グリッドで列グループを設定する方法の詳細情報を参照してください。
 
-### 使用方法
+## 使用方法
 
 縮小可能な列グループは複数列ヘッダー機能の一部で、列グループをより小さいデータ セットに縮小/展開する方法を提供します。列グループが折りたたまれると、列のサブセットがエンドユーザーに表示され、グループの他の子列が非表示になります。折りたたまれた/展開された各列は、グリッド データソースにバインドすることも、非バインドにして計算することもできます。
 
@@ -90,7 +90,7 @@ Ignite UI for Angular については、[*はじめに*](general/getting_started
 
 折りたたみ可能として指定されている列グループの初期状態は、`[expanded]="true"` です。ただし、プロパティ `[expanded]="false"` を設定することにより、この動作を簡単に変更できます。
 
-### 展開 / 縮小インジケーター (ハンドル)
+## 展開 / 縮小インジケーター (ハンドル)
 
 igxGrid のデフォルトの展開インジケーターは次のとおりです。
 
@@ -101,7 +101,7 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 <img src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
 したがって、デフォルトの展開/折りたたみインジケータを変更する必要がある場合、2 つの簡単な方法を紹介します。
-##### 入力プロパティ
+### 入力プロパティ
 
 **collapsibleIndicatorTemplate** 入力プロパティを使用して、カスタムの展開/折りたたみテンプレートを定義し、それを各折りたたみ可能な列グループに提供できます。以下のマークアップを確認してください。
 
@@ -118,7 +118,7 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
     </igx-column-group>
 </igx-column-group>
 ```
-##### igxCollapsibleIndicator ディレクティブの使用
+### igxCollapsibleIndicator ディレクティブの使用
 
 この動作を実現する別の方法は、以下の例に示すように igxCollapsibleIndicator ディレクティブを使用することです。
 
@@ -142,14 +142,14 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 > 非表示で、同じ列が表示される場所にグループが定義されている場合、列が表示されます。
 
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [Grid の概要](grid.md)

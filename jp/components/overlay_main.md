@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Overlay
+# Overlay
 <p class="highlight">
 オーバーレイ サービスはアプリケーションの前景にコンテンツを動的な描画をサポートします。描画するコンテンツおよび描画方法 (配置、アニメーション、スクロールおよびクリック動作など) を構成できます。
 このオーバーレイ サービスは Toggle ディレクティブと完全に統合されています。
@@ -137,7 +137,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
-たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、最初に [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
+たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) と [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、最初に [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
 ```typescript
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
@@ -294,7 +294,7 @@ export class ExampleComponent {
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-## その他のリソース
+### その他のリソース
 * [配置方法](overlay_position.md)
 * [スクロール方法](overlay_scroll.md)
 * [スタイル設定](overlay_styling.md)

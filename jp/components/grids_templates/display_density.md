@@ -23,12 +23,12 @@ _language: ja
 ---
 }
 
-### @@igComponent の表示密度
+# @@igComponent の表示密度
 
 **@@igxName** デザインは[マテリアル デザイン ガイドライン](https://material.io/guidelines/material-design/introduction.html)に基づきます。表示[密度](https://material.io/design/layout/density.html#usage)オプションの定義済みセットから選択するオプションを提供します。正しい密度を選択すると、コンテンツの大量との相互作用でユーザー エクスペリエンスを向上できます。
 
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:620px">
@@ -64,7 +64,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-### 使用方法
+## 使用方法
 
 上記デモで示されるように、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は 3 つの密度オプション (**compact**、**cosy**、**comfortable**) を提供します。以下のコード スニペットは、[`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) を設定する方法を示します。
 
@@ -295,7 +295,7 @@ public selectDensity(event) {
  ```
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 
 <div class="divider--half"></div>
 
@@ -305,7 +305,7 @@ public selectDensity(event) {
 
 <div class="divider--half"></div>
 
-### その他のリソース
+## その他のリソース
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)

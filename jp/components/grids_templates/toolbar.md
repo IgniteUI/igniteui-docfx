@@ -5,11 +5,11 @@ _keywords: Angular ツール バー, igniteui for angular, infragistics
 _language: ja
 ---
 
-### UI 操作のための @@igComponent ツールバー コンテナ
+# UI 操作のための @@igComponent ツールバー コンテナ
 
 Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポート、Angular イベントなど) をホストします。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
@@ -68,7 +68,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 ```
 }
 
-#### 機能
+## 機能
 
 ツールバーは、列の非表示、列のピン固定、データを MS Excel や CSV 形式にエクスポートできます。 
 各機能は、対応する boolean プロパティを設定して個別に有効にすることができます。
@@ -172,7 +172,7 @@ import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular
 export class AppModule {}
 ```
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### エクスポートのカスタマイズ
+## エクスポートのカスタマイズ
 
 更にツールバー機能は簡単にオン/オフすることができます。エクスポート処理は、エクスポート処理初期化する際に発生される [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) イベントで詳細設定することができます。このイベントは、エクスポーターとエクスポーターのオプションで公開できます。
 
@@ -245,7 +245,7 @@ public toolbarExportingHandler(args) {
 <div class="divider"></div>
 }
 
-#### エクスポート インジケーター
+## エクスポート インジケーター
 
 グリッドに大量のデータがある場合、そのデータを Excel または CSV にエクスポートするには時間がかかることがあります。そのため、エクスポートが進行中かどうかを示すエクスポート インジケーターをツールバーの下部に追加しました。エクスポート プロセスに 500 ミリ秒以上かかる場合、インジケーターはツールバーの下部に表示され、エクスポートが完了すると非表示になります。以下のサンプルには、エクスポート インジケーターが表示されるデータ エクスポートに必要な時間を増やすために大量のデータが含まれています。
 
@@ -273,7 +273,7 @@ public toolbarExportingHandler(args) {
 }
 }
 
-#### カスタム コンテンツ テンプレート
+## カスタム コンテンツ テンプレート
 
 ツールバーにアプリケーション固有の UI (カスタム ボタンなど) を追加する場合、ng-template を作成して [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブでマークします。以下のコード スニペットはカスタム テンプレートを定義する方法を示します。
 
@@ -294,7 +294,7 @@ public toolbarExportingHandler(args) {
 > [!NOTE]
 > [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) ディレクティブのコンテキストに 2 つのプロパティがあります。
 > `grid` - ツールバーを含む [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) への参照。
-> `toolbar` - [`Infragistics.Web.Mvc.dll`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) への参照を追加します。
+> `toolbar` - [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) への参照。
 
 以下のサンプルは、列ヘッダーをクリックしてソート セットをクリアするためのボタンをツールバーに追加する方法です。
 
@@ -332,7 +332,7 @@ public toolbarExportingHandler(args) {
 <div class="divider"></div>
 }
 
-### スタイル設定
+## スタイル設定
 
 ツールバーのスタイル設定を開始するには、すべてのテーマ機能とコンポーネントミックスインが存在するインデックスファイルをインポートする必要があります。
 
@@ -395,7 +395,7 @@ $dark-button-theme: igx-button-theme(
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -427,7 +427,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 >[!NOTE]
 >`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -487,7 +487,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
@@ -523,7 +523,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 <div class="divider"></div>
 }
 
-### API リファレンス
+## API リファレンス
 
 以下は、Grid Toolbar サービスのその他の API です。
 
@@ -552,7 +552,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 * [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

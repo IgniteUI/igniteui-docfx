@@ -23,9 +23,9 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 ---
 }
 
-### @@igComponent Selection 概要
+## @@igComponent Selection 概要
 
-Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row_selection.md)、[セル選択](cell_selection.md)、[列選択](column_selection.md)の 3 つの選択モードを提供します。グリッドのデフォルトの選択モードは、**列選択**と組み合わせた**複数セルの選択**です。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
+IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row_selection.md)、[セル選択](cell_selection.md)、[列選択](column_selection.md)の 3 つの選択モードを提供します。グリッドのデフォルトの選択モードは、**列選択**と組み合わせた**複数セルの選択**です。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
 
 プロパティ [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
@@ -51,10 +51,10 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row_s
 
 > 詳細については、[列選択トピック](column_selection.md) を参照してください。
 
-### ショーケース アプリケーション
+## ショーケース アプリケーション
 
 @@if (igxName === 'IgxGrid'){
-#### グリッドのコンテキスト メニュー
+### グリッドのコンテキスト メニュー
 
 [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルをエミットします。**コンテキスト メニュー**は、エミットされたセルで動作します。
 
@@ -158,14 +158,14 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 <div class="divider--half"></div>
 }
 
-### API リファレンス
+## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
