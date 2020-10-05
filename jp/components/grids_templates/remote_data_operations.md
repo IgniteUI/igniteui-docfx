@@ -537,7 +537,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 
 ### デフォルト テンプレートのリモート ページング
 
-If you want to use the *default paging template* you need to set the [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) property, only then the grid will be able to calculate the *total page number* based on total remote records. When performing a remote pagination we pass to the grid only the data for the current page, so the grid will not try to paginate the provided data source. That's why we should set the [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) property to *GridPagingMode.remote*. Also it is necessary to subscribe to [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) or [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) events in order to fetch the data from your remote service, it depends on the use case which event will be used.
+デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) または [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -633,7 +633,7 @@ public paginate() {
 
 ### カスタム テンプレートのリモート ページング
 
-When we define a *custom paging template* it's not necessary to define the @@igComponent properties like [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) or [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords), as we did for the *custom paging with default template*. We need to create a custom pager template to get the data only for the requested page and to pass the correct **skip** and **top** parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage). We are going to use the `<igx-paginator>` in order to ease our example configuration.
+カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) や [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
