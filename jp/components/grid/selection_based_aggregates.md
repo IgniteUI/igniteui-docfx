@@ -4,7 +4,6 @@ _description: 機能豊かな API を使用して Ignite Angular Material テー
 _keywords: データ集計, 選択, ignite ui for angular, インフラジスティックス
 ---
 
-
 # 選択に基づいた集計
 
 以下のサンプルでは、グリッドのフッターで選択した値に基づいて、カスタム集計関数と共に集計を表示する際の複数選択の動作を確認できます。
@@ -65,7 +64,7 @@ const dates = data.filter(rec => isDate(rec));
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
 * [集計](summaries.md)    
-* [ページング](paging.md)      
+* [ページング](paging.md)    
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。    

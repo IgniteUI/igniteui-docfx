@@ -3,8 +3,8 @@ title: 階層グリッド - グループ化 | グループ行 | Ignite UI for An
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
-
 ---
+
 # グリッドのグループ化
 
 Angular Material テーブルまたは UI グリッドの Group by 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。
@@ -14,7 +14,6 @@ Angular Material テーブルまたは UI グリッドの Group by 動作は、�
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -107,6 +106,8 @@ export interface IGroupByRecord {
     <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
 </ng-template>
 ```
+
+
 ## ページングでグループ化
 
 グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。展開または折りたたみ操作を行うと、ページングでページ数が再計算され、必要に応じてページ インデックスが調整されます。
@@ -126,15 +127,13 @@ export interface IGroupByRecord {
 
 グループ化と要約の統合については、[集計](summaries.html#グループの集計)トピックで説明しています。
 
-
 ## キーボード ナビゲーション
 
 グループ UI は、以下のキーボード インタラクションをサポートします。
 
 - グループ行 (行または展開/縮小セルにフォーカス)
-   -  <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
-   -  <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
-
+   - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
+   - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
 
 - グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。

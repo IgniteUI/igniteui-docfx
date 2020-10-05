@@ -26,7 +26,15 @@ _language: ja
 # @@igComponent 列選択
 列選択機能は、シングルク リックで列全体を選択する簡単な方法を提供します。特定の列の重要性を強調するために、ヘッダー セルとその下のすべてにフォーカスします。この機能は豊富な [`API`]({environment:angularApiUrl}) を備えて選択状態の操作、選択した部分からのデータ抽出、データ分析操作、可視化が可能になります。
 
-*Contact Title、City、および Address 列の選択が無効になっています。
+@@if (igxName === 'IgxGrid') {
+*_Contact Title_、_City_、および _Address_ 列の選択が無効になっています。
+}
+@@if (igxName === 'IgxTreeGrid') {
+*_Unit Price_ および _Discontinued_ 列の選択が無効になっています。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+*_Photo_ および _Debut_ 列の選択が無効になっています。
+}
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-selection-iframe" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection' width="100%" height="100%" seamless frameborder="0" class="no-theming" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -48,7 +56,15 @@ _language: ja
 > [!NOTE]
 > [`複数列ヘッダー`](multi_column_headers.md) は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) 入力に反映されません。その子の 1 つ以上で選択動作が有効な場合、[`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) です。さらに、すべての `selectable` 子孫が [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) である場合、コンポーネントは [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) としてマークされます。
 
-*Country Information 列グループでは、 City 列 および Postal code 列のみを選択できます。
+@@if (igxName === 'IgxGrid') {
+*_Country Information_ 列グループでは、_City_ 列および _Postal code_ 列のみを選択できます。
+}
+@@if (igxName === 'IgxTreeGrid') {
+*_Personal Details_ 列グループでは、_ID_ 列および _Title_ 列のみを選択できます。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+*_Location_ 列グループでは、_City_ 列のみを選択できます。
+}
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-group-selection" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>

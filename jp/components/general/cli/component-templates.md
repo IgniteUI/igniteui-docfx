@@ -1,11 +1,11 @@
 ﻿---
 title: コンポーネントおよびシナリオ CLI テンプレート | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular フレームワークで利用可能なすべての CLI テンプレート一覧をご覧ください。
-_keywords: igniteui for angular | angular schematics | テンプレート | インフラジスティックス
+_keywords: igniteui for angular, angular schematics, テンプレート, インフラジスティックス
 _language: ja
 ---
 
-## コンポーネント テンプレート
+# コンポーネント テンプレート
 
 以下の表に、Ignite UI Angular Schematics また は Ignite UI CL Iコマンドを使用して生成できる Ignite UI Angular コンポーネントのリストを示します。さらに、本ドキュメントには利用可能なデモへのリンクが含まれますが、CLI によって生成されたデモと完全にく同じではないことに注意してください。
 

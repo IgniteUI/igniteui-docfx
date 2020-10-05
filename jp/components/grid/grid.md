@@ -57,7 +57,7 @@ export class AppModule {}
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular'
+import { IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })

@@ -673,7 +673,7 @@ $custom-button: igx-button-theme(
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
-* [検索](search.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

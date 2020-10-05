@@ -224,7 +224,6 @@ export class PasteHandler {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ## その他のリソース
-
 <div class="divider--half"></div>
 
 * [Excel エクスポーター](export_excel.md) - Excel エクスポーター サービスを使用して、IgxGrid から Excel にデータをエクスポートします。選択したデータのみを IgxGrid からエクスポートするオプションもあります。エクスポート機能は、IgxExcelExporterService クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式はフィルタリングやソートなどの機能が使用でき、IgxExcelExporterService の export メソッドを呼び出して最初の引数として IgxGrid コンポーネントを渡します。

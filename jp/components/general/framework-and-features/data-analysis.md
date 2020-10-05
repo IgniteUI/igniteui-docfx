@@ -68,9 +68,7 @@ _language: ja
     <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
 </div>
 
-<div>
-<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" target="_blank">全画面表示</a>
-</div>
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager")'>全画面表示</button>
 
 > [!NOTE]
 > [Dock Manager Web コンポーネント](../../dock-manager.md)は、ペインでアプリケーションのレイアウトを管理する方法を提供します。エンド ユーザーはペインをピン固定、サイズ変更、移動、非表示にすることでカスタマイズできます。データを選択した後、いくつかのチャートを作成し、利用可能な領域にドラッグしてピン固定します。
@@ -128,9 +126,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
-<div>
-<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">全画面表示</a>
-</div>
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>全画面表示</button>
 
 以下のチャート タイプをサポートします。
 - [ColumnGrouped](../../data-chart-type-category-series.md)、[AreaGrouped](../../data-chart-type-category-area-series.md)、[LineGrouped](../../data-chart-type-category-line-series.md)、[BarGrouped](../../data-chart-type-category-series.md)
@@ -185,9 +181,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
 </div>
 
-<div>
-<a class="full-screen-btn" href="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" target="_blank">全画面表示</a>
-</div>
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>全画面表示</button>
 
 ## データ分析パッケージ API
  
@@ -225,12 +219,13 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 | `scatterChartYAxisValueMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。**設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの最初の数値プロパティ名になります** | `path`: **string** |
 | `bubbleChartRadiusMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの 2 番目の数値プロパティ名になります | `path`: **string** |
 
+
 ## 便利なリソース
 
 <div class="divider--half"></div>
 
 * [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
-* [Ignite UI スタート キット  (英語)](https://github.com/IgniteUI/ng-universal-example)
+* [Ignite UI スタート キット (英語)](https://github.com/IgniteUI/ng-universal-example)
 * [サーバー側レンダリング用語](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
 * [Ignite UI で作業を開始](../getting_started.md)
 * [Ignite UI CLI ガイド](../cli/step-by-step-guide.md)
