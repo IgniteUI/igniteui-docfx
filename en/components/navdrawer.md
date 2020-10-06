@@ -140,7 +140,7 @@ export class AppComponent  {
     @ViewChild(IgxNavigationDrawerComponent, { static: true })
     public drawer: IgxNavigationDrawerComponent;
 
-    // And of couse add the key line to our navigate function
+    // And of course add the key line to our navigate function
 
     public navigate(item) {
         this.selected = item.text;

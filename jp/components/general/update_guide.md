@@ -1,11 +1,11 @@
 ﻿---
-title: アップデート ガイド
-_description: このトピックでは、新しいバージョンの Ignite UI for Angular ライブラリにアップデートする方法についてご紹介します。
-_keywords: Ignite UI for Angular, アップデート, npm パッケージ, バージョン, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+title: アップデート ガイド | Ignite UI for Angular | インフラジスティックス
+_description: 新しいバージョンの Ignite UI for Angular ライブラリにアップデートする方法については、この記事を参照してください。
+_keywords: ignite ui for angular, アップデート, npm パッケージ, マテリアル コンポーネント
 _language: ja
 ---
 
-## アップデート ガイド
+# アップデート ガイド
 
 Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) は、最初の数字がコードでサポートされる Angular のメジャー バージョンで、2 番目の数字はメジャー バージョン リリースの数字です。また重大な変更がメジャー リリース間でリリースされる場合があります。
 **Ignite UI for Angular** 各リリースのすべての変更の一覧は、製品 [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md) (英語) をご覧ください。
@@ -21,7 +21,7 @@ ng update
 ```cmd
 ng update igniteui-angular
 ```
-`Igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
@@ -42,7 +42,7 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-### 10.0.x から 10.1.x の場合:
+## 10.0.x から 10.1.x の場合:
 
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、`IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`  `IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレートディレクティブの使用に関する詳細は、この[トピック](../grid/excel_style_filtering.md#テンプレート)をご覧ください。
@@ -59,7 +59,7 @@ ng update @angular/cli
     </igx-grid>
     ```
 
-### 9.0.x から 10.0.x の場合:
+## 9.0.x から 10.0.x の場合:
 * IgxDropdown
     * ドロップダウン項目の表示プロパティが `flex` から `block` に変更されました。これは、切り捨てられたテキストをデフォルトで有効にするために行われました。この変更により、ドロップダウン項目のコンテンツにテキスト以外のものが含まれる場合、レイアウトはアプリケーション レベルで処理する必要があります。
 
@@ -84,7 +84,7 @@ ng update @angular/cli
     } 
     ```
 
-### 8.x.x から 9.0.x の場合:
+## 8.x.x から 9.0.x の場合:
 
 Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
 
@@ -127,7 +127,7 @@ import { HammerModule } from "@angular/platform-browser";
 
 `ng update` プロセスは、`AvatarType`、`Type` などのすべての列挙名を `IgxAvatarType` と `IgxBadgeType` にそれぞれ更新します。その他の列挙メンバー名は変更されません。 
 
-### 8.1.x から 8.2.x の場合:
+## 8.1.x から 8.2.x の場合:
 
 * IgxDrag
     * `hideBaseOnDrag` と `visible` 入力は非推奨のため、アプリケーションで同じ機能を実現するために、Angular が提供する基本要素を非表示にする任意の方法を使用できます。1 つの例として、可視性スタイルの非表示設定があります。これは、非表示にして DOM で使用するスペースを保持するためです。
@@ -221,7 +221,7 @@ import { HammerModule } from "@angular/platform-browser";
 
     コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#選択)をご覧ください。
 
-### 8.0.x から 8.1.x の場合:
+## 8.0.x から 8.1.x の場合:
 * `igx-paginator` コンポーネントはスタンドアロン コンポーネントとして導入され、Grid コンポーネントでも使用されます。
 `paginationTemplate` を設定している場合は、CSS を変更してページネーションを正しく表示する必要がある場合があることに注意してください。これは、コンテンツをセンタリングするための CSS ルールを持つページング固有のコンテナの下にテンプレートが適用されなくなったため、手動で追加する必要がある場合があるためです。
 以下はスタイルの例です。
@@ -242,19 +242,19 @@ import { HammerModule } from "@angular/platform-browser";
 }
 ```
 
-### 7.3.x から 8.0.x の場合:
+## 7.3.x から 8.0.x の場合:
 * アップデート中に以下のエラーが発生した場合、`パッケージ "@angular/compiler-cli" は "typescript" と互換性のないピア依存関係を持っているため (">=3.1.1 <3.3" が必要で、"3.4.5" をインストールします。)`、最初に `@angular/core` パッケージを更新する必要があります。このエラーは [Angular CLI](https://github.com/angular/angular-cli/issues/13095) の既知の問題に関連しています
 * `igniteui-angular` パッケージの更新中に次のエラーが表示された場合、`パッケージ "igniteui-angular" は "web-animations-js" と互換性のないピア依存関係を持っているため ("^2.3.1" が必要で、"2.3.2-pr208" をインストールします。)`、`ng update igniteui-angular --force` を使用して更新する必要があります。これは、`igniteui-angular` を更新する前に `@angular/core` と `@angular/cli` を更新した場合に発生する場合があります。
 
-### 7.2.x または 7.3.x から 7.3.4 の場合:
+## 7.2.x または 7.3.x から 7.3.4 の場合:
 * `IgxGrid`、`IgxTreeGrid`、または `IgxHierarchicalGrid` メソッドを使用する場合は、`condition` パラメーターがオプションではなくなったことに注意してください。`filterGlobal` メソッドが無効な条件で呼び出されると、すべての列の既存のフィルターは消去されません。
 
-### 7.1.x から 7.2.x の場合:
+## 7.1.x から 7.2.x の場合:
 * `combo.value` と一緒に IgxCombo を使う場合、`combo.value` が唯一のゲッターであることに注意してください。
 * `IgxTextHighlightDirective` を使用している場合、`page` 入力プロパティは推奨されません。`IActiveHighlightInfo` インターフェイスの `rowIndex`、`columnIndex`、`page` プロパティも非推奨です。代わりに、`行`と`列`のオプション プロパティが追加されています。
 * `igx-button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。 
 
-### 7.0.x から 7.1.x
+## 7.0.x から 7.1.x
  * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。
 
 	バージョン 7.1 以前:
@@ -283,6 +283,6 @@ export class CustomSummary extends IgxNumberSummaryOperand {
 }
 ```
 
-### 6.0.x から 6.1.x
+## 6.0.x から 6.1.x
 
 * アプリケーションで IgxCombo コントロールを使用する場合、`itemsMaxWidth` オプションを設定し、このオプションを `itemsWidth` に変更してください。

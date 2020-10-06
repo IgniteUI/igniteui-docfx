@@ -23,10 +23,10 @@ _language: ja
 ---
 }
 
-### @@igComponent 行のピン固定
+## @@igComponent 行のピン固定
 単一または複数の行を Angular UI グリッドの上側または下側にピン固定できます。Ignite UI for Angular の**行ピン固定**を使用すると、エンドユーザーは特定の順序で行をピン固定し、@@igComponent を垂直にスクロールしても常に表示される特別な領域に行を複製できます。Material UI Grid には組み込みの行ピン固定 UI が含まれており、@@igComponent のコンテキストで `igxActionStrip` コンポーネントを初期化することで有効になります。その他、カスタム UI を定義し、行のピン固定 API を介して行のピン固定状態を変更できます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -59,7 +59,7 @@ _language: ja
 </div>
 }
 
-### 行のピン固定 UI
+## 行のピン固定 UI
 
 組み込みの行ピン固定 UI は、`GridPinningActions` コンポーネントと `igxActionStrip` コンポーネントを追加することで有効になります。アクション ストリップは、その API を介して表示または非表示にでき、表示される行の状態に基づいてピンまたはピン固定解除ボタンのアイコンを表示します。ピン固定された行のコピーをビューにスクロールする追加のアクションがピン固定された行ごとに表示されます。
 
@@ -122,7 +122,7 @@ _language: ja
 }
 
 
-#### 行のピン固定 API
+## 行のピン固定 API
 
 行のピン固定は、[`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html) の `pinned` 設定によって制御されます。デフォルトでピン固定行は @@igComponent の上側に固定して描画され、@@igComponent 本体のピン固定されていない行は垂直スクロールされます。
 
@@ -204,7 +204,7 @@ public rowPinning(event) {
 ```
 }
 
-### ピン固定の位置
+## ピン固定の位置
 
 [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) 設定オプションを使用して、行のピン固定の位置を変更できます。ピン固定の位置を Top または Bottom のいずれかに設定できます。
 Bottom に設定すると、行がピン固定されていない行の後に、グリッドの一番下にレンダリングされます。ピン固定されていない行は垂直にスクロールできますが、ピン固定された行は下側に固定されます。
@@ -232,11 +232,11 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 ```
 
 
-### カスタム行ピン固定 UI
+## カスタム行ピン固定 UI
 
 カスタム UI を定義し、関連する API を介して行のピン状態を変更できます。
 
-#### アイコン付きの追加の列によるカスタム行ピン固定 UI
+### アイコン付きの追加の列によるカスタム行ピン固定 UI
 
 アクション ストリップの代わりに、すべての行にピンのアイコンを表示し、エンドユーザーが特定の行のピン状態をクリックして変更できます。
 カスタム アイコンを含むセル テンプレートの列を追加することで実行できます。
@@ -345,7 +345,7 @@ public togglePinning(row: IgxGridRowComponent, event) {
 
 @@if (igxName === 'IgxGrid') {
 
-#### 行ドラッグによるカスタム行ピン固定 UI
+### 行ドラッグを使用した方法
 
 ピン状態を変更するために、ピン固定された行とピン固定されていない行の間に直接行をドラッグアンドドロップできるようにするとします。
 これは、行のドラッグ機能を有効にし、ドロップの際に API で行をピン固定/ピン固定解除することで実現できます。
@@ -405,7 +405,7 @@ public onDropAllowed(args) {
 }
 
 
-### 行ピン固定の制限
+## 行ピン固定の制限
 
 * データソースに存在するレコードのみをピン固定できます。
 * 行のピン固定状態は Excel にエクスポートされません。グリッドは行のピン固定が適用されずにエクスポートされます。
@@ -415,13 +415,13 @@ public onDropAllowed(args) {
 
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 
 @@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下では、@@igComponent の行ピン固定スタイルをカスタマイズする手順を示します。
 
-#### スタイル ライブラリのインポート
+### スタイル ライブラリのインポート
 
 行ピン固定機能をカスタマイズするには、まずすべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
@@ -429,7 +429,7 @@ public onDropAllowed(args) {
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### テーマの定義
+### テーマの定義
 
 次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
 
@@ -444,7 +444,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### CSS 変数の使用
+### CSS 変数の使用
 
 最後にカスタム グリッド テーマを設定します。
 
@@ -452,7 +452,7 @@ $custom-grid-theme: igx-grid-theme(
 @include igx-css-vars($custom-grid-theme);
 ```
 
-#### ミックスインの使用
+### ミックスインの使用
 
 Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
 
@@ -467,7 +467,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 }
 ```
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:540px">
@@ -497,12 +497,12 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
