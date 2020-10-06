@@ -3,24 +3,23 @@ title: 階層グリッド - グループ化 | グループ行 | Ignite UI for An
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
-
 ---
-### グリッドのグループ化
+
+# グリッドのグループ化
 
 Angular Material テーブルまたは UI グリッドの Group by 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### 初期のグループ化状態
+## 初期のグループ化状態
 
 グリッドの [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティに式の配列を割り当てることによって、グリッドの初期グループ化を定義することができます。
 
@@ -35,7 +34,7 @@ public ngOnInit() {
 
 グループ式は、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) インターフェイスを実装します。
 
-#### API でグループ化
+## API でグループ化
 
 グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true` に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
 
@@ -85,7 +84,7 @@ export interface IGroupByExpandState {
 
 グループは展開済み (***デフォルト***) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
 
-#### グループ行テンプレート
+## グループ行テンプレート
 
 UI の展開/縮小なしのグループ行は完全なテンプレート化が可能です。デフォルトでグループ アイコンを描画し、フィールド名と値を表示します。テンプレートが描画されるレコードのグループ化には、以下のシグネチャがあります。
 
@@ -107,12 +106,14 @@ export interface IGroupByRecord {
     <span>Total items with value: {{ groupRow.value }} are {{ groupRow.records.length }}</span>
 </ng-template>
 ```
-### ページングでグループ化
+
+
+## ページングでグループ化
 
 グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。展開または折りたたみ操作を行うと、ページングでページ数が再計算され、必要に応じてページ インデックスが調整されます。
 複数のページにまたがるグループは、ページ間で分割されます。グループ行は、開始ページでのみ表示され、後続のページでは繰り返されません。グループ行の要約情報はグループ全体に基づいて計算され、ページングの影響を受けません。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -122,19 +123,17 @@ export interface IGroupByRecord {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### 集計でグループ化
+## 集計でグループ化
 
 グループ化と要約の統合については、[集計](summaries.html#グループの集計)トピックで説明しています。
 
-
-#### キーボード ナビゲーション
+## キーボード ナビゲーション
 
 グループ UI は、以下のキーボード インタラクションをサポートします。
 
 - グループ行 (行または展開/縮小セルにフォーカス)
-   -  <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
-   -  <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
-
+   - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
+   - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
 
 - グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。
@@ -143,7 +142,7 @@ export interface IGroupByRecord {
    - <kbd>DELETE</kbd> - フィールドのグループ解除
    - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
 
-### カスタム グループ化
+## カスタム グループ化
 
 igxGrid では、列ごとまたはグループ化式ごとにカスタム グループを定義できます。これにより、カスタム条件に基づいてグループ化が提供されます。これは、複雑なオブジェクトごとにグループ化する必要がある場合、または他のアプリケーション固有のシナリオで役立ちます。
 
@@ -152,7 +151,7 @@ igxGrid では、列ごとまたはグループ化式ごとにカスタム グ�
 
 以下のサンプルは、`Date` によるカスタム グループ化を示しています。日付の値は、ユーザーが選択したグループ化モードに基づいて、日、週、月、または年でソート / グループ化されています。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-custom-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -239,13 +238,13 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 ```
 
 
-### スタイル設定
+## スタイル設定
 
 igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
-#### グローバル テーマのインポート
+### グローバル テーマのインポート
 
 グループ化機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
@@ -253,7 +252,7 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### カスタム テーマの定義
+### カスタム テーマの定義
 
 次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。Group By 機能で使用されるため、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) を拡張する必要もあります。
 
@@ -285,7 +284,7 @@ $custom-chips-theme: igx-chip-theme(
 );
 ```
 
-#### カスタム カラー パレットの定義
+### カスタム カラー パレットの定義
 
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
 `Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
@@ -321,7 +320,7 @@ $custom-chips-theme: igx-chip-theme(
     $hover-text-color: igx-contrast-color($custom-palette, "primary", 600)
 );
 ```
-#### カスタム スキーマの定義
+### カスタム スキーマの定義
 さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。 
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
 ```scss
@@ -349,7 +348,7 @@ $custom-theme: igx-grid-theme(
 );
 ```
 
-#### カスタム テーマの適用
+### カスタム テーマの適用
 
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 ```scss
@@ -357,7 +356,7 @@ $custom-theme: igx-grid-theme(
 @include igx-chip($custom-chips-theme);
 ```
 
-#### スコープ コンポーネント テーマ
+### スコープ コンポーネント テーマ
 
 カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (インデックス ファイルのインポートを含む)。
 
@@ -377,7 +376,7 @@ $custom-theme: igx-grid-theme(
 }
 ```
 
-#### デモ   
+### デモ   
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="grid-sample-groupby-styling" data-src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -387,13 +386,13 @@ $custom-theme: igx-grid-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### 既知の制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |
 |グループ列の最大値は 10 です。 | 10 列以上の場合はエラーがスローされます。
 
-### API リファレンス
+## API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -403,7 +402,7 @@ $custom-theme: igx-grid-theme(
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 * [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [Grid 概要](grid.md)

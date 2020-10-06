@@ -15,10 +15,10 @@ _language: ja
 ---
 }
 
-### @@igComponent クリップボードの操作
+# @@igComponent クリップボードの操作
 クリップボードへのコピー操作が @@igComponent で可能になりました。この機能は、現在の複数セル データ選択を通して Angular Data Grid のデータをすばやくコピーするための簡単でカスタマイズ可能な方法を提供します。システム クリップボードの動作により、ユーザーは @@igComponent から Excel または他の外部プログラムにデータをコピーできます。
 
-#### デモ
+### デモ
 
 
 @@if (igxName === 'IgxGrid') {
@@ -42,7 +42,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-### 機能
+## 機能
 コピー動作は、ブラウザーとオペレーティング システムで定義されているデフォルトのインタラクションで動作します。以下は、コピー＆ペースト動作の場合です。
 
 - Windows または Unix 
@@ -55,7 +55,7 @@ _language: ja
   - ブラウザー メニューからのコピー操作
 
 
-### 制限
+## 制限
 - カットとコピーの両方のイベントは、Internet Explorer では本来サポートされていません。例外は発生される **paste** イベント(IE 11)ですが、イベントの `clipboardData` プロパティを公開していません。
 > [!NOTE] 
 > IE 11のセルを`コピー`するためには、キーボード選択を使用できます。複数セルを選択するには `Shift キー` を押しながらコピーするには `Ctrl + C` を押します。
@@ -64,7 +64,7 @@ _language: ja
 - この機能の現在のバージョンは、グリッドからのコピー動作のみをカバーします。今後、グリッドの動作内で`貼り付け`を公開する予定です。
 @@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excel から貼り付け](paste_excel.md)トピックをご覧ください 。}
 
-### API の使用
+## API の使用
 次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) プロパティを公開します。
 - [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) は選択したセルのコピーを有効または無効にします。
 - [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) は、コピー時に関連付けられているヘッダーを含めます。
@@ -76,7 +76,7 @@ _language: ja
 
 - [`onGridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#resizable) コピー操作が実行されたときに発生します。[`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) を使用してコピー動作が有効になっている場合のみ発生します。
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

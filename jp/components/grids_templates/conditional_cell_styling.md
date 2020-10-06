@@ -23,8 +23,7 @@ _language: ja
 ---
 }
 
-
-### @@igComponent 条件付きセルのスタイル設定
+# @@igComponent 条件付きセルのスタイル設定
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいて 2 通りの条件付きセルのスタイル設定をサポートします。
 
 - [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
@@ -53,79 +52,9 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-#### 'cellClasses' を使用したデモ
+## 概要
 
-@@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:530px">
-    <iframe id="grid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
-<div class="divider--half"></div>
-
-- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力を使用して、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取る [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles)。
-
-```ts
-public styles = {
-    "background": "linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)",
-    "text-shadow": "1px 1px 2px rgba(25,25,25,.25)",
-    "animation": "0.25s ease-in-out forwards alternate popin"
-};
-```
-
-> `cellStyles` と `cellClasses` の両方のコールバック シグネチャが次のように変更されました。
-
-```ts
-(rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
-```
-
-#### 'cellStyles' を使用したデモ
-
-@@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:530px">
-    <iframe id="grid-cell-cellStyling-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-cell-cellStyling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
-<div class="divider--half"></div>
-
-### 概要
-
-#### cellClasses の使用
+### cellClasses の使用
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
 
 @@if (igxName === 'IgxGrid') {
@@ -221,7 +150,50 @@ public priceClasses = {
 
 **::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
-#### cellStyles の使用
+### デモ
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
+<div class="divider--half"></div>
+
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)　入力を使用して、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取る [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles)。
+
+```ts
+public styles = {
+    "background": "linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)",
+    "text-shadow": "1px 1px 2px rgba(25,25,25,.25)",
+    "animation": "0.25s ease-in-out forwards alternate popin"
+};
+```
+
+> `cellStyles` と `cellClasses` の両方のコールバック シグネチャが次のように変更されました。
+
+```ts
+(rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
+```
+
+### cellStyles の使用
 列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
 [上記のサンプル](conditional_cell_styling.md#cellStyles-を使用したデモ)で作成した項目:
@@ -321,8 +293,34 @@ public updateCSS(css: string) {
 }
 ```
 
+### デモ
 
-#### 既知の問題と制限
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-cell-cellStyling-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-cell-cellStyling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
+<div class="divider--half"></div>
+
+## 既知の問題と制限
 
 - 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
 残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子`...を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
@@ -349,14 +347,14 @@ editDone(evt) {
   ...
 ```
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

@@ -403,11 +403,11 @@
           href: hierarchicalgrid/column_selection.md
           new: true
         # Not yet fully implemented for igxHGrid
-        # - name: Cell selection
-        #  href: grid/cell_selection.md
+        # - name: セル選択
+        #  href: hierarchicalgrid/cell_selection.md
         #  new: true
     # Not yet fully implemented for igxHGrid
-    # - name: Searching
+    # - name: 検索
     #   href: hierarchicalgrid/search.md
     #   new: true
     - name: ツールバー

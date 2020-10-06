@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-### グリッド サイズ変更の概要
+# グリッド サイズ変更の概要
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) はサイズ変更する方法が多数あり、ユーザーのさまざまな状況に対応できます。方法は簡単なものから複雑なものまでさまざまです。それぞれを取り上げて、より詳しく説明します。パーセンテージを使用する場合など、いくつかの違いがあるため、`width` と `height` は別々に設定します。
 
@@ -32,14 +32,14 @@ _language: ja
 > [!Note]
 > ユーザーがボーダー ボックスのサイズ変更をオーバーライドした場合に正しい [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) になるかどうかは保証できません。
 
-### 幅
+## 幅
 
 入力`幅`に値が割り当てられていない場合のデフォルト値は `100%` で、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は使用可能なスペースを埋めようとします。`Percentages` セクションで、グリッドがグリッドにどのように反応するかを確認できます。
 
 > [!Note]
 > [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 自体の幅スタイルを手動で設定すると、予期しない動作が生じます。
 
-#### Null
+### Null
 
 グリッドの `幅` は `null` 値を許容でき、設定すると、DOM のすべての列がレンダリングされます。それに応じてグリッドのサイズが決定されて列の仮想化が適用されないため、グリッドの水平スクロールバーはありません。
 
@@ -63,7 +63,7 @@ _language: ja
 > [!Note]
 > この動作により、グリッド データに含まれる列が多すぎる場合、すべての列が仮想化なしでレンダリングされるため、ブラウザーのパフォーマンスに大きな影響を与える可能性があります。
 
-#### ピクセル
+### ピクセル
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅`の入力がピクセルに設定されると、グリッド全体のサイズがその値に設定され、静的になります。ブラウザーのサイズ変更や DOM の変更には反応しませんが、グリッド コンテンツの場合はそれに当てはまりません。
 
@@ -77,7 +77,7 @@ _language: ja
     <img src="../../images/grid_sizing/width-cols-scroll-parent-scroll-v2.jpg" style="width: 80%"/>
 
 
-#### パーセンテージ
+### パーセンテージ
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`がパーセンテージに設定されている場合、親要素の幅に応じてグリッドのサイズが変更されます。親要素の幅が指定されていない場合、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) のサイズはブラウザー ウィンドウに相対します。
 
@@ -94,14 +94,14 @@ _language: ja
     <img src="../../images/grid_sizing/width-percent-150p-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/width-percent-150p-parent-scroll-v2.jpg" style="width: 80%"/>
 
-### 高さ
+## 高さ
 
 デフォルトでは、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の高さが定義されていない場合、`100%` に設定されます。`Percentages` セクションで、DOM 構造に応じたグリッドの応答を確認できます。
 
 > [!Note]
 > [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 自体の`高さ`のスタイルを手動で設定すると、予期しない動作が生じます。
 
-#### Null
+### Null
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `高さ`の入力で `null` 値を許容できます。null 値を設定すると、スクロールバーの数に関係なくすべての行が表示されます。この場合、グリッドはとにかくすべての行をレンダリングするため、垂直仮想化はありません。
 
@@ -121,7 +121,7 @@ _language: ja
 > [!Note]
 > この動作により、グリッド データに含まれる行が多すぎる場合、すべての行が仮想化なしでレンダリングされるため、ブラウザーのパフォーマンスに大きな影響を与える可能性があります。
 
-#### Pixels
+### ピクセル
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`高さ`をピクセル単位で設定すると、`幅`がピクセル単位で設定される方法と同様に、グリッドがあらゆる場合にその特定のサイズにサイズ変更されるため簡単です。
 
@@ -140,7 +140,7 @@ _language: ja
 
 
 
-#### パーセンテージ
+### パーセンテージ
 
 `高さ`の入力がパーセンテージに設定されている場合、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は親要素の高さに基づいてサイズ設定されます。親要素の`高さ`がピクセルまたはパーセンテージで設定されている場合、グリッドのサイズは親のサイズに対して相対的になります。
 
@@ -171,11 +171,11 @@ _language: ja
     <img src="../../images/grid_sizing/height-percent-100-parent-100-v2.jpg" style="width: 80%"/>
 
 
-### 列幅の変更
+## 列幅の変更
 
 グリッドのサイズに応じてグリッド内の列サイズも変わるため、グリッドはサイズに基づいて水平スクロールバーをレンダリングするかどうかを決定します。  列の幅は、ピクセル、パーセンテージ、または何も設定されていない場合は自動サイズに設定できます。このセクションでは、これらの状況について詳しく見ていきます。
 
-#### 既定
+### 既定
 
 既定で列の幅が指定されていない場合、グリッド ビュー領域に空のスペースがある場合に列が自動でサイズ変更されるようになります。自動サイズの列の最小幅は `136px` であるため、列で使用可能な領域が `136px` 未満の場合、既定でそのサイズになります。
 
@@ -204,7 +204,7 @@ _language: ja
 > [!Note]
 > 行セレクターのチェックボックス列などの機能列は、列の自動サイズ調整時に考慮される追加のスペースを埋めます。
 
-#### ピクセル
+### ピクセル
 
 列の`幅`をピクセル単位で設定した場合、手動でサイズを変更しない限り、列はそのサイズで固定されます。列の結合された`幅`は静的であるため、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `幅`より小さくすることも、それを超えることもできます。
 
@@ -217,7 +217,7 @@ _language: ja
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
 
-#### パーセンテージ
+### パーセンテージ
 
 列の`幅`がパーセンテージで設定されている場合、それらのサイズはグリッドサイズに対して相対的に計算されます。これは、ピクセル単位の幅の仕組みと似ていますが、列に対する応答も提供します。つまり、グリッドのサイズが変更されると、列もそれに応じてサイズが変更されます。
 
@@ -239,11 +239,11 @@ _language: ja
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-### 子グリッド サイズ変更
+## 子グリッド サイズ変更
 
 通常、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) には子が含まれているため、さまざまなシナリオに対応するために、`幅`と`高さ`を指定することもできます。子は`行アイランド テンプレート`を使用して定義されるため、これは、同じレベルおよびアイランドのすべての子に同じ`幅`と`高さ`プロパティが適用されることを意味します。 
 
-#### 幅
+### 幅
 
 各子グリッドも[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html)のインスタンスであるため、子の`幅`は[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html)自体とそれほど大きな違いはありません。
 
@@ -251,7 +251,7 @@ _language: ja
 
 <img src="../../images/grid_sizing/hgrid-width-percentages-v2.jpg" style="width: 80%"/>
 
-#### 高さ
+### 高さ
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の各子の`高さ`も、ルートレベルグリッドの`高さ`と同様に動作します。
 
@@ -262,13 +262,13 @@ _language: ja
 ---
 }
 
-### API リファレンス
+## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
