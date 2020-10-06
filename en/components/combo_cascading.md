@@ -10,7 +10,7 @@ _language: en
 The Ignite UI for Angular Combo and Select components expose events, properties and methods that allow users to easily construct cascading scenarios, either using one of the controls or both of them.
 </p>
 
-### Demo
+## Demo
 The following sample demonstrates a scenario where the [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components are used together:
 
 <div class="sample-container loading" style="height: 540px;">
@@ -22,9 +22,9 @@ The following sample demonstrates a scenario where the [igx-select]({environment
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 To get started, first you need to import the `IgxComboModule` and the `IgxSelectModule` in your **app.module.ts** file:
 
 ```typescript
@@ -38,7 +38,7 @@ import { IgxComboModule, IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Template Configuration
+### Template Configuration
 The APIs of both components are used to get the selected item from one and load data source for the next component either select or combo, as well as clear selection and reset data source.
 
 ```html
@@ -57,7 +57,7 @@ The APIs of both components are used to get the selected item from one and load 
 
 ```
 
-#### Component Definition
+### Component Definition
 ```typescript
 import { Component } from "@angular/core";
 import { data } from "./local-data";
@@ -91,7 +91,7 @@ export class CascadingCombos {
 }
 ```
 
-### API Summary
+## API Summary
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
@@ -100,7 +100,7 @@ export class CascadingCombos {
 Additional components and/or directives with relative APIs that were used:
 * [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo Component](combo.md)
