@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent 行選択
+# @@igComponent 行選択
 
 Ignite UI for Angular の行選択では、行内の他のすべての列に先行する行セレクター列があります。行選択ボックスをクリックすると、行の選択や選択解除、複数行にわたるデータの選択が可能になります。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -60,14 +60,14 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 <div class="divider--half"></div>
 }
 
-### 設定
+## 設定
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、**none**、**single**、**multiple** のツリーモードを公開します。以下で、それぞれについて詳しく説明します。
 
-#### None 選択
+### None 選択
 
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) では、デフォルトで行選択が無効になります。それ以外の場合 ([rowSelection]="'none'")。したがって、@@igComponent UI とのインタラクションを通じて行を選択または選択解除することは**できません**が、選択/選択解除する唯一の方法は、提供された API メソッドを使用することです。
 
-#### 単一選択
+### 単一選択
 
 単一行の選択は、`[rowSelection] = '"single"'` プロパティの設定のみで簡単に設定できるようになりました。これにより、**グリッド内の 1 行のみを選択できます**。行のセルにフォーカスするときにセルをクリックするかスペースキーを押すと行を選択できます。もちろん、行セレクターフィールドをクリックして行を選択できます。行が選択または選択解除されると、**onRowSelectionChange** イベントが生成されます。
 
@@ -128,7 +128,7 @@ public handleRowSelection(event) {
 ```
 }
 
-#### 複数選択
+### 複数選択
 
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で複数行選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multiple` に設定します。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用して複数行を選択できます。選択はスクロール、ページング、およびソートとフィルターリング、などのデータ操作で保持されます。行を選択するには、セルをクリックするか、セルにフォーカスがあるときにスペースキーを押します。1 つの行を選択し、Shift キーを押しながら別の行をクリックすると、行の範囲全体が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。Ctrl キーを押しながらクリックすると、行が切り替わり、前の選択が保持されます。
 
@@ -175,9 +175,9 @@ public handleRowSelection(event) {
 * 行選択モードのランタイムを切り替えると、優先行選択状態がクリアされます。
 
 
-### API の使用
+## API の使用
 
-#### コードで行を選択
+### コードで行を選択
 
 以下は、単一または複数の行を同時に選択できるコード例です ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を介して)。また、このメソッドの2番目のパラメータとして、前の行の選択がクリアされるかどうかに対応するブールプロパティを渡すことができます。デフォルトでは、前の選択が保持されます。
 
@@ -206,7 +206,7 @@ public handleRowSelection(event) {
 
 1、2、および 5 の ID を持つデータ エントリに対応する行を @@igComponent の選択に追加します。
 
-#### 行選択の解除
+### 行選択の解除
 プログラムで行を選択解除する必要がある場合は、`deselectRows(rowIds: [])` を使用できます。
 
 ```html
@@ -219,7 +219,7 @@ public handleRowSelection(event) {
 <button (click)="this.@@igObjectRef.deselectRows([1,2,5])">Deselect 1,2 and 5</button>
 ```
 
-#### 行選択イベント
+### 行選択イベント
 行選択に何らかの変更があると、**`onRowSelectionChange`** イベントが発生します。 **`onRowSelectionChange`** は次の引数を公開します。
 - `oldSelection` - 行選択の前の状態を含む行 ID の配列。
 - `newSelection` - 行選択の新しい状態に一致する行 ID の列。
@@ -247,14 +247,14 @@ public handleRowSelectionChange(args) {
 
 ```
 
-#### 全行の選択
+### 全行の選択
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) が提供するもう 1 つの便利な API メソッドが `selectAll(onlyFilteredData)` です。このメソッドはデフォルトですべてのデータ行を選択しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみが選択されます。ただし、false パラメーターを指定してメソッドを呼び出すと、`selectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータを選択します。
 > **注**: `selectAll()` は削除された行を選択しないことに注意してください。
 
-#### 全行の選択解除
+### 全行の選択解除
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、デフォルトですべてのデータ行の選択を解除する `deselectAll(onlyFilteredData)` メソッドを提供しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみを選択解除します。ただし、false パラメーターを指定してメソッドを呼び出すと、`deselectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータをクリアします。
 
-#### 選択した行を取得する方法
+### 選択した行を取得する方法
 現在選択されている行を確認する必要がある場合は、`selectedRows` ゲッターを使用して行 ID を取得できます。
 
 ```typescript
@@ -341,7 +341,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 `rowContext.select()` および `rowContext.deselect()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
 }
 
-#### ヘッダー テンプレート 
+### ヘッダー テンプレート 
 @@igComponent 内でカスタムヘッダーセレクターテンプレートを作成するには、`igxHeadSelector` ディレクティブで `<ng-template>` を宣言します。テンプレートから、ヘッダーの状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
 
 `selectedCount` プロパティは現在選択されている行数を示し、`totalCount` は @@igComponent に合計の行数を示します。
@@ -408,7 +408,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 `headContext.selectAll()` と `headContext.deselectAll()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
 }
 
-#### 行の番号付けデモ
+### 行の番号付けデモ
 このデモでは、カスタム ヘッダーと行セレクターの使用方法を示します。後者は、`rowContext.index` を使用して行番号と、`rowContext.selected` にバインドされた `igx-checkbox` を表示します。
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -442,7 +442,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 
 @@if (igxName === 'IgxGrid') {
-#### Excel スタイル行セレクターのデモ
+### Excel スタイル行セレクターのデモ
 このデモは、カスタム テンプレートを使用して Excel ライクなヘッダーおよび行セレクターを示します。
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-selection-template-excel-iframe" src='{environment:demosBaseUrl}/grid/grid-selection-template-excel' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -454,7 +454,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 <div class="divider--half"></div>
 }
 
-#### 条件付き選択のデモ
+### 条件付き選択のデモ
 このデモでは、`onRowSelectionChange` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -487,14 +487,14 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 <div class="divider--half"></div>
 }
 
-### API リファレンス
+## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

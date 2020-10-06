@@ -23,12 +23,12 @@ _language: ja
 ---
 }
 
-### @@igComponent リモート データ操作の概要
+# @@igComponent リモート データ操作の概要
 
 Ignite UI for Angular @@igComponent は、リモート仮想化、リモート ソート、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
 
 @@if (igxName === 'IgxGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -40,7 +40,7 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -105,7 +105,7 @@ public processData(reset) {
 >[!NOTE]
 >最初の [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
-#### リモート仮想化のデモ
+### リモート仮想化のデモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -116,7 +116,8 @@ public processData(reset) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### 無限スクロール
+
+## 無限スクロール
 
  エンドポイントからデータを分割して取得するシナリオの一般的なデザインは、無限スクロールです。データ グリッドの場合、エンドユーザーが一番下までスクロールすることによってトリガーされたロードデータが連続的に増加します。次の段落では、利用可能な API を使用して、`IgxGrid` で無限スクロールを簡単に実現する方法を説明します。
 
@@ -168,7 +169,7 @@ public handlePreLoad() {
 ```
 
 
-#### 無限スクロールのデモ
+### 無限スクロールのデモ
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -178,7 +179,7 @@ public handlePreLoad() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### リモート ソート/フィルタリング
+## リモート ソート/フィルタリング
 
 リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
 
@@ -231,7 +232,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 >[!NOTE]
 >リモー トデータが要求された場合、フィルタリング操作が大文字と小文字を区別します。
 
-#### リモート ソート/フィルタリングのデモ
+### リモート ソート/フィルタリングのデモ
 
 このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
 }
@@ -293,24 +294,23 @@ public processData() {
 >[!NOTE]
 >リモー トデータが要求された場合、フィルタリング操作が大文字と小文字を区別します。
 
-#### リモート フィルタリングのデモ
+### リモート フィルタリングのデモ
 
 このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->
-### 一意の列値ストラテジ
+## 一意の列値ストラテジ
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### 一意の列値ストラテジ
+### 一意の列値ストラテジ
 }
 
 Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
 - **column**  - フィルタリング式ツリー。各列に基づいて削減されます。
 - **filteringExpressionsTree** - フィルタリング式ツリー。各列に基づいて削減されます。
-- **done** -
-サーバーから取得されたときに、新しく生成された列値で呼び出されるコールバック。
+- **done** - サーバーから取得されたときに、新しく生成された列値で呼び出されるコールバック。
 
 開発者は、**列**と **filteringExpressionsTree** 引数によって提供される情報に基づいて、必要な一意の列値を手動で生成し、**done** コールバックを呼び出すことができます。
 
@@ -333,7 +333,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
-#### 一意の列値ストラテジのデモ
+### 一意の列値ストラテジのデモ
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -360,7 +360,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 }
 ```
 
-#### 一意の列値ストラテジのデモ
+### 一意の列値ストラテジのデモ
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="tree-grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -402,7 +402,7 @@ this.remoteValuesService.getColumnData(
 }
 ```
 
-#### 一意の列値ストラテジのデモ
+### 一意の列値ストラテジのデモ
 
 <div class="sample-container loading" style="height:800px">
     <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -430,9 +430,8 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 ### リモート ページング
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
-はじめにデータ フェッチングを行うサービスを宣言します。
-デフォルトのページング テンプレートを使用する場合、`totalRecords` プロパティを設定する必要があります。それにより、グリッドは合計リモート レコードに基づいて合計ページ番号を計算できます。注: リモート サービスからフェッチ データを実装する必要があります。
-ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
+はじめにデータ フェッチングを行うサービスを宣言します。デフォルトのページング テンプレートを使用する場合、`totalRecords` プロパティを設定する必要があります。それにより、グリッドは合計リモート レコードに基づいて合計ページ番号を計算できます。注: リモート サービスからフェッチ データを実装する必要があります。ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
+
 ```typescript
 @Injectable()
 export class RemotePagingService {
@@ -533,7 +532,108 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
+
 要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
+
+### デフォルト テンプレートのリモート ページング
+
+デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) または [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid #grid1 [data]="data | async"  [paging]="true" (perPageChange)="paginate()" (onPagingDone)="pagingDone($event)" 
+    [pagingMode]="mode" [totalRecords]="totalCount">
+    <igx-column field="ID"></igx-column>
+    ...
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [paging]="true" [perPage]="10"
+        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event)">
+    <igx-column field="Name"></igx-column>
+    ...
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" (perPageChange)="getFirstPage()"
+    [pagingMode]="mode"  [totalRecords]="totalCount" (onPagingDone)="pagingDone($event)" #hierarchicalGrid>
+    <igx-column field="CustomerID"></igx-column>
+    ...
+</igx-hierarchical-grid>
+```
+}
+
+```typescript
+public totalCount = 0;
+public data: Observable<any[]>;
+public mode = GridPagingMode.remote;
+@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
+
+private _dataLengthSubscriber;
+...
+public ngOnInit() {
+    this.data = this.remoteService.remoteData.asObservable();
+    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+        this.totalCount = data;
+        this.grid1.isLoading = false;
+    });
+}
+...
+public ngAfterViewInit() {
+    this.grid1.isLoading = true;
+    this.remoteService.getData(0, this.grid1.perPage);
+}
+
+public pagingDone(page) {
+    const skip = page.current * this.grid1.perPage;
+    this.remoteService.getData(skip, this.grid1.perPage);
+}
+
+public paginate() {
+    this.remoteService.getData(0, this.grid1.perPage);
+}
+```
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:620px">
+    <iframe id="remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-default-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:560px">
+    <iframe id="tree-grid-remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:580px">
+    <iframe id="remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+### カスタム テンプレートのリモート ページング
+
+カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) や [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -647,7 +747,7 @@ public paginate(page: number) {
 最後にグリッドのテンプレートを宣言します。
 @@if (igxName === 'IgxGrid') {
 ```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [perPage]="perPage">
+<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" >
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
@@ -659,8 +759,7 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [paging]="true" [perPage]="perPage"
-    [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
     <igx-column field="CustomerID"></igx-column>
         <igx-column field="CompanyName"></igx-column>
         <igx-column field="ContactName"></igx-column>
@@ -689,8 +788,6 @@ public paginate(page: number) {
 }
 
 上記すべての設定を完了すると以下のような結果になります。
-
-#### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:620px">
@@ -726,7 +823,7 @@ public paginate(page: number) {
 }
 
 @@if (igxName === 'IgxGrid') {
-### カスタム テンプレートのリモート ページング
+### カスタム ページネーターのリモート ページング
 
 独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 
@@ -842,7 +939,7 @@ public paginate(page: number) {
 **paginate** メソッドで示されるように、 `_totalPagesOnServer` 値に基づいてカスタム ページネーション ロジックが実行されます。
 
 
-#### デモ
+#### 一括編集のリモート ページングのデモ
 
 
 <div class="sample-container loading" style="height:620px">
@@ -855,13 +952,13 @@ public paginate(page: number) {
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

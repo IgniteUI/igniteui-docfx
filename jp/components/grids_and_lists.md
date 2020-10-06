@@ -1,7 +1,7 @@
 ﻿---
 title: Angular Data Grids と Lists コンポーネント | DataTable | Ignite UI for Angular | インフラジスティックス
 _description: 数百のデータ ポイント可視化においてもタイムラグのないスクロールを提供できるパワフルなグリッド機能を備えています。Ignite UI for Angular の Data Grid は、最適化と高速化を実現します。
-_keywords: angular data grid,infragistics, infragistics.com
+_keywords: angular data grid, infragistics, infragistics.com
 _language: ja
 ---
 
@@ -9,7 +9,7 @@ _language: ja
   <div class="feature__details">
     <h1 id="the-fastest-data-angular-data-grid" class="h2">高速 Angular データ グリッド</h1>
     <p>Ignite UI for Angular の [Data Grid](grid/grid.md) は、大規模なデータセットの高速処理など高パフォーマンスを念頭に最適化されています。仮想ディレクティブとパワフルなグリッド機能により、仮想データグリッドでは数百のデータ ポイントを遅延なしでスクロールできます。</p>
-    <a class="cta-btn" href="https://jp.infragistics.com/products/ignite-ui-angular/getting-started">無償版ダウンロード</a>
+    <a class="cta-btn no-external-icon" href="https://jp.infragistics.com/products/ignite-ui-angular/getting-started">無償版ダウンロード</a>
   </div>
   <div class="feature__image feature__image--right">
     <img src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid.svg" alt="Ignite UI for Angular のデータグリッドはスピードとパフォーマンスが最適化されています。">

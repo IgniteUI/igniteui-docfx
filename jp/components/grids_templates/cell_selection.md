@@ -23,8 +23,8 @@ _language: ja
 ---
 }
 
-### @@igComponent 選択
-選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@ igComponent はセル選択の 3 つのモードをサポートするようになり、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで簡単に切り替えることができます。セルの選択を無効にしたり、*グリッド内のセルを 1 つだけ選択*したり、デフォルトのオプションとして提供される*グリッド内の複数のセルを選択*したりできます。これらの各オプションについて詳しく説明します。
+# @@igComponent 選択
+選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@igComponent は、セル選択の 3 つのモードをサポートしています。[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで、それらを簡単に切り替えることができます。セルの選択を無効にするか、*グリッド内の 1 つのセルのみを選択する*か、*グリッド内の複数のセルを選択する*ことができます。これはデフォルトのオプションとして提供されています。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -50,7 +50,8 @@ _language: ja
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-#### @@igComponent 複数セル選択
+## 選択タイプ
+### @@igComponent 複数セル選択
 
 セルの選択方法:
 - `マウス ドラッグ` - セルの長方形データ選択。
@@ -83,27 +84,26 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 }
-}
 
-#### @@igComponent 単一選択
+### @@igComponent 単一選択
 
 `[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
 > `選択モード`が `single`であるか `multiple`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
 
-#### @@igComponent 選択なし
+### @@igComponent 選択なし
 セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-#### キーボード ナビゲーションのインタラクション
+## キーボード ナビゲーションのインタラクション
 
-##### Shift キーが押されている間
+### Shift キーが押されている間
 - <kbd>Shift</kbd> + <kbd>上矢印</kbd> - 現在の選択範囲に上のセルを追加します。
 - <kbd>Shift</kbd> + <kbd>下矢印</kbd> - 現在の選択範囲に下のセルを追加します。
 - <kbd>Shift</kbd> + <kbd>左矢印</kbd> - 現在の選択に左のセルを追加します。
 - <kbd>Shift</kbd> + <kbd>右矢印</kbd> - 現在の選択範囲に右のセルを追加します。
 
-##### Ctrl + Shift キーが押されている間
+### Ctrl + Shift キーが押されている間
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>上矢印</kbd> - 列内のフォーカスのあるセルの上にあるすべてのセルを選択します。
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>下矢印</kbd> - 列内のフォーカスのあるセルの下にあるすべてのセルを選択します。
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>左矢印</kbd> - 行の先頭まですべてのセルを選択します。
@@ -114,10 +114,10 @@ _language: ja
 > [!NOTE]
 > 連続スクロールは、グリッド本体でのみ可能です。
 
-### API の使用
+## API の使用
 以下は、範囲の選択、選択の解除、または選択したセル データを取得する方法です。
 
-#### 範囲の選択
+### 範囲の選択
 
 [`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectrange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
 
@@ -134,11 +134,11 @@ this.grid1.selectRange(range);
 > [!NOTE]
 > 選択範囲は加算操作です。以前の選択はクリアされません。
 
-#### セル選択のクリア
+### セル選択のクリア
 
 [`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearcellselection) は、現在のセル選択をクリアします。
 
-#### 選択したデータの取得
+### 選択したデータの取得
 
 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) は、選択内容に応じた形式で選択されたデータの配列を返します。
 
@@ -200,7 +200,7 @@ expectedData = [
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 
 
-### 機能の統合
+## 機能の統合
 マルチセル選択はインデックス ベースです (DOM 要素選択)。
 
 - `ソート` - ソートが実行されると、選択は解除されません。昇順または降順でソートしている間、現在選択されているセルはそのままになります。
@@ -213,11 +213,11 @@ expectedData = [
 
 }
 
-### スタイリングのガイドライン
+## スタイリングのガイドライン
 
 テーマ エンジンは、`選択したセルの範囲`をスタイルできるプロパティを公開します。
 
-#### テーマのインポート
+### テーマのインポート
 
 選択のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -226,7 +226,7 @@ expectedData = [
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-#### 色の定義
+### 色の定義
 
 完了後、[`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
 ```scss
@@ -235,7 +235,7 @@ expectedData = [
     $border-yellow: #f2c43c;
 ```
 
-#### カスタム テーマの作成
+### カスタム テーマの作成
 
 次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張する新しいテーマを作成します。
 
@@ -247,7 +247,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### テーマの適用
+### テーマの適用
 
 次にコンポーネントのスタイルに mixin を含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
@@ -256,7 +256,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
  >[!NOTE]
- >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
  > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
 
  ```scss
@@ -271,7 +271,7 @@ $custom-grid-theme: igx-grid-theme(
 カスタム テーマを適用すると、選択したグリッドセルが選択した色で強調表示されます。
 
 @@if (igxName === 'IgxGrid'){
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
@@ -285,7 +285,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -300,7 +300,7 @@ $custom-grid-theme: igx-grid-theme(
 
 
 @@if (igxName === 'IgxTreeGrid'){
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:620px">
     <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -314,14 +314,14 @@ $custom-grid-theme: igx-grid-theme(
 }
 
 
-### API リファレンス
+## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
