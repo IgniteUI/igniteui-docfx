@@ -487,7 +487,7 @@ If you are developing applications on multiple platforms, consider our complete 
             panel.style.maxHeight = null;
             } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
+            }
         });
         }
     })()
