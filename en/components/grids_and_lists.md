@@ -9,6 +9,20 @@ _keywords: angular data grid, infragistics, infragistics.com
   margin-top: 0;
 }
 
+.theme-widget-wrapper{
+    display: none;
+}
+
+.h3, h3{
+    font-weight: bold;
+}
+
+.cta-area{
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 2rem;
+}
+
 ul#features-list{
     margin: 0 auto;
     column-gap: 12%;
@@ -19,15 +33,16 @@ ul#features-list li{
     margin-bottom: 15px;
 }
 
-div#features-gifs{
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: column;
-    margin: 0 auto;
+.feature{
+    padding: 15px 0;
 }
 
-div#list-features-included, div.features-gifs--wrapper{
+.feature__details p{
+    margin: 0;
+    margin-top: 1rem;
+}
+
+div#list-features-included{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -35,62 +50,9 @@ div#list-features-included, div.features-gifs--wrapper{
     flex-wrap: wrap;
 }
 
-div#features-gifs div.features-gifs--content:last-child {
-        border-left: 1px solid #ccc;
-}
-
-
-div#features-gifs div.features-gifs--content{
-    text-align: left;
-    width: 50%;
-    padding: 1rem;
-}
-
 div#list-features-included{
     columns: 3;
     column-gap: 10%;
-}
-
-@media only screen and (max-width: 767px){
-        .features-gifs--wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-    }
-
-    div#list-features-included {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-flow: column;
-        align-items: center;
-        display: flex;
-    }
-
-    div#list-features-included ul {
-        margin-left: auto;
-        width: 70%;
-        margin-right: auto;
-    }
-    
-
-    div#features-gifs div.features-gifs--content{
-        width: 100%;
-    }
-
-    div#features-gifs div.features-gifs--content:last-child {
-        border-left: none;
-    }
-    div.support-section:last-child:last-child {
-        border-left: none;
-    }
-    div#support-section-wrapper{
-        flex-flow: column;
-    }
-}
-
-div#features-gifs  div.features-gifs--content img{
-    padding: 15px 0;
 }
 
 div#support-section-wrapper{
@@ -102,9 +64,21 @@ div.support-section{
     text-align: left;
 }
 
-#faqs-accordion-wrapper {
+h2#frequently-asked-questions{
+    padding: .2rem 0 .5rem 1.1rem;
+    margin-top: 1.5rem;
+    border: 1px solid #ccc;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+div#faqs-accordion-wrapper {
     display: flex;
     flex-flow: column;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
 }
 
 .faqs-accordion {
@@ -145,17 +119,62 @@ div.support-section{
     width: 30px;
     height: 25px;
 }
-.theme-widget-wrapper{
-    display: none;
+
+.faqs-accordion-content{
+    border-bottom: 1px solid #ccc;
+    padding: 0 .9rem;
+}
+
+.faqs-accordion-content:last-child{
+    border-top: none;
+}
+
+.faqs-accordion-content:last-child{
+    border-bottom: none;
 }
 
 h3#quick-and-easy-to-customize-build-and-implement{
     text-align: center;
 }
 
-.feature {
-    align-items: stretch;
+h3#angular-grid-paging-sorting-filtering--searching, h3#angular-grid-paging-sorting-filtering--searching ~ h3{
+    visibility: hidden;
 }
+
+h3#excel-library-for-the-angular-grid ~ h3{
+    visibility: visible;
+}
+
+@media only screen and (max-width: 767px){
+
+    div#list-features-included {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-flow: column;
+        align-items: center;
+        display: flex;
+    }
+
+    div#list-features-included ul {
+        margin-left: auto;
+        width: 70%;
+        margin-right: auto;
+    }
+    
+    div.support-section:last-child:last-child{
+        border-left: none;
+    }
+
+    div#support-section-wrapper{
+        flex-flow: column;
+    }
+
+    div.support-section:last-child{
+        padding-left: 1.25rem;
+    }
+}
+
 </style>
 
 <div >
@@ -211,10 +230,11 @@ This example demonstrates a few of the data grid’s key features:
 <li>Column templates like [**Sparkline Column**](sparkline.md#demo) and Image Column</li>
 </ul>
 
+<div class="divider"></div>
+<div class="divider"></div>
+
+<img class="b-lazy b-lazy-gifs vmar--xl width--full b-loaded responsive-img" style="width: 100%" title="Scrolling Ignite UI for Angular Data Grid component" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif?v=201808021304" alt="Scrolling Ignite UI for Angular Data Grid component showing off its performance and data visualization capbilities">
 <div class="divider--half"></div>
-
-
-<img class="b-lazy b-lazy-gifs vmar--xl width--full b-loaded responsive-img" title="Scrolling Ignite UI for Angular Data Grid component" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif?v=201808021304" alt="Scrolling Ignite UI for Angular Data Grid component showing off its performance and data visualization capbilities">
 
 ### Data Virtualization and Performance
 <div class="divider--half"></div>
@@ -223,13 +243,15 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 
 <div class="divider--half"></div>
 <hr style="border: .5px solid #ccc;">
-<h4 class="h2" style="text-align: center; font-weight: 700" >Quick and Easy to Customize, Build and Implement</h4>
-<div style="text-align:center">
+<div  class="cta-area">
+    <h4 class="h2" style="text-align: center; font-weight: 700; margin-top: 0;" >Quick and Easy to Customize, Build and Implement</h4>
+    <div style="text-align:center">
     <p>The Ignite UI Angular Data Grid can handle unlimited rows and columns of data, while providing access to custom templates and real-time data updates. Featuring an intuitive API for easy theming and branding, you can quickly bind to data with minimal code.</p>
     <div class="divider--half"></div>
         <div style="text-align:center">
             <a class="cta-btn no-external-icon ui-btn--sm" href="grid/grid.md">view samples</a>
         </div>
+    </div>
     </div>
 </div>
 <hr style="border: .5px solid #ccc;">
@@ -239,6 +261,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of filtering capabilities within Angular Data Grid" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif?v=201811121733" alt="Animation of filtering capabilities within Angular Data Grid"></div>
     <div class="feature__details">
+        <span class="h3 features__heading">Angular Grid Paging, Sorting, Filtering, & Searching<a class="anchorjs-link" href="#angular-grid-paging-sorting-filtering--searching" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Allow users to navigate your data set with our default [pager](grid/paging.md) or create your own template to give your own paging experience. With complete support for single and multi-column sorting, full-text [search](grid/search.md) on the grid, and several [advanced filtering](grid/advanced_filtering.md) options, including data-type based [Microsoft Excel-style Filtering](grid/excel_style_filtering.md).</p>
     </div>
 </div>
@@ -249,6 +272,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
         <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of filtering capabilities within Angular Data Grid" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-inline-grid-editing-1100.jpg?v=201808021304" alt="Animation of filtering capabilities within Angular Data Grid">
     </div>
     <div class="feature__details">
+        <span class="h3 features__heading">Inline Angular Grid Editing<a class="anchorjs-link" href="#inline-angular-grid-editing" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Allow users to navigate your data set with our default [pager](grid/paging.md) or create your own template to give your own paging experience. With complete support for single and multi-column sorting, full-text [search](grid/search.md) on the grid, and several [advanced filtering](grid/advanced_filtering.md) options, including data-type based [Microsoft Excel-style Filtering](grid/excel_style_filtering.md).</p>
     </div>
 </div>
@@ -257,6 +281,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid"></div>
     <div class="feature__details">
+        <span class="h3 features__heading">Keyboard Navigation & Row/Cell Selection in the Angular Grid<a class="anchorjs-link" href="#keyboard-navigation--rowcell-selection-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>We provide you default [cell templates for editable columns](grid/grid.md#cell-editing-template) which are based on the data type of the column. You can define your own custom templates for editable columns and override default behavior for committing and discarding changes in the cell value.</p>
     </div>
 </div>
@@ -266,6 +291,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <div class="feature__image feature__image--right">
 <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid"></div>
     <div class="feature__details">
+        <span class="h3 features__heading">Angular Grid Accessibility & ARIA Support<a class="anchorjs-link" href="#angular-grid-accessibility--aria-support" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Ensure accessibility compliance and improve usability, enabling Excel-like [keyboard navigation](grid/keyboard_navigation.md) in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. <a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">Learn about our most recent enhancements to this feature</a>.</p>
     </div>
 </div>
@@ -274,6 +300,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Grid of data with column grouping, pinning and summary features enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg?v=201808021304" alt="Grid of data with column grouping, pinning and summary features enabled for Angular Data Grid component"></div>
     <div class="feature__details">
+        <span class="h3 features__heading">Column Grouping, Pinning, Summaries, & Moving in the Angular Grid<a class="anchorjs-link" href="#column-grouping-pinning-summaries--moving-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Group columns or pre-set column groups via mouse interaction, touch or our API, with support for built-in column [summaries](grid/summaries.md) or custom summary templates. Enable users to interactively [hide](grid/column_hiding.md) or [move columns](grid/column_moving.md), with full support for interactive [column pinning](grid/column_pinning.md), during move, drag, and reorder operations.</p>
     </div>
 </div>
@@ -282,6 +309,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Grid of data with Multi-Column Headers feature enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg?v=201808021304" alt="Grid of data with Multi-Column Headers feature enabled on the Angular Data Grid component"></div>
     <div class="feature__details">
+        <span class="h3 features__heading">Multi-Column Headers in the Angular Grid<a class="anchorjs-link" href="#multi-column-headers-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Enable [multi-column headers](grid/multi_column_headers.md), allowing you to group columns under a common header. Every column group could be a representation of combinations between other groups or columns, with full support for column pinning, interactive column moving within groups, sorting, and hiding groups.</p>
     </div>
 </div>
@@ -290,6 +318,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of different grids design showing the themeing and templating capabilities" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif?v=201808021304" alt="Animation of different grids design showing the themeing and templating capabilities of the Angular Data Grid"></div>
     <div class="feature__details">
+        <span class="h3 features__heading">Theming, Styling, & Templating in the Angular Grid<a class="anchorjs-link" href="#theming-styling--templating-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>With Ignite UI for Angular you can customize cell appearance with CSS or re-template any cell with ng-template to give any cell render appearance. With full support for Material Design, you can customize your branded experience with our simple-to-use theming engine.</p>
     </div>
 </div>
@@ -299,6 +328,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Icon representation of Microsoft Excel-like features" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Icon representation of Microsoft Excel-like features on the Angular Data Grid">
 </div>
     <div class="feature__details">
+        <span class="h3 features__heading">Excel Library for the Angular Grid<a class="anchorjs-link" href="#excel-library-for-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel_library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.</p>
     </div>
 </div>
@@ -306,7 +336,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 
 
 ## Angular Grid Features
-<div class="divider--half"></div>
+<div class="divider"></div>
 <div id="list-features-included">
 <ul>
     <li>[Inline Editing](grid/editing.md)</li>
@@ -345,13 +375,13 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <hr>
 
 
-<div style="text-align: center">
-<h4 class="h2" style="font-weight: 700">Download the Fastest Angular Grid Today!</h4>
-<div class="divider--half"></div>
-<a class="cta-btn no-external-icon ui-btn--sm" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">download now</a>
-<br>
-30 days free trial. No credit card required.
-<div class="divider"></div>
+<div class="cta-area">
+    <h4 class="h2" style="font-weight: 700; margin-top: 0;">Download the Fastest Angular Grid Today!</h4>
+    <div class="divider--half"></div>
+    <a class="cta-btn no-external-icon ui-btn--sm" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">download now</a>
+    <br>
+    30 days free trial. No credit card required.
+    <div class="divider"></div>
 </div>
 
 <hr>
@@ -373,7 +403,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
             <li>Internet Explorer 11 with polyfills</li>
         </ul>
     </div>
-    <div class="support-section" style="margin-left: 4rem;">
+    <div class="support-section" style="padding-left: 4rem;">
     <div >
             <h2>Ignite UI for Angular Support Options</h2>
     </div>
@@ -395,12 +425,11 @@ There are multiple options to get access to our award-winning support at Infragi
 ## Ignite UI for Angular Trial License and Commercial
 <div class="divider--half"></div>
 <p>Ignite UI for Angular is a commercially licensed product available via a subscription model. You can try the Ignite UI for Angular product for free when you <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/free-downloads">register for a 30-day trial</a>. When you are done with your Trial Period, you can <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">purchase a license </a> from our web site or by calling <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/about-us/contact-us">sales in your region</a>.</p>
+<hr>
 <div class="divider--half"></div>
 
-<hr>
-
 ## Frequently Asked Questions
-<div class="divider"></div>
+
 <div id="faqs-accordion-wrapper">
     <div class="faqs-accordion-content">
         <div class="faqs-accordion h4">Why should I choose the Infragistics Ignite UI for Angular Data Grid?</div>
