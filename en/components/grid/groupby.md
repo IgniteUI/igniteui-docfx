@@ -35,6 +35,8 @@ Grouping expressions implement the [`ISortingExpression`]({environment:angularAp
 
 ## Group By API
 
+### Grouping API
+
 Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) property to `true`.
 
 ```html
@@ -60,6 +62,8 @@ grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase:
 
 Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
 
+### Expand/Collapse API
+
 In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) component [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate). A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
 
 ```typescript
@@ -82,6 +86,8 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
 ```
 
 Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
+
+### Select/Deselect all rows in a group API
 
 Selecting/Deselecting all rows in a certain group is available through the [`selectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrowsingroup) and [`deselectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrowsingroup) API methods.
 
