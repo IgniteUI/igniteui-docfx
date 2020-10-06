@@ -91,6 +91,19 @@ public date: Date = new Date();
 | `mm` | 先行ゼロのある分フィールド (00..59) を書式設定します。 |
 | `tt` | AM/PM フィールドを表します。 |
 
+#### カスタム ラベル
+コンポーネントにネストされた `<label>` タグ内に `igxlabel` を配置することで、デフォルトのラベルをカスタム ラベルに変更できます。
+
+````html
+<!-- timepicker-label.component.html -->
+<igx-time-picker>
+    <label igxLabel>Meeting Start</label>
+</igx-time-picker>
+````
+
+カスタム ラベルの外観は、[検証セクション](#検証) の検証サンプルで確認できます。
+
+
 #### デルタおよびスピン モードの変更
 
 項目のデルタを変更するには、[`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) を設定します。スピン モードを変更するには、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を使用します。
@@ -135,13 +148,14 @@ public onValidationFailed() {
 
 ```html
 <igx-time-picker
-[itemsDelta]="{hours:1, minutes:5}"
-format="HH:mm tt"
-[vertical]="true"
-[minValue]="min"
-[maxValue]="max"
-(onValidationFailed)="onValidationFailed()"
-></igx-time-picker>
+	[itemsDelta]="{hours:1, minutes:5}"
+	format="HH:mm tt"
+	[vertical]="true"
+	[minValue]="min"
+	[maxValue]="max"
+	(onValidationFailed)="onValidationFailed()">
+	<label igxLabel>Meeting Start</label>
+</igx-time-picker>
 
 <igx-toast #toast message="Value must be between 09:15:30 AM and 06:15:30 PM"></igx-toast>
 
@@ -195,7 +209,7 @@ public mode = InteractionMode.DropDown;
 **キーボード操作**
 
 * ドロップダウンを`開く`には、*クロック アイコン* をクリックし、<kbd>Space</kbd> または <kbd>Alt</kbd> + <kbd>Down</kbd> キーの組み合わせを押します。
-* ドロップダウンを`Accept` や `Close` する場合、<kbd>Escape</kbd> または <kbd>Enter</kbd> キーを押します。
+* ドロップダウンを `Accept` や `Close` する場合、<kbd>Escape</kbd> または <kbd>Enter</kbd> キーを押します。
 * マウスでタイムピッカー以外をクリックして入力した値を `Accept` してドロップダウンを `Close` します。
 * ドロップダウンが開いて新しい値が `Accept` にタイプされた場合、タイムピッカーの外側をクリックまたは <kbd>Tab</kbd> を押してフォーカスを移動します。
 

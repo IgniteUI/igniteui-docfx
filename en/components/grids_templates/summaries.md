@@ -24,7 +24,7 @@ _keywords: angular grid summaries, ignite ui for angular, infragistics
 
 The Angular UI grid in Ignite UI for Angular has a **summaries** feature that functions on a per-column level as group footer. Angular grid summaries is powerful feature which enables the user to see column information in a separate container with a predefined set of default summary items, depending on the type of data within the column or by implementing a custom angular template in the @@igComponent.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -172,7 +172,7 @@ public disableSummary() {
 ```
 }
 
-#### Custom @@igComponent summaries
+## Custom @@igComponent Summaries
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) according to the column data type and your needs. This way you can redefine the existing function or you can add new functions. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) class provides the default implementation only for the [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) method. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and provides implementation for the [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) and [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average). [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and additionally gives you [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) and [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
@@ -283,7 +283,7 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-#### Custom summaries, which access all @@igComponent data
+### Custom summaries, which access all @@igComponent data
  Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
 As you can see in the code snippet below the operate method has the following three parameters:
 - columnData - gives you an array that contains the values only for the current column
@@ -336,7 +336,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 
 @@if (igxName === 'IgxGrid') {
-### Summaries with Group By
+## Summaries with Group By
 
 When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) properties. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) property which allows you to determine whether the summary row stays visible when the group row that refers to is collapsed.
 
@@ -355,7 +355,7 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 > [!NOTE]
 > The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:720px">
     <iframe id="grid-groupby-summary-iframe" data-src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -367,7 +367,7 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-### Child Summaries
+## Child Summaries
 
 The @@igComponent supports separate summaries for the root nodes and for each nested child node level. Which summaries are shown is configurable using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) property. The child level summaries can be shown before or after the child nodes using the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) property which allows you to determine whether the summary row stays visible when the parent node that refers to is collapsed.
 
@@ -397,7 +397,7 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 }
 <div class="divider--half"></div>
 
-#### Keyboard Navigation
+## Keyboard Navigation
 
 The summary rows can be navigated with the following keyboard interactions:
 
@@ -410,7 +410,7 @@ The summary rows can be navigated with the following keyboard interactions:
 - <kbd>TAB</kbd> - sequentially navigates to the next cell on the row and if the last cell is reached navigates to the next row
 - <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - sequentially navigates to the previous cell on the row and if the first cell is reached navigates to the previous row
 
-### Styling
+## Styling
 
 To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -448,7 +448,7 @@ The last step is to **include** the component mixins:
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -478,7 +478,7 @@ $custom-theme: igx-grid-summary-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -519,7 +519,7 @@ $custom-theme: igx-grid-summary-theme(
 Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="grid-groupby-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary-styling' width="100%" height="100%"
@@ -532,7 +532,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="treegrid-summary-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -544,7 +544,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="hierarchical-grid-summary-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -556,7 +556,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 
-### API References
+## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -567,7 +567,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

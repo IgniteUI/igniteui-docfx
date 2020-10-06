@@ -1,41 +1,43 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 極座標スプライン チャート
-_description: 複合チャート ビューを作成するために、同じプロット エリアに視覚要素の複数のインスタンスを表示する極座標スプライン チャートを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 極座標スプライン チャート | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して極座標スプライン チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, polar spline charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 極座標スプライン チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'PolarSplineSeries']
 _language: ja
 ---
 
-## 極座標スプライン チャート
+# Angular 極座標スプライン チャート
 
 Ignite UI for Angular 極座標スプライン チャートは、極座標チャートのグループに属し、極座標 (角度/半径) 座標系のデータ ポイントを接続するスプライン ラインのコレクションを使用してレンダリングされます。[`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) は [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) と同じデータ プロットの概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。他のシリーズ タイプと同じように、複数の [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) は同じデータ チャートにプロットでき、データセットの相違点を示すために互いにオーバーレイできます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
-<!-- <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-spline-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
-</div> -->
+
+
+</div>
 
 <div class="divider--half"></div>
 
-### 軸の要件
+## 軸の要件
 
 Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
 -   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
 -   [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)
 
-### データの要件
+## データの要件
 
 [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) がレンダリングされません。
--   すべてのデータ項目には、極座標シリーズの [`angleMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath) と [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#radiusmemberpath) プロパティを使用してマッピングする必要がある少なくとも 2 つの数値データ列 ([`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) など)を含める必要があります。
+-   すべてのデータ項目には、極座標シリーズの [`angleMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath) と [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#radiusmemberpath) プロパティを使用してマッピングする必要がある少なくとも 2 つの数値データ列 ([`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) など）を含める必要があります。
 
 極座標シリーズのデータポイントの位置は、「極」と呼ばれる、固定方向からの角度 (角度座標) と固定点 (デカルト座標の原点に類似) からの距離 (半径座標) によって決まります。極から始まって外側を指す線は角度軸 ([`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html)) のグリッド線で、極を囲む同心円状の輪は半径軸 ([`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)) のグリッド線です。
 
@@ -45,7 +47,7 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 public dataSource: any[] = SamplePolarData.create();
 ```
 
-### モジュールの要件
+## モジュールの要件
 
 [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) は以下のモジュールが必要です。
 
@@ -73,7 +75,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 })
 ```
 
-### コード例
+## コード例
 
 このコードは、[`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 

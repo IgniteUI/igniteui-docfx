@@ -1,14 +1,14 @@
 ---
-title: Getting Started
+title: Getting Started | Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular is a complete set of native Angular UI components, which allow you to build fast, feature-rich and Material designed applications!
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: ignite ui for angular, getting started, angular components
 ---
 
 # Getting started with Ignite UI for Angular
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) is a complete set of Material-based UI Widgets, Components & Sketch UI kits and supporting directives for Angular by Infragistics. It enables developers to build modern high-performance HTML5 & JavaScript apps for desktop browsers, mobile experiences and progressive web apps (PWA’s) targeting Google's Angular framework.
 
-### Prerequisites
+## Prerequisites
 
 1. Install NodeJS.
 2. Install Visual Studio Code.
@@ -33,11 +33,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Installing Ignite UI for Angular
+## Installing Ignite UI for Angular
 
 The Ignite UI for Angular can be installed either wth the Angular CLI or with the Ignite UI CLI.
 
-#### Quick Start with the Angular CLI
+### Quick Start with the Angular CLI
 
 The Angular CLI provides support for external libraries to your project through the `ng add` command, which installs a library's `npm` packages to your workspace and configures the project in the current working directory to use that library.
 
@@ -56,7 +56,7 @@ ng add igniteui-angular
 
 During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
 
-#### Quick Start with Angular Schematics & Ignite UI  CLI
+### Quick Start with Angular Schematics & Ignite UI  CLI
 To create an application from scratch and configure it to use the Ignite UI for Angular components you can use either the Ignite UI for Angular Schematics or the Ignite UI CLI. The first step is to install the respective package globally as follows:
 
 ```cmd

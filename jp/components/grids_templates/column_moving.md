@@ -1,39 +1,40 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+_description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャまたは列移動 API を使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
 _keywords: column order, igniteui for angular, infragistics, 列順序
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 列移動 - ネイティブ Angular | Ignite UI for Angular
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネントスイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Column Moving, Tree Grid Column Moving, Angular Tree Grid Column Moving, Angular Tree Table Column Moving, Angular column moving
+title: Angular グリッドの列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
+_description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャまたは列移動 API を使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
+_keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 列移動 - ネイティブ Angular | Ignite UI for Angular
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネントスイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Column Moving, Hierarchical Grid Column Moving, Angular Hierarchical Grid Column Moving, Angular Hierarchical Table Column Moving, Angular column moving
+title: Angular グリッドの列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
+_description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャまたは列移動 API を使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
+_keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
 _language: ja
 ---
 }
 
 # @@igComponent 列移動の概要
 
-The @@igComponent component in Ignite UI for Angular provides the **Column Moving** feature to allow columns reordering via standard drag/drop mouse or touch gestures, or by using the Column Moving API. Column moving works both with pinned and unpinned columns and with Multi Column Headers. Moving a column into the pinned area pins the column and vice versa, moving a column outside of the pinned area unpins the column.
-> [!NOTE]
-> Reordering between columns and column groups is allowed only when they are at the same level in the hierarchy and both are in the same group. Moving is allowed between columns/column-groups, if they are top level columns.
+Ignite UI for Angular の @@igComponent のコンポーネントは、標準ドラッグ/ドロップのマウス/タッチによるジェスチャ、または列移動 API を使用した順序変更のための**列移動**機能を提供します。列の移動は、固定列と固定されていない列、および複数列ヘッダーの両方で機能します。列を固定領域に移動すると列が固定され、または逆に固定領域の外に列を移動すると、列の固定が解除されます。
 
 > [!NOTE]
-> If a column header is templated and the corresponding column is movable (or groupable), then the templated elements need to have the **draggable** attribute set to **false**! This allows to attach handlers for any event emitted by the element, otherwise the event is consumed by the `igxDrag` directive.
+> 列と列グループ間の順序変更は、それらが階層の同じレベルにあり、両方が同じグループにある場合にのみ許可されます。列/列グループが最上位の列である場合、列/列グループ間を移動できます。
 
 > [!NOTE]
-> ピン固定領域が最大幅 (@@igComponent 幅合計の 80 %)を超えた場合、ドロップ操作が禁止されていてピン固定ができないことをヒントの表示でエンドユーザーに通知します。つまり、ピン固定領域に列をドロップできません。
+> 列ヘッダーがテンプレート化され、対応する列が移動可能 (またはグループ化可能) である場合、テンプレート化された要素は **draggable** 属性を **false** に設定する必要があります。これにより、要素によって発行されたすべてのイベントのハンドラーをアタッチできます。それ以外の場合、イベントは `igxDrag` ディレクティブによって消費されます。
+
+> [!NOTE]
+> ピン固定領域が最大幅 (@@igComponent 幅合計の 80%) を超えた場合、ドロップ操作が禁止されていてピン固定ができないことをヒントの表示でエンドユーザーに通知します。つまり、ピン固定領域に列をドロップできません。
 
 ```html
 <ng-template igxHeader>
@@ -78,7 +79,9 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 }
 
 ## 概要
-**列移動**は各列レベルで有効にできます。つまり、[**igx-grid**]({environment:angularApiUrl}/classes/igxgridcomponent.html) に移動可能な列と移動不可の列の両方を含むことができます。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) 入力によって制御されます。
+
+**列移動**は各列レベルで有効にできます。つまり、[**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) に移動可能な列と移動不可の列の両方を含むことができます。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) 入力によって制御されます。
+
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -94,13 +97,12 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 ```html
 <igx-column #companyname field="CompanyName" [movable]="true" width="150px">
 ```
-
 }
 
 ## API
-In addition to the drag and drop functionality, the Column Moving feature also provides two API methods to allow moving a column/reordering columns programmatically: 
+ドラッグアンドドロップ機能に加えて、列の移動機能には、プログラムで列を移動/並べ替えできる 2 つの API メソッドも用意されています。 
 
-[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - Moves a column before or after another column (a target). The first parameter is the column to be moved, and the second parameter is the target column. Also accepts an optional third parameter `position` (representing a `DropPosition`({environment:angularApiUrl}/enums/dropposition.html) value), which determines whether to place the column before or after the target column.
+[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - 列を別の列 (ターゲット) の前または後に移動します。最初のパラメーターは移動する列で、2 番目のパラメーターはターゲット列です。オプションの 3 番目のパラメーター `position` ([`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) 値を表す) でターゲット列の前または後に列を配置するかどうかを決定します。
 
 ```typescript
 // Move the ID column after the Name column
@@ -110,7 +112,7 @@ const nameColumn = grid.getColumnByName("Name");
 grid.moveColumn(idColumn, nameColumn, DropPosition.AfterDropTarget);
 ```
 
-[`move`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#move) - Moves a column to a specified visible index. If the passed index parameter is invalid (is negative, or exceeds the number of columns), or if the column is not allowed to move to this index (if inside another group), no operation is performed.
+[`move`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#move) - 列を指定された表示インデックスに移動します。渡されたインデックス パラメーターが無効である場合 (負である/列数を超える場合)、または列がこのインデックスに移動できない場合 (別のグループ内にある場合)、操作は実行されません。
 
 ```typescript
 // Move the ID column at 3rd position.
@@ -118,11 +120,12 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-Note that when using the API, only the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
+API を使用する時、操作が成功した場合、[`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `movable` プロパティを true に設定する必要がないことにも注意してください。 
 
 ## イベント
+
 列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`onColumnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingstart)、[`onColumnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmoving)、[`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) があります。
-[`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -201,7 +204,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 ```
 
 > [!NOTE]
-> コンポーネントの [**View Encapsulation**](../themes/component-themes.md#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を `ペネトレーション` する必要な場合があります。
+> コンポーネントの [**View Encapsulation**](../themes/component-themes.md#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を解除する必要な場合があります。
 
 ```scss
 :host {
@@ -211,7 +214,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 }
 ```
 
-## カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -317,14 +320,14 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 <div class="divider--half"></div>
 }
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
@@ -336,7 +339,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
-* [検索](search.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

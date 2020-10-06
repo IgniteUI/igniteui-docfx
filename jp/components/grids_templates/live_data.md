@@ -3,7 +3,7 @@
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
-_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
+_keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
 ---
 }
@@ -12,14 +12,13 @@ _language: ja
 ---
 title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
-_keywords: angular データグリッド, agular grid 更新, angular ライブデータ
+_keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
 ---
 }
 
-### 更新のライブデモ
-
-Ignite UI for Angularの @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
+# 更新のライブデモ
+Ignite UI for Angular の @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">

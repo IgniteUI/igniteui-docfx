@@ -98,13 +98,13 @@ The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApi
     };
 
     public _overlaySettings = {
+        target: this.igxButton.nativeElement,
         closeOnOutsideClick: false,
         closeOnEscape: true,
         positionStrategy: new ConnectedPositioningStrategy(this._positionSettings)
     };
 
     public toggle() {
-        this._overlaySettings.positionStrategy.settings.target = this.igxButton.nativeElement;
         this.igxToggle.toggle(this._overlaySettings);
     }
 ```
@@ -153,7 +153,7 @@ After these changes the toggle should work exactly in the same way.
 </div>
 
 >[!NOTE]
-> By default `IgxToggleActionDirective` excludes its host element from the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property. Therefore, clicking on the host element will not fire any event. Additionally, this directive will set its host element as the position strategy [`target`]({environment:angularApiUrl}/interfaces/positionsettings.html#target).
+> By default `IgxToggleActionDirective` excludes its host element from the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property. Therefore, clicking on the host element will not fire any event. Additionally, this directive will set its host element as the overlay settings [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target).
 
 #### Automatic Toggle Service Provider
 

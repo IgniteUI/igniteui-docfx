@@ -8,7 +8,7 @@ _keywords: angular filter, ignite ui for angular, infragistics
 
 IgniteUI for Angular @@igComponent component provides three different filtering types - [Quick filtering](filtering.md), [Excel style filtering](excel_style_filtering.md) and [Advanced filtering](advanced_filtering.md) which enable you to display only the records which meet specified criteria.
 
-#### Setup
+## Setup
 In order to specify if filtering is enabled and which filtering mode should be used, the @@igComponent exposes the following boolean properties - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering), [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering), [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) and [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable).
 
 Property **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** enables you to specify the following options:
@@ -45,14 +45,14 @@ To enable the [Advanced filtering](advanced_filtering.md) however, you need to s
 >[!NOTE]
 >You can enable both the [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) and the advanced filtering user interfaces in the @@igComponent. Both filtering user interfaces will work independently of one another. The final filtered result in the @@igComponent is the intersection between the results of the two filters.
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

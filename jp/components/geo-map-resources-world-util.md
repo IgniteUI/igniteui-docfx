@@ -1,16 +1,16 @@
 ---
-title: マップ | データ可視化ツール | Ignite UI for Angular | データ ユーティリティ | インフラジスティックス
-_description: マップを使用すると、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルから地理的画像マップにロードされた地理空間データを表示できます。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: map, Ignite UI for Angular, Infragistics, マップ, インフラジスティックス
+title: Angular マップ | ワールド ユーティリティ | データソース | インフラジスティックス
+_description: インフラジスティックスの Angular JavaScript マップ データ ユーティリティを使用して、地理的データを生成します。Ignite UI for Angular マップのサンプルを是非お試しください!
+_keywords: Angular map, map data, Ignite UI for Angular, Infragistics, Angular マップ, マップ データ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
 
-## ワールド ユーティリティ
+# Angular ワールド ユーティリティ
 
-リソース トピックは、地理データの生成に役立つユーティリティの実装です。
+リソース トピックは、Angular 地理データの生成に役立つユーティリティの実装です。
 
-### コード スニペット
+## コード スニペット
 
 ```ts
 export default class WorldUtils {

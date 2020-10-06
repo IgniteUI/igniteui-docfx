@@ -1,10 +1,10 @@
 ﻿---
-title: ステップバイステップ ガイド
+title: ステップバイステップ ガイド | Ignite UI for Angular | インフラジスティックス
 _description: ステップバイステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: angular cli, ignite ui for angular, インフラジスティックス
 ---
 
-## ステップバイステップ ガイド
+# ステップバイステップ ガイド
 利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics または Ignite UI CLI](../cli-overview.md) で以前作成したプロジェクトを更新できます。
 
 Schematics コレクションを使用してガイドをアクティブにするには、以下のコマンドを実行します。
