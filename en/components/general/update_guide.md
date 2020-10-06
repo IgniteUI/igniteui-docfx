@@ -43,10 +43,10 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 10.0.x to 10.1.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
-    * Since we have removed the `IgxExcelStyleSortingTemplateDirective`, `IgxExcelStyleHidingTemplateDirective`, `IgxExcelStyleMovingTemplateDirective`, `IgxExcelStylePinningTemplateDirective` and `IgxExcelStyleSelectingTemplateDirective` directives for re-templating some parts of the Excel style filter menu you could use the newly added directives for re-templating the column operations and filter operations areas - `IgxExcelStyleColumnOperationsTemplateDirective` and `IgxExcelStyleFilterOperationsTemplateDirective`. We have also exposed all internal components of the Excel style filter menu in order to be used inside the templates. You could find more information about using the new template directives in this [topic](../grid/excel_style_filtering.md#templates).
+    * Since we have removed the `IgxExcelStyleSortingTemplateDirective`, `IgxExcelStyleHidingTemplateDirective`, `IgxExcelStyleMovingTemplateDirective`, `IgxExcelStylePinningTemplateDirective`, and `IgxExcelStyleSelectingTemplateDirective` directives used for templating some parts of the Excel style filter menu, you could use the newly added directives for templating the column and filter operations areas - `IgxExcelStyleColumnOperationsTemplateDirective` and `IgxExcelStyleFilterOperationsTemplateDirective`. We have also exposed all internal components of the Excel style filter menu so that they can be used inside custom templates. You can find more information about the new template directives in the [Excel-Style Filtering Topic](../grid/excel_style_filtering.md#templates).
 * IgxGrid
-    * The `selectedRows()` method has been reworked to be a `selectedRows` input property. This breaking change allows a user to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
-    * Binding of the `selectedRows` input could look something like this:
+    * The `selectedRows()` method has been refactored into an input property named. This breaking change allows users to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
+    * Binding to the `selectedRows` input property could look something like this:
     ```typescript
     public mySelectedRows = [0, 1, 2];
     ```
