@@ -5,11 +5,11 @@ _keywords: 高度なフィルター, igniteui for angular, インフラジステ
 _language: ja
 ---
 
-### @@igComponent 高度なフィルタリング
+# @@igComponent 高度なフィルタリング
 
 高度なフィルタリングは、@@igComponent のような任意の Angular Material テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -44,7 +44,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-###インタラクション
+## インタラクション
 
 高度なフィルタリングダイアログを開くには、グリッドツールバーの**高度なフィルタリング**ボタンをクリックする必要があります。高度なフィルターが適用されていない場合、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) でリンクされたフィルター条件のグループの作成から開始する必要があります。その後、フィルタリング条件またはサブグループを追加できます。 
 
@@ -56,7 +56,7 @@ _language: ja
 
 フィルタリング条件とグループを作成する準備後にデータをフィルタリングするには、**[適用]** ボタンをクリックします。拡張フィルターを変更後、変更を保存したくない場合は、**[キャンセル]** ボタンをクリックします。**[フィルターのクリア]** ボタンをクリックして、高度なフィルターをクリアすることもできます。
 
-###使用方法
+## 使用方法
 
 高度なフィルタリングを有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを true に設定します。
 
@@ -115,11 +115,11 @@ ngAfterViewInit(): void {
 >@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルターの結果の共通部分です。
 
 
-### 外部の高度なフィルタリング
+## 外部の高度なフィルタリング
 
 上記デモで示されるように、高度なフィルタリング ダイアログは、@@igComponent の上にあるオーバーレイでホストされます。ダイアログのセットアップの準備ができたときに、適用または閉じる操作によってダイアログが非表示になります。ダイアログはスタンドアロン コンポーネントとして使用した場合、常に表示になります。以下のデモでは、高度なフィルタリングダイアログが @@igComponent とは別に宣言されます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:750px">
@@ -154,7 +154,7 @@ ngAfterViewInit(): void {
 </div>
 }
 
-#### 使用方法
+### 使用方法
 
 @@igComponent の外部で動作するように高度なフィルタリングを構成する方法は簡単です。ダイアログを作成して、その [`grid`]({environment:angularApiUrl}/classes/igxadvancedfilteringdialogcomponent.html#grid) プロパティを設定するだけです。
 
@@ -181,7 +181,7 @@ ngAfterViewInit(): void {
 <div class="divider--half"></div>
 
 
-### スタイル設定
+## スタイル設定
 
 高度なフィルタリング ダイアログのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -314,7 +314,7 @@ igx-advanced-filtering-dialog {
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -361,7 +361,7 @@ $custom-drop-down: igx-drop-down-theme(
 >[!NOTE]
 >`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -469,7 +469,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 テーマを上記と同じ方法で含めることに注意してください。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
@@ -504,14 +504,14 @@ $custom-drop-down: igx-drop-down-theme(
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## 表示密度
+# 表示密度
 
 密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、事前に定義された一連のオプション (comfortable、compact、 cosy) を提供します。
 
