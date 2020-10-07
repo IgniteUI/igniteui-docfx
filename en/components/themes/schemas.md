@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-### Overview
+## Overview
 Schemas are like recipes. They are simple Sass maps, similar to JSON that allow us to define all properties a theme might use. Those properties can be colors, shadows, margins, paddings, etc. Anything a theme consumes can be described as a `schema`, then passed to the global or component theme. A component schema can extend an existing component schema and override the properties of the former.
 
 To make it easier to understand, lets take a look at the default schema the avatar component uses:
@@ -59,7 +59,7 @@ The result of the igx-color function call will be automatically passed as the fi
 
 <div class="divider"></div>
 
-### Extending Schemas
+## Extending Schemas
 As you saw from the example above. Schemas are simple maps and as such can be extended by overriding some of their properties. You might want to extend the default avatar schema by only changing the icon-background property, without having to copy all other properties manually. This is easily done using the `extend` function we provide.
 
 ```scss
@@ -70,7 +70,7 @@ $my-avatar-schema: extend($_light-avatar, (
 
 Now the value of `$my-avatar-schema` will contain all properties of `$_light-avatar`, except the value of `icon-background` will be set to `limegreen`.
 
-### Consuming Schemas
+## Consuming Schemas
 Until now we have shown what a component schema is and how you can modify it, but we have not talked about how you can use a schema in your Sass project. 
 
 Individual component schemas are bundled up in a global schema map for all components we might have. So the `$_light-avatar` schema is part of the global `$light-schema` map. The `$light-schema` maps component schemas to component names. The `$light-schema` looks something like this:
@@ -111,7 +111,7 @@ $my-avatar-theme: igx-avatar-theme(
     $schema: $my-light-schema
 );
 ```
-### Conclusions
+## Conclusions
 
 Although schemas require more advanced knowledge of our theming engine compared to theme functions and mixins, they present a powerful way for declaring component themes in your application. 
 
@@ -119,14 +119,14 @@ The good thing about schemas is they allow you to modify the global theme before
 
 Another great feature of theme schemas is that you can have as many as you want and swap them as you wish. **For instance, we use schemas internally to provide both light and dark themes by default. This allows you to switch the entire look of your application.**
 
-### API Overview
+## API Overview
 * [Light Avatar Schema]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
 * [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
