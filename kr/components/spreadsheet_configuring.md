@@ -1,27 +1,29 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | Configuration | Infragistics |
+title: Angular Spreadsheet | Grid Controls | Configuration | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
 ---
 
-## Configuring Spreadsheet
+# Angular Configuring Spreadsheet
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) allows the user to configure many different aspects of the control, including but not limited to editing of the cells, the visibility of gridlines and headers, protection, zoom level, and various other properties related to the Excel worksheet.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-configuring' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-overview-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Configuring Cell Editing
+## Configuring Cell Editing
 
 When a user edits a cell value and confirms the new input, the [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control has the ability to navigate to cells adjacent to the currently active cell on press of the `Enter` key, depending on the configuration of the spreadsheet.
 
@@ -50,7 +52,7 @@ this.spreadsheet.isEnterKeyNavigationEnabled = true;
 this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDirection.Left;
 ```
 
-### Configuring Formula Bar
+## Configuring Formula Bar
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) allows you to configure the visibility of the formula bar by setting the [`isFormulaBarVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isformulabarvisible) property of the control.
 
@@ -64,7 +66,7 @@ The following code snippets demonstrate the above:
 this.spreadsheet.isFormulaBarVisible = true;
 ```
 
-### Configuring Gridlines
+## Configuring Gridlines
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) allows you to configure the visibility of its gridlines by setting the [`areGridlinesVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#aregridlinesvisible) property of the control.
 
@@ -78,7 +80,7 @@ The following code snippets demonstrate the above:
 this.spreadsheet.areGridlinesVisible = true;
 ```
 
-### Configuring Headers
+## Configuring Headers
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) allows you to configure the visibility of its headers by setting the [`areHeadersVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#areheadersvisible) property of the control.
 
@@ -92,7 +94,7 @@ The following code snippets demonstrate the above:
 this.spreadsheet.areHeadersVisible = false;
 ```
 
-### Configuring Navigation
+## Configuring Navigation
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control allows you to configure navigation between a worksheet's cells by configuring whether or not the control is in "end mode." End mode is the functionality where, on press of an arrow key, the active cell will be moved from the current cell to the end of the row or column where data exists in the adjacent cells, depending on the direction of the arrow key pressed. This functionality is good for navigating to the end of large blocks of data very quickly.
 
@@ -110,7 +112,7 @@ The following code snippets demonstrate the above, in that the [`IgxSpreadsheetC
 this.spreadsheet.isInEndMode = true;
 ```
 
-### Configuring Protection
+## Configuring Protection
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) will respect the protection of a workbook on a worksheet-by-worksheet basis. Configuration for a worksheet's protection can be configured by calling the `Protect()` method on the worksheet to protect it, and the `Unprotect()` method to unprotect it.
 
@@ -121,7 +123,7 @@ this.spreadsheet.activeWorksheet.protect();
 this.spreadsheet.activeWorksheet.unprotect();
 ```
 
-### Configuring Selection
+## Configuring Selection
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control allows you to configure the type of selection allowed in the control then modifier keys (**Shift** or **Ctrl**) are pressed by the user. This is done by setting the [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#selectionmode) property of the spreadsheet to one of the following values:
 
@@ -159,7 +161,7 @@ The following code snippet demonstrates adding a cell range to the spreadsheet's
 this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 5));
 ```
 
-### Configuring Tab Bar Area
+## Configuring Tab Bar Area
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control respects the configuration of the visibility and width of the tab bar area from the [`WindowOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/windowoptions.html) of the currently active [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) via the [`tabBarWidth`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/windowoptions.html#tabbarwidth) and `TabBarVisibility` properties, respectively.
 
@@ -173,7 +175,7 @@ this.spreadsheet.workbook.windowOptions.tabBarVisible = false;
 this.spreadsheet.workbook.windowOptions.tabBarWidth = 200;
 ```
 
-### Configuring Zoom Level
+## Configuring Zoom Level
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control supports zooming in and out by configuring its [`zoomLevel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#zoomlevel) property. The zoom level can be a maximum of 400% and a minimum of 10%.
 

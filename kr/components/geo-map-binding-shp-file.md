@@ -1,14 +1,14 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Shape Files | Infragistics
+title: Angular Map | Data Visualization Tools | Geographic Shape Files | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files. View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, Infragistics
 ---
 
-## Binding Shape Files with Geo-spatial Data
+# Angular Binding Shape Files with Geo-spatial Data
 
 The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-spatial data (points/locations, polylines, polygons) from shape files and converts it to a collection of [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -33,11 +33,11 @@ The following table explains properties of the `ShapeDataSource` class for loadi
 
 When both source properties are set to non-null values, then the `ShapeDataSource` object’s ImportAsync method is invoked which in return performs fetching and reading the shape files and finally doing the conversion. After this operation is complete, the `ShapeDataSource` is populated with [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects and the `ImportCompleted` event is raised in order to notify about completed process of loading and converting geo-spatial data from shape files.
 
-### Loading Shapefiles
+## Loading Shapefiles
 
 The following code creates an instance of the `ShapeDataSource` object for loading a shape file that contains locations of major cities in the world. It also demonstrates how to handle the `ImportCompleted` event as a prerequisite for binding data to the map component.
 
-### Binding Shapefiles
+## Binding Shapefiles
 
 In the map component, Geographic Series are used for displaying geo-spatial data that is loaded from shape files. All types of Geographic Series have an `ItemsSource` property which can be bound to an array of objects. The `ShapeDataSource` is an example such array because it contains a list of [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.
 
@@ -51,7 +51,7 @@ The [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular
 
 This data structure is suitable for use in most Geographic Series as long as appropriate data columns are mapped to them.
 
-### Code Snippet
+## Code Snippet
 
 This code example assumes that shape files were loaded using the `ShapeDataSource`.
 The following code binds [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) in the map component to the `ShapeDataSource` and maps the `Points` property of all [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.

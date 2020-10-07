@@ -1,15 +1,15 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | Conditional Formatting | Infragistics |
+title: Angular Spreadsheet | Grid Controls | Conditional Formatting | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
 ---
 
-## Spreadsheet Conditional Formatting
+# Angular Spreadsheet Conditional Formatting
 
 The Angular Spreadsheet component allows you conditionally format the cells of a worksheet. This allows you to highlight different pieces of your data based on a condition.
 
-### Conditional Formatting Overview
+## Conditional Formatting Overview
 
 You can configure the conditional formatting of a particular worksheet by using the many `Add` methods exposed on the `ConditionalFormats` collection of that worksheet. The first parameter of these `Add` methods is the string region of the worksheet that you would like to apply the conditional format to.
 
@@ -39,7 +39,7 @@ The following lists the supported conditional formats in the [`IgxSpreadsheetCom
 -   [`TextOperatorConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/textoperatorconditionalformat.html): Added using the `AddTextCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s text value meets the criteria defined by a string and a [`FormatConditionTextOperator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/formatconditiontextoperator.html) value as placed in the `AddTextCondition` method’s parameters.
 -   [`UniqueConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/uniqueconditionalformat.html): Added using the `AddUniqueCondition` method, this conditional format exposes properties which control the visual attributes of a worksheet cell based on whether a cell’s value is unique across the associated range.
 
-### Dependencies
+## Dependencies
 
 In order to add conditional formatting to the [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control, you will need to import the following dependencies:
 
@@ -69,7 +69,7 @@ import { FormatConditionTopBottom } from "igniteui-react-excel";
 import { WorkbookColorInfo } from 'igniteui-react-excel';
 ```
 
-### Code Snippet
+## Code Snippet
 
 The following code snippet demonstrates how to add each of the conditional formats to a spreadsheet in the [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control:
 

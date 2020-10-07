@@ -1,15 +1,15 @@
 ---
-제목: 도넛형 차트 | 계층 데이터 비주얼라이제이션 | Ignite UI for Angular | Infragistics
+제목: 도넛형 차트 | 계층 데이터 비주얼라이제이션 | Infragistics
 _description: 도넛 형 차트 구성 요소를 사용하여 계층 적 데이터 시각화를위한 동심 반지 모양의 여러 변수를 표시합니다. 자세한 정보는 데모를보십시오.
-_keywords: doughnut chart, Ignite UI for Angular, infragistics
+_keywords: doughnut chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## 도넛형 차트
+# Angular 도넛형 차트
 
 Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포넌트와 유사하며 변수의 발생을 비례 적으로 보여줍니다. 도넛형 차트는 동심원상 링으로 여러 변수를 표시할 수 있으며, 계층 데이터를 시각화하기 위한 내장 기능도 제공합니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,18 +17,20 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 의존성
+## 의존성
 
 차트 패키지를 설치할 때 코어 패키지도 설치해야 합니다.
 
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-### 필요한 모듈
+## 필요한 모듈
 
 [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html)에는 다음 모듈이 필요합니다:
 
@@ -48,7 +50,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 사용 방법
+## 사용 방법
 
 도넛형 차트 모듈을 불러오기 한 후 다음 단계는 데이터에 바인딩합니다.
 컴포넌트를 작성하려면 먼저 데이터를 바인딩해야 합니다. 다음의 코드 조작은 간단한 데이터 소스를 작성하는 방법을 보여줍니다.
@@ -78,11 +80,11 @@ this.state = {
 
 <div class="divider--half"></div>
 
-### 다중 링
+## 다중 링
 
 도넛형 차트 컴포넌트는 다중 링을 다른 컬렉션에 바인딩할 수 있는 각 링과 동시에 표시할 수 있으며 공통 데이터 소스를 공유할 수 있습니다.
 
-### 조각 선택
+## 조각 선택
 
 도넛형 차트 컴포넌트는 하나 이상의 조각 상태를 선택한 상태로 설정하는 API를 공개합니다. 임의로 선택한 조각에 단일 사용자 비주얼 스타일을 적용할 수 있습니다.
 
@@ -96,7 +98,7 @@ this.state = {
 
 **SelectedSlices 컬렉션의 콘텐츠 수정** - `selectedSlices` 컬렉션의 콘텐츠를 변경하여 선택한 조각을 변경할 수 있습니다. 도넛형 차트에는 슬라이스 객체에 대한 `IsSelected` 속성을 직접 수정할 수 있도록 모든 조각에 대한 참조를 보유하고 있습니다.
 
-### 조각 선택 데모
+## 조각 선택 데모
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -104,11 +106,13 @@ this.state = {
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 조각 전개
+## 조각 전개
 
 도넛형 차트 컴포넌트 조각은 프로그래밍 방식 또는 사용자 상호 작용에 의해 전개됩니다.
 
@@ -124,7 +128,7 @@ this.state = {
 **ExplodedSlices 컬렉션의 콘텐츠 수정**
 `ExplodedSlices` 컬렉션의 콘텐츠를 변경하여 전개된 조각을 변경할 수 있습니다.
 
-### 조각 전개 데모
+## 조각 전개 데모
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -132,15 +136,17 @@ this.state = {
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 범례
+## 범례
 
 도넛형 차트 컴포넌트는 범례 사용을 지원합니다. 범례는 차트 시리즈를 통해 연결된 ItemLegend가 사용됩니다.
 
-### 범례 데모
+## 범례 데모
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -148,4 +154,6 @@ this.state = {
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>

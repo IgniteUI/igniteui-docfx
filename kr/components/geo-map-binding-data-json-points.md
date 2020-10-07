@@ -1,14 +1,14 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic JSON Data | Infragistics
+title: Angular Map | Data Visualization Tools | Geographic JSON Data | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geographic locations loaded from JSON files. View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, Infragistics
 ---
 
-## Binding JSON Files with Geographic Locations
+# Angular Binding JSON Files with Geographic Locations
 
 With [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html), you can plot geographic data loaded from various file types. For example, you can load geographic locations from JavaScript Object Notation (JSON) file.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ With [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui
 
 <div class="divider--half"></div>
 
-### Data Example
+## Data Example
 
 Here is an example of data from JSON file:
 
@@ -33,6 +33,6 @@ Here is an example of data from JSON file:
 ]
 ```
 
-### Code Snippet
+## Code Snippet
 
 The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) in the map component to an array of objects created from loaded JSON file with geographic locations:
