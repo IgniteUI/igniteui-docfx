@@ -6,7 +6,7 @@ _keywords: angular group by, igniteui for angular, infragistics
 
 # Grid Group By
 
-A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API. When row selection is enabled groupby row selector would be rendered on the most left part of each groupby row. In case the **rowSelection** property is set to single the checkboxes would be disabled and would only serve as an indicator of the group into which the selection is placed. If the **rowSelection** property is set to multiple clicking over the groupby row selectors would select all records belonging to this group.
+A Group By behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API. When Row Selection is enabled, a Group By row selector is rendered in the left-most area of the group row. In case the **rowSelection** property is set to single, checkboxes are disabled and only serve as an indication for the group where selection is placed. If the **rowSelection** property is set to multiple, clicking over the Group By row selector selects all records belonging to this group.
 
 ### Demo
 
