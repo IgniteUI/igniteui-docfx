@@ -109,7 +109,7 @@ If you need to deselect all rows within a group programmatically, you can use th
 
 ### Group Row Templates
 
-The group row without its expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record template is rendered against has the following signature:
+The group row except for the expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record template is rendered against has the following signature:
 
 ```typescript
 export interface IGroupByRecord {
