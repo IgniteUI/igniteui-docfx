@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-### Overview
+## Overview
 Border radius as any other property is set through the theme schema like it's shown in the example bellow.
 
 ```scss
@@ -30,7 +30,7 @@ We decided to not limit you to fractions only. You can use whatever unit you wan
 
 If you decide to go with fractions, you will automatically be limited by the theming engine to min and max boundary for each component.
 
-### How to use?
+## How to use?
 Let's see how we can change the default values for the buttons from the example above.
 
 ```scss
@@ -58,7 +58,7 @@ The result from the above code snippets is:
 </div>
 <div class="divider--half"></div>
 
-### Baseline roundness values
+## Baseline roundness values
 The table shows the default border-radius for each component and its min and max boundaries
 
 |                        | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
