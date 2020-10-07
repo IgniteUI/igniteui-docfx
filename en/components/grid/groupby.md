@@ -150,7 +150,7 @@ The `groupRow` property returns a reference to the group row.
 </ng-template>
 ```
 
-The `selectedCount` and `totalCount` properties can be used to determine if the groupby row selector should be checked or partially checked (indeterminate).
+The `selectedCount` and `totalCount` properties can be used to determine if the Group By row selector should be checked or indeterminate (partially selected).
 
 ```html
 <igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
