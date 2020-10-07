@@ -85,11 +85,29 @@ div#faqs-accordion-wrapper {
     border-bottom-right-radius: 9px;
 }
 
+
+.faqs-accordion-content{
+    border-bottom: 1px solid #ccc;
+    padding: 0 .9rem;
+    cursor: pointer;
+}
+
+.faqs-accordion-content:hover{
+    background-color: #f2f2f2;
+}
+
+.faqs-accordion-content:last-child{
+    border-top: none;
+}
+
+.faqs-accordion-content:last-child{
+    border-bottom: none;
+}
+
 .faqs-accordion {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  cursor: pointer;
   background: transparent;
   border: none;
   text-align: left;
@@ -100,18 +118,13 @@ div#faqs-accordion-wrapper {
 }
 
 .faqs-accordion-panel {
-  padding: 0 18px;
+  padding: 0 18px 5px 18px;
   background: transparent;
   max-height: 0;
   overflow: hidden;
-  margin-bottom: 5px;
   -webkit-transition: max-height 0.2s ease-out;
   -o-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
-}
-
-.faqs-accordion-panel ul{
-  margin-bottom: 15px;
 }
 
 .faqs-accordion:before {
@@ -122,7 +135,7 @@ div#faqs-accordion-wrapper {
     height: 25px;
 }
 
-.faqs-accordion.active:before {
+.faqs-accordion-content.active .faqs-accordion:before {
     font-family: Material Icons;
     content: "keyboard_arrow_up";
     font-size: 25px;
@@ -130,17 +143,8 @@ div#faqs-accordion-wrapper {
     height: 25px;
 }
 
-.faqs-accordion-content{
-    border-bottom: 1px solid #ccc;
-    padding: 0 .9rem;
-}
-
-.faqs-accordion-content:last-child{
-    border-top: none;
-}
-
-.faqs-accordion-content:last-child{
-    border-bottom: none;
+.faqs-accordion-panel ul{
+  margin-bottom: 15px;
 }
 
 h3#quick-and-easy-to-customize-build-and-implement{
@@ -490,13 +494,13 @@ If you are developing applications on multiple platforms, consider our complete 
 
 <script>
     (function(){
-        var acc = document.getElementsByClassName("faqs-accordion");
+        var acc = document.getElementsByClassName("faqs-accordion-content");
         var i;
 
         for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            var panel = this.nextElementSibling.nextElementSibling;
+            var panel = this.lastElementChild;
             if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
             } else {
