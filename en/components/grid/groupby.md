@@ -132,7 +132,7 @@ As an example, the following template would make the group rows summary more ver
 
 ### Group Row Selector Templates
 
-As mentioned above the group row without its expand/collapse UI is fully templatable. To create a custom groupby row selector template, within the Grid, declare an `<ng-template>` with `igxGroupByRowSelector` directive. From the template you can access the implicitly provided context variable, with properties that give you information about the groupby-row's state.
+As mentioned above the group row except for the expand/collapse UI is fully templatable. To create a custom Group By row selector template within the Grid, declare an `<ng-template>` with `igxGroupByRowSelector` directive. From the template, you can access the implicitly provided context variable, with properties that give you information about the Group By row's state.
 
 The `selectedCount` property shows how many of the group records are currently selected while `totalCount` shows how many records belong to the group.
 
