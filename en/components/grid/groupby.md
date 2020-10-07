@@ -142,7 +142,7 @@ The `selectedCount` property shows how many of the group records are currently s
 </ng-template>
 ```
 
-The `groupRow` property property returns a reference to the group row.
+The `groupRow` property returns a reference to the group row.
 
 ```html
 <ng-template igxGroupByRowSelector let-groupByRowContext>
