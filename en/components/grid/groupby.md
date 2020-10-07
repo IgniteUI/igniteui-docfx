@@ -89,20 +89,20 @@ Groups can be created expanded (***default***) or collapsed and the expansion st
 
 ### Select/Deselect all rows in a group API
 
-Selecting/Deselecting all rows in a group is available through the [`selectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrowsingroup) and [`deselectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrowsingroup) API methods.
+Selecting/Deselecting all rows in a group is available through the [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) and [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) API methods.
 
-The code snippet below can be used to select all rows within a group using the group record instance [`selectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrowsingroup) method. Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
+The code snippet below can be used to select all rows within a group using the group record instance [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) method. Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
-    grid.selectAllRowsInGroup(groupRow);
+    grid.selectRowsInGroup(groupRow);
 ```
 
-If you need to deselect all rows within a group programmatically, you can use the [`deselectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrowsingroup) method.
+If you need to deselect all rows within a group programmatically, you can use the [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) method.
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
-    grid.deselectAllRowsInGroup(groupRow);
+    grid.deselectRowsInGroup(groupRow);
 ```
 
 ## Templating
@@ -190,7 +190,7 @@ The grouping UI supports the following keyboard interactions:
 - For group rows (focus should be on the row or the expand/collapse cell)
    - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - Expands the group
    - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - Collapses the group
-   - <kbd>SPACE</kbd> - selects the group row and all rows in the group, if <kbd>rowSelection</kbd> property is set to multiple
+   - <kbd>SPACE</kbd> - selects all rows in the group, if <kbd>rowSelection</kbd> property is set to multiple
 
 - For group [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) components in the group by area (focus should be on the chip)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
