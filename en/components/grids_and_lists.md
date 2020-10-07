@@ -5,12 +5,8 @@ _keywords: angular data grid, infragistics, infragistics.com
 ---
 <style>
 
-.affix{
-  margin-top: 0;
-}
-
-.theme-widget-wrapper{
-    display: none;
+.themes-container{
+    display: none !important;
 }
 
 .h3, h3{
@@ -25,8 +21,12 @@ _keywords: angular data grid, infragistics, infragistics.com
 
 ul#features-list{
     margin: 0 auto;
-    column-gap: 12%;
-    columns: 2
+    -webkit-column-gap: 12%;
+       -moz-column-gap: 12%;
+            column-gap: 12%;
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2
 }
 
 ul#features-list li{
@@ -51,11 +51,17 @@ div#list-features-included{
 }
 
 div#list-features-included{
-    columns: 3;
-    column-gap: 10%;
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+    -webkit-column-gap: 10%;
+       -moz-column-gap: 10%;
+            column-gap: 10%;
 }
 
 div#support-section-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -73,8 +79,6 @@ h2#frequently-asked-questions{
 }
 
 div#faqs-accordion-wrapper {
-    display: flex;
-    flex-flow: column;
     border: 1px solid #ccc;
     border-top: none;
     border-bottom-left-radius: 9px;
@@ -82,12 +86,16 @@ div#faqs-accordion-wrapper {
 }
 
 .faqs-accordion {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
   background: transparent;
   border: none;
   text-align: left;
   outline: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -97,6 +105,8 @@ div#faqs-accordion-wrapper {
   max-height: 0;
   overflow: hidden;
   margin-bottom: 5px;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
 }
 
@@ -188,6 +198,10 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 
 
 ## Angular Grid Example
+<div class="divider--half"></div>
+
+Business propeller – In this angular grid example we show how users can do search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling also we have examples for multi-row Layout, cell styling that includes embedded in the cell linear progress bar Indicator component and sparkline component.
+
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
@@ -425,12 +439,12 @@ There are multiple options to get access to our award-winning support at Infragi
 ## Ignite UI for Angular Trial License and Commercial
 <div class="divider--half"></div>
 <p>Ignite UI for Angular is a commercially licensed product available via a subscription model. You can try the Ignite UI for Angular product for free when you <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/free-downloads">register for a 30-day trial</a>. When you are done with your Trial Period, you can <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">purchase a license </a> from our web site or by calling <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/about-us/contact-us">sales in your region</a>.</p>
-<hr>
+
 <div class="divider--half"></div>
 
 ## Frequently Asked Questions
 
-<div id="faqs-accordion-wrapper">
+<div id="faqs-accordion-wrapper" class="resizable-content">
     <div class="faqs-accordion-content">
         <div class="faqs-accordion h4">Why should I choose the Infragistics Ignite UI for Angular Data Grid?</div>
         <div class="divider--half"></div>
@@ -466,7 +480,7 @@ If you are developing applications on multiple platforms, consider our complete 
         </div>
     </div>
     <div class="faqs-accordion-content">
-        <div class="faqs-accordion h4">Can I purchase the Infragistics Ignite UI for Angular Data Grid control separately?</div>
+        <div class="faqs-accordion h4">How do I Install Angular and the Infragistics Ignite UI for Angular Data Grid control?</div>
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
         To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting_started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
