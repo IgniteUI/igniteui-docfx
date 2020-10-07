@@ -91,7 +91,7 @@ Groups can be created expanded (***default***) or collapsed and the expansion st
 
 Selecting/Deselecting all rows in a group is available through the [`selectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrowsingroup) and [`deselectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectallrowsingroup) API methods.
 
-The below code example can be used to select all rows within a group by the group record instance using [`selectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrowsingroup) method. Additionally, as a second parameter of this method, you can pass a boolean property which corresponds to whether the previous row selection will be cleared or not. By default the previous selection will be preserved.
+The code snippet below can be used to select all rows within a group using the group record instance [`selectAllRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectallrowsingroup) method. Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
