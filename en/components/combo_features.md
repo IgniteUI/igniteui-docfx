@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
 </p>
 
-### Demo
+## Demo
 The following demo demonstrates some of the igx-combo features that are enabled/disabled at runtime:
 
 <div class="sample-container loading" style="height: 440px;">
@@ -21,9 +21,9 @@ The following demo demonstrates some of the igx-combo features that are enabled/
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 To get started with the Combo component, first you need to import the `IgxComboModule` in your **app.module.ts** file. Our sample also uses the [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component to toggle combo properties' values, so we will need the `IgxSwitchModule` as well:
 
 ```typescript
@@ -40,7 +40,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Template Configuration
+### Template Configuration
 
 ```html
 <div class="combo-container">
@@ -60,7 +60,7 @@ export class AppModule {}
 </div>
 ```
 
-#### Component Definition
+### Component Definition
 Note that grouping is enabled/disabled by setting the [groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) property to a corresponding data source entity or setting it to an empty string.
 
 ```typescript
@@ -76,9 +76,9 @@ Note that grouping is enabled/disabled by setting the [groupKey]({environment:an
     }
 ```
 
-### Features
+## Features
 
-#### Data Binding
+### Data Binding
 The following code snippet illustrates a basic usage of the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) bound to a local data source. The [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) specifies which property of the data entries will be stored for the combo's selection and the [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) specifies which property will be used for the combo text:
 
 ```html
@@ -102,7 +102,7 @@ export class ComboDemo implements OnInit {
 
 Follow the [Combo Remote Binding topic](combo_remote.md) for more details about binding the combo component with remote data.
 
-#### Custom Overlay Settings
+### Custom Overlay Settings
 The combo component allows users to change the way a list of items is shown. This can be done by defining [Custom OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the [Combo's OverlaySettings]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) input:
 
 ```typescript
@@ -139,7 +139,7 @@ If everything is set up correctly, the combo's list will display centered, using
 > [!Note]
 > The igx-combo component uses the [AutoPositionStrategy]({environment:angularApiUrl}/classes/autopositionstrategy.html) as a default position strategy.
 
-#### Filtering
+### Filtering
 By default, filtering in the combo is enabled. It can be disabled by setting the [filterable]({environment:angularApiUrl}/classes/igxcombocomponent.html#filterable) property to false.
 
 Filtering options can be further enhanced by enabling the search case sensitivity. To display the case-sensitive icon in the search input, set the [showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showsearchcaseicon) property to true:
@@ -150,7 +150,7 @@ Filtering options can be further enhanced by enabling the search case sensitivit
 
 <div class="divider--half"></div>
 
-#### Custom Values
+### Custom Values
 The [allowCustomValues]({environment:angularApiUrl}/classes/igxcombocomponent.html#allowcustomvalues) property controls whether custom values can be added to the collection. If it is enabled, a missing item could be included using the UI of the combo.
 
 ```html
@@ -159,7 +159,7 @@ The [allowCustomValues]({environment:angularApiUrl}/classes/igxcombocomponent.ht
 
 <div class="divider--half"></div>
 
-#### Search Input Focus
+### Search Input Focus
 The combo's [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponent.html#autofocussearch)  property controls if the search input should receive focus when a combo is opened. By default, the property is set to `true`. When set to `false`, the focus goes to the combo's items container. For mobile devices, this can be used to prevent the software keyboard from popping up when opening the combo.
 
 ```html
@@ -168,7 +168,7 @@ The combo's [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocompon
 
 <div class="divider--half"></div>
 
-#### Disable Combo
+### Disable Combo
 You can disable a combo using the following code:
 
 ```html
@@ -177,7 +177,7 @@ You can disable a combo using the following code:
 
 <div class="divider--half"></div>
 
-#### Grouping
+### Grouping
 Defining a combo's `groupKey` option will group the items, according to the provided key:
 
 ```html
@@ -186,7 +186,7 @@ Defining a combo's `groupKey` option will group the items, according to the prov
 
 <div class="divider--half"></div>
 
-### API Summary
+## API Summary
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
@@ -195,7 +195,7 @@ Defining a combo's `groupKey` option will group the items, according to the prov
 Additional components and/or directives with relative APIs that were used:
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo Component](combo.md)
