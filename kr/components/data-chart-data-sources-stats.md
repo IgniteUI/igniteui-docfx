@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 분산 버블 시리즈의 샘플 데이터 소스
+# Angular 분산 버블 시리즈의 샘플 데이터 소스
 
 이 항목에서는 [분산 버블 시리즈](data-chart-type-scatter-bubble-series.md) 및 [분산 마커 시리즈](data-chart-type-scatter-point-series.md)의 데이터 소스를 구현하는 방법에 대한 예제를 제공합니다
 
@@ -85,7 +85,7 @@ export class SampleScatterStats {
         data.push(new Country("ERI",6130922,504,195,3,"Eritrea","Africa"));
         data.push(new Country("EST",1325016,16887,16944,127,"Estonia","Europe"));
         data.push(new Country("ETH",91728849,467,51,8,"Ethiopia","Africa"));
-        data.push(new Country("EUU",505640311,32917,0,118,"Euroean Union","Europe"));
+        data.push(new Country("EUU",505640311,32917,0,118,"European Union","Europe"));
         data.push(new Country("FRO",49506,0,0,120,"Faeroe Islands","Europe"));
         data.push(new Country("FJI",874742,4613,150,81,"Fiji","Oceania"));
         data.push(new Country("FIN",5413971,45649,68960,156,"Finland","Europe"));

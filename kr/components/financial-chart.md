@@ -1,15 +1,15 @@
 ---
-제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Infragistics
 _description: 재무 차트 구성 요소를 사용하여 간단한 API를 사용하여 재무 데이터를 시각화하십시오. 자세한 정보는 데모, 종속성, 사용법 및 도구 모음을보십시오.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+_keywords: financial chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## 금융 차트
+# Angular 금융 차트
 
 금융 차트는 간단하고 직관적인 API를 사용하여 금융 데이터를 쉽게 시각화할 수 있는 차트 컴포넌트입니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -43,14 +45,14 @@ _language: kr
  </igx-financial-chart>
 ```
 
-### 의존성
+## 의존성
 
 차트 패키지를 설치할 때 코어 패키지도 설치해야 합니다.
 
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-### 필요한 모듈
+## 필요한 모듈
 
 `XamFinancialChart`에는 다음 모듈이 필요합니다:
 
@@ -70,7 +72,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 사용 방법
+## 사용 방법
 
 금융 차트 모듈을 불러오기 한 후 다음 단계는 데이터에 바인딩합니다.
 
@@ -102,7 +104,7 @@ let data = [
  </igx-financial-chart>
 ```
 
-### 도구 모음
+## 도구 모음
 
 도구 모음이 금융 차트의 맨 위에 표시됩니다. 최종 사용자가 표시되는 데이터에 대한 다양한 세부 정보를 변경할 수 있고 다른 창을 표시할 수 있습니다. 도구 모음에는 다음의 선택기가 포함되어 있습니다:
 

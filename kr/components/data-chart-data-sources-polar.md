@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 폴라 시리즈의 샘플 데이터 소스
+# Angular 폴라 시리즈의 샘플 데이터 소스
 
 이 항목에서는 [폴라 시리즈](data-chart-type-polar-series.md)의 데이터 소스를 구현하는 방법에 대한 예제를 제공합니다
 

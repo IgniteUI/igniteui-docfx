@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 시리즈 주석
+# Angular 시리즈 주석
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)는 차트에 플롯된 점에 대한 맥락 정보를 주석으로 표시할 수 있는 레이어를 지원합니다. 이것은 단순히 시리즈를 보는 것만으로는 파악하기 힘든 더 많은 정보를 최종 사용자에게 표시하여 도움을 줄 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-annotations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 콜아웃 레이어
+## 콜아웃 레이어
 
 콜아웃 레이어는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 기존 데이터 또는 새로운 데이터의 주석을 표시합니다. 주석은 데이터 소스의 주어진 데이터 값 옆에 표시됩니다.
 
@@ -56,7 +58,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 십자형 레이어
+## 십자형 레이어
 
 십자형 레이어는 각 시리즈를 대상으로 구성된 모든 시리즈의 실제 값과 교차하는 교차선을 별도의 선 세트로 렌더링합니다.
 
@@ -86,7 +88,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 최종값 레이어
+## 최종값 레이어
 
 최종값 레이어는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 시리즈 최종값을 나타내는 주석을 차트 축에 따라 표시합니다.
 
