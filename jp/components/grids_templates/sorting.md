@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent ソートの概要
+# @@igComponent ソートの概要
 
 Ignite UI for Angular @@igComponent では、列レベルでのデータ ソートが可能です。つまり、**@@igSelector** にソート可能な列とソート不可の列の両方を持つことができます。Angular でソートを実行すると、指定した条件に基づいてレコードの表示順序を変更できます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -40,6 +40,8 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
+更に **@@igSelector** の [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) 出力を使用してソートにカスタム contextmenu が追加されます。
+
 <div class="sample-container loading" style="height:550px">
     <iframe id="tree-grid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-sorting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -50,6 +52,8 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+更に **@@igSelector** の [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) 出力を使用してソートにカスタム contextmenu が追加されます。
+
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -68,7 +72,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
 
-#### ソート インジケーター
+## ソート インジケーター
 ソートされた列数が一定数以上ある場合、ソート順の指定がないと混乱する可能性があります。 
 
 **@@igxName** は、ソートされた各列のインデックスを示すことにより、この問題の解決策を提供します。
@@ -84,7 +88,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 </div>
 }
 
-#### API でのソート
+## API を使用したソート
 
 @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) メソッドを使用して列、複数の列の組み合わせをソートできます。
 
@@ -120,7 +124,7 @@ this.@@igObjectRef.clearSort();
 > [!NOTE]
 > ソート操作で @@igComponent の基になるデータ ソースは変更**しません**。
 
-#### 初期のソート状態
+## 初期のソート状態
 
 @@igComponent でソート状態を初期設定するには、ソート式の配列を @@igComponent の [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressions) プロパティに渡します。
 
@@ -139,14 +143,14 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-
 #### リモート ソート
+
 @@igComponent はリモート ソートをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
 
 <div class="divider--half"></div>
 }
 
-### スタイル設定
+## スタイル設定
 
 ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -179,7 +183,7 @@ $custom-theme: igx-grid-theme(
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -202,9 +206,9 @@ $custom-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -240,7 +244,7 @@ $custom-theme: igx-grid-theme(
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
 @@if (igxName === 'IgxGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/grid/grid-sorting-styling' width="100%" height="100%" 
@@ -253,7 +257,7 @@ $custom-theme: igx-grid-theme(
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="tree-grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -265,7 +269,7 @@ $custom-theme: igx-grid-theme(
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sorting-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -277,12 +281,12 @@ $custom-theme: igx-grid-theme(
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-### @@igComponent 一括編集とトランザクション
+# @@igComponent 一括編集とトランザクション
 
 @@if (igxName === 'IgxGrid') {
 igxGrid の一括編集機能は、[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、igxTransactionService の概要と実装方法の詳細を確認してください。
@@ -43,7 +43,7 @@ IgxHierarchicalGrid の一括編集機能は、[`HierarchicalTransactionService`
 以下は、IgxHierarchicalGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 以下のサンプルは、グリッドにプロバイダーのトランザクションがあり、行編集が有効にされています。行編集全体を確定後にトランザクションが追加されるようにします。
@@ -86,7 +86,7 @@ IgxHierarchicalGrid の一括編集機能は、[`HierarchicalTransactionService`
 > [!NOTE]
 > トランザクション ステートは、すべての更新、追加、削除された行、そして最後のステートで構成されます。
 
-### 使用方法
+## 使用方法
 
 `@@igxNameModule` を **app.module.ts** ファイルにインポートします。
 
@@ -396,7 +396,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 > [!NOTE]
 > [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを無効にすると @@igComponent を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
-### API リファレンス
+## API リファレンス
 
 @@if (igxName === 'IgxGrid') {
 * [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
@@ -412,7 +412,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 * [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
 }
 
-### その他のリソース
+## その他のリソース
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [@@igComponent 編集](editing.md)

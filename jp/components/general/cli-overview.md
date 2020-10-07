@@ -1,7 +1,7 @@
 ---
-title: Angular Schematics & Ignite UI CLI
+title: Angular Schematics | Angular CLI | Ignite UI for Angular | インフラジスティックス
 _description: Angular Schematics & Ignite UI CLI は Ignite UI for Angular コンポーネントでプロジェクトを作成して変更できるためのヘルプを提供します。
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: igniteui for angular, angular schematics, cli, infragistics, インフラジスティックス 
 _language: ja
 ---
 
@@ -14,7 +14,7 @@ CLI ツールでは、Ignite UI for Angular の定義済みのプロジェクト
 
 ツールの両方バージョンにより、異なるプロジェクト、コンポーネント、およびシナリオビュー (テンプレート)を生成し、ガイドモードを提供します。
 
-### 作業の開始
+## 作業の開始
 
 Ignite UI for Angular Schematics をグローバルにインストールする方法:
 ```cmd
@@ -28,7 +28,7 @@ IgniteUI CLI を使用する場合、npm でインストールできます。
 npm install -g igniteui-cli 
 ```
 
-#### ガイドの使用
+### ガイドの使用
 アプリケーションを最短でブートストラップする最も簡単な方法は、[Step-by-Step ガイド](cli/step-by-step-guide.md)を使用する方法です。
 
 Ignite UI for Angular Schematics を使用してガイドをアクティブにするには、次のコマンドを実行します。
@@ -49,7 +49,7 @@ ig
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-#### 新しいプロジェクトの作成
+## 新しいプロジェクトの作成
 
 Ignite UI for Angular コントロールを使用するように設定されたアプリケーションを作成するには、コレクションオプションに `@igniteui/angular-schematics` を提供する `ng new` コマンドを実行します。
 
@@ -142,7 +142,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 </details>
 
 
-#### テンプレートの追加
+## テンプレートの追加
 [利用可能な Ignite UI Angular テンプレート](cli/component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[Step-by-Step Guide](cli/step-by-step-guide.md#ビューの追加) を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting_started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
 
 Schematics には、 Ignite UI for Angular コレクション と `component [template] [name]` の `ng generate` を使用します。
@@ -187,7 +187,7 @@ ig add grid newGrid
   </p>
 </details>
 
-#### アプリケーションの実行
+## アプリケーションの実行
 
 `start` schematic またはコマンドはアプリケーションがビルドされ、Web サーバーが起動してデフォルトのブラウザーで開きます。
 
@@ -200,7 +200,7 @@ Ignite UI CLI の使用:
 ig start
 ```
 
-#### Ignite UI CLI コマンド
+## Ignite UI CLI コマンド
 使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)にあります。
 
 | コマンド | エイリアス | 説明 |

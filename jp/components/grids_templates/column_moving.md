@@ -8,17 +8,17 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 列移動 - ネイティブ Angular | Ignite UI for Angular
+title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
 _description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャまたは列移動 API を使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネントスイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Column Moving, Tree Grid Column Moving, Angular Tree Grid Column Moving, Angular Tree Table Column Moving, Angular column moving
+_keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 列移動 - ネイティブ Angular | Ignite UI for Angular
+title: Angular Grid 列移動 | 列順序 | Ignite UI for Angular | インフラジスティックス
 _description: Angular UI グリッドの列ドラッグ機能でマウス/タッチ ジェスチャまたは列移動 API を使用して、Angular Material テーブルの Ignite UI のカスタム列の順序を設定します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネントスイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid コンポーネント, Angular Hierarchical Table コンポーネント, Angular Hierarchical Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical Grid, Angular 高パフォーマンス Hierarchical Table, Column Moving, Hierarchical Grid Column Moving, Angular Hierarchical Grid Column Moving, Angular Hierarchical Table Column Moving, Angular column moving
+_keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
 _language: ja
 ---
 }
@@ -320,14 +320,14 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 <div class="divider--half"></div>
 }
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
