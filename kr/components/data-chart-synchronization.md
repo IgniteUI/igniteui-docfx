@@ -1,22 +1,24 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Synchronization
+title: Angular Data Chart | Data Visualization Tools | Infragistics | Synchronization
 _description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
 _keywords: data chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## Chart Synchronization
+# Angular Chart Synchronization
 
 The Ignite UI for Angular data chart component allows for synchronization with respect to the coordination of zooming, panning, and crosshair events between multiple charts. This can help you to visualize the same areas of multiple charts, assuming your data sources are similar or the same with respect to the axes.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-chart-synchronization-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-chart-synchronization-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -27,7 +29,7 @@ If you want to synchronize a set of charts, you can assign them the same name to
 
 Note that in order to synchronize either vertically and/or horizontally, you will need to set the `IsHorizontalZoomEnabled` and/or `IsVerticalZoomEnabled` property to `true`, respectively. A synchronized chart that is dependent on another chart will still zoom regardless of this property setting.
 
-### Code Snippet - Chart Synchronization
+## Code Snippet - Chart Synchronization
 
 The following code snippet demonstrates how to synchronize a pair of chart controls in the Ignite UI for Angular data chart:
 
@@ -50,5 +52,5 @@ The following code snippet demonstrates how to synchronize a pair of chart contr
     syncChannel="ChannelA"
     synchronizeHorizontally=true
     synchronizeVertically=true>
-</igx-data-chart>  
+</igx-data-chart>
 ```

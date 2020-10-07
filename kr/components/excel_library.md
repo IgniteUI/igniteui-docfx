@@ -1,22 +1,23 @@
 ---
-title: Excel Library Component - Native Angular | Ignite UI for Angular
+title: Angular Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component ... TODO.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine
 ---
 
-## Excel Library
+# Angular Excel Library
 
 The Infragistics Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like Workbooks, Worksheets, Cells, Formulas and many more. The Infragistics Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
-### Demo
+## Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 100px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
 When installing the excel package, the core package must also be installed.
 
@@ -39,7 +40,7 @@ import { IgxExcelModule } from 'igniteui-angular-excel';
 export class AppModule {}
 ```
 
-### The Excel Library Contains 5 Modules
+## The Excel Library Contains 5 Modules
 
 -   **IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
 -   **IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
@@ -47,7 +48,7 @@ export class AppModule {}
 -   **IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
 -   **IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
 
-### Supported Versions of Microsoft Excel
+## Supported Versions of Microsoft Excel
 
 The following is a list of the supported versions of Excel.\*\*
 
@@ -70,7 +71,7 @@ The following is a list of the supported versions of Excel.\*\*
 > [!NOTE]
 > The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.
 
-### Load and Save Workbooks
+## Load and Save Workbooks
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
@@ -92,7 +93,7 @@ ExcelUtility.save(workbook, "fileName");
 
 <div class="divider--half"></div>
 
-### Managing Heap
+## Managing Heap
 
 Due to the size of the Excel Library, it's recommended to disable the source map generation.
 

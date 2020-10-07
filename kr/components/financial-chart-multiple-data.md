@@ -1,15 +1,15 @@
 ---
-제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics } 복수 데이터 소스 바인딩
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Infragistics } 복수 데이터 소스 바인딩
 _description: 재무 차트 구성 요소를 사용하여 간단한 API를 사용하여 재무 데이터를 시각화하십시오. 자세한 정보는 데모, 종속성, 사용법 및 도구 모음을보십시오.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+_keywords: financial chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## 금융 차트를 복수의 데이터 소스에 바인딩
+# Angular 금융 차트를 복수의 데이터 소스에 바인딩
 
 `XamFinancialChart` 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
@@ -53,7 +55,7 @@ let data: any = [ dataSource1, dataSource2 ]
 
 <div class="divider--half"></div>
 
-### 추가 리소스
+## 추가 리소스
 
 <div class="divider--half"></div>
 

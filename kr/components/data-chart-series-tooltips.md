@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 도구 설명
+# Angular 도구 설명
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 2개의 도구 설명 "레이어"와 함께 도구 설명을 표시할 수 있습니다. 이 도구 설명은 차트의 각 시리즈에 대한 맥락 정보를 확인할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-tooltips-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-tooltips-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -31,7 +33,7 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 })
 ```
 
-### 기본 도구 설명
+## 기본 도구 설명
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 각 시리즈 유형에 기본 도구 설명을 제공합니다. 기본 도구 설명에는 시리즈 제목, 데이터 값, 축 값 등 호버된 특정 시리즈 항목과 관련된 모든 정보가 표시되며 또한, 시리즈 외관에 맞게 스타일 설정되어 있습니다.
 
@@ -56,7 +58,7 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 </igx-data-chart>
 ```
 
-### 카테고리 도구 설명 레이어
+## 카테고리 도구 설명 레이어
 
 CategoryToolTipLayer는 카테고리 축을 사용하는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어 시리즈용의 그룹화된 도구 설명을 표시합니다. 그룹화된 도구 설명은 현재 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어 상단에 표시됩니다.
 
@@ -83,7 +85,7 @@ CategoryToolTipLayer는 카테고리 축을 사용하는 [`IgxDataChartComponent
 </igx-data-chart>
 ```
 
-### 항목 도구 설명 레이어
+## 항목 도구 설명 레이어
 
 항목 도구 설명 레이어는 포인터가 특정 시리즈 위로 이동할 경우에 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 모든 시리즈에 대한 도구 설명을 개별적으로 표시합니다. 도구 설명 스타일은 도구 설명을 표시하는 시리즈에서 상속됩니다.
 
