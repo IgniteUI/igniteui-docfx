@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo Component provides easy filtering, single and multiple selection of items, grouping and adding custom values to a dropdown list.
 </p>
 
-### Demo
+## Demo
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="combo-main-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,7 +19,7 @@ The Ignite UI for Angular Combo Component provides easy filtering, single and mu
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Features
+## Features
 
 The combo control exposes the following features:
     - Data Binding - local data and [remote data](combo_remote.md)
@@ -30,7 +30,7 @@ The combo control exposes the following features:
     - [Templates](combo_templates.md)
     - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
 
-### Usage
+## Usage
 
 To get started with the Combo component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
 
@@ -65,7 +65,7 @@ export class ComboDemo implements OnInit {
 
 Our combo is now bound to the array of cities.
 
-#### Data value and display properties
+### Data value and display properties
 
 Since the combo is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey):
 
@@ -81,7 +81,7 @@ In our case, we want the combo to display the `name` of each city and the combo 
 > [!Note]
 > When the data source is comprised of a simple type (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`.
 
-#### Two-Way Binding
+### Two-Way Binding
 
 The combo component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
 
@@ -125,7 +125,7 @@ export class MyCombo {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-binding-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Selection API
+### Selection API
 
 The combo component exposes API that allows getting and manipulating the current selection state of the control. 
 
@@ -186,7 +186,7 @@ export class MyExampleCombo {
 }
 ```
 
-### Single Selection
+## Single Selection
 
 By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `onSelectionChange` event:
 
@@ -211,7 +211,7 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 </div>
 <div class="divider--half"></div>
 
-### Keyboard Navigation
+## Keyboard Navigation
 
 When igxCombo is closed and focused:
 - `ArrowDown` or `Alt` + `ArrowDown` will open the combo drop down and will move focus to the search input.
@@ -246,7 +246,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 - `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
 
 
-### Styling
+## Styling
 
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
@@ -289,7 +289,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The last step is to include the component's theme.
 
@@ -301,7 +301,7 @@ The last step is to include the component's theme.
 }
 ```
 
-#### Using Theme Overrides
+### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -320,7 +320,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 > [!NOTE]
 > The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay_main.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay_styling.md).
 
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:410px">
     <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -331,7 +331,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 
 <div class="divider--half"></div>
 
-### Known Issues
+## Known Issues
 
 - The combo input that displays the selected items is not editable. However, due to browser specifics in IE and FireFox, the cursor is visible.
 - Backspace works in disabled combo in IE.
@@ -340,7 +340,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 > [!NOTE]
 > The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
 
-### API Summary
+## API Summary
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
@@ -353,7 +353,7 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo Features](combo_features.md)
