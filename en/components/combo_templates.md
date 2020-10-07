@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
 </p>
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,7 +19,7 @@ The Ignite UI for Angular Combo Component allows defining custom templates for d
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
+## Usage
 To get started with the Combo component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
 
 ```typescript
@@ -35,10 +35,10 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Template Types
+## Template Types
 When defining `igx-combo` templates, you need to reference them using the following predefined reference names:
 
-#### Item template
+### Item template
 Use selector `[igxComboItem]`:
 
 ```html
@@ -52,7 +52,7 @@ Use selector `[igxComboItem]`:
 </igx-combo>
 ```
 
-#### Header template
+### Header template
 Use selector `[igxComboHeader]`:
 
 ```html
@@ -63,7 +63,7 @@ Use selector `[igxComboHeader]`:
 </igx-combo>
 ```
 
-#### Footer template
+### Footer template
 Use selector `[igxComboFooter]`:
 
 ```html
@@ -74,7 +74,7 @@ Use selector `[igxComboFooter]`:
 </igx-combo>
 ```
 
-#### Empty template
+### Empty template
 Use selector `[igxComboEmpty]`:
 
 ```html
@@ -85,7 +85,7 @@ Use selector `[igxComboEmpty]`:
 </igx-combo>
 ```
 
-#### Add template
+### Add template
 Use selector `[igxComboAddItem]`:
 
 ```html
@@ -98,7 +98,7 @@ Use selector `[igxComboAddItem]`:
 </igx-combo>
 ```
 
-#### Toggle Icon Template
+### Toggle Icon Template
 Use selector `[igxComboToggleIcon]`:
 
 ```html
@@ -109,7 +109,7 @@ Use selector `[igxComboToggleIcon]`:
 </igx-combo>
 ```
 
-#### Clear Icon Template
+### Clear Icon Template
 Use selector `[igxComboClearIcon]`:
 
 ```html
@@ -120,7 +120,7 @@ Use selector `[igxComboClearIcon]`:
 </igx-combo>
 ```
 
-### Templating Combo Input
+## Templating Combo Input
 When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` selectors, change how the respective buttons appear in the combo input. Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `igxLabel`). The code snippet below illustrates how to add an appropriate label and prefix to the combo input:
 
 ```html
@@ -130,13 +130,13 @@ When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` s
     </igx-combo>
 ```
 
-### API Summary
+## API Summary
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo Component](combo.md)

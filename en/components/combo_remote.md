@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo Component exposes an API that allows binding a combo to a remote service and retrieving data on demand.
 </p>
 
-### Demo
+## Demo
 The sample below demonstrates remote binding using the [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) property to load new chunk of remote data:
 
 <div class="sample-container loading" style="height: 400px;">
@@ -20,7 +20,7 @@ The sample below demonstrates remote binding using the [onDataPreLoad]({environm
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
+## Usage
 To get started with the Combo component, first you need to import the `IgxComboModule` in your **app.module.ts** file. In this demo, a remote service is used for server requests, therefore, we also need to include the `HttpClientModule`:
 
 ```typescript
@@ -38,7 +38,7 @@ import { HttpClientModule } from "@angular/common/http";
 export class AppModule {}
 ```
 
-#### Define Remote Service
+### Define Remote Service
 When binding a combo to remote data, we need to have an available service that will load data on demand from a server. The combo component exposes the [virtualizationState]({environment:angularApiUrl}/classes/igxcombocomponent.html#virtualizationstate) property which gives the current state of a combo - the first index and the number of items that need to be loaded. In order to show properly the scroll size, the [totalItemCount]({environment:angularApiUrl}/classes/igxcombocomponent.html#totalitemcount) property should have value that corresponds to the total items on the server.
 
 The code below defines a simple service that has a `getData()` method, which receives combo's current state information and returns data as an observable:
@@ -64,7 +64,7 @@ export class RemoteService {
 }
 ```
 
-#### Binding Combo to Remote Service
+### Binding Combo to Remote Service
 When data is returned from a service as an observable, we can set it to the combo component using the [async](https://angular.io/api/common/AsyncPipe) pipe:
 
 ```html
@@ -141,7 +141,7 @@ export class ComboRemoteComponent implements OnInit {
 > [!Note]
 > A service needs to be included as a provider.
 
-#### Handling Selection
+### Handling Selection
 When using a combo bound to remote data loaded in chunks and dealing with a more complex data type (e.g. objects), it is necessary to define a `valueKey`. As stated in the [combo topic](combo.md#data-value-and-display-properties), when no `valueKey` is specified, the combo will try to handle selection by `equality (===)`. Since the objects that will be marked as selected will not be the same as the object that are continuously loaded, the selection will fail.
 
 > [!Note]
@@ -149,13 +149,13 @@ When using a combo bound to remote data loaded in chunks and dealing with a more
 
 When the combo is bound to remote data, setting value/selected items through API will only take into account the items that are loaded in the current chunk. If you want to set an initial value, make sure those specific items are loaded before selecting.
 
-### API Summary
+## API Summary
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo Component](combo.md)
