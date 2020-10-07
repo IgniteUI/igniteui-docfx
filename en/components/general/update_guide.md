@@ -42,12 +42,11 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
 ## From 10.0.x to 10.1.x
-
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
-    * Since we have removed the `IgxExcelStyleSortingTemplateDirective`, `IgxExcelStyleHidingTemplateDirective`, `IgxExcelStyleMovingTemplateDirective`, `IgxExcelStylePinningTemplateDirective` and `IgxExcelStyleSelectingTemplateDirective` directives for re-templating some parts of the Excel style filter menu you could use the newly added directives for re-templating the column operations and filter operations areas - `IgxExcelStyleColumnOperationsTemplateDirective` and `IgxExcelStyleFilterOperationsTemplateDirective`. We have also exposed all internal components of the Excel style filter menu in order to be used inside the templates. You could find more information about using the new template directives in this [topic](../grid/excel_style_filtering.md#templates).
+    * Since we have removed the `IgxExcelStyleSortingTemplateDirective`, `IgxExcelStyleHidingTemplateDirective`, `IgxExcelStyleMovingTemplateDirective`, `IgxExcelStylePinningTemplateDirective`, and `IgxExcelStyleSelectingTemplateDirective` directives used for templating some parts of the Excel style filter menu, you could use the newly added directives for templating the column and filter operations areas - `IgxExcelStyleColumnOperationsTemplateDirective` and `IgxExcelStyleFilterOperationsTemplateDirective`. We have also exposed all internal components of the Excel style filter menu so that they can be used inside custom templates. You can find more information about the new template directives in the [Excel-Style Filtering Topic](../grid/excel_style_filtering.md#templates).
 * IgxGrid
-    * The `selectedRows()` method has been reworked to be a `selectedRows` input property. This breaking change allows a user to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
-    * Binding of the `selectedRows` input could look something like this:
+    * The `selectedRows()` method has been refactored into an input property named. This breaking change allows users to easily change the grid's selection state at runtime. Pre-selection of rows is also supported. All instances where the `selectedRows()` method is called have to be rewritten without any parentheses.
+    * Binding to the `selectedRows` input property could look something like this:
     ```typescript
     public mySelectedRows = [0, 1, 2];
     ```
@@ -58,8 +57,32 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     </igx-grid>
     ```
 
-## From 8.x.x to 9.0.x
+## From 9.0.x to 10.0.x
+* IgxDropdown
+    * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
+    
+    * The following example demonstrates how to style a dropdown item with an icon and text content so that they are vertically aligned.
+    
+    ```html
+    <igx-drop-down-item>
+        <div class="my-styles">
+            <igx-icon>alarm</igx-icon>
+            <span>item text</span>
+        </div>
+    </igx-drop-down-item>
+    ```
+    ```scss
+    .my-styles {
+        display: flex;
+        align-items: center;
+        
+        span {
+          margin-left: 8px;
+        }
+    } 
+    ```
 
+## From 8.x.x to 9.0.x
 Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added (please, refer to the following document for details: https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) . Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
 
 * igxGrid

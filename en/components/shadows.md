@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 Shadows are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation.
 
-### Elevations
+## Elevations
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
@@ -142,12 +142,12 @@ Shadows are used to establish and maintain functional boundaries between Documen
     </div>
 </div>
 
-### Usage
+## Usage
 <div class="elevate-image">
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-### How to add elevations?
+## How to add elevations?
 
 The following section demonstrates how to set elevation to a component. In the example, we are using the card component.
 
@@ -240,7 +240,7 @@ Here is The result from the above code snippets:
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
 * [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
