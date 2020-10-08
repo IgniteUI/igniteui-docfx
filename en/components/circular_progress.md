@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
 <div class="divider"></div>
 
-#### Demo
+## Demo
 <div class="sample-container loading" style="height:100px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/circular-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 To get started with the Circular Progress Indicator component, first you need to import the **IgxProgressBarModule** in the **app.module.ts** file:
 ```typescript
@@ -54,7 +54,7 @@ After that, we should have the demo sample in your browser.
 > The default progress increments by **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value** per update cycle, this happens if the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is not defined. To change the update rate, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be defined.```
 
 
-#### Indeterminate Progress
+### Indeterminate Progress
 
 If you want to track a process that is not determined precisely, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 
@@ -80,7 +80,7 @@ The final result should be:
 </div>
 <div class="divider--half"></div>
 
-#### Dynamic Progress
+### Dynamic Progress
 
 You can dynamically change the value of the progress by using external controls like buttons. To achieve this, we can bind the value to a class property:
 
@@ -143,7 +143,7 @@ Add some styles:
 }
 ```
 
-#### Gradient Progress
+### Gradient Progress
 
 One way to customize the progress bar is to use a color gradient instead of a solid color.
 This can be done in one of two ways - by using the [`IgxProgressBarGradientDirective`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#gradienttemplate) directive or by implementing a custom theme, albeit custom themes support up to two color stops.
@@ -202,7 +202,7 @@ After reproducing the steps above, you should get this as a result:
 </div>
 <div class="divider--half"></div>
 
-### Styling
+## Styling
 
 To get started with styling the circular progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -219,7 +219,7 @@ $custom-theme: igx-progress-circular-theme(
 );
 ```
 
-#### Including Themes
+### Including Themes
 
 <div class="divider"></div>
 
@@ -258,7 +258,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 }
 ```
 
-#### Demo
+### Demo
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height:100px">
     <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 
@@ -270,7 +270,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API
+## API
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
