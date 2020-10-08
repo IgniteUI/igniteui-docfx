@@ -1,4 +1,4 @@
-## デフォルトのテーマ
+# デフォルトのテーマ
 Material テーマは、Ignite UI for Angular のデフォルトテーマです。これを使用するには、`igx-theme` mixins を `igx-core` の後に含めます。
 
 ```scss
@@ -7,14 +7,14 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 @include igx-theme($default-palette);
 ```
 
-### Material Light テーマ
+## Material Light テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-light-theme($default-palette);
 ```
 
-### Material Dark テーマ
+## Material Dark テーマ
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
@@ -43,7 +43,7 @@ $my-color-palette: igx-palette(
 @include igx-theme($my-color-palette, $schema: $dark-schema);
 ```
 
-### API の概要
+## API の概要
 * [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
