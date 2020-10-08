@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 축
+# Angular 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서는 축은 축 기본 선, 격자선, 눈금 표시, 제목 및 라벨 모양을 설정하는 기본 속성을 제공합니다. 차트가 지원하는 여러 유형의 시리즈에 대해 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)에서 사용할 수 있는 여러 유형의 축이 있습니다. 시리즈 유형에 따라 사용할 수 있는 축 유형이 결정됩니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 지원되는 축
+## 지원되는 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 특정 시리즈 유형에 사용할 수 있도록 다양한 유형의 축을 지원합니다. 다음 표에는 시리즈 유형에 사용할 수 있는 축이 열거되어 있습니다.
 
@@ -38,7 +40,7 @@ _language: kr
 | NumericRadiusAxis  | 모든 [폴라 시리즈](data-chart-type-polar-series.md) 및 [레이디얼 시리즈](data-chart-type-radial-series.md)                                                                                                                                                                                                          |
 | CategoryAngleAxis  | 모든 [레이디얼 시리즈](data-chart-type-radial-series.md)                                                                                                                                                                                                                                                      |
 
-### 카테고리 X축
+## 카테고리 X축
 
 [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)는 데이터를 일련의 카테고리 데이터 항목으로 처리합니다. 이 축의 라벨은 순서의 위치에 따라 X축에 배치됩니다. 이 유형의 축은 문자열과 숫자를 포함한 거의 모든 유형의 데이터를 표시할 수 있습니다. 이 유형의 축은 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md),  and [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)와 호환됩니다
 
@@ -52,7 +54,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 카테고리  Y축
+## 카테고리  Y축
 
 [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html) 는 데이터를 일련의 카테고리 데이터 항목으로 처리합니다. 이 축의 라벨은 순서의 위치에 따라 Y축에 배치됩니다. 이 유형의 축은 문자열과 숫자를 포함한 거의 모든 유형의 데이터를 표시할 수 있습니다. 이 유형의 축은 [카테고리 시리즈](data-chart-type-category-series.md) 그룹 내의 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html)만 호환됩니다.
 
@@ -66,7 +68,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 카테고리 DateTime X축
+## 카테고리 DateTime X축
 
 [`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) 축은 데이터를 날짜별로 정렬된 카테고리 데이터 항목의 순서대로 처리합니다. 이 축의 라벨은 이 축의 `DateTimeMemberPath` 속성을 사용하여 매핑된 데이터 열의 값에 따라 X축에 배치됩니다. 이 유형의 축은 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md) 및 [카테고리 시리즈](data-chart-type-category-series.md)([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)와 호환됩니다
 
@@ -82,7 +84,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 숫자 X축
+## 숫자 X축
 
 [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)는 데이터를 지속적으로 변하는 숫자 데이터 항목으로 처리합니다. 이 축의 라벨은 X축에 배치됩니다. 라벨 위치는 해당 값 매핑 속성을 사용하여 매핑되는 데이터 열의 값에 따라 다릅니다. 이 유형의 축은 [분산 시리즈](data-chart-type-scatter-bubble-series.md) 및 [모양 시리즈](data-chart-type-shape-series.md) 유형과 호환됩니다. 또한, 이 축은 `ValueMemberPath` 속성을 사용하여 데이터 열을 매핑하는 [Category Series](data-chart-type-category-series.md)의 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 유형과 호환됩니다.
 
@@ -96,7 +98,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 숫자 Y축
+## 숫자 Y축
 
 [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)는 데이터를 지속적으로 변하는 숫자 데이터 항목으로 처리합니다. 이 축의 라벨은 Y축에 배치됩니다. 라벨 위치는 해당 값 매핑 속성을 사용하여 매핑되는 데이터 열의 값에 따라 다릅니다. 이 유형의 축은 [분산 시리즈](data-chart-type-scatter-bubble-series.md) 및 [모양 시리즈](data-chart-type-shape-series.md) 유형과 호환됩니다. 또한,  이 축은 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md) 및 [카테고리 시리즈](data-chart-type-category-series.md) 유형([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) 제외)과 호환됩니다
 
@@ -110,7 +112,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 시간 X축
+## 시간 X축
 
 [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)는 데이터를 날짜별로 정렬된 카테고리 데이터 항목의 순서대로 처리합니다. 이 축의 라벨은 이 축의 `DateTimeMemberPath` 속성을 사용하여 매핑된 데이터 열의 값에 따라 X축에 배치됩니다. 이 유형의 축은 [금융 시리즈](data-chart-type-financial-series.md), [범위 시리즈](data-chart-type-range-series.md) 및 [카테고리 시리즈](data-chart-type-category-series.md) 유형과 호환됩니다
 
@@ -126,7 +128,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 서수 시간 X축
+## 서수 시간 X축
 
 [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)와 [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)의 주요 차이점은 서수 축에 표시되는 날짜를 등거리로 가정하는 것입니다. [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html) 는 현재 시간 순서대로 날짜를 정렬하고 조정합니다. 따라서 더 나은 성능을 위해 또는 동일한 시간 간격으로 데이터 항목이 시간 순서대로 이미 존재할 경우에는 [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)를 사용하는 것이 좋습니다.
 
@@ -140,7 +142,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 백분율 변경 Y축
+## 백분율 변경 Y축
 
 [`IgxPercentChangeYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpercentchangeyaxiscomponent.html)는 시리즈의 첫 번째 점을 참조값으로 사용하도록 작동합니다. 첫 번째 값 이후의 각 값은 기준 값과 비교하여 증가 또는 감소하는 백분율에 따라 변경됩니다.
 
@@ -156,7 +158,7 @@ _language: kr
 </igx-data-chart>
 ```
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

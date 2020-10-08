@@ -1,16 +1,16 @@
 ---
-제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics
+제목: 카테고리 차트 | 데이터 비주얼라이제이션 도구 | Infragistics
 _description: 범주 차트 구성 요소를 사용하여 데이터를 나타내는 데 가장 적합한 차트 유형을 분석하고 자동으로 선택합니다. 시각화를위한 차트 유형에 대해 알아보십시오.
-_keywords: category chart, Ignite UI for Angular, infragistics
+_keywords: category chart, Ignite UI for Angular, Infragistics
 _language: kr
 mentionedTypes: ['XamCategoryChart', 'CategoryChartType']
 ---
 
-## 카테고리 차트
+# Angular 카테고리 차트
 
 카테고리 차트 컴포넌트는 카테고리 데이터를 간단히 시각화할 수 있게 해주는 Ignite UI for Angular 차트 컴포넌트입니다. 이 컨트롤은 복잡한 데이터 비주얼라이제이션 도메인을 API로 단순화하여 관리할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,6 +19,8 @@ mentionedTypes: ['XamCategoryChart', 'CategoryChartType']
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -41,14 +43,14 @@ mentionedTypes: ['XamCategoryChart', 'CategoryChartType']
 
 카테고리 차트 컴포넌트의 직관적인 동작의 다른 예로서 명시적으로 레이블을 설정할 필요가 없다는 것입니다. 카테고리 차트는 제공한 데이터 내에서 최초의 적절한 문자열 속성을 사용하고 이를 레이블에 사용합니다.
 
-### 의존성
+## 의존성
 
 차트 패키지를 설치할 때 코어 패키지도 설치해야 합니다.
 
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-charts**
 
-### 필요한 모듈
+## 필요한 모듈
 
 `XamCategoryChart`에는 다음 모듈이 필요합니다:
 
@@ -70,7 +72,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 사용 방법
+## 사용 방법
 
 카테고리 차트 모듈을 불러오기 한 후 다음 단계는 데이터에 바인딩합니다.
 
@@ -97,7 +99,7 @@ var data = [
 
 <div class="divider--half"></div>
 
-### 차트 유형
+## 차트 유형
 
 카테고리 차트의 기본 동작을 무효화하고 표시할 차트 유형을 설정할 수 있습니다. 이는 [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 속성을 설정하여 실행합니다.
 카테고리 차트가 지원하는 모든 유형은 다음과 같습니다.
@@ -105,7 +107,7 @@ var data = [
 > [!NOTE]
 > 특별히 속성의 [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) 설정이 있습니다. [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto)를 사용한 경우, 차트는 데이터를 분석하고 가장 적합한 차트 유형을 할당합니다.
 
-### 지원되는 차트 유형
+## 지원되는 차트 유형
 
 | 속성                                                                                                                                       | 설명                                                                          | 예                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------- |

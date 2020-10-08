@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 금융 시리즈
+# Angular 금융 시리즈
 
 이 항목에서는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 금융 시리즈에 대해 설명합니다. 금융 시리즈는 주가과 같은 금융 데이터를 가져와서 가로 라인을 따라 OHLC바 또는 캔들스틱 컬렉션(예: [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html))으로 렌더링하는 차트 시리즈 중 가장 간단하고 일반적인 형식의 그룹입니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,15 +17,17 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 금융 시리즈의 유형
+## 금융 시리즈의 유형
 
 데이터 차트는 2개의 금융 오버레이와 30개 이상의 금융지표 및 시간 경과에 따라 높음, 낮음, 시작가, 마감가와 같은 주가를 표시하는 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html)를 지원합니다. [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html#displaytype) 속성을 사용하여 주가를 OHLC바 또는 캔들스틱으로 표시할 수 있습니다. 이 시리즈는 주가의 변화를 측정하고 동향을 분석하기 위해 다수의 금융지표 및 금융 오버레이와 결합하여 종종 사용됩니다.
 
-### 금융 오버레이
+## 금융 오버레이
 
 금융 오버레이는 일반적으로 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html)
 뒤에 표시되며 주가의 동향을 보여줍니다. 이러한 오버레이는 Y축에서 동일한 비율의 값을 사용하기 때문에 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html)를 표시하는 동일한 데이터 차트에 표시할 수 있습니다. 다음 목록은 모든 금융 오버레이 유형을 보여줍니다:
@@ -33,7 +35,7 @@ _language: kr
 -   [`IgxBollingerBandsOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html)(BBO)는 가격의 표준 편차를 기반으로 하므로 가격 변동폭을 반영합니다. 밴드는 표준 편차가 증가할 때 더 넓어지고 표준 편차가 감소할 때 더 좁아지며 이동 평균에 의해 평탄해집니다. 사용자가 조정할 수 있는 표준 편차 및 평탄한 기간을 제외하고 BollingerBandsOverlay 너비의 비율에 영향을 주는 사용자가 조정 가능한 승수가 있으며,
 -   [`IgxPriceChannelOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpricechanneloverlaycomponent.html)(PCO)는 가격 변동성 또는 2개의 평행선 간의 시간에 따른 가격 변화입니다. 아래 줄은 추세선으로 저가에 그려지고, 위쪽 줄은 채널선으로 고가에 기초합니다. 채널은 모든 시간대의 추세 방향을 보여줍니다. 가격 채널 또는 추세, 위, 아래 또는 옆으로 가능
 
-### 금융지표
+## 금융지표
 
 금융지표는 종종 거래자들이 변화를 측정하고 주가의 추세를 보여 주기 위해 사용됩니다. 이러한 지표는 일반적으로 동일한 Y축 비율을 공유하지 않기 때문에 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html)의 차트 위 또는 아래에 별도의 차트로 표시됩니다. 단, 차트 제어는 원하는 경우, 여러 축을 사용하고 축을 공유하여 동일한 플롯 영역에 가격 시리즈와 지표를 나타내도록 지원합니다. 이에 대한 자세한 것은 [Axis Sharing and Multiple Axes](data-chart-axis-sharing.md) 항목을 참조하십시오. 또한, 모든 금융지표에는 인디케이터가 선, 열 또는 영역을 사용하여 렌더링되는지 여부를 결정하는 [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html#displaytype) 속성이 있습니다. 다음 목록은 모든 금융지표 유형을 보여줍니다:
 
@@ -72,11 +74,11 @@ _language: kr
 -   [`IgxWeightedCloseIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxweightedcloseindicatorcomponent.html)(WCI)는 하루 동안의 고가, 저가 및 종가 평균을 나타내는 점에서 [`IgxTypicalPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtypicalpriceindicatorcomponent.html)와 유사합니다. 단, 이 인디케이터는 종가에 더 중점을 두며 산술 평균을 계산할 때 2번 포함됩니다.
 -   [`IgxWilliamsPercentRIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwilliamspercentrindicatorcomponent.html)(WPRI)는 스탁캐스틱 오실레이터와 유사합니다. 단, 비율 범위는 0~-100입니다. 과다 매입 및 과다 매도 증권을 식별하는 데 유용합니다. 이 인디케이터는 해당 기간의 가장 높은 최고치와 해당 기간의 가장 높은 최고치에서 가장 낮은 최저치를 뺀 값의 현재 종가 사이의 차이로 나누어 계산합니다.
 
-### 필요한 축
+## 필요한 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 모든 금융 시리즈에서는 Y축으로 [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)를, X축으로 [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html) 또는 [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html)만 사용할 수 있습니다.
 
-### 필요한 데이터
+## 필요한 데이터
 
 금융 시리즈, 인디케이터 및 오버레이의 데이터 요구 사항은 다음과 같습니다:
 
@@ -91,7 +93,7 @@ _language: kr
 this.state = { dataSource: SampleFinancialData.create() }
 ```
 
-### 필요한 모듈
+## 필요한 모듈
 
 금융 시리즈에는 다음과 같은 모듈이 필요합니다:
 
@@ -117,7 +119,7 @@ import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
 })
 ```
 
-### 코드 예제
+## 코드 예제
 
 이 코드는 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html), [`IgxBollingerBandsOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbollingerbandsoverlaycomponent.html) 및 [`IgxMedianPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmedianpriceindicatorcomponent.html)를 사용하여 데이터 차트의 예를 만드는 방법을 보여줍니다. 이 시리즈는 동일한 X축과 Y축을 사용하지만 여러 축을 사용하여 서로 다른 시리즈에 할당할 수 있습니다. 자세한 것은 [축 공유 및 다중 축](data-chart-axis-sharing.md) 항목을 참조하십시오.
 
@@ -165,7 +167,7 @@ import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
  </igx-data-chart>
 ```
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

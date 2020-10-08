@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 시리즈
+# Angular 시리즈
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 시리즈는 카테고리 시리즈, 금융 시리즈, 폴라 시리즈, 레이디얼 시리즈, 범위 시리즈, 분산 시리즈, 스택 시리즈, 모양 시리즈의 유사한 시리즈 그룹으로 분류됩니다.
 
@@ -13,7 +13,7 @@ _language: kr
 
 다음 목록은 각 그룹의 모든 시리즈 유형을 보여 줍니다. 시리즈 이름을 클릭하면 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 각 시리즈를 사용하는 방법에 대해 설명한 도움말을 볼 수 있습니다.
 
-#### 카테고리 시리즈
+### 카테고리 시리즈
 
 -   [AreaSeries](data-chart-type-category-series.md)
 -   [BarSeries](data-chart-type-category-series.md)
@@ -26,7 +26,7 @@ _language: kr
 -   [StepLineSeries](data-chart-type-category-series.md)
 -   [WaterfallSeries](data-chart-type-category-series.md)
 
-#### 폴라 시리즈
+### 폴라 시리즈
 
 -   [PolarAreaSeries](data-chart-type-polar-series.md)
 -   [PolarLineSeries](data-chart-type-polar-series.md)
@@ -34,19 +34,19 @@ _language: kr
 -   [PolarSplineSeries](data-chart-type-polar-series.md)
 -   [PolarSplineAreaSeries](data-chart-type-polar-series.md)
 
-#### Radial Series
+### Radial Series
 
 -   [RadialAreaSeries](data-chart-type-radial-series.md)
 -   [RadialLineSeries](data-chart-type-radial-series.md)
 -   [RadialColumnSeries](data-chart-type-radial-series.md)
 -   [RadialPieSeries](data-chart-type-radial-series.md)
 
-#### 범위 시리즈
+### 범위 시리즈
 
 -   [RangeAreaSeries](data-chart-type-range-series.md)
 -   [RangeColumnSeries](data-chart-type-range-series.md)
 
-#### 분산 시리즈
+### 분산 시리즈
 
 -   [분산 영역 시리즈](data-chart-type-scatter-area-series.md)
 -   [분산 버블 시리즈](data-chart-type-scatter-bubble-series.md)
@@ -57,17 +57,17 @@ _language: kr
 -   [분산 폴리곤 시리즈](data-chart-type-shape-series.md)
 -   [분산 폴리라인 시리즈](data-chart-type-shape-series.md)
 
-#### 금융 시리즈
+### 금융 시리즈
 
 -   [FinancialPriceSeries(OHLC)](data-chart-type-financial-series.md)
 -   [FinancialPriceSeries(Candlestick)](data-chart-type-financial-series.md)
 
-#### 금융 오버레이
+### 금융 오버레이
 
 -   [BollingerBandsOverlay](data-chart-type-financial-series.md)
 -   [PriceChannelOverlay](data-chart-type-financial-series.md)
 
-#### 금융지표
+### 금융지표
 
 -   [AbsoluteVolumeOscillatorIndicator](data-chart-type-financial-series.md)
 -   [AccumulationDistributionIndicator](data-chart-type-financial-series.md)
