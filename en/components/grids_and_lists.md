@@ -204,10 +204,6 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 ## Angular Grid Example
 <div class="divider--half"></div>
 
-Business propeller – In this angular grid example we show how users can do search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling also we have examples for multi-row Layout, cell styling that includes embedded in the cell linear progress bar Indicator component and sparkline component.
-
-<div class="divider--half"></div>
-
 <div class="sample-container loading" style="height: 435px">
     <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
     </iframe>
@@ -251,7 +247,10 @@ This example demonstrates a few of the data grid’s key features:
 <div class="divider"></div>
 <div class="divider"></div>
 
-<img class="b-lazy b-lazy-gifs vmar--xl width--full b-loaded responsive-img" style="width: 100%" title="Scrolling Ignite UI for Angular Data Grid component" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif?v=201808021304" alt="Scrolling Ignite UI for Angular Data Grid component showing off its performance and data visualization capbilities">
+<div class="sample-container loading" style="height: 520px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/grid/grid-sample-2" onload="onSampleIframeContentLoaded(this);">
+    </iframe>
+</div>
 <div class="divider--half"></div>
 
 ### Data Virtualization and Performance
@@ -307,7 +306,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 ### Angular Grid Accessibility & ARIA Support
 <div class="feature">
     <div class="feature__image feature__image--right">
-<img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid"></div>
+<img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Icon representation for ARIA support" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg?v=201808021304" alt="Icon representation for ARIA support on the Angular Data Grid Component"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Angular Grid Accessibility & ARIA Support<a class="anchorjs-link" href="#angular-grid-accessibility--aria-support" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Ensure accessibility compliance and improve usability, enabling Excel-like [keyboard navigation](grid/keyboard_navigation.md) in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. <a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">Learn about our most recent enhancements to this feature</a>.</p>
