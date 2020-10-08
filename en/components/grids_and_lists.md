@@ -473,6 +473,7 @@ Ignite UI for Angular is a commercially licensed product available via a subscri
 We also offer discounts for multi-year licenses. Please <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">refer to our Pricing page</a> for more information on pricing.
 <div class="divider--half"></div>
 If you are developing applications on multiple platforms, consider our complete app development package, Infragistics Ultimate, which include desktop platforms like WPF and Windows Forms, plus all modern web toolsets for Angular, Web Components, ASP.NET MVC and ASP.NET Core.
+<div class="divider--half"></div>
     </div>
     </div>
     <div class="faqs-accordion-content">
@@ -480,6 +481,7 @@ If you are developing applications on multiple platforms, consider our complete 
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
         No, you cannot purchase the Angular Data Grid separately. It is part of a the <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular">Ignite UI for Angular product</a>, which includes dozens of UI controls and components, plus over 60 charts, including Angular Financial Charting. If you are interested in other modern web platforms like Angular, ASP.NET MVC, Web Components or ASP.NET Blazor, check out our <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui">Ignite UI product bundle</a>, which gives you every web platform for only $100 more on your subscription. That is hundreds of controls, components, and data visualizations for a very low price.
+        <div class="divider--half"></div>
         </div>
     </div>
     <div class="faqs-accordion-content">
@@ -487,6 +489,7 @@ If you are developing applications on multiple platforms, consider our complete 
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
         To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting_started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
+        <div class="divider--half"></div>
         </div>
     </div>
 </div>
