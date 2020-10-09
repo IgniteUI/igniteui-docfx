@@ -24,18 +24,26 @@ Ignite UI for Angular Doughnut Chart コンポーネントは円チャートと�
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
-chart コンポーネントをインストールするときに core パッケージもインストールする必要があります。
+Chart コンポーネントをインストールするときに core パッケージもインストールする必要があります。
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## モジュールの要件
 
-Angular Doughnut Chart コンポーネントは以下のモジュールを要求します。
+Angular ドーナツ チャートを作成するには、以下のモジュールが必要です<!-- Angular, React, WebComponents -->。<!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DoughnutChartModule
+-   RingSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
@@ -176,6 +184,8 @@ this.Seasons = [
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## スライスの分割
 
 ドーナツ チャート コンポーネントのスライスは、コードまたはユーザー インタラクションによって分割できます。
@@ -205,6 +215,7 @@ this.Seasons = [
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## 凡例
 

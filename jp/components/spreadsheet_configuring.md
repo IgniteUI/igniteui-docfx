@@ -27,7 +27,7 @@ Angular Spreadsheet コンポネントは、セルの編集、グリッド線と
 
 Enter キーを押したときに移動する隣接セルの方向は、[`enterKeyNavigationDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#enterkeynavigationdirection) プロパティを `Down`、`Up`、`Left`、`Right` に設定して構成することもできます。
 
-以下のコードスニペットは上記のデモです。
+以下のコード スニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet isEnterKeyNavigationEnabled=true
@@ -44,7 +44,7 @@ this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDire
 
 Angular [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、コントロールの IsFormulaBarVisible プロパティを設定して数式バーの表示/非表示を設定できます。
 
-以下のコードスニペットは上記のデモです。
+以下のコード スニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet isFormulaBarVisible=true></igx-spreadsheet>
@@ -58,7 +58,7 @@ this.spreadsheet.isFormulaBarVisible = true;
 
 [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、コントロールの [`areGridlinesVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#aregridlinesvisible) プロパティを設定して数式バーの表示/非表示を設定できます。
 
-以下のコードスニペットは上記のデモです。
+以下のコード スニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet areGridlinesVisible=true></igx-spreadsheet>
@@ -72,7 +72,7 @@ this.spreadsheet.areGridlinesVisible = true;
 
 [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、AreHeadersVisible プロパティを設定してへッダーの可視性を設定できます。
 
-以下のコードスニペットは上記のデモです。
+以下のコード スニペットは上記のデモです。
 
 ```html
 <igx-spreadsheet areHeadersVisible=false></igx-spreadsheet>
@@ -90,7 +90,7 @@ this.spreadsheet.areHeadersVisible = false;
 
 ユーザーが `End` キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの [`isInEndMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isinendmode) プロパティを設定することでプログラムで設定できます。
 
-以下のコードスニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を終了モードで開始させる方法を示しています。
+以下のコード スニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を終了モードで開始させる方法を示しています。
 
 ```html
 <igx-spreadsheet isInEndMode=true></igx-spreadsheet>
@@ -121,7 +121,7 @@ this.spreadsheet.activeWorksheet.unprotect();
 
 上記の説明で述べた [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールの [`activeSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activeselection) プロパティを使用して取得できます。
 
-次のコードスニペットは、選択モードの設定を示しています。
+次のコード スニペットは、選択モードの設定を示しています。
 
 ```html
 <igx-spreadsheet selectionMode="ExtendSelection"></igx-spreadsheet>
@@ -135,7 +135,7 @@ this.spreadsheet.selectionMode = SpreadsheetCellSelectionMode.ExtendSelection;
 
 [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetselection.html) オブジェクトには、新しい [`SpreadsheetCellRange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetcellrange.html) オブジェクトの形式でスプレッドシートの選択範囲にプログラムでセルの範囲を追加できる `AddCellRange()` メソッドがあります。
 
-次のコードスニペットは、スプレッドシートの選択範囲にセル範囲を追加する方法を示しています。
+次のコード スニペットは、スプレッドシートの選択範囲にセル範囲を追加する方法を示しています。
 
 ```ts
 this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 5));
@@ -147,7 +147,7 @@ this.spreadsheet.activeSelection.addCellRange(new SpreadsheetCellRange(2, 2, 5, 
 
 タブバー領域は、ワークシート名をコントロール内のタブとして可視化する領域です。
 
-次のコードスニペットを使用して、タブバーの表示と幅を設定できます。
+次のコード スニペットを使用して、タブバーの表示と幅を設定できます。
 
 ```ts
 this.spreadsheet.workbook.windowOptions.tabBarVisible = false;

@@ -34,14 +34,14 @@ Angular データ チャート コンポーネントのプロット領域では�
 -   散布シリーズ
     -   [散布バブル シリーズ](data-chart-type-scatter-bubble-series.md)
     -   [散布点シリーズ](data-chart-type-scatter-point-series.md)
-    -   [散布図 - 折れ線シリーズ](data-chart-type-scatter-point-series.md)
-    -   [散布図 - スプライン シリーズ](data-chart-type-scatter-point-series.md)
+    -   [散布図 - 折れ線シリーズ](data-chart-type-scatter-line-series.md)
+    -   [散布図 - スプライン シリーズ](data-chart-type-scatter-spline-series.md)
 
 ## マーカー プロパティ
 
 上記のシリーズは、[`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) プロパティを使用して変更可能な 12 種類のマーカーをサポートしています。また、[`markerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) と [`markerOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) プロパティをそれぞれ使用して、塗りつぶしと線を変更することもできます。
 
-以下のこのコードスニペットは、マーカーの形状と外観を変更する方法を示しています。
+以下のこのコード スニペットは、マーカーの形状と外観を変更する方法を示しています。
 
 ```html
 <igx-column-series name="series1"
@@ -58,7 +58,7 @@ Angular データ チャート コンポーネントのプロット領域では�
 
 `MarkerTemplate` プロパティを使用してカスタム形状を指定できます。
 
-以下のこのコードスニペットは、データポイントの値を使用してカスタム マーカーを作成する方法を示しています。
+以下のこのコード スニペットは、データポイントの値を使用してカスタム マーカーを作成する方法を示しています。
 
 
 ```html

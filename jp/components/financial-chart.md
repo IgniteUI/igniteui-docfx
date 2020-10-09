@@ -46,18 +46,25 @@ Angular Financial Chart コンポーネントは、シンプルな API を使用
 </igx-financial-chart>
 ```
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
-chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+Chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
-## 必要なモジュール
+<!-- end: Angular, React, WebComponents -->
 
-Financial Chart コンポーネントは、以下のモジュールが必要です。
+## モジュールの要件
+
+Angular ファイナンシャル チャートを作成するには、以下のモジュールが必要です<!-- Angular, React, WebComponents -->。<!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   FinancialChartModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
