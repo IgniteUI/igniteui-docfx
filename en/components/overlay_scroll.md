@@ -11,7 +11,7 @@ The scroll strategy determines how the scrolling is handled in the provided `Igx
 3. **Close** - uses a tolerance and closes an expanded component upon scrolling if the tolerance is exceeded.
 4. **Absolute** - scrolls everything.
 
-### Usage
+## Usage
 
 Every scroll strategy has the following methods:
  - [`initialize`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html#initialize) - initializes the scroll strategy. It needs a reference of the document, the overlay service and the id of the component rendered
@@ -25,7 +25,7 @@ this.scrollStrategy.detach();
 ```
 <div class="divider--half"></div>
 
-#### Getting Started
+### Getting Started
 The scroll strategy is passed as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called:
 ```typescript
 // Initializing and using overlay settings
@@ -51,7 +51,7 @@ overlay.show(overlayId, newOverlaySettings);
 ```
 <div class="divider--half"></div>
 
-#### Dependencies
+### Dependencies
 
 To use the any of the scroll strategies, import it like this:
 
@@ -59,7 +59,7 @@ To use the any of the scroll strategies, import it like this:
 import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ```
 
-#### Scroll Strategies
+### Scroll Strategies
 The scroll strategies can be passed to the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to determine how the overlay should handle scrolling.
 The demo below illustrates the difference between the separate [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html):
 <div class="sample-container loading" style="height: 400px">
@@ -71,7 +71,7 @@ The demo below illustrates the difference between the separate [`scrollStrategie
 </div>
 <div class="divider--half"></div>
 
-### Modal
+## Modal
 The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object also allows a boolean property ([`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal)) to be passed. This controls how the overlay will be displayed:
 - If the [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) property is `false`, the element will be attached to the DOM foreground but everything will still be active and interactable - e.g. scrolling, clicking, etc.
 - If the [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) property is `true`, the element will be attached to the DOM foreground and an overlay blocker will wrap behind it, stopping propagation of all events:
@@ -85,10 +85,10 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 </div>
 <div class="divider--half"></div>
 
-### API References
+## API References
 * [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
 
-### Additional Resources
+## Additional Resources
 * [Overlay Main Topic](overlay_main.md)
 * [Position strategies](overlay_position.md)
 * [Styling Topic](overlay_styling.md)
