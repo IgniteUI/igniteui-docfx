@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## コンボ リモート バインディング
+# コンボ リモート バインディング
 <p class="highlight">
 Ignite UI for Angular Combo コンポーネントは、コンボをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
 </p>
 
-### デモ
+## デモ
 以下のサンプルは、[onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 <div class="sample-container loading" style="height: 400px;">
@@ -21,7 +21,7 @@ Ignite UI for Angular Combo コンポーネントは、コンボをリモート 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 Combo コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で `HttpClientModule` を含む必要があります。
 
 ```typescript
@@ -39,7 +39,7 @@ import { HttpClientModule } from "@angular/common/http";
 export class AppModule {}
 ```
 
-#### リモート サービスの定義
+### リモート サービスの定義
 コンボをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。Combo コンポーネントは [virtualizationState]({environment:angularApiUrl}/classes/igxcombocomponent.html#virtualizationstate) プロパティを公開し、コンボの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/igxcombocomponent.html#totalitemcount) プロパティにサーバー上の全項目に対応する値が必要です。
 
 以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボの状態を受け取り、observable としてデータを返します。
@@ -65,7 +65,7 @@ export class RemoteService {
 }
 ```
 
-#### コンボをリモート サービスへバインド
+### コンボをリモート サービスへバインド
 データがサービスから observable として返されると [async](https://angular.io/api/common/AsyncPipe) パイプを使用して Combo コンポーネントに設定します。
 
 ```html
@@ -142,7 +142,7 @@ export class ComboRemoteComponent implements OnInit {
 > [!Note]
 > サービスはプロバイダーとして含む必要があります。
 
-#### 選択の処理
+### 選択の処理
 より複雑なデータ型 (オブジェクトなど) を扱うチャンクでロードされたリモート データにバインドされたコンボを使用する場合、`valueKey` を定義する必要があります。[コンボ トピック](combo.md#データ値と表示プロパティ)で述べたように、`valueKey` が指定されていない場合、コンボは選択を `equality (===)` で処理しようとします。選択済みとしてマークされるオブジェクトは、継続的にロードされるオブジェクトと同じではないため、選択は失敗します。
 
 > [!Note]
@@ -150,13 +150,13 @@ export class ComboRemoteComponent implements OnInit {
 
 コンボがリモートデータにバインドされている場合、APIを介して値/選択項目を設定すると、現在のチャンクにロードされた項目のみが考慮されます。初期値を設定したい場合は、選択する前にそれらの特定の項目がロードされていることを確認してください。
 
-### API まとめ
+## API まとめ
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)

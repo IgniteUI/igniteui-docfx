@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## カスケーディング
+# カスケーディング
 <p class="highlight">
 Ignite UI for Angular の Combo と Select コンポーネントは、コントロールの一方または両方を使用して簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 </p>
 
-### デモ
+## デモ
 以下のサンプルは、[igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントが一緒に使用されています。
 
 <div class="sample-container loading" style="height: 540px;">
@@ -22,9 +22,9 @@ Ignite UI for Angular の Combo と Select コンポーネントは、コント�
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 まず `IgxComboModule` と `IgxSelectModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
@@ -38,7 +38,7 @@ import { IgxComboModule, IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### テンプレートの構成
+### テンプレートの構成
 両方のコンポーネントの API は、選択された項目を取得し、次の Select または Combo のコンポーネントのデータソースを読み込み、選択をクリアしてデータソースをリセットします。
 
 ```html
@@ -57,7 +57,7 @@ export class AppModule {}
 
 ```
 
-#### コンポーネント定義
+### コンポーネント定義
 ```typescript
 import { Component } from "@angular/core";
 import { data } from "./local-data";
@@ -91,7 +91,7 @@ export class CascadingCombos {
 }
 ```
 
-### API まとめ
+## API まとめ
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
@@ -100,7 +100,7 @@ export class CascadingCombos {
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 * [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)
