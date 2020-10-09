@@ -41,7 +41,7 @@ Ignite UI for Angular は以下のタイプの円チャートを提供します�
     <body>
         <div class="link" href="doughnut-chart.md">
             <div class="linkContent">
-                <div>Doughnut Chart</div>
+                <div>ドーナッツ チャート</div>
                 <img class="img" src="../images/charts/doughnut-chart-selection.png">
             </div>
         </div>
