@@ -5,12 +5,8 @@ _keywords: angular data grid, infragistics, infragistics.com
 ---
 <style>
 
-.affix{
-  margin-top: 0;
-}
-
-.theme-widget-wrapper{
-    display: none;
+.themes-container{
+    display: none !important;
 }
 
 .h3, h3{
@@ -25,8 +21,12 @@ _keywords: angular data grid, infragistics, infragistics.com
 
 ul#features-list{
     margin: 0 auto;
-    column-gap: 12%;
-    columns: 2
+    -webkit-column-gap: 12%;
+       -moz-column-gap: 12%;
+            column-gap: 12%;
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2
 }
 
 ul#features-list li{
@@ -51,11 +51,17 @@ div#list-features-included{
 }
 
 div#list-features-included{
-    columns: 3;
-    column-gap: 10%;
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+    -webkit-column-gap: 10%;
+       -moz-column-gap: 10%;
+            column-gap: 10%;
 }
 
 div#support-section-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -73,35 +79,52 @@ h2#frequently-asked-questions{
 }
 
 div#faqs-accordion-wrapper {
-    display: flex;
-    flex-flow: column;
     border: 1px solid #ccc;
     border-top: none;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
 }
 
+
+.faqs-accordion-content{
+    border-bottom: 1px solid #ccc;
+    padding: 0 .9rem;
+    cursor: pointer;
+}
+
+.faqs-accordion-content:hover{
+    background-color: #f2f2f2;
+}
+
+.faqs-accordion-content:last-child{
+    border-top: none;
+}
+
+.faqs-accordion-content:last-child{
+    border-bottom: none;
+}
+
 .faqs-accordion {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  cursor: pointer;
   background: transparent;
   border: none;
   text-align: left;
   outline: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
 .faqs-accordion-panel {
-  padding: 0 18px;
+  padding: 0 18px 5px 18px;
   background: transparent;
   max-height: 0;
   overflow: hidden;
-  margin-bottom: 5px;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
-}
-
-.faqs-accordion-panel ul{
-  margin-bottom: 15px;
 }
 
 .faqs-accordion:before {
@@ -112,7 +135,7 @@ div#faqs-accordion-wrapper {
     height: 25px;
 }
 
-.faqs-accordion.active:before {
+.faqs-accordion-content.active .faqs-accordion:before {
     font-family: Material Icons;
     content: "keyboard_arrow_up";
     font-size: 25px;
@@ -120,17 +143,8 @@ div#faqs-accordion-wrapper {
     height: 25px;
 }
 
-.faqs-accordion-content{
-    border-bottom: 1px solid #ccc;
-    padding: 0 .9rem;
-}
-
-.faqs-accordion-content:last-child{
-    border-top: none;
-}
-
-.faqs-accordion-content:last-child{
-    border-bottom: none;
+.faqs-accordion-panel ul{
+  margin-bottom: 15px;
 }
 
 h3#quick-and-easy-to-customize-build-and-implement{
@@ -233,7 +247,10 @@ This example demonstrates a few of the data grid’s key features:
 <div class="divider"></div>
 <div class="divider"></div>
 
-<img class="b-lazy b-lazy-gifs vmar--xl width--full b-loaded responsive-img" style="width: 100%" title="Scrolling Ignite UI for Angular Data Grid component" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-virtualization-performance-1100.gif?v=201808021304" alt="Scrolling Ignite UI for Angular Data Grid component showing off its performance and data visualization capbilities">
+<div class="sample-container loading" style="height: 520px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/grid/grid-sample-2" onload="onSampleIframeContentLoaded(this);">
+    </iframe>
+</div>
 <div class="divider--half"></div>
 
 ### Data Virtualization and Performance
@@ -289,7 +306,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 ### Angular Grid Accessibility & ARIA Support
 <div class="feature">
     <div class="feature__image feature__image--right">
-<img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid"></div>
+<img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Icon representation for ARIA support" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg?v=201808021304" alt="Icon representation for ARIA support on the Angular Data Grid Component"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Angular Grid Accessibility & ARIA Support<a class="anchorjs-link" href="#angular-grid-accessibility--aria-support" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Ensure accessibility compliance and improve usability, enabling Excel-like [keyboard navigation](grid/keyboard_navigation.md) in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. <a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">Learn about our most recent enhancements to this feature</a>.</p>
@@ -425,12 +442,12 @@ There are multiple options to get access to our award-winning support at Infragi
 ## Ignite UI for Angular Trial License and Commercial
 <div class="divider--half"></div>
 <p>Ignite UI for Angular is a commercially licensed product available via a subscription model. You can try the Ignite UI for Angular product for free when you <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/free-downloads">register for a 30-day trial</a>. When you are done with your Trial Period, you can <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">purchase a license </a> from our web site or by calling <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/about-us/contact-us">sales in your region</a>.</p>
-<hr>
+
 <div class="divider--half"></div>
 
 ## Frequently Asked Questions
 
-<div id="faqs-accordion-wrapper">
+<div id="faqs-accordion-wrapper" class="resizable-content">
     <div class="faqs-accordion-content">
         <div class="faqs-accordion h4">Why should I choose the Infragistics Ignite UI for Angular Data Grid?</div>
         <div class="divider--half"></div>
@@ -456,6 +473,7 @@ Ignite UI for Angular is a commercially licensed product available via a subscri
 We also offer discounts for multi-year licenses. Please <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">refer to our Pricing page</a> for more information on pricing.
 <div class="divider--half"></div>
 If you are developing applications on multiple platforms, consider our complete app development package, Infragistics Ultimate, which include desktop platforms like WPF and Windows Forms, plus all modern web toolsets for Angular, Web Components, ASP.NET MVC and ASP.NET Core.
+<div class="divider--half"></div>
     </div>
     </div>
     <div class="faqs-accordion-content">
@@ -463,26 +481,28 @@ If you are developing applications on multiple platforms, consider our complete 
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
         No, you cannot purchase the Angular Data Grid separately. It is part of a the <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular">Ignite UI for Angular product</a>, which includes dozens of UI controls and components, plus over 60 charts, including Angular Financial Charting. If you are interested in other modern web platforms like Angular, ASP.NET MVC, Web Components or ASP.NET Blazor, check out our <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui">Ignite UI product bundle</a>, which gives you every web platform for only $100 more on your subscription. That is hundreds of controls, components, and data visualizations for a very low price.
+        <div class="divider--half"></div>
         </div>
     </div>
     <div class="faqs-accordion-content">
-        <div class="faqs-accordion h4">Can I purchase the Infragistics Ignite UI for Angular Data Grid control separately?</div>
+        <div class="faqs-accordion h4">How do I Install Angular and the Infragistics Ignite UI for Angular Data Grid control?</div>
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
         To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting_started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
+        <div class="divider--half"></div>
         </div>
     </div>
 </div>
 
 <script>
     (function(){
-        var acc = document.getElementsByClassName("faqs-accordion");
+        var acc = document.getElementsByClassName("faqs-accordion-content");
         var i;
 
         for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            var panel = this.nextElementSibling.nextElementSibling;
+            var panel = this.lastElementChild;
             if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
             } else {
