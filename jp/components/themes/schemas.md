@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: ja
 ---
 
-## スキーマ
+# スキーマ
 <p class="highlight">Schemas はシンプルかつ宣言的にコンポーネントテーマで使用する可能性のあるすべてのプロパティをリストします。</p>
 
 <div class="divider--half"></div>
 
-### 概要
+## 概要
 スキーマはレシピのようなものです。JSON 同様のシンプルな Sass マップでテーマが使用するすべてのプロパティを定義します。プロパティは、色、影、マージン、パディングなどでテーマが使用するあらゆる項目が `schema` として記述され、グローバルまたはコンポーネント テーマへ渡します。コンポーネント スキーマは既存コンポーネント スキーマを拡張し、前のプロパティをオーバーライドします。
 
 次に avatar コンポーネントで使用されるデフォルトのスキーマについて説明します。
@@ -60,7 +60,7 @@ igx-color 関数の結果が最初の引数として `hexrgba` 関数に自動�
 
 <div class="divider"></div>
 
-### スキーマの拡張
+## スキーマの拡張
 上記例からもわかるように、Schemas はシンプルなマップのためプロパティをオーバーライドして拡張できます。デフォルトの avatar スキーマは、その他すべてのプロパティを手動でコピーせずに icon-background を変更することもできます。`extend` 関数を使用して簡単に行うことができます。
 
 ```scss
@@ -71,7 +71,7 @@ $my-avatar-schema: extend($_light-avatar, (
 
 `$my-avatar-schema` の値は、`$my-avatar-schema` が `limegreen` に設定される以外の `$my-avatar-schema` のすべてのプロパティを含みます。
 
-### スキーマの使用
+## スキーマの使用
 以上がコンポーネント スキーマの概要と変更方法です。次に Sass プロジェクトのスキーマの使用方法について説明します。 
 
 各コンポーネント スキーマはすべてのコンポーネントのグローバル スキーマとバンドルされます。`$_light-avatar` スキーマはグローバル `$light-schema` マップの一部です。`$light-schema` はコンポーネント スキーマをコンポーネント名にマップします。`$light-schema` は以下のようになります。
@@ -112,7 +112,7 @@ $my-avatar-theme: igx-avatar-theme(
     $schema: $my-light-schema
 );
 ```
-### まとめ
+## まとめ
 
 スキーマは、テーマ関数や mixins と比較してテーマ エンジンについてより多くの知識を必要としますが、コンポーネント テーマを宣言するためのパワフルな方法を提供します。 
 
@@ -120,14 +120,14 @@ $my-avatar-theme: igx-avatar-theme(
 
 その他のテーマ スキーマの利点としてスキーマ数に制限がないことと必要に応じてスワップできる点です。**たとえば、デフォルトで light と dark テーマ両方を提供するスキーマを内部で使用します。アプリケーション全体の外観を切り替えることもできます。**
 
-### API の概要
+## API の概要
 * [Light Avatar スキーマ]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
 * [Dark コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
