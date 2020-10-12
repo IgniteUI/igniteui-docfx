@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## 角の丸み付け
+# 角の丸み付け
 <p class="highlight">Ignite UI for Angular は、border-radius を変更してコンポーネントの形を変更できます。</p>
 
 <div class="divider--half"></div>
 
-### 概要
+## 概要
 他のプロパティ同様 border radius は、以下の例のようにテーマ スキーマを介して設定されます。 
 
 ```scss
@@ -31,7 +31,7 @@ $_light-button: (
 
 フラクションを使用する場合、テーマ エンジンによって各コンポーネントの min と max の境界に自動的に制限されます。
 
-### 使用方法
+## 使用方法
 上記の例のボタンのデフォルト値を変更できます。
 
 ```scss
@@ -60,7 +60,7 @@ $myButtons-theme: (
 <div class="divider--half"></div>
 
 
-### ベースライン円形値
+## ベースライン円形値
 以下のテーブルは、各コンポーネントのデフォルト border-radius とその min と max 境界を示します。
 
 |                        | **角の形を変更できるか？** | **Min/Max 境界** | **ベースライン テーマ値** |
