@@ -186,8 +186,8 @@ The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularA
 const targetElement = this.myAnchorButton.nativeElement;
 const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings(
         targetElement,
-        RelativePositionStrategy.Connected,
-        RelativePosition.Above);
+        RelativePosition.Above,
+        RelativePositionStrategy.Connected);
 ```
 
 ### Hiding the Overlay
