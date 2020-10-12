@@ -472,7 +472,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 }
 ```
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
