@@ -68,9 +68,13 @@ To turn on the grid excel filtering, two inputs should be set. The [`allowFilter
 
 ## Interactions
 
-In order to open the filter menu for a particular column, the Angular filter icon in the header should be clicked. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons available for the features that are turned on.
+In order to open the filter menu for a particular column, the Angular filter icon in the header should be clicked. Additionally, you can use the `Ctrl + Shift + L` combination on a selected header. If the column can be sorted, pinned, moved, selected or hidden along with the filtering functionality, there will be buttons available for the features that are turned on.
 
-If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and click Apply button. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between the expressions is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). If you want to clear the filter, you can check Select All item and then Apply button.
+If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and either click the Apply button, or press `Enter`. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between the expressions is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or).
+
+If you want to replace the filtered items, simply open the filter menu and apply a new filter. If you want to add items to the currently filtered ones, however, you should select the option `Add current selection to filter`.
+
+If you want to clear the filter, you can check the `Select All` option and then click the Apply button.
 
 To apply a filter with different expressions, you can click the **Text filter**, which will open a sub menu with all available filter operators for the particular column. Selecting one of them will open the custom filter dialog, where you can add as many expressions as you want with different filter and logic operators. There is also a clear button, which can clear the filter.
 
