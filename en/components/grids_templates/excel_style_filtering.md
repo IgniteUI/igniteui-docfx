@@ -72,7 +72,7 @@ In order to open the filter menu for a particular column, the Angular filter ico
 
 If no filter is applied, all the items in the list will be selected. They can be filtered from the input above the list. In order to filter the data, you can select/deselect the items in the list and either click the Apply button, or press `Enter`. The filtering applied through the list items creates filter expressions with `equals` operator and the logic operator between the expressions is [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or).
 
-If you want to replace the filtered items, simply open the filter menu and apply a new filter. If you want to add items to the currently filtered ones, however, you should select the option `Add current selection to filter`.
+If you type something in the search box and apply the filter, only the items that match the search criteria will be selected. If you want to add items to the currently filtered ones, however, you should select the option `Add current selection to filter`.
 
 If you want to clear the filter, you can check the `Select All` option and then click the Apply button.
 
