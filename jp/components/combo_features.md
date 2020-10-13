@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular widgets, web �
 _language: ja
 ---
 
-## コンボ機能
+# コンボ機能
 <p class="highlight">
 Ignite UI for Angular Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
 </p>
 
-### デモ
+## デモ
 以下のデモは、ランタイムで有効または無効にできるいくつかの igx-combo 機能を示します。
 
 <div class="sample-container loading" style="height: 440px;">
@@ -22,9 +22,9 @@ Ignite UI for Angular Combo コントロールは、データと値のバイン�
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 Combo コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。サンプルは[ igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用してコンボのプロパティの値をトグルしているため、`IgxSwitchModule` も必要です。
 
 ```typescript
@@ -41,7 +41,7 @@ import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### テンプレートの構成
+### テンプレートの構成
 
 ```html
 <div class="combo-container">
@@ -61,7 +61,7 @@ export class AppModule {}
 </div>
 ```
 
-#### コンポーネント定義
+### コンポーネント定義
 グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) プロパティを対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 
 ```typescript
@@ -77,9 +77,9 @@ export class AppModule {}
     }
 ```
 
-### 機能
+## 機能
 
-#### データ バインディング
+### データ バインディング
 以下のコード スニペットは、ローカル データソースにバインドされた [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用方法を示しています。[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) は、コンボの選択に保存されるデータ エントリのプロパティを指定し、[displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) は、コンボ テキストに使用されるプロパティを指定します。
 
 ```html
@@ -103,7 +103,7 @@ export class ComboDemo implements OnInit {
 
 Combo コンポーネントをリモート データにバインドする方法の詳細は、[コンボ リモート バインディングのトピック](combo_remote.md)を参照してください。
 
-#### カスタム オーバーレイ設定
+### カスタム オーバーレイ設定
 Combo コンポーネントでは、ユーザーが項目リストの表示方法を変更できます。これを行うには、カスタム [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) を定義し、それらを Combo の [overlaySettings]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) 入力に渡します。
 
 ```typescript
@@ -140,7 +140,7 @@ export class CustomOverlayCombo {
 > [!Note]
 > igx-combo コンポーネントは、デフォルトの配置ストラテジとして [AutoPositionStrategy]({environment:angularApiUrl}/classes/autopositionstrategy.html) を使用します。
 
-#### フィルタリング
+### フィルタリング
 コンボのフィルタリングがデフォルトで有効になります。無効にするには、[filterable]({environment:angularApiUrl}/classes/igxcombocomponent.html#filterable) プロパティを false に設定します。
 
 フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、[showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showsearchcaseicon) プロパティを true に設定します。
@@ -151,7 +151,7 @@ export class CustomOverlayCombo {
 
 <div class="divider--half"></div>
 
-#### カスタム値
+### カスタム値
 [allowCustomValues]({environment:angularApiUrl}/classes/igxcombocomponent.html#allowcustomvalues) プロパティは、カスタム値をコレクションに追加できるかどうかを制御します。有効な場合、コンボ UI で項目を追加できます。
 
 ```html
@@ -160,7 +160,7 @@ export class CustomOverlayCombo {
 
 <div class="divider--half"></div>
 
-#### 検索入力のフォーカス
+### 検索入力のフォーカス
 Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponent.html#autofocussearch) プロパティはコンボが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。デフォルトで、 このプロパティは `true` に設定されます。`false` に設定すると、フォーカスはコンボの項目コンテナーに移動します。モバイル デバイスでは、コンボを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
 
 ```html
@@ -169,7 +169,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 
 <div class="divider--half"></div>
 
-#### コンボの無効化
+### コンボの無効化
 以下のコードでコンボを無効にできます。
 
 ```html
@@ -178,7 +178,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 
 <div class="divider--half"></div>
 
-#### グループ化
+### グループ化
 コンボの `groupKey` オプションを定義すると、キーに基づいて項目をグループ化します。
 
 ```html
@@ -187,7 +187,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 
 <div class="divider--half"></div>
 
-### API まとめ
+## API まとめ
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
@@ -196,7 +196,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)

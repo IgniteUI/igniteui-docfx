@@ -5,23 +5,23 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## グローバル テーマ
+# グローバル テーマ
 <div class="highlight">グローバル テーマは、カスタム カラー パレットを使用するテーマをすばやく生成します。カラー パレットは、コンポーネント専用に作成されたカスタム テーマを持たないすべてのコンポーネントにプロパゲートされます。</div>
 <div class="divider"></div>
 
-### 概要
+## 概要
 アプリケーション プロジェクトに _`igniteui-angular.css`_ ファイルを追加した場合、削除してください。_`My-app-theme.scss`_ ファイルを使用してアプリケーションのすべてのコンポーネント用にグローバル テーマを生成します。
 
 **Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。グローバル テーマの生成には 2 つの mixins `igx-core` と `igx-theme` を含みます。両方の mixins は数個の引数を受け取ります。
 
-#### igx-core  
+### igx-core  
 
 | 名前                 |  型    | デフォルト            | 説明                                                                           |
 | :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
 | `$print-layout`      | boolean  | true               | 印刷にスタイルを含めるか除外します。                                               |
 | `$direction`         | Keyword  | ltr                | すべてのコンポーネントのコンテンツの向きを指定します。 `ltr` または `rtl` に指定できます。 
 
-#### igx-theme  
+### igx-theme  
 
 | 名前              |  型   | デフォルト            | 説明                                                                                                    |
 | :---------------: | :-----: | :---------------:  | :------------------------------------------------------------------------------------------------------------: |
@@ -58,7 +58,7 @@ $my-color-palette: igx-palette(
 > [!IMPORTANT]
 > `igx-theme` の前に `igx-core` を含むと効果的です。`igx-core` は `igx-theme` に必要なすべての基本定義を提供します。
 
-### コンポーネントの除外
+## コンポーネントの除外
 <div class="divider--half"></div>
 
 `igx-theme` mixin は、グローバル テーマ スタイルから除外されるコンポーネント名のリストを提供します。例えば、`igx-avatar` および `igx-badge` に含まれるすべてのスタイルを完全に削除してカスタム スタイルを提供したい場合、コンポーネントのリストを渡して達成することができます。
@@ -72,7 +72,7 @@ $unnecessary: (igx-avatar, igx-badge);
 
 更にアプリで使用しないコンポーネントがある場合、`$exclude` のリストに追加して生成される CSS のサイズを縮小することができます。
 
-### Light と Dark テーマ
+## Light と Dark テーマ
 
 `Igx-theme` mixin に加えグローバル テーマ mixins を追加しました。*__light__* および *__dark__* テーマのブート ストラップにグローバル テーマ mixins が含まれます。これらの mixins は `igx-light-theme` と `igx-dark-theme` です。
 
@@ -92,7 +92,7 @@ $unnecessary: (igx-avatar, igx-badge);
 ```
 アプリケーション DOM ツリーの上位にある `.light-theme` と `.dark-theme` の CSS クラスを適用し、`app-root` 要素が推奨されます。
 
-#### 使用可能なテーマ
+### 使用可能なテーマ
 Ignite UI for Angular には、事前定義されたテーマのセットから選択するオプションがあります。
 以下の表では、すぐに使用できるすべての定義済みテーマを示します。
 
@@ -131,14 +131,14 @@ $my-color-palette: igx-palette(
 @include igx-bootstrap-light-theme($my-color-palette);
 ```
 
-### ブラウザー サポート
+## ブラウザー サポート
 <div class="divider--half"></div>
 
 `$igx-legacy-support` の値は、コンポーネントのテーマの動作を決定するため大変重要です。値を `true` に設定した場合、各コンポーネントのスタイルのルールの値はビルド時にテーマで定義されたハードコーディングされた値に設定されます。`$igx-legacy-support` の値を`false` に設定した場合も、スタイル ルールは `:root` スコープまたは一番近いブロックのスコープで定義された CSS 変数を検索します。
 
 一般的なルールは、Internet Explorer 11 をサポートするかどうかに基づいて `$legacy-support` の値を設定します。IE11 をサポートする場合、`$legacy-support` 値を `true` に設定します。それ以外の場合、値を `false` (デフォルト) に設定すると、テーマで CSS 変数が必要です。
 
-### API の概要
+## API の概要
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
@@ -146,7 +146,7 @@ $my-color-palette: igx-palette(
 
 <div class="divider--half"></div>
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コンポーネント テーマの作成方法:
