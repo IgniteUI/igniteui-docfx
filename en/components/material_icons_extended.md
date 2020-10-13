@@ -11,13 +11,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     <iframe id="material-icons-extended-iframe" seamless class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
-### Installation
+## Installation
 
 ```sh
 npm install @igniteui/material-icons-extended
 ```
 
-### Usage
+## Usage
 
 First, let's see how we can register a single icon in our component:
 
@@ -68,7 +68,7 @@ To use the icons in your component template:
 
 For more information and other types of usage, go to our [GitHub Repository](https://github.com/IgniteUI/material-icons-extended).
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html)
