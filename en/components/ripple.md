@@ -14,9 +14,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </iframe></div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 
 The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxRippleModule` inside your **app.module.ts** file:
 
@@ -41,7 +41,7 @@ The `web-animations.min.js` polyfill is [available](https://github.com/web-anima
 for other browsers.
 
 
-#### Adding Ripple Effect
+### Adding Ripple Effect
 
 Use the `igxRipple` directive to add a ripple effect to the specified element:
 
@@ -49,9 +49,9 @@ Use the `igxRipple` directive to add a ripple effect to the specified element:
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
 
-### Examples 
+## Examples 
 
-#### Custom Color
+### Custom Color
 
 You can easily change the default ripple color using the `igxRipple`:
 
@@ -62,7 +62,7 @@ You can easily change the default ripple color using the `igxRipple`:
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
 </iframe></div>
 
-#### Centered Ripple Effect 
+### Centered Ripple Effect 
 By default, the ripple effect starts from the position of the click event. You can change this behavior using the [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) property and setting the center of the element as origin.
 
 ```html
@@ -72,7 +72,7 @@ By default, the ripple effect starts from the position of the click event. You c
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
 </iframe></div>
 
-#### Ripple Duration
+### Ripple Duration
 We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
 
 ```html
@@ -82,7 +82,7 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
 </iframe></div>
 
-#### Ripple Target
+### Ripple Target
 Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) property to attach a ripple effect to a specific element inside a parent element.
 
 ```html
@@ -101,7 +101,7 @@ Notice that no matter whether you click on the parent or the child element, the 
 > The child element, which you want to target with the `igxRippleTarget` property, has to be relatively positioned.
 
 
-### Styling
+## Styling
 
 First, in order to use the functions exposed by the theme engine, we need to import the `index` file, where all styling functions and mixins are located, into our style file: 
       
@@ -117,7 +117,7 @@ $custom-ripple-theme: igx-ripple-theme(
 );
 ```  
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The next step is to pass the custom ripple theme:
 
@@ -125,7 +125,7 @@ The next step is to pass the custom ripple theme:
 @include igx-css-vars($custom-ripple-theme);
 ```
 
-#### Using Component Theme Overrides
+### Using Component Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -143,7 +143,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 >[!NOTE]
   > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
 
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:200px">
     <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -154,13 +154,13 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 </div>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
