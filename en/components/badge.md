@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 <div class="divider"></div>
 
-#### Demo
+## Demo
 <div class="sample-container loading" style="height:100px">
     <iframe id="badge-sample-2-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 To get started with the Badge, the first step is to import the `IgxBadgeModule` in the **app.module.ts** file:
 
 ```typescript
@@ -80,7 +80,7 @@ igx-badge {
 
 If everything's done right, you should see the demo sample in your browser.
 
-#### Badge in List
+### Badge in List
 
 Let's extend the previous sample and create a list with contacts, similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we're using the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.
 
@@ -212,7 +212,7 @@ If the sample is configured properly, a list of members should be displayed and 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styling
+## Styling
 
 To get started with styling the badges, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -232,7 +232,7 @@ $custom-badge-theme: igx-badge-theme(
 );
 ```
 
-#### Including Themes
+### Including Themes
 
 <div class="divider"></div>
 
@@ -273,7 +273,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:340px">
     <iframe id="badge-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/badge-styling-sample' width="100%" height="100%" 
@@ -285,7 +285,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="badge-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -295,7 +295,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/enums/igxbadgetype.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

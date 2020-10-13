@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Button Group
 <p class="highlight">The Ignite UI for Angular Button Group component is used to organize buttons into styled button groups with horizontal/vertical alignment, single/multiple selection and toggling.</p>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 85px">
     <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
@@ -17,9 +17,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 
 The Button Group is exported as an `NgModule`, thus you will need to import the `IgxButtonGroupModule` inside your `AppModule`:
 
@@ -38,7 +38,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Add Button Group
+### Add Button Group
 
 Use the [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) selector to wrap your buttons and display them into a button group. If you want a button to be selected by default, use the `selected` property:
 
@@ -60,9 +60,9 @@ Use the [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupco
 </igx-buttongroup>
 ```
 
-### Examples
+## Examples
 
-#### Alignment
+### Alignment
 Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) input property to set the orientation of the buttons in the button group.
 
 ```typescript
@@ -92,7 +92,7 @@ public alignment = ButtonGroupAlignment.vertical;
 </div>
 <div class="divider--half"></div>
 
-#### Multiple selection
+### Multiple selection
 Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) input property to enable the multiple selection in the button group.
 
 ```html
@@ -118,7 +118,7 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Display Density
+### Display Density
 The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
 
 > [!NOTE] 
@@ -160,7 +160,7 @@ public selectDensity(event) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Custom toggle buttons
+### Custom toggle buttons
 Use the [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) input property to set an array of customized buttons in the button group.
 
 ```typescript
@@ -234,7 +234,7 @@ public ngOnInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styling
+## Styling
 
 To get started with styling the button group, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -260,7 +260,7 @@ $custom-button-group: igx-button-group-theme(
 
 As seen, the `igx-button-group-theme` exposes some useful parameters for basic styling of its items. If you want to drill deeper and change some button specific parameters, you can create a new theme that extends the `igx-button-theme` and scope it under the respective button group class.
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The last step is to include the component's theme.
 
@@ -268,7 +268,7 @@ The last step is to include the component's theme.
 @include igx-css-vars($custom-button-group);
 ```
 
-#### Using Theme Overrides
+### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -282,7 +282,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 }
 ```
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 200px">
     <iframe id="buttonGroup-style-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-style" class="lazyload no-theming">
@@ -292,7 +292,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
@@ -300,7 +300,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
