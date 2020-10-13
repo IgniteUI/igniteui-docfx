@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox.</p>
 <div class="divider"></div>
 
-#### Demo
+## Demo
 <div class="sample-container loading" style="height: 100px">
 <iframe id="checkbox-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/checkbox-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 At its core, the checkbox component allows for a choice between selected/unselected state. The default styling is done according to the selection controls specification in the Material Design guidelines.
 
 First you need to import the `IgxCheckboxModule` in the **app.module.ts** file:
@@ -45,7 +45,7 @@ To make the checkbox in the demo, add the following code inside the component te
 </igx-checkbox>
 ```
 
-#### Checkbox properties
+### Checkbox properties
 
 Let's enhance the code above by binding the checkbox properties to some data. Say, we have an array of task objects, each having two properties: description and done. You can bind the checkbox component [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) property to the underlying task object done property. Analogically, you can bind the [`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) property to description.
 Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) event and add some custom logic in the provided event handler method.
@@ -101,7 +101,7 @@ The final result would be something like that:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Label Positioning
+### Label Positioning
 
 You can position the label using the checkbox's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) property:
 
@@ -111,7 +111,7 @@ You can position the label using the checkbox's [`labelPosition`]({environment:a
 
 If the `labelPosition` is not set, the label will be positioned after the checkbox.
 
-#### Indeterminate Checkbox
+### Indeterminate Checkbox
 
 In addition to the checked and unchecked states, there is a third state a checkbox can be in: **indeterminate**. In this state the checkbox is neither checked, nor unchecked. This is set using the checkbox's [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) property:
 
@@ -207,7 +207,7 @@ After all that is done, our application should look like this:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styling
+## Styling
 
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -228,7 +228,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-#### Including Themes
+### Including Themes
 
 <div class="divider"></div>
 
@@ -266,7 +266,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
     @include igx-css-vars($custom-checkbox-theme);
 }
 ```
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="checkbox-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" class="lazyload no-theming"></iframe>
@@ -278,14 +278,14 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 * [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
