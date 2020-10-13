@@ -248,7 +248,7 @@ This example demonstrates a few of the data grid’s key features:
 <div class="divider"></div>
 
 <div class="sample-container loading" style="height: 520px">
-    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/grid/grid-sample-2" onload="onSampleIframeContentLoaded(this);">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/finjs-sample/grid-finjs-partial" onload="onSampleIframeContentLoaded(this);">
     </iframe>
 </div>
 <div class="divider--half"></div>

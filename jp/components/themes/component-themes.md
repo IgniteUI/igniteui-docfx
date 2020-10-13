@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## コンポーネント テーマ
+# コンポーネント テーマ
 <div class="highlight">コンポーネント テーマは、テーマをグローバルに定義して特定のコンポーネント インスタンスのスタイルを変更できます。</div>
 <div class="divider"></div>
 
-### 概要
+## 概要
 <div class="divider--half"></div>
 
 Ignite UI for Angular でコンポーネント テーマを設定する方法、次にコンポーネント レベル IE 11 などの古いブラウザーをサポートするためにコンポーネントのテーマ設定に 2 つの方法があります。
@@ -19,7 +19,7 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 これらの方法を実際に使用する方法やコンポーネント レベルのテーマを作成する場合にどちらか一方を使用する方法について説明します。
 <div class="divider"></div>
 
-### テーマの作成
+## テーマの作成
 <div class="divider--half"></div>
 
 コンポーネント テーマは複数のパーツで構成されます。
@@ -69,7 +69,7 @@ $another-avatar-theme: igx-avatar-theme(
 次のポイントに移ります。
 <div class="divider"></div>
 
-### テーマのスコープ
+## テーマのスコープ
 <div class="divider--half"></div>
 
 前の例のように同じコンポーネントをターゲットにした複数のテーマを同じレベルに追加する場合、最後のテーマ mixin が優先されます。これは CSS のカスケードの動作に起因します。同じコンポーネントタイプをターゲットにした 2 つ以上のテーマが必要な場合、セレクターを使用してスコープする必要があります。例えば、複数の `igx-avatar` テーマを作成して特定の CSS セレクターにスコープし、後でコンポーネントマークアップに使用できます。
@@ -99,7 +99,7 @@ $another-avatar-theme: igx-avatar-theme(
 ```
 <div class="divider"></div>
 
-### 表示のカプセル化
+## 表示のカプセル化
 <div class="divider--half"></div>
 
 グローバルにスコープし、単一の Sass ファイルに含まれるテーマを作成する方法について説明しました。ただし最適な方法ではないため、Sass ファイルを特定アプリのコンポーネントにバインドした方がよい場合があります。この場合、表示のカプセル化、特に Angular で発生させる方法を考慮する必要があります。
@@ -155,12 +155,12 @@ CSS 変数を使用すれば、`:: ng-deep` 擬似セレクターは必要あり
 ```
 <div class="divider"></div>
 
-### 古いブラウザーの場合
+## 古いブラウザーの場合
 <div class="divider--half"></div>
 
 [概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`igx-theme` mixin を使用して `$legacy-support` に`true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。 
 
-#### グローバル テーマの使用
+### グローバル テーマの使用
 
 テーマ設定の方法を決定する - true の場合、テーマはハードコーディングされた値で設定されます。
 
@@ -182,7 +182,7 @@ $badge-theme: igx-badge-theme($background-color: white);
 ```
 <div class="divider"></div>
 
-#### カプセル化した表示の使用
+### カプセル化した表示の使用
 
 以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
@@ -200,13 +200,13 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 ```
 <div class="divider"></div>
 
-### API
+## API
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
 
 <div class="divider--half"></div>
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 グローバル テーマの設定方法:

@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## パレット
+# パレット
 <p class="highlight">Ignite UI for Angular テーマ エンジンは、色を生成および取得するためのいくつかの機能と mixins を提供します。</p>
 <div class="divider"></div>
 
-### 概要
+## 概要
 
 パレットは `primary`、` secondary`、 `grays`、` surface`、 `info`、` success`、 `warn`、そして ` error` の色の引数を受け付けます。`primary` の色が通常あなたのブランド カラーです。ほとんどの場合、igx-navbar コンポーネントなどの静的要素のスタイルを設定するために使用されます。二次色は、ボタン、スイッチ、スライダーなどのように動作可能な要素に使用されるものです。唯一必要な引数は `primary` と `secondary` 色のものです。表面色は、カード、メニュー、日付/タイムピッカー、バナーシートなどのようないくつかのコンポーネントの '表面' に色を付けるために使われます。デフォルトでは、`surface`、`grays`、`info`、`success`、`warn`、`error` は、定義済みの色のセットです。
 
@@ -38,7 +38,7 @@ $my-color-palette: igx-palette(
 
 <div class="divider"></div>
 
-### グレースケール パレット
+## グレースケール パレット
 
 `primary` と ` secondary` パレットのように、灰色の色調を生成するために使用される `igx-palette` 関数の色を提供できます。`grays` パレットの生成に使用されるデフォルトの色は `#000` (`black`)。`grays` パレットは、コンポーネント全体のテキストの色を設定するために使用されます。値の変更は、アプリケーションの背景を変更する場合に役立ちます。たとえば、アプリケーションで暗い背景を使用する場合、`grays` の色を `white` に設定すると、すべてのテキストの色は `white` の色調に基づいて強制されます。
 
@@ -59,7 +59,7 @@ $my-color-palette: igx-palette(
 
 <div class="divider"></div>
 
-### サブパレットの色
+## サブパレットの色
 
 `igx-color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
@@ -81,7 +81,7 @@ $my-warning-color: igx-color($my-palette, 'warn');
 
 <div class="divider"></div>
 
-### コントラスト テキスト色の取得
+## コントラスト テキスト色の取得
 
 サブパレットの色の取得と同じように、サブパレットの色のコントラスト テキスト色を取得できます。
 
@@ -98,7 +98,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
 
 <div class="divider"></div>
 
-### Color クラス
+## Color クラス
 
 CSS クラスを使用して Web 要素 (テキストや背景など) に色を適用することを好む人もいます。パレットの各色の CSS クラスを生成できる mixin があります。
 
@@ -120,13 +120,13 @@ mixin は、CSS クラス名とパレットの色を渡す css プロパティ�
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [パレット色の取得]({environment:sassApiUrl}/index.html#function-igx-color)
 * [コントラスト色の取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
 * [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

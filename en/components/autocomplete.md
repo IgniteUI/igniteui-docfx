@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.</p>
 <div class="divider"></div>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 The first step is to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
 
 ```typescript
@@ -89,7 +89,7 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 >[!NOTE]
 >The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means that all capabilities of the dropdown component can be used in the autocomplete.
 
-#### Disabled Autocomplete
+### Disabled Autocomplete
 You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) input:
 
 ```html
@@ -101,7 +101,7 @@ You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({envir
 </igx-input-group>
 ```
 
-#### Autocomplete Settings
+### Autocomplete Settings
 The `igx-autocomplete` dropdown positioning, scrolling strategy, and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings).
 
 In the following example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
@@ -177,7 +177,7 @@ If everything went right, you should see this in your browser:
 
 <div class="divider--half"></div>
 
-### Keyboard Navigation
+## Keyboard Navigation
 <div class="divider--half"></div>
 
  - <kbd>⬆</kbd> / <kbd>⬇</kbd> or typing in the input will open the dropdown, if it's closed.
@@ -189,7 +189,7 @@ If everything went right, you should see this in your browser:
 >[!NOTE]
 >When the autocomplete opens, then the first item on the list is automatically selected. The same is valid when the list is filtered.
 
-### Compatibility support
+## Compatibility support
 Applying the `igxAutocomplete` directive will decorate the element with the following ARIA attributes:
  - role="combobox" - role of the element, where the directive is applied.
  - aria-autocomplete="list" - indicates that input completion suggestions are provided in the form of list
@@ -205,14 +205,14 @@ The `drop-down` component, used as provider for suggestions, will expose the fol
  - aria-disabled="true"/"false" applied on `igx-drop-down-item`, `igx-drop-down-item-group` component containers when they are disabled.
 
 
-### Styling
+## Styling
 Every component has its own theme.
 
 To get the `igxAutocomplete` styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
 
 Take a look at the [`igxInputGroup`](input_group.md#styling) and the [`igxDropdown`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
 
-### API Reference
+## API Reference
 <div class="divider--half"></div>
 
 * [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
@@ -221,7 +221,7 @@ Take a look at the [`igxInputGroup`](input_group.md#styling) and the [`igxDropdo
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [IgxDropDown](drop_down.md)
