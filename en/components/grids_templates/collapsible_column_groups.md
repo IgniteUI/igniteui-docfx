@@ -13,8 +13,9 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-collapsible-groups-iframe" src='{environment:demosBaseUrl}/grid/grid-collapsible-groups' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-collapsible-groups-iframe" src='{environment:demosBaseUrl}/grid/grid-collapsible-groups' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -24,8 +25,9 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="tree-grid-collapsible-groups-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-collapsible-groups-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-collapsible-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -34,9 +36,9 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="hierarchical-grid-collapsible-column-groups-iframe"
-    data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups' width="100%" height="100%" seamless frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-collapsible-column-groups-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-collapsible-column-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-collapsible-column-groups-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
