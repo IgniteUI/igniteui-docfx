@@ -3,12 +3,13 @@ title: Angular Panel | Expandable | Ignite UI for Angular | Infragistics
 _description: Use an Angular accordion/material expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded.
 _keywords: angular accordion, igniteui for angular, infragistics
 ---
-## Expansion Panel
+# Expansion Panel
 <p class="highlight">
     The [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The expansion panel can be toggled using mouse click, or keyboard interactions.
 </p>
 <div class="divider--half"></div>
-### Usage
+
+## Usage
 <div class="sample-container loading" style="height: 320px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -63,7 +64,7 @@ The table below shows all the available markup parts for the expansion panel.
 | `igx-expansion-panel-body`        | This is the expandable container and it's only visible when the panel is expanded.                                     |
 
 
-### Properties Binding and Events
+## Properties Binding and Events
 We can add some logic to our component to make it show/hide the `igx-expansion-panel-description` depending on the current state of the panel.  
 We can do this by binding the description to the control [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) property:
 
@@ -117,7 +118,7 @@ Below we have the results:
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Component Customization
+## Component Customization
 The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html).
 Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconposition) input on the `igx-expansion-panel-header`. The possible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
 
