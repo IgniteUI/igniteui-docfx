@@ -63,8 +63,9 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 The scroll strategies can be passed to the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to determine how the overlay should handle scrolling.
 The demo below illustrates the difference between the separate [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html):
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>

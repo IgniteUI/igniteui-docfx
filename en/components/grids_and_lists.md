@@ -205,9 +205,10 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
     </iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 ## What is an Angular Data Grid? 
 

@@ -10,8 +10,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ### Demo
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
 </iframe></div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div class="divider--half"></div>
 
 ### Usage
