@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent 編集
+# @@igComponent 編集
 
 Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更は、[セル編集](cell_editing.md)、[行編集](row_editing.md)、[一括編集](batch_editing.md)で実行できます。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。**セル編集**モードはデフォルトで有効で、列のデータ タイプに基づいて異なるエディターが表示されます。また、[igxCellEditor](cell_editing.md#セル編集テンプレート) ディレクティブといくつかの [igxRow ディレクティブ](row_editing.md#customizing-row-editing-overlay)を使用してカスタム編集テンプレートを定義できます。
 
-#### 設定
+## 設定
 有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) ブール値プロパティを公開します。
 
 以下のオプションは、プロパティ **editable** で指定できます。
@@ -47,7 +47,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 - **行および一括編集** - このシナリオでは、変更は行レベルで保持されるため、元に戻す/やり直し操作は変更された各セルではなく、各行のセル全体に対して動作します。
 
 
-#### テンプレートの編集
+### テンプレートの編集
 
  データ型固有の**編集テンプレート**を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
@@ -57,7 +57,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
  - `boolean` データ型ではデフォルトのテンプレートは [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
  - カスタム テンプレートについては、[セル編集トピック](cell_editing.md#セル編集テンプレート)を参照してください。
 
-#### Event arguments and sequence
+### Event arguments and sequence
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) life cycle - when starting, committing or canceling editing.
 
  | Event | Description | Arguments | Cancellable |
@@ -71,7 +71,7 @@ The grid exposes a wide array of events that provide greater control over the ed
 | [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 | [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
-##### Event cancelation
+### Event cancelation
  - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
  - `CellEditEnter` - Row edit allowed, although neither of the cells in the row context will be editable.
  - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
@@ -109,7 +109,7 @@ The following sample demonstrates the editing execution sequence in action:
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -123,7 +123,7 @@ The following sample demonstrates the editing execution sequence in action:
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

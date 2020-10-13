@@ -40,7 +40,7 @@ In order to use the [`HierarchicalTransactionService`]({environment:angularApiUr
 Below is a detailed example of how is Batch Editing enabled for the IgxHierarchicalGrid component.
 }
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
@@ -83,7 +83,7 @@ The following sample illustrates how to enable and use Batch Editing via Transac
 > [!NOTE]
 > Transaction state consists of all the updated, added and deleted rows, and their last states.
 
-### Usage
+## Usage
 
 To get started import the `@@igxNameModule` in the **app.module.ts** file:
 
@@ -393,7 +393,7 @@ Deleting a parent node in the grid has some peculiarities. If you are using a hi
 > [!NOTE]
 > Disabling [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property will modify @@igComponent to create transactions on cell change and will not expose row editing overlay in the UI.
 
-### API References
+## API References
 
 @@if (igxName === 'IgxGrid') {
 * [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
@@ -409,7 +409,7 @@ Deleting a parent node in the grid has some peculiarities. If you are using a hi
 * [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
 }
 
-### Additional Resources
+## Additional Resources
 
 * [@@igComponent Overview](@@igMainTopic.md)
 * [@@igComponent Editing](editing.md)

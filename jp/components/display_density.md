@@ -5,13 +5,13 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## 表示密度
+# 表示密度
 
 密度設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、事前に定義された一連のオプション (comfortable、compact、 cosy) を提供します。
 
 [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) インジェクション トークンを使用し、アプリケーションやコンポーネントの表示密度を設定できます。 
 
-### 表示密度のデモ
+## 表示密度のデモ
 <div class="sample-container loading" style="height: 250px; width: 600px;">
     <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -24,7 +24,7 @@ _language: ja
 > [!NOTE]
 > Ignite UI for Angular コンポーネントをプロジェクトに追加する前に、必要なすべての依存関係を構成し、プロジェクトのセットアップが正しく完了したことを確認してください。[インストール](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#installation) のトピックで手順をご確認ください。
 
-### 使用方法
+## 使用方法
 
 **アプリケーションやコンポーネントのレベルで表示密度を設定**
 
@@ -46,7 +46,7 @@ providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayD
 <igx-input-group [displayDensity]="'cosy'"> ... </igx-input-group>
 ```
 
-### API リファレンス
+## API リファレンス
 <div class="divider"></div>
 
 * [DisplayDensity]({environment:angularApiUrl}/enums/displaydensity.html)
@@ -54,7 +54,7 @@ providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayD
 * [IDisplayDensityOptions]({environment:angularApiUrl}/interfaces/idisplaydensityoptions.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

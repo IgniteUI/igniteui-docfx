@@ -1,14 +1,14 @@
 ---
-title: Angular Data Grid | Angular Grid & Diagram Component | Infragistics
+title: Angular Data Grid | Angular Material Table | Infragistics
 _description: Create a touch-responsive Angular component with a variety of events using the Ignite UI for Angular data grid. Enhance your data visualization today!
-_keywords: angular data grid, angular component, ignite ui for angular, angular grid, angular diagram component
+_keywords: angular data grid, angular grid, angular material table, ignite ui for angular
 ---
 
 # Angular Data Grid Overview and Configuration
 
 <p class="highlight">The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ _keywords: angular data grid, angular component, ignite ui for angular, angular 
 </div>
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
@@ -95,7 +95,7 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
  ...
  ```
 
-# Columns configuration
+## Columns configuration
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
 
@@ -119,7 +119,7 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Each of the columns of the grid can be templated separately. The column expects `ng-template`  Angular grid module directives.
 
-#### Header template
+### Header template
 
 `igxHeader` targets the column header providing as a context the column object itself.
 
@@ -429,7 +429,7 @@ The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html
 
 Currently, the Angular data grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
 
-### Nested data
+### Working with Nested data
 
 There are mainly two ways to bind a more complex data source to the Angular grid.
 The grid supports binding through a "path" of properties in the data record.
@@ -563,7 +563,7 @@ And the result from this configuration is:
 </div>
 <div class="divider--half"></div>
 
-### Flat data
+### Working with Flat data
 
 The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property of the [IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html).
 

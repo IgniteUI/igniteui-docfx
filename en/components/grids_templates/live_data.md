@@ -3,7 +3,7 @@
 ---
 title: Grid Live Data - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
-_keywords: angular data grid, agular grid updates, angular live data
+_keywords: angular data grid, angular grid updates, angular live data
 ---
 }
 
@@ -11,11 +11,11 @@ _keywords: angular data grid, agular grid updates, angular live data
 ---
 title: Tree Grid Live Data - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
-_keywords: angular data grid, agular grid updates, angular live data
+_keywords: angular data grid, angular grid updates, angular live data
 ---
 }
 
-### Live Updating Demo
+# Live Updating Demo
 The @@igComponent component in Ignite UI for Angular is able to handle thousands of updates per seconds, while keeping the grid responsive for any interaction that the user may undertake. This sample demonstrates the @@igComponent handling thousands of updates per second and also Chart representation of data, based on Category Prices per Region. Use the `Chart` button to show data based on the `selected rows` or use the button under `Chart column` to see the same based on row `Region` value.
 
 @@if (igxName === 'IgxGrid') {

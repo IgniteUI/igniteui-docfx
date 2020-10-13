@@ -1,18 +1,19 @@
 ---
-title: Excel Library Using Worksheets
+title: Angular Excel Library Using Worksheets
 _description: The Ignite UI for Excel Library component with Worksheet Operations.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Worksheet, Conditional Formatting, Sorting, Filtering, Gridlines, Headers, Protection
 ---
 
-## Using Worksheets
+# Angular Using Worksheets
 
 The Infragistics Excel Engine's [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) allows you to filter, sort, and customize the formats of the cells, as shown below.
 
-### Demo
+## Demo
 
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 200px">
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
@@ -33,7 +34,7 @@ import { SortDirection } from "igniteui-angular-excel";
 import { WorkbookColorInfo } from "igniteui-angular-excel";
 ```
 
-### Configuring the Gridlines
+## Configuring the Gridlines
 
 The gridlines are used to visually separate the cells in the worksheet. You may show or hide the gridlines and also change their color.
 
@@ -55,7 +56,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.gridlineColor = "Red";
 ```
 
-### Configuring the Headers
+## Configuring the Headers
 
 The column and row headers are used to visually identify columns and rows. They are also used to visually highlight the currently selected cell or cell region.
 
@@ -68,7 +69,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.showRowAndColumnHeaders = false;
 ```
 
-### Configuring Editing of the Worksheet
+## Configuring Editing of the Worksheet
 
 By default, the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) objects that you save will be editable. You can disable editing of a worksheet by protecting it using the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object's `protect` method. This method has a lot of nullable `bool` arguments that determine which pieces are protected, and one of these options is to allow editing of objects, which if set to `false` will prevent editing of the worksheet.
 
@@ -95,7 +96,7 @@ worksheet.protect();
 worksheet.columns(0).cellFormat.locked = false;
 ```
 
-### Filtering Worksheet Regions
+## Filtering Worksheet Regions
 
 Filtering is done by setting a filter condition on a worksheet's [`WorksheetFilterSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html) which can be retrieved from the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object's `filterSettings` property. Filter conditions are only reapplied when they're added, removed, modified, or when the `reapplyFilters` method is called on the worksheet. They are not constantly evaluated as data within the region changes.
 
@@ -126,7 +127,7 @@ worksheet.filterSettings.setRegion("Sheet1!A1:A10");
 worksheet.filterSettings.applyAverageFilter(0, AverageFilterType.AboveAverage);
 ```
 
-### Freezing and Splitting Panes
+## Freezing and Splitting Panes
 
 You can freeze rows at the top of your worksheet or columns at the left using the freezing panes features. Frozen rows and columns remain visible at all times while the user is scrolling. The frozen rows and columns are separated from the rest of the worksheet by a single, solid line, which cannot be removed.
 
@@ -149,7 +150,7 @@ worksheet.displayOptions.frozenPaneSettings.firstColumnInRightPane = 2;
 worksheet.displayOptions.frozenPaneSettings.firstRowInBottomPane = 6;
 ```
 
-### Setting the Worksheet Zoom Level
+## Setting the Worksheet Zoom Level
 
 You can change the zoom level for each worksheet independently using the `magnificationInNormalView` property on the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object's `displayOptions`. This property takes a value between 10 and 400 and represents the percentage of zoom that you wish to apply.
 
@@ -162,7 +163,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.displayOptions.magnificationInNormalView = 300;
 ```
 
-### Worksheet Level Sorting
+## Worksheet Level Sorting
 
 Sorting is done by setting a sorting condition on a worksheet level object on either columns or rows. You can sort columns or rows in ascending or descending order.
 
@@ -179,7 +180,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
 ```
 
-### Worksheet Protection
+## Worksheet Protection
 
 You can protect a worksheet by calling the `protect` method on the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object. This method exposes many nullable `bool` parameters that allow you to restrict or allow the following user operations:
 
@@ -205,7 +206,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 worksheet.protect();
 ```
 
-### Worksheet Conditional Formatting
+## Worksheet Conditional Formatting
 
 You can configure the conditional formatting of a [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object by using the many "Add" methods exposed on the `conditionalFormats` collection of that worksheet. The first parameter of these "Add" methods is the `string` region of the worksheet that you would like to apply the conditional format to.
 

@@ -8,7 +8,7 @@ _keywords: angular filter, ignite ui for angular, infragistics, Angular フィ�
 
 IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング](filtering.md)、[Excel スタイル フィルタリング](excel_style_filtering.md)、および[高度なフィルタリング](advanced_filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。
 
-#### 設定
+## 設定
 フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
 
 **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** プロパティを使用して、以下のオプションを指定できます:
@@ -45,14 +45,14 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 >[!NOTE]
 >@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルター結果の共通部分です。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

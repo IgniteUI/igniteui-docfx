@@ -1,15 +1,15 @@
 ---
-제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics | 사용자 인디케이터
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Infragistics | 사용자 인디케이터
 _description: 재무 차트 구성 요소를 사용하여 간단한 API를 사용하여 재무 데이터를 시각화하십시오. 자세한 정보는 데모, 종속성, 사용법 및 도구 모음을보십시오.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+_keywords: financial chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## 사용자 인디케이터
+# Angular 사용자 인디케이터
 
 `XamFinancialChart` 제어를 사용하면 인디케이터 창에 표시하는 사용자 금융지표를 정의할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-custom-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>

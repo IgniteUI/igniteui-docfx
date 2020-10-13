@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent の仮想コンテンツ検索機能
+# @@igComponent の仮想コンテンツ検索機能
 
 ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Angular Material テーブル ベースのグリッドの拡張により、検索 API を使用した**仮想コンテンツ**の検索が可能です。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -55,9 +55,9 @@ _language: ja
 <!-- TODO -->
 }
 
-### 使用方法
+## 使用方法
 
-#### グリッドの設定
+### グリッドの設定
 グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加しました。
 
 @@if (igxName === 'IgxGrid') {
@@ -130,7 +130,7 @@ public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
 
-#### 検索入力ボックス
+### 検索入力ボックス
 
 検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによる各 **searchText** のすべての変更を検出できます。これによって @@igComponent の [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
@@ -149,7 +149,7 @@ public exactMatch: boolean = false;
 <input #search1 id="search1" placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)" />
 ```
 
-#### 検索結果の個数を表示
+### 検索結果の個数を表示
 検索で見つかった現在の場所と総個数を示します。グリッドの `lastSearchInfo` プロパティを使用します。このプロパティは、**find** メソッド使用時に自動的に更新されます。
 
 - `@@igObjectRef.lastSearchInfo.matchInfoCache.length` 値は検索で見つかった個数です。
@@ -168,7 +168,7 @@ public exactMatch: boolean = false;
 </div>
 ```
 
-#### 検索ボタンの追加
+### 検索ボタンの追加
 
 ボタンの各クリック イベント ハンドラー内で [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを呼び出して検索や検索結果をナビゲーションするためのボタンを作成します。
 
@@ -181,7 +181,7 @@ public exactMatch: boolean = false;
 </div>
 ```
 
-#### キーボード検索の追加
+### キーボード検索の追加
 
 ユーザーは矢印キーと Enter キーで結果を移動できます。preventDefault() メソッドのデフォルト キャレットの移動を防止する検索入力の **keydown** イベントを処理し、ユーザーが押したキーに基づいて [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを呼び出します。
 
@@ -206,7 +206,7 @@ public searchKeyDown(ev) {
 }
 ```
 
-#### 大文字と小文字の区別と完全一致
+### 大文字と小文字の区別と完全一致
 
 次に完全一致の検索で大文字と小文字を区別するかどうかをユーザーが選択できるようにします。**caseSensitive** と **exactMatch** プロパティを入力 **caseSensitive** and **exactMatch** プロパティにそれぞれバインドし、プロパティを切り替えて **change** イベントを処理後、[`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) メソッドを呼び出すことによりシンプルなチェックボックスを使用します。
 
@@ -234,11 +234,11 @@ public updateExactSearch() {
 }
 ```
 
-#### 永続化
+### 永続化
 
 @@igComponent のフィルターやソート、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティの変更時も強調表示が保持されます。
 
-#### アイコンの追加
+### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
 [**IgxInputGroup**](../input_group.md)、[**IgxIcon**](../icon.md)、[**IgxRipple**](../ripple.md)、[**IgxButton**](../button.md)、[**IgxChip**](../chip.md) のモジュールを使用します。
@@ -346,7 +346,7 @@ public clearSearch() {
 </igx-suffix>
 ```
 
-### 既知の制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |
@@ -354,7 +354,7 @@ public clearSearch() {
 |リモート仮想化| リモート仮想化の使用時に検索が正しく動作しない問題。|
 |セル テキストが切れる問題| セル内のテキストが長すぎるために検索テキストが省略記号によって切れている場合も、セルまでスクロールして一致カウントに含まれますが、強調表示はされません。|
 
-### API リファレンス
+## API リファレンス
 
 このトピックでは、@@igComponent にカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。以下は検索 API です。
 
@@ -390,7 +390,7 @@ public clearSearch() {
 * [IgxButtonDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

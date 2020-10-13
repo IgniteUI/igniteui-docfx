@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## コンボ テンプレート
+# コンボ テンプレート
 <p class="highlight">
 Ignite UI for Angular Combo コンポーネントでは、ヘッダー、フッター、項目、空のリスト、追加ボタンなどのさまざまな領域にカスタム テンプレートを定義できます。
 </p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ Ignite UI for Angular Combo コンポーネントでは、ヘッダー、フッ�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 Combo コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。
 
 ```typescript
@@ -36,10 +36,10 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### テンプレート タイプ
+## テンプレート タイプ
 `igx-combo` のテンプレートを定義する場合、定義済みの参照名を使用して参照してください。
 
-#### 項目テンプレート
+### 項目テンプレート
 セレクター `[igxComboItem]` の使用:
 
 ```html
@@ -53,7 +53,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-#### ヘッダー テンプレート
+### ヘッダー テンプレート
 セレクター `[igxComboHeader]` の使用:
 
 ```html
@@ -64,7 +64,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-#### フッター テンプレート
+### フッター テンプレート
 セレクター `[igxComboFooter]` の使用:
 
 ```html
@@ -75,7 +75,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-#### 空のテンプレート
+### 空のテンプレート
 セレクター `[igxComboEmpty]` の使用:
 
 ```html
@@ -86,7 +86,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-#### テンプレートの追加
+### テンプレートの追加
 セレクター `[igxComboAddItem]` の使用:
 
 ```html
@@ -99,7 +99,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-#### トグル アイコン テンプレート
+### トグル アイコン テンプレート
 セレクター `[igxComboToggleIcon]` の使用:
 
 ```html
@@ -110,7 +110,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-#### クリア アイコン テンプレート
+### クリア アイコン テンプレート
 セレクター `[igxComboClearIcon]` の使用:
 
 ```html
@@ -121,7 +121,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-### コンボ入力のテンプレート化
+## コンボ入力のテンプレート化
 テンプレートで使用した場合、`igxComboClearIcon` および `igxComboToggleIcon` セレクターがコンボ入力での各ボタンの表示方法を変更します。`igx-combo` 内のコンテンツを渡すと、`igx-input-group` をテンプレート化する方法 (`igx-prefix`、`igx-suffix`、`igxLabel` を使用) と同様に、コンボ入力のテンプレート化も可能になります。以下のコード スニペットは、適切なラベルやプレフィックスをコンボに追加する方法を示します。
 
 ```html
@@ -131,13 +131,13 @@ export class AppModule {}
     </igx-combo>
 ```
 
-### API まとめ
+## API まとめ
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)

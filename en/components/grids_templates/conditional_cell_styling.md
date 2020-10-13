@@ -49,79 +49,9 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-#### Demo with 'cellClasses'
+## Overview
 
-@@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:530px">
-    <iframe id="grid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
-<div class="divider--half"></div>
-
-- By using the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles) which accepts an object literal where the keys are style properties and the values are expressions for evaluation.
-
-```ts
-public styles = {
-    "background": "linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)",
-    "text-shadow": "1px 1px 2px rgba(25,25,25,.25)",
-    "animation": "0.25s ease-in-out forwards alternate popin"
-};
-```
-
-> The callback signature for both `cellStyles` and `cellClasses` is now changed to:
-
-```ts
-(rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
-```
-
-#### Demo with 'cellStyles'
-
-@@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:530px">
-    <iframe id="grid-cell-cellStyling-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-cell-cellStyling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
-}
-<div class="divider--half"></div>
-
-### Overview
-
-#### Using cellClasses
+### Using cellClasses
 You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and define custom rules.
 
 @@if (igxName === 'IgxGrid') {
@@ -217,7 +147,50 @@ public priceClasses = {
 
 Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
-#### Using cellStyles
+### Demo
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-styling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-cell-styling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
+<div class="divider--half"></div>
+
+- By using the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles) which accepts an object literal where the keys are style properties and the values are expressions for evaluation.
+
+```ts
+public styles = {
+    "background": "linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)",
+    "text-shadow": "1px 1px 2px rgba(25,25,25,.25)",
+    "animation": "0.25s ease-in-out forwards alternate popin"
+};
+```
+
+> The callback signature for both `cellStyles` and `cellClasses` is now changed to:
+
+```ts
+(rowData: any, columnKey: string, cellValue: any, rowIndex: number) => boolean
+```
+
+### Using cellStyles
 Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
 
 In the [sample above](conditional_cell_styling.md#demo-with-cellstyles) we've created:
@@ -317,8 +290,34 @@ Define a `popin` animation
 }
 ```
 
+### Demo
 
-#### Known issues and limitations
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:530px">
+    <iframe id="grid-cell-cellStyling-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-cellStyling-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:600px">
+    <iframe id="treegrid-cell-cellStyling-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-cellStyling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<!-- TODO -->
+}
+<div class="divider--half"></div>
+
+## Known issues and limitations
 
 - If there are cells bind to the same condition (from different columns) and one cell is updated, the other cells won't be updated based on the new value, if the condition is met.
 A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operator` ... on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
@@ -345,14 +344,14 @@ editDone(evt) {
   ...
 ```
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
@@ -369,7 +368,7 @@ editDone(evt) {
 * [Selection](selection.md)
 * [Searching](search.md)
 * [Toolbar](toolbar.md)
-* [Multi Column Headers](multi_column_headers.md)
+* [Multi-column Headers](multi_column_headers.md)
 * [Display Density](display_density.md)
 
 <div class="divider--half"></div>

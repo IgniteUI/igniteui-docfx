@@ -1,14 +1,14 @@
 ---
-title: Map | Data Visualization Tools | Ignite UI for Angular | Geographic Data Models | Infragistics
+title: Angular Map | Data Visualization Tools | Geographic Data Models | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
-_keywords: map, Ignite UI for Angular, infragistics
+_keywords: map, Ignite UI for Angular, Infragistics
 ---
 
-## Binding Geographic Data Models
+# Angular Binding Geographic Data Models
 
 The Ignite UI for Angular map component is designed to display geo-spatial data from shape files and/or geographic locations from data models on geographic imagery maps. The `ItemsSource` property of geographic series is used for the purpose of binding to data models. This property can be bound an array of custom objects.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="geo-map-binding-data-model-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -32,6 +32,6 @@ The following table summarized data structures required for each type of geograp
 | [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)                           | `ShapeMemberPath`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Specifies the name of data column of `ItemsSource` items that contains the geographic points of shapes. This property must be mapped to an array of arrays of objects with x and y properties.     |
 | [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)                     | `ShapeMemberPath`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Specifies the name of data column of `ItemsSource` items that contains the geographic coordinates of lines. This property must be mapped to an array of arrays of objects with x and y properties. |
 
-### Code Snippet
+## Code Snippet
 
 The following code shows how to bind the [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) to a custom data model that contains geographic locations of some cities of the world stored using longitude and latitude coordinates. Also, we use the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) to plot shortest geographic path between these locations using the [WorldUtility](geo-map-resources-world-util.md)

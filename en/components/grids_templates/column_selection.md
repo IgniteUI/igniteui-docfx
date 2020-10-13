@@ -43,15 +43,15 @@ The Column selection feature provides an easy way to select an entire column wit
 </div>
 <div class="divider--half"></div>
 
-### Basic usage
+## Basic usage
 
 The column selection feature can be enabled through the [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input, which takes [GridSelectionMode]({environment:angularApiUrl}/enums/gridselectionmode.html) values.
 
-#### Interactions
+## Interactions
 The default selection mode is `none`. If set to `single` or `multiple` all of the presented columns will be [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable). With that being said, in order to select a column, we just need to click on one, which will mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected). If the column is not selectable, no selection style will be applied on the header, while hovering.
 
 > [!NOTE]
-> [`Multi Column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of its children has the selection behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all of its `selectable` descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
+> [`Multi-column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of its children has the selection behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all of its `selectable` descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
 
 @@if (igxName === 'IgxGrid') {
 *Under _Country Information_ Column Group only column _City_ and _Postal code_ are selectable.
@@ -73,16 +73,16 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 </div>
 <div class="divider--half"></div>
 
-#### Keyboard combinations
+## Keyboard combinations
 
 > [!NOTE]
 > The keyboard combinations are available only when the grid [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input is set to [`multiple`]({environment:angularApiUrl}/enums/gridselectionmode.html#multiple).
 
 There are two scenarios for keyboard navigation of the **Column Selection** feature:
-- Multi column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> on every **selectable** header cell.
+- Multi-column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> on every **selectable** header cell.
 - Range column selection - holding <kbd>shift</kbd> + <kbd>click</kbd> selects all **selectable** columns in between.
 
-#### API manipulations
+## API manipulations
 The **API** provides some additional capabilities when it comes to the **non-visible** columns such that, every **hidden** column could be marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) by setting the corresponding **setter**.
 
 > [!NOTE]
@@ -90,7 +90,7 @@ The **API** provides some additional capabilities when it comes to the **non-vis
 
 More information regarding the API manipulations could be found in the [`API References`](#api-references) section.
 
-### Styling
+## Styling
 Before diving into the styling options, the core module and all component mixins need to be imported.
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -134,14 +134,14 @@ $custom-grid-theme: igx-grid-theme(
 - **$header-selected-background** - sets the background color of the selected column header.
 
 
-#### Using CSS Variables
+### Using CSS Variables
 The last step is to include the custom `igx-grid` theme.
 
 ```scss
 @include igx-css-vars($custom-grid-theme)
 ```
 
-#### Overriding the Base Theme
+### Overriding the Base Theme
 In order to style components for Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
 >[!NOTE]
@@ -154,7 +154,7 @@ In order to style components for Internet Explorer 11, we have to use a differen
     }
 }
 ```
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:570px">
     <iframe id="@@igObjectRef-column-selection-styles" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
@@ -166,7 +166,7 @@ In order to style components for Internet Explorer 11, we have to use a differen
 </div>
 <div class="divider--half"></div>
 
-### <a name="api-references"></a>API References
+## <a name="api-references"></a>API References
 <div class="divider--half"></div>
 The column selection UI has a few more APIs to explore, which are listed below.
 
@@ -194,7 +194,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:
 * [onColumnsSelectionChange]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onColumnsSelectionChange)
 
-### Additional Resources
+## Additional Resources
 
 * [@@igComponent overview](@@igMainTopic.md)
 * [Selection](selection.md)

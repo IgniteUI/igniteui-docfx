@@ -23,11 +23,11 @@ _language: ja
 ---
 }
 
-### @@igComponent の集計概要
+# @@igComponent の集計概要
 
 Ignite UI for Angular の Angular UI グリッドには、グループ フッターとして列レベルで集計できる機能があります。Angular グリッド集計は、列内のデータ タイプに応じて、あるいは @@igComponent にカスタム Angular テンプレートを実装することによって、定義済みのデフォルト集計項目を使用して別のコンテナの列情報を表示できます。
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -71,7 +71,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 `string` と `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) の場合、データ型の場合、以下の関数が利用できます。
  - count
 
-`Number` データ型の場合、以下の関数が利用できます。
+`number` データ型の場合、以下の関数が利用できます。
  - count
  - min
  - max
@@ -175,7 +175,7 @@ public disableSummary() {
 ```
 }
 
-#### カスタム @@igComponent 集計
+## カスタム @@igComponent 集計
 この関数が要件に合わない場合、指定した列にカスタム集計を提供できます。これには、基本クラス [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかを列データ型や必要に応じてオーバーライドします。このように既存の関数を再定義、または新しい関数を追加できます。[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) クラスは、[`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) メソッドにデフォルト実装のみを提供します。[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、[`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min)、[`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max)、[`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum)、[`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average) を提供します。[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) は [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) を拡張し、追加で [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) と [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest) を提供します。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
@@ -286,7 +286,7 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-#### すべての @@igComponent データにアクセスするカスタム集計
+### すべての @@igComponent データにアクセスするカスタム集計
  カスタム列集計内のすべてのグリッド データにアクセスできます。IgxSummaryOperand `operate` メソッドには、2 つの追加のオプション パラメーターが導入されています。
 以下のコード スニペットで示されるように operate メソッドには以下の 3 つのパラメーターがあります。
 - columnData - 現在の列の値のみを含む配列を提供します。
@@ -337,8 +337,9 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 }
 
+
 @@if (igxName === 'IgxGrid') {
-### グループの集計
+## グループの集計
 
 列のグループがある場合、@@igComponent は[`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) と [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) を使用して集計配置の変更やモードの計算をします。これら 2 つのプロパティに加えて、@@igxName は、参照するグループ行が縮小されたときに集計行が表示されたままであるかどうかを決定できる [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティを公開します。
 
@@ -353,10 +354,11 @@ class MySummary extends IgxNumberSummaryOperand {
 
 [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。 デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、グループ行が縮小されたときに、集計行は表示されたままになります。
 
+
 > [!NOTE]
 > [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:720px">
     <iframe id="grid-groupby-summary-iframe" data-src='{environment:demosBaseUrl}/grid/grid-groupby-summary' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -371,6 +373,7 @@ class MySummary extends IgxNumberSummaryOperand {
 ### 子集計
 
 @@igComponent はルート ノードの集計と各ネストされた子ノード レベルの区別をサポートします。集計は [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティを使用して設定できます。子レベル集計は、[`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) を使用して子ノードの前または後に表示できます。これら 2 つのプロパティに加えて、@@igxName は、参照する親ノードが縮小されたときに集計行が表示されたままであるかどうかを決定でき [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティを公開します。
+
 
 以下は、使用可能な [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティの値です。
  - rootLevelOnly - ルート レベルのノードのみ集計が計算されます。
@@ -397,7 +400,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 <div class="divider--half"></div>
 
-#### キーボード ナビゲーション
+### キーボード ナビゲーション
 
 集計行は、以下のキーボード操作でナビゲーションできます。
 
@@ -410,7 +413,7 @@ class MySummary extends IgxNumberSummaryOperand {
 - <kbd>TAB</kbd> - 行の次のセルへ順番に移動して最後のセルの後は次の行へ移動。
 - <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - 行で前のセルへ順番に移動して最初のセルの後は前の行へ移動。
 
-### スタイル設定
+## スタイル設定
 
 ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -448,7 +451,7 @@ $custom-theme: igx-grid-summary-theme(
 }
 ```
 
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -478,7 +481,7 @@ $custom-theme: igx-grid-summary-theme(
 >[!NOTE]
 >`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
 
@@ -519,7 +522,7 @@ $custom-theme: igx-grid-summary-theme(
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
 @@if (igxName === 'IgxGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="grid-groupby-summary-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-summary-styling' width="100%" height="100%"
@@ -532,7 +535,7 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="treegrid-summary-styling-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -544,7 +547,7 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:710px">
     <iframe id="hierarchical-grid-summary-styling-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -556,7 +559,7 @@ $custom-theme: igx-grid-summary-theme(
 </div>
 }
 
-### API リファレンス
+## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -567,19 +570,7 @@ $custom-theme: igx-grid-summary-theme(
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
-
-### API リファレンス
-
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [@@igxNameSummaries スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme)
-* [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
-* [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
-* [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
-* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
@@ -591,6 +582,7 @@ $custom-theme: igx-grid-summary-theme(
 * [列のピン固定](column_pinning.md)
 * [列のサイズ変更](column_resizing.md)
 * [選択](selection.md)
+@@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

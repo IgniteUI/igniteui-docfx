@@ -24,7 +24,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 
 Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. Modifying of data can be achieved through: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md), and [Batch Editing](batch_editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. **Cell editing** mode is enabled by default and different editors will be shown based on the column data type. Also, defining a custom edit templates is achievable by using [igxCellEditor directive](cell_editing.md#cell-editing-templates) and a couple of [igxRow directives](row_editing.md#customizing-row-editing-overlay).
 
-#### Setup
+## Setup
 In order to specify which edit mode should be enabled, the @@igComponent exposes the following boolean properties - [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable).
 
 Property **editable** enables you to specify the following options:
@@ -44,7 +44,7 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
 - *Row and Batch Editing* - in this scenario the modifications are preserved on row level so undo/ redo operations will not be working for each cell that is modified but for the bunch of cell from each row.
 
 
-#### Editing Templates
+### Editing Templates
 
  If you want to use a data type specific *edit templates*, you should specify the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
 
@@ -54,7 +54,7 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
  - For `boolean` data type, default template is using [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
  - For custom templates you can see [cell editing topic](cell_editing.md#cell-editing-templates)
 
-#### Event arguments and sequence
+### Event arguments and sequence
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) life cycle - when starting, committing or canceling editing.
 
  | Event | Description | Arguments | Cancellable |
@@ -68,7 +68,7 @@ The grid exposes a wide array of events that provide greater control over the ed
 | [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 | [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
-##### Event cancelation
+### Event cancelation
  - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
  - `CellEditEnter` - Row edit allowed, although neither of the cells in the row context will be editable.
  - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
@@ -106,7 +106,7 @@ The following sample demonstrates the editing execution sequence in action:
 </div>
 }
 
-### API References
+## API References
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
@@ -120,7 +120,7 @@ The following sample demonstrates the editing execution sequence in action:
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

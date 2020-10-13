@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 분산 마커 시리즈
+# Angular 분산 마커 시리즈
 
 이 항목에서는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 분산 마커 시리즈에 대해 설명합니다. 분산 마커 시리즈는 데카르트(x, y) 좌표계를 사용하여 각 데이터 항목의 마커를 플롯하는 시리즈 그룹입니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-scatter-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 분산 마커 시리즈의 유형
+## 분산 마커 시리즈의 유형
 
 다음 표에는 모든 유형의 분산 마커 시리즈와 그 설명이 표시되어 있습니다.
 
@@ -31,7 +33,7 @@ _language: kr
 | [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | 마커 외에도 각 데이터 포인트 사이에 직선을 표시합니다.                            |
 | [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | 마커 외에도 각 데이터 포인트 사이에 보간 된 부드러운 선을 표시합니다.                   |
 
-### 필요한 축
+## 필요한 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 분산 마커 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
@@ -41,7 +43,7 @@ _language: kr
 | [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html)     | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 | [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 
-### 필요한 데이터
+## 필요한 데이터
 
 분산 마커 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
@@ -55,7 +57,7 @@ _language: kr
 this.state = { dataSource: SampleScatterStats.getCountries() }
 ```
 
-### 필요한 모듈
+## 필요한 모듈
 
 분산 마커 시리즈에는 다음과 같은 모듈이 필요합니다:
 
@@ -85,7 +87,7 @@ import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### 코드 예제
+## 코드 예제
 
 이 코드는 [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
@@ -108,7 +110,7 @@ export class AppModule { /* ... */ }
 
 위의 코드를 사용하면 [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)를 대체하여 [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterlineseriescomponent.html) 또는 [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html)를 생성할 수도 있습니다.
 
-### 시리즈 외관
+## 시리즈 외관
 
 [Markers](data-chart-series-markers.md) 속성을 사용하여 마커 외관을 사용자 지정할 수 있으며, 마커 사이의 선 비주얼의 `Brush` 및 `Thickness`를 변경할 수 있습니다. 아래 코드는 이러한 속성을 사용하는 방법을 보여 줍니다.
 
@@ -123,7 +125,7 @@ export class AppModule { /* ... */ }
 </igx-scatter-series>
 ```
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

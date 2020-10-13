@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <p class="highlight">The Ignite UI for Angular Drop Down component can fully integrate with the [IgxForOf](for_of.md) directive in order to display a very large list of items for its selection.</p>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,9 +18,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 
 In order to configure the drop-down to display a list of virtual items, you need to fulfill some prerequisites.
 First, we need to import the `IgxForOfModule` in the module of the component that will declare our drop-down.
@@ -39,7 +39,7 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Template Configuration
+### Template Configuration
 
 Next, we need to create the drop-down component's template, looping through the data using [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) instead of `*ngFor`. The `*igxFor` directive needs some additional configuration in order to properly display all of the items:
 
@@ -82,7 +82,7 @@ To preserve selection while scrolling, the drop-down item needs to have a refere
 > When the drop-down uses virtualized items, the type of [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) becomes `{ value: any, index: number }`, where `value` is a reference to the data item passed inside of the `[value]` input and `index` is the item's index in the data set
 
 
-#### Component Definition
+### Component Definition
 
 Inside of the component's constructor, we'll declare a moderately large list of items (containing both headers and disabled items), which will be displayed in the drop-down. We will also need to declare `itemHeight` and `itemsMaxHeight`:
 
@@ -117,7 +117,7 @@ export class DropDownVirtualComponent {
 }
 ```
 
-#### Styles
+### Styles
 
 The last part of the configuration is to set `overflow: hidden` to the wrapping div in order to prevent the appearance of two scroll bars (one from the `igxFor` and one from the container itself):
 
@@ -128,10 +128,10 @@ The last part of the configuration is to set `overflow: hidden` to the wrapping 
 }
 ```
 
-### Remote Data
+## Remote Data
 The `igx-drop-down` supports loading chunks of remote data using the `*igxFor` structural directive. The configuration is similar to the one with local items, the main difference being how data chunks are loaded.
 
-#### Template
+### Template
 The drop-down template does not need to change much compared to the previous example - we still need to specify a wrapping div, style it accordingly and write out the complete configuration for the `*igxFor`. Since we'll be getting our data from a remote source, we need to specify that our data will be an observable and pass it through Angular's `async` pipe:
 
 ```html
@@ -150,7 +150,7 @@ The drop-down template does not need to change much compared to the previous exa
 </igx-drop-down>
 ```
 
-#### Handling chunk load
+### Handling chunk load
 As you can see, the template is almost identical to the one in the previous example. In this remote data scenario, the code behind will do most of the heavy lifting.
 
 First, we need to define a remote service for fetching data:
@@ -241,7 +241,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 
 Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) emitter. This subscription will be responsible for fetching data everytime the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
 
-#### Remote Virtualization - Demo
+### Remote Virtualization - Demo
 The result of the above configuration is a drop-down that dynamically loads the data it should display, depending on the scrollbar's state:
 
 <div class="sample-container loading" style="height:400px">
@@ -253,7 +253,7 @@ The result of the above configuration is a drop-down that dynamically loads the 
 </div>
 <div class="divider--half"></div>
 
-### Notes and Limitations
+## Notes and Limitations
 
 Using the drop-down with a virtualized list of items enforces some limitations. Please, be aware of the following when trying to set up a drop-down list using `*igxFor`:
  - The drop-down items that are being looped need to be passed in a wrapping element (e.g. `<div>`) which has the following css: `overflow: hidden` and `height` equal to `containerSize` in `px`
@@ -264,7 +264,7 @@ Using the drop-down with a virtualized list of items enforces some limitations. 
  - `dropdown.setSelectedItem` should be called with the **item's index in the data set**
  - setting the drop-down item's `[selected]` input will **not** mark the item in the drop-down selection
 
-### API References
+## API References
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
