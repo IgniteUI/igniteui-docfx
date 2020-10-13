@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-### Shadows
+# Shadows
 
 Shadows は、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。
 
-### エレベーション
+## エレベーション
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
@@ -143,13 +143,13 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     </div>
 </div>
 
-### 使用方法
+## 使用方法
 
 <div class="elevate-image">
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-###エレベーションの追加方法
+## エレベーションの追加方法
 
 以下はコンポーネントにエレベーションを設定する方法を示します。この例では card コンポーネントを使用しています。
 
@@ -241,7 +241,10 @@ $myboringCard: igx-card-theme(
 
 <div class="divider--half"></div>
 
-### API リファレンス
+
+## API リファレンス
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
 * [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
+
+

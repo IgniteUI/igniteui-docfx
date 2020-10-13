@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Drop Down component displays a scrollable list of items which may be visually grouped. Clicking or tapping an item selects it and closes the drop down</p>
 <div class="divider"></div>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height:200px">
     <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -18,9 +18,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 
 To get started with the drop-down component, first you need to import the `IgxDropDownModule` in the **app.module.ts** file:
 
@@ -38,7 +38,7 @@ import { IgxDropDownModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Add Drop Down
+### Add Drop Down
 
 Let's create a simple drop-down that provides several option items to choose from. To achieve this, we will use the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as well as the [IgxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) to open/close the drop-down.
 
@@ -68,9 +68,9 @@ export class MyDropDownComponent {
 }
 ```
 
-### Examples
+## Examples
 
-#### Predefined selected item
+### Predefined selected item
 Let's say we want to have a predefined selected item. One way to do this, is by handling the [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of the drop-down component.
 
 ```html
@@ -110,7 +110,7 @@ export class MyDropDownComponent {
 
 <div class="divider--half"></div>
 
-#### Grouping items
+### Grouping items
 
 To provide a more useful visual information, use the [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) property to group items semantically or the [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) property to display an item as a non-interactive. You can also set the [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) property on a particular item to make it the selected item.
 
@@ -161,7 +161,7 @@ If the sample is configured properly, a list of countries should be displayed as
     </button>
 </div>
 
-#### Grouping hierarchical data
+### Grouping hierarchical data
 
 The `igx-drop-down` items can also be grouped using the [`igx-drop-down-item-group`]({environment:angularApiUrl}/classes/igxdropdowngroupcomponent.html) container, making it easier for users to differentiate separate categories. The `igx-drop-down-item-group` accepts `igx-drop-down-item` elements as its content and renders them in a grouped fashion.
 
@@ -240,7 +240,7 @@ You can see the results in the sample below:
     </button>
 </div>
 
-#### Drop Down as menu
+### Drop Down as menu
 You can configure the drop-down to behave as a menu. To do this, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [onSelection]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. In this way, the selected item is not preserved when opening the menu and previous selections get invalidated. Still, you can get the clicked item through the [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value in the event.
 
 ```html
@@ -303,7 +303,7 @@ export class MyMenuComponent {
     </button>
 </div>
 
-#### Navigation directive
+### Navigation directive
 Use the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive to enable keyboard navigation for the `igxDropDown` component. In order to allow the directive to handle all triggered events, it should be applied to the active (focused) element or a parent container. By default, a drop-down or its items don't take focus, so the directive can be placed on a `button` or `input` that will control the drop-down. The navigation directive value should target a component that is an instance or a descendant of the [IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) class.
 
 The following sample demonstrates an input that opens and closes the `igxDropDown` instance on click. Applying the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive on the input itself will enable keyboard navigation when using the up and down arrow keys. This relies on the default drop-down behavior with the [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) property set to `false` to allow the input to maintain focus.
@@ -390,7 +390,7 @@ When the `allowItemsFocus` property is enabled, the drop down items gain tab ind
 </igx-drop-down>
 ```
 
-### Styling
+## Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
 ```scss
@@ -415,7 +415,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 );
 ```
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The last step is to pass the custom drop-down theme: 
 
@@ -423,7 +423,7 @@ The last step is to pass the custom drop-down theme:
  @include igx-css-vars($custom-drop-down-theme);
 ```
 
-#### Using Theme Overrides
+### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
@@ -440,7 +440,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 > [!NOTE]
 > The [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) component uses the [IgxOverlay](overlay_main.md) to hold and display the `igx-drop-down-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check: [IgxOverlay styling guide](overlay_styling.md).
 
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:350px">
     <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -451,14 +451,14 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 
 <div class="divider--half"></div>
 
-### API Summary
+## API Summary
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
 * [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

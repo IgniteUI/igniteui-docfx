@@ -5,13 +5,13 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 폴라 시리즈
+# Angular 폴라 시리즈
 
 이 항목에서는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 폴라 시리즈에 대해 설명합니다. 폴라 시리즈는 데카르트(x, y) 좌표계 대신 폴라(각도, 반경) 좌표계를 사용하여 차트에 데이터를 플롯하는 일련의 시리즈입니다. 즉, 폴라 시리즈는 [분산 시리즈](data-chart-type-scatter-point-series.md)의 개념을 사용하여 수평선을 따라 늘어서는 것이 아니라 원을 중심으로 감쌉니다. 이 시리즈 그룹은 폴라 좌표계를 사용하여 여러 개의 서로 다른 데이터 시리즈 내의 항목 간의 관계를 표시하는 데 사용됩니다.
 
 폴라 시리즈는 데이터의 불균등한 간격이나 데이터 클러스터에 주의를 끕니다. 이것은 과학적인 데이터(예: 바람의 방향과 속도, 자기장의 강도와 방향, 태양계 내의 물체 위치)를 플롯하는 데 사용되며, 수집된 데이터와 예상 결과의 편차를 강조 표시할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,11 +19,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 폴라 시리즈의 유형
+## 폴라 시리즈의 유형
 
 데이터 차트는 다음과 같은 유형의 폴라 시리즈를 지원합니다:
 
@@ -35,7 +37,7 @@ _language: kr
 | [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html)       | 폴라(각도/반경) 좌표에 있는 데이터 점을 나타내는 마커 집합을 표시합니다.                        |
 | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)             | 폴라(각도/반경) 좌표에 있는 데이터 점을 연결하는 직선 집합을 표시합니다.                        |
 
-### 필요한 축
+## 필요한 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 폴라 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
@@ -47,7 +49,7 @@ _language: kr
 | [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html)       | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
 | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)             | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
 
-### 필요한 데이터
+## 필요한 데이터
 
 폴라 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
@@ -63,7 +65,7 @@ _language: kr
 this.state = { dataSource: SamplePolarData.create() }
 ```
 
-### 필요한 모듈
+## 필요한 모듈
 
 폴라 시리즈를 사용하려면 로딩하는 동안 앱에 다음 모듈을 불러와야 합니다.
 
@@ -95,7 +97,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 })
 ```
 
-### 코드 예제
+## 코드 예제
 
 이 코드는 [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
@@ -118,7 +120,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 
 또한, 위의 코드를 사용하여 [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)를 렌더링할 폴라 시리즈의 이름으로 대체하여 다른 유형의 폴라 시리즈를 생성할 수도 있습니다.
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

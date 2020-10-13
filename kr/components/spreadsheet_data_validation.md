@@ -1,27 +1,29 @@
 ---
-title: Spreadsheet | Grid Controls | Ignite UI for Angular | Data Validation | Infragistics |
+title: Angular Spreadsheet | Grid Controls | Data Validation | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet']
 ---
 
-## Data Validation
+# Angular Data Validation
 
-This topic explains to to configure and set the bulit-in data validation rules.
+This topic explains to to configure and set the built-in data validation rules.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="spreadsheet-data-validation-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
 When setting up the data validation rules you will need to import the rules you want to use.
 
@@ -49,15 +51,15 @@ import { TwoConstraintDataValidationRule } from 'igniteui-react-excel';
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-The following snippt shows how you can setup the data validation rules
+The following snippet shows how you can setup the data validation rules
 
 ```ts
 // this validation rule has only input message set
 const valRule1 = new AnyValueDataValidationRule();
 valRule1.inputMessageTitle = "Hotel room booking form";
-valRule1.inputMessageDescription = "Please us the form below to choose your accomodation type";
+valRule1.inputMessageDescription = "Please us the form below to choose your accommodation type";
 this.spreadsheet.workbook.worksheets(0).rows(1).cells(0).dataValidationRule = valRule1;
 this.spreadsheet.workbook.worksheets(0).rows(1).cells(0).value = "Hotel room booking form";
 
@@ -67,7 +69,7 @@ valRule2.validationOperator = TwoConstraintDataValidationOperator.Between;
 valRule2.setLowerConstraint(1);
 valRule2.setUpperConstraint(4);
 valRule2.inputMessageTitle = "Adults";
-valRule2.inputMessageDescription = "Adults cound must be min, 1 and max. 4.";
+valRule2.inputMessageDescription = "Adults count must be min, 1 and max. 4.";
 valRule2.errorMessageTitle = "Adult requirement not met";
 valRule2.errorMessageDescription = "There must be between 1 and 4 adults per room.";
 valRule2.errorStyle = DataValidationErrorStyle.Information;
@@ -82,7 +84,7 @@ valRule3.setFormula("=AND((B4+B5)<5 " + separator + " (B4+B5)>0)", null);
 valRule3.inputMessageTitle = "Children";
 valRule3.inputMessageDescription = "Children and adults cannot be more than 4 per room.";
 valRule3.errorMessageTitle = "Room limit exceeded";
-valRule3.errorMessageDescription = "The macimum persons per room is 4.";
+valRule3.errorMessageDescription = "The maximum persons per room is 4.";
 valRule3.errorStyle = DataValidationErrorStyle.Warning;
 this.spreadsheet.workbook.worksheets(0).rows(4).cells(1).dataValidationRule = valRule3;
 this.spreadsheet.workbook.worksheets(0).rows(4).cells(1).value = 0;
