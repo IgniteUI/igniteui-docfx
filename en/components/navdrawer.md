@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Navigation Drawer component is a side navigation container. It can rest above content and slide in/out of view or be pinned to expand/collapse within the content. A mini version provides quick access to navigation even when closed. The Navigation Drawer features responsive mode selection and touch gestures. Content is completely customizable and can make use of default menu item styling.</p>
 <div class="divider"></div>
 
-### Navigation Drawer Demo
+## Navigation Drawer Demo
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
@@ -21,7 +21,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-### Dependencies
+## Dependencies
 
 >[!NOTE]
 >This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application for touch interactions to work as expected.
@@ -42,7 +42,7 @@ export class AppModule {
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 With the dependencies imported, the Navigation Drawer can be defined in the app component template:
 
@@ -153,7 +153,7 @@ If everything went well, you should see the demo sample in your browser.
 
 <div class="divider--half"></div>
 
-### Modes
+## Modes
 
 Unpinned (elevated above the content) mode is the normal behavior where the drawer sits above and applies a darkened overlay over the content. Generally used to provide temporary navigation suitable for mobile devices. 
 
@@ -163,7 +163,7 @@ The drawer can be pinned to take advantage of larger screens, placing it within 
 > By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinthreshold) property and can be disabled by setting a falsy value (e.g. 0).
 
 
-#### Pinned (persistent) setup
+### Pinned (persistent) setup
 Pin changes the position of the drawer from `fixed` to `relative` to put it on the same flow as content. Therefore, the app styling should account for such layout, especially if the drawer needs to be toggled in this mode. While there's more than one way to achieve such fluid layout (including programmatically), the easiest way is using [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) and [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) directives.
 
 Here's how that would look applied to the previous example: 
@@ -217,7 +217,7 @@ Alternatively, skipping using directives, manual styling can be applied similar 
 }
 ```
 
-#### Mini variant
+### Mini variant
 With the mini variant, the Navigation Drawer changes its width instead of closing.
 Most commonly used to maintain quick selection available on the side at all times, leaving just the icons.
 This variant is enabled simply by the presence of an alternative mini template decorated with `igxDrawerMini` directive.
@@ -249,7 +249,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 <div class="divider--half"></div>
 
-### Using Angular Router
+## Using Angular Router
 
 To use the Angular Router, first, we need to import git from `@angular/router` and create an instance of the router in our constructor.
 Then we have to define our navigation items using the router for their link values.
@@ -326,7 +326,7 @@ After all the steps above are completed, your app should look like that:
 
 <div class="divider--half"></div>
 
-### Styling
+## Styling
 To get started with styling the navigation drawer, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -344,7 +344,7 @@ $custom-theme: igx-navdrawer-theme(
 ```
 As seen, the `igx-navdrawer-theme` exposes some useful parameters for basic styling of its items. 
 
-#### Including themes
+### Including themes
 
 <div class="divider"></div>
 
@@ -392,6 +392,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 </div>
 
 <div class="divider--half"></div>
-### API and Style References
+
+## API and Style References
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
 * [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme)
