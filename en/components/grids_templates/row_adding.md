@@ -15,7 +15,7 @@ The @@igComponent provides a convenient way to perform data manipulations throug
 
 ### Demo
 
-The following sample demonstrates how to enable native row adding in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row won't  update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
+The following sample demonstrates how to enable native row adding in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same doesn't update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:520px">
@@ -152,18 +152,18 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 > Setting primary key is mandatory for row adding operations.
 
 > [!NOTE]
-> Every column excluding the primary key one is editable in the row adding UI by default. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> Every column excluding the primary key one is editable in the row adding UI by default. If you want to disable editing for a specific column, then you have to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions input controlling the visibility of the add row button may use the use action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) to fine tune which records the button shows for.
+> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) to fine tune which records the button shows for.
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the use action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) to fine tune which records the buttons shows for.
+> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) to fine tune which records the buttons show for.
 }
 
-The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) is automatically provided for @@igComponent. It holds pending cell changes until the row state submitted or cancelled.
+The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) is automatically provided for @@igComponent. It holds pending cell changes until the row state is submitted or cancelled.
 
 ## Positioning
 
@@ -177,6 +177,8 @@ The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/i
 
 The add row UI has the same behavior as the row editing one as they are designed to provide a consistent editing experience to end users. Please, refer to the [@@igComponent Row Editing](row_editing.md) topic for more information.
 
+After a new row is added through the row adding UI, its position and/or visibility is determined by the sorting, filtering and grouping state of the grid. In a grid that does not have any of these states applied, it appears as the last record. A snackbar is briefly displayed containing a button the end user may use to scroll the grid to its position if it is not in view.
+
 ## Keyboard Navigation
 
 - <kbd>ALT</kbd> + <kbd>+</kbd> - Enters edit mode for adding a row
@@ -185,9 +187,9 @@ The add row UI has the same behavior as the row editing one as they are designed
 - <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> - Enters edit mode for adding a child
 }
 
-- `Esc` exits row adding mode without submitting any changes
+- <kbd>ESC</kbd> exits row adding mode without submitting any changes
 
-- `Tab` move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
+- <kbd>TAB</kbd> move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
 
 ## Feature Integration
 
