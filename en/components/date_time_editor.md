@@ -18,7 +18,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 
-### Usage
+## Usage
 To get started with the Ignite UI for Angular Date Time Directive, let's first import the `IgxDateTimeEditorModule` in the **app.module.ts** file:
 
 ```typescript
@@ -38,7 +38,7 @@ export class AppModule {}
 
 To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input_group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
 
-#### Binding 
+### Binding 
 A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
 ```typescript
 public date = new Date();
@@ -59,7 +59,7 @@ To create a two-way data-binding, set an ngModel:
 <div class="divider--half"></div>
 
 
-#### Keyboard Navigation
+### Keyboard Navigation
 Date Time Editor Directive has intuitive keyboard navigation that makes it easy to increment, decrement, or jump through different DateParts among others without having to touch the mouse.
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. On <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Right</kbd> it goes to the end of the section. If already there it goes to the end of next section if any. It works in a similar fashion in the opposite direction.
@@ -69,9 +69,9 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
 
-### Examples
+## Examples
 
-#### Display and input format
+### Display and input format
 IgxDateTimeEditor supports different display and input formats.
 
 It uses Angular's [DatePipe](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the DatePipe, e.g. `EE/MM/yyyy`. Notice that formats like shortDate, longDate, etc., can be used as `displayFormat` only.
@@ -85,7 +85,7 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 </igx-input-group>
 ```
 
-#### Min max value
+### Min max value
 You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
 ```typescript
 public minDate = new Date(2020, 1, 15);
@@ -99,7 +99,7 @@ public maxDate = new Date(2020, 11, 1);
 
 ```
 
-#### Increment and decrement
+### Increment and decrement
 `igxDateTimeEditor` directive exposes public `increment` and `decrement` methods. They increment or decrement a specific `DatePart` of the currently set date and time and can be used in a couple of ways.
 
 In the first scenario, if no specific DatePart is passed to the method, a default DatePart will increment or decrement, based on the specified `inputFormat` and the internal directive implementation.
@@ -115,7 +115,7 @@ You may compare both in the following sample:
 <div class="divider--half"></div>
 
 
-#### In Angular Forms
+### In Angular Forms
 The Date Time Editor Directive supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
 > Note: If needed, you can revert back to a valid state by handling the `validationFailed` event and changing the `newValue` property of the available arguments.
@@ -132,7 +132,7 @@ Template-driven form example:
 <div class="divider--half"></div>
 ```
 
-#### Text Selection
+### Text Selection
 You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
 
 ```html
@@ -143,11 +143,11 @@ You can force the component to select all of the input text on focus using [`igx
 
 > NOTE: In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxDateTimeEditor` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
-### Styling 
+## Styling 
 For details check out the [`Input Group styling guide`](input_group.md#styling).
 <div class="divider--half"></div>
 
-### API References
+## API References
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -157,7 +157,7 @@ For details check out the [`Input Group styling guide`](input_group.md#styling).
 <div class="divider--half"></div>
 
 
-### Additional Resources
+## Additional Resources
 Related topics:
 * [Mask](mask.md)
 * [Label & Input](label_input.md)
