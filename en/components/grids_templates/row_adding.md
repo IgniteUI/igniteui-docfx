@@ -169,7 +169,7 @@ The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/i
 
 - The Default position row add UI is below the row that the end user clicked the add row button for.
 
-- The grid scrolls to fully display the add row UI automatically.
+- The @@igComponent scrolls to fully display the add row UI automatically.
 
 - The overlay for the add row UI maintains its position during scrolling.
 
@@ -177,7 +177,7 @@ The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/i
 
 The add row UI has the same behavior as the row editing one as they are designed to provide a consistent editing experience to end users. Please, refer to the [@@igComponent Row Editing](row_editing.md) topic for more information.
 
-After a new row is added through the row adding UI, its position and/or visibility is determined by the sorting, filtering and grouping state of the grid. In a grid that does not have any of these states applied, it appears as the last record. A snackbar is briefly displayed containing a button the end user may use to scroll the grid to its position if it is not in view.
+After a new row is added through the row adding UI, its position and/or visibility is determined by the sorting, filtering and grouping state of the @@igComponent. In a @@igComponent that does not have any of these states applied, it appears as the last record. A snackbar is briefly displayed containing a button the end user may use to scroll the @@igComponent to its position if it is not in view.
 
 ## Keyboard Navigation
 
@@ -193,23 +193,23 @@ After a new row is added through the row adding UI, its position and/or visibili
 
 ## Feature Integration
 
-- Any row adding operation will stop if the data view of the grid gets modified. Any changes made by the end user are submitted. Operations that change the data view include but are not limited to sorting, grouping, filtering, paging, etc.
+- Any row adding operation will stop if the data view of the @@igComponent gets modified. Any changes made by the end user are submitted. Operations that change the data view include but are not limited to sorting, grouping, filtering, paging, etc.
 
 - Summaries are updated after the row add operation finishes. The same is valid for the other data view dependant features such as sorting, filtering, etc.
-@@if (igxName === 'IgxTreeGrid') {
+@@if (igxName === 'IgxHierarchicalGrid') {
 
-- When spawning the UI for hierarchical grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed 
+- When spawning the UI for Hierarchical Grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed.
 }
 
 ## Remote scenarios
 
-In most remote data scenarios the Primary Key assignment happens on the create server request. In this case the added records on the client will not have the final primary key value until saved on the server's data base. In that case the recommended way to handle this update in the grid is as follows:
+In most remote data scenarios the Primary Key assignment happens on the create server request. In this case the added records on the client will not have the final primary key value until saved on the server's data base. In that case the recommended way to handle this update in the @@igComponent is as follows:
 
-- If the grid does not use transactions.
+- If the @@igComponent does not use transactions.
 
     Once the create request is successfully completed and returns the added record data, you can replace that record's id in the local data record instance.
 
-- If the grid uses transactions.
+- If the @@igComponent uses transactions.
 
     Once the create request or batch update request is successfully completed and returns the added record instances (with their db generated ids), the related ADD transactions should be cleared from the transaction log using the [clear]({environment:angularApiUrl}/interfaces/transactionservice.html#clear) API method. This is necessary because the local transaction will have a generated id field, which may differ than the one created in the data base, so they should be cleared. You can then add the record(s) passed in the response to the local data instance.
 
