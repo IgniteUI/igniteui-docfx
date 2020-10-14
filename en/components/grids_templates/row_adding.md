@@ -15,7 +15,7 @@ The @@igComponent provides a convenient way to perform data manipulations throug
 
 ### Demo
 
-The following sample demonstrates how to enable native row adding in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same doesn't update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
+The following sample demonstrates how to enable native row adding in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row doesn't update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:520px">
