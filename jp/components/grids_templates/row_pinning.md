@@ -66,7 +66,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-grid #grid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -80,7 +80,7 @@ _language: ja
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-tree-grid #treeGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -94,7 +94,7 @@ _language: ja
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 

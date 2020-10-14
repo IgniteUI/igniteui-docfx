@@ -60,7 +60,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-grid #grid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -74,7 +74,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-tree-grid #treeGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -88,7 +88,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
