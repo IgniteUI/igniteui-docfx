@@ -323,16 +323,17 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 </div>
 
 ## Keyboard navigation
-If you traverse the page using `tab` button you should keep in mind that following  W3 accessability recommendations the igxCalendarComponent introduces the following tab stops:
+If you traverse the page using *Tab key* you should keep in mind that based on [W3 accessability recommendations](https://www.w3.org/TR/wai-aria-practices/#layoutGrid) the *igxCalendarComponent* now introduces the following tab stops:
 - Previous month button
 - Month selection button
 - Year selection button
 - Next month button
-- Selected date* /Current date/First focusable /not disabled/ date in the days view
+- Selected date, Current date, First focusable (not disabled) date in the days view
 
-*In the calendar that contains more than one selected dates only the first one will be introduced as a tab stop. For example in the multi selection calendar if you have selected the dates : 13/10/2020, 17/10/2020 and 21/10/2020 only 13/10/2020 will be accessible during tab navigation; in the calendar with range selection only the first date of the selected range will be part of the page tab sequence.
+In a Calendar that contains more than one selected dates, only the first date will be introduced as a tab stop. For example, in the multi-selection calendar if you have selected the dates: *13/10/2020*, *17/10/2020* and *21/10/2020* only *13/10/2020* will be accessible during tab navigation; in the calendar with range selection only the first date of the selected range will be part of the *page tab sequence*.
 
->Since version 10.2.0, <kbd>tab</kbd> navigation in the days view is no longer available. In order to navigate between the dates in the date view you should use `arrow keys` buttons.
+>[!NOTE]
+> Behavioral change, from *v10.2.0* - Tab key navigation in the *days view* is no longer available. In order to navigate between the dates in the *date view* you should use the *arrow keys*.
 
 When the `igxCalendar` component is focused, use:
 - <kbd>PageUp</kbd> key to move to the previous month,
@@ -351,16 +352,16 @@ When the `months` button (in the subheader) is focused, use:
 When the `year` button (in the subheader) is focused, use:
 - <kbd>Space</kbd> or <kbd>Enter</kbd> key to open the decade view.
 
-When a `day` inside the current month is focused, use:
-- Arrow keys to navigate through the days, but the disabled dates will be skipped.
-- Navigating next from last day in current month or previous from first day in current month, will move focus to next/previous month that is in view.
-- Navigating next from last day in last visible current month or previous from first day in first current month, will change the months in view.
-- <kbd>Enter</kbd> key to select the currently focused day.
+When a `day` inside the current month is focused:
+- Use *Arrow keys* to navigate through the days. Note: The disabled dates will be skipped.
+- Focus will be persisted on the current month that is in the view, while navigation **from**/**to** the **last day**/**first day** of the month.
+- THe kb navigation would be continuous, which means that it will go through all months while navigating with the arrows.
+- Use <kbd>Enter key</kbd> to select the currently focused day.
 
 When a `month` inside the months view is focused, use:
-- Arrow keys to navigate through the months,
-- <kbd>Home</kbd> key to focus the first month inside the months view,
-- <kbd>End</kbd> key to focus the last month inside the months view,
+- Arrow keys to navigate through the months.
+- <kbd>Home</kbd> key to focus the first month inside the months view.
+- <kbd>End</kbd> key to focus the last month inside the months view.
 - <kbd>Enter</kbd> key to select the currently focused month and close the view.
 
 When an `year` inside the decade view is focused, use:
@@ -369,7 +370,6 @@ When an `year` inside the decade view is focused, use:
 
 >[!NOTE]
 >Following version 8.2.0, keyboard navigation will not focus days that are outside of current month, but will rather change the month in view.
-
 
 ## Multi View Calendar
 Multiview calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays) property.  Keyboard navigation moves to next/previous months when those are in view.
