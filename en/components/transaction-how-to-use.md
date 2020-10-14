@@ -10,7 +10,7 @@ You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}
 
 When working with the Ignite UI for Angular grid components, you may use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and implement similar behavior.
 
-#### Demo
+## Demo
 
 In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to demonstrate how to enable transactions. We will demonstrate how to add transactions, how to transform the data through a [pipe](https://angular.io/guide/pipes) and how to visually update the view in order to let the user see the changes that are about to be committed.
 
@@ -24,9 +24,9 @@ In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlis
 </div>
 <div class="divider--half"></div>
 
-### Include Transaction Service
+## Include Transaction Service
 
-#### Include Transaction Service in project
+### Include Transaction Service in project
 
 We have two options to include `IgxTransactionService` in our application. The first one is to add it to `AppModule` or other parent module in the application, as it is done in the demo above:
 
@@ -52,7 +52,7 @@ The other option is to provide it in the component, where the transaction servic
 export class TransactionBaseComponent { }
 ```
 
-#### Inject Transaction Service in component
+### Inject Transaction Service in component
 
 In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library, as well as the [`State`]({environment:angularApiUrl}/interfaces/state.html) and [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interfaces and the [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum, which will be needed by our application:
 
@@ -66,7 +66,7 @@ Then Transaction Service should be imported in the constructor:
 constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }
 ```
 
-### Define igxList
+## Define igxList
 
 In our html template, we define an [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component with **edit**, **delete** and **add** actions, which modify the list and its items:
 
@@ -84,7 +84,7 @@ In our html template, we define an [`igxList`]({environment:angularApiUrl}/class
 </igx-list>
 ```
 
-### Pipe for pending changes
+## Pipe for pending changes
 
 The list component from above uses the `transactionBasePipe` to display changes to the items in the wishlist without affecting the original data. Here is how the pipe looks like:
 
@@ -131,9 +131,9 @@ export class TransactionBasePipe implements PipeTransform {
 }
 ```
 
-### Edit, delete, add functionality
+## Edit, delete, add functionality
 
-#### Define edit functionality
+### Define edit functionality
 
 The second list item contains an edit button, which updates the item's data.
 ```html
@@ -166,7 +166,7 @@ public isEdited(id): boolean {
 }
 ```
 
-#### Define delete functionality
+### Define delete functionality
 
 The third list item contains a delete button, which deletes the item's data.
 
@@ -200,7 +200,7 @@ public isDeleted(id): boolean {
 }
 ```
 
-#### Define add functionality
+### Define add functionality
 
 At the end of the list an ADD button is added, which adds a new item to the list.
 
@@ -230,7 +230,7 @@ public itemAdded(id: number): boolean {
 }
 ```
 
-### Transaction Log
+## Transaction Log
 
 The demo demonstrates the pending transactions inside a log:
 
@@ -263,7 +263,7 @@ We will also add a representation of the current state of our list. It will show
 </div>
 ```
 
-### Commit pending transactions
+## Commit pending transactions
 
 Once we are done with all our changes, we may commit them all at once using the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method of the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). It applies all transactions over the provided data:
 
@@ -286,7 +286,7 @@ public onCommit(): void {
 }
 ````
 
-### Clear pending transactions
+## Clear pending transactions
 
 At any point of our interaction with the list, we may clear the Transaction log, using the [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) method.
 
@@ -301,7 +301,7 @@ public onClear(): void {
 
 ```
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)

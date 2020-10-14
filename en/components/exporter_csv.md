@@ -11,7 +11,7 @@ The IgniteUI CSV Exporter service can export data in a Character Separated Value
 The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.</p>
 <div class="divider"></div>
 
-### CSV Exporter Demo
+## CSV Exporter Demo
 
 <div class="sample-container loading" style="height: 150px;">
     <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv"
@@ -75,7 +75,7 @@ public exportButtonHandler() {
 If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.csv" which contains the data from the `localData` array in CSV format. 
 
 
-### Exporting IgxGrid's Data
+## Exporting IgxGrid's Data
 
 The CSV Exporter service can also export data in CSV format from an [**IgxGrid**](grid/grid.md). The only difference is that you need to invoke the 
 [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) method and pass the [**IgxGrid**](grid/grid.md) as first argument.
@@ -121,7 +121,7 @@ public exportButtonHandler() {
 </div>
 
 
-### Customizing the Exported Format
+## Customizing the Exported Format
 
 The CSV Exporter supports several types of exporting formats. The export format may be specified:
 * as a second argument of the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) objects's constructor
@@ -139,7 +139,7 @@ Different export formats have different file extensions and value delimiters. Th
 
 You can also specify a custom delimiter using the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) objects's [`valueDelimiter`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html#valuedelimiter) property.
 
-### Customizing the Exported Content
+## Customizing the Exported Content
 
 In the above examples the CSV Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
@@ -158,7 +158,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedD
 
 When you are exporting data from [**IgxGrid**](grid/grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) object. These properties are described in the table below.
 
-### API Summary
+## API Summary
 
 The CSV Exporter service has a few more APIs to explore, which are listed below.
 
@@ -172,7 +172,7 @@ Additional components that were used:
 
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
