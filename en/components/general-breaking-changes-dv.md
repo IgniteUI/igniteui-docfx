@@ -8,9 +8,21 @@ _keywords: Breaking Changes,  Ignite UI for Angular, Infragistics
 
 This topic provides information about breaking changes in Ignite UI for Angular as well as how to update older code to latest API.
 
+## Changed name of PropertyPath
+
+The data grid component property `propertyPath` has been renamed to `field`. This applies to all Column types, GroupDescription, SortDescription & SummaryDescription.
+
+> [!NOTE]
+> These breaking changes were introduce in version **{PackageVerChangedFields}** of the grid package.
+
 ## Changed Name of Live Grid
 
-The data grid component and it's corresponding module's names have changed from "LiveGrid" to "DataGrid." The new code for importing the grid and it's corresponding module is:
+The data grid component and it's corresponding module's names have changed from "LiveGrid" to "DataGrid".
+
+> [!NOTE]
+> These breaking changes were introduce in version **{PackageVerRenamedGrid}** of these packages and components:
+
+The new code for importing the grid and it's corresponding module is:
 
 ## Required Peer Dependency for Data Grid
 

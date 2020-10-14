@@ -11,6 +11,8 @@ This topic explains various types of polar series in the Angular data chart comp
 
 Polar series draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind's direction and speed, strength and direction of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
 
+<!-- Angular, React, WebComponents -->
+
 ## Demo
 
 <div class="sample-container loading" style="height: 500px">
@@ -24,6 +26,7 @@ Polar series draw attention to uneven intervals or clusters of data. They are of
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## Types of Polar Series
 
@@ -67,7 +70,13 @@ public dataSource: any[] = SamplePolarData.create();
 
 ## Required Modules
 
-In order to use polar series, you need to import the following modules in your app during load:
+The polar series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartPolarModule
+-   DataChartPolarCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:

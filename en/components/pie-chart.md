@@ -25,6 +25,8 @@ This control is used for representing categorical data. It is most effective whe
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the charts component, the core package must also be installed.
@@ -34,9 +36,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) requires the following modules:
+The [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   PieChartModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
