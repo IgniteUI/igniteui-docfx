@@ -201,6 +201,19 @@ After a new row is added through the row adding UI, its position and/or visibili
 - When spawning the UI for hierarchical grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed 
 }
 
+## Remote scenarios
+
+In most remote data scenarios the Primary Key assignment happens on the create server request. In this case the added records on the client will not have the final primary key value until saved on the server's data base. In that case the recommended way to handle this update in the grid is as follows:
+
+- If the grid does not use transactions.
+
+    Once the create request is successfully completed and returns the added record data, you can replace that record's id in the local data record instance.
+
+- If the grid uses transactions.
+
+    Once the create request or batch update request is successfully completed and returns the added record instances (with their db generated ids), the related ADD transactions should be cleared from the transaction log using the [clear]({environment:angularApiUrl}/interfaces/transactionservice.html#clear) API method. This is necessary because the local transaction will have a generated id field, which may differ than the one created in the data base, so they should be cleared. You can then add the record(s) passed in the response to the local data instance.
+
+This will ensure that the remotely generated ids are always reflected in the local data, and subsequent update/delete operations target the correct record ids.
 
 ## Styling
 
