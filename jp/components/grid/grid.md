@@ -1,7 +1,7 @@
 ---
-title: Angular データ グリッド | Angular グリッド & 図コンポーネント | インフラジスティックス
+title: Angular データ グリッド | Angular Material テーブル | インフラジスティックス
 _description: Ignite UI for Angular データ グリッドを使用して、さまざまなイベントを含むタッチ レスポンシブな Angular コンポーネントを作成します。今すぐデータ視覚化を強化しましょう!
-_keywords: angular データ グリッド, angular コンポーネント, ignite ui for angular, angular グリッド, angular 図コンポーネント
+_keywords: angular データ グリッド, angular グリッド, angular material テーブル, ignite ui for angular
 _language: ja
 ---
 
