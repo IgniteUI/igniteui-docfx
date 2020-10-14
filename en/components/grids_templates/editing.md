@@ -55,7 +55,7 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
  - For custom templates you can see [cell editing topic](cell_editing.md#cell-editing-templates)
 
 ### Event arguments and sequence
-The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) life cycle - when starting, committing or canceling editing.
+The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) lifecycle - when starting, committing or canceling the editing action.
 
  | Event | Description | Arguments | Cancellable |
 |-------|-------------|-----------|-------------|

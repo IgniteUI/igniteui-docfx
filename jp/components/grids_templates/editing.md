@@ -58,7 +58,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
  - カスタム テンプレートについては、[セル編集トピック](cell_editing.md#セル編集テンプレート)を参照してください。
 
 ### Event arguments and sequence
-The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) life cycle - when starting, committing or canceling editing.
+The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) lifecycle - when starting, committing or canceling the editing action.
 
  | Event | Description | Arguments | Cancellable |
 |-------|-------------|-----------|-------------|
