@@ -68,11 +68,6 @@ _language: ja
 ```html
 <igx-grid #grid [data]="data" (mouseleave)="actionStrip.hide()">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -87,11 +82,6 @@ _language: ja
 ```html
 <igx-tree-grid #treeGrid [data]="data" (mouseleave)="actionStrip.hide()">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -106,11 +96,6 @@ _language: ja
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="data" (mouseleave)="actionStrip.hide()">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
