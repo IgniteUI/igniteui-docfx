@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 > [!NOTE]
 > `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to `IgxBottomNavModule`.
 
-### Bottom Navigation Demo
+## Bottom Navigation Demo
 
 <div class="divider--half"></div>
 
@@ -27,7 +27,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 The first step is to import the `IgxBottomNavModule` in the **app.module.ts** file:
 
@@ -58,7 +58,7 @@ If all went well, you should see the demo sample in your browser.
 
 <div class="divider--half"></div>
 
-### Customizing Bottom Navigation
+## Customizing Bottom Navigation
 
 Let's modify the tabs and make them more appealing by including icons. The Bottom Navigation control is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy for you to adopt them in your application.
@@ -184,7 +184,7 @@ Here is an example:
 
 <div class="divider"></div>
 
-### Integration With Router Outlet Container
+## Integration With Router Outlet Container
 
 Despite the primary usage of the Bottom Navigation component is to define panels with content, there may be cases in which you may need to define tab items only.
 
@@ -304,7 +304,7 @@ The described approach above is used by the following sample to demonstrate rout
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styles
+## Styles
 
 To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -326,7 +326,7 @@ If we take a look at the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index
 > [!NOTE]
 > In order to style any additional components that are used as part of a tab panel's content, an additional theme should be created that is specific to the respective component.
 
-#### Including themes
+### Including themes
 
 <div class="divider"></div>
 
@@ -365,7 +365,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
     @include igx-css-vars($dark-bottom-nav);
 }
 ```
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -386,7 +386,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 );
 ```
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -423,7 +423,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" >
     <iframe id="tabbar-style-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-style' width="100%" height="100%" seamless
@@ -435,7 +435,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -447,7 +447,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

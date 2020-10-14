@@ -4,10 +4,10 @@ _description: Present users with dashboards and engaging text, images, icons or 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Card component, Angular Card controls
 ---
 
-#Card
+# Card
 <p class="highlight">The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
 
-###Card Demo
+## Card Demo
 <div class="sample-container loading" style="height: 500px">
     <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
@@ -18,11 +18,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-###Usage
+## Usage
 
 Cards allow you to easily display content composed of different types of objects or similar objects whose size and supported actions can vary.
 
-####Getting Started
+### Getting Started
 
 Import the `IgxCardModule` inside our **app.module.ts** file:
 
@@ -78,7 +78,7 @@ You can place anything inside the `igx-card-content` tags. Usually text goes the
 
 Finally, the `igx-card-actions` is where you'd place any actionable items, like buttons. If you use the `igxButton` directive on an element, it will automatically be placed correctly according to the material design spec inside the area.
 
-#### Media, Thumbs, and Avatars
+### Media, Thumbs, and Avatars
 If you want to show an image or icon in the card header next to the title and subtitle, you can do it by using the `igxCardThumbnail` directive.
 
 Taking the card above as an example, we can edit the contents of the `igx-card-header` and add a `igxCardThumbnail` container to hold an icon:
@@ -122,10 +122,10 @@ or, even this:
 </igx-card-header>
 ```
 
-#### Outlined cards
+### Outlined cards
 The card has a `type` attribute you can set to either `default` (set automatically if omitted), or `outlined`. The `outlined` type removes any shadows from the card, replacing them with a thin border to separate the card from the background.
 
-#### Horizontal Layout
+### Horizontal Layout
 
 By default all sections of the card (header, content, media, actions) are layed out vertically. This is nice when we have a lot of vertical space. Say we wanted to lay out all the sections in the card horizontally. We can use the `horizontal` attribute of the card to set its layout.
 
@@ -195,7 +195,7 @@ If everything went well, our card should look like this:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Alternative layouts
+### Alternative layouts
 
 You can get even more creative with the layout of the `igx-card`.
 
@@ -235,7 +235,7 @@ Bellow is an example showing how you can create a semi-horizontal card, where we
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Card Actions
+### Card Actions
 
 The card actions area allows additional configuration to what we have already mentioned.
 
@@ -265,7 +265,7 @@ You can also justify the buttons so that they are layed out across the entire ax
 </igx-card-actions>
 ```
 
-### Styling
+## Styling
 To get started with styling the card, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -283,7 +283,7 @@ $colorful-card: igx-card-theme(
 ```
 As seen, the `igx-card-theme` exposes some useful parameters for basic styling of its items. 
 
-#### Including themes
+### Including themes
 
 <div class="divider"></div>
 
@@ -322,7 +322,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 }
 ```
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 486px">
     <iframe id="card-style-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-styling-sample" class="lazyload no-theming">
@@ -336,7 +336,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
 The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
-### API and Style References
+## API and Style References
 
 For more detailed information regarding the card's API, refer to the following links:
 * [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
@@ -360,7 +360,7 @@ Styles:
 
 <div class="divider"></div>
 
-###Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

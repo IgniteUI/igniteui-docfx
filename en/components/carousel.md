@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.</p>
 <div class="divider"></div>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 550px">
     <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -21,10 +21,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 
 
-### Usage
+## Usage
 The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
 
-#### First steps
+### First steps
 <div class="divider--half"></div>
 
 >[!NOTE]
@@ -47,7 +47,7 @@ export class AppModule {}
 
 In this section we will go through the setup of the above defined **demo**.
 
-#### Adding slides with *ngFor
+### Adding slides with *ngFor
 <div class="divider--half"></div>
 
 If we have slides with the same type of content, the easiest approach is to use *\*ngFor* to add them in the template.
@@ -83,9 +83,9 @@ public slides = [
 </div>
 ...
 ```
-### Examples
+## Examples
 
-#### Configuring IgxCarousel
+### Configuring IgxCarousel
 <div class="divider--half"></div>
 
 By default, the carousel has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
@@ -104,7 +104,7 @@ The carousel template may look like this:
 </div>
 ```
 
-#### Custom indicators
+### Custom indicators
 <div class="divider--half"></div>
 
 To add custom carousel indicators we will have to use the [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html), like this:
@@ -117,7 +117,7 @@ To add custom carousel indicators we will have to use the [IgxCarouselIndicatorD
 ...
 ```
 
-#### Custom nav buttons
+### Custom nav buttons
 
 To achieve this we will use the [IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) and [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) directives:
 
@@ -137,7 +137,7 @@ To achieve this we will use the [IgxCarouselPrevButtonDirective]({environment:an
 ...
 ```
 
-#### Slide containing other components
+### Slide containing other components
 <div class="divider--half"></div>
 
 This carousel is going to contain slides with forms and images:
@@ -192,7 +192,7 @@ This carousel is going to contain slides with forms and images:
 ...
 ```
 
-##### Demo
+#### Demo
 
 <div class="sample-container loading" style="height: 700px">
     <iframe id="carousel-with-components-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-with-components-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -205,7 +205,7 @@ This carousel is going to contain slides with forms and images:
 </div>
 
 
-### Animations
+## Animations
 
 Animated slide transitions provide the end-users a nice experience when interacting with the carousel.
 
@@ -222,7 +222,7 @@ The animations are configured through the [animationType]({environment:angularAp
 Setting `none` to the `animationType` input disables carousel's animations.
 
 
-#### Demo
+### Demo
 
 The demo below demonstrates the different types of animations, which the carousel supports. 
 
@@ -237,21 +237,21 @@ The demo below demonstrates the different types of animations, which the carouse
 </div>
 
 
-### Navigation
+## Navigation
 <div class="divider--half"></div>
 
 Transition and navigation are the most important carousel features.
 
 The navigation in the carousel can be handled by the user through navigation buttons, keyboard navigation and pan interaction on mobile devices.
 
-#### Pan gestures
+### Pan gestures
 <div class="divider--half"></div>
 
 By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property to `false`.
 
 The carousel [animations](carousel.md#animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
 
-#### Keyboard navigation
+### Keyboard navigation
 <div class="divider--half"></div>
 
 * To navigate to the **next**/**previous** slide, you have to use, respectfully: 
@@ -261,7 +261,7 @@ The carousel [animations](carousel.md#animations) are fully supported on touch d
     * `End` key for the end slide
     * `Home` key for the start slide
  
-#### Automatic transitioning
+### Automatic transitioning
 <div class="divider--half"></div>
 
 The **IgxCarousel** can be easily configured to change the slides automatically, without any user interaction. This way you can create your own slideshow by only setting a transition interval to the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) property, which determines the amount of time in milliseconds between slides transition. 
@@ -269,7 +269,7 @@ The **IgxCarousel** can be easily configured to change the slides automatically,
 >[!NOTE]
 >The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`. 
 
-### Advanced Example
+## Advanced Example
 <div class="divider--half"></div>
 
 Let's create a fully automated carousel with looping enabled. Each slide will be synced with a [list item]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) in a list. Clicking on a list item will trigger a slide change.
@@ -343,7 +343,7 @@ These configurions will have the following result:
 
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
@@ -352,7 +352,7 @@ These configurions will have the following result:
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
