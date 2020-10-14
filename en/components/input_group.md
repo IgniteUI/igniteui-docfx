@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular controls can easily be used in Reactive Forms that provide a model-driven approach for handling form inputs.</p>
 <div class="divider--half"></div>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height:100px">
 <iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 To get started with the Input Group component, first you need to import the `IgxInputGroupModule` from the `igniteui-angular` toolkit.
 
 Note that the `IgxInputGroup` also depends on the **FormsModule** in order to have a working Template Driven Form:
@@ -42,12 +42,12 @@ export class AppModule {}
 > [!NOTE]
 > To use any of the directives `igxInput`, `igxLabel`, `igx-prefix`, `igx-suffix` or `igx-hint`, you have to wrap them in an `<igx-input-group>` container.
 
-### Examples
+## Examples
 
-#### Label & Input
+### Label & Input
 You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
 
-#### Prefix & Suffix
+### Prefix & Suffix
 The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can contain or be attached to HTML elements, strings, icons or even other components. In the following sample we will create a new input field with a string **prefix** and an icon **suffix**:
 
 ```html
@@ -64,7 +64,7 @@ The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can c
 </div>
 <div class="divider--half"></div>
 
-#### Hints
+### Hints
 The [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive provides a helper text placed below the input. It can be at the beginning or at the end of the input depending on the value of the [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) property. Let's add a hint to our phone input:
 
 ```html
@@ -85,7 +85,7 @@ This is how the phone field with hint looks:
 </div>
 <div class="divider--half"></div>
 
-#### Input Types & Input Group Type Token
+### Input Types & Input Group Type Token
 The input group styles can be altered by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input group component supports the following types: `line` (default if type is not specified), `border`, `box`, and `search`. The `line`, `border`, and `box` types are made specifically for the `Material Design` themes. Setting those types with other themes will not have any effect on how the input group looks.
 An example of setting a specific type declaratively:
 ```html
@@ -113,7 +113,7 @@ providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styling
+## Styling
 
 The first thing we need to do, in order to get started with the input group styling, is to include the `index` file in our style file:
 
@@ -136,7 +136,7 @@ $custom-input-group: igx-input-group-theme(
 );
 ```
 
-#### Using CSS variables
+### Using CSS variables
 
 The last step is to include the newly created theme:
 
@@ -144,7 +144,7 @@ The last step is to include the newly created theme:
 @include igx-css-vars($custom-input-group);
 ```
 
-#### Using Theme Overrides
+### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use the [input group mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group), since it doesn't support CSS variables.
 
@@ -160,7 +160,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 }
 ```
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:120px">
     <iframe id="input-group-style-iframe" src='{environment:demosBaseUrl}/data-entries/input-group-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -172,7 +172,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 </div>
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -181,7 +181,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Related topics:
