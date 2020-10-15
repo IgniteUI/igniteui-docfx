@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Toggle
+# Toggle
 
 <p class="highlight">Ignite UI for Angular の Toggle ディレクティブは、ユーザーが簡単に開閉できるボックスにコンテンツをラップします。</p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 370px">
     <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -21,9 +21,9 @@ _language: ja
     </button>
 </div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 Toggle コンポーネントを初期化にするには、まず `IgxToggleModule` を **app.module.ts** ファイルにインポートします。
 
@@ -41,7 +41,7 @@ import { IgxToggleModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### トグルの表示
+### トグルの表示
 
 トグルのコンテンツを表示および非表示にするには、[open]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [close]({environment:angularApiUrl}/classes/igxtoggledirective.html#close) メソッドを使用します。
 
@@ -75,9 +75,9 @@ export class Class {
 </div>
 ```
 
-### コード例 
+## コード例 
 
-#### 位置の変更 
+### 位置の変更 
 
 次のサンプルでは、さまざまな配置方法を使用してコンテンツをボタンの下に表示します。 
 
@@ -122,7 +122,7 @@ export class Class {
     </button>
 </div>
 
-#### トグル自動操作
+### トグル自動操作
 
 `open` および `close` メソッドの使用を回避するために、`onClick` ハンドラーを含む、参照するトグルの状態を自動的に変更できるディレクティブがあります。
 
@@ -156,7 +156,7 @@ export class Class {
 >[!NOTE]
 > デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。 さらに、このディレクティブはホスト要素をオーバーレイ設定の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) として設定します。
 
-#### 自動トグル サービス プロバイダー
+### 自動トグル サービス プロバイダー
 
 `igxToggle` ディレクティブの状態を保持し、[`igxNavigationService`]({environment:angularApiUrl}/classes/igxnavigationservice.html) プロバイダーを介してコマンドする便利な方法があります。トグルをサービスに登録するために使用される `igxToggle` 要素の識別子を設定します。状態を自動的に制御したい場合、この識別子を `igxToggleActionDirective`に渡す必要があります。
 
@@ -182,7 +182,7 @@ export class Class {
     </button>
 </div>
 
-#### トグル コンテナのオフセット
+### トグル コンテナのオフセット
 
 対応する軸に沿ったトグル コンテナーの位置を指定した量だけ操作できます。
 
@@ -205,7 +205,7 @@ public offsetToggle() {
     </button>
 </div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider"></div>
 
 * [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
@@ -218,7 +218,7 @@ public offsetToggle() {
 * [igxNavigationService]({environment:angularApiUrl}/classes/igxnavigationservice.html)
 
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

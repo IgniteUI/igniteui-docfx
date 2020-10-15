@@ -5,14 +5,14 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Overlay
+# Overlay
 <p class="highlight">
 オーバーレイ サービスはアプリケーションの前景にコンテンツを動的な描画をサポートします。描画するコンテンツおよび描画方法 (配置、アニメーション、スクロールおよびクリック動作など) を構成できます。
 このオーバーレイ サービスは Toggle ディレクティブと完全に統合されています。
 </p>
 <div class="divider--half"></div>
 
-#### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,7 +23,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### はじめに
+## はじめに
 
 はじめに、[`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) をインポートし、コンポーネントへの参照をコンポーネントのコンストラクターに`注入`する必要があります。
 ```typescript
@@ -42,7 +42,7 @@ export class MyOverlayComponent {
 ...
 ```
 
-### コンテンツの表示
+## コンテンツの表示
 
 オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
@@ -120,7 +120,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
     - 閉じた後、ビューを DOM にある元の位置にアタッチします。
 <div class="divider--half"></div>
 
-### コンポーネントのアタッチ
+## コンポーネントのアタッチ
 閉じた後、ビューを DOM にある元の位置にアタッチします。以下のデモでは、[IgxCard](card.md#card-デモ) コンポーネントをオーバーレイ サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドに渡し、IDを生成します。次に、提供された ID で [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドを呼び出し、カードをモーダル コンテナで DOM にアタッチします。
 
 
@@ -133,7 +133,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 </div>
 <div class="divider--half"></div>
 
-### オーバーレイ設定
+## オーバーレイ設定
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
@@ -171,7 +171,7 @@ export class MyOverlayComponent {
 ボタンをクリックすると、ボタンに相対的に配置される `MyDynamicComponent` を表示します。
 <div class="divider--half"></div>
 
-### オーバーレイの非表示
+## オーバーレイの非表示
 
 [`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
 
@@ -218,7 +218,7 @@ export class MyOverlayComponent {
     <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
 </div>
 ```
-### アタッチ設定
+## アタッチ設定
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドの [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
 
@@ -245,7 +245,7 @@ defaultOverlaySettings = {
 ```
 <div class="divider--half"></div>
 
-### igxToggle との統合
+## igxToggle との統合
 [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) と完全に統合されます。コンテンツの切り替えで Toggle ディレクティブの [`toggle()`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドにカスタム オーバーレイ設定を渡すことができます。
 
 構成設定をトグルのメソッドに渡す方法は以下の例で紹介されます。
@@ -286,10 +286,10 @@ export class ExampleComponent {
 ```
 <div class="divider--half"></div>
 
-### 仮定と制限
+## 仮定と制限
 アウトレットにオーバーレイを表示する際にアウトレットが CSS で変換、視点、またはフィルターが設定された要素の子である場合、モーダル オーバーレイが表示されません。これは、上記のいずれかの CSS プロパティが設定された際にブラウザーが新しく含まれるブロックを作成して[こちら](https://developer.mozilla.org/ja-JP/docs/Web/CSS/position#fixed)のようにオーバーレイがこのブロックに制限されるためです。
 
-### API リファレンス
+## API リファレンス
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 

@@ -5,11 +5,11 @@ _keywords: ジェット, Angular, ネイティブ Angular コンポーネント 
 _language: ja
 ---
 
-### Chip
+# Chip
 
 [Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
     <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ _language: ja
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 
 はじめに、**app.module.ts** ファイルに **IgxChipsModule** をインポートします。
 ```typescript
@@ -45,7 +45,7 @@ export class AppModule {}
 </igx-chip>
 ```
 
-#### 選択
+### 選択
 
 ![Default Selection](../images/chip/selecting_default.gif)
 
@@ -58,7 +58,7 @@ export class AppModule {}
 </igx-chip>
 ```
 
-#### 削除
+### 削除
 
 ![Removing](../images/chip/removing_default.gif)
 
@@ -82,7 +82,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 }
 ```
 
-#### ドラッグ
+### ドラッグ
 
 ドラッグは、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効にすると、チップをクリックしてドラッグできます。
 
@@ -162,7 +162,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### Chip テンプレート
+### Chip テンプレート
 
 [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) のすべての要素がテンプレート化できます。
 
@@ -225,11 +225,11 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </ng-template>
 ```
 
-### Chip Area
+## Chip Area
 
 [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要となる複雑なシナリオの処理で使用されます。
 
-#### Chip のソート
+### Chip のソート
 
 ![Dragging](../images/chip/dragging.gif)
 
@@ -257,7 +257,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 }
 ```
 
-#### キーボード ナビゲーション
+### キーボード ナビゲーション
 
 チップをフォーカスするには `Tab` キーを押すか、それをクリックします。チップがチップ領域にある場合、キーボード ナビゲーションを使用して順序を変更することができます。
 
@@ -371,7 +371,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 すべてが適切に設定されていれば、ブラウザーで以下が表示されます。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="chip-area-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-area-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -382,7 +382,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 チップのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -405,7 +405,7 @@ $custom-theme: igx-chip-theme(
 );
 ```
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -444,7 +444,7 @@ $custom-theme: igx-chip-theme(
 }
 ```
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:100px">
     <iframe id="chip-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -454,13 +454,13 @@ $custom-theme: igx-chip-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### API
+## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 * [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
-### 参照
+## 参照
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

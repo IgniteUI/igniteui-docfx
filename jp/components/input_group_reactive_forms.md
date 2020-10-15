@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## リアクティブ フォームの統合
+# リアクティブ フォームの統合
 <p class="highlight">
 Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供する Reactive フォームで簡単に統合できます。
 </p>
 
-### デモ
+## デモ
 次のサンプルは、リアクティブ フォームで使用される場合の [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)、[`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html)、および [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールを示しています。
 
 <div class="sample-container loading" style="height: 850px;">
@@ -22,9 +22,9 @@ Ignite UI for Angular コントロールは、フォーム入力を処理する�
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 リアクティブ フォームを使用する前に、Ignite UI コンポーネントのすべてのモジュールと `ReactiveFormsModule` をインポートします。
 
@@ -45,7 +45,7 @@ export class AppModule {}
 
 リアクティブ フォームについては、[こちら](https://angular.io/guide/reactive-forms) を参照してください。
 
-#### フォームの作成
+### フォームの作成
 
 フォームのモデルを設定するには、`form` 要素の `formGroup` プロパティを使用します。次に、各モデル プロパティに対応する各入力フィールドに `formControlName` を追加します。
 
@@ -100,7 +100,7 @@ export class ReactiveFormsSampleComponent {
 
 この例では、`movie`、`fullName`、`email`、および `genres`のフィールドが必要となり、値がない場合は送信されません。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -109,7 +109,7 @@ export class ReactiveFormsSampleComponent {
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 関連トピック:

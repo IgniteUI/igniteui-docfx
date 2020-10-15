@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Divider
+# Divider
 
 <p class="highlight">デバイダ コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。</p>
 <div class="divider"></div>
 
-### デモ
+## デモ
 
 デフォルトでは、デバイダは水平の実線です。
 
@@ -22,13 +22,13 @@ _language: ja
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 
 ```html
 <igx-divider></igx-divider>
 ```
 
-### 垂直デバイダ
+## 垂直デバイダ
 `vertical` 属性を追加してその値を `true` に設定することで、デバイダの方向を水平から垂直に変更できます。
 
 ```html
@@ -42,7 +42,7 @@ _language: ja
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### 破線の仕切り
+## 破線の仕切り
 デバイダのデフォルト スタイルは`実線`ですが、`破線`も使用できます。
 デフォルトの外観を変更するには、デバイダの `type` 属性を使用してその値を `dashed` に設定します。
 
@@ -57,7 +57,7 @@ _language: ja
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### インセット デバイダ
+## インセット デバイダ
 デバイダは両側に設定できます。
 デバイダを埋め込むには、デバイダの `middle` 属性を `true` に設定し、`inset` 値を指定することにより、デバイダが両端から縮小し始めます。
 
@@ -81,13 +81,13 @@ _language: ja
 
 `middle` 属性の値が誤った値に設定されている場合、または属性がそれ以外で省略されている場合は、デバイダは左側にのみ設定されます。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 * [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

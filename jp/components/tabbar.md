@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Bottom Navigation
+# Bottom Navigation
 
 <p class="highlight">Ignite UI for Angular Bottom Navigation コンポーネントは、単一ビューで表示される複数のコンテンツ パネル間での移動を可能にします。パネルの間のナビゲーションは下部にあるタブ ボタンで実行されます。</p>
 <div class="divider"></div>
@@ -13,7 +13,7 @@ _language: ja
 > [!NOTE]
 > `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
 
-### Bottom Navigation デモ
+## Bottom Navigation デモ
 
 <div class="divider--half"></div>
 
@@ -28,7 +28,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-#### 使用方法
+## 使用方法
 
 はじめに、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
 
@@ -59,7 +59,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### Bottom Navigation のカスタマイズ
+## Bottom Navigation のカスタマイズ
 
 タブにアイコンを追加します。Bottom Navigation コントロールがマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。 
 
@@ -183,7 +183,7 @@ Bottom Navigation は以下のようになります。
 
 <div class="divider"></div>
 
-### ルーター アウトレット コンテナとの統合
+## ルーター アウトレット コンテナとの統合
 
 Bottom Navigation コンポーネントの主な用途はコンテンツを含むパネルの定義ですが、タブ項目のみを定義する必要がある場合があります。
 
@@ -303,7 +303,7 @@ export class TabbarRoutingModule { }
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 タブのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -325,7 +325,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 > [!NOTE]
 > タブ パネルのコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -364,7 +364,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
     @include igx-css-vars($dark-bottom-nav);
 }
 ```
-#### カラーパレットの定義
+### カラーパレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -385,7 +385,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 );
 ```
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[**スキーマ**](themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -422,7 +422,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" >
     <iframe id="tabbar-style-iframe" src='{environment:demosBaseUrl}/layouts/tabbar-style' width="100%" height="100%" seamless
@@ -434,7 +434,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -446,7 +446,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 * [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -4,11 +4,11 @@ _description: オーバーレイ サービスの IPositionStrategy インター�
 _language: ja
 ---
 
-## 配置ストラテジ
+# 配置ストラテジ
 
 配置ストラテジは、提供された `IgxOverlayService` でコンポーネントを表示する場所を決定します。デフォルトでコンテンツは画面の中央に配置されます。
 
-#### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -19,18 +19,18 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### ストラテジの概要
+## ストラテジの概要
 
 5 つの配置ストラテジがあります。
 
-#### Global
+### Global
 [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡された指示に基づいてコンテンツを配置します。 [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) に Left/Center/Right、[`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) に Top/Middle/Bottom があります。デフォルトは:
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-#### Container
+### Container
 コンテンツを `GlobalPositionStrategy` として配置します。
 `ContainerPositionStrategy`は画面に関連する位置ではなく、`OverlaySettings` `outlet`で提供されるコンテンツに関連する位置にコンテンツを配置します。デフォルトは:
     | horizontalDirection        | verticalDirection        |
@@ -38,14 +38,14 @@ _language: ja
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
-#### Connected
+### Connected
 [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) からの開始点と [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) から渡された方向に基づいて要素を配置します。開始点 ([`Point`]({environment:angularApiUrl}/classes/point.html)) または `HTMLElement` を配置決めのベースとして渡すことができます。デフォルトは:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-#### Auto
+### Auto
 **Connected** ポジション ストラテジと同じ方法で要素を配置します。
 要素が部分的にビューポートから出た場合を考慮して、異なる開始点も計算します。**Auto** ストラテジは最初に **Connected** ストラテジと同じように要素を表示しようとします。要素がビューポートから出た場合 **Auto** は開始点と方向を反転します。つまり、方向が 'bottom' の場合、要素は 'top' に切り替わります。
 反転後、要素がまだビューポートの外である場合、**Auto** は要素をビューポートに入れるために初期の方向と開始点を使用します。たとえば、エレメントがビューポートの右側から 50 ピクセル分外に出た場合、**Auto** はそれを 50 ピクセル分左へずらします。その後、要素がビューポートから部分的に外れている場合、そしてその高さまたは幅がビューポートのものより大きい場合、**Auto** は要素の左端/上端をビューポートの左端/上端に揃えます。デフォルトは:
@@ -54,7 +54,7 @@ _language: ja
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
-#### Elastic
+### Elastic
 要素の一部が表示範囲外の場合、**Connected** 配置ストラテジのように要素を配置し、要素をビュー ポートに収まるように (幅や高さの再計算により) サイズ変更します。 [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)  へ渡して要素のサイズが特定のしきい値を下回るようなサイズ変更を防ぐことができます。デフォルトは:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint      minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
@@ -66,7 +66,7 @@ _language: ja
 > [!NOTE]
 > オーバーレイ要素はサイズ変更**されます**が配置ストラテジは `overflow` を**処理しません**。たとえば、サイズ変更時の要素に `overflow-y` が必要な場合、適切なスタイルを組み込んで提供します。
 
-### 使用方法
+## 使用方法
 
 配置ストラテジを使用して、オーバーレイでさまざまな組み合わせのコンテンツを表示できます。他のポジション ストラテジの使用を開始するには、最初に次のように使用される各ストラテジに必要な依存関係を含める必要があります。
 
@@ -103,7 +103,7 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 </div>
 <div class="divider--half"></div>
 
-### 配置設定
+## 配置設定
 
 各配置ストラテジには、固有の配置設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定された `target` (`buttonElement`) の右上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は左上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`PositionSettings` を渡します。
 
@@ -135,7 +135,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
 </div>
 <div class="divider--half"></div>
 
-#### ストラテジの変更
+### ストラテジの変更
 
 オーバーレイに渡される [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`positionStrategy`]({environment:angularApiUrl}/interfaces/ipositionstrategy.html) プロパティをオーバーライドすることにより、オーバーレイで使用される配置ストラテジを変更することもできます。
 
@@ -153,7 +153,7 @@ overlay.show(overlayId, { positionStrategy: myPositionStrategy });
 </div>
 <div class="divider--half"></div>
 
-#### 設定の変更
+### 設定の変更
 
 既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。
 ```typescript
@@ -169,7 +169,7 @@ overlaySettings.target = dummyHTMLElement;
 overlay.show(overlayId, overlaySettings);
 ```
 
-#### コンテンツのオフセット
+### コンテンツのオフセット
 
 対応する軸に沿って指定した量のみコンテンツをオフセットする方法:
 ```typescript
@@ -179,11 +179,11 @@ const deltaY: number = 15;
 overlay.setOffset(this._overlayId, deltaX, deltaY);
 ```
 
-### API リファレンス
+## API リファレンス
 
 * [IPositionStrategy]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
 
-### その他のリソース
+## その他のリソース
 * [オーバーレイ メイン トピック](overlay_main.md)
 * [スクロール ストラテジ](overlay_scroll.md)
 * [スタイル設定](overlay_styling.md)
