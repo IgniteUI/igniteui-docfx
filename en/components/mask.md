@@ -8,10 +8,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
@@ -19,7 +20,7 @@ By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
 
 The first step is to import the `IgxMaskModule` and `IgxInputGroupModule` in our **app.module.ts** file.
@@ -40,7 +41,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-#### Supported Built-in Mask Rules
+### Supported Built-in Mask Rules
 <div class="divider--half"></div>
 
 | Mask Character | Description |
@@ -55,7 +56,7 @@ export class AppModule {}
 | & | any keyboard character (excluding space) |
 | C | any keyboard character |
 
-#### Apply Mask on Input
+### Apply Mask on Input
 In the following example, we apply a phone number with an extension mask to an input.
 
 ```html
@@ -72,7 +73,7 @@ In the following example, we apply a phone number with an extension mask to an i
 
 If configured properly, you should see the demo sample in your browser.
 
-#### Bind to Formatted/Raw Value
+### Bind to Formatted/Raw Value
 Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) is set to *false* and the raw value is used.
 
 ```html
@@ -120,7 +121,7 @@ public clear() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Validate Masked Values
+### Validate Masked Values
 In addition to setting a mask to an input, you can validate the entered value as well. The following example implements masks, validation and notification for invalid data using the Mask directive and Snack Bar component.
 
 ```html
@@ -163,7 +164,7 @@ private notify(snackbar, message, input) {
 </div>
 <div class="divider--half"></div>
 
-#### Text Selection
+### Text Selection
 You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
 
 Import the `IgxTextSelectionModule` in your **app.module.ts** file:
@@ -193,7 +194,7 @@ You can see how this works in the previous sample.
 >[!NOTE]
 >In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxMask` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
-#### Apply additional formatting on focus and blur
+### Apply additional formatting on focus and blur
 In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
 
 Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
@@ -244,7 +245,7 @@ As a result, a '%' sign should be appended to the value on blur (i.e. when the u
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Adding a placeholder
+### Adding a placeholder
 The user can also take advantage of the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) input property, which serves the purpose of the native input placeholder attribute. If no value is provided for the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder), the value set for the mask is used.
 
 ```typescript
@@ -270,7 +271,7 @@ value = null;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -278,7 +279,7 @@ value = null;
 * [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
 * [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -8,16 +8,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI Material Icons Extended is a subset of icons that extends the material icon set by Google.</p>
 
 <div class="sample-container loading" style="height: 700px">
-    <iframe id="material-icons-extended-iframe" seamless class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="material-icons-extended-iframe" seamless="" class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
-### Installation
+## Installation
 
 ```sh
 npm install @igniteui/material-icons-extended
 ```
 
-### Usage
+## Usage
 
 First, let's see how we can register a single icon in our component:
 
@@ -68,7 +69,7 @@ To use the icons in your component template:
 
 For more information and other types of usage, go to our [GitHub Repository](https://github.com/IgniteUI/material-icons-extended).
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html)

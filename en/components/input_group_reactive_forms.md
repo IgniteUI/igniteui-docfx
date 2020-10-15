@@ -9,21 +9,22 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular controls can be easily integrated into Reactive Forms that provide a model-driven approach for handling form inputs.
 </p>
 
-### Demo
+## Demo
 The following sample demonstrates the [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls when used in Reactive Forms.
 
 <div class="sample-container loading" style="height: 850px;">
-    <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="reactive-forms-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
-#### First Steps
+### First Steps
 
 Before you get started with Reactive Forms, you need to import all required modules for the Ignite UI components as well as the `ReactiveFormsModule`:
 
@@ -44,7 +45,7 @@ export class AppModule {}
 
 For a complete introduction to Reactive Forms, follow the [Angular tutorial](https://angular.io/guide/reactive-forms).
 
-#### Create Form
+### Create Form
 
 Use the `formGroup` property of the `form` element to set the model for the form. Next, add `formControlName` to each of the input fields, which will correspond to each individual model property.
 
@@ -99,7 +100,7 @@ export class ReactiveFormsSampleComponent {
 
 In our case the `movie`, `fullName`, `email`, and `genres` form fields are required and the form won't be submitted, unless their values are set.
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -108,7 +109,7 @@ In our case the `movie`, `fullName`, `email`, and `genres` form fields are requi
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Related topics:

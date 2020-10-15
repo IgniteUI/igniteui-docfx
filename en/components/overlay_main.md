@@ -11,18 +11,19 @@ The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
 
-#### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Getting Started
+## Getting Started
 
 First we need to import the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) in the component and `inject` a reference to it in the component's constructor:
 ```typescript
@@ -41,7 +42,7 @@ export class MyOverlayComponent {
 ...
 ```
 
-### Displaying Content
+## Displaying Content
 
 The overlay service can be used to dynamically display an `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
@@ -119,7 +120,7 @@ The first parameter in both overloads is mandatory and represents the content th
     - On close, it will re-attach the view back to it's original location in the DOM
 <div class="divider--half"></div>
 
-### Attaching Components
+## Attaching Components
 In the below demo, we can pass the [IgxCard](card.md#card-demo) component through the Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to generate an ID. Then we call the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with the provided ID to dynamically attach the card to the DOM in a modal container.
 
 
@@ -132,7 +133,7 @@ In the below demo, we can pass the [IgxCard](card.md#card-demo) component throug
 </div>
 <div class="divider--half"></div>
 
-### Overlay Settings
+## Overlay Settings
 
 The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method also accepts an object of the [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) type, which configures the way the content is shown. If no such object is provided, the Overlay Service will use its default settings to render the passed content.
 
@@ -165,10 +166,8 @@ export class MyOverlayComponent {
 ...
 <button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
 </div>
-
 ```
 Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
-<div class="divider--half"></div>
 
 ### Preset Overlay Settings
 
@@ -202,7 +201,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
         RelativePositionStrategy.Connected);
 ```
 
-### Hiding the Overlay
+## Hiding the Overlay
 
 The [`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method removes the content from the overlay and, if applicable, re-attaches it to it's original location in the DOM. 
 
@@ -249,7 +248,7 @@ export class MyOverlayComponent {
     <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
 </div>
 ```
-### Attaching Settings
+## Attaching Settings
 
 Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave and if the container is modal or not
 
@@ -276,7 +275,7 @@ defaultOverlaySettings = {
 ```
 <div class="divider--half"></div>
 
-### Integration with igxToggle 
+## Integration with igxToggle 
 The [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html) is fully integrated with the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html). As such, the Toggle Directive's [`toggle()`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) method allows for custom overlay settings to be passed when toggling the content.
 
 An example of how to pass configuration settings to the toggle's method is shown below:
@@ -317,14 +316,14 @@ export class ExampleComponent {
 ```
 <div class="divider--half"></div>
 
-### Assumptions and Limitations
+## Assumptions and Limitations
 If you show the overlay in an outlet, and if the outlet is a child of an element with transform, perspective or filter set in the CSS you won't be able to show the modal overlay. The reason for this is if one of the above mentioned CSS properties is set, the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).
 
-### API References
+## API References
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 * [Position Strategies](overlay_position.md)
 * [Scroll Strategies](overlay_scroll.md)
 * [Styling Topic](overlay_styling.md)

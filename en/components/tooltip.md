@@ -9,19 +9,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives provide us with the ability to create a fully customizable tooltip and attach it to any element on our page.
 While most tooltips have a limited number of available positions, with the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive we can specify any position we want on the page while keeping it in relation to the target (anchor) and provide various other overlay settings like scroll strategies and custom animations!
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height:150px">
-    <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tooltip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 The first step is to import the `IgxTooltipModule` in the app.module.ts file.
 
@@ -40,7 +40,7 @@ import {
 export class AppModule {}
 ```
 
-### Simple tooltip
+## Simple tooltip
 
 Let's say we want to create a simple text tooltip like the one above. In our case, we're using our awesome [`IgxAvatar`](avatar.md) as the element, so we start by importing the `IgxAvatarModule` first.
 
@@ -60,7 +60,7 @@ import {
 export class AppModule {}
 ```
 
-#### Tooltip target
+### Tooltip target
 The avatar will be our target and all we have to do is set the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive on it, which basically marks our element as one that has a tooltip.
 
 - The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive extends the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) directive.
@@ -74,7 +74,7 @@ The avatar will be our target and all we have to do is set the [`igxTooltipTarge
 </igx-avatar>
 ```
 
-#### Tooltip
+### Tooltip
 Now let's create the tooltip element itself! Since we want a simple text tooltip, we will define an ordinary div element with text inside and set the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive on it, which marks it as a tooltip.
 
 - The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive extends the [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive.
@@ -88,7 +88,7 @@ Now let's create the tooltip element itself! Since we want a simple text tooltip
 </div>
 ```
 
-#### Attach tooltip to target
+### Attach tooltip to target
 Now that we have both our target and tooltip defined, all that's left for us to do is assign the tooltip's reference to the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) selector of the target.
 
 ```html
@@ -105,13 +105,13 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 
 If everything went well, you should see the sample shown in the [Tooltip Demo](#demo) section.
 
-#### Show/Hide delay settings
+### Show/Hide delay settings
 What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
 
 > [!NOTE]
 > The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) and its respective API methods work by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. Showing and hiding the tooltip through the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does not take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
 
-### Rich tooltip
+## Rich tooltip
 
 Customizing and styling the content of our tooltip has never been easier with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive! Since the tooltip itself is an ordinary element in our markup, we can basically improve its content by adding any elements we need and have the ability to style them accordingly!
 
@@ -224,7 +224,7 @@ If all went well, this is how our location and tooltip should look like:
 </div>
 <div class="divider--half"></div>
 
-### Overlay configuration
+## Overlay configuration
 Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay_main.md) to open and close the respective tooltip element.
 
 The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes an [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)), which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default overlay settings will be used.
@@ -232,7 +232,7 @@ The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdir
 > [!NOTE]
 > Any property that is set through the [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default overlay settings and will have a direct impact on the tooltip.
 
-### Styling
+## Styling
 
 To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -270,7 +270,7 @@ Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for 
 > [!NOTE]
 > In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
 
-#### Including Themes
+### Including Themes
 
 <div class="divider"></div>
 
@@ -311,7 +311,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 So now our styled tooltip should look like this:
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:200px">
     <iframe id="tooltip-style-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -323,7 +323,7 @@ So now our styled tooltip should look like this:
 </div>
 <div class="divider--half"></div>
 
-### Accessibility
+## Accessibility
 
 Elements with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive have an autogenerated [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) property (if not set by the developer), a tooltip [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role) and the **aria-hidden** attribute that is automatically updated depending on whether the tooltip is visible or not. By setting the **aria-describedby** attribute of the target to its respective tooltip's [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id), a reference will be provided to the tooltip element. This provides screenreaders the information needed to read out the tooltip's contents when the end-user triggers the tooltip.
 
@@ -332,7 +332,7 @@ Extra care should be taken in the following scenarios:
 - The tooltip is used with a manually implemented behavior (e.g. manually show/hide) instead of the built-in one.
 - The target element is unfocusable.
 
-### API References
+## API References
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons and avatars to improve on the design of our application! The respective APIs are listed below:
 
@@ -354,7 +354,7 @@ Styles:
 
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -8,17 +8,18 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
 <div class="divider--half"></div>
 
-#### Demo
+## Demo
 <div class="sample-container loading" style="height:50px">
-    <iframe id="linear-progressbar-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="linear-progressbar-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 To get started with the Linear Progress Bar Indicator component, you need to import the **IgxProgressBarModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
@@ -42,7 +43,7 @@ To have a better understanding of how everything works, let's create a simple ex
 
 After that, you should see the demo sample in your browser.
 
-#### Progress Types
+### Progress Types
 
 You can set the type of your bar, using the [`type`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) attribute. There are five types of linear progress bars - `default`, `error`, `success`, `info`, and `warning`.
 
@@ -71,10 +72,10 @@ So if we set up everything correctly, you should see the following in your brows
 </div>
 <div class="divider--half"></div>
 
-#### Indeterminate Progress
+### Indeterminate Progress
 If you want to track a process that is not determined precisely, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 
-#### Text Properties
+### Text Properties
 
 You can align the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) property. Permitted values are `left`, `center`, and `right`. 
 
@@ -146,7 +147,7 @@ Let's take a look at how this turned out:
 > If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is defined greater than the [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) input, there is only one update, which gets **the value that is passed for progress update**.   
 <div class="divider--half"></div>
 
-#### Dynamic Progress
+### Dynamic Progress
 
 You can dynamically change the value of the progressbar by using external controls like buttons. To achieve this, we can bind the value to a class property:
 
@@ -203,7 +204,7 @@ After completing the steps above, our progressbar should look like this:
 </div>
 <div class="divider--half"></div>
 
-### Styling
+## Styling
 
 To get started with styling the linear progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -221,7 +222,7 @@ $custom-theme: igx-progress-linear-theme(
 );
 ```
 
-#### Including Themes
+### Including Themes
 
 <div class="divider"></div>
 
@@ -261,7 +262,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 }
 ```
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:50px">
     <iframe id="linear-progressbar-styling-iframe" src='{environment:demosBaseUrl}/data-display/linear-progressbar-styling' width="100%" height="100%" 
@@ -273,7 +274,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API
+## API
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
