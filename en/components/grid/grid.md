@@ -256,6 +256,34 @@ public initColumns(column: IgxGridColumn) {
 
 The code above will make the **ProductName** column sortable and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
 
+### Custom display format
+
+All values for a date or numeric column are transformed through the Angular [`DatePipe`](https://angular.io/api/common/DatePipe) or [`DecimalPipe`](https://angular.io/api/common/DecimalPipe). This does not modify the original value, just the value that is displayed in the column. By default, values will be displayed according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) (if not specified, it fallbacks to the application locale, which defaults to `'en-US'`).
+
+See [Setting up the locale of your app](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) for more details.
+
+Also, there are optional parameters for formatting:
+
+- `format` - determines what date/time parts are displayed, defaults to `'mediumDate'`, equivalent to `'MMM d, y'`
+- `timezone` - the timezone offset for dates. By default uses the end-user's local system timezone
+- `digitsInfo` - decimal representation objects. Default to `'1.0-3'`
+
+To allow customizing the display format by these parameters, the [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) input is exposed. A column will respect only the corresponding properties for its data type, if `pipeArgs` is set. Example:
+
+```typescript
+const pipeArgs: IColumnPipeArgs = {
+     format: 'longDate',
+     timezone: 'UTC',
+     digitsInfo: '1.1-2'
+}
+```
+```html
+<igx-column field="OrderDate" dataType="date" [pipeArgs]="pipeArgs"></igx-column>
+<igx-column field="UnitPrice" dataType="number" [pipeArgs]="pipeArgs"></igx-column>
+```
+
+The `OrderDate` column will respect only the `format` and `timezone` properties, while the `UnitPrice` will only respect the `digitsInfo`. For further details, please check the official Angular documentation at [Localizing your app](https://angular.io/guide/i18n).
+
 ## Data structure
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form:
@@ -425,14 +453,8 @@ and in the template of the component:
 
 ## Complex data binding
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (inluding nesting deeper than one level) through a "path" of properties in the data record.
 
-Currently, the Angular data grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
-
-### Working with Nested data
-
-There are mainly two ways to bind a more complex data source to the Angular grid.
-The grid supports binding through a "path" of properties in the data record.
 Take a look at the following data model:
 ```typescript
 interface AminoAcid {
@@ -474,9 +496,11 @@ configuration. Same goes for grouping and editing operations with or without tra
 </div>
 <div class="divider--half"></div>
 
-The other way to bind and visualize complex data in the **IgxGrid** is to:
+An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - and interpolate it in a custom column template
+    - use the `cell` object in the template, from which to access the `rowData`, therefore retrieve any value from it, i.e `cell.rowData[field]`
+
+and interpolate it those in the template.
 
 Below is the data that we are going to use:
 
