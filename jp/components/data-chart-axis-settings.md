@@ -77,7 +77,7 @@ Angular データ チャート コンポーネントでは、数値軸または�
 
 デフォルトでは、データ チャート コンポーネントは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。[`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
 
-以下のコードスニペットは、データ チャート コンポーネントの軸範囲を変更する方法を示しています。
+以下のコード スニペットは、データ チャート コンポーネントの軸範囲を変更する方法を示しています。
 
 ```html
 <igx-numeric-y-axis #yAxis
@@ -95,7 +95,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 対応するストロークとストロークの太さのプロパティを設定して、チャート内の軸上の間隔の色と太さを設定することもできます。
 
-以下のコードスニペットは、データ チャートの軸上の間隔を構成する方法を示しています。
+以下のコード スニペットは、データ チャートの軸上の間隔を構成する方法を示しています。
 
 ```html
 <igx-numeric-y-axis #yAxis
@@ -135,7 +135,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 このプロパティを正の値 （最大 1） に設定すると、カテゴリが互いに重なります。値が 1 の場合、チャートはカテゴリを互いの上に表示します。
 
-以下のコードスニペットは、x 軸の [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
+以下のコード スニペットは、x 軸の [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
 
 ```html
 <igx-category-x-axis #xAxis

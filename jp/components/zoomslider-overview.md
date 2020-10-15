@@ -34,6 +34,8 @@ Angular ZoomSlider コントロールは、範囲対応コントロールにズ�
 | 拡張性                    | ZoomSlider コントロールは、追加設定なしで DataChart コントロール をサポートします。                                   |
 | 構成可能なズーム範囲ウィンドウ        | ズーム範囲ウィンドウの初期幅、初期位置、最小サイズは、構成可能です。                                                      |
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 Angular chart コンポーネントをインストールするときに core パッケージもインストールする必要があります。
@@ -43,9 +45,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## モジュールの要件
 
-[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) は以下のモジュールを要求します。
+[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   ZoomSliderModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxZoomSliderModule } from 'igniteui-angular-charts';

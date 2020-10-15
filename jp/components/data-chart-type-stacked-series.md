@@ -74,9 +74,16 @@ Angular データ チャート コンポーネントはさまざまな種類の�
 -   すべてのデータ項目には、財務軸 (CategoryXAxis など) の Label プロパティにマッピングする必要があるデータ列 (文字列または日時) を少なくとも 1 列含める必要があります
 -   すべてのデータ項目には、積層シリーズの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加する [`IgxStackedFragmentSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html) の [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html#valuememberpath) プロパティを使用してマッピングする必要がある少なくとも 1 つの数値データ列を含める必要があります。
 
-## 必要なモジュール
+## モジュールの要件
 
-散布 シリーズは以下のモジュールが必要です。
+積層シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartInteractivityModule
+-   DataChartCategoryModule
+-   DataChartStackedModule,
+-   StackedFragmentSeriesModule,
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
