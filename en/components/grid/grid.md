@@ -258,7 +258,7 @@ The code above will make the **ProductName** column sortable and editable and wi
 
 ## Data structure
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form:
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) handles **flat data** and nested **POJOs(Plain old Java objects)**. The data structure specific for rendering is in the form:
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -269,29 +269,34 @@ const OBJECT_ARRAY = [{
         .
         ObjectKeyN: valueN
     },
-    {
+    .
+    .
+    .
+  }];
+
+const POJO = [{
         ObjectKey1: value1,
         ObjectKey2: value2,
         .
         .
         .
-        ObjectKeyN: valueN
+        ObjectKeyN: {
+          ObjectKeyN1: value1,
+          ObjectKeyN2: value2,
+          .
+          .
+          .
+          ObjectKeyNM: valueNM,
+        }
     },
     .
     .
-    .,
-    {
-        ObjectKey1: value1,
-        ObjectKey2: value2,
-        .
-        .
-        .
-        ObjectKeyN: valueN
-    }];
+    .
+  }];
 
 ```
 >[!WARNING]
->**The key values must not contain neither arrays or other objects**.
+>**The key values must not contain arrays**.
 
 >If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
 
