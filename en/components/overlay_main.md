@@ -11,7 +11,7 @@ The overlay service is fully integrated in the toggle directive.
 </p>
 <div class="divider--half"></div>
 
-## Demo
+### Demo
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -191,7 +191,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 ## Demo
 
-<div class="sample-container loading" style="height: 700px">
+<div class="sample-container loading" style="height: 950px">
     <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
