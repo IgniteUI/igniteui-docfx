@@ -96,6 +96,9 @@
         - name: Row Editing
           href: grid/row_editing.md
           new: false
+        - name: Row Adding
+          href: grid/row_adding.md
+          new: true
         - name: Batch Editing
           href: grid/batch_editing.md
           new: false
@@ -229,6 +232,9 @@
         - name: Row Editing
           href: treegrid/row_editing.md
           new: false
+        - name: Row Adding
+          href: treegrid/row_adding.md
+          new: true
         - name: Batch Editing
           href: treegrid/batch_editing.md
           new: false
@@ -347,6 +353,9 @@
         - name: Row Editing
           href: hierarchicalgrid/row_editing.md
           new: false
+        - name: Row Adding
+          href: hierarchicalgrid/row_adding.md
+          new: true
         - name: Batch Editing
           href: hierarchicalgrid/batch_editing.md
           new: false
