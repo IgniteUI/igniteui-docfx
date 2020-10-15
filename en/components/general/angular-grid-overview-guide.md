@@ -6,16 +6,6 @@ _keywords: angular, angular app development, infragistics
 
 # A Complete Guide to Angular Grid and Angular App Development
 
-### What is an Angular Data Grid? 
-
-An Angular data grid is a component used to display tabular data in a series of rows and columns. Data grids, also known as tables, are well known in the desktop world with popular software such as Microsoft Excel. While grids have been available on desktop platforms for a long time, they have recently become part of web app UIs, such as Angular UI.  
-
-Modern grids can be complex and may include a range of functionalities, including data binding, editing, Excel-like filtering, custom sorting, grouping, row reordering, row and column freezing, row aggregation, and exporting to Excel, CSV, and pdf formats.  
-
-### Why Use an Angular Data Grid? 
-
-Angular data grids are essential in use cases where lots of data must be stored and sorted through quickly. This can include industries such as financial or insurance that use high-volume, high-velocity data frequently.  Often the success of these companies is dependent on the functionality and performance of these data grids. When stock decisions need to be made in microseconds, for example, it’s imperative that the data grid performs with no lag time or flicker. 
-
 ### Ignite UI - Our Framework for Angular App Development 
 
 Ignite UI for Angular is an advanced toolset from Infragistics that includes feature-rich, high-performing UI components such as data grids and other components including charts, data visualization maps, editors, and more. 
