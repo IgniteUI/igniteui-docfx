@@ -11,7 +11,7 @@ The IgniteUI CSV Exporter service can export data in a Character Separated Value
 The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.</p>
 <div class="divider"></div>
 
-## CSV Exporter Demo
+## Demo
 
 <div class="sample-container loading" style="height: 150px;">
     <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
