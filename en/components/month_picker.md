@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
     The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.
 </p>
 
-### Month Picker Demo
+## Demo
 <div class="sample-container loading" style="height: 620px">
     <iframe id="monthpicker-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -19,7 +19,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
+## Usage
 
 The first step is to import the `IgxCalendarModule` inside our **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) also depends on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
 
@@ -58,7 +58,7 @@ To add a month picker in a template, use the following code:
 <igx-month-picker></igx-month-picker>
 ```
 
-#### Setting date
+### Setting date
 Set a date to [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) using the [`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) input.
 
 ```typescript
@@ -81,7 +81,7 @@ To create a two-way data-binding, set `ngModel` like this:
 <igx-month-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
-#### Formatting
+### Formatting
 Change the month picker display format, using the [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) inputs.
 
 ```html
@@ -99,7 +99,7 @@ public numericFormatOptions = {
 };
 ```
 
-#### Localization
+### Localization
 Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the month picker localization.
 
 ```html
@@ -127,7 +127,7 @@ Here is an example of localizing and formatting the month picker component:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Keyboard navigation
+## Keyboard navigation
 - When the **igxMonthPicker** component is focused, use
     - <kbd>PageUp</kbd> key to move to the previous year,
     - <kbd>PageDown</kbd> key to move to the next year,
@@ -149,7 +149,7 @@ Here is an example of localizing and formatting the month picker component:
     - <kbd>Enter</kbd> key to select the currently focused month and close the view,
     - <kbd>Tab</kbd> key to navigate through the months.
 
-### Styling
+## Styling
 To get started with styling the month picker, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -173,7 +173,7 @@ $my-calendar-theme: igx-calendar-theme(
 );
 ```
 
-#### Including themes
+### Including themes
 
 <div class="divider"></div>
 
@@ -214,7 +214,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 After everything's done, your component should look like this:
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 600px">
     <iframe id="monthpicker-styling-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -224,7 +224,7 @@ After everything's done, your component should look like this:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
@@ -233,7 +233,7 @@ After everything's done, your component should look like this:
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
