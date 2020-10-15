@@ -89,11 +89,11 @@
       new: true
     - name: 編集
       href: grid/editing.md
-      new: false
+      updated: true
       items:
         - name: セル編集
           href: grid/cell_editing.md
-          new: false
+          updated: true
         - name: 行編集
           href: grid/row_editing.md
           new: false
@@ -225,11 +225,11 @@
       new: false
     - name: 編集
       href: treegrid/editing.md
-      new: false
+      updated: true
       items:
         - name: セル編集
           href: treegrid/cell_editing.md
-          new: false
+          updated: true
         - name: 行編集
           href: treegrid/row_editing.md
           new: false
@@ -346,11 +346,11 @@
       new: false
     - name: 編集
       href: hierarchicalgrid/editing.md
-      new: false
+      updated: true
       items:
         - name: セル編集
           href: hierarchicalgrid/cell_editing.md
-          new: false
+          updated: true
         - name: 行編集
           href: hierarchicalgrid/row_editing.md
           new: false
@@ -1107,6 +1107,7 @@
   new: true
 - name: Calendar
   href: calendar.md
+  updated: true
 - name: Date Picker
   href: date_picker.md
 - name: Date Range Picker

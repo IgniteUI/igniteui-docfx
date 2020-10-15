@@ -88,11 +88,11 @@
       new: true
     - name: Editing
       href: grid/editing.md
-      new: false
+      updated: true
       items:
         - name: Cell Editing
           href: grid/cell_editing.md
-          new: false
+          updated: true
         - name: Row Editing
           href: grid/row_editing.md
           new: false
@@ -129,7 +129,7 @@
       new: false
     - name: Summaries
       href: grid/summaries.md
-      new: false
+      updated: true
     - name: Column Moving
       href: grid/column_moving.md
       new: false
@@ -224,11 +224,11 @@
       new: false
     - name: Editing
       href: treegrid/editing.md
-      new: false
+      updated: true
       items:
         - name: Cell Editing
           href: treegrid/cell_editing.md
-          new: false
+          updated: true
         - name: Row Editing
           href: treegrid/row_editing.md
           new: false
@@ -345,11 +345,11 @@
       new: false
     - name: Editing
       href: hierarchicalgrid/editing.md
-      new: false
+      updated: true
       items:
         - name: Cell Editing
           href: hierarchicalgrid/cell_editing.md
-          new: false
+          updated: true
         - name: Row Editing
           href: hierarchicalgrid/row_editing.md
           new: false
@@ -1106,6 +1106,7 @@
   new: true
 - name: Calendar
   href: calendar.md
+  updated: true
 - name: Date Picker
   href: date_picker.md
 - name: Date Range Picker
