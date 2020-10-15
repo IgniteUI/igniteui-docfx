@@ -126,7 +126,7 @@
       new: false
     - name: Summaries
       href: grid/summaries.md
-      new: false
+      updated: true
     - name: Column Moving
       href: grid/column_moving.md
       new: false
