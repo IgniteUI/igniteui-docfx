@@ -169,7 +169,7 @@ export class MyOverlayComponent {
 ```
 Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
 
-### Preset Overlay Settings
+## Preset Overlay Settings
 
 The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
 
@@ -187,8 +187,9 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
         targetElement,
         RelativePosition.Above,
         RelativePositionStrategy.Connected);
+```
 
-#### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 700px">
     <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -199,7 +200,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 </div>
 
 <div class="divider--half"></div>
-```
+
 
 ## Hiding the Overlay
 
