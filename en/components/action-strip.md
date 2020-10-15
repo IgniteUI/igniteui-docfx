@@ -85,11 +85,6 @@ This can be utilized via grid action components and we are providing two default
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div class="cell-template" (mouseover)="actionStrip.show(cell.row)" (mouseout)="actionStrip.hide()">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -100,6 +95,7 @@ This can be utilized via grid action components and we are providing two default
 ```
 >Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
+>Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
