@@ -234,8 +234,9 @@ $my-color-palette: igx-palette(
 Since Ignite UI for Angular bases its component designs on the [Material Design Principles](https://material.io/guidelines/material-design/introduction.html "Introduction to Material Design"), we try to get as close as possible to colors, sizes, typography, and the overall look and feel of our components to those created by Google. Example:
 
 <div class="sample-container loading" style="height: 477px">
-    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 We want to also mention our samples browser Theming widget. Now, you can change themes at runtime in the [Ignite UI sample browser](http://www.infragistics.com/angularsite/components/grid/grid.html "Data Grid Overview and Configuration") with just one click. Theming widget allows you to change the styles, colors, roundness, and elevation. Customization of theming has never been easier. Once you are ready with your theme, just press "DOWNLOAD SASS" and you have your SCSS file at your disposal and you can use it in your app: 
 

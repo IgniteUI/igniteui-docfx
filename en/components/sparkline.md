@@ -24,6 +24,8 @@ The sparkline control has several visual elements and corresponding features tha
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 In order to use the Ignite UI for Angular sparkline component, the following packages need to be installed:
@@ -32,6 +34,8 @@ In order to use the Ignite UI for Angular sparkline component, the following pac
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
+
+<!-- end: Angular, React, WebComponents -->
 
 The Angular sparkline component requires the import of the following modules:
 

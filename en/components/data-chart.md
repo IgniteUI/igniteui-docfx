@@ -15,13 +15,15 @@ The Angular data chart is a charting component that provides modular design of a
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 
 
 </div>
 
 <div class="divider--half"></div>
+
+<!-- Angular, React, WebComponents -->
 
 ## Dependencies
 
@@ -32,9 +34,17 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The Angular data chart component requires the following modules:
+The Angular data chart component requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule
+-   DataChartScatterCoreModule,
+-   DataChartScatterModule,
+-   NumberAbbreviatorModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxDataChartCoreModule } from 'igniteui-angular-charts';

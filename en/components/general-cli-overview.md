@@ -34,19 +34,19 @@ ig new "My Project" --framework=react --type=igr-es6
 
 ## Adding Components
 
-Once you have created a project, you can then add additional component templates using `ig add` at any point. Running this command without any parameters will guide you through the available templates by using a keyboard navigation CLI to add the control of your choosing.
+Once you have created a project, you can then add additional component templates using **ig add** at any point. Running this command without any parameters will guide you through the available templates by using a keyboard navigation CLI to add the control of your choosing.
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 ig add
 </pre>
 
-Alternatively, you can simply run the `ig list` command to get a full list of supported templates in the current project you have created.
+Alternatively, you can simply run the **ig list** command to get a full list of supported templates in the current project you have created.
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 ig list
 </pre>
 
-After running `ig list` and you find the component template you would like to add, you can do so quickly by following this template in your command line:
+After running **ig list** and you find the component template you would like to add, you can do so quickly by following this template in your command line:
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 ig add [component_template] [component_name]
@@ -62,7 +62,7 @@ ig add grid MyGridComponent
 
 ## Build and Run the Application
 
-In order to build and run the Ignite UI for Angular application, you can call the `ig build` and `ig run` commands:
+In order to build and run the Ignite UI for Angular application, you can call the **ig build** and **ig run** commands:
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 ig build

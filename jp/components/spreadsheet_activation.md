@@ -29,7 +29,7 @@ Angular [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-u
 
 ## コード スニペット
 
-次のコードスニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールのセルとワークシートのアクティブ化の設定を示しています。
+次のコード スニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールのセルとワークシートのアクティブ化の設定を示しています。
 
 ```ts
 this.spreadsheet.activeWorksheet = this.spreadsheet.workbook.worksheets(1);

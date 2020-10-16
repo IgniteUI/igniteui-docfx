@@ -22,7 +22,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 
 # @@igComponent Editing
 
-Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. Modifying of data can be achieved through: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md), and [Batch Editing](batch_editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. **Cell editing** mode is enabled by default and different editors will be shown based on the column data type. Also, defining a custom edit templates is achievable by using [igxCellEditor directive](cell_editing.md#cell-editing-templates) and a couple of [igxRow directives](row_editing.md#customizing-row-editing-overlay).
+Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. Modifying of data can be achieved through: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md), [Row Adding](row_adding.md) and [Batch Editing](batch_editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. **Cell editing** mode is enabled by default and different editors will be shown based on the column data type. Also, defining a custom edit templates is achievable by using [igxCellEditor directive](cell_editing.md#cell-editing-templates) and a couple of [igxRow directives](row_editing.md#customizing-row-editing-overlay).
 
 ## Setup
 In order to specify which edit mode should be enabled, the @@igComponent exposes the following boolean properties - [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable).
@@ -79,7 +79,7 @@ The following sample demonstrates the editing execution sequence in action:
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-editing-lifecycle-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-lifecycle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -89,7 +89,7 @@ The following sample demonstrates the editing execution sequence in action:
 <div class="sample-container loading" style="height:650px">
     <iframe id="tree-grid-editing-lifecycle-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-editing-lifecycle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -99,7 +99,7 @@ The following sample demonstrates the editing execution sequence in action:
 <div class="sample-container loading" style="height:650px">
     <iframe id="hGrid-editing-lifecycle-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-editing-lifecycle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hGrid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hGrid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>

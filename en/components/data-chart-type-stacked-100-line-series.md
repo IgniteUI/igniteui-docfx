@@ -46,7 +46,12 @@ The [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ign
 
 ## Required Modules
 
-Creation of the [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) requires the following modules:
+Creation of the [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartInteractivityModule
+-   Stacked100LineSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
