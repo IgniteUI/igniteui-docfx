@@ -26,7 +26,7 @@ The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransaction
 
 A more detailed overview of the opportunities that the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) provides can be found in our ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
