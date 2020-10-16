@@ -10,6 +10,8 @@ _language: ja
 
 このトピックは、Angular データ チャート コンポーネントのファイナカテゴリ シリーズのさまざまなタイプについて説明します。カテゴリ シリーズは、データを取り入れてそれを水平線 ([`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) など) または垂直線 ([`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) など) に沿って延ばしたデータ ポイントのコレクションとして描画するチャート シリーズの中でも、もっとも簡単で一般的な形のグループです。
 
+<!-- Angular, React, WebComponents -->
+
 ## サンプル
 
 <div class="sample-container loading" style="height: 400px">
@@ -23,6 +25,7 @@ _language: ja
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## カテゴリ シリーズのタイプ
 
@@ -74,7 +77,13 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## モジュールの要件
 
-カテゴリシリーズには以下のモジュールが必要です。
+The category series を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule;
+-   DataChartCategoryModule;
+-   DataChartCategoryCoreModule;
+-   DataChartInteractivityModule;
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -128,9 +137,9 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
  </igx-data-chart>
 ```
 
-## コード例 - バーシリーズ
+## コード例 - 棒シリーズ
 
-上記のコードを使って [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。ただし、 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) は、他のタイプの軸が必要なため、この規則の例外となります。このコードは、[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+上記のコードを使って [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) をレンダリングしたいシリーズの名前で置き換えて他のタイプのカテゴリ シリーズを作成することもできます。ただし、[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) は、他のタイプの軸が必要なため、この規則の例外となります。このコードは、[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart

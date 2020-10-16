@@ -122,7 +122,7 @@ Angular Financial Chart コンポーネントで、チャートのデータが Y
 -   [`yAxisLogarithmBase`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。
     これは yAxisIsLogarithmic が True の場合のみ効果があります。
 
-以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
+以下のコード スニペットは、x 軸の目盛りの色、長さ、太さを設定します。
 
 ```html
  <igx-financial-chart
@@ -140,7 +140,7 @@ Angular Financial Chart コンポーネントで、チャートのデータが Y
 
 目盛りは軸にポイントを表示します。スケールに特定の数値ポイント、またはカテゴリ軸にカテゴリ値を表します。x 軸および y 軸のラベルの長さ、太さ、色を変更できます。
 
-以下のコードスニペットは、x 軸の目盛りの色、長さ、太さを設定します。
+以下のコード スニペットは、x 軸の目盛りの色、長さ、太さを設定します。
 
 ```html
  <igx-financial-chart
