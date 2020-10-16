@@ -140,7 +140,7 @@ npm i xmlhttprequest
 ```
 </li>
 <li>
-`Server.ts` ファイル以外に追加するファイル:  
+`server.ts` ファイル以外に追加するファイル:  
 ``` typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```

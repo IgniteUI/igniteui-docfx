@@ -228,7 +228,7 @@ export class AppModule {}
 </igx-card>
 ```
 
-<div class="sample-container loading" style="height: 252px">
+<div class="sample-container loading" style="height: 270px">
     <iframe id="card-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -276,10 +276,10 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 
 ```scss
 $colorful-card: igx-card-theme(
-    $background: #FD6BD93A,
-    $header-text-color: #F2F607,
-    $subtitle-text-color: #FA2509,
-    $content-text-color: #0A41F7
+    $background: #011627,
+    $header-text-color: #FEFEFE,
+    $subtitle-text-color: #ECAA53,
+    $content-text-color: #FEFEFE
 );
 ```
 ご覧のとおり、`igx-card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 

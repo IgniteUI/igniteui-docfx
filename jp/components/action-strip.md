@@ -96,6 +96,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 ```
 >注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
+>注: ʻIgxActionStripComponent`がグリッドの子コンポーネントである場合、行をホバーするとUI が自動的に表示されます。
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

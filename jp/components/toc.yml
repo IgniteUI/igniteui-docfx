@@ -130,7 +130,7 @@
       new: false
     - name: 集計
       href: grid/summaries.md
-      new: false
+      updated: true
     - name: 列移動
       href: grid/column_moving.md
       new: false
