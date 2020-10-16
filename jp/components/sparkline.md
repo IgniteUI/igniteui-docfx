@@ -25,6 +25,8 @@ Ignite UI for Angular スパークライン コンポーネントは、軽量な
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 Ignite UI for Angular スパークライン コンポーネントを使用するには、以下のパッケージをインストールする必要があります。
@@ -33,6 +35,8 @@ Ignite UI for Angular スパークライン コンポーネントを使用する
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
+
+<!-- end: Angular, React, WebComponents -->
 
 Angular スパークライン コンポーネントには、以下のモジュールのインポートが必要です。
 

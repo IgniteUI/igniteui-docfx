@@ -45,7 +45,7 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) は、データを一連のカテゴリ データ項目として扱います。この軸のラベルがシーケンスの位置に応じて、X 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。このタイプの軸は、[Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([Bar シリーズ](data-chart-type-category-bar-series.md) を除く) と互換性があります。
 
-以下のコードは、[`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)を Angular データ チャート コンポーネントに追加する方法を示します。
+以下のコードは、[`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) を Angular データ チャート コンポーネントに追加する方法を示します。
 
 ```html
 <igx-data-chart [dataSource]="data"
@@ -57,7 +57,7 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 ## カテゴリ Y 軸
 
-`categoryYAxis` は、データを一連のカテゴリ データ項目として扱います。この軸のラベルがシーケンスの位置に応じて、Y 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。この軸タイプは、[Category シリーズ](data-chart-type-category-series.md) グループ内の [Bar シリーズ](data-chart-type-category-bar-series.md) とのみ互換性があります。
+[`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html) は、データを一連のカテゴリ データ項目として扱います。この軸のラベルがシーケンスの位置に応じて、Y 軸に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。この軸タイプは、[Category シリーズ](data-chart-type-category-series.md) グループ内の [Bar シリーズ](data-chart-type-category-bar-series.md) とのみ互換性があります。
 
 以下のコード スニペットは、[`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html) を Angular データ チャート コンポーネントに追加する方法を示します。
 
@@ -71,16 +71,16 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 ## カテゴリ DateTime X 軸
 
-[`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) 軸は、日付順にソートされた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、この軸の [`dateTimeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimeaxisbasecomponent.html#datetimememberpath) プロパティを使用してマッピングされたデータ列の値に従って、X軸に沿って配置されます。また、書式設定されたラベルを表示するには、[`formatLabel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#formatlabel) イベントを使用できます。
-このタイプの軸は、[Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([Bar シリーズ](data-chart-type-category-bar-series.md) を除く) と互換性があります。
+<!-- Angular, React, WebComponents -->
 
-以下のコードは、[`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) を Angular データ チャート コンポーネントに追加する方法を示します。
+[`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) 軸は、日付順にソートされた一連のカテゴリデータ項目としてデータを扱います。この軸のラベルは、
+この軸の [`dateTimeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimeaxisbasecomponent.html#datetimememberpath) プロパティを使用してマッピングされたデータ列の値に従って、X軸に沿って配置されます。また、書式設定されたラベルを表示するには、[`formatLabel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#formatlabel) イベントを使用できます。
 
 ```html
 <igx-data-chart [dataSource]="data"
     width="100%"
     height="400px">
-    <igx-category-date-time-x-axis name="yAxis"
+    <igx-category-date-time-x-axis name="xAxis"
         (FormatLabel)=”xAxisFormatLabel()”
         dateTimeMemberPath="Date" >
         </igx-category-date-time-x-axis>
@@ -127,7 +127,8 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 <igx-data-chart [dataSource]="data"
     width="100%"
     height="400px">
-    <igx-time-x-axis name="xAxis" dateTimeMemberPath="Date"/>
+    <igx-time-x-axis name="xAxis" dateTimeMemberPath="Date"
+    DataSource="@data"/>
 </igx-data-chart>
 ```
 
@@ -145,7 +146,7 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 </igx-data-chart>
 ```
 
-## Y軸の変化率
+## Y 軸の変化率
 
 [`IgxPercentChangeYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpercentchangeyaxiscomponent.html) は、参照値としてシリーズの最初のポイントを取得します。それ以後の値は参照値に比較して増減パーセントに基づいて拡大縮小されます。
 

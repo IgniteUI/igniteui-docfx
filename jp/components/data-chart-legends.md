@@ -30,7 +30,7 @@ _language: ja
 
 さらに、各シリーズオブジェクトの [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) プロパティを設定しない場合、凡例にデフォルトのシリーズ タイトルが使用されます。
 
-次のコードスニペットは、Angular データ チャート コンポネントで凡例を使用する方法を示しています。
+次のコード スニペットは、Angular データ チャート コンポネントで凡例を使用する方法を示しています。
 
 ```html
 <div>
