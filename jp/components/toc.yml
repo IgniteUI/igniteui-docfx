@@ -482,7 +482,7 @@
       new: false
 - name: チャート
   header: true
-- name: Category Chart
+- name: カテゴリ チャート
   href: category-chart.md
   new: false
   items:
@@ -510,7 +510,7 @@
 #   - name: ツールチップ テンプレート
 #     href: category-chart-tooltip-template.md
 #     new: false
-- name: Data Chart
+- name: テータ チャート
   href: data-chart.md
   new: false
   items:
@@ -750,7 +750,7 @@
     - name: 値オーバーレイ
       href: data-chart-value-overlay.md
       new: true
-- name: ファイナンシャルチャート
+- name: ファイナンシャル チャート
   href: financial-chart.md
   new: false
   items:
