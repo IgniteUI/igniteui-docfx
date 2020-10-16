@@ -191,7 +191,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 ## Demo
 
-<div class="sample-container loading" style="height: 950px">
+<div class="sample-container loading" style="height: 750px">
     <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
