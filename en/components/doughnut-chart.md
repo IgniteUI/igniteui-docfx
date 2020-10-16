@@ -24,6 +24,8 @@ The Ignite UI for Angular doughnut chart component is similar to the Pie Chart c
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the charts component, the core package must also be installed.
@@ -33,9 +35,15 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The Angular doughnut chart component requires the following modules:
+The Angular doughnut chart component requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DoughnutChartModule
+-   RingSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
@@ -177,6 +185,8 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## Slice Explosion
 
 The doughnut chart component slices explode either programmatically or by user interaction.
@@ -206,6 +216,7 @@ You can change the exploded slices by changing the contents of the `ExplodedSlic
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## Legend
 

@@ -29,6 +29,12 @@ Angular データ チャート コンポネントを使用すると、データ 
 
 Angular データ チャート コンポネントでハイライトを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
 
+<!-- Blazor -->
+
+-   DataChartInteractivityModule
+-   DataChartAnnotationModule
+    <!-- end: Blazor -->
+
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
@@ -45,7 +51,7 @@ import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 Angular データ チャート コンポネントのシリーズ ハイライト機能を使用すると、単一のアイテムまたはシリーズ全体を強調表示できます。たとえば、折れ線シリーズを使用している場合、ハイライトは線の形状全体を 1 つの単一形状として強調表示します。ただし、列シリーズなどのシリーズの各項目にハイライトを適用することはできます。
 
-次のコードスニペットは、データ チャートのシリーズで強調表示を有効にする方法を示しています。
+次のコード スニペットは、データ チャートのシリーズで強調表示を有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart

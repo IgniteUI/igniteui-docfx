@@ -10,13 +10,11 @@ _language: ja
 
 Ignite UI for Angular Map コンポーネントを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープ ファイルからロードされた地理空間データを地理的画像マップに表示できます。
 
-## サンプル
-
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-bubble-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
@@ -29,6 +27,8 @@ Angular 地図コンポーネントを使用すると、Bing Maps™ および O
 
 Map は、マウス、キーボード、またはコードビハインドを使用して、マップ コンテンツをナビゲーションするためのカスタマイズ可能なナビゲーション動作を提供します。
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 地理マップコンポーネントを使用するには、はじめにこれらのパッケージをインストールする必要があります。
@@ -39,9 +39,23 @@ npm install --save igniteui-angular-charts
 npm install --save igniteui-angular-maps
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## モジュールの要件
 
+<!-- Angular, React, WebComponents -->
+
 [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) には以下のモジュールが必要ですが、Ig$DataChartInteractivityModule は、マップ コンテンツのパンやズームなどのマウス操作にのみ必要です。
+
+<!-- end: Angular, React, WebComponents -->
+
+<!-- Blazor -->
+
+[`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) には以下のモジュールが必要ですが、DataChartInteractivityModule は、マップ コンテンツのパンやズームなどのマウス操作にのみ必要です。
+
+-   GeographicMapModule
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts

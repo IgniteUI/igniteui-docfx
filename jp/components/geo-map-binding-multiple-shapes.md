@@ -43,6 +43,12 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
+<!-- Blazor -->
+
+-   GeographicMapModule 
+-   IgcDataChartInteractivityModule
+    <!-- end: Blazor -->
+
 ## シリーズの作成
 
 次に、後で異なるタイプのシェープ ファイルをロードする地理的シリーズでマップを作成します。
@@ -123,6 +129,8 @@ sdsLocations.shapefileSource = url + "/Shapes/WorldCities.shp";
 sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
 sdsLocations.dataBind();
 ```
+
+<!-- Angular, React, WebComponents -->
 
 ## ポリゴンの処理
 
@@ -214,6 +222,8 @@ public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
     symbolSeries.dataSource = geoLocations;
 }
 ```
+
+<!-- end: Angular, React, WebComponents -->
 
 ## マップ背景
 

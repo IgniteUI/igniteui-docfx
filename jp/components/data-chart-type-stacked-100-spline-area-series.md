@@ -47,7 +47,12 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 
 ## モジュールの要件
 
-[`IgxStacked100SplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineareaseriescomponent.html) は以下のモジュールが必要です。
+[`IgxStacked100SplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineareaseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartInteractivityModule
+-   Stacked100SplineAreaSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -72,7 +77,7 @@ import { IgxDataChartStackedModule } from 'igniteui-angular-charts';
 })
 ```
 
-### 
+### コード例
 
 このコードは、[`IgxStacked100SplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineareaseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 

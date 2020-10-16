@@ -119,7 +119,7 @@ worksheet.columns(0).cellFormat.locked = false;
 | [`applyYearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applyyeartodatefilter)               |                             日付セルの範囲を現在の年の開始日からフィルターの評価実施日までの期間に絞り込むことのできるフィルターです。                            |
 | [`applyCustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetfiltersettings.html#applycustomfilter)                       |      1 つ、ないし 2 つのカスタム条件に基づいてデータを絞り込むことのできるフィルターです。この 2 つの絞り込み条件は論理積 (and) または論理和 (or) 演算子と組み合わせて使用できます。      |
 
-以下のコードスニペットを使用してフィルターをワークシート領域に追加します。
+以下のコード スニペットを使用してフィルターをワークシート領域に追加します。
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);

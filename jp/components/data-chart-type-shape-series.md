@@ -60,7 +60,14 @@ public dataSource: any[] = SampleShapeData.create();
 
 ## モジュールの要件
 
-散布多角形シリーズには、以下のモジュールが必要です。
+散布多角形シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartScatterCoreModule
+-   DataChartScatterModule   
+-   DataChartInteractivityModule
+-   ScatterPolygonSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
