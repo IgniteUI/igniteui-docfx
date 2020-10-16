@@ -55,18 +55,13 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 
 ### Row Pinning UI
 
-The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip can then be shown or hidden via its API and will display a pin or unpin button icon based on the state of the row it is shown for. An additional action allowing to scroll the copy of the pinned row into view is shown for each pinned row as well.
+The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip is automatically shown when hovering a row and will display a pin or unpin button icon based on the state of the row it is shown for. An additional action allowing to scroll the copy of the pinned row into view is shown for each pinned row as well.
 
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-grid #grid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -79,13 +74,8 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-tree-grid #treeGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -98,13 +88,8 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
