@@ -9,6 +9,8 @@ mentionedTypes: ['XamDataChart']
 
 This topic explains various types of category series in the Angular data chart component. Category series is a group of the simplest and most common form of chart series that take data and render it as collection of data points stretched along a horizontal line (e.g. [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html)) or vertical line (e.g. [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html)).
 
+<!-- Angular, React, WebComponents -->
+
 ## Demo
 
 <div class="sample-container loading" style="height: 400px">
@@ -22,6 +24,7 @@ This topic explains various types of category series in the Angular data chart c
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## Types of Category Series
 
@@ -73,7 +76,13 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## Required Modules
 
-The category series require the following modules:
+The category series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule;
+-   DataChartCategoryModule;
+-   DataChartCategoryCoreModule;
+-   DataChartInteractivityModule;
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:

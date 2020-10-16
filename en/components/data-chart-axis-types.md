@@ -70,16 +70,16 @@ The following code snippet demonstrates how to add a [`IgxCategoryYAxisComponent
 
 ## Category DateTime X Axis
 
-The [`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the [`dateTimeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimeaxisbasecomponent.html#datetimememberpath) property of this axis. Also in order to display the formatted labels you can use the ‘FormatLabel’ event.
-This type of axis is compatible with the [Financial Series](data-chart-type-financial-series.md), [Range Series](data-chart-type-range-series.md), and [Category Series](data-chart-type-category-series.md) (except [Bar Series](data-chart-type-category-bar-series.md))
+<!-- Angular, React, WebComponents -->
 
-The following code snippet demonstrates how to add a [`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) to the Angular data chart component:
+The [`IgxCategoryDateTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorydatetimexaxiscomponent.html) Axis treats the data as a sequence of category data items that are sorted by date. Labels on this axis are placed along the X-Axis, according to the value in a data column that is mapped using the [`dateTimeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimeaxisbasecomponent.html#datetimememberpath) property of this axis. Also in order to display the formatted labels you can use the [`formatLabel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#formatlabel) event.
+This type of axis is compatible with the [Financial Series](data-chart-type-financial-series.md), [Range Series](data-chart-type-range-series.md), and [Category Series](data-chart-type-category-series.md) (except [Bar Series](data-chart-type-category-bar-series.md))
 
 ```html
 <igx-data-chart [dataSource]="data"
     width="100%"
     height="400px">
-    <igx-category-date-time-x-axis name="yAxis"
+    <igx-category-date-time-x-axis name="xAxis"
         (FormatLabel)=”xAxisFormatLabel()”
         dateTimeMemberPath="Date" >
         </igx-category-date-time-x-axis>
@@ -126,7 +126,8 @@ The following code snippet demonstrates how to add a [`IgxTimeXAxisComponent`]({
 <igx-data-chart [dataSource]="data"
     width="100%"
     height="400px">
-    <igx-time-x-axis name="xAxis" dateTimeMemberPath="Date"/>
+    <igx-time-x-axis name="xAxis" dateTimeMemberPath="Date"
+    DataSource="@data"/>
 </igx-data-chart>
 ```
 

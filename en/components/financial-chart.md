@@ -45,6 +45,8 @@ Refer to the [Financial Chart Panes](financial-chart-panes.md) topics for  infor
  </igx-financial-chart>
 ```
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the chart package, the core package must also be installed.
@@ -54,9 +56,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The Angular Financial Chart component requires the following modules:
+The Angular Financial Chart component requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   FinancialChartModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts

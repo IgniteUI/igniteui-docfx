@@ -5,7 +5,7 @@ _keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular
 mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
 ---
 
-# Angular Treemap Overview
+## Angular Treemap Overview
 
 The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 
@@ -63,6 +63,8 @@ Note that the LayoutOrientation property works with the layout types SliceAndDic
 
 -   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the chart component, the core package must also be installed.
@@ -72,9 +74,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules:
+The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   TreemapModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxTreemapModule } from "igniteui-angular-charts";
