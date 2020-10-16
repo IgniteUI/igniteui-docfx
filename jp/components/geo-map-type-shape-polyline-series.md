@@ -31,7 +31,7 @@ _language: ja
 
 ## コード スニペット
 
-以下のコードは、ShapefileConverter を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) をバインドする方法を示します。
+以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) をバインドする方法を示します。
 
 <!-- Angular -->
 

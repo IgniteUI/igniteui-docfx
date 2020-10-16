@@ -26,6 +26,11 @@ Angular データ チャート コンポーネントでは、チャート ナビ
 
 チャートでナビゲーションする場合、インポートしてからインタラクティブ モードを登録します。以下のコードを使用できます。
 
+<!-- Blazor -->
+
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
+
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 
@@ -40,7 +45,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 
 またマウスやタッチでボタンをクリックしてズームまたはパンニングできます。チャートの [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティは、マウスクリック イベントやタッチ イベントで何が起こるかを決定します。このプロパティはデフォルトで `DragZoom` に設定されており、ズームを有効に設定すると、クリックしてドラッグした際にプロット領域の上に四角形のプレビューが配置され、グラフのズーム領域になります。この [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティは、パンニングを許可する場合は `DragPan`、これらの操作を禁止する場合は `None` に設定することもできます。
 
-以下のコードスニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
+以下のコード スニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -71,7 +76,7 @@ Angular データ チャート コンポーネントのナビゲーションは�
 -   Apple キー
 -   None
 
-以下のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、**Shift** キーを押しながらズーム、**Alt** キーを押しながらパンのみ可能です。
+以下のコード スニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、**Shift** キーを押しながらズーム、**Alt** キーを押しながらパンのみ可能です。
 
 ```html
 <igx-data-chart #chart
@@ -123,7 +128,7 @@ Angular データ チャート コンポーネントは、チャートでズー�
 -   [`windowScaleHorizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): チャートで表示されるコンテンツ ビュー長方形の幅部分を表す数値。
 -   [`windowScaleVertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): チャートで表示されるコンテンツ ビュー長方形の高さ部分を表す数値。
 
-以下のコードスニペットは、Angular データ チャート コンポーネントのビューをプログラムで変更する方法を示しています。以下では、Angular データ チャート コンポーネントを表す変数名 chart があると仮定します。
+以下のコード スニペットは、Angular データ チャート コンポーネントのビューをプログラムで変更する方法を示しています。以下では、Angular データ チャート コンポーネントを表す変数名 chart があると仮定します。
 
 ```ts
 // Zoom in by a factor of 0.05

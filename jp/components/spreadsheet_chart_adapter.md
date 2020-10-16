@@ -83,7 +83,7 @@ Spreadsheet ChartAdapter は、折れ線、エリア、縦棒、ドーナツを�
 
 > [!NOTE]
 >
-> 以下のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
+> 以下のコード スニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
 
 ハイパーリンクを使用するように Angular スプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
 
@@ -99,7 +99,7 @@ import { WorksheetCell } from 'igniteui-angular-excel';
 
 ## コード スニペット
 
-以下のコードスニペットは、`XamSpreadsheet` コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
+以下のコード スニペットは、`XamSpreadsheet` コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();

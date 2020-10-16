@@ -55,7 +55,7 @@ Microsoft Excel では各セルとセル領域に名前が割り当てられて�
 
 Infragistics Angular Excel Library は、[`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) オブジェクトの [`getCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#getcell) と [`getRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#getregion) メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する [`NamedReference`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/namedreference.html) インスタンスを使用してセルまたは領域を参照します。
 
-以下のコードスニペットは、セルまたは領域の名前の例です。
+以下のコード スニペットは、セルまたは領域の名前の例です。
 
 ```ts
 var workbook = new Workbook();
