@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Switch
+# Switch
 <p class="highlight">Ignite UI for Angular Switch コンポーネントは iOS の switch コンポーネントと同様に動作するバイナリ選択コンポーネントです。</p>
 <div class="divider"></div>
 
-#### デモ
+## デモ
 <div class="sample-container loading" style="height:200px">
     <iframe id="switch-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 中核となるスイッチ コンポーネントはオン/オフ状態の切り替えが可能です。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
@@ -48,7 +48,7 @@ export class AppModule {}
 </igx-switch>
 ```
 
-#### Switch プロパティ
+### Switch プロパティ
 
 上記のコードを拡張するには、スイッチ プロパティをデータにバインドします。`name` および `state` の 2 つのプロパティを持つ設定オブジェクトの配列があるとしましょう。スイッチ コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxswitchcomponent.html#checked) プロパティを基礎となるオブジェクトの state プロパティにバインドします。同じように、value プロパティを name にバインドします。
 
@@ -96,7 +96,7 @@ igx-switch {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="switch-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### ラベル位置
+### ラベル位置
 
 スイッチの [`labelPosition`]({environment:angularApiUrl}/classes/igxswitchcomponent.html#labelposition) プロパティを使用してラベルを配置できます。
 
@@ -106,7 +106,7 @@ igx-switch {
 
 `labelPosition` が設定されていない場合、ラベルはスイッチの後に配置されます。
 
-### スタイル設定
+## スタイル設定
 
 スイッチのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -124,7 +124,7 @@ $custom-switch-theme: igx-switch-theme(
 );
 ```
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -162,7 +162,7 @@ $custom-switch-theme: igx-switch-theme(
     @include igx-css-vars($custom-switch-theme);
 }
 ```
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 200px">
     <iframe id="switch-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/switch-styling" class="lazyload no-theming"></iframe>
@@ -174,13 +174,13 @@ $custom-switch-theme: igx-switch-theme(
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

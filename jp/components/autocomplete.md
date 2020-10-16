@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Autocomplete
+# Autocomplete
 <p class="highlight">[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印`/`下矢印` キーを使用して表示します。</p>
 <div class="divider"></div>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -19,7 +19,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 はじめに、**app.module** で **IgxAutocompleteModule** と **IgxDropDownModule** をインポートします。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) を [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用した場合は、**igxInputGroupModule** も必要となります。
 
 ```typescript
@@ -90,7 +90,7 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 >[!NOTE]
 >[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) は、利用可能なオプションのプロバイダーとして [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を使用します。これはドロップダウン コンポーネントのすべての機能をオートコンプリートで使用できることを意味します。
 
-#### Autocomplete の無効化
+### Autocomplete の無効化
 Autocomplete を無効にするには、[`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) 入力を使用します。
 
 ```html
@@ -102,7 +102,7 @@ Autocomplete を無効にするには、[`IgxAutocompleteDisabled`]({environment
 </igx-input-group>
 ```
 
-#### Autocomplete の設定
+### Autocomplete の設定
 `igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) を使用して設定できます。
 
 以下の例では、ドロップダウンを入力の上に配置し、開始と終了のアニメーションを無効にします。`ConnectedPositioningStrategy` を使用します。
@@ -178,7 +178,7 @@ export class AutocompleteComponent {
 
 <div class="divider--half"></div>
 
-### キーボード ナビゲーション
+## キーボード ナビゲーション
 <div class="divider--half"></div>
 
  - 閉じていた場合、<kbd>上矢印</kbd> / <kbd>下矢印</kbd> または入力を開始すると、ドロップダウンを開きます。
@@ -190,7 +190,7 @@ export class AutocompleteComponent {
 >[!NOTE]
 >オートコンプリートが開いた際にリストの最初の項目が自動的に選択されます。リストがフィルターされたときも同様です。
 
-### 互換性サポート
+## 互換性サポート
 `igxAutocomplete` ディレクティブを適用すると要素を以下の ARIA 属性で装飾します。
  - role="combobox" - ディレクティブが適用される要素のロール。
  - aria-autocomplete="list" - 入力完了の候補がリストのフォームに適用されたことを示します。
@@ -206,14 +206,14 @@ export class AutocompleteComponent {
  - aria-disabled="true"/"false" - `igx-drop-down-item` に適用されます。無効な場合の `igx-drop-down-item-group` コンポーネント コンテナに適用されます。
 
 
-### スタイル設定
+## スタイル設定
 各コンポーネントには独自のテーマがあります。
 
 `igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) と [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) の両方を使用する必要があります。 
 
 これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input_group.md#スタイル設定) および [`igxDropdown`](drop_down.md#スタイル設定) のスタイル設定セクションを参照してください。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
@@ -222,7 +222,7 @@ export class AutocompleteComponent {
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [IgxDropDown](drop_down.md)

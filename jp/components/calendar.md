@@ -255,7 +255,7 @@ export class CalendarSample7Component {
 
 ```html
 <!-- app.component.html -->
-<igx-calendar #calendar 
+<igx-calendar #calendar
     (onSelection)="onSelection($event)"
     (viewDateChanged)="viewDateChanged($event)"
     (activeViewChanged)="activeViewChanged($event)">
@@ -294,7 +294,7 @@ public activeViewChanged(event: CalendarView) {
 
 ## ビュー
 `IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
-- Days ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
+- 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
 
 <div class="sample-container loading" style="height: 420px">
     <iframe id="calendar-days-view-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-days-view' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -304,7 +304,7 @@ public activeViewChanged(event: CalendarView) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-days-view-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-- Months ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
+- 月ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
 
 <div class="sample-container loading" style="height: 520px">
     <iframe id="calendar-months-view-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-months-view' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -314,7 +314,7 @@ public activeViewChanged(event: CalendarView) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-months-view-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-- Years ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
+- 年ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="calendar-years-view-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-years-view' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -325,6 +325,18 @@ public activeViewChanged(event: CalendarView) {
 </div>
 
 ## キーボード ナビゲーション
+Tab キーを使用してページを移動する場合、*igxCalendarComponent* が [W3 アクセシビリティ推奨事項](https://www.w3.org/TR/wai-aria-practices/#layoutGrid)に基づいて以下のタブストップを導入することに注意してください。
+- [前月] ボタン
+- [月の選択] ボタン
+- [年の選択] ボタン
+- [翌月] ボタン
+- 日ビューの選択した日付、現在の日付、最初のフォーカス可能な (無効ではない) 日付
+
+選択した複数の日付を含むカレンダーでは、最初の日付のみがタブ位置として表示されます。たとえば、複数選択カレンダーで日付を選択した場合: タブ ナビゲーションのときに *13/10/2020*、*17/10/2020* および *21/10/2020* のみアクセスできます。範囲を選択したカレンダーでは、選択した範囲の最初の日付のみがページ タブ シーケンスの一部になります。
+
+>[!NOTE]
+> *V10.2.0* からの動作変更- 日ビューの Tab キー ナビゲーションは使用できなくなりました。日付ビューの日付間を移動するには、矢印キーを使用します。
+
 `igxCalendar` コンポーネントにフォーカスがある場合、以下を使用してナビゲーションできます。
 - <kbd>PageUp</kbd> キーは前の月に移動します。
 - <kbd>PageDown</kbd> キーは次の月に移動します。
@@ -332,7 +344,6 @@ public activeViewChanged(event: CalendarView) {
 - <kbd>Shift</kbd> + <kbd>PageDown</kbd>> キーは次の年に移動します。
 - <kbd>Home</kbd> キーは現在の年の最初の月をフォーカスします。
 - <kbd>End</kbd> キーは現在の月の最後の日または最後の月をフォーカスします。
-- <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
 
 `前` または`次`の月のボタン(サブヘッダー内)にフォーカスがある場合、以下を使用します。
 - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次の月または前の月のビューへスクロールします。
@@ -343,12 +354,11 @@ public activeViewChanged(event: CalendarView) {
 サブヘッダーの`年`ボタンのフォーカス時:
 - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは10 年ビューを開きます。
 
-現在月の`日`のフォーカス時:
-- 矢印キーで日を移動します。
-- 矢印キーで前/翌月に移動します。
-- 現在の月の最終日から次の日または現在の月の最初の日から前に移動すると、表示されている次の月または前の月にフォーカスが移動します。
-- 現在の月の最終日から次の日または現在の月の最初の日から前に移動すると、表示されている次の月または前の月にフォーカスが移動します。
-- <kbd>Enter</kbd> キーを使用して、現在フォーカスされている日を選択します。
+現在月の`日`がフォーカスされる場合:
+- 矢印キーで日を移動します。注: 無効な日付はスキップされます。
+- フォーカスはビューの現在の月に保持され、ナビゲーションは月の**最終日** / **初日** **から** / **まで**になります。
+- キーボード ナビゲーションは連続です。つまり、矢印でナビゲーションしている間、すべての月を移動します。
+- <kbd>Enter キー</kbd> を使用して、現在フォーカスされている日を選択します。
 
 月ビュー内の`月`のフォーカス時:
 - 矢印キーで月を移動します。
@@ -357,12 +367,11 @@ public activeViewChanged(event: CalendarView) {
 - <kbd>Enter</kbd> キーは、現在フォーカスされている月を選択してビューと閉じます。
 
 10 年ビュー内の`年`のフォーカス時:
-- 矢印キーで年を移動します。
+- <kbd>上矢印</kbd>キーと<kbd>下矢印</kbd>キーで年を移動します。
 - <kbd>Enter</kbd> キーは、現在フォーカスされている年を選択してビューと閉じます。
 
 >[!NOTE]
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
-
 
 ## マルチビュー カレンダー
 マルチ ビューカレンダーは、3 種類すべての選択をサポートしています。[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) 入力を使用して、表示される月の数を設定します。これは、フレックス コンテナーに水平に表示されます。設定される最大値に制限はありません。マルチ ビューカレンダーを使用する場合、現在の月に属さない日を非表示にできます。非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays)プ ロパティを使用します。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
@@ -381,7 +390,7 @@ public activeViewChanged(event: CalendarView) {
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法は、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
@@ -427,7 +436,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 <div class="sample-container loading" style="height:500px">
-    <iframe id="calendar-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-styling-sample' width="100%" height="100%" 
+    <iframe id="calendar-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-styling-sample' width="100%" height="100%"
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>

@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Circular Progress
+# Circular Progress
 <p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
 <div class="divider"></div>
 
-#### デモ
+## デモ
 <div class="sample-container loading" style="height:100px">
     <iframe id="progressbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/circular-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 Circular Progress Indicator コンポーネントを使用するには、まず **IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
 ```typescript
@@ -56,7 +56,7 @@ class="custom-size"
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を定義する必要があります。
 
 
-#### 不確定のプログレス
+### 不確定のプログレス
 
 正確に決定していないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) プロパティを `true` に設定できます。
 
@@ -82,7 +82,7 @@ class="custom-size"
 </div>
 <div class="divider--half"></div>
 
-#### ダイナミック プログレス
+### ダイナミック プログレス
 
 ボタンなどの外部コントロールを使用して進行の値を動的に変更できます。これを実現するには、値をクラス プロパティにバインドします。
 
@@ -145,7 +145,7 @@ public decrementProgress() {
 }
 ```
 
-#### グラデーション プログレス
+### グラデーション プログレス
 
 プログレス バーをカスタマイズする方法の 1 つとして、単色の代わりにカラー グラデーションを使用する方法があります。
 これは、[`IgxProgressBarGradientDirective`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#gradienttemplate) ディレクティブを使用する、もしくは、カスタムテーマを実装 することにより実行できます (カスタム テーマは 2 つまでの色経由点 (color stop) をサポートします)。
@@ -204,7 +204,7 @@ $custom-theme: igx-progress-circular-theme(
 </div>
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 
 円形のプログレスバーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -221,7 +221,7 @@ $custom-theme: igx-progress-circular-theme(
 );
 ```
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -260,7 +260,7 @@ $custom-theme: igx-progress-circular-theme(
 }
 ```
 
-#### デモ
+### デモ
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height:100px">
     <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 
@@ -272,7 +272,7 @@ $custom-theme: igx-progress-circular-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### API
+## API
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)

@@ -5,10 +5,10 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-##Card
+# Card
 <p class="highlight">Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) は、テキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
 
-###Card デモ
+## Card デモ
 <div class="sample-container loading" style="height: 500px">
     <iframe id="card-sample-0-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-0' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
@@ -19,11 +19,11 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-###使用方法
+## 使用方法
 
 Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされるアクションが異なる同様のオブジェクトから成るコンテンツを表示できます。
 
-####作業の開始
+### 作業の開始
 
 **app.module.ts** ファイルに  `IgxCardModule` をインポートします。
 
@@ -79,7 +79,7 @@ export class AppModule {}
 
 最後に `igx-card-actions` は、ボタンのようなアクション可能なアイテムを配置する場所です。要素に `igxButton` ディレクティブを使用すると、その領域内の材料設計仕様に従って自動的に正しく配置されます。
 
-#### メディア、サムネイル、アバター
+### メディア、サムネイル、アバター
 タイトルや字幕の横のカード ヘッダーに画像やアイコンを表示したい場合は、`igxCardThumbnail` ディレクティブを使用してそれを実行できます。
 
 上記のカードを例にとると、`igx-card-header` の内容を編集して、アイコンを保持する `igxCardThumbnail` コンテナを追加できます。
@@ -123,10 +123,10 @@ export class AppModule {}
 </igx-card-header>
 ```
 
-#### カードのアウトライン
+### カードのアウトライン
 カードには `type` 属性があり、`default` (省略した場合は自動的に設定) または `outlined` に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
 
-#### 水平レイアウト
+### 水平レイアウト
 
 デフォルトでは、カードのすべてのセクション (ヘッダー、コンテンツ、メディア、アクション) は縦にレイアウトされています。垂直方向のスペースが多くある場合に便利です。カードのすべてのセクションを水平に配置する場合、カードの `horizontal` 属性を使用してレイアウトを設定できます。
 
@@ -196,7 +196,7 @@ export class AppModule {}
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### その他のレイアウト
+### その他のレイアウト
 
 `igx-card` カードはさまざまなレイアウトが可能です。
 
@@ -228,7 +228,7 @@ export class AppModule {}
 </igx-card>
 ```
 
-<div class="sample-container loading" style="height: 252px">
+<div class="sample-container loading" style="height: 270px">
     <iframe id="card-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -236,7 +236,7 @@ export class AppModule {}
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### カード アクション
+### カード アクション
 
 カードのアクション領域では、すでに説明したコンテンツに追加の設定を加えることができます。
 
@@ -266,7 +266,7 @@ export class AppModule {}
 </igx-card-actions>
 ```
 
-### スタイル設定
+## スタイル設定
 Card のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -276,15 +276,15 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 
 ```scss
 $colorful-card: igx-card-theme(
-    $background: #FD6BD93A,
-    $header-text-color: #F2F607,
-    $subtitle-text-color: #FA2509,
-    $content-text-color: #0A41F7
+    $background: #011627,
+    $header-text-color: #FEFEFE,
+    $subtitle-text-color: #ECAA53,
+    $content-text-color: #FEFEFE
 );
 ```
 ご覧のとおり、`igx-card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -323,7 +323,7 @@ $colorful-card: igx-card-theme(
 }
 ```
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 486px">
     <iframe id="card-style-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-styling-sample" class="lazyload no-theming">
@@ -337,7 +337,7 @@ $colorful-card: igx-card-theme(
 このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能性を向上しました。最後に公開されたテーマの色を設定してカスタムパレットを作成、スキーマを拡張してカードのテーマを変更しました。 
 カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
-### API と スタイル リファレンス
+## API と スタイル リファレンス
 
 カード API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
@@ -361,7 +361,7 @@ $colorful-card: igx-card-theme(
 
 <div class="divider"></div>
 
-###その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
