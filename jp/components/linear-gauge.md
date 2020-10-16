@@ -28,6 +28,8 @@ Ignite UI for Angular Linear Gauge コンポーネントは、データをリニ
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 Angular gauge コンポーネントをインストールするときに core パッケージもインストールする必要があります。
@@ -37,9 +39,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 </pre>
 
-## 必要なモジュール
+<!-- end: Angular, React, WebComponents -->
 
-[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) は、以下のモジュールが必要です。
+## モジュールの要件
+
+[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   LinearGaugeModule 
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
