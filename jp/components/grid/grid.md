@@ -258,7 +258,7 @@ public initColumns(column: IgxGridColumn) {
 
 ## データ構造
 
-[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラットデータ**のみ取得します。描画に固有のデータ構造はフォームにあります。
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) handles **flat data** and nested **POJOs(Plain old Java objects)**。描画に固有のデータ構造はフォームにあります。
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -269,29 +269,34 @@ const OBJECT_ARRAY = [{
         .
         ObjectKeyN: valueN
     },
-    {
+    .
+    .
+    .
+  }];
+
+const POJO = [{
         ObjectKey1: value1,
         ObjectKey2: value2,
         .
         .
         .
-        ObjectKeyN: valueN
+        ObjectKeyN: {
+          ObjectKeyN1: value1,
+          ObjectKeyN2: value2,
+          .
+          .
+          .
+          ObjectKeyNM: valueNM,
+        }
     },
     .
     .
-    .,
-    {
-        ObjectKey1: value1,
-        ObjectKey2: value2,
-        .
-        .
-        .
-        ObjectKeyN: valueN
-    }];
+    .
+  }];
 
 ```
 >[!WARNING]
->**キー値に配列またはその他のオブジェクトを含まないでください。**
+>**The key values must not contain arrays**.
 
 >[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 

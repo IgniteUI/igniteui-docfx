@@ -17,9 +17,9 @@ With only a few lines of code, users can easily localize the strings in Ignite U
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
+## Usage
 
-#### Localize entire application
+### Localize entire application
 
 To get all available resource strings, there is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
 The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter, which will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
@@ -45,7 +45,7 @@ public ngOnInit(): void {
 </button>
 </div>
 
-#### Localize particular strings for all components
+### Localize particular strings for all components
 
 Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
 
@@ -61,7 +61,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
     </button>
 </div>
 
-#### Localize particular strings for particular instance of a component
+### Localize particular strings for particular instance of a component
 
 If only a single `igx-grid` instance should be localized, there is a way. The `resourceStrings` property should be used and it should be set to a new instance of `IGridResourceStrings` type.
 
@@ -78,7 +78,7 @@ this.grid.resourceStrings = newGridRes;
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Load localized resources from npm package
+## Load localized resources from npm package
 
 Firstly the package that contains the resource strings should be installed:
 
@@ -100,7 +100,7 @@ public ngOnInit(): void {
 }
 ```
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 
