@@ -27,6 +27,8 @@ The following sample demonstrates how setting multiple properties on the same ra
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the gauge component, the core package must also be installed.
@@ -36,9 +38,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules:
+The [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   RadialGaugeModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts

@@ -46,15 +46,15 @@ Create data sources for all geographic series that you want to display in the Ig
 <ng-template let-series="series" let-item="item" #polylineTooltipTemplate>
         <div>
             <span>
-                Arrival: {{item.origin.country}}
+            Arrival: {{item.origin.country}}
             </span>
             <br/>
             <span>
-                   Destination: {{item.dest.country}}
+            Destination: {{item.dest.country}}
             </span>
             <br/>
             <span>
-                    Distance: {{item.distance}} miles
+            Distance: {{item.distance}} miles
             </span>
         </div>
     </ng-template>
@@ -74,7 +74,7 @@ Create data sources for all geographic series that you want to display in the Ig
                 </span>
                 <br/>
                 <span>
-                        Flights: {{item.flights}}
+                Flights: {{item.flights}}
                 </span>
             </div>
         </ng-template>
@@ -109,7 +109,9 @@ Create second [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl
     </igx-geographic-polyline-series>
 ```
 
-Create [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with geographic gridlines and add it to [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the geographic Ignite UI for Angular map.
+## Overlaying Airports
+
+Create [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with airport points and add it to [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the geographic Ignite UI for Angular map.
 
 ```html
 <igx-geographic-symbol-series  #symbolSeries
@@ -121,6 +123,10 @@ Create [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/product
     markerBrush="White" >
 </igx-geographic-symbol-series>
 ```
+
+## Summary
+
+For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project.
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";

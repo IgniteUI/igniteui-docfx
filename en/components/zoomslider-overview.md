@@ -5,7 +5,7 @@ _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart
 mentionedTypes: ['ZoomSlider, XamDataChart']
 ---
 
-# Angular Zoom Slider Overview
+## Angular Zoom Slider Overview
 
 The Angular ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart or CategoryChart.
 
@@ -33,6 +33,8 @@ The Angular ZoomSlider control provides zooming functionality to range-enabled c
 | Extensibility                     | The ZoomSlider control supports DataChart control out-of the box.                                                                                                          |
 | Configurable zoom-range window    | The initial zoom-range window width and position, as well as its minimum size, are configurable.                                                                           |
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the Angular chart component, the core package must also be installed.
@@ -42,9 +44,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
+The [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   ZoomSliderModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxZoomSliderModule } from 'igniteui-angular-charts';
