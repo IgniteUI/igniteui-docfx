@@ -58,7 +58,16 @@ public dataSource: any[] = SampleRangeData.create();
 
 ## Required Modules
 
-In order to use range series, you need to import the following modules in your app during load:
+The range series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   RadialPieSeriesModule
+-   RadialPieSeriesCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
+    ```
+
+    ```
 
 ```ts
 // in app.module.ts file

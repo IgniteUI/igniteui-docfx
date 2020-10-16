@@ -38,7 +38,7 @@ Note that the following code examples are using the [Shape Styling Utility](geo-
 -   [Shape Comparison Styling](#shape-comparison-styling)
 -   [Shape Random Styling](#shape-random-styling)
 -   [Shape Range Styling](#shape-range-styling)
--   [Shape Scale Styling](shape-scale-styling)
+-   [Shape Scale Styling](#shape-scale-styling)
 
 ## Shape Random Styling
 
