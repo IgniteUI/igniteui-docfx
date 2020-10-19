@@ -5,13 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## 仮想スクロール ディレクティブ
+# 仮想スクロール ディレクティブ
 
 <p class="highlight">Ignite UI for Angular igxForOf ディレクティブは、膨大なデータをテンプレート化するための ngForOf の代替手段です。仮想化を使用して、DOM レンダリングとメモリ使用量を最適化します。</p>
 <div class="divider"></div>
 
-
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -22,9 +21,9 @@ _language: ja
     <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで行う必要があるのは、`AppModule` に `IgxForOfModule` をインポートすることだけです。
 
@@ -43,7 +42,7 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### igxFor を追加
+### igxFor を追加
 
 モジュールをインポート後、ローカル データにバインドする `igxFor` の基本構成を設定します。
 
@@ -56,13 +55,13 @@ export class AppModule {}
 **data** プロパティは、仮想化されたデータを提供する配列です。
 
 
-### 例
+## 例
 
 `igxFor` ディレクティブを使用して、データを垂直、水平、または両方向に仮想化できます。
 
 仮想化はページング機能のようにデータをより小さいチャンクに分割します。このチャンクは、ユーザーがデータを水平/垂直にスクロールするときにコンテナー ビューポートで切り替わります。ページングの動作との違いは、仮想化が通常のスクロールバーの動作を装うことです。`igxFor` ディレクティブはスクロール可能なコンテナーを作成して、データを分割して描画します。それは [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 内で使用され、仮想 [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) を構築するために使用できます。
 
-#### 垂直仮想化
+### 垂直仮想化
 
 ```html
 <igx-list>
@@ -82,7 +81,7 @@ export class AppModule {}
 
 ***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
-#### 水平仮想化 
+### 水平仮想化 
 
 ```html
 <igx-list>
@@ -109,7 +108,7 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### 水平仮想化および垂直仮想化
+### 水平仮想化および垂直仮想化
 
 ```html
 <table #container [style.width]='width' 
@@ -140,7 +139,7 @@ export class AppModule {}
 
 より詳細な情報とデモについては、[グリッド仮想化](grid/virtualization.md)トピックに従ってください。
 
-#### リモート サービスにバインドされる igxFor
+### リモート サービスにバインドされる igxFor
 [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは、`Observable` プロパティ- `remoteData`を使用してリモート サービスにバインドできます。(次の例の場合) `chunkLoading` イベントも、データのリクエストをトリガーするために利用する必要があります。
 
 ```html
@@ -227,7 +226,7 @@ chunkLoading(evt) {
 }
 ```
 
-### ローカル変数
+## ローカル変数
 
 igxFor ディレクティブのコンテキストには、`even`、`odd`、`first`、`last` のヘルパー プロパティが含まれています。これらは、コレクション内の現在の要素の位置を識別するために使用されます。次のコードスニペットは、`ng-template` で `even` プロパティを使用する方法を示しています。すべての偶数の div 要素に `even` クラスが割り当てられます:
 
@@ -239,20 +238,20 @@ igxFor ディレクティブのコンテキストには、`even`、`odd`、`firs
 </ng-template>
 ```
 
-### 既知の制限
+## 既知の制限
 
 |制限|説明|
 |--- |--- |
 | `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOM ノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば `MutationObserver` を使用して、手動でスクロール位置をリセットします。`</li></ul>
 | 初期化後にレンダリングされたテンプレートのコンテンツのサイズが変更された場合、`scrollTo` メソッドが正しく動作されません。 | 初期化後にランタイムを変更するサイズを持つテンプレート内の要素の場合 (コンテンツ プロジェクション、リモート要求の解決などの結果として)、`scrollTo` メソッドは正しいインデックスまでスクロールできません。メソッドは、ランタイムのサイズ変更が発生する前にインデックスの位置までスクロールし、サイズが変更された後は場所が正しくありません。回避策として、コンテンツが後で読み込まれた場合にコンテンツに基づいてサイズを変更しないテンプレートを使用します。
 
-### API リファレンス
+## API リファレンス
 
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 
-### その他のリソース
+## その他のリソース
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

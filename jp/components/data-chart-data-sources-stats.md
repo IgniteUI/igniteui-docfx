@@ -8,7 +8,7 @@ _language: ja
 
 # Angular 散布バブル シリーズのサンプルデータソース
 
-このトピックでは、[散布バブル シリーズ](data-chart-type-scatter-bubble-series.md)と [Scatter Marker シリーズ](data-chart-type-scatter-point-series.md) のデータソースを実装する方法の例を示します。
+このトピックでは、[散布バブル シリーズ](data-chart-type-scatter-bubble-series.md)と [散布マーカー シリーズ](data-chart-type-scatter-point-series.md) のデータソースを実装する方法の例を示します。
 
 ```ts
 export class SampleScatterStats {

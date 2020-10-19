@@ -10,6 +10,8 @@ _language: ja
 
 このトピックは、Angular データ チャート コンポーネントのラジアル シリーズのさまざまなタイプについて説明します。ラジアル シリーズは、[カテゴリ シリーズ](data-chart-type-category-series.md)のように水平線に沿って伸びるのではなく、円の周りを囲んだデータポイントのコレクションとしてデータをレンダリングするシリーズのグループです。ラジアル シリーズは、チャートの範囲の最小から最大までのカテゴリのリストもマッピングし、カテゴリシリーズと同じカテゴリグループ化メカニズムをサポートします。
 
+<!-- Angular, React, WebComponents -->
+
 ## サンプル
 
 <div class="sample-container loading" style="height: 500px">
@@ -23,6 +25,7 @@ _language: ja
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
 ## ラジアル シリーズのタイプ
 
@@ -64,7 +67,13 @@ this.state = { dataSource: SampleRadialData.create() }
 
 ## モジュールの要件
 
-ラジアル シリーズを使用するには、ロード中にアプリに以下のモジュールをインポートする必要があります。
+ラジアル シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartRadialSeriesModule
+-   DataChartRadialSeriesCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:

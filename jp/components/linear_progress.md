@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Linear Progress
+# Linear Progress
 <p class="highlight">Ignite UI for Angular Linear Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。インジケーターは状態変更で外観を更新します。インジケーターがストライプまたは実線色でスタイル設定できます。</p>
 <div class="divider--half"></div>
 
-#### デモ
+## デモ
 <div class="sample-container loading" style="height:50px">
     <iframe id="linear-progressbar-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 Linear Progress Bar Indicator コンポーネントを初期化するには、**IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
 ```typescript
 // app.module.ts
@@ -44,7 +44,7 @@ export class AppModule {}
 
 その後、ブラウザ上でデモサンプルを確認することができます。
 
-#### プログレス タイプ
+### プログレス タイプ
 
 [`type`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) 属性を使用してバーのタイプを設定できます。リニア プログレス バーには、`default`、`error`、`success`、`info`、および `warning` の 5 つのタイプがあります。
 
@@ -73,10 +73,10 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### 不確定のプログレス
+### 不確定のプログレス
 正確に決定していないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) プロパティを `true` に設定できます。
 
-#### Text プロパティ
+### Text プロパティ
 
 [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) プロパティを使用してテキストを配置できます。指定できる値は `left`、`center`、`right` です。
 
@@ -148,7 +148,7 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) を [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) 入力より大きい値に定義した場合、**進行状況の更新に渡す値**を取得する更新は一つのみとなります。  
 <div class="divider--half"></div>
 
-#### ダイナミック プログレス
+### ダイナミック プログレス
 
 ボタンなどの外部コントロールを使用してプログレス バーの値を動的に変更できます。これを実現するには、値をクラス プロパティにバインドします。
 
@@ -205,7 +205,7 @@ public decrementProgress() {
 </div>
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 
 リニア プログレスバーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -223,7 +223,7 @@ $custom-theme: igx-progress-linear-theme(
 );
 ```
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -263,7 +263,7 @@ $custom-theme: igx-progress-linear-theme(
 }
 ```
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:50px">
     <iframe id="linear-progressbar-styling-iframe" src='{environment:demosBaseUrl}/data-display/linear-progressbar-styling' width="100%" height="100%" 
@@ -275,7 +275,7 @@ $custom-theme: igx-progress-linear-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API
+## API
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)

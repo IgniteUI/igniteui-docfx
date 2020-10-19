@@ -9,7 +9,7 @@ _language: ja
 
 # Angular 積層型 100 エリア チャート
 
-Ignite UI for Angular 積層型 100 エリア チャートはカテゴリ チャートのグループに属し、線分　([`IgxStackedFragmentSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) で接続された点のコレクションを使用して描画され、線の下の領域が塗りつぶされて積み上げられます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。Angular 積層型 100 エリア チャートは、y 軸の値の処理以外は、Angular 積層型エリア チャートと同じです。データを直接的に表す代わりに、[`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100areaseriescomponent.html) は、データ ポイント内のすべての値の合計の割合でデータを表示します。
+Ignite UI for Angular 積層型 100 エリア チャートはカテゴリ チャートのグループに属し、線分 ([`IgxStackedFragmentSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) で接続された点のコレクションを使用して描画され、線の下の領域が塗りつぶされて積み上げられます。コレクションのそれぞれの積層フラグメントは各積層の視覚的な要素を表します。各積層は正の値と負の値の両方を含みます。正の値はいずれも y 軸の正の側にグループ化され、負の値は y 軸の負の側にグループ化されます。Angular 積層型 100 エリア チャートは、y 軸の値の処理以外は、Angular 積層型エリア チャートと同じです。データを直接的に表す代わりに、[`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100areaseriescomponent.html) は、データ ポイント内のすべての値の合計の割合でデータを表示します。
 
 ## サンプル
 
@@ -47,7 +47,12 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 
 ## モジュールの要件
 
-[`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100areaseriescomponent.html) は以下のモジュールが必要です。
+[`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100areaseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartInteractivityModule
+-   Stacked100AreaSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
