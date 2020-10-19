@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Toast
+# Toast
 <p class="highlight">Ignite UI for Angular Toast コンポーネントは、ユーザーが閉じられない非対話型の情報および報告メッセージを表示できます。通知はページの上側、中央、または下側に表示できます。</p>
 <div class="divider"></div>
 
-### Toast デモ
+## Toast デモ
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2" class="lazyload"></iframe>
@@ -22,9 +22,9 @@ _language: ja
 <div class="divider--half"></div>
 
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 Toast コンポーネントを初期化する前に、 `IgxToastModule` を **app.module.ts** ファイルにインポートします。
 
@@ -42,7 +42,7 @@ import { IgxToastModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Toast の表示
+### Toast の表示
 Toast コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
 
 ```html
@@ -63,9 +63,9 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 <igx-toast #toast ></igx-toast>
 ```
 
-### 例
+## 例
 
-#### 非表示/自動的に隠す
+### 非表示/自動的に隠す
 開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) メソッドを使用して、コンポーネントを閉じることができます。 
 
 ```html
@@ -88,7 +88,7 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### 表示期間
+### 表示期間
 [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
 
 ```html
@@ -143,7 +143,7 @@ public show(toast) {
 
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 
 Toast のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
@@ -161,7 +161,7 @@ $custom-toast-theme: igx-toast-theme(
 );
 ```
 
-#### CSS 変数の使用 
+### CSS 変数の使用 
 
 最後に Toast のカスタム テーマを設定します。 
 
@@ -169,7 +169,7 @@ $custom-toast-theme: igx-toast-theme(
 @include igx-css-vars($custom-toast-theme);
 ```
 
-#### ミックスインの使用
+### ミックスインの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -184,7 +184,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-#### カラー パレットの使用
+### カラー パレットの使用
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
 
@@ -210,7 +210,7 @@ $custom-toast-theme: igx-toast-theme(
 >[!NOTE]
 >`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palette.md)のトピックを参照してください。
 
-#### スキーマの使用
+### スキーマの使用
 
 [**スキーマ**](themes/schemas.md) の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
@@ -257,13 +257,13 @@ $custom-toast-theme: igx-toast-theme(
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 * [IgxToastComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
