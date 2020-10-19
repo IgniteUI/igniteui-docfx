@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Input Group
+# Input Group
 <p class="highlight">Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供するリアクティブ フォームで簡単に使用できます。</p>
 <div class="divider--half"></div>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height:100px">
 <iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 Input Group コンポーネントを初期化にするには、まず `IgxInputGroupModule` を `igniteui-angular` ツールキットにインポートします。
 
 `IgxInputGroup` はテンプレート駆動フォームを使用するために **FormsModule** にも依存します。
@@ -43,12 +43,12 @@ export class AppModule {}
 > [!NOTE]
 > `igxInput`、`igxLabel`、`igx-preix`、`igx-suffix` または `igx-hint` ディレクティブを使用するには、`<igx-input-group>` コンテナーでラップする必要があります。
 
-### 例
+## 例
 
-#### Label および Input
+### Label および Input
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、 [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
 
-#### Prefix および Suffix
+### Prefix および Suffix
 `igx-prefix` / `igxPrefix` および `igx-suffix` / `igxSuffix` ディレクティブは、HTML 要素、文字列、アイコン、またはその他のコンポーネントを含むことができます。以下のサンプルでは、文字列 **prefix** とアイコン **suffix** を持つ新しい入力フィールドを作成します。
 
 ```html
@@ -65,7 +65,7 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### Hint
+### Hint
 [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブは、入力の下に配置されるヘルパー テキストを提供します。[`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) プロパティの値に応じて、入力の開始または終了の位置に配置できます。以下は、phone 入力にヒントを追加します。
 
 ```html
@@ -86,7 +86,7 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### Input タイプと Input グループ タイプ トークン
+### Input タイプと Input グループ タイプ トークン
 入力グループのスタイルは、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用して変更できます。サポートされている入力グループ コンポーネントは、`line` (タイプが指定されていない場合のデフォルト)、`border`、 `box` および `search` です。`line`、`border` および `box` タイプは、マテリアル デザイン テーマ専用に作成されています。これらのタイプを他のテーマで設定しても、入力グループの外観には影響しません。
 
 特定の型を宣言的に設定する例:
@@ -114,7 +114,7 @@ providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StckBlitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。
 
@@ -137,7 +137,7 @@ $custom-input-group: igx-input-group-theme(
 );
 ```
 
-#### CSS 変数の使用
+### CSS 変数の使用
 
 最後に、新しく作成したテーマを含めます。
 
@@ -145,7 +145,7 @@ $custom-input-group: igx-input-group-theme(
 @include igx-css-vars($custom-input-group);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、[input group mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group) を用いる必要があります。
 
@@ -161,7 +161,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height:120px">
     <iframe id="input-group-style-iframe" src='{environment:demosBaseUrl}/data-entries/input-group-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -173,7 +173,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -182,7 +182,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 関連トピック:

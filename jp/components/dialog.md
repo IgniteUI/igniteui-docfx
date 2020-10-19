@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## ダイアログ ウィンドウ
+# ダイアログ ウィンドウ
 <p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な規格の警告メッセージを提供できます。</p>
 <div class="divider"></div>
 
-### Dialog デモ
+## Dialog デモ
 <div class="sample-container loading" style="height:200px">
     <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 はじめに、**app.module.ts** ファイルに **IgxDialogModule** をインポートします。
 
@@ -39,7 +39,7 @@ export class AppModule {}
 ```
 <div class="divider--half"></div>
 
-#### 通知ダイアログ
+### 通知ダイアログ
 
 通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。 
 
@@ -59,7 +59,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-#### 標準ダイアログ
+### 標準ダイアログ
 
 標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) および [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理します。 
 
@@ -85,7 +85,7 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### カスタム ダイアログ
+### カスタム ダイアログ
 
 カスタム ダイアログを作成するには、サインイン コンポーネントのテンプレートに以下のコードを追加します。ダイアログのタイトル領域は `igxDialogTitle` ディレクティブまたは `igx-dialog-title` セレクターを使ってカスタマイズできます。アクション領域は `igxDialogActions` ディレクティブまたは `igx-dialog-actions` セレクターを使ってカスタマイズできます。
 [**igxLabel**](input_group.md) および [**igxInput**](input_group.md) ディレクティブで装飾された label と input を含む 2 つの入力グループを追加します。
@@ -135,7 +135,7 @@ export class AppModule {}
 </div>
 <div class="divider--half"></div>
 
-#### 位置とアニメーション設定 
+### 位置とアニメーション設定 
 
 `igxDialog` が表示される位置を変更するには、2 つの方法があります。
 
@@ -198,7 +198,7 @@ params: {
 }
 ```
 
-### スタイル設定
+## スタイル設定
 
 ダイアログ ウィンドウのスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをはじめにインポートする必要があります。
 
@@ -233,7 +233,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > [`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay_main.md#スタイル設定)をご覧ください。
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -272,7 +272,7 @@ $my-dialog-theme: igx-dialog-theme(
 }
 ```
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:300px">
     <iframe id="dialog-styling-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -282,7 +282,7 @@ $my-dialog-theme: igx-dialog-theme(
 </div>
 <div class="divider--half"></div>
 
-### API まとめ
+## API まとめ
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
@@ -290,7 +290,7 @@ $my-dialog-theme: igx-dialog-theme(
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

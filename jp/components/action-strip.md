@@ -5,14 +5,14 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Action Strip
+# Action Strip
 <p class="highlight">
 Ignite UI for Angular Action Strip コンポーネントは、ホバーなどのユーザー操作の際に特定のターゲット コンテナーの上に追加の UI および機能を表示できる 1 つ以上のアクションを含むオーバーレイ領域を提供します。アクション ストリップはコンテナーをオーバーレイしようとして絶対的に配置されるため、コンテナーは相対的に配置する必要があります。主な操作とターゲットコ ンテナーへのユーザー アクセスはアクション ストリップでオーバーラップされますが、使用できます。
 </p>
 
 <div class="divider--half"></div>
 
-#### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="action-strip-paragraph-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -25,7 +25,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 アクション ストリップを初期化して正しく配置するには、相対的に配置されたコンテナー内に配置する必要があります。
 
 ```html
@@ -40,7 +40,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 
 デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
-#### メニューのルック アンド フィール
+### メニューのルック アンド フィール
 3 つ以上のアクション項目が表示される場合に、[`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、`[その他]` ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
 
 ```html
@@ -67,7 +67,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### アクション ストリップの再利用
+### アクション ストリップの再利用
 
 同じアクション ストリップ インスタンスは、アクションを同時に表示する必要がない限り、ドキュメント内の複数の場所で使用できます。
 アクション ストリップは [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context) によって親コンテナーを変更できます。
@@ -76,7 +76,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 >注: アクション ストリップを `element` に追加するために、`show` API メソッドは [Angular Renderer2](https://angular.io/api/core/Renderer2) を使用します。
 
 
-### グリッドでの使用
+## グリッドでの使用
 
 アクション ストリップは、IgxGrid の追加機能と UI を提供します。
 これはグリッド アクション コンポーネントで利用でき、2 つのデフォルト コンポーネントを提供します。
@@ -96,6 +96,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 ```
 >注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
+>注: ʻIgxActionStripComponent`がグリッドの子コンポーネントである場合、行をホバーするとUI が自動的に表示されます。
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -104,7 +105,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 アクション ストリップをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
 ```scss
@@ -142,7 +143,7 @@ $custom-strip: igx-action-strip-theme(
 </div>
 
 
-### API と スタイル リファレンス
+## API と スタイル リファレンス
 
 アクション ストリップの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
@@ -162,7 +163,7 @@ $custom-strip: igx-action-strip-theme(
 
 <div class="divider"></div>
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

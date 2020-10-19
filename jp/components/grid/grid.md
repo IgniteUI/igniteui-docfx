@@ -1,7 +1,7 @@
 ---
-title: Angular データ グリッド | Angular グリッド & 図コンポーネント | インフラジスティックス
+title: Angular データ グリッド | Angular Material テーブル | インフラジスティックス
 _description: Ignite UI for Angular データ グリッドを使用して、さまざまなイベントを含むタッチ レスポンシブな Angular コンポーネントを作成します。今すぐデータ視覚化を強化しましょう!
-_keywords: angular データ グリッド, angular コンポーネント, ignite ui for angular, angular グリッド, angular 図コンポーネント
+_keywords: angular データ グリッド, angular グリッド, angular material テーブル, ignite ui for angular
 _language: ja
 ---
 
@@ -258,7 +258,7 @@ public initColumns(column: IgxGridColumn) {
 
 ## データ構造
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) handles **flat data** and nested **POJOs(Plain old Java objects)**。描画に固有のデータ構造はフォームにあります。
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) はフラット データ**とネストされた **POJOs (Plain old Java objects)** を処理します。描画に固有のデータ構造はフォームにあります。
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -296,7 +296,7 @@ const POJO = [{
 
 ```
 >[!WARNING]
->**The key values must not contain arrays**.
+>**キー値に配列を含まないでください。**
 
 >[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 

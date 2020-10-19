@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Ripple
+# Ripple
 <p class="highlight">Ignite UI for Angular Ripple コンポーネントは、タッチまたはマウス クリックに応答してアニメーションを作成します。</p>
 
 ### Ripple デモ
@@ -16,9 +16,9 @@ _language: ja
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルに `IgxRippleModule` をインポートする必要があります。
 
@@ -41,7 +41,7 @@ export class AppModule {}
 > [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 
-#### リップル エフェクトの追加
+### リップル エフェクトの追加
 
 `igxRipple` を使用して指定した要素にリップル効果を追加します。
 
@@ -49,9 +49,9 @@ export class AppModule {}
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
 
-### 例
+## 例
 
-#### カスタム色
+### カスタム色
 
 `igxRipple` を使用して、デフォルトのリップル色を簡単に変更できます。
 
@@ -62,7 +62,7 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
 </iframe></div>
 
-#### 中央揃えのリップル エフェクト
+### 中央揃えのリップル エフェクト
 デフォルトでリップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、[`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) プロパティを使用できます。
 
 ```html
@@ -72,7 +72,7 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
 </iframe></div>
 
-#### リップルの期間
+### リップルの期間
 [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) プロパティを使用して、リップルアニメーションの期間を変更できます。これは、デフォルトで 600 ミリ秒に設定されています。
 
 ```html
@@ -82,7 +82,7 @@ export class AppModule {}
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
 </iframe></div>
 
-#### リップルの対象要素
+### リップルの対象要素
 [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) プロパティを使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
 
 ```html
@@ -101,7 +101,7 @@ export class AppModule {}
 > `igxRippleTarget` プロパティで対象する子要素は、相対的に配置する必要があります。
 
 
-### スタイル設定
+## スタイル設定
 
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルにすべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
@@ -117,7 +117,7 @@ $custom-ripple-theme: igx-ripple-theme(
 );
 ```  
 
-#### CSS 変数の使用
+### CSS 変数の使用
 
 次に Ripple のカスタム テーマを渡します。
 
@@ -125,7 +125,7 @@ $custom-ripple-theme: igx-ripple-theme(
 @include igx-css-vars($custom-ripple-theme);
 ```
 
-#### コンポーネント テーマ オーバーライドの使用
+### コンポーネント テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -143,7 +143,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 >[!NOTE]
   > `igxRiple` ディレクティブを使用して設定される色は、カスタム テーマ内で設定される色よりも優先されます。  
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:200px">
     <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -154,13 +154,13 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 </div>
 
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
