@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Radio & Radio Group
+# Radio & Radio Group
 
-### Radio Button
+## Radio Button
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height: 90px">
     <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -21,7 +21,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-#### 使用方法
+### 使用方法
 
 Radio Button コンポーネントを初期化にするには、まず `IgxRadioModule` を `AppModule` ファイルにインポートします。
 
@@ -48,7 +48,7 @@ export class AppModule {
 <igx-radio [(ngModel)]="selected" value="option2">Option 2</igx-radio>
 ```
 
-#### ラベル
+### ラベル
 
 `labelPosition` プロパティを使用して、ラジオ コンポーネントのデフォルトのラベル位置を変更できます。`before` および `after` から選択できます。設定されていない場合、ラベルはラジオ ボタンの後に配置されます。
 
@@ -61,7 +61,7 @@ export class AppModule {
     <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-#### プロパティ
+### プロパティ
 上記のサンプルに 4 つのラジオ ボタンを追加し、各ボタンに特定の背景色を適用します。次に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は `NgModel` ディレクティブによって双方向バインディングが設定されるため、ユーザーが別のラジオ ボタン (色) を選択する際に値が更新されます。
 
 ```typescript
@@ -111,7 +111,7 @@ public selectedColor: string = this.colors[3].hex;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### スタイル設定
+## スタイル設定
 
 ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -132,7 +132,7 @@ $custom-radio-theme: igx-radio-theme(
 );
 ```
 
-##### CSS 変数の使用
+### CSS 変数の使用
 
 最後には、カスタム ラジオ テーマをアプリケーションに渡します。
 
@@ -140,7 +140,7 @@ $custom-radio-theme: igx-radio-theme(
 @include igx-css-vars($custom-radio-theme);
 ```
 
-##### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -163,11 +163,11 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 </div>
 <div class="divider--half"></div>
 
-### Radio Group
+## Radio Group
 <p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、**テンプレート駆動型およびリアクティブ型のフォームをサポートします。**</p>
 <div class="divider"></div>
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height: 360px">
     <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
@@ -177,7 +177,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 </div>
 <div class="divider--half"></div>
 
-#### 使用方法
+### 使用方法
 
 Radio Group ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルの `IgxRadioModule` をインポートする必要があります。
 
@@ -211,14 +211,14 @@ import { IgxRadioModule } from 'igniteui-angular';
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
