@@ -73,7 +73,7 @@ The grid exposes a wide array of events that provide greater control over the ed
 
 ### Event cancelation
  - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
-  - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) enabled, row edit will be triggered, although cell edit will remain forbidden.
+  - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
  - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
  - `RowEdit` - Committing cell is possible, but not the whole row. The row will stay in edit mode and the row transaction will be considered open. Hitting **Done** does not commit or close the row. **Cancel** button closes the editing process and the transaction without committing the changes.
 
