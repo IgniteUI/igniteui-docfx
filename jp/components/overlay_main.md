@@ -167,10 +167,41 @@ export class MyOverlayComponent {
 ...
 <button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
 </div>
-
 ```
 ボタンをクリックすると、ボタンに相対的に配置される `MyDynamicComponent` を表示します。
+
+## プリセット オーバーレイ設定
+
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) および [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドにより、事前定義された設定セットに基づいて [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を容易に作成することができます。
+
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) メソッドは、`outlet` パラメーターが指定されている場合、[`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) または [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) を使用して非モーダル [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。`AbsolutePosition` 列挙体は、`Center`、`Top`、または `Bottom` から選択できる位置を定義します。デフォルトの位置は `Center` です。
+
+```typescript
+const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
+```
+
+[`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドは、[`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html)、 [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) または [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) を使用して [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。ターゲット、位置およびストラテジを受け入れます。`target` は、コンポーネントが表示するアタッチ ポイントまたは要素です。`position` は `RelativePosition` 列挙体であり、次のオプションがあります: `Above`、 `Below`、` Before`、`After`、 `Default`。`Default` オプションは、要素をターゲットの下に配置し、左揃えにします。位置ストラテジは、`RelativePositionStrategy` 列挙体を介して設定できます。デフォルト値は `Auto` です。
+
+```typescript
+const targetElement = this.myAnchorButton.nativeElement;
+const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings(
+        targetElement,
+        RelativePosition.Above,
+        RelativePositionStrategy.Connected);
+```
+
+### デモ
+
+<div class="sample-container loading" style="height: 750px">
+    <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
 <div class="divider--half"></div>
+
 
 ## オーバーレイの非表示
 

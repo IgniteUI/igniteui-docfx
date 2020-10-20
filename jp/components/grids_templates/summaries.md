@@ -83,7 +83,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
  - earliest
  - latest
 
-[`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) プロパティを `true` に設定すると **@@igComponent 集計**が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを `number` または `date` に設定します。
+[`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) プロパティを `true` に設定すると **@@igComponent 集計**が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを `number` または `date` に設定します。集計値は、グリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズされて表示されます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
@@ -222,7 +222,9 @@ class MySummary extends IgxNumberSummaryOperand {
   }
 ```
 }
-上記コードに示すように、メソッド [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) がインターフェイスである [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) のリストを返します。
+
+例に表示されるように、基本クラスは [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドを公開しているため、すべてのデフォルト集計を取得して結果を変更するか、まったく新しい集計結果を計算することができます。 
+このメソッドは [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) のリストを返し、集計を計算するためのオプションのパラメーターを取得します。
 ```typescript
 interface IgxSummaryResult {
     key: string;
@@ -230,6 +232,8 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
+
+[「すべてのデータにアクセスするカスタム集計」](#すべての-@@igComponent-データにアクセスするカスタム集計)および以下の[「ローカライズされたカスタム集計」](#ローカライズされたカスタム集計)セクションを参照してください。
 
 > [!NOTE]
 > 集計行の高さを正しく計算するために、@@igComponent の [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドでデータが空の場合も常に [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) 配列の正しい長さを返す必要があります。
@@ -337,6 +341,23 @@ class MySummary extends IgxNumberSummaryOperand {
 </div>
 }
 
+### ローカライズされたカスタム集計
+デフォルトで、集計結果はグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズおよび書式設定されます。カスタム集計を提供する場合、結果を対応するローカライズおよび書式設定で書式設定し、列の値と一致させることができます。
+
+`locale` パラメーターを使用して、ローカライズされた集計データを取得します (グリッドのロケールに従って; 渡されない場合、`locale` は `'en-US'` にデフォルト設定されます。)返される日付および数値の形式をカスタマイズする場合のみ、`pipeArgs` パラメーターを使用します。
+```typescript
+class MySummary extends IgxDateSummaryOperand {
+    operate(columnData: any[], allData = [], fieldName, locale: string, pipeArgs: IColumnPipeArgs): IgxSummaryResult[] {
+        const pipeArgs: IColumnPipeArgs = {
+            format: 'longDate',
+            timezone: 'UTC',
+            digitsInfo: '1.1-2'
+        }
+        const result = super.operate(columnData, allData, fieldName, locale, pipeArgs);
+        return result;
+    }
+}
+```  
 
 @@if (igxName === 'IgxGrid') {
 ## グループの集計
