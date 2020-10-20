@@ -97,7 +97,7 @@
         - name: 行編集
           href: grid/row_editing.md
           new: false
-        - name: Row Adding
+        - name: 行追加
           href: grid/row_adding.md
           new: true
         - name: 一括編集
@@ -233,7 +233,7 @@
         - name: 行編集
           href: treegrid/row_editing.md
           new: false
-        - name: Row Adding
+        - name: 行追加
           href: treegrid/row_adding.md
           new: true
         - name: 一括編集
@@ -354,7 +354,7 @@
         - name: 行編集
           href: hierarchicalgrid/row_editing.md
           new: false
-        - name: Row Adding
+        - name: 行追加
           href: hierarchicalgrid/row_adding.md
           new: true
         - name: 一括編集

@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Time Picker
+# Time Picker
 <p class="highlight">Date Picker のデザインや機能と同様 Ignite UI for Angular Time Picker コンポーネントは、ダイアログのスピン ボタンで時間を選択して入力フィールドに値を設定します。またユーザーは、ドロップダウンで時間値の選択やマスク入力を使用した編集が可能です。</p>
 <div class="divider--half"></div>
 
-#### デモ
+## デモ
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -20,7 +20,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
@@ -44,7 +44,7 @@ export class AppModule {}
 ```
 <div class="divider--half"></div>
 
-#### デフォルト
+### デフォルト
 
 タイムピッカーを追加するには、ミーティング コンポーネントのテンプレートで、以下のコードを追加するとデフォルトのタイムピッカーが作成されます。
 
@@ -57,7 +57,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-#### 値の設定
+### 値の設定
 
 値を設定するには、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) 入力を使用します。日付を追加します。
 
@@ -77,7 +77,7 @@ public date: Date = new Date();
 <igx-time-picker [(ngModel)]="date"></igx-time-picker>
 ```
 
-#### 書式の設定
+### 書式の設定
 時間の書式を設定するには、[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) の [`format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#format) オプションを使用します。
 
 以下の表は、使用可能な時間表示書式です。
@@ -92,7 +92,7 @@ public date: Date = new Date();
 | `mm` | 先行ゼロのある分フィールド (00..59) を書式設定します。 |
 | `tt` | AM/PM フィールドを表します。 |
 
-#### カスタム ラベル
+### カスタム ラベル
 コンポーネントにネストされた `<label>` タグ内に `igxlabel` を配置することで、デフォルトのラベルをカスタム ラベルに変更できます。
 
 ````html
@@ -105,7 +105,7 @@ public date: Date = new Date();
 カスタム ラベルの外観は、[検証セクション](#検証) の検証サンプルで確認できます。
 
 
-#### デルタおよびスピン モードの変更
+### デルタおよびスピン モードの変更
 
 項目のデルタを変更するには、[`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) を設定します。スピン モードを変更するには、[`isSpinLoop`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#isspinloop) を使用します。
 
@@ -113,7 +113,7 @@ public date: Date = new Date();
 <igx-time-picker [isSpinLoop]="false" [itemsDelta]="{hours:1, minutes:5}"></igx-time-picker>
 ```
 
-#### 検証
+## 検証
 
 ユーザー入力を制限するために [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を設定できます。[`onValidationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#onvalidationfailed) を処理して、無効な時間が選択された場合にユーザーを通知できます。
 
@@ -174,7 +174,7 @@ public onValidationFailed() {
 </div>
 <div class="divider--half"></div>
 
-#### ドロップダウン モード
+## ドロップダウン モード
 
 タイムピッカーをプロジェクトに追加する際にデフォルト (ダイアログ) モードに設定します。編集可能なモードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
 
@@ -224,7 +224,7 @@ public mode = InteractionMode.DropDown;
 </div>
 <div class="divider--half"></div>
 
-#### 入力グループのテンプレート化
+## 入力グループのテンプレート化
 
 API (プロパティ、イベント、メソッド) を使用して要件によってタイムピッカーを構成し、コードで操作する方法を説明しました。次に入力グループの外観をカスタマイズします。
 
@@ -266,7 +266,7 @@ public date: Date = new Date();
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### ドロップダウン モードのテンプレート化
+## ドロップダウン モードのテンプレート化
 
 <a href="#入力グループのテンプレート化">テンプレート入力グループ</a> セクションに記載されているすべての情報は、ドロップダウン モードのタイムピッカーを再テンプレート設定する際に適用できます。唯一の要件は、HTML 要素が `openDialog(target)` に渡されて、その要素が生成されているドロップダウンの配置ターゲットとして使用されることです。
 
@@ -308,7 +308,7 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 
 
 
-#### カスタム ボタン アクション
+## カスタム ボタン アクション
 [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、カスタム アクション ボタンをサポートします。これを実現するには、`igxTimePickerActions` ディレクティブセレクタでマークされた `ng-template` でボタンをラップします。
 
 以下の例では、'CANCEL'、'OK'、'NOW' 操作用のカスタム操作ボタンが追加されています。
@@ -347,7 +347,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 </div>
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 
 タイム ピッカーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -396,7 +396,7 @@ export class TimepickerStylingComponent {
 >[!NOTE]
 >[`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay_main.md#スタイル設定)をご覧ください。
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -435,7 +435,7 @@ export class TimepickerStylingComponent {
 }
 ```
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="time-picker-styling" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" class="lazyload"></iframe>
 </div>
@@ -445,7 +445,7 @@ export class TimepickerStylingComponent {
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
@@ -456,7 +456,7 @@ export class TimepickerStylingComponent {
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

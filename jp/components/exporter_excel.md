@@ -5,13 +5,13 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Excel Exporter
+# Excel Exporter
 
 <p class="highlight">
 Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) または [**IgxTreeGrid**](treegrid/tree_grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングやソートなどの機能が使用できます。</p>
 <div class="divider"></div>
 
-#### Excel Exporter デモ
+## デモ
 
 <div class="sample-container loading" style="height: 100px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,9 +23,9 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 </div>
 <div class="divider--half"></div>
 
-#### 使用方法
+## 使用方法
 
-Ignite UI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
+IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) を app.module.ts ファイルにインポートし、`providers` 配列にサービスを追加します。
 
 ```typescript
 // app.module.ts
@@ -77,8 +77,7 @@ public exportButtonHandler() {
 
 正しく設定された場合、エクスポート ボタンが表示されます。ボタンが押されるとエクスポート処理をトリガーし、ブラウザーで "ExportedDataFile.csv" ファイルをダウンロードします。このファイルは `localData` 配列のデータを MS Excel 形式で含みます。
 
-
-### IgxGrid データのエクスポート
+## IgxGrid データのエクスポート
 
 上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) または各行で発生される [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
 
@@ -95,7 +94,7 @@ this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArg
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
 ```
 
-#### 既知の制限
+## 既知の制限
 > [!NOTE] 
 > [JSZip](https://www.npmjs.com/package/jszip) のライブラリがの[問題](https://github.com/Stuk/jszip/issues/617)が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
 
@@ -107,7 +106,7 @@ npm install --save setimmediate
 import 'setimmediate';
 ```
 
-### API リファレンス
+## API リファレンス
 
 以下は、その他の Excel Exporter サービスの API です。
 
@@ -124,7 +123,7 @@ Grid Excel エクスポーター:
 
 <div class="divider"></div>
 
-#### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
