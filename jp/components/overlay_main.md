@@ -170,17 +170,17 @@ export class MyOverlayComponent {
 ```
 ボタンをクリックすると、ボタンに相対的に配置される `MyDynamicComponent` を表示します。
 
-## Preset Overlay Settings
+## プリセット オーバーレイ設定
 
-The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) および [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドにより、事前定義された設定セットに基づいて [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を容易に作成することができます。
 
-The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] method creates non-modal [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) or [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) in case the `outlet` parameter is provided. The `AbsolutePosition` enumeration defines the possible positions to choose from: `Center`, `Top` or `Bottom`. The default position is `Center`.
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) メソッドは、`outlet` パラメーターが指定されている場合、[`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) または [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) を使用して非モーダル [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。`AbsolutePosition` 列挙体は、`Center`、`Top`、または `Bottom` から選択できる位置を定義します。デフォルトの位置は `Center` です。
 
 ```typescript
 const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
 ```
 
-The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] method creates [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) or [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html). Accepts target, position and strategy. The `target` is the attaching point or element for the component to show. The `position` is a `RelativePosition` enumeration with the following options: `Above`, `Below`, `Before`, `After` and `Default`. The `Default` option positions the element below the target, left aligned. The position strategy can be set through the `RelativePositionStrategy` enumeration, which default value is `Auto`.
+[`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドは、[`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html)、 [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) または [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) を使用して [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。ターゲット、位置およびストラテジを受け入れます。`target` は、コンポーネントが表示するアタッチ ポイントまたは要素です。`position` は `RelativePosition` 列挙体であり、次のオプションがあります: `Above`、 `Below`、` Before`、`After`、 `Default`。`Default` オプションは、要素をターゲットの下に配置し、左揃えにします。位置ストラテジは、`RelativePositionStrategy` 列挙体を介して設定できます。デフォルト値は `Auto` です。
 
 ```typescript
 const targetElement = this.myAnchorButton.nativeElement;

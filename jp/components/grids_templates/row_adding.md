@@ -1,21 +1,21 @@
 ---
-title: Angular Grid Row Adding | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. Intuitive grid row adding and CRUD capabilities are available with the UI grid.
-_keywords: row adding, igniteui for angular, infragistics
+title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+_keywords: 行追加, igniteui for angular, infragistics, インフラジスティックス
 ---
 
-# @@igComponent Row Adding
+# @@igComponent 行追加
 
 @@if (igxName !== 'IgxTreeGrid') {
-The @@igComponent provides a convenient way to perform data manipulations through inline row adding and a powerful API for Angular CRUD operations. Add an [Action Strip](../action-strip.md) component with editing actions enabled in the grid's template, hover a row and use the provided button or press <kbd>ALT</kbd> + <kbd>+</kbd> to spawn the row adding UI.
+@@igComponent コンポーネントはインライン行追加や Angular CRUD 操作のための強力な API を通して便利なデータ操作方法を提供します。グリッドのテンプレートで編集アクションが有効になっている[アクション ストリップ](../action-strip.md)コンポーネントを追加し、行にホバーして提供されたボタンを使用するか、<kbd>ALT</kbd> + <kbd>+</kbd> を押して、行追加 UI を生成します。
 }
 @@if (igxName === 'IgxTreeGrid') {
-The @@igComponent provides a convenient way to perform data manipulations through inline row adding and a powerful API for Angular CRUD operations. Add an [Action Strip](../action-strip.md) component with editing actions enabled in the grid's template, hover a row and use the provided button, press <kbd>ALT</kbd> + <kbd>+</kbd> to spawn the row adding UI or <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> to spawn the UI for adding a child for the selected row.
+@@igComponent コンポーネントはインライン行追加や Angular CRUD 操作のための強力な API を通して便利なデータ操作方法を提供します。グリッドのテンプレートで編集アクションが有効になっている[アクションストリップ](../action-strip.md)コンポーネントを追加し、ホバーして提供されたボタンを使用するか、<kbd>ALT</kbd> + <kbd>+</kbd> を押して、行追加 UI を生成するか、<kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> を押して、選択した行に子を追加するための UI を生成します。
 }
 
 ### デモ
 
-The following sample demonstrates how to enable native row adding in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row doesn't update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
+次のサンプルは、@@igComponent でネイティブの行追加を有効にする方法を示しています。セルの値を変更してから、同じ行の別のセルをクリックまたはナビゲートしても、**[完了]** ボタンを使用して確認するか、**[キャンセル]** ボタンを使用して破棄するまで、行の値は更新されません。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:520px">
@@ -52,9 +52,9 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 <div class="divider--half"></div>
 }
 
-## Row Adding Usage
+## 行追加の使用
 
-To get started import the `@@igxNameModule` in the **app.module.ts** file:
+はじめに、**app.module.ts** ファイルに `@@igxNameModule` をインポートします:
 
 ```typescript
 // app.module.ts
@@ -70,7 +70,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and an [Action Strip](../action-strip.md) component with editing actions enabled. The [`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) input controls the visibility of the button that spawns the row adding UI.
+次に、バインドしたデータソースに @@igComponent を定義をして [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定し、編集アクションを有効にした[アクション ストリップ](../action-strip.md) コンポーネントを定義します。[`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) 入力は、行追加 UI を生成するボタンの表示状態を制御します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -149,56 +149,56 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 
 > [!NOTE]
-> Setting primary key is mandatory for row adding operations.
+> プライマリ キーは行追加操作で必須です。
 
 > [!NOTE]
-> Every column excluding the primary key one is editable in the row adding UI by default. If you want to disable editing for a specific column, then you have to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> プライマリ キーを除くすべての列は、デフォルトで行追加 UI で編集可能です。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を `false` に設定する必要があります。
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) to fine tune which records the button shows for.
+> [行の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) を使用して、ボタンが表示するレコードを調整できます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) to fine tune which records the buttons show for.
+> [行の追加] と [子の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) を使用して、ボタンが表示するレコードを調整できます。
 }
 
-The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) is automatically provided for @@igComponent. It holds pending cell changes until the row state is submitted or cancelled.
+内部の [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) は @@igComponent に自動的に提供されます。行の状態が送信またはキャンセルされるまで、保留中のセルの変更を保持します。
 
-## Positioning
+## 位置
 
-- The Default position row add UI is below the row that the end user clicked the add row button for.
+- 行追加 UI のデフォルト位置は、エンド ユーザーが [行の追加] ボタンをクリックした行の下にあります。
 
-- The @@igComponent scrolls to fully display the add row UI automatically.
+- @@igComponent がスクロールして、行追加 UI が自動的に完全に表示されます。
 
-- The overlay for the add row UI maintains its position during scrolling.
+- 行追加 UI のオーバーレイは、スクロール中もその位置を維持します。
 
-## Behavior
+## 動作
 
-The add row UI has the same behavior as the row editing one as they are designed to provide a consistent editing experience to end users. Please, refer to the [@@igComponent Row Editing](row_editing.md) topic for more information.
+行追加 UI は、エンド ユーザーに整合性のある編集エクスペリエンスを提供するように設計されているため、行編集 UI と同じ動作をします。詳細については、[@@igComponent 行編集](row_editing.md)トピックを参照してください。
 
-After a new row is added through the row adding UI, its position and/or visibility is determined by the sorting, filtering and grouping state of the @@igComponent. In a @@igComponent that does not have any of these states applied, it appears as the last record. A snackbar is briefly displayed containing a button the end user may use to scroll the @@igComponent to its position if it is not in view.
+行追加 UI を介して新しい行が追加された後、その位置や表示状態は、@@igComponent のソート、フィルタリングおよびグループ化の状態によって決定されます。これらの状態のいずれも適用されていない @@igComponent では、最後のレコードとして表示されます。スナックバーが短時間表示され、@@igComponent が表示されていない場合にはエンド ユーザーがコントロールの位置までスクロールするためのボタンが含まれています。
 
-## Keyboard Navigation
+## キーボード ナビゲーション
 
-- <kbd>ALT</kbd> + <kbd>+</kbd> - Enters edit mode for adding a row
+- <kbd>ALT</kbd> + <kbd>+</kbd> - 行を追加するために編集モードに入ります。
 @@if (igxName === 'IgxTreeGrid') {
 
-- <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> - Enters edit mode for adding a child
+- <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> - 子を追加するために編集モードに入ります。
 }
 
-- <kbd>ESC</kbd> exits row adding mode without submitting any changes
+- <kbd>ESC</kbd> 変更を送信せずに行追加モードを終了します。
 
-- <kbd>TAB</kbd> move focus from one editable cell in the row to the next and from the right-most editable cell to the CANCEL and DONE buttons. Navigation from DONE button goes to the left-most editable cell within the currently edited row.
+- <kbd>TAB</kbd> 行の編集可能なセルから次のセルへフォーカスを移動、右端の編集可能なセルから キャンセル と 完了 ボタンへ移動します。[完了] ボタンからのナビゲーションは、現在編集されている行内の一番左の編集可能なセルに移動します。
 
-## Feature Integration
+## 機能の統合
 
-- Any row adding operation will stop if the data view of the @@igComponent gets modified. Any changes made by the end user are submitted. Operations that change the data view include but are not limited to sorting, grouping, filtering, paging, etc.
+- @@igComponent のデータ ビューが変更されると、行追加の操作は停止します。エンド ユーザーが行った変更はすべて送信されます。データ ビューを変更する操作には、ソート、グループ化、フィルタリング、ページングなどが含まれますが、これらに限定されません。
 
-- Summaries are updated after the row add operation finishes. The same is valid for the other data view dependant features such as sorting, filtering, etc.
+- 行追加の操作が終了すると、集計が更新されます。同じことが、ソート、フィルタリングなど、他のデータ ビューに依存する機能にも当てはまります。
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-- When spawning the UI for Hierarchical Grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed.
+- 階層グリッドの UI を生成すると、エンド ユーザーが [行の追加] ボタンをクリックした行に対して現在展開されている子レイアウトはすべて縮小されます。
 }
 
 ## リモート シナリオ
