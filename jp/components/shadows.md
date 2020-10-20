@@ -242,7 +242,6 @@ $myboringCard: igx-card-theme(
 
 <div class="divider--half"></div>
 
-
 ## API リファレンス
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
