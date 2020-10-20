@@ -78,7 +78,7 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 If the sample is configured properly, the toast will appear when the *Show button* is clicked. For the first component auto-hide feature is disabled and the toast will disappear on 'Hide' button click.
 In the other two components you can see in action how to pass different messages through the [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and use content projection.
 
-<div class="sample-container loading" style="height: 300px">
+<div class="sample-container loading" style="height: 450px">
     <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
 </div>
 
@@ -124,14 +124,14 @@ import { IgxToastPosition } from 'igniteui-angular';
 ...
 public toastPosition: IgxToastPosition;
 public show(toast) {
-    this.toastPosition = IgxToastPosition.Top;
+    this.toastPosition = "top";
     toast.show();
 }
 ...
 
 ```
 
-<div class="sample-container loading" style="height: 200px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
 </div>
 
@@ -247,7 +247,7 @@ $custom-toast-theme: igx-toast-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 600px">
     <iframe id="toast-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-style" class="lazyload"></iframe>
 </div>
 <div>
