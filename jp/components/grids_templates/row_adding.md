@@ -13,7 +13,7 @@ The @@igComponent provides a convenient way to perform data manipulations throug
 The @@igComponent provides a convenient way to perform data manipulations through inline row adding and a powerful API for Angular CRUD operations. Add an [Action Strip](../action-strip.md) component with editing actions enabled in the grid's template, hover a row and use the provided button, press <kbd>ALT</kbd> + <kbd>+</kbd> to spawn the row adding UI or <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> to spawn the UI for adding a child for the selected row.
 }
 
-### Demo
+### デモ
 
 The following sample demonstrates how to enable native row adding in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row doesn't update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
 
@@ -201,29 +201,29 @@ After a new row is added through the row adding UI, its position and/or visibili
 - When spawning the UI for Hierarchical Grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed.
 }
 
-## Remote scenarios
+## リモート シナリオ
 
-In most remote data scenarios the Primary Key assignment happens on the create server request. In this case the added records on the client will not have the final primary key value until saved on the server's data base. In that case the recommended way to handle this update in the @@igComponent is as follows:
+ほとんどのリモート データ シナリオでは、主キーの割り当てはサーバーの作成要求で発生します。この場合、クライアントに追加されたレコードは、サーバーのデータベースに保存されるまで最終的な主キー値を持ちません。@@igComponent でこの更新を処理する推奨される方法は以下のとおりです。
 
-- If the @@igComponent does not use transactions.
+- @@igComponent がトランザクションを使用しない場合
 
-    Once the create request is successfully completed and returns the added record data, you can replace that record's id in the local data record instance.
+    作成要求が正常に完了し、追加されたレコード データを返すと、ローカル データ レコード インスタンスでそのレコードの ID を置き換えることができます。
 
-- If the @@igComponent uses transactions.
+- @@igComponent がトランザクションを使用する場合
 
-    Once the create request or batch update request is successfully completed and returns the added record instances (with their db generated ids), the related ADD transactions should be cleared from the transaction log using the [clear]({environment:angularApiUrl}/interfaces/transactionservice.html#clear) API method. This is necessary because the local transaction will have a generated id field, which may differ than the one created in the data base, so they should be cleared. You can then add the record(s) passed in the response to the local data instance.
+    作成要求または一括更新要求が正常に完了し、追加されたレコード インスタンス (db で生成された ID) を返すと、[clear]({environment:angularApiUrl}/interfaces/transactionservice.html#clear) API メソッド を使用して関連する ADD トランザクションをトランザクション ログからクリアする必要があります。  ローカル トランザクションに生成された id フィールドがあり、データベースで作成された id フィールドと異なる場合があるため、クリアする必要があります。返却されたレコードをローカル データ インスタンスに追加できます。
 
-This will ensure that the remotely generated ids are always reflected in the local data, and subsequent update/delete operations target the correct record ids.
+これにより、リモートで生成された ID がローカル データに常に反映され、以降の更新/削除操作で正しいレコード ID がターゲットになります。
 
-## Styling
+## スタイル設定
 
-The row adding UI comprises the buttons in the `IgxActionStrip` editing actions, the editing editors and overlay, as well as the snackbar which allows end users to scroll to the newly added row. To style these components you may refer to these comprehensive guides in their respective topics:
+行追加 UI は `IgxActionStrip` 編集操作のボタン、編集エディター、オーバーレイ、エンドユーザーが新しく追加された行にスクロールできるスナックバーが構成されます。これらのコンポーネントのスタイル設定には、それぞれのトピックのガイドを参照してください。
 
-- [@@igComponent Row Editing](row_editing.md#styling)
-- [IgxSnackbar](../snackbar.html#styling)
-- [IgxActionStrip](../action-strip.md#styling)
+- [@@igComponent 行追加](row_editing.md#スタイル設定)
+- [IgxSnackbar](../snackbar.html#スタイル設定)
+- [IgxActionStrip](../action-strip.md#スタイル設定)
 
-## API References
+## API リファレンス
 
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
 * [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
@@ -236,15 +236,15 @@ The row adding UI comprises the buttons in the `IgxActionStrip` editing actions,
 * [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 * [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-* [@@igComponent Overview](@@igMainTopic.md)
-* [@@igComponent Editing](editing.md)
-* [@@igComponent Transactions](batch_editing.md)
+* [@@igComponent の概要](@@igMainTopic.md)
+* [@@igComponent 編集](editing.md)
+* [@@igComponent トランザクション](batch_editing.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)

@@ -256,9 +256,37 @@ public initColumns(column: IgxGridColumn) {
 
 上記のコードは **ProductName** 列のソートや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
 
+### カスタム表示形式
+
+日付列または数値列のすべての値は、[`Angular DatePipe`](https://angular.io/api/common/DatePipe) または [`DecimalPipe`](https://angular.io/api/common/DecimalPipe) を介して変換されます。これは元の値を変更せず、列に表示される値のみを変更します。デフォルトでは、値はグリッドの[`ロケール`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale)に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
+
+詳細については、[「Setting up the locale of your app (英語)」](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app)をご覧ください。
+
+また、書式設定のためのオプションのパラメーターがあります。
+
+- `format` - 表示される日付/時間部分を決定します。デフォルトの設定は `'mediumDate'` です (`'MMM d, y'`)。
+- `timezone` - 日付のタイムゾーン オフセット。デフォルトでは、エンドユーザーのローカル システムのタイムゾーンを使用します。
+- `digitsInfo` - 10 進表現オブジェクト。デフォルトの設定は `'1.0-3'` です。
+
+これらのパラメーターによって表示形式をカスタマイズできるようにするには、[`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) 入力を公開します。`pipeArgs` が設定されている場合、列はそのデータ型の対応するプロパティのみに遵守します。例:
+
+```typescript
+const pipeArgs: IColumnPipeArgs = {
+     format: 'longDate',
+     timezone: 'UTC',
+     digitsInfo: '1.1-2'
+}
+```
+```html
+<igx-column field="OrderDate" dataType="date" [pipeArgs]="pipeArgs"></igx-column>
+<igx-column field="UnitPrice" dataType="number" [pipeArgs]="pipeArgs"></igx-column>
+```
+
+`OrderDate` 列は `format` および `timezone` プロパティのみに遵守しますが、`UnitPrice` は `digitsInfo` のみに遵守します。詳細については、[「Localizing your app (英語)」](https://angular.io/guide/i18n)で Angular の公式ドキュメントを参照してください。
+
 ## データ構造
 
-[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) はフラット データ**とネストされた **POJOs (Plain old Java objects)** を処理します。描画に固有のデータ構造はフォームにあります。
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラット データ**とネストされた **POJOs (Plain old Java objects)** を処理します。描画に固有のデータ構造はフォームにあります。
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -430,14 +458,8 @@ export class MyComponent implements OnInit {
 
 ## 複雑なデータ バインディング
 
-[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) の主な目的は**フラット データ**を処理することですが、これはより複雑なデータを扱うことが不可能であることを意味するものではありません。
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、データ レコード内のプロパティのパスを介した複合オブジェクト (1 レベルより深いネストを含む) へのバインドをサポートします。
 
-現在、Angular データ グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
-
-### ネスト データの使用
-
-より複雑なデータソースを Angular グリッドにバインドするには、主に 2 つの方法があります。
-グリッドは、データ レコード内のプロパティのパスを介したバインディングをサポートします。
 次のデータ モデルを見てください:
 ```typescript
 interface AminoAcid {
@@ -477,9 +499,11 @@ interface AminoAcid {
 </div>
 <div class="divider--half"></div>
 
-**IgxGrid** で複雑なデータをバインドして視覚化するもう 1 つの方法は、次のとおりです。
+**IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
     - ネストされたデータを含むセルの値を使用します。
-    - カスタム列テンプレートでそれを補間します。
+    - `rowData` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.rowData[field]` など) を取得します。
+
+それをテンプレートに挿入します。
 
 以下は使用するデータです。
 

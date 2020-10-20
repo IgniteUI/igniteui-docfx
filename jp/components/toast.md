@@ -79,7 +79,7 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
 他の 2 つのコンポーネントでは、 [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
-<div class="sample-container loading" style="height: 300px">
+<div class="sample-container loading" style="height: 450px">
     <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
 </div>
 
@@ -125,14 +125,14 @@ import { IgxToastPosition } from 'igniteui-angular';
 ...
 public toastPosition: IgxToastPosition;
 public show(toast) {
-    this.toastPosition = IgxToastPosition.Top;
+    this.toastPosition = "top";
     toast.show();
 }
 ...
 
 ```
 
-<div class="sample-container loading" style="height: 200px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
 </div>
 
@@ -248,7 +248,7 @@ $custom-toast-theme: igx-toast-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-<div class="sample-container loading" style="height: 500px">
+<div class="sample-container loading" style="height: 600px">
     <iframe id="toast-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-style" class="lazyload"></iframe>
 </div>
 <div>

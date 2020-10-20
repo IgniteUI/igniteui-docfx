@@ -300,7 +300,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="キーボード ナビゲーション機能のアニメーション" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Angular Data Grid のキーボード ナビゲーション機能のアニメーション"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Angular グリッドでのキーボード ナビゲーションと行/セルの選択<a class="anchorjs-link" href="#keyboard-navigation--rowcell-selection-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>列のデータ型に基づくデフォルトの[編集可能な列のセル テンプレート](grid/grid.md#セル編集テンプレート)を提供します。編集可能な列にカスタム テンプレートを定義し、セル値のコミットや変更の破棄でデフォルト動作をオーバーライドできます。</p>
+        <p>上、下、右、左、タブ、および Enter キーを使用して、Angular データ グリッドで Excel のような[キーボード ナビゲーション](grid/keyboard_navigation.md)を有効にして、アクセシビリティ コンプライアンスを確保し、使いやすさを向上させます。マウスまたはキーボードを使用して Angular グリッドで単一または複数の行選択を切り替えて完全な行を選択または選択解除するか、グリッド ツールバーの組み込みの [すべて選択] または [すべて選択解除] チェックボックスを使用して行選択を操作できます。この機能強化の詳細については、<a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">こちら</a>をご覧ください。</p>
     </div>
 </div>
 
@@ -310,7 +310,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="ARIA サポートのアイコン表示" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg?v=201808021304" alt="Angular Data Grid コンポーネントの ARIA サポートのアイコン表示"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Angular グリッドのアクセシビリティと ARIA のサポート<a class="anchorjs-link" href="#angular-grid-accessibility--aria-support" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>上、下、右、左、タブ、および Enter キーを使用して、Angular データ グリッドで Excel のような[キーボード ナビゲーション](grid/keyboard_navigation.md)を有効にして、アクセシビリティ コンプライアンスを確保し、使いやすさを向上させます。マウスまたはキーボードを使用して Angular グリッドで単一または複数の行選択を切り替えて完全な行を選択または選択解除するか、グリッド ツールバーの組み込みの [すべて選択] または [すべて選択解除] チェックボックスを使用して行選択を操作できます。この機能強化の詳細については、<a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">こちら</a>をご覧ください。</p>
+        <p>Ignite UI for Angular の各 Angular コンポーネントは、最新のアクセシビリティ ガイドラインと仕様に従って実装されています。当社の Angular コンポーネントは、OS またはブラウザーが提供するアクセシビリティ技術 (読み上げソフトウェア) を使用してテストされています。当社のチームは、ガイドラインが実装されていることを確認するだけでなく、視覚障害者に配信される実際のコンテンツが消費可能でユーザー フレンドリーであることを保証します。Ignite UI for Angular データ グリッドは キーボード アクセシビリティ、ARIA、明瞭なカラー パレットを提供します。詳しくについては、<a class="no-external-icons" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility">こちら</a>をご覧ください。</p>
     </div>
 </div>
 
