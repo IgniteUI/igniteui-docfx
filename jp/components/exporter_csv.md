@@ -5,26 +5,26 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## CSV Exporter
+# CSV Exporter
 
 <p class="highlight">
 Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) からデータをエクスポートします。
 エクスポート機能は [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) クラスにカプセル化されます。</p>
 <div class="divider"></div>
 
-### CSV Exporter デモ
+## CSV Exporter デモ
 
 <div class="sample-container loading" style="height: 150px;">
-    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="csv-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-Ignite UI CSV Exporter をインスタンス化するには、[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) を app.module.ts ファイルにインポートし、サービスを `providers` 配列に追加します。
+IgniteUI CSV Exporter をインスタンス化するには、[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) を app.module.ts ファイルにインポートし、サービスを `providers` 配列に追加します。
 
 ```typescript
 // app.module.ts
@@ -76,7 +76,7 @@ public exportButtonHandler() {
 結果とは、エクスポート ボタンが表示されます。押されたとき、エクスポート処理をトリガーし、ブラウザーが "ExportedDataFile.csv" ファイルをダウンロードします。このファイルは `localData` 配列のデータを CSV 形式で含みます。
 
 
-### IgxGrid のデータのエクスポート
+## IgxGrid のデータのエクスポート
 
 CSV Exporter サービスも [**IgxGrid**](grid/grid.md) からのデータを CSV 形式でエクスポートできます。[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) メソッドを起動し、[**IgxGrid**](grid/grid.md) を最初の引数として渡します。
 
@@ -121,7 +121,7 @@ public exportButtonHandler() {
 </div>
 
 
-### エクスポート形式のカスタマイズ
+## エクスポート形式のカスタマイズ
 
 CSV Exporter は複数のエクスポート形式タイプをサポートします。エクスポート形式は以下の方法で指定できます。
 * [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのコンストラクターの 2 番目の引数として指定。
@@ -139,7 +139,7 @@ CSV Exporter は複数のエクスポート形式タイプをサポートしま�
 
 [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトの [`valueDelimiter`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html#valuedelimiter) プロパティを使用してカスタム区切り記号を指定できます。
 
-### エクスポートされたコンテンツのカスタマイズ
+## エクスポートされたコンテンツのカスタマイズ
 
 上記の例では、CSV Exporter サービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される [`onColumnExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#oncolumnexport) または各行で発生される [`onRowExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#onrowexport) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルできます。
 
@@ -158,7 +158,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedD
 
 [**IgxGrid**](grid/grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
-### API まとめ
+## API まとめ
 
 以下は、CSV Exporter サービスのその他の API です。
 
@@ -172,7 +172,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedD
 
 <div class="divider"></div>
 
-### 追加のリソース
+## 追加のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

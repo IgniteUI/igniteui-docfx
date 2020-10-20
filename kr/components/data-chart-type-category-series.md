@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 카테고리 시리즈
+# Angular 카테고리 시리즈
 
 이 항목에서는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 카테고리 시리즈에 대해 설명합니다. 카테고리 시리즈는 데이터를 가져 와서 가로 라인(예: [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html)) 또는 세로 라인(예: [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html))을 따라 늘어나는 데이터 점 컬렉션으로 렌더링하는 차트 시리즈의 가장 간단하고 일반적인 형태의 그룹입니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 카테고리 시리즈의 유형
+## 카테고리 시리즈의 유형
 
 다음 표에는 모든 유형의 카테고리 시리즈와 그 설명이 표시되어 있습니다.
 
@@ -38,7 +40,7 @@ _language: kr
 | [`IgxStepAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html)     | [`IgxStepLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html) 유형과 동일하지만 연속하는 수직선과 수평선이 데이터 점 사이의 변화를 단계적으로 진행시키는 것이 아닌 값보다 아래의 영역이 채워진다는 점이 다릅니다.           |
 | [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html)   | 속하는 데이터 점의 값 사이의 차이를 나타내는 세로 열로 점 집합을 표시합니다.값의 양수 및 음수 변화를 구별하기 위해 열은 색상으로 코드화됩니다. 카테고리는 가로로 정렬되고 값은 세로로 표시됩니다.U시간 경과에 따른 연이은 데이터 점 변경을 표시하거나 여러 항목을 비교할 때 사용합니다.                                                                                      |
 
-### 필요한 축
+## 필요한 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 카테고리 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
@@ -54,13 +56,13 @@ _language: kr
 | [`IgxStepLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html)     | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)   | [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html), [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html) |
 | [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html)   | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)   | [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html), [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html), [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html) |
 
-### 필요한 데이터
+## 필요한 데이터
 
 카테고리 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
 -   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
 -   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 카테고리 시리즈를 렌더링하지 않습니다.
--   모든 데이터 항목에는 카테고리 축(예: [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))의 `Label` 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
+-   모든 데이터 항목에는 카테고리 축(예: [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html))의 [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) 속성에 매핑해야 하는 하나 이상의 데이터 열(문자열 또는 날짜 시간)이 포함되어 있어야 함
 -   모든 데이터 항목에는 카테고리 시리즈(예: [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html))의 `ValueMemberPath` 속성을 사용하여 매핑하는 숫자 데이터 열이 하나 이상 있어야 합니다
 
 [SampleCategoryData](data-chart-data-sources-category.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
@@ -69,7 +71,7 @@ _language: kr
 this.state = { dataSource: SampleCategoryData.create() }
 ```
 
-### 필요한 모듈
+## 필요한 모듈
 
 카테고리 시리즈에는 다음과 같은 모듈이 필요합니다:
 
@@ -105,7 +107,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 })
 ```
 
-### 코드 예제 - 열 시리즈
+## 코드 예제 - 열 시리즈
 
 이 코드는 [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
@@ -125,7 +127,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
  </igx-data-chart>
 ```
 
-### 코드 예제 - 바 시리즈
+## 코드 예제 - 바 시리즈
 
 또한, 위의 코드를 사용하여 [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html)를 렌더링할 카테고리 시리즈의 이름으로 대체하여 다른 유형의 시리즈를 생성할 수도 있습니다. 단, [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html)는 다른 유형의 축이 필요하기 때문에 이 규칙에서 예외입니다. 이 코드는 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html)로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
@@ -145,7 +147,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
  </igx-data-chart>
 ```
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

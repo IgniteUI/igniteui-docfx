@@ -47,15 +47,15 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 <ng-template let-series="series" let-item="item" #polylineTooltipTemplate>
         <div>
             <span>
-                Arrival: {{item.origin.country}}
+            Arrival: {{item.origin.country}}
             </span>
             <br/>
             <span>
-                   Destination: {{item.dest.country}}
+            Destination: {{item.dest.country}}
             </span>
             <br/>
             <span>
-                    Distance: {{item.distance}} miles
+            Distance: {{item.distance}} miles
             </span>
         </div>
     </ng-template>
@@ -75,7 +75,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
                 </span>
                 <br/>
                 <span>
-                        Flights: {{item.flights}}
+                Flights: {{item.flights}}
                 </span>
             </div>
         </ng-template>
@@ -110,7 +110,9 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
     </igx-geographic-polyline-series>
 ```
 
-地理グリッド線を使用して [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを XamGeographicMap の [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+## 空港のオーバーレイ
+
+空港ポイントを使用して [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを Ignite UI for Angular 地理マップの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
 
 ```html
 <igx-geographic-symbol-series  #symbolSeries
@@ -122,6 +124,10 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
     markerBrush="White" >
 </igx-geographic-symbol-series>
 ```
+
+## まとめ
+
+上記すべてのコード スニペットを以下のコード ブロックにまとめて、プロジェクトに簡単にコピーできます。
 
 ```ts
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";

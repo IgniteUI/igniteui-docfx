@@ -5,9 +5,9 @@ _keywords: batch editing, igniteui for angular, infragistics, 一括編集,
 _language: ja
 ---
 
-## トランザクション サービス クラス階層
+# トランザクション サービス クラス階層
 
-### トランザクション、状態、トランザクション ログ
+## トランザクション、状態、トランザクション ログ
 
 トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type) を定義します。
 
@@ -19,7 +19,7 @@ _language: ja
 
 トランザクションを追加する際、[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出して、保留中のトランザクションをオンにすることができます。[`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) を呼び出すまで、後続のトランザクションはすべて単一のトランザクションに蓄積されます。`true` を [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) に渡すと、蓄積されたすべてのトランザクションがトランザクションログと取り消しスタックに単一のトランザクションとして追加されます。
 
-### igxBaseTransaction の使用
+## igxBaseTransaction の使用
 
 グリッド モジュールは、トランザクション サービス ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) の非常に基本的な実装を提供し、行編集機能を可能にする保留中のセッション機能のみを提供します。[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) と [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) は、行編集で複数のセルごとの操作を 1 つの変更にまとめることができます。  つまり、1 つのレコードの複数のセルを編集すると、1 つのトランザクションが作成され、行編集イベントのみを処理できます。
 
@@ -32,17 +32,15 @@ _language: ja
 * [Tree Grid 行編集](treegrid/row_editing.md)
 * [Hierarchical Grid 行編集](hierarchicalgrid/row_editing.md)
 
-### igxTransactionService および igxHierarchicalTransactionService に関する一般情報
-
+## igxTransactionService および igxHierarchicalTransactionService に関する一般情報
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、*access*、*manipulate* (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を*破棄またはコミット*するための API を公開します。
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、セル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。
-行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出してトランザクションサービスを保留状態に設定します。編集された各セルは、保留中のトランザクションログに追加されますが、メイントランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、セル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出してトランザクションサービスを保留状態に設定します。編集された各セルは、保留中のトランザクションログに追加されますが、メイントランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
 
 いずれのケース (セル編集と行編集) も、グリッド編集の状態は、更新、追加、削除されたすべての行とその最後の状態で構成されます。これらは、後で一度に、または ID ごとに検査、操作、および送信できます。編集モードに応じて、個々のセルまたは行の変更が収集され、データ行/レコードごとに蓄積されます。
 
-### igxTransactionService の使用
+## igxTransactionService の使用
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を拡張します。
 
@@ -53,7 +51,7 @@ _language: ja
 以下のトピックで、バッチ編集を使用した igxGrid の実装方法の詳細な例を見つけることができます。
 * [Grid 一括編集](grid/batch_editing.md)
 
-### igxHierarchicalTransactionService の使用
+## igxHierarchicalTransactionService の使用
 
 [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を拡張します。
 
@@ -73,7 +71,7 @@ _language: ja
 * [Tree Grid 一括編集](treegrid/batch_editing.md)
 * [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)

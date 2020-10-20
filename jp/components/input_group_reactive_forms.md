@@ -5,26 +5,27 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## リアクティブ フォームの統合
+# リアクティブ フォームの統合
 <p class="highlight">
 Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供する Reactive フォームで簡単に統合できます。
 </p>
 
-### デモ
+## デモ
 次のサンプルは、リアクティブ フォームで使用される場合の [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)、[`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html)、および [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールを示しています。
 
 <div class="sample-container loading" style="height: 850px;">
-    <iframe id="reactive-forms-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="reactive-forms-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="reactive-forms-sample" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 リアクティブ フォームを使用する前に、Ignite UI コンポーネントのすべてのモジュールと `ReactiveFormsModule` をインポートします。
 
@@ -45,7 +46,7 @@ export class AppModule {}
 
 リアクティブ フォームについては、[こちら](https://angular.io/guide/reactive-forms) を参照してください。
 
-#### フォームの作成
+### フォームの作成
 
 フォームのモデルを設定するには、`form` 要素の `formGroup` プロパティを使用します。次に、各モデル プロパティに対応する各入力フィールドに `formControlName` を追加します。
 
@@ -100,7 +101,7 @@ export class ReactiveFormsSampleComponent {
 
 この例では、`movie`、`fullName`、`email`、および `genres`のフィールドが必要となり、値がない場合は送信されません。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -109,7 +110,7 @@ export class ReactiveFormsSampleComponent {
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 関連トピック:

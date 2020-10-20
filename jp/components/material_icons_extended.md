@@ -4,20 +4,21 @@ _description: Ignite UI for Angular は、マテリアル アイコン セット
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール、ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール, 拡張されたマテリアル アイコン
 ---
 
-## 拡張されたマテリアル アイコン
+# 拡張されたマテリアル アイコン
 <p class="highlight">Ignite UI for Angular は、マテリアル アイコン セットを拡張する素晴らしいアイコン セットを提供します。</p>
 
 <div class="sample-container loading" style="height: 700px">
-    <iframe id="material-icons-extended-iframe" seamless class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="material-icons-extended-iframe" seamless="" class="lazyload no-theming" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/material-icons-extended" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
-### インストール
+## インストール
 
 ```sh
 npm install @igniteui/material-icons-extended
 ```
 
-### 使用方法
+## 使用方法
 
 まず、コンポーネントに単一のアイコンを登録する方法を見てみましょう。
 
@@ -68,7 +69,7 @@ export class SampleComponent implements OnInit {
 
 詳細とその他の使用方法については、[GitHub リポジトリ](https://github.com/IgniteUI/material-icons-extended)にアクセスしてください。
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html)

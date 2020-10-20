@@ -9,10 +9,11 @@ _language: ja
 
 **テキスト入力フィールド**に [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
@@ -20,7 +21,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。
 
 はじめに、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。
@@ -41,7 +42,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-#### サポートされる定義済みマスク ルール
+### サポートされる定義済みマスク ルール
 <div class="divider--half"></div>
 
 | マスク文字 | 説明 |
@@ -56,7 +57,7 @@ export class AppModule {}
 | & | 任意のキーボード文字 (スペース以外) |
 | C | 任意のキーボード文字 |
 
-#### マスクを入力に適用
+### マスクを入力に適用
 以下の例では、内線を含む電話番号のマスクを入力に適用します。
 
 ```html
@@ -73,7 +74,7 @@ export class AppModule {}
 
 正しく構成されていれば、ブラウザ上でデモサンプルを確認することができます。
 
-#### 書式設定付き/Raw 値にバインド
+### 書式設定付き/Raw 値にバインド
 [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) が *false* に設定し、Raw 値が使用されます。
 
 ```html
@@ -121,7 +122,7 @@ public clear() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### マスク値を検証
+### マスク値を検証
 入力にマスクを設定し、入力した値を検証できます。以下の例は、Mask ディレクティブおよび Snack Bar コンポーネントを使用してマスクを実装し、無効なデータのための検証および通知を実装します。
 
 ```html
@@ -164,7 +165,7 @@ private notify(snackbar, message, input) {
 </div>
 <div class="divider--half"></div>
 
-#### テキスト選択
+### テキスト選択
 [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label_input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
 **app.module.ts** ファイルに  `IgxToastModule` をインポートします:
@@ -194,7 +195,7 @@ export class AppModule {}
 >[!NOTE]
 >コンポーネントが正しく動作するためには、`igxMask` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
-#### focus と blur に追加の書式を適用
+### focus と blur に追加の書式を適用
 デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
  表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
@@ -245,7 +246,7 @@ public inputFormat = new InputFormatPipe();
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample4-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### プレースホルダーの追加
+### プレースホルダーの追加
 [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) プロパティは、ネイティブ プレースホルダー属性として使用できます。[`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) に値が提供されない場合、マスクの値セットが使用されます。
 
 ```typescript
@@ -271,7 +272,7 @@ value = null;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="mask-sample5-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -279,7 +280,7 @@ value = null;
 * [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
 * [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -5,23 +5,24 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## 仮想ドロップダウン
+# 仮想ドロップダウン
 
 <p class="highlight">Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目リストを表示するために、[IgxForOf](for_of.md) ディレクティブの使用方法を完全に統合できます。</p>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height:320px">
-    <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 仮想アイテムのリストを表示するようにドロップダウンを設定するには、いくつかの前提条件を満たす必要があります。
 はじめにドロップダウンを宣言するコンポーネントのモジュールに `IgxForOfModule` をインポートする必要があります。
@@ -40,7 +41,7 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### テンプレートの構成
+### テンプレートの構成
 
 次に、`*ngFor` の代わりに [`*igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html) を使用してデータをループ処理し、ドロップダウン コンポーネントのテンプレートを作成する必要があります。`*igxFor` ディレクティブは、すべての項目を正しく表示するために追加の構成が必要です。
 
@@ -83,7 +84,7 @@ export class AppModule {}
 > ドロップダウンが仮想化項目を使用する場合、[`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) の種類は `{ value: any, index: number }` になります。ここで、`value` はデータ項目への参照です。`[value]` input の内に渡され、`index` はデータセット内の項目のインデックスです。
 
 
-#### コンポーネント定義
+### コンポーネント定義
 
 コンポーネントの constructor 内で、ドロップダウンに表示される、適度に大きな項目のリスト (ヘッダーと無効なアイテムの両方を含む) を宣言します。`itemHeight` と `itemsMaxHeight` を宣言する必要があります。
 
@@ -118,7 +119,7 @@ export class DropDownVirtualComponent {
 }
 ```
 
-#### スタイル
+### スタイル
 
 最後に、ラッピング div に `overflow: hidden` を設定して、2 つのスクロールバー (`igxFor` のスクロールバーとコンテナー自体のスクロールバー) が表示されないようにします。
 
@@ -129,10 +130,10 @@ export class DropDownVirtualComponent {
 }
 ```
 
-### リモート データ
+## リモート データ
 `igx-drop-down` は、`*igxFor` 構造ディレクティブを使用したリモート データの部分的な読み込みをサポートします。構成はローカル項目の構成に似ていますが、主な違いはデータ部分の読み込み方法です。
 
-#### テンプレート
+### テンプレート
 ドロップダウン テンプレートは、以前の例 と比べてそれほど変更する必要はありません。それでも、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。リモートソースからデータを取得するので、データが観測可能になるように指定して Angular の `非同期`パイプに渡す必要があります。
 
 ```html
@@ -151,7 +152,7 @@ export class DropDownVirtualComponent {
 </igx-drop-down>
 ```
 
-#### チャンクロードの処理
+### チャンクロードの処理
 ご覧のとおり、テンプレートは前の例のテンプレートとほとんど同じです。このリモートデータのシナリオでは、背後にあるコードが大部分の負担を軽減します。
 
 まず、データを取得するためのリモートサービスを定義する必要があります。
@@ -242,7 +243,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 
 `ngAfterViewInit` フックの内部で、初期状態のデータを取得し、`igxForOf` ディレクティブの [onChunkPreload]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
 
-#### リモートの仮想化 - デモ
+### リモートの仮想化 - デモ
 上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。
 
 <div class="sample-container loading" style="height:400px">
@@ -254,7 +255,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 </div>
 <div class="divider--half"></div>
 
-### 注意と制限
+## 注意と制限
 
 仮想化された項目のリストでドロップダウンを使用すると、いくつかの制限があります。`*igxFor` を使用してドロップダウン リストを設定するときは、次の点に注意してください。
  - ループされているロップダウン項目は、次の css を持つラッピング要素 (`<div>` など) で渡す必要があります。`overflow: hidden` と `height` が `containerSize` に等しい (`px` で) 。

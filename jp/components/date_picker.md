@@ -1,30 +1,30 @@
 ---
-title: Date Picker コンポーネント
-_description: Ignite UI for Angular Date Picker コントロールを使用して web アプリケーションにカレンダーから日付を選択する機能を追加できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Date Picker コンポーネント, Angular Date Picker コントロール
+title: Angular Date Picker | 日付のピッカー | インフラジスティックス
+_description: Ignite UI for Angular Date Picker コントロールのを使用して、カレンダーから Web アプリケーションに日付を選択する機能を使用する方法を学びます。
+_keywords: angular date picker, angular 日付のピッカー, angular コンポーネント, ignite ui for angular
 _language: ja
 ---
 
-## Date Picker
+# Angular Date Picker
 <p class="highlight">Ignite UI for Angular Date Picker コンポーネントは単一の日付選択が可能な月表示カレンダーを表示するか、ドロップダウン モードで日付を変更するための入力機能を提供します。ロケールおよびカスタム日付書式設定をサポートします。</p>
 
-### Date Picker デモ
+## デモ
 <div class="sample-container loading" style="height: 550px;">
-    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
+    <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
+## 使用方法
 
-### 使用方法
-
-#### はじめに
+### はじめに
 Date Picker コンポーネントを初期化する前に、`IgxDatePickerModule` を **app.module.ts** ファイルにインポートします。
 
-日付ピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、 タッチ操作のために **BrowserAnimationsModule**  と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
+日付ピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule**  と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -42,7 +42,7 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Date Picker の表示
+### Date Picker の表示
 デフォルトの`ダイアログ モード`の Date Picker を追加するには、以下のコードを使用してください。
 
 ```html
@@ -51,9 +51,9 @@ export class AppModule {}
 <igx-date-picker></igx-date-picker>
 ```
 
-### 例
+## 例
 
-#### 日付の設定
+### 日付の設定
 `IgxDatePickerComponent` に日付を設定するには、以下のコードを使用して日付を追加します。
 
 ```typescript
@@ -80,13 +80,13 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
-#### ドロップダウン モード
+### ドロップダウン モード
 デフォルトで日付ピッカーは読み取り専用モードで表示されます。ドロップダウン モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#mode) 入力を [`dropdown`]({environment:angularApiUrl}/enums/interactionmode.html#dropdown) に設定します。
 
 ```html
 <!-- date-picker-sample.component.html -->
 
-<igx-date-picker mode="editable"></igx-date-picker>
+<igx-date-picker mode="dropdown"></igx-date-picker>
 ```
 
 日付ピッカーは、以下の日付ピッカー入力を設定して更にカスタマイズできます。
@@ -109,7 +109,7 @@ public date: Date = new Date(Date.now());
 |[`onDisabledDate`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#ondisableddate) | [`IDatePickerDisabledDateEventArgs`]({environment:angularApiUrl}/interfaces/idatepickerdisableddateeventargs.html) | 日付ピッカーでユーザーが無効な日付を入力またはスピンした場合に発生します。 |
 | [`onValidationFailed`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#onvalidationfailed) | [`IDatePickerValidationFailedEventArgs`]({environment:angularApiUrl}/interfaces/idatepickervalidationfailedeventargs.html) | 日付ピッカーでユーザー無効なな日付を入力またはスピンした場合に発生します。 |
 
-##### キーボード ナビゲーション
+### キーボード ナビゲーション
 * 日付ピッカー ドロップダウンを開く: 
     * <kbd>SPACE</kbd> キー
     * <kbd>ALT</kbd> キー + <kbd>DOWN</kbd> キー
@@ -139,7 +139,27 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
-#### ボタンの追加
+### 週番号
+
+[`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showWeekNumbers) 入力を使用して、Calendar コンポーネント と DatePicker コンポーネントの両方の週番号を表示できるようになりました。
+
+```html
+<igx-date-picker [showWeekNumbers]="true">
+</igx-date-picker>
+```
+
+以下のデモは、週番号が有効になっている日付のピッカーを示しています:
+
+<div class="sample-container loading" style="height: 550px;">
+    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
+### ボタンの追加
 `IgxDatePickerComponent` に today および cancel ボタンを表示できます。
 
 テンプレートで有効にするには、[`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) および [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) 入力を使用します。
@@ -152,7 +172,26 @@ public date: Date = new Date(Date.now());
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
-#### マルチ ビュー モード
+#### カスタム ラベル
+`igxLabel` ディレクティブを使用して、デフォルトのラベルをカスタム ラベルに変更できます:
+
+````html
+<!-- datepicker-label.component.html -->
+<igx-date-picker>
+    <label igxLabel>Custom label</label>
+</igx-date-picker>
+````
+
+次のセクションにあるマルチ ビュー モードのサンプルで、カスタム ラベルの外観を確認できます。
+
+> [!NOTE]
+> ラベルの間にテキストを設定しないことで、ラベルを削除できます: `<label igxLabel></label>`。
+
+> [!NOTE]
+> 現在、`label` プロパティは非推奨となる予定です。
+
+### マルチ ビュー モード
+
 マルチビューの Date Picker は、`dropdown` と `dialog` モードの両方をサポートします。
 
 [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) 入力を使用して、カレンダーに表示される月数を設定します。現在月に属さない日を非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) プロパティを使用します。
@@ -161,8 +200,10 @@ public date: Date = new Date(Date.now());
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
-       
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true">
+	<label igxLabel>Custom label</label>
+</igx-date-picker>
+
 <label>Drop Down Mode</label>
 <igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
 ```
@@ -177,7 +218,7 @@ public date: Date = new Date(Date.now());
 </div>
 <div class="divider--half"></div>
 
-#### カスタム アクション ボタン
+### カスタム アクション ボタン
 `IgxDatePickerComponent` は、定義済みの ‘Today’ と ‘Cancel’ ボタンをサポートしますが、カスタム アクション ボタンも追加できます。これを行うには、`igxDatePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
 以下の例では、年と月のカレンダー ビューに切り替えるための 2 つのカスタム アクション ボタンが含まれています。
@@ -215,7 +256,7 @@ public yearsView(datePicker: IgxDatePickerComponent) {
 </div>
 <div class="divider--half"></div>
 
-#### カスタム書式設定
+### カスタム書式設定
 デフォルトで、表示値は指定した [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) プロパティに基づいて書式設定されます。独自のフォーマッタをフォーマッタ関数ジュに追加して使用することもできます。
 
 ```typescript
@@ -247,9 +288,9 @@ public formatter = (date: Date) => {
 </div>
 <div class="divider--half"></div>
 
-### テンプレート  
+## テンプレート  
 
-#### ダイアログ モードの日付ピッカー
+### ダイアログ モードの日付ピッカー
 
 日付ピッカーの入力グループの外観は、`ng-template` コンテキストで公開される [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) プロパティのいくつかを使用してカスタマイズできます。そのためには、まず入力グループを `ng-template` でラップし、`IgxDatePickerTemplate` ディレクティブで装飾します。次に、`ng-template` 要素内で変数を宣言できます。
 
@@ -316,7 +357,7 @@ public formatter = (date: Date) => {
 
 <div class="divider--half"></div>
 
-### インターナショナリゼーション
+## インターナショナリゼーション
 `IgxDatePickerComponent` のローカライズは、[`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) 入力で制御できます。[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) によって提供される `igxCalendarHeader` と `igxCalendarSubheader` テンプレートを使用して、ヘッダーとサブヘッダーの外観を指定できます。このテンプレートを使用する方法の詳細については、[**IgxCalendarComponent**](calendar.md) トピックを参照してください。
 
 以下は日本ロケール定義を持つ日付ピッカーです。
@@ -398,7 +439,7 @@ public getDatePart(val: any, component: any, datePart: string) {
 </div>
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 日付ピッカーのスタイル設定には、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -426,7 +467,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 );
 ```
 
-#### CSS 変数の使用 
+### CSS 変数の使用 
 
 最後に日付ピッカーのカスタム テーマを設定します。 
 
@@ -434,7 +475,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 @include igx-css-vars($custom-datepicker-theme);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -458,7 +499,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datepicker-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
@@ -467,7 +508,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

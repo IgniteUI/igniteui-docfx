@@ -42,6 +42,12 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
+<!-- Blazor -->
+
+-   GeographicMapModule 
+-   IgcDataChartInteractivityModule
+    <!-- end: Blazor -->
+
 ## Creating Series
 
 Next, we need to create a map with a few Geographic Series that will later load different type of shapefile.
@@ -122,6 +128,8 @@ sdsLocations.shapefileSource = url + "/Shapes/WorldCities.shp";
 sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
 sdsLocations.dataBind();
 ```
+
+<!-- Angular, React, WebComponents -->
 
 ## Processing Polygons
 
@@ -213,6 +221,8 @@ public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
     symbolSeries.dataSource = geoLocations;
 }
 ```
+
+<!-- end: Angular, React, WebComponents -->
 
 ## Map Background
 

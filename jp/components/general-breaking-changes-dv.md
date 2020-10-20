@@ -9,9 +9,21 @@ _language: ja
 
 このトピックでは、Ignite UI for Angular の重大な変更に関する情報と、古いコードを最新の API に更新する方法について説明します。
 
+## PropertyPath の名称変更
+
+データ グリッド コンポーネントの `propertyPath` プロパティ名が `field` に変更されました。これは、すべての Column タイプ、GroupDescription、SortDescription および SummaryDescription に適用します。
+
+> [!NOTE]
+> これらの重大な変更は、グリッド パッケージの **{PackageVerChangedFields}** バージョンで導入されました。
+
 ## Live Grid の名称変更
 
-Data Grid コンポーネントおよび対応するモジュールの名前が 「LiveGrid」 から 「DataGrid」 に変更されました。グリッドとそれに対応するモジュールをインポートする新しいコードは以下のとおりです。
+Data Grid コンポーネントおよび対応するモジュールの名前が 「LiveGrid」 から 「DataGrid」 に変更されました。
+
+> [!NOTE]
+> これらの重大な変更は、パッケージおよびコンポーネントの **{PackageVerRenamedGrid}** バージョンで導入されました。
+
+グリッドとそれに対応するモジュールをインポートする新しいコードは以下のとおりです。
 
 ## Data Grid の必須ピア依存関係
 

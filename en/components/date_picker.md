@@ -1,22 +1,22 @@
 ---
-title: Date Picker Component
-_description: Add the functionality to select a date from a calendar to your web application with Ignite UI for Angular Date Picker control.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Date Picker components, Angular Date Picker controls
+title: Angular Date Picker | Date Picker | Infragistics
+_description: Learn how to use a functionality to select a date from a calendar to your web application with Ignite UI for Angular Date Picker control.
+_keywords: angular date picker, angular component, ignite ui for angular
 ---
 
-# Date Picker
+# Angular Date Picker
 <p class="highlight">The Ignite UI for Angular Date Picker Component displays a month-view calendar that lets the users to pick a single date or provides an editable input for modifying the date in a dropdown mode. It supports locales and custom date formatting.</p>
 
 ## Demo
 <div class="sample-container loading" style="height: 550px;">
-    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
+    <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
-
 
 ## Usage
 
@@ -138,6 +138,26 @@ In the next sample we will set the display format to longDate (equivalent to 'MM
 </div>
 <div class="divider--half"></div>
 
+### Week numbers
+
+You can now use [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showWeekNumbers) input to show the week numbers for both Calendar and DatePicker components.
+
+```html
+<igx-date-picker [showWeekNumbers]="true">
+</igx-date-picker>
+```
+
+The following demo illustrates a Date picker with enabled week numbers:
+
+<div class="sample-container loading" style="height: 550px;">
+    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 ### Adding buttons
 The `IgxDatePickerComponent` can display 'today' and 'cancel' buttons.
 
@@ -151,8 +171,26 @@ We can also create a two-way data-binding using an `ngModel`:
 <igx-date-picker cancelButtonLabel="cancel" todayButtonLabel="today" [(ngModel)]="date"></igx-date-picker>
 ```
 
-### Multi View mode
-The multiview date picker supports both the `dropdown` and the `dialog` modes.
+#### Custom label
+Using the `igxLabel` directive, the default label can be changed to a custom one:
+
+````html
+<!-- datepicker-label.component.html -->
+<igx-date-picker>
+    <label igxLabel>Custom label</label>
+</igx-date-picker>
+````
+
+You can see what the custom label will look like in the multi view mode sample found in next section.
+
+> [!NOTE]
+> The label can be removed by setting no text in the label: `<label igxLabel></label>`.
+
+> [!NOTE]
+> Currently the `label` property is in the process of being deprecated.
+
+### Multi-view mode
+The multi-view date picker supports both the `dropdown` and the `dialog` modes.
 
 Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#monthsviewnumber) input to set the number of displayed months in the calendar. To hide the days that do not belong to the current month, use the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#hideoutsidedays) property.
 
@@ -160,7 +198,9 @@ Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxdatepickerco
 <!-- date-picker-sample.component.html -->
 
 <label>Dialog Mode</label>
-<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>
+<igx-date-picker [monthsViewNumber]="2" [hideOutsideDays]="true">
+	<label igxLabel>Custom label</label>
+</igx-date-picker>
        
 <label>Drop Down Mode</label>
 <igx-date-picker mode="dropdown" [monthsViewNumber]="2" [hideOutsideDays]="true"></igx-date-picker>

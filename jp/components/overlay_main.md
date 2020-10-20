@@ -12,18 +12,19 @@ _language: ja
 </p>
 <div class="divider--half"></div>
 
-#### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### はじめに
+## はじめに
 
 はじめに、[`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) をインポートし、コンポーネントへの参照をコンポーネントのコンストラクターに`注入`する必要があります。
 ```typescript
@@ -42,7 +43,7 @@ export class MyOverlayComponent {
 ...
 ```
 
-### コンテンツの表示
+## コンテンツの表示
 
 オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
@@ -120,7 +121,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
     - 閉じた後、ビューを DOM にある元の位置にアタッチします。
 <div class="divider--half"></div>
 
-### コンポーネントのアタッチ
+## コンポーネントのアタッチ
 閉じた後、ビューを DOM にある元の位置にアタッチします。以下のデモでは、[IgxCard](card.md#card-デモ) コンポーネントをオーバーレイ サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドに渡し、IDを生成します。次に、提供された ID で [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドを呼び出し、カードをモーダル コンテナで DOM にアタッチします。
 
 
@@ -133,7 +134,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 </div>
 <div class="divider--half"></div>
 
-### オーバーレイ設定
+## オーバーレイ設定
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
@@ -152,9 +153,8 @@ export class MyOverlayComponent {
     public showInOverlay() {
         if (!this._overlayId) {
             this._overlayId = this.overlayService.attach(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({
-                    target: this.myAnchorButton.nativeElement
-                })
+                target: this.myAnchorButton.nativeElement,
+                positionStrategy: new ConnectedPositioningStrategy()
             });
         }
         this.overlayService.show(this._overlayId);
@@ -167,12 +167,43 @@ export class MyOverlayComponent {
 ...
 <button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
 </div>
-
 ```
 ボタンをクリックすると、ボタンに相対的に配置される `MyDynamicComponent` を表示します。
+
+## プリセット オーバーレイ設定
+
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) および [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドにより、事前定義された設定セットに基づいて [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を容易に作成することができます。
+
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) メソッドは、`outlet` パラメーターが指定されている場合、[`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) または [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) を使用して非モーダル [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。`AbsolutePosition` 列挙体は、`Center`、`Top`、または `Bottom` から選択できる位置を定義します。デフォルトの位置は `Center` です。
+
+```typescript
+const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
+```
+
+[`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドは、[`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html)、 [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) または [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) を使用して [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。ターゲット、位置およびストラテジを受け入れます。`target` は、コンポーネントが表示するアタッチ ポイントまたは要素です。`position` は `RelativePosition` 列挙体であり、次のオプションがあります: `Above`、 `Below`、` Before`、`After`、 `Default`。`Default` オプションは、要素をターゲットの下に配置し、左揃えにします。位置ストラテジは、`RelativePositionStrategy` 列挙体を介して設定できます。デフォルト値は `Auto` です。
+
+```typescript
+const targetElement = this.myAnchorButton.nativeElement;
+const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings(
+        targetElement,
+        RelativePosition.Above,
+        RelativePositionStrategy.Connected);
+```
+
+### デモ
+
+<div class="sample-container loading" style="height: 750px">
+    <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+
 <div class="divider--half"></div>
 
-### オーバーレイの非表示
+
+## オーバーレイの非表示
 
 [`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
 
@@ -196,8 +227,8 @@ export class MyOverlayComponent {
             //  generate ID
             if (!this._overlayId) {
                 this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                    target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
-                        target: this.myAnchorButton.nativeElement,
                         closeOnOutsideClick: false, // overlay will not close on outside clicks
                         modal: false // overlay content will not be rendered in a modal dialog
                     }) // The attach method returns an ID that can be used to reference the shown content
@@ -219,7 +250,7 @@ export class MyOverlayComponent {
     <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
 </div>
 ```
-### アタッチ設定
+## アタッチ設定
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドの [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
 
@@ -246,7 +277,7 @@ defaultOverlaySettings = {
 ```
 <div class="divider--half"></div>
 
-### igxToggle との統合
+## igxToggle との統合
 [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) と完全に統合されます。コンテンツの切り替えで Toggle ディレクティブの [`toggle()`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドにカスタム オーバーレイ設定を渡すことができます。
 
 構成設定をトグルのメソッドに渡す方法は以下の例で紹介されます。
@@ -287,10 +318,10 @@ export class ExampleComponent {
 ```
 <div class="divider--half"></div>
 
-### 仮定と制限
+## 仮定と制限
 アウトレットにオーバーレイを表示する際にアウトレットが CSS で変換、視点、またはフィルターが設定された要素の子である場合、モーダル オーバーレイが表示されません。これは、上記のいずれかの CSS プロパティが設定された際にブラウザーが新しく含まれるブロックを作成して[こちら](https://developer.mozilla.org/ja-JP/docs/Web/CSS/position#fixed)のようにオーバーレイがこのブロックに制限されるためです。
 
-### API リファレンス
+## API リファレンス
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 

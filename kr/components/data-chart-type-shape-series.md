@@ -5,13 +5,13 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 분산 모양 시리즈
+# Angular 분산 모양 시리즈
 
 이 항목에서는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 모양 시리즈에 대해 설명합니다. 분산 모양 시리즈는 모양 배열(배열 또는 X/Y 좌표 배열)을 가져와서 데카르트(x, y) 좌표계에서 폴리곤([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html))  또는 폴리라인([`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html))의 컬렉션으로 렌더링하는 차트 시리즈 그룹입니다.
 
 분산 모양 시리즈는 과학 데이터의 강조 표시 영역으로 자주 사용되거나 다이어그램, 청사진 또는 건물의 평면도를 플롯하는 데 사용할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-shape-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,11 +19,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 모양 시리즈의 유형
+## 모양 시리즈의 유형
 
 다음 표에는 모든 유형의 모양 시리즈와 그 설명이 표시되어 있습니다.
 
@@ -32,7 +34,7 @@ _language: kr
 | [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리곤을 표시합니다. 국경과 같은 도형을 렌더링할 때 유용합니다.        |
 | [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리라인을 표시합니다. 네트워크 그래프와 같이 단선을 렌더링할 때 유용합니다. |
 
-### 필요한 축
+## 필요한 축
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 분산 모양 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
@@ -41,7 +43,7 @@ _language: kr
 | [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 | [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 
-### 필요한 데이터
+## 필요한 데이터
 
 분산 모양 시리즈에는 다음과 같은 데이터 요구 사항이 있습니다:
 
@@ -55,7 +57,7 @@ _language: kr
 this.state = { dataSource: SampleShapeData.create() }
 ```
 
-### 필요한 모듈
+## 필요한 모듈
 
 분산 폴리곤 시리즈에는 다음과 같은 모듈이 필요합니다:
 
@@ -83,7 +85,7 @@ import { IgxDataChartShapeModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### 코드 예제
+## 코드 예제
 
 이 코드는 `ShapeColumnSeries`로 데이터 차트의 인스턴스를 생성하고 데이터 소스에 바인딩하는 방법을 보여줍니다.
 
@@ -106,7 +108,7 @@ export class AppModule { /* ... */ }
 
 위의 코드를 사용하면 [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)를 대체하여 [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)를 생성할 수도 있습니다.
 
-### 추가 리소스
+## 추가 리소스
 
 -   [축 유형](data-chart-axis-types.md)
 -   [축 공유](data-chart-axis-sharing.md)

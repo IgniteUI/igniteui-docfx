@@ -14,8 +14,9 @@ The overlay service is fully integrated in the toggle directive.
 ## Demo
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
@@ -136,7 +137,7 @@ In the below demo, we can pass the [IgxCard](card.md#card-demo) component throug
 
 The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method also accepts an object of the [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) type, which configures the way the content is shown. If no such object is provided, the Overlay Service will use its default settings to render the passed content.
 
-For example, if we want the content to be positioned relative to an element, we can pass a different [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object first:
+For example, if we want the content to be positioned relative to an element, we can pass a different [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) and [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object first:
 ```typescript
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
@@ -151,9 +152,8 @@ export class MyOverlayComponent {
     public showInOverlay() {
         if (!this._overlayId) {
             this._overlayId = this.overlayService.attach(MyDynamicComponent, {
-                positionStrategy: new ConnectedPositioningStrategy({
-                    target: this.myAnchorButton.nativeElement
-                })
+                target: this.myAnchorButton.nativeElement,
+                positionStrategy: new ConnectedPositioningStrategy()
             });
         }
         this.overlayService.show(this._overlayId);
@@ -166,9 +166,39 @@ export class MyOverlayComponent {
 ...
 <button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
 </div>
-
 ```
 Clicking on the button will now show `MyDynamicComponent` positioned relative to the button.
+
+## Preset Overlay Settings
+
+The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
+
+The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] method creates non-modal [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) or [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) in case the `outlet` parameter is provided. The `AbsolutePosition` enumeration defines the possible positions to choose from: `Center`, `Top` or `Bottom`. The default position is `Center`.
+
+```typescript
+const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
+```
+
+The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] method creates [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) or [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html). Accepts target, position and strategy. The `target` is the attaching point or element for the component to show. The `position` is a `RelativePosition` enumeration with the following options: `Above`, `Below`, `Before`, `After` and `Default`. The `Default` option positions the element below the target, left aligned. The position strategy can be set through the `RelativePositionStrategy` enumeration, which default value is `Auto`.
+
+```typescript
+const targetElement = this.myAnchorButton.nativeElement;
+const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings(
+        targetElement,
+        RelativePosition.Above,
+        RelativePositionStrategy.Connected);
+```
+
+### Demo
+
+<div class="sample-container loading" style="height: 750px">
+    <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
+
 <div class="divider--half"></div>
 
 ## Hiding the Overlay
@@ -195,8 +225,8 @@ export class MyOverlayComponent {
             //  generate ID
             if (!this._overlayId) {
                 this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                    target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
-                        target: this.myAnchorButton.nativeElement,
                         closeOnOutsideClick: false, // overlay will not close on outside clicks
                         modal: false // overlay content will not be rendered in a modal dialog
                     }) // The attach method returns an ID that can be used to reference the shown content
@@ -220,7 +250,7 @@ export class MyOverlayComponent {
 ```
 ## Attaching Settings
 
-Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`attach()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave and if the container is modal or not
+Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave and if the container is modal or not
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" class="lazyload"></iframe>

@@ -10,8 +10,9 @@ Position strategies determine where the content is displayed in the provided `Ig
 ## Demo
 
 <div class="sample-container loading" style="height: 350px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
@@ -37,7 +38,7 @@ Positions the content as `GlobalPositionStrategy`. Instead of position related t
 <div class="divider"></div>
 
 ### Connected
-Positions the element based on the directions and start point passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`]({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults are:
+Positions the element based on the start point from [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) and directions passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). It is possible to either pass a start point (type [`Point`]({environment:angularApiUrl}/classes/point.html)) or an `HTMLElement` as a positioning base. Defaults are:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
@@ -81,11 +82,10 @@ Then specify the positioning strategy to be used by the overlay. The position st
 ```typescript
 // Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
-    // Pass in the positioning strategy
-    positionStrategy: new ConnectedPositioningStrategy({
-        // Set the target where content should be shown
+    // Set the target where content should be shown
         target: this.buttonElement.nativeElement
-    })
+    // Pass in the positioning strategy
+    positionStrategy: new ConnectedPositioningStrategy()
 };
 const overlayId = overlay.attach(dummyElement, overlaySettings); 
 ``` 
@@ -106,7 +106,6 @@ Each positioning strategy has its own positioning settings. These settings deter
 
 ```typescript
 const positionSettings: PositionSettings = {
-    target: buttonElement.nativeElement,
     horizontalStartPoint: HorizontalAlignment.Right,
     verticalStartPoint: VerticalAlignment.Top,
     horizontalDirection: HorizontalAlignment.Left,
@@ -117,6 +116,7 @@ const strategy = new ConnectedPositioningStrategy(positionSettings);
 
 // Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
+    target: buttonElement.nativeElement,
     // Pass in the positioning strategy
     positionStrategy: strategy
 };
@@ -157,10 +157,10 @@ To change the position settings of an already existing strategy, override any of
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
 Object.assign(overlaySettings.positionStrategy.settings, {
-    target: dummyHTMLElement,
     horizontalStartPoint: HorizontalAlignment.Left,
     horizontalDirection: HorizontalAlignment.Left
 });
+overlaySettings.target = dummyHTMLElement;
 // the element will now start to the left of the target (dummyHTMLElement)
 // and will align itself to the left
 overlay.show(overlayId, overlaySettings);

@@ -1,14 +1,14 @@
 ---
-title: Data Visualization Tools | Ignite UI for Angular | Infragistics
+title: Angular Data Visualization Tools | Infragistics
 _description: The Ignite UI for Angular is a complete set of Angular components designed to enable developers to build the most modern, high-performance HTML5 & TypeScript apps for modern desktop browsers.
 _keywords: Ignite UI for Angular, Infragistics, Getting started, IG, Install Angular
 ---
 
-## Getting Started With Ignite UI for Angular
+# Angular Getting Started With Ignite UI for Angular
 
 The Ignite UI for Angular is a complete set of Angular components designed to enable developers to build the most modern, high-performance HTML5 & TypeScript apps for modern desktop browsers.
 
-### Setting Up Computer
+## Setting Up Computer
 
 Before you can run Ignite UI for Angular, there are 2 steps to get everything on your machine set up to run any Angular app, including Ignite UI for Angular, and to build Angular apps. To get started, you must install both NodeJS and Visual Studio Code on your machine. Modern web development with Angular requires NodeJS, it’s sort of like an ASP.NET app running in the browser and requires ASP.NET runtime deployed on the server. For development, there is nothing better than Visual Studio Code to build Angular apps. Getting started is easy, just download and install both Node.js and Visual Studio Code.
 
@@ -31,7 +31,7 @@ Before you can run Ignite UI for Angular, there are 2 steps to get everything on
     </div>
 </div>
 
-### Creating New App
+## Creating New App
 
 Now that we have everything we need, we can start creating/updating our application!
 
@@ -70,7 +70,7 @@ Lastly, you can build for production or start your application with these comman
 
 After executing those simple commands, your new project will be built and served. It will automatically open in your default browser and you will be able to use Ignite UI for Angular components in your project.
 
-### Updating Existing App
+## Updating Existing App
 
 What if you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before)? We have you covered! All you have to do is execute these commands:
 
@@ -92,15 +92,21 @@ Or
 
 This will automatically install packages for Ignite UI for Angular, along with all of their dependencies, font imports and styles references to the existing project.
 
-### Importing Modules
+## Importing Modules
 
 First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](geo-map.md) component.
 
-### Using Components
+<!-- Blazor -->
+
+-   GeographicMapModule
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
+
+## Using Components
 
 We are now ready to use the Ignite UI for Angular map component in our markup! Let's go ahead and define it:
 
-### Running Application
+## Running Application
 
 Finally, we can run our new application by using one of the following commands:
 

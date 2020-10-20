@@ -14,8 +14,9 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 ## Demo
 
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -84,11 +85,6 @@ This can be utilized via grid action components and we are providing two default
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div class="cell-template" (mouseover)="actionStrip.show(cell.row)" (mouseout)="actionStrip.hide()">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -99,6 +95,7 @@ This can be utilized via grid action components and we are providing two default
 ```
 >Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
+>Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

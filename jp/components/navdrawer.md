@@ -5,16 +5,17 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Navigation Drawer
+# Navigation Drawer
 <p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウト、もしくはコンテンツ内で展開/縮小するためにピン固定できます。 ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツは、デフォルトのメニュー項目スタイル設定を使用する他、カスタマイズも可能です。</p>
 <div class="divider"></div>
 
-### Navigation Drawer デモ
+## Navigation Drawer デモ
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
+    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -22,7 +23,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-### 依存関係
+## 依存関係
 
 >[!NOTE]
 >このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。 
@@ -43,7 +44,7 @@ export class AppModule {
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 依存関係をインポートした後、Navigation Drawer をコンポーネントのテンプレートで定義できます。
 
@@ -154,7 +155,7 @@ export class AppComponent  {
 
 <div class="divider--half"></div>
 
-### モード
+## モード
 
 ピン固定されていないモード (コンテンツの上に配置) は標準の動作です。Drawer は上に配置され、すべてのコンテンツの上に暗いオーバーレイを適用します。モバイル デバイスで使用される一時的なナビゲーションを提供するために使用されます。
 
@@ -164,7 +165,7 @@ export class AppComponent  {
 > Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinthreshold) プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
 
 
-#### ピン固定 (persistent) モード
+### ピン固定 (persistent) モード
 ピン固定は、コンテンツと同じフローに配置するために、Drawer の位置を `fixed` から `relative` に変更します。従って、このモードで Drawer を切り替える必要がある場合、アプリケーションのスタイル設定を切り替えるためにレイアウトをデザインする必要があります。流動レイアウトを実装するには、[`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) および [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) ディレクティブを使用します。
 
 上記の例に適用すると以下のようになります。
@@ -218,7 +219,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 }
 ```
 
-#### ミニ バリアント
+### ミニ バリアント
 ミニ バリアントを使用する場合、Navigation Drawer を閉じる代わりに幅を変更します。
 サイドでクイック選択を利用可能にするためにアイコンが常に表示されます。
 このバリアントを使用するには、`igxDrawerMini` ディレクティブでデコレートしたミニ テンプレートを設定します。
@@ -250,7 +251,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 
 <div class="divider--half"></div>
 
-### Angular Router の使用
+## Angular Router の使用
 
 Angular Router を使用するには、最初に `@angular/router` から git をインポートし、コンストラクターでルーターのインスタンスを作成する必要があります。次に、リンク値にルーターを使用して、ナビゲーション項目を定義します。
 
@@ -326,7 +327,7 @@ import { RouterModule } from "@angular/router";
 
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 Navigation drawer のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -344,7 +345,7 @@ $custom-theme: igx-navdrawer-theme(
 ```
 ご覧のとおり、`igx-navdrawer-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -393,7 +394,7 @@ $custom-theme: igx-navdrawer-theme(
 
 <div class="divider--half"></div>
 
-### API と スタイル リファレンス
+## API とスタイル リファレンス
 
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
 * [IgxNavigationDrawerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme)

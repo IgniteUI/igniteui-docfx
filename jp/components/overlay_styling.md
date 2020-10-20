@@ -5,14 +5,14 @@ _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, 
 _language: ja
 ---
 
-## オーバーレイ スタイリング
+# オーバーレイ スタイリング
 <p class="highlight">
 [`IgxOverlayService`](overlay_main.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop_down.md)、[コンボ](combo.md)、[日付ピッカー](date_picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
 他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
 </p>
 <div class="divider--half"></div>
 
-### オーバーレイ コンポーネントのスタイル設定
+## オーバーレイ コンポーネントのスタイル設定
 
 ほとんどの場合、[グローバル](themes/global-theme.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop_down.md#スタイル設定)ドロップダウンを見てみましょう。
 
@@ -39,7 +39,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 
 グローバル スタイルはスコープされたルール下では生成されず、カプセル化の影響も受けないため、サービスがオーバーレイ アウトレットに移動した `igx-drop-down-item` など、ページ上の任意の要素と一致できます。
 
-### スコープ コンポーネント スタイル
+## スコープ コンポーネント スタイル
 
 オーバーレイに表示される要素のスタイルをスコーピングする際に DOM のオーバーレイ `アウトレット`の位置を指定する必要があります。スコープが設定された CSS ルールには、要素の特定の階層構造が必要です - オーバーレイ コンテンツが、適用するスタイルの正しいコンテキストで表示されることを確認してください。
 
@@ -89,19 +89,20 @@ export class OverlayStylingComponent {
 コンボのアイテムのリストがコンポーネントのホスト**内**に適切にレンダリングされます。つまり、カスタムテーマが有効になります。
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe class="lazyload no-theming" id="overlay-styling-simple-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe class="lazyload no-theming" id="overlay-styling-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### オーバーレイのスタイル設定
+## オーバーレイのスタイル設定
 
 `ViewEncapsulation` がオーバーレイの `outlet` プロパティとどのように連携するかを説明しました。次にオーバーレイ ラッパー自体のスタイルを設定する方法を示します。
 [`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
 
-#### グローバル スタイル
+### グローバル スタイル
 
 オーバーレイ モーダルをスタイル設定する最も簡単な方法は、アプリのグローバル スタイルにテーマを含める方法です。
 
@@ -124,7 +125,7 @@ $my-overlay-theme: igx-overlay-theme(
 
 これで、**すべて**のモーダル オーバーレイの背景が紫色になります。
 
-#### スコープ オーバーレイ スタイル
+### スコープ オーバーレイ スタイル
 
 特定のコンポーネントの下に**のみ**特定の背景をオーバーレイに表示したい場合は、テーマを[スコープできます](#スコープ-コンポーネント-スタイル)。モーダル オーバーレイをスコープする場合、オーバーレイ アウトレットを移動する必要がありますが、これにはいくつかの[制限](overlay_main.md#前提事項と制限)があります。
 オーバーフロークリッピング、z-index、およびビューポートの問題のリスクを最小限に抑えるために、より高いレベルのコンポーネントでのみモーダルオーバーレイのアウトレットを使用することをお勧めします。
@@ -151,11 +152,11 @@ $my-overlay-theme: igx-overlay-theme(
 >[!NOTE]
 >コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
 
-### API リファレンス
+## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### その他のリソース
+## その他のリソース
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
 * [オーバーレイ メイン トピック](overlay_main.md)
 * [配置ストラテジ](overlay_position.md)

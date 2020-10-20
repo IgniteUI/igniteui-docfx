@@ -5,21 +5,22 @@ _keywords: angular slider, igniteui for angular, インフラジスティック�
 _language: ja
 ---
 
-## Slider 概要と構成
+# Slider 概要と構成
 <p class="highlight">Ignite UI for Angular Slider コンポーネントを使用すると、つまみをトラックで移動して指定した範囲内で値選択を許可します。トラックを連続またはステップに定義でき、単一または範囲によってスライダーのタイプを選択できます。</p>
 <div class="divider"></div>
 
-### Slider デモ
+## Slider デモ
 <div class="sample-container loading" style="height: 250px">
-    <iframe id="slide-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 >[!WARNING]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -40,7 +41,7 @@ import { IgxSliderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### 範囲スライダー
+### 範囲スライダー
 デフォルトで Slider コンポーネントは不連続タイプに設定されています。不連続スライダーで現在値は数値ラベル (バブル) で可視化されます。バブルは常に表示されているか、スライダーのつまみにカーソルを合わせると表示されます。
 定義済みステップを持つ不連続スライダーを使用すると、有意な値のみを選択可能にすることができます。
 
@@ -90,7 +91,7 @@ class Task {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### 連続スライダー
+### 連続スライダー
 最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) 入力を true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。 
 
 > [!NOTE]
@@ -128,7 +129,7 @@ public volume = 20;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### 範囲スライダー
+### 範囲スライダー
 最初に、スライダーの [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) を [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range) に設定します。次にスライダー値を PriceRange 型のオブジェクトにバインドします。
 そのオブジェクトに上限および下限のプロパティがあります。
 
@@ -193,7 +194,7 @@ class PriceRange {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### ラベル モード
+### ラベル モード
 ここまでで目盛りでのみ数値を表示しましたが、基本的な値の配列を使用することで、情報を提示するために使用できる別の方法があります。
 >[!NOTE]
 > 初期値の配列には少なくとも 2 つの値を含める必要があり、含めない場合は `labelsView` が有効になりません。
@@ -234,7 +235,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 
 上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) に対応すると、スライドできる範囲が制限されます。
 
-#### ラベルのテンプレート化
+### ラベルのテンプレート化
 上記では、[igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) ディレクティブと [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) ディレクティブの両方を使用して、カスタム `label` テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
 ここでの [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) は、暗黙的に `value` 入力プロパティへの参照を、そして `labelsView` が有効な場合は明示的に `labels` 入力への参照を与えます。
 
@@ -247,10 +248,10 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
   </ng-template>
 ```
 
-### Slider 目盛りとラベル
+## Slider 目盛りとラベル
 **Slider 目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行うことができます。この新しい機能は、データの表示範囲を確認するための Angular Slider の操作が必要なくなります。**目盛り**と**目盛り ラベル**の配置と方向の制御に関して、高い柔軟性があります。**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、または**その両方**を選択したりできます。さらに、この機能は、**プライマリ目盛りラベル**、**セカンダリ目盛りラベル**、またはその両方を**オン/オフ**にする方法を提供します。**目盛りラベル**は**水平**から**垂直** (**上から下** (90) または**下から上** (-90)) に向きを変更することもできます。
 
-#### 目盛りの有効化
+### 目盛りの有効化
 スライダーの目盛りを有効にするには、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を **true** に設定します。    
 [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を使用してプライマリ目盛りの数を設定します。
 [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を使用してセカンダリ目盛りの数を設定します。
@@ -284,7 +285,7 @@ public type = SliderType.RANGE;
 </div>
 
 
-#### ラベルの向きと表示状態
+### ラベルの向きと表示状態
 以下のサンプルでは、[`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) を **false** に設定して、すべての**セカンダリ ラベル**を無効にします。  
 
 ```html
@@ -319,7 +320,7 @@ public type = SliderType.RANGE;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### 目盛りの位置
+### 目盛りの位置
 次に、**目盛り**の位置を変更する方法を見てみましょう。
 
 ```html
@@ -354,7 +355,7 @@ public type = SliderType.RANGE;
 > [!NOTE]
 > [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
 
-#### ラベル ビューを含むスライダー目盛り
+### ラベル ビューを含むスライダー目盛り
 この例では、目盛りラベルとつまみラベルがどのように一緒に機能するかを示します。
 
 ```html
@@ -379,7 +380,7 @@ public type = SliderType.RANGE;
 
 いずれにしても反映されないため、ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) は設定されていません。コレクションの **長さ** が優先されます。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を設定できないことを意味しません。すべての**セカンダリ目盛り**は、**ラベル**なしで空になります。
 
-#### テンプレートのラベル
+### テンプレートのラベル
 最後に、**目盛りラベル**にカスタム テンプレートを提供する方法と、 [`テンプレート コンテキスト`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) が提供するものを確認します。
 
 ```html
@@ -423,10 +424,10 @@ public type = SliderType.RANGE;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-tick-labels-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 スライダー コンポーネントのデフォルト スタイル設定を変更するには、新しいテーマを作成します。
 
-#### デモ
+### デモ
 これは、新しいテーマを適用した結果です。
 
 <div class="sample-container loading" style="height: 240px">
@@ -437,7 +438,7 @@ public type = SliderType.RANGE;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### コンポーネント テーマの作成
+### コンポーネント テーマの作成
 はじめに、[カスタム パレット](../themes/palette.md)を作成します。
 コンポーネント テーマを作成し、カスタム パレットを適用します。 
 ```scss
@@ -473,7 +474,7 @@ $custom-slider-theme: igx-slider-theme(
 }
 ```
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)

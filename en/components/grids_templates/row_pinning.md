@@ -27,9 +27,9 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -37,9 +37,9 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="tree-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -47,9 +47,9 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="hierarchical-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -58,18 +58,13 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 
 ## Row Pinning UI
 
-The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip can then be shown or hidden via its API and will display a pin or unpin button icon based on the state of the row it is shown for. An additional action allowing to scroll the copy of the pinned row into view is shown for each pinned row as well.
+The built-in row pinning UI is enabled by adding an `igxActionStrip` component with the `GridPinningActions` component. The action strip is automatically shown when hovering a row and will display a pin or unpin button icon based on the state of the row it is shown for. An additional action allowing to scroll the copy of the pinned row into view is shown for each pinned row as well.
 
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-grid #grid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -82,13 +77,8 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-tree-grid #treeGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -101,13 +91,8 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" (mouseleave)="actionStrip.hide()">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div (mouseover)="actionStrip.show(cell.row)">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>

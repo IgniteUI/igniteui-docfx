@@ -5,14 +5,15 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Carousel
+# Carousel
 <p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動できます。</p>
 <div class="divider"></div>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
     </button>
@@ -21,10 +22,10 @@ _language: ja
 </div>
 
 
-### 使用方法
+## 使用方法
 Carousel を全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
 
-#### はじめに
+### はじめに
 <div class="divider--half"></div>
 
 >[!NOTE]
@@ -47,7 +48,7 @@ export class AppModule {}
 
 このセクションでは、上記で定義した **デモ** の設定を行います。
 
-#### *ngFor を使用してスライドを追加する
+### *ngFor を使用してスライドを追加する
 <div class="divider--half"></div>
 
 同じ種類のコンテンツを含むスライドがある場合、最も簡単な方法は *\*ngFor* を使用してテンプレートに追加する方法です。
@@ -83,9 +84,9 @@ public slides = [
 </div>
 ...
 ```
-### 例
+## 例
 
-#### IgxCarousel の定義
+### IgxCarousel の定義
 <div class="divider--half"></div>
 
 デフォルトでは、カルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
@@ -104,7 +105,7 @@ public slides = [
 </div>
 ```
 
-#### カスタム インジケーター
+### カスタム インジケーター
 <div class="divider--half"></div>
 
 カスタム カルーセル インジケーターを追加するには、以下のように [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html) を使用する必要があります。
@@ -117,7 +118,7 @@ public slides = [
 ...
 ```
 
-#### カスタム nav ボタン
+### カスタム nav ボタン
 
 これを実現するために、[IgxCarouselPrevButtonDirective]({environment:angularApiUrl}/classes/igxcarouselprevbuttondirective.html) と [IgxCarouselNextButtonDirective]({environment:angularApiUrl}/classes/igxcarouselnextbuttondirective.html) ディレクティブを使用します。
 
@@ -137,7 +138,7 @@ public slides = [
 ...
 ```
 
-#### 他のコンポーネントを含むスライド
+### 他のコンポーネントを含むスライド
 <div class="divider--half"></div>
 
 このカルーセルには、フォームと画像を含むスライドが含まれます。
@@ -192,7 +193,7 @@ public slides = [
 ...
 ```
 
-##### デモ
+#### デモ
 
 <div class="sample-container loading" style="height: 700px">
     <iframe id="carousel-with-components-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-with-components-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -205,7 +206,7 @@ public slides = [
 </div>
 
 
-### アニメーション
+## アニメーション
 
 アニメーション化されたスライド遷移により、エンドユーザーはカルーセルを操作しているときに高いエクスペリエンスを得ることができます。
 
@@ -222,7 +223,7 @@ public slides = [
 `animationType` 入力に `none` を設定すると、カルーセルのアニメーションが無効になります。
 
 
-#### デモ
+### デモ
 
 以下のデモは、カルーセルがサポートするさまざまなタイプのアニメーションを示しています。
 
@@ -237,21 +238,21 @@ public slides = [
 </div>
 
 
-### ナビゲーション
+## ナビゲーション
 <div class="divider--half"></div>
 
 トランジションとナビゲーションは、最も重要なカルーセル機能です。
 
 カルーセル内のナビゲーションは、モバイル デバイスでのナビゲーション ボタン、キーボード ナビゲーション、パン操作を通じてユーザーが処理できます。
 
-#### パン ジェスチャ
+### パン ジェスチャ
 <div class="divider--half"></div>
 
 デフォルトでカルーセルはあらゆるタッチ対応デバイスに使用できます。これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) プロパティを `false` に設定して変更できます。
 
 カルーセル [アニメーション](carousel.md#アニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームに合わせてプログレッシブ Web アプリケーション ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
 
-#### キーボード ナビゲーション
+### キーボード ナビゲーション
 <div class="divider--half"></div>
 
 *   **次へ**/**前へ**のスライドに移動するには、丁寧に使用する必要があります。
@@ -261,7 +262,7 @@ public slides = [
     * `End` キー - 最後のスライド
     * `Home` キー - 最初のスライド
  
-#### 自動的なトランジション
+### 自動的なトランジション
 <div class="divider--half"></div>
 
 **IgxCarousel** は、ユーザーの操作なしでスライドを自動的に変更するように簡単に構成できます。この方法では、トランジション間隔を [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) プロパティに設定するだけで、スライドショーを作成できます。このプロパティは、スライド トランジション間の間隔 (ミリ秒)を決定します。
@@ -269,7 +270,7 @@ public slides = [
 >[!NOTE]
 >自動的なスライド トランジションは、デフォルトでユーザーに完全に依存しているわけではありません。スライドの上にマウス ポインターを置くと、マウス ポインターがスライド領域から出るまで、現在のスライド トランジションが中断されます。これは、[pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) プロパティを `false` に設定することで防止できます。
 
-### 高度な例
+## 高度な例
 <div class="divider--half"></div>
 
 ループを有効にして完全に自動化されたカルーセルを作成しましょう。各スライドは、リスト内の[リスト項目]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) と同期されます。リスト項目をクリックすると、スライドの変更がトリガーされます。
@@ -343,7 +344,7 @@ public slides = [
 
 
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
@@ -352,7 +353,7 @@ public slides = [
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -5,23 +5,24 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Label および Input
+# Label および Input
 <p class="highlight">
 Ignite UI for Angular Input および Label ディレクティブを使用すると、単一行または複数行のテキスト要素を作成できます。フォーム入力の全般的なシナリオにおいて便利な機能です。
 </p>
 <div class="divider--half"></div>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height:100px">
-<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="input-group-sample-1-frame" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-1-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 Input および Label ディレクティブを初期化にするには、まず `IgxInputGroupModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
@@ -38,7 +39,7 @@ import { IgxInputGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Label および Input
+## Label および Input
 Label および Input ディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html) のテキスト フィールド仕様を実装します。
 
 [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) を使用するには、`<igx-input-group>` コンテナーにラップします。
@@ -52,7 +53,7 @@ Label および Input ディレクティブのデフォルト スタイル設定
 
 `igxInput` ディレクティブは `<input>` および `<textarea>` 単一行および複数行テキスト フィールドの HTML 要素に適用できます。
 
-#### 検証
+### 検証
 [`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) 属性を使用して `input` を検証できます。ラベルの隣にアスタリスクが追加され、このフィールドは必須入力であることを示します。入力は検証が成功/失敗したかどうかによって緑/赤に変わります。
 
 ```html
@@ -71,7 +72,7 @@ Label および Input ディレクティブのデフォルト スタイル設定
 </div>
 <div class="divider--half"></div>
 
-#### データ バインディング
+### データ バインディング
 Ignite UI for Angular Input ディレクティブは、一方向および双方向のデータ バインディングをサポートします。以下のコードは `NgModel` を使用して双方向のデータ バインディングを追加する方法を示します。
 
 ```typescript
@@ -90,7 +91,7 @@ public user = {
 </igx-input-group>
 ```
 
-#### フォーカスとテキストの選択
+### フォーカスとテキストの選択
 
 [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) ディレクティブを使用して、input 要素に `focus` を強制するロジックを追加できます。
 
@@ -129,17 +130,17 @@ public user = {
 </div>
 <div class="divider--half"></div>
 
-### Input Group
+## Input Group
 Ignite UI for Angular Input Group コンポーネントは、開発者が使いやすく美しフォームを作成するのに役立ちます。詳細については、別のトピック[こちら](input_group.md) を参照してください。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 関連トピック:

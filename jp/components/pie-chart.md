@@ -26,6 +26,8 @@ Ignite UI for Angular 円チャート コンポネントは、セクションに
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## 依存関係
 
 chart コンポーネントをインストールするときに core パッケージもインストールする必要があります。
@@ -35,9 +37,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 </pre>
 
-## 必要なモジュール
+<!-- end: Angular, React, WebComponents -->
 
-[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) は、以下のモジュールが必要です。
+## モジュールの要件
+
+[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   PieChartModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts

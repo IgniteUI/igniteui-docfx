@@ -33,8 +33,8 @@ Most of data chart series support markers and they are listed below:
 -   Some Scatter Series:
     -   [Scatter Bubble Series](data-chart-type-scatter-bubble-series.md)
     -   [Scatter Point Series](data-chart-type-scatter-point-series.md)
-    -   [Scatter Line Series](data-chart-type-scatter-point-series.md)
-    -   [Scatter Spline Series](data-chart-type-scatter-point-series.md)
+    -   [Scatter Line Series](data-chart-type-scatter-line-series.md)
+    -   [Scatter Spline Series](data-chart-type-scatter-spline-series.md)
 
 ## Marker Properties
 

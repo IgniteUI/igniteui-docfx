@@ -5,23 +5,24 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Drop Down
+# Drop Down
 <p class="highlight">Ignite UI for Angular Drop Down は、視覚的にグループ化するスクロール可能な項目のリストを表示します。項目をクリックまたはタップして選択するとドロップダウンが閉じられます。</p>
 <div class="divider"></div>
 
-### Drop Down デモ
+## デモ
 <div class="sample-container loading" style="height:200px">
-    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 Drop Down コンポーネントを使用するには、まず `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
 
@@ -39,7 +40,7 @@ import { IgxDropDownModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### ドロップダウンの追加
+### ドロップダウンの追加
 
 選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。これを実現するには、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と [IgxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用してドロップダウンを開きます / 閉じます。
 
@@ -69,9 +70,9 @@ export class MyDropDownComponent {
 }
 ```
 
-### 例
+## 例
 
-#### 定義済みの選択項目
+### 定義済みの選択項目
 定義済みの選択項目を作成したいとします。1 つの方法は、ドロップダウン コンポーネントの [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理することです。
 
 ```html
@@ -111,7 +112,7 @@ export class MyDropDownComponent {
 
 <div class="divider--half"></div>
 
-#### 項目のグループ化
+### 項目のグループ化
 
 より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。
 
@@ -162,7 +163,7 @@ export class MyDropDownComponent {
     </button>
 </div>
 
-#### 階層データのグループ化
+### 階層データのグループ化
 
 `igx-drop-down` 項目は [`igx-drop-down-item-group`]({environment:angularApiUrl}/classes/igxdropdowngroupcomponent.html) コンテナーによりグループ化して、ユーザーが個別のカテゴリを区別しやすくなります。`igx-drop-down-item-group` は、`igx-drop-down-item` 要素をコンテンツとして受け取り、グループ形式で描画します。
 
@@ -241,7 +242,7 @@ export class MyCustomDropDownComponent {
     </button>
 </div>
 
-#### ドロップダウン メニュー
+### ドロップダウン メニュー
 ドロップダウンをメニューとして動作するように構成できます。[onSelection]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値で取得できます。
 
 ```html
@@ -304,7 +305,7 @@ export class MyMenuComponent {
     </button>
 </div>
 
-#### Navigation ディレクティブ
+### Navigation ディレクティブ
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
 
 以下のサンプルでは、クリックで `igxDropDown` インスタンスを開閉できます。入力自体に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用すると、上下矢印キーを使用するキーボード ナビゲーションが有効になります。これは、[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) プロパティを `false` に設定し、入力でフォーカスを維持できるデフォルトのドロップダウン動作に依存します。
@@ -391,7 +392,7 @@ export class InputDropDownComponent {
 </igx-drop-down>
 ```
 
-### スタイル設定
+## スタイル設定
 [Ignite UI for Angular テーマ](themes/index.md) を使用して、ドロップダウンの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -416,7 +417,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 );
 ```
 
-#### CSS 変数の使用
+### CSS 変数の使用
 
 最後にカスタム ドロップダウン テーマを設定します。
 
@@ -424,7 +425,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
  @include igx-css-vars($custom-drop-down-theme);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -441,7 +442,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 > [!NOTE]
 > [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay_main.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay_styling.md)を確認してください。
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:350px">
     <iframe id="dropdown-styling-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -452,14 +453,14 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
 * [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

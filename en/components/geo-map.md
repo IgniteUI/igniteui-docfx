@@ -9,13 +9,11 @@ mentionedTypes: ['XamGeographicMap']
 
 The Ignite UI for Angular map component allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.
 
-## Demo
-
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-overview-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-bubble-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
@@ -28,9 +26,11 @@ The map's [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-a
 
 The map provides customizable navigation behaviors for navigating map content using mouse, keyboard, or code-behind.
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
-To use the Angular geographic map component, you need to first install these packages:
+The Angular geographic map component, you need to first install these packages:
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
@@ -38,9 +38,23 @@ npm install --save igniteui-angular-charts
 npm install --save igniteui-angular-maps
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
+<!-- Angular, React, WebComponents -->
+
 The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules, however the Ig$DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
+
+<!-- end: Angular, React, WebComponents -->
+
+<!-- Blazor -->
+
+The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules, however the DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
+
+-   GeographicMapModule
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts

@@ -18,6 +18,8 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 ## Dependencies
 
 When installing the excel package, the core package must also be installed.
@@ -27,9 +29,14 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
 </pre>
 
+<!-- end: Angular, React, WebComponents -->
+
 ## Required Modules
 
-The Angular excel library requires the following modules:
+The Angular excel library requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   ExcelModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts

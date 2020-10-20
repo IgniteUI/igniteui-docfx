@@ -28,6 +28,12 @@ The Angular data chart component allows you to highlight the plotted series in t
 
 In order to enable highlighting in the Angular data chart component, you need to import and register the interactivity module. This can be done using the following code:
 
+<!-- Blazor -->
+
+-   DataChartInteractivityModule
+-   DataChartAnnotationModule
+    <!-- end: Blazor -->
+
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
