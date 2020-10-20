@@ -21,7 +21,7 @@
             {
                 "files": [
                     "images/**",
-                    "../**.config"
+                    "web.config"
                 ],
                 "exclude": [
                     "obj/**",
