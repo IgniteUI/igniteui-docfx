@@ -99,11 +99,19 @@ To set the type, use the [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/inde
 providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
 ```
 
->Note:
->[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
+>[!NOTE]
+>The [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
 >Most of the `igniteui-angular` form controls use input-group component internally, or allow for a custom template. Setting a global token will affect these components as well.
 
+Ignite UI for Angular also provides styling for the input of `type="file"` and it supports all the input group types and themes, just add this to your template:
 
+```html
+<igx-input-group>
+    <input igxInput type="file" multiple />
+</igx-input-group>
+```
+
+Use the `multiple` attribute to set if your input should allow multiple file selection or not.
 
 <div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>

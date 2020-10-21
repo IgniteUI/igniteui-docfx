@@ -119,8 +119,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 >[!NOTE]
 >To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive, you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
 
-##### Demo
-<div class="sample-container loading" style="height: 100px">
+<div class="sample-container loading" style="height: 130px">
 <iframe id="input-text-selection-frame" data-src='{environment:demosBaseUrl}/data-entries/input-text-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -128,6 +127,8 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-text-selection-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+
+
 
 ## Input Group
 The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the separate topic [here](input_group.md).
