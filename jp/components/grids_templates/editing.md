@@ -25,7 +25,7 @@ _language: ja
 
 # @@igComponent 編集
 
-Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更は、[セル編集](cell_editing.md)、[行編集](row_editing.md)、[行追加](row_adding.md)、[一括編集](batch_editing.md)で実行できます。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。**セル編集**モードはデフォルトで有効で、列のデータ タイプに基づいて異なるエディターが表示されます。また、[igxCellEditor](cell_editing.md#セル編集テンプレート) ディレクティブといくつかの [igxRow ディレクティブ](row_editing.md#customizing-row-editing-overlay)を使用してカスタム編集テンプレートを定義できます。
+Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. The data manipulation phases are: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md), and [Batch Editing](batch_editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. Additionally, **Cell editing** exposes several default editors based on the column data type, that could be easily customized via [igxCellEditor directive](cell_editing.md#cell-editing-templates) or [igxRow directives](row_editing.md#customizing-row-editing-overlay).
 
 ## 設定
 有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) ブール値プロパティを公開します。
@@ -62,22 +62,22 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
  | イベント | 説明 | 引数 | キャンセル可能 |
 |-------|-------------|-----------|-------------|
-| [`rowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditEnter) | `rowEditing` が有効な場合、行が編集モードに入るときに発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditEnter) | セルが**編集モードに入る**ときに発生します (`rowEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) | 値が変更された場合、セルの値が**コミットされた**前に発生します (`Enter` の押下など)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#celleditdone) | 値が変更された場合、セルが編集され、セルの値が**コミットされた**後に発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
-| [`cellEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditExit) | セルが**編集モードを終了した**ときに発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowedit) | `rowEditing` が有効な場合、編集モードの値の行が**コミットされた**前に発生します (行編集オーバーレイの `[完了]` ボタンをクリックなど)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | `rowEditing`が有効な場合、行が編集され、新しい行の値が**コミットされた**後に発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | `rowEditing`が有効な場合、行が編集モードを終了したときに発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditEnter) | If `rowEditing` is enabled, fires when a row enters edit mode | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditEnter) | Fires when a cell **enters edit mode** (after `rowEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) | If value is changed, fires just **before** a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#celleditdone) | If value is changed, fires **after** a cell has been edited and cell's value is **committed** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
+| [`cellEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditExit) | Fires when a cell **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowedit) | If `rowEditing` is enabled, fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
-### イベントのキャンセル
- - `RowEditEnter` - 行もセルも編集モードに入りません。
- - `CellEditEnter` - 行編集が許可されますが、行コンテキストのセルは編集できません。
- - `CellEdit` - セル/行の編集を許可し、**[完了]** ボタンまたは **[Enter]** を押しても値または行のトランザクションはコミットされません。[キャンセル] ボタンをクリックするまで、セル編集と行編集は閉じません。
- - `RowEdit` - 行全体ではなくセルのコミットは可能です。行は編集モードのままになり、行トランザクションは開いていると見なされます。**[完了]** を押しても、行をコミットまたは閉じません。**[キャンセル]** ボタンは、変更をコミットせずに編集プロセスとトランザクションを閉じます。
+### Event cancelation
+ - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
+ - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
+ - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
+ - `RowEdit` - Committing cell is possible, but not the whole row. The row will stay in edit mode and the row transaction will be considered open. Hitting **Done** does not commit or close the row. **Cancel** button closes the editing process and the transaction without committing the changes.
 
-以下のサンプルは、実行中の編集実行シーケンスを示しています。
+The following sample demonstrates the editing execution sequence in action:
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
     <iframe id="grid-editing-lifecycle-iframe" src='{environment:demosBaseUrl}/grid/grid-editing-lifecycle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
