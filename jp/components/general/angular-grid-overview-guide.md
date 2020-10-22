@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Grid と Angular アプリケーション開発の完全ガイド 
   
-Angular Data Grid とその使用方法については、[このセクション](../grids_and_lists.md#Angular-Data-Grid-の概要 ) (グリッドの概要トピック) をご覧ください。
+Angular Data Grid とその使用方法については、[このセクション](../grids_and_lists.md#Angular-Data-Grid-の概要) (グリッドの概要トピック) をご覧ください。
 
 ### Ignite UI - Angular アプリ開発のフレームワーク 
 

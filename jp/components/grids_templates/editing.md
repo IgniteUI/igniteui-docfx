@@ -25,7 +25,7 @@ _language: ja
 
 # @@igComponent 編集
 
-Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell_editing.md)、[行編集](row_editing.md)、および[一括編集](batch_editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell_editing.md#cell-editing-templates)または [igxRow ディレクティブ](row_editing.md#customizing-row-editing-overlay)を介して簡単にカスタマイズできます。 
+Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell_editing.md)、[行編集](row_editing.md)、および[一括編集](batch_editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell_editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row_editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
 
 ## 設定
 有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) ブール値プロパティを公開します。
