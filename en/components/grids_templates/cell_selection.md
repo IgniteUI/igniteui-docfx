@@ -102,7 +102,6 @@ How to select cells:
 <div class="divider--half"></div>
 }
 
-
 ### @@igComponent Single Selection
 
 When you set the `[cellSelection]="'single'"`, this allows you to have only one selected cell in the grid at a time. Also the mode `mouse drag` will not work and instead of selecting a cell, this will make default text selection.

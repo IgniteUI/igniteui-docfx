@@ -62,7 +62,7 @@ _With Ignite UI for Angular @@igComponent you can easy select data by using vari
 
 ## Angular Select Options
 
-IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). The default selection mode of the grid is **Multi-cell selection** in conjunction with **Column Selection**, in order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
+IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
 ### Angular Row Selection
 

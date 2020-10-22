@@ -104,7 +104,6 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-
 ### @@igComponent 単一選択
 
 `[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
