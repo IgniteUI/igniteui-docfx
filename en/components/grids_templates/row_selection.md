@@ -20,11 +20,12 @@ _keywords: data select, igniteui for angular, infragistics
 ---
 }
 
-# @@igComponent Row Selection
+# Angular @@igComponent Row Selection
 
 With row selection in Ignite UI for Angular, there is row selector column that precedes all other columns within the row. When a user clicks on the row selector, the row will either become selected or deselected, enabling the user to select multiple rows of data.
 
-### Demo
+## Angular Row Selection Example
+<div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
