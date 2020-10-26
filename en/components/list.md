@@ -23,7 +23,7 @@ The Ignite UI for Angular List component displays rows of items and supports one
 </div>
 <div class="divider--half"></div>
 
-## How to create list view win Angular?
+## How to create list view with Angular?
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
