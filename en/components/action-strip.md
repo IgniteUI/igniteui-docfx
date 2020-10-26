@@ -141,6 +141,12 @@ When `$legacy-support` is set to `true`, include the component theme like this:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+## Known Issues and Limitations
+
+- Using the Action Strip component on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+    ```typescript
+    import 'core-js/es7/array';
+    ```
 
 ## API and Style References
 
