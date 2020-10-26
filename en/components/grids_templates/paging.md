@@ -4,11 +4,12 @@ _description: Configure Angular pagination and create custom pages in the Angula
 _keywords: angular pagination, igniteui for angular, infragistics
 ---
 
-# @@igComponent Paging Functionality
-Angular pagination in the @@igComponent is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
+# Angular grid pagination
+Pagination is used to split large set of data into a sequence of pages that have similar content.Angular table pagination improves user experience and data interaction.@@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
 
-### Demo
+### Angular pagination example
 
+The following example reprsents @@igComponent pagination with options like sorting and items per page.The user can also quickly scroll through the @@igComponent pages via Go to last page and Go to first page buttons.
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -48,7 +49,7 @@ The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) inpu
 </@@igSelector>
 ```
 
-## Templating
+## Angular pagination template
 The paging area supports templating by the user, if a template reference is passed to the @@igComponent during initialization. The example below is a template where the pagination is controlled through an input.
 
 ```html
@@ -92,11 +93,11 @@ this.@@igObjectRef.totalRecords = 30;
 
 @@if (igxName === 'IgxGrid') {
 ## Paging with Group By
-
+Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
 Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
 }
 
-## Paginator Component
+## Reusable Paginator component in Angular
 A new component `igx-paginator` is introduced with 8.1.0 release. This component replaces the current pager and can be used as a standalone component as well.
 The `igx-paginator` exposes a couple of input and output properties that enable further customization of the paging.
 
@@ -135,7 +136,7 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 </ng-template>
 ```
 
-### Demo
+### Paginator component demo
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
@@ -148,8 +149,7 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 <div class="divider--half"></div>
 
 ## Remote Paging
-
-The @@igComponent supports remote paging, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
+Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
 
 
 @@if (igxName === 'IgxGrid') {
@@ -206,7 +206,7 @@ public ngOnInit(): void {
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox demo</button>
 </div>
 
-## Styling
+## Pagination styling in Angular
 
 To get started with styling the paginator, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -373,7 +373,7 @@ $dark-button: igx-button-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxGrid'){
-### Demo
+### Pagination style example
 
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
