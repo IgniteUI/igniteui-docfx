@@ -6,10 +6,12 @@ _keywords: angular list, angular component, ignite ui for angular, angular list 
 
 # Angular List View
 
-<p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
+<p class="highlight">
+The List element is extremely useful when presenting a group of items.Your list can be a simple list of textual items, or it can be a complex array of separate layout elements.
+The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
 <div class="divider"></div>
 
-## List Demo
+## Angular grid list example
 
 <div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +23,7 @@ _keywords: angular list, angular component, ignite ui for angular, angular list 
 </div>
 <div class="divider--half"></div>
 
-## Usage
+## How to create list view win Angular?
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
@@ -453,7 +455,7 @@ Now try panning the list items for yourself:
 </div>
 <div class="divider--half"></div>
 
-## Filtering
+## Angular filter list
 
 Our list is looking good, but wouldn't it be even better if we could search for contacts by name? We can easily achieve that by using our filtering pipe.
 Let's do this.
@@ -513,6 +515,8 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
     ...
 </igx-list-item>
 ```
+
+Looking for more filtering options? Check out our angular filtering options, including [**Excel Style Filtering**](grid/excel_style_filtering.md) and [**Advanced Filtering Options**](grid/advanced_filtering.md).
 
 ## Applying theme to the list component
 
