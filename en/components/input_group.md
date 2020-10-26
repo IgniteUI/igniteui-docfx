@@ -111,7 +111,6 @@ Ignite UI for Angular also provides styling for the input of `type="file"` and i
 </igx-input-group>
 ```
 
-Use the `multiple` attribute to set if your input should allow multiple file selection or not.
 
 <div class="sample-container loading" style="height:520px">
 <iframe class="lazyload" id="input-group-sample-5-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-5' width="100%" height="100%" seamless frameBorder="0"></iframe>
