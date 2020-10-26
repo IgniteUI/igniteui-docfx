@@ -279,7 +279,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Angular Data Grid 内のフィルタリング機能のアニメーション" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif?v=201811121733" alt="Angular Data Grid 内のフィルタリング機能のアニメーション"></div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular グリッドのページング、ソート、フィルタリング & 検索<a class="anchorjs-link" href="#angular-grid-paging-sorting-filtering--searching" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular グリッドのページング、ソート、フィルタリング & 検索<a class="anchorjs-link" href="#angular-グリッドのページングソートフィルタリング--検索" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>ユーザーがデフォルトの[ページャー](grid/paging.md)を使用してデータ セットをナビゲートできるようにするか、独自のテンプレートを作成して独自のページング エクスペリエンスを提供します。単一列および複数列のソート、グリッド上の全文[検索](grid/search.md)、およびデータ型に基づく [Microsoft Excel スタイルのフィルタリング](grid/excel_style_filtering.md) を含むいくつかの[高度なフィルタリング] オプションを完全にサポートします。</p>
     </div>
 </div>
@@ -290,7 +290,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
         <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Angular Data Grid 内のフィルタリング機能のアニメーション" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-inline-grid-editing-1100.jpg?v=201808021304" alt="Angular Data Grid 内のフィルタリング機能のアニメーション">
     </div>
     <div class="feature__details">
-        <span class="h3 features__heading">インライン Angular グリッド編集<a class="anchorjs-link" href="#inline-angular-grid-editing" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">インライン Angular グリッド編集<a class="anchorjs-link" href="#インライン-angular-グリッド編集" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>ユーザーがデフォルトの[ページャー](grid/paging.md)を使用してデータ セットをナビゲートできるようにするか、独自のテンプレートを作成して独自のページング エクスペリエンスを提供します。単一列および複数列のソート、グリッド上の全文[検索](grid/search.md)、およびデータ型に基づく [Microsoft Excel スタイルのフィルタリング](grid/excel_style_filtering.md) を含むいくつかの[高度なフィルタリング] オプションを完全にサポートします。</p>
     </div>
 </div>
@@ -299,7 +299,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="キーボード ナビゲーション機能のアニメーション" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Angular Data Grid のキーボード ナビゲーション機能のアニメーション"></div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular グリッドでのキーボード ナビゲーションと行/セルの選択<a class="anchorjs-link" href="#keyboard-navigation--rowcell-selection-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular グリッドでのキーボード ナビゲーションと行/セルの選択<a class="anchorjs-link" href="#angular-グリッドでのキーボード-ナビゲーションと行セルの選択" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>上、下、右、左、タブ、および Enter キーを使用して、Angular データ グリッドで Excel のような[キーボード ナビゲーション](grid/keyboard_navigation.md)を有効にして、アクセシビリティ コンプライアンスを確保し、使いやすさを向上させます。マウスまたはキーボードを使用して Angular グリッドで単一または複数の行選択を切り替えて完全な行を選択または選択解除するか、グリッド ツールバーの組み込みの [すべて選択] または [すべて選択解除] チェックボックスを使用して行選択を操作できます。この機能強化の詳細については、<a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">こちら</a>をご覧ください。</p>
     </div>
 </div>
@@ -309,7 +309,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <div class="feature__image feature__image--right">
 <img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="ARIA サポートのアイコン表示" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-aria-support-1100.jpg?v=201808021304" alt="Angular Data Grid コンポーネントの ARIA サポートのアイコン表示"></div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular グリッドのアクセシビリティと ARIA のサポート<a class="anchorjs-link" href="#angular-grid-accessibility--aria-support" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular グリッドのアクセシビリティと ARIA のサポート<a class="anchorjs-link" href="#angular-グリッドのアクセシビリティと-aria-のサポート" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Ignite UI for Angular の各 Angular コンポーネントは、最新のアクセシビリティ ガイドラインと仕様に従って実装されています。当社の Angular コンポーネントは、OS またはブラウザーが提供するアクセシビリティ技術 (読み上げソフトウェア) を使用してテストされています。当社のチームは、ガイドラインが実装されていることを確認するだけでなく、視覚障害者に配信される実際のコンテンツが消費可能でユーザー フレンドリーであることを保証します。Ignite UI for Angular データ グリッドは キーボード アクセシビリティ、ARIA、明瞭なカラー パレットを提供します。詳しくについては、<a class="no-external-icons" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility">こちら</a>をご覧ください。</p>
     </div>
 </div>
@@ -318,7 +318,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="列のグループ化、ピン固定、および集計機能が有効になっているデータのグリッド" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg?v=201808021304" alt="Angular Data Grid コンポーネントで列のグループ化、ピン固定、および集計機能が有効になっているデータのグリッド"></div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular Grid の列のグループ化、ピン固定、集計、移動<a class="anchorjs-link" href="#column-grouping-pinning-summaries--moving-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular Grid の列のグループ化、ピン固定、集計、移動<a class="anchorjs-link" href="#angular-grid-の列のグループ化ピン固定集計移動" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>組み込みの列[集計](grid/summaries.md)またはカスタム集計テンプレートをサポートし、マウス操作、タッチ、または API を介して列またはグループ列をグループ化します。インタラクティブな[列のピン固定](grid/column_pinning.md)、移動、ドラッグ、ソート操作に列をインタラクティブに[非表示](grid/column_hiding.md)または[移動](grid/column_moving.md)できます。</p>
     </div>
 </div>
@@ -327,7 +327,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="複数列ヘッダー機能を有効にしたデータのグリッド" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg?v=201808021304" alt="Angular Data Grid コンポーネントで複数列ヘッダー機能を有効にしたデータのグリッド"></div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular Grid の複数列ヘッダー<a class="anchorjs-link" href="#multi-column-headers-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular Grid の複数列ヘッダー<a class="anchorjs-link" href="#angular-grid-の複数列ヘッダー" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>[複数列ヘッダー](grid/multi_column_headers.md)を有効にし、共通ヘッダーで列をグループ化できます。各列グループは、その他のグループや列と組み合わせることができ、ピン固定、グループ内でインタラクティブに列移動、グループのソートや非表示など多数の機能が使用できます。</p>
     </div>
 </div>
@@ -336,7 +336,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="テーマ設定およびテンプレート化機能を示すさまざまなグリッド デザインのアニメーション" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif?v=201808021304" alt="Angular Data Grid のテーマ設定およびテンプレート化機能を示すさまざまなグリッド デザインのアニメーション"></div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular Grid のテーマ設定、スタイル設定、テンプレート化<a class="anchorjs-link" href="#theming-styling--templating-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular Grid のテーマ設定、スタイル設定、テンプレート化<a class="anchorjs-link" href="#angular-grid-のテーマ設定スタイル設定テンプレート化" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>Ignite UI for Angular では、CSS や ng-template の再テンプレート化でセルの外観をカスタマイズできます。マテリアル デザインを完全にサポートし、使いやすいテーマ エンジンでブランド化されたインターフェイスをカスタマイズできます。</p>
     </div>
 </div>
@@ -346,7 +346,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Microsoft Excel のような機能のアイコン表示" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Angular Data Grid の Microsoft Excel のような機能のアイコン表示">
 </div>
     <div class="feature__details">
-        <span class="h3 features__heading">Angular Grid の Excel ライブラリ<a class="anchorjs-link" href="#excel-library-for-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
+        <span class="h3 features__heading">Angular Grid の Excel ライブラリ<a class="anchorjs-link" href="#angular-grid-の-excel-ライブラリ" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>データ グリッドの XLXS、XLS、TSV、または CSV のエクスポートを完全にサポートします。Ignite UI for Angular [Excel ライブラリ](excel_library.md)には、クライアント マシンで Microsoft Excel を必要としない 300 以上の数式、テーブルサポート、条件付き書式、チャートの作成などが含まれます。</p>
     </div>
 </div>

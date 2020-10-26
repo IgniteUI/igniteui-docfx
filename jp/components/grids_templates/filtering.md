@@ -406,10 +406,10 @@ $custom-grid: igx-grid-theme(
 
 ```scss
 $dark-input-group: igx-input-group-theme(
-    $box-background: #292826,
-    $idle-text-color: #FFCD0F,
-    $focused-text-color: #FFCD0F,
-    $filled-text-color: #FFCD0F
+    $box-background: #FFCD0F,
+    $idle-text-color: #292826,
+    $focused-text-color: #292826,
+    $filled-text-color: #292826
 );
 
 $dark-button: igx-button-theme(
@@ -482,10 +482,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "primary", 400),
-    $idle-text-color: igx-color($dark-palette, "secondary", 400),
-    $focused-text-color: igx-color($dark-palette, "secondary", 400),
-    $filled-text-color: igx-color($dark-palette, "secondary", 400)
+    $box-background: igx-color($dark-palette, "secondary", 400),
+    $idle-text-color: igx-color($dark-palette, "primary", 400),
+    $focused-text-color: igx-color($dark-palette, "primary", 400),
+    $filled-text-color: igx-color($dark-palette, "primary", 400)
 );
 
 $dark-button: igx-button-theme(
@@ -528,16 +528,16 @@ $custom-grid-schema: extend($_light-grid,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("primary", 400)
+            igx-color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         )
     )
 );
