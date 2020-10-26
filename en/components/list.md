@@ -11,7 +11,7 @@ The List element is extremely useful when presenting a group of items. You can c
 The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
 <div class="divider"></div>
 
-## Angular grid list example
+## Angular List Example
 
 <div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
