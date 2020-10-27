@@ -59,7 +59,11 @@
         "sitemap": {
             "baseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
             "changefreq": "weekly",
+            "priority": 0.7,
             "fileOptions":{
+                "**/grid/**": {
+                    "priority": 0.8
+                },
                 "**/grid.md": {
                     "priority": 0.9
                 },
