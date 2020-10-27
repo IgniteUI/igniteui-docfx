@@ -9,7 +9,7 @@ Pagination is used to split a large set of data into a sequence of pages that ha
 
 ### Angular Pagination Example
 
-The following example represents @@igComponent pagination with options like sorting and items per page.The user can also quickly scroll through the @@igComponent pages via Go to last page and Go to first page buttons.
+The following example represents @@igComponent pagination and exposes the options usage of `items per page` and how paging can be enabled. The user can also quickly navigate through the @@igComponent pages via "Go to last page" and "Go to first page" buttons.
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
