@@ -5,11 +5,11 @@ _keywords: angular pagination, igniteui for angular, infragistics
 ---
 
 # Angular @@igComponent Pagination
-Pagination is used to split large set of data into a sequence of pages that have similar content.Angular table pagination improves user experience and data interaction.@@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
+Pagination is used to split a large set of data into a sequence of pages that have similar content. Angular table pagination improves user experience and data interaction. @@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in the @@igComponent supports template for custom pages.
 
 ### Angular Pagination Example
 
-The following example represents @@igComponent pagination with options like sorting and items per page.The user can also quickly scroll through the @@igComponent pages via Go to last page and Go to first page buttons.
+The following example represents @@igComponent pagination and exposes the options usage of `items per page` and how paging can be enabled. The user can also quickly navigate through the @@igComponent pages via "Go to last page" and "Go to first page" buttons.
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
