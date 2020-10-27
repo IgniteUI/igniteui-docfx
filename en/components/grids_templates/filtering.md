@@ -23,7 +23,7 @@ _canonicalLink: grid/filtering
 }
 
 # Angular @@igComponent Filtering
-_IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel_style_filtering.md) and [Advanced filtering](advanced_filtering.md) which enable you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound._
+IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel_style_filtering.md) and [Advanced filtering](advanced_filtering.md) which enable you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 
 
 
