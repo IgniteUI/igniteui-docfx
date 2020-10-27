@@ -11,5 +11,5 @@
 	</metadata>
 	<files>
 		<file src="$langFolder$\_site\**\*.*" target="\" />
-		<file src="web.config" target="" />
+		<!--<file src="web.config" target="" />-->
 	</files></package>
