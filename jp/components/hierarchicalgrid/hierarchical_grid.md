@@ -5,11 +5,11 @@ _keywords: Angular データ グリッド, igniteui for angular, インフラジ
 _language: ja
 ---
 
-## 階層グリッド
+# 階層グリッド
 
 <p class="highlight">Ignite UI for Angular 階層データ グリッド は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。マテリアル テーブル ベースの UI グリッドにより、階層データの表示がさらに簡単できれいになりました。</p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height:520px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -21,7 +21,7 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-### 依存関係
+## 依存関係
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -57,12 +57,12 @@ export class AppModule {}
 public hgrid1: IgxHierarchicalGridComponent;
 ```
 
-### データ バインディング
+## データ バインディング
 
 **igx-hierarchical-grid** は、**igx-grid** から派生し、ほとんどの機能を共有します。主要な違いは階層で複数レベルを定義できることです。**Igx-row-island** と呼ばれる **Igx-hierarchical-grid** の定義内の個別のタグで設定されます。**igx-row-island** コンポーネントは、特定レベルの各子グリッドの設定を定義します。レベルごとの複数行アイランドがサポートされます。
 階層グリッドで 2 通りのデータ バインドがサポートされます。 
 
-#### 1.階層データの使用
+### 階層データの使用
 
 アプリケーションが階層データ全体をオブジェクトの子配列を参照するオブジェクトの配列として読み込む場合、Hierarchical Grid を設定して読み込み、自動的にバインドすることができます。以下はプロパティ構造の階層データソースのプロパティの例です。
 
@@ -111,7 +111,7 @@ export const singers = [{
 > [!NOTE]
 > `data` の代わりにユーザーは、データを自動的に設定するめの読み込みに **igx-hierarchical-grid** が必要な `key` のみ設定します。
 
-#### 2.ロードオンデマンドの使用
+### ロードオンデマンドの使用
 
 ほとんどのアプリケーションがはじめに最小限のデータを読み込むようでざいんされているため、結果的に読み込み時間が短くなります。このような場合、**igx-hierarchical-grid** を設定してユーザーが作成したサービスでデータのオンデマンド フィードを可能にします。以下の設定は、特別な `@Output` と新しい loading-in-progress テンプレートでロードオンデマンドのすべての機能が提供されます。
 
@@ -195,7 +195,7 @@ export class RemoteLoDService {
     }
 }
 ```
-### 機能
+## 機能
 
 グリッド機能を有効にして **igx-row-island** マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
 
@@ -236,38 +236,37 @@ export class RemoteLoDService {
 - ナビゲーション
     up/down へ移動するときに next/prev 要素が子グリッドの場合、ナビゲーションが関連子グリッド内で継続され、関連セルが選択済みにマークされ、フォーカスされます。子セルが現在の表示ビューポート以外にある場合にビューへスクロールされるため、選択したセルが常に表示されます。
 
-
-#### "すべて縮小" ボタン
+## [すべて縮小] ボタン
 
 左上の角にある [すべて縮小] ボタンを押して Hierarchical Grid で展開されてる行を縮小できます。更に他のグリッドを含む各子グリッドと Hierarchical Grid にも同様のボタンがあり、階層の特定のグリッドのみ縮小することができます。 
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
-サイズ変更
+## サイズ変更
 
 詳細については、[Grid Sizing](sizing.md) トピックをご覧ください。
 
-### CRUD 操作
+## CRUD 操作
 
 > [!NOTE]
 > フラットな Data Grid と行アイランドの各インスタンスの重要な違いは、同じトランザクション サービス インスタンスがあり、同じトランザクション ログを蓄積する点です。CRUD 機能を有効にするには、`IgxHierarchicalTransactionServiceFactory` を注入する必要があります。
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
 
-### スタイル設定
+## スタイル設定
 
 igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
 
-#### グローバル テーマのインポート   
+### グローバル テーマのインポート   
 階層グリッドのカスタマイズは、すべてのスタイリング機能と mixins が配置されている `index` ファイルをインポートする必要があります。 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### カスタム テーマの定義
+### カスタム テーマの定義
 次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
  >[!NOTE]
@@ -289,7 +288,7 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-#### カスタム カラー パレットの定義
+### カスタム カラー パレットの定義
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
 `Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
 
@@ -318,7 +317,7 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-#### カスタム スキーマの定義
+### カスタム スキーマの定義
 さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
 ```scss
@@ -347,14 +346,14 @@ $custom-theme: igx-grid-theme(
 );
 ```   
 
-#### カスタム テーマの適用
+### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
 
 ```scss
 @include igx-grid($custom-theme);
 ```
 
-#### スコープ コンポーネント テーマ
+### スコープ コンポーネント テーマ
 
 カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
 
@@ -373,7 +372,7 @@ $custom-theme: igx-grid-theme(
 }
 ```   
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:505px">
     <iframe id="hierarchical-grid-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -382,7 +381,7 @@ $custom-theme: igx-grid-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### 既知の問題と制限
+## 既知の問題と制限
 
 |制限|説明|
 |--- |--- |
@@ -402,7 +401,7 @@ $custom-theme: igx-grid-theme(
 * [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [グリッド サイズ変更](sizing.md)
