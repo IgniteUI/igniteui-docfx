@@ -5,7 +5,7 @@ _keywords: angular pagination, igniteui for angular, infragistics
 ---
 
 # Angular @@igComponent Pagination
-Pagination is used to split large set of data into a sequence of pages that have similar content.Angular table pagination improves user experience and data interaction.@@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in @@igComponent supports template for custom pages.
+Pagination is used to split a large set of data into a sequence of pages that have similar content. Angular table pagination improves user experience and data interaction. @@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in the @@igComponent supports template for custom pages.
 
 ### Angular Pagination Example
 
