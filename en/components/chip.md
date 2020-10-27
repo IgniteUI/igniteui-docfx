@@ -456,6 +456,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ## Known Issues and Limitations
 
 - Using the Chips Area component on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+
     ```typescript
     import 'core-js/es7/array';
     ```
