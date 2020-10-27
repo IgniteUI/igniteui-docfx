@@ -57,7 +57,55 @@
         "disableGitFeatures": true,
         "sitemap": {
             "baseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
-            "changefreq": "weekly"
+            "changefreq": "weekly",
+            "priority": 0.7,
+            "fileOptions":{
+                "**/grid/**": {
+                    "priority": 0.8
+                },
+                "**/grid.md": {
+                    "priority": 0.9
+                },
+                "**/hierarchical_grid.md": {
+                    "priority": 0.9
+                },
+                "**/tree_grid.md": {
+                    "priority": 0.9
+                },
+                "**/grids_and_lists.md": {
+                    "priority": 0.9
+                },
+                "**/combo.md": {
+                    "priority": 0.9
+                },
+                "**/spreadsheet_overview.md": {
+                    "priority": 0.9
+                },
+                "**/category-chart.md": {
+                    "priority": 0.9
+                },
+                "**/data-chart.md": {
+                    "priority": 0.9
+                },
+                "**/financial-chart.md": {
+                    "priority": 0.9
+                },
+                "**/ignite-ui-licensing.md": {
+                    "priority": 0.9
+                },
+                "**/getting_started.md": {
+                    "priority": 0.9
+                },
+                "**/accessibility-compliance.md": {
+                    "priority": 0.9
+                },
+                "**/ssr-rendering.md": {
+                    "priority": 0.9
+                },
+                "**/data-analysis.md": {
+                    "priority": 0.9
+                }
+            }
         }
     }
 }
