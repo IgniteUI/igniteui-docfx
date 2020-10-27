@@ -8,7 +8,6 @@ _keywords: angular list, angular component, ignite ui for angular, angular list 
 
 The List element is extremely useful when presenting a group of items. You can create a simple list of textual items, or a more complex one, containing an array of different layout elements.
 The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component.
-<div class="divider"></div>
 
 ## Angular List Example
 The following example represents list populated with contacts with a name and a phone number, displayed under the name.The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the experience and add some functionality like picture avatar and icon for favorite a contact.In addition, the List View provides possibility of sorting achieved by using our filtering pipe.
