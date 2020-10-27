@@ -7,7 +7,7 @@ _keywords: angular list, angular component, ignite ui for angular, angular list 
 # Angular List View
 
 The List element is extremely useful when presenting a group of items. You can create a simple list of textual items, or a more complex one, containing an array of different layout elements.
-The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
+The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component.
 <div class="divider"></div>
 
 ## Angular List Example
