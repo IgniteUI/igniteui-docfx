@@ -27,7 +27,7 @@ _IgniteUI for Angular @@igComponent component provides three different filtering
 
 
 
-## Demo
+## Angular Filter Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
