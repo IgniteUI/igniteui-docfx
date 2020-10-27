@@ -24,7 +24,7 @@ _keywords: data select, igniteui for angular, infragistics
 _With Ignite UI for Angular @@igComponent you can easily select data by using variety of events, rich API or with simple mouse interactions like single select._
 
 
-## Angular Select Example
+## Angular Grid Selection Example
 
 <div class="divider--half"></div>
 
