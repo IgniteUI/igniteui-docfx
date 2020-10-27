@@ -201,7 +201,6 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 <div class="divider--half"></div>
 
-
 ## Hiding the Overlay
 
 The [`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method removes the content from the overlay and, if applicable, re-attaches it to it's original location in the DOM. 
