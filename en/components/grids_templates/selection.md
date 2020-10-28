@@ -26,6 +26,7 @@ With Ignite UI for Angular @@igComponent you can easily select data by using var
 
 ## Angular Grid Selection Example
 
+The sample below demonstrates @@igComponent's **cell selection** behavior.
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
