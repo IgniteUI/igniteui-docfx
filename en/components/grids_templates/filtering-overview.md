@@ -6,7 +6,7 @@ _keywords: angular filter, ignite ui for angular, infragistics
 
 # @@igComponent Filtering Overview
 
-IgniteUI for Angular @@igComponent component provides three different filtering types - [Quick filtering](filtering.md), [Excel style filtering](excel_style_filtering.md) and [Advanced filtering](advanced_filtering.md) which enable you to display only the records which meet specified criteria.
+IgniteUI for Angular @@igComponent component provides three different filtering types - [Quick filtering](filtering.md), [Excel style filtering](excel-style-filtering.md) and [Advanced filtering](advanced-filtering.md) which enable you to display only the records which meet specified criteria.
 
 ## Setup
 In order to specify if filtering is enabled and which filtering mode should be used, the @@igComponent exposes the following boolean properties - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering), [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering), [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) and [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable).
@@ -35,7 +35,7 @@ Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 </@@igSelector>
 ```
 
-To enable the [Advanced filtering](advanced_filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
+To enable the [Advanced filtering](advanced-filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
 
 ```html
 <@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
@@ -60,9 +60,9 @@ To enable the [Advanced filtering](advanced_filtering.md) however, you need to s
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

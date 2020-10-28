@@ -210,7 +210,7 @@ Every component has its own theme.
 
 To get the `igxAutocomplete` styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
 
-Take a look at the [`igxInputGroup`](input_group.md#styling) and the [`igxDropdown`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
+Take a look at the [`igxInputGroup`](input-group.md#styling) and the [`igxDropdown`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
 ## API Reference
 <div class="divider--half"></div>
@@ -224,9 +224,9 @@ Take a look at the [`igxInputGroup`](input_group.md#styling) and the [`igxDropdo
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [IgxDropDown](drop_down.md)
-* [IgxInputGroup](input_group.md)
-* [Template Driven Forms Integration](input_group.md)
+* [IgxDropDown](drop-down.md)
+* [IgxInputGroup](input-group.md)
+* [Template Driven Forms Integration](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 
