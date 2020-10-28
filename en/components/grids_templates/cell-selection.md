@@ -10,6 +10,7 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/cell-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/cell-selection
 ---
 }
 

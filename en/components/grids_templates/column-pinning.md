@@ -10,6 +10,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 title: Angular Tree Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
 _description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock column or change column order with rich and easy to use API
 _keywords: lock column, ignite ui for angular, infragistics 
+_canonicalLink: grid/column-pinning
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 title: Angular Hierarchical Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
 _description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock column or change column order with rich and easy to use API
 _keywords: lock column, ignite ui for angular, infragistics 
+_canonicalLink: grid/column-pinning
 ---
 }
 

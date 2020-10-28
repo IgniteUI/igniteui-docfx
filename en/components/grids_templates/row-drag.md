@@ -10,6 +10,7 @@ _keywords: angular drag component, material component, ignite ui for angular, in
 title: Tree Grid Row Drag | Angular Grid & Diagram Component | Infragistics
 _description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_canonicalLink: grid/row-drag
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular drag component, material component, ignite ui for angular, in
 title: Hierarchical Grid Row Drag | Angular Grid & Diagram Component | Infragistics
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_canonicalLink: grid/row-drag
 ---
 }
 
