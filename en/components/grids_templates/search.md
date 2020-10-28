@@ -20,11 +20,13 @@ _keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 
-# @@igComponent Searching through virtualized content
+# Angular @@igComponent Searching through virtualized content
 
-While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
+Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent. 
 
-### Demo
+## Angular Search Example
+
+The following example represents @@igComponent with search input box that allows searching in all columns and rows, as well as specific filtering options for each column.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -52,7 +54,7 @@ While browsers natively provide content search functionality, most of the time t
 <!-- TODO -->
 }
 
-## Usage
+## Angular Search Usage
 
 ### Grid setup
 Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
@@ -127,7 +129,7 @@ public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
 
-### Search input box
+### Angular search box input
 
 Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
