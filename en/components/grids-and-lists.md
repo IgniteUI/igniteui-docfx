@@ -432,7 +432,7 @@ There are multiple options to get access to our award-winning support at Infragi
 <div class="divider--half"></div>
         <ul>
             <li>Start at the Angular <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/support/ignite-ui-angular-help">Support</a> home page</li>
-            <li>Read the Angular [Documentation](general/getting_started.md) and experiment with Angular Samples</li>
+            <li>Read the Angular [Documentation](general/getting-started.md) and experiment with Angular Samples</li>
             <li>Read the<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/community/blogs/tags/Ignite UI for Angular"> Angular Blogs</a> to stay up to date</li>
             <li>Submit a <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/grid-table"> Support Case</a></li>
             <li>Learn from the Angular <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">Reference Applications</a></li>
@@ -491,7 +491,7 @@ If you are developing applications on multiple platforms, consider our complete 
         <div class="faqs-accordion h4">How do I Install Angular and the Infragistics Ignite UI for Angular Data Grid control?</div>
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
-        To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting_started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
+        To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting-started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
         <div class="divider--half"></div>
         </div>
     </div>

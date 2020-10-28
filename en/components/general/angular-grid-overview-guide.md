@@ -24,7 +24,7 @@ You can install Ignite UI for Angular with either the Angular CLI or with the [I
 
 `ng add igniteui-angular` 
 
-This is the preferred option when you need to add Ignite UI for Angular to an [existing Angular application](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html#installing-ignite-ui-for-angular "Installing Ignite UI for Angular"). 
+This is the preferred option when you need to add Ignite UI for Angular to an [existing Angular application](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html#installing-ignite-ui-for-angular "Installing Ignite UI for Angular"). 
 
 If you’re creating a new application from scratch, we recommend the following approach: 
 
