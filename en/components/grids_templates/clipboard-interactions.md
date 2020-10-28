@@ -63,7 +63,7 @@ Copy behavior is working with the default interaction defined by the browser and
 
 - The copy behavior is disabled while the grid is in edit mode.
 - The current version of this feature covers only the `copy` from grid behavior. Later on we plan to expose `paste` within grid behavior.
-@@if (igxName === 'IgxGrid') { You can use a custom paste handler in order to configure `paste` behavior, have a look at our [Paste from Excel topic](paste_excel.md). }
+@@if (igxName === 'IgxGrid') { You can use a custom paste handler in order to configure `paste` behavior, have a look at our [Paste from Excel topic](paste-excel.md). }
 
 ## API Usage
 We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) @Input property, which handles the following options:

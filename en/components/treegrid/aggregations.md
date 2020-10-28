@@ -80,7 +80,7 @@ public groupColumnKey = "Categories";
 
 <div class="divider--half"></div>
 
-* [TreeGrid overview](tree_grid.md)
+* [TreeGrid overview](tree-grid.md)
 * [TreeGrid Summaries](summaries.md)
 * [Grid Summaries](../grid/summaries.md)
 

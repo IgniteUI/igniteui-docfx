@@ -22,7 +22,7 @@ The Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/ig
 
 ### Usage
 
-The Load on Demand feature is compatible with both types of Tree Grid data sources - [`primary and foreign keys`](tree_grid.md#primary-and-foreign-keys) or [`child collection`](tree_grid.md#child-collection). You only need to load the root level data in the Tree Grid and specify the necessary keys for one of the data source types. In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand).
+The Load on Demand feature is compatible with both types of Tree Grid data sources - [`primary and foreign keys`](tree-grid.md#primary-and-foreign-keys) or [`child collection`](tree-grid.md#child-collection). You only need to load the root level data in the Tree Grid and specify the necessary keys for one of the data source types. In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand).
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
@@ -79,7 +79,7 @@ If you want to provide your own custom loading indicator, you may create an ng-t
 
 <div class="divider--half"></div>
 
-* [Tree Grid overview](tree_grid.md)
+* [Tree Grid overview](tree-grid.md)
 * [Tree Grid Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>

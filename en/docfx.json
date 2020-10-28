@@ -67,10 +67,10 @@
                 "**/grid.md": {
                     "priority": 0.9
                 },
-                "**/hierarchical_grid.md": {
+                "**/hierarchical-grid.md": {
                     "priority": 0.9
                 },
-                "**/tree_grid.md": {
+                "**/tree-grid.md": {
                     "priority": 0.9
                 },
                 "**/grids_and_lists.md": {
