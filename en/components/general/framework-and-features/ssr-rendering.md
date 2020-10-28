@@ -141,5 +141,5 @@ npm run build:ssr && npm run serve:ssr
 * [Angular Universal guide](https://angular.io/guide/universal)
 * [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
 * [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Getting started with Ignite UI for Angular](../getting_started.md)
+* [Getting started with Ignite UI for Angular](../getting-started.md)
 * [Ignite UI CLI Guide](../cli/step-by-step-guide.md)

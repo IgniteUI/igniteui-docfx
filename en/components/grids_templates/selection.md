@@ -63,7 +63,7 @@ The sample below demonstrates @@igComponent's **cell selection** behavior.
 
 ## Angular Grid Selection Options
 
-IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
+IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row-selection.md), [Cell selection](cell-selection.md) and [Column selection](column-selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
 ### Angular Row Selection
 
@@ -72,7 +72,7 @@ Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.h
 - single - Selection of only one row within the @@igComponent would be available
 - multiple - multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused
 
-> Go to [Row selection topic](row_selection.md) for more information.
+> Go to [Row selection topic](row-selection.md) for more information.
 
 ### Angular Cell Selection
 
@@ -81,7 +81,7 @@ Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.
 - single - Selection of only one cell within the @@igComponent would be available.
 - multiple - Currently, this is the default state of the selection in the @@igComponent. Multi-cell selection is available by mouse dragging over the cells, after a left button mouse clicked continuously.
 
-> Go to [Cell selection topic](cell_selection.md) for more information.
+> Go to [Cell selection topic](cell-selection.md) for more information.
 
 ### Angular Column Selection
 
@@ -93,7 +93,7 @@ The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncompone
  - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>mouse click</kbd> over the column cells.
  - Range column selection - holding <kbd>shift</kbd> + <kbd>mouse click</kbd> selects everything in between.
 
-> Go to [Column selection topic](column_selection.md) for more information.
+> Go to [Column selection topic](column-selection.md) for more information.
 
 @@if (igxName === 'IgxGrid'){
 ## Grid Context Menu
@@ -211,15 +211,15 @@ The template we are going to use to combine the grid with the context menu:
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
-* [Row Selection](row_selection.md)
-* [Cell Selection](cell_selection.md)
+* [Row Selection](row-selection.md)
+* [Cell Selection](cell-selection.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
+* [Column Moving](column-moving.md)
 * [Virtualization and Performance](virtualization.md)
-@@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
+@@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
