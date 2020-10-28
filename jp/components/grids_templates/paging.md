@@ -5,10 +5,12 @@ _keywords: angular pagination, igniteui for angular, infragistics
 _language: ja
 ---
 
-# @@igComponent ページング
-@@igComponent のページングは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) で設定できます。その他の Angular Material テーブルと同様に、@@igComponent のページングはカスタム ページのテンプレートをサポートします。
+# Angular @@igComponent Pagination
+Pagination is used to split a large set of data into a sequence of pages that have similar content. Angular table pagination improves user experience and data interaction. @@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in the @@igComponent supports template for custom pages.
 
-### デモ
+### Angular Pagination の例
+
+The following example represents @@igComponent pagination and exposes the options usage of `items per page` and how paging can be enabled. The user can also quickly navigate through the @@igComponent pages via "Go to last page" and "Go to first page" buttons.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -49,7 +51,7 @@ _language: ja
 </@@igSelector>
 ```
 
-## テンプレート
+## Angular Pagination Template
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
@@ -94,10 +96,11 @@ this.@@igObjectRef.totalRecords = 30;
 @@if (igxName === 'IgxGrid') {
 ## グループ化によるページング
 
+Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
 ページングとグループ化の統合については、[グループ化](groupby.html#ページングによるグループ化)のトピックで説明しています。
 }
 
-## ページネータ コンポーネント
+## Reusable Paginator Component in Angular
 8.1.0 リリースでは、新しいコンポーネント `igx-paginator` が導入されました。このコンポーネントは、現在のページャーを置き換え、スタンドアロン コンポーネントとしても使用できます。
 `igx-paginator` は、ページングを詳細なカスタマイズが可能な入力および出力プロパティを公開します。
 
@@ -136,7 +139,7 @@ this.@@igObjectRef.totalRecords = 30;
 </ng-template>
 ```
 
-### デモ
+### ページネータ コンポネント デモ
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
@@ -150,7 +153,7 @@ this.@@igObjectRef.totalRecords = 30;
 
 ## リモート ページング
 
-@@igComponent はリモート ページングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#リモート-ページング) トピックで説明されています。
+Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`@@igComponent Remote Data Operations`](remote_data_operations.md#remote-paging) topic.
 
 
 @@if (igxName === 'IgxGrid') {
@@ -207,7 +210,7 @@ public ngOnInit(): void {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz デモ</button>
 </div>
 
-## スタイル設定
+## Pagination Styling in Angular
 
 ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -374,7 +377,7 @@ $dark-button: igx-button-theme(
 
 テーマを上記と同じ方法で含める必要があることに注意してください。
 @@if (igxName === 'IgxGrid'){
-### デモ
+### Pagination Style Example
 
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
