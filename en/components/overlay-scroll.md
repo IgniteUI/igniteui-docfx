@@ -90,8 +90,8 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 * [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
 
 ## Additional Resources
-* [Overlay Main Topic](overlay_main.md)
-* [Position strategies](overlay_position.md)
-* [Styling Topic](overlay_styling.md)
+* [Overlay Main Topic](overlay-main.md)
+* [Position strategies](overlay-position.md)
+* [Styling Topic](overlay-styling.md)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)

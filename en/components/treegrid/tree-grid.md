@@ -394,7 +394,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ```
 
 > [!NOTE]
-> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 

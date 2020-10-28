@@ -324,6 +324,6 @@ If you show the overlay in an outlet, and if the outlet is a child of an element
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Additional Resources
-* [Position Strategies](overlay_position.md)
-* [Scroll Strategies](overlay_scroll.md)
-* [Styling Topic](overlay_styling.md)
+* [Position Strategies](overlay-position.md)
+* [Scroll Strategies](overlay-scroll.md)
+* [Styling Topic](overlay-styling.md)

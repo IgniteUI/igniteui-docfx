@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Virtual Drop Down
 
-<p class="highlight">The Ignite UI for Angular Drop Down component can fully integrate with the [IgxForOf](for_of.md) directive in order to display a very large list of items for its selection.</p>
+<p class="highlight">The Ignite UI for Angular Drop Down component can fully integrate with the [IgxForOf](for-of.md) directive in order to display a very large list of items for its selection.</p>
 
 ## Demo
 <div class="sample-container loading" style="height:320px">

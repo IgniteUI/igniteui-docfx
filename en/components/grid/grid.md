@@ -694,7 +694,7 @@ See the [Grid Sizing](sizing.md) topic.
 | Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
 
 > [!NOTE]
-> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 

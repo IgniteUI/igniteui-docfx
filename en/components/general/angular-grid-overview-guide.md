@@ -6,7 +6,7 @@ _keywords: angular, angular app development, infragistics
 
 # A Complete Guide to Angular Grid and Angular App Development
 
-_Get to know the Angular Data Grid and how to use it [by checking out this informative section](../grids_and_lists.md#what-is-an-angular-data-grid) part of our Grid Overview topic._
+_Get to know the Angular Data Grid and how to use it [by checking out this informative section](../grids-and-lists.md#what-is-an-angular-data-grid) part of our Grid Overview topic._
 
 ### Ignite UI - Our Framework for Angular App Development 
 

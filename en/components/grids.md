@@ -445,7 +445,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <li>[Cell Copy and Paste](grid/clipboard-interactions.md)</li>
     <li>[Cell Styling](grid/conditional-cell-styling.md)</li>
     <li>[Grid-level Searching](grid/search.md)</li>
-    <li>[Export to Excel, CSV, TSV](exporter_excel.md)</li>
+    <li>[Export to Excel, CSV, TSV](exporter-excel.md)</li>
     <li>[Multi-Column Headers](grid/multi-column-headers.md)</li>
     <li>[Combo Box/Dropdown](combo.md)</li>
     <li>[ARIA/a11y Support](general/accessibility-compliance.md)</li>

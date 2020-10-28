@@ -130,7 +130,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 <div class="divider--half"></div>
 
 ## Input Group
-The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the separate topic [here](input_group.md).
+The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the separate topic [here](input-group.md).
 
 ## API References
 <div class="divider--half"></div>
@@ -143,7 +143,7 @@ The Ignite UI for Angular Input Group component helps developers to create easy-
 <div class="divider--half"></div>
 
 Related topics:
-* [Input Group](input_group.md)
+* [Input Group](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

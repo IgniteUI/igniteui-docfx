@@ -37,7 +37,7 @@ export class AppModule {}
 ```
 
 
-To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input_group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
+To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
 
 ### Binding 
 A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
@@ -134,7 +134,7 @@ Template-driven form example:
 ```
 
 ### Text Selection
-You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
+You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label-input.md#focus--text-selection).
 
 ```html
 <igx-input-group>
@@ -145,7 +145,7 @@ You can force the component to select all of the input text on focus using [`igx
 > NOTE: In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxDateTimeEditor` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 ## Styling 
-For details check out the [`Input Group styling guide`](input_group.md#styling).
+For details check out the [`Input Group styling guide`](input-group.md#styling).
 <div class="divider--half"></div>
 
 ## API References
@@ -161,8 +161,8 @@ For details check out the [`Input Group styling guide`](input_group.md#styling).
 ## Additional Resources
 Related topics:
 * [Mask](mask.md)
-* [Label & Input](label_input.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Label & Input](label-input.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
 
 
 Our community is active and always welcoming to new ideas.

@@ -348,7 +348,7 @@ We can also allow the user to choose the display order of the columns in the col
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the @@igComponent)
 
-Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio_button.md) module.
+Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) module.
 
 ```typescript
 // app.module.ts
@@ -619,7 +619,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ## API References
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-In this article we learned how to use the built-in column hiding UI in the @@igComponent's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](../radio_button.md) button.
+In this article we learned how to use the built-in column hiding UI in the @@igComponent's toolbar and we defined it as a separate component as well. We introduced a UI that allows the user to choose between different column orders and we set our own custom title and filter prompt texts. We also used an additional Ignite UI for Angular component - the [**IgxRadio**](../radio-button.md) button.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 In this article we learned how to use the built-in column hiding UI in the @@igComponent's toolbar.

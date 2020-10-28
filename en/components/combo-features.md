@@ -101,7 +101,7 @@ export class ComboDemo implements OnInit {
 > [!Note]
 > If the `displayKey` property is omitted then the `valueKey` entity will be used instead.
 
-Follow the [Combo Remote Binding topic](combo_remote.md) for more details about binding the combo component with remote data.
+Follow the [Combo Remote Binding topic](combo-remote.md) for more details about binding the combo component with remote data.
 
 ### Custom Overlay Settings
 The combo component allows users to change the way a list of items is shown. This can be done by defining [Custom OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the [Combo's OverlaySettings]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) input:
@@ -125,7 +125,7 @@ export class CustomOverlayCombo {
 <igx-combo [data]="items" [overlaySettings]="customSettings"></igx-combo>
 ```
 
-If everything is set up correctly, the combo's list will display centered, using the [GlobalPositionStrategy](overlay_position.md#global):
+If everything is set up correctly, the combo's list will display centered, using the [GlobalPositionStrategy](overlay-position.md#global):
 
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -200,11 +200,11 @@ Additional components and/or directives with relative APIs that were used:
 <div class="divider--half"></div>
 
 * [Combo Component](combo.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.
 

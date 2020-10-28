@@ -503,7 +503,7 @@ This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Com
 
 ### Styling Demo
 
-In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input_group.md#styling), [`igx-datepicker`](../date_picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling)
+In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input-group.md#styling), [`igx-datepicker`](../date-picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling)
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

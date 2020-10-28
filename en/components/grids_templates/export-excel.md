@@ -109,7 +109,7 @@ If all went well, you should see the @@igxName component and a button under it. 
 
 ## Export All Data
 
-There are some cases when you might be using remote operations like *Paging* and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter_excel.html#excel-exporter) and pass the whole data collection, if available. Example:
+There are some cases when you might be using remote operations like *Paging* and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter-excel.html#excel-exporter) and pass the whole data collection, if available. Example:
 
 ```ts
 public exportButtonHandler() {

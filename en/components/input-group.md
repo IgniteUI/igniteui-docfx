@@ -45,7 +45,7 @@ export class AppModule {}
 ## Examples
 
 ### Label & Input
-You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
+You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label-input.md).
 
 ### Prefix & Suffix
 The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can contain or be attached to HTML elements, strings, icons or even other components. In the following sample we will create a new input field with a string **prefix** and an icon **suffix**:
@@ -92,15 +92,15 @@ An example of setting a specific type declaratively:
 <igx-input-group type="border">
 ```
 
-Using the [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) injection token allows to specify a type on an application level for all input-group instances. It provides an easy way to style all related components at once.
-To set the type, use the [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) injection token to create a DI provider.
+Using the [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) injection token allows to specify a type on an application level for all input-group instances. It provides an easy way to style all related components at once.
+To set the type, use the [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) injection token to create a DI provider.
 
 ```typescript
-providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
+providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 ```
 
 >Note:
->[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
 >Most of the `igniteui-angular` form controls use input-group component internally, or allow for a custom template. Setting a global token will affect these components as well.
 
 
@@ -186,8 +186,8 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 
 Related topics:
 
-* [Label & Input](label_input.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Label & Input](label-input.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
 
 Our community is active and always welcoming to new ideas.
 

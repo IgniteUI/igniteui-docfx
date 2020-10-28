@@ -84,7 +84,7 @@ In this example, we'll handle dragging a row from one grid to another, removing 
 ### Drop Areas
 
 Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
-We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag_drop.md).
+We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag-drop.md).
 
 First we need to import the `IgxDragDropModule` in our app module:
 

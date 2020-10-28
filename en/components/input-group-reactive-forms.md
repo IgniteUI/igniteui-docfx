@@ -116,7 +116,7 @@ Related topics:
 
 * [Combo](combo.md)
 * [Select](select.md)
-* [Input Group](input_group.md)
+* [Input Group](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 

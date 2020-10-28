@@ -371,7 +371,7 @@ $my-time-picker-theme: igx-time-picker-theme(
 >[!NOTE]
 >In order to style any additional components that are used as part of the time picker window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
-Since the time picker window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the time picker window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+Since the time picker window uses the [`IgxOverlayService`](overlay-main.md), in order for our custom theme to reach down the time picker window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
 The items in our time picker **are not** descendants of our component `host` - they are currently being displayed in the default overlay outlet, at the end of the `document` body. Changing this is done by making use of the [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) property in the `overlaySettings`. The `outlet` controls where the overlay container should be rendered.
 
@@ -393,7 +393,7 @@ export class TimepickerStylingComponent {
 Now, the time picker's items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
 >[!NOTE]
->In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+>In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay-main.md), you can take a look at this [link](overlay-main.md#styling).
 
 ### Including Themes
 

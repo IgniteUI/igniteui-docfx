@@ -105,11 +105,11 @@ Additional components and/or directives with relative APIs that were used:
 <div class="divider--half"></div>
 
 * [Combo Component](combo.md)
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Combo Features](combo-features.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
 
 Our community is active and always welcoming to new ideas.
 
