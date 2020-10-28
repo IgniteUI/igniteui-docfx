@@ -51,7 +51,7 @@ The column selection feature can be enabled through the [`columnSelection`]({env
 The default selection mode is `none`. If set to `single` or `multiple` all of the presented columns will be [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable). With that being said, in order to select a column, we just need to click on one, which will mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected). If the column is not selectable, no selection style will be applied on the header, while hovering.
 
 > [!NOTE]
-> [`Multi-column Headers`](multi_column_headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of its children has the selection behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all of its `selectable` descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
+> [`Multi-column Headers`](multi-column-headers.md) don't reflect on the [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) input. The [`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) is [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable), if at least one of its children has the selection behaviour enabled. In addition, the component is marked as [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) if all of its `selectable` descendents are [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected).
 
 @@if (igxName === 'IgxGrid') {
 *Under _Country Information_ Column Group only column _City_ and _Postal code_ are selectable.
@@ -97,7 +97,7 @@ Before diving into the styling options, the core module and all component mixins
 ```
 
 >[!NOTE]
->Please note that [`row selection`](row_selection.md) and [`column selection`](column_selection.md) can't be manipulated   independently. They depend on the same `variables`.
+>Please note that [`row selection`](row-selection.md) and [`column selection`](column-selection.md) can't be manipulated   independently. They depend on the same `variables`.
 
 With that being said, let's move on and change the **selection** and **hover** styles.<br/>
 Following the simplest approach, let's define our custom **theme**.
@@ -198,14 +198,14 @@ The column selection UI has a few more APIs to explore, which are listed below.
 
 * [@@igComponent overview](@@igMainTopic.md)
 * [Selection](selection.md)
-* [Cell selection](cell_selection.md)
+* [Cell selection](cell-selection.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>

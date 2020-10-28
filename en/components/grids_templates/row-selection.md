@@ -499,14 +499,14 @@ This demo prevents some rows from being selected using the `onRowSelectionChange
 
 * [@@igComponent overview](@@igMainTopic.md)
 * [Selection](selection.md)
-* [Cell selection](cell_selection.md)
+* [Cell selection](cell-selection.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>

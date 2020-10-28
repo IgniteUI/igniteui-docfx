@@ -43,9 +43,9 @@ The @@igComponent component in Ignite UI for Angular is able to handle thousands
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>
@@ -84,7 +84,7 @@ Our community is active and always welcoming to new ideas.
 <div class="divider--half"></div>
 
 * [Data Grid](../grid/grid.md)
-* [Row Editing](row_editing.md)
+* [Row Editing](row-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

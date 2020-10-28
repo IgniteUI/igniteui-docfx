@@ -333,8 +333,8 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}
 

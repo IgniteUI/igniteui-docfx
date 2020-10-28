@@ -148,7 +148,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 ```
 }
 
-Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](column_moving.md), [`pinning`](column_pinning.md) and [`hiding`](column_hiding.md).
+Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](column-moving.md), [`pinning`](column-pinning.md) and [`hiding`](column-hiding.md).
 > [!NOTE]
 > When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
 > Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
@@ -426,7 +426,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Resizing](column_resizing.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 @@if (igxName === 'IgxGrid') {* [Group by](groupby.md)}
 

@@ -175,7 +175,7 @@ The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/i
 
 ## Behavior
 
-The add row UI has the same behavior as the row editing one as they are designed to provide a consistent editing experience to end users. Please, refer to the [@@igComponent Row Editing](row_editing.md) topic for more information.
+The add row UI has the same behavior as the row editing one as they are designed to provide a consistent editing experience to end users. Please, refer to the [@@igComponent Row Editing](row-editing.md) topic for more information.
 
 After a new row is added through the row adding UI, its position and/or visibility is determined by the sorting, filtering and grouping state of the @@igComponent. In a @@igComponent that does not have any of these states applied, it appears as the last record. A snackbar is briefly displayed containing a button the end user may use to scroll the @@igComponent to its position if it is not in view.
 
@@ -219,7 +219,7 @@ This will ensure that the remotely generated ids are always reflected in the loc
 
 The row adding UI comprises the buttons in the `IgxActionStrip` editing actions, the editing editors and overlay, as well as the snackbar which allows end users to scroll to the newly added row. To style these components you may refer to these comprehensive guides in their respective topics:
 
-- [@@igComponent Row Editing](row_editing.md#styling)
+- [@@igComponent Row Editing](row-editing.md#styling)
 - [IgxSnackbar](../snackbar.html#styling)
 - [IgxActionStrip](../action-strip.md#styling)
 
@@ -241,7 +241,7 @@ The row adding UI comprises the buttons in the `IgxActionStrip` editing actions,
 
 * [@@igComponent Overview](@@igMainTopic.md)
 * [@@igComponent Editing](editing.md)
-* [@@igComponent Transactions](batch_editing.md)
+* [@@igComponent Transactions](batch-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

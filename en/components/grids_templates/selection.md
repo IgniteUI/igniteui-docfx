@@ -22,21 +22,21 @@ _keywords: data select, igniteui for angular, infragistics
 
 # @@igComponent Selection Overview
 
-IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row_selection.md), [Cell selection](cell_selection.md) and [Column selection](column_selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
+IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row-selection.md), [Cell selection](cell-selection.md) and [Column selection](column-selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
 Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
 - single - Selection of only one row within the @@igComponent would be available
 - multiple - multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused
 
-> Go to [Row selection topic](row_selection.md) for more information.
+> Go to [Row selection topic](row-selection.md) for more information.
 
 Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) enables you to specify the following options:
 - none - Cell selection would be disabled for the @@igComponent
 - single - Selection of only one cell within the @@igComponent would be available.
 - multiple - Currently, this is the default state of the selection in the @@igComponent. Multi-cell selection is available by mouse dragging over the cells, after a left button mouse clicked continuously.
 
-> Go to [Cell selection topic](cell_selection.md) for more information.
+> Go to [Cell selection topic](cell-selection.md) for more information.
 
 The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options for each **column**:
 - false - the corresponding column selection will be disabled for the @@igComponent
@@ -46,7 +46,7 @@ The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncompone
  - Multi column selection - holding <kbd>ctrl</kbd> + <kbd>mouse click</kbd> over the column cells.
  - Range column selection - holding <kbd>shift</kbd> + <kbd>mouse click</kbd> selects everything in between.
 
-> Go to [Column selection topic](column_selection.md) for more information.
+> Go to [Column selection topic](column-selection.md) for more information.
 
 ## Showcase Application
 
@@ -167,13 +167,13 @@ The template we are going to use to combine the grid with the context menu:
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
-* [Row Selection](row_selection.md)
-* [Cell Selection](cell_selection.md)
+* [Row Selection](row-selection.md)
+* [Cell Selection](cell-selection.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
+* [Column Moving](column-moving.md)
 * [Virtualization and Performance](virtualization.md)
 @@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}
 

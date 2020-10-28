@@ -232,17 +232,17 @@ This example demonstrates a few of the data grid’s key features:
 <ul id="features-list">
 <li>[**Virtualized Rows and Columns**](grid/virtualization.md) so you can load millions of records</li>
 
-<li>[**Inline Editing**](grid/row_editing.md) with Cell, Row, and [**Batch**](grid/batch_editing.md) Update options</li>
+<li>[**Inline Editing**](grid/row-editing.md) with Cell, Row, and [**Batch**](grid/batch-editing.md) Update options</li>
 
-<li>[**Excel-style Filtering**](grid/excel_style_filtering.md) and full [**Excel Keyboard Navigation**](grid/keyboard_navigation.md) capability</li>
+<li>[**Excel-style Filtering**](grid/excel-style-filtering.md) and full [**Excel Keyboard Navigation**](grid/keyboard-navigation.md) capability</li>
 
 <li>Interactive [**Outlook-style Grouping**](grid/groupby.md)</li>
 
 <li>[**Column Summaries**](grid/summaries.md) based on any data in a grid cell or column</li>
 
-<li>[**Export to Excel**](grid/export_excel.md), including [**Data Visualization**](excel_library_working_with_charts.md)</li>
+<li>[**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel_library_working_with_charts.md)</li>
 
-<li>[**Display Density**](grid/display_density.md) to adjust the height and sizing of the rows</li>
+<li>[**Display Density**](grid/display-density.md) to adjust the height and sizing of the rows</li>
 
 <li>Column templates like [**Sparkline Column**](sparkline.md#demo) and Image Column</li>
 </ul>
@@ -282,7 +282,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of filtering capabilities within Angular Data Grid" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-filtering-ui-768.gif?v=201811121733" alt="Animation of filtering capabilities within Angular Data Grid"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Angular Grid Paging, Sorting, Filtering, & Searching<a class="anchorjs-link" href="#angular-grid-paging-sorting-filtering--searching" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>Allow users to navigate your data set with our default [pager](grid/paging.md) or create your own template to give your own paging experience. With complete support for single and multi-column sorting, full-text [search](grid/search.md) on the grid, and several [advanced filtering](grid/advanced_filtering.md) options, including data-type based [Microsoft Excel-style Filtering](grid/excel_style_filtering.md).</p>
+        <p>Allow users to navigate your data set with our default [pager](grid/paging.md) or create your own template to give your own paging experience. With complete support for single and multi-column sorting, full-text [search](grid/search.md) on the grid, and several [advanced filtering](grid/advanced-filtering.md) options, including data-type based [Microsoft Excel-style Filtering](grid/excel-style-filtering.md).</p>
     </div>
 </div>
 
@@ -302,7 +302,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of keyboard navigation functionality" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-keyboard-navigation-1100.gif?v=201808021304" alt="Animation of keyboard navigation functionality within Angular Data Grid"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Keyboard Navigation & Row/Cell Selection in the Angular Grid<a class="anchorjs-link" href="#keyboard-navigation--rowcell-selection-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>Ensure accessibility compliance and improve usability, enabling Excel-like [keyboard navigation](grid/keyboard_navigation.md) in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. <a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">Learn about our most recent enhancements to this feature</a>.</p>
+        <p>Ensure accessibility compliance and improve usability, enabling Excel-like [keyboard navigation](grid/keyboard-navigation.md) in the Angular data grid, using the up, down, right, left, tab, and Enter keys. You can toggle single or multiple row selection in the Angular grid using the mouse or keyboard to select or de-select full rows, or use the built-in select all / de-select all checkbox in the grid toolbar to work with row selection. <a class="no-external-icon" href="https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility-">Learn about our most recent enhancements to this feature</a>.</p>
     </div>
 </div>
 
@@ -321,7 +321,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Grid of data with column grouping, pinning and summary features enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg?v=201808021304" alt="Grid of data with column grouping, pinning and summary features enabled for Angular Data Grid component"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Column Grouping, Pinning, Summaries, & Moving in the Angular Grid<a class="anchorjs-link" href="#column-grouping-pinning-summaries--moving-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>Group columns or pre-set column groups via mouse interaction, touch or our API, with support for built-in column [summaries](grid/summaries.md) or custom summary templates. Enable users to interactively [hide](grid/column_hiding.md) or [move columns](grid/column_moving.md), with full support for interactive [column pinning](grid/column_pinning.md), during move, drag, and reorder operations.</p>
+        <p>Group columns or pre-set column groups via mouse interaction, touch or our API, with support for built-in column [summaries](grid/summaries.md) or custom summary templates. Enable users to interactively [hide](grid/column-hiding.md) or [move columns](grid/column-moving.md), with full support for interactive [column pinning](grid/column-pinning.md), during move, drag, and reorder operations.</p>
     </div>
 </div>
 
@@ -330,7 +330,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Grid of data with Multi-Column Headers feature enabled" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg?v=201808021304" alt="Grid of data with Multi-Column Headers feature enabled on the Angular Data Grid component"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Multi-Column Headers in the Angular Grid<a class="anchorjs-link" href="#multi-column-headers-in-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>Enable [multi-column headers](grid/multi_column_headers.md), allowing you to group columns under a common header. Every column group could be a representation of combinations between other groups or columns, with full support for column pinning, interactive column moving within groups, sorting, and hiding groups.</p>
+        <p>Enable [multi-column headers](grid/multi-column-headers.md), allowing you to group columns under a common header. Every column group could be a representation of combinations between other groups or columns, with full support for column pinning, interactive column moving within groups, sorting, and hiding groups.</p>
     </div>
 </div>
 
@@ -364,24 +364,24 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <li>[Grid Sorting](grid/sorting.md)</li>
     <li>[Column Grouping](grid/groupby.md)</li>
     <li>[Column Summaries](grid/summaries.md)</li>
-    <li>[Fixed/Pinned Columns](grid/column_pinning.md)</li>
-    <li>[Resizable Columns](grid/column_resizing.md)</li>
-    <li>[Column Hiding](grid/column_hiding.md)</li>
+    <li>[Fixed/Pinned Columns](grid/column-pinning.md)</li>
+    <li>[Resizable Columns](grid/column-resizing.md)</li>
+    <li>[Column Hiding](grid/column-hiding.md)</li>
 </ul>
 <ul>
-    <li>[Column Moving](grid/column_moving.md)</li>
-    <li>[Cell Copy and Paste](grid/clipboard_interactions.md)</li>
-    <li>[Cell Styling](grid/conditional_cell_styling.md)</li>
-    <li>[Real-time/Live Data Theming](grid/live_data.md)</li>
+    <li>[Column Moving](grid/column-moving.md)</li>
+    <li>[Cell Copy and Paste](grid/clipboard-interactions.md)</li>
+    <li>[Cell Styling](grid/conditional-cell-styling.md)</li>
+    <li>[Real-time/Live Data Theming](grid/live-data.md)</li>
     <li>[Custom Grid Toolbar](grid/toolbar.md)</li>
     <li>[Grid Paging](grid/paging.md)</li>
     <li>[Row Selection](grid/selection.md)</li>
-    <li>[Cell Selection](grid/cell_selection.md)</li>
+    <li>[Cell Selection](grid/cell-selection.md)</li>
 </ul>
 <ul>
     <li>[Grid-level Searching](grid/search.md)</li>
     <li>[Export to Excel, CSV, TSV](exporter_excel.md)</li>
-    <li>[Multi-Column Headers](grid/multi_column_headers.md)</li>
+    <li>[Multi-Column Headers](grid/multi-column-headers.md)</li>
     <li>[Combo Box/Dropdown](combo.md)</li>
     <li>[Virtualization and Performance](grid/virtualization.md)</li>
     <li>[Remote Data Load on Demand](grid/virtualization.md#remote-virtualization)</li>
@@ -457,12 +457,12 @@ There are multiple options to get access to our award-winning support at Infragi
         <div class="faqs-accordion-panel">
             <ul>
                 <li>[Virtualized Rows and Columns](grid/virtualization.md) so you can load millions of records</li>
-                <li>[Inline Editing](grid/row_editing.md) with Cell, Row, and [Batch](grid/batch_editing.md) Update options</li>
-                <li>[Excel-style Filtering](grid/excel_style_filtering.md) and full [Excel Keyboard Navigation](grid/keyboard_navigation.md) capability</li>
+                <li>[Inline Editing](grid/row-editing.md) with Cell, Row, and [Batch](grid/batch-editing.md) Update options</li>
+                <li>[Excel-style Filtering](grid/excel-style-filtering.md) and full [Excel Keyboard Navigation](grid/keyboard-navigation.md) capability</li>
                 <li>Interactive [Outlook-style Grouping](grid/groupby.md)</li>
                 <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
-                <li>[Export to Excel](grid/export_excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
-                <li>[Display Density](grid/display_density.md) to adjust the height and sizing of the rows</li>
+                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
+                <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
                 <li>Column templates like [Sparkline Column](sparkline.md) and Image Column</li>
             </ul>
         </div>

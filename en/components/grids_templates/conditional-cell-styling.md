@@ -193,7 +193,7 @@ public styles = {
 ### Using cellStyles
 Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
 
-In the [sample above](conditional_cell_styling.md#demo-with-cellstyles) we've created:
+In the [sample above](conditional-cell-styling.md#demo-with-cellstyles) we've created:
 - Two different styles that will be applied based on the column index. 
 - You will also change the `text color` based on even/odd rows.
 
@@ -361,15 +361,15 @@ editDone(evt) {
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
-* [Column Hiding](column_hiding.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
+* [Column Hiding](column-hiding.md)
 * [Selection](selection.md)
 * [Searching](search.md)
 * [Toolbar](toolbar.md)
-* [Multi-column Headers](multi_column_headers.md)
-* [Display Density](display_density.md)
+* [Multi-column Headers](multi-column-headers.md)
+* [Display Density](display-density.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

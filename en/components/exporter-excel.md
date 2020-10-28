@@ -113,8 +113,8 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grids Excel Exporters:
-* [`IgxGrid Excel Exporters`](grid/export_excel.md)
-* [`IgxTreeGrid Excel Exporters`](treegrid/export_excel.md)
+* [`IgxGrid Excel Exporters`](grid/export-excel.md)
+* [`IgxTreeGrid Excel Exporters`](treegrid/export-excel.md)
 
 Additional components that were used:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)

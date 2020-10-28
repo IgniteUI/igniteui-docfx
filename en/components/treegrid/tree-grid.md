@@ -418,7 +418,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [Grid Sizing](sizing.md)
 * [Data Grid](../grid/grid.md)
-* [Row Editing](row_editing.md)
+* [Row Editing](row-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

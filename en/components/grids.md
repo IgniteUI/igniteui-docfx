@@ -442,11 +442,11 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <li>[Cell Templates](data-grid-column-types.md#template-column)</li>
 </ul>
 <!-- <ul>
-    <li>[Cell Copy and Paste](grid/clipboard_interactions.md)</li>
-    <li>[Cell Styling](grid/conditional_cell_styling.md)</li>
+    <li>[Cell Copy and Paste](grid/clipboard-interactions.md)</li>
+    <li>[Cell Styling](grid/conditional-cell-styling.md)</li>
     <li>[Grid-level Searching](grid/search.md)</li>
     <li>[Export to Excel, CSV, TSV](exporter_excel.md)</li>
-    <li>[Multi-Column Headers](grid/multi_column_headers.md)</li>
+    <li>[Multi-Column Headers](grid/multi-column-headers.md)</li>
     <li>[Combo Box/Dropdown](combo.md)</li>
     <li>[ARIA/a11y Support](general/accessibility-compliance.md)</li>
 </ul> -->
@@ -519,12 +519,12 @@ There are multiple options to get access to our award-winning support at Infragi
         <div class="faqs-accordion-panel">
             <ul>
                 <li>[Virtualized Rows and Columns](grid/virtualization.md) so you can load millions of records</li>
-                <li>[Inline Editing](grid/row_editing.md) with Cell, Row, and [Batch](grid/batch_editing.md) Update options</li>
-                <li>[Excel-style Filtering](grid/excel_style_filtering.md) and full [Excel Keyboard Navigation](grid/keyboard_navigation.md) capability</li>
+                <li>[Inline Editing](grid/row-editing.md) with Cell, Row, and [Batch](grid/batch-editing.md) Update options</li>
+                <li>[Excel-style Filtering](grid/excel-style-filtering.md) and full [Excel Keyboard Navigation](grid/keyboard-navigation.md) capability</li>
                 <li>Interactive [Outlook-style Grouping](grid/groupby.md)</li>
                 <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
-                <li>[Export to Excel](grid/export_excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
-                <li>[Display Density](grid/display_density.md) to adjust the height and sizing of the rows</li>
+                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
+                <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
                 <li>Column templates like [Sparkline Column](sparkline.md) and Image Column</li>
             </ul>
         </div>

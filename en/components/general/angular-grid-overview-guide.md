@@ -193,9 +193,9 @@ The Grid provides three types of Filtering with custom filtering conditions:
 
  - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-filtering-overview "Grid filtering Overview topic") per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
 
- - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Excel-style Filtering Overview topic"), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
+ - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel-style-filtering.html "Excel-style Filtering Overview topic"), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
 
- - [Advanced filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html "Advanced Filtering Overview topic") that provides a dialog which allows the creation of groups with filtering conditions across all columns. 
+ - [Advanced filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced-filtering.html "Advanced Filtering Overview topic") that provides a dialog which allows the creation of groups with filtering conditions across all columns. 
 
 Our [Angular 9 release](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release "Ignite UI for Angular 9.0.0 Release") includes plenty of new key features – from data analysis to a rich visualization, grid state persistence, and theming widget. 
 

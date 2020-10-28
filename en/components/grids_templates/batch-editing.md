@@ -413,8 +413,8 @@ Deleting a parent node in the grid has some peculiarities. If you are using a hi
 
 * [@@igComponent Overview](@@igMainTopic.md)
 * [@@igComponent Editing](editing.md)
-* [@@igComponent Row Editing](row_editing.md)
-* [@@igComponent Row Adding](row_adding.md)
+* [@@igComponent Row Editing](row-editing.md)
+* [@@igComponent Row Adding](row-adding.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -42,7 +42,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 * `Columns`
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
-    * Columns templates and functions are restored using application level code, see [Restoring Column](state_persistence.md#restoring-columns) section.
+    * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -60,10 +60,10 @@ _keywords: state persistence, ignite ui for angular, infragistics
 * `Columns`
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
-    * Columns templates and functions are restored using application level code, see [Restoring Column](state_persistence.md#restoring-columns) section.
+    * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
 }
 
-> The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state_persistence.md#restoring-columns) section to see how to restore column templates.
+> The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state-persistence.md#restoring-columns) section to see how to restore column templates.
 
 ## Usage
 
@@ -135,7 +135,7 @@ The simple to use single-point API's allows to achieve a full state persistence 
 
 ## Restoring columns
 
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state_persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
 
 1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event:
 @@if (igxName === 'IgxGrid') {

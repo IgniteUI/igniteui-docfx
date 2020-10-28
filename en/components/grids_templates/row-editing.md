@@ -469,7 +469,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 * [@@igComponent Overview](@@igMainTopic.md)
 * [@@igComponent Editing](editing.md)
-* [@@igComponent Transactions](batch_editing.md)
+* [@@igComponent Transactions](batch-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

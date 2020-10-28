@@ -340,13 +340,13 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 
 * [@@igComponent overview](@@igMainTopic.md)
 * [Selection](selection.md)
-* [Row selection](row_selection.md)
+* [Row selection](row-selection.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>

@@ -86,10 +86,10 @@ We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcompon
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
 * [Summaries](summaries.md)
-* [Column Pinning](column_pinning.md)
+* [Column Pinning](column-pinning.md)
 * [Selection](selection.md)
 * [Virtualization and Performance](virtualization.md)
-* [Multi-column headers](multi_column_headers.md)
+* [Multi-column headers](multi-column-headers.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

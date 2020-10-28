@@ -515,14 +515,14 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [@@igComponent overview](@@igMainTopic.md)
 * [Filtering](filtering.md)
-* [Excel Style Filtering](excel_style_filtering.md)
+* [Excel Style Filtering](excel-style-filtering.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

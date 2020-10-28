@@ -305,20 +305,20 @@ Use the demo below to try out the custom scenarios that we just implemented:
 ## Additional Resources
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxHierarchicalGrid') {* [Grid Keyboard Navigation](../grid/keyboard_navigation.md)}
-@@if (igxName === 'IgxHierarchicalGrid') {* [Tree Grid Keyboard Navigation](../treegrid/keyboard_navigation.md)}
-@@if (igxName === 'IgxTreeGrid') {* [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard_navigation.md)}
-@@if (igxName === 'IgxTreeGrid') {* [Grid Keyboard Navigation](../grid/keyboard_navigation.md)}
-@@if (igxName === 'IgxGrid') {* [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard_navigation.md)}
-@@if (igxName === 'IgxGrid') {* [Tree Grid Keyboard Navigation](../treegrid/keyboard_navigation.md)}
+@@if (igxName === 'IgxHierarchicalGrid') {* [Grid Keyboard Navigation](../grid/keyboard-navigation.md)}
+@@if (igxName === 'IgxHierarchicalGrid') {* [Tree Grid Keyboard Navigation](../treegrid/keyboard-navigation.md)}
+@@if (igxName === 'IgxTreeGrid') {* [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md)}
+@@if (igxName === 'IgxTreeGrid') {* [Grid Keyboard Navigation](../grid/keyboard-navigation.md)}
+@@if (igxName === 'IgxGrid') {* [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md)}
+@@if (igxName === 'IgxGrid') {* [Tree Grid Keyboard Navigation](../treegrid/keyboard-navigation.md)}
 * [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

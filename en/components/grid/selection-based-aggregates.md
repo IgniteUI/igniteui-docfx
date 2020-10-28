@@ -60,8 +60,8 @@ Change the selection to see summaries of the currently selected range.
 
 * [Grid overview](grid.md)    
 * [Selection Service]({environment:angularApiUrl}/classes/igxgridselectionservice.html)
-* [Row Selection](row_selection.md)   
-* [Cell Selection](cell_selection.md)    
+* [Row Selection](row-selection.md)   
+* [Cell Selection](cell-selection.md)    
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
 * [Summaries](summaries.md)    
