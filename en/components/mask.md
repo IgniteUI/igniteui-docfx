@@ -165,7 +165,7 @@ private notify(snackbar, message, input) {
 <div class="divider--half"></div>
 
 ### Text Selection
-You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label_input.md#focus--text-selection).
+You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label-input.md#focus--text-selection).
 
 Import the `IgxTextSelectionModule` in your **app.module.ts** file:
 
