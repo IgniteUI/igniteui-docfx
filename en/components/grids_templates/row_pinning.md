@@ -10,6 +10,7 @@ _keywords: lock row, ignite ui for angular, infragistics 
 title: Angular Tree Grid Row Pinning | Lock Row | Ignite UI for Angular | Infragistics
 _description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock rows with rich and easy to use API
 _keywords: lock row, ignite ui for angular, infragistics 
+_canonicalLink: grid/row-pinning
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: lock row, ignite ui for angular, infragistics 
 title: Angular Hierarchical Grid Row Pinning | Lock Row | Ignite UI for Angular | Infragistics
 _description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock rows with rich and easy to use API
 _keywords: lock row, ignite ui for angular, infragistics 
+_canonicalLink: grid/row-pinning
 ---
 }
 
