@@ -10,6 +10,7 @@ _keywords: column order, igniteui for angular, infragistics
 title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
 _description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
 _keywords: column order, igniteui for angular, infragistics
+_canonicalLink: grid/column-moving
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: column order, igniteui for angular, infragistics
 title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
 _description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
 _keywords: column order, igniteui for angular, infragistics
+_canonicalLink: grid/column-moving
 ---
 }
 
