@@ -10,6 +10,7 @@ _keywords: column selection, igniteui for angular, infragistics
 title: Angular Tree Grid Column Selection | Ignite UI for Angular | infragistics
 _description: Learn how to configure column selection with the Angular Material table. The column selection makes Tree Grid interactions more appealing than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_canonicalLink: grid/column-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: column selection, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Column Selection | Ignite UI for Angular | infragistics
 _description: Learn how to configure column selection with the Angular Material table. The column selection makes Hierarchical Grid interaction more appealing than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_canonicalLink: grid/column-selection
 ---
 }
 

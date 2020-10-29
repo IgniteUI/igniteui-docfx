@@ -12,6 +12,7 @@ _keywords: angular data grid, angular grid updates, angular live data
 title: Tree Grid Live Data - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
 _keywords: angular data grid, angular grid updates, angular live data
+_canonicalLink: grid/live-data
 ---
 }
 

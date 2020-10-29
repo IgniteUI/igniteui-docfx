@@ -10,6 +10,7 @@ _keywords: data export, ignite ui for angular, infragistics
 title: Angular Tree Grid Export to Excel | Ignite UI for Angular | Infragistics
 _description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
 _keywords: data export, ignite ui for angular, infragistics
+_canonicalLink: grid/export-excel
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: data export, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid Export to Excel | Ignite UI for Angular | Infragistics
 _description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
 _keywords: data export, ignite ui for angular, infragistics
+_canonicalLink: grid/export-excel
 ---
 }
 
