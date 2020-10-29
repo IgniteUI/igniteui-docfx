@@ -7,11 +7,11 @@ _language: ja
 
 # Angular List ビュー
 
-The List element is extremely useful when presenting a group of items. You can create a simple list of textual items, or a more complex one, containing an array of different layout elements.
-The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component.
+List 要素は、項目のグループを番号の付いた形式または黒丸の付いた形式のいずれかで提示する時に非常に役に立ちます。さまざまなレイアウト要素の配列を含むテキスト アイテムの単純なリスト、またはより複雑なリストを作成できます。
+Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。
 
-## Angular List Example
-The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
+## Angular List 例
+次の例は、_name_ プロパティと _phonenumber_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[**IgxAvatar**](avatar.md) と [**IgxIcon**](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
 <div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -23,7 +23,7 @@ The following example represents a list populated with contacts with a _name_ an
 </div>
 <div class="divider--half"></div>
 
-## How to create list view with Angular?
+## Angular でリスト ビューを作成する方法
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -454,7 +454,7 @@ public leftPanPerformed(args) {
 </div>
 <div class="divider--half"></div>
 
-## Angular filter list
+## Angular フィルター リスト
 
 リストで連絡先を名前によって検索する機能を追加します。これはフィルタリング パイプを使用して実装できます。
 

@@ -25,11 +25,11 @@ _language: ja
 
 # Angular @@igComponent の仮想コンテンツ検索機能
 
-Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
+Angular @@igComponent 検索により、データのコレクション内の値を見つけるプロセスが可能になります。この機能のセットアップが簡単になり、検索入力ボックス、ボタン、キーボード ナビゲーション、その他の便利な機能を使用して実装できるため、ユーザー エクスペリエンスがさらに向上します。ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Ignite UI for Angular Material テーブル ベースのグリッドの拡張により、**検索 API** を使用した**仮想コンテンツ**の検索が可能です。
 
-### Angular 検索の例
+## Angular 検索の例
 
-The following example represents @@igComponent with search input box that allows searching in all columns and rows, as well as specific filtering options for each column.
+次の例は、すべての列と行を検索できる検索入力ボックスと、各列の特定のフィルタリング オプションを備えた @@igComponent を表しています。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
