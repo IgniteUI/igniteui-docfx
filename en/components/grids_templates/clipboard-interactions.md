@@ -10,6 +10,7 @@ _keywords: copy data, igniteui for angular, infragistics
 title: Angular Grid Copy Data | Ignite UI for Angular | Infragistics 
 _description: Use the data select behavior in order to copy data and export selected from the Grid into Excel file. The angular data grid has a rich set of helpful angular events
 _keywords: copy data, igniteui for angular, infragistics
+_canonicalLink: grid/clipboard-interactions
 ---
 }
 
