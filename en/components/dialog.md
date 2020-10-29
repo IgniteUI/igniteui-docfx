@@ -89,7 +89,7 @@ To create a standard dialog, in the template of our file manager component, we a
 ### Custom Dialog
 
 To create a custom dialog, in the template of our sign-in component, we add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
-We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
+We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input-group.md) and [**igxInput**](input-group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
@@ -219,7 +219,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
-Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+Since the dialog window uses the [`IgxOverlayService`](overlay-main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
 ```html
 <div igxOverlayOutlet>
@@ -230,7 +230,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 ```
 
 > [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay-main.md), you can take a look at this [link](overlay-main.md#styling).
 
 ### Including Themes
 

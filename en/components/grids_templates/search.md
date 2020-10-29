@@ -240,7 +240,7 @@ What if we would like to filter and sort our @@igComponent or even to add and re
 ### Adding icons
 
 By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](../input_group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) and the [**IgxChip**](../chip.md) modules.
+To do this, let's go and grab the [**IgxInputGroup**](../input-group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) and the [**IgxChip**](../chip.md) modules.
 
 ```typescript
 // app.module.ts
@@ -264,7 +264,7 @@ export class AppModule {}
 
 Finally, let's update our template with the new components!
 
-We will wrap all of our components inside an [**IgxInputGroup**](../input_group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) method to clear the highlights.
+We will wrap all of our components inside an [**IgxInputGroup**](../input-group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) method to clear the highlights.
 
 ```html
 <!--searchgrid.component.html-->
@@ -398,9 +398,9 @@ Styles:
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>
