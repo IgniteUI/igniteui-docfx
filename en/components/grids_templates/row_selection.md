@@ -10,6 +10,7 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Tree Grid Row Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/row-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Row Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/row-selection
 ---
 }
 

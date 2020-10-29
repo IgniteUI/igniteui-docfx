@@ -1,8 +1,19 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular Grid Row Adding | UI Grid | Ignite UI for Angular | Infragistics
 _description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. Intuitive grid row adding and CRUD capabilities are available with the UI grid.
 _keywords: row adding, igniteui for angular, infragistics
 ---
+}
+
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular Grid Row Adding | UI Grid | Ignite UI for Angular | Infragistics
+_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. Intuitive grid row adding and CRUD capabilities are available with the UI grid.
+_keywords: row adding, igniteui for angular, infragistics
+_canonicalLink: grid/row-adding
+---
+}
 
 # @@igComponent Row Adding
 

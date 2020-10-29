@@ -1,8 +1,18 @@
+@@if(igxName==='IgxGrid'){
 ---
 title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
 _description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and CRUD capabilities are available with the UI grid.
 _keywords: row editing, igniteui for angular, infragistics
 ---
+}
+@@if(igxName!=='IgxGrid'){
+---
+title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
+_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and CRUD capabilities are available with the UI grid.
+_keywords: row editing, igniteui for angular, infragistics
+_canonicalLink: grid/row-editing
+---
+}
 
 # @@igComponent Row Editing
 

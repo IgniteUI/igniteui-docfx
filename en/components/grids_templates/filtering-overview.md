@@ -1,8 +1,18 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular Filtering Overview | Angular Grid Filtering | Ignite UI for Angular | Infragistics
 _description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
+}
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular Filtering Overview | Angular Grid Filtering | Ignite UI for Angular | Infragistics
+_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+_keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering-overview
+---
+}
 
 # @@igComponent Filtering Overview
 

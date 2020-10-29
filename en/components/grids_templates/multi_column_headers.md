@@ -10,6 +10,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
+_canonicalLink: grid/multi-column-headers
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
+_canonicalLink: grid/multi-column-headers
 ---
 }
 
@@ -408,6 +410,14 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
+
+## Known Issues and Limitations
+
+- Using @@igComponent with multi-column headers on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
 
 ## API References
 <div class="divider--half"></div>
