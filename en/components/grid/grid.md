@@ -6,12 +6,15 @@ _keywords: angular data grid, angular grid, angular material table, ignite ui fo
 
 # Angular Data Grid Overview and Configuration
 
-<p class="highlight">The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.</p>
+The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.
 
-## Demo
+## Angular Data Grid Example
+
+Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering and sorting on live data, grid summaries, cell styling that includes our embedded [*Sparkline*](../sparkline.md) component, 
+[*Circular Progress Indicator*](../circular-progress.md) component, and [*Icons*](../icon.md). We have also included an example for custom paging and per page of the [*Angular Pagination*](paging.md).
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular data grid example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -20,7 +23,8 @@ _keywords: angular data grid, angular grid, angular material table, ignite ui fo
 </div>
 <div class="divider--half"></div>
 
-## Dependencies
+## Getting Started with Ignite UI for Angular Data Grid
+### Dependencies
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
@@ -63,7 +67,7 @@ import { IgxGridComponent } from 'igniteui-angular';
 public grid: IgxGridComponent;
 ```
 
-## Usage
+### Usage
 
 Now that we have the grid module imported, let’s get started with a basic configuration of the **igx-grid** that binds to local data:
 
@@ -75,7 +79,7 @@ The **id** property is a string value and is the unique identifier of the grid w
 
 The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
-## Styling Configuration
+## Angular Grid Styling Configuration
 > [!NOTE]
 > The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
 
@@ -95,7 +99,7 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
  ...
  ```
 
-## Columns configuration
+## Angular Grid Column Configuration
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
 
@@ -284,7 +288,7 @@ const pipeArgs: IColumnPipeArgs = {
 
 The `OrderDate` column will respect only the `format` and `timezone` properties, while the `UnitPrice` will only respect the `digitsInfo`. For further details, please check the official Angular documentation at [Localizing your app](https://angular.io/guide/i18n).
 
-## Data structure
+## Angular Grid Data Structure
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) handles **flat data** and nested **POJOs(Plain old Java objects)**. The data structure specific for rendering is in the form:
 
@@ -328,7 +332,7 @@ const POJO = [{
 
 >If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
 
-## Data binding
+## Angular Grid Data Binding
 
 Before going any further with the grid we want to change the Angular grid to bind to remote data service, which is the common scenario in large-scale applications. A good practice is to separate all data fetching related logic in a separate data service, so we are going to create a service which will handle the fetching of data from the server.
 
