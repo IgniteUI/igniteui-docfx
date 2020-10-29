@@ -28,6 +28,7 @@ The Column selection feature provides an easy way to select an entire column wit
 ## Angular Column Selection Example
 <div class="divider--half"></div>
 
+The sample below demonstrates the three types of @@igComponent's **column selection** behavior. Use the _column selection_ dropdown below to enable each of the available selection modes.
 @@if (igxName === 'IgxGrid') {
 *_Contact Title_, _City_ and _Address_ columns are with disabled column selection.
 }

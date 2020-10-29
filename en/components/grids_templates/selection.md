@@ -25,10 +25,9 @@ _canonicalLink: grid/selection
 # Angular @@igComponent Selection Overview
 With Ignite UI for Angular @@igComponent you can easily select data by using variety of events, rich API or with simple mouse interactions like single select.
 
-
 ## Angular Grid Selection Example
 
-The sample below demonstrates @@igComponent's **cell selection** behavior.
+The sample below demonstrates the three types of @@igComponent's **cell selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box.
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {

@@ -27,6 +27,7 @@ The selection feature enables rich data select capabilities in the Material UI b
 @@if (igxName === 'IgxHierarchicalGrid') { In the Hierarchical Grid you can specify the cell selection mode on grid level. So for example in the parent grid multi-cell selection can be enabled, but in child grids cell selection mode can be single or disabled. }But let's dive deeper in each of these options.
 
 ## Angular Cell Selection Example
+The sample below demonstrates the three types of @@igComponent's **cell selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box.
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
