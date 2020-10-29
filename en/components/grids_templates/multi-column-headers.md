@@ -10,6 +10,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
+_canonicalLink: grid/multi-column-headers
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
 _description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
 _keywords: column headers, ignite ui for angular, infragistics
+_canonicalLink: grid/multi-column-headers
 ---
 }
 

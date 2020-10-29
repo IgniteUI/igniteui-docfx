@@ -10,6 +10,7 @@ _keywords: angular remote data operations, ignite ui for angular, infragistics
 title: Angular Remote Data Operations | Angular Tree Grid Remote Data Operations | Ignite UI for Angular | Infragistics
 _description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
+_canonicalLink: grid/remote-data-operations
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular remote data operations, ignite ui for angular, infragistics
 title: Angular Remote Data Operations | Angular Hierarchical Grid Remote Data Operations | Ignite UI for Angular | Infragistics
 _description: Start using angular remote data operations such as remote filtering, remote sorting and remote scrolling to load data from a server with Ignite UI for Angular Material table.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
+_canonicalLink: grid/remote-data-operations
 ---
 }
 

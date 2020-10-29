@@ -10,6 +10,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 title: Angular Tree Grid Column Resizing | Ignite UI for Angular | Infragistics
 _description: Start using Angular Tree Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
 _keywords: grid column resizing, igniteui for angular, infragistics
+_canonicalLink: grid/column-resizing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: grid column resizing, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Column Resizing | Ignite UI for Angular | Infragistics
 _description: Start using Angular Hierarchical Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
 _keywords: grid column resizing, igniteui for angular, infragistics
+_canonicalLink: grid/column-resizing
 ---
 }
 
