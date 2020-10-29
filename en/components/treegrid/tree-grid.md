@@ -4,14 +4,17 @@ _description: Learn how to use Ignite UI for Angular data grid, based on Angular
 _keywords: angular data grid, igniteui for angular, infragistics
 ---
 
-# Data Tree Grid Overview and Configuration
+# Angular Tree Grid Overview and Configuration
 
-<p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
+The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.
 
-### Demo
+## Angular Tree Grid Example
+
+In this example, you can see how users can manipulate hierarchical or flat data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, cell styling that includes our embedded [*Sparkline*](../sparkline.md) component and 
+an example for custom pagination with [*Angular Pagination*](paging.md).
 
 <div class="sample-container loading" style="height:850px">
-    <iframe id="treegrid-childdatakey-iframe" src='{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-childdatakey-iframe" src='{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular tree grid example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -20,7 +23,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 </div>
 <div class="divider--half"></div>
 
-### Getting started
+## Getting Started with Ignite UI for Angular Tree Grid
 To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -63,7 +66,7 @@ Regardless of which option is used for building the tree grid's hierarchy (child
 > [!NOTE]
 > Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
 
-### Initial Expansion Depth
+### Initial expansion depth
 
 Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
@@ -247,11 +250,11 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
-### Sizing
+## Angular Tree Grid Sizing
 
 See the [Grid Sizing](sizing.md) topic.
 
-### Styling
+## Angular Tree Grid Styling
 
 The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
 
@@ -298,7 +301,7 @@ The last step is to **include** the component theme in our application.
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -327,7 +330,7 @@ $custom-theme: igx-grid-theme(
 );
 ```
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -366,10 +369,10 @@ $custom-theme: igx-grid-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Angular Tree Grid Styling Demo
 
 <div class="sample-container loading" style="height:600px">
-    <iframe id="tree-grid-styling" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="tree-grid-styling" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming" alt="Angular tree grid styling demo"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
