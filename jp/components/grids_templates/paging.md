@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Angular @@igComponent 改ページ
-改ページは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルの改ページにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent 改ページは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) および [` perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 入力で設定できます。他の Angular Material テーブルと同様に、@@igComponent の改ページはカスタム ページのテンプレートをサポートします。
+改ページは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルの改ページにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent 改ページは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) および [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 入力で設定できます。他の Angular Material テーブルと同様に、@@igComponent の改ページはカスタム ページのテンプレートをサポートします。
 
 ### Angular 改ページの例
 
