@@ -10,6 +10,7 @@ _keywords: column hiding, ignite ui for angular, infragistics
 title: Angular Tree Grid Column Hiding | Ignite UI for Angular | Infragistics
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
 _keywords: column hiding, ignite ui for angular, infragistics
+_canonicalLink: grid/column-hiding
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: column hiding, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid Column Hiding | Ignite UI for Angular | Infragistics
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table
 _keywords: column hiding, ignite ui for angular, infragistics
+_canonicalLink: grid/column-hiding
 ---
 }
 

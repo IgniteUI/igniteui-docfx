@@ -10,6 +10,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 title: Angular Tree Grid State Persistence | Ignite UI for Angular | Infragistics
 _description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
+_canonicalLink: grid/state-persistence
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid State Persistence | Ignite UI for Angular | Infragistics
 _description: Easily achieve state persistence for the IgxHierarchicalGrid by using the API exposed by the IgxGridState directive.
 _keywords: state persistence, ignite ui for angular, infragistics
+_canonicalLink: grid/state-persistence
 ---
 }
 

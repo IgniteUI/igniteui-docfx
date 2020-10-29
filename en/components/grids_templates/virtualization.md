@@ -10,6 +10,7 @@ _keywords: angular data grid, grid performance, data table virtualization, ignit
 title: Virtualization Directive - Native Angular | Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the tree grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory. 
 _keywords: angular data grid, grid performance, data table virtualization, ignite ui for angular
+_canonicalLink: grid/virtualization
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular data grid, grid performance, data table virtualization, ignit
 title: Virtualization Directive - Native Angular | Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the hierarchical grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory.
 _keywords: angular data grid, grid performance, data table virtualization, ignite ui for angular
+_canonicalLink: grid/virtualization
 ---
 }
 # @@igComponent Virtualization and Performance

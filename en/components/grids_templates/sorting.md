@@ -10,6 +10,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 title: Angular Tree Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
 _description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
 _keywords: angular sort, ignite ui for angular, infragistics
+_canonicalLink: grid/sorting
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
 _description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
 _keywords: angular sort, ignite ui for angular, infragistics
+_canonicalLink: grid/sorting
 ---
 }
 
