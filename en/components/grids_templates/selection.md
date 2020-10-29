@@ -156,6 +156,14 @@ The template we are going to use to combine the grid with the context menu:
 <div class="divider--half"></div>
 }
 
+## Known Issues and Limitations
+
+- Using the @@igComponent with Selection enabled on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
+
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

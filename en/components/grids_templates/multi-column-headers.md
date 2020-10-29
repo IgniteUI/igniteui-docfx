@@ -409,6 +409,14 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 }
 
+## Known Issues and Limitations
+
+- Using @@igComponent with multi-column headers on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
+
 ## API References
 <div class="divider--half"></div>
 
