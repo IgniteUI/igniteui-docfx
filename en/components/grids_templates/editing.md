@@ -10,6 +10,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular tree grid editing
 _keywords: data manipulation, ignite ui for angular, infragistics
+_canonicalLink: grid/editing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular hierarchical grid editing
 _keywords: data manipulation, ignite ui for angular, infragistics
+_canonicalLink: grid/editing
 ---
 }
 

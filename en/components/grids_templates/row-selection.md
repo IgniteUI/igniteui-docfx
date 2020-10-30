@@ -10,6 +10,7 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Tree Grid Row Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/row-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,14 +18,17 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Row Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/row-selection
 ---
 }
 
-# @@igComponent Row Selection
+# Angular @@igComponent Row Selection
 
 With row selection in Ignite UI for Angular, there is row selector column that precedes all other columns within the row. When a user clicks on the row selector, the row will either become selected or deselected, enabling the user to select multiple rows of data.
 
-### Demo
+## Angular Row Selection Example
+
+The sample below demonstrates the three types of @@igComponent's **row selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box. Use the switch button to _hide_ or _show_ the row selector checkbox.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
