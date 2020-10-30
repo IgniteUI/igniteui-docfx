@@ -1,8 +1,19 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
 _description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
 _keywords: angular toolbar, igniteui for angular, infragistics
 ---
+}
+
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
+_description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
+_keywords: angular toolbar, igniteui for angular, infragistics
+_canonicalLink: grid/toolbar
+---
+}
 
 # @@igComponent Toolbar container for UI operations
 

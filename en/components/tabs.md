@@ -256,7 +256,7 @@ Now that we have all navigation routes set up, we need to declare the `igx-tabs`
 
   <igx-tab-item 
     label="Tab 3" 
-    icon="radio_button_checked"
+    icon="radio-button_checked"
     routerLink="view3"
     routerLinkActive 
     #rla3="routerLinkActive"

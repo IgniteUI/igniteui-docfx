@@ -442,11 +442,11 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <li>[Cell Templates](data-grid-column-types.md#template-column)</li>
 </ul>
 <!-- <ul>
-    <li>[Cell Copy and Paste](grid/clipboard_interactions.md)</li>
-    <li>[Cell Styling](grid/conditional_cell_styling.md)</li>
+    <li>[Cell Copy and Paste](grid/clipboard-interactions.md)</li>
+    <li>[Cell Styling](grid/conditional-cell-styling.md)</li>
     <li>[Grid-level Searching](grid/search.md)</li>
-    <li>[Export to Excel, CSV, TSV](exporter_excel.md)</li>
-    <li>[Multi-Column Headers](grid/multi_column_headers.md)</li>
+    <li>[Export to Excel, CSV, TSV](exporter-excel.md)</li>
+    <li>[Multi-Column Headers](grid/multi-column-headers.md)</li>
     <li>[Combo Box/Dropdown](combo.md)</li>
     <li>[ARIA/a11y Support](general/accessibility-compliance.md)</li>
 </ul> -->
@@ -493,7 +493,7 @@ There are multiple options to get access to our award-winning support at Infragi
 <div class="divider--half"></div>
         <ul>
             <li>Start at the Angular <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/support/ignite-ui-Angular-help">Support</a> home page</li>
-            <li>Read the Angular [Documentation](general/getting_started.md) and experiment with Angular Samples</li>
+            <li>Read the Angular [Documentation](general/getting-started.md) and experiment with Angular Samples</li>
             <li>Read the<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/community/blogs/tags/Ignite UI for Angular"> Angular Blogs</a> to stay up to date</li>
             <li>Submit a <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-Angular/grid-table"> Support Case</a></li>
             <li>Learn from the Angular <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">Reference Applications</a></li>
@@ -519,12 +519,12 @@ There are multiple options to get access to our award-winning support at Infragi
         <div class="faqs-accordion-panel">
             <ul>
                 <li>[Virtualized Rows and Columns](grid/virtualization.md) so you can load millions of records</li>
-                <li>[Inline Editing](grid/row_editing.md) with Cell, Row, and [Batch](grid/batch_editing.md) Update options</li>
-                <li>[Excel-style Filtering](grid/excel_style_filtering.md) and full [Excel Keyboard Navigation](grid/keyboard_navigation.md) capability</li>
+                <li>[Inline Editing](grid/row-editing.md) with Cell, Row, and [Batch](grid/batch-editing.md) Update options</li>
+                <li>[Excel-style Filtering](grid/excel-style-filtering.md) and full [Excel Keyboard Navigation](grid/keyboard-navigation.md) capability</li>
                 <li>Interactive [Outlook-style Grouping](grid/groupby.md)</li>
                 <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
-                <li>[Export to Excel](grid/export_excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
-                <li>[Display Density](grid/display_density.md) to adjust the height and sizing of the rows</li>
+                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
+                <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
                 <li>Column templates like [Sparkline Column](sparkline.md) and Image Column</li>
             </ul>
         </div>
@@ -551,7 +551,7 @@ If you are developing applications on multiple platforms, consider our complete 
         <div class="faqs-accordion h4">Can I purchase the Infragistics Ignite UI for Angular Data Grid control separately?</div>
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
-        To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting_started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
+        To get started with the Angular Data Grid, follow the steps in the [getting started guide](general/getting-started.md). We also maintain a library of <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">sample applications</a>, which are designed to not only inspire but are best practices guides for Angular development.
         </div>
     </div>
 </div>

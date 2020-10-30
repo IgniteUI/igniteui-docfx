@@ -225,7 +225,7 @@ If all went well, this is how our location and tooltip should look like:
 <div class="divider--half"></div>
 
 ## Overlay configuration
-Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay_main.md) to open and close the respective tooltip element.
+Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay-main.md) to open and close the respective tooltip element.
 
 The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes an [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)), which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default overlay settings will be used.
 
@@ -253,7 +253,7 @@ $dark-tooltip: igx-tooltip-theme(
 > [!NOTE]
 > In order to style any additional components that are used as part of the tooltip's content (such as [`IgxButton`](button.md), [`IgxSwitch`](switch.md), etc.), an additional theme should be created that is specific to the respective component and placed under the tooltip's scope only (so it does not affect the rest of the application).
 
-Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the tooltip that we want to style, we will provide a specific outlet where the tooltip will be placed in the DOM when it is visible.
+Since the tooltip uses the [`IgxOverlayService`](overlay-main.md), in order for our custom theme to reach down the tooltip that we want to style, we will provide a specific outlet where the tooltip will be placed in the DOM when it is visible.
 
 ```html
 <igx-avatar #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
@@ -268,7 +268,7 @@ Since the tooltip uses the [`IgxOverlayService`](overlay_main.md), in order for 
 ```
 
 > [!NOTE]
-> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay-main.md), you can take a look at this [link](overlay-main.md#styling).
 
 ### Including Themes
 

@@ -35,7 +35,7 @@ const gridsConfigs = {
   },
   treeGrid: {
       igPath: '/treegrid',
-      igMainTopic: 'tree_grid',
+      igMainTopic: 'tree-grid',
       igObjectRef: "treeGrid",
       igDemoBasePath: "tree-grid",
       igComponent: "Tree Grid",
@@ -45,7 +45,7 @@ const gridsConfigs = {
   },
   hierarchicalGrid: {
       igPath: '/hierarchicalgrid',
-      igMainTopic: 'hierarchical_grid',
+      igMainTopic: 'hierarchical-grid',
       igObjectRef: "hierarchicalGrid",
       igDemoBasePath: "hierarchical-grid",
       igComponent: "Hierarchical Grid",
@@ -144,14 +144,14 @@ const watchFiles = (done) => {
     const included = [
         `${DOCFX_ARTICLES}/grid/grid.md`,
         `${DOCFX_ARTICLES}/grid/groupby.md`,
-        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
-        `${DOCFX_ARTICLES}/grid/master_detail.md`,
-        `${DOCFX_ARTICLES}/grid/selection_based_aggregates.md`,
-        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/grid/paste-excel.md`,
+        `${DOCFX_ARTICLES}/grid/master-detail.md`,
+        `${DOCFX_ARTICLES}/grid/selection-based-aggregates.md`,
+        `${DOCFX_ARTICLES}/treegrid/tree-grid.md`,
         `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
-        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
+        `${DOCFX_ARTICLES}/treegrid/load-on-demand.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical-grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load-on-demand.md`
     ];
 
     // watch([`${DOCFX_TEMPLATE}/**/*`, `!${DOCFX_TEMPLATE}/styles/css`], series(build));

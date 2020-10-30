@@ -27,9 +27,9 @@ With the accumulated state being a partial object, we can also use the service t
 The [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) has no undo stack so it does not provide undo/redo functionality.
 
 A detailed example of how you may use [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) to enable Row Editing is provided in the following topics:
-* [Grid Row Editing](grid/row_editing.md)
-* [Tree Grid Row Editing](treegrid/row_editing.md)
-* [Hierarchical Grid Row Editing](hierarchicalgrid/row_editing.md)
+* [Grid Row Editing](grid/row-editing.md)
+* [Tree Grid Row Editing](treegrid/row-editing.md)
+* [Hierarchical Grid Row Editing](hierarchicalgrid/row-editing.md)
 
 ## General information on igxTransactionService and igxHierarchicalTransactionService
 
@@ -48,7 +48,7 @@ You need to define the [`igxTransactionService`]({environment:angularApiUrl}/cla
 The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) provides an undo stack so you may get advantage of the undo/redo functionality. The Undo stack is actually an array that contains arrays of transactions. When using the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html), you may check the [`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) accessor in order to understand if there are any transactions in the Undo stack. If there are - you may use the [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) method to remove the last transaction and [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) to apply the last undone transaction.
 
 You may find a detailed example of how igxGrid with Batch Editing is implemented in the following topic:
-* [Grid Batch Editing](grid/batch_editing.md)
+* [Grid Batch Editing](grid/batch-editing.md)
 
 ## Using igxHierarchicalTransactionService
 
@@ -67,8 +67,8 @@ In your application, you may want to handle the scenario where the user tries to
 ```
 
 You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) with Batch Editing are implemented in the following topics:
-* [Tree Grid Batch Editing](treegrid/batch_editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* [Tree Grid Batch Editing](treegrid/batch-editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
 
 ## Additional Resources
 <div class="divider--half"></div>
@@ -76,6 +76,6 @@ You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiU
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [Transaction Service](transaction.md)
 * [How to use the Transaction service](transaction-how-to-use.md)
-* [Grid Batch Editing](grid/batch_editing.md)
-* [Tree Grid Batch Editing](treegrid/batch_editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* [Grid Batch Editing](grid/batch-editing.md)
+* [Tree Grid Batch Editing](treegrid/batch-editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)

@@ -10,6 +10,7 @@ _keywords: angular filter, ignite ui for angular, infragistics
 title: Angular Filter | Angular Tree Grid Filtering | Ignite UI for Angular | Infragistics
 _description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular filter, ignite ui for angular, infragistics
 title: Angular Filter | Angular Hierarchical Grid Filtering | Ignite UI for Angular | Infragistics
 _description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering
 ---
 }
 
@@ -696,9 +698,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>
