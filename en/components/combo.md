@@ -4,15 +4,18 @@ _description: The igx-combo provides a powerful input, combining features of the
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
 ---
 
-# Combo
-<p class="highlight">
-The Ignite UI for Angular Combo Component provides easy filtering, single and multiple selection of items, grouping and adding custom values to a dropdown list.
-</p>
+# Angular ComboBox Overview
 
-## Demo
+The Angular ComboBox component is a drop-down list with an editable option that allows users to choose an option from a predefined list. The Ignite UI for Angular Combo Component provides easy filtering, single and multiple selection of items, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote data binding), filtering, grouping, templates, custom values, and more.
+
+
+## Angular ComboBox Example
+
+In this angular ComboBox example, you can see how users can do filtering, single and multiple selection with the provided data. In addition, the ComboBox expose keyboard navigation and custom styling capabilities.
+
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular combobox example as an alt text"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -20,7 +23,7 @@ The Ignite UI for Angular Combo Component provides easy filtering, single and mu
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## Features
+## Angular ComboBox Features
 
 The combo control exposes the following features:
     - Data Binding - local data and [remote data](combo-remote.md)
@@ -247,7 +250,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 - `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
 
 
-## Styling
+## Angular ComboBox Styling
 
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
@@ -290,7 +293,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-### Using CSS variables 
+### Using CSS Variables 
 
 The last step is to include the component's theme.
 
