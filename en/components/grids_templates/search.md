@@ -10,6 +10,7 @@ _keywords: Content search, ignite ui for angular, infragistics
 title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
+_canonicalLink: grid/search
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: Content search, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
+_canonicalLink: grid/search
 ---
 }
 
