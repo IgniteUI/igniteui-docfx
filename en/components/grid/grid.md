@@ -104,7 +104,7 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
 
 
-### Defining columns
+### Defining Columns
 
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
@@ -123,7 +123,7 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Each of the columns of the grid can be templated separately. The column expects `ng-template`  Angular grid module directives.
 
-### Header template
+### Header Template
 
 `igxHeader` targets the column header providing as a context the column object itself.
 
@@ -152,7 +152,7 @@ Each of the columns of the grid can be templated separately. The column expects 
 ```
 As you can see, we are adding **draggable** attribute set to *false*.
 
-### Cell template
+### Cell Template
 
 `igxCell` applies the provided template to all cells in the column. The context object provided in the template consists of the cell value provided implicitly and the cell object itself. It can be used to define a template where the cells can grow according to their content, as in the below example.
 
@@ -194,7 +194,7 @@ If the data in a cell is bound with `[(ngModel)]` and the value change is not ha
 
 When properly implemented, the cell editing template also ensures that the cell's `editValue` will correctly pass through the grid [editing event cycle](editing.md#editing-events).
 
-### Cell editing template
+### Cell Editing Template
 
 The column also accepts one last template that will be used when a cell is in edit mode. As with the other column templates, the provided context object is again the cell value and the cell object itself. Of course in order to make the edit-mode template accessible to end users, you need
 to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property of the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) to `true`.
@@ -212,7 +212,7 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 
 Make sure to check the API for the [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) in order to get accustomed with the provided properties you can use in your templates.
 
-### Column template API
+### Column Template API
 
 Each of the column templates can be changed programmatically at any point through the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) object itself. For example in the code below, we have declared two templates for our user data. In our TypeScript code we'll get references to the templates themselves and then based on some condition we will render the appropriate template for the column in our application.
 
@@ -260,7 +260,7 @@ public initColumns(column: IgxGridColumn) {
 
 The code above will make the **ProductName** column sortable and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
 
-### Custom display format
+### Custom Display Format
 
 All values for a date or numeric column are transformed through the Angular [`DatePipe`](https://angular.io/api/common/DatePipe) or [`DecimalPipe`](https://angular.io/api/common/DecimalPipe). This does not modify the original value, just the value that is displayed in the column. By default, values will be displayed according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) (if not specified, it fallbacks to the application locale, which defaults to `'en-US'`).
 
@@ -460,7 +460,7 @@ and in the template of the component:
 
 **Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
 
-## Complex data binding
+## Complex Data Binding
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (inluding nesting deeper than one level) through a "path" of properties in the data record.
 
@@ -676,7 +676,7 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
-## State persistence
+## State Persistence
 
 Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
 
