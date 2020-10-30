@@ -66,7 +66,7 @@ Regardless of which option is used for building the tree grid's hierarchy (child
 > [!NOTE]
 > Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
 
-### Initial expansion depth
+### Initial Expansion Depth
 
 Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
