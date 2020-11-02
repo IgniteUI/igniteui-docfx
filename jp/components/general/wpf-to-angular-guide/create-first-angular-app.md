@@ -1,4 +1,4 @@
-﻿---
+---
 title: Angular アプリケーションの作成 | IgniteUI for Angular | インフラジスティックス
 _description: WPF から Angular へ移行時の Angularアプリケーション作成方法を説明します。
 _keywords: angular application, ignite ui for angular, インフラジスティックス

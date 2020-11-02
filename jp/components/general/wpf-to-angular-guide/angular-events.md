@@ -1,4 +1,4 @@
-﻿---
+---
 title: Angular イベントの処理 | IgniteUI for Angular | インフラジスティックス
 _description: WPF から Angular への移行時の Angular イベント処理について学びます。
 _keywords: angular events, ignite ui for angular, インフラジスティックス

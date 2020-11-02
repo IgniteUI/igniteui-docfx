@@ -1,4 +1,4 @@
-﻿---
+---
 title: One-Way Data Binding in Angular | IgniteUI for Angular | インフラジスティックス
 _description: WPF から Angular に移行するときに、Angular で一方向のデータバインディングを作成する方法を説明します。
 _keywords: data binding, ignite ui for angular, インフラジスティックス
