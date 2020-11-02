@@ -6,7 +6,7 @@ _keywords: angular filter, ignite ui for angular, infragistics, Angular フィ�
 
 # @@igComponent のフィルタリング概要
 
-IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング](filtering.md)、[Excel スタイル フィルタリング](excel_style_filtering.md)、および[高度なフィルタリング](advanced_filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。
+IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング](filtering.md)、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。
 
 ## 設定
 フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
@@ -35,7 +35,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 </@@igSelector>
 ```
 
-ただし、[高度なフィルタリング](advanced_filtering.md)を有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
+ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
 
 ```html
 <@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
@@ -60,9 +60,9 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 * [ページング](paging.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列ピン固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列サイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>
