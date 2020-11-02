@@ -88,7 +88,7 @@ export class AppModule {}
 ### カスタム ダイアログ
 
 カスタム ダイアログを作成するには、サインイン コンポーネントのテンプレートに以下のコードを追加します。ダイアログのタイトル領域は `igxDialogTitle` ディレクティブまたは `igx-dialog-title` セレクターを使ってカスタマイズできます。アクション領域は `igxDialogActions` ディレクティブまたは `igx-dialog-actions` セレクターを使ってカスタマイズできます。
-[**igxLabel**](input_group.md) および [**igxInput**](input_group.md) ディレクティブで装飾された label と input を含む 2 つの入力グループを追加します。
+[**igxLabel**](input-group.md) および [**igxInput**](input-group.md) ディレクティブで装飾された label と input を含む 2 つの入力グループを追加します。
 
 ```html
 <!--sign-in.component.html-->
@@ -220,7 +220,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > ダイアログ ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ダイアログ ウィンドウのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
 
-ダイアログウィンドウは [`IgxOverlayService`](overlay_main.md) を使用するため、カスタム テーマがスタイルを設定するダイアログ ウィンドウに届くように、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
+ダイアログウィンドウは [`IgxOverlayService`](overlay-main.md) を使用するため、カスタム テーマがスタイルを設定するダイアログ ウィンドウに届くように、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 
 ```html
 <div igxOverlayOutlet>
@@ -231,7 +231,7 @@ $my-dialog-theme: igx-dialog-theme(
 ```
 
 > [!NOTE]
-> [`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay_main.md#スタイル設定)をご覧ください。
+> [`IgxOverlayService`](overlay-main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay-main.md#スタイル設定)をご覧ください。
 
 ### テーマを含む
 

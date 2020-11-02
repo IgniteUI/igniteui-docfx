@@ -31,7 +31,7 @@ Angular データ グリッドを初期化するには、以下のコマンド�
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
 Angular グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
 
@@ -672,7 +672,7 @@ export const DATA: any[] = [
 
 ## パーシステンス (永続化) 状態
 
-新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
+新しい組み込みの [`IgxGridState`](state-persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
 
 ## サイズ変更
@@ -692,7 +692,7 @@ export const DATA: any[] = [
 | ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 > [!NOTE]
-> `igxGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxGrid` で有効です。詳細については、[igxForOf 既知の問題](../for_of.html#既知の問題と制限) のセクションを参照してください。
+> `igxGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxGrid` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
 
 <div class="divider--half"></div>
 
@@ -712,9 +712,9 @@ export const DATA: any[] = [
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

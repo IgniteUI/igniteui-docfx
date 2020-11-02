@@ -9,9 +9,9 @@ _language: kr
 <p class="highlight">
 
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) components.<br />
-The combo component provides easy **[filtering](combo_features.md#filtering)** and **multiple selection** of items, **[grouping](combo_features.md#grouping)** and adding **[custom values](combo_features.md#custom-values)** to the dropdown list.<br />
-**[Custom templates](combo_templates.md)** could be provided in order to customize different areas of the components, such as items, header, footer, etc.<br />
-The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component is integrated with the **[Template Driven Forms](input_group.md)** and **[Reactive Forms](input_group_reactive_forms.md)**.<br />
+The combo component provides easy **[filtering](combo-features.md#filtering)** and **multiple selection** of items, **[grouping](combo-features.md#grouping)** and adding **[custom values](combo-features.md#custom-values)** to the dropdown list.<br />
+**[Custom templates](combo-templates.md)** could be provided in order to customize different areas of the components, such as items, header, footer, etc.<br />
+The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component is integrated with the **[Template Driven Forms](input-group.md)** and **[Reactive Forms](input-group-reactive-forms.md)**.<br />
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) exposes intuitive **keyboard navigation** and it is **accessibility compliant**.<br />
 Drop Down items are **virtualized**, which guarantees smooth work, even if the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) is bound to data source with a lot of items.
 </p>
@@ -67,13 +67,13 @@ export class ComboDemo implements OnInit {
 
 ## Features
 Combo control exposes the following features:
-    - Data Binding - local data and [remote data](combo_remote.md)
-    - [Value Binding](combo_features.md#value-binding)
-    - [Filtering](combo_features.md#filtering)
-    - [Grouping](combo_features.md#grouping)
-    - [Custom values](combo_features.md#custom-values)
-    - [Templates](combo_templates.md)
-    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
+    - Data Binding - local data and [remote data](combo-remote.md)
+    - [Value Binding](combo-features.md#value-binding)
+    - [Filtering](combo-features.md#filtering)
+    - [Grouping](combo-features.md#grouping)
+    - [Custom values](combo-features.md#custom-values)
+    - [Templates](combo-templates.md)
+    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](input-group-reactive-forms.md)
 
 ## Keyboard Navigation
 
@@ -121,17 +121,17 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 - Combo is not having input for sizing its height. In the future [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)  will expose an option that allows custom sizing and then [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
 > [!NOTE]
-> `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxCombo`. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
+> `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxCombo`. For more details see [igxForOf Known Issues](for-of.html#known-limitations) section.
 
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo Features](combo-features.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Cascading Scenario](combo-cascading.md)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
 
