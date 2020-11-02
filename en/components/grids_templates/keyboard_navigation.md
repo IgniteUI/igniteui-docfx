@@ -10,6 +10,7 @@ _keywords: keyboard navigation, ignite ui for angular, infragistics
 title: TreeGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
 _description: Learn how to use TreeGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
 _keywords: keyboard navigation, ignite ui for angular, infragistics
+_canonicalLink: grid/keyboard-navigation
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: keyboard navigation, ignite ui for angular, infragistics
 title: HierarchicalGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
 _description: Learn how to use HierarchicalGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
 _keywords: keyboard navigation, ignite ui for angular, infragistics
+_canonicalLink: grid/keyboard-navigation
 ---
 }
 

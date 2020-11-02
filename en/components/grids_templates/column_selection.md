@@ -10,6 +10,7 @@ _keywords: column selection, igniteui for angular, infragistics
 title: Angular Tree Grid Column Selection | Ignite UI for Angular | infragistics
 _description: Learn how to configure column selection with the Angular Material table. The column selection makes Tree Grid interactions more appealing than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_canonicalLink: grid/column-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,12 +18,17 @@ _keywords: column selection, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Column Selection | Ignite UI for Angular | infragistics
 _description: Learn how to configure column selection with the Angular Material table. The column selection makes Hierarchical Grid interaction more appealing than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_canonicalLink: grid/column-selection
 ---
 }
 
-# @@igComponent Column Selection
+# Angular @@igComponent Column Selection
 The Column selection feature provides an easy way to select an entire column with a single click. It emphasizes the importance of a particular column by focusing the header cell(s) and everything below. The feature comes with a rich [`API`]({environment:angularApiUrl}) that allows for manipulation of the selection state, data extraction from the selected fractions and data analysis operations and visualizations.
 
+## Angular Column Selection Example
+<div class="divider--half"></div>
+
+The sample below demonstrates the three types of @@igComponent's **column selection** behavior. Use the _column selection_ dropdown below to enable each of the available selection modes.
 @@if (igxName === 'IgxGrid') {
 *_Contact Title_, _City_ and _Address_ columns are with disabled column selection.
 }

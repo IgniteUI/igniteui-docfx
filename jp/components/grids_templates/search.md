@@ -23,11 +23,13 @@ _language: ja
 ---
 }
 
-# @@igComponent の仮想コンテンツ検索機能
+# Angular @@igComponent の仮想コンテンツ検索機能
 
-ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Angular Material テーブル ベースのグリッドの拡張により、検索 API を使用した**仮想コンテンツ**の検索が可能です。
+Angular @@igComponent 検索により、データのコレクション内の値を見つけるプロセスが可能になります。この機能のセットアップが簡単になり、検索入力ボックス、ボタン、キーボード ナビゲーション、その他の便利な機能を使用して実装できるため、ユーザー エクスペリエンスがさらに向上します。ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Ignite UI for Angular Material テーブル ベースのグリッドの拡張により、**検索 API** を使用した**仮想コンテンツ**の検索が可能です。
 
-### デモ
+## Angular 検索の例
+
+次の例は、すべての列と行を検索できる検索入力ボックスと、各列の特定のフィルタリング オプションを備えた @@igComponent を表しています。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -55,7 +57,7 @@ _language: ja
 <!-- TODO -->
 }
 
-## 使用方法
+## Angular 検索の使用方法
 
 ### グリッドの設定
 グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加しました。
@@ -130,7 +132,7 @@ public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
 
-### 検索入力ボックス
+### Angular 検索入力ボックス
 
 検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによる各 **searchText** のすべての変更を検出できます。これによって @@igComponent の [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 

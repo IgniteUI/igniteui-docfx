@@ -10,6 +10,7 @@ _keywords: material density, igniteui for angular, infragistics
 title:  Angular Tree Grid Display Density | Ignite UI for Angular | infragistics 
 _description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
 _keywords: material density, igniteui for angular, infragistics
+_canonicalLink: grid/display-density
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: material density, igniteui for angular, infragistics
 title:  Angular Hierarchical Grid Display Density | Ignite UI for Angular | infragistics 
 _description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
 _keywords: material density, igniteui for angular, infragistics
+_canonicalLink: grid/display-density
 ---
 }
 

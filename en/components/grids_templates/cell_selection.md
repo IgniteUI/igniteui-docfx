@@ -10,6 +10,7 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/cell-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,12 +18,17 @@ _keywords: data select, igniteui for angular, infragistics
 title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
 _keywords: data select, igniteui for angular, infragistics
+_canonicalLink: grid/cell-selection
 ---
 }
 
-# @@igComponent Selection
+# Angular @@igComponent Cell Selection
 The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option.
 @@if (igxName === 'IgxHierarchicalGrid') { In the Hierarchical Grid you can specify the cell selection mode on grid level. So for example in the parent grid multi-cell selection can be enabled, but in child grids cell selection mode can be single or disabled. }But let's dive deeper in each of these options.
+
+## Angular Cell Selection Example
+The sample below demonstrates the three types of @@igComponent's **cell selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box.
+<div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">

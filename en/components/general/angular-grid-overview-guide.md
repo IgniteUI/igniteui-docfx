@@ -191,7 +191,7 @@ Angular data grids support easy sorting, filtering, and pagination. With rich AP
 
 The Grid provides three types of Filtering with custom filtering conditions: 
 
- - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-filtering-overview "Grid filtering Overview topic") per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
+ - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html "Grid Filtering Overview topic") per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
 
  - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Excel-style Filtering Overview topic"), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
 
