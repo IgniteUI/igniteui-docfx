@@ -1,4 +1,4 @@
-﻿---
+---
 title: 一括編集 | トランザクション サービス | Ignite UI for Angular | インフラジスティックス
 _description: コンポーネントで Angular CRUD 操作を実行するときにバッチ編集を実装できるトランザクション サービスクラスの階層について学びます。
 _keywords: batch editing, igniteui for angular, infragistics, 一括編集,
