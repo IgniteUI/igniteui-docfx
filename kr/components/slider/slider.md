@@ -281,7 +281,7 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 
 ###Additional Resources
 
-* [Slider ticks](slider_ticks.md)
+* [Slider ticks](slider-ticks.md)
 
 
 <div class="divider--half"></div>

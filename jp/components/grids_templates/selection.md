@@ -25,21 +25,21 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 
 ## @@igComponent Selection 概要
 
-IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row_selection.md)、[セル選択](cell_selection.md)、[列選択](column_selection.md)の 3 つの選択モードを提供します。デフォルトでは、@@igComponent では**複数セルの選択**モードのみが有効になっています。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
+IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row-selection.md)、[セル選択](cell-selection.md)、[列選択](column-selection.md)の 3 つの選択モードを提供します。デフォルトでは、@@igComponent では**複数セルの選択**モードのみが有効になっています。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
 
 プロパティ [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
 - single - @@igComponent 内の 1 行のみの選択が利用可能になります。
 - multiple - 複数行の選択は、<kbd>ctrl</kbd> + <kbd>click</kbd>、<kbd>space キー</kbd>を押して`行セレクター`を使用することにより、複数行の選択が可能になります。
 
-> 詳細については、[行選択トピック](row_selection.md)を参照してください。
+> 詳細については、[行選択トピック](row-selection.md)を参照してください。
 
 以下のオプションは、プロパティ [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) で指定できます。
 - none - @@igComponent のセル選択が無効になります。
 - single - @@igComponent 内の 1 セルのみ選択が利用可能になります。
 - multiple - @@ igComponent の選択のデフォルト状態です。Multi - セルの選択は、マウスの左ボタンを連続してクリックした後、マウスをセル上にドラッグすることで利用できます。
 
-> 詳細については、[セル選択トピック](cell_selection.md)を参照してください。
+> 詳細については、[セル選択トピック](cell-selection.md)を参照してください。
 
 [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用して、**列**ごとに以下のオプションを指定できます。
 - false - 対応する列選択は @@igComponent に対して無効になります。
@@ -49,7 +49,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row_se
  - 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>。
  - 列の範囲選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>マウス クリック</kbd>、その間のすべての列が選択されます。
 
-> 詳細については、[列選択トピック](column_selection.md) を参照してください。
+> 詳細については、[列選択トピック](column-selection.md) を参照してください。
 
 ## ショーケース アプリケーション
 
@@ -170,15 +170,15 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
-* [行選択](row_selection.md)
-* [セル選択](cell_selection.md)
+* [行選択](row-selection.md)
+* [セル選択](cell-selection.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [仮想化とパフォーマンス](virtualization.md)
-@@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
+@@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -31,7 +31,7 @@ Avatar コンポーネントを初期化するには、以下のコマンドを�
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](general/getting-started.md)トピックををご覧ください。
 
 次に、**app.module.ts** ファイルに `IgxAvatarModule` をインポートします。
 

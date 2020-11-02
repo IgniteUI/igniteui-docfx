@@ -16,18 +16,15 @@ components/hierarchicalgrid/*.md
 # All grid specific files that should NOT be ignored:
 !components/grid/grid.md
 !components/grid/groupby.md
-!components/grid/paste_excel.md
-<<<<<<< HEAD
-!components/grid/master_detail.md
-=======
-!components/grid/selection_based_aggregates.md
->>>>>>> 46689395... Adds Japanese and Korean template of the newly introduced topic
+!components/grid/paste-excel.md
+!components/grid/master-detail.md
+!components/grid/selection-based-aggregates.md
 
 # All tree grid specific files that should NOT be ignored:
-!components/treegrid/tree_grid.md
+!components/treegrid/tree-grid.md
 !components/treegrid/aggregations.md
-!components/treegrid/load_on_demand.md
+!components/treegrid/load-on-demand.md
 
 # All hierarchical grid specific files that should NOT be ignored:
-!components/hierarchicalgrid/hierarchical_grid.md
-!components/hierarchicalgrid/load_on_demand.md
+!components/hierarchicalgrid/hierarchical-grid.md
+!components/hierarchicalgrid/load-on-demand.md
