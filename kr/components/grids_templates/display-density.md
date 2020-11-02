@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title:  그리드 표시 밀도- 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Data Grid control provides default cell templates for editable columns which are based on the data type of the column.
