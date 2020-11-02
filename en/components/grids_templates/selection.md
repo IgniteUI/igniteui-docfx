@@ -22,9 +22,51 @@ _canonicalLink: grid/selection
 ---
 }
 
-# @@igComponent Selection Overview
+# Angular @@igComponent Selection Overview
+With Ignite UI for Angular @@igComponent you can easily select data by using variety of events, rich API or with simple mouse interactions like single select.
+
+## Angular Grid Selection Example
+
+The sample below demonstrates the three types of @@igComponent's **cell selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box.
+<div class="divider--half"></div>
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Selection Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="treegrid-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Selection Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="hGrid-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Selection Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hGrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hGrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
+
+## Angular Grid Selection Options
 
 IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row-selection.md), [Cell selection](cell-selection.md) and [Column selection](column-selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
+
+### Angular Row Selection
 
 Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
@@ -33,12 +75,16 @@ Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.h
 
 > Go to [Row selection topic](row-selection.md) for more information.
 
+### Angular Cell Selection
+
 Property [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) enables you to specify the following options:
 - none - Cell selection would be disabled for the @@igComponent
 - single - Selection of only one cell within the @@igComponent would be available.
 - multiple - Currently, this is the default state of the selection in the @@igComponent. Multi-cell selection is available by mouse dragging over the cells, after a left button mouse clicked continuously.
 
 > Go to [Cell selection topic](cell-selection.md) for more information.
+
+### Angular Column Selection
 
 The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) enables you to specify the following options for each **column**:
 - false - the corresponding column selection will be disabled for the @@igComponent
@@ -50,10 +96,8 @@ The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncompone
 
 > Go to [Column selection topic](column-selection.md) for more information.
 
-## Showcase Application
-
 @@if (igxName === 'IgxGrid'){
-### Grid Context Menu
+## Grid Context Menu
 
 Using the [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) event you can add a custom context menu to facilitate your work with **IgxGrid**. With a **right click** on the grid's body, the event emits the cell on which it is triggered. The **context menu** will operate with the emitted cell.
 
@@ -150,7 +194,6 @@ The template we are going to use to combine the grid with the context menu:
 <div class="sample-container loading" style="height:600px">
     <iframe class="lazyload" id="grid-context-menu-iframe" data-src='{environment:demosBaseUrl}/grid/grid-contextmenu-sample' width="100%" height="100%" seamless="" frameborder="0"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
