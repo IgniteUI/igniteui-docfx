@@ -211,7 +211,7 @@ export class AutocompleteComponent {
 
 `igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) と [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) の両方を使用する必要があります。 
 
-これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input_group.md#スタイル設定) および [`igxDropdown`](drop_down.md#スタイル設定) のスタイル設定セクションを参照してください。
+これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input-group.md#スタイル設定) および [`igxDropdown`](drop-down.md#スタイル設定) のスタイル設定セクションを参照してください。
 
 ## API リファレンス
 <div class="divider--half"></div>
@@ -225,9 +225,9 @@ export class AutocompleteComponent {
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [IgxDropDown](drop_down.md)
-* [IgxInputGroup](input_group.md)
-* [テンプレート駆動フォームの統合](input_group.md)
+* [IgxDropDown](drop-down.md)
+* [IgxInputGroup](input-group.md)
+* [テンプレート駆動フォームの統合](input-group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
