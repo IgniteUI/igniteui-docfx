@@ -74,7 +74,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
 
 ### 入力プロパティ
 
-Select コンポーネントは、[入力グループ](input_group.md)に適用可能な次のディレクティブをサポートしています。
+Select コンポーネントは、[入力グループ](input-group.md)に適用可能な次のディレクティブをサポートしています。
 
 - `igxLabel` - Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
 - `igx-prefix`/`igxPrefix`
@@ -328,10 +328,10 @@ export class MyClass implements OnInit {
 
 Select のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) と [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) の両方を使用する必要があります。
 
-これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input_group.md#styling) および [`Drop Down`](drop_down.md#styling) のスタイル設定セクションを参照してください。
+これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input-group.md#styling) および [`Drop Down`](drop-down.md#styling) のスタイル設定セクションを参照してください。
 
 > [!NOTE]
-> [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay_main.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay_styling.md)を確認してください。
+> [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay-main.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。
 
 <div class="divider--half"></div>
 

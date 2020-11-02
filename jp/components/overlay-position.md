@@ -185,8 +185,8 @@ overlay.setOffset(this._overlayId, deltaX, deltaY);
 * [IPositionStrategy]({environment:angularApiUrl}/interfaces/ipositionstrategy.html)
 
 ## その他のリソース
-* [オーバーレイ メイン トピック](overlay_main.md)
-* [スクロール ストラテジ](overlay_scroll.md)
-* [スタイル設定](overlay_styling.md)
+* [オーバーレイ メイン トピック](overlay-main.md)
+* [スクロール ストラテジ](overlay-scroll.md)
+* [スタイル設定](overlay-styling.md)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)

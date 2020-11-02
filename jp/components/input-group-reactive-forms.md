@@ -117,7 +117,7 @@ export class ReactiveFormsSampleComponent {
 
 * [Combo](combo.md)
 * [Select](select.md)
-* [Input Group](input_group.md)
+* [Input Group](input-group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -60,8 +60,8 @@ const dates = data.filter(rec => isDate(rec));
 
 * [Grid の概要](grid.md)    
 * [SelectionService]({environment:angularApiUrl}/classes/igxgridselectionservice.html)
-* [行選択](row_selection.md)   
-* [セル選択](cell_selection.md)    
+* [行選択](row-selection.md)   
+* [セル選択](cell-selection.md)    
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
 * [集計](summaries.md)    

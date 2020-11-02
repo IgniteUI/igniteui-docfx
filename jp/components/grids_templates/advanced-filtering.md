@@ -516,14 +516,14 @@ $custom-drop-down: igx-drop-down-theme(
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [フィルタリング](filtering.md)
-* [Excel スタイル フィルタリング](excel_style_filtering.md)
+* [Excel スタイル フィルタリング](excel-style-filtering.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [並び替え](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列サイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

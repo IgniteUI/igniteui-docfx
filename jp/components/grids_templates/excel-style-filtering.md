@@ -369,7 +369,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ## 一意の列値ストラテジ
 
-Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。これらの値は手動で提供し、ロード オン デマンドすることができます。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#一意の列値ストラテジ)で説明されています。
+Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。これらの値は手動で提供し、ロード オン デマンドすることができます。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md#一意の列値ストラテジ)で説明されています。
 
 
 ## 外部の Excel スタイル フィルタリング
@@ -856,9 +856,9 @@ $custom-drop-down: igx-drop-down-theme(
 * [ページング](paging.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

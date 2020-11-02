@@ -99,7 +99,7 @@ In that case the movie, full name, email and genres form's fields are required a
 
 * [Combo](combo.md)
 * [Select](select.md)
-* [Template Driven Forms Integration](input_group.md)
+* [Template Driven Forms Integration](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 

@@ -145,7 +145,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 ```
 }
 
-모든 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)은 [`moving`](column_moving.md), [`pinning`](column_pinning.md), [`hiding`](column_hiding.md)을 지원합니다.
+모든 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)은 [`moving`](column-moving.md), [`pinning`](column_pinning.md), [`hiding`](column_hiding.md)을 지원합니다.
 > [!NOTE]
 > 열 집합과 열 그룹이 있는 경우 가장 위의 상위 열에 대해서만 핀 고정이 가능합니다. 더 구체적으로 중첩된 `column groups` 또는 `columns`의 핀 고정은 허용되지 않습니다. <br />
 > `columns`과 `column groups` 사이의 이동은 계층에서 같은 수준이고 같은 `group`인 경우에만 허용됩니다. <br />
@@ -208,7 +208,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 * [필터링](filtering.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 @@if (igxName === 'IgxGrid') {* [Group by](groupby.md)}
 

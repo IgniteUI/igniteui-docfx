@@ -145,7 +145,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxGrid') {
 #### リモート ソート
 
-@@igComponent はリモート ソートをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
+@@igComponent はリモート ソートをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote-data-operations.md)で説明されています。
 
 <div class="divider--half"></div>
 }
@@ -294,9 +294,9 @@ $custom-theme: igx-grid-theme(
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

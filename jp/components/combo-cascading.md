@@ -105,11 +105,11 @@ export class CascadingCombos {
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)
-* [コンボ機能](combo_features.md)
-* [コンボ リモート バインディング](combo_remote.md)
-* [コンボ テンプレート](combo_templates.md)
-* [テンプレート駆動フォームの統合](input_group.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [コンボ機能](combo-features.md)
+* [コンボ リモート バインディング](combo-remote.md)
+* [コンボ テンプレート](combo-templates.md)
+* [テンプレート駆動フォームの統合](input-group.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

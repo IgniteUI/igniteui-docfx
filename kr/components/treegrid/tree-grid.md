@@ -281,7 +281,7 @@ See the [Grid Sizing](sizing.md) topic.
 |Group By|Group By 기능은 트리 그리드에 고유하기 때문에 지원되지 않습니다.|
 
 > [!NOTE]
-> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
@@ -305,7 +305,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 * [Grid Sizing](sizing.md)
 * [데이터 그리드](../grid/grid.md)
-* [행 편집](row_editing.md)
+* [행 편집](row-editing.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

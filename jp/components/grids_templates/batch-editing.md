@@ -416,8 +416,8 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [@@igComponent 編集](editing.md)
-* [@@igComponent 行編集](row_editing.md)
-* [@@igComponent 行追加](row_adding.md)
+* [@@igComponent 行編集](row-editing.md)
+* [@@igComponent 行追加](row-adding.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

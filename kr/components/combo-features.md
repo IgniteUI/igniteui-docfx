@@ -7,7 +7,7 @@ _language: kr
 
 ## Combo Features
 <p class="highlight">
-Combo control exposes several features including data and value binding, **[custom values](combo_features.md#custom-values)**, **[filtering](combo_features.md#filtering)**, **[grouping](combo_features.md#grouping)**, etc. 
+Combo control exposes several features including data and value binding, **[custom values](combo-features.md#custom-values)**, **[filtering](combo-features.md#filtering)**, **[grouping](combo-features.md#grouping)**, etc. 
 </p>
 <div class="divider"></div>
 
@@ -91,7 +91,7 @@ export class ComboDemo implements OnInit {
 > Note: If [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) is omitted then [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) entity will be used instead.
 
 
-Follow this [topic](combo_remote.md) for more details about binding [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with remote data.
+Follow this [topic](combo-remote.md) for more details about binding [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with remote data.
 
 ## Value Binding
 
@@ -159,11 +159,11 @@ Defining a combo's groupKey option will group the items, according to the provid
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Cascading Scenario](combo-cascading.md)
 * [IgxSwitch](switch.md)
 
 Our community is active and always welcoming to new ideas.

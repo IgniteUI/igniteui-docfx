@@ -440,7 +440,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 > [!NOTE]
-> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay_main.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay_styling.md)を確認してください。
+> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay-main.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay-styling.md)を確認してください。
 
 ### デモ
 <div class="sample-container loading" style="height:350px">

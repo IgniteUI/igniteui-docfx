@@ -38,7 +38,7 @@ export class AppModule {}
 ```
 
 
-input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を[入力グループ](input_group.md)にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、`igx-prefix`、`igx-suffix`、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
+input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を[入力グループ](input-group.md)にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、`igx-prefix`、`igx-suffix`、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
 
 ### バインディング 
 以下は、Date オブジェクトを [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value) として設定する基本的な構成シナリオです。
@@ -135,7 +135,7 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 ```
 
 ### テキスト選択
-[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label_input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
+[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label-input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
 ```html
 <igx-input-group>
@@ -146,7 +146,7 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 > 注: コンポーネントが正しく動作するためには、`igxDateTimeEditor` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
 ## スタイル設定 
-詳細については、[`Input Group スタイル ガイド`](input_group.md#スタイル設定)を参照してください。
+詳細については、[`Input Group スタイル ガイド`](input-group.md#スタイル設定)を参照してください。
 <div class="divider--half"></div>
 
 ## API リファレンス
@@ -162,8 +162,8 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 ## その他のリソース
 関連トピック:
 * [Mask](mask.md)
-* [Label および Input](label_input.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [Label および Input](label-input.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -175,7 +175,7 @@ export class AppModule {}
 
 ## 動作
 
-行追加 UI は、エンド ユーザーに整合性のある編集エクスペリエンスを提供するように設計されているため、行編集 UI と同じ動作をします。詳細については、[@@igComponent 行編集](row_editing.md)トピックを参照してください。
+行追加 UI は、エンド ユーザーに整合性のある編集エクスペリエンスを提供するように設計されているため、行編集 UI と同じ動作をします。詳細については、[@@igComponent 行編集](row-editing.md)トピックを参照してください。
 
 行追加 UI を介して新しい行が追加された後、その位置や表示状態は、@@igComponent のソート、フィルタリングおよびグループ化の状態によって決定されます。これらの状態のいずれも適用されていない @@igComponent では、最後のレコードとして表示されます。スナックバーが短時間表示され、@@igComponent が表示されていない場合にはエンド ユーザーがコントロールの位置までスクロールするためのボタンが含まれています。
 
@@ -219,7 +219,7 @@ export class AppModule {}
 
 行追加 UI は `IgxActionStrip` 編集操作のボタン、編集エディター、オーバーレイ、エンドユーザーが新しく追加された行にスクロールできるスナックバーが構成されます。これらのコンポーネントのスタイル設定には、それぞれのトピックのガイドを参照してください。
 
-- [@@igComponent 行追加](row_editing.md#スタイル設定)
+- [@@igComponent 行追加](row-editing.md#スタイル設定)
 - [IgxSnackbar](../snackbar.html#スタイル設定)
 - [IgxActionStrip](../action-strip.md#スタイル設定)
 
@@ -241,7 +241,7 @@ export class AppModule {}
 
 * [@@igComponent の概要](@@igMainTopic.md)
 * [@@igComponent 編集](editing.md)
-* [@@igComponent トランザクション](batch_editing.md)
+* [@@igComponent トランザクション](batch-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

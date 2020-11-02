@@ -267,7 +267,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [가상화 및 성능](virtualization.md)
 * [페이징](paging.md)
 * [정렬](sorting.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 
 <div class="divider--half"></div>

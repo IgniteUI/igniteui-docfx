@@ -262,7 +262,7 @@ column.autosize();
 * [필터링](filtering.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 이동](column_moving.md)
+* [열 이동](column-moving.md)
 * [열 핀 고정](column_pinning.md)
 * [선택](selection.md)
 

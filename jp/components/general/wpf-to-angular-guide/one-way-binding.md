@@ -115,7 +115,7 @@ export class SampleComponent implements OnInit {
 
 ## その他のリソース
 * [デスクトップから Web: Angular 補間とプロパティバインディングによる一方向データバインディング](https://www.youtube.com/watch?v=fP7iVhFNTOk&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
-* [双方向バインディング](two_way_binding.md)
+* [双方向バインディング](two-way-binding.md)
 * [Angular データの表示](https://angular.io/guide/displaying-data#displaying-data)
 
 <div class="divider--half"></div>

@@ -45,7 +45,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 * `複数の列`
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
-    * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state_persistence.md#restoring-columns)セクションを参照してください。
+    * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#restoring-columns)セクションを参照してください。
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -63,10 +63,10 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 * `複数の列`
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
-    * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state_persistence.md#列の復元)セクションを参照してください。
+    * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#列の復元)セクションを参照してください。
 }
 
-> [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはテンプレートを処理しません。列テンプレートの復元方法については、「[列の復元](state_persistence.md#列の復元)」セクションを参照してください。
+> [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはテンプレートを処理しません。列テンプレートの復元方法については、「[列の復元](state-persistence.md#列の復元)」セクションを参照してください。
 
 ## 使用方法
 
@@ -138,7 +138,7 @@ public options =  { cellSelection: false; sorting: false; }
 
 ## 列の復元
 
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトで列テンプレート、列フォーマッタなどを保持しません ([`制限`](state_persistence.md#制限)を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。テンプレート化された列でこれを行う方法を示します。
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトで列テンプレート、列フォーマッタなどを保持しません ([`制限`](state-persistence.md#制限)を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。テンプレート化された列でこれを行う方法を示します。
 
 1. テンプレート参照変数 (以下の例では `#activeTemplate`) を定義し、[`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントにイベント ハンドラーを割り当てます。
 @@if (igxName === 'IgxGrid') {

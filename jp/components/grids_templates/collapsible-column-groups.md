@@ -54,9 +54,9 @@ IgxGrid および縮小可能な複数列ヘッダーを使用するには、ま
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[*はじめに*](general/getting_started.md) トピックををご覧ください。
+Ignite UI for Angular については、[*はじめに*](general/getting-started.md) トピックををご覧ください。
 
-次に app.module.ts ファイルに @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} をインポートします。そのため、[*複数列グループ*](./multi_column_headers.md)のトピックを簡単に確認することを強くお勧めします。グリッドで列グループを設定する方法の詳細情報を参照してください。
+次に app.module.ts ファイルに @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} をインポートします。そのため、[*複数列グループ*](./multi-column-headers.md)のトピックを簡単に確認することを強くお勧めします。グリッドで列グループを設定する方法の詳細情報を参照してください。
 
 ## 使用方法
 
@@ -160,7 +160,7 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
 * [選択](selection.md)
 

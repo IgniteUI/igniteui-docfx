@@ -87,7 +87,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 ### ドロップ エリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
-[`igxDrop` ディレクティブ](../drag_drop.md) を使用して、行をドロップする場所を定義できます。
+[`igxDrop` ディレクティブ](../drag-drop.md) を使用して、行をドロップする場所を定義できます。
 
 はじめに、アプリ モジュールに `IgxDragDropModule` をインポートする必要があります。
 

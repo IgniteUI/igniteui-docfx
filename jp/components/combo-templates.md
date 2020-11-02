@@ -142,11 +142,11 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)
-* [コンボ機能](combo_features.md)
-* [コンボ リモート バインディング](combo_remote.md)
-* [テンプレート駆動フォームの統合](input_group.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [カスケーディング](combo_cascading.md)
+* [コンボ機能](combo-features.md)
+* [コンボ リモート バインディング](combo-remote.md)
+* [テンプレート駆動フォームの統合](input-group.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

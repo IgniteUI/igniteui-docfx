@@ -351,7 +351,7 @@ export class AppModule {}
 - **Alphabetical** (列をアルファベット順でソート)
 - **DisplayOrder** (列をグリッドで表示される順序によってソート)
 
-このオプションにラジオ ボタンを追加します。[**IgxRadio**](../radio_button.md) モジュールを追加します。
+このオプションにラジオ ボタンを追加します。[**IgxRadio**](../radio-button.md) モジュールを追加します。
 
 ```typescript
 // app.module.ts
@@ -622,7 +622,7 @@ $custom-button: igx-button-theme(
 ## API リファレンス
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-このトピックでは、@@igComponent のツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定しました。[**IgxRadio**](../radio_button.md) ボタンなどその他の Ignite UI for Angular コンポーネントも使用しています。
+このトピックでは、@@igComponent のツールバーの定義済みの列非表示 UI の使用方法や別のコンポーネントとして定義する方法について説明しました。その他の列順序から選択する機能を提供する UI を実装し、カスタム タイトルおよびフィルター プロンプト テキストを設定しました。[**IgxRadio**](../radio-button.md) ボタンなどその他の Ignite UI for Angular コンポーネントも使用しています。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 このトピックでは、@@igComponent のツールバーの定義済みの列非表示 UI の使用方法について学びました。
@@ -671,7 +671,7 @@ $custom-button: igx-button-theme(
 * [並び替え](sorting.md)
 * [集計](summaries.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
 

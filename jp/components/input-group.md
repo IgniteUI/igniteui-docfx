@@ -46,7 +46,7 @@ export class AppModule {}
 ## 例
 
 ### Label および Input
-[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、 [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label_input.md)を参照してください。
+[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、 [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label-input.md)を参照してください。
 
 ### Prefix および Suffix
 `igx-prefix` / `igxPrefix` および `igx-suffix` / `igxSuffix` ディレクティブは、HTML 要素、文字列、アイコン、またはその他のコンポーネントを含むことができます。以下のサンプルでは、文字列 **prefix** とアイコン **suffix** を持つ新しい入力フィールドを作成します。
@@ -94,15 +94,15 @@ export class AppModule {}
 <igx-input-group type="border">
 ```
 
-[IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) インジェクション トークンを使用すると、すべての入力グループ インスタンスのタイプをアプリケーション レベルで指定できます。すべての関連コンポーネントを一度に簡単にスタイル設定できます。
-タイプを設定するには、[IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) インジェクション トークンを使用して DI プロバイダーを作成します。
+[IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) インジェクション トークンを使用すると、すべての入力グループ インスタンスのタイプをアプリケーション レベルで指定できます。すべての関連コンポーネントを一度に簡単にスタイル設定できます。
+タイプを設定するには、[IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) インジェクション トークンを使用して DI プロバイダーを作成します。
 
 ```typescript
-providers: [{provide: IGX_INPUT_GROUP_TYPE, useValue: 'box' }]
+providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 ```
 
 >注:
->[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。  
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。  
 >`igniteui-angular` フォーム コントロールのほとんどは、内部で input-group コンポーネントを使用するか、カスタム テンプレートを使用します。グローバル トークンの設定は、これらのコンポーネントにも影響します。
 
 
@@ -187,8 +187,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 関連トピック:
 
-* [Label および Input](label_input.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
+* [Label および Input](label-input.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

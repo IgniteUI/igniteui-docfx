@@ -183,10 +183,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-multi-column-headers-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 헤더로 열 그룹화">
-      <a href="grid/multi_column_headers.md" class="feature__more-details">데이터 그리드로 복수 열 헤더 설정</a>
+      <a href="grid/multi-column-headers.md" class="feature__more-details">데이터 그리드로 복수 열 헤더 설정</a>
     </div>
     <div class="feature__details">
-      <h3 id="multi-column-headers">[복수 열 헤더](grid/multi_column_headers.md)</h3>
+      <h3 id="multi-column-headers">[복수 열 헤더](grid/multi-column-headers.md)</h3>
       <p>공통 헤더 아래에 열을 그룹화할 수 있도록 복수 열 헤더를 활성화합니다.모든 열 그룹은 열 핀 고정, 그룹 내 대화형 열 이동, 그룹 정렬 및 숨기기를 완벽하게 지원하여 다른 그룹 또는 열 사이의 조합이 가능합니다.</p>
     </div>
   </div>
@@ -238,10 +238,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-dropdown-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 드롭다운으로 선택 항목 탐색">
-      <a href="drop_down.md" class="feature__more-details">드롭다운 컴포넌트로 작업</a>
+      <a href="drop-down.md" class="feature__more-details">드롭다운 컴포넌트로 작업</a>
     </div>
     <div class="feature__details">
-      <h3 id="dropdown">[드롭다운](drop_down.md)</h3>
+      <h3 id="dropdown">[드롭다운](drop-down.md)</h3>
       <p>시각적으로 그룹화할 수 있는 단일 선택 항목의 스크롤 가능한 목록을 표시합니다.</p>
     </div>
   </div>
@@ -249,10 +249,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 오버레이 토글">
-      <a href="overlay_main.md" class="feature__more-details">오버레이 컴포넌트로 시작하기</a>
+      <a href="overlay-main.md" class="feature__more-details">오버레이 컴포넌트로 시작하기</a>
     </div>
     <div class="feature__details">
-      <h3 id="overlay">[오버레이](overlay_main.md)</h3>
+      <h3 id="overlay">[오버레이](overlay-main.md)</h3>
       <p>다양한 오버레이 매개 변수로 콘텐츠 렌더링을 변경합니다.</p>
     </div>
   </div>
@@ -305,10 +305,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--right">
       <img class="b-lazy b-lazy-gifs" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.jpg 1100w" data-gif-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif" data-gif-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-480.gif  480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-768.gif 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-column-moving-1100.gif 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 열 이동.">
-      <a href="grid/column_moving.md" class="feature__more-details">열 이동 문서</a>
+      <a href="grid/column-moving.md" class="feature__more-details">열 이동 문서</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-moving">[열 이동](grid/column_moving.md)</h3>
+      <h3 id="column-moving">[열 이동](grid/column-moving.md)</h3>
       <p>간단히 열을 이동, 정렬, 드래그 및 구성할 수 있습니다.p>
     </div>
   </div>
@@ -316,10 +316,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-export-to-excel-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Excel 내보내기를 지원하는 데이터 그리드.">
-      <a href="exporter_excel.md" class="feature__more-details">Angular 데이터 그리드로 Excel 내보내기</a>
+      <a href="exporter-excel.md" class="feature__more-details">Angular 데이터 그리드로 Excel 내보내기</a>
     </div>
     <div class="feature__details">
-      <h3 id="column-moving">[Excel/CSV/TSV로 내보내기](exporter_excel.md)</h3>
+      <h3 id="column-moving">[Excel/CSV/TSV로 내보내기](exporter-excel.md)</h3>
       <p>열을 포함하거나 제외하고 출력을 사용자 정의할 수 있는 API를 지원하여 그리드를 XLSX, TSV 또는 CSV 형식으로 Excel로 내보내기를 할 수 있습니다.</p>
     </div>
   </div>

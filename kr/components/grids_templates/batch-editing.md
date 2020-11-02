@@ -382,8 +382,8 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 * [@@igComponent 개요](@@igMainTopic.md)
 * [@@igComponent 편집](editing.md)
-* [@@igComponent 행 편집](row_editing.md)
-* [@@igComponent Row Adding](row_adding.md)
+* [@@igComponent 행 편집](row-editing.md)
+* [@@igComponent Row Adding](row-adding.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

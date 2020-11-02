@@ -277,7 +277,7 @@ CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행�
 |Export to Excel|Export to Excel 는 현재 계층 적 그리드에서 지원되지 않지만 Ignite UI for Angular의 차후 버전에서 사용할 수 있습니다.|
 
 > [!NOTE]
-> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
 
 ### Styling
 The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
@@ -424,9 +424,9 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [필터링](filtering.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 이동](column_moving.md)
+* [열 이동](column-moving.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 
 <div class="divider--half"></div>

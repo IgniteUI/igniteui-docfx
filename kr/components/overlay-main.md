@@ -259,5 +259,5 @@ If you show the overlay in an outlet, and if the outlet is child of element with
 
 
 ## Additional Resources
-* [Position strategies](overlay_position.md)
-* [Scroll strategies](overlay_scroll.md)
+* [Position strategies](overlay-position.md)
+* [Scroll strategies](overlay-scroll.md)

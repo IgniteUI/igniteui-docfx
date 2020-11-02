@@ -102,7 +102,7 @@ export class ComboDemo implements OnInit {
 > [!Note]
 > `displayKey` プロパティが省略された場合、`valueKey` エンティティが項目テキストとして使用されます。
 
-Combo コンポーネントをリモート データにバインドする方法の詳細は、[コンボ リモート バインディングのトピック](combo_remote.md)を参照してください。
+Combo コンポーネントをリモート データにバインドする方法の詳細は、[コンボ リモート バインディングのトピック](combo-remote.md)を参照してください。
 
 ### カスタム オーバーレイ設定
 Combo コンポーネントでは、ユーザーが項目リストの表示方法を変更できます。これを行うには、カスタム [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) を定義し、それらを Combo の [overlaySettings]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) 入力に渡します。
@@ -126,7 +126,7 @@ export class CustomOverlayCombo {
 <igx-combo [data]="items" [overlaySettings]="customSettings"></igx-combo>
 ```
 
-すべてが適切に設定されると、[GlobalPositionStrategy](overlay_position.md#グローバル) を使用してコンボのリストが中央に表示されます。
+すべてが適切に設定されると、[GlobalPositionStrategy](overlay-position.md#グローバル) を使用してコンボのリストが中央に表示されます。
 
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="combo-overlay-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-overlay" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -201,11 +201,11 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 <div class="divider--half"></div>
 
 * [コンボ コンポーネント](combo.md)
-* [コンボ リモート バインディング](combo_remote.md)
-* [コンボ テンプレート](combo_templates.md)
-* [テンプレート駆動フォームの統合](input_group.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [カスケーディング](combo_cascading.md)
+* [コンボ リモート バインディング](combo-remote.md)
+* [コンボ テンプレート](combo-templates.md)
+* [テンプレート駆動フォームの統合](input-group.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

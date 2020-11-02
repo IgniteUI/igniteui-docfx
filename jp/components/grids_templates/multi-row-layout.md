@@ -268,7 +268,7 @@ $my-custom-schema: extend($light-schema, (
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [ソート](sorting.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

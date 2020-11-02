@@ -27,7 +27,7 @@ IgniteUI for Angular @@igComponent component provides three different filtering 
 
 ## Angular Filter Example
 
-The sample below demonstrates @@igComponent's **Quick filtering** user experience. @@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method is used to apply _contains_ condition on the _ProductName column_ though external _igxInputGroup component_.  } 
+The sample below demonstrates @@igComponent's **Quick filtering** user experience. @@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method is used to apply _contains_ condition on the _ProductName column_ through external _igxInputGroup component_.  } 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

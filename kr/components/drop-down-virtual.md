@@ -7,7 +7,7 @@ _language: kr
 
 ## Virtual Drop Down
 
-<p class="highlight">[The Ignite UI for Angular Drop Down](drop_down.md) can fully integrate usage of the [IgxForOf directive](for_of.md) in order to display a very large list of items for its selection</p>
+<p class="highlight">[The Ignite UI for Angular Drop Down](drop-down.md) can fully integrate usage of the [IgxForOf directive](for-of.md) in order to display a very large list of items for its selection</p>
 
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -84,7 +84,7 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 #### 드롭 영역
 
 행 드래그를 활성화하는 것은 매우 간단한데 다음은 행 *드롭*을 처리하는 방법을 설정해야 합니다.
-[`igxDrop` 지시문](../drag_drop.md)을 사용하여 행을 삭제할 위치를 정의할 수 있습니다.
+[`igxDrop` 지시문](../drag-drop.md)을 사용하여 행을 삭제할 위치를 정의할 수 있습니다.
 
 먼저 앱 모듈에서 `IgxDragDropModule`을 가져와야 합니다:
 

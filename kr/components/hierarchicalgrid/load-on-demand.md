@@ -307,7 +307,7 @@ export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
 
 <div class="divider--half"></div>
 
-* [계층 그리드 컴포넌트](hierarchical_grid.md)
+* [계층 그리드 컴포넌트](hierarchical-grid.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

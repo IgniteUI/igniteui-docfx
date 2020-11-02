@@ -345,13 +345,13 @@ $custom-grid-theme: igx-grid-theme(
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [選択](selection.md)
-* [行の選択](row_selection.md)
+* [行の選択](row-selection.md)
 * [フィルタリング](filtering.md)
 * [並び替え](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>

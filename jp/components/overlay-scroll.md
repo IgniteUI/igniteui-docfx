@@ -91,8 +91,8 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 * [IScrollStrategy]({environment:angularApiUrl}/interfaces/iscrollstrategy.html)
 
 ## その他のリソース
-* [オーバーレイ メイン トピック](overlay_main.md)
-* [配置ストラテジ](overlay_position.md)
-* [スタイル設定](overlay_styling.md)
+* [オーバーレイ メイン トピック](overlay-main.md)
+* [配置ストラテジ](overlay-position.md)
+* [スタイル設定](overlay-styling.md)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)

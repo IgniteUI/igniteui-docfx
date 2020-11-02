@@ -22,7 +22,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 
 ### 사용 방법
 
-로드 온디맨드 기능은 [`기본 키와 외부 키`](tree_grid.md#primary-and-foreign-keys) 또는 [`하위 컬렉션`](tree_grid.md#child-collection)과 같은 2가지 유형의 Tree Grid 데이터 소스와 호환됩니다. 트리 그리드에 루트 수준 데이터를 로딩하고 데이터 소스 유형 중 하나에 필요한 키를 지정하기만 하면 됩니다. 사용자가 행을 확장할 때 하위 행을 로딩하기 위해 Tree Grid가 콜백 입력 속성인 [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand)를 제공합니다.
+로드 온디맨드 기능은 [`기본 키와 외부 키`](tree-grid.md#primary-and-foreign-keys) 또는 [`하위 컬렉션`](tree-grid.md#child-collection)과 같은 2가지 유형의 Tree Grid 데이터 소스와 호환됩니다. 트리 그리드에 루트 수준 데이터를 로딩하고 데이터 소스 유형 중 하나에 필요한 키를 지정하기만 하면 됩니다. 사용자가 행을 확장할 때 하위 행을 로딩하기 위해 Tree Grid가 콜백 입력 속성인 [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand)를 제공합니다.
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
@@ -79,7 +79,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 
 <div class="divider--half"></div>
 
-* [트리 그리드 개요](tree_grid.md)
+* [트리 그리드 개요](tree-grid.md)
 * [트리 그리드 가상화 및 성능](virtualization.md)
 
 <div class="divider--half"></div>

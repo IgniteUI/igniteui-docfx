@@ -151,7 +151,7 @@ _language: ja
 ```
 }
 
-各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column_moving.md), [`ピン固定`](column_pinning.md) と [`非表示`](column_hiding.md) をサポートします。
+各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md), [`ピン固定`](column_pinning.md) と [`非表示`](column_hiding.md) をサポートします。
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は列の一番上の親レベルでのみ可能です。ネストした `column groups` や `columns` のピン固定はできません。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみです。<br />
@@ -429,7 +429,7 @@ $custom-theme: igx-grid-theme(
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 @@if (igxName === 'IgxGrid') {* [グループ化](groupby.md)}
 

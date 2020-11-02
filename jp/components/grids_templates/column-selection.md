@@ -54,7 +54,7 @@ _language: ja
 デフォルトの選択モードは `none` です。`single` または `multiple` に設定されると、すべての列は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) になります。列を選択するには、列をクリックして [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) としてマークします。列が選択不可な場合、ホバー時に選択スタイルはヘッダーに適用されません。
 
 > [!NOTE]
-> [`複数列ヘッダー`](multi_column_headers.md) は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) 入力に反映されません。その子の 1 つ以上で選択動作が有効な場合、[`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) です。さらに、すべての `selectable` 子孫が [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) である場合、コンポーネントは [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) としてマークされます。
+> [`複数列ヘッダー`](multi-column-headers.md) は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) 入力に反映されません。その子の 1 つ以上で選択動作が有効な場合、[`IgxColumnGroupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) です。さらに、すべての `selectable` 子孫が [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) である場合、コンポーネントは [`selected`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected) としてマークされます。
 
 @@if (igxName === 'IgxGrid') {
 *_Country Information_ 列グループでは、_City_ 列および _Postal code_ 列のみを選択できます。
@@ -100,7 +100,7 @@ API 操作の詳細については、[`API リファレンス`](#api-references)
 ```
 
 >[!NOTE]
->[`行選択`](row_selection.md)と[`列選択`](column_selection.md)は個別に操作できないことに注意してください。同じ`変数`に依存します。
+>[`行選択`](row-selection.md)と[`列選択`](column-selection.md)は個別に操作できないことに注意してください。同じ`変数`に依存します。
 
 **選択**と**ホバー**のスタイル設定を変更します。<br/>
 最も簡単な方法は、カスタム **テーマ**を定義する方法です。
@@ -201,14 +201,14 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [選択](selection.md)
-* [セル選択](cell_selection.md)
+* [セル選択](cell-selection.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>

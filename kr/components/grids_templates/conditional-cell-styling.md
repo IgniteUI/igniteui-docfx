@@ -163,15 +163,15 @@ public priceClasses = {
 * [필터링](filtering.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 이동](column_moving.md)
+* [열 이동](column-moving.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [열 숨기기](column_hiding.md)
 * [선택](selection.md)
 * [검색](search.md)
 * [도구 모음](toolbar.md)
-* [복수 열 헤더](multi_column_headers.md)
-* [표시 밀도](display_density.md)
+* [복수 열 헤더](multi-column-headers.md)
+* [표시 밀도](display-density.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

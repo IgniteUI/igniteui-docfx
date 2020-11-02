@@ -7,7 +7,7 @@ _language: ja
 
 # 仮想ドロップダウン
 
-<p class="highlight">Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目リストを表示するために、[IgxForOf](for_of.md) ディレクティブの使用方法を完全に統合できます。</p>
+<p class="highlight">Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目リストを表示するために、[IgxForOf](for-of.md) ディレクティブの使用方法を完全に統合できます。</p>
 
 ## デモ
 <div class="sample-container loading" style="height:320px">

@@ -63,7 +63,7 @@ public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4,
 
 ### コンポーネントの投影
 
-デフォルトの Date Range Picker UX の機能向上のため、コンポーネントは子コンポーネントの投影を許可します - [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 、[`igxLabel`](label_input.md)、[`IgxHint`](input_group.md#hint)、[`igxPrefix`](input_group.md#Prefix-および-Suffix)、[`igxSuffix`](input_group.md#Prefix-および-Suffix) ([`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く) と同じです。詳細については、[Label および Input](label_input.md) トピックを参照してください。
+デフォルトの Date Range Picker UX の機能向上のため、コンポーネントは子コンポーネントの投影を許可します - [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#Prefix-および-Suffix)、[`igxSuffix`](input-group.md#Prefix-および-Suffix) ([`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く) と同じです。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
 さらに、Date Range Picker は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) を投影するように構成できます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) は、カレンダーの切り替えを制御し、[カレンダーの切り替え](#カレンダーの切り替え) セクションに示すように変更できます。
 
@@ -89,8 +89,8 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
     </igx-date-range-end>
 </igx-date-range-picker>
 ```
-- [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) と [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) は、既存の [`IgxInputGroupComponent`](input_group.md) を拡張します。このような構成を操作するには、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) に定義する必要があります。さらに、[`IgxInputGroupComponent`](input_group.md) で利用可能なすべての他のコンポーネントおよびディレクティブも使用できます。
-- 両方の入力で日付編集を有効にするには、[`igxDateTimeEditor`](date_time_editor.md) ディレクティブでデコレートする必要があります。
+- [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) と [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) は、既存の [`IgxInputGroupComponent`](input-group.md) を拡張します。このような構成を操作するには、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) に定義する必要があります。さらに、[`IgxInputGroupComponent`](input-group.md) で利用可能なすべての他のコンポーネントおよびディレクティブも使用できます。
+- 両方の入力で日付編集を有効にするには、[`igxDateTimeEditor`](date-time-editor.md) ディレクティブでデコレートする必要があります。
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="daterangepicker-start-end-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -112,7 +112,7 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
 ## コード例
 
 ### ラベル
-日付範囲ピッカーのラベルを定義するには、以下のスニペットに示すように [`igxLabel`](label_input.md) ディレクティブを使用する必要があります。
+日付範囲ピッカーのラベルを定義するには、以下のスニペットに示すように [`igxLabel`](label-input.md) ディレクティブを使用する必要があります。
 
 ```html
 <igx-date-range-picker [(ngModel)]="range">
@@ -121,7 +121,7 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
 ```
 
 ### カレンダーの切り替え
-単一の読み取り専用入力を使用するデフォルト構成では、デフォルトのカレンダーのアイコンがプレフィックスとして表示されます。カレンダーのアイコンは、[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input_group.md#Prefix-および-Suffix) または [`igxSuffix`](input_group.md#Prefix-および-Suffix) で設定できます。デフォルトの位置を変更し、アイコンをサフィックスとして表示するには、以下を実行する必要があります。
+単一の読み取り専用入力を使用するデフォルト構成では、デフォルトのカレンダーのアイコンがプレフィックスとして表示されます。カレンダーのアイコンは、[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#Prefix-および-Suffix) または [`igxSuffix`](input-group.md#Prefix-および-Suffix) で設定できます。デフォルトの位置を変更し、アイコンをサフィックスとして表示するには、以下を実行する必要があります。
 
 ```html
 <igx-date-range-picker>
@@ -183,7 +183,7 @@ Date Range Picker のカレンダー UI 内のキーボード ナビゲーショ
 
 [カレンダーのキーボード ナビゲーションセクション](calendar.md#キーボード-ナビゲーション)には、カレンダーで使用できるすべてのキーボードの組み合わせが含まれています。
 
-2 つの異なる入力を使用する場合、[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブの[キーボード ナビゲーション](date_time_editor.md#キーボード-ナビゲーション)は Date Range Picker コンポーネントにも適用できます。
+2 つの異なる入力を使用する場合、[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブの[キーボード ナビゲーション](date-time-editor.md#キーボード-ナビゲーション)は Date Range Picker コンポーネントにも適用できます。
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>左矢印</kbd> / <kbd>右矢印</kbd>  -日付セクション間を移動します。<kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>右矢印</kbd>でセクションの最後に移動します。既にセクションの最後にある場合、次のセクションの最後に移動します。反対方向も同様です。
 - <kbd>上矢印</kbd> / <kbd>下矢印</kbd> - 日付部分を増減します。
@@ -391,7 +391,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 ### スタイルのスコーピング
-スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay_styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input_group.md#スタイルのスコーピング)の両方のスタイル設定セクションを参照してください。
+スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay-styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input-group.md#スタイルのスコーピング)の両方のスタイル設定セクションを参照してください。
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="styled-daterangepicker-iframe" src='{environment:demosBaseUrl}/scheduling/styled-daterangepicker' width="100%" height="100%" 
@@ -426,10 +426,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ## その他のリソース
 関連トピック:
-* [Date Time Editor](date_time_editor.md)
-* [Label および Input](label_input.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [Date Picker](date_picker.md)
+* [Date Time Editor](date-time-editor.md)
+* [Label および Input](label-input.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [Date Picker](date-picker.md)
 
 
 コミュニティに参加して新しいアイデアをご提案ください。

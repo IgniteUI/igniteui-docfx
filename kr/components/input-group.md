@@ -44,7 +44,7 @@ export class AppModule {}
 > To use any of the directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), `igxLabel`, `igx-prefix`, `igx-suffix` or [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), you have to wrap them in an `<igx-input-group>` container.
 
 #### Label & Input
-You can read about the `igxLabel` and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label_input.md).
+You can read about the `igxLabel` and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label-input.md).
 
 #### Prefix & Suffix
 If you want to have an input prefix or suffix, you can use Ignite UI for Angular Prefix or Suffix. Both directives can contain html elements, strings, icons or even other components. Let's add a new input field with string **prefix** (`+359`) and [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) **suffix** (`<igx-icon>phone</igx-icon>`):
@@ -106,11 +106,11 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 ### Additional Resources
 Related topics:
 
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Label & Input](label_input.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Label & Input](label-input.md)
 * [Combo](combo.md)
 * [Select](select.md)
-* [Display Density](display_density.md)
+* [Display Density](display-density.md)
 
 Our community is active and always welcoming to new ideas.
 

@@ -196,7 +196,7 @@ public styles = {
 ### cellStyles の使用
 列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
-[上記のサンプル](conditional_cell_styling.md#cellStyles-を使用したデモ)で作成した項目:
+[上記のサンプル](conditional-cell-styling.md#cellStyles-を使用したデモ)で作成した項目:
 - 列インデックスに基づいて適用される 2 つの異なるスタイル。 
 - また、偶数/奇数行に基づいて`テキストの色`を変更します。
 
@@ -364,15 +364,15 @@ editDone(evt) {
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [列の非表示](column_hiding.md)
 * [選択](selection.md)
 * [検索](search.md)
 * [ツールバー](toolbar.md)
-* [複数行ヘッダー](multi_column_headers.md)
-* [表示密度](display_density.md)
+* [複数行ヘッダー](multi-column-headers.md)
+* [表示密度](display-density.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

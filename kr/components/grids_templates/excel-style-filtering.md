@@ -371,9 +371,9 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 * [페이징](paging.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 이동](column_moving.md)
+* [열 이동](column-moving.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 
 <div class="divider--half"></div>

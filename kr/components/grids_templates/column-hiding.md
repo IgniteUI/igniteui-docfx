@@ -344,7 +344,7 @@ export class AppModule {}
 - **Alphabetical**(알파벳순으로 열 순서를 정렬)
 - **DisplayOrder**(@@igComponent에 표시되는 순서에 따라 열 순서를 정렬)
 
-이 옵션에 잘 디자인된 두 개의 라디오 버튼을 추가합니다! [**IgxRadio**](../radio_button.md) 모듈에 추가하기만 하면 됩니다.
+이 옵션에 잘 디자인된 두 개의 라디오 버튼을 추가합니다! [**IgxRadio**](../radio-button.md) 모듈에 추가하기만 하면 됩니다.
 
 ```typescript
 // app.module.ts
@@ -440,7 +440,7 @@ export class AppModule {}
 ### API 참조
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-이 조항에서는 @@igComponent 도구 모음에 내장된 열 숨기기 UI를 사용하는 방법과 별도의 컴포넌트로 정의하는 방법을 설명했습니다. 사용자가 다른 열 순서 중에서 선택할 수 있는 기능을 제공하는 UI를 장착하여 사용자 제목 및 필터 프롬프트 텍스트를 설정했습니다. 또한, Ignite UI for Angular 컴포넌트 [**IgxRadio**](../radio_button.md) 버튼을 추가로 사용했습니다.
+이 조항에서는 @@igComponent 도구 모음에 내장된 열 숨기기 UI를 사용하는 방법과 별도의 컴포넌트로 정의하는 방법을 설명했습니다. 사용자가 다른 열 순서 중에서 선택할 수 있는 기능을 제공하는 UI를 장착하여 사용자 제목 및 필터 프롬프트 텍스트를 설정했습니다. 또한, Ignite UI for Angular 컴포넌트 [**IgxRadio**](../radio-button.md) 버튼을 추가로 사용했습니다.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 이 항목에서는 @@igComponent 도구 모음에 정의된 열 숨기기 UI를 사용하는 방법을 설명했습니다.
@@ -489,7 +489,7 @@ export class AppModule {}
 * [정렬](sorting.md)
 * [요약](summaries.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [검색](search.md)}
 

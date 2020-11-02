@@ -95,11 +95,11 @@ export class CascadingCombos {
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [Combo Features](combo-features.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
 * [IgxOverlay]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 Our community is active and always welcoming to new ideas.

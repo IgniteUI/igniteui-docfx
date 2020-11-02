@@ -309,7 +309,7 @@ export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
 
 <div class="divider--half"></div>
 
-* [Hierarchical Grid コンポーネント](hierarchical_grid.md)
+* [Hierarchical Grid コンポーネント](hierarchical-grid.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

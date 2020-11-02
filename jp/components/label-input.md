@@ -131,7 +131,7 @@ public user = {
 <div class="divider--half"></div>
 
 ## Input Group
-Ignite UI for Angular Input Group コンポーネントは、開発者が使いやすく美しフォームを作成するのに役立ちます。詳細については、別のトピック[こちら](input_group.md) を参照してください。
+Ignite UI for Angular Input Group コンポーネントは、開発者が使いやすく美しフォームを作成するのに役立ちます。詳細については、別のトピック[こちら](input-group.md) を参照してください。
 
 ## API リファレンス
 <div class="divider--half"></div>
@@ -144,7 +144,7 @@ Ignite UI for Angular Input Group コンポーネントは、開発者が使い�
 <div class="divider--half"></div>
 
 関連トピック:
-* [Input Group](input_group.md)
+* [Input Group](input-group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

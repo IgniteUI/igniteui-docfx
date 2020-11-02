@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 **Slider ticks**, provide a new and more attractive way for data visualization, like a particular timeframe, days of the week and more. With this new functionality the users are not obligated to interact with the slider in order to see what data stays behind. It is extremely flexible, in regards of the control over positioning and orientation of the **ticks** and **tick labels**. The **ticks** can be turned **on/off**, as well as pick between **primary**, **secondary** or **both**. Additionally this feature provides a way to  turn **on/of** **primary**, **secondary** **tick labels** or both, they can even change their rotation form **horizontal** to **vertical** (**top to bottom** (90) or **bottom to top** (-90)).
 
 ### Usage
-Before we start, make sure that you have gone through the **Ignite UI for Angular** [getting started](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html) section.
+Before we start, make sure that you have gone through the **Ignite UI for Angular** [getting started](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html) section.
 
 Once the set up is ready, the **IgxSliderModule** needs to be included in the **app.module.ts** file
 

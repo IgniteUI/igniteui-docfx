@@ -8,7 +8,7 @@ _language: ja
 # Excel Exporter
 
 <p class="highlight">
-Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) または [**IgxTreeGrid**](treegrid/tree_grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングやソートなどの機能が使用できます。</p>
+Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) または [**IgxTreeGrid**](treegrid/tree-grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングやソートなどの機能が使用できます。</p>
 <div class="divider"></div>
 
 ## デモ
@@ -114,8 +114,8 @@ import 'setimmediate';
 * [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grid Excel エクスポーター:
-* [`IgxGrid Excel エクスポーター`](grid/export_excel.md)
-* [`IgxTreeGrid Excel エクスポーター`](treegrid/export_excel.md)
+* [`IgxGrid Excel エクスポーター`](grid/export-excel.md)
+* [`IgxTreeGrid Excel エクスポーター`](treegrid/export-excel.md)
 
 その他の使用されたコンポーネント:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)

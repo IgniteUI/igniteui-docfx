@@ -897,7 +897,7 @@ public ngAfterViewInit() {
 
 ### 一括編集のリモート ページング
 
-これまでの例で、リモート データで @@igxName を設定する方法を説明しました。次に、[一括編集のトピック](batch_editing.html)に従ってグリッドのバッチ編集を有効にします。
+これまでの例で、リモート データで @@igxName を設定する方法を説明しました。次に、[一括編集のトピック](batch-editing.html)に従ってグリッドのバッチ編集を有効にします。
 
 サンプルを続行する前に、現在のユースケースを明確します。ページネーションを実行すると、グリッドには現在のページのデータのみが含まれます。新しい行を追加すると、(一括編集により) 新しく追加された行はグリッドに含まれる現在のデータと連結されます。したがって、サーバーが指定されたページのデータを返さない場合、グリッドのデータソースは新しく追加された行のみで構成され、グリッドは定義されたページ設定 (page、perPage) に基づいてページを作成します。
 
@@ -968,9 +968,9 @@ public paginate(page: number) {
 * [ソート](sorting.md)
 * [ページング](paging.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

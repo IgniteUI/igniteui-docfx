@@ -45,9 +45,9 @@ Ignite UI for Angular の @@igComponent コンポーネントは、1 秒間に�
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>
@@ -86,7 +86,7 @@ Ignite UI for Angular の @@igComponent コンポーネントは、1 秒間に�
 <div class="divider--half"></div>
 
 * [データ グリッド](../grid/grid.md)
-* [行編集](row_editing.md)
+* [行編集](row-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

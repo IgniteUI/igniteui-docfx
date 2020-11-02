@@ -171,7 +171,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue)をトリガーし、[トランザクション状態](./batch_editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
 > セルテンプレート [`igxCell`](../grid/grid.md#セル-テンプレート) は、編集モード外での列のセルの表示方法を制御します。
@@ -503,7 +503,7 @@ $custom-grid-theme: igx-grid-theme(
 
 ### デモのスタイル設定
 
-上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input_group.md#スタイル設定)、[`igx-datepicker`](../date_picker.md#スタイル設定) および [`igx-checkbox`](../checkbox.md#スタイル設定))。
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input-group.md#スタイル設定)、[`igx-datepicker`](../date-picker.md#スタイル設定) および [`igx-checkbox`](../checkbox.md#スタイル設定))。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">
@@ -561,6 +561,6 @@ $custom-grid-theme: igx-grid-theme(
 * [ソート](sorting.md)
 * [集計](summaries.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}

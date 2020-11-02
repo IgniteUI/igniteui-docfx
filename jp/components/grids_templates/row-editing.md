@@ -470,7 +470,7 @@ $button-theme: igx-button-theme(
 
 * [@@igComponent 概要](@@igMainTopic.md)
 * [@@igComponent 編集](editing.md)
-* [@@igComponent トランザクション](batch_editing.md)
+* [@@igComponent トランザクション](batch-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

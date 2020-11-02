@@ -7,14 +7,14 @@ _language: ja
 
 # オーバーレイ スタイリング
 <p class="highlight">
-[`IgxOverlayService`](overlay_main.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop_down.md)、[コンボ](combo.md)、[日付ピッカー](date_picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
+[`IgxOverlayService`](overlay-main.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop-down.md)、[コンボ](combo.md)、[日付ピッカー](date-picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
 他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
 </p>
 <div class="divider--half"></div>
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/global-theme.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop_down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/global-theme.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -127,7 +127,7 @@ $my-overlay-theme: igx-overlay-theme(
 
 ### スコープ オーバーレイ スタイル
 
-特定のコンポーネントの下に**のみ**特定の背景をオーバーレイに表示したい場合は、テーマを[スコープできます](#スコープ-コンポーネント-スタイル)。モーダル オーバーレイをスコープする場合、オーバーレイ アウトレットを移動する必要がありますが、これにはいくつかの[制限](overlay_main.md#前提事項と制限)があります。
+特定のコンポーネントの下に**のみ**特定の背景をオーバーレイに表示したい場合は、テーマを[スコープできます](#スコープ-コンポーネント-スタイル)。モーダル オーバーレイをスコープする場合、オーバーレイ アウトレットを移動する必要がありますが、これにはいくつかの[制限](overlay-main.md#前提事項と制限)があります。
 オーバーフロークリッピング、z-index、およびビューポートの問題のリスクを最小限に抑えるために、より高いレベルのコンポーネントでのみモーダルオーバーレイのアウトレットを使用することをお勧めします。
 
 ```scss
@@ -158,6 +158,6 @@ $my-overlay-theme: igx-overlay-theme(
 
 ## その他のリソース
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [オーバーレイ メイン トピック](overlay_main.md)
-* [配置ストラテジ](overlay_position.md)
-* [スクロール ストラテジ](overlay_scroll.md)
+* [オーバーレイ メイン トピック](overlay-main.md)
+* [配置ストラテジ](overlay-position.md)
+* [スクロール ストラテジ](overlay-scroll.md)

@@ -335,7 +335,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 * [@@igComponent 개요](@@igMainTopic.md)
 * [@@igComponent 편집](editing.md)
-* [@@igComponent 트랜잭션](batch_editing.md)
+* [@@igComponent 트랜잭션](batch-editing.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

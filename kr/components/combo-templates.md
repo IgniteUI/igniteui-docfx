@@ -170,11 +170,11 @@ Passing content inside of the `igx-combo` also allows templating of the combo in
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo Features](combo-features.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.
 

@@ -226,7 +226,7 @@ export class PasteHandler {
 ### 추가 리소스
 <div class="divider--half"></div>
 
-* [Excel 내보내기](export_excel.md)
+* [Excel 내보내기](export-excel.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

@@ -496,8 +496,8 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [フィルタリング](filtering.md)
 * [並び替え](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列のサイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

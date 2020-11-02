@@ -326,6 +326,6 @@ export class ExampleComponent {
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ### その他のリソース
-* [配置方法](overlay_position.md)
-* [スクロール方法](overlay_scroll.md)
-* [スタイル設定](overlay_styling.md)
+* [配置方法](overlay-position.md)
+* [スクロール方法](overlay-scroll.md)
+* [スタイル設定](overlay-styling.md)

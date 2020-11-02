@@ -66,7 +66,7 @@ import { FormsModule } from '@angular/forms';
 
 ## その他のリソース
 * [デスクトップから Web: デスクトップから Web: ngModel を使用した Angular 双方向バインディング](https://www.youtube.com/watch?v=MrjTTDEj7cA&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
-* [Angular 一方向バインディング](one_way_binding.md)
+* [Angular 一方向バインディング](one-way-binding.md)
 * [Angular NgModel](https://angular.io/api/forms/NgModel)
 
 <div class="divider--half"></div>

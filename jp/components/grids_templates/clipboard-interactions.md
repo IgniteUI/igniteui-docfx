@@ -64,7 +64,7 @@ _language: ja
 
 - グリッドが編集モードの間、コピー動作は無効になります。
 - この機能の現在のバージョンは、グリッドからのコピー動作のみをカバーします。今後、グリッドの動作内で`貼り付け`を公開する予定です。
-@@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excel から貼り付け](paste_excel.md)トピックをご覧ください 。}
+@@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excel から貼り付け](paste-excel.md)トピックをご覧ください 。}
 
 ## API の使用
 次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) プロパティを公開します。
@@ -90,7 +90,7 @@ _language: ja
 * [列のピン固定](column_pinning.md)
 * [選択](selection.md)
 * [仮想化とパフォーマンス](virtualization.md)
-* [複数列ヘッダー](multi_column_headers.md)
+* [複数列ヘッダー](multi-column-headers.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

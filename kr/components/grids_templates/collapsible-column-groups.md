@@ -48,9 +48,9 @@ To get started with the IgxGrid and the **Collapsible multi-column headers** , f
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi_column_headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
+The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
 
 ### Usage
 
@@ -154,7 +154,7 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
+* [Column Moving](column-moving.md)
 * [Column Pinning](column_pinning.md)
 * [Selection](selection.md)
 

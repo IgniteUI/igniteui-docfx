@@ -31,7 +31,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
 階層グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
 
@@ -389,7 +389,7 @@ $custom-theme: igx-grid-theme(
 |Excel エクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
 > [!NOTE]
-> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for_of.html#既知の問題と制限) のセクションを参照してください。
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
 
 ## API リファレンス
 
@@ -410,9 +410,9 @@ $custom-theme: igx-grid-theme(
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

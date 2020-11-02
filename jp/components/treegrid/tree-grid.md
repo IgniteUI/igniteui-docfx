@@ -27,7 +27,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
 ツリー グリッドが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に `IgxTreeGridModule` をインポートする必要があります。
 
@@ -386,7 +386,7 @@ $custom-theme: igx-grid-theme(
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
 
 > [!NOTE]
-> `igxTreeGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxTreeGrid` で有効です。詳細については、[igxForOf 既知の問題](../for_of.html#既知の問題と制限) のセクションを参照してください。
+> `igxTreeGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxTreeGrid` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
 
 <div class="divider--half"></div>
 
@@ -410,7 +410,7 @@ $custom-theme: igx-grid-theme(
 
 * [Grid サイズ変更](sizing.md)
 * [Data Grid](../grid/grid.md)
-* [行編集](row_editing.md)
+* [行編集](row-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
