@@ -2,16 +2,16 @@
   header: true
   _language: "kr"
 - name: Getting started
-  href: general/getting_started.md
+  href: general/getting-started.md
   new: false
 - name: Update guide
-  href: general/update_guide.md
+  href: general/update-guide.md
   new: false
 - name: Ignite UI CLI
   href: general/cli-overview.md
   new: false
 - name: Grids & Lists
-  href: grids_and_lists.md
+  href: grids-and-lists.md
   header: true
 - name: Data Grid
   href: grid/grid.md
@@ -24,16 +24,16 @@
       href: grid/editing.md
       new: false
     - name: 행 편집
-      href: grid/row_editing.md
+      href: grid/row-editing.md
       new: false
     - name: Row Adding
-      href: grid/row_adding.md
+      href: grid/row-adding.md
       new: true
     - name: Row Drag
-      href: grid/row_drag.md
+      href: grid/row-drag.md
       new: false
     - name: 트랜잭션
-      href: grid/batch_editing.md
+      href: grid/batch-editing.md
       new: false
     - name: 페이징
       href: grid/paging.md
@@ -42,7 +42,7 @@
       href: grid/filtering.md
       new: false
     - name: Excel 스타일 필터링
-      href: grid/excel_style_filtering.md
+      href: grid/excel-style-filtering.md
       new: false
     - name: 정렬
       href: grid/sorting.md
@@ -54,19 +54,19 @@
       href: grid/summaries.md
       new: false
     - name: 열 이동
-      href: grid/column_moving.md
+      href: grid/column-moving.md
       new: false
     - name: 열 핀 고정
-      href: grid/column_pinning.md
+      href: grid/column-pinning.md
       new: true
     - name: Row Pinning
-      href: grid/row_pinning.md
+      href: grid/row-pinning.md
       new: true
     - name: 크기 조정
-      href: grid/column_resizing.md
+      href: grid/column-resizing.md
       new: false
     - name: 숨기기
-      href: grid/column_hiding.md
+      href: grid/column-hiding.md
       new: false
     - name: 행 선택
       href: grid/selection.md
@@ -78,59 +78,59 @@
       href: grid/toolbar.md
       new: false
     - name: Excel 내보내기
-      href: grid/export_excel.md
+      href: grid/export-excel.md
       new: false
     - name: Excel에서 붙여넣기
-      href: grid/paste_excel.md
+      href: grid/paste-excel.md
       new: false
     - name: 복수 열 헤더
-      href: grid/multi_column_headers.md
+      href: grid/multi-column-headers.md
       new: false
     - name: Collapsible Column Groups
-      href: grid/collapsible_column_groups.md
+      href: grid/collapsible-column-groups.md
       new: true
     - name: 표시 밀도
-      href: grid/display_density.md
+      href: grid/display-density.md
       new: false
     - name: 조건부 셀 스타일
-      href: grid/conditional_cell_styling.md
+      href: grid/conditional-cell-styling.md
       new: false
     #- name: Keyboard navigation
-    #  href: grid/keyboard_navigation.md
+    #  href: grid/keyboard-navigation.md
     #  new: true
     #- name: 다중 행 레이아웃
-    #  href: grid/multi_row_layout.md
+    #  href: grid/multi-row-layout.md
     #  new: true
     - name: Sizing
       href: grid/sizing.md
       new: true
     - name: State Persistence
-      href: grid/state_persistence.md
+      href: grid/state-persistence.md
       new: true
 - name: Tree Grid
-  href: treegrid/tree_grid.md
+  href: treegrid/tree-grid.md
   new: true
   items:
     - name: 가상화 및 성능
       href: treegrid/virtualization.md
       new: false
     - name: 로드 온디맨드
-      href: treegrid/load_on_demand.md
+      href: treegrid/load-on-demand.md
       new: false
     - name: 편집
       href: treegrid/editing.md
       new: false
     - name: 행 편집
-      href: treegrid/row_editing.md
+      href: treegrid/row-editing.md
       new: false
     - name: Row Adding
-      href: treegrid/row_adding.md
+      href: treegrid/row-adding.md
       new: true
     - name: Row Drag
-      href: treegrid/row_drag.md
+      href: treegrid/row-drag.md
       new: false
     - name: 트랜잭션
-      href: treegrid/batch_editing.md
+      href: treegrid/batch-editing.md
       new: false
     - name: 페이징
       href: treegrid/paging.md
@@ -139,7 +139,7 @@
       href: treegrid/filtering.md
       new: false
     - name: Excel 스타일 필터링
-      href: treegrid/excel_style_filtering.md
+      href: treegrid/excel-style-filtering.md
       new: false
     - name: 정렬
       href: treegrid/sorting.md
@@ -148,16 +148,16 @@
       href: treegrid/summaries.md
       new: false
     - name: 열 이동
-      href: treegrid/column_moving.md
+      href: treegrid/column-moving.md
       new: false
     - name: 열 핀 고정
-      href: treegrid/column_pinning.md
+      href: treegrid/column-pinning.md
       new: false
     - name: 크기 조정
-      href: treegrid/column_resizing.md
+      href: treegrid/column-resizing.md
       new: false
     - name: 숨기기
-      href: treegrid/column_hiding.md
+      href: treegrid/column-hiding.md
       new: false
     - name: 행 선택
       href: treegrid/selection.md
@@ -169,53 +169,53 @@
       href: treegrid/toolbar.md
       new: false
     - name: Excel 내보내기
-      href: treegrid/export_excel.md
+      href: treegrid/export-excel.md
       new: false
     - name: 복수 열 헤더
-      href: treegrid/multi_column_headers.md
+      href: treegrid/multi-column-headers.md
       new: false
     - name: Collapsible Column Groups
-      href: treegrid/collapsible_column_groups.md
+      href: treegrid/collapsible-column-groups.md
       new: true
     - name: 표시 밀도
-      href: treegrid/display_density.md
+      href: treegrid/display-density.md
       new: false
     - name: 조건부 셀 스타일
-      href: treegrid/conditional_cell_styling.md
+      href: treegrid/conditional-cell-styling.md
       new: false
     - name: 그리드 집계
       href: treegrid/aggregations.md
       new: false
     #- name: Keyboard navigation
-    # href: treegrid/keyboard_navigation.md
+    # href: treegrid/keyboard-navigation.md
     # new: true
     - name: Sizing
       href: treegrid/sizing.md
       new: true
 - name: Hierarchical Grid
-  href: hierarchicalgrid/hierarchical_grid.md
+  href: hierarchicalgrid/hierarchical-grid.md
   new: false
   items:
     - name: 가상화 및 성능
       href: hierarchicalgrid/virtualization.md
       new: false
     - name: 로드 온디맨드
-      href: hierarchicalgrid/load_on_demand.md
+      href: hierarchicalgrid/load-on-demand.md
       new: false
     - name: 편집
       href: hierarchicalgrid/editing.md
       new: false
     - name: 행 편집
-      href: hierarchicalgrid/row_editing.md
+      href: hierarchicalgrid/row-editing.md
       new: false
     - name: Row Adding
-      href: hierarchicalgrid/row_adding.md
+      href: hierarchicalgrid/row-adding.md
       new: true
     - name: Row Drag
-      href: hierarchicalgrid/row_drag.md
+      href: hierarchicalgrid/row-drag.md
       new: false
     - name: 트랜잭션
-      href: hierarchicalgrid/batch_editing.md
+      href: hierarchicalgrid/batch-editing.md
       new: false
     - name: 페이징
       href: hierarchicalgrid/paging.md
@@ -224,7 +224,7 @@
       href: hierarchicalgrid/filtering.md
       new: false
     - name: Excel 스타일 필터링
-      href: hierarchicalgrid/excel_style_filtering.md
+      href: hierarchicalgrid/excel-style-filtering.md
       new: false
     - name: 정렬
       href: hierarchicalgrid/sorting.md
@@ -233,16 +233,16 @@
       href: hierarchicalgrid/summaries.md
       new: false
     - name: 열 이동
-      href: hierarchicalgrid/column_moving.md
+      href: hierarchicalgrid/column-moving.md
       new: false
     - name: 열 핀 고정
-      href: hierarchicalgrid/column_pinning.md
+      href: hierarchicalgrid/column-pinning.md
       new: false
     - name: 크기 조정
-      href: hierarchicalgrid/column_resizing.md
+      href: hierarchicalgrid/column-resizing.md
       new: false
     - name: 숨기기
-      href: hierarchicalgrid/column_hiding.md
+      href: hierarchicalgrid/column-hiding.md
       new: false
     - name: 행 선택
       href: hierarchicalgrid/selection.md
@@ -255,19 +255,19 @@
       href: hierarchicalgrid/toolbar.md
       new: false
     - name: 복수 열 헤더
-      href: hierarchicalgrid/multi_column_headers.md
+      href: hierarchicalgrid/multi-column-headers.md
       new: false
     - name: Collapsible Column Groups
-      href: hierarchicalgrid/collapsible_column_groups.md
+      href: hierarchicalgrid/collapsible-column-groups.md
       new: true
     - name: 표시 밀도
-      href: hierarchicalgrid/display_density.md
+      href: hierarchicalgrid/display-density.md
       new: false
     # - name: 조건부 셀 스타일
-    #   href: hierarchicalgrid/conditional_cell_styling.md
+    #   href: hierarchicalgrid/conditional-cell-styling.md
     #   new: true
     #- name: Keyboard navigation
-    #  href: hierarchicalgrid/keyboard_navigation.md
+    #  href: hierarchicalgrid/keyboard-navigation.md
     #  new: true
     - name: Sizing
       href: hierarchicalgrid/sizing.md
@@ -279,16 +279,16 @@
   new: true
   items:
     - name: Features
-      href: combo_features.md
+      href: combo-features.md
       new: false
     - name: Remote Binding
-      href: combo_remote.md
+      href: combo-remote.md
       new: true
     - name: Templates
-      href: combo_templates.md
+      href: combo-templates.md
       new: false
     - name: Cascading Scenario
-      href: combo_cascading.md
+      href: combo-cascading.md
       new: true
 - name: Spreadsheet
   href: spreadsheet_overview.md
@@ -755,15 +755,15 @@
 - name: Shadows
   href: shadows.md
 - name: Display Density
-  href: display_density.md
+  href: display-density.md
 - name: Data Entry & Display
   header: true
 - name: Drop Down
-  href: drop_down.md
+  href: drop-down.md
   new: false
   items:
     - name: Virtual Drop Down
-      href: drop_down_virtual.md
+      href: drop-down-virtual.md
       new: true
 - name: Select
   href: select.md
@@ -780,16 +780,16 @@
 - name: Switch
   href: switch.md
 - name: Radio & Radio Group
-  href: radio_button.md
+  href: radio-button.md
   new: false
 - name: Label & Input
-  href: label_input.md
+  href: label-input.md
 - name: Input Group
-  href: input_group.md
+  href: input-group.md
   new: false
   items:
     - name: Reactive Forms
-      href: input_group_reactive_forms.md
+      href: input-group-reactive-forms.md
 - name: Mask
   href: mask.md
   new: false
@@ -801,11 +801,11 @@
   href: divider.md
   new: true
 - name: Linear Progress
-  href: linear_progress.md
+  href: linear-progress.md
 - name: Circular Progress
-  href: circular_progress.md
+  href: circular-progress.md
 - name: Virtual For Directive
-  href: for_of.md
+  href: for-of.md
 - name: Chip
   href: chip.md
   new: false
@@ -821,7 +821,7 @@
   new: true
   items:
     - name: Slider ticks
-      href: slider/slider_ticks.md
+      href: slider/slider-ticks.md
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -830,17 +830,17 @@
   href: tooltip.md
   new: false
 - name: Overlay
-  href: overlay_main.md
+  href: overlay-main.md
   new: true
   items:
   - name: Positioning Strategies
-    href: overlay_position.md
+    href: overlay-position.md
     new: true
   - name: Scrolling Strategies
-    href: overlay_scroll.md
+    href: overlay-scroll.md
     new: false
 - name: Drag and Drop
-  href: drag_drop.md
+  href: drag-drop.md
   new: true
 - name: Action Strip
   new: true
@@ -867,7 +867,7 @@
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel
-  href: expansion_panel.md
+  href: expansion-panel.md
   new: true
 - name: Notifications
   header: true
@@ -883,20 +883,20 @@
 - name: Calendar
   href: calendar.md
 - name: Date Picker
-  href: date_picker.md
+  href: date-picker.md
 - name: Month Picker
-  href: month_picker.md
+  href: month-picker.md
   new: true
 - name: Time Picker
-  href: time_picker.md
+  href: time-picker.md
   new: false
 - name: Services
   header: true
 - name: CSV Exporter
-  href: exporter_csv.md
+  href: exporter-csv.md
   new: false
 - name: Excel Exporter
-  href: exporter_excel.md
+  href: exporter-excel.md
   new: false
 - name: Localization
   href: localization.md
