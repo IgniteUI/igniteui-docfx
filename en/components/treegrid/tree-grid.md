@@ -8,7 +8,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 
 <p class="highlight">The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table based UI Tree Grid.</p>
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height:850px">
     <iframe id="treegrid-childdatakey-iframe" src='{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -20,7 +20,7 @@ _keywords: angular data grid, igniteui for angular, infragistics
 </div>
 <div class="divider--half"></div>
 
-### Getting started
+## Getting started
 To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -45,7 +45,7 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Usage
+## Usage
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
@@ -235,7 +235,7 @@ And here is the final result:
 </div>
 <div class="divider--half"></div>
 
-### Persistence and Integration
+## Persistence and Integration
 
 The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
 
@@ -247,11 +247,11 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 <div class="divider--half"></div>
 
-### Sizing
+## Sizing
 
 See the [Grid Sizing](sizing.md) topic.
 
-### Styling
+## Styling
 
 The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
 
@@ -298,7 +298,7 @@ The last step is to **include** the component theme in our application.
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -327,7 +327,7 @@ $custom-theme: igx-grid-theme(
 );
 ```
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -366,7 +366,7 @@ $custom-theme: igx-grid-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="tree-grid-styling" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
