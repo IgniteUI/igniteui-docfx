@@ -62,6 +62,23 @@ Another way to set the toast content is to directly pass the message as a parame
 <igx-toast #toast ></igx-toast>
 ```
 
+The [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method can also be used in the AppComponent file to to manage the value of the message.
+
+```typescript
+// app.component.ts
+@ViewChild('toast', { read: IgxToastComponent }) public toast: IgxToastComponent;
+
+public message: any;
+
+public ngOnInit() {
+    this.message = 'Display message';
+}
+
+public showMessage() {
+    this.toast.show(this.message);
+}
+```
+
 ## Examples
 
 ### Hide/Auto Hide
