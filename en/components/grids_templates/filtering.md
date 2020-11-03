@@ -442,10 +442,10 @@ As seen, the `igx-grid-theme` only controls colors for the filtering row and the
 
 ```scss
 $dark-input-group: igx-input-group-theme(
-    $box-background: #292826,
-    $idle-text-color: #FFCD0F,
-    $focused-text-color: #FFCD0F,
-    $filled-text-color: #FFCD0F
+    $box-background: #FFCD0F,
+    $idle-text-color: #292826,
+    $focused-text-color: #292826,
+    $filled-text-color: #292826
 );
 
 $dark-button: igx-button-theme(
@@ -518,10 +518,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "primary", 400),
-    $idle-text-color: igx-color($dark-palette, "secondary", 400),
-    $focused-text-color: igx-color($dark-palette, "secondary", 400),
-    $filled-text-color: igx-color($dark-palette, "secondary", 400)
+    $box-background: igx-color($dark-palette, "secondary", 400),
+    $idle-text-color: igx-color($dark-palette, "primary", 400),
+    $focused-text-color: igx-color($dark-palette, "primary", 400),
+    $filled-text-color: igx-color($dark-palette, "primary", 400)
 );
 
 $dark-button: igx-button-theme(
@@ -564,16 +564,16 @@ $custom-grid-schema: extend($_light-grid,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("primary", 400)
+            igx-color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         )
     )
 );
@@ -696,9 +696,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>
