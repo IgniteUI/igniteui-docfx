@@ -11,5 +11,4 @@
 	</metadata>
 	<files>
 		<file src="$langFolder$\_site\**\*.*" target="\" />
-	</files>
-</package>
+	</files></package>
