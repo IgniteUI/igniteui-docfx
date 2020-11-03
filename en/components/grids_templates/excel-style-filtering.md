@@ -362,6 +362,39 @@ The following code demonstrates how to define a custom Excel style filter menu u
 </div>
 }
 
+We have also added a directive for re-templating the filter icon in the column header for Excel Style Filtering - [`IgxExcelStyleHeaderIconDirective`]({environment:angularApiUrl}/classes/igxexcelstyleheadericondirective.html):
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid ...>
+    <ng-template igxExcelStyleHeaderIcon>
+        <!-- Custom Excel Style header icon template content here -->
+    </ng-template>
+</igx-grid>
+```
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid ...>
+    <ng-template igxExcelStyleHeaderIcon>
+        <!-- Custom Excel Style header icon template content here -->
+    </ng-template>
+</igx-tree-grid>
+```
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid ...>
+    <ng-template igxExcelStyleHeaderIcon>
+        <!-- Custom Excel Style header icon template content here -->
+    </ng-template>
+</igx-hierarchical-grid>
+```
+
+}
+
 Here is the full list of Excel style filtering components that you could use:
 - [`igx-excel-style-header`]({environment:angularApiUrl}/classes/igxexcelstyleheadercomponent.html)
 - [`igx-excel-style-sorting`]({environment:angularApiUrl}/classes/igxexcelstylesortingcomponent.html)
