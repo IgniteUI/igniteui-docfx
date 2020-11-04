@@ -329,6 +329,16 @@ The following code demonstrates how to define a custom Excel style filter menu u
 
 }
 
+You could also re-template the Excel style filtering icon in the column header using the `igxExcelStyleHeaderIcon` directive:
+
+```html
+<@@igSelector ...>
+    <ng-template igxExcelStyleHeaderIcon>
+        <igx-icon>filter_alt</igx-icon>
+    </ng-template>
+</@@igSelector>
+```
+
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
@@ -360,39 +370,6 @@ The following code demonstrates how to define a custom Excel style filter menu u
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
-}
-
-We have also added a directive for re-templating the filter icon in the column header for Excel Style Filtering - [`IgxExcelStyleHeaderIconDirective`]({environment:angularApiUrl}/classes/igxexcelstyleheadericondirective.html):
-
-@@if (igxName === 'IgxGrid') {
-```html
-<igx-grid ...>
-    <ng-template igxExcelStyleHeaderIcon>
-        <!-- Custom Excel Style header icon template content here -->
-    </ng-template>
-</igx-grid>
-```
-
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid ...>
-    <ng-template igxExcelStyleHeaderIcon>
-        <!-- Custom Excel Style header icon template content here -->
-    </ng-template>
-</igx-tree-grid>
-```
-
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid ...>
-    <ng-template igxExcelStyleHeaderIcon>
-        <!-- Custom Excel Style header icon template content here -->
-    </ng-template>
-</igx-hierarchical-grid>
-```
-
 }
 
 Here is the full list of Excel style filtering components that you could use:
