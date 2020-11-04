@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-### Shadows
+# Shadows
 
 Shadows は、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。
 
-### エレベーション
+## エレベーション
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
@@ -143,13 +143,13 @@ Shadows は、Document Object Model ツリーの間に境界線を描画し、�
     </div>
 </div>
 
-### 使用方法
+## 使用方法
 
 <div class="elevate-image">
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-###エレベーションの追加方法
+## エレベーションの追加方法
 
 以下はコンポーネントにエレベーションを設定する方法を示します。この例では card コンポーネントを使用しています。
 
@@ -230,8 +230,9 @@ $myboringCard: igx-card-theme(
 以下は上記コードスニペットの結果です。
 
 <div class="sample-container loading" style="height: 470px">
-    <iframe id="card-sample-shadow-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/card-sample-shadow" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-shadow-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/card-sample-shadow" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
@@ -241,7 +242,9 @@ $myboringCard: igx-card-theme(
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
 * [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
+
+

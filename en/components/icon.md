@@ -7,11 +7,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Icon
 <p class="highlight">The Ignite UI for Angular Icon component unifies icon/font sets so developers can use them interchangeably and add material icons to markup.</p>
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 75px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
     </button>
@@ -21,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxIconModule` inside your `AppModule`:
 
@@ -39,9 +40,9 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### Examples
+## Examples
 
-#### Icon Color
+### Icon Color
 
 Use the [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) property of the `igx-icon` component to change its default color:
 
@@ -52,7 +53,7 @@ Use the [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#icon
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
-#### Inactive Icon
+### Inactive Icon
 
 If you want to disable an icon, you can use the [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) property:
 
@@ -63,7 +64,7 @@ If you want to disable an icon, you can use the [`active`]({environment:angularA
     <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
 </iframe></div>
 
-#### Content Projection
+### Content Projection
 
 You can set icons with content projection:
 
@@ -75,7 +76,7 @@ You can set icons with content projection:
     <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
 </iframe></div>
 
-#### Icon Size
+### Icon Size
 
 You can customize the icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
 
@@ -90,7 +91,7 @@ You can customize the icons using CSS. The icon's size can be changed through th
     <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
 </iframe></div>
 
-### SVG Icons
+## SVG Icons
 
 You can also use an SVG image as an icon. First, inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example we will inject it in a component's constructor but you can use it wherever it is needed in your code. 
 
@@ -123,7 +124,7 @@ public ngOnInit() {
     </button>
 </div>
 
-### Server-side Rendering Note
+## Server-side Rendering Note
 
 > In case you have implemented server side rendering logic in your application using Angular Universal and have used the `IgxIconService` to register icons, this may cause the following exception:
 <br/><br/>
@@ -145,7 +146,7 @@ On the top of your `server.ts` file, add:
 </li>
 </ol>
 
-### Styling
+## Styling
 
 To get started with styling the icons, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -162,7 +163,7 @@ $custom-icon-theme: igx-icon-theme(
 );
 ```   
 
-#### Using CSS variables 
+### Using CSS variables 
 
 The last step is to pass the custom icon theme in our application: 
 
@@ -170,7 +171,7 @@ The last step is to pass the custom icon theme in our application:
  @include igx-css-vars($custom-icon-theme);
 ```
 
-#### Using Theme Overrides
+### Using Theme Overrides
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
@@ -184,7 +185,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 }
 ```
 
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:75px">
     <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -194,17 +195,17 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Breaking Changes in 6.2.0
+## Breaking Changes in 6.2.0
 
 * The [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` property is deprecated. To set the icon name for 'material' icons, place the name of the icon between the opening and closing tags. For 'Font Awesome' and SVG icons, use the `name` property.
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

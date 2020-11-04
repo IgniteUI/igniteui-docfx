@@ -6,7 +6,7 @@ _keywords: batch editing, igniteui for angular, infragistics
 
 # Transaction Service class hierarchy
 
-### Transaction, State, Transaction Log
+## Transaction, State, Transaction Log
 
 The Transaction is the main building block of the [Transaction service]({environment:angularApiUrl}/classes/igxtransactionservice.html). The Transaction is actually every operation that you execute on the data. The [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interface defines three properties: [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id), [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) and [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type).
 
@@ -18,7 +18,7 @@ Every time you add a Transaction, it is added to the transaction log and undo st
 
 While adding transactions you may turn on pending transactions by calling [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending). All subsequent transactions will be accumulated in single transaction until you call [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending). If you pass `true` to [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) all accumulated transactions will be added as a single transaction in the transaction log and in the undo stack.
 
-### Using igxBaseTransaction
+## Using igxBaseTransaction
 
 Our grid module provides a very basic implementation of the Transaction service ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) with just pending session functionality allowing for Row Editing feature. By using [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) and [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) Row editing can combine multiple per-cell operations into a single change. This means editing multiple cells of a single record creates a single transaction and you can handle just the row edit event.
 
@@ -27,11 +27,11 @@ With the accumulated state being a partial object, we can also use the service t
 The [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) has no undo stack so it does not provide undo/redo functionality.
 
 A detailed example of how you may use [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) to enable Row Editing is provided in the following topics:
-* [Grid Row Editing](grid/row_editing.md)
-* [Tree Grid Row Editing](treegrid/row_editing.md)
-* [Hierarchical Grid Row Editing](hierarchicalgrid/row_editing.md)
+* [Grid Row Editing](grid/row-editing.md)
+* [Tree Grid Row Editing](treegrid/row-editing.md)
+* [Hierarchical Grid Row Editing](hierarchicalgrid/row-editing.md)
 
-### General information on igxTransactionService and igxHierarchicalTransactionService
+## General information on igxTransactionService and igxHierarchicalTransactionService
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are injectable middlewares, that implement the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to *access*, *manipulate* (undo and redo) and *discard or commit* one or all changes to the data.
 
@@ -39,7 +39,7 @@ A detailed example of how you may use [`igxBaseTransactionService`]({environment
 
 In both cases (cell editing and row editing) the state of the grid edits consists of all updated, added and deleted rows and their last states. Those can later be inspected, manipulated and submitted at once or per id. Changes are collected for individual cells or rows, depending on editing mode, and accumulated per data row/record.
 
-### Using igxTransactionService
+## Using igxTransactionService
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) extends [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html).
 
@@ -48,9 +48,9 @@ You need to define the [`igxTransactionService`]({environment:angularApiUrl}/cla
 The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) provides an undo stack so you may get advantage of the undo/redo functionality. The Undo stack is actually an array that contains arrays of transactions. When using the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html), you may check the [`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) accessor in order to understand if there are any transactions in the Undo stack. If there are - you may use the [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) method to remove the last transaction and [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) to apply the last undone transaction.
 
 You may find a detailed example of how igxGrid with Batch Editing is implemented in the following topic:
-* [Grid Batch Editing](grid/batch_editing.md)
+* [Grid Batch Editing](grid/batch-editing.md)
 
-### Using igxHierarchicalTransactionService
+## Using igxHierarchicalTransactionService
 
 [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) extends [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html).
 
@@ -67,15 +67,15 @@ In your application, you may want to handle the scenario where the user tries to
 ```
 
 You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) with Batch Editing are implemented in the following topics:
-* [Tree Grid Batch Editing](treegrid/batch_editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* [Tree Grid Batch Editing](treegrid/batch-editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [Transaction Service](transaction.md)
 * [How to use the Transaction service](transaction-how-to-use.md)
-* [Grid Batch Editing](grid/batch_editing.md)
-* [Tree Grid Batch Editing](treegrid/batch_editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* [Grid Batch Editing](grid/batch-editing.md)
+* [Tree Grid Batch Editing](treegrid/batch-editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)

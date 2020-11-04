@@ -8,18 +8,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
 
-#### Demo   
+## Demo   
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="text-highlight-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 To get started with the Ignite UI for Angular TextHighlight directive you need to import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
 
@@ -37,7 +38,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-Let's create a search box that we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input_group.md) component in which we will add a text input with buttons for clear matches, find next, find previous, and a button for specifying whether the search will be case-sensitive or not. Also it has a label for how many matches we have found.
+Let's create a search box that we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input-group.md) component in which we will add a text input with buttons for clear matches, find next, find previous, and a button for specifying whether the search will be case-sensitive or not. Also it has a label for how many matches we have found.
 
 ```html
 <div class="search-container">
@@ -182,7 +183,7 @@ If the sample is configured properly, the final result should look like that:
 
 <div class="divider"></div>
 
-### Search across multiple elements
+## Search across multiple elements
 The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) allows you to search across multiple elements which all share one active highlight. This is done by having the same [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupname) value across multiple TextHighlight directives. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two div elements. The [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) and [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) inputs are useful when you have multiple elements and in our case the second div has a different row value.
 
 ```html
@@ -268,7 +269,7 @@ private find(increment: number) {
 
 <div class="divider"></div>
 
-### Styles
+## Styles
 
 The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive can be styled in terms of changing the color and the background of all occurrences of the given string. To get started, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -316,7 +317,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 >[!NOTE]
 >Keep in mind that by default the `$legacy-support` is set to `false`
 
-#### Custom styles
+### Custom styles
 
 Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) and provide an awesome experience to our users!
 
@@ -361,7 +362,7 @@ As mentioned earlier, we can even combine them with a theme:
 }
 ```
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 300px;">
     <iframe id="text-highlight-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/text-highlight-style" class="lazyload no-theming"></iframe>
@@ -372,7 +373,7 @@ As mentioned earlier, we can even combine them with a theme:
 </div>
 <div class="divider"></div>
 
-### API References
+## API References
 
 For more detailed information regarding the TextHighlight directive's API, refer to the following link:
 * [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
@@ -383,7 +384,7 @@ Additional components that were used:
 * [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 * [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>

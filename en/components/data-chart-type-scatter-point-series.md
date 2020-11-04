@@ -48,7 +48,14 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 ## Required Modules
 
-Creation of the [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) requires the following modules:
+Creation of the [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartScatterCoreModule
+-   DataChartScatterModule       
+-   DataChartInteractivityModule
+-   NumberAbbreviatorModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:

@@ -31,9 +31,9 @@ Angular グリッド フィルタリングを使用すると、指定した基�
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -41,9 +41,9 @@ Angular グリッド フィルタリングを使用すると、指定した基�
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -51,9 +51,9 @@ Angular グリッド フィルタリングを使用すると、指定した基�
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:610px">
-    <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -210,7 +210,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ## リモート フィルタリング
 
-@@igComponent はリモート フィルタリングをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md) で説明されています。
+@@igComponent はリモート フィルタリングをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote-data-operations.md) で説明されています。
 
 <div class="divider--half"></div>
 }
@@ -406,10 +406,10 @@ $custom-grid: igx-grid-theme(
 
 ```scss
 $dark-input-group: igx-input-group-theme(
-    $box-background: #292826,
-    $idle-text-color: #FFCD0F,
-    $focused-text-color: #FFCD0F,
-    $filled-text-color: #FFCD0F
+    $box-background: #FFCD0F,
+    $idle-text-color: #292826,
+    $focused-text-color: #292826,
+    $filled-text-color: #292826
 );
 
 $dark-button: igx-button-theme(
@@ -482,10 +482,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "primary", 400),
-    $idle-text-color: igx-color($dark-palette, "secondary", 400),
-    $focused-text-color: igx-color($dark-palette, "secondary", 400),
-    $filled-text-color: igx-color($dark-palette, "secondary", 400)
+    $box-background: igx-color($dark-palette, "secondary", 400),
+    $idle-text-color: igx-color($dark-palette, "primary", 400),
+    $focused-text-color: igx-color($dark-palette, "primary", 400),
+    $filled-text-color: igx-color($dark-palette, "primary", 400)
 );
 
 $dark-button: igx-button-theme(
@@ -528,16 +528,16 @@ $custom-grid-schema: extend($_light-grid,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("primary", 400)
+            igx-color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         )
     )
 );
@@ -659,9 +659,9 @@ $custom-input-group: igx-input-group-theme(
 * [ページング](paging.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

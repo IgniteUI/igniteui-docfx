@@ -4,15 +4,16 @@ _description: ピン固定、サイズ変更、移動、非表示が可能なペ
 _keywords: manage angular page layout, Ignite UI for Angular, Infragistics, Angular ページ レイアウトの管理, インフラジスティックス
 _language: ja
 ---
-## ドック マネージャー
+# ドック マネージャー
 
 Ignite UI Dock Manager コンポーネントは、ペインでアプリケーションのレイアウトを管理する方法を提供します。エンド ユーザーはペインをピン固定、サイズ変更、移動、非表示にすることでカスタマイズできます。
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>
@@ -23,7 +24,7 @@ Ignite UI Dock Manager コンポーネントは、ペインでアプリケーシ
 <div class="divider--half"></div>
 
 
-### 使用方法
+## 使用方法
 ドック マネージャーは標準の [Web コンポーネント](https://developer.mozilla.org/ja-JP/docs/Web/Web_Components)であり、Angular アプリケーションで使用できます。
 
 以下の手順に従って、ドック マネージャーのパッケージを Angular プロジェクトに追加し、コンポーネントを使用するためにセットアップします。

@@ -5,14 +5,15 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Icon
+# Icon
 <p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント セットを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。</p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 75px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
     </button>
@@ -22,7 +23,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への `IgxIconModule` のインポートのみが必要になります。
 
@@ -40,9 +41,9 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-### 例
+## 例
 
-#### アイコンの色
+### アイコンの色
 
 デフォルトの色を変更するには、`igx-icon` コンポーネントの [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) プロパティを使用します。
 
@@ -53,7 +54,7 @@ export class AppModule {}
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
-#### アイコンの無効化
+### アイコンの無効化
 
 アイコンを無効にするには、[`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) を使用できます。
 
@@ -64,7 +65,7 @@ export class AppModule {}
     <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
 </iframe></div>
 
-#### コンテンツ プロジェクション
+### コンテンツ プロジェクション
 
 コンテンツ プロジェクションでアイコンを設定できます。
 
@@ -76,7 +77,7 @@ export class AppModule {}
     <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
 </iframe></div>
 
-#### アイコンのサイズ
+### アイコンのサイズ
 
 CSS を使用してアイコンをカスタマイズできます。アイコン サイズは `font-size` プロパティで変更できます。さらに中央揃えにするには、`width` と `height` プロパティに等しい値を設定します。
 
@@ -91,7 +92,7 @@ CSS を使用してアイコンをカスタマイズできます。アイコン 
     <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
 </iframe></div>
 
-### SVG アイコン
+## SVG アイコン
 
 SVG 画像はアイコンとして使用できます。はじめに [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存を注入します。この例ではコンポーネントのコンストラクタに注入されますが、コード内の必要な場所に使用できます。
 
@@ -124,7 +125,7 @@ public ngOnInit() {
     </button>
 </div>
 
-### サーバーサイド レンダリング時の注意
+## サーバーサイド レンダリング時の注意
 
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/><br/>
@@ -139,14 +140,14 @@ npm i xmlhttprequest
 ```
 </li>
 <li>
-`Server.ts` ファイル以外に追加するファイル:  
+`server.ts` ファイル以外に追加するファイル:  
 ``` typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
 </li>
 </ol>
 
-### スタイル設定
+## スタイル設定
 
 アイコンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -163,7 +164,7 @@ $custom-icon-theme: igx-icon-theme(
 );
 ```   
 
-#### CSS 変数の使用 
+### CSS 変数の使用 
 
 最後には、カスタム アイコン テーマをアプリケーションに渡します。
 
@@ -171,7 +172,7 @@ $custom-icon-theme: igx-icon-theme(
  @include igx-css-vars($custom-icon-theme);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -185,7 +186,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:75px">
     <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
@@ -195,17 +196,17 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### 6.2.0 の重大な変更
+## 6.2.0 の重大な変更
 
 * [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

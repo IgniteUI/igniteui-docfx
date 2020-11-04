@@ -20,19 +20,19 @@ Every time you execute an operation ([**transaction**]({environment:angularApiUr
 We have built three classes on top of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) that provide users with the ability to commit all changes they have made, or only changes made to a specific record, at once. Those classes are [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html), [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html).
 
 The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are fully integrated with our [igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html), [igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) and [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) components. You can find detailed examples of using those components with transactions enabled in the following topics:
-* [igxGrid Batch Editing and Transactions](grid/batch_editing.md)
-* [igxHierarchicalGrid Batch Editing and Transactions](hierarchicalgrid/batch_editing.md)
-* [igxTreeGrid Batch Editing and Transactions](treegrid/batch_editing.md)
+* [igxGrid Batch Editing and Transactions](grid/batch-editing.md)
+* [igxHierarchicalGrid Batch Editing and Transactions](hierarchicalgrid/batch-editing.md)
+* [igxTreeGrid Batch Editing and Transactions](treegrid/batch-editing.md)
 
 A more detailed overview of the opportunities that the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) provides can be found in our ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [Transaction Service class hierarchy](transaction-classes.md)
 * [How to use the Transaction service](transaction-how-to-use.md)
-* [Grid Batch Editing](grid/batch_editing.md)
-* [Tree Grid Batch Editing](treegrid/batch_editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch_editing.md)
+* [Grid Batch Editing](grid/batch-editing.md)
+* [Tree Grid Batch Editing](treegrid/batch-editing.md)
+* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
 * ["Building a transaction service for managing large scale editing experiences" blog](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e)

@@ -6,15 +6,7 @@ _keywords: angular, angular app development, infragistics
 
 # A Complete Guide to Angular Grid and Angular App Development
 
-### What is an Angular Data Grid? 
-
-An Angular data grid is a component used to display tabular data in a series of rows and columns. Data grids, also known as tables, are well known in the desktop world with popular software such as Microsoft Excel. While grids have been available on desktop platforms for a long time, they have recently become part of web app UIs, such as Angular UI.  
-
-Modern grids can be complex and may include a range of functionalities, including data binding, editing, Excel-like filtering, custom sorting, grouping, row reordering, row and column freezing, row aggregation, and exporting to Excel, CSV, and pdf formats.  
-
-### Why Use an Angular Data Grid? 
-
-Angular data grids are essential in use cases where lots of data must be stored and sorted through quickly. This can include industries such as financial or insurance that use high-volume, high-velocity data frequently.  Often the success of these companies is dependent on the functionality and performance of these data grids. When stock decisions need to be made in microseconds, for example, it’s imperative that the data grid performs with no lag time or flicker. 
+_Get to know the Angular Data Grid and how to use it [by checking out this informative section](../grids-and-lists.md#what-is-an-angular-data-grid) part of our Grid Overview topic._
 
 ### Ignite UI - Our Framework for Angular App Development 
 
@@ -32,7 +24,7 @@ You can install Ignite UI for Angular with either the Angular CLI or with the [I
 
 `ng add igniteui-angular` 
 
-This is the preferred option when you need to add Ignite UI for Angular to an [existing Angular application](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html#installing-ignite-ui-for-angular "Installing Ignite UI for Angular"). 
+This is the preferred option when you need to add Ignite UI for Angular to an [existing Angular application](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html#installing-ignite-ui-for-angular "Installing Ignite UI for Angular"). 
 
 If you’re creating a new application from scratch, we recommend the following approach: 
 
@@ -199,11 +191,11 @@ Angular data grids support easy sorting, filtering, and pagination. With rich AP
 
 The Grid provides three types of Filtering with custom filtering conditions: 
 
- - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-filtering-overview "Grid filtering Overview topic") per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
+ - [Filter row](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html "Grid Filtering Overview topic") per column with default filtering strategy provided out of the box, as well as all the standard filtering conditions. 
 
- - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Excel-style Filtering Overview topic"), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
+ - [Excel style filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel-style-filtering.html "Excel-style Filtering Overview topic"), with a configurable menu of features like sorting, moving, pinning, and hiding features. 
 
- - [Advanced filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html "Advanced Filtering Overview topic") that provides a dialog which allows the creation of groups with filtering conditions across all columns. 
+ - [Advanced filtering](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced-filtering.html "Advanced Filtering Overview topic") that provides a dialog which allows the creation of groups with filtering conditions across all columns. 
 
 Our [Angular 9 release](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release "Ignite UI for Angular 9.0.0 Release") includes plenty of new key features – from data analysis to a rich visualization, grid state persistence, and theming widget. 
 
@@ -234,8 +226,9 @@ $my-color-palette: igx-palette(
 Since Ignite UI for Angular bases its component designs on the [Material Design Principles](https://material.io/guidelines/material-design/introduction.html "Introduction to Material Design"), we try to get as close as possible to colors, sizes, typography, and the overall look and feel of our components to those created by Google. Example:
 
 <div class="sample-container loading" style="height: 477px">
-    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 We want to also mention our samples browser Theming widget. Now, you can change themes at runtime in the [Ignite UI sample browser](http://www.infragistics.com/angularsite/components/grid/grid.html "Data Grid Overview and Configuration") with just one click. Theming widget allows you to change the styles, colors, roundness, and elevation. Customization of theming has never been easier. Once you are ready with your theme, just press "DOWNLOAD SASS" and you have your SCSS file at your disposal and you can use it in your app: 
 

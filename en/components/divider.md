@@ -9,25 +9,26 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The divider component enables users to separate content both horizontally and vertically.</p>
 <div class="divider"></div>
 
-### Demo
+## Demo
 
 By default the divider is a solid horizontal line.
 
 <div class="sample-container loading" style="height:207px">
-    <iframe id="divider-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="divider-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-1' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Usage
+## Usage
 
 ```html
 <igx-divider></igx-divider>
 ```
 
-### Vertical Divider
+## Vertical Divider
 By adding the `vertical` attribute and setting its value to `true`, you can change the direction of the divider from horizontal to vertical.
 
 ```html
@@ -41,7 +42,7 @@ By adding the `vertical` attribute and setting its value to `true`, you can chan
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Dashed Divider
+## Dashed Divider
 The default style of the divider is a `solid` line but it can also be `dashed`.
 To change the default look simply use the `type` attribute of the divider and set its value to `dashed`.
 
@@ -56,7 +57,7 @@ To change the default look simply use the `type` attribute of the divider and se
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Inset Divider
+## Inset Divider
 The divider can be set in on both sides.
 To inset the divider, set the `middle` attribute of the divider to `true` and provider the desired `inset` value, the divider will start shrinking from both ends.
 
@@ -80,13 +81,13 @@ To inset the divider, set the `middle` attribute of the divider to `true` and pr
 
 If the value of the `middle` attribute is set to a falsy value, or if the attribute is omitted altoghether, the divider will set in only on the left.
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 * [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

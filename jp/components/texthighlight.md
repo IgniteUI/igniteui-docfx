@@ -5,22 +5,23 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## TextHighlight ディレクティブ
+# TextHighlight ディレクティブ
 
 Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
 
-#### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="text-highlight-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 Ignite UI for Angular TextHighlight ディレクティブを使用するには、**app.module.ts** ファイルに `IgxTextHighlightModule` とアプリケーションに必要な他の Ignite UI for Angular モジュールをインポートします。
 
@@ -38,7 +39,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input_group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
+次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input-group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
 
 ```html
 <div class="search-container">
@@ -183,7 +184,7 @@ private find(increment: number) {
 
 <div class="divider"></div>
 
-### 複数要素で検索
+## 複数要素で検索
 [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数の要素内を検索できます。複数の TextHighlight ディレクティブで同じ [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupname) 値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は div 要素を 2 つ追加します。 [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) と [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) 入力は複数要素がある場合に便利で、この場合は 2 つ目の div に異なる行値があります。
 
 ```html
@@ -269,7 +270,7 @@ private find(increment: number) {
 
 <div class="divider"></div>
 
-### スタイル設定
+## スタイル設定
 
 [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、指定された文字列のすべての発生の色と背景を変更してスタイル設定できます。まず、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -317,7 +318,7 @@ $dark-highlight: igx-highlight-theme(
 >[!NOTE]
 >デフォルトでは、`$legacy-support` は `false` に設定されます。
 
-#### カスタム スタイル
+### カスタム スタイル
 
 [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブの [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) と [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) 入力を利用できます。これらのクラスを [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) のスタイルと組み合わせて、優れたユーザー エクスペリエンスを提供できます。
 
@@ -362,7 +363,7 @@ $dark-highlight: igx-highlight-theme(
 }
 ```
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 300px;">
     <iframe id="text-highlight-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/text-highlight-style" class="lazyload no-theming"></iframe>
@@ -373,7 +374,7 @@ $dark-highlight: igx-highlight-theme(
 </div>
 <div class="divider"></div>
 
-### API リファレンス
+## API リファレンス
 
 TextHighlight ディレクティブの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 * [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
@@ -384,7 +385,7 @@ TextHighlight ディレクティブの API に関する詳細な情報は、以�
 * [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 <div class="divider"></div>
 
-### その他のリソース
+## その他のリソース
 * [Grid 検索](grid/search.md)
 
 <div class="divider--half"></div>

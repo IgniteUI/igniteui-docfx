@@ -10,6 +10,7 @@ _keywords: angular grid sizing, igniteui for angular, infragistics
 title:  Angular Tree Grid Sizing | Ignite UI for Angular | infragistics 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
+_canonicalLink: grid/sizing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular grid sizing, igniteui for angular, infragistics
 title:  Angular Hierarchical Grid Sizing | Ignite UI for Angular | infragistics 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords:  angular grid sizing, igniteui for angular, infragistics
+_canonicalLink: grid/sizing
 ---
 }
 

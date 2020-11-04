@@ -5,22 +5,22 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## ローカライズ
+# ローカライズ
 
 最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 
-#### アプリケーション全体のローカライズ
+### アプリケーション全体のローカライズ
 
 すべてのリソース文字列を取得するには、`IResourceStrings` オブジェクトを返すグローバル関数 `getCurrentResourceStrings` があります。 
 値はローカライズするために置き換えられます。次にオブジェクトはパラメーターとして `changei18n` 関数に渡して app.module レベルでコンポーネントのグローバル i18n を変更します。app.module.ts だけでなくアプリ内どこでもローカライズ可能です。
@@ -33,7 +33,7 @@ public ngOnInit(): void {
     const currentRS = getCurrentResourceStrings();
 
     for (const key of Object.keys(currentRS)) {
-        currentRS[key] = '[Localized]'+ currentRS[key];
+    currentRS[key] = '[Localized]'+ currentRS[key];
     }
 
     changei18n(currentRS);
@@ -46,7 +46,7 @@ public ngOnInit(): void {
 </button>
 </div>
 
-#### すべてのコンポーネントの特定の文字列をローカライズ
+### すべてのコンポーネントの特定の文字列をローカライズ
 
 その他の方法としてすべてのコンポーネントの一部の文字列のみローカライズ/変更します。`IResourceStrings` タイプのローカライズ可能なコンポーネントに `resourceStrings` プロパティがあります。
 
@@ -62,7 +62,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
     </button>
 </div>
 
-#### コンポーネントの特定のインスタンスの文字列をローカライズ
+### コンポーネントの特定のインスタンスの文字列をローカライズ
 
 単一の `igx-grid` インスタンスのみをローカライズする方法があります。`resourceStrings` プロパティを使用し `IGridResourceStrings` の新しいインスタンスを設定します。
 
@@ -79,7 +79,7 @@ this.grid.resourceStrings = newGridRes;
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### ローカライズされたリソースを npm パッケージから読み込む
+## ローカライズされたリソースを npm パッケージから読み込む
 
 最初にリソース文字列を含むパッケージをインストールします。
 
@@ -94,7 +94,6 @@ import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResourceStringsKO } from 'igniteui-angular-i18n';
 import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
-
 public ngOnInit(): void {
     ...
     changei18n(IgxResourceStringsJA);
@@ -104,7 +103,7 @@ public ngOnInit(): void {
 
 * [詳しい実装サンプルはこちら](https://kb.jp.infragistics.com/?p=535)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 

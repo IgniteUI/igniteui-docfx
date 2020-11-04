@@ -5,22 +5,23 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Button Group
+# Button Group
 <p class="highlight">Ignite UI for Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height: 85px">
-    <iframe id="buttonGroup-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
 
@@ -39,7 +40,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### ボタン グループの追加
+### ボタン グループの追加
 
 [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) セレクターを使用してボタンをラップし、ボタン グループに表示します。デフォルトでボタンを選択したい場合、`selected` プロパティを使用します。
 
@@ -61,9 +62,9 @@ export class AppModule {}
 </igx-buttongroup>
 ```
 
-### 例
+## 例
 
-#### 配置
+### 配置
 [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) プロパティを使用して、ボタン グループ内のボタンの方向を設定します。
 
 ```typescript
@@ -93,7 +94,7 @@ public alignment = ButtonGroupAlignment.vertical;
 </div>
 <div class="divider--half"></div>
 
-#### 複数選択
+### 複数選択
 [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
 
 ```html
@@ -119,7 +120,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### 表示密度
+### 表示密度
 [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
 
 > [!NOTE] 
@@ -161,7 +162,7 @@ public selectDensity(event) {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### カスタム トグル ボタン
+### カスタム トグル ボタン
 [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) プロパティを使用して、ボタン グループ内のカスタムボタンの配列を設定します。
 
 ```typescript
@@ -235,7 +236,7 @@ public ngOnInit() {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 ボタン グループ のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -261,7 +262,7 @@ $custom-button-group: igx-button-group-theme(
 
 ご覧のとおり、`igx-button-group-theme` は、項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。ボタン固有のパラメーターを変更する場合は、`igx-button-theme` を拡張する新しいテーマを作成し、それぞれのボタン グループのクラスの下でスコープできます。
 
-#### CSS 変数の使用
+### CSS 変数の使用
 
 最後にコンポーネントのテーマを含めます。
 
@@ -269,7 +270,7 @@ $custom-button-group: igx-button-group-theme(
 @include igx-css-vars($custom-button-group);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
 
@@ -283,7 +284,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 200px">
     <iframe id="buttonGroup-style-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-style" class="lazyload no-theming">
@@ -293,7 +294,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
@@ -301,7 +302,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

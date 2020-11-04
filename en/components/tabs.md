@@ -10,12 +10,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for [`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) and [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html), as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
 </p>
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 250px; border: 1px solid #ededed;">
-    <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="tabs-sample-0" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);">
     </iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
@@ -23,7 +24,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 First, we need to import the `IgxTabsModule` in the **app.module.ts** file.
 
@@ -65,7 +66,7 @@ If the sample is configured properly, the final result should look like that:
 
 <div class="divider"></div>
 
-### Tabs Types
+## Tabs Types
 There are two types of tabs - `fixed` and `contentfit`. Set the [`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabstype) input to choose between [`fixed`]({environment:angularApiUrl}/enums/tabstype.html#fixed) and [`contentfit`]({environment:angularApiUrl}/enums/tabstype.html#contentfit) tabs.
 - **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
 No matter what type of tabs you chose, the width of the tab header is limited by the specified min and max width. 
@@ -95,7 +96,7 @@ No matter what type of tabs you chose, the width of the tab header is limited by
 
 <div class="divider"></div>
 
-### Customizing Tabs
+## Customizing Tabs
 
 Let's modify the tabs and make them more appealing by including icons using the [`icon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) input. The `igx-tabs` component is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
@@ -154,7 +155,7 @@ If changing the labels and icons is not enough, you can also provide your own te
 </igx-tabs>
 ```
 
-### Integration With Router Outlet Container
+## Integration With Router Outlet Container
 
 Although the `igx-tabs` component is meant to be used as a list of tabs with content specified for each tab group, there might be cases in which you need to define tab items where the content is separate from the tab group.
 
@@ -255,7 +256,7 @@ Now that we have all navigation routes set up, we need to declare the `igx-tabs`
 
   <igx-tab-item 
     label="Tab 3" 
-    icon="radio_button_checked"
+    icon="radio-button_checked"
     routerLink="view3"
     routerLinkActive 
     #rla3="routerLinkActive"
@@ -277,7 +278,7 @@ The above code creates an `igx-tabs` component with three tab items. All tab ite
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styles
+## Styles
 
 To get started with styling the tabs, we need to import the theming module, where all the theme functions and component mixins live:
 
@@ -320,7 +321,7 @@ If you are targeting browsers that don't support CSS variables, like IE 11, you 
   }
 }
 ```
-#### Palettes & Colors
+### Palettes & Colors
 
 Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -363,7 +364,7 @@ $dark-tabs: igx-tabs-theme(
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -375,7 +376,7 @@ $dark-tabs: igx-tabs-theme(
 * [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -11,9 +11,9 @@ _keywords: angular data grid, angular grid, angular material table, ignite ui fo
 ## Demo
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
@@ -30,7 +30,7 @@ To get started with the Angular data grid, first you need to install Ignite UI f
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
 The Angular grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxGridModule` inside your `AppModule`:
 
@@ -181,7 +181,7 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
-When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the Angular grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch_editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
+When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the Angular grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch-editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
 
 > [!NOTE]
 > The grid exposes a default handling for number, string, date and boolean column types. For example, the column will display `check` or `close` icon, instead of true/false by default, for boolean column type.
@@ -256,9 +256,37 @@ public initColumns(column: IgxGridColumn) {
 
 The code above will make the **ProductName** column sortable and editable and will instantiate the corresponding features UI (like inputs for editing, etc.).
 
+### Custom display format
+
+All values for a date or numeric column are transformed through the Angular [`DatePipe`](https://angular.io/api/common/DatePipe) or [`DecimalPipe`](https://angular.io/api/common/DecimalPipe). This does not modify the original value, just the value that is displayed in the column. By default, values will be displayed according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) (if not specified, it fallbacks to the application locale, which defaults to `'en-US'`).
+
+See [Setting up the locale of your app](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) for more details.
+
+Also, there are optional parameters for formatting:
+
+- `format` - determines what date/time parts are displayed, defaults to `'mediumDate'`, equivalent to `'MMM d, y'`
+- `timezone` - the timezone offset for dates. By default uses the end-user's local system timezone
+- `digitsInfo` - decimal representation objects. Default to `'1.0-3'`
+
+To allow customizing the display format by these parameters, the [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) input is exposed. A column will respect only the corresponding properties for its data type, if `pipeArgs` is set. Example:
+
+```typescript
+const pipeArgs: IColumnPipeArgs = {
+     format: 'longDate',
+     timezone: 'UTC',
+     digitsInfo: '1.1-2'
+}
+```
+```html
+<igx-column field="OrderDate" dataType="date" [pipeArgs]="pipeArgs"></igx-column>
+<igx-column field="UnitPrice" dataType="number" [pipeArgs]="pipeArgs"></igx-column>
+```
+
+The `OrderDate` column will respect only the `format` and `timezone` properties, while the `UnitPrice` will only respect the `digitsInfo`. For further details, please check the official Angular documentation at [Localizing your app](https://angular.io/guide/i18n).
+
 ## Data structure
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) takes only **flat data**. The data structure specific for rendering is in the form:
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) handles **flat data** and nested **POJOs(Plain old Java objects)**. The data structure specific for rendering is in the form:
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -269,29 +297,34 @@ const OBJECT_ARRAY = [{
         .
         ObjectKeyN: valueN
     },
-    {
+    .
+    .
+    .
+  }];
+
+const POJO = [{
         ObjectKey1: value1,
         ObjectKey2: value2,
         .
         .
         .
-        ObjectKeyN: valueN
+        ObjectKeyN: {
+          ObjectKeyN1: value1,
+          ObjectKeyN2: value2,
+          .
+          .
+          .
+          ObjectKeyNM: valueNM,
+        }
     },
     .
     .
-    .,
-    {
-        ObjectKey1: value1,
-        ObjectKey2: value2,
-        .
-        .
-        .
-        ObjectKeyN: valueN
-    }];
+    .
+  }];
 
 ```
 >[!WARNING]
->**The key values must not contain neither arrays or other objects**.
+>**The key values must not contain arrays**.
 
 >If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
 
@@ -425,14 +458,8 @@ and in the template of the component:
 
 ## Complex data binding
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) main purpose is to handle **flat data**, although this does not mean that it is impossible to work with more complex data.
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (inluding nesting deeper than one level) through a "path" of properties in the data record.
 
-Currently, the Angular data grid columns don't support composite keys, although you can still create a column out of several other columns. In this section we will cover, how to configure [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) with **nested data** and **flat data**.
-
-### Working with Nested data
-
-There are mainly two ways to bind a more complex data source to the Angular grid.
-The grid supports binding through a "path" of properties in the data record.
 Take a look at the following data model:
 ```typescript
 interface AminoAcid {
@@ -474,9 +501,11 @@ configuration. Same goes for grouping and editing operations with or without tra
 </div>
 <div class="divider--half"></div>
 
-The other way to bind and visualize complex data in the **IgxGrid** is to:
+An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - and interpolate it in a custom column template
+    - use the `cell` object in the template, from which to access the `rowData`, therefore retrieve any value from it, i.e `cell.rowData[field]`
+
+and interpolate it those in the template.
 
 Below is the data that we are going to use:
 
@@ -645,7 +674,7 @@ And the result is:
 
 ## State persistence
 
-Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
+Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state-persistence.md) directive.
 
 
 ## Sizing
@@ -665,7 +694,7 @@ See the [Grid Sizing](sizing.md) topic.
 | Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
 
 > [!NOTE]
-> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
@@ -685,9 +714,9 @@ See the [Grid Sizing](sizing.md) topic.
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

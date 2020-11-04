@@ -11,11 +11,12 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 
 <div class="divider--half"></div>
 
-#### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-paragraph-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -23,7 +24,7 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 To initialize and position the Action Strip correctly, it needs to be inside a relatively positioned container:
 
 ```html
@@ -38,7 +39,7 @@ To initialize and position the Action Strip correctly, it needs to be inside a r
 
 By default, the Action Strip will be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
 
-#### Menu look and feel
+### Menu look and feel
 For scenarios where more than three action items will be shown, it is best to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item within the Action Strip marked with the `*igxActionStripMenuItem` structural directive will be shown in a dropdown, revealed upon toggling the more button i.e. the three dots representing the last action.
 
 ```html
@@ -65,7 +66,7 @@ For scenarios where more than three action items will be shown, it is best to us
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-menu-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Reusing the Action Strip
+### Reusing the Action Strip
 
 The same Action Strip instance can be used in multiple places in the document as long as the actions need not be visible simultaneously for them.
 The Action Strip can change its parent container, which is possible by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
@@ -74,7 +75,7 @@ The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/ig
 >Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
 
 
-### Usage in Grids
+## Usage in Grids
 
 The Action Strip provides additional functionality and UI for the IgxGrid.
 This can be utilized via grid action components and we are providing two default ones:
@@ -84,11 +85,6 @@ This can be utilized via grid action components and we are providing two default
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
-        <ng-template igxCell let-cell="cell" let-val>
-            <div class="cell-template" (mouseover)="actionStrip.show(cell.row)" (mouseout)="actionStrip.hide()">
-                <span>{{val}}</span>
-            </div>
-        </ng-template>
     </igx-column>
 
     <igx-action-strip #actionStrip>
@@ -99,6 +95,7 @@ This can be utilized via grid action components and we are providing two default
 ```
 >Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
+>Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 <div class="sample-container loading" style="height: 600px;">
     <iframe id="action-strip-grid-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/grid/grid-action-strip" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
@@ -107,7 +104,7 @@ This can be utilized via grid action components and we are providing two default
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-grid-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-### Styling
+## Styling
 
 To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
 ```scss
@@ -144,8 +141,15 @@ When `$legacy-support` is set to `true`, include the component theme like this:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+## Known Issues and Limitations
 
-### API and Style References
+- Using the Action Strip component on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
+
+## API and Style References
 
 For more detailed information regarding the Action Strip API, refer to the following links:
 * [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
@@ -165,7 +169,7 @@ Additional components and/or directives that can be used within the Action Strip
 
 <div class="divider"></div>
 
-###Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

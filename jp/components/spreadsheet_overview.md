@@ -29,9 +29,13 @@ npm install --save igniteui-angular-excel
 npm install --save igniteui-angular-spreadsheet
 </pre>
 
-## 必要なモジュール
+## モジュールの要件
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、以下のモジュールが必要です。
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   ExcelModule
+-   SpreadsheetModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxExcelModule } from 'igniteui-angular-excel';
@@ -61,7 +65,7 @@ Angular スプレッドシート モジュールがインポートされたの�
 
 > [!NOTE]
 >
-> 次のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。.
+> 次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。.
 
 以下は、ワークブックを Angular スプレッドシートにロードする方法を示しています。
 

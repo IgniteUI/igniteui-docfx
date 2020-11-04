@@ -4,24 +4,25 @@ _description: Ignite UI for Angular Banner コンポーネントは、簡単に�
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Banner コンポーネント, Angular Banner コントロール
 _language: ja
 ---
-## Banner
+# Banner
 <p class="highlight">
 Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム アクション ボタンやアイコンの表示を設定できます。</p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 530px">
-    <iframe id="banner-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
+    <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-#### はじめに
+### はじめに
 
 Banner コンポーネントを初期化にするには、まず `IgxBannerModule` を **app.module.ts** ファイルにインポートします。 
 
@@ -39,7 +40,7 @@ import { IgxBannerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-#### Banner の表示
+### Banner の表示
 
 Banner コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。 
 
@@ -57,11 +58,11 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 > [!NOTE]
 > `IgxBannerModule` には、バナーを閉じるデフォルトの `Dismiss` バナーボタンが含まれています。
 
-### 例
+## 例
 
 [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponent.html) は、マテリアル デザイン バナー ガイドラインにできるかぎり準拠しながらコンテンツをテンプレート化します。
 
-#### Banner メッセージの変更
+### Banner メッセージの変更
 
 `igx-banner` タグに渡されるコンテンツを変更することによりバナーに表示されるメッセージを設定できます。指定したバナー領域にテキストが表示され、表示時にバナーはデフォルト テンプレートを使用します。以下は、サンプル バナーのコンテンツを変更してより多くの情報を提供します。
 
@@ -72,7 +73,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
     </igx-banner>
 ```
 
-#### アイコンの追加
+### アイコンの追加
 
 [`Igx-icon`](icon.md) は、バナーのコンテンツに渡すことでバナーに表示できます。Icon は常にバナー メッセージの最初に配置されます。
 
@@ -103,7 +104,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
     ...
 ```
 
-#### バナー ボタンの変更
+### バナー ボタンの変更
 
 `IgxBannerModule` は、バナー ボタンをテンプレート化するための [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html) ディレクティブを公開します。このディレクティブはデフォルト バナー ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。
 
@@ -126,7 +127,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### カスタム アニメーションの適用
+### カスタム アニメーションの適用
 
 Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
@@ -162,7 +163,7 @@ export class MyBannerComponent {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-#### イベントにバインド
+### イベントにバインド
 Banner コンポーネントは状態の変更時にイベントを発生します。[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) と [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) と [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) は Banner が閉じるときにエミットされます。*Ing* イベント (`onOpening`, `onClosing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`onOpening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
@@ -186,7 +187,7 @@ export class MyBannerComponent {
 > [!NOTE]
 > 上記が適用されるとオープニング イベントが常にキャンセルされるため、Banner が開くことはありません。
 
-### 高度な例
+## 高度な例
 
 2 つのカスタムボタンのバナーを作成しましょう。1 つは通知を閉じるためのボタンで、もう 1 つは接続をオンにするためのボタンです。`igx-banner-actions` セレクターを使用してカスタム アクション ハンドラーを渡すことができます。
 
@@ -228,7 +229,7 @@ export class MyBannerComponent {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="banner-advanced-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに index ファイルをインポートする必要があります。
 
@@ -247,7 +248,7 @@ $custom-banner-theme: igx-banner-theme(
 );
 ```
 
-#### CSS 変数の使用 
+### CSS 変数の使用 
 
 最後にバナーのカスタム テーマを渡します。
 
@@ -255,7 +256,7 @@ $custom-banner-theme: igx-banner-theme(
 @include igx-css-vars($custom-banner-theme);
 ```
 
-#### ミックスインの使用
+### ミックスインの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
@@ -270,7 +271,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-#### カラー パレットの使用
+### カラー パレットの使用
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
 
@@ -294,9 +295,9 @@ $custom-banner-theme: igx-banner-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palette.md) のトピックをご覧ください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palette.md) のトピックをご覧ください。
 
-#### スキーマの使用
+### スキーマの使用
 
 テーマ エンジンを使用して[`スキーマ`](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner)) の 1 つを拡張します。
@@ -336,7 +337,7 @@ $custom-banner-theme: igx-banner-theme(
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
@@ -350,7 +351,7 @@ $custom-banner-theme: igx-banner-theme(
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

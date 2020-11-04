@@ -46,7 +46,12 @@ The [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/i
 
 ## Required Modules
 
-Creation of the [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html) requires the following modules:
+Creation of the [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartInteractivityModule
+-   Stacked100SplineSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
