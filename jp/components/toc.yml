@@ -110,12 +110,9 @@
       href: grid/paging.md
       new: false
     - name: フィルタリング
-      href: grid/filtering-overview.md
+      href: grid/filtering.md
       new: false
       items:
-        - name: クイック フィルタリング
-          href: grid/filtering.md
-          new: false
         - name: Excel スタイル フィルタリング
           href: grid/excel-style-filtering.md
           updated: true
@@ -246,12 +243,9 @@
       href: treegrid/paging.md
       new: false
     - name: フィルタリング
-      href: treegrid/filtering-overview.md
+      href: treegrid/filtering.md
       new: false
       items:
-      - name: クイック フィルタリング
-        href: treegrid/filtering.md
-        new: false
       - name: Excel スタイル フィルタリング
         href: treegrid/excel-style-filtering.md
         updated: true
@@ -367,12 +361,9 @@
       href: hierarchicalgrid/paging.md
       new: false
     - name: フィルタリング
-      href: hierarchicalgrid/filtering-overview.md
+      href: hierarchicalgrid/filtering.md
       new: false
       items:
-      - name: クイック フィルタリング
-        href: hierarchicalgrid/filtering.md
-        new: false
       - name: Excel スタイル フィルタリング
         href: hierarchicalgrid/excel-style-filtering.md
         updated: true
