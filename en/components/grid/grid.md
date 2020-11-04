@@ -672,6 +672,10 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
+## Keyboard Navigation
+Keyboard navigation in the IgxGrids provides a rich variety of keyboard interactions for the user. It enhances the accessibility of the IgxGrid and allows to navigate through any type of elements inside (cell, row, column header, toolbar, footer, etc.).
+See these topics for more information [Grid Keyboard Navigation](../grid/keyboard-navigation.md), [TreeGrid Keyboard Navigation](../treegrid/keyboard-navigation.md), [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md).
+
 ## State persistence
 
 Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state-persistence.md) directive.
