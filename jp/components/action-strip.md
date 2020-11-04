@@ -142,6 +142,13 @@ $custom-strip: igx-action-strip-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="action-strip-styling-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+## 既知の問題と制限
+
+- IE11 で Action Strip コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
 
 ## API と スタイル リファレンス
 

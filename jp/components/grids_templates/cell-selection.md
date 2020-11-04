@@ -23,9 +23,13 @@ _language: ja
 ---
 }
 
-# @@igComponent 選択
+# Angular @@igComponent 選択
 選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@igComponent は、セル選択の 3 つのモードをサポートしています。[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで、それらを簡単に切り替えることができます。セルの選択を無効にするか、*グリッド内の 1 つのセルのみを選択する*か、*グリッド内の複数のセルを選択する*ことができます。これはデフォルトのオプションとして提供されています。
 @@if (igxName === 'IgxHierarchicalGrid') { 階層グリッドでは、グリッド レベルでセル選択モードを指定できます。たとえば、親グリッドではマルチセル選択を有効にできますが、子グリッドではセル選択モードを単一または無効にすることができます。}これらの各オプションについて詳しく説明します。
+
+## Angular セル選択の例
+以下のサンプルは、@@igComponent の**セル選択**動作の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。
+<div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -50,7 +54,6 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:750px">
     <iframe id="hGrid-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -91,8 +94,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-    
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="tree-grid-multi-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -108,7 +110,7 @@ _language: ja
 
 `[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
-> `選択モード`が `single`であるか `multiple`であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
+> `選択モード`が `single` であるか `multiple` であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
 
 ### @@igComponent 選択なし
 セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
@@ -350,7 +352,7 @@ $custom-grid-theme: igx-grid-theme(
 * [並び替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
