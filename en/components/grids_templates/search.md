@@ -24,7 +24,7 @@ _canonicalLink: grid/search
 
 # Angular @@igComponent Searching through virtualized content
 
-Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent. 
+Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table-based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent. 
 
 ## Angular Search Example
 

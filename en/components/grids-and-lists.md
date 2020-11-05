@@ -203,7 +203,7 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 
 ## Angular Grid Example
 
-In this angular grid example, you can see how users can customize their view of the data by leveraging the various features built into the grid, including search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling. We have provided examples for cell styling that includes embedded in the cell linear progress bar indicator component and sparkline component. View more features [here](#list-features).
+In this angular grid example, you can see how users can customize their _data view_ by leveraging the various features built into the grid, like data search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling. We have provided examples for cell templating that includes components like linear progress bar indicator and sparkline. View more features [here](#list-features).
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
