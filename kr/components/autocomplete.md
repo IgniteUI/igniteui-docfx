@@ -26,7 +26,7 @@ The following sample demonstrates simple use of the `igx-autocomplete` directive
 <div class="divider--half"></div>
 
 > [!WARNING]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**Getting Started**](general/getting_started.md) topic.
+> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**Getting Started**](general/getting-started.md) topic.
 
 ## Usage
 ### Getting Started
@@ -247,10 +247,10 @@ For the purpose of the sample there is a delay in the data loading, in order to 
 ### Additional Resources
 <div class="divider--half"></div>
 
-* [IgxDropDownComponent](drop_down.md)
-* [IgxInputGroup](input_group.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
+* [IgxDropDownComponent](drop-down.md)
+* [IgxInputGroup](input-group.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
 
 Our community is active and always welcoming to new ideas.
 

@@ -236,7 +236,7 @@ public updateExactSearch() {
 #### 아이콘 추가
 
 다른 컴포넌트 중 일부를 사용하여 사용자 인터페이스를 작성하고 전체 검색 줄의 전반적인 디자인을 향상시킬 수 있습니다! 검색 입력의 왼쪽에는 멋진 검색 또는 삭제 아이콘, 오른쪽에는 소재 디자인 아이콘 및 리플 스타일의 버튼과 결합된 검색 옵션 및 탐색을 표시합니다. 입력 그룹 내의 컴포넌트를 래핑하여 보다 세련된 디자인으로 할 수 있습니다.
-이를 위해 [**IgxInputGroup**](../input_group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) 및 [**IgxChip**](../chip.md) 모듈을 사용합니다.
+이를 위해 [**IgxInputGroup**](../input-group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) 및 [**IgxChip**](../chip.md) 모듈을 사용합니다.
 
 ```typescript
 // app.module.ts
@@ -260,7 +260,7 @@ export class AppModule {}
 
 마지막으로 템플릿을 새로운 컴포넌트로 업데이트합니다!
 
-[**IgxInputGroup**](../input_group.md) 내의 모든 컴포넌트를 래핑합니다. 왼쪽에서 검색과 삭제/지우기 아이콘을 전환합니다(검색 입력이 비었는지 여부에 따라). 중앙에 입력 위치를 지정합니다. 또한, 삭제 아이콘을 클릭할 때마다 **searchText**를 업데이트하고 @@igComponent의 [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) 메소드를 호출하여 강조 표시를 지웁니다.
+[**IgxInputGroup**](../input-group.md) 내의 모든 컴포넌트를 래핑합니다. 왼쪽에서 검색과 삭제/지우기 아이콘을 전환합니다(검색 입력이 비었는지 여부에 따라). 중앙에 입력 위치를 지정합니다. 또한, 삭제 아이콘을 클릭할 때마다 **searchText**를 업데이트하고 @@igComponent의 [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) 메소드를 호출하여 강조 표시를 지웁니다.
 
 ```html
 <!--searchgrid.component.html-->
@@ -394,9 +394,9 @@ public clearSearch() {
 * [페이징](paging.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 이동](column_moving.md)
+* [열 이동](column-moving.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 
 <div class="divider--half"></div>
