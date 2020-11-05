@@ -161,7 +161,7 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 * [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>
