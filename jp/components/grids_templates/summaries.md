@@ -600,7 +600,7 @@ $custom-theme: igx-grid-summary-theme(
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [列移動](column-moving.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 @@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}

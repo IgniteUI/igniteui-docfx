@@ -66,7 +66,7 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 @@if (igxName === 'IgxGrid') {
 ## Remote Virtualization
 
-The @@igComponent supports remote virtualization, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote virtualization, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 }
 
 ## Virtualization Limitations

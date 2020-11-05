@@ -89,7 +89,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 </@@igSelector>
 ```
 
-ただし、[高度なフィルタリング](advanced_filtering.md)を有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
+ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
 
 ```html
 <@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
@@ -697,7 +697,7 @@ $custom-input-group: igx-input-group-theme(
 * [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
