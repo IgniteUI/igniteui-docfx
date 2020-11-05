@@ -522,7 +522,7 @@ $custom-drop-down: igx-drop-down-theme(
 * [並び替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
-* [列固定](column_pinning.md)
+* [列固定](column-pinning.md)
 * [列サイズ変更](column-resizing.md)
 * [選択](selection.md)
 
