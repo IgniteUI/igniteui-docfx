@@ -11,7 +11,7 @@ The Angular ComboBox component represents a drop-down list that provides editabl
 
 ## Angular ComboBox Example
 
-In this angular ComboBox example, you can see how users can do filtering, single and multiple selection with the provided data. In addition, the ComboBox expose keyboard navigation and custom styling capabilities.
+In this Angular ComboBox example, you can see how users can filter items and perform single or multiple selection with the provided data. In addition, the ComboBox expose keyboard navigation and custom styling capabilities.
 
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
