@@ -23,16 +23,60 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 ---
 }
 
-## @@igComponent Selection 概要
+# Angular @@igComponent 選択の概要
+Ignite UI for Angular @@igComponent を使用して、さまざまなイベント、豊富な API、または単一選択などのシンプルなマウス操作でデータを簡単に選択できます。
 
-IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row-selection.md)、[セル選択](cell-selection.md)、[列選択](column-selection.md)の 3 つの選択モードを提供します。デフォルトでは、@@igComponent では**複数セルの選択**モードのみが有効になっています。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection)、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
+## Angular Grid 例選択の例
 
-プロパティ [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用すると、次のオプションを指定できます。
+以下のサンプルは、@@igComponent の**セル選択**動作の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。
+<div class="divider--half"></div>
+
+@@if (igxName === 'IgxGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="grid-cell-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Selection Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:650px">
+    <iframe id="treegrid-cell-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Selection Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:750px">
+    <iframe id="hGrid-cell-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Selection Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hGrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hGrid-cell-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
+}
+
+## Angular Grid 選択のオプション
+
+Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-selection.md)、[セル選択](cell-selection.md)、[列選択](column-selection.md)の 3 つの選択モードを提供します。デフォルトでは、@@igComponent で**複数セル選択**モードのみが有効になっています。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) 、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
+
+### Angular 行選択
+
+[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
 - single - @@igComponent 内の 1 行のみの選択が利用可能になります。
 - multiple - 複数行の選択は、<kbd>ctrl</kbd> + <kbd>click</kbd>、<kbd>space キー</kbd>を押して`行セレクター`を使用することにより、複数行の選択が可能になります。
 
 > 詳細については、[行選択トピック](row-selection.md)を参照してください。
+
+### Angular セル選択
 
 以下のオプションは、プロパティ [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) で指定できます。
 - none - @@igComponent のセル選択が無効になります。
@@ -41,24 +85,24 @@ IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row-se
 
 > 詳細については、[セル選択トピック](cell-selection.md)を参照してください。
 
-[`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用して、**列**ごとに以下のオプションを指定できます。
-- false - 対応する列選択は @@igComponent に対して無効になります。
-- true - 対応する列選択は @@igComponent に対して有効になります。
-- 以下の 3 つのバリエーションがあります:
- - 単一選択 - 列セルを<kbd>マウス クリック</kbd>。
- - 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>。
+### Angular 列選択
+
+[`selectable` プロパティ]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) を使用して、**列**ごとに以下のオプションを指定できます。
+- False - 対応する列選択は @@igComponent に対して無効になります。
+- True - 対応する列選択は @@igComponent に対して有効になります。
+- 以下の 3 つのバリエーションがあります。
+ - 単一選択 - 列セルを<kbd>マウス クリック</kbd>します。
+ - 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>します。
  - 列の範囲選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>マウス クリック</kbd>、その間のすべての列が選択されます。
 
-> 詳細については、[列選択トピック](column-selection.md) を参照してください。
-
-## ショーケース アプリケーション
+> 詳細については、[列選択トピック](column_selection.md)を参照してください。
 
 @@if (igxName === 'IgxGrid'){
-### グリッドのコンテキスト メニュー
+## グリッドのコンテキスト メニュー
 
-[`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルをエミットします。**コンテキスト メニュー**は、エミットされたセルで動作します。
+[`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルを放出します。**コンテキスト メニュー**は、放出されたセルで動作します。
 
-**複数セルの選択**がある場合、選択したセルが複数セルの選択領域にあるかどうかをチェックするロジックを配置します。その場合、選択したセルの値も出力します
+**複数セルの選択**がある場合、選択したセルが複数セルの選択領域にあるかどうかをチェックするロジックを配置します。その場合、選択したセルの値も出力します。
 
 基本的に、メイン関数は次のようになります。
 
@@ -122,7 +166,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[行選択](row-se
 ...
 ```
 
-IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り付けす。
+IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り付けます。
 
 グリッドとコンテキスト メニューを組み合わせるために使用するテンプレート:
 ```html
@@ -153,11 +197,19 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-context-menu-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 }
+
+## 既知の問題と制限
+
+- IE11 で選択を有効にした @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
 
 ## API リファレンス
 
@@ -178,10 +230,10 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 * [集計](summaries.md)
 * [列移動](column-moving.md)
 * [仮想化とパフォーマンス](virtualization.md)
-@@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}
+@@if (igxName === 'IgxGrid'){* [選択に基づいた集計]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
