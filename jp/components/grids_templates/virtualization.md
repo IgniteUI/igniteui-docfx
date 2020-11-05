@@ -67,7 +67,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 @@if (igxName === 'IgxGrid') {
 ## リモート仮想化
 
-@@igComponent はリモート仮想化をサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md)で説明されています。
+@@igComponent はリモート仮想化をサポートします。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md)で説明されています。
 }
 
 ## 仮想化の制限
@@ -97,9 +97,9 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列のピン固定](column-pinning.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

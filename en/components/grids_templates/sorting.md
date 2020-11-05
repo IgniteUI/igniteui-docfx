@@ -10,6 +10,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 title: Angular Tree Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
 _description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
 _keywords: angular sort, ignite ui for angular, infragistics
+_canonicalLink: grid/sorting
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
 _description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
 _keywords: angular sort, ignite ui for angular, infragistics
+_canonicalLink: grid/sorting
 ---
 }
 
@@ -142,7 +144,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxGrid') {
 ## Remote Sorting
 
-The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 
 <div class="divider--half"></div>
 }
@@ -291,9 +293,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

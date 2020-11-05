@@ -380,7 +380,7 @@ export class MyComponent implements OnInit {
 
 ### 상태 지속성
 
-Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state_persistence.md) directive.
+Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state-persistence.md) directive.
 
 ### 키보드 탐색
 키보드 탐색은 모든 그리드에서 기본적으로 사용할 수 있으며 최종 사용자를 위해 가능한 많은 기능과 시나리오를 포함하도록 하고 있습니다. 특정 셀에 초점을 맞추고 다음 키 조합 중 하나를 누른 경우 설명된 동작이 실행됩니다:
@@ -436,7 +436,7 @@ See the [Grid Sizing](sizing.md) topic.
 | 행 높이는 현재 뷰에 렌더링되지 않은 셀의 높이에 영향을 받지 않습니다. | 가상화로 인해 뷰에 없는 사용자 템플릿(셀 높이를 변경한)을 가진 열은 행 높이에 영향을 주지 않습니다. 행 높이는 관련된 열이 뷰에서 스크롤되는 동안에만 영향을 받습니다.
 
 > [!NOTE]
-> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for_of.html#known-limitations) section.
+> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
 
 <div class="divider--half"></div>
 
@@ -456,9 +456,9 @@ See the [Grid Sizing](sizing.md) topic.
 * [필터링](filtering.md)
 * [정렬](sorting.md)
 * [요약](summaries.md)
-* [열 이동](column_moving.md)
+* [열 이동](column-moving.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 
 <div class="divider--half"></div>
