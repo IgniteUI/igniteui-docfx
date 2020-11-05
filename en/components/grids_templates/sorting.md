@@ -144,7 +144,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxGrid') {
 ## Remote Sorting
 
-The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 
 <div class="divider--half"></div>
 }
