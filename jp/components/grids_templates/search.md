@@ -23,11 +23,13 @@ _language: ja
 ---
 }
 
-# @@igComponent の仮想コンテンツ検索機能
+# Angular @@igComponent の仮想コンテンツ検索機能
 
-ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Angular Material テーブル ベースのグリッドの拡張により、検索 API を使用した**仮想コンテンツ**の検索が可能です。
+Angular @@igComponent 検索により、データのコレクション内の値を見つけるプロセスが可能になります。この機能のセットアップが簡単になり、検索入力ボックス、ボタン、キーボード ナビゲーション、その他の便利な機能を使用して実装できるため、ユーザー エクスペリエンスがさらに向上します。ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Ignite UI for Angular Material テーブル ベースのグリッドの拡張により、**検索 API** を使用した**仮想コンテンツ**の検索が可能です。
 
-### デモ
+## Angular 検索の例
+
+次の例は、すべての列と行を検索できる検索入力ボックスと、各列の特定のフィルタリング オプションを備えた @@igComponent を表しています。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -55,7 +57,7 @@ _language: ja
 <!-- TODO -->
 }
 
-## 使用方法
+## Angular 検索の使用方法
 
 ### グリッドの設定
 グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加しました。
@@ -130,7 +132,7 @@ public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
 
-### 検索入力ボックス
+### Angular 検索入力ボックス
 
 検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによる各 **searchText** のすべての変更を検出できます。これによって @@igComponent の [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
@@ -241,7 +243,7 @@ public updateExactSearch() {
 ### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-[**IgxInputGroup**](../input_group.md)、[**IgxIcon**](../icon.md)、[**IgxRipple**](../ripple.md)、[**IgxButton**](../button.md)、[**IgxChip**](../chip.md) のモジュールを使用します。
+[**IgxInputGroup**](../input-group.md)、[**IgxIcon**](../icon.md)、[**IgxRipple**](../ripple.md)、[**IgxButton**](../button.md)、[**IgxChip**](../chip.md) のモジュールを使用します。
 
 ```typescript
 // app.module.ts
@@ -265,7 +267,7 @@ export class AppModule {}
 
 テンプレートを新しいコンポーネントで更新します。
 
-[**IgxInputGroup**](../input_group.md) 内のすべてのコンポーネントをラップします。左側で検索と 削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
+[**IgxInputGroup**](../input-group.md) 内のすべてのコンポーネントをラップします。左側で検索と 削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -399,9 +401,9 @@ public clearSearch() {
 * [ページング](paging.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列のピン固定](column-pinning.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

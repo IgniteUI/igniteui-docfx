@@ -39,7 +39,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input_group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
+次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input-group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
 
 ```html
 <div class="search-container">

@@ -16,7 +16,7 @@ The `IgxSelectComponent` allows you to select a single item from a drop-down lis
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
 >[!WARNING]
->To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html) topic.
+>To start using Ignite UI for Angular components, in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [*getting started*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html) topic.
 
 
 ## Usage
@@ -273,7 +273,7 @@ export class MyClass {
 }
 ```
 
-You may also notice that in the above sample we have a *prefix* on the input field, this is because `igx-select` supports both prefixes and suffixes. You can read more about them [*here*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html).
+You may also notice that in the above sample we have a *prefix* on the input field, this is because `igx-select` supports both prefixes and suffixes. You can read more about them [*here*](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input-group.html).
 - The items' list default exapansion panel arrow uses `IgxSuffix` and it can be changed by the user.
 - If more than one `IgxSuffix` is used, the expansion arrow will be displayed always last.
 
