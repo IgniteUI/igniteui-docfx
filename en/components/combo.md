@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Angular ComboBox Overview
 
-The Angular ComboBox component is a drop-down list with an editable option that allows users to choose an option from a predefined list. The Ignite UI for Angular Combo Component provides easy filtering, single and multiple selection of items, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote data binding), filtering, grouping, templates, custom values, and more.
+The Angular ComboBox component represents a drop-down list that provides editable functionalities, allowing users to choose an option from a predefined list. The Ignite UI for Angular Combo Component provides also filtering capabilities, single and multiple selections of items, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote), filtering, grouping, custom templates, custom values, and more.
 
 
 ## Angular ComboBox Example
