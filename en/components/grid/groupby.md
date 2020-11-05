@@ -9,7 +9,7 @@ _keywords: angular group by, igniteui for angular, infragistics
 A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API.
 
 ## Angular Grid Group By Example
-In this example of an angular grid group by we show how users can group a large amount of data in a visual and hierarchical structure. Dragging the column headers to the top allows users to see the grouped data for the selected column. They can do group by in multiple fields by dragging more column headers to the top. These grouping options come handy when you have tables with numerous rows and columns where users can shift and present the data in a much faster and easier way.
+This example presents the grouping capabilities of a large amount of data. Dragging the column headers to the top (grouping area) allows users to see the data for the selected column in a hierarchical structure. They can do group by in multiple fields by dragging more column headers to the top. These grouping options come in handy when you have tables with numerous rows and columns where users want to present the data in a much faster and visually acceptable way.
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Group By Example"></iframe>
