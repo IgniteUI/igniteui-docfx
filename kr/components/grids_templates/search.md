@@ -22,7 +22,7 @@ _keywords: Content search, ignite ui for angular, infragistics
 
 ### @@igComponent Searching through virtualized content
 
-While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
+While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table-based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
 
 #### 데모
 

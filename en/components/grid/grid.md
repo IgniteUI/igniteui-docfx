@@ -6,12 +6,12 @@ _keywords: angular data grid, angular grid, angular material table, ignite ui fo
 
 # Angular Data Grid Overview and Configuration
 
-The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table based UI Grid.
+The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI styling.
 
 ## Angular Data Grid Example
 
-Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering and sorting on live data, grid summaries, cell styling that includes our embedded [*Sparkline*](../sparkline.md) component, 
-[*Circular Progress Indicator*](../circular-progress.md) component, and [*Icons*](../icon.md). We have also included an example for custom paging and per page of the [*Angular Pagination*](paging.md).
+Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component, 
+[Circular Progress Indicator](../circular-progress.md) component, and [Icons](../icon.md). The demo also includes  custom paging and per page usage part of the [Angular Pagination](paging.md).
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular data grid example"></iframe>
@@ -684,7 +684,7 @@ Check out these resources for more information:
  - [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md)
  - [Blog post](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility) - Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation
 
-## State persistence
+## State Persistence
 
 Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state-persistence.md) directive.
 
