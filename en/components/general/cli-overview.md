@@ -9,7 +9,7 @@ Our CLI tools provide project templates pre-configured for Ignite UI for Angular
 
 [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) is a stand-alone command-line tool for creating and scaffolding applications for a variety of frameworks.
 
-[Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) are part of the same project, available as a collection that can be used with the [Angular CLI](https://angular.io/guide/schematics#schematics-for-the-angular-cli). They offer similar core Ignite UI CLI functionality, but one that's integrated with the Schematics workflow and focused specifically on this product. The schematics collection is added to your project when you [install Ignite UI for Angular](getting_started.md#installing-ignite-ui-for-angular).
+[Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) are part of the same project, available as a collection that can be used with the [Angular CLI](https://angular.io/guide/schematics#schematics-for-the-angular-cli). They offer similar core Ignite UI CLI functionality, but one that's integrated with the Schematics workflow and focused specifically on this product. The schematics collection is added to your project when you [install Ignite UI for Angular](getting-started.md#installing-ignite-ui-for-angular).
 
 Both versions of the tooling allow for generating different projects, component and scenario views (templates) and offer guided mode.
 
@@ -142,7 +142,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
 
 
 ## Add template
-To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](cli/step-by-step-guide.md#add-view). Supported only inside existing projects created with the Angular Schematics, Ignite UI CLI or where Ignite UI for Angular has been [installed using `ng add`](getting_started.md#installing-ignite-ui-for-angular).
+To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](cli/step-by-step-guide.md#add-view). Supported only inside existing projects created with the Angular Schematics, Ignite UI CLI or where Ignite UI for Angular has been [installed using `ng add`](getting-started.md#installing-ignite-ui-for-angular).
 
 With Schematics, use `ng generate` with the Ignite UI for Angular collection and `component [template] [name]`:
 

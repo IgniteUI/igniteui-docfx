@@ -25,7 +25,7 @@ _language: ja
 
 # @@igComponent 編集
 
-Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell_editing.md)、[行編集](row_editing.md)、および[一括編集](batch_editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell_editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row_editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
+Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell-editing.md)、[行編集](row-editing.md)、および[一括編集](batch-editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell-editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row-editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
 
 ## 設定
 有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) ブール値プロパティを公開します。
@@ -55,10 +55,10 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
  - `number` データ型のデフォルト テンプレートは **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"** を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が **0** に設定されます。
  - `date` データ型ではデフォルトのテンプレートは [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
  - `boolean` データ型ではデフォルトのテンプレートは [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
- - カスタム テンプレートについては、[セル編集トピック](cell_editing.md#セル編集テンプレート)を参照してください。
+ - カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
 ### イベントの引数とシーケンス
-グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row_editing.md)および[**セルの編集**](cell_editing.md)のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
+グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row-editing.md)および[**セルの編集**](cell-editing.md)のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
 
  | イベント | 説明 | 引数 | キャンセル可能 |
 |-------|-------------|-----------|-------------|
@@ -133,6 +133,6 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 * [ソート](sorting.md)
 * [集計](summaries.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}

@@ -67,7 +67,7 @@ Now that the spreadsheet module is imported, next is the basic configuration of 
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel_utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
+> In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
 
 The following demonstrates how to load a workbook into the spreadsheet
 

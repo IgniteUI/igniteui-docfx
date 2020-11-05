@@ -80,7 +80,7 @@ public groupColumnKey = "Categories";
 
 <div class="divider--half"></div>
 
-* [TreeGrid 개요](tree_grid.md)
+* [TreeGrid 개요](tree-grid.md)
 * [TreeGrid 요약](summaries.md)
 * [그리드 요약](../grid/summaries.md)
 

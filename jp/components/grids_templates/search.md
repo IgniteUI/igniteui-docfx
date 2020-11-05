@@ -243,7 +243,7 @@ public updateExactSearch() {
 ### アイコンの追加
 
 その他のコンポーネントを使用するためにユーザー インターフェイスを作成し、検索バー全体のデザインを向上します。検索入力の左側に検索または削除アイコン、検索オプションのチップ、右側にはマテリアル デザイン アイコンと Ripple スタイルのボタンを組み合わせたナビゲーションを表示できます。入力グループ内のコンポーネントをラップしてより洗練されたデザインにすることができます。
-[**IgxInputGroup**](../input_group.md)、[**IgxIcon**](../icon.md)、[**IgxRipple**](../ripple.md)、[**IgxButton**](../button.md)、[**IgxChip**](../chip.md) のモジュールを使用します。
+[**IgxInputGroup**](../input-group.md)、[**IgxIcon**](../icon.md)、[**IgxRipple**](../ripple.md)、[**IgxButton**](../button.md)、[**IgxChip**](../chip.md) のモジュールを使用します。
 
 ```typescript
 // app.module.ts
@@ -267,7 +267,7 @@ export class AppModule {}
 
 テンプレートを新しいコンポーネントで更新します。
 
-[**IgxInputGroup**](../input_group.md) 内のすべてのコンポーネントをラップします。左側で検索と 削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
+[**IgxInputGroup**](../input-group.md) 内のすべてのコンポーネントをラップします。左側で検索と 削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -401,9 +401,9 @@ public clearSearch() {
 * [ページング](paging.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
+* [列移動](column-moving.md)
 * [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

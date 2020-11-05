@@ -65,7 +65,7 @@ Angular スプレッドシート モジュールがインポートされたの�
 
 > [!NOTE]
 >
-> 次のコード スニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。.
+> 次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。.
 
 以下は、ワークブックを Angular スプレッドシートにロードする方法を示しています。
 
