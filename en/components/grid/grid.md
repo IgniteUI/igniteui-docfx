@@ -672,6 +672,14 @@ And the result is:
 </div>
 <div class="divider--half"></div>
 
+## Keyboard Navigation
+Grid's keyboard navigation provides a rich variety of keyboard interactions for the user. It enhances accessibility and allows intuitive navigation through any type of elements inside (cell, row, column header, toolbar, footer, etc.).
+Check out these resources for more information:
+ - [Grid Keyboard Navigation](../grid/keyboard-navigation.md)
+ - [TreeGrid Keyboard Navigation](../treegrid/keyboard-navigation.md)
+ - [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md)
+ - [Blog post](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility) - Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation
+
 ## State persistence
 
 Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state-persistence.md) directive.
