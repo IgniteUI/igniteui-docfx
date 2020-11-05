@@ -7,6 +7,6 @@ _language: kr
 (function() {
         let HOST = window.location.href;
         window.location.href = HOST.indexOf('index.html') !== -1 ? 
-               HOST.replace('index.html', 'components/general/getting_started.html') : (HOST + 'components/general/getting_started.html');
+               HOST.replace('index.html', 'components/general/getting-started.html') : (HOST + 'components/general/getting-started.html');
 })();
 </script>

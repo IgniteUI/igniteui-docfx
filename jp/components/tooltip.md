@@ -226,7 +226,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ## オーバーレイ構成
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`IgxOverlayService`](overlay_main.md) を使用して各ツールチップ要素を開くか閉じるかします。
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`IgxOverlayService`](overlay-main.md) を使用して各ツールチップ要素を開くか閉じるかします。
 
 [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) プロパティ (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
 
@@ -254,7 +254,7 @@ $dark-tooltip: igx-tooltip-theme(
 > [!NOTE]
 > ダイアログ ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md)、[`IgxSwitch`](switch.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ツールチップのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
 
-ツールチップは [`IgxOverlayService`](overlay_main.md) を使用するため、スタイル設定するツールチップにカスタム テーマが適用されるよう、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
+ツールチップは [`IgxOverlayService`](overlay-main.md) を使用するため、スタイル設定するツールチップにカスタム テーマが適用されるよう、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 
 ```html
 <igx-avatar #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
@@ -269,7 +269,7 @@ $dark-tooltip: igx-tooltip-theme(
 ```
 
 > [!NOTE]
-> [`IgxOverlayService`](overlay_main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、この[リンク](overlay_main.md#スタイル設定)をご覧ください。
+> [`IgxOverlayService`](overlay-main.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、この[リンク](overlay-main.md#スタイル設定)をご覧ください。
 
 ### テーマを含む
 

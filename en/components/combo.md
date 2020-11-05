@@ -26,13 +26,13 @@ In this angular ComboBox example, you can see how users can do filtering, single
 ## Angular ComboBox Features
 
 The combo control exposes the following features:
-    - Data Binding - local data and [remote data](combo_remote.md)
-    - [Value Binding](combo_features.md#value-binding)
-    - [Filtering](combo_features.md#filtering)
-    - [Grouping](combo_features.md#grouping)
-    - [Custom Values](combo_features.md#custom-values)
-    - [Templates](combo_templates.md)
-    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
+    - Data Binding - local data and [remote data](combo-remote.md)
+    - [Value Binding](combo-features.md#value-binding)
+    - [Filtering](combo-features.md#filtering)
+    - [Grouping](combo-features.md#grouping)
+    - [Custom Values](combo-features.md#custom-values)
+    - [Templates](combo-templates.md)
+    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](input-group-reactive-forms.md)
 
 ## Usage
 
@@ -322,7 +322,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 ```
 
 > [!NOTE]
-> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay_main.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay_styling.md).
+> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay-main.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
 
 ### Demo
 <div class="sample-container loading" style="height:410px">
@@ -342,7 +342,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 - The combo does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
 > [!NOTE]
-> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
+> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for-of.html#known-limitations) section.
 
 ## API Summary
 <div class="divider--half"></div>
@@ -360,12 +360,12 @@ Additional components and/or directives with relative APIs that were used:
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo Features](combo-features.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.
 
