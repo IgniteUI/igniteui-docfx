@@ -151,7 +151,7 @@ _language: ja
 ```
 }
 
-各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md), [`ピン固定`](column_pinning.md) と [`非表示`](column_hiding.md) をサポートします。
+各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md), [`ピン固定`](column-pinning.md) と [`非表示`](column-hiding.md) をサポートします。
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は列の一番上の親レベルでのみ可能です。ネストした `column groups` や `columns` のピン固定はできません。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみです。<br />
@@ -411,6 +411,14 @@ $custom-theme: igx-grid-theme(
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 }
+
+## 既知の問題と制限
+
+- IE11 で複数列ヘッダーの @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
 
 ## API リファレンス
 <div class="divider--half"></div>

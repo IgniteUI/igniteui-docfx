@@ -23,9 +23,13 @@ _language: ja
 ---
 }
 
-# @@igComponent 列選択
+# Angular @@igComponent 列選択
 列選択機能は、シングルク リックで列全体を選択する簡単な方法を提供します。特定の列の重要性を強調するために、ヘッダー セルとその下のすべてにフォーカスします。この機能は豊富な [`API`]({environment:angularApiUrl}) を備えて選択状態の操作、選択した部分からのデータ抽出、データ分析操作、可視化が可能になります。
 
+## Angular 列選択の例
+<div class="divider--half"></div>
+
+以下のサンプルは、@@igComponent の**列選択**動作の 3 つのタイプを示します。使用可能な各選択モードを有効にするには、以下の [列選択] ドロップダウンを使用します。
 @@if (igxName === 'IgxGrid') {
 *_Contact Title_、_City_、および _Address_ 列の選択が無効になっています。
 }
@@ -207,7 +211,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
