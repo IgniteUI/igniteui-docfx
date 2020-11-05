@@ -23,11 +23,13 @@ _language: ja
 ---
 }
 
-# @@igComponent 行選択
+# Angular @@igComponent 行選択
 
 Ignite UI for Angular の行選択では、行内の他のすべての列に先行する行セレクター列があります。行選択ボックスをクリックすると、行の選択や選択解除、複数行にわたるデータの選択が可能になります。
 
-### デモ
+## Angular 行選択の例
+
+以下のサンプルは、@@igComponent の**行選択**の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。切り替えボタンを使用して、行セレクターのチェックボックスを非表示または表示します。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
@@ -508,7 +510,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 * [並び替え](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [仮想化とパフォーマンス](virtualization.md)
 
