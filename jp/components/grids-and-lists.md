@@ -319,7 +319,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="列のグループ化、ピン固定、および集計機能が有効になっているデータのグリッド" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-summaries-1100.jpg?v=201808021304" alt="Angular Data Grid コンポーネントで列のグループ化、ピン固定、および集計機能が有効になっているデータのグリッド"></div>
     <div class="feature__details">
         <span class="h3 features__heading">Angular Grid の列のグループ化、ピン固定、集計、移動<a class="anchorjs-link" href="#angular-grid-の列のグループ化ピン固定集計移動" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>組み込みの列[集計](grid/summaries.md)またはカスタム集計テンプレートをサポートし、マウス操作、タッチ、または API を介して列またはグループ列をグループ化します。インタラクティブな[列のピン固定](grid/column_pinning.md)、移動、ドラッグ、ソート操作に列をインタラクティブに[非表示](grid/column_hiding.md)または[移動](grid/column-moving.md)できます。</p>
+        <p>組み込みの列[集計](grid/summaries.md)またはカスタム集計テンプレートをサポートし、マウス操作、タッチ、または API を介して列またはグループ列をグループ化します。インタラクティブな[列のピン固定](grid/column-pinning.md)、移動、ドラッグ、ソート操作に列をインタラクティブに[非表示](grid/column-hiding.md)または[移動](grid/column-moving.md)できます。</p>
     </div>
 </div>
 
@@ -362,9 +362,9 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <li>[グリッドのソート](grid/sorting.md)</li>
     <li>[列のグループ化](grid/groupby.md)</li>
     <li>[列の集計](grid/summaries.md)</li>
-    <li>[ピン固定列](grid/column_pinning.md)</li>
+    <li>[ピン固定列](grid/column-pinning.md)</li>
     <li>[サイズ変更可能な列](grid/column-resizing.md)</li>
-    <li>[列の非表示](grid/column_hiding.md)</li>
+    <li>[列の非表示](grid/column-hiding.md)</li>
 </ul>
 <ul>
     <li>[列移動](grid/column-moving.md)</li>

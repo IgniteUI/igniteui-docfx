@@ -377,7 +377,7 @@ Here is the full list of Excel style filtering components that you could use:
 
 ## Unique Column Values Strategy
 
-The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. These values can be provided manually and loaded on demand, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md#unique-column-values-strategy) topic.
+The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. These values can be provided manually and loaded on demand, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md#unique-column-values-strategy) topic.
 
 
 ## External Excel Style filtering
