@@ -14,7 +14,7 @@ WPF to Angular tutorial is the first step that you should take in order to make 
 
 The guide is divided into the following topics and has included video tutorials:
 
-#### [Create your first Angular application](create_first_angular_app.md)
+#### [Create your first Angular application](create-first-angular-app.md)
 
 Before you begin on your path of learning Angular, you’ll need to install the prerequisites for modern web app dev with Angular.  This section covers using the Node.js package manager, installing the Visual Studio Code IDE, and a few of the basic concepts that are necessary for modern web development. Check out the [video tutorial](https://youtu.be/dhjrAPPad54) for this topic.
 

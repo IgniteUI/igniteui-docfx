@@ -670,7 +670,7 @@ $custom-button: igx-button-theme(
 * [ページング](paging.md)
 * [並び替え](sorting.md)
 * [集計](summaries.md)
-* [列のピン固定](column_pinning.md)
+* [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
