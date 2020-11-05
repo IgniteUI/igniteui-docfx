@@ -313,6 +313,6 @@ row.delete();
 * [정렬](sorting.md)
 * [요약](summaries.md)
 * [열 핀 고정](column_pinning.md)
-* [열 크기 조정](column_resizing.md)
+* [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [검색](search.md)}
