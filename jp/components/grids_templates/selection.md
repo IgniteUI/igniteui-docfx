@@ -95,7 +95,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
  - 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>します。
  - 列の範囲選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>マウス クリック</kbd>、その間のすべての列が選択されます。
 
-> 詳細については、[列選択トピック](column_selection.md)を参照してください。
+> 詳細については、[列選択トピック](column-selection.md)を参照してください。
 
 @@if (igxName === 'IgxGrid'){
 ## グリッドのコンテキスト メニュー
