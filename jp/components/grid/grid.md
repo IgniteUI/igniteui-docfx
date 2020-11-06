@@ -7,12 +7,14 @@ _language: ja
 
 # Angular データ グリッドの概要と構成
 
-<p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
+Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
 
-## デモ
+## Angular データ グリッドの例
+
+Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component, [Circular Progress Indicator](../circular-progress.md) component, and [Icons](../icon.md). The demo also includes  custom paging and per page usage part of the [Angular Pagination](paging.md).
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular データ グリッドの例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
@@ -21,7 +23,8 @@ _language: ja
 </div>
 <div class="divider--half"></div>
 
-## 依存関係
+## Getting Started with Ignite UI for Angular Data Grid
+### 依存関係
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -64,7 +67,7 @@ import { IgxGridComponent } from 'igniteui-angular';
 public grid: IgxGridComponent;
 ```
 
-## 使用方法
+### 使用方法
 
 グリッド モジュールをインポート後、ローカル データにバインドする **igx-grid** の基本構成を設定します。
 
@@ -76,7 +79,7 @@ public grid: IgxGridComponent;
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
-## スタイルの構成
+## Angular Grid スタイルの構成
 > [!NOTE]
 > [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
 
@@ -96,7 +99,7 @@ public grid: IgxGridComponent;
  ...
  ```
 
-## 列の構成
+## Angular Grid 列の構成
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
@@ -284,7 +287,7 @@ const pipeArgs: IColumnPipeArgs = {
 
 `OrderDate` 列は `format` および `timezone` プロパティのみに遵守しますが、`UnitPrice` は `digitsInfo` のみに遵守します。詳細については、[「Localizing your app (英語)」](https://angular.io/guide/i18n)で Angular の公式ドキュメントを参照してください。
 
-## データ構造
+## Angular Grid データ構造
 
 [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラット データ**とネストされた **POJOs (Plain old Java objects)** を処理します。描画に固有のデータ構造はフォームにあります。
 
@@ -328,7 +331,7 @@ const POJO = [{
 
 >[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 
-## データ バインディング
+## Angular Grid データ バインディング
 
 はじめにリモート データ サービスにバインドするために Angular グリッドを変更します。大規模なアプリケーション レベルでは一般的なシナリオです。すべてのデータ取得に関連するロジックを別のデータ サービスに分割することがベスト プラクティスであるため、サーバーからデータの取得を処理するサービスを作成します。
 
