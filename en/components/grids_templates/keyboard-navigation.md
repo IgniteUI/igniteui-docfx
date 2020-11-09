@@ -98,6 +98,7 @@ When the **@@igxName** body is focused, the following key combinations are avail
  - <kbd>Alt + Arrow Right</kbd> or <kbd>Alt + Arrow Down</kbd> - @@if (igxName === "IgxGrid") {over Group Row - expands the group} @@if (igxName === "IgxHierarchicalGrid") {expands the row island } @@if (igxName === "IgxTreeGrid") {expands the current node}
  @@if (igxName === "IgxGrid") {- <kbd>Alt + Arrow Left</kbd> or <kbd>Alt + Arrow Up</kbd> - over Master Detail Row - collapses the details view
  - <kbd>Alt + Arrow Right</kbd> or <kbd>Alt + Arrow Down</kbd> - over Master Detail Row - expands the details view}
+ @@if (igxName === "IgxGrid") {- <kbd>Space</kbd> - over Group Row - selects all rows in the group, if <kbd>rowSelection</kbd> property is set to multiple}
 
 Practice all of the above mentioned actions in the demo sample below. Focus any navigable grid element and a list with some of the available actions for the element will be shown to guide you through.
 

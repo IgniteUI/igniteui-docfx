@@ -1,6 +1,6 @@
 ---
-title: Angular データ ツリー グリッド | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
+title: Angular Tree Grid | Fastest Angular Tree Table | Infragistics
+_description: The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little coding. Try it for FREE
 _keywords: angular group by, igniteui for angular, インフラジスティックス
 _language: ja
 ---

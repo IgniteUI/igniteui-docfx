@@ -1,9 +1,20 @@
+@@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid フィルタリング | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルでデータの高度なフィルターを設定する方法。グリッドの高度なフィルタリングがより使いやすくなりました。
-_keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
+title: Angular Grid | Advanced Filtering | Infragistics
+_description: Learn how to configure advanced filter of data with the Angular Material table. The grid advanced filtering is more convenient and engaging than ever.
+_keywords: advanced filter, igniteui for angular, infragistics
 _language: ja
 ---
+}
+@@if(igxName !== 'IgxGrid'){
+---
+title: Angular Grid | Advanced Filtering | Infragistics
+_description: Learn how to configure advanced filter of data with the Angular Material table. The grid advanced filtering is more convenient and engaging than ever.
+_keywords: advanced filter, igniteui for angular, infragistics
+_canonicalLink: grid/advanced-filtering
+_language: ja
+---
+}
 
 # @@igComponent 高度なフィルタリング
 

@@ -1,13 +1,13 @@
-@@if(igxName==='IgxGrid') {
+@@if(igxName === 'IgxGrid') {
 ---
-title: Angular Grid Pagination | Template | Ignite UI for Angular | Infragistics
+title: Angular Grid Paging | Angular Pagination Table | Infragistics
 _description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 ---
 }
-@@if(igxName!=='IgxGrid') {
+@@if(igxName !== 'IgxGrid') {
 ---
-title: Angular Grid Pagination | Template | Ignite UI for Angular | Infragistics
+title: Angular Grid Paging | Angular Pagination Table | Infragistics
 _description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 _canonicalLink: grid/paging
