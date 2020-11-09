@@ -194,6 +194,22 @@ export class RemoteLoDService {
     }
 }
 ```
+
+### Hide/Show row expand indicators
+
+If you have a way to provide information whether a row has children prior to its expanding, you could use the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) input property. This way you could provide a boolean property from the data objects which indicates whether an expansion indicator should be displayed.
+
+```html
+<igx-hierarchical-grid #grid [data]="data" primaryKey="ID" hasChildrenKey="hasChildren">
+        ...
+</igx-hierarchical-grid>
+```
+
+Note that setting the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#haschildrenkey) property is not required. In case you don't provide it, expansion indicators will be displayed for each row.
+
+Additionally if you wish to show/hide the header expand/collapse all indicator you can use the [showExpandAll]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#showExpandAll) property.
+This UI is disabled by default for performance reasons and it is not recommended to enable it in grids with large data or grids with load on demand.
+
 ### Features
 
 The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned. 
