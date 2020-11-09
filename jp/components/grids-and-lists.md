@@ -243,7 +243,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 
 <li>グリッド セルまたは列のデータに基づいた[**列集計**](grid/summaries.md)</li>
 
-<li>[**Excel へのエクスポート**](grid/export-excel.md) ([**データ可視化**](excel_library_working_with_charts.md)を含む)</li>
+<li>[**Excel へのエクスポート**](grid/export-excel.md) ([**データ可視化**](excel-library-working-with-charts.md)を含む)</li>
 
 <li>行の高さとサイズ変更を調整する[**表示密度**](grid/display-density.md)</li>
 
@@ -352,7 +352,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 </div>
     <div class="feature__details" id="list-features">
         <span class="h3 features__heading">Angular Grid の Excel ライブラリ<a class="anchorjs-link" href="#angular-grid-の-excel-ライブラリ" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>データ グリッドの XLXS、XLS、TSV、または CSV のエクスポートを完全にサポートします。Ignite UI for Angular [Excel ライブラリ](excel_library.md)には、クライアント マシンで Microsoft Excel を必要としない 300 以上の数式、テーブルサポート、条件付き書式、チャートの作成などが含まれます。</p>
+        <p>データ グリッドの XLXS、XLS、TSV、または CSV のエクスポートを完全にサポートします。Ignite UI for Angular [Excel ライブラリ](excel-library.md)には、クライアント マシンで Microsoft Excel を必要としない 300 以上の数式、テーブルサポート、条件付き書式、チャートの作成などが含まれます。</p>
     </div>
 </div>
 <div class="divider--half"></div>
@@ -464,7 +464,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
                 <li>[Excel スタイル フィルタリング](grid/excel-style-filtering.md)と [Excel キーボード ナビゲーション](grid/keyboard-navigation.md)機能</li>
                 <li>インタラクティブな [Outlook スタイルのようなグループ化](grid/groupby.md)</li>
                 <li>グリッド セルまたは列のデータに基づいた[列集計](grid/summaries.md)</li>
-                <li>[Excel へのエクスポート](grid/export-excel.md) ([データ可視化](excel_library_working_with_charts.md)を含む)</li>
+                <li>[Excel へのエクスポート](grid/export-excel.md) ([データ可視化](excel-library-working-with-charts.md)を含む)</li>
                 <li>行の高さとサイズ変更を調整する[表示密度](grid/display-density.md)</li>
                 <li>[スパークライン列](sparkline.md)や画像列などの列テンプレート</li>
             </ul>
