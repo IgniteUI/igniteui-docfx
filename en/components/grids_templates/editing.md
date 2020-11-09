@@ -10,6 +10,7 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular tree grid editing
 _keywords: data manipulation, ignite ui for angular, infragistics
+_canonicalLink: grid/editing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,12 +18,13 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular hierarchical grid editing
 _keywords: data manipulation, ignite ui for angular, infragistics
+_canonicalLink: grid/editing
 ---
 }
 
 # @@igComponent Editing
 
-Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. The data manipulation phases are: [Cell Editing](cell_editing.md), [Row Editing](row_editing.md), and [Batch Editing](batch_editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. Additionally, **Cell editing** exposes several default editors based on the column data type, that could be easily customized via [igxCellEditor directive](cell_editing.md#cell-editing-templates) or [igxRow directives](row_editing.md#customizing-row-editing-overlay).
+Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. The data manipulation phases are: [Cell Editing](cell-editing.md), [Row Editing](row-editing.md), and [Batch Editing](batch-editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. Additionally, **Cell editing** exposes several default editors based on the column data type, that could be easily customized via [igxCellEditor directive](cell-editing.md#cell-editing-templates) or [igxRow directives](row-editing.md#customizing-row-editing-overlay).
 
 ## Setup
 In order to specify which edit mode should be enabled, the @@igComponent exposes the following boolean properties - [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable).
@@ -52,10 +54,10 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
  - For `number` data type, default template is using **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
  - For `date` data type, default template is using [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
  - For `boolean` data type, default template is using [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
- - For custom templates you can see [cell editing topic](cell_editing.md#cell-editing-templates)
+ - For custom templates you can see [cell editing topic](cell-editing.md#cell-editing-templates)
 
 ### Event arguments and sequence
-The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row_editing.md) and [**Cell Editing**](cell_editing.md) lifecycle - when starting, committing or canceling the editing action.
+The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row-editing.md) and [**Cell Editing**](cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
 
  | Event | Description | Arguments | Cancellable |
 |-------|-------------|-----------|-------------|
@@ -129,7 +131,7 @@ The following sample demonstrates the editing execution sequence in action:
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}

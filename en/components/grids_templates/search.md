@@ -10,6 +10,7 @@ _keywords: Content search, ignite ui for angular, infragistics
 title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
+_canonicalLink: grid/search
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,14 +18,17 @@ _keywords: Content search, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
+_canonicalLink: grid/search
 ---
 }
 
-# @@igComponent Searching through virtualized content
+# Angular @@igComponent Searching through virtualized content
 
-While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
+Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular Material table-based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent. 
 
-### Demo
+## Angular Search Example
+
+The following example represents @@igComponent with search input box that allows searching in all columns and rows, as well as specific filtering options for each column.
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
@@ -52,7 +56,7 @@ While browsers natively provide content search functionality, most of the time t
 <!-- TODO -->
 }
 
-## Usage
+## Angular Search Usage
 
 ### Grid setup
 Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
@@ -127,7 +131,7 @@ public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
 
-### Search input box
+### Angular search box input
 
 Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
@@ -238,7 +242,7 @@ What if we would like to filter and sort our @@igComponent or even to add and re
 ### Adding icons
 
 By using some of our other components, we can create an enriched user interface and improve the overall design of our entire search bar! We can have a nice search or delete icon on the left of the search input, a couple of chips for our search options and some material design icons combined with nice ripple styled buttons for our navigation on the right. We can wrap these components inside an input group for a more refined design.
-To do this, let's go and grab the [**IgxInputGroup**](../input_group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) and the [**IgxChip**](../chip.md) modules.
+To do this, let's go and grab the [**IgxInputGroup**](../input-group.md), [**IgxIcon**](../icon.md),  [**IgxRipple**](../ripple.md), [**IgxButton**](../button.md) and the [**IgxChip**](../chip.md) modules.
 
 ```typescript
 // app.module.ts
@@ -262,7 +266,7 @@ export class AppModule {}
 
 Finally, let's update our template with the new components!
 
-We will wrap all of our components inside an [**IgxInputGroup**](../input_group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) method to clear the highlights.
+We will wrap all of our components inside an [**IgxInputGroup**](../input-group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) method to clear the highlights.
 
 ```html
 <!--searchgrid.component.html-->
@@ -396,9 +400,9 @@ Styles:
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

@@ -10,6 +10,7 @@ _keywords: angular data grid, grid performance, data table virtualization, ignit
 title: Virtualization Directive - Native Angular | Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the tree grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory. 
 _keywords: angular data grid, grid performance, data table virtualization, ignite ui for angular
+_canonicalLink: grid/virtualization
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular data grid, grid performance, data table virtualization, ignit
 title: Virtualization Directive - Native Angular | Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the hierarchical grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory.
 _keywords: angular data grid, grid performance, data table virtualization, ignite ui for angular
+_canonicalLink: grid/virtualization
 ---
 }
 # @@igComponent Virtualization and Performance
@@ -64,7 +66,7 @@ Explicitly setting column widths in percentages (%) will, in most cases, create 
 @@if (igxName === 'IgxGrid') {
 ## Remote Virtualization
 
-The @@igComponent supports remote virtualization, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote virtualization, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 }
 
 ## Virtualization Limitations
@@ -94,9 +96,9 @@ Without information about the sizes of the container and the items before render
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

@@ -10,6 +10,7 @@ _keywords: angular grid summaries, igniteui for angular, infragistics
 title: Angular Tree Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
 _description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
+_canonicalLink: grid/summaries
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular grid summaries, ignite ui for angular, infragistics
 title: Angular Hierarchical Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
 _description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
+_canonicalLink: grid/summaries
 ---
 }
 
@@ -596,11 +598,11 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
-@@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection_based_aggregates.html)}
+@@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

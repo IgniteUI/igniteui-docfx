@@ -23,12 +23,12 @@ _language: ja
 ---
 }
 
-# @@igComponent のクイック フィルタリング概要
+# Angular @@igComponent フィルタリング
+IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
-Angular グリッド フィルタリングを使用すると、指定した基準を満たすレコードのみの表示が可能です。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
+## Angular フィルターの例
 
-### デモ
-
+以下のサンプルは、@@igComponent の**クイック フィルタリング** ユーザー エクスペリエンスを示しています。@@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドは、外部の _igxInputGroup_ コンポーネントを介して _ProductName_  列に _contains_ 条件を適用するために使用されます。} 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -61,6 +61,43 @@ Angular グリッド フィルタリングを使用すると、指定した基�
 }
 
 <div class="divider--half"></div>
+
+## 設定
+フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
+
+**[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** プロパティを使用して、以下のオプションを指定できます:
+- **false** - 対応する列のフィルタリングが無効になります /デフォルト値/。
+- **true** - 対応する列のフィルタリングが有効になります。
+
+**[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)** プロパティを使用して、以下のオプションを指定できます:
+- **false** - 対応するグリッドのフィルタリングが無効になります /デフォルト値/。
+- **true** - 対応するグリッドのフィルタリングが有効になります。
+
+**[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode)** プロパティを使用して、以下のオプションを指定できます:
+- **quickFilter** - 簡易なフィルタリング UI /デフォルト値/。 
+- **excelStyleFilter** - Excel のようなフィルタリング UI。
+
+**[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)** プロパティを使用して、以下のオプションを指定できます:
+- **true** - 対応する列のフィルタリングが有効なになります /デフォルト値/。
+- **false** - 対応する列のフィルタリングが無効になります。
+
+
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="Price" [dataType]="'number'" [filterable]="false">
+</@@igSelector>
+```
+
+ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
+
+```html
+<@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+</@@igSelector>
+```
+
+>[!NOTE]
+>@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルター結果の共通部分です。
 
 ## インタラクション
 
@@ -98,7 +135,7 @@ Angular グリッド フィルタリングを使用すると、指定した基�
 > [!NOTE]
 > `string` 型の値が dataType `Date` の列で使用される場合、@@igComponent は値を `Date` オブジェクトに解析しないためフィルター条件は使用できません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
 
-列または複数の列は @@igComponent API でフィルターできます。@@igComponent は、このタスクに複数のメソッドを公開します ([`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter)、[`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal)、[`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter))。
+列または複数の列は @@igComponent API でフィルターできます。@@igComponent は、このタスクに複数のメソッドを公開します ([`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter)、[`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal)、[`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter))。
 
 *   [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - 単一の列または複数の列をフィルターします。
 
@@ -156,7 +193,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.Or;
 this.@@igObjectRef.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
-*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter) - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
+*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
 
 ```typescript
 // Remove the filtering state from the ProductName column
@@ -210,7 +247,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ## リモート フィルタリング
 
-@@igComponent はリモート フィルタリングをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote_data_operations.md) で説明されています。
+@@igComponent はリモート フィルタリングをサポートします。詳細については、 [`@@igComponent リモート データ操作`](remote-data-operations.md) で説明されています。
 
 <div class="divider--half"></div>
 }
@@ -659,9 +696,9 @@ $custom-input-group: igx-input-group-theme(
 * [ページング](paging.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列のピン固定](column-pinning.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

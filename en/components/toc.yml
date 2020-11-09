@@ -7,13 +7,13 @@
   href: general/ignite-ui-licensing.md
   new: true
 - name: Getting started
-  href: general/getting_started.md
+  href: general/getting-started.md
   new: false
 - name: Breaking Changes
   href: general-breaking-changes-dv.md
   new: true
 - name: Update guide
-  href: general/update_guide.md
+  href: general/update-guide.md
   new: false
 - name: Accessibility Compliance
   href: general/accessibility-compliance.md
@@ -32,32 +32,32 @@
       href: general/cli/auth-template.md
       new: false
 - name: WPF to Angular guide
-  href: general/wpf_to_angular_guide/wpf_to_angular_guide.md
+  href: general/wpf-to-angular-guide/wpf-to-angular-guide.md
   new: false
   items:
     - name: Create your first Angular app
-      href: general/wpf_to_angular_guide/create_first_angular_app.md
+      href: general/wpf-to-angular-guide/create-first-angular-app.md
       new: false
     - name: Create your UI with Angular components
-      href: general/wpf_to_angular_guide/create_ui_with_components.md
+      href: general/wpf-to-angular-guide/create-ui-with-components.md
       new: false
     - name: One-Way Binding
-      href: general/wpf_to_angular_guide/one_way_binding.md
+      href: general/wpf-to-angular-guide/one-way-binding.md
       new: false
     - name: Angular Events
-      href: general/wpf_to_angular_guide/angular_events.md
+      href: general/wpf-to-angular-guide/angular-events.md
       new: false
     - name: Two-Way Binding
-      href: general/wpf_to_angular_guide/two_way_binding.md
+      href: general/wpf-to-angular-guide/two-way-binding.md
       new: false
     - name: Transforming Data with Angular Pipes
-      href: general/wpf_to_angular_guide/angular_pipes.md
+      href: general/wpf-to-angular-guide/angular-pipes.md
       new: false
     - name: Structural Directives in Angular
-      href: general/wpf_to_angular_guide/structural_directives.md
+      href: general/wpf-to-angular-guide/structural-directives.md
       new: false
     - name: Layout Elements
-      href: general/wpf_to_angular_guide/layout.md
+      href: general/wpf-to-angular-guide/layout.md
       new: false
 - name: Framework & features
   href: general/framework-and-features/framework-and-features.md
@@ -71,55 +71,52 @@
       new: false
       updated: true
 - name: Grids & Lists
-  href: grids_and_lists.md
+  href: grids-and-lists.md
   header: true
 - name: Data Grid
   href: grid/grid.md
   new: true
   items:
     - name: Live Data / Real-Time
-      href: grid/live_data.md
+      href: grid/live-data.md
       new: false
     - name: Virtualization and performance
       href: grid/virtualization.md
       new: false
     - name: Remote Data Operations
-      href: grid/remote_data_operations.md
+      href: grid/remote-data-operations.md
       new: true
     - name: Editing
       href: grid/editing.md
       updated: true
       items:
         - name: Cell Editing
-          href: grid/cell_editing.md
+          href: grid/cell-editing.md
           updated: true
         - name: Row Editing
-          href: grid/row_editing.md
+          href: grid/row-editing.md
           new: false
         - name: Row Adding
-          href: grid/row_adding.md
+          href: grid/row-adding.md
           new: true
         - name: Batch Editing
-          href: grid/batch_editing.md
+          href: grid/batch-editing.md
           new: false
     - name: Row Drag
-      href: grid/row_drag.md
+      href: grid/row-drag.md
       new: false
     - name: Paging
       href: grid/paging.md
       new: false
     - name: Filtering
-      href: grid/filtering-overview.md
+      href: grid/filtering.md
       new: false
       items:
-        - name: Quick Filtering
-          href: grid/filtering.md
-          new: false
         - name: Excel Style Filtering
-          href: grid/excel_style_filtering.md
+          href: grid/excel-style-filtering.md
           updated: true
         - name: Advanced Filtering
-          href: grid/advanced_filtering.md
+          href: grid/advanced-filtering.md
           new: true
     - name: Sorting
       href: grid/sorting.md
@@ -131,36 +128,36 @@
       href: grid/summaries.md
       updated: true
     - name: Column Moving
-      href: grid/column_moving.md
+      href: grid/column-moving.md
       new: false
       updated: true
     - name: Column Pinning
-      href: grid/column_pinning.md
+      href: grid/column-pinning.md
       new: true
     - name: Row Pinning
-      href: grid/row_pinning.md
+      href: grid/row-pinning.md
       new: true
     - name: Column Resizing
-      href: grid/column_resizing.md
+      href: grid/column-resizing.md
       new: false
     - name: Column Hiding
-      href: grid/column_hiding.md
+      href: grid/column-hiding.md
       new: false
     - name: Selection
       href: grid/selection.md
       new: false
       items:
         - name: Row selection
-          href: grid/row_selection.md
+          href: grid/row-selection.md
           new: false
         - name: Cell selection
-          href: grid/cell_selection.md
+          href: grid/cell-selection.md
           new: false
         - name: Selection-based Aggregates
-          href: grid/selection_based_aggregates.md
+          href: grid/selection-based-aggregates.md
           new: false
         - name: Column Selection
-          href: grid/column_selection.md
+          href: grid/column-selection.md
           new: true
     - name: Searching
       href: grid/search.md
@@ -170,92 +167,89 @@
       new: false
       updated: true
     - name: Export to Excel
-      href: grid/export_excel.md
+      href: grid/export-excel.md
       new: false
     - name: Paste from Excel
-      href: grid/paste_excel.md
+      href: grid/paste-excel.md
       new: false
     - name: Multi-column Headers
-      href: grid/multi_column_headers.md
+      href: grid/multi-column-headers.md
       new: false
     - name: Collapsible Column Groups
-      href: grid/collapsible_column_groups.md
+      href: grid/collapsible-column-groups.md
       new: true
     - name: Display Density
-      href: grid/display_density.md
+      href: grid/display-density.md
       new: false
     - name: Conditional Cell Styling
-      href: grid/conditional_cell_styling.md
+      href: grid/conditional-cell-styling.md
       new: false
     - name: Keyboard navigation
-      href: grid/keyboard_navigation.md
+      href: grid/keyboard-navigation.md
       new: false
       updated: true
     - name: Multi-row Layout
-      href: grid/multi_row_layout.md
+      href: grid/multi-row-layout.md
       new: false
     - name: Clipboard Interactions
-      href: grid/clipboard_interactions.md
+      href: grid/clipboard-interactions.md
       new: false
     - name: Sizing
       href: grid/sizing.md
       new: false
     - name: Master-Detail Grid
-      href: grid/master_detail.md
+      href: grid/master-detail.md
       new: true
     - name: State Persistence
-      href: grid/state_persistence.md
+      href: grid/state-persistence.md
       updated: true
 - name: Tree Grid
-  href: treegrid/tree_grid.md
+  href: treegrid/tree-grid.md
   new: true
   items:
     - name: Live Data / Real-Time
-      href: treegrid/live_data.md
+      href: treegrid/live-data.md
       new: false
     - name: Virtualization and performance
       href: treegrid/virtualization.md
       new: false
     - name: Remote Data Operations
-      href: treegrid/remote_data_operations.md
+      href: treegrid/remote-data-operations.md
       new: true
     - name: Load On Demand
-      href: treegrid/load_on_demand.md
+      href: treegrid/load-on-demand.md
       new: false
     - name: Editing
       href: treegrid/editing.md
       updated: true
       items:
         - name: Cell Editing
-          href: treegrid/cell_editing.md
+          href: treegrid/cell-editing.md
           updated: true
         - name: Row Editing
-          href: treegrid/row_editing.md
+          href: treegrid/row-editing.md
           new: false
         - name: Row Adding
-          href: treegrid/row_adding.md
+          href: treegrid/row-adding.md
           new: true
         - name: Batch Editing
-          href: treegrid/batch_editing.md
+          href: treegrid/batch-editing.md
           new: false
     - name: Row Drag
-      href: treegrid/row_drag.md
+      href: treegrid/row-drag.md
       new: false
     - name: Paging
       href: treegrid/paging.md
       new: false
     - name: Filtering
-      href: treegrid/filtering-overview.md
+      href: treegrid/filtering.md
       new: false
       items:
-      - name: Quick Filtering
-        href: treegrid/filtering.md
-        new: false
       - name: Excel Style Filtering
-        href: treegrid/excel_style_filtering.md
+        href: treegrid/excel-style-filtering.md
         updated: true
       - name: Advanced Filtering
-        href: treegrid/advanced_filtering.md
+        href: treegrid/advanced-filtering.md
         new: true
     - name: Sorting
       href: treegrid/sorting.md
@@ -264,33 +258,33 @@
       href: treegrid/summaries.md
       new: true
     - name: Column Moving
-      href: treegrid/column_moving.md
+      href: treegrid/column-moving.md
       new: false
       updated: true
     - name: Column Pinning
-      href: treegrid/column_pinning.md
+      href: treegrid/column-pinning.md
       new: false
     - name: Row Pinning
-      href: treegrid/row_pinning.md
+      href: treegrid/row-pinning.md
       new: true
     - name: Column Resizing
-      href: treegrid/column_resizing.md
+      href: treegrid/column-resizing.md
       new: false
     - name: Column Hiding
-      href: treegrid/column_hiding.md
+      href: treegrid/column-hiding.md
       new: false
     - name: Selection
       href: treegrid/selection.md
       new: new
       items:
         - name: Row selection
-          href: treegrid/row_selection.md
+          href: treegrid/row-selection.md
           new: false
         - name: Cell selection
-          href: treegrid/cell_selection.md
+          href: treegrid/cell-selection.md
           new: false
         - name: Column Selection
-          href: treegrid/column_selection.md
+          href: treegrid/column-selection.md
           new: true
     - name: Searching
       href: treegrid/search.md
@@ -300,83 +294,80 @@
       new: false
       updated: true
     - name: Export to Excel
-      href: treegrid/export_excel.md
+      href: treegrid/export-excel.md
       new: false
     - name: Multi-column Headers
-      href: treegrid/multi_column_headers.md
+      href: treegrid/multi-column-headers.md
       new: false
     - name: Collapsible Column Groups
-      href: treegrid/collapsible_column_groups.md
+      href: treegrid/collapsible-column-groups.md
       new: true
     - name: Display Density
-      href: treegrid/display_density.md
+      href: treegrid/display-density.md
       new: false
     - name: Conditional Cell Styling
-      href: treegrid/conditional_cell_styling.md
+      href: treegrid/conditional-cell-styling.md
       new: false
     - name: Aggregations
       href: treegrid/aggregations.md
       new: false
     - name: Keyboard navigation
-      href: treegrid/keyboard_navigation.md
+      href: treegrid/keyboard-navigation.md
       new: false
       updated: true
     - name: Clipboard Interactions
-      href: treegrid/clipboard_interactions.md
+      href: treegrid/clipboard-interactions.md
       new: false
     - name: Sizing
       href: treegrid/sizing.md
       new: false
     - name: State Persistence
-      href: treegrid/state_persistence.md
+      href: treegrid/state-persistence.md
       new: true
 - name: Hierarchical Grid
-  href: hierarchicalgrid/hierarchical_grid.md
+  href: hierarchicalgrid/hierarchical-grid.md
   new: true
   items:
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
       new: false
     - name: Remote Data Operations
-      href: hierarchicalgrid/remote_data_operations.md
+      href: hierarchicalgrid/remote-data-operations.md
       new: true
     - name: Load on Demand
-      href: hierarchicalgrid/load_on_demand.md
+      href: hierarchicalgrid/load-on-demand.md
       new: false
     - name: Editing
       href: hierarchicalgrid/editing.md
       updated: true
       items:
         - name: Cell Editing
-          href: hierarchicalgrid/cell_editing.md
+          href: hierarchicalgrid/cell-editing.md
           updated: true
         - name: Row Editing
-          href: hierarchicalgrid/row_editing.md
+          href: hierarchicalgrid/row-editing.md
           new: false
         - name: Row Adding
-          href: hierarchicalgrid/row_adding.md
+          href: hierarchicalgrid/row-adding.md
           new: true
         - name: Batch Editing
-          href: hierarchicalgrid/batch_editing.md
+          href: hierarchicalgrid/batch-editing.md
           new: false
     - name: Row Drag
-      href: hierarchicalgrid/row_drag.md
+      href: hierarchicalgrid/row-drag.md
       new: false
     - name: Paging
       href: hierarchicalgrid/paging.md
       new: false
     - name: Filtering
-      href: hierarchicalgrid/filtering-overview.md
+      href: hierarchicalgrid/filtering.md
       new: false
       items:
-      - name: Quick Filtering
-        href: hierarchicalgrid/filtering.md
-        new: false
       - name: Excel Style Filtering
-        href: hierarchicalgrid/excel_style_filtering.md
+        href: hierarchicalgrid/excel-style-filtering.md
         updated: true
       - name: Advanced Filtering
-        href: hierarchicalgrid/advanced_filtering.md
+        href: hierarchicalgrid/advanced-filtering.md
         new: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
@@ -385,33 +376,33 @@
       href: hierarchicalgrid/summaries.md
       new: true
     - name: Column Moving
-      href: hierarchicalgrid/column_moving.md
+      href: hierarchicalgrid/column-moving.md
       new: false
       updated: true
     - name: Column Pinning
-      href: hierarchicalgrid/column_pinning.md
+      href: hierarchicalgrid/column-pinning.md
       new: false
     - name: Row Pinning
-      href: hierarchicalgrid/row_pinning.md
+      href: hierarchicalgrid/row-pinning.md
       new: true
     - name: Column Resizing
-      href: hierarchicalgrid/column_resizing.md
+      href: hierarchicalgrid/column-resizing.md
       new: false
     - name: Column Hiding
-      href: hierarchicalgrid/column_hiding.md
+      href: hierarchicalgrid/column-hiding.md
       new: false
     - name: Selection
       href: hierarchicalgrid/selection.md
       new: false
       items:
         - name: Row selection
-          href: hierarchicalgrid/row_selection.md
+          href: hierarchicalgrid/row-selection.md
           new: false
         - name: Cell selection
-          href: hierarchicalgrid/cell_selection.md
+          href: hierarchicalgrid/cell-selection.md
           new: true
         - name: Column Selection
-          href: hierarchicalgrid/column_selection.md
+          href: hierarchicalgrid/column-selection.md
           new: true
     # Not yet fully implemented for igxHGrid
     # - name: Searching
@@ -421,26 +412,26 @@
       href: hierarchicalgrid/toolbar.md
       new: false
     - name: Multi-column Headers
-      href: hierarchicalgrid/multi_column_headers.md
+      href: hierarchicalgrid/multi-column-headers.md
       new: false
     - name: Collapsible Column Groups
-      href: hierarchicalgrid/collapsible_column_groups.md
+      href: hierarchicalgrid/collapsible-column-groups.md
       new: true
     - name: Display Density
-      href: hierarchicalgrid/display_density.md
+      href: hierarchicalgrid/display-density.md
       new: false
     # - name: Conditional Cell Styling
-    #   href: hierarchicalgrid/conditional_cell_styling.md
+    #   href: hierarchicalgrid/conditional-cell-styling.md
     #   new: true
     - name: Keyboard navigation
-      href: hierarchicalgrid/keyboard_navigation.md
+      href: hierarchicalgrid/keyboard-navigation.md
       new: false
       updated: true
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
     - name: State Persistence
-      href: hierarchicalgrid/state_persistence.md
+      href: hierarchicalgrid/state-persistence.md
       new: true
 - name: List View
   href: list.md
@@ -449,44 +440,44 @@
   new: true
   items:
     - name: Features
-      href: combo_features.md
+      href: combo-features.md
       new: false
     - name: Remote Binding
-      href: combo_remote.md
+      href: combo-remote.md
       new: false
     - name: Templates
-      href: combo_templates.md
+      href: combo-templates.md
       new: true
     - name: Cascading Scenario
-      href: combo_cascading.md
+      href: combo-cascading.md
       new: false
 - name: Spreadsheet
-  href: spreadsheet_overview.md
+  href: spreadsheet-overview.md
   new: false
   items:
     - name: Activation
-      href: spreadsheet_activation.md
+      href: spreadsheet-activation.md
       new: false
     - name: Chart Adapter
-      href: spreadsheet_chart_adapter.md
+      href: spreadsheet-chart-adapter.md
       new: false
     - name: Clipboard
-      href: spreadsheet_clipboard.md
+      href: spreadsheet-clipboard.md
       new: false
     - name: Conditional Formatting
-      href: spreadsheet_conditional_formatting.md
+      href: spreadsheet-conditional-formatting.md
       new: false
     - name: Configuring Spreadsheet
-      href: spreadsheet_configuring.md
+      href: spreadsheet-configuring.md
       new: false
     - name: Commands
-      href: spreadsheet_commands.md
+      href: spreadsheet-commands.md
       new: false
     - name: Data Validation
-      href: spreadsheet_data_validation.md
+      href: spreadsheet-data-validation.md
       new: false
     - name: Hyperlinks
-      href: spreadsheet_hyperlinks.md
+      href: spreadsheet-hyperlinks.md
       new: false
 - name: Charts
   header: true
@@ -882,29 +873,29 @@
 - name: Frameworks
   header: true
 - name: Excel Library
-  href: excel_library.md
+  href: excel-library.md
   new: false
   items:
     - name: Using Cells
-      href: excel_library_using_cells.md
+      href: excel-library-using-cells.md
       new: false
     - name: Using Tables
-      href: excel_library_using_tables.md
+      href: excel-library-using-tables.md
       new: false
     - name: Using Workbooks
-      href: excel_library_using_workbooks.md
+      href: excel-library-using-workbooks.md
       new: false
     - name: Using Worksheets
-      href: excel_library_using_worksheets.md
+      href: excel-library-using-worksheets.md
       new: false
     - name: Working with Charts
-      href: excel_library_working_with_charts.md
+      href: excel-library-working-with-charts.md
       new: false
     # - name: Working with Grids
-    #   href: excel_library_working_with_grid.md
+    #   href: excel-library-working-with-grid.md
     #   new: false
     - name: Working with Sparklines
-      href: excel_library_working_with_sparklines.md
+      href: excel-library-working-with-sparklines.md
       new: false
 - name: Gauges
   header: true
@@ -963,15 +954,15 @@
 - name: Shadows
   href: shadows.md
 - name: Display Density
-  href: display_density.md
+  href: display-density.md
 - name: Data Entry & Display
   header: true
 - name: Drop Down
-  href: drop_down.md
+  href: drop-down.md
   new: false
   items:
     - name: Virtual Drop Down
-      href: drop_down_virtual.md
+      href: drop-down-virtual.md
       new: false
 - name: Select
   href: select.md
@@ -988,16 +979,16 @@
 - name: Switch
   href: switch.md
 - name: Radio & Radio Group
-  href: radio_button.md
+  href: radio-button.md
   new: false
 - name: Label & Input
-  href: label_input.md
+  href: label-input.md
 - name: Input Group
-  href: input_group.md
+  href: input-group.md
   new: false
   items:
     - name: Reactive Forms
-      href: input_group_reactive_forms.md
+      href: input-group-reactive-forms.md
 - name: Mask
   href: mask.md
   new: false
@@ -1007,16 +998,16 @@
   href: icon.md
   items:
     - name: Material Icons Extended
-      href: material_icons_extended.md
+      href: material-icons-extended.md
 - name: Divider
   href: divider.md
   new: false
 - name: Linear Progress
-  href: linear_progress.md
+  href: linear-progress.md
 - name: Circular Progress
-  href: circular_progress.md
+  href: circular-progress.md
 - name: Virtual For Directive
-  href: for_of.md
+  href: for-of.md
 - name: Chip
   href: chip.md
   new: false
@@ -1038,20 +1029,20 @@
   href: tooltip.md
   new: false
 - name: Overlay
-  href: overlay_main.md
+  href: overlay-main.md
   new: true
   items:
   - name: Positioning Strategies
-    href: overlay_position.md
+    href: overlay-position.md
     new: true
   - name: Scrolling Strategies
-    href: overlay_scroll.md
+    href: overlay-scroll.md
     new: false
   - name: Styling
-    href: overlay_styling.md
+    href: overlay-styling.md
     new: false
 - name: Drag and Drop
-  href: drag_drop.md
+  href: drag-drop.md
   new: true
 - name: Zoom Slider
   new: false
@@ -1082,7 +1073,7 @@
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel
-  href: expansion_panel.md
+  href: expansion-panel.md
   new: false
 - name: Splitter
   href: splitter.md
@@ -1102,29 +1093,29 @@
 - name: Scheduling
   header: true
 - name: Date Time Editor
-  href: date_time_editor.md
+  href: date-time-editor.md
   new: true
 - name: Calendar
   href: calendar.md
   updated: true
 - name: Date Picker
-  href: date_picker.md
+  href: date-picker.md
 - name: Date Range Picker
-  href: date_range_picker.md
+  href: date-range-picker.md
   new: true
 - name: Month Picker
-  href: month_picker.md
+  href: month-picker.md
   new: false
 - name: Time Picker
-  href: time_picker.md
+  href: time-picker.md
   new: false
 - name: Services
   header: true
 - name: CSV Exporter
-  href: exporter_csv.md
+  href: exporter-csv.md
   new: false
 - name: Excel Exporter
-  href: exporter_excel.md
+  href: exporter-excel.md
   new: false
 - name: Localization
   href: localization.md

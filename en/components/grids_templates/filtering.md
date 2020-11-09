@@ -10,6 +10,7 @@ _keywords: angular filter, ignite ui for angular, infragistics
 title: Angular Filter | Angular Tree Grid Filtering | Ignite UI for Angular | Infragistics
 _description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,15 +18,16 @@ _keywords: angular filter, ignite ui for angular, infragistics
 title: Angular Filter | Angular Hierarchical Grid Filtering | Ignite UI for Angular | Infragistics
 _description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
 _keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering
 ---
 }
 
-# @@igComponent Quick Filtering Overview
+# Angular @@igComponent Filtering
+IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel-style-filtering.md) and [Advanced filtering](advanced-filtering.md) which enable you to display only the records that meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 
-Angular grid filtering enables you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
+## Angular Filter Example
 
-### Demo
-
+The sample below demonstrates @@igComponent's **Quick filtering** user experience. @@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method is used to apply _contains_ condition on the _ProductName column_ through external _igxInputGroup component_.  } 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -58,6 +60,43 @@ Angular grid filtering enables you to display only the records which meet specif
 }
 
 <div class="divider--half"></div>
+
+## Setup
+In order to specify if filtering is enabled and which filtering mode should be used, the @@igComponent exposes the following boolean properties - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering), [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering), [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) and [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable).
+
+Property **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** enables you to specify the following options:
+- **false** - the filtering for the corresponding grid will be disabled; /default value/
+- **true** - the filtering for the corresponding grid will be enabled;
+
+Property **[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)** enables you to specify the following options:
+- **false** - the advanced filtering for the corresponding grid will be disabled; /default value/
+- **true** - the advanced filtering for the corresponding grid will be enabled;
+
+Property **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode)** enables you to specify the following options:
+- **quickFilter** - a simplistic filtering UI; /default value/
+- **excelStyleFilter** - an Excel-like filtering UI;
+
+Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)** enables you to specify the following options:
+- **true** - the filtering for the corresponding column will be enabled; /default value/
+- **false** - the filtering for the corresponding column will be disabled;
+
+
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="Price" [dataType]="'number'" [filterable]="false">
+</@@igSelector>
+```
+
+To enable the [Advanced filtering](advanced-filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
+
+```html
+<@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+</@@igSelector>
+```
+
+>[!NOTE]
+>You can enable both the [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) and the advanced filtering user interfaces in the @@igComponent. Both filtering user interfaces will work independently of one another. The final filtered result in the @@igComponent is the intersection between the results of the two filters.
 
 ## Interaction
 
@@ -95,7 +134,7 @@ Filtering feature is enabled for the @@igComponent component by setting the [`al
 > [!NOTE]
 > If values of type `string` are used by a column of dataType `Date`, the @@igComponent won't parse them to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` objects.
 
-You can filter any column or a combination of columns through the @@igComponent API. The @@igComponent exposes several methods for this task - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) and [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter).
+You can filter any column or a combination of columns through the @@igComponent API. The @@igComponent exposes several methods for this task - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) and [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter).
 
 *   [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - filter a single column or a combination of columns.
 
@@ -153,7 +192,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.Or;
 this.@@igObjectRef.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
-*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
+*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
 
 ```typescript
 // Remove the filtering state from the ProductName column
@@ -207,7 +246,7 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ## Remote Filtering
 
-The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 
 <div class="divider--half"></div>
 }
@@ -657,9 +696,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>
