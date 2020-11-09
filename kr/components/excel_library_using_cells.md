@@ -1,22 +1,23 @@
 ---
-title: Excel Library Component - Native Angular | Ignite UI for Angular
+title: Angular Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Library
 ---
 
-## Using Cells
+# Angular Using Cells
 
 The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
-### References
+## References
 
 The following code shows the imports needed to use the code-snippets below:
 
@@ -30,7 +31,7 @@ import { WorksheetCellComment } from "igniteui-angular-excel";
 import { FormattedString } from "igniteui-angular-excel";
 ```
 
-### Referencing Cells and Regions
+## Referencing Cells and Regions
 
 You can access a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object or a [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) object by calling the [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) object’s `getCell` or `getRegion` methods, respectively. Both methods accept a string parameter that references a cell. Getting a reference to a cell is useful when applying formats or working with formulas and cell contents.
 
@@ -46,7 +47,7 @@ var cell = worksheet.getCell("E2");
 var region = worksheet.getRegion("G1:G10");
 ```
 
-### Accessing Cells and Regions by Name
+## Accessing Cells and Regions by Name
 
 In Microsoft Excel, individual cells, as well as cell regions can have names assigned to them. The name of a cell or region can be used to reference that cell or region instead of their address.
 
@@ -69,7 +70,7 @@ var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
 ```
 
-### Adding a Comment to a Cell
+## Adding a Comment to a Cell
 
 A comment allows you to display hints or notes for a cell when the end user’s mouse hovers over a cell. The comments display as a tooltip-like callout that contains text. The Infragistics Excel Library allows you to add comments to a cell by setting a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `comment` property.
 
@@ -86,7 +87,7 @@ cellComment.text = commentText;
 worksheet.rows(0).cells(0).comment = cellComment;
 ```
 
-### Adding a Formula to a Cell
+## Adding a Formula to a Cell
 
 The Infragistics Excel Library allows you to add Microsoft Excel formulas to a cell or group of cells in a worksheet. You can do this using the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s [`applyFormula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#applyformula) method or by instantiating a [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) object and applying it to a cell. Regardless of the manner in which you apply a formula to a cell, you can access the [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) object using the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) property. If you need the value, use the cell’s [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#value) property.
 
@@ -102,7 +103,7 @@ The following code shows you how to add a formula to a cell.
  sumFormula.applyTo(worksheet.rows(5).cells(0));
 ```
 
-### Copying a Cell’s Format
+## Copying a Cell’s Format
 
 Cells can have different formatting, including background color, format string, and font style. If you need a cell to have the same format as a previously formatted cell, instead of individually setting each option exposed by the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) object’s `cellFormat` property, you can call the [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object’s `setFormatting` method and pass it a [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object to copy. This will copy every format setting from the first cell to the second cell. You can also do this for a row, merged cell region, or column.
 
@@ -120,7 +121,7 @@ worksheet.columns(1).cellFormat.font.bold = true;
 worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 ```
 
-### Formatting a Cell
+## Formatting a Cell
 
 The Infragistics Excel Library allows you to customize the look and behavior of a cell. You can customize a cell by setting properties exposed by the `cellFormat` property of the [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html), [`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html), [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html), or [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) objects.
 
@@ -137,7 +138,7 @@ var workbook = workbook.worksheets().add("Sheet1");
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 ```
 
-### Excel 2007 Color Model
+## Excel 2007 Color Model
 
 The color palette is analogous to the color dialog in Microsoft Excel 2007 UI. You can open this color dialog by navigating to Excel Options => Save => Colors.
 
@@ -221,7 +222,7 @@ When saving out in the newer file formats such as .xlsx, the newer color informa
 
 When the older formats are opened in Microsoft Excel 2003 and earlier versions, these future features records are ignored, but when the older file formats are opened in Excel 2007 and later, their records are read and the color information from them overwrites the indexed color that was previously loaded from the normal format records.
 
-### Excel Format Support
+## Excel Format Support
 
 You can set a host of different formats on a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) by using the [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
 
@@ -245,13 +246,13 @@ You can determine what would really be seen in cells by using the `getResolvedCe
 
 This method returns a `CellFormat` instance which refers back to the associated `cellFormat` on which it is based. So subsequent changes to the `CellFormat` property will be reflected in the instance returned from a `getResolvedCellFormat` call.
 
-### Merging Cells
+## Merging Cells
 
 Aside from setting the value or format of cells, you can also merge cells to make two or more cells appear as one. If you merge cells, they must be in a rectangular region.
 
 When you merge cells, each cell in the region will have the same value and cell format. The merged cells will also be associated with the same [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) object, accessible from their `associatedMergedCellsRegion` property. The resultant [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) object will also have the same value and cell format as the cells.
 
-Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you unmerge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
+Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you un-merge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
 
 In order to create a merged cell region, you must add a range of cells to the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
 
@@ -275,7 +276,7 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
-### Retrieving the Cell Text as Displayed in Excel
+## Retrieving the Cell Text as Displayed in Excel
 
 The text displayed in a cell depends on several factors other than the actual cell value, such as the format string and the width of the column that the cell is contained in.
 

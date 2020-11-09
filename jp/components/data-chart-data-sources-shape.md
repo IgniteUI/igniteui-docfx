@@ -1,12 +1,12 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | データ ソース
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して、散布多角形や散布ポリラインなどのシェープ チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, shape chart, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, シェープ チャート, インフラジスティックス, データソース
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## 散布図シリーズのサンプル データソース
+# Angular 散布図シリーズのサンプル データソース
 
 このトピックでは、[散布図シリーズ](data-chart-type-shape-series.md) のデータソースを実装する方法の例を示します。
 

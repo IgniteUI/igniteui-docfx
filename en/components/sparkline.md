@@ -1,17 +1,17 @@
 ---
-title: Sparkline | Data Visualization Tools | Ignite UI for Angular | Infragistics
-_description: Use the sparkline chart to render in a small scale layout such as a grid cell or stand alone.
-_keywords: Sparkline, Ignite UI for Angular, Infragistics
+title: Angular Sparkline | Data Visualization Tools | Infragistics
+_description: Use Infragistics' Angular sparkline chart control to render in a small scale layout such as a grid cell or stand alone. Learn about the Ignite UI for Angular sparkline chart configurable elements!
+_keywords: Sparkline, Ignite UI for Angular, Infragistics, WinLoss, Area, Column
 mentionedTypes: ['XamSparkline', 'SparklineDisplayType', 'TrendLineType']
 ---
 
-## Sparkline
+# Angular Sparkline Overview
 
 The Ignite UI for Angular sparkline component is a lightweight charting control. It is intended for rendering within a small scale layout such as within a grid cell, but can also be rendered alone.
 
 The sparkline control has several visual elements and corresponding features that can be configured and customized such as the chart type, markers, ranges, trendlines, unknown value plotting, and tooltips.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="sparkline-display-types-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -21,16 +21,23 @@ The sparkline control has several visual elements and corresponding features tha
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### Dependencies
+<!-- Angular, React, WebComponents -->
+
+## Dependencies
 
 In order to use the Ignite UI for Angular sparkline component, the following packages need to be installed:
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
-The sparkline component requires the import of the following modules:
+<!-- end: Angular, React, WebComponents -->
+
+The Angular sparkline component requires the import of the following modules:
 
 ```ts
 // app.module.ts
@@ -49,7 +56,7 @@ import { SparklineDisplayType } from 'igniteui-angular-charts';
 export class AppModule {}
 ```
 
-### Sparkline Types
+## Sparkline Types
 
 The Ignite UI for Angular sparkline component supports the following types of sparklines:
 
@@ -81,7 +88,7 @@ If the [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/doc
 
 <div class="divider--half"></div>
 
-### Markers
+## Markers
 
 The Ignite UI for Angular sparkline component allows you to show markers as circular colored icons on your series to indicate the individual data points based on X/Y coordinates. Markers can be set on sparklines of display types [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line), [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area), and [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column). The [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) type of sparkline does not currently accept markers. By default, markers are not displayed.
 
@@ -122,7 +129,7 @@ All of the markers mentioned above can be customized using the related marker ty
 
 <div class="divider--half"></div>
 
-### Normal Range
+## Normal Range
 
 The normal range feature of the Ignite UI for Angular sparkline component is a horizontal stripe representing some pre-defined meaningful range when the data is being visualized. The normal range can be set as a shaded area outlined with the desired color.
 
@@ -155,7 +162,7 @@ You can also configure whether or not to show the normal range in front of or be
 
 <div class="divider--half"></div>
 
-### Trendlines
+## Trendlines
 
 The Ignite UI for Angular sparkline component has support for a range of trendlines that display as another layer on top of the actual sparkline layer. To display a sparkline, you can use the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) property.
 
@@ -200,7 +207,7 @@ The following code example shows how to enable a trendline in the Ignite UI for 
 
 <div class="divider--half"></div>
 
-### Unknown Value Interpolation
+## Unknown Value Interpolation
 
 The Ignite UI for Angular sparkline component can detect unknown values and render the space for unknown values through a specified interpolation algorithm. If your data contains null values and you do not use this feature, meaning no interpolation is specified, the unknown value will not be plotted.
 
@@ -221,7 +228,7 @@ In order to plot the unknown values, you can set the [`unknownValuePlotting`]({e
 
 <div class="divider--half"></div>
 
-### Sparkline in Data Grid
+## Sparkline in Data Grid
 
 You can embed the Ignite UI for Angular sparkline component in a template column of data grid or other components that support templates. The following code example shows how to do this:
 

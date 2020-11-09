@@ -1,24 +1,25 @@
 ---
-title: Excel ライブラリ | データ スプレッドシート | Ignite UI for Angular | インフラジスティックス
-_description: Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Excel からアプリケーションへデータを簡単に転送できます。
-_keywords: Excel library, Ignite UI for Angular, Infragistics, Excel ライブラリ, インフラジスティックス
-mentionedTypes: ['Workbook']
+title: Angular Excel ライブラリ | セルの使用 | インフラジスティックス
+_description: インフラジスティックスの Angular Excel ライブラリのセルでセルへのアクセス、数式とコメントの追加、セルの結合、セルの書式設定などの操作を実行する方法について説明します。Ignite UI for Angular Excel のサンプルを是非お試しください!
+_keywords: Excel library,  cell operations, Ignite UI for Angular, Infragistics, Excel ライブラリ, セル操作, インフラジスティックス
+mentionedTypes: ['Workbook', 'Worksheet', 'WorksheetCell', 'WorkbookStyleCollection', 'IWorksheetCellFormat', 'WorkbookColorInfo', 'DisplayOptions']
 _language: ja
 ---
 
-## セルの使用
+# Angular セルの使用
 
 Excel ワークシートの [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
-### 参照
+## 参照
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 
@@ -32,9 +33,9 @@ import { WorksheetCellComment } from "igniteui-angular-excel";
 import { FormattedString } from "igniteui-angular-excel";
 ```
 
-### セルと領域を参照
+## セルと領域を参照
 
-[`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの `getCell` または `getRegion` メソッドを呼び出して [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクト または [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
+[`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの [`getCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#getcell) または [`getRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#getregion) メソッドを呼び出して [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクト または [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html) オブジェクトへアクセスできます。両メソッドはセルを参照する文字列パラメーターを許容します。書式設定を適用する場合または数式とセルのコンテンツで作業する場合にセル参照を取得すると便利です。
 
 以下のコード例では、セルと領域を参照する方法を示します。
 
@@ -48,13 +49,13 @@ var cell = worksheet.getCell("E2");
 var region = worksheet.getRegion("G1:G10");
 ```
 
-### セルと領域に名前でアクセス
+## セルと領域に名前でアクセス
 
 Microsoft Excel では各セルとセル領域に名前が割り当てられています。アドレスの代わりにセルまたは領域の名前を使用してセルまたは領域を参照できます。
 
-Infragistics Angular Excel Library は、Worksheet オブジェクトの `getCell` と `getRegion` メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する [`NamedReference`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/namedreference.html) インスタンスを使用してセルまたは領域を参照します。
+Infragistics Angular Excel Library は、[`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html#worksheet) オブジェクトの [`getCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#getcell) と [`getRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#getregion) メソッドによって、名前によるセルおよび領域の参照をサポートします。そのセルまたは領域を参照する [`NamedReference`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/namedreference.html) インスタンスを使用してセルまたは領域を参照します。
 
-以下のコードスニペットは、セルまたは領域の名前の例です。
+以下のコード スニペットは、セルまたは領域の名前の例です。
 
 ```ts
 var workbook = new Workbook();
@@ -71,9 +72,9 @@ var cell = worksheet.getCell("myCell");
 var region = worksheet.getRegion("myRegion");
 ```
 
-### セルにコメントを追加
+## セルにコメントを追加
 
-コメントによって、エンドユーザーがマウスをセル上にホバーするとセルのヒントまたはメモを表示することができます。コメントはテキストを含むツールチップのような吹き出しとして表示します。Infragistics Angular Excel Library は [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの `comment` プロパティでセルにコメントを追加できます。
+コメントによって、エンドユーザーがマウスをセル上にホバーするとセルのヒントまたはメモを表示することができます。コメントはテキストを含むツールチップのような吹き出しとして表示します。Infragistics Angular Excel Library は [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの [`comment`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#comment) プロパティでセルにコメントを追加できます。
 
 以下のコード例は、セルにコメントを追加する方法を示します。
 
@@ -88,7 +89,7 @@ cellComment.text = commentText;
 worksheet.rows(0).cells(0).comment = cellComment;
 ```
 
-### セルに数式を追加
+## セルに数式を追加
 
 Infragistics Excel ライブラリは、ワークシートでセルまたはセルのグループに Microsoft Excel の数式を追加できます。[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの [`applyFormula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#applyformula) メソッドを使用、または [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) オブジェクトを初期化してセルに割り当てることができます。セルに数式を適用する方法に関わらず、[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトのプロパティを使用して [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula) オブジェクトにアクセスできます。値が必要な場合、セルの [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#value) プロパティを使用します。
 
@@ -104,9 +105,9 @@ Infragistics Excel ライブラリは、ワークシートでセルまたはセ�
  sumFormula.applyTo(worksheet.rows(5).cells(0));
 ```
 
-### セル書式のコピー
+## セル書式のコピー
 
-セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの `cellFormat` プロパティで公開した各オプションを設定する代わりに [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトの `setFormatting` メソッドを呼び出して [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
+セルには背景色、書式文字列、フォント スタイルなどさまざまな書式を持つことができます。以前書式設定したセルと同じ書式を持つようにする場合、[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトの [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) プロパティで公開した各オプションを設定する代わりに [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトの [`setFormatting`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#setformatting) メソッドを呼び出して [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトへ渡してコピーします。これによって最初のセルから 2 番目のセルにすべての書式設定をコピーします。行、結合セル領域、または列でも行うことができます。
 
 以下のコードは、2 列目の書式を 4 列目にコピーする方法を示します。
 
@@ -122,9 +123,9 @@ worksheet.columns(1).cellFormat.font.bold = true;
 worksheet.columns(3).cellFormat.setFormatting(worksheet.columns(1).cellFormat);
 ```
 
-### セルの書式設定
+## セルの書式設定
 
-Infragistics Angular Excel Library は、セルの外観と動作をカスタマイズすることができます。[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html)、[`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html)、[`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html)、または [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトの `cellFormat` プロパティで公開したプロパティを設定してセルをカスタマイズできます。
+Infragistics Angular Excel Library は、セルの外観と動作をカスタマイズすることができます。[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html)、[`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html)、[`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html)、または [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトの [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html#cellformat) プロパティで公開したプロパティを設定してセルをカスタマイズできます。
 
 セル外観の各アスペクトをカスタマイズできます。セルのフォント、背景、境界線だけでなくテキストの配列と回転を設定できます。セルのテキストで文字ごとに異なる書式を適用することさえ可能です。
 
@@ -139,29 +140,29 @@ var workbook = workbook.worksheets().add("Sheet1");
 worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 ```
 
-### Excel 2007 カラー モデル
+## Excel 2007 カラー モデル
 
 このカラー パレットは Microsoft Excel 2007 UI のカラー ダイアログと似ています。[Excel オプション] => [保存] => [色] からこのカラー ダイアログを開くことができます。
 
 [`CellFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfill.html) クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。以下の通りです:
 
--   **noColor** - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
+-   `NoColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
 
--   **createSolidFill** - Solid のパターン スタイルと、メソッドで指定された `Color` または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) に設定された背景色を持つ [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) インスタンスを返します。
+-   `CreateSolidFill` - Solid のパターン スタイルと、メソッドで指定された [`color`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html#color) または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) に設定された背景色を持つ [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) インスタンスを返します。
 
--   **createPatternFill** - 指定されたパターン スタイルと、背景とパターンの色に指定された `Color` または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) 値がある [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) インスタンスを返します。
+-   `CreatePatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された [`color`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html#color) または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) 値がある [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) インスタンスを返します。
 
--   **createLinearGradientFill** - 角度とグラデーション境界が指定された [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) インスタンスを返します。
+-   `CreateLinearGradientFill` - 角度とグラデーション境界が指定された [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) インスタンスを返します。
 
--   **createRectangularGradientFill** - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
+-   `CreateRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
 
 以下は、作成可能なさまさまな塗りつぶしを表す派生タイプです。
 
--   **CellFillPattern** - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
+-   [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html) - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の [セルの書式設定] ダイアログの [塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
 
--   **CellFillLinearGradient** - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
+-   [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html) - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
 
--   **CellFillRectangularGradient** - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
+-   [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html) - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
 
 以下のコード スニペットは、[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) で単色の塗りつぶしを作成する方法を示します。
 
@@ -213,9 +214,9 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 -   これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
 
-色は、シールされた不変クラスである [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) クラスで定義されます。このクラスには静的な `automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) インスタンスを作成することを可能にするさまざまなコンストラクタがあります。
+色は、シールされた不変クラスである [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) クラスで定義されます。このクラスには静的な `Automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) インスタンスを作成することを可能にするさまざまなコンストラクタがあります。
 
-[`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) の `getResolvedColor` メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
+[`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) の [`getResolvedColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html#getresolvedcolor) メソッドは、Excel でファイルを開く際にユーザーに実際に表示される色を決定することが可能となります。
 
 [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
 
@@ -223,39 +224,39 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 古い形式が Microsoft Excel 2003 以前のバージョンで開かれると機能が無視されますが Excel 2007 以降で開かれるとレコードが読み取られて色情報が標準形式レコードから以前読み込まれたインデックス付きの色を上書きします。
 
-### Excel 書式設定のサポート
+## Excel 書式設定のサポート
 
-セルの `cellFormat` プロパティから返された `CellFormat` オブジェクトを使用して [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) でさまざまな形式のホストを設定できます。この [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトはさまざまなセルの側面 (境界線、フォント、塗りつぶし、配置) のスタイル設定、セルのサイズ自動調整やロックなどを設定できます。
+セルの `cellFormat` プロパティから返された [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトを使用して [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) でさまざまな形式のホストを設定できます。この [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトはさまざまなセルの側面 (境界線、フォント、塗りつぶし、配置) のスタイル設定、セルのサイズ自動調整やロックなどを設定できます。
 
-[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの `styles` コレクションを使用して Microsoft Excel 2007 ビルトイン スタイルにアクセスできます。Excel のスタイル リストは、Microsoft Excel 2007 で [ホーム] タブの [セルのスタイル] ギャラリーにあります。
+[`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) オブジェクトの [`styles`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) コレクションを使用して Microsoft Excel 2007 ビルトイン スタイルにアクセスできます。Excel のスタイル リストは、Microsoft Excel 2007 で [ホーム] タブの [セルのスタイル] ギャラリーにあります。
 
-ワークブックの `styles` コレクションに標準スタイルという特別なタイプのスタイルがあり、コレクションの `normalStyle` プロパティによって、または Normal という名前でコレクションにインデックスしてアクセスできます。
+ワークブックの [`styles`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) コレクションに標準スタイルという特別なタイプのスタイルがあり、コレクションの [`normalStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#normalstyle) プロパティによって、または Normal という名前でコレクションにインデックスしてアクセスできます。
 
-`normalStyle` にはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。`normalStyle` でプロパティを変更すると、ワークブックのすべてのデフォルトのセル書式プロパティが変更されます。ワークブックの既定のフォント以外に変更したい場合などに便利です。
+[`normalStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#normalstyle) にはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。[`normalStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#normalstyle) でプロパティを変更すると、ワークブックのすべてのデフォルトのセル書式プロパティが変更されます。ワークブックの既定のフォント以外に変更したい場合などに便利です。
 
-以下のメソッドを使用して`styles` コレクションのクリア、または `clear` や `reset` メソッドで定義された状態にリセットすることができます。両メソッドはすべてのユーザー定義スタイルを削除しますが `clear` は `styles` コレクション全体をクリアします。
+以下のメソッドを使用して [`styles`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) コレクションのクリア、または [`clear`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#clear) や [`reset`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#reset) メソッドで定義された状態にリセットすることができます。両メソッドはすべてのユーザー定義スタイルを削除しますが [`clear`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#clear) は [`styles`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) コレクション全体をクリアします。
 
-この機能では、`style` プロパティが `CellFormat` オブジェクトに追加されています。これは書式の親スタイルを表す、[`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) インターフェイスへの参照です。スタイルの書式では、このプロパティは常に null です。スタイルが親スタイルを持つことができないためです。行、列およびセル書式には、`style` プロパティが常にデフォルトで `normalStyle` スタイルを返します。
+この機能では、[`style`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#style) プロパティが [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) オブジェクトに追加されています。これは書式の親スタイルを表す、[`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) インターフェイスへの参照です。スタイルの書式では、このプロパティは常に null です。スタイルが親スタイルを持つことができないためです。行、列およびセル書式には、[`style`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#style) プロパティが常にデフォルトで [`normalStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#normalstyle) スタイルを返します。
 
-`style` プロパティを null に設定した場合、`normalStyle` スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
+[`style`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#style) プロパティを null に設定した場合、[`normalStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstylecollection.html#normalstyle) スタイルに戻ります。スタイル コレクションで別のスタイルに設定される場合、そのスタイルはセル書式にすべての未設定のプロパティのデフォルトを保持するようになります。
 
-`style` プロパティをセル書式に設定した場合、`style` に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセルの `style` を作成してスタイルをセルのスタイルとして設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
+[`style`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#style) プロパティをセル書式に設定した場合、[`style`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#style) に含まれる書式オプションはセル書式から削除されます。すべてのその他のプロパティはそのまま残されます。たとえば、境界線の書式を含むセルの [`style`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworksheetcellformat.html#style) を作成してスタイルをセルのスタイルとして設定した場合、セル書式の境界線の書式オプションは削除され、セル書式に塗りつぶしの書式のみ含まれます。
 
 書式オプション フラグが書式から削除されると、すべての関連付けたプロパティは未設定値にリセットされます。したがってセル書式の罫線プロパティはデフォルト/未設定値に暗黙的にリセットされます。
 
-行、列、セルおよび結合セルを表すクラスで、`getResolvedCellFormat` メソッドを使用することで、セルに実際に何が表示されるかを決定できます。
+行、列、セルおよび結合セルを表すクラスで、[`getResolvedCellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#getresolvedcellformat) メソッドを使用することで、セルに実際に何が表示されるかを決定できます。
 
-このメソッドは、ベースとなった関連付けられた `CellFormat` に参照を返す `cellFormat` インスタンスを返します。そのため `CellFormat` プロパティへの以降の変更は、`getResolvedCellFormat` の呼び出しから返されるインスタンスに反映されます。
+このメソッドは、ベースとなった関連付けられた [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) に参照を返す [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) インスタンスを返します。そのため [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) プロパティへの以降の変更は、[`getResolvedCellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#getresolvedcellformat) の呼び出しから返されるインスタンスに反映されます。
 
-### セルの結合
+## セルの結合
 
 セルの値または書式の設定以外に、2 つ以上のセルをひとつのセルとして表示するためにセルを結合することができます。セルを結合する場合、長方形の領域内にセルがなければなりません。
 
-セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトに関連付けされ、`associatedMergedCellsRegion` プロパティからアクセスできるようになります。[`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトも結果としてセルと同じ値およびセル書式になります。
+セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトに関連付けされ、[`associatedMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#associatedmergedcellsregion) プロパティからアクセスできるようになります。[`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトも結果としてセルと同じ値およびセル書式になります。
 
 領域または領域内の任意のセルの値（またはセル書式）を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
 
-結合されたセル領域を作成するには、セルの範囲を [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) オブジェクトの `mergedCellsRegions` コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
+結合されたセル領域を作成するには、セルの範囲を [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの [`mergedCellsRegions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#mergedcellsregions) コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
 
 ```ts
 var workbook = new Workbook();
@@ -277,7 +278,7 @@ mergedRegion1.value = "Day 1";
 worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center;
 ```
 
-### Excel に表示されるセル テキストを取得
+## Excel に表示されるセル テキストを取得
 
 セルに表示されるテキストは、書式文字列やセルが含まれる列幅など実際のセル値以外の複数の要因に依存します。
 
@@ -317,11 +318,11 @@ worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center
 
 これが該当しない唯一のときは、パディング文字が書式文字列で使用される時です。テキストのために十分な余地がないとき、値はすべてのハッシュ マークとして表示されます。
 
-ワークシートの `displayOptions` の `showFormulasInCells` プロパティを設定してセルに結果の代わりに数式を表示できます。書式文字列やセル幅は無視されます。テキスト値は書式文字列が @ であるかのように表示します。整数でない数値は書式文字列が 0.0 であるかのように表示し、整数の数値は書式文字列が 0 のように表示します。
+ワークシートの [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#displayoptions) の [`showFormulasInCells`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/displayoptions.html#showformulasincells) プロパティを設定してセルに結果の代わりに数式を表示できます。書式文字列やセル幅は無視されます。テキスト値は書式文字列が @ であるかのように表示します。整数でない数値は書式文字列が 0.0 であるかのように表示し、整数の数値は書式文字列が 0 のように表示します。
 
 さらに、値が合わない場合、すべてのハッシュとして表示しません。完全に表示できないとしても、表示テキストはセル テキストとしてフル テキストを今まで通り返します。
 
-以下のコード スニペットは、`getText` メソッドを使用して Excel で表示されるようなテキストを取得する方法を示します。
+以下のコード スニペットは、[`getText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#gettext) メソッドを使用して Excel で表示されるようなテキストを取得する方法を示します。
 
 ```ts
 var workbook = new Workbook();

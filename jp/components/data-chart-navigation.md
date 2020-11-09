@@ -1,28 +1,35 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | ナビゲーション
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | ナビゲーション | インフラジスティックス
+_description: インフラジスティックスの Angular チャートをナビゲートするには、マウスまたはタッチを使用して左右にパンし、水平および垂直にズームします。Ignite UI for Angular のグラフ ナビゲーション機能について説明します。
+_keywords: Angular charts, data chart, navigation, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ナビゲーション, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'ModifierKeys']
 _language: ja
 ---
 
-## ナビゲーション
+# Angular ナビゲーション
 
 Angular データ チャート コンポーネントでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
 チャートでナビゲーションする場合、インポートしてからインタラクティブ モードを登録します。以下のコードを使用できます。
+
+<!-- Blazor -->
+
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
@@ -32,13 +39,13 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 })
 ```
 
-### チャート UI ナビゲーションの概要
+## チャート UI ナビゲーションの概要
 
 UI でのナビゲーションを許可するには、ズームを許可する方向に応じて、チャートの [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) プロパティおよび [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) プロパティを true に設定する必要があります。マウスホイールを回転してチャートをズームできます。
 
 またマウスやタッチでボタンをクリックしてズームまたはパンニングできます。チャートの [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティは、マウスクリック イベントやタッチ イベントで何が起こるかを決定します。このプロパティはデフォルトで `DragZoom` に設定されており、ズームを有効に設定すると、クリックしてドラッグした際にプロット領域の上に四角形のプレビューが配置され、グラフのズーム領域になります。この [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティは、パンニングを許可する場合は `DragPan`、これらの操作を禁止する場合は `None` に設定することもできます。
 
-以下のコードスニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
+以下のコード スニペットは、チャートで基本的な UI ナビゲーションを有効にする方法を示しています。
 
 ```html
 <igx-data-chart #chart
@@ -50,7 +57,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 </igx-data-chart>
 ```
 
-### マウスとキーボードによるチャート ナビゲーション
+## マウスとキーボードによるチャート ナビゲーション
 
 Angular データ チャート コンポーネントのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
@@ -69,7 +76,7 @@ Angular データ チャート コンポーネントのナビゲーションは�
 -   Apple キー
 -   None
 
-以下のコードスニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、**Shift** キーを押しながらズーム、**Alt** キーを押しながらパンのみ可能です。
+以下のコード スニペットは、チャートで UI ナビゲーションを有効にする方法を示しています。以下の例では、**Shift** キーを押しながらズーム、**Alt** キーを押しながらパンのみ可能です。
 
 ```html
 <igx-data-chart #chart
@@ -84,7 +91,7 @@ Angular データ チャート コンポーネントのナビゲーションは�
 </igx-data-chart>
 ```
 
-<!-- ### Chart Navigation with Overview Plus Detail Pane
+<!-- ## Chart Navigation with Overview Plus Detail Pane
 
 In the `XamDataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
 
@@ -111,7 +118,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 </IgrDataChart>
 ``` -->
 
-### コードによるチャート ナビゲーション
+## コードによるチャート ナビゲーション
 
 Angular データ チャート コンポーネントは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
 
@@ -121,7 +128,7 @@ Angular データ チャート コンポーネントは、チャートでズー�
 -   [`windowScaleHorizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): チャートで表示されるコンテンツ ビュー長方形の幅部分を表す数値。
 -   [`windowScaleVertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): チャートで表示されるコンテンツ ビュー長方形の高さ部分を表す数値。
 
-以下のコードスニペットは、Angular データ チャート コンポーネントのビューをプログラムで変更する方法を示しています。以下では、Angular データ チャート コンポーネントを表す変数名 chart があると仮定します。
+以下のコード スニペットは、Angular データ チャート コンポーネントのビューをプログラムで変更する方法を示しています。以下では、Angular データ チャート コンポーネントを表す変数名 chart があると仮定します。
 
 ```ts
 // Zoom in by a factor of 0.05

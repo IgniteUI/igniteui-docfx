@@ -11,12 +11,12 @@ _language: ja
 #### デモ
 
 <div class="sample-container loading" style="height:850px">
-    <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -25,7 +25,7 @@ _language: ja
 
 #### 実装
 
-サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**Category**、**Type**、**Contract** で表形式のデータをグループ化します。  並べ替え後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**Price**、**Change**、**Change(%)** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
+サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**Category**、**Type**、**Contract** で表形式のデータをグループ化します。ソート後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**Price**、**Change**、**Change(%)** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
 以下はテンプレートでパイプを使用した例です。
 
@@ -81,7 +81,7 @@ public groupColumnKey = "Categories";
 
 <div class="divider--half"></div>
 
-* [TreeGrid 概要](tree_grid.md)
+* [TreeGrid 概要](tree-grid.md)
 * [TreeGrid 集計](summaries.md)
 * [Grid 集計](../grid/summaries.md)
 

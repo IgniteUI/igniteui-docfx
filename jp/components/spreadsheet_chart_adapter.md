@@ -1,28 +1,29 @@
 ---
-title: スプレッドシート | Grid コントロール | Ignite UI for Angular | チャート アダプター | インフラジスティックス
-_description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集機能をアプリケーションに直接埋め込むことができます。
-_keywords: Spreadsheet, Ignite UI for Angular, Infragistics, スプレッドシート, インフラジスティックス
-mentionedTypes: ['Spreadsheet']
+title: Angular スプレッドシート | チャート アダプター | インフラジスティックス
+_description: インフラジスティックスの Angular スプレッドシート コントロールに縦棒、折れ線、エリアなどのチャートを表示します。Ignite UI for Angular スプレッドシートにチャートを統合する方法について説明します。
+_keywords: Excel Spreadsheet, chart adapter, Ignite UI for Angular, Infragistics, Excel スプレッドシート、チャート アダプター, インフラジスティックス
+mentionedTypes: ['Spreadsheet', 'Worksheet', 'WorksheetShapeCollection', 'WorksheetChart']
 _language: ja
 ---
 
-## Spreadsheet チャート アダプター
+# Angular Spreadsheet チャート アダプター
 
 Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) にチャートを表示できます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/spreadsheet/spreadsheet-adapter' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+
 
 <div class="divider--half"></div>
 
-### チャート アダプターの概要
+## チャート アダプターの概要
 
 [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) を使用すると、スプレッドシートにチャートを表示できます。スプレッドシート チャート アダプターは、Infragistics.Documents.Excel.WorksheetChart インスタンスに基づいてスプレッド シートのチャート要素を作成し、初期化します。
 
-WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの `AddChart` メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
+WorksheetChart をワークシートに追加するには、ワークシートの Shapes コレクションの [`addChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetshapecollection.html#addchart) メソッドを使用する必要があります。チャートの追加の詳細については、下記をご覧ください。
 
 以下はその手順です。
 
@@ -30,7 +31,7 @@ WorksheetChart をワークシートに追加するには、ワークシート�
 2.  Spreadsheet に割り当てる SpreadsheetChartAdapter クラスのインスタンスを作成します。
 3.  アプリを実行してチャートを含むワークシートを読み込みます。
 
-### サポートされるチャート タイプ
+## サポートされるチャート タイプ
 
 Spreadsheet ChartAdapter は、折れ線、エリア、縦棒、ドーナツを含む 35 以上のチャート タイプがサポートされます。チャート タイプ一覧:
 
@@ -78,16 +79,16 @@ Spreadsheet ChartAdapter は、折れ線、エリア、縦棒、ドーナツを�
     -   積層エリアと縦棒チャート
     -   カスタムな組み合わせ
 
-### 依存関係
+## 依存関係
 
 > [!NOTE]
 >
-> 以下のコードスニペットでは、外部の [ExcelUtility](excel_utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
+> 以下のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
 
-ハイパーリンクを使用するようにスプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
+ハイパーリンクを使用するように Angular スプレッドシート コントロールを設定するときは、[`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html) クラスをインポートする必要があります。
 
 ```ts
-import { IgxSpreadsheetchartadaptermodule } from 'igniteui-angular-spreadsheet-chart-adapter';
+import { IgxSpreadsheetChartAdapterModule } from 'igniteui-angular-spreadsheet-chart-adapter';
 import { SpreadsheetChartAdapter } from 'igniteui-angular-spreadsheet-chart-adapter';
 
 import { ChartTitle, ChartType, FormattedString, Workbook } from 'igniteui-angular-excel';
@@ -96,9 +97,9 @@ import { Worksheet } from 'igniteui-angular-excel';
 import { WorksheetCell } from 'igniteui-angular-excel';
 ```
 
-### コード スニペット
+## コード スニペット
 
-以下のコードスニペットは、`XamSpreadsheet` コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
+以下のコード スニペットは、`XamSpreadsheet` コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();
@@ -120,7 +121,7 @@ ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/ChartData.xlsx").
 
     const chart1 = sheet.shapes().addChart(ChartType.Line, cell1, { x: 0, y: 0 }, cell1, { x: 100, y: 100 });
 
-    const title: ChartTitle = new ChartTitle();
+    const title: Angular ChartTitle = new ChartTitle();
     title.text = new FormattedString("Line Chart");
     chart1.chartTitle = title;
 

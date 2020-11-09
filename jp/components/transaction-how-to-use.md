@@ -5,29 +5,29 @@ _keywords:  batch editing, igniteui for angular, infragistics, 一括編集,
 _language: ja
 ---
 
-## トランザクション サービスの使用方法
+# トランザクション サービスの使用方法
 
 データソースの状態を保持し、一度に多くのトランザクションをコミットする必要があるコンポーネントを使用する場合、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) を利用できます。 
 
 Ignite UI for Angular グリッドコンポーネントの [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、グリッドと統合して、追加設定なしに一括編集機能が使用できます。ただし、その他の Ignite UI for Angular またはカスタムコンポーネントでトランザクションを使用する必要がある場合は、再度 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を使用して、同様の動作を実装できます。
 
-#### デモ
+## デモ
 
 このトピックでは、[`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントを使用して、トランザクションを有効にする方法を示します。トランザクションを追加する方法、[pipe](https://angular.io/guide/pipes) を介してデータを変換する方法、およびコミットされようとしている変更をユーザーに表示するするためにビューを視覚的に更新する方法を示します。
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="transaction-base-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### トランザクション サービスを含む
+## トランザクション サービスを含む
 
-#### トランザクション サービスをプロジェクトに含む
+### トランザクション サービスをプロジェクトに含む
 
 アプリケーションに `IgxTransactionService` を含めるには、2 つのオプションがあります。最初の方法は、上記のデモで行われているように、アプリケーションの `AppModule` または他の親モジュールに追加することです。
 
@@ -53,9 +53,9 @@ export class AppModule { }
 export class TransactionBaseComponent { }
 ```
 
-#### コンポーネントにトランザクション サービスを注入する
+### コンポーネントにトランザクション サービスを注入する
 
-`ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enumをインポートする必要があります。
+`ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum をインポートする必要があります。
 
 ```typescript
 import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
@@ -67,7 +67,7 @@ import { IgxTransactionService, State, Transaction, TransactionType } from "igni
 constructor(private _transactions: IgxTransactionService<Transaction, State>) { ... }
 ```
 
-### igxList の定義
+## igxList の定義
 
 html テンプレートで [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントに **edit**、**delete**、および **add** 処理を定義して、リストとそのアイテムを変更します。
 
@@ -85,7 +85,7 @@ html テンプレートで [`igxList`]({environment:angularApiUrl}/classes/igxli
 </igx-list>
 ```
 
-### 保留中の変更のパイプ
+## 保留中の変更のパイプ
 
 上記のリスト コンポーネントは、`transactionBasePipe` を使用して、元のデータに影響を与えることなく、ウィッシュ リスト内のアイテムへの変更を表示します。パイプは以下のようになります。
 
@@ -132,16 +132,16 @@ export class TransactionBasePipe implements PipeTransform {
 }
 ```
 
-### 編集、削除、機能の追加
+## 編集、削除、機能の追加
 
-#### 編集機能の定義
+### 編集機能の定義
 
 2 番目のリスト アイテムには、アイテムのデータを更新する編集ボタンが含まれています。
 ```html
 <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE’ トランザクションが作成されます。 
+`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE' トランザクションが作成されます。 
 
 ```typescript
 public onEdit(): void {
@@ -167,7 +167,7 @@ public isEdited(id): boolean {
 }
 ```
 
-#### 削除機能の定義
+### 削除機能の定義
 
 3 番目のリスト アイテムには、アイテムのデータを削除する削除ボタンが含まれています。
 
@@ -176,7 +176,7 @@ public isEdited(id): boolean {
 ```
 
 
-`onDelete` イベント ハンドラー内でボタンが押されると、「DELETE」トランザクションが作成されます。 
+`onDelete` イベント ハンドラー内でボタンが押されると、'DELETE' トランザクションが作成されます。 
 
 ```typescript
 public onDelete(): void {
@@ -201,7 +201,7 @@ public isDeleted(id): boolean {
 }
 ```
 
-#### 追加機能の定義
+### 追加機能の定義
 
 リストの最後に [追加] ボタンが追加され、リストに新しいアイテムが追加されます。
 
@@ -231,7 +231,7 @@ public itemAdded(id: number): boolean {
 }
 ```
 
-### トランザクション ログ
+## トランザクション ログ
 
 デモでは、ログ内の保留中のトランザクションを示します。
 
@@ -264,7 +264,7 @@ public getTransactionLog(): any[] {
 </div>
 ```
 
-### 保留されたトランザクションをコミット
+## 保留されたトランザクションをコミット
 
 すべての変更が完了したら、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) の [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドを使用して、一度にすべてをコミットできます。指定されたデータにすべてのトランザクションを適用します。
 
@@ -279,8 +279,15 @@ public onCommit(): void {
 }
 
 ```
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を使用している場合は、primaryKey と childDataKey を引数として期待する [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドのオーバー読み込みを使用することもできます。
 
-### 保留されたトランザクションのクリア
+```typescript
+public onCommit(): void {
+    this.transactions.commit(this.wishlist, primaryKey, childDataKey);
+}
+````
+
+## 保留されたトランザクションのクリア
 
 リストとのやり取りのどの時点でも、[`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) メソッドを使用して、トランザクション ログをクリアできます。
 
@@ -293,3 +300,11 @@ public onClear(): void {
     this.transactions.clear();
 }
 
+```
+
+## その他のリソース
+<div class="divider--half"></div>
+
+* [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+* [トランザクション サービス](transaction.md)
+* [トランザクション サービス クラス階層](transaction-classes.md)

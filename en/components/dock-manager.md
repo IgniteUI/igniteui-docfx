@@ -3,26 +3,27 @@ title: Manage Angular Page Layout | Dock Manager | Ignite UI | Infragistics
 _description: Learn how the Dock Manager lets you customize the layout of your Angular application via panes that can be pinned, resized, moved, and hidden.
 _keywords: manage angular page layout, Ignite UI for Angular, Infragistics
 ---
-## Dock Manager
+# Dock Manager
 
 The Ignite UI Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
     </button>
 </div>
 
 <div class="divider--half"></div>
 
 
-### Usage
+## Usage
 The Dock Manager is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
 
 Follow the steps below to add the Dock Manager package to your Angular project and set it up in order to use the component.

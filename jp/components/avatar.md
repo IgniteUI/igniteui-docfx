@@ -5,32 +5,33 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-##Avatar
+# Avatar
 
 <p class="highlight">Ignite UI for Angular Avatar コンポーネントは、イニシャル、画像、またはマテリアル アイコンをアプリケーションに追加します。</p>
 <div class="divider"></div>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 Avatar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](general/getting-started.md)トピックををご覧ください。
 
 次に、**app.module.ts** ファイルに `IgxAvatarModule` をインポートします。
 
@@ -48,11 +49,11 @@ import { IgxAvatarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### 例
+## 例
 
 Avatar の形式は四角または丸で、3 つのサイズ オプション (大、中、小) があります。イニシャル、画像、またはアイコンを表示できます。
 
-#### イニシャルを表示するアバター
+### イニシャルを表示するアバター
 [イニシャル]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) ('John Smith' の場合 'JS') を使用した簡易なアバターを作成するには、以下のコードをコンポーネントのテンプレートに追加します。
 
 ```html
@@ -63,7 +64,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ```html
 <igx-avatar initials="JS"
-            roundShape="true"
+            [roundShape]="true"
             size="medium">
 </igx-avatar>
 ```
@@ -73,7 +74,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 // avatar.component.scss
 
 .igx-avatar {
-    background:  #e41c77;
+    background: #e41c77;
     color: #000000;
 }
 
@@ -84,12 +85,12 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
     <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-#### 画像を表示するアバター
+### 画像を表示するアバター
 画像を表示するアバターを作成するには、`src` プロパティで画像ソースを設定します。
 
 ```html
 <igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
-            roundShape="true"
+            [roundShape]="true"
             size="large">
 </igx-avatar>
 ```
@@ -100,12 +101,12 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
     <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-#### アイコンを表示するアバター
+### アイコンを表示するアバター
 アバターでアイコンを表示するには、[`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) プロパティを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。
 
 ```html
 <igx-avatar icon="person"
-            roundShape="true"
+            [roundShape]="true"
             size="small">
 </igx-avatar>
 ```
@@ -116,7 +117,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
     <iframe id="avatar-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
@@ -136,7 +137,7 @@ $custom-avatar-theme: igx-avatar-theme(
 );
 ```
 
-#### CSS 変数の使用
+### CSS 変数の使用
 
 最後にアバターのカスタム テーマを渡します。
 
@@ -144,7 +145,7 @@ $custom-avatar-theme: igx-avatar-theme(
 @include igx-css-vars($custom-avatar-theme);
 ```
 
-#### ミックスインの使用
+### ミックスインの使用
 
 Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
 
@@ -165,20 +166,20 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
     <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
     </button>
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

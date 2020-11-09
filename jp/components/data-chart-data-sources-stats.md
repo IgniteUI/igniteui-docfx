@@ -1,14 +1,14 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | データ ソース
+title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+_keywords: Angular charts, data chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## 散布バブル シリーズのサンプルデータソース
+# Angular 散布バブル シリーズのサンプルデータソース
 
-このトピックでは、[散布バブル シリーズ](data-chart-type-scatter-bubble-series.md)と [Scatter Marker シリーズ](data-chart-type-scatter-point-series.md) のデータソースを実装する方法の例を示します。
+このトピックでは、[散布バブル シリーズ](data-chart-type-scatter-bubble-series.md)と [散布マーカー シリーズ](data-chart-type-scatter-point-series.md) のデータソースを実装する方法の例を示します。
 
 ```ts
 export class SampleScatterStats {
@@ -86,7 +86,7 @@ export class SampleScatterStats {
         data.push(new Country("ERI",6130922,504,195,3,"Eritrea","Africa"));
         data.push(new Country("EST",1325016,16887,16944,127,"Estonia","Europe"));
         data.push(new Country("ETH",91728849,467,51,8,"Ethiopia","Africa"));
-        data.push(new Country("EUU",505640311,32917,0,118,"Euroean Union","Europe"));
+        data.push(new Country("EUU",505640311,32917,0,118,"European Union","Europe"));
         data.push(new Country("FRO",49506,0,0,120,"Faeroe Islands","Europe"));
         data.push(new Country("FJI",874742,4613,150,81,"Fiji","Oceania"));
         data.push(new Country("FIN",5413971,45649,68960,156,"Finland","Europe"));

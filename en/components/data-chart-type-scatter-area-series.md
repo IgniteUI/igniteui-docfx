@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Area
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Scatter Area Chart | Data Binding | Infragistics
+_description: Infragistics Ignite UI for Angular provide scatter area series . Learn about our Ignite UI for Angular  scatter area series!
+_keywords: Angular charts, data chart, scatter area charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','ScatterAreaSeries','ScatterContourSeries']
 ---
 
-## Scatter Area Chart
+# Angular Scatter Area Chart
 
 This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) in the Angular data chart component. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) works a lot like the [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-area-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,15 +17,17 @@ This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesCompo
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) and [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) can be used with [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html).
 
-### Required Data
+## Required Data
 
 The [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) has the following data requirements:
 
@@ -39,9 +41,16 @@ You can use the [SampleScatterData](data-chart-data-sources-scatter.md) as data 
 public dataSource: any[] = SampleScatterData.create();
 ```
 
-### Required Modules
+## Required Modules
 
-The scatter area series requires the following modules:
+The scatter area series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartScatterCoreModule
+-   DataChartScatterModule       
+-   DataChartInteractivityModule
+-   ScatterAreaSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -68,7 +77,7 @@ import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of data chart with  [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) and bind it to the data source.
 
@@ -90,7 +99,7 @@ This code demonstrates how to create an instance of data chart with  [`IgxScatte
  </igx-data-chart>
 ```
 
-### Color Scale
+## Color Scale
 
 Use the [`colorScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html#colorscale) property of the[`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) to resolve values of points and thus fill the surface of the series. The colors are smoothly interpolated around the shape of the surface by applying a pixel-wise triangle rasterizer to triangulation data. Because rendering of the surface is pixel-wise, the color scale uses colors instead of brushes.
 

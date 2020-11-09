@@ -4,21 +4,22 @@ _description: Ignite UI for Angular Navbar control provides optimal UI experienc
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular NavBar component, Angular Navbar control
 ---
 
-## Navbar
+# Navbar
 <p class="highlight">The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.</p>
 
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 To get started with the Navbar component, first you need to import the `IgxNavbarModule` in our **app.module.ts** file:
 
@@ -45,9 +46,9 @@ Then in the template of our component we can add the following code to show a ba
 </igx-navbar>
 ```
 
-### Examples
+## Examples
 
-#### Add Menu Button
+### Add Menu Button
 
 In order to add a menu button, we will show the action button using the `actionButtonIcon` property, and make it use a menu icon as follows:
 
@@ -61,7 +62,7 @@ In order to add a menu button, we will show the action button using the `actionB
 > [!NOTE]
 > The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
 
-#### Add Icons
+### Add Icons
 
 Now that our app has its menu in place, we can make it a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIcon**](icon.md) module and import it in our **app.module.ts** file.
 ```typescript
@@ -97,12 +98,12 @@ If all went well, you should see the following in your browser:
     <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-1' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-#### Add Custom Action Icon
+### Add Custom Action Icon
 
 What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar? We can easily achieve this by using the `igx-navbar-action` directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
 
@@ -141,12 +142,12 @@ Finally, this is how our navbar should look like with its custom action icon:
     <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-#### Add Navigation Icon
+### Add Navigation Icon
 
 If we want to create a navbar with an icon navigating back, we should follow a couple of steps. First, we can use the `actionButtonIcon` property to choose a suitable icon from the Material fontset. Then, we can make a simple check if there are any previously visited pages to go back to, and pass the result to the  [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) property. The last step is to create a method for navigating back and hook it to the [`onAction`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#onaction) property.
 
@@ -183,12 +184,12 @@ If the sample is configured properly, you should see the following in your brows
     <iframe id="navbar-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-3' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-#### Add Custom Title
+### Add Custom Title
 
 If we want to provide a custom content for a navbar's title, we can achieve this by using `igx-navbar-title` or `igxNavbarTitle` directive. They will replace the default navbar's title provided by `title` input property. The sample below has a custom title containing a link with an image:
 
@@ -219,12 +220,12 @@ If we want to provide a custom content for a navbar's title, we can achieve this
     data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Styling
+## Styling
 
 To get started with styling the navbar, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -243,7 +244,7 @@ $custom-navbar-theme: igx-navbar-theme(
 );
 ```
 
-#### Using CSS variables
+### Using CSS variables
 
 The last step is to pass the newly created theme:
 
@@ -251,7 +252,7 @@ The last step is to pass the newly created theme:
 @include igx-css-vars($custom-navbar-theme);
 ```
 
-#### Using mixins 
+### Using mixins 
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
@@ -266,7 +267,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 }
 ```
 
-#### Using color palettes
+### Using color palettes
 
 Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -292,7 +293,7 @@ $custom-navbar-theme: igx-navbar-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using schemas
+### Using schemas
 
 You can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -333,18 +334,18 @@ $cutom-navbar-theme: igx-navbar-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 150px">
     <iframe id="nav-bar-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-style' class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
@@ -357,7 +358,7 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

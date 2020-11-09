@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Radial Line Chart
-_description: Create a radial line chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools |Radial Line Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create radial line charts. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, radial line charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialLineSeries']
 ---
 
-## Radial Line Chart
+# Angular Radial Line Chart
 
 The Ignite UI for Angular radial line chart belongs to a group of radial charts and is rendered using a collection of straight lines connecting data points. The [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) uses the same concepts of data plotting as the [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html), but wraps data points around a circle rather than stretching them along a horizontal line.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,24 +17,26 @@ The Ignite UI for Angular radial line chart belongs to a group of radial charts 
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html).
 
 -   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
 -   [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)
 
-### Required Data
+## Required Data
 
 The [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
 -   The data source must contain at least one data item otherwise the chart will not render the [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html).
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)).
+-   All data items must contain at least one label data column (string or date time) which should be mapped to the [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)).
 -   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath) property of the [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html).
 
 You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data source which meets above data requirements.
@@ -43,9 +45,15 @@ You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data so
 public dataSource: any[] = SampleRadialData.create();
 ```
 
-### Required Modules
+## Required Modules
 
-Creation of the [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) requires the following modules:
+Creation of the [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   RadialLineSeriesModule
+-   RadialLineSeriesCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -70,7 +78,7 @@ import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 })
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) and bind it to a data source.
 

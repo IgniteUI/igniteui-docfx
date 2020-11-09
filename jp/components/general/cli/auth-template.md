@@ -1,17 +1,17 @@
 ﻿---
-title: 認証プロジェクト テンプレート
+title: 認証プロジェクト テンプレート | Ignite UI for Angular | インフラジスティックス
 _description: Angular 認証プロジェクト テンプレート ガイド
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: igniteui for angular, angular schematics, テンプレート, インフラジスティックス
 _language: ja
 ---
 
-## 認証プロジェクト テンプレート
+# 認証プロジェクト テンプレート
 
 [`new` コマンド](../cli-overview.md#新しいプロジェクトの作成)または[ステップバイステップモード](step-by-step-guide.md)を使用する場合に選択するプロジェクト の複数のバージョン(プロジェクト テンプレート)があります。
 
 Angular Schematics または Ignite UI CLI を使用して Angular プロジェクト作成する場合は、ユーザー管理でアプリを開始するために追加セットアップをできるだけ必要としないクライアント側認証モジュールの基本的な実装を含むテンプレートを選択できます。
 
-### 認証プロジェクトの作成
+## 認証プロジェクトの作成
 'Ignite UI for Angular' プロジェクト タイプを選択した後、ステップバイステップの手順を実行する際に認証プロジェクトを選択できます。
 
 ![](../../../images/general/cli-igx-side-auth.png)
@@ -27,7 +27,7 @@ Schematics コレクションを使用する場合は、以下のコマンドを
 ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=side-nav-auth
 ```
 
-### 説明
+## 説明
 このテンプレートはサイドナビゲーションのデフォルトに基づいて作成され、ログイン ページまたはログインユーザーのアバターを表示するプロファイル ページとログイン セクションをアプリのナビゲーションバーに追加します。
 
 ![](../../../images/general/igx-side-auth-login-bar.png)
@@ -38,7 +38,7 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 
 このプロジェクトは、さまざまな[外部認証プロバイダー](#add-a-third-party-social-provider)もサポートしています。 
 
-### コード
+## コード
 ユーザー管理に関連するすべてのアイテムは、`src/app/authentication`フォルダー下にあります。以下は、注目すべきエクスポートです。
 
 - `authentication.module.ts` の `AuthenticationModule` は、すべてのコンポーネントとサービスをメイン アプリモジュールにエクスポートします。
@@ -48,14 +48,14 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 - `services/authentication.service.ts` の `AuthenticationService` は、バックエンド API との通信に使用されます。
 - `Services/external-auth.service.ts` の `ExternalAuthService` は、サードパーティ ログインのプロバイダーを処理します。
 
-### 構成の要件
+## 構成の要件
 
 このプロジェクトは、REST API サービスを使用する単一ページアプリ用にセットアップされているため、`AuthenticationService` を使用してリクエストを次の URL に送信します。
 - `/login` - ユーザー名とパスワードでログインします。
 - `/register` - ユーザー情報で登録します。
 - `/extlogin` - 外部ソースからユーザー情報を渡します。
 
-すべてのエンドポイントは、JSON Wen Token(JWT） またはメッセージとともにエラー状態を返す必要があります。
+すべてのエンドポイントは、JSON Wen Token (JWT) またはメッセージとともにエラー状態を返す必要があります。
 
 > **注:**デモンストレーションの目的で、プロジェクトには要求をインターセプトする `services/fake-backend.service.ts` があります。`authentication.module.ts` の `BackendProvider` は、本番環境では使用しないでください。開発の開始時に、プロバイダーとファイルの両方を削除する必要があります。
 
@@ -66,7 +66,7 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 常にセキュリティ面を評価し、状況に応じて調整します。提供されるプロジェクト構造は単なる出発点です。
 
 
-### サードパーティ (ソーシャル) プロバイダーを追加する
+## サードパーティ (ソーシャル) プロバイダーを追加する
 
 プロジェクトのメイン モジュール `src/app/app.module.ts` は、外部認証サービスを挿入して生成し、次のような初期化をコメントアウトします。
 
@@ -117,7 +117,7 @@ https://developers.facebook.com/docs/apps/#register
 
 ![](../../../images/general/igx-side-auth-login-social.png)
 
-#### プロバイダーの詳細
+### プロバイダーの詳細
 
 以下は、プロジェクト テンプレートに付属するデフォルト プロバイダーです。
 

@@ -1,15 +1,15 @@
 ---
-제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Ignite UI for Angular | Infragistics | 퍼포먼스
+제목: 금융 차트 | 데이터 비주얼라이제이션 도구 | Infragistics | 퍼포먼스
 _description: 재무 차트 구성 요소를 사용하여 간단한 API를 사용하여 재무 데이터를 시각화하십시오. 자세한 정보는 데모, 종속성, 사용법 및 도구 모음을보십시오.
-_keywords: financial chart, Ignite UI for Angular, infragistics
+_keywords: financial chart, Ignite UI for Angular, Infragistics
 _language: kr
 ---
 
-## 퍼포먼스
+# Angular 퍼포먼스
 
 `XamFinancialChart` 컨트롤은 대량의 데이터 점을 렌더링할 수 있는 매우 우수한 성능을 제공합니다. 다음의 데모는 20년간의 데이터를 바인딩하고 캔들 스틱을 사용하여 1일 간격으로 주가를 표시합니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-performance-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,6 +17,8 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-performance-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 <div class="divider--half"></div>
 
@@ -59,7 +61,7 @@ export class AppComponent {
 
 또한, 애플리케이션에서 퍼포먼스를 최적화할 때 금융 차트의 다음 기능을 고려해야 합니다.
 
-### 차트 유형
+## 차트 유형
 
 [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 옵션을 설정하면 차트 퍼포먼스에 다음과 같은 영향을 미칠 수 있습니다:
 
@@ -68,7 +70,7 @@ export class AppComponent {
 -   `Bar` - [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) 차트 유형보다 렌더링이 복잡하며 OHLC 수치 값을 가진 데이터 항목을 렌더링할 경우에 권장됩니다.
 -   `Candle` - `Bar` 차트 유형보다 렌더링이 복잡하며 OHLC 수치 값을 가진 데이터 항목을 렌더링할 경우에도 권장됩니다.
 
-### 볼륨 유형
+## 볼륨 유형
 
 `VolumeType` 옵션을 설정하면 차트 퍼포먼스에 다음과 같은 영향을 미칠 수 있습니다:
 
@@ -76,38 +78,38 @@ export class AppComponent {
 -   `area` - `Line` 볼륨 유형보다 렌더링이 복잡합니다.
 -   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - `area` 볼륨 유형보다 렌더링이 복잡하며 1-3 재고의 볼륨 데이터를 렌더링할 경우에 권장됩니다.
 
-### 마커 유형
+## 마커 유형
 
 `MarkerTypes` 옵션을 `none`으로 설정하면 다른 유형보다 렌더링할 항목의 양이 줄어 듭니다.
 
-### 범례 표시
+## 범례 표시
 
 `IsLegendVisible` 옵션을 `false`로 설정하면 범례가 렌더링되지 않으므로 성능이 향상됩니다.
 
-### 줌 슬라이더 유형
+## 줌 슬라이더 유형
 
 `ZoomSliderType` 옵션을 `none`으로 설정하면 차트 퍼포먼스가 향상되고 다른 인디케이터 및 볼륨 창을 위해 수직 공간을 더 많이 사용할 수 있습니다.
 
-### 차트 창
+## 차트 창
 
-`inidicatorTypes` 및 `OverlayTypes` 옵션을 사용하여 복수의 창을 설정한 경우, 퍼포먼스가 저하될 수 있으므로 소수의 금융지표와 단일 금융 오버레이를 사용하는 것이 좋습니다.
+`indicatorTypes` 및 `OverlayTypes` 옵션을 사용하여 복수의 창을 설정한 경우, 퍼포먼스가 저하될 수 있으므로 소수의 금융지표와 단일 금융 오버레이를 사용하는 것이 좋습니다.
 
-### X축 모드
+## X축 모드
 
 `XAxisMode` 옵션을 설정하면 차트 퍼포먼스에 다음과 같은 영향을 미칠 수 있습니다:
 
 -   `Ordinal` - 금융 차트에서 사용할 수 있는 가장 간단한 X축 모드이며 데이터 범위(예: 주말 또는 공휴일) 내에서 브레이크 렌더링이 필요하지 않은 경우에 권장됩니다.
 -   `Time` - 금융 차트에서 `Ordinal` 보다 복잡합니다. 데이터 범위(예: 주말 또는 공휴일) 내에서 브레이크 렌더링이 필요할 경우에 권장됩니다.
 
-### Y축 모드
+## Y축 모드
 
 성능 향상을 위해 `PercentChange` 모드를 사용할 때보다 더 적은 작업이 필요한 `YAxisMode` 옵션의 `numeric`로 설정하는 것이 좋습니다.
 
-### 주석
+## 주석
 
 Callout 주석(`calloutsVisible`) 또는 Final Value 주석(`finalValueAnnotationsVisible`)을 사용하면 금융 차트의 성능이 저하됩니다.
 
-### 축 비주얼
+## 축 비주얼
 
 기본적으로 금융 차트는 최상의 퍼포먼스를 발휘하도록 최적화되어 있지만, 추가 차트 비주얼을 사용하면 퍼포먼스가 저하될 수 있는데 예를 들면 다음과 같습니다:
 
@@ -130,7 +132,7 @@ Callout 주석(`calloutsVisible`) 또는 Final Value 주석(`finalValueAnnotatio
 
 <div class="divider--half"></div>
 
-### 추가 리소스
+## 추가 리소스
 
 <div class="divider--half"></div>
 

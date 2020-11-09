@@ -4,11 +4,11 @@ _description:
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
 ---
 
-## Palettes
+# Palettes
 <p class="highlight">The Ignite UI for Angular theming engine provides several powerful functions and mixins for generating and retrieving colors.</p>
 <div class="divider"></div>
 
-### Overview
+## Overview
 
 Palettes accept arguments for `primary`, `secondary`, `grays`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surfaces' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `grays`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
@@ -36,7 +36,7 @@ Got it? Good! But how does one access any of the colors in the palette?
 
 <div class="divider"></div>
 
-### The Grayscale Palette
+## The Grayscale Palette
 
 Similar to the `primary` and `secondary` palettes, you can provide a color to the `igx-palette` function that will be used to generate shades of gray. The default color used to generate the `grays` palette is `#000`, or better known as `black`. The `grays` palette is mainly used for setting text colors across components. Modifying the value is useful when changing the background of your application. For instance, if your application uses a darker background, setting the `grays` color to `white` is sensible, and will force all text colors to be based on shades of `white`.
 
@@ -57,7 +57,7 @@ $my-color-palette: igx-palette(
 
 <div class="divider"></div>
 
-### Sub-Palette Colors
+## Sub-Palette Colors
 
 We provide a function that is easy to remember and use `igx-color`. It takes three arguments - `palette`, `color`, and `variant`;
 
@@ -79,7 +79,7 @@ $my-warning-color: igx-color($my-palette, 'warn');
 
 <div class="divider"></div>
 
-### Contrast Text Colors
+## Contrast Text Colors
 
 Similar to how we get sub-palette colors, there's a way to get the contrast text color for each of the colors in the sub-palettes.
 
@@ -96,7 +96,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
 
 <div class="divider"></div>
 
-### Color Classes
+## Color Classes
 
 We understand that some people prefer to use CSS classes to apply colors to web elements, be it text or background. We have a mixin that allows you to generate CSS classes for each color in a palette.
 
@@ -118,13 +118,13 @@ The above code will generate CSS classes for each color variant in the palette. 
 
 <div class="divider--half"></div>
 
-### API Reference
+## API Reference
 * [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
 * [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
 * [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

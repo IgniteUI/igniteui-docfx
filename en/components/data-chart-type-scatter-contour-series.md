@@ -1,17 +1,17 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Contour
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Scatter Contour Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create scatter contour charts. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, scatter contour charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','ScatterContourSeries']
 
 ---
 
-## Scatter Contour Chart
+# Angular Scatter Contour Chart
 
 This topic explains, with code examples, how to use  [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) in the Angular data chart component. This series
 draws colored contour lines based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) works a lot like the [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) except that it represents data as contour lines colored using a fill scale and the scatter area series represents data as a surface interpolated using a color scale.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,15 +19,17 @@ draws colored contour lines based on a triangulation of X and Y data with a nume
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-contour-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) and [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) can be used with [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html).
 
-### Required Data
+## Required Data
 
 The [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) has the following data requirements:
 
@@ -41,9 +43,19 @@ You can use the [SampleScatterData](data-chart-data-sources-scatter.md) as data 
 public dataSource: any[] = SampleScatterData.create();
 ```
 
-### Required Modules
+## Required Modules
 
-The scatter contour series requires the following modules:
+The scatter contour series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartScatterCoreModule
+-   DataChartScatterModule   
+-   DataChartInteractivityModule
+-   ScatterContourSeriesModule
+    <!-- end: Blazor -->
+    ```
+
+    ```
 
 ```ts
 // axis' modules:
@@ -70,7 +82,7 @@ import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of data chart with  [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) and bind it to the data source.
 
@@ -92,7 +104,7 @@ This code demonstrates how to create an instance of data chart with  [`IgxScatte
  </igx-data-chart>
 ```
 
-### Contour Fill Scale
+## Contour Fill Scale
 
 Use the [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html#fillscale) property of the[`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) to resolve fill brushes of the contour lines.
 
@@ -102,7 +114,7 @@ The provided [`IgxValueBrushScaleComponent`]({environment:dvApiBaseUrl}/products
 -   `MaximumValue` sets the highest value to assign a brush. Any given value greater than this value will be Transparent.
 -   `MinimumValue` sets the lowest value to assign a brush. Any given value less than this value will be Transparent.
 
-### Contour Value Resolver
+## Contour Value Resolver
 
 The [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) renders using exactly 10 contour lines at even intervals between the minimum and maximum values of the items mapped to the [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html#valuememberpath) property. If you desire more or fewer contours, you can assign the [`IgxLinearContourValueResolverComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlinearcontourvalueresolvercomponent.html) with a number of contours to the [`valueResolver`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html#valueresolver) property of the [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html).
 

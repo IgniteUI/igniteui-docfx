@@ -1,26 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title:  Angular Grid Sizing | Ignite UI for Angular | infragistics 
-_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accomodate the different scenarios that users can have.
+_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title:  Angular Tree Grid Sizing | Ignite UI for Angular | infragistics 
-_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accomodate the different scenarios that users can have.
+_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
+_canonicalLink: grid/sizing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title:  Angular Hierarchical Grid Sizing | Ignite UI for Angular | infragistics 
-_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accomodate the different scenarios that users can have.
+_description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords:  angular grid sizing, igniteui for angular, infragistics
+_canonicalLink: grid/sizing
 ---
 }
 
-### Grid Sizing Overview
+# Grid Sizing Overview
 
 There are many different ways to size the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) in order to accommodate a lot of scenarios that the users can have. While some are straight forward, others might be more complex and that is why we will take each one and look into them in more depth. We will go through setting `width` and `height` separately since there are some differences e.g. when using percentages for each.
 
@@ -29,14 +31,14 @@ When it comes to border and padding size for the [**@@igxName**]({environment:an
 > [!Note]
 > If the Border box sizing is overridden by the user we cannot guarantee that the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size correctly.
 
-### Width
+## Width
 
 If the `width` input does not have value assigned, its default value is `100%` and the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) tries to fill the available space. You can check how the grid reacts to it in the `Percentages` section.
 
 > [!Note]
 > Setting manually the `width` style of the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) itself will result in an unexpected behavior.
 
-#### Null
+### Null
 
 The grid's `width` can accepts value of `null`, which when set, renders all columns in the DOM. The grid sizes accordingly so there is no grid horizontal scrollbar since column virtualization is not applied.
 
@@ -60,7 +62,7 @@ The grid's `width` can accepts value of `null`, which when set, renders all colu
 > [!Note]
 > Due to this behavior, if the grid data contains too many columns, it might have significant impact on the browser performance, since all columns would be rendered without virtualization.
 
-#### Pixels
+### Pixels
 
 When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width` input is set to pixels it will set the whole grid size to that value and it will be static. It will not react to any browser resizing or changes in the DOM, although this is not the case for the grid content:
 
@@ -74,7 +76,7 @@ When the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `
     <img src="../../images/grid_sizing/width-cols-scroll-parent-scroll-v2.jpg" style="width: 80%"/>
 
 
-#### Percentages
+### Percentages
 
 When the `width` of the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) is set to percentages it will size the grid according to the parent element's width. If the parent element does not have width specified the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size relative to the browser window.
 
@@ -91,14 +93,14 @@ When the `width` of the [**@@igxName**]({environment:angularApiUrl}/classes/@@ig
     <img src="../../images/grid_sizing/width-percent-150p-parent-noscroll-v2.jpg" style="width: 80%"/>
     <img src="../../images/grid_sizing/width-percent-150p-parent-scroll-v2.jpg" style="width: 80%"/>
 
-### Height
+## Height
 
 By default if no height is defined for the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html), it will be set to `100%`. You can check how the grid reacts depending on the DOM structure in the `Percentages` section.
 
 > [!Note]
 > Setting manually the `height` style of the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) itself will result in an unexpected behavior.
 
-#### Null
+### Null
 
 The [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` input can accept `null` value, which when set, displays all rows with no scrollbar no matter how many they are. In this case, there is no vertical virtualization since the grid renders all rows anyway.
 
@@ -118,7 +120,7 @@ The [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `heigh
 > [!Note]
 > Due to this behavior, if the grid data contains too many rows, it might have significant impact on the browser performance, since all rows would be rendered without virtualization.
 
-#### Pixels
+### Pixels
 
 Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `height` in pixels is more straightforward since the grid will size to that specific size in all occasions similarly to how `width` is set in pixels.
 
@@ -137,7 +139,7 @@ Setting the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html
 
 
 
-#### Percentages
+### Percentages
 
 When the `height` input is set to percentages the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) will size based on the parent element height. If the parent element has its `height` set in pixels or percentages, the grid will size relative to the size of the parent.
 
@@ -168,11 +170,11 @@ Let's have `width` set to `1200px` and the parent element not having any size ap
     <img src="../../images/grid_sizing/height-percent-100-parent-100-v2.jpg" style="width: 80%"/>
 
 
-### Column Sizing
+## Column Sizing
 
 Depending on the grid size itself, the columns inside it can also be sized differently that could result in scenarios where the grid renders horizontal scrollbar or not.  Columns can have width set in pixels, percentages or autosized when nothing is set. We will take a deeper look regarding these scenarios in this section.
 
-#### Default
+### Default
 
 By default when a column doesn't have a specified width it will try to autosize, so that it fills if any empty space is available in the grid view area. Autosized columns have minimum width of `136px`, so if the area available is less than `136px` for that column, it will default to that size.
 
@@ -201,7 +203,7 @@ When the grid is resized in these scenarios, the column width is also updated to
 > [!Note]
 > Feature columns like Row Selector checkbox column and etc. fill additional space that is taken into account when autosizing columns.
 
-#### Pixels
+### Pixels
 
 When columns have set specific `width` in pixels, they stick to that size, unless they are resized manually. Since the combined `width` of the columns is static, it can be less than the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width` or exceed it.
 
@@ -214,7 +216,7 @@ When columns have set specific `width` in pixels, they stick to that size, unles
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
 
-#### Percentages
+### Percentages
 
 When columns have set `width` in percentages, their size is calculated relatively to the grid size. It is similar to how width in pixels works, but provides also responsiveness to the columns which means that when the grid is resized, the columns also will resize accordingly.
 
@@ -236,11 +238,11 @@ When columns have set `width` in percentages, their size is calculated relativel
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-### Child Grid Sizing
+## Child Grid Sizing
 
 Because the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) usually contains children, they can also have their `width` and `height` specified, in order to accommodate different scenarios. Since the children are defined using `row island` template, this means that all children in the same level and island will have the same `width` and `height` property applied to them. 
 
-#### Width
+### Width
 
 The `width` for the children does not behave much different than the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) itself, since each child grid is instance of [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) as well.
 
@@ -248,7 +250,7 @@ The only difference is that the user cannot change the parent element of the chi
 
 <img src="../../images/grid_sizing/hgrid-width-percentages-v2.jpg" style="width: 80%"/>
 
-#### Height
+### Height
 
 The `height` of each child in the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) behaves also similarly to the `height` of the root level grid.
 
@@ -259,13 +261,13 @@ The difference is that for the child grid, when `height` is set to percentages, 
 ---
 }
 
-### API References
+## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

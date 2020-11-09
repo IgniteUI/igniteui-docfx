@@ -5,21 +5,22 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Checkbox
+# Checkbox
 <p class="highlight">Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。</p>
 <div class="divider"></div>
 
-#### デモ
+## デモ
 <div class="sample-container loading" style="height: 100px">
-<iframe id="checkbox-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/checkbox-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="checkbox-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/checkbox-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 チェックボックス コンポーネントは、選択/選択解除の状態の選択ができます。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
 はじめに、**app.module.ts** ファイルに `IgxCheckboxModule` をインポートします。
@@ -46,7 +47,7 @@ export class AppModule {}
 </igx-checkbox>
 ```
 
-#### Checkbox プロパティ
+### Checkbox プロパティ
 
 チェックボックス プロパティをデータにバインドし、上記のコードを拡張します。たとえば、description および done の 2 つのプロパティを持つタスク オブジェクトの配列がある場合では、チェックボックス コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) プロパティをその元となるタスク オブジェクトの done プロパティにバインドできます。同様に、[`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) プロパティを description にバインドします。
 オプションに [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) イベントをバインドし、イベント ハンドラー メソッドでカスタム ロジックを追加できます。
@@ -98,11 +99,11 @@ igx-checkbox {
     <iframe id="checkbox-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### ラベル配置
+### ラベル配置
 
 チェックボックスの [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) プロパティを使用してラベル位置を指定することができます。
 
@@ -112,7 +113,7 @@ igx-checkbox {
 
 `labelPosition` が設定されていない場合、ラベルはチェックボックスの後に配置されます。
 
-#### 未確定状態のチェックボックス
+### 未確定状態のチェックボックス
 
 オンとオフに加えて、チェックボックスの 3 番目の状態があります: **未確定**。この状態では、チェックボックスはオンでもオフでもありません。チェックボックスの [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) プロパティを使用して設定します。
 
@@ -204,11 +205,11 @@ public toggleAll() {
     <iframe id="checkbox-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -229,7 +230,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -267,26 +268,26 @@ $custom-checkbox-theme: igx-checkbox-theme(
     @include igx-css-vars($custom-checkbox-theme);
 }
 ```
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="checkbox-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="checkbox-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 * [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

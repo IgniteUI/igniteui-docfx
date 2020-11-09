@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 _language: kr
 ---
 
-## 범례
+# Angular 범례
 
 범례는 최종 사용자가 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에 플롯된 데이터와 관련된 맥락 정보로 차트 시리즈의 비주얼을 식별할 수 있도록 도와줍니다. 플롯 영역에 표시된 데이터를 보다 쉽게 이해할 수 있도록 대부분의 차트에는 적어도 하나의 범례가 있어야 하지만 필수 사항은 아니며 기본적으로는 차트는 범례 없이 렌더링할 수 있습니다.
 
-### 데모
+## 데모
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-legends-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ _language: kr
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-legends-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 범례 개요
+## 범례 개요
 
 기본적으로 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 는 차트 내 모든 시리즈의 범례를 표시하지 않습니다. 여러 시리즈에 공통된 범례를 표시하려면 애플리케이션에 `XamLegend` 객체를 추가한 다음 그것을 차트의 `Infragistics.Controls.Charts.Legend` 속성에 설정해야 합니다.
 

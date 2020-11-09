@@ -1,39 +1,39 @@
 ---
-title: Angular Data Grid | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material Table に基づいた Ignite UI for Angular データ グリッドの使用方法について。さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: angular data grid, igniteui for angular, インフラジスティックス
+title: Angular Data Grid | Build Fast Angular Tables | Infragistics
+_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. 30 days free trial
+_keywords: angular data grid, angular material table, ignite ui for angular
 _language: ja
 ---
 
-## データグリッド
+# Angular データ グリッドの概要と構成
 
-<p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、並べ替え、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
+<p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 依存関係
+## 依存関係
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Angular データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
-グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
+Angular グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -57,14 +57,14 @@ export class AppModule {}
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular/grid/';
 // Or
-import { IgxGridComponent } from 'igniteui-angular'
+import { IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('myGrid', { read: IgxGridComponent })
 public grid: IgxGridComponent;
 ```
 
-### 使用方法
+## 使用方法
 
 グリッド モジュールをインポート後、ローカル データにバインドする **igx-grid** の基本構成を設定します。
 
@@ -76,11 +76,11 @@ public grid: IgxGridComponent;
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
-### スタイルの構成
+## スタイルの構成
 > [!NOTE]
 > [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
 
-[**Angular**](https://angular.io/) のほとんどのスタイルは [Autoprefixer](https://www.npmjs.com/package/autoprefixer) プラグインで暗示的にプレフィックスされてます。 
+[**Angular**](https://angular.io/) のほとんどのスタイルは [Autoprefixer](https://www.npmjs.com/package/autoprefixer) プラグインで暗示的にプレフィックスされてます。
 
 ただし、**グリッド レイアウト**のプレフィックスでは、[Autoprefixer](https://www.npmjs.com/package/autoprefixer) **グリッド プロパティ** をコメント `/* autoprefixer grid:on */` で有効にする必要があります。
 
@@ -94,14 +94,14 @@ public grid: IgxGridComponent;
 
     /* autoprefixer grid:on */
  ...
- ``` 
+ ```
 
-### 列の構成
+## 列の構成
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**並べ替え**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
 
-#### 列の定義
+### 列の定義
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
@@ -118,9 +118,9 @@ public grid: IgxGridComponent;
 </igx-grid>
 ```
 
-グリッドの各列は別のテンプレートを持つことができます。列にグリッド モジュール ディレクティブの 1 つでデコレートした `ng-template` タグが必要です。
+グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
 
-#### ヘッダー テンプレート
+### ヘッダー テンプレート
 
 `igxHeader` は列ヘッダーを対象とし、列オブジェクトをコンテキストとして提供します。
 
@@ -138,7 +138,7 @@ public grid: IgxGridComponent;
 >グループ化/移動機能と一緒にヘッダー テンプレートを使用すると、*列ヘッダー領域*は**ドラッグ可能**になり、ヘッダー テンプレートのカスタム要素部分に**ドラッグ不可**としてマークするまでアクセスできません。以下は例です。
 
 ```html
-<igx-column #col field="ProductName" header="Product Name" 
+<igx-column #col field="ProductName" header="Product Name"
     [groupable]="true" [movable]="true" [hasSummary]="true">
     <ng-template igxHeader let-col>
         <div class="text">{{col.field}}</div>
@@ -149,7 +149,7 @@ public grid: IgxGridComponent;
 ```
 **draggable** 属性を false に設定して追加しています。
 
-#### セル テンプレート
+### セル テンプレート
 
 `igxCell` は提供したテンプレートを列のすべてのセルに適用します。テンプレートで提供されるコンテキスト オブジェクトは暗示的に提供されたセル値およびセル オブジェクトです。以下のようにセルがコンテンツに応じて拡張するテンプレートを定義するために使用できます。
 
@@ -182,13 +182,16 @@ public grid: IgxGridComponent;
 <igx-grid>
 ```
 
-`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集) を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
+`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、Angular グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集) を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
 
-セル内のデータが `[(ngModel)]` でバインドされていて、値の変更が処理されない場合、新しい値はグリッドの基になるデータソースで適切に更**されません**。カスタム テンプレートを使用してセルの編集を行う場合は、セルの**セル編集テンプレート**を使用することを強くお勧めします。
+> [!NOTE]
+> グリッドは、数値、文字列、日付、およびブール列タイプのデフォルトの処理を公開します。例えば、ブール列タイプの場合に列はデフォルトで true/false の代わりに`チェック`または`閉じる`アイコンを表示します。
+
+セル内のデータが `[(ngModel)]` でバインドされていて、値の変更が処理されない場合、新しい値は Angular グリッドの基になるデータソースで適切に**更新されません**。カスタム テンプレートを使用してセルの編集を行う場合は、セルの**セル編集テンプレート**を使用することを強くお勧めします。
 
 適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド[編集イベント サイクル](editing.md#編集イベント) を正しく渡します。
 
-#### セル編集テンプレート
+### セル編集テンプレート
 
 列は、セルが編集モードにある場合に使用されるテンプレートを使用します。その他の列テンプレートと同じように、提供されるコンテキスト オブジェクトはセル値およびセル オブジェクトです。編集モード テンプレートをユーザー アクセス可能にするには、[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) プロパティを `true` に設定します。
 
@@ -205,7 +208,7 @@ public grid: IgxGridComponent;
 
 テンプレートで使用可能なプロパティの詳細については、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の API を参照してください。
 
-#### 列テンプレート API
+### 列テンプレート API
 
 各列テンプレートが [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) オブジェクトでコードによって変更可能です。以下のコード例で、ユーザー データの 2 つのテンプレートを宣言しました。TypeScript コードでテンプレートへの参照を取得し、条件に基づいてアプリケーションで列の適切なテンプレートを描画します。
 
@@ -251,11 +254,39 @@ public initColumns(column: IgxGridColumn) {
 }
 ```
 
-上記のコードは **ProductName** 列の並べ替えや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
+上記のコードは **ProductName** 列のソートや編集機能を有効にし、対応する機能の UI (編集の入力など) をインスタンス化します。
 
-### データ構造
+### カスタム表示形式
 
-[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラットデータ**のみ取得します。描画に固有のデータ構造はフォームにあります。 
+日付列または数値列のすべての値は、[`Angular DatePipe`](https://angular.io/api/common/DatePipe) または [`DecimalPipe`](https://angular.io/api/common/DecimalPipe) を介して変換されます。これは元の値を変更せず、列に表示される値のみを変更します。デフォルトでは、値はグリッドの[`ロケール`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale)に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
+
+詳細については、[「Setting up the locale of your app (英語)」](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app)をご覧ください。
+
+また、書式設定のためのオプションのパラメーターがあります。
+
+- `format` - 表示される日付/時間部分を決定します。デフォルトの設定は `'mediumDate'` です (`'MMM d, y'`)。
+- `timezone` - 日付のタイムゾーン オフセット。デフォルトでは、エンドユーザーのローカル システムのタイムゾーンを使用します。
+- `digitsInfo` - 10 進表現オブジェクト。デフォルトの設定は `'1.0-3'` です。
+
+これらのパラメーターによって表示形式をカスタマイズできるようにするには、[`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) 入力を公開します。`pipeArgs` が設定されている場合、列はそのデータ型の対応するプロパティのみに遵守します。例:
+
+```typescript
+const pipeArgs: IColumnPipeArgs = {
+     format: 'longDate',
+     timezone: 'UTC',
+     digitsInfo: '1.1-2'
+}
+```
+```html
+<igx-column field="OrderDate" dataType="date" [pipeArgs]="pipeArgs"></igx-column>
+<igx-column field="UnitPrice" dataType="number" [pipeArgs]="pipeArgs"></igx-column>
+```
+
+`OrderDate` 列は `format` および `timezone` プロパティのみに遵守しますが、`UnitPrice` は `digitsInfo` のみに遵守します。詳細については、[「Localizing your app (英語)」](https://angular.io/guide/i18n)で Angular の公式ドキュメントを参照してください。
+
+## データ構造
+
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラット データ**とネストされた **POJOs (Plain old Java objects)** を処理します。描画に固有のデータ構造はフォームにあります。
 
 ```typescript
 const OBJECT_ARRAY = [{
@@ -266,35 +297,40 @@ const OBJECT_ARRAY = [{
         .
         ObjectKeyN: valueN
     },
-    {
+    .
+    .
+    .
+  }];
+
+const POJO = [{
         ObjectKey1: value1,
         ObjectKey2: value2,
         .
         .
         .
-        ObjectKeyN: valueN
+        ObjectKeyN: {
+          ObjectKeyN1: value1,
+          ObjectKeyN2: value2,
+          .
+          .
+          .
+          ObjectKeyNM: valueNM,
+        }
     },
     .
     .
-    .,
-    {
-        ObjectKey1: value1,
-        ObjectKey2: value2,
-        .
-        .
-        .
-        ObjectKeyN: valueN 
-    }];
+    .
+  }];
 
 ```
 >[!WARNING]
->**キー値に配列またはその他のオブジェクトを含まないでください。**
+>**キー値に配列を含まないでください。**
 
 >[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 
-### データ バインディング
+## データ バインディング
 
-はじめにリモート データ サービスにバインドするためにグリッドを変更します。大規模なアプリケーション レベルでは一般的なシナリオです。すべてのデータ取得に関連するロジックを別のデータ サービスに分割することがベスト プラクティスであるため、サーバーからデータの取得を処理するサービスを作成します。
+はじめにリモート データ サービスにバインドするために Angular グリッドを変更します。大規模なアプリケーション レベルでは一般的なシナリオです。すべてのデータ取得に関連するロジックを別のデータ サービスに分割することがベスト プラクティスであるため、サーバーからデータの取得を処理するサービスを作成します。
 
 サービスを別のファイルで実装します。
 
@@ -420,17 +456,54 @@ export class MyComponent implements OnInit {
 
 **注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
 
-### 複雑なデータ バインディング
+## 複雑なデータ バインディング
 
-[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) の主な目的は**フラット データ**を処理することですが、これはより複雑なデータを扱うことが不可能であることを意味するものではありません。
+[IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、データ レコード内のプロパティのパスを介した複合オブジェクト (1 レベルより深いネストを含む) へのバインドをサポートします。
 
-現在、グリッド列は複合キーをサポートしていませんが、他の列から列を作成することができます。このセクションでは、**ネスト データ**と**フラット データ**を使用して [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) を構成する方法について説明します。
+次のデータ モデルを見てください:
+```typescript
+interface AminoAcid {
+    name: string;
+    abbreviation: {
+        short: string;
+        long: string;
+    }
+    weight: {
+        molecular: number;
+        residue: number;
+    },
+    formula: {
+        molecular: string;
+        residue: string;
+    }
+    ...
+}
+```
+たとえば、グリッド内の特定のアミノ酸の重みを表示するには、次のスニペットで十分です。
+```html
+<igx-column field="weight.molecular"></igx-column>
+<igx-column field="weight.residue"></igx-column>
+```
+詳しくは、以下のサンプルを参照してください。このバインディングのタイプは、グリッドに期待されるすべてのデフォルト機能をサポートします。
+つまり、追加の構成を行わなくても、すべてのソートおよびフィルタリング操作がそのまま使用できます。トランザクションの有無に関係なく、グループ化と編集の操作、およびバインドされた列のセルをテンプレート化する機能についても同様です。
 
-#### ネスト データ
+>[!WARNING]
+>グリッドは、`primary key`、`foreign key` および `child key` プロパティのこの種のバインディングを**サポートしていません**。
 
-以下は、階層データを **IgxGrid** へバインドする方法です。
-    - ネストされたデータを含むセルの`値`
-    - カスタム列テンプレート
+<div class="sample-container loading" style="height:460px">
+    <iframe id="grid-nested-data-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding-2' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
+**IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
+    - ネストされたデータを含むセルの値を使用します。
+    - `rowData` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.rowData[field]` など) を取得します。
+
+それをテンプレートに挿入します。
 
 以下は使用するデータです。
 
@@ -512,16 +585,16 @@ export const EMPLOYEE_DATA = [
     <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-#### フラット データ
+### フラット データの使用
 
-フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。 
+フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
 
-グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
+Angular グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
 
 以下は使用するデータです。
 ```typescript
@@ -548,7 +621,7 @@ export const DATA: any[] = [
 <igx-column field="Address" header="Address" width="25%" editable="true">
                 <ng-template #compositeTemp igxCell let-cell="cell">
                     <div class="address-container">
-                    // In the Address column combine the Country, City and PostCode values of the corresponding data record 
+                    // In the Address column combine the Country, City and PostCode values of the corresponding data record
                         <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
                         <br/>
                         <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
@@ -592,17 +665,17 @@ export const DATA: any[] = [
     <iframe id="grid-composite-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-composite-data-binding' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### パーシステンス (永続化) 状態
+## パーシステンス (永続化) 状態
 
-新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
+新しい組み込みの [`IgxGridState`](state-persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
 
-### サイズ変更
+## サイズ変更
 
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。
 
@@ -615,11 +688,11 @@ export const DATA: any[] = [
 |グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が列幅に依存しない | すべての列の [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) で決定されます。|
 |親コンテナーでネストされた Grid | グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy|グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションに基づきます。 <br/>"compact": 24px <br/> "cosy": 32px <br/> "comfortable ": 48px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
+| 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションに基づきます。 <br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 | ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 > [!NOTE]
-> `igxGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxGrid` で有効です。詳細については、[igxForOf 既知の問題](../for_of.html#既知の問題と制限) のセクションを参照してください。
+> `igxGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxGrid` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
 
 <div class="divider--half"></div>
 
@@ -637,11 +710,11 @@ export const DATA: any[] = [
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
-* [並べ替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列のピン固定](column-pinning.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

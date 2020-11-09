@@ -1,15 +1,17 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Radial
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Radial Charts | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create radial charts such as radial area, radial line, radial pie and many more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, radial charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','RadialPieSeries']
 ---
 
-## Radial Series
+# Angular Radial Series
 
 This topic explains various types of radial series in the Angular data chart component. Radial series a group of series that render data as collection of data points wrapped around a circle, rather than stretching along a horizontal line as [Category Series](data-chart-type-category-series.md) do. Radial series are also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the same category grouping mechanisms of [Category Series](data-chart-type-category-series.md).
 
-### Demo
+<!-- Angular, React, WebComponents -->
+
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +19,14 @@ This topic explains various types of radial series in the Angular data chart com
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
-### Types of Radial Series
+## Types of Radial Series
 
 The following table lists all types of radial series and their descriptions:
 
@@ -33,7 +38,7 @@ The following table lists all types of radial series and their descriptions:
 | `RadialScatterSeries`                                                                                                                                        | Displays a collection of markers representing data points which are located at the radial (angle/radius) coordinates                                              |
 | [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) | Displays a collection of straight lines connecting data points which are located at the radial (angle/radius) coordinates                                         |
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with radial series.
 
@@ -44,13 +49,13 @@ The Angular data chart component provides various types of axes but only the fol
 | [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html) | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
 | [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html)     | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html) |
 
-### Required Data
+## Required Data
 
 Radial series have the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the chart will not render the radial series.
--   All data items must contain at least one label data column (string or date time) which should be mapped to the `Label` property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html))
+-   All data items must contain at least one label data column (string or date time) which should be mapped to the [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) property of the category axis (e.g. [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html))
 -   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath) property of radial series (e.g. [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html))
 
 You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data source which meets above data requirements.
@@ -59,11 +64,15 @@ You can use the [SampleRadialData](data-chart-data-sources-radial.md) as data so
 public dataSource: any[] = SampleRadialData.create();
 ```
 
-### Required Modules
+## Required Modules
 
-<!-- Angular -->
+The radial series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
-In order to use radial series, you need to import the following modules in your app during load:
+-   DataChartCoreModule        
+-   DataChartRadialSeriesModule
+-   DataChartRadialSeriesCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -91,7 +100,7 @@ import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 })
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of data chart with [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) and bind it to the data source.
 

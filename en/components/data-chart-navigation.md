@@ -1,27 +1,34 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Navigation
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Navigation | Infragistics
+_description: Navigate Infragistics' Angular charts by panning right and left and zooming horizontally and vertically using mouse or touch. Learn about Ignite UI for Angular graph navigation capabilities!
+_keywords: Angular charts, data chart, navigation, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'ModifierKeys']
 ---
 
-## Navigation
+# Angular Navigation
 
 In the Angular data chart component, navigation is disabled by default. Once enabled, you are able to zoom and pan the data chart either programmatically or in the UI.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
 In order to use navigation in the data chart, you need to import and register the interactivity module. This can be done by using the following code:
+
+<!-- Blazor -->
+
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
@@ -31,7 +38,7 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 })
 ```
 
-### Data Chart UI Navigation Overview
+## Data Chart UI Navigation Overview
 
 In order to allow navigation in the UI, you need to set either the [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) and/or the [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) properties of the chart to true, depending on the direction that you wish to allow zooming. This will allow you to zoom the data chart by rolling a mouse wheel over it.
 
@@ -49,7 +56,7 @@ The following code snippet demonstrates how you can enable base UI navigation in
 </igx-data-chart>
 ```
 
-### Data Chart Navigation with Mouse and Keyboard
+## Data Chart Navigation with Mouse and Keyboard
 
 Navigation in the Angular data chart component can happen with either the mouse or the keyboard once enabled. The following operations can be invoked using the following mouse or keyboard operations by default:
 
@@ -83,7 +90,7 @@ The following code snippet demonstrates how you can enable UI navigation in the 
 </igx-data-chart>
 ```
 
-<!-- ### Chart Navigation with Overview Plus Detail Pane
+<!-- ## Chart Navigation with Overview Plus Detail Pane
 
 In the `XamDataChart` control, there is an overlaid control that allows navigation. This control supports a preview of most supported series types as well as all navigation methods described above. This overlay is the overview plus detail pane, and it can be enabled by setting the `overviewPlusDetailPaneVisibility` property.
 
@@ -110,7 +117,7 @@ The following code snippet demonstrates how to enable the overview plus detail p
 </IgrDataChart>
 ``` -->
 
-### Data Chart Navigation through Code
+## Data Chart Navigation through Code
 
 The Angular data chart component provides several navigation properties that are updated each time a zoom or pan operation happens in the data chart. You can also set each of these properties to zoom or pan the data chart programmatically. The following is a list of these properties:
 

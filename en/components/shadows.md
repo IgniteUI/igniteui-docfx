@@ -4,11 +4,11 @@ _description:
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
 
-### Shadows
+# Shadows
 
 Shadows are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation.
 
-### Elevations
+## Elevations
 <div class="elevations row">
     <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="elevation-sample elevate-1">
@@ -142,12 +142,12 @@ Shadows are used to establish and maintain functional boundaries between Documen
     </div>
 </div>
 
-### Usage
+## Usage
 <div class="elevate-image">
     <img width="100%" height="100%" src="../images/whatismaterial_3d_elevation2.jpg" alt="Shadows Usage">
 </div>
 
-### How to add elevations?
+## How to add elevations?
 
 The following section demonstrates how to set elevation to a component. In the example, we are using the card component.
 
@@ -228,11 +228,12 @@ $myboringCard: igx-card-theme(
 Here is The result from the above code snippets:
 
 <div class="sample-container loading" style="height: 470px">
-    <iframe id="card-sample-shadow-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/card-sample-shadow" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="card-sample-shadow-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/card-sample-shadow" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-shadow-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -240,7 +241,7 @@ Here is The result from the above code snippets:
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 
 * [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
 * [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)

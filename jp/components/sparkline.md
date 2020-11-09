@@ -1,18 +1,18 @@
 ---
-title: スパークライン | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
-_description: スパークライン チャートを使用して、グリッド セルやスタンドアロンなどのコンパクトなレイアウトでレンダリングします。
-_keywords: Sparkline, Ignite UI for Angular, Infragistics, スパークライン, インフラジスティックス
+title: Angular スパークライン | データ可視化ツール | インフラジスティックス
+_description: インフラジスティックスの Angular スパークライン チャート コントロールを使用して、グリッド セルやスタンドアロンなどのコンパクトなレイアウトで描画します。Ignite UI for Angular スパークライン チャートの設定可能な要素について説明します。
+_keywords: Sparkline, Ignite UI for Angular, Infragistics, WinLoss, Area, Column, スパークライン, インフラジスティックス, エリア, 列
 mentionedTypes: ['XamSparkline', 'SparklineDisplayType', 'TrendLineType']
 _language: ja
 ---
 
-## スパークライン
+# Angular スパークラインの概要
 
 Ignite UI for Angular スパークライン コンポーネントは、軽量なチャート コントロールです。グリッド セル内などのコンパクトなレイアウト内でのレンダリングを目的としていますが、単独でレンダリングすることもできます。
 
 スパークライン コントロールには、チャートの種類、マーカー、範囲、トレンドライン、不明な値のプロット、ツールチップなど、構成およびカスタマイズが可能ないくつかの視覚的要素とそれに対応する機能があります。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="sparkline-display-types-iframe" src='{environment:dvDemosBaseUrl}/charts/sparkline-display-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -22,16 +22,23 @@ Ignite UI for Angular スパークライン コンポーネントは、軽量な
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### 依存関係
+<!-- Angular, React, WebComponents -->
+
+## 依存関係
 
 Ignite UI for Angular スパークライン コンポーネントを使用するには、以下のパッケージをインストールする必要があります。
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
-スパークライン コンポーネントには、以下のモジュールのインポートが必要です。
+<!-- end: Angular, React, WebComponents -->
+
+Angular スパークライン コンポーネントには、以下のモジュールのインポートが必要です。
 
 ```ts
 // app.module.ts
@@ -50,7 +57,7 @@ import { SparklineDisplayType } from 'igniteui-angular-charts';
 export class AppModule {}
 ```
 
-### スパークラインのタイプ
+## スパークラインのタイプ
 
 Ignite UI for Angular スパークライン コンポーネントは、以下のスパークライン タイプをサポートしています。
 
@@ -80,9 +87,10 @@ Ignite UI for Angular スパークライン コンポーネントは、以下の
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### マーカー
+## マーカー
 
 Ignite UI for Angular スパークライン コンポーネントを使用すると、マーカーをシリーズ上の円形のアイコンとして表示して、X/Y 座標に基づいて個々のデータポイントを示すことができます。マーカーは、表示タイプが Line、Area、および Column のスパークラインに設定できます。[`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss) 型のスパークラインは、現在マーカーを設定できません。既定では、マーカーは表示されません。
 
@@ -121,9 +129,10 @@ Ignite UI for Angular スパークライン コンポーネントを使用する
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### 標準範囲
+## 標準範囲
 
 Ignite UI for Angular スパークライン コンポーネントの通常の範囲機能は、データが視覚化されているときに定義済みの意味のある範囲を表す水平方向の縞模様です。標準範囲は、指定した色のアウトラインで網掛けエリアとして設定できます。
 
@@ -154,9 +163,10 @@ DisplayNormalRangeInFront プロパティを設定することで、スパーク
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### トレンドライン
+## トレンドライン
 
 Ignite UI for Angular スパークライン コンポーネントは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。近似曲線を表示するには、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#trendlinetype) プロパティを使用します。
 
@@ -199,9 +209,10 @@ Ignite UI for Angular スパークライン コンポーネントは、実際の
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### 不明な値の補間
+## 不明な値の補間
 
 Ignite UI for Angular スパークライン コンポーネントは、不明な値を検出し、指定された補間アルゴリズムを介して不明な値のためのスペースを描画することができます。データに null 値が含まれていて、この機能を使用しない場合、つまり補間が指定されていない場合、不明な値はプロットされません。
 
@@ -220,9 +231,10 @@ Ignite UI for Angular スパークライン コンポーネントは、不明な
     </button>
 </div>
 
+
 <div class="divider--half"></div>
 
-### データ グリッドのスパークライン
+## データ グリッドのスパークライン
 
 Ignite UI for Angular スパークライン コンポーネントは、データ グリッドのテンプレート列またはテンプレートをサポートする他のコンポーネントに埋め込むことができます。以下のコード例ではその方法を示します。
 
@@ -252,3 +264,4 @@ Ignite UI for Angular スパークライン コンポーネントは、データ
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="sparkline-grid-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
+

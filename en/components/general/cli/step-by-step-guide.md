@@ -1,10 +1,10 @@
 ---
-title: Step-by-Step Guide
+title: Step-by-Step Guide | Ignite UI for Angular | Infragistics
 _description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
-_keywords: Ignite UI for Angular, UI controls, CLI, Templates, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: angular cli, ignite ui for angular, infragistics
 ---
 
-## Step-by-Step Guide
+# Step-by-Step Guide
 If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics or Ignite UI CLI](../cli-overview.md).
 
 To activate the guide using the Schematics collection run:

@@ -1,16 +1,16 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 棒チャート
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示する棒チャートを作成し、複合チャート ビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 棒チャート | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して横棒チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, bar chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 横棒チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
 
-## 棒チャート
+# Angular 棒チャート
 
-Ignite UI for Angular 棒チャートはカテゴリ チャートのグループに属し、チャートの左から右にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して描画されます。[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) は、[`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と同じデータ プロットの概念を使用していますが、データ ポイントは、水平 (x 軸) でなく垂直軸 (y 軸) に沿って拡大します。つまり、棒チャートは柱状チャートのように描画されますが、時計回りに 90 度回転します。
+Ignite UI for Angular 棒チャートはカテゴリ チャートのグループに属し、チャートの左から右にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して描画されます。[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) は、[`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と同じデータ プロットの概念を使用していますが、データ ポイントは、水平 (x 軸) でなく垂直軸 (y 軸) に沿って拡大します。つまり、棒チャートは縦棒チャートのように描画されますが、時計回りに 90 度回転します。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-bar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,24 +18,26 @@ Ignite UI for Angular 棒チャートはカテゴリ チャートのグループ
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 軸の要件
+## 軸の要件
 
 Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
 -   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
 -   [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html)
 
-### データの要件
+## データの要件
 
 [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) には以下のデータ要件があります。
 
 -   データソースはデータ項目の配列またはリストである必要があります。
 -   データソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はチャートで [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) がレンダリングされません。
--   すべてのデータ項目には、財務軸 ([`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html) など) の `Label` プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
+-   すべてのデータ項目には、財務軸 ([`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html) など) の [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) プロパティにマッピングする必要があるデータ列 （文字列または日時）を少なくとも 1 列含める必要があります
 -   すべてのデータ項目には、[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) の `ValueMemberPath` プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
 
 上記データ要件を満たすデータソースとして [SampleCategoryData](data-chart-data-sources-category.md) を使用できます。
@@ -44,9 +46,15 @@ Angular データ チャート コンポーネントはさまざまなタイプ�
 public dataSource: any[] = SampleCategoryData.create();
 ```
 
-### モジュールの要件
+## モジュールの要件
 
-[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) を作成するには、以下のモジュールが必要です。
+[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule
+-   DataChartCategoryModule
+-   DataChartCategoryCoreModule
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -69,7 +77,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 })
 ```
 
-### コード例
+## コード例
 
 このコードは、[`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) を使用して Ignite UI for Angular データ チャートのインスタンスを作成し、それをデータソースにバインドする方法を示します。
 

@@ -1,17 +1,17 @@
 ---
-title: データ チャート | 可視化ツール | Ignite UI for Angular | インフラジスティックス | 散布図 - バブル
-_description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
-_keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+title: Angular データ チャート | データ可視化ツール | 散布バブル チャート | データ バインディング | インフラジスティックス
+_description: インフラジスティックスの Angular チャート コントロールを使用して散布バブル チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
+_keywords: Angular charts, data chart, scatter bubble charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 散布図バブル チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart','BubbleSeries']
 _language: ja
 ---
 
-## 散布図 - バブル シリーズ
+# Angular 散布図 - バブル シリーズ
 
 このトピックは、コード例を示して Angular データ チャート コンポーネントで散布 [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) 使用する方法を説明します。このシリーズ
 データをプロットするためにデカルト座標系 (x, y) を使用する[散布図 - マーカーシリーズ](data-chart-type-scatter-point-series.md) に似ています。このシリーズはスケールされたバブルの集まりとしてデータを表示します。それぞれがその位置を決定する一対の数値X / Y値とそのサイズを決定する 3 番目の値を持ちます。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,15 +19,17 @@ _language: ja
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 軸の要件
+## 軸の要件
 
 Angular データ チャート コンポーネントにはさまざまな種類の軸がありますが、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) では [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) と [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) のみ使用できます。
 
-### データの要件
+## データの要件
 
 [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) には以下のデータ要件があります。
 
@@ -41,9 +43,16 @@ Angular データ チャート コンポーネントにはさまざまな種類�
 public dataSource: any[] = SampleScatterStats.getCountries();
 ```
 
-### モジュールの要件
+## モジュールの要件
 
-散布バブル シリーズは以下のモジュールを要求します。
+散布バブル シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DataChartCoreModule        
+-   DataChartScatterCoreModule
+-   DataChartScatterModule   
+-   DataChartInteractivityModule
+-   NumberAbbreviatorModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -73,7 +82,7 @@ import { IgxDataChartScatterModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### コード例
+## コード例
 
 このコードは、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
@@ -96,7 +105,7 @@ export class AppModule { /* ... */ }
  </igx-data-chart>
 ```
 
-### バブル形状
+## バブル形状
 
 BubbleSeries  の外観は、[Markers](data-chart-series-markers.md) プロパティの使用やバブルの形状を定義済みの形状の 1 つに変更してカスタマイズすることができます。次に例を示します。
 
@@ -116,7 +125,7 @@ series1.markerBrush = "White";
 series1.markerOutline = "Blue";
 ```
 
-### バブル半径スケール
+## バブル半径スケール
 
 [`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusscale) は、バブルのサイズを決定する BubbleSeries のオプション機能です。この機能は、[`IgxSizeScaleComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html) オブジェクトを介して実装できます。半径スケールが設定されると、最小のバブルは [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#minimumvalue) と等しくなり、最大のバブルは [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsizescalecomponent.html#maximumvalue) と等しくなり、すべての残りのバブルはそれに応じて拡大/縮小されます。サイズ スケールはリニアと対数のどちらでもかまいません。半径スケールが設定されていない場合、各バブルのサイズは [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) プロパティにマップされたデータ列の値と等しくなります。
 
@@ -129,7 +138,7 @@ series1.radiusMemberPath = "GdpPerCapita";
 series1.radiusScale = sizeScale;
 ```
 
-### バブル塗りつぶしスケール
+## バブル塗りつぶしスケール
 
 [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillscale) は、単一の [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) 内のカラーパターンを決定するオプション機能です。このシリーズは、以下の塗りつぶしスケールをサポートします。
 

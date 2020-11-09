@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700 
 ---
 
-## Typography
+# Typography
 <p class="highlight">The Ignite UI for Angular Typography Sass module allows you to modify the typography for the entire application, specific typographic scale, or specific components.</p>
 <div class="divider"></div>
 
@@ -34,7 +34,7 @@ An application can define multiple `scales` that may share scale categories betw
 
 Ignite UI for Angular defines a `$default-type-scale` (illustrated by the table above), which is in turn used by the `igx-typography` mixin to set the initial typography styles. The user can, however, pass a different type scale to be used by `igx-typography` mixin.
 
-### Usage
+## Usage
 > [!IMPORTANT]
 > By default we don't apply any typography styles. To use our typography in your application you have to set the `igx-typography` CSS class on a top-level element. All of its children will then use our typography styles.
 
@@ -55,7 +55,7 @@ There are a several mixins and functions that are used to set and retrieve categ
 
 Let's take a closer look at what each one of the aforementioned mixins and functions do.
 
-#### The Type Style
+### The Type Style
 The `igx-type-style` function is an interface-like function that simply ensures that certain arguments are passed as part of the style set for a scale category. Say, for instance, that we want to define a new set of style rules for the `h1` scale category. To do so, we would simply write:
 
 ```scss
@@ -70,7 +70,7 @@ $h1-style: igx-type-style(
 > Any properties that you do not pass, such as `$font-family`, `letter-spacing`, etc. will be automatically replaced with the default values as specified in the `$default-type-scale` for the category you want to use your style for.
 
 
-#### The Type Scale
+### The Type Scale
 
 The type scale is a map of type styles for all 13 scale categories. To generate a new type map, all you have to do is write the following Sass:
 
@@ -91,7 +91,7 @@ Now `$my-type-scale` will store a modified type scale containing the modificatio
 > [!NOTE]
 > You can modify as many of the 13 category scales as you want by passing type styles for each one of them. 
 
-#### The Typography Mixin
+### The Typography Mixin
 
 The typography mixin defines the global typography styles for an application, including how the native h1-h6 and p elements look.
 
@@ -108,7 +108,7 @@ To overwrite the default typography, include the `igx-typography` mixin anywhere
 );
 ```
 
-### Custom Type Styles
+## Custom Type Styles
 The `igx-type-style` mixin can be used to retrieve the style rules for a scale category from a specific type scale. Furthermore, it allows you to add additional style rules.
 
 ```scss
@@ -121,7 +121,7 @@ The `igx-type-style` mixin can be used to retrieve the style rules for a scale c
 
 The above code will produce a class style selector `.my-fancy-h1`, which contains all of the style rules for the `h1` scale category from `$my-type-scale` with the addition of the `color` property set to the `royalblue` color. Now, if you set the class of any element to `.my-fancy-h1`, it will look like any other `h1` element but be also `royalblue` in color.
 
-### Component Typography
+## Component Typography
 
 Most of the components in Ignite UI for Angular use scale categories for styling the text. For instance, the `igx-card` component uses the following scale categories:
 - `h5` - used for styling card title.
@@ -178,7 +178,7 @@ The typography component mixins take a second argument - `$categories`. It is us
 
 Now the card component will use the `overline` scale category to style the title. The user can completely overhaul the entire card typography by assigning different type scales to the different text parts of the card.
 
-### CSS Classes
+## CSS Classes
 
 In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. We also separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `igx-typography`, you can modify it to look like an `h3` by giving it a class of `igx-typography__h3`.
 
@@ -204,7 +204,7 @@ Here's a list of all CSS classes we provide by default:
 
 <div class="divider"></div>
 
-###Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

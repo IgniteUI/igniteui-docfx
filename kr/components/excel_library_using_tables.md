@@ -1,22 +1,22 @@
 ---
-title: Excel Library Using Tables
+title: Angular Excel Library Using Tables
 _description: The Ignite UI for Excel Library component Using Tables.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Tables, Sorting, Filtering
 ---
 
-## Using Tables
+# Angular Using Tables
 
 The Infragistics Excel Engine's [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#worksheet).
 
-<!--### Demo
+<!--## Demo
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel-library/working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>-->
 
 <div class="divider--half"></div>
 
-### Adding a Table to a Worksheet
+## Adding a Table to a Worksheet
 
 Worksheet tables in the Infragistics Excel Engine are represented by the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `Add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html) object.
 
@@ -54,7 +54,7 @@ table.deleteDataRows(0, 5);
 table.resize("A1:G15");
 ```
 
-### Filtering Tables
+## Filtering Tables
 
 Filtering is done by applying a filter on a column in the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html). When the filter is applied on a column, all filters in the table will be reevaluated to determine which rows meet the criteria of all filters applied.
 
@@ -82,7 +82,7 @@ var table = worksheet.tables().add("A1:G10", true);
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 ```
 
-### Sorting Tables
+## Sorting Tables
 
 Sorting is done by setting a sorting condition on a table column. When a sorting condition is set on a column, all sorting conditions in the table will be reevaluated to determine the order of the cells in the table. When cells need to be moved to meet their sort criteria, the entire row of cells in the table is moved as a unit.
 

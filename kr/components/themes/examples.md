@@ -1,7 +1,7 @@
 ---
 title: Theming Examples
 _description: Ignite UI for Angular uses SASS functions and mixins to give you the ability of styling easily your entire application or only specific parts of it with only a couple of steps.
-_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Agular Themes, Global Theme, Component Theme
+_keywords: Ignite UI for Angular, Angular Theming Component, Angular Theming, Ignite UI for Angular Components, Ignite for Angular Themes, Global Theme, Component Theme
 _language: kr
 ---
 
@@ -75,7 +75,7 @@ Our app will have:
 @import '~igniteui-angular/lib/core/styles/components/grid-paginator/grid-paginator-theme';
 
 ```
-- [**Igx-Dialog**](../dialog.md) with embedded [**Igx-Input-Group**](../input_group.md):
+- [**Igx-Dialog**](../dialog.md) with embedded [**Igx-Input-Group**](../input-group.md):
 
 ```scss
 
@@ -335,7 +335,7 @@ Now we can easily change our defined themes with only a `click` event:
 * [Grid Paging](../grid/paging.md)
 * [Grid Filtering](../grid/filtering.md)
 * [Dialog](../dialog.md)
-* [Input Group](../input_group.md)
+* [Input Group](../input-group.md)
 * [Snackbar](../snackbar.md)
 * [Button](../button.md)
 * [Button Group](../buttonGroup.md)

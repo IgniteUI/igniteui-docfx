@@ -4,7 +4,7 @@ _description: Information on using the Licensed Ignite UI npm package
 _keywords: npm package license, ignite ui license feed, licensing
 ---
 
-## License Agreements
+# License Agreements
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the products that you purchase and use.
 PLEASE NOTE: We have updated our license terms and subscription model.
 
@@ -19,13 +19,13 @@ Infragistics Ignite UI for Angular is available as a npm package and you can add
 
 Infragistics Ignite UI Dock Manager Web Component is available as a separate npm package and by installing it you will start using the [Ignite UI Dock Manager Web Component Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
-> More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting_started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
+> More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
 
 ### Upgrading packages using our Angular Schematics or Ignite UI CLI
-If Ignite UI for Angular has been added to the project using [`ng add`](./getting_started.md) or the project has been created through our [schematics collection or Ignite UI CLI](./cli-overview.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
+If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection or Ignite UI CLI](./cli-overview.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
 
 >[!NOTE]
-> As the process changes packages, we recommend that you update your project first before switching to avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update_guide.md).
+> As the process changes packages, we recommend that you update your project first before switching to avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update-guide.md).
 
 Depending on your project setup, either run the following schematic in your project:
 ```bash

@@ -1,15 +1,15 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Markers
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Markers | Infragistics
+_description: Use the markers of the Infragistics' Angular charts to indentify a data point even if it values fall between major or minor gridlines. Check out the Ignite UI for Angular graph's markers feature!
+_keywords: Angular charts, data chart, markers, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'MarkerSeries']
 ---
 
-## Markers
+# Angular Markers
 
 In the Angular data chart component's plot area, markers are visual elements displayed at location of data points. Markers help your end users immediately identify a data point’s even if its values fall between major or minor grid lines.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -17,11 +17,13 @@ In the Angular data chart component's plot area, markers are visual elements dis
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Supported Series
+## Supported Series
 
 Most of data chart series support markers and they are listed below:
 
@@ -31,10 +33,10 @@ Most of data chart series support markers and they are listed below:
 -   Some Scatter Series:
     -   [Scatter Bubble Series](data-chart-type-scatter-bubble-series.md)
     -   [Scatter Point Series](data-chart-type-scatter-point-series.md)
-    -   [Scatter Line Series](data-chart-type-scatter-point-series.md)
-    -   [Scatter Spline Series](data-chart-type-scatter-point-series.md)
+    -   [Scatter Line Series](data-chart-type-scatter-line-series.md)
+    -   [Scatter Spline Series](data-chart-type-scatter-spline-series.md)
 
-### Marker Properties
+## Marker Properties
 
 Above series support 12 shapes of markers that you can change using the [`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) property.  Also, you can change fill and stroke using [`markerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) and [`markerOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) properties respectively.
 
@@ -50,7 +52,7 @@ This code snippet below demonstrate how to change shape and appearance of marker
 
 <!-- TODO add this section when we add MarkerTemplate
 
-### Marker Templates
+## Marker Templates
 
 You can provide custom shape using the `MarkerTemplate` property.
 

@@ -1,18 +1,18 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Scatter Shape
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Scatter Shape Chart | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create shape charts such as ScatterPolygonSeries and ScatterPolylineSeries. View the demo for more information!
+_keywords: Angular charts, data chart, shape charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries','ScatterPolylineSeries']
 
 ---
 
-## Scatter Shape Series
+# Angular Scatter Shape Series
 
 This topic explains various types of shape series in the Angular data chart component. Scatter shape series is a group of chart series that take array of shapes (array or arrays of X/Y coordinates) and render them as collection of polygons ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html))  or polylines ([`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)) in Cartesian (x, y) coordinate system.
 
 Scatter shape series are often used highlight regions in scientific data or they can be used to plot diagrams, blueprints, or even floor plan of buildings.
 
-### Demo
+## Demo
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-shape-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -20,11 +20,13 @@ Scatter shape series are often used highlight regions in scientific data or they
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### Types of Shape Series
+## Types of Shape Series
 
 The following table lists all types of shape series and their descriptions:
 
@@ -33,7 +35,7 @@ The following table lists all types of shape series and their descriptions:
 | [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | Displays a polygon for each of shape mapped to [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) property. It is useful for rendering shapes such as a country boarders.           |
 | [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | Displays a polyline for each of shape mapped to [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) property. It is useful for rendering disconnected lines such as a network graph. |
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with scatter shape series.
 
@@ -42,7 +44,7 @@ The Angular data chart component provides various types of axes but only the fol
 | [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 | [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 
-### Required Data
+## Required Data
 
 Scatter shape series have the following data requirements:
 
@@ -56,9 +58,16 @@ You can use the [SampleShapeData](data-chart-data-sources-shape.md) as data sour
 public dataSource: any[] = SampleShapeData.create();
 ```
 
-### Required Modules
+## Required Modules
 
-The scatter polygon series requires the following modules:
+The scatter polygon series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartScatterCoreModule
+-   DataChartScatterModule   
+-   DataChartInteractivityModule
+-   ScatterPolygonSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -84,7 +93,7 @@ import { IgxDataChartShapeModule } from 'igniteui-angular-charts';
 export class AppModule { /* ... */ }
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of data chart with `ShapeColumnSeries` and bind it to the data source.
 

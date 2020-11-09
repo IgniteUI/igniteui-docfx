@@ -1,71 +1,110 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Filter | Angular Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+title: Angular Filter | Angular Filterable Data Grid | Infragistics
+_description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Filter | Angular Tree Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+title: Angular Filter | Angular Filterable Data Tree Grid | Infragistics
+_description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Filter | Angular Hierarchical Grid Filtering | Ignite UI for Angular | Infragistics
-_description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
+title: Angular Filter | Angular Filterable Data Hierarchical Grid | Infragistics
+_description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
+_canonicalLink: grid/filtering
 ---
 }
 
-### @@igComponent Filtering Overview
+# Angular @@igComponent Filtering
+IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel-style-filtering.md) and [Advanced filtering](advanced-filtering.md) which enable you to display only the records that meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 
-Angular grid filtering enables you to display only the records which meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
+## Angular Filter Example
 
-#### Demo
-
+The sample below demonstrates @@igComponent's **Quick filtering** user experience. @@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method is used to apply _contains_ condition on the _ProductName column_ through external _igxInputGroup component_.  } 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:610px">
-    <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
 <div class="divider--half"></div>
 
-###Interaction
+## Setup
+In order to specify if filtering is enabled and which filtering mode should be used, the @@igComponent exposes the following boolean properties - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering), [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering), [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) and [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable).
+
+Property **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** enables you to specify the following options:
+- **false** - the filtering for the corresponding grid will be disabled; /default value/
+- **true** - the filtering for the corresponding grid will be enabled;
+
+Property **[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)** enables you to specify the following options:
+- **false** - the advanced filtering for the corresponding grid will be disabled; /default value/
+- **true** - the advanced filtering for the corresponding grid will be enabled;
+
+Property **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode)** enables you to specify the following options:
+- **quickFilter** - a simplistic filtering UI; /default value/
+- **excelStyleFilter** - an Excel-like filtering UI;
+
+Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)** enables you to specify the following options:
+- **true** - the filtering for the corresponding column will be enabled; /default value/
+- **false** - the filtering for the corresponding column will be disabled;
+
+
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="Price" [dataType]="'number'" [filterable]="false">
+</@@igSelector>
+```
+
+To enable the [Advanced filtering](advanced-filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
+
+```html
+<@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+</@@igSelector>
+```
+
+>[!NOTE]
+>You can enable both the [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) and the advanced filtering user interfaces in the @@igComponent. Both filtering user interfaces will work independently of one another. The final filtered result in the @@igComponent is the intersection between the results of the two filters.
+
+## Interaction
 
 In order to open the filter row for a particular column, the 'Filter' chip below its header should be clicked. To add conditions you should choose filter operand using the dropdown on the left of the input and enter value. For `number` and `date` columns 'Equals' is selected by default, for `string` - 'Contains' and for `boolean` - 'All'. Pressing 'Enter' confirms the condition and you are now able to add another one. There is a dropdown, between 'condition' chips, which determines the logical operator between them, 'AND' is selected by default. To remove a condition you can click the 'X' button of the chip, and to edit it you should select the chip and the input will be populated with the chip's data. While filter row is opened you can click on any filterable column's header in order to select it and to be able to add filter conditions for it.
 
 While some filtering conditions have been applied to a column, and the filter row is closed, you can either remove the conditions by clicking the chip's close button, or you can open the filter row by selecting any of the chips. When there is not enough space to show all the conditions, a filter icon is shown with a badge that indicates how many more conditions there are. It can also be clicked in order to open the filter row.
 
-###Usage
+## Usage
 
 There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The @@igComponent currently provides not only a simplistic filtering UI, but also more complex filtering options. Depending on the set [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) of the column, the correct set of [**filtering operations**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) is loaded inside the filter UI dropdown. Additionally, you can set the [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and the initial [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) properties.
 
@@ -95,7 +134,7 @@ Filtering feature is enabled for the @@igComponent component by setting the [`al
 > [!NOTE]
 > If values of type `string` are used by a column of dataType `Date`, the @@igComponent won't parse them to `Date` objects and using filtering conditions won't be possible. If you want to use `string` objects, additional logic should be implemented on the application level, in order to parse the values to `Date` objects.
 
-You can filter any column or a combination of columns through the @@igComponent API. The @@igComponent exposes several methods for this task - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) and [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter).
+You can filter any column or a combination of columns through the @@igComponent API. The @@igComponent exposes several methods for this task - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter), [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) and [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter).
 
 *   [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - filter a single column or a combination of columns.
 
@@ -153,7 +192,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.Or;
 this.@@igObjectRef.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
 ```
 
-*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearfilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
+*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
 
 ```typescript
 // Remove the filtering state from the ProductName column
@@ -163,7 +202,7 @@ this.@@igObjectRef.clearFilter('ProductName');
 this.@@igObjectRef.clearFilter();
 ```
 
-#### Initial filtered state
+## Initial filtered state
 
 To set the initial filtering state of the @@igComponent, set the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
 
@@ -187,7 +226,7 @@ public ngAfterViewInit() {
 }
 ```
 
-#### Filtering logic
+### Filtering logic
 
 The [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringlogic) property of the @@igComponent controls how filtering multiple columns will resolve in the @@igComponent. You can change it at any time through the @@igComponent API, or through the @@igComponent input property.
 
@@ -205,14 +244,14 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
-#### Remote Filtering
+## Remote Filtering
 
-The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 
 <div class="divider--half"></div>
 }
 
-#### Custom Filtering Operands
+## Custom Filtering Operands
 You can customize the filtering menu by adding, removing or modifying the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
 
 In the sample below, inspect the “Product Name” and “Discontinued” columns filters menus. For the “Discontinued” column filter, we have limited the number of operands to All, True and False. For the “Product Name” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
@@ -320,8 +359,8 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -330,8 +369,8 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -340,12 +379,12 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
-#### Retemplating filter cell
+## Re-templating filter cell
 You can add a template marked with `igxFilterCellTemplate` in order to retemplate the filter cell. In the sample below, an input is added for the string columns and IgxDatePicker for the date column. When the user types or selects a value, a filter with contains operator for string columns and equals operator for date columns, is applied using grid's public API.
 
 @@if (igxName === 'IgxGrid') {
@@ -354,8 +393,8 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -364,8 +403,8 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -374,28 +413,13 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
-#### Breaking Changes in 6.1.0
-* @@igxName `filteringExpressions` property is removed. Use [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) instead.
-* `filter_multiple` method is removed. Use [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method and [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property instead.
-* The [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method has new signature. It now accepts the following parameters:
-  * `name` - the name of the column to be filtered.
-  * `value` - the value to be used for filtering.
-  * `conditionOrExpressionTree` (optional) - this parameter accepts object of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) or [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html). If only simple filtering is needed, a filtering operation could be passed as an argument. In case of advanced filtering, an expressions tree containing complex filtering logic could be passed as an argument.
-  * `ignoreCase` (optional) - whether the filtering is case sensitive or not.
-* [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) event now have only one parameter of type [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) which contains the filtering state of the filtered column.
-* filtering operands: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html).
-* [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) now exposes a [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) property, which takes an [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) class reference.
-* Custom filters can be provided to the @@igComponent columns by populating the [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) property of the [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) with operations of [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) type.
-}
-<div class="divider--half"></div>
 
-### Styling
+## Styling
 
 To get started with styling the filtering row, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -418,10 +442,10 @@ As seen, the `igx-grid-theme` only controls colors for the filtering row and the
 
 ```scss
 $dark-input-group: igx-input-group-theme(
-    $box-background: #292826,
-    $idle-text-color: #FFCD0F,
-    $focused-text-color: #FFCD0F,
-    $filled-text-color: #FFCD0F
+    $box-background: #FFCD0F,
+    $idle-text-color: #292826,
+    $focused-text-color: #292826,
+    $filled-text-color: #292826
 );
 
 $dark-button: igx-button-theme(
@@ -470,7 +494,7 @@ The last step is to **include** the component mixins, each with its respective t
 }
 ```
 
-#### Defining a color palette
+### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
@@ -494,10 +518,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "primary", 400),
-    $idle-text-color: igx-color($dark-palette, "secondary", 400),
-    $focused-text-color: igx-color($dark-palette, "secondary", 400),
-    $filled-text-color: igx-color($dark-palette, "secondary", 400)
+    $box-background: igx-color($dark-palette, "secondary", 400),
+    $idle-text-color: igx-color($dark-palette, "primary", 400),
+    $focused-text-color: igx-color($dark-palette, "primary", 400),
+    $filled-text-color: igx-color($dark-palette, "primary", 400)
 );
 
 $dark-button: igx-button-theme(
@@ -511,7 +535,7 @@ $dark-button: igx-button-theme(
 >[!NOTE]
 >The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
 
-#### Using Schemas
+### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
@@ -540,16 +564,16 @@ $custom-grid-schema: extend($_light-grid,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("primary", 400)
+            igx-color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("secondary", 400)
+            igx-color: ("primary", 400)
         )
     )
 );
@@ -604,7 +628,7 @@ $custom-input-group: igx-input-group-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-#### Demo
+### Demo
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:500px">
@@ -612,8 +636,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -622,8 +646,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -632,19 +656,39 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
-### API References
+## Known Limitations
+
+> [!NOTE] 
+> Some browsers such as Firefox fail to parse regional specific decimal separators by considering them grouping separators, thus resulting in them being invalid. When inputting such values for a numeric column filter value, only the valid part of the number will be applied to the filtering expression. For further information, refer to the Firefox [issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1199665).
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+### Breaking Changes in 6.1.0
+* @@igxName `filteringExpressions` property is removed. Use [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) instead.
+* `filter_multiple` method is removed. Use [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method and [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property instead.
+* The [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method has new signature. It now accepts the following parameters:
+  * `name` - the name of the column to be filtered.
+  * `value` - the value to be used for filtering.
+  * `conditionOrExpressionTree` (optional) - this parameter accepts object of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) or [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html). If only simple filtering is needed, a filtering operation could be passed as an argument. In case of advanced filtering, an expressions tree containing complex filtering logic could be passed as an argument.
+  * `ignoreCase` (optional) - whether the filtering is case sensitive or not.
+* [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) event now have only one parameter of type [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) which contains the filtering state of the filtered column.
+* filtering operands: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html).
+* [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) now exposes a [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) property, which takes an [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) class reference.
+* Custom filters can be provided to the @@igComponent columns by populating the [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) property of the [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) with operations of [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) type.
+}
+
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
@@ -652,9 +696,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [Paging](paging.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Column Moving](column_moving.md)
-* [Column Pinning](column_pinning.md)
-* [Column Resizing](column_resizing.md)
+* [Column Moving](column-moving.md)
+* [Column Pinning](column-pinning.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

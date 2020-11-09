@@ -5,28 +5,29 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Tabs
+# Tabs
 
 <p class="highlight">
 Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。[`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) および [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html) のラッパーとして機能し、データのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
 </p>
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 250px; border: 1px solid #ededed;">
-    <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="tabs-sample-0" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);">
     </iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
-はじめに、** app.module.ts ** ファイルに  `IgxTabsModule` をインポートします。
+はじめに、**app.module.ts** ファイルに  `IgxTabsModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -60,13 +61,13 @@ export class AppModule {}
     <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
-### Tabs タイプ
+## Tabs タイプ
 タブには、`fixed` および `contentfit` の 2 種類があります。[`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabstype) 入力を設定して、[`fixed`]({environment:angularApiUrl}/enums/tabstype.html#fixed) と [`contentfit`]({environment:angularApiUrl}/enums/tabstype.html#contentfit) タブを選択します。
 - **Content-fit タブ** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) に基づいて決定され、すべてのタブのパディングが等しくなります。
 タブのタイプに関係なく、タブ ヘッダーの幅は指定した最小幅および最大幅によって制限されます。
@@ -90,13 +91,13 @@ export class AppModule {}
     <iframe id="tabs-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider"></div>
 
-### タブのカスタマイズ
+## タブのカスタマイズ
 
 タブに [`icon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) 入力を追加します。`igx-tabs` コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 
@@ -134,8 +135,8 @@ export class AppModule {}
 </div>
 
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-3" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -154,7 +155,7 @@ export class AppModule {}
 </igx-tabs>
 ```
 
-### ルーター アウトレット コンテナとの統合
+## ルーター アウトレット コンテナとの統合
 
 `igx-tabs` コンポーネントは、タブ グループごとにコンテンツが指定されたタブのリストとして使用することを目的としています。しかし、コンテンツがタブ グループとは別のタブ項目を定義する場合があります。。
 
@@ -255,7 +256,7 @@ export class AppRoutingModule { }
 
   <igx-tab-item 
     label="Tab 3" 
-    icon="radio_button_checked"
+    icon="radio-button_checked"
     routerLink="view3"
     routerLinkActive 
     #rla3="routerLinkActive"
@@ -273,11 +274,11 @@ export class AppRoutingModule { }
 </div>
 
 <div>
-  <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 
 タブのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するテーマ モジュールをインポートする必要があります。
 
@@ -320,7 +321,7 @@ CSS 変数をサポートしないブラウザー (IE 11 など) をターゲッ
   }
 }
 ```
-#### パレットおよび色
+### パレットおよび色
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
 
@@ -357,14 +358,13 @@ $dark-tabs: igx-tabs-theme(
     <iframe id="tabs-style-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -376,7 +376,7 @@ $dark-tabs: igx-tabs-theme(
 * [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 

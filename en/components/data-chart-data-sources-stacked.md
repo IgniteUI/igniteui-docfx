@@ -1,13 +1,38 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Data Source
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Data Source | Infragistics
+_description: Use Infragistics' Angular charts control to create stacked charts such as stacked bar, stacked area and more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, stacked chart, Ignite UI for Angular, Infragistics, data source
 mentionedTypes: ['XamDataChart']
 ---
 
-## Sample Data Source for Stacked Series
+# Angular Sample Data Source for Stacked Series
 
 This topic provides an example on how to implement data source for Stacked Series
+
+    public class SampleCategoryData
+        {
+            public static List<SampleCategoryItem> Create() {
+                // total olympic medals for top countries
+                var data = new List<SampleCategoryItem>() {
+                    new SampleCategoryItem {Year = "1996", USA= 148, CHN= 110, RUS= 95},
+                    new SampleCategoryItem {Year = "2000", USA= 142, CHN= 115, RUS= 91},
+                    new SampleCategoryItem {Year = "2004", USA= 134, CHN= 121, RUS= 86},
+                    new SampleCategoryItem {Year = "2008", USA= 131, CHN= 129, RUS= 65},
+                    new SampleCategoryItem {Year = "2012", USA= 135, CHN= 115, RUS= 77},
+                    new SampleCategoryItem {Year = "2016", USA= 146, CHN= 112, RUS= 88},
+                };
+                return data;
+            }
+        }
+
+        public class SampleCategoryItem
+        {    
+            public int USA { get; set; }
+            public int CHN { get; set; }
+            public int RUS { get; set; }
+
+            public string Year { get; set; }
+        }
 
 ```ts
 export class SampleCategoryItem  {

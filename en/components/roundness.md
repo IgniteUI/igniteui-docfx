@@ -4,12 +4,12 @@ _description: Ignite UI for Angular allow you to change the shape of components 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
 ---
 
-## Components roundness 
+# Components roundness 
 <p class="highlight">In Ignite UI for Angular we allows you to change the shape of components by changing their border-radius</p>
 
 <div class="divider--half"></div>
 
-### Overview
+## Overview
 Border radius as any other property is set through the theme schema like it's shown in the example bellow.
 
 ```scss
@@ -30,7 +30,7 @@ We decided to not limit you to fractions only. You can use whatever unit you wan
 
 If you decide to go with fractions, you will automatically be limited by the theming engine to min and max boundary for each component.
 
-### How to use?
+## How to use?
 Let's see how we can change the default values for the buttons from the example above.
 
 ```scss
@@ -50,15 +50,16 @@ $myButtons-theme: (
 The result from the above code snippets is:
 
 <div class="sample-container loading" style="height: 250px">
-    <iframe id="buttons-roundness-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/buttons-roundness-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="buttons-roundness-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/buttons-roundness-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Baseline roundness values
+## Baseline roundness values
 The table shows the default border-radius for each component and its min and max boundaries
 
 |                        | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |

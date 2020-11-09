@@ -1,41 +1,44 @@
 ---
-title: List View コンポーネント
-_description: Ignite UI for Angular List View コンポーネントを使用すると、ネイティブ Angular フレームワークで行にデータを任意のテンプレートを使用して表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular List View コンポーネント, Angular List View コントロール
+title: Angular List View | Angular List Example | Infragistics
+_description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
+_keywords: angular list, ignite ui for angular, angular list component
 _language: ja
 ---
 
-## List View
+# Angular List ビュー
 
-<p class="highlight">Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。</p>
-<div class="divider"></div>
+List 要素は、項目のグループを番号の付いた形式または黒丸の付いた形式のいずれかで提示する時に非常に役に立ちます。さまざまなレイアウト要素の配列を含むテキスト アイテムの単純なリスト、またはより複雑なリストを作成できます。
+Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。
 
-### List デモ
+## Angular List 例
+次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[**IgxAvatar**](avatar.md) と [**IgxIcon**](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
-<div class="sample-container loading" style="height: 477px">
-<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<div class="sample-container loading" style="height: 513px">
+<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## Angular でリスト ビューを作成する方法
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
+Angular List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
 
-Ignite UI for Angular List を初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Angular List コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](general/getting-started.md)トピックををご覧ください。
 
 次に app.module.ts ファイルに `IgxListModule` をインポートします。
+
 ```typescript
 // app.module.ts
 
@@ -50,7 +53,9 @@ import { IgxListModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-連絡先コンポーネントのテンプレートでリストを作成できます。項目がない場合は、空のリストのデフォルト テンプレートを使用できます。[`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
+連絡先コンポーネントのテンプレートでリストを作成できます。
+項目がない場合は、空のリストのデフォルト テンプレートを使用できます。
+[`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) ディレクティブを使用して空のリストの外観をカスタマイズするためにカスタム テンプレートを設定できます。この場合、デフォルト テンプレートは使用されません。
 
 ```html
 <!--contacts.component.html-->
@@ -81,8 +86,8 @@ export class AppModule {}
 <iframe id="list-sample-5-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
 データの読み込みで遅延が発生した場合、リストの [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isloading) プロパティを `true` に設定し、デフォルト テンプレートで処理中のデータ読み込み処理についてユーザーに通知できます。[`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) ディレクティブを使用してカスタムの読み込みテンプレートを提供できます。
@@ -111,11 +116,11 @@ export class AppModule {}
 <iframe id="list-sample-6-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-6' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-#### リスト項目の追加
+### リスト項目の追加
 
 リストが空の場合にテンプレートは便利ですが、次は項目を追加します。以下のコードを追加すると項目の簡易なリストを作成できます。
 
@@ -136,11 +141,11 @@ export class AppModule {}
 <iframe id="list-sample-2-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-リスト項目にカスタム マークアップおよびスタイルを適用します。たとえば、名前の下に電話番号が表示される連絡先のリストを作成する場合、コンポーネントの typescript ファイルで連絡先のリストを定義します。
+リスト項目にカスタム マークアップおよびスタイルを適用します。たとえば、名前の下に電話番号が表示される連絡先の Angular リストを作成する場合、コンポーネントの typescript ファイルで連絡先のリストを定義します。
 
 ```typescript
 // contacts.component.ts
@@ -173,11 +178,11 @@ public contacts = [{
 
 <igx-list>
   <igx-list-item isHeader="true">
-    連絡先
+    Contacts
   </igx-list-item>
   <igx-list-item *ngFor="let contact of contacts">
-    <span class="name">{{ contact.name }}</span>
-    <span class="phone">{{ contact.phone }}</span>
+    <h4 igxListLineTitle>{{ contact.name }}</h4>
+    <p igxListLineSubTitle>{{ contact.phone }}</p>
   </igx-list-item>
 </igx-list>
 ```
@@ -190,11 +195,11 @@ public contacts = [{
 <iframe id="list-sample-3-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### アバターおよびアイコンの追加
+### アバターおよびアイコンの追加
 
 その他のコンポーネントを [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) と共に使用してエクスペリエンスの向上や機能拡張が可能です。名前や電話番号の値の左に画像のアバターを表示できます。また、連絡先をお気に入りに追加するための星アイコンを右側に追加できます。要素を追加するには、[**IgxAvatar**](avatar.md) および [**IgxIcon**](icon.md) モジュールを app.module.ts ファイルにインポートします。
 
@@ -267,9 +272,9 @@ public contacts = [{
 </igx-list>
 ```
 
-- `igxListThumbnail` は、リスト項目の開始に何らかのメディアを追加する必要がある場合に使用します。このディレクティブは、ターゲット要素（この場合は igx-avatar）を、デフォルトの位置と間隔を提供するコンテナーにラップします。
+- `igxListThumbnail` は、リスト項目の開始に何らかのメディアを追加する必要がある場合に使用します。このディレクティブは、ターゲット要素 (この場合は igx-avatar) を、デフォルトの位置と間隔を提供するコンテナーにラップします。
 - `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは ` igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナでターゲット要素をラップします。
-- `igxListLine` は、 `igxListThumbnail` と ` igxListAction` の間にテキストが必要な場合に使用します。このディレクティブは、テキストの位置、間隔、配置が残りのディレクティブと外観がよくなるようにします。
+- `igxListLine` は、`igxListThumbnail` と `igxListAction` の間にテキストが必要な場合に使用します。このディレクティブは、テキストの位置、間隔、配置が残りのディレクティブと外観がよくなるようにします。
 
 次に、連絡先オブジェクトの isFavorite プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
 
@@ -326,18 +331,18 @@ public selectDensity(event) {
 
 結果は以下のようになります。
 
-<div class="sample-container loading" style="height: 477px">
+<div class="sample-container loading" style="height: 513px">
 <iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-#### リスト項目パンニング
+### リスト項目パンニング
 
-連絡先や電話番号のリストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
+連絡先や電話番号の Angular リストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
 [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) はリスト項目パンニングに最適です。
 以下の手順に沿って作成します。
 - [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) またはそのいずれかを使用してパンニングを有効にします。
@@ -444,14 +449,16 @@ public leftPanPerformed(args) {
 <iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### フィルタリング
+## Angular フィルター リスト
+
 リストで連絡先を名前によって検索する機能を追加します。これはフィルタリング パイプを使用して実装できます。
-コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
+
+Angular コンポーネント テンプレートの上側に入力フィールドを追加し、コンポーネントの _searchContact_ プロパティにバインドします:
 
 ```html
 <!--contacts.component.html-->
@@ -507,9 +514,7 @@ public leftPanPerformed(args) {
 </igx-list-item>
 ```
 
-<div class="divider"></div>
-
-### テーマの適用
+## List コンポーネントにテーマの適用
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
 
@@ -536,8 +541,8 @@ public leftPanPerformed(args) {
 <iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
@@ -546,15 +551,15 @@ public leftPanPerformed(args) {
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)を参照してください。
 
-### API まとめ
+## API リファレンス
 
-この記事では List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
+この記事では Angular List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-使用したその他のコンポーネント:
+使用したその他の Angular コンポーネント:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
@@ -563,7 +568,7 @@ public leftPanPerformed(args) {
 
 <div class="divider"></div>
 
-### 追加のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

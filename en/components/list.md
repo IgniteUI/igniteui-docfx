@@ -1,38 +1,39 @@
 ---
-title: List View Component
-_description: Using any template, display data within rows seamlessly and intuitively through a native Angular framework with Ignite UI for Angular List View component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular List View components, Angular List View controls
+title: Angular List View | Angular List Example | Infragistics 
+_description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
+_keywords: angular list, ignite ui for angular, angular list component
 ---
 
-## List View
+# Angular List View
 
-<p class="highlight">The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component. </p>
-<div class="divider"></div>
+The List element is extremely useful when presenting a group of items. You can create a simple list of textual items, or a more complex one, containing an array of different layout elements.
+The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component.
 
-### List Demo
-
+## Angular List Example
+The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 <div class="sample-container loading" style="height: 513px">
-<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## How to create list view with Angular?
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
 
-At its core the list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
+At its core the Angular list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
 
-To get started with the Ignite UI for Angular List, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Angular list component, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxListModule` in our app.module.ts file:
 
@@ -51,7 +52,7 @@ export class AppModule {}
 ```
 
 Then in the template of our contacts component we can create our list, but what if currently (or at some point in the future) we have no items in it?
-In this case, the list provides us with a default template that is used when the list is empty.
+In this case, the Angular list provides us with a default template that is used when the list is empty.
 We can always provide our own template for the look of our empty list by simply using the [`igxEmptyList`]({environment:angularApiUrl}/classes/igxemptylisttemplatedirective.html) directive. In this case, the default template will not be used:
 
 ```html
@@ -83,8 +84,8 @@ If all went great, this is how our empty list should look like:
 <iframe id="list-sample-5-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 Sometimes there may be a delay in your data loading. In this case you can set the list's [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isloading) property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the [`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) directive:
@@ -113,11 +114,11 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 <iframe id="list-sample-6-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-6' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-6-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Add List Items
+### Add List Items
 
 It's nice having a template for when the list is empty, but now let's add some items! We can add the following code to get a simple list of items:
 
@@ -138,11 +139,11 @@ If all went well, you should see the following in your browser:
 <iframe id="list-sample-2-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-Let's up our game a bit and enhance our list items. Say we want to create a list of contacts with a name and a phone number displayed under the name.
+Let's up our game a bit and enhance our list items. Say we want to create an Angular list of contacts with a name and a phone number displayed under the name.
 In our component typescript file we can define a list of contacts:
 
 ```typescript
@@ -187,17 +188,17 @@ Let's look at how we can use some of them in the next example:
 
 Both directives `igxListLineTitle` and `igxListLineSubTitle` gives our list items some default look. 
 
-After all that our list should now look like that:
+After all that our Angular list should now look like that:
 
 <div class="sample-container loading" style="height: 400px">
 <iframe id="list-sample-3-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-#### Adding Avatar and Icons
+### Adding Avatar and Icons
 
 We can use some of our other components in conjunction with the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to enrich the experience and add some functionality. We can have a nice picture avatar to the left of the name and phone values. Additionally, we can add a star icon to the right of them to allow the user to favorite a contact. To do that let's grab the [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) modules and import them in our app.module.ts file.
 
@@ -333,14 +334,14 @@ And here's the result of all that work:
 <iframe id="list-sample-4-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-#### List Items Panning
+### List Items Panning
 
-Now that we have such a beautiful list with contacts and their phone numbers, why don't we implement an ability to call a contact.
+Now that we have such a beautiful Angular list with contacts and their phone numbers, why don't we implement an ability to call a contact.
 The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) has the perfect solution for this - list item panning.
 To do this you have to implement the following steps:
 - Enable the panning using the [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) and/or the [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) properties
@@ -447,17 +448,17 @@ Now try panning the list items for yourself:
 <iframe id="list-sample-7-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-7' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-7-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Filtering
+## Angular filter list
 
 Our list is looking good, but wouldn't it be even better if we could search for contacts by name? We can easily achieve that by using our filtering pipe.
 Let's do this.
 
-Let's add an input field to the top in our component template first and bind it to a property in our component called _searchContact_:
+Let's add an input field to the top in our Angular component template first and bind it to a property in our component called _searchContact_:
 
 ```html
 <!--contacts.component.html-->
@@ -513,7 +514,7 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 </igx-list-item>
 ```
 
-### Applying theme to the list component
+## Applying theme to the list component
 
 Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
 
@@ -540,8 +541,8 @@ The result from the above code is
 <iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-8-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
@@ -550,15 +551,15 @@ The result from the above code is
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 
-### API References
+## API References
 
-In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
+In this article we covered a lot of ground with the Angular list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-Additional components that were used:
+Additional Angular components that were used:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
@@ -567,7 +568,7 @@ Additional components that were used:
 
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

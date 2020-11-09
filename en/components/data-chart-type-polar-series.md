@@ -1,17 +1,19 @@
 ---
-title: Data Chart | Visualization Tools | Ignite UI for Angular | Infragistics | Polar
-_description: Create a data chart that displays multiple instances of visual elements in the same plot area in order to create composite chart views.
-_keywords: data chart, Ignite UI for Angular, Infragistics
+title: Angular Data Chart | Data Visualization Tools | Polar Charts | Data Binding | Infragistics
+_description: Use Infragistics' Angular charts control to create polar charts such as polar scatter, polar line, polar area and many more. Learn about our Ignite UI for Angular graph types!
+_keywords: Angular charts, data chart, polar charts, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'PolarLineSeries']
 ---
 
-## Polar Series
+# Angular Polar Series
 
 This topic explains various types of polar series in the Angular data chart component. Polar series is a group of series that use the polar (angle, radius) coordinate system instead of the Cartesian (x, y) coordinate system to plot data in chart. In other words, polar series take concepts of [Scatter Series](data-chart-type-scatter-point-series.md) and wrap them around a circle rather than stretching along a horizontal line. This group of series is used to show the relationship among the items in several distinct series of data using the polar coordinates system.
 
 Polar series draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind's direction and speed, strength and direction of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
 
-### Demo
+<!-- Angular, React, WebComponents -->
+
+## Demo
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -19,11 +21,14 @@ Polar series draw attention to uneven intervals or clusters of data. They are of
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
-### Types of Polar Series
+## Types of Polar Series
 
 The Data Chart supports the following types of polar series:
 
@@ -35,7 +40,7 @@ The Data Chart supports the following types of polar series:
 | [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html)       | Displays a collection of markers representing data points which are located at the polar (angle/radius) coordinates                                              |
 | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)             | Displays a collection of straight lines connecting data points which are located at the polar (angle/radius) coordinates                                         |
 
-### Required Axes
+## Required Axes
 
 The Angular data chart component provides various types of axes but only the following types of axes can be used with polar series.
 
@@ -47,7 +52,7 @@ The Angular data chart component provides various types of axes but only the fol
 | [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html)       | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
 | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)             | [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html) | [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericangleaxiscomponent.html) |
 
-### Required Data
+## Required Data
 
 Polar series have the following data requirements:
 
@@ -63,9 +68,15 @@ You can use the [SamplePolarData](data-chart-data-sources-polar.md) as data sour
 public dataSource: any[] = SamplePolarData.create();
 ```
 
-### Required Modules
+## Required Modules
 
-In order to use polar series, you need to import the following modules in your app during load:
+The polar series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+
+-   DataChartCoreModule        
+-   DataChartPolarModule
+-   DataChartPolarCoreModule      
+-   DataChartInteractivityModule
+    <!-- end: Blazor -->
 
 ```ts
 // axis' modules:
@@ -95,7 +106,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 })
 ```
 
-### Code Example
+## Code Example
 
 This code demonstrates how to create an instance of data chart with [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) and bind it to the data source.
 

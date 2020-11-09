@@ -4,21 +4,22 @@ _description: Whether building informative dialogs or data manipulation windows,
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dialog Window components, Angular Dialog Window controls
 ---
 
-##Dialog Window
+# Dialog Window
 <p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
 <div class="divider"></div>
 
-### Dialog Demo
+## Dialog Demo
 <div class="sample-container loading" style="height:200px">
-    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### Usage
+## Usage
 
 The first step is to import the **IgxDialogModule** in our **app.module.ts** file:
 
@@ -37,7 +38,7 @@ export class AppModule {}
 ```
 <div class="divider--half"></div>
 
-#### Alert Dialog
+### Alert Dialog
 
 To create an alert dialog, in the template of our email component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
@@ -58,7 +59,7 @@ If everything's done right, you should see the demo sample shown above in your b
 
 <div class="divider--half"></div>
 
-#### Standard Dialog
+### Standard Dialog
 
 To create a standard dialog, in the template of our file manager component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
 [`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
@@ -80,15 +81,15 @@ To create a standard dialog, in the template of our file manager component, we a
     <iframe id="dialog-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-#### Custom Dialog
+### Custom Dialog
 
 To create a custom dialog, in the template of our sign-in component, we add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
-We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
+We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input-group.md) and [**igxInput**](input-group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
@@ -130,12 +131,12 @@ We add two input groups consisting of a label and and input decorated with the [
     <iframe id="dialog-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-#### Position and Animation Settings
+### Position and Animation Settings
 
 There are two ways to change the position at which the `igxDialog` will be shown:
 
@@ -196,7 +197,7 @@ params: {
 }
 ```
 
-### Styling
+## Styling
 
 To get started with styling the dialog window, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -218,7 +219,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
-Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+Since the dialog window uses the [`IgxOverlayService`](overlay-main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
 ```html
 <div igxOverlayOutlet>
@@ -229,9 +230,9 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 ```
 
 > [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay-main.md), you can take a look at this [link](overlay-main.md#styling).
 
-#### Including Themes
+### Including Themes
 
 <div class="divider"></div>
 
@@ -270,17 +271,17 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 }
 ```
 
-#### Demo
+### Demo
 <div class="sample-container loading" style="height:300px">
     <iframe id="dialog-styling-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog-styling-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-### API Summary
+## API Summary
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
@@ -288,7 +289,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

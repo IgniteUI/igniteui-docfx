@@ -4,11 +4,11 @@ _description: The Ignite UI for Angular Theming component is developed in SASS w
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
 ---
 
-## Component Themes
+# Component Themes
 <div class="highlight">Component themes allow you to change the styles of specific component instances by overriding the globally defined theme.</div>
 <div class="divider"></div>
 
-### Overview
+## Overview
 <div class="divider--half"></div>
 
 Before we dig deep into how you can create component-level themes, let's take a few moments to talk about how Ignite UI for Angular approaches component theming. Because we want to be able to support older browsers, like IE11, we have two completely different approaches for theming components.
@@ -18,7 +18,7 @@ Before we dig deep into how you can create component-level themes, let's take a 
 We'll take a look at how these approaches work in practice, and how to use one instead of the other when generating component-level themes.
 <div class="divider"></div>
 
-### Creating Themes
+## Creating Themes
 <div class="divider--half"></div>
 
 There are several parts to a component theme:
@@ -68,7 +68,7 @@ In the above code, the defacto global theme is now the `$another-avatar-theme` a
 This brings me to my next point.
 <div class="divider"></div>
 
-### Scoping Themes
+## Scoping Themes
 <div class="divider--half"></div>
 
 As we saw in the previous example, when adding multiple themes targeting the same component at the same level, the last theme mixin takes precedence. This is due to the way the CSS cascade works. If you want to have two or more themes targeting the same type of components you will have to scope them using a selector. For instance we can create multiple `igx-avatar` themes and scope them to specific CSS selectors we can later use in our component markup.
@@ -98,7 +98,7 @@ In a component template:
 ```
 <div class="divider"></div>
 
-### View Encapsulation
+## View Encapsulation
 <div class="divider--half"></div>
 
 So far we've explored ways to create themes that are globally scoped, and are included in a single Sass file. However, this is not always desirable, and in some instances you will want the Sass file to be bound to a specific app component. In those cases we have to take View Encapsulation, and specifically how it is emulated in Angular, into consideration.
@@ -155,12 +155,12 @@ As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support`
 
 <div class="divider"></div>
 
-### Targeting Older Browsers
+## Targeting Older Browsers
 <div class="divider--half"></div>
 
 In the [overview](#overview) section I mentioned you could use hard-coded values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
 
-#### Usage in global themes
+### Usage in global themes
 
 The below example shows how you can style components using hard-coded values.
 
@@ -182,7 +182,7 @@ $badge-theme: igx-badge-theme($background-color: white);
 ```
 <div class="divider"></div>
 
-#### Usage in encapsulated views 
+### Usage in encapsulated views 
 
 The below sample uses the sample from the [View Encapsulation](#view-encapsulation) section as a starting point:
 
@@ -200,13 +200,13 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 ```
 <div class="divider"></div>
 
-### API Overview
+## API Overview
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
 * [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar)
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Learn how to configure a global theme:

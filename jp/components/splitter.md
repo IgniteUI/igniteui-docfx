@@ -4,24 +4,25 @@ _description: Angular Splitter コンポーネントを使用して、ビュー�
 _keywords: angular splitter, igniteui for angular, infragistics, インフラジスティックス
 ---
 
-## スプリッター
+# スプリッター
 
 Ignite UI for Angular Splitter コンポーネントはレイアウトを作成し、サイズ変更、展開、縮小が可能な複数の垂直方向または水平方向に配置されたペインに分割できます。これらの操作は、ペイン間のスプリッター バーで公開される UI によって実行されます。以下のデモでシンプルなスプリッター レイアウトを示します。
 
-### デモ
+## デモ
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="splitter-horizontal-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-horizontal-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-horizontal-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 **igxSplitter** コンポーネントを初期化にするには、まず **IgxSplitterModule** を **app.module** にインポートします。
 ```typescript
@@ -55,7 +56,7 @@ export class AppModule {}
 **igxSplitter** は **igx-splitter** タグで初期化されます。単一の **igx-splitter** コンポーネントの下に複数のスプリッター ペインを定義できます。ペインのコンテンツはテンプレート化可能で、サイズ変更可能なコンテナーに描画されます。
 
 
-#### 方向
+### 方向
 
 スプリッターは、[`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) 入力によって定義される垂直または水平にすることができます。デフォルト値は Vertical です。
 ```typescript
@@ -72,7 +73,7 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
-#### ペインの構成
+### ペインの構成
 
 **igxSplitterPane** コンポーネントには、いくつかのプロパティが含まれています。[`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) プロパティを使用してペインの初期サイズを設定できます。[`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) および [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) プロパティを使用して、ペインの最小または最大サイズを設定できます。`minSize` および `maxSize` を超えるサイズ変更は許可されません。
 ```html
@@ -97,7 +98,7 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
-#### ネストされたペイン
+### ネストされたペイン
 
 スプリッター コンポーネントをネストして、スプリッター ペイン内により複雑なレイアウトを作成できます。
 ```typescript
@@ -129,22 +130,22 @@ public typeVertical = SplitterType.Vertical;
 </igx-splitter>
 ```
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height: 400px">
     <iframe id="splitter-nested-sample-iframe" src='{environment:demosBaseUrl}/layouts/splitter-nested-sample' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">codesandbox で表示
+    </button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-nested-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
 </div>
 
-### キーボード ナビゲーション
+## キーボード ナビゲーション
 
 スプリッター コンポーネントではキーボード ナビゲーションがデフォルトで有効です。以下は、スプリッター バーをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
-#### キーの組み合わせ
+### キーの組み合わせ
 - `上矢印` - 垂直スプリッターでスプリッター バーを上へ移動
 - `下矢印` - 垂直スプリッターでスプリッター バーを下へ移動
 - `左矢印` - 水平スプリッターでスプリッター バーを左へ移動
@@ -154,7 +155,7 @@ public typeVertical = SplitterType.Vertical;
 - `Ctrl +左矢印` - 水平スプリッターでペインを展開/縮小
 - `Ctrl +右矢印` - 水平スプリッターでペインを展開/縮小
 
-### スタイル設定
+## スタイル設定
 **igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -176,7 +177,7 @@ $splitter-theme: igx-splitter-theme(
 );
 ```
 
-#### CSS 変数の使用 
+### CSS 変数の使用 
 
 次に Splitter のカスタム テーマを渡します。
 
@@ -184,11 +185,11 @@ $splitter-theme: igx-splitter-theme(
 @include igx-css-vars($custom-splitter-theme);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を通す必要があります。一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -199,18 +200,18 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 }
 ```
 
-#### デモ
+### デモ
 これは、新しいテーマを適用した結果です。
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="splitter-styling-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="splitter-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)

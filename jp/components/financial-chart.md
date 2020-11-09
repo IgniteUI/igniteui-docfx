@@ -1,16 +1,16 @@
 ---
-title: ファイナンシャル チャートの構成 | データ可視化ツール | Ignite UI for Angular | インフラジスティックス
-_description: 簡単な API を使用して財務データを可視化するには、財務チャート コンポーネントを使用します。詳細については、サンプル、依存関係、使用方法、およびツールバーを参照してください。
-_keywords: financial chart, Ignite UI for Angular, infragistics, ファイナンシャル チャート, インフラジスティックス
-mentionedTypes: ['XamFinancialChart', 'FinancialChartType', 'FinancialOverlayType']
+title: Angular ファイナンシャル チャート | React テーブルとコントロール | インフラジスティックス
+_description: 簡単な API を使用して財務データを可視化するには、Angular ファイナンシャル チャート コンポーネントを使用します。$PlatformName$ を使用して高速で編集可能なファイナンシャル チャートを作成できます。
+_keywords: Angular charts, financial chart, stock chart, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, インフラジスティックス
+mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 _language: ja
 ---
 
-## ファイナンシャル チャート
+# Angular ファイナンシャル チャートの概要
 
 Angular Financial Chart コンポーネントは、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,6 +18,8 @@ Angular Financial Chart コンポーネントは、シンプルな API を使用
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
@@ -26,14 +28,14 @@ Angular Financial Chart コンポーネントは、シンプルな API を使用
 
 ファイナンシャル チャート コンポーネントはデータ列を解析して選択します。日/時列を X 軸で使用し、Open、High、Low、Close、Volume 列、または最初の 5 つの数値列を Y 軸で使用します。ユーザーがチャート タイプを棒、ローソク足、柱状、または折れ線に設定できます。主要なビジュアル要素にツールバー、価格ペイン、ボリューム ペイン、インジケーター ペイン、およびナビゲーション ペインがあります。
 
-[`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
+[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) プロパティを以下のオプションの 1 つに設定してチャート タイプを明示的に指定することもできます。
 
 | プロパティ                                                                                                                             | 説明                                                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar)       | 各データ ポイントにマーカーがある棒シリーズを指定します。                                                                                                                                                                                                                      |
 | [`Candle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#candle) | ローソク足シリーズを指定します。                                                                                                                                                                                                                                   |
 | [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#column) | 柱状シリーズを指定します。                                                                                                                                                                                                                                      |
-| [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line)              | 折れ線シリーズを指定します。                                                                                                                                                                                                                                     |
+| [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line)     | 折れ線シリーズを指定します。                                                                                                                                                                                                                                     |
 | [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#auto)     | データ アダプターに基づいてチャート タイプの自動選択を指定します。これは、データの名前および数値列の数に基づいて上記の値を選択します。たとえば、Open、High、Low、および Close 列があるデータ項目のために [`Bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#bar) を使用します。 |
 
 その他のチャート ペインの詳細については、[Financial Chart ペイン](financial-chart-panes.md) トピックを参照してください。
@@ -44,16 +46,25 @@ Angular Financial Chart コンポーネントは、シンプルな API を使用
 </igx-financial-chart>
 ```
 
-### 依存関係
+<!-- Angular, React, WebComponents -->
 
-chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+## 依存関係
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+Chart パッケージをインストールするときに core パッケージもインストールする必要があります。
 
-### 必要なモジュール
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
-Angular Financial Chart コンポーネントは、以下のモジュールが必要です。
+<!-- end: Angular, React, WebComponents -->
+
+## モジュールの要件
+
+Angular ファイナンシャル チャートを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   FinancialChartModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
@@ -71,11 +82,11 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 ファイナンシャル チャート モジュールをインポートした後、チャートをデータにバインドします。
 
-`XamFinancialChart` コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールを作成するには、はじめにバインドするデータが必要です。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
 
 ```ts
 let data = [
@@ -103,7 +114,7 @@ let data = [
  </igx-financial-chart>
 ```
 
-### ツールバー
+## ツールバー
 
 ファイナンシャル チャートの上にツールバーが表示されます。チャートで表示されるデータの詳細を変更でき、複数のペインの表示も可能です。ツールバーには以下のセレクターが含まれます。
 

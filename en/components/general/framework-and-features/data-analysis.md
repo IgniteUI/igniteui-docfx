@@ -1,5 +1,5 @@
 ---
-title: Data analysis with Ignite UI for Angular.
+title: Data analysis capabilities | Angular Universal | Ignite UI for Angular | Infragistics
 _description: How to use chart integration functionality with Ignite UI for Angular and provide the data analysis means to achieve better business objectives.
 _keywords: data analysis, ignite ui for angular, infragistics
 ---
@@ -51,14 +51,14 @@ _keywords: data analysis, ignite ui for angular, infragistics
 
 </style>
 
-## Data Analysis
+# Data Analysis
 
 Data analysis is the process of examining, transforming, and arranging data in a specific way to generate useful information based on it. It also allows for reaching certain outcomes and conclusions through analytical and logical reasoning.
 
 >[!NOTE]
 >This functionality will be introduced in **Ignite UI for Angular** as external package in order to ease the configuration and limit the required code at minimum
 
-### Data Analysis with DockManager
+## Data Analysis with DockManager
 Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../../dock-manager.md) right pane. From there you can:
  - Choose specific chart type and visualize it in separate pane.
  - Or use the `Data Analysis` context button to show different text formatting options.
@@ -77,7 +77,7 @@ Keep in mind (sample related):
 - If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
 - If selected data is not compatible for any of the charts - an "Incompatible data" warning message will be shown.
 
-### Data Analysis Package
+## Data Analysis Package
 
 You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#license-agreements), you will have access to the private feed. 
 
@@ -104,7 +104,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 ```
 And that's it! You can now perform **cell range selection** and follow the data analysis flow.
 
-### Data Analysis Button
+## Data Analysis Button
 The data analysis button is the outlet to visualize your selected data in various ways:
 
 ![](../../../images/general/data-analysis-button.png)
@@ -113,7 +113,7 @@ This way every range selection performed in the grid can be easily analyzed in a
 
 The button is rendered on every range selection at the **bottom-right** of the selection and hides when the selection is inactive. Horizontal and vertical scrolling reposition the button so that it is always rendered at its designated position.
 
-### Chart Integration
+## Chart Integration
 This section introduces Grid's integration with charting functionality, which allows the end user to visualize a chart based on Grid's selected data and choose different chart types if needed.
 
 The chart will be shown by selecting a range of cells and by clicking on the show analysis button.
@@ -134,12 +134,12 @@ We currently support the following Chart types:
 - ScatterPoint, ScatterBubble, ScatterLine. In order to show meaningful Scatter Bubble Chart we disable the preview when the data is not in valid format.
 - [Pie Chart](../../pie-chart.md)
 
-### Conditional Cell Formatting 
+## Conditional Cell Formatting 
 If you have a Grid with thousands of rows of data it would be very difficult to see patterns and trends just from examining the raw information. Similar to charts and sparklines, `Conditional formatting` provides another way to visualize data and make it easier to understand. 
 
 Understanding conditional formatting - it allows for applying formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data. The formatting of a range gets cleared when performing formatting on different range or through the clear button. The clear button is only active when there is an applied formatting.  
 
-#### Number range selection
+### Number range selection
 - `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
 
 
@@ -165,7 +165,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 - `Empty`- Marks all cells with `undefined` values
 
-#### Text range selection
+### Text range selection
 - `Text contains` - Marks all cells that contain the cell value from the `top-left most selected cell`. Example:
 
 ![](../../../images/general/contains-formatting.png)
@@ -174,7 +174,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).
 - `Empty`- Marks all cells with `undefined` values
 
-#### Demo
+### Demo
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
@@ -182,9 +182,9 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>View in full screen</button>
 
-### Data Analysis Package API
+## Data Analysis Package API
  
-#### IgxConditionalFormattingDirective
+### IgxConditionalFormattingDirective
 <div class="divider--half"></div>
 
 | API | Description | Arguments |
@@ -197,7 +197,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 | `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
 | `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditonalFormatting.clearFormatting()** |
 
-#### IgxChartIntegrationDirective
+### IgxChartIntegrationDirective
 <div class="divider--half"></div>
 
 | API | Description | Arguments |
@@ -219,12 +219,12 @@ Understanding conditional formatting - it allows for applying formatting such as
 | `bubbleChartRadiusMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default radius member path will be the second numeric property name of the first data record in the `chartData`** | `path`: **string** |
 
 
-### Useful resources
+## Useful resources
 
 <div class="divider--half"></div>
 
 * [Angular Universal guide](https://angular.io/guide/universal)
 * [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
 * [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Getting started with Ignite UI for Angular](../getting_started.md)
+* [Getting started with Ignite UI for Angular](../getting-started.md)
 * [Ignite UI CLI Guide](../cli/step-by-step-guide.md)

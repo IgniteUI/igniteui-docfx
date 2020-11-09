@@ -5,20 +5,21 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-## Button
+# Button
 <p class="highlight">Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。</p>
 
-### デモ
+## デモ
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="buttons-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
-</div>
+    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
+</iframe></div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります。
 
@@ -37,9 +38,9 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### ボタン タイプ
+## ボタン タイプ
 
-#### Flat ボタン
+### Flat ボタン
 
 [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用して、シンプルなフラット ボタンをコンポーネント テンプレートに追加します。タイプを選択しない場合、デフォルト値は `flat` です。
 
@@ -51,7 +52,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
 </iframe></div>
 
-#### Raised ボタン 
+### Raised ボタン 
 
 エンボス加工されたボタンを作成するには、`igxButton` プロパティの値を変更するだけです。
 
@@ -63,7 +64,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
 </iframe></div>
 
-#### Outlined ボタン
+### Outlined ボタン
 
 同様に、アウトライン タイプに切り替えることができます。
 
@@ -75,7 +76,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
 
-#### Icon ボタン
+### Icon ボタン
 
 アイコンをボタンとして使用することもできます。
 
@@ -89,7 +90,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </iframe></div>
 
-#### フローティング アクション ボタン
+### フローティング アクション ボタン
 
 アイコンを使用して、フローティング アクション ボタンを作成します。
 
@@ -99,13 +100,25 @@ export class AppModule {}
 </button>
 ```
 
+拡張 FAB を作成するには、`igx-icon` の前に任意の要素を追加できます。
+
+```html
+<button class="btn" igxButton="fab">
+    <span>like</span>
+    <igx-icon fontSet="material">favorite</igx-icon>
+</button>
+```
+
+>[!NOTE]
+>拡張 FAB テキストを適切にスタイルするには、`<span>`、`<div>` または `<p>` タグを使用します。
+
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
 </iframe></div>
 
-### 例
+## 例
 
-#### ボタンの無効化
+### ボタンの無効化
 
 ボタンを無効にするには、`disabled` プロパティを使用します。
 
@@ -117,7 +130,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
 </iframe></div> 
 
-#### Ripple
+### Ripple
 
 [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) ディレクティブは、ボタンまたはその他の指定した要素にリップル効果を追加します。`以下のプロパティを使用して、デフォルトのリップル色、位置、および期間を簡単に変更できます。
 
@@ -131,7 +144,7 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </iframe></div> 
 
-#### Span
+### Span
 
 `Span` や `div` などの要素を Ignite UI for Angular スタイルのボタンに変更するために `igxButton` ディレクティブを使用できます。デフォルトの色は `igxButtonColor` と `igxButtonBackground` プロパティでカスタマイズできます。
 
@@ -145,12 +158,12 @@ export class AppModule {}
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </iframe></div>
 
-### 密度の表示
+## 密度の表示
 
 [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) 入力を使用して `igxButton` の表示密度を選択できます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってすべての密度値を表示する必要があります。これにより、選択されるたびにボタンの `displayDensity` にバインドされた独自の **density** プロパティが更新されます。
 
 > [!NOTE] 
-> `Icon` タイプのボタンは、異なる表示密度値を設定しても視覚的に変化しません。
+> `icon` タイプのボタンは、異なる表示密度値を設定しても視覚的に変化しません。
 
 ```typescript
 // app.module.ts
@@ -198,12 +211,12 @@ public selectDensity(event) {
     <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### スタイル設定
+## スタイル設定
 
 ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -229,7 +242,7 @@ $custom-button-theme: igx-button-theme(
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
 
-#### CSS 変数の使用 
+### CSS 変数の使用 
 
 最後には、カスタム ボタン テーマをアプリケーションに渡します。 
 
@@ -237,11 +250,11 @@ $custom-button-theme: igx-button-theme(
  @include igx-css-vars($custom-button-theme);
 ```
 
-#### テーマ オーバーライドの使用
+### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -251,18 +264,18 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" class="lazyload no-theming">
 </iframe></div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-### API リファレンス
+## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
@@ -270,7 +283,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

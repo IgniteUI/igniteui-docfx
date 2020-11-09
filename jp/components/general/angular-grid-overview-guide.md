@@ -1,21 +1,13 @@
 ---
-title: Angular Grid と Angular アプリケーション開発 - 完全ガイド 
+title: Angular Grid と Angular アプリケーション開発の完全ガイド
 _description: 最新のデータ グリッドとチャートは複雑で、さまざまな機能が含まれています。完全なガイドでは Angular Grid とアプリケーション開発について説明します。
 _keywords: angular, angular アプリケーション開発, infragistics 
 _language: ja
 ---
 
-## Angular Grid と Angular アプリケーション開発: 完全ガイド 
-
-### Angular Data Grid の概要 
-
-Angular データ グリッドは、一連の行と列で表データを表示するために使用されるコンポーネントです。テーブルとも呼ばれるデータ グリッドは、Microsoft Excel などの一般的なソフトウェアでデスクトップの世界でよく知られています。グリッドはデスクトップ プラットフォームで長い間利用されてきますが、最近 Angular UI などの Web ア プリ UI の一部になりました。  
-
-最新のグリッドは複雑で、データ バインディング、編集、Excel のようなフィルタリング、カスタム並べ替え、グループ化、行の並べ替え、行と列の固定、行の集計、Excel、CSV、PDF 形式のエクスポートなど、さまざまな機能が含まれる場合があります。  
-
-### Angular Data Grid の利点 
-
-Angular データ グリッドは、大量のデータをすばやく保存して並べ替える必要がある場合に重要です。これには、大量の高速データを頻繁に使用する金融や保険などの業界が含まれます。  これらの企業の成功は、データ グリッドの機能とパフォーマンスに依存します。たとえば、在庫をマイクロ秒単位で決定する場合、データグ リッドが遅延時間やちらつきのない状態で実行する必要があります。 
+# Angular Grid と Angular アプリケーション開発の完全ガイド 
+  
+Angular Data Grid とその使用方法については、[このセクション](../grids-and-lists.md#Angular-Data-Grid-の概要) (グリッドの概要トピック) をご覧ください。
 
 ### Ignite UI - Angular アプリ開発のフレームワーク 
 
@@ -33,7 +25,7 @@ Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](https://jp.inf
 
 `ng add igniteui-angular` 
 
-Ignite UI for Angular を[既存の Angular アプリケーション](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html#ignite-ui-for-angular-のインストール "Ignite UI for Angular のインストール")に追加する必要がある場合、このオプションお勧めします。 
+Ignite UI for Angular を[既存の Angular アプリケーション](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html#ignite-ui-for-angular-のインストール "Ignite UI for Angular のインストール")に追加する必要がある場合、このオプションお勧めします。 
 
 新しいアプリケーションを最初から作成する場合、以下の方法をお勧めします。 
 
@@ -49,7 +41,7 @@ IgniteUI CLI をインストールすると、cli の[ガイド](https://jp.infr
 
 製品の依存関係のインポートには、Ignite UI CLI の使用をお勧めします。`ng add igniteui-angular` を使用すると、Ignite UI for Angular パッケージとその依存関係、フォントのインポート、スタイル設定などをプロジェクトにインストールできます。 
 
-Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
+Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
 
 ### コンポーネントをテンプレートに追加 
 
@@ -69,7 +61,7 @@ Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用す�
     </igx-column>
 </igx-grid>
 ```
-グリッド自体は、グリッドの列コレクションを定義し、並べ替えやページングなどの列ごとの機能を有効にするために使用される IgxColumnComponent などのさまざまなコンポーネントで構成されます。 
+グリッド自体は、グリッドの列コレクションを定義し、ソートやページングなどの列ごとの機能を有効にするために使用される IgxColumnComponent などのさまざまなコンポーネントで構成されます。 
 
 グリッドの各列は別のテンプレートを持つことができます。列にグリッド モジュール ディレクティブの 1 つでデコレートした ng-template タグが必要です。 
 
@@ -182,9 +174,9 @@ export class MyComponent implements OnInit {
 ```
 チャート コンポーネントにデータソースを設定すると、すべてのシリーズに適用されますが、データチャートに追加された各シリーズに異なるデータソースを設定することもできます。 
 
-### 並べ替え、フィルタリング、ページネーション 
+### ソート、フィルタリング、ページネーション 
 
-Angular データ グリッドは、簡単な並べ替え、フィルタリング、ページネーションをサポートします。豊富な API と直感的な機能のセットアップにより、Ignite UI for Angular コンポーネントを簡単に使用できます。 
+Angular データ グリッドは、簡単なソート、フィルタリング、ページネーションをサポートします。豊富な API と直感的な機能のセットアップにより、Ignite UI for Angular コンポーネントを簡単に使用できます。 
 
 ```html
 <igx-grid #grid1 (onSortingDone)="removeSorting($event)"
@@ -200,11 +192,11 @@ Angular データ グリッドは、簡単な並べ替え、フィルタリン�
 
 グリッドは、カスタム フィルタリング条件で 3 種類のフィルタリングを提供します。 
 
- - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-のフィルタリング概要 "Grid のフィルタリング概要")。  
+ - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html "Grid のフィルタリング概要")。  
 
- - 並べ替え、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
+ - ソート、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel-style-filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
 
- - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html "高度なフィルタリングの概要")。 
+ - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced-filtering.html "高度なフィルタリングの概要")。 
 
 [Angular 9 リリース](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release "Ignite UI for Angular 9.0.0 リリース")には、データ解析、豊富な可視化、グリッド状態の永続化、テーマ ウィジェットなど、多数の新しい主要機能が含まれています。 
 
@@ -235,8 +227,9 @@ $my-color-palette: igx-palette(
 IgniteUI for Angular はコンポーネントのデザインを[マテリアル デザイン原則](https://material.io/guidelines/material-design/introduction.html "マテリアル デザインの概要")に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。例:
 
 <div class="sample-container loading" style="height: 477px">
-    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 サンプル ブラウザーのテーマ ウィジェットについても説明します。[Ignite UI サンプル ブラウザー](http://jp.infragistics.com/angularsite/components/grid/grid.html "Data Grid 概要と構成")でワンクリックでテーマをランタイムに変更できるようになりました。テーマ ウィジェットでは、スタイル、色、丸み、およびエレベーションを変更できます。テーマを簡単にカスタマイズできます。テーマの準備をした後、[SASS の ダウンロード] を押すと、設定済みの SCSS ファイルをアプリケーションで使用できます。 
 
@@ -257,7 +250,7 @@ Ignite Angular UI ツールセットには[データ分析機能](https://jp.inf
 
 ### コード生成とデザインのためのツール 
 
-Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design システム") の一部で、[Indigo.Design UI Kit](https://jp.infragistics.com/products/indigo-design/help/creating-an-artboard.html "はじめてのアートボード作成") を使用して Sketch で作成したデザインから[ネイティブな Angular コード](https://jp.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio プラグイン")を生成できます。さまざまな編集およびフィルタリングモードをサポートするモバイル対応またはデータ密度の高いグリッドを生成できます。また、並べ替え、ページング、集計、グループ化などの一般的なグリッド機能の多くを使用することもできます。さらに、各列で移動、サイズ変更、非表示、ピン固定などのさまざまな操作を指定して、デザイン時に高度なデータ操作シナリオを実現し、数分で実行できる完璧なピクセルのユーザー インターフェイスを実現できます。 
+Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design システム") の一部で、[Indigo.Design UI Kit](https://jp.infragistics.com/products/indigo-design/help/creating-an-artboard.html "はじめてのアートボード作成") を使用して Sketch で作成したデザインから[ネイティブな Angular コード](https://jp.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio プラグイン")を生成できます。さまざまな編集およびフィルタリングモードをサポートするモバイル対応またはデータ密度の高いグリッドを生成できます。また、ソート、ページング、集計、グループ化などの一般的なグリッド機能の多くを使用することもできます。さらに、各列で移動、サイズ変更、非表示、ピン固定などのさまざまな操作を指定して、デザイン時に高度なデータ操作シナリオを実現し、数分で実行できる完璧なピクセルのユーザー インターフェイスを実現できます。 
 
 ### パフォーマンスのベンチマーク 
 
@@ -274,4 +267,4 @@ Grid コンポーネントは一般に、大量の表データを可視化する
 
 Grid で使用したい機能を簡単に見つけてナビゲートできます。また、アプリケーションをより魅力的にできます。 
 
-詳細については、[Medium Software Performance (Web) の記事 (英語)](https://medium.com/ignite-ui/software-performance-web-61158c8583d "Web Software Performance")をご覧ください。
+詳細については、[Medium Software Performance (Web) の記事 (英語)](https://medium.com/ignite-ui/software-performance-web-61158c8583d "Web Software Performance") をご覧ください。

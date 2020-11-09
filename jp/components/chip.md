@@ -5,22 +5,22 @@ _keywords: ジェット, Angular, ネイティブ Angular コンポーネント 
 _language: ja
 ---
 
-### Chip
+# Chip
 
 [Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
 
-### デモ
+## デモ
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### 使用方法
+## 使用方法
 
 はじめに、**app.module.ts** ファイルに **IgxChipsModule** をインポートします。
 ```typescript
@@ -45,7 +45,7 @@ export class AppModule {}
 </igx-chip>
 ```
 
-#### 選択
+### 選択
 
 ![Default Selection](../images/chip/selecting_default.gif)
 
@@ -58,7 +58,7 @@ export class AppModule {}
 </igx-chip>
 ```
 
-#### 削除
+### 削除
 
 ![Removing](../images/chip/removing_default.gif)
 
@@ -82,7 +82,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 }
 ```
 
-#### ドラッグ
+### ドラッグ
 
 ドラッグは、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効にすると、チップをクリックしてドラッグできます。
 
@@ -94,7 +94,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 ```
 
 >[!NOTE]
->チップの順序を並べ替えるには、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) を使用してイベントを処理する必要があります。
+>チップの順序をソートするには、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) を使用してイベントを処理する必要があります。
 
 <div class="divider"></div>
 
@@ -158,11 +158,11 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-#### Chip テンプレート
+### Chip テンプレート
 
 [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) のすべての要素がテンプレート化できます。
 
@@ -225,15 +225,15 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </ng-template>
 ```
 
-### Chip Area
+## Chip Area
 
 [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) はチップの間の操作 (ドラッグ、選択、ナビゲーションなど) が必要となる複雑なシナリオの処理で使用されます。
 
-#### Chip の並べ替え
+### Chip のソート
 
 ![Dragging](../images/chip/dragging.gif)
 
-チップの位置を変更するため、ユーザーによってドラッグができます。ドラッグはデフォルトで無効になっていますが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) 入力プロパティを使用して有効にできます。実際のチップの並べ替えは手動で処理する必要があります。チップが別のチップの上にドラッグされる場合に、新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
+チップの位置を変更するため、ユーザーによってドラッグができます。ドラッグはデフォルトで無効になっていますが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) 入力プロパティを使用して有効にできます。実際のチップのソートは手動で処理する必要があります。チップが別のチップの上にドラッグされる場合に、新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
 
 ```html
 <igx-chips-area (onReorder)="chipsOrderChanged($event)">
@@ -257,7 +257,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 }
 ```
 
-#### キーボード ナビゲーション
+### キーボード ナビゲーション
 
 チップをフォーカスするには `Tab` キーを押すか、それをクリックします。チップがチップ領域にある場合、キーボード ナビゲーションを使用して順序を変更することができます。
 
@@ -371,18 +371,18 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 すべてが適切に設定されていれば、ブラウザーで以下が表示されます。
 
-#### デモ
+### デモ
 
 <div class="sample-container loading" style="height: 100px">
     <iframe id="chip-area-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-area-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### スタイル設定
+## スタイル設定
 チップのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -405,7 +405,7 @@ $custom-theme: igx-chip-theme(
 );
 ```
 
-#### テーマを含む
+### テーマを含む
 
 <div class="divider"></div>
 
@@ -444,23 +444,31 @@ $custom-theme: igx-chip-theme(
 }
 ```
 
-#### デモ
+### デモ
 <div class="sample-container loading" style="height:100px">
     <iframe id="chip-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
-### API
+## 既知の問題と制限
+
+- IE11 で Chips Area コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
+
+## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 * [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
-### 参照
+## 参照
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

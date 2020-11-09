@@ -4,18 +4,21 @@ _description: Learn how to configure an Angular select. The Material select prov
 _keywords:  angular select, igniteui for angular, infragistics
 ---
 
-## Select
+# Select
 <p class="highlight">The [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
-### Demo
+## Demo
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="select-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 
-
-### Usage
+## Usage
 To get started with the [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
 ```typescript
 // app.module.ts
@@ -68,9 +71,9 @@ By default, the Select component will use the `innerText` of the item element in
 ```
 To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#grouped-select).
 
-#### Input Properties
+### Input Properties
 
-The Select component supports the following directives applicable to the [Input Group](input_group.md):
+The Select component supports the following directives applicable to the [Input Group](input-group.md):
 
 - `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
 - `igx-prefix`/`igxPrefix`
@@ -96,13 +99,15 @@ The Select component supports the following directives applicable to the [Input 
 <div class="sample-container loading" style="height: 350px;">
     <iframe id="select-input-directives-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-input-directives" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 > [!NOTE]
 If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
-#### Group Select Items
+### Group Select Items
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
 ```typescript
@@ -144,10 +149,12 @@ Then in your template file you can iterate over the objects and access their ite
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
 </div>
-
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
-#### Header & Footer
+### Header & Footer
 Currently, there are no default header and footer templates for the Select component. However, you can add a header or a footer template by marking them respectively with `igxSelectHeader` or `igxSelectFooter`. As these are custom templates, you should define their styling as well.
 
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
@@ -206,10 +213,12 @@ In this example, there are both header and footer ng-templates defined. In the h
 <div class="sample-container loading" style="height: 610px;">
     <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
 </div>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-
-#### Custom Toggle Button
+### Custom Toggle Button
 You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
 
 ```html
@@ -222,7 +231,7 @@ You can customize the default toggle button, using the `igxSelectToggleIcon` dir
 <igx-select>
 ```
 
-### Keyboard Navigation
+## Keyboard Navigation
 
 - Open the `igx-select` by clicking on the `Space`, `Enter` or `ALT + Up/Down Arrow` keys, while the select is focused.
 - Close the `igx-select` using the `ALT + Up/Down Arrow` combination or any of the `Enter`, `Space`, `Esc` or `Tab` keys.
@@ -235,7 +244,7 @@ You can customize the default toggle button, using the `igxSelectToggleIcon` dir
 >[!NOTE]
 >`igx-select` supports only *single* selection of items.
 
-### Custom Overlay Settings
+## Custom Overlay Settings
 You can create custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). To do this you first define your template like so:
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
@@ -259,12 +268,12 @@ export class MyClass implements OnInit {
             closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: scaleInTop,
-            target: this.select.inputGroup.element.nativeElement,
+            openAnimation: scaleInTop,            
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
         this.customOverlaySettings = {
+            target: this.select.inputGroup.element.nativeElement,
             positionStrategy: new ConnectedPositioningStrategy(
                 positionSettings
             ),
@@ -280,8 +289,10 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 <div class="sample-container loading" style="height: 260px;">
     <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
 </div>
-
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<div>
+    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 You can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html#open)'s open function, where your template should look like this:
 ```html
@@ -311,19 +322,19 @@ export class MyClass implements OnInit {
 >[!NOTE]
 >If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the one provided in the `open` function. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
 
-### Styling
+## Styling
 Every component has its own theme.
 
 To get the Select styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
 
-Take a look at the [`Input Group`](input_group.md#styling) and the [`Drop Down`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
+Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
 > [!NOTE]
-> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay_styling.md).
+> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay-main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay-styling.md).
 
 <div class="divider--half"></div>
 
-### API Reference 
+## API Reference 
 * [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
 * [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
@@ -334,7 +345,7 @@ Take a look at the [`Input Group`](input_group.md#styling) and the [`Drop Down`]
 * [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
-### Additional Resources
+## Additional Resources
 * [NgModel](https://angular.io/api/forms/NgModel)
 * [ViewChild](https://angular.io/api/core/ViewChild)
 * [ngForOf](https://angular.io/api/common/NgForOf)

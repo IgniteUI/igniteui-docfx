@@ -1,16 +1,16 @@
 ---
-title:  ドーナツ チャート | 階層データ 可視化 | Ignite UI for Angular | インフラジスティックス
-_description: ドーナツチャート コンポーネントを使用して、複数の変数を同心円で表示し、階層データを可視化します。詳細については、以下のサンプルを参照してください。
-_keywords: doughnut chart, Ignite UI for Angular, Infragistics, ドーナツ チャート, インフラジスティックス
+title: ドーナツ チャート | 階層データの可視化 | インフラジスティックス
+_description: インフラジスティックスの Angular ドーナツ チャート コントロールを使用して、複数の変数を同心円で表示し、階層データを可視化します。詳細については、Ignite UI for Angular ドーナツ チャートのサンプルを参照してください。
+_keywords: Angular charts, doughnut chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, multiple rings, Angular チャート, ドーナツ チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, 複数リング, インフラジスティックス
 mentionedTypes: ['XamDoughnutChart']
 _language: ja
 ---
 
-## ドーナツ チャート
+# Angular ドーナツ チャートの概要
 
 Ignite UI for Angular Doughnut Chart コンポーネントは円チャートと同様、変数の発生を比例的に表示します。ドーナツ型チャート は、複数の変数をコンセントリック リングで表示でき、階層データの可視化を組み込みでサポートします。
 
-### サンプル
+## サンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
@@ -18,20 +18,32 @@ Ignite UI for Angular Doughnut Chart コンポーネントは円チャートと�
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### 依存関係
+<!-- Angular, React, WebComponents -->
 
-chart パッケージをインストールするときに core パッケージもインストールする必要があります。
+## 依存関係
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-charts**
+Chart コンポーネントをインストールするときに core パッケージもインストールする必要があります。
 
-### モジュールの要件
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm install --save igniteui-angular-core
+npm install --save igniteui-angular-charts
+</pre>
 
-Angular Douhgnut Chart コンポーネントは以下のモジュールを要求します。
+<!-- end: Angular, React, WebComponents -->
+
+## モジュールの要件
+
+Angular ドーナツ チャートを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+
+-   DoughnutChartModule
+-   RingSeriesModule
+    <!-- end: Blazor -->
 
 ```ts
 // app.module.ts
@@ -49,7 +61,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### 使用方法
+## 使用方法
 
 ファイナドーナツ型 チャート モジュールをインポートした後、チャートをデータにバインドします。
 コンポーネントを作成するには、最初にバインドするためのデータが必要になります。以下のコード スニペットは、シンプルなデータソースを作成する方法を示します。
@@ -78,9 +90,9 @@ this.data = [
 
 <div class="divider--half"></div>
 
-### 複数のリング
+## 複数のリング
 
-ドーナツ チャート コンポーネントは、複数のリングを、異なるデータ ソースにバインド可能な各リングと同時に表示できます。または共通のデータ ソースを共有できます。たとえば、以下の 2 つのデータ ソースは、複数のリングにバインドするために使用されます。
+ドーナツ チャート コンポーネントは、複数のリングを、異なるデータ項目にバインド可能な各リングと同時に表示できます。または共通のデータ ソースを共有できます。たとえば、以下の 2 つのデータ ソースは、複数のリングにバインドするために使用されます。
 
 ```ts
 public Months: any[];
@@ -110,7 +122,7 @@ this.Seasons = [
 ```
 
 ```html
- <igx-doughnut-chart width="700px" height="500px">
+ <igx-doughnut-chart width="100%" height="100%">
         <igx-ring-series name="Months"
             [dataSource]="Months"
             labelsPosition="Center"
@@ -130,7 +142,7 @@ this.Seasons = [
  </igx-doughnut-chart>
 ```
 
-### 複数リング サンプル
+## 複数リング サンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-rings-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -138,11 +150,13 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### スライスの選択
+## スライスの選択
 
 ドーナツ型チャート コンポーネントは、1 つ以上のスライスの状態を 選択された状態に設定する API を公開します。任意で、単一のカスタム ビジュアル スタイルを選択済みスライスに適用できます。
 
@@ -156,7 +170,7 @@ this.Seasons = [
 
 **SelectedSlices コレクションのコンテンツを変更** - `SelectedSlices` コレクションのコンテンツを変更して選択されたスライスを変更できます。ドーナツ チャートは、Slice オブジェクトへに対し `IsSelected` プロパティを直接修正できるすべてのスライスへの参照を保持します。
 
-### スライス選択のデモ
+## スライス選択のサンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -164,11 +178,15 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
 
-### スライスの分割
+<!-- Angular, React, WebComponents -->
+
+## スライスの分割
 
 ドーナツ チャート コンポーネントのスライスは、コードまたはユーザー インタラクションによって分割できます。
 
@@ -184,7 +202,7 @@ this.Seasons = [
 **ExplodedSlices コレクションのコンテンツの修正**
 `ExplodedSlices` コレクションのコンテンツを変更することにより公開されたスライスを変更できます。
 
-### スライスの分割のデモ
+## スライスの分割のサンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -192,15 +210,18 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
 </div>
 
 <div class="divider--half"></div>
+<!-- end: Angular, React, WebComponents -->
 
-### 凡例
+## 凡例
 
 ドーナツ チャート コンポネントは凡例の使用をサポートしています。使用される凡例は、一連のチャートを介して接続されている ItemLegend です。
 
-### 凡例デモ
+## 凡例サンプル
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -208,4 +229,44 @@ this.Seasons = [
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
     </button>
+
+
+</div>
+
+## アニメーション
+
+チャートの半径をスケールする `radiusFactor` プロパティを設定してドーナツ チャートをアニメーション化できます。
+`startAngle` プロパティを設定してチャートが回転する間、チャートの角度が増加し続けるようにします。
+
+以下のコードでは、radiusFactor がチャートをサイズの 0.25％ 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
+
+```ts
+window.setInterval(() => this.tick(), 15);
+public tick(): void {
+    if (this.isAnimating) {
+        if (this.chartSeries.radiusFactor < 1.0)
+            this.chartSeries.radiusFactor += 0.0025;
+
+        if (this.chartSeries.startAngle < 360)
+            this.chartSeries.startAngle++;
+
+        if (this.chartSeries.radiusFactor >= 1.0 &&
+            this.chartSeries.startAngle >= 360) {
+            this.isAnimating = false;
+            window.clearInterval(this.interval);
+        }
+    }
+}
+```
+
+## サンプル
+
+<div class="sample-container loading" style="height: 450px">
+    <iframe id="doughnut-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-animation-iframe" data-demos-base-url="environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+
+
 </div>
