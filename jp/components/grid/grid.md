@@ -673,6 +673,13 @@ export const DATA: any[] = [
 </div>
 <div class="divider--half"></div>
 
+## キーボード ナビゲーション
+Grid のキーボード ナビゲーションは、さまざまなキーボード操作をユーザーに提供します。アクセシビリティが向上し、内部の要素 (セル、行、列ヘッダー、ツールバー、フッターなど) を直感的にナビゲートできます。詳細については、これらのリソースを参照してください。
+ - [Grid キーボード ナビゲーション](../grid/keyboard-navigation.md)
+ - [TreeGrid キーボード ナビゲーション](../treegrid/keyboard-navigation.md)
+ - [Hierarchical Grid キーボード ナビゲーション](../hierarchicalgrid/keyboard-navigation.md)
+ -「Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation」の[ブロク](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility)
+
 ## パーシステンス (永続化) 状態
 
 新しい組み込みの [`IgxGridState`](state-persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。

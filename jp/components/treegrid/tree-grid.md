@@ -25,6 +25,7 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 </div>
 <div class="divider--half"></div>
 
+
 ## Ignite UI for Angular Tree Grid で作業を開始
 
 ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
@@ -389,6 +390,15 @@ $custom-theme: igx-grid-theme(
 |--- |--- |
 |ツリー セルのテンプレート化|ツリーセルをテンプレート化する場合、セルの境界外にスパンするコンテンツはオーバレイに配置しない限り表示されません。|
 |グループ化|グループ化機能は、ツリーグリッドに継承されるためサポートされません。|
+
+> [!NOTE]
+> ツリー グリッドには、25 レベルの深度制限があります。それ以上のレベルをサポートするには、アプリケーションにカスタム CSS クラスを追加する必要があります。以下には、このような CSS クラスの例を示します。
+
+```scss
+.igx-grid__tree-cell--padding-level-26 {
+    padding-left: 39rem;
+}
+```
 
 > [!NOTE]
 > `igxTreeGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxTreeGrid` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
