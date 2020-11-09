@@ -23,7 +23,7 @@ _canonicalLink: grid/filtering
 }
 
 # Angular @@igComponent Filtering
-IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel_style_filtering.md) and [Advanced filtering](advanced_filtering.md) which enable you to display only the records that meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
+IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel-style-filtering.md) and [Advanced filtering](advanced-filtering.md) which enable you to display only the records that meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 
 ## Angular Filter Example
 
@@ -88,7 +88,7 @@ Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 </@@igSelector>
 ```
 
-To enable the [Advanced filtering](advanced_filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
+To enable the [Advanced filtering](advanced-filtering.md) however, you need to set the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
 
 ```html
 <@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
@@ -246,7 +246,7 @@ When set to [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or), a 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ## Remote Filtering
 
-The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote_data_operations.md) topic.
+The @@igComponent supports remote filtering, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
 
 <div class="divider--half"></div>
 }

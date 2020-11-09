@@ -110,12 +110,9 @@
       href: grid/paging.md
       new: false
     - name: フィルタリング
-      href: grid/filtering-overview.md
+      href: grid/filtering.md
       new: false
       items:
-        - name: クイック フィルタリング
-          href: grid/filtering.md
-          new: false
         - name: Excel スタイル フィルタリング
           href: grid/excel-style-filtering.md
           updated: true
@@ -246,12 +243,9 @@
       href: treegrid/paging.md
       new: false
     - name: フィルタリング
-      href: treegrid/filtering-overview.md
+      href: treegrid/filtering.md
       new: false
       items:
-      - name: クイック フィルタリング
-        href: treegrid/filtering.md
-        new: false
       - name: Excel スタイル フィルタリング
         href: treegrid/excel-style-filtering.md
         updated: true
@@ -367,12 +361,9 @@
       href: hierarchicalgrid/paging.md
       new: false
     - name: フィルタリング
-      href: hierarchicalgrid/filtering-overview.md
+      href: hierarchicalgrid/filtering.md
       new: false
       items:
-      - name: クイック フィルタリング
-        href: hierarchicalgrid/filtering.md
-        new: false
       - name: Excel スタイル フィルタリング
         href: hierarchicalgrid/excel-style-filtering.md
         updated: true
@@ -469,13 +460,13 @@
       href: spreadsheet_activation.md
       new: false
     - name: チャート アダプター
-      href: spreadsheet_chart_adapter.md
+      href: spreadsheet_chart-adapter.md
       new: false
     - name: クリップボード
       href: spreadsheet_clipboard.md
       new: false
     - name: 条件付き書式
-      href: spreadsheet_conditional_formatting.md
+      href: spreadsheet_conditional-formatting.md
       new: false
     - name: Spreadsheet の構成
       href: spreadsheet_configuring.md
@@ -484,7 +475,7 @@
       href: spreadsheet_commands.md
       new: false
     - name: データ検証
-      href: spreadsheet_data_validation.md
+      href: spreadsheet_data-validation.md
       new: false
     - name: ハイパーリンク
       href: spreadsheet_hyperlinks.md
@@ -883,29 +874,29 @@
 - name: フレームワーク
   header: true
 - name: Excel ライブラリ
-  href: excel_library.md
+  href: excel-library.md
   new: false
   items:
     - name: セルの使用
-      href: excel_library_using_cells.md
+      href: excel-library-using-cells.md
       new: false
     - name: テーブルの使用
-      href: excel_library_using_tables.md
+      href: excel-library-using-tables.md
       new: false
     - name: ワークブックの使用
-      href: excel_library_using_workbooks.md
+      href: excel-library-using-workbooks.md
       new: false
     - name: ワークシートの使用
-      href: excel_library_using_worksheets.md
+      href: excel-library-using-worksheets.md
       new: false
     - name: チャートを使用した作業
-      href: excel_library_working_with_charts.md
+      href: excel-library-working-with-charts.md
       new: false
     # - name: Working with Grids
-    #   href: excel_library_working_with_grid.md
+    #   href: excel-library-working-with-grid.md
     #   new: false
     - name: スパークラインを使用した作業
-      href: excel_library_working_with_sparklines.md
+      href: excel-library-working-with-sparklines.md
       new: false
 - name: ゲージ
   header: true
