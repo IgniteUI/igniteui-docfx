@@ -11,7 +11,7 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component, [Circular Progress Indicator](../circular-progress.md) component, and [Icons](../icon.md). The demo also includes  custom paging and per page usage part of the [Angular Pagination](paging.md).
+Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular 改ページ](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular データ グリッドの例"></iframe>
@@ -23,7 +23,7 @@ Boston Marathon 2020 – In this angular grid example, you can see how users can
 </div>
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Data Grid
+## Ignite UI for Angular Data Grid で作業を開始
 ### 依存関係
 
 >[!NOTE]

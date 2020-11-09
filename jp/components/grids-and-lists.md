@@ -204,7 +204,7 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
 
 ## Angular Grid 例
 
-In this angular grid example, you can see how users can customize their _data view_ by leveraging the various features built into the grid, like data search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling. We have provided examples for cell templating that includes components like linear progress bar indicator and sparkline. View more features [here](#list-features).
+この Angular グリッドの例では、データの検索とフィルタリング、列のソート、サイズ変更、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、水平および垂直スクロールなど、グリッドに組み込まれているさまざまな機能を利用してユーザーがデータ ビューをカスタマイズする方法を確認できます。Linear Progress Bar Indicator やスパークラインなどのコンポーネントを含むセル テンプレートの例を提供しました。その他の機能については、[こちら](#list-features)をご覧ください。
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">

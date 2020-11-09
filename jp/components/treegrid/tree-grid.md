@@ -12,7 +12,7 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 
 ## Angular ツリー グリッドの例
 
-In this example, you can see how users can manipulate hierarchical or flat data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../sparkline.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
+この例では、ユーザーが階層データまたはフラット データを操作する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
 
 
 <div class="sample-container loading" style="height:850px">
@@ -25,7 +25,7 @@ In this example, you can see how users can manipulate hierarchical or flat data.
 </div>
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Tree Grid
+## Ignite UI for Angular Tree Grid で作業を開始
 
 ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 

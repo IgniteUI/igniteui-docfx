@@ -10,7 +10,7 @@ _language: ja
 Angular Material テーブルまたは UI グリッドの Group by 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。
 
 ## Angular Grid グループ化の例
-This example presents the grouping capabilities of a large amount of data. Dragging the column headers to the top (grouping area) allows users to see the data for the selected column in a hierarchical structure. They can do group by in multiple fields by dragging more column headers to the top. These grouping options come in handy when you have tables with numerous rows and columns where users want to present the data in a much faster and visually acceptable way.
+この例は、大量のデータのグループ化が可能であることを示しています。列ヘッダーを一番上 (グループ化領域) にドラッグすると、ユーザーは選択した列のデータを階層構造で表示できます。さらに列ヘッダーを一番上にドラッグすることで、複数のフィールドでグループ化できます。これらのグループ化オプションは、ユーザーが多数の行と列を持つテーブルがあり、はるかに高速で視覚的に受け入れられる方法でデータを表示しようとする場合に役立ちます。
 
 <div class="sample-container loading" style="height:605px">
     <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid グループ化の例"></iframe>
