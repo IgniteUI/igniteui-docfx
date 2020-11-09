@@ -1,9 +1,20 @@
+@@if(igxName === 'IgxGrid') {
 ---
-title: Angular Grid ソート | テンプレート | Ignite UI for Angular | インフラジスティックス
-_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
+title: Angular Grid Paging | Angular Pagination Table | Infragistics
+_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 _language: ja
 ---
+}
+@@if(igxName !== 'IgxGrid') {
+---
+title: Angular Grid Paging | Angular Pagination Table | Infragistics
+_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+_keywords: angular pagination, igniteui for angular, infragistics
+_canonicalLink: grid/paging
+_language: ja
+---
+}
 
 # Angular @@igComponent 改ページ
 改ページは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルの改ページにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent 改ページは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) および [` perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 入力で設定できます。他の Angular Material テーブルと同様に、@@igComponent の改ページはカスタム ページのテンプレートをサポートします。

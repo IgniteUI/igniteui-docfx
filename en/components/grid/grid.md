@@ -1,7 +1,7 @@
 ---
-title: Angular Data Grid | Angular Material Table | Infragistics
-_description: Create a touch-responsive Angular component with a variety of events using the Ignite UI for Angular data grid. Enhance your data visualization today!
-_keywords: angular data grid, angular grid, angular material table, ignite ui for angular
+title: Angular Data Grid | Build Fast Angular Tables | Infragistics
+_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. 30 days free trial
+_keywords: angular data grid, angular material table, ignite ui for angular
 ---
 
 # Angular Data Grid Overview and Configuration
