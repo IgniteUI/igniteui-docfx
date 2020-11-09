@@ -202,10 +202,12 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 
 
 ## Angular Grid Example
+
+In this angular grid example, you can see how users can customize their _data view_ by leveraging the various features built into the grid, like data search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling. We have provided examples for cell templating that includes components like linear progress bar indicator and sparkline. View more features [here](#list-features).
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);" alt="Angular grid example">
     </iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
@@ -221,7 +223,7 @@ An Angular data grid is a component used to display tabular data in a series of 
 
 Angular data grids are essential in use cases where lots of data must be stored and sorted through quickly. This can include industries such as financial or insurance that use high-volume, high-velocity data frequently.  Often the success of these companies is dependent on the functionality and performance of these data grids. When stock decisions need to be made in microseconds, for example, it’s imperative that the data grid performs with no lag time or flicker.
 
-## Key features
+## Key Features
 <div class="divider--half"></div>
 
 The Ignite UI for Angular Data Grid is not just for high-volume and real-time data. It is a feature-rich Angular grid that gives you capabilities that you would never be able to accomplish with so little code on your own.
@@ -240,7 +242,7 @@ This example demonstrates a few of the data grid’s key features:
 
 <li>[**Column Summaries**](grid/summaries.md) based on any data in a grid cell or column</li>
 
-<li>[**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel_library_working_with_charts.md)</li>
+<li>[**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel-library-working-with-charts.md)</li>
 
 <li>[**Display Density**](grid/display-density.md) to adjust the height and sizing of the rows</li>
 
@@ -347,9 +349,9 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Icon representation of Microsoft Excel-like features" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Icon representation of Microsoft Excel-like features on the Angular Data Grid">
 </div>
-    <div class="feature__details">
+    <div class="feature__details" id="list-features">
         <span class="h3 features__heading">Excel Library for the Angular Grid<a class="anchorjs-link" href="#excel-library-for-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel_library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.</p>
+        <p>Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel-library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.</p>
     </div>
 </div>
 <div class="divider--half"></div>
@@ -461,7 +463,7 @@ There are multiple options to get access to our award-winning support at Infragi
                 <li>[Excel-style Filtering](grid/excel-style-filtering.md) and full [Excel Keyboard Navigation](grid/keyboard-navigation.md) capability</li>
                 <li>Interactive [Outlook-style Grouping](grid/groupby.md)</li>
                 <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
-                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
+                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel-library-working-with-charts.md)</li>
                 <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
                 <li>Column templates like [Sparkline Column](sparkline.md) and Image Column</li>
             </ul>
