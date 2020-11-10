@@ -76,6 +76,7 @@
 - name: Data Grid
   href: grid/grid.md
   new: true
+  sortable: true
   items:
     - name: Live Data / Real-Time
       href: grid/live-data.md
@@ -206,6 +207,7 @@
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: true
+  sortable: true
   items:
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
@@ -327,6 +329,7 @@
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: true
+  sortable: true
   items:
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
