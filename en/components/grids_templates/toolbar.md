@@ -372,7 +372,6 @@ that simulates a long running operation in the grid:
 </div>
 <div class="divider--half"></div>
 }
-}
 
 ## Custom Content
 
