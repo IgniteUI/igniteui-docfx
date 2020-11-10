@@ -46,7 +46,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from
     all grids and all other properties related to the toolbar in the grid are deprecated.
     It is recommended to follow the recommended way for enabling
-    toolbar features as described in [this topic](../grids_templates/toolbar.md).
+    toolbar features as described in the [Toolbar topic](../grid/toolbar.md).
     * The `igxToolbarCustomContent` directive is removed. While the migration will move
     your template content inside the toolbar content, it does not try to resolve template bindings. Make sure to check your template files after the migration.
     * The API for the toolbar component was changed during the refactor and many of the old properties are now removed. Unfortunately, having
