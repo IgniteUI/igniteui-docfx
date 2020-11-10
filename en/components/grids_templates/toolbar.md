@@ -86,7 +86,7 @@ The following code snippet demonstrates how to enable a toolbar and set its titl
 ```
 }
 
-@@if (igxName === 'IgxHierarchicalGrid')
+@@if (igxName === 'IgxHierarchicalGrid') {
 
 ## Toolbar with child grids
 Due to certain limitations in how the child grids of an IgxHierarchicalGrid are implemented and how DI scope works, there is a caveat when
