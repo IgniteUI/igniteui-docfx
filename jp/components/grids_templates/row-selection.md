@@ -184,7 +184,7 @@ public handleRowSelection(event) {
 
 ### コードで行を選択
 
-以下は、単一または複数の行を同時に選択できるコード例です ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を介して)。また、このメソッドの2番目のパラメータとして、前の行の選択がクリアされるかどうかに対応するブールプロパティを渡すことができます。デフォルトでは、前の選択が保持されます。
+以下は、単一または複数の行を同時に選択できるコード スニペットです ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を介して)。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
@@ -356,7 +356,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 </ng-template>
 ```
 
-`selectedCount` と `totalCount` プロパティを使用して、ヘッド セレクターをチェックするか部分的にチェックする (不確定) かを決定できます。
+`selectedCount` および` totalCount` プロパティを使用して、ヘッド セレクターをチェックするか、不確定にする（部分的に選択する）かを決定できます。
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
