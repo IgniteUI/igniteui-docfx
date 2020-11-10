@@ -1,7 +1,7 @@
 ---
-title: Combo Component
-_description: The igx-combo provides a powerful input, combining features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
+title: Angular Combobox Component | Data binding combobox | Infragistics
+_description: The Ignite UI for Angular ComboBox provides a powerful input, combining features of the basic HTML input, select, filtering and custom drop-down lists. Try it for FREE
+_keywords: angular combobox, ignite ui for angular, infragistics
 ---
 
 # Angular ComboBox Overview

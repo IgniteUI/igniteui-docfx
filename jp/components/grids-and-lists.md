@@ -1,6 +1,6 @@
 ---
-title: Angular Data Grids と Lists コンポーネント | DataTable | Ignite UI for Angular | インフラジスティックス
-_description: 数百のデータ ポイント可視化においてもタイムラグのないスクロールを提供できるパワフルなグリッド機能を備えています。Ignite UI for Angular の Data Grid は、最適化と高速化を実現します。
+title: Angular Grids & Tables | Fastest Angular UI Grid | Infragistics
+_description: Looking for fast angular grids and tables? Ignite UI for Angular provides a complete library of Angular-native, Material-based UI data grids and tables. Find more.
 _keywords: angular data grid, infragistics, infragistics.com
 _language: ja
 ---
@@ -203,12 +203,17 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
 
 
 ## Angular Grid 例
+
+この Angular グリッドの例では、データの検索とフィルタリング、列のソート、サイズ変更、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、水平および垂直スクロールなど、グリッドに組み込まれているさまざまな機能を利用してユーザーがデータ ビューをカスタマイズする方法を確認できます。Linear Progress Bar Indicator やスパークラインなどのコンポーネントを含むセル テンプレートの例を提供しました。その他の機能については、[こちら](#list-features)をご覧ください。
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid 例">
     </iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+
+<div class="divider--half"></div>
 
 ## Angular Data Grid の概要 
 
@@ -238,7 +243,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 
 <li>グリッド セルまたは列のデータに基づいた[**列集計**](grid/summaries.md)</li>
 
-<li>[**Excel へのエクスポート**](grid/export-excel.md) ([**データ可視化**](excel_library_working_with_charts.md)を含む)</li>
+<li>[**Excel へのエクスポート**](grid/export-excel.md) ([**データ可視化**](excel-library-working-with-charts.md)を含む)</li>
 
 <li>行の高さとサイズ変更を調整する[**表示密度**](grid/display-density.md)</li>
 
@@ -345,9 +350,9 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Microsoft Excel のような機能のアイコン表示" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Angular Data Grid の Microsoft Excel のような機能のアイコン表示">
 </div>
-    <div class="feature__details">
+    <div class="feature__details" id="list-features">
         <span class="h3 features__heading">Angular Grid の Excel ライブラリ<a class="anchorjs-link" href="#angular-grid-の-excel-ライブラリ" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>データ グリッドの XLXS、XLS、TSV、または CSV のエクスポートを完全にサポートします。Ignite UI for Angular [Excel ライブラリ](excel_library.md)には、クライアント マシンで Microsoft Excel を必要としない 300 以上の数式、テーブルサポート、条件付き書式、チャートの作成などが含まれます。</p>
+        <p>データ グリッドの XLXS、XLS、TSV、または CSV のエクスポートを完全にサポートします。Ignite UI for Angular [Excel ライブラリ](excel-library.md)には、クライアント マシンで Microsoft Excel を必要としない 300 以上の数式、テーブルサポート、条件付き書式、チャートの作成などが含まれます。</p>
     </div>
 </div>
 <div class="divider--half"></div>
@@ -459,7 +464,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
                 <li>[Excel スタイル フィルタリング](grid/excel-style-filtering.md)と [Excel キーボード ナビゲーション](grid/keyboard-navigation.md)機能</li>
                 <li>インタラクティブな [Outlook スタイルのようなグループ化](grid/groupby.md)</li>
                 <li>グリッド セルまたは列のデータに基づいた[列集計](grid/summaries.md)</li>
-                <li>[Excel へのエクスポート](grid/export-excel.md) ([データ可視化](excel_library_working_with_charts.md)を含む)</li>
+                <li>[Excel へのエクスポート](grid/export-excel.md) ([データ可視化](excel-library-working-with-charts.md)を含む)</li>
                 <li>行の高さとサイズ変更を調整する[表示密度](grid/display-density.md)</li>
                 <li>[スパークライン列](sparkline.md)や画像列などの列テンプレート</li>
             </ul>

@@ -1,7 +1,7 @@
 ---
-title: Angular List コンポーネント | List モジュール | データ視覚化 | インフラジスティックス
-_description: テンプレートを使用すると、Angular List ビュー コンポーネントを使用して、行内のデータをシームレスかつ直感的に表示できます。Ignite UI for Angular を今すぐ使い始めましょう!
-_keywords: angular list, angular コンポーネント, ignite ui for angular, angular list モジュール, angular list コンポーネント
+title: Angular List View | Angular List Example | Infragistics
+_description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
+_keywords: angular list, ignite ui for angular, angular list component
 _language: ja
 ---
 

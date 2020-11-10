@@ -1,6 +1,6 @@
 ---
-title: Angular Data Grids and Lists Components | DataTable | Ignite UI for Angular | Infragistics
-_description: Find powerful grid features for no-lag scrolling through millions of data points. Ignite UI for Angular’s Data Grid is built for optimization and speed.
+title: Angular Grids & Tables | Fastest Angular UI Grid | Infragistics
+_description: Looking for fast angular grids and tables? Ignite UI for Angular provides a complete library of Angular-native, Material-based UI data grids and tables. Find more.
 _keywords: angular data grid, infragistics, infragistics.com
 ---
 <style>
@@ -242,7 +242,7 @@ This example demonstrates a few of the data grid’s key features:
 
 <li>[**Column Summaries**](grid/summaries.md) based on any data in a grid cell or column</li>
 
-<li>[**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel_library_working_with_charts.md)</li>
+<li>[**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel-library-working-with-charts.md)</li>
 
 <li>[**Display Density**](grid/display-density.md) to adjust the height and sizing of the rows</li>
 
@@ -351,7 +351,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
 </div>
     <div class="feature__details" id="list-features">
         <span class="h3 features__heading">Excel Library for the Angular Grid<a class="anchorjs-link" href="#excel-library-for-the-angular-grid" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
-        <p>Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel_library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.</p>
+        <p>Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel-library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.</p>
     </div>
 </div>
 <div class="divider--half"></div>
@@ -463,7 +463,7 @@ There are multiple options to get access to our award-winning support at Infragi
                 <li>[Excel-style Filtering](grid/excel-style-filtering.md) and full [Excel Keyboard Navigation](grid/keyboard-navigation.md) capability</li>
                 <li>Interactive [Outlook-style Grouping](grid/groupby.md)</li>
                 <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
-                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel_library_working_with_charts.md)</li>
+                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel-library-working-with-charts.md)</li>
                 <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
                 <li>Column templates like [Sparkline Column](sparkline.md) and Image Column</li>
             </ul>

@@ -1,7 +1,7 @@
 ---
-title: Angular List Component | List Modules | Data Visualization | Infragistics
-_description: Using any template, you can display data within rows seamlessly and intuitively with the Angular list view component. Start using Ignite UI for Angular today!
-_keywords: angular list, angular component, ignite ui for angular, angular list modules, angular list component
+title: Angular List View | Angular List Example | Infragistics 
+_description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
+_keywords: angular list, ignite ui for angular, angular list component
 ---
 
 # Angular List View

@@ -76,6 +76,7 @@
 - name: Data Grid
   href: grid/grid.md
   new: true
+  sortable: true
   items:
     - name: Live Data / Real-Time
       href: grid/live-data.md
@@ -206,6 +207,7 @@
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: true
+  sortable: true
   items:
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
@@ -327,6 +329,7 @@
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: true
+  sortable: true
   items:
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
@@ -873,29 +876,29 @@
 - name: Frameworks
   header: true
 - name: Excel Library
-  href: excel_library.md
+  href: excel-library.md
   new: false
   items:
     - name: Using Cells
-      href: excel_library_using_cells.md
+      href: excel-library-using-cells.md
       new: false
     - name: Using Tables
-      href: excel_library_using_tables.md
+      href: excel-library-using-tables.md
       new: false
     - name: Using Workbooks
-      href: excel_library_using_workbooks.md
+      href: excel-library-using-workbooks.md
       new: false
     - name: Using Worksheets
-      href: excel_library_using_worksheets.md
+      href: excel-library-using-worksheets.md
       new: false
     - name: Working with Charts
-      href: excel_library_working_with_charts.md
+      href: excel-library-working-with-charts.md
       new: false
     # - name: Working with Grids
-    #   href: excel_library_working_with_grid.md
+    #   href: excel-library-working-with-grid.md
     #   new: false
     - name: Working with Sparklines
-      href: excel_library_working_with_sparklines.md
+      href: excel-library-working-with-sparklines.md
       new: false
 - name: Gauges
   header: true
