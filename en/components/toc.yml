@@ -15,6 +15,7 @@
 - name: Update guide
   href: general/update-guide.md
   new: false
+  updated: true
 - name: Accessibility Compliance
   href: general/accessibility-compliance.md
   new: true
