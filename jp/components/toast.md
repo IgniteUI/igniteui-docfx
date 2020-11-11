@@ -63,6 +63,23 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 <igx-toast #toast ></igx-toast>
 ```
 
+[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
+
+```typescript
+// app.component.ts
+@ViewChild('toast', { read: IgxToastComponent }) public toast: IgxToastComponent;
+
+public message: any;
+
+public ngOnInit() {
+    this.message = 'Display message';
+}
+
+public showMessage() {
+    this.toast.show(this.message);
+}
+```
+
 ## 例
 
 ### 非表示/自動的に隠す
