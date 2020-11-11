@@ -332,7 +332,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 }
 
-You could also re-template the Excel style filtering icon in the column header using the `igxExcelStyleHeaderIcon` directive:
+`igxExcelStyleHeaderIcon` ディレクティブを使用して、列ヘッダーの Excel スタイル フィルタリング アイコンを再テンプレート化することもできます。
 
 ```html
 <@@igSelector ...>

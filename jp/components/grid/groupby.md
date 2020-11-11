@@ -101,7 +101,7 @@ export interface IGroupByExpandState {
     grid.selectRowsInGroup(groupRow);
 ```
 
-If you need to deselect all rows within a group programmatically, you can use the [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) method.
+プログラムでグループ内のすべての行の選択を解除する必要がある場合は、[`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) メソッドを使用できます。
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
