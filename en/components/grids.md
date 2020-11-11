@@ -1,5 +1,5 @@
 ---
-title: Angular Grid Layout | Real-Time Angular Tables | The Lightweight Angular Web Components table | Table Controls for Angular Apps | Infragistics
+title: Angular Grid Layout | Real-Time Angular Tables | The Lightweight Angular Web Components table | Infragistics
 _description: Our Angular grid layout will help you build dynamic, touch-responsive data grids with little coding and configuration. Get 30-day FREE trial of Ignite UI for Angular.
 _keywords: Angular data grid, infragistics, grids, Ignite UI for Angular, table
 ---
