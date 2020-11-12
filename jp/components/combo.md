@@ -1,7 +1,7 @@
 ---
-title: Angular Combobox Component | Data binding combobox | Infragistics
-_description: The Ignite UI for Angular ComboBox provides a powerful input, combining features of the basic HTML input, select, filtering and custom drop-down lists. Try it for FREE
-_keywords: angular combobox, ignite ui for angular, infragistics
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス 
+_description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
+_keywords: angular combobox, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -16,7 +16,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular combobox example as an alt text"></iframe>
+    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular Combobox 例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>

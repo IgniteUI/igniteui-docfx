@@ -1,5 +1,5 @@
 ---
-title: Angular Grid Group By | Group by multiple fields | Infragistics
+title: Angular Grid グループ化 | 複数のフィールドでグループ化 | インフラジスティックス
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Grid グループ化
 
-Angular Material テーブルまたは UI グリッドの Group by 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。
+Angular Material テーブルまたは UI グリッドの Group By 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。行選択を有効にすると、Group By 行セレクターがグループ行の一番左の領域に描画されます。**rowSelection** プロパティが単一に設定されている場合、チェックボックスは無効になり、選択が行われるグループの表示としてのみ機能します。**rowSelection** プロパティが複数に設定されている場合、Group By 行セレクターをクリックすると、このグループに属するすべてのレコードが選択されます。
 
 ## Angular Grid グループ化の例
 この例は、大量のデータのグループ化が可能であることを示しています。列ヘッダーを一番上 (グループ化領域) にドラッグすると、ユーザーは選択した列のデータを階層構造で表示できます。さらに列ヘッダーを一番上にドラッグすることで、複数のフィールドでグループ化できます。これらのグループ化オプションは、ユーザーが多数の行と列を持つテーブルがあり、はるかに高速で視覚的に受け入れられる方法でデータを表示しようとする場合に役立ちます。
@@ -36,7 +36,9 @@ public ngOnInit() {
 
 グループ式は、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) インターフェイスを実装します。
 
-## API でグループ化
+## Group By API
+
+### グループ化 API
 
 グループ化は、UI およびグリッド コンポーネントで公開された API で実行できます。各列の [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) プロパティを `true` に設定してエンドユーザーは特定の列でグリッド データをグループ化できます。
 
@@ -63,6 +65,8 @@ grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase:
 
 グループ化は、ソートおよびグループ式が列がグループ化されずにソートされた場合もソートされた列として適用される場合に可能です。グループ式は [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) プロパティにあり、グループ列の式が常に最初になるようソートします。ソート API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除してソートを解除します。
 
+### API の展開/縮小
+
 グループ式の他にグループ行の展開も制御できます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コンポーネント [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) の別のプロパティに保存されます。グループ行は、作成されたフィールド名とグループ化の各レベルを表す値に基づいて識別されます。以下は展開状態のインターフェイスのシグネチャです。
 
 ```typescript
@@ -84,11 +88,31 @@ export interface IGroupByExpandState {
     grid.toggleGroup(groupRow);
 ```
 
-グループは展開済み (***デフォルト***) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
+グループは展開済み (**デフォルト**) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
 
-## グループ行テンプレート
+### グループ API ですべての行を選択/選択解除
 
-UI の展開/縮小なしのグループ行は完全なテンプレート化が可能です。デフォルトでグループ アイコンを描画し、フィールド名と値を表示します。テンプレートが描画されるレコードのグループ化には、以下のシグネチャがあります。
+グループ内のすべての行の選択/選択解除は、[`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) および [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) API メソッドを介して利用できます。
+
+以下のコードスニペットは、グループ レコード [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) メソッドを使用してグループ内のすべての行を選択するために使用できます。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
+
+```typescript
+    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    grid.selectRowsInGroup(groupRow);
+```
+
+プログラムでグループ内のすべての行の選択を解除する必要がある場合は、[`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) メソッドを使用できます。
+
+```typescript
+    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    grid.deselectRowsInGroup(groupRow);
+```
+
+## テンプレート
+
+### グループ行テンプレート
+
+展開/縮小 UI を除くグループ行は完全にテンプレート化可能です。デフォルトでグループ アイコンを描画し、フィールド名と値を表示します。テンプレートが描画されるレコードのグループ化には、以下のシグネチャがあります:
 
 ```typescript
 export interface IGroupByRecord {
@@ -101,7 +125,7 @@ export interface IGroupByRecord {
 }
 ```
 
-たとえば、以下のテンプレートはグループ行集計でより詳細な情報を表示します。
+たとえば、以下のテンプレートはグループ行集計でより詳細な情報を表示します:
 
 ```html
 <ng-template igxGroupByRow let-groupRow>
@@ -109,6 +133,39 @@ export interface IGroupByRecord {
 </ng-template>
 ```
 
+### グループ行セレクター テンプレート
+
+上記のように、展開/縮小 UI を除くグループ行は完全にテンプレート化可能です。グリッド内にカスタムの GroupBy 行セレクター テンプレートを作成するには、`igxGroupByRowSelector` ディレクティブを使用して `<ng-template>` を宣言します。テンプレートから、Group By 行の状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
+
+`selectedCount` プロパティは、現在選択されているグループ レコードの数を示し、`totalCount` はグループに属するレコードの数を示します。
+
+```html
+<ng-template igxGroupByRowSelector let-groupByRowContext>
+    {{ groupByRowContext.selectedCount }} / {{ groupByRowContext.totalCount  }}
+</ng-template>
+```
+
+`groupRow` プロパティは、グループ行への参照を返します。
+
+```html
+<ng-template igxGroupByRowSelector let-groupByRowContext>
+    <div (click)="handleGroupByRowSelectorClick($event, groupByRowContext.groupRow)">Handle groupRow</div>
+</ng-template>
+```
+
+`selectedCount` と `totalCount` プロパティを使用して、Group By 行セレクターをチェックするか不確定にする (部分的に選択する) かを決定できます。
+
+```html
+<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+    <!-- ... -->
+    <ng-template igxGroupByRowSelector let-context>
+        <igx-checkbox
+            [checked]=" context.selectedCount > 0 && context.selectedCount === context.totalCount"
+            [indeterminate]="context.selectedCount > 0 && context.selectedCount !== context.totalCount">
+        </igx-checkbox>
+    </ng-template>
+</igx-grid>
+```
 
 ## Angular Grid ページングでグループ化
 
@@ -136,6 +193,7 @@ export interface IGroupByRecord {
 - グループ行 (行または展開/縮小セルにフォーカス)
    - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
    - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
+   - <kbd>SPACE</kbd> - <kbd>rowSelection</kbd> プロパティが複数に設定されている場合、グループ内のすべての行を選択します。
 
 - グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。
@@ -149,7 +207,7 @@ export interface IGroupByRecord {
 igxGrid では、列ごとまたはグループ化式ごとにカスタム グループを定義できます。これにより、カスタム条件に基づいてグループ化が提供されます。これは、複雑なオブジェクトごとにグループ化する必要がある場合、または他のアプリケーション固有のシナリオで役立ちます。
 
 > [!NOTE]
-> カスタム グループ化を実装するには、まずデータを適切にソートする必要があります。このため、ベース [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張するカスタムのソート ストラテジを適用する必要がある場合もあります。 データがソートされた後、列または特定のグループ化式に [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) を指定することにより、カスタム グループを決定できます。
+> カスタム グループ化を実装するには、まずデータを適切にソートする必要があります。このため、ベース [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張するカスタムのソート ストラテジを適用する必要がある場合もあります。データがソートされた後、列または特定のグループ化式に [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) を指定することにより、カスタム グループを決定できます。
 
 以下のサンプルは、`Date` によるカスタム グループ化を示しています。日付の値は、ユーザーが選択したグループ化モードに基づいて、日、週、月、または年でソート / グループ化されています。
 
