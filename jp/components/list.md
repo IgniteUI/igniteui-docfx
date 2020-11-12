@@ -1,7 +1,7 @@
 ---
-title: Angular List View | Angular List Example | Infragistics
-_description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
-_keywords: angular list, ignite ui for angular, angular list component
+title: Angular List ビュー | Angular List 例 | インフラジスティックス
+_description: Ignite UI for Angular List コンポーネントは、アイテムの行を表示し、1 つ以上のヘッダー アイテム、およびリスト アイテムの検索とフィルタリングをサポートします。 無料でお試しください。
+_keywords: angular list, ignite ui for angular, angular list コンポーネント
 _language: ja
 ---
 

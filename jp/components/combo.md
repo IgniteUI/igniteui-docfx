@@ -1,7 +1,7 @@
 ---
-title: Angular Combobox Component | Data binding combobox | Infragistics
-_description: The Ignite UI for Angular ComboBox provides a powerful input, combining features of the basic HTML input, select, filtering and custom drop-down lists. Try it for FREE
-_keywords: angular combobox, ignite ui for angular, infragistics
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス 
+_description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。 無料でお試しください。
+_keywords: angular combobox, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 

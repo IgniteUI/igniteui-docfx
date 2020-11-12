@@ -1,5 +1,5 @@
 ---
-title: Angular Grid Group By | Group by multiple fields | Infragistics
+title: Angular Grid グループ化 | 複数のフィールドでグループ化 | インフラジスティックス
 _description: Angular グループを設定して Angular Material テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja

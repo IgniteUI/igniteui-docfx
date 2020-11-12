@@ -1,7 +1,7 @@
 ---
-title: Angular Tree Grid | Fastest Angular Tree Table | Infragistics
-_description: The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little coding. Try it for FREE
-_keywords: angular group by, igniteui for angular, インフラジスティックス
+title: Angular Tree Grid | 最速の Angular Tree テーブル | インフラジスティックス
+_description: Ignite UI for Angular のツリー グリッドは、階層データまたはフラット データを簡単に表示および操作するために使用されます。コーディングをほとんど行わずにデータをバインドできます。無料でお試しください。
+_keywords: angular データ グリッド, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
