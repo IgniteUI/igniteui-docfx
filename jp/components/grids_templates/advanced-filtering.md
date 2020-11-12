@@ -1,7 +1,7 @@
 @@if(igxName === 'IgxGrid'){
 ---
 title: Angular Grid | 高度なフィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの高度なフィルターを構成する方法を学びます。 グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
+_description: Angular マテリアル テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,7 +9,7 @@ _language: ja
 @@if(igxName !== 'IgxGrid'){
 ---
 title: Angular Grid | 高度なフィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの高度なフィルターを構成する方法を学びます。 グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
+_description: Angular マテリアル テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---

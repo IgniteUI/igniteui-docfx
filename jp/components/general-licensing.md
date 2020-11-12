@@ -96,8 +96,8 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
   src="../images/general/generate-token.jpg"
   data-src="../images/general/generate-token.jpg"
-  alt="New Token Generated"
-  title="Generate new token" />
+  alt="生成されたトークンの作成"
+  title="生成されたトークンの作成" />
 
 > 注: 各トークンは Base64 エンコードです。
 
@@ -123,22 +123,22 @@ npm config set _auth=$(token) --scope:@infragistics
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
   src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
   data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  alt="Azure Pipelines CI yml update"
-  title="Azure Pipelines CI yml update" />
+  alt="Azure Pipelines CI yml の更新"
+  title="Azure Pipelines CI yml の更新" />
 
 **npm registry** および **token** 変数を追加します。
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
   src="../images/general/azure-ci-new-variable-2.jpg"
   data-src="../images/general/azure-ci-new-variable-2.jpg"
-  alt="Set npm Registry and token variables"
-  title="Set npm Registry and token variables" />
+  alt="npm Registry および token 変数の設定"
+  title="npm Registry および token 変数の設定" />
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
   src="../images/general/azure-ci-add-token-variable-1.jpg"
   data-src="../images/general/azure-ci-add-token-variable-1.jpg"
-  alt="npm Registry and token variables"
-  title="npm Registry and token variables" />
+  alt="npm Registry および token 変数"
+  title="npm Registry および token 変数" />
 
 ## Travis CI の構成
 

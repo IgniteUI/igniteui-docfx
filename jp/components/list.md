@@ -1,6 +1,6 @@
 ---
 title: Angular List ビュー | Angular List 例 | インフラジスティックス
-_description: Ignite UI for Angular List コンポーネントは、アイテムの行を表示し、1 つ以上のヘッダー アイテム、およびリスト アイテムの検索とフィルタリングをサポートします。 無料でお試しください。
+_description: Ignite UI for Angular List コンポーネントは、アイテムの行を表示し、1 つ以上のヘッダー アイテム、およびリスト アイテムの検索とフィルタリングをサポートします。無料でお試しください。
 _keywords: angular list, ignite ui for angular, angular list コンポーネント
 _language: ja
 ---
