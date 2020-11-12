@@ -16,6 +16,7 @@
 - name: アップデート ガイド
   href: general/update-guide.md
   new: false
+  updated: true
 - name: アクセシビリティ準拠
   href: general/accessibility-compliance.md
   new: true

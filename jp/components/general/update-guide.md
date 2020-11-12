@@ -21,7 +21,7 @@ ng update
 ```cmd
 ng update igniteui-angular
 ```
-`igniteui-angular` の更新時は、`@angular/core`, `@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`igniteui-angular` の更新時は、`@angular/core`、`@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
@@ -42,8 +42,18 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-## 10.0.x から 10.1.x の場合:
+## 10.2.x から 11.0.x の場合:
+* IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
+    * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from
+    all grids and all other properties related to the toolbar in the grid are deprecated.
+    It is recommended to follow the recommended way for enabling
+    toolbar features as described in the [Toolbar topic](../grid/toolbar.md).
+    * The `igxToolbarCustomContent` directive is removed. While the migration will move
+    your template content inside the toolbar content, it does not try to resolve template bindings. Make sure to check your template files after the migration.
+    * The API for the toolbar component was changed during the refactor and many of the old properties are now removed. Unfortunately, having
+    an adequate migration for these changes is complicated to say the least, so any errors should be handled at project level.
 
+## 10.0.x から 10.1.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、`IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`  `IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレートディレクティブの使用に関する詳細は、この[トピック](../grid/excel-style-filtering.md#テンプレート)をご覧ください。
 * IgxGrid
@@ -77,15 +87,14 @@ ng update @angular/cli
     .my-styles {
         display: flex;
         align-items: center;
-        
+
         span {
           margin-left: 8px;
         }
-    } 
+    }
     ```
 
 ## 8.x.x から 9.0.x の場合:
-
 Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
 
 * igxGrid
@@ -128,7 +137,6 @@ import { HammerModule } from "@angular/platform-browser";
 `ng update` プロセスは、`AvatarType`、`Type` などのすべての列挙名を `IgxAvatarType` と `IgxBadgeType` にそれぞれ更新します。その他の列挙メンバー名は変更されません。 
 
 ## 8.1.x から 8.2.x の場合:
-
 * IgxDrag
     * `hideBaseOnDrag` と `visible` 入力は非推奨のため、アプリケーションで同じ機能を実現するために、Angular が提供する基本要素を非表示にする任意の方法を使用できます。1 つの例として、可視性スタイルの非表示設定があります。これは、非表示にして DOM で使用するスペースを保持するためです。
 
@@ -167,7 +175,7 @@ import { HammerModule } from "@angular/platform-browser";
     * インターフェイス `IgxDropEnterEventArgs` と `IgxDropLeaveEventArgs` を使用する場合は、`IDragBaseEventArgs` に置き換える必要があります。
     * また、`IgxDropEventArgs` インターフェイスの使用はすべて、用する場合は、`IDropDroppedEventArgs` に置き換える必要があります。
 
-* IgxRowDragDirective 
+* IgxRowDragDirective
     * `IRowDragStartEventArgs` および `IRowDragEndEventArgs` では、関連先をより明確にするために引数の名前が変更されています。`owner` 引数は `dragDirective` に名前が変更されます。
     `owner` 引数は、owner コンポーネントへの参照を提供するようになりました。コードが以下のような場合:
         ```typescript
@@ -252,13 +260,13 @@ import { HammerModule } from "@angular/platform-browser";
 ## 7.1.x から 7.2.x の場合:
 * `combo.value` と一緒に IgxCombo を使う場合、`combo.value` が唯一のゲッターであることに注意してください。
 * `IgxTextHighlightDirective` を使用している場合、`page` 入力プロパティは推奨されません。`IActiveHighlightInfo` インターフェイスの `rowIndex`、`columnIndex`、`page` プロパティも非推奨です。代わりに、`行`と`列`のオプション プロパティが追加されています。
-* `igx-button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。 
+* `igx-button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。
 
 ## 7.0.x から 7.1.x
  * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。
 
 	バージョン 7.1 以前:
-```typescript	
+```typescript
 export class CustomSummary extends IgxNumberSummaryOperand {
 	public operate(data?: any[]): IgxSummaryResult[] {
 		return [{
