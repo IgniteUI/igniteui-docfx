@@ -1,24 +1,24 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Search | Angular Search Examples | Infragistics
+title: Angular Grid 検索 | Angular 検索例 | インフラジスティックス
 _description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
-_keywords: Content search, ignite ui for angular, infragistics
+_keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Search | Angular Search Examples | Infragistics
+title: Angular Tree Grid 検索 | Angular 検索例 | インフラジスティックス
 _description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
-_keywords: Content search, ignite ui for angular, infragistics
+_keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Search | Angular Search Examples | Infragistics
+title: Angular Hierarchical Grid 検索 | Angular 検索例 | インフラジスティックス
 _description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
-_keywords: Content search, ignite ui for angular, infragistics
+_keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
