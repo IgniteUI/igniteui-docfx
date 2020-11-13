@@ -1,5 +1,6 @@
 - name: General
   header: true
+  sortable: true
 - name: "Angular: A Complete Guide"
   href: general/angular-grid-overview-guide.md
   new: true
@@ -485,6 +486,7 @@
       new: false
 - name: Charts
   header: true
+  sortable: true
 - name: Category Chart
   href: category-chart.md
   new: false
@@ -801,6 +803,7 @@
 - name: Map
   href: geo-map.md
   new: false
+  sortable: true
   items:
     - name: Binding CSV File
       href: geo-map-binding-data-csv.md
@@ -879,6 +882,7 @@
 - name: Excel Library
   href: excel-library.md
   new: false
+  sortable: true
   items:
     - name: Using Cells
       href: excel-library-using-cells.md
@@ -904,6 +908,7 @@
 - name: Gauges
   header: true
   new: false
+  sortable: true
 - name: Bullet Graph
   href: bullet-graph.md
   new: false
@@ -915,6 +920,7 @@
   new: false
 - name: Styling & Themes
   header: true
+  sortable: true
 - name: Themes
   href: themes/index.md
   new: true
@@ -961,6 +967,7 @@
   href: display-density.md
 - name: Data Entry & Display
   header: true
+  sortable: true
 - name: Drop Down
   href: drop-down.md
   new: false
@@ -1020,6 +1027,7 @@
   new: false
 - name: Interactions
   header: true
+  sortable: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
@@ -1056,12 +1064,14 @@
   href: action-strip.md
 - name: Menus
   header: true
+  sortable: true
 - name: Navigation Drawer
   href: navdrawer.md
 - name: Navbar
   href: navbar.md
 - name: Layouts
   header: true
+  sortable: true
 - name: Layout Manager
   href: layout.md
 - name: Carousel
@@ -1087,6 +1097,7 @@
   new: true
 - name: Notifications
   header: true
+  sortable: true
 - name: Banner
   href: banner.md
   new: false
@@ -1096,6 +1107,7 @@
   href: toast.md
 - name: Scheduling
   header: true
+  sortable: true
 - name: Date Time Editor
   href: date-time-editor.md
   new: true
@@ -1115,6 +1127,7 @@
   new: false
 - name: Services
   header: true
+  sortable: true
 - name: CSV Exporter
   href: exporter-csv.md
   new: false
