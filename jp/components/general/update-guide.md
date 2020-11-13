@@ -44,14 +44,10 @@ ng update @angular/cli
 
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
-    * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from
-    all grids and all other properties related to the toolbar in the grid are deprecated.
-    It is recommended to follow the recommended way for enabling
-    toolbar features as described in the [Toolbar topic](../grid/toolbar.md).
-    * The `igxToolbarCustomContent` directive is removed. While the migration will move
-    your template content inside the toolbar content, it does not try to resolve template bindings. Make sure to check your template files after the migration.
-    * The API for the toolbar component was changed during the refactor and many of the old properties are now removed. Unfortunately, having
-    an adequate migration for these changes is complicated to say the least, so any errors should be handled at project level.
+    * グリッドでツール バーをインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、 `showToolbar` プロパティはすべてのグリッドから削除され、グリッド内のツールバーに関連する他のすべてのプロパティは非推奨です。
+    [ツールバー トピック](../grid/toolbar.md)で説明されているように、ツールバー機能を有効にするための推奨される方法に従うことをお勧めします。
+    * `igxToolbarCustomContent` ディレクティブが削除されました。移行により、テンプレート コンテンツがツールバー コンテンツ内に移動しますが、テンプレート バインディングは解決されません。移行後は、必ずテンプレート ファイルを確認してください。
+    * ツールバー コンポーネントの API はリファクタリング中に変更され、古いプロパティの多くが削除されました。残念ながら、これらの変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
 
 ## 10.0.x から 10.1.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
