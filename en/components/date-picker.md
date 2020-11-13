@@ -7,7 +7,7 @@ _keywords: angular date picker, angular component, ignite ui for angular
 # Angular Date Picker
 <p class="highlight">The Ignite UI for Angular Date Picker Component displays a month-view calendar that lets the users to pick a single date or provides an editable input for modifying the date in a dropdown mode. It supports locales and custom date formatting.</p>
 
-## Demo
+## Angular Date Picker Example
 <div class="sample-container loading" style="height: 550px;">
     <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>

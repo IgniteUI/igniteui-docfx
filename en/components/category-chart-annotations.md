@@ -9,7 +9,7 @@ mentionedTypes: ['CategoryChart']
 
 This topic provides conceptual information about the annotations and overlay interactions available on the Ignite UI for Angular category chart component.
 
-## Demo
+## Angular Annotations Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

@@ -203,7 +203,7 @@ this.state.setState(state, ['filtering', 'rowiIslands']);
 ```
 }
 
-## Demo
+## Angular @@igComponent State Persistence Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:763px">

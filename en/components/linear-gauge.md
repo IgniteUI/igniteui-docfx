@@ -9,7 +9,7 @@ mentionedTypes: ['XamLinearGauge']
 
 Use the Angular linear gauge component to see a simple display of a value compared against a scale and one or more ranges.
 
-## Demo
+## Angular Linear Gauge Overview Example
 
 The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
 

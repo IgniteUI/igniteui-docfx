@@ -9,7 +9,7 @@ mentionedTypes: ['CategoryChart']
 
 The Ignite UI for Angular category chart component is capable of handling high volumes of data, ranging into the millions of data points, as shown in the following demo.
 
-## Demo
+## Angular High Volume Data Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

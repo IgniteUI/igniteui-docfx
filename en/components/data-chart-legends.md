@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'Infragistics.Controls.Charts.Legend']
 
 Legends help end-users identify visuals of data chart series with contextual information related to data plotted in the Angular data chart component. Most data charts should have at least one legend in order to make it easier to understand data displayed in the plot area, however, it is not a requirement and the data chart can render without any legends, as it does by default.
 
-## Demo
+## Angular Legends Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-legends-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-legends' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

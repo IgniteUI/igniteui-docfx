@@ -41,7 +41,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 </ng-template>
 ```
 
-## Demo
+### Angular @@igComponent Column Moving Overview Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

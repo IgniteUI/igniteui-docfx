@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'MarkerSeries']
 
 In the Angular data chart component's plot area, markers are visual elements displayed at location of data points. Markers help your end users immediately identify a data point’s even if its values fall between major or minor grid lines.
 
-## Demo
+## Angular Markers Example
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

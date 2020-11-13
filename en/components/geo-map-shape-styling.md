@@ -9,7 +9,7 @@ mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries']
 
 This topic explains how to apply custom styling to the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) in the Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html).
 
-## Demo
+## Angular Shape Styling on Geographic Shape Series Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-shape-styling-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

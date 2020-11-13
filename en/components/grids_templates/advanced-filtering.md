@@ -19,7 +19,7 @@ _canonicalLink: grid/advanced-filtering
 
 The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent.
 
-### Demo
+### Angular @@igComponent Advanced Filtering Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">

@@ -26,7 +26,7 @@ _canonicalLink: grid/row-drag
 
 In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
 
-### Demo
+### Angular @@igComponent Row Drag Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">

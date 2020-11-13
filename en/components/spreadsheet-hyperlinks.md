@@ -9,7 +9,7 @@ mentionedTypes: ['Spreadsheet']
 
 The Angular Spreadsheet component allows display of pre-existing hyperlinks in your Excel workbook as well as insertion of new ones that can link to websites, file directories, and even other worksheets in the workbook.
 
-## Demo
+## Angular Spreadsheet Hyperlinks Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-hyperlinks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

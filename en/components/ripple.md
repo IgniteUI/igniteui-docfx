@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Ripple
 <p class="highlight">The Ignite UI for Angular Ripple component creates an animation in response to a touch or a mouse click.</p>
 
-### Demo
+## Angular Ripple Example
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 100px">
     <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">

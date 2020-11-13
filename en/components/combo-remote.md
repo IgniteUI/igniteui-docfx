@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo Component exposes an API that allows binding a combo to a remote service and retrieving data on demand.
 </p>
 
-## Demo
+## Angular Combo Remote Binding Example
 The sample below demonstrates remote binding using the [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) property to load new chunk of remote data:
 
 <div class="sample-container loading" style="height: 400px;">

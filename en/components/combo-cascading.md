@@ -10,7 +10,7 @@ _language: en
 The Ignite UI for Angular Combo and Select components expose events, properties and methods that allow users to easily construct cascading scenarios, either using one of the controls or both of them.
 </p>
 
-## Demo
+## Angular Cascading Scenario Example
 The following sample demonstrates a scenario where the [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components are used together:
 
 <div class="sample-container loading" style="height: 540px;">

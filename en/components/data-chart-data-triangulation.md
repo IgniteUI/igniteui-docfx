@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 The Data Chart is ... TODO ...
 
-## Demo
+## Angular Data Chart  Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-binding-data-triangulation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-binding-data-triangulation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

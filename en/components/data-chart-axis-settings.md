@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateT
 
 In the Ignite UI for Angular data chart component, an axis provides base properties for specifying the appearance of axis main lines, tickmarks, titles, and axis labels.
 
-## Demo
+## Angular Axis Settings Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-axis-settings-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-settings' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

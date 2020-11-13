@@ -149,7 +149,7 @@ public priceClasses = {
 
 Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
-### Demo
+### Angular @@igComponent Conditional Cell Styling Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">

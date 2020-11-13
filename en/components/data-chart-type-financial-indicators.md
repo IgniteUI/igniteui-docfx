@@ -11,7 +11,7 @@ mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 
 TODO TODO TODO
 
-### Demo
+## Angular Financial Series Example
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-area-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-area-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

@@ -9,7 +9,7 @@ mentionedTypes: ['FinancialChart']
 
 This topic provides conceptual information about the annotations available on the Angular financial chart component.
 
-## Demo
+## Angular Chart Annotations Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
