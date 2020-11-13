@@ -42,7 +42,7 @@ In order to use the [`HierarchicalTransactionService`]({environment:angularApiUr
 Below is a detailed example of how is Batch Editing enabled for the IgxHierarchicalGrid component.
 }
 
-### Demo
+### Angular @@igComponent Batch Editing and Transactions Example
 
 @@if (igxName === 'IgxGrid') {
 The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.

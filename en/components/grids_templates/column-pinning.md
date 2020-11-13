@@ -25,7 +25,7 @@ _canonicalLink: grid/column-pinning
 # @@igComponent Column Pinning 
 A column or multiple columns can be pinned to the left or right side of the Angular UI Grid. **Column Pinning** in Ignite UI for Angular allows the end users to lock column in a particular column order, this will allow them to see it while horizontally scrolling the @@igComponent. The Material UI Grid has a built-in column pinning UI, which can be used through the @@igComponent's toolbar to change the pin state of the columns. In addition, you can define a custom UI and change the pin state of the columns via the Column Pinning API.
 
-#### Demo
+### Angular @@igComponent Column Pinning  Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:510px">

@@ -9,7 +9,7 @@ mentionedTypes: ['Spreadsheet', 'Worksheet', 'WorksheetShapeCollection', 'Worksh
 
 The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html).
 
-## Demo
+## Angular Spreadsheet Chart Adapter Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

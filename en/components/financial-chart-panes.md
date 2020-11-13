@@ -9,7 +9,7 @@ mentionedTypes: ['FinancialChart', 'FinancialChartYAxisMode']
 
 The Angular financial chart component has multiple panes to display financial data.
 
-## Demo
+## Angular Chart Panes Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="financial-chart-panes-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

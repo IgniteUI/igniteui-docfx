@@ -13,7 +13,7 @@ Polar series draw attention to uneven intervals or clusters of data. They are of
 
 <!-- Angular, React, WebComponents -->
 
-## Demo
+## Angular Polar Series Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

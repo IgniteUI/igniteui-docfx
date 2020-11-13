@@ -10,7 +10,7 @@ mentionedTypes: ['XamDoughnutChart']
 
 The Ignite UI for Angular doughnut chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
-## Demo
+## Angular Doughnut Chart Overview Example
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

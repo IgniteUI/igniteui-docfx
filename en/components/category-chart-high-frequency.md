@@ -9,7 +9,7 @@ mentionedTypes: ['CategoryChart']
 
 The Ignite UI for Angular category chart component is capable of handling high volumes of data, ranging into the millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
 
-## Demo
+## Angular Real Time Data Example
 
 <div class="sample-container loading" style="height: 500px;">
     <iframe id="category-chart-high-frequency-iframe" align="center" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency' height="100%" width="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

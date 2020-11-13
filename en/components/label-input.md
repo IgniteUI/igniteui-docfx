@@ -10,7 +10,7 @@ The Ignite UI for Angular Input and Label directives are used to create single-l
 </p>
 <div class="divider--half"></div>
 
-## Demo
+## Angular Label & Input Example
 <div class="sample-container loading" style="height:100px">
 <iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart','RadialPieSeries']
 
 The Ignite UI for Angular radial pie chart belongs to a group of radial charts and uses pie slices that extend from the center of chart towards locations of data points. The [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) take concepts of categorizing multiple series of data points and wrapping them around on a circle rather than stretching data points along a horizontal line.
 
-## Demo
+## Angular Radial Pie Chart Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

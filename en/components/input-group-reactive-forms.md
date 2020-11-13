@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular controls can be easily integrated into Reactive Forms that provide a model-driven approach for handling form inputs.
 </p>
 
-## Demo
+## Angular Reactive Forms Integration Example
 The following sample demonstrates the [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html), [`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) controls when used in Reactive Forms.
 
 <div class="sample-container loading" style="height: 850px;">

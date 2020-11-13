@@ -9,7 +9,7 @@ mentionedTypes: ['Spreadsheet', 'SpreadsheetAction']
 
 The Angular Spreadsheet component allows you to perform commands for activating different features of the spreadsheet. This topic explains how to perform different operations with the control using commands. Many of the commands will perform their action based on the active cells, rows, or worksheets. For example two such commands are ZoomIn and ZoomOut. See the SpreadsheetAction enum for a full list.
 
-## Demo
+## Angular Working with Commands Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="spreadsheet-commands-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-commands' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

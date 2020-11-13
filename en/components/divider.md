@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The divider component enables users to separate content both horizontally and vertically.</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Divider Example
 
 By default the divider is a solid horizontal line.
 

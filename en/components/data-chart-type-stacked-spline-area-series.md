@@ -10,7 +10,7 @@ namespace: Infragistics.Controls.Charts
 
 The Ignite UI for Angular stacked spline area chart belongs to a group of category charts and is rendered using a collection of points connected by smooth curves of spline segments ([`IgxStackedFragmentSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) with the area below the spline filled in and stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis.
 
-## Demo
+## Angular Stacked Spline Area Chart Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

@@ -10,7 +10,7 @@ mentionedTypes: ['XamDataChart', 'AreaSeries', 'BarSeries','ColumnSeries', 'Poin
 
 The Angular data chart component has support for trendlines, which help to identify a trend in data bound to a series.
 
-## Demo
+## Angular Trendlines Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

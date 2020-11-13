@@ -12,7 +12,7 @@ This topic explains various types of shape series in the Angular data chart comp
 
 Scatter shape series are often used highlight regions in scientific data or they can be used to plot diagrams, blueprints, or even floor plan of buildings.
 
-## Demo
+## Angular Scatter Shape Series Example
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-shape-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

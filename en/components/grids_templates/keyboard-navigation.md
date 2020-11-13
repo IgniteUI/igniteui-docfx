@@ -101,7 +101,7 @@ When the **@@igxName** body is focused, the following key combinations are avail
 
 Practice all of the above mentioned actions in the demo sample below. Focus any navigable grid element and a list with some of the available actions for the element will be shown to guide you through.
 
-## Demo
+### Angular @@igComponent Keyboard Navigation Example
 @@if (igxName === "IgxGrid") {
 <div class="sample-container loading" style="height:470px">
     <iframe id="grid-keyboardnav-guide-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-keyboardnav-guide' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -9,7 +9,7 @@ mentionedTypes: ['Workbook', 'Worksheet', 'WorksheetCell', 'WorkbookStyleCollect
 
 The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) objects in an Excel worksheet is the object that holds your actual data values for the worksheet. This topic goes over the many operations that you can perform on these cells, such as accessing them and their regions by name, adding formulas and comments to the cells, and merging and formatting them.
 
-## Demo
+## Angular Using Cells Example
 
 <div class="sample-container loading" style="height: 150px">
     <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

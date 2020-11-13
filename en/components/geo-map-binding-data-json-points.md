@@ -9,7 +9,7 @@ mentionedTypes: ['XamGeographicMap']
 
 With the Ignite UI for Angular map, you can plot geographic data loaded from various file types. For example, you can load geographic locations from JavaScript Object Notation (JSON) file.
 
-## Demo
+## Angular Binding JSON Files with Geographic Locations Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

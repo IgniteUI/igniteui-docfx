@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart']
 
 The Angular data chart component has support for showing tooltips along with a couple of tooltip layers. These tooltips help you to see contextual information about each of the series in your data chart.
 
-## Demo
+## Angular Tooltips Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="data-chart-series-tooltips-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-tooltips' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

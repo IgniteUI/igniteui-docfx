@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'FinancialPriceSeries','PriceDisplayType','Cate
 
 The Ignite UI for Angular financial price chart in [`Candlestick`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/pricedisplaytype.html#candlestick) mode is used to plot stock prices, and show the stock’s high, low, open and close prices for each day. Each data point is plotted as a vertical column with vertical lines on both the top and bottom. The vertical line indicates the span between high and low values of an investment. The top of the vertical line indicates the highest price during a session and the bottom of the vertical line indicates the lowest price during a session. The vertical columns indicate the span between the opening and closing values of an investment. The columns are filled using series’ [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) when there is positive value and using the series' [`negativeBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#negativebrush) when there is negative value between the opening and closing values.
 
-## Demo
+## Angular Financial Candlestick Chart Example
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-candlestick-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-candlestick-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

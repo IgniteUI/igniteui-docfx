@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Drop Down component displays a scrollable list of items which may be visually grouped. Clicking or tapping an item selects it and closes the drop down</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Drop Down Example
 <div class="sample-container loading" style="height:200px">
     <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

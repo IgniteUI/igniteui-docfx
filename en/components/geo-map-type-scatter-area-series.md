@@ -9,7 +9,7 @@ mentionedTypes: ['XamGeographicMap','GeographicScatterAreaSeries','CustomPalette
 
 Use the Angular map component's [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) to draw a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc.
 
-## Demo
+## Angular Using Scatter Area Series Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-type-scatter-area-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

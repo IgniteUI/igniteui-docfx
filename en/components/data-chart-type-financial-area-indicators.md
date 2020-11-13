@@ -9,7 +9,7 @@ mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 
 Financial indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed in a separate chart above or below of a chart with the [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) because they do not share the same Y-Axis scale. However, the chart control supports plotting price series and indicators in the same plot area, if desired, using multiple axes and by sharing axes. For more information on this, please refer to the [Axis Sharing and Multiple Axes](data-chart-axis-sharing.md) topic.
 
-## Demo
+## Angular Financial Area Indicators Example
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="data-chart-type-financial-area-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-area-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

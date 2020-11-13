@@ -497,7 +497,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-### Demo
+### Angular @@igComponent Toolbar container for UI operations Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
