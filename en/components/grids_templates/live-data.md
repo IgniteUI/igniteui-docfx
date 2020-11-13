@@ -16,9 +16,13 @@ _canonicalLink: grid/live-data
 ---
 }
 
-# Live Updating Demo
-The @@igComponent component in Ignite UI for Angular is able to handle thousands of updates per seconds, while keeping the grid responsive for any interaction that the user may undertake. This sample demonstrates the @@igComponent handling thousands of updates per second and also Chart representation of data, based on Category Prices per Region. Use the `Chart` button to show data based on the `selected rows` or use the button under `Chart column` to see the same based on row `Region` value.
+# @@igComponent Live Updating
+The @@igComponent component is able to handle thousands of updates per second, while staying responsive for user interactions.
 
+The sample below demonstrates the @@igComponent performance when all records are updated multiple times per second. Use the UI controls to choose the number of records loaded and the frequency of updates.
+Feed the same data into the Category Chart to experience the powerful charting capabilities of Ignite UI. The `Chart` button will show `Category Prices per Region` data for the selected rows and the `Chart` column button will show the same for the current row.
+
+## Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -28,6 +32,40 @@ The @@igComponent component in Ignite UI for Angular is able to handle thousands
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
 </div>
+
+## Data binding and updates
+A service provides data to the component when the page loads, and when the slider controller is used to fetch a certain number of records. While in a real scenario updated data would be consumed from the service, here data is updated in code. This is done to keep the demo simple and focus on its main goal - demonstrate the grid performance.
+```html
+<igx-grid #grid [data]="data" ...></igx-grid>
+```
+```typescript
+public ngOnInit() {
+    this.localService.getData(this.volume);
+    this.volumeSlider.onValueChange.subscribe(x => this.localService.getData(this.volume);
+    this.localService.records.subscribe(x => { this.data = x; });
+}
+```
+
+Angular pipes are used internally to update the grid view. A change in the data field value or a change in the data object/data collection reference will trigger the corresponding pipes. However, this is not the case for columns, which are bound to [`complex data objects`](grid.md#complex-data-binding), because the Angular pure pipe will not detect a change in a nested property. To resolve the situation, provide a new object reference for the data object containing the property. Example:
+
+```html
+<igx-grid #grid [data]="data" ...>
+    <igx-column field="price.usd"></igx-column>
+</igx-grid>
+```
+```typescript
+private updateData(data: IRecord[]) {
+    const newData = []
+    for (const rowData of data) {
+        rowData.price = { usd: getUSD(), eur: getEUR() };
+        newData.push({...rowData});
+    }
+    this.grid.data = newData;
+}
+```
+
+## Templates
+Updating the view works the same way for columns with a default template and for columns with a custom template. However, it is recommended to keep custom templates relatively simple. As number of elements in the template grows, negative performance impact rises as well.
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
