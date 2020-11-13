@@ -244,7 +244,7 @@ export class RemoteLoDService {
 
 ## サイズ変更
 
-詳細については、[Grid Sizing](sizing.md) トピックをご覧ください。
+詳細については、[Grid サイズ変更](sizing.md)トピックをご覧ください。
 
 ## CRUD 操作
 

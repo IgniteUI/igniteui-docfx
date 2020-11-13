@@ -1,24 +1,24 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Grid | Infragistics
-_description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
-_keywords: angular filter, ignite ui for angular, infragistics
+title: Angular フィルター | Angular フィルタリング可能なデータ グリッド | インフラジスティックス
+_description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
+_keywords: angular フィルター, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Tree Grid | Infragistics
-_description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
-_keywords: angular filter, ignite ui for angular, infragistics
+title: Angular フィルター | Angular フィルタリング可能なデータ ツリー グリッド | インフラジスティックス
+_description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
+_keywords: angular フィルター, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Hierarchical Grid | Infragistics
-_description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
-_keywords: angular filter, ignite ui for angular, infragistics
+title: Angular フィルター | Angular フィルタリング可能なデータ階層グリッド | インフラジスティックス
+_description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
+_keywords: angular フィルター, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
