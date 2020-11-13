@@ -16,12 +16,13 @@ _canonicalLink: grid/live-data
 ---
 }
 
-# Live Updating Demo
+# @@igComponent Live Updating
 The @@igComponent component is able to handle thousands of updates per second, while staying responsive for user interactions.
 
 The sample below demonstrates the @@igComponent performance when all records are updated multiple times per second. Use the UI controls to choose the number of records loaded and the frequency of updates.
 Feed the same data into the Category Chart to experience the powerful charting capabilities of Ignite UI. The `Chart` button will show `Category Prices per Region` data for the selected rows and the `Chart` column button will show the same for the current row.
 
+## Demo
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -45,7 +46,7 @@ public ngOnInit() {
 }
 ```
 
-Angular pipes are used internally to update the grid view. A change in the data field value or a change in the data object/data collection reference will trigger the corresponding pipes. However, this is not the case for columns, which are bound to [`complex data objects`](grid.md#complex-data-binding). The pipe is not able to detect a change in a nested property. To work around the situation, you need to change the reference of the data object containing the property. Example:
+Angular pipes are used internally to update the grid view. A change in the data field value or a change in the data object/data collection reference will trigger the corresponding pipes. However, this is not the case for columns, which are bound to [`complex data objects`](grid.md#complex-data-binding), because the Angular pure pipe will not to detect a change in a nested property. To resolve the situation, provide a new object reference for the data object containing the property. Example:
 
 ```html
 <igx-grid #grid [data]="data" ...>
