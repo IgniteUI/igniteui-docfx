@@ -46,7 +46,7 @@ public ngOnInit() {
 }
 ```
 
-Angular pipes are used internally to update the grid view. A change in the data field value or a change in the data object/data collection reference will trigger the corresponding pipes. However, this is not the case for columns, which are bound to [`complex data objects`](grid.md#complex-data-binding), because the Angular pure pipe will not to detect a change in a nested property. To resolve the situation, provide a new object reference for the data object containing the property. Example:
+Angular pipes are used internally to update the grid view. A change in the data field value or a change in the data object/data collection reference will trigger the corresponding pipes. However, this is not the case for columns, which are bound to [`complex data objects`](grid.md#complex-data-binding), because the Angular pure pipe will not detect a change in a nested property. To resolve the situation, provide a new object reference for the data object containing the property. Example:
 
 ```html
 <igx-grid #grid [data]="data" ...>
@@ -65,7 +65,7 @@ private updateData(data: IRecord[]) {
 ```
 
 ## Templates
-Updating the view works the same for columns with a default template and for columns using a custom template. However, we recommend you to keep custom templates relatively simple. As number of elements in the template grows, negative performance impact rises as well.
+Updating the view works the same way for columns with a default template and for columns with a custom template. However, it is recommended to keep custom templates relatively simple. As number of elements in the template grows, negative performance impact rises as well.
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
