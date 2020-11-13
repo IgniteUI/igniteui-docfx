@@ -20,7 +20,7 @@ To update the **Ignite UI for Angular** package run the following command:
 ```cmd
 ng update igniteui-angular
 ```
-When you update `igniteui-angular` - it's recommended to update `@angular/core`, `@angular/cli` and `igniteui-cli` packages to their matching versions. 
+When you update `igniteui-angular` - it's recommended to update `@angular/core`, `@angular/cli` and `igniteui-cli` packages to their matching versions.
 To update the **Ignite UI CLI** package run the following command:
 ```cmd
 ng update igniteui-cli
@@ -41,6 +41,17 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 10.2.x to 11.0.x
+* IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
+    * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from
+    all grids and all other properties related to the toolbar in the grid are deprecated.
+    It is recommended to follow the recommended way for enabling
+    toolbar features as described in the [Toolbar topic](../grid/toolbar.md).
+    * The `igxToolbarCustomContent` directive is removed. While the migration will move
+    your template content inside the toolbar content, it does not try to resolve template bindings. Make sure to check your template files after the migration.
+    * The API for the toolbar component was changed during the refactor and many of the old properties are now removed. Unfortunately, having
+    an adequate migration for these changes is complicated to say the least, so any errors should be handled at project level.
+
 ## From 10.0.x to 10.1.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
     * Since we have removed the `IgxExcelStyleSortingTemplateDirective`, `IgxExcelStyleHidingTemplateDirective`, `IgxExcelStyleMovingTemplateDirective`, `IgxExcelStylePinningTemplateDirective`, and `IgxExcelStyleSelectingTemplateDirective` directives used for templating some parts of the Excel style filter menu, you could use the newly added directives for templating the column and filter operations areas - `IgxExcelStyleColumnOperationsTemplateDirective` and `IgxExcelStyleFilterOperationsTemplateDirective`. We have also exposed all internal components of the Excel style filter menu so that they can be used inside custom templates. You can find more information about the new template directives in the [Excel-Style Filtering Topic](../grid/excel-style-filtering.md#templates).
@@ -60,9 +71,9 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 * IgxDropdown
     * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
-    
+
     * The following example demonstrates how to style a dropdown item with an icon and text content so that they are vertically aligned.
-    
+
     ```html
     <igx-drop-down-item>
         <div class="my-styles">
@@ -75,18 +86,18 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     .my-styles {
         display: flex;
         align-items: center;
-        
+
         span {
           margin-left: 8px;
         }
-    } 
+    }
 
 ## From 9.0.x to 10.0.x
 * IgxDropdown
     * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
-    
+
     * The following example demonstrates how to style a dropdown item with an icon and text content so that they are vertically aligned.
-    
+
     ```html
     <igx-drop-down-item>
         <div class="my-styles">
@@ -99,11 +110,11 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     .my-styles {
         display: flex;
         align-items: center;
-        
+
         span {
           margin-left: 8px;
         }
-    } 
+    }
     ```
 
 ## From 8.x.x to 9.0.x
@@ -146,7 +157,7 @@ Due to name changes made in some of the `Enumerations` we export, manual update 
 * IgxDividerType.`DEFAULT` -> IgxDividerType.`SOLID`
 * IgxProgressType.`DANGER` -> IgxProgressType.`ERROR`
 
-The `ng update` process will update all enumeration names, like `AvatarType`, `Type`, et al. to `IgxAvatarType` and `IgxBadgeType`, respectively. All other enumeration member names remain unchanged. 
+The `ng update` process will update all enumeration names, like `AvatarType`, `Type`, et al. to `IgxAvatarType` and `IgxBadgeType`, respectively. All other enumeration member names remain unchanged.
 
 ## From 8.1.x to 8.2.x
 
@@ -188,7 +199,7 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
     * Any use of interfaces `IgxDropEnterEventArgs` and `IgxDropLeaveEventArgs` should be replaced with `IDragBaseEventArgs`.
     * Also any use of the  `IgxDropEventArgs` interface should be replaced with `IDropDroppedEventArgs`.
 
-* IgxRowDragDirective 
+* IgxRowDragDirective
     * `IRowDragStartEventArgs` and `IRowDragEndEventArgs` have argument's name changed in order to be more clear to what it relates to. `owner` argument is renamed to `dragDirective`.
     The `owner` argument now provides a reference to the owner component. If your code was like:
         ```typescript
@@ -273,13 +284,13 @@ The style should be something similar to:
 ## From 7.1.x to 7.2.x
 * If you use an IgxCombo with `combo.value`, you should know that now `combo.value` is only a getter.
 * If you use `IgxTextHighlightDirective`, you should know that the `page` input property is deprecated. `rowIndex`, `columnIndex` and `page` properties of the `IActiveHighlightInfo` interface are also deprecated. Instead, `row` and `column` optional properties are added.
-* If you use the `igx-button-theme`, you should know that the `$button-roundness` has been replaced for each button type with: `$flat-border-radius`, `$raised-border-radius`, `$outline-border-radius`, `$fab-border-radius`,  `$icon-border-radius`. 
+* If you use the `igx-button-theme`, you should know that the `$button-roundness` has been replaced for each button type with: `$flat-border-radius`, `$raised-border-radius`, `$outline-border-radius`, `$fab-border-radius`,  `$icon-border-radius`.
 
 ## From 7.0.x to 7.1.x
  * If you use an IgxGrid with summaries in your application, you should know that now the `IgxSummaryOperand.operate()` method is called with empty data in order to calculate the necessary height for the summary row. For custom summary operands, the method should always return an array of IgxSummaryResult with proper length.
 
 	Before version 7.1:
-```typescript	
+```typescript
 export class CustomSummary extends IgxNumberSummaryOperand {
 	public operate(data?: any[]): IgxSummaryResult[] {
 		return [{

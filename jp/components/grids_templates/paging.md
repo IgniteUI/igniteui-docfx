@@ -1,16 +1,16 @@
 @@if(igxName === 'IgxGrid') {
 ---
-title: Angular Grid Paging | Angular Pagination Table | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
-_keywords: angular pagination, igniteui for angular, infragistics
+title: Angular Grid ページング | Angular 改ページ テーブル | インフラジスティックス
+_description: Angular 改ページを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_keywords: angular 改ページ, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if(igxName !== 'IgxGrid') {
 ---
-title: Angular Grid Paging | Angular Pagination Table | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
-_keywords: angular pagination, igniteui for angular, infragistics
+title: Angular Grid ページング | Angular 改ページ テーブル | インフラジスティックス
+_description: Angular 改ページを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_keywords: angular 改ページ, igniteui for angular, インフラジスティックス
 _canonicalLink: grid/paging
 _language: ja
 ---
