@@ -431,7 +431,7 @@ $dark-button: igx-button-theme(
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
