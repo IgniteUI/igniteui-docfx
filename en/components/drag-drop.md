@@ -7,7 +7,7 @@ _keywords: Angular Drag and Drop, Ignite UI for Angular, Infragistics
 # Drag and Drop
 <p class="highlight">The Ignite UI for Angular Drag and Drop directives enable dragging of elements around the page. The supported features include free dragging, using a drag handle, drag ghost, animations and multiple drop strategies.</p>
 
-## Demo
+## Angular Drag and Drop Example
 
 Drag and drop icon to reposition it.
 

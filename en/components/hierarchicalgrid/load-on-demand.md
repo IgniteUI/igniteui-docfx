@@ -12,7 +12,7 @@ The Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/cl
 This topic demonstrates how to configure Load on Demand by creating a Remote Service Provider that communicates with an already available remote oData v4 Service. Here's the working demo and later we will go through it step by step and describe the process of creating it.
 
 
-#### Demo
+### Angular Hierarchical Grid Load On Demand Example
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

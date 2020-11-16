@@ -7,7 +7,7 @@ _keywords: angular calendar, angular component, ignite ui for angular
 # Angular Calendar
 <p class="highlight">The Ignite UI for Angular Calendar component, developed as a native [Angular component](https://angular.io/guide/architecture#components), provides an easy and intuitive ways to display date information. Users can choose from three different selection modes - single selection, multi selection or range selection.</p>
 
-## Demo
+## Angular Calendar Example
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 500px">
     <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-sample-5' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

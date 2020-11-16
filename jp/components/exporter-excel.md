@@ -11,7 +11,7 @@ _language: ja
 Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) または [**IgxTreeGrid**](treegrid/tree-grid.md) のデータをエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式では、フィルタリングやソートなどの機能が使用できます。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular Excel Exporter 例
 
 <div class="sample-container loading" style="height: 100px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

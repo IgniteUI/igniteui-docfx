@@ -9,7 +9,7 @@ _language: ja
 
 <p class="highlight">Ignite UI for Angular の Toggle ディレクティブは、ユーザーが簡単に開閉できるボックスにコンテンツをラップします。</p>
 
-## デモ
+## Angular Toggle 例
 
 <div class="sample-container loading" style="height: 370px">
     <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>

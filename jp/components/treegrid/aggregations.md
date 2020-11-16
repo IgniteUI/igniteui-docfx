@@ -8,7 +8,7 @@ _language: ja
 ### Tree Grid 集計
 階層以外のデータ列を **group by** し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と以下のデモのようなカスタム実装を使用します。
 
-#### デモ
+### Angular Tree Grid 集計 例
 
 <div class="sample-container loading" style="height:850px">
     <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

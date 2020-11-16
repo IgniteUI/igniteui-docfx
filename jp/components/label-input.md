@@ -11,7 +11,7 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 </p>
 <div class="divider--half"></div>
 
-## デモ
+## Angular Label および Input 例
 <div class="sample-container loading" style="height:100px">
 <iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

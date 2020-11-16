@@ -10,7 +10,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular igxForOf ディレクティブは、膨大なデータをテンプレート化するための ngForOf の代替手段です。仮想化を使用して、DOM レンダリングとメモリ使用量を最適化します。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular 仮想スクロール ディレクティブ 例
 
 <div class="sample-container loading" style="height:650px">
     <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -28,7 +28,7 @@ _language: ja
 Ignite UI for Angular @@igComponent は、リモート仮想化、リモート ソート、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
 
 @@if (igxName === 'IgxGrid') {
-### デモ
+### Angular @@igComponent リモート データ操作の概要 例
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

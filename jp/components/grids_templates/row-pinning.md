@@ -26,7 +26,7 @@ _language: ja
 ## @@igComponent 行のピン固定
 単一または複数の行を Angular UI グリッドの上側または下側にピン固定できます。Ignite UI for Angular の**行ピン固定**を使用すると、エンドユーザーは特定の順序で行をピン固定し、@@igComponent を垂直にスクロールしても常に表示される特別な領域に行を複製できます。Material UI Grid には組み込みの行ピン固定 UI が含まれており、@@igComponent のコンテキストで `igxActionStrip` コンポーネントを初期化することで有効になります。その他、カスタム UI を定義し、行のピン固定 API を介して行のピン固定状態を変更できます。
 
-### デモ
+### Angular #@@igComponent 行のピン固定 例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
