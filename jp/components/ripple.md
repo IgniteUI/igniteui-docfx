@@ -143,7 +143,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 >[!NOTE]
   > `igxRiple` ディレクティブを使用して設定される色は、カスタム テーマ内で設定される色よりも優先されます。  
 
-## Angular Ripple 例
+## Angular Ripple の例
 <div class="sample-container loading" style="height:200px">
     <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>

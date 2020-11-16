@@ -43,7 +43,7 @@ IgxHierarchicalGrid の一括編集機能は、[`HierarchicalTransactionService`
 以下は、IgxHierarchicalGrid コンポーネントで一括編集を有効にする方法の詳細な例です。
 }
 
-### Angular @@igComponent 一括編集とトランザクション 例
+### Angular @@igComponent 一括編集とトランザクションの例
 
 @@if (igxName === 'IgxGrid') {
 以下のサンプルは、グリッドにプロバイダーのトランザクションがあり、行編集が有効にされています。行編集全体を確定後にトランザクションが追加されるようにします。

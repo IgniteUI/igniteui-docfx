@@ -12,7 +12,7 @@ _language: ja
 </p>
 <div class="divider--half"></div>
 
-## Angular Overlay 例
+## Angular Overlay の例
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>

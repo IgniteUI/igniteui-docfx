@@ -9,7 +9,7 @@ _language: ja
 
 複数行レイアウトは、`igxGridComponent` のレンダリング機能を拡張します。この機能により、単一のデータレコードを複数の表示行に分割することができます。	
 
-### Angular 複数行レイアウト 例
+### Angular 複数行レイアウトの例
 
 <div class="sample-container loading" style="height:755px">	
     <iframe id="grid-multi-row-layout-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>	

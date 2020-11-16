@@ -8,7 +8,7 @@ _language: ja
 # Button Group
 <p class="highlight">Ignite UI for Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
 
-## Angular Button Group 例
+## Angular Button Group の例
 <div class="sample-container loading" style="height: 85px">
     <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>

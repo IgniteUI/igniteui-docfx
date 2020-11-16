@@ -8,7 +8,7 @@ _language: ja
 
 Ignite UI Dock Manager コンポーネントは、ペインでアプリケーションのレイアウトを管理する方法を提供します。エンド ユーザーはペインをピン固定、サイズ変更、移動、非表示にすることでカスタマイズできます。
 
-## Angular ドック マネージャー 例
+## Angular ドック マネージャーの例
 
 <div class="sample-container loading" style="height: 600px">
     <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>

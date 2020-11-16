@@ -10,7 +10,7 @@ _language: ja
 <p class="highlight">デバイダ コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。</p>
 <div class="divider"></div>
 
-## Angular Divider 例
+## Angular Divider の例
 
 デフォルトでは、デバイダは水平の実線です。
 

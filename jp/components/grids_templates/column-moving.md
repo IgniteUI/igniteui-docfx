@@ -42,7 +42,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 </ng-template>
 ```
 
-### Angular @@igComponent 列移動の概要 例
+### Angular @@igComponent 列移動の例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

@@ -10,7 +10,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Avatar コンポーネントは、イニシャル、画像、またはマテリアル アイコンをアプリケーションに追加します。</p>
 <div class="divider"></div>
 
-## Angular Avatar 例
+## Angular Avatar の例
 
 <div class="sample-container loading" style="height:200px">
     <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular の Combo と Select コンポーネントは、コントロールの一方または両方を使用して簡単にカスケーディングを作成できるイベント、プロパティ、メソッドを公開します。
 </p>
 
-## Angular カスケーディング 例
+## Angular カスケーディングの例
 以下のサンプルは、[igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントが一緒に使用されています。
 
 <div class="sample-container loading" style="height: 540px;">
