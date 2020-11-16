@@ -27,7 +27,7 @@ _language: ja
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
-### Angular @@igComponent 複数列ヘッダーの概要 例
+### Angular @@igComponent 複数列ヘッダーの例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">

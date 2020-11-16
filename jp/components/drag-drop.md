@@ -8,7 +8,7 @@ _language: ja
 # Drag and Drop
 <p class="highlight">Ignite UI for Angular Drag and Drop ディレクティブは、ページの要素のドラッグを有効にします。サポートされている機能には自由自在のドラッグ、ドラッグ ハンドルの使用、ゴーストのドラッグ、アニメーション、および複数のドロップ ストラテジが含まれています。</p>
 
-## Angular Drag and Drop 例
+## Angular Drag and Drop の例
 
 アイコンをドラッグ アンド ドロップして位置を変更します。
 

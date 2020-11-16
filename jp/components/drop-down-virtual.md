@@ -9,7 +9,7 @@ _language: ja
 
 <p class="highlight">Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目リストを表示するために、[IgxForOf](for-of.md) ディレクティブの使用方法を完全に統合できます。</p>
 
-## Angular 仮想ドロップダウン 例
+## Angular 仮想ドロップダウンの例
 <div class="sample-container loading" style="height:320px">
     <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

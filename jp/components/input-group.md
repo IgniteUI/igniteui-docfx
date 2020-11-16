@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供するリアクティブ フォームで簡単に使用できます。</p>
 <div class="divider--half"></div>
 
-## Angular Input Group 例
+## Angular Input Group の例
 <div class="sample-container loading" style="height:100px">
 <iframe id="input-group-sample-1-frame" src='{environment:demosBaseUrl}/data-entries/input-group-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
