@@ -428,7 +428,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

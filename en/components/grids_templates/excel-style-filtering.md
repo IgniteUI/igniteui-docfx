@@ -329,6 +329,16 @@ The following code demonstrates how to define a custom Excel style filter menu u
 
 }
 
+You could also re-template the Excel style filtering icon in the column header using the `igxExcelStyleHeaderIcon` directive:
+
+```html
+<@@igSelector ...>
+    <ng-template igxExcelStyleHeaderIcon>
+        <igx-icon>filter_alt</igx-icon>
+    </ng-template>
+</@@igSelector>
+```
+
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {

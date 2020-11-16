@@ -99,6 +99,7 @@ _language: ja
  - <kbd>Alt + 右矢印</kbd> または <kbd>Alt + 下矢印</kbd> - @@if (igxName === "IgxGrid") {グループ行はグループを展開します。} @@if (igxName === "IgxHierarchicalGrid") { 行アイランドを展開します。} @@if (igxName === "IgxTreeGrid") { 現在のノードを展開します。}
  @@if (igxName === "IgxGrid") {- <kbd>Alt + 左矢印</kbd> または <kbd>Alt + 上矢印</kbd> - マスター/詳細行で詳細ビューを縮小します。
  - <kbd>Alt + 右矢印</kbd> または <kbd>Alt + 下矢印</kbd> - マスター/詳細行で詳細ビューを展開します。}
+ @@if (igxName === "IgxGrid") {- <kbd>Space</kbd> - グループ行上 - <kbd>rowSelection</kbd> プロパティが複数に設定されている場合、グループ内のすべての行を選択します。}
 
 以下のデモサンプルで上記のすべての操作を実行できます。ナビゲーション可能なグリッド要素をフォーカスすると、利用可能な操作のリストが表示されます。
 

@@ -237,7 +237,7 @@ IgniteUI for Angular はコンポーネントのデザインを[マテリアル 
     src="../../images/general/ThemeingWidget1.gif" 
     data-src="../../images/general/ThemeingWidget1.gif" 
     data-srcset="../../images/general/ThemeingWidget1.gif 480w, ../../images/general/ThemeingWidget1.gif 768w, ../../images/general/ThemeingWidget1.gif 1100w" 
-    alt="Theming widget example"
+    alt="テーマ ウィジェットの例"
     title="テーマ ウィジェットは、Ignite UI のパワフルなテーマ フレームワークを使用しています。">
 
 ### Ignite UI のデータ分析 
@@ -262,7 +262,7 @@ Grid コンポーネントは一般に、大量の表データを可視化する
     src="../../images/general/scrolling.gif" 
     data-src="../../images/general/scrolling.gif" 
     data-srcset="../../images/general/scrolling.gif 480w, ../../images/general/scrolling.gif 768w, ../../images/general/scrolling.gif 1100w" 
-    alt="Scrolling performance"
+    alt="スクロールのパフォーマンス"
     title="igxGrid 仮想スクロールのパフォーマンス">
 
 Grid で使用したい機能を簡単に見つけてナビゲートできます。また、アプリケーションをより魅力的にできます。 
