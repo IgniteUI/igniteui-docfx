@@ -11,7 +11,7 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 
 <div class="divider--half"></div>
 
-## Demo
+## Angular Action Strip Example
 
 <div class="sample-container loading" style="height: 400px;">
     <iframe id="action-strip-paragraph-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>

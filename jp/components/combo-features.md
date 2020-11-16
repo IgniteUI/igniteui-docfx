@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
 </p>
 
-## デモ
+## Angular コンボ機能 例
 以下のデモは、ランタイムで有効または無効にできるいくつかの igx-combo 機能を示します。
 
 <div class="sample-container loading" style="height: 440px;">
