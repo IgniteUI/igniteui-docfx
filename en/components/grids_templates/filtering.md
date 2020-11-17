@@ -25,7 +25,7 @@ _canonicalLink: grid/filtering
 # Angular @@igComponent Filtering
 IgniteUI for Angular @@igComponent component provides three different filtering types - Quick filtering, [Excel style filtering](excel-style-filtering.md) and [Advanced filtering](advanced-filtering.md) which enable you to display only the records that meet specified criteria. The Material UI grid component in Ignite UI provides angular filter capabilities and extensive filtering API through the Data Container to which the @@igComponent is bound.
 
-### Angular @@igComponent Filtering Example
+## Angular @@igComponent Filtering Example
 
 The sample below demonstrates @@igComponent's **Quick filtering** user experience. @@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method is used to apply _contains_ condition on the _ProductName column_ through external _igxInputGroup component_.  } 
 @@if (igxName === 'IgxGrid') {

@@ -23,10 +23,10 @@ _language: ja
 ---
 }
 
-### @@igComponent 列ピン固定 
+# @@igComponent 列ピン固定 
 単一または複数の列を Angular UI グリッドの左端にピン固定できます。Ignite UI for Angular の**列固定**は、ユーザーが特定の列順序で列をロックすることを可能にし、@@igComponent で水平スクロール時にロックされた列が常に表示されます。Material UI Grid には組み込みの列ピン固定 UI があり、@@igComponent のツールバーで列の表示状態を変更できます。その他、カスタム UI を定義し、Column Pinning API を介して列のピン固定状態を変更できます。
 
-### Angular ##@@igComponent 列ピン固定  例
+## Angular ##@@igComponent 列ピン固定  例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:510px">

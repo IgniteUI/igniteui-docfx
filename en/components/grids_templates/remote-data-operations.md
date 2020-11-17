@@ -27,7 +27,7 @@ _canonicalLink: grid/remote-data-operations
 The Ignite UI for Angular @@igComponent supports remote data operations such as remote virtualization, remote sorting, remote filtering and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
-### Angular @@igComponent Remote Data Operations Overview Example
+## Angular @@igComponent Remote Data Operations Overview Example
 
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

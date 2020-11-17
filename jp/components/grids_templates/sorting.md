@@ -27,7 +27,7 @@ _language: ja
 
 Ignite UI for Angular @@igComponent では、列レベルでのデータ ソートが可能です。つまり、**@@igSelector** にソート可能な列とソート不可の列の両方を持つことができます。Angular でソートを実行すると、指定した条件に基づいてレコードの表示順序を変更できます。
 
-### Angular @@igComponent ソートの概要 例
+## Angular @@igComponent ソートの概要 例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">

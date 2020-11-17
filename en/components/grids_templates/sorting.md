@@ -26,7 +26,7 @@ _canonicalLink: grid/sorting
 
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
 
-### Angular @@igComponent Sorting Overview Example
+## Angular @@igComponent Sorting Overview Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">

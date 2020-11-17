@@ -18,7 +18,7 @@ _canonicalLink: grid/row-editing
 
 The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified. 
 
-### Angular @@igComponent Row Editing Example
+## Angular @@igComponent Row Editing Example
 
 The following sample demonstrates how to enable row editing in the @@igComponent. Changing a cell value and then clicking or navigating to another cell on the same row won't  update the row value until confirmed by using the **Done** button, or discarded by using **Cancel** button.
 
