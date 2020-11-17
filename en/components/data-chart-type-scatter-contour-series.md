@@ -47,9 +47,9 @@ public dataSource: any[] = SampleScatterData.create();
 
 The scatter contour series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartScatterCoreModule
--   DataChartScatterModule   
+-   DataChartScatterModule
 -   DataChartInteractivityModule
 -   ScatterContourSeriesModule
     <!-- end: Blazor -->

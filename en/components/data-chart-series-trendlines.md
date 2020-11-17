@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools | Trendline | Infragistics
-_description: Use the trendlines of the Infragistics' Angular charts to indentify a trend in data bound to a series. Check out the Ignite UI for Angular graph's trendlines feature!
+_description: Use the trendlines of the Infragistics' Angular charts to identify a trend in data bound to a series. Check out the Ignite UI for Angular graph's trendlines feature!
 _keywords: Angular charts, data chart, trendlines, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'AreaSeries', 'BarSeries','ColumnSeries', 'PointSeries','SplineSeries','StepAreaSeries','WaterfallSeries']
 
