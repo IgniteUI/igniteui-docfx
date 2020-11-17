@@ -19,7 +19,7 @@ _language: ja
 
 グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 
-### デモ
+## Angular @@igComponent Excel スタイル フィルタリングの例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">

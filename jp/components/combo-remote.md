@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular Combo コンポーネントは、コンボをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
 </p>
 
-## デモ
+## Angular コンボ リモート バインディングの例
 以下のサンプルは、[onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 <div class="sample-container loading" style="height: 400px;">

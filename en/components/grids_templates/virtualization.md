@@ -26,7 +26,7 @@ _canonicalLink: grid/virtualization
 In Ignite UI for Angular, the [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) control now utilizes the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive and virtualizes its content both vertically and horizontally.
 
 @@if (igxName === 'IgxGrid') {
-### Demo
+## Angular @@igComponent Virtualization and Performance Example
 
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-2' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

@@ -18,7 +18,7 @@ _canonicalLink: grid/excel-style-filtering
 
 The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
 
-### Demo
+## Angular @@igComponent Excel Style Filtering Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">

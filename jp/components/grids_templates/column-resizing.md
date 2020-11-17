@@ -27,7 +27,7 @@ _language: ja
 
 グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
 
-### @@igComponent 列サイズ変更のデモ
+## Angular @@igComponent 列サイズ変更の例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
