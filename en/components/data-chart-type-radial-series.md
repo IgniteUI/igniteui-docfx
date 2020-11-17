@@ -68,9 +68,9 @@ public dataSource: any[] = SampleRadialData.create();
 
 The radial series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartRadialSeriesModule
--   DataChartRadialSeriesCoreModule      
+-   DataChartRadialSeriesCoreModule
 -   DataChartInteractivityModule
     <!-- end: Blazor -->
 

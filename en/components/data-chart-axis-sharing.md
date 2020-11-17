@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools | Axis Sharing | Infragistics
-_description: Infragistics' Angular charts control allows for muliple axes to be displayed in the same plot area. Create a Ignite UI for Angular graph with multiple axis!
+_description: Infragistics' Angular charts control allows for multiple axes to be displayed in the same plot area. Create a Ignite UI for Angular graph with multiple axis!
 _keywords: Angular charts, data chart, axis sharing, Ignite UI for Angular, Infragistics, multiple axes
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 ---

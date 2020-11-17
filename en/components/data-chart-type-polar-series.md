@@ -72,9 +72,9 @@ public dataSource: any[] = SamplePolarData.create();
 
 The polar series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartPolarModule
--   DataChartPolarCoreModule      
+-   DataChartPolarCoreModule
 -   DataChartInteractivityModule
     <!-- end: Blazor -->
 

@@ -51,9 +51,9 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 Creation of the [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartScatterCoreModule
--   DataChartScatterModule   
+-   DataChartScatterModule
 -   DataChartInteractivityModule
 -   ScatterPolylineSeriesModule
     <!-- end: Blazor -->

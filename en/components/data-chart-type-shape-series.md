@@ -62,9 +62,9 @@ public dataSource: any[] = SampleShapeData.create();
 
 The scatter polygon series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartScatterCoreModule
--   DataChartScatterModule   
+-   DataChartScatterModule
 -   DataChartInteractivityModule
 -   ScatterPolygonSeriesModule
     <!-- end: Blazor -->
