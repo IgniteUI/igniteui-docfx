@@ -80,7 +80,7 @@ import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
 ## 変更前のコード
 
-以前は、API クラスと列挙型への完全なパスを使用してインポートする必要がありました。.
+以前は、API クラスと列挙型への完全なパスを使用してインポートする必要がありました。
 
 ```ts
 // gauges:
