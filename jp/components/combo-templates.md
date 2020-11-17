@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular Combo コンポーネントでは、ヘッダー、フッター、項目、空のリスト、追加ボタンなどのさまざまな領域にカスタム テンプレートを定義できます。
 </p>
 
-## デモ
+## Angular コンボ テンプレートの例
 
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="combo-templates-sample" frameborder="0" seamless="" width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>

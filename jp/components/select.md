@@ -8,7 +8,7 @@ _language: ja
 # Select
 <p class="highlight">[Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
 
-## デモ
+## Angular Select の例
 <div class="sample-container loading" style="height: 300px;">
     <iframe id="select-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

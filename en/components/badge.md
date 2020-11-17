@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Badge Example
 <div class="sample-container loading" style="height:100px">
     <iframe id="badge-sample-2-iframe" src='{environment:demosBaseUrl}/data-display/badge-sample-2' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

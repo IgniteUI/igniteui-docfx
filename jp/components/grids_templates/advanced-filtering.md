@@ -19,7 +19,7 @@ _language: ja
 
 高度なフィルタリングは、@@igComponent のような任意の Angular Material テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
 
-### デモ
+## Angular @@igComponent 高度なフィルタリングの例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">

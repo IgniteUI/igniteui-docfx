@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Navigation Drawer component is a side navigation container. It can rest above content and slide in/out of view or be pinned to expand/collapse within the content. A mini version provides quick access to navigation even when closed. The Navigation Drawer features responsive mode selection and touch gestures. Content is completely customizable and can make use of default menu item styling.</p>
 <div class="divider"></div>
 
-## Navigation Drawer Demo
+## Angular Navigation Drawer Example
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">

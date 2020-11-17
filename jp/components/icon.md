@@ -8,7 +8,7 @@ _language: ja
 # Icon
 <p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント セットを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。</p>
 
-## デモ
+## Angular Icon の例
 
 <div class="sample-container loading" style="height: 75px">
     <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">

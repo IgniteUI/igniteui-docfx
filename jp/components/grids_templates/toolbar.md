@@ -21,7 +21,7 @@ _canonicalLink: grid/toolbar
 
 Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポート、Angular イベントなど) をホストします。
 
-## Angular ツール バー グリッド 例
+## Angular ツールバー グリッドの例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">

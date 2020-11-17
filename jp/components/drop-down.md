@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Drop Down は、視覚的にグループ化するスクロール可能な項目のリストを表示します。項目をクリックまたはタップして選択するとドロップダウンが閉じられます。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular Drop Down の例
 <div class="sample-container loading" style="height:200px">
     <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

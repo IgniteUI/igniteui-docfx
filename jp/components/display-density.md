@@ -11,7 +11,7 @@ _language: ja
 
 [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) インジェクション トークンを使用し、アプリケーションやコンポーネントの表示密度を設定できます。 
 
-## 表示密度のデモ
+## Angular 表示密度のデモ例
 <div class="sample-container loading" style="height: 250px; width: 600px;">
     <iframe id="density-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

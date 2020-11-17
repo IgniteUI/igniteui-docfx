@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Button Group
 <p class="highlight">The Ignite UI for Angular Button Group component is used to organize buttons into styled button groups with horizontal/vertical alignment, single/multiple selection and toggling.</p>
 
-## Demo
+## Angular Button Group Example
 <div class="sample-container loading" style="height: 85px">
     <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);">
 </iframe></div>

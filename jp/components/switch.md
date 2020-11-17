@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Switch コンポーネントは iOS の switch コンポーネントと同様に動作するバイナリ選択コンポーネントです。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular Switch の例
 <div class="sample-container loading" style="height:200px">
     <iframe id="switch-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

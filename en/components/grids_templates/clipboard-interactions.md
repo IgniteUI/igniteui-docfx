@@ -17,7 +17,7 @@ _canonicalLink: grid/clipboard-interactions
 # @@igComponent Clipboard Interactions
 Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
 
-### Demo
+## Angular @@igComponent Clipboard Interactions Example
 
 
 @@if (igxName === 'IgxGrid') {

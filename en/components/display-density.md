@@ -10,7 +10,7 @@ Display density configuration can significantly improve the visual representatio
 
 Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) injection token, you can configure the display density on an application and/or on a component level. 
 
-## Display Density Demo
+## Angular Display Density Example
 <div class="sample-container loading" style="height: 250px; width: 600px;">
     <iframe id="density-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

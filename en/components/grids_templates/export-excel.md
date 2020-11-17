@@ -29,7 +29,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <div class="divider"></div>
 
-### Excel Exporter Demo
+## Angular Excel Exporter Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height: 300px;">

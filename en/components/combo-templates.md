@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
 </p>
 
-## Demo
+## Angular Combo Templates Example
 
 <div class="sample-container loading" style="height: 450px;">
     <iframe id="combo-templates-sample" frameborder="0" seamless="" width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
