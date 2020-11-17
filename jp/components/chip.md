@@ -9,7 +9,7 @@ _language: ja
 
 [Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
 
-## Angular Chip 例
+## Angular Chip の例
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
     <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

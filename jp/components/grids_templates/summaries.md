@@ -27,7 +27,7 @@ _language: ja
 
 Ignite UI for Angular の Angular UI グリッドには、グループ フッターとして列レベルで集計できる機能があります。Angular グリッド集計は、列内のデータ タイプに応じて、あるいは @@igComponent にカスタム Angular テンプレートを実装することによって、定義済みのデフォルト集計項目を使用して別のコンテナの列情報を表示できます。
 
-## Angular @@igComponent の集計概要 例
+## Angular @@igComponent 集計の例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:650px">

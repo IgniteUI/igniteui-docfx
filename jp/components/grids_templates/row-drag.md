@@ -27,7 +27,7 @@ _language: ja
 
 Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelector` コンポーネントで初期化されて、[`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) 入力で設定できます。行ドラッグを有効にすると、ユーザーは行ドラッグ ハンドルを使用して行のドラッグを開始できます。
 
-## Angular @@igComponent 行ドラッグ 例
+## Angular @@igComponent 行ドラッグの例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">

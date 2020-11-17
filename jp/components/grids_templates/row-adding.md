@@ -13,7 +13,7 @@ _keywords: 行追加, igniteui for angular, infragistics, インフラジステ�
 @@igComponent コンポーネントはインライン行追加や Angular CRUD 操作のための強力な API を通して便利なデータ操作方法を提供します。グリッドのテンプレートで編集アクションが有効になっている[アクションストリップ](../action-strip.md)コンポーネントを追加し、ホバーして提供されたボタンを使用するか、<kbd>ALT</kbd> + <kbd>+</kbd> を押して、行追加 UI を生成するか、<kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>+</kbd> を押して、選択した行に子を追加するための UI を生成します。
 }
 
-## Angular @@igComponent 行追加 例
+## Angular @@igComponent 行追加の例
 
 次のサンプルは、@@igComponent でネイティブの行追加を有効にする方法を示しています。セルの値を変更してから、同じ行の別のセルをクリックまたはナビゲートしても、**[完了]** ボタンを使用して確認するか、**[キャンセル]** ボタンを使用して破棄するまで、行の値は更新されません。
 

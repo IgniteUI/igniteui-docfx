@@ -13,7 +13,7 @@ _language: ja
 このトピックは、既に利用可能なリモート oData v4 サービスと通信してリモート サービス プロバイダーを作成し、ロードオンデマンドを設定する方法を説明します。以下は、デモと作成手順を示します。
 
 
-## Angular 階層グリッド ロードオンデマンド 例
+## Angular 階層グリッド ロードオンデマンドの例
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

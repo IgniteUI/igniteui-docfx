@@ -8,7 +8,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Snack Bar コンポーネントは単一行のメッセージで操作のフィードバックを提供します。元に戻すなどの操作へのリンクを追加できます。Snack Bar メッセージがその他の画面要素の上に表示されます。モバイル デバイス画面の下部に配置され、より大きいデバイス画面の左下に配置されます。</p>
 <div class="divider"></div>
 
-## Angular Snackbar 例
+## Angular Snackbar の例
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 140px">

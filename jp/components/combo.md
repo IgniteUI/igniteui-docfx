@@ -10,13 +10,13 @@ _language: ja
 Angular ComboBox コンポーネントは、編集可能な機能を提供するドロップダウン リストを表し、ユーザーが事前定義されたリストからオプションを選択できるようにします。Ignite UI for Angular Combo コンポーネントは、フィルタリング機能、項目の単一と複数選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能をサポートします。HTML select タグの代わりに使用でき、データ バインディング (ローカルおよびリモート)、フィルタリング、グループ化、カスタム テンプレート、カスタム値など、すぐに使用できる機能がいくつかあります。
 
 
-## Angular ComboBox 例
+## Angular ComboBox の例
 
 この AngularComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して単一または複数の選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
 
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular Combobox 例"></iframe>
+    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular Combobox の例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>

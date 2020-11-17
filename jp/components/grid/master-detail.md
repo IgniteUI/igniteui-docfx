@@ -11,7 +11,7 @@ _language: ja
 
 このモードは、master-detail スタイル データを階層構造で表示する必要がある場合に役立ちます。
 
-## Angular Grid Master-Detail 例
+## Angular Grid Master-Detail の例
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-master-detail-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

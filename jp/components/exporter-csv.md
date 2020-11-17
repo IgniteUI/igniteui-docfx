@@ -12,7 +12,7 @@ Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生デ�
 エクスポート機能は [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) クラスにカプセル化されます。</p>
 <div class="divider"></div>
 
-## Angular CSV Exporter 例
+## Angular CSV Exporter の例
 
 <div class="sample-container loading" style="height: 150px;">
     <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

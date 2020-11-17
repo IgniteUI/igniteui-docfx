@@ -26,7 +26,7 @@ _language: ja
 # Angular @@igComponent フィルタリング
 IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
-## Angular @@igComponent フィルタリング 例
+## Angular @@igComponent フィルタリングの例
 
 以下のサンプルは、@@igComponent の**クイック フィルタリング** ユーザー エクスペリエンスを示しています。@@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドは、外部の _igxInputGroup_ コンポーネントを介して _ProductName_  列に _contains_ 条件を適用するために使用されます。} 
 @@if (igxName === 'IgxGrid') {

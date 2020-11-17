@@ -8,7 +8,7 @@ _language: ja
 
 配置ストラテジは、提供された `IgxOverlayService` でコンポーネントを表示する場所を決定します。デフォルトでコンテンツは画面の中央に配置されます。
 
-## Angular 配置ストラテジ 例
+## Angular 配置ストラテジの例
 
 <div class="sample-container loading" style="height: 350px">
     <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>

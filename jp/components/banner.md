@@ -8,7 +8,7 @@ _language: ja
 <p class="highlight">
 Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム アクション ボタンやアイコンの表示を設定できます。</p>
 
-## Angular Banner 例
+## Angular Banner の例
 
 <div class="sample-container loading" style="height: 530px">
     <iframe id="banner-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/banner-sample-1" class="lazyload"></iframe>
