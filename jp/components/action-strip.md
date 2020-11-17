@@ -15,7 +15,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 ## Angular Action Strip の例
 
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="action-strip-paragraph-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/action-strip-paragraph" onload="onSampleIframeContentLoaded(this);" alt="Angular Action Strip の例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
