@@ -1,28 +1,27 @@
 
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid Live Data - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
+title: Grid Live Data - Native Angular | Ignite UI for Angular | Infragistics
+_description: Check out how the Ignite UI for Angular Data Grid can handle thousands of updates per second, while staying responsive for user interactions.
 _keywords: angular data grid, angular grid updates, angular live data
 ---
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Live Data - Native Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid can handle thousands of updates per second.
+title: Tree Grid Live Data - Native Angular | Ignite UI for Angular | Infragistics
+_description: Check out how the Ignite UI for Angular Tree Grid can handle thousands of updates per second, while staying responsive for user interactions.
 _keywords: angular data grid, angular grid updates, angular live data
 _canonicalLink: grid/live-data
 ---
 }
 
-# @@igComponent Live Updating
+# Data @@igComponent Live Updating
 The @@igComponent component is able to handle thousands of updates per second, while staying responsive for user interactions.
 
+## Angular Live-data Update Example
 The sample below demonstrates the @@igComponent performance when all records are updated multiple times per second. Use the UI controls to choose the number of records loaded and the frequency of updates.
-Feed the same data into the Category Chart to experience the powerful charting capabilities of Ignite UI. The `Chart` button will show `Category Prices per Region` data for the selected rows and the `Chart` column button will show the same for the current row.
-
-## Demo
+Feed the same data into the [Category Chart](../category-chart.md) to experience the powerful charting capabilities of Ignite UI for Angular. The `Chart` button will show `Category Prices per Region` data for the selected rows and the `Chart` column button will show the same for the current row.
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
