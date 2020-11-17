@@ -14,7 +14,7 @@ Ignite UI for Angular コントロールは、フォーム入力を処理する�
 次のサンプルは、リアクティブ フォームで使用される場合の [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)、[`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html)、および [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールを示しています。
 
 <div class="sample-container loading" style="height: 850px;">
-    <iframe id="reactive-forms-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="reactive-forms-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/reactive-forms" onload="onSampleIframeContentLoaded(this);" alt="Angular リアクティブ フォームの統合の例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
