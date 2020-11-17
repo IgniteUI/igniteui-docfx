@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Layout Directive allows developers to specify a layout direction for any children of the container it is applied to. Layout can flow vertically or horizontally, with controls for wrapping, justification, and alignment.</p>
 <div class="divider"></div>
 
-## Layout Demo
+## Angular Layout Manager Example
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 580px">

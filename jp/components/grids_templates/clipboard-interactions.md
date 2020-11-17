@@ -18,7 +18,7 @@ _language: ja
 # @@igComponent クリップボードの操作
 クリップボードへのコピー操作が @@igComponent で可能になりました。この機能は、現在の複数セル データ選択を通して Angular Data Grid のデータをすばやくコピーするための簡単でカスタマイズ可能な方法を提供します。システム クリップボードの動作により、ユーザーは @@igComponent から Excel または他の外部プログラムにデータをコピーできます。
 
-### Angular @@igComponent クリップボード操作の例
+## Angular @@igComponent クリップボード操作の例
 
 
 @@if (igxName === 'IgxGrid') {

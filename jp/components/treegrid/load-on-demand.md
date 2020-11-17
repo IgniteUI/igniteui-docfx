@@ -5,11 +5,11 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-###  ツリー グリッド ロードオンデマンド
+#  ツリー グリッド ロードオンデマンド
 
 Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、サーバーから最小限のデータのみ取得してレンダリングされるため、ユーザーにすばやくデータを表示できます。その後、ユーザーが行を展開した後にのみ、その特定の親行の子がロードされます。このメカニズムは、ロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 
-### Angular ツリー グリッド ロードオンデマンドの例
+## Angular ツリー グリッド ロードオンデマンドの例
 
 <div class="sample-container loading" style="height:450px">
     <iframe id="tree-grid-lod-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

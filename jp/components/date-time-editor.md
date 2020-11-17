@@ -20,7 +20,7 @@ _language: ja
 <div class="divider--half"></div>
 
 
-## 使用方法
+## Angular Date Time Editor 例
 Ignite UI for Angular Date Time ディレクティブを使用するにはまず初めに `IgxDateTimeEditorModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript

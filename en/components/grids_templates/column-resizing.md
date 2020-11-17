@@ -26,7 +26,7 @@ _canonicalLink: grid/column-resizing
 
 With deferred grid column resizing, the user will see a temporary resize indicator while the Angular drag resizing operation is in effect. The new grid column width is applied once the drag operation has ended.
 
-### Angular @@igComponent Column Resizing Example
+## Angular @@igComponent Column Resizing Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">

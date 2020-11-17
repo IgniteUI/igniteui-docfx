@@ -27,7 +27,7 @@ _language: ja
 
 Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーがユーザー インターフェイスを介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
-### Angular @@igComponent 列非表示の例
+## Angular @@igComponent 列非表示の例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">

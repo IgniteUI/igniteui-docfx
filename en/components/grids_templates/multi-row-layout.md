@@ -8,7 +8,7 @@ _keywords: angular multi-row layout, material row layout, ignite ui for angular
 
 Multi-row Layout extends the rendering capabilities of the `igxGridComponent`. The feature allows splitting a single data record into multiple visible rows.
 
-### Angular Multi-row Layout Example
+## Angular Multi-row Layout Example
 
 <div class="sample-container loading" style="height:755px">
     <iframe id="grid-multi-row-layout-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

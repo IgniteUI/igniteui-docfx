@@ -9,6 +9,7 @@ _language: ja
 
 Ignite UI for Angular Date Range Picker コンポーネントは開始日と終了日を定義して日付範囲を選択できる月表示カレンダーを表示します。カレンダーの UI は、ダイアログ (デフォルトの設定) または入力フィールドにあるカレンダー アイコンへのユーザー操作によってドロップダウンとして表示されます。さらに、このコンポーネントには高度なセットアップ オプションがあり、2 つの異なる編集可能な入力フィールドを公開します。コンポーネントはロケールおよびカスタム日付書式設定をサポートします。
 
+## Angular Date Range Picker 例
 <div class="sample-container loading" style="height:600px">
     <iframe id="basic-daterangepicker-iframe" src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
