@@ -28,7 +28,7 @@ _language: ja
 **@@igxName** デザインは[マテリアル デザイン ガイドライン](https://material.io/guidelines/material-design/introduction.html)に基づきます。表示[密度](https://material.io/design/layout/density.html#usage)オプションの定義済みセットから選択するオプションを提供します。正しい密度を選択すると、コンテンツの大量との相互作用でユーザー エクスペリエンスを向上できます。
 
 
-### デモ
+## Angular @@igComponent 表示密度の例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:620px">

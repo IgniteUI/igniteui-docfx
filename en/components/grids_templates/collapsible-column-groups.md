@@ -18,7 +18,7 @@ _canonicalLink: grid/collapsible-column-groups
 
 Multi-column headers allow you to have multiple levels of nested columns and column groups, also they provide you the ability to mark each column group as **collapsible**. **Collapsible multi-column headers** make it possible to collapse/expand, e.g. to show and hide the nested headers under the current one, which will give you a shortened/summarized information for example.
 
-#### Demo
+## Angular Grid Collapsible Column Groups Overview Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">

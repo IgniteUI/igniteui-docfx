@@ -10,7 +10,7 @@ _language: ja
 Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供する Reactive フォームで簡単に統合できます。
 </p>
 
-## デモ
+## Angular リアクティブ フォームの統合の例
 次のサンプルは、リアクティブ フォームで使用される場合の [`igx-input-group`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)、[`igx-select`]({environment:angularApiUrl}/classes/igxselectcomponent.html)、および [`igx-combo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) コントロールを示しています。
 
 <div class="sample-container loading" style="height: 850px;">

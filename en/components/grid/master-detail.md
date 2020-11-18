@@ -10,7 +10,7 @@ The `igxGrid` component supports specifying a detail template that displays addi
 
 This mode is useful when you need to display master-detail style data in a hierarchical structure.
 
-### Demo
+## Angular Grid Master-Detail Example
 
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-master-detail-iframe" src='{environment:lobDemosBaseUrl}/grid/grid-master-detail' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>

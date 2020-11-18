@@ -13,7 +13,7 @@ _language: ja
 > [!NOTE]
 > `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
 
-## Bottom Navigation デモ
+## Angular Bottom Navigation の例
 
 <div class="divider--half"></div>
 

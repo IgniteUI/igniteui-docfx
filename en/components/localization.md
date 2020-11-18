@@ -8,6 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
+## Angular Localization Example
 <div class="sample-container loading" style="height:550px">
     <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

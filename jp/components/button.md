@@ -8,7 +8,7 @@ _language: ja
 # Button
 <p class="highlight">Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。</p>
 
-## デモ
+## Angular Button の例
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 150px">
     <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">

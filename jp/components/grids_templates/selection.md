@@ -26,7 +26,7 @@ _keywords: data select, igniteui for angular, インフラジスティックス
 # Angular @@igComponent 選択の概要
 Ignite UI for Angular @@igComponent を使用して、さまざまなイベント、豊富な API、または単一選択などのシンプルなマウス操作でデータを簡単に選択できます。
 
-## Angular Grid 例選択の例
+## Angular Grid 選択の例
 
 以下のサンプルは、@@igComponent の**セル選択**動作の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。
 <div class="divider--half"></div>

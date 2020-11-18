@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Toast コンポーネントは、ユーザーが閉じられない非対話型の情報および報告メッセージを表示できます。通知はページの上側、中央、または下側に表示できます。</p>
 <div class="divider"></div>
 
-## Toast デモ
+## Angular Toast の例
 
 <div class="sample-container loading" style="height: 300px">
     <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2" class="lazyload"></iframe>

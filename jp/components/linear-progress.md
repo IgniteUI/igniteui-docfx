@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Linear Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。インジケーターは状態変更で外観を更新します。インジケーターがストライプまたは実線色でスタイル設定できます。</p>
 <div class="divider--half"></div>
 
-## デモ
+## Angular Linear Progress の例
 <div class="sample-container loading" style="height:50px">
     <iframe id="linear-progressbar-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>

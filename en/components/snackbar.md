@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Snack Bar component provides feedback about an operation with a single-line message, which can include a link to an action such as Undo. The Snack Bar message appears above all other screen elements, located at the bottom of a mobile device screen or at the lower left of larger device screens.</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Snackbar Example
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 140px">

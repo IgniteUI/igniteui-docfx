@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Ignite UI for Angular Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
 </p>
 
-## Demo
+## Angular Combo Features Example
 The following demo demonstrates some of the igx-combo features that are enabled/disabled at runtime:
 
 <div class="sample-container loading" style="height: 440px;">

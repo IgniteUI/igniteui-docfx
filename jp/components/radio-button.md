@@ -10,7 +10,7 @@ _language: ja
 ## Radio Button
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
-### デモ
+## Angular Radio & Radio Group の例
 <div class="sample-container loading" style="height: 90px">
     <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
