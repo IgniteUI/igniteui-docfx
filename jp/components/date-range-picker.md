@@ -13,7 +13,7 @@ Ignite UI for Angular Date Range Picker コンポーネントは開始日と終�
 <div class="sample-container loading" style="height:600px">
     <iframe id="basic-daterangepicker-iframe" src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="basic-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="basic-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -198,7 +198,7 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 
 値の表示形式には、Angular [DatePipe](https://angular.io/api/common/DatePipe) 形式のいずれかを使用します。`shortDate` や `longDate` などの定義済みの形式オプションをサポートできます。
 
-`inputFormat` プロパティは、DatePipe でサポートされる文字 (`MM/dd/yyyy` など) を使用して構成された書式文字列を受け入れますが、 `shortDate` や `longDate` などの定義済みの形式オプションはサポートしていません。`inputFormat` プロパティが定義されていない場合、[Angular locale ID](https://angular.io/api/core/LOCALE_ID) トークンがビルド時に使用されます。
+`inputFormat` プロパティは、DatePipe でサポートされる文字 (`MM/dd/yyyy` など) を使用して構成された書式文字列を受け入れますが、`shortDate` や `longDate` などの定義済みの形式オプションはサポートしていません。`inputFormat` プロパティが定義されていない場合、[Angular locale ID](https://angular.io/api/core/LOCALE_ID) トークンがビルド時に使用されます。
 
 ```html
 <igx-date-range-picker [(ngModel)]="range" required 
