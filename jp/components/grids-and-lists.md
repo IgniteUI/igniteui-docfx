@@ -211,7 +211,7 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
     <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid の例">
     </iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 <div class="divider--half"></div>
 
@@ -437,7 +437,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
             <li><a class="no-external-icon" href="{environment:infragisticsBaseUrl}/support/ignite-ui-angular-help">Angular サポート ホーム ページをご覧ください。</a> </li>
             <li>Angular [ドキュメント](general/getting-started.md)を読み、Angular サンプルを試してください。</li>
             <li>最新の情報は、<a class="no-external-icon" href="https://www.infragistics.com/community/blogs/tags/Ignite%20UI%20for%20Angular">Angular ブログをご覧ください。</a> </li>
-            <li><a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/grid-table">サポート ケースの送信</a></li>
+            <li><a class="no-external-icon" href="https://www.infragistics.com/ignite-ui-angular/grid-table">サポート ケースの送信</a></li>
             <li>Angular <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">参照アプリケーションを試してください。</a></li>
         </ul>
     </div>

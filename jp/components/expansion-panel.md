@@ -14,7 +14,7 @@ _language: ja
 <div class="sample-container loading" style="height: 320px;">
     <iframe id="expansion-sample-1-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -150,7 +150,7 @@ export class ExpansionPanelComponent {
 ```
 このコンポーネントは、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
-`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、 [`IgxCombo`](combo.md)、チャート、その他の拡張パネルもレンダリングできます。
+`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の拡張パネルもレンダリングできます。
 
 展開パネルの本体にいくつかの基本的なマークアップを追加します。
 ```html
@@ -230,7 +230,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 > [`テーマ化`](themes/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を参照してください。
 
 ### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、 `igx-css-vars` mixin をインクルードし、 `$custom-panel-theme` マップを渡します。 
+コンポーネント テーマを適用するには、`igx-css-vars` mixin をインクルードし、`$custom-panel-theme` マップを渡します。 
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
