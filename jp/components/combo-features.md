@@ -16,7 +16,7 @@ Ignite UI for Angular Combo コントロールは、データと値のバイン�
 <div class="sample-container loading" style="height: 440px;">
     <iframe id="combo-features-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-features" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-features-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -162,7 +162,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### 検索入力のフォーカス
-Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponent.html#autofocussearch) プロパティはコンボが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。デフォルトで、 このプロパティは `true` に設定されます。`false` に設定すると、フォーカスはコンボの項目コンテナーに移動します。モバイル デバイスでは、コンボを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
+Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponent.html#autofocussearch) プロパティはコンボが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。デフォルトで、このプロパティは `true` に設定されます。`false` に設定すると、フォーカスはコンボの項目コンテナーに移動します。モバイル デバイスでは、コンボを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
 
 ```html
 <igx-combo [autoFocusSearch]="false"></igx-combo>
