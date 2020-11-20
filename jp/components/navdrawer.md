@@ -9,7 +9,7 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウト、もしくはコンテンツ内で展開/縮小するためにピン固定できます。 ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツは、デフォルトのメニュー項目スタイル設定を使用する他、カスタマイズも可能です。</p>
 <div class="divider"></div>
 
-## Angular Navigation Drawer 例
+## Angular Navigation Drawer の例
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
