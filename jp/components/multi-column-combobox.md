@@ -16,7 +16,7 @@ _language: ja
 
 `ValueField` プロパティは選択された基本データ項目のバインド値を決定します。オブジェクトのリストに複数のプロパティがある場合に必要です。
 
-## Angular 複数列コンボ ボックスの例
+## サンプル
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/editors/multi-column-combobox-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
