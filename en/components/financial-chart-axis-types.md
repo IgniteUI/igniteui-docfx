@@ -27,7 +27,7 @@ By default, you do not need to explicitly set the labels. The financial chart co
 
 ## Axis Interval
 
-In the Financial Chart control, the [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval) property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminorinterval) property specifies how frequently minor gridlines are rendered on an axis.
+In the Financial Chart control, the [`yAxisInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval) property specifies how frequently major gridlines and axis labels are rendered on an axis. Similarly, the [`yAxisMinorInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminorinterval) property specifies how frequently minor gridlines are rendered on an axis.
 
 The following code snippet demonstrates how to configure intervals on the y-axis.
 
@@ -97,7 +97,7 @@ The following code example shows how to set the modes for the axes:
 
 ## Axis Range
 
-In the Angular financial chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the financial chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminimumvalue) property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismaximumvalue) property.
+In the Angular financial chart component, the range on numeric axes is the difference in numeric values from the beginning of the axis to the end or from the smallest to largest values in the data. The range minimum is the lowest value of the axis. The range maximum is the highest value of the axis. By default, the financial chart component will calculate the minimum and maximum values for the y-axis range based on the lowest and highest data points in order to maximize the chart plot area. The automatic calculation of an axis' minimum and maximum values may not be appropriate for your set of data points. For example, if your data has a minimum value of 850, you may want to set the minimum value of the axis using y-axis’s [`yAxisMinimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminimumvalue) property to 800 so that there will be a space value of 50 between the axis minimum and the lowest value of data points. The same can be applied to the axis maximum value and the highest value of data points using y-axis’s [`yAxisMaximumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismaximumvalue) property.
 
 The following sample code demonstrates how to change the axis range on the y-axis.
 
@@ -117,8 +117,8 @@ The following sample code demonstrates how to change the axis range on the y-axi
 
 In the Angular financial chart component, you can control if the data in the chart is mapped logarithmically along the y-axis, this is done by setting the following properties:
 
--   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
--   [`yAxisLogarithmBase`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - The base value to use in the log function when mapping the position of data items along the y-axis.
+-   [`yAxisIsLogarithmic`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - This specifies if the y-axis should use a logarithmic scale instead of a linear one. By default this property is set to false.
+-   [`yAxisLogarithmBase`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - The base value to use in the log function when mapping the position of data items along the y-axis.
     This is effective only when yAxisIsLogarithmic is true.
 
 The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis.

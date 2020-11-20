@@ -7,7 +7,7 @@ mentionedTypes: ['XamDataChart']
 
 # Angular Bar Chart
 
-The Ignite UI for Angular bar chart belongs to a group of category charts and it is rendered using a collection of rectangles that extend from the left to right of the chart towards the values of data points. [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) uses the same concepts of data plotting as [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) but data points are stretched along a vertical line (y-axis) rather than horizontal line (x-axis). In other words, the bar chart is rendered like the column chart, but with 90 degrees clockwise rotation.
+The Ignite UI for Angular bar chart belongs to a group of category charts and it is rendered using a collection of rectangles that extend from the left to right of the chart towards the values of data points. [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) uses the same concepts of data plotting as [`IgxColumnSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) but data points are stretched along a vertical line (y-axis) rather than horizontal line (x-axis). In other words, the bar chart is rendered like the column chart, but with 90 degrees clockwise rotation.
 
 ## Demo
 
@@ -25,19 +25,19 @@ The Ignite UI for Angular bar chart belongs to a group of category charts and it
 
 ## Required Axes
 
-The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html).
+The Angular data chart component provides various types of axes but only the following types of axes can be used with [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html).
 
--   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
--   [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html)
+-   [`IgxNumericXAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
+-   [`IgxCategoryYAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html)
 
 ## Required Data
 
-The [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) has the following data requirements:
+The [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) has the following data requirements:
 
 -   The data source must be an array or a list of data items.
--   The data source must contain at least one data item otherwise the chart will not render the [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html).
--   All data items must contain at least one data column (string or date time) which should be mapped to the [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) property of the category axis (e.g. [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html)).
--   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html).
+-   The data source must contain at least one data item otherwise the chart will not render the [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html).
+-   All data items must contain at least one data column (string or date time) which should be mapped to the [`IgxLabelComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) property of the category axis (e.g. [`IgxCategoryYAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryyaxiscomponent.html)).
+-   All data items must contain at least one numeric data column which should be mapped using the `ValueMemberPath` property of the [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html).
 
 You can use the [SampleCategoryData](data-chart-data-sources-category.md) as data source which meets above data requirements.
 
@@ -47,7 +47,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## Required Modules
 
-Creation of the [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+Creation of the [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
 -   DataChartCoreModule
 -   DataChartCategoryModule
@@ -78,7 +78,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 ## Code Example
 
-This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) and bind it to a data source.
+This code demonstrates how to create an instance of the Ignite UI for Angular data chart with [`IgxBarSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) and bind it to a data source.
 
 ```html
  <igx-data-chart

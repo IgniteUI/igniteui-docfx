@@ -42,7 +42,7 @@ As shown in the above demo, the brushes for the chart types can be configured. T
 
 Markers are visual elements that display the values of data points in the category chart component's plot area. Markers help your end-users immediately identify a data point's value even if the value falls between major or minor grid lines.
 
-The appearance of chart markers is managed through the [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html), [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markerbrushes), [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markeroutlines) properties of the category chart, as demonstrated in the following code example.
+The appearance of chart markers is managed through the [`MarkerType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html), [`markerBrushes`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markerbrushes), [`markerOutlines`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markeroutlines) properties of the category chart, as demonstrated in the following code example.
 
 ```html
 <igx-category-chart
@@ -82,11 +82,11 @@ This feature allows you to animate the series as it loads a new data source. The
 
 The chart resizes allowing for the title and subtitle information.
 
-By default, transition in animations are disabled and you can enable transition-in animations by setting the [`isTransitionInEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#istransitioninenabled) option to “true”.
+By default, transition in animations are disabled and you can enable transition-in animations by setting the [`isTransitionInEnabled`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#istransitioninenabled) option to “true”.
 
 Transition in animations can be configured in terms of transition type, speed of the individual data points relative to each other, and the easing transition (managed by an easing function).
 
-The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorytransitioninmode.html#auto) (default).
+The transition type is configured by setting the transitionInMode option to the desired transition name. Automatic selection of the transition type based on the series type is possible, too, by setting the property to [`Auto`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorytransitioninmode.html#auto) (default).
 
 The following code example demonstrates how to enable transition in animations and have the chart accordion in from the right.
 

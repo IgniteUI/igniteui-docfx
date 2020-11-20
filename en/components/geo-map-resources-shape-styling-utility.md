@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 # Angular Shape Styling Utility
 
-The resource topic provides implementation of an utility that helps with styling UI elements of [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) in Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) component.
+The resource topic provides implementation of an utility that helps with styling UI elements of [`IgxGeographicShapeSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) in Angular [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) component.
 
 ## Required Imports
 

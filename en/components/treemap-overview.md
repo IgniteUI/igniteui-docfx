@@ -29,39 +29,39 @@ Treemaps are not designed to convey numerical quantities; the intent is to show 
 
 ## Required Data
 
-Binding to the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) contains the following data requirements:
+Binding to the [`IgxTreemapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) contains the following data requirements:
 
 -   The data source must be an array or a list of data items
 -   The data source must contain at least one data item otherwise the map will not render any nodes.
--   All data items must contain at least one data column (e.g. string) which should be mapped to the [`labelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#labelmemberpath) property.
--   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#valuememberpath) property.
--   To categorize data into organized tiles you can optionally use [`parentIdMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#parentidmemberpath) and [`idMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#idmemberpath).
+-   All data items must contain at least one data column (e.g. string) which should be mapped to the [`labelMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#labelmemberpath) property.
+-   All data items must contain at least one numeric data column which should be mapped using the [`valueMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#valuememberpath) property.
+-   To categorize data into organized tiles you can optionally use [`parentIdMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#parentidmemberpath) and [`idMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#idmemberpath).
 
 ## Layout Types
 
 The Ignite UI for Angular treemap component supports the following types algorithms:
 
--   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice)
--   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified)
--   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped)
+-   [`SliceAndDice`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice)
+-   [`Squarified`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified)
+-   [`Stripped`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped)
 
-The type is defined by setting the [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) property. If the [`TreemapLayoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) property is not specified, then by default, the [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) type is displayed. There are different tiling algorithms when it comes to displaying the data. All algorithms have their advantages depending on the user’s needs. Some aim to obtain the best aspect ratio – the nodes are as close to rectangles as possible. Other algorithms aim to preserve the initial order of the elements – object which are close to each other in the data source are arranged near each other on the treemap.
+The type is defined by setting the [`TreemapLayoutType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) property. If the [`TreemapLayoutType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html) property is not specified, then by default, the [`Stripped`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) type is displayed. There are different tiling algorithms when it comes to displaying the data. All algorithms have their advantages depending on the user’s needs. Some aim to obtain the best aspect ratio – the nodes are as close to rectangles as possible. Other algorithms aim to preserve the initial order of the elements – object which are close to each other in the data source are arranged near each other on the treemap.
 
--   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) layout type algorithm obtains the best aspect ratio but the objects are arranged by size.
+-   [`Stripped`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) layout type algorithm obtains the best aspect ratio but the objects are arranged by size.
 
--   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice) layout algorithm aims to preserve the initial order at the expense of the aspect ratio.
+-   [`SliceAndDice`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice) layout algorithm aims to preserve the initial order at the expense of the aspect ratio.
 
--   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) layout tiling algorithm has a better aspect ratio than the SliceAndDice and keeps a better order than Squarified.
+-   [`Squarified`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) layout tiling algorithm has a better aspect ratio than the SliceAndDice and keeps a better order than Squarified.
 
 ## Layout Orientation
 
-[`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layoutorientation) property enables the user to set the direction in which the nodes of the hierarchy will be expanded.
+[`layoutOrientation`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layoutorientation) property enables the user to set the direction in which the nodes of the hierarchy will be expanded.
 
 Note that the LayoutOrientation property works with the layout types SliceAndDice and Strip.
 
--   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#horizontal) – the child nodes are going to be stacked horizontally(SliceAndDice).
+-   [`Horizontal`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#horizontal) – the child nodes are going to be stacked horizontally(SliceAndDice).
 
--   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
+-   [`Vertical`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaporientation.html#vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
 
 <!-- Angular, React, WebComponents -->
 
@@ -78,7 +78,7 @@ npm install --save igniteui-angular-charts
 
 ## Required Modules
 
-The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+The [`IgxTreemapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
 -   TreemapModule
     <!-- end: Blazor -->

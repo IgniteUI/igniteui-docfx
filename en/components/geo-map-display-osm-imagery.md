@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap']
 
 # Angular Displaying Imagery from Open Street Maps
 
-The Angular [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) is a free geographic imagery mapping service created collaboratively by OpenStreetMap© contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on <a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> web site.
+The Angular [`IgxOpenStreetMapImagery`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) is a free geographic imagery mapping service created collaboratively by OpenStreetMap© contributors from around the world. It provides geographic imagery tiles of the world only in road map style without any configuration options. This geographic imagery service can be accessed directly on <a href="http://www.openstreetmap.org" target="_blank">www.OpenStreetMap.org</a> web site.
 By the default, the Ignite UI for Angular map component already displays geographic imagery from the Open Street Maps. Therefore, there is no need to configure the control to display geographic imagery from the Open Street Maps.
 
 ## Demo
@@ -25,7 +25,7 @@ By the default, the Ignite UI for Angular map component already displays geograp
 
 ## Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) object which provides geographic imagery from  OpenStreetMap© contributors.
+This code example explicitly sets `BackgroundContent` of the map component to the [`IgxOpenStreetMapImagery`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) object which provides geographic imagery from  OpenStreetMap© contributors.
 
 ```html
 <igx-geographic-map #map

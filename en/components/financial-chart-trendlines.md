@@ -27,10 +27,10 @@ The Angular financial chart component provides many visuals that can be customiz
 
 In the Angular financial chart component, chart navigation is enabled by default. However, you can customize it by setting the following properties:
 
--   [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#ishorizontalzoomenabled) - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
--   [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#isverticalzoomenabled) - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
--   [`isWindowSyncedToVisibleRange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#iswindowsyncedtovisiblerange) - If set to true the Y-Axis will automatically resize to the visible data range. By default, this property is set to false.
--   [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) - This is used to retrieve or specify the scroll and zoom state in the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) component. The [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) is expressed as a Rectangle with coordinates and sizes between 0 and 1.
+-   [`isHorizontalZoomEnabled`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#ishorizontalzoomenabled) - This specifies if the chart can be horizontally zoomed through user interactions. By default, this property is set to true.
+-   [`isVerticalZoomEnabled`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#isverticalzoomenabled) - This specifies if the chart can be vertically zoomed through user interactions. By default, this property is set to false.
+-   [`isWindowSyncedToVisibleRange`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#iswindowsyncedtovisiblerange) - If set to true the Y-Axis will automatically resize to the visible data range. By default, this property is set to false.
+-   [`windowRect`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) - This is used to retrieve or specify the scroll and zoom state in the [`IgxFinancialChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) component. The [`windowRect`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) is expressed as a Rectangle with coordinates and sizes between 0 and 1.
 
 ```html
  <igx-financial-chart
@@ -62,7 +62,7 @@ The price pane is always displayed in the Financial Chart and you can configure 
 
 ## Configuring Overlays
 
-By default overlays are not displayed on the Angular financial chart component. There are two types of overlays - [`BollingerBands`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#bollingerbands) and [`PriceChannel`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#pricechannel). You can also customize the default settings of the overlays. The following code demonstrates how to set the color, overlay outlines and thickness.
+By default overlays are not displayed on the Angular financial chart component. There are two types of overlays - [`BollingerBands`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#bollingerbands) and [`PriceChannel`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialoverlaytype.html#pricechannel). You can also customize the default settings of the overlays. The following code demonstrates how to set the color, overlay outlines and thickness.
 
 ```html
  <igx-financial-chart

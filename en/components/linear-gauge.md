@@ -11,7 +11,7 @@ Use the Angular linear gauge component to see a simple display of a value compar
 
 ## Demo
 
-The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
+The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
 The following sample demonstrates how setting multiple properties on the same linear gauge can transform it to completely different linear gauge.
 
@@ -42,7 +42,7 @@ npm install --save igniteui-angular-gauges
 
 ## Required Modules
 
-The [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+The [`IgxLinearGaugeComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
 -   LinearGaugeModule 
     <!-- end: Blazor -->
@@ -258,7 +258,7 @@ The backing element represents background and border of the linear gauge compone
 
 ## Scale
 
-The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the linear gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge

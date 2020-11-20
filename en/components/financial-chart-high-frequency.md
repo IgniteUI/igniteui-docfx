@@ -25,7 +25,7 @@ The Angular financial chart component is very fast control that can handle rende
 
 ## Code Example
 
-You can create the Angular financial chart component with high frequency data updates by removing the first data item from your data source and appending a new data item to end of your data. Also, you should call [`notifyRemoveItem`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyremoveitem) and [`notifyInsertItem`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyinsertitem) functions to notify the chart about changes. Also, you can look for more "notify" methods on the financial chart to get more information about how to notify the chart of changes to the data it is bound against.
+You can create the Angular financial chart component with high frequency data updates by removing the first data item from your data source and appending a new data item to end of your data. Also, you should call [`notifyRemoveItem`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyremoveitem) and [`notifyInsertItem`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyinsertitem) functions to notify the chart about changes. Also, you can look for more "notify" methods on the financial chart to get more information about how to notify the chart of changes to the data it is bound against.
 
 The following example demonstrates how to notify Financial Chart control about high frequency data updates:
 

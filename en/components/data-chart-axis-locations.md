@@ -25,7 +25,7 @@ mentionedTypes: ['XamDataChart']
 
 ## Code Example
 
-This code demonstrates how to create Ignite UI for Angular data chart with two [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) that will be placed on left/right sides and two [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) that will be stacked on one another.
+This code demonstrates how to create Ignite UI for Angular data chart with two [`IgxNumericYAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) that will be placed on left/right sides and two [`IgxCategoryXAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) that will be stacked on one another.
 
 ```html
    <igx-data-chart
