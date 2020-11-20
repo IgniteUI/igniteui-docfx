@@ -49,9 +49,9 @@ public dataSource: any[] = SampleRadialData.create();
 
 Creation of the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   RadialPieSeriesModule
--   RadialPieSeriesCoreModule      
+-   RadialPieSeriesCoreModule
 -   DataChartInteractivityModule
     <!-- end: Blazor -->
 

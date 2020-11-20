@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools | Markers | Infragistics
-_description: Use the markers of the Infragistics' Angular charts to indentify a data point even if it values fall between major or minor gridlines. Check out the Ignite UI for Angular graph's markers feature!
+_description: Use the markers of the Infragistics' Angular charts to identify a data point even if it values fall between major or minor gridlines. Check out the Ignite UI for Angular graph's markers feature!
 _keywords: Angular charts, data chart, markers, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'MarkerSeries']
 ---

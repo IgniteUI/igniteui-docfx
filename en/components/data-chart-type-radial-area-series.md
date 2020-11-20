@@ -49,9 +49,9 @@ public dataSource: any[] = SampleRadialData.create();
 
 Creation of the [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   RadialAreaSeriesModule
--   RadialAreaSeriesCoreModule      
+-   RadialAreaSeriesCoreModule
 -   DataChartInteractivityModule
     <!-- end: Blazor -->
 
