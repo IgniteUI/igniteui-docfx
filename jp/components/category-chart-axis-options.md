@@ -93,7 +93,7 @@ Ignite UI for Angular カテゴリ チャートの軸タイトル機能は、チ
 
 ## 軸の範囲
 
-カテゴリ チャート コンポーネントで、数値軸の範囲は軸の始めと終わり、つまりデータの最小値と最大値の数値の差です。範囲の最小値は、軸の最小値です。範囲の最大値は、軸の最大値です。カテゴリ チャート コンポーネント、チャート プロット領域を最大化するために、デフォルトで最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最小値と最大値を計算します。軸の最大値と最小値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) プロパティを使用して軸の最小値を 800 に設定してください。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができます。y 軸の [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) プロパティを使用して軸の最大値とデータ ポイントの最大値にも同様に適用できます。
+カテゴリ チャート コンポーネントで、数値軸の範囲は軸の始めと終わり、つまりデータの最小値と最大値の数値の差です。範囲の最小値は、軸の最小値です。範囲の最大値は、軸の最大値です。カテゴリ チャート コンポーネント、チャート プロット領域を最大化するために、デフォルトで最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最小値と最大値を計算します。軸の最大値と最小値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の [`yAxisMinimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) プロパティを使用して軸の最小値を 800 に設定してください。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができます。y 軸の [`yAxisMinimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) プロパティを使用して軸の最大値とデータ ポイントの最大値にも同様に適用できます。
 
 以下のサンプル コードは、y 軸で軸の範囲を変更する方法を示します。
 
@@ -111,7 +111,7 @@ Ignite UI for Angular カテゴリ チャートの軸タイトル機能は、チ
 
 ## 軸間隔
 
-カテゴリ チャート コンポーネントで、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、[`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminorinterval) プロパティは副グリッド線が軸に描画される頻度を指定します。
+カテゴリ チャート コンポーネントで、[`yAxisInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、[`yAxisMinorInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminorinterval) プロパティは副グリッド線が軸に描画される頻度を指定します。
 
 以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
 
@@ -139,7 +139,7 @@ Ignite UI for Angular カテゴリ チャートの軸タイトル機能は、チ
    0 - シリーズ間に間隔は描画されません。
    1 - シリーズ間に利用可能な最大の間隔が描画されます。
 
-カテゴリ チャートの [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap) を `0.125` に設定するには、以下のコードを使用します。
+カテゴリ チャートの [`xAxisGap`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap) を `0.125` に設定するには、以下のコードを使用します。
 
 ```html
 <igx-category-chart
@@ -161,7 +161,7 @@ Ignite UI for Angular カテゴリ チャートの軸タイトル機能は、チ
 -   負の値 (-1 以上): カテゴリは互いに生成する間隔によって引き離されます。
 -   正の数 (1 以下): カテゴリが互いに重なります。値 1 は、互いのチャート上にカテゴリを描画します。
 
-以下のコード例では、[`xAxisOverlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisoverlap) を 0 に設定します。
+以下のコード例では、[`xAxisOverlap`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisoverlap) を 0 に設定します。
 
 ```html
 <igx-category-chart
