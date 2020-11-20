@@ -63,11 +63,11 @@ export class AppComponent {
 
 ## 차트 유형
 
-[`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 옵션을 설정하면 차트 퍼포먼스에 다음과 같은 영향을 미칠 수 있습니다:
+[`ChartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 옵션을 설정하면 차트 퍼포먼스에 다음과 같은 영향을 미칠 수 있습니다:
 
--   [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - 간단히 렌더링할 차트 유형이며 대량의 데이터 점을 렌더링하거나 대량의 데이터 소스를 플로팅할 때 권장됩니다.
--   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - `Line` 차트 유형보다 렌더링이 복잡하며 단일 수치 값을 가진 데이터 항목을 렌더링할 경우에 권장됩니다.
--   `Bar` - [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) 차트 유형보다 렌더링이 복잡하며 OHLC 수치 값을 가진 데이터 항목을 렌더링할 경우에 권장됩니다.
+-   [`line`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#line) - 간단히 렌더링할 차트 유형이며 대량의 데이터 점을 렌더링하거나 대량의 데이터 소스를 플로팅할 때 권장됩니다.
+-   [`IgxColumnComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - `Line` 차트 유형보다 렌더링이 복잡하며 단일 수치 값을 가진 데이터 항목을 렌더링할 경우에 권장됩니다.
+-   `Bar` - [`IgxColumnComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) 차트 유형보다 렌더링이 복잡하며 OHLC 수치 값을 가진 데이터 항목을 렌더링할 경우에 권장됩니다.
 -   `Candle` - `Bar` 차트 유형보다 렌더링이 복잡하며 OHLC 수치 값을 가진 데이터 항목을 렌더링할 경우에도 권장됩니다.
 
 ## 볼륨 유형
@@ -76,7 +76,7 @@ export class AppComponent {
 
 -   `Line` - 간단히 렌더링할 볼륨 유형이며 대량의 데이터 점을 렌더링하거나 대량의 데이터 소스를 플로팅할 때 권장됩니다.
 -   `area` - `Line` 볼륨 유형보다 렌더링이 복잡합니다.
--   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - `area` 볼륨 유형보다 렌더링이 복잡하며 1-3 재고의 볼륨 데이터를 렌더링할 경우에 권장됩니다.
+-   [`IgxColumnComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - `area` 볼륨 유형보다 렌더링이 복잡하며 1-3 재고의 볼륨 데이터를 렌더링할 경우에 권장됩니다.
 
 ## 마커 유형
 

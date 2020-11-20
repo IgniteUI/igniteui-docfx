@@ -7,11 +7,11 @@ _language: kr
 
 # Angular 시리즈
 
-[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 시리즈는 카테고리 시리즈, 금융 시리즈, 폴라 시리즈, 레이디얼 시리즈, 범위 시리즈, 분산 시리즈, 스택 시리즈, 모양 시리즈의 유사한 시리즈 그룹으로 분류됩니다.
+[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 시리즈는 카테고리 시리즈, 금융 시리즈, 폴라 시리즈, 레이디얼 시리즈, 범위 시리즈, 분산 시리즈, 스택 시리즈, 모양 시리즈의 유사한 시리즈 그룹으로 분류됩니다.
 
-이 시리즈 외에도 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에 [시리즈 주석](data-chart-series-annotations.md) 및 [시리즈 강조 표시](data-chart-series-highlighting.md)를 추가할 수 있습니다.
+이 시리즈 외에도 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에 [시리즈 주석](data-chart-series-annotations.md) 및 [시리즈 강조 표시](data-chart-series-highlighting.md)를 추가할 수 있습니다.
 
-다음 목록은 각 그룹의 모든 시리즈 유형을 보여 줍니다. 시리즈 이름을 클릭하면 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 각 시리즈를 사용하는 방법에 대해 설명한 도움말을 볼 수 있습니다.
+다음 목록은 각 그룹의 모든 시리즈 유형을 보여 줍니다. 시리즈 이름을 클릭하면 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 각 시리즈를 사용하는 방법에 대해 설명한 도움말을 볼 수 있습니다.
 
 ### 카테고리 시리즈
 
