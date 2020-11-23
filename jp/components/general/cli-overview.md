@@ -145,7 +145,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 ## テンプレートの追加
 [利用可能な Ignite UI Angular テンプレート](cli/component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[Step-by-Step Guide](cli/step-by-step-guide.md#ビューの追加) を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting-started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
 
-Schematics には、 Ignite UI for Angular コレクション と `component [template] [name]` の `ng generate` を使用します。
+Schematics には、Ignite UI for Angular コレクション と `component [template] [name]` の `ng generate` を使用します。
 
 ```cmd
 ng g @igniteui/angular-schematics:component grid newGrid
@@ -170,7 +170,7 @@ ig add grid newGrid
     注: module 引数は、Angular プロジェクトでのみ適用できます。
   </p> 
   <p>
-    新しいコンポーネントを登録するモジュールの、 /src/app/ folder を基準とした module.ts ファイルのパス。
+    新しいコンポーネントを登録するモジュールの、/src/app/ folder を基準とした module.ts ファイルのパス。
   </p>
   <code>ng g @igniteui/angular-schematics:component combo newCombo --module=myModule/myModule.module.ts</code>
   <br>

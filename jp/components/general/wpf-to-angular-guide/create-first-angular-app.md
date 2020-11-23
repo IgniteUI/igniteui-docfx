@@ -44,7 +44,7 @@ code .
 
 ### プロジェクト構造
 
-次にこれらの各ファイルを見て、それらが WPF アプリケーションとどのように関連しているかを見てみましょう。最良の方法は、各プロジェクトを並べて比較することです。左側は、WPF アプリです。右側は、 Angular アプリです。
+次にこれらの各ファイルを見て、それらが WPF アプリケーションとどのように関連しているかを見てみましょう。最良の方法は、各プロジェクトを並べて比較することです。左側は、WPF アプリです。右側は、Angular アプリです。
 
 <img src="../../../images/general/WPF_project_structure.png" />
 <img src="../../../images/general/Angular_project_structure.png" />
