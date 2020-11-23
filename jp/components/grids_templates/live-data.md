@@ -1,8 +1,8 @@
 
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
-_description: Angular Data Grid の Ignite UI は、毎秒何千もの更新を処理できます。
+title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular Data Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
 ---
@@ -10,16 +10,19 @@ _language: ja
 
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular
-_description: The Ignite UI for Angular Data Grid は、毎秒数千に及ぶデータポイントの更新を処理します。
+title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular Tree Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
 ---
 }
 
-# 更新のライブデモ
-Ignite UI for Angular の @@igComponent コンポーネントは、1 秒間に何千もの更新を処理しながら、ユーザーはグリッドをインタラクティブに操作できます。このサンプルでは、​​@@igComponent が 1 秒あたり数千の更新を処理し、Region ごとの Category Prices に基づいたデータをチャートで示しています。`Chart` ボタンを使用して、`選択した行`に基づいてデータを表示するか、`チャート列`の下にあるボタンを使用して、行の `Region` の値に基づいて同じデータを表示します。
+# Data @@igComponent ライブ更新
+@@igComponent コンポーネントは、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理できます。
 
+## Angular ライブ データ更新の例
+以下のサンプルは、すべてのレコードが 1 秒間に複数回更新される場合の @@igComponent のパフォーマンスを示しています。UI コントロールを使用して、読み込むレコードの数と更新の頻度を選択します。
+同じデータを[カテゴリ チャート](../category-chart.md)に入力して、Ignite UI forAngular の強力なチャート作成機能を体験してください。`Chart` ボタンには、選択した行の `Category Prices per Region` データが表示され、`Chart` 列ボタンには現在の行の同じデータが表示されます。
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
@@ -29,6 +32,40 @@ Ignite UI for Angular の @@igComponent コンポーネントは、1 秒間に�
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
+
+## データ バインディングおよび更新
+サービスは、ページが読み込まれたとき、およびスライダー コントローラーを使用して特定の数のレコードを取得したときに、コンポーネントにデータを提供します。実際のシナリオでは、更新されたデータはサービスから消費されますが、ここではデータはコードで更新されます。これは、デモをシンプルに保ち、その主な目標であるグリッドのパフォーマンスを実証するために行われます。
+```html
+<igx-grid #grid [data]="data" ...></igx-grid>
+```
+```typescript
+public ngOnInit() {
+    this.localService.getData(this.volume);
+    this.volumeSlider.onValueChange.subscribe(x => this.localService.getData(this.volume);
+    this.localService.records.subscribe(x => { this.data = x; });
+}
+```
+
+Angular パイプは、グリッド ビューを更新するために内部的に使用されます。データ フィールド値の変更またはデータ オブジェクト/データ コレクション参照の変更により、対応するパイプがトリガーされます。ただし、これは[`複合データ オブジェクト`](grid.md#複雑なデータ-バインディング)にバインドされている列には当てはまりません。これは、Angular の純粋パイプがネストされたプロパティの変更を検出しないためです。この状況を解決するには、プロパティを含むデータ オブジェクトの新しいオブジェクト参照を提供します。例:
+
+```html
+<igx-grid #grid [data]="data" ...>
+    <igx-column field="price.usd"></igx-column>
+</igx-grid>
+```
+```typescript
+private updateData(data: IRecord[]) {
+    const newData = []
+    for (const rowData of data) {
+        rowData.price = { usd: getUSD(), eur: getEUR() };
+        newData.push({...rowData});
+    }
+    this.grid.data = newData;
+}
+```
+
+## テンプレート
+ビューの更新は、デフォルト テンプレートの列とカスタム テンプレートの列で同じように機能します。ただし、カスタム テンプレートは比較的単純にしておくことをお勧めします。テンプレート内の要素の数が増えると、パフォーマンスへの悪影響も大きくなります。
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)

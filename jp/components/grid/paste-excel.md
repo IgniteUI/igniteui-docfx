@@ -9,7 +9,7 @@ _language: ja
 
 Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 
-## Angular Excel からデータを貼り付けるデ例
+## Angular Excel からデータを貼り付ける例
 
 このサンプルでは、Excel から [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の貼り付けを実装する方法を紹介します。
 サンプルは、Excel スプレッドシートを開いて行をコピーし、キーボード (Ctrl + V、Shift + Insert、Command + V) を使用してグリッドに貼り付けます。
