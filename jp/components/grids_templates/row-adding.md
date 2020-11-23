@@ -31,7 +31,7 @@ _keywords: 行追加, igniteui for angular, infragistics, インフラジステ�
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:520px">
-    <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent 行追加の例"></iframe>
 </div>
 <br/>
 <div>
@@ -42,7 +42,7 @@ _keywords: 行追加, igniteui for angular, infragistics, インフラジステ�
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
    <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent 行追加の例"></iframe>
 </div>
 <br/>
 <div>
