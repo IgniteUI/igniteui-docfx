@@ -42,7 +42,7 @@ _language: ja
 
 ## igxTransactionService の使用
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を拡張します。
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、[`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を拡張します。
 
 バッチ編集機能を有効にするには、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を igxGrid またはその親コン​​ポーネントのプロバイダーとして定義します。
 
@@ -53,7 +53,7 @@ _language: ja
 
 ## igxHierarchicalTransactionService の使用
 
-[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を拡張します。
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を拡張します。
 
 [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) および [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)  の親と子の間の関係を処理するように設計されているため、ADD トランザクションを追加するときに予想される場所に新しいレコードが追加されます。また、親レコードを削除すると、その子はデータ型とグリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#cascadeondelete) プロパティに基づいて、上位レベルの階層に昇格されるか、親とともに削除されます。
 
