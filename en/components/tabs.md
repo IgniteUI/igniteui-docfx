@@ -13,7 +13,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 ## Angular Tabs Example
 
 <div class="sample-container loading" style="height: 250px; border: 1px solid #ededed;">
-    <iframe id="tabs-sample-0" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="tabs-sample-0" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);" alt="Angular Tabs Example">
     </iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
@@ -57,7 +57,7 @@ We set the names of tabs using the [`label`]({environment:angularApiUrl}/classes
 If the sample is configured properly, the final result should look like that:
 
 <div class="sample-container loading" style="height: 200px; border: 1px solid #ededed;">
-    <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload" alt="Angular Tabs Example"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>

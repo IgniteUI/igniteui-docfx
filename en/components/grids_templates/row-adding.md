@@ -42,7 +42,7 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:520px">
-    <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Adding Example"></iframe>
 </div>
 <br/>
 <div>
@@ -53,7 +53,7 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
    <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Adding Example"></iframe>
 </div>
 <br/>
 <div>
