@@ -1,31 +1,31 @@
 {
-    "name": "igniteui-for-angular-docfx",
-    "version": "1.0.0",
-    "description": "Static sample site generator for Ignite UI for Angular.",
-    "main": "index.js",
-    "scripts": {
-        "start": "gulp serve",
-        "build": "gulp build",
-        "build-gh-actions": "gulp buildTravis",
-        "build-staging": "set NODE_ENV=staging && gulp build",
-        "build-production": "set NODE_ENV=production && gulp build",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Infragistics",
-    "license": "ISC",
-    "dependencies": {
-        "gulp-sass": "^4.0.1",
-        "igniteui-docfx-template": "2.8.8",
-        "natives": "^1.1.6",
-        "yargs": "^10.0.3"
-    },
-    "devDependencies": {
-        "browser-sync": "^2.26.7",
-        "del": "^5.1.0",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-file-include": "^2.1.1",
-        "gulp-shell": "^0.7.1",
-        "slash": "^3.0.0"
-    }
+  "name": "igniteui-for-angular-docfx",
+  "version": "1.0.0",
+  "description": "Static sample site generator for Ignite UI for Angular.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build",
+    "build-gh-actions": "gulp buildTravis",
+    "build-staging": "set NODE_ENV=staging && gulp build",
+    "build-production": "set NODE_ENV=production && gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Infragistics",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-sass": "^4.0.1",
+    "igniteui-docfx-template": "2.8.8",
+    "natives": "^1.1.6",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-shell": "^0.7.1",
+    "slash": "^3.0.0"
+  }
 }
