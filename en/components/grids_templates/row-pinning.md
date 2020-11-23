@@ -29,7 +29,7 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-row-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Pinning Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -39,7 +39,7 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="tree-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Pinning Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -49,7 +49,7 @@ One or multiple rows can be pinned to the top or bottom of the Angular UI Grid. 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="hierarchical-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-row-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Pinning Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

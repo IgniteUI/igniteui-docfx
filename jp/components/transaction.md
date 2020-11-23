@@ -20,7 +20,7 @@ _language: ja
 
 [`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html) 上に 3 つのクラスを構築したことにより、ユーザーは、行ったすべての変更、または特定のレコードに加えられた変更のみを一度にコミットできます。これらのクラスは、[`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)、[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) です。
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html)、[igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)、 および [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) コンポーネントと完全に統合されています。以下のトピックは、トランザクションを有効にしてこれらのコンポーネントを使用する詳細な例を示します。
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html)、[igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)、および [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) コンポーネントと完全に統合されています。以下のトピックは、トランザクションを有効にしてこれらのコンポーネントを使用する詳細な例を示します。
 * [igxGrid 一括編集とトランザクション](grid/batch-editing.md)
 * [igxHierarchicalGrid 一括編集とトランザクション](hierarchicalgrid/batch-editing.md)
 * [igxTreeGrid 一括編集とトランザクション](treegrid/batch-editing.md)

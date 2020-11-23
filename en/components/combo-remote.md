@@ -13,7 +13,7 @@ The Ignite UI for Angular Combo Component exposes an API that allows binding a c
 The sample below demonstrates remote binding using the [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) property to load new chunk of remote data:
 
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-remote-sample" frameborder="0" seamless="" width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-remote-sample" frameborder="0" seamless="" width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-remote" onload="onSampleIframeContentLoaded(this);" alt="Angular Combo Remote Binding Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

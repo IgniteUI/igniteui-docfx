@@ -4,6 +4,7 @@ const {dest, series, src, watch, parallel} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const replace = require('gulp-replace');
 const argv = require('yargs').argv;
 const fs = require('fs');
 const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
@@ -124,6 +125,12 @@ const  styles = () => {
         .pipe(dest(`${DOCFX_TEMPLATE}/styles/css`));
 };
 
+const removeHTMLExtensionFromSiteMap = () => {
+  return src([DOCFX_SITE + '/sitemap.xml'])
+      .pipe(replace(/\.html/g, ''))
+      .pipe(dest(DOCFX_SITE));
+};
+
 const buildSite = (done) => {
     exec(`docfx build ${DOCFX_CONF}`, (err, stdout, stderr) => {
       console.log(stdout);
@@ -202,7 +209,7 @@ const build = series(
   styles, 
   postProcessorConfigs, 
   parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics), 
-  buildSite);
+  buildSite,removeHTMLExtensionFromSiteMap);
 
 const buildTravis = series(styles, postProcessorConfigs, generateGridsTopics);
 

@@ -13,9 +13,9 @@ _language: ja
 ## Angular 仮想スクロール ディレクティブの例
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 仮想スクロール ディレクティブの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
     <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox で表示</button>
@@ -242,8 +242,7 @@ igxFor ディレクティブのコンテキストには、`even`、`odd`、`firs
 
 |制限|説明|
 |--- |--- |
-| `igxForOf` を使用するコンポーネントのスクロール位置は、予期されるコンテナに保存されません。 | `igxForOf` ディレクティブを使用するコンポーネントが `<ng-content>` または他の予期されたコンテナにある場合、データの位置は保持されますが、そのスクロールバーの位置は保持されません。これは、DOM 要素が切り離され、後で DOM ツリーに再接続され、その結果、スクロールバーのスクロール位置が失われるためです。内部的に `igxForOf` を使用する影響を受けるコントロールは、`igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`、`igxCombo` です。<br/>回避策は次のとおりです。<br/> <ul><li>たとえば、`ngIf` でラップすることにより、DOM ノードの状態をリセットします。コンポーネントは破棄されてから再作成され、すべての内部状態が失われます。</li><li>状態を保持、すなわち、要素が DOM ツリーに再追加されたかどうかを判断し、たとえば `MutationObserver` を使用して、手動でスクロール位置をリセットします。`</li></ul>
-| 初期化後にレンダリングされたテンプレートのコンテンツのサイズが変更された場合、`scrollTo` メソッドが正しく動作されません。 | 初期化後にランタイムを変更するサイズを持つテンプレート内の要素の場合 (コンテンツ プロジェクション、リモート要求の解決などの結果として)、`scrollTo` メソッドは正しいインデックスまでスクロールできません。メソッドは、ランタイムのサイズ変更が発生する前にインデックスの位置までスクロールし、サイズが変更された後は場所が正しくありません。回避策として、コンテンツが後で読み込まれた場合にコンテンツに基づいてサイズを変更しないテンプレートを使用します。
+| 初期化後にレンダリングされたテンプレートのコンテンツのサイズが変更された場合、`scrollTo` メソッドが正しく動作されません。| 初期化後にランタイムを変更するサイズを持つテンプレート内の要素の場合 (コンテンツ プロジェクション、リモート要求の解決などの結果として)、`scrollTo` メソッドは正しいインデックスまでスクロールできません。メソッドは、ランタイムのサイズ変更が発生する前にインデックスの位置までスクロールし、サイズが変更された後は場所が正しくありません。回避策として、コンテンツが後で読み込まれた場合にコンテンツに基づいてサイズを変更しないテンプレートを使用します。
 
 ## API リファレンス
 

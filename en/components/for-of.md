@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Angular Virtual For Directive Example
 
 <div class="sample-container loading" style="height:650px">
-    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Virtual For Directive Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -241,8 +241,7 @@ The `igxFor` directive includes the following helper properties in its context: 
 
 |Limitation|Description|
 |--- |--- |
-| Scroll position of components that use `igxForOf` is not preserved in projected container | When a component that uses `igxForOf` directive is in a `<ng-content>`, or other projected container, its scrollbar position won't be preserved, even though the data position would be. That's because the DOM elements are detached and later re-attached to the DOM tree and as a result, losing the scrollbar scroll position. The affected controls that use `igxForOf` internally are: `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`, `igxCombo`. <br/>Some possible workarounds are: <br/> <ul><li>Resetting the DOM node's state, for example by wrapping it in an `ngIf`. The component will be destroyed and then re-created, losing all internal states;</li><li>Persisting the state, i.e. determining whether the element has been re-added to the DOM tree and resetting its scroll position manually, for example using `MutationObserver`</li></ul>
-| `scrollTo` method does not work correctly when the content size of the rendered templates changes post initialization | When the elements inside the template have a size, that changes runtime after initialization (for example as a result of content projection, remote request resolution etc.), then the `scrollTo` method will not be able to scroll to the correct index. The method will scroll to the position of the index before the runtime size change occurs, hence the location will not be correct after the size is changed later. A possible workaround is to use templates that do not change their size based on their content if the content is loaded later.
+| `scrollTo` method does not work correctly when the content size of the rendered templates changes post initialization | When the elements inside the template have a size, that changes runtime after initialization (for example as a result of content projection, remote request resolution etc.), then the `scrollTo` method will not be able to scroll to the correct index. The method will scroll to the position of the index before the runtime size change occurs, hence the location will not be correct after the size is changed later. A possible workaround is to use templates that do not change their size based on their content if the content is loaded later. |
 
 ## API References
 

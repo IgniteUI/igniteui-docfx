@@ -12,7 +12,7 @@ The Ignite UI for Angular List component displays rows of items and supports one
 ## Angular List Example
 The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 <div class="sample-container loading" style="height: 513px">
-<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular List Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
