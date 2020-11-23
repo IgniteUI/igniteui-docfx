@@ -15,7 +15,7 @@ _language: ja
 <div class="sample-container loading" style="height:325px">
     <iframe id="icons-sample-iframe" src='{environment:demosBaseUrl}/interactions/icons-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -34,7 +34,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 移動が実行される前に、ポインターの最後と次の位置を含む [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベントもトリガーされます。要素のドラッグ時に動きが検出されるたびにトリガーされます。 
 
-ユーザーがマウス/タッチをリリースした後、 ドラッグ ゴースト要素が DOM から削除され、[`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) が発生されます。
+ユーザーがマウス/タッチをリリースした後、ドラッグ ゴースト要素が DOM から削除され、[`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) が発生されます。
 
 > [!Note]
 > [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベントの性質上、短い期間で何度もトリガーされる可能性があり、トリガーされたときに実行される複雑な操作のパフォーマンスの問題が発生することがあります。
@@ -127,7 +127,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 両方の関数には、トランジション アニメーションをカスタマイズし、期間、タイミング関数、または遅延を設定するために設定できる引数があります。特定の開始位置が設定されている場合、そこから要素をアニメーション化します。
 
-トランジション アニメーションが終了すると、ゴーストが作成される場合、ゴーストは削除され、 `igxDrag` ディレクティブは初期状態に戻ります。ゴーストが作成されていない場合、位置を維持します。いずれの場合もアニメーションの持続時間に基づいて、[`transitioned`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) イベントがトリガーされます。アニメーションが適用されていない場合、ただちにトリガーされます。
+トランジション アニメーションが終了すると、ゴーストが作成される場合、ゴーストは削除され、`igxDrag` ディレクティブは初期状態に戻ります。ゴーストが作成されていない場合、位置を維持します。いずれの場合もアニメーションの持続時間に基づいて、[`transitioned`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitioned) イベントがトリガーされます。アニメーションが適用されていない場合、ただちにトリガーされます。
 
 要素の変換を処理する他のアニメーションを作成できます。これは、Angular Animations または CSS Animations を使用して、ベース `igxDrag` 要素/そのゴーストのいずれかに他の要素と同様に実行できます。ゴーストに適用する場合は、カスタムゴ ーストを定義し、その要素にアニメーションを適用する必要があります。
 
@@ -155,7 +155,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 ### ドロップ ストラテジ
 
-`igxDrop` には、`Default`、`Prepend`、 `Insert` および `Append` の 4 つのドロップ ストラテジがあります。
+`igxDrop` には、`Default`、`Prepend`、`Insert` および `Append` の 4 つのドロップ ストラテジがあります。
 
 * `Default` - 要素が `igxDrop` 要素にドロップされた場合にアクションを実行せず、[`IgxDefaultDropStrategy`]({environment:angularApiUrl}/classes/igxdefaultdropstrategy.html) という名前のクラスとして実装されます。
 
