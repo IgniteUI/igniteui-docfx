@@ -490,7 +490,7 @@ $dark-column-actions-theme: igx-column-actions-theme(
 );
 ```
 
-Since the column actions are using other components, igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
+Since the column actions are using other components - igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
 
 ```scss
 $dark-button-theme: igx-button-theme(
