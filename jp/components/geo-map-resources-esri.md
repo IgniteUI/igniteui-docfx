@@ -8,7 +8,7 @@ _language: ja
 
 # Angular Esri ユーティリティ
 
-リソース トピックは、Esri Maps が [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で提供する [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html) の使用に役立つユーティリティの実装を提供します。
+リソース トピックは、Esri Maps が [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で提供する [`IgxArcGISOnlineMapImagery`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html) の使用に役立つユーティリティの実装を提供します。
 
 ## コード スニペット
 
