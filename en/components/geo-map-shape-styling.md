@@ -7,7 +7,7 @@ mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries']
 
 # Angular Shape Styling on Geographic Shape Series
 
-This topic explains how to apply custom styling to the [`IgxGeographicShapeSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) in the Angular [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html).
+This topic explains how to apply custom styling to the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) in the Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html).
 
 ## Angular Shape Styling on Geographic Shape Series Example
 

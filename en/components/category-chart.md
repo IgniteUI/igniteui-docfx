@@ -26,19 +26,19 @@ The Angular category chart component make it easy to organize and visualize cate
 
  A user can bind a collection of data, a group of collections, and a data property and let the charting control do the rest. The Angular component will analyze the data and automatically choose the best chart type to represent the data.
 
-By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the [`chartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property is set to [`Auto`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto), the control will use a column chart for a small data sets or a line chart for larger data sets.
+By using a smart Data Adapter, the data is analyzed and the appropriate visualization is rendered. For example, if the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property is set to [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto), the control will use a column chart for a small data sets or a line chart for larger data sets.
 
-However, you can also explicitly specify the chart type by setting the [`chartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) to:
+However, you can also explicitly specify the chart type by setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) to:
 
--   [`Line`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#line)
--   [`Area`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#area)
--   [`Column`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#column)
--   [`Point`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point)
--   [`Spline`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#spline)
--   [`SplineArea`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#splinearea)
--   [`StepArea`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#steparea)
--   [`StepLine`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)
--   [`Waterfall`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#waterfall)
+-   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#line)
+-   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#area)
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#column)
+-   [`Point`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point)
+-   [`Spline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#spline)
+-   [`SplineArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#splinearea)
+-   [`StepArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#steparea)
+-   [`StepLine`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)
+-   [`Waterfall`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#waterfall)
 
 Another example of the intuitive behavior of the Angular category chart component is that you do not need to explicitly set the labels. The category chart will use the first appropriate string property that it finds within the data you provided and will use that for the labels.
 
@@ -75,7 +75,7 @@ export class AppModule {}
 
 <!-- end: Angular, React, WebComponents -->
 
-It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the [`IgxCategoryChartCoreModule`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcoremodule.html), and the dynamic module for the series in question, e.g. [`IgxLineSeriesDynamicModule`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriesdynamicmodule.html). If the [`chartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) is [`Auto`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto), it wil make sure to select a series type that has been loaded.
+It's also possible to load a more minimal configuration of category chart whereby it can only load a subset of the possible series, and exclude other optional features by instead loading the [`IgxCategoryChartCoreModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcoremodule.html), and the dynamic module for the series in question, e.g. [`IgxLineSeriesDynamicModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriesdynamicmodule.html). If the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) is [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto), it wil make sure to select a series type that has been loaded.
 
 <div class="divider--half"></div>
 
@@ -108,23 +108,23 @@ The following code demonstrates how to bind the category chart to the above data
 
 ## Chart Types
 
-You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the [`chartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property.
+You can override the default behavior of the category chart and set which type of chart should be displayed. This is done by setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property.
 Below are listed all of the types that the Angular category chart supports.
 
 > [!NOTE]
-> Special case is the [`Auto`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) setting of that property. If [`Auto`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) is used the chart will analyze assigned data and will assign the most suitable chart type.
+> Special case is the [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) setting of that property. If [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) is used the chart will analyze assigned data and will assign the most suitable chart type.
 
 ## Supported Chart Types
 
 | Type                                                                                                                                     | Description and Preview                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [`Auto`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto)             | Specifies automatic selection of chart type based on suggestions from built-in data adapter that analyzes data source bound to the chart. |
-| [`Line`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#line)             | Specifies category line chart with markers at each data point. ![](../images/category_chart_line.png)                                     |
-| [`Area`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#area)             | Specifies category area chart. ![](../images/category_chart_area.png)                                                                     |
-| [`Column`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#column)         | Specifies category column chart with vertical rectangles at each data point. ![](../images/category_chart_column.png)                     |
-| [`Point`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point)           | Specifies category point chart with markers at each data point. ![](../images/category_chart_point.png)                                   |
-| [`StepLine`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)     | Specifies category step line chart. ![](../images/category_chart_stepline.png)                                                            |
-| [`StepArea`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#steparea)     | Specifies category step area chart. ![](../images/category_chart_steparea.png)                                                            |
-| [`Spline`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#spline)         | Specifies category spline line chart with markers at each data point. ![](../images/category_chart_spline.png)                            |
-| [`SplineArea`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#splinearea) | Specifies category spline area chart. ![](../images/category_chart_splinearea.png)                                                        |
-| [`Waterfall`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#waterfall)   | Specifies category waterfall chart. ![](../images/category_chart_waterfall.png)                                                           |
+| [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto)             | Specifies automatic selection of chart type based on suggestions from built-in data adapter that analyzes data source bound to the chart. |
+| [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#line)             | Specifies category line chart with markers at each data point. ![](../images/category_chart_line.png)                                     |
+| [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#area)             | Specifies category area chart. ![](../images/category_chart_area.png)                                                                     |
+| [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#column)         | Specifies category column chart with vertical rectangles at each data point. ![](../images/category_chart_column.png)                     |
+| [`Point`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point)           | Specifies category point chart with markers at each data point. ![](../images/category_chart_point.png)                                   |
+| [`StepLine`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline)     | Specifies category step line chart. ![](../images/category_chart_stepline.png)                                                            |
+| [`StepArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#steparea)     | Specifies category step area chart. ![](../images/category_chart_steparea.png)                                                            |
+| [`Spline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#spline)         | Specifies category spline line chart with markers at each data point. ![](../images/category_chart_spline.png)                            |
+| [`SplineArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#splinearea) | Specifies category spline area chart. ![](../images/category_chart_splinearea.png)                                                        |
+| [`Waterfall`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#waterfall)   | Specifies category waterfall chart. ![](../images/category_chart_waterfall.png)                                                           |

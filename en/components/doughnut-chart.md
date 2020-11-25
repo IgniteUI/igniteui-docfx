@@ -161,7 +161,7 @@ this.Seasons = [
 
 The doughnut chart component exposes the API for setting the state of one or more slices to selected. Optionally, you may apply a single custom visual style to the selected slices.
 
-**Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the [`allowSliceSelection`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceselection) property.
+**Enable/disable slice selection** - You can enable (default setting) or disable slice selection in the doughnut chart by setting the [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceselection) property.
 
 **Configuring the look of the selected slices** - You can define how the selected slices will look by defining a style with a `TargetType` of Slice and assigning it to the `SelectedStyle` property of the doughnut chart.
 
@@ -192,7 +192,7 @@ The doughnut chart component exposes the API for setting the state of one or mor
 The doughnut chart component slices explode either programmatically or by user interaction.
 
 **Enable/disable slice explosion**
-You can enable or disable the ability to explode slices by setting the [`allowSliceExplosion`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceexplosion) property.
+You can enable or disable the ability to explode slices by setting the [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceexplosion) property.
 
 **Changing the exploded state of a slice upon slice click**
 If you attach an event handler for the `SliceClick` event, a reference to the clicked slice is supplied in the event arguments and you can modify its exploded state.

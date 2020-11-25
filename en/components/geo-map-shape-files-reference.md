@@ -17,7 +17,7 @@ This topic provides resources about maps and geo-spatial related material as wel
 
 Before plotting geo-spatial data in the control, one should get familiar with the following resources which provide general information about maps and geo-spatial data.
 
--   [Wikipedia – Cartography](http://en.wikipedia.org/wiki/cartography)
+-   [Wikipedia – Cartography](http://en.wikipedia.org/wiki/Cartography)
 
 -   [National Atlas of the United States – Geographic Locations](http://nationalatlas.gov/articles/mapping/a_latlong.html)
 
@@ -25,7 +25,7 @@ Before plotting geo-spatial data in the control, one should get familiar with th
 
 -   [U.S. Geological Survey](http://www.usgs.gov/)
 
--   [Wikipedia – Map Projections](http://en.wikipedia.org/wiki/map_projection)
+-   [Wikipedia – Map Projections](http://en.wikipedia.org/wiki/Map_projection)
 
 -   [University of Colorado – Map Projections](http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html)
 
@@ -33,7 +33,7 @@ Before plotting geo-spatial data in the control, one should get familiar with th
 
 ## Shape Files Format
 
-The Angular [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control uses popular [Shape Files](http://en.wikipedia.org/wiki/shapefile#overview) format as one of the sources for geo-spatial data. Shape files are usually shipped with other file types, generally files with  _.shp_, _.shx_, and _.dbf_  extensions.
+The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control uses popular [Shape Files](http://en.wikipedia.org/wiki/Shapefile#Overview) format as one of the sources for geo-spatial data. Shape files are usually shipped with other file types, generally files with  _.shp_, _.shx_, and _.dbf_  extensions.
 
 The following table provides basic information and purpose for each type of shape files.
 
@@ -47,7 +47,7 @@ Refer to the following resources for detailed information and specifications on 
 
 -   [ESRI - Shape File Technical Description](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)
 
--   [Wikipedia - Shape File Description](http://en.wikipedia.org/wiki/shapefile#overview)
+-   [Wikipedia - Shape File Description](http://en.wikipedia.org/wiki/Shapefile#Overview)
 
 ## Shape File Tools
 
@@ -67,7 +67,7 @@ The following list provides resource tools for editing shape files.
 
 ## Shape Files Data Sources
 
-The following list provides resources for obtaining shape files. Also, samples for the [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control are good source of shape files. These shape files are included in the installer for the Samples Browser.
+The following list provides resources for obtaining shape files. Also, samples for the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control are good source of shape files. These shape files are included in the installer for the Samples Browser.
 
 -   [ESRI - World Map Data](http://www.esri.com/data/download/basemap/index.html)
 

@@ -38,7 +38,7 @@ Most of data chart series support markers and they are listed below:
 
 ## Marker Properties
 
-Above series support 12 shapes of markers that you can change using the [`markerType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) property.  Also, you can change fill and stroke using [`markerBrush`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) and [`markerOutline`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) properties respectively.
+Above series support 12 shapes of markers that you can change using the [`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) property.  Also, you can change fill and stroke using [`markerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) and [`markerOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) properties respectively.
 
 This code snippet below demonstrate how to change shape and appearance of markers.
 
