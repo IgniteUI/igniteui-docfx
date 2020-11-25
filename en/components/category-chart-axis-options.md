@@ -9,10 +9,10 @@ mentionedTypes: ['CategoryChart']
 
 In the Ignite UI for Angular category chart component, an Axis provides base properties for specifying appearance of axis main lines, tickmarks, titles, and axis labels.
 
-## Demo
+## Angular Axis Options Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-axis-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-axis-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-axis-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-axis-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Axis Options Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

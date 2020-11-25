@@ -9,10 +9,10 @@ mentionedTypes: ['Spreadsheet', 'SpreadsheetAction', 'SpreadsheetCommandType', '
 
 This topic explains how to perform clipboard operations on the Ignite UI for Angular spreadsheet component.
 
-## Demo
+## Angular Working with Clipboard Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Working with Clipboard Example"></iframe>
 </div>
 
 

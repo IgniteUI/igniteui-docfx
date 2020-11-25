@@ -15,7 +15,7 @@ The `TextField` property determines which value is shown when users make a selec
 
 The `ValueField` property determines the bound value of the underlying data item selected. This is necessary if your list of objects have several properties.
 
-## Demo
+## Angular Multi-Column Combo Box Overview Example
 
 <div class="sample-container loading" style="height: 500px">
     <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/editors/multi-column-combobox-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Multi-Column Combo Box Overview Example"></iframe>
