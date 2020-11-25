@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular カテゴリ チャート コンポネントは、以下のサンプルに示すように、数百万に及ぶデータ ポイントを含む大量のデータを高速で処理できます。
 
-## サンプル
+## Angular 大規模データの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="category-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 大規模データの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

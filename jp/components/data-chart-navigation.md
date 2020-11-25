@@ -10,10 +10,10 @@ _language: ja
 
 Angular データ チャート コンポーネントでは、チャート ナビゲーションがデフォルトで無効になっています。有効にするとコードや UI を介してチャートのズームやパンニングができるようになります。
 
-## サンプル
+## Angular ナビゲーションの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ナビゲーションの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular データチャート コンポーネントは、複数のチャート間のズーム、パン、および十字線イベントの調整に関して同期をとることができます。これは、データソースが軸に関して似ているか同じであると仮定して、複数のチャートの同じ領域を可視化するのに役立ちます。
 
-## サンプル
+## Angular 同期の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-chart-synchronization-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-chart-synchronization-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 同期の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
