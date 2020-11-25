@@ -480,7 +480,7 @@ $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
 );
 ```
 
-To theme the column actions menus of the toolbar we have to change the theme for the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
+To theme the column actions menus of the toolbar, we have to change the theme of the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
 
 ```scss
 $dark-column-actions-theme: igx-column-actions-theme(
