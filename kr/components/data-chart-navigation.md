@@ -7,7 +7,7 @@ _language: kr
 
 # Angular 탐색
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서는 탐색이 기본적으로 비활성화되어 있습니다. 활성화로 설정되면 프로그래밍 방식 또는 UI를 통해 차트를 확대/축소하고 이동할 수 있습니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서는 탐색이 기본적으로 비활성화되어 있습니다. 활성화로 설정되면 프로그래밍 방식 또는 UI를 통해 차트를 확대/축소하고 이동할 수 있습니다.
 
 ## 데모
 
@@ -35,7 +35,7 @@ import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 
 ## 차트 UI 탐색 개요
 
-UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 따라 차트의 [`isHorizontalZoomEnabled`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) 및/또는 [`isVerticalZoomEnabled`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) 속성을 true로 설정해야 합니다. 이렇게 하면 마우스 휠을 사용해 차트를 확대/축소할 수 있습니다.
+UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 따라 차트의 [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) 및/또는 [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) 속성을 true로 설정해야 합니다. 이렇게 하면 마우스 휠을 사용해 차트를 확대/축소할 수 있습니다.
 
 마우스 버튼을 클릭하거나 터치를 사용하여 간단하게 확대/축소하거나 이동할 수도 있습니다. 차트의 `DefaultInteraction` 속성은 마우스 클릭 또는 터치 이벤트로 발생하는 동작을 결정합니다. 이 속성은 기본값으로 `DragZoom`으로 설정되며 확대/축소를 활성화 상태로 설정한 경우, 클릭 및 드래그하면 차트의 확대 영역이 될 플롯 영역 위에 사각형의 미리보기가 배치됩니다. 이 `DefaultInteraction` 속성은 이동을 허용하기 위해 `DragPan`으로 설정하거나, 이러한 조작을 금지하기 위해 `None`으로 설정할 수 있습니다.
 
@@ -53,7 +53,7 @@ UI에서 탐색을 허용하려면 확대/축소를 허용하려는 방향에 �
 
 ## 마우스 및 키보드를 사용한 차트 탐색
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 탐색은 마우스나 키보드가 활성화된 상태에서 실행됩니다. 다음 조작은 기본적으로 다음의 마우스 또는 키보드 조작을 사용하여 호출할 수 있습니다:
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 탐색은 마우스나 키보드가 활성화된 상태에서 실행됩니다. 다음 조작은 기본적으로 다음의 마우스 또는 키보드 조작을 사용하여 호출할 수 있습니다:
 
 -   **Panning**: 키보드의 화살표 키를 사용하거나 Shift 키를 누른 상태에서 마우스로 클릭하고 드래그합니다.
 -   **Zoom In**: 키보드의 PageUp 키를 사용하거나 마우스 휠을 위로 회전시킵니다.
@@ -114,15 +114,15 @@ The following code snippet demonstrates how to enable the overview plus detail p
 
 ## 코드를 통한 차트 탐색
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 차트에서 확대/축소 또는 이동 조작이 발생할 때마다 업데이트되는 여러 탐색 속성을 제공합니다. 이러한 각 속성을 설정하여 차트를 프로그래밍 방식으로 확대/축소 또는 이동할 수도 있습니다. 다음은 이러한 속성 목록입니다:
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 차트에서 확대/축소 또는 이동 조작이 발생할 때마다 업데이트되는 여러 탐색 속성을 제공합니다. 이러한 각 속성을 설정하여 차트를 프로그래밍 방식으로 확대/축소 또는 이동할 수도 있습니다. 다음은 이러한 속성 목록입니다:
 
 -   `WindowPositionHorizontal`: 차트에 표시되는 콘텐츠 뷰 직사각형의 X부분을 나타내는 수치 값입니다.
 -   `WindowPositionVertical`: 차트에 표시되는 콘텐츠 뷰 직사각형의 Y부분을 나타내는 수치 값입니다.
 -   `WindowRect`: 현재 뷰에 있는 차트 부분을 표시하는 직사각형을 나타내는 `IgRect` 객체입니다. 예를 들면, "0, 0, 1, 1"의 `WindowRect`는 전체 차트입니다.
--   [`windowScaleHorizontal`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): 차트에 표시되는 콘텐츠 뷰 직사각형의 너비 부분을 나타내는 수치 값입니다.
--   [`windowScaleVertical`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): 차트에 표시되는 콘텐츠 뷰 직사각형의 높이 부분을 나타내는 수치 값입니다.
+-   [`windowScaleHorizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalehorizontal): 차트에 표시되는 콘텐츠 뷰 직사각형의 너비 부분을 나타내는 수치 값입니다.
+-   [`windowScaleVertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#windowscalevertical): 차트에 표시되는 콘텐츠 뷰 직사각형의 높이 부분을 나타내는 수치 값입니다.
 
-다음의 코드 조각은 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 뷰를 프로그래밍 방식으로 변경하는 방법을 보여줍니다. 다음은 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어를 나타내는 "chart"라는 변수가 있다고 가정한 경우입니다:
+다음의 코드 조각은 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 뷰를 프로그래밍 방식으로 변경하는 방법을 보여줍니다. 다음은 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어를 나타내는 "chart"라는 변수가 있다고 가정한 경우입니다:
 
 ```ts
 // Zoom in by a factor of 0.05

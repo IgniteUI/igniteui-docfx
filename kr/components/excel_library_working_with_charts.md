@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Nati
 
 # Angular Working with Charts
 
-The Infragistics Excel Engine's [`WorksheetChart`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html) functionality allows you to add visual charting representations of data trends across regions of cells in a worksheet. For example, if you want to see your Excel data in a region of cells visualized as a column, line, or over 70 other chart types, this feature can help you to achieve that.
+The Infragistics Excel Engine's [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html) functionality allows you to add visual charting representations of data trends across regions of cells in a worksheet. For example, if you want to see your Excel data in a region of cells visualized as a column, line, or over 70 other chart types, this feature can help you to achieve that.
 
 ## Demo
 
@@ -23,7 +23,7 @@ In order to add a chart to a worksheet, you must use the `addChart` method of th
 
 The `addChart` method returns the worksheet chart element to be added to the worksheet. Once you have this, you can use the `setSourceData` method on the chart to set a cell address of the region of worksheet cells that you wish to use as a data source, as well as whether or not you want to switch the mapping of columns and rows to the X and Y axis.
 
-There are over 70 supported chart types, including `Line`, `Area`, [`IgxColumnComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html), and `Pie`.
+There are over 70 supported chart types, including `Line`, `Area`, [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html), and `Pie`.
 
 The following code demonstrates how to use the Excel charting feature. The below snippet will add a column chart to between the first cell and the 13th cell in the first row of the worksheet. The source data is then set for the data in the region of A2:M6, switching the mapping of columns and rows for the X and Y axis of the column chart:
 

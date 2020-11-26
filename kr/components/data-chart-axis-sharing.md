@@ -7,7 +7,7 @@ _language: kr
 
 # Angular 축 공유 및 다중 행
 
- [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 동일한 플롯 영역에서 여러 축을 공유하고 추가할 수 있습니다. 모든 축에 대해 차트 플롯 영역과 관련하여 위치를 지정할 수 있습니다. 광범위 값(예: 주가 및 주식 거래량)을 가진 많은 데이터 소스를 플롯하는 경우, 여러 축을 사용하는 것이 일반적인 시나리오입니다.
+ [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 동일한 플롯 영역에서 여러 축을 공유하고 추가할 수 있습니다. 모든 축에 대해 차트 플롯 영역과 관련하여 위치를 지정할 수 있습니다. 광범위 값(예: 주가 및 주식 거래량)을 가진 많은 데이터 소스를 플롯하는 경우, 여러 축을 사용하는 것이 일반적인 시나리오입니다.
 
 ## 데모
 
@@ -25,7 +25,7 @@ _language: kr
 
 ## 코드 예제
 
-이 코드는 2개의 [`IgxNumericYAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) 및 1개의 [`IgxCategoryXAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)가 2개의 시리즈 사이에서 공유되는 데이터 차트를 생성하는 방법을 보여 줍니다.
+이 코드는 2개의 [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) 및 1개의 [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)가 2개의 시리즈 사이에서 공유되는 데이터 차트를 생성하는 방법을 보여 줍니다.
 
 ```html
  <igx-data-chart

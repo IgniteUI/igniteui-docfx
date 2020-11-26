@@ -27,13 +27,13 @@ _language: kr
 
 금융 차트 컴포넌트는 데이터 열을 분석하고 선택하며, 날짜/시간 열을 X축으로 사용하여 열기, 높음, 낮음, 닫기, 볼륨 열 또는 최초 5개의 수치 열을 Y축으로 사용합니다. 그 밖에도 사용자가 차트 유형을 바, 캔들, 기둥, 선으로 설정할 수 있습니다. 도구 모음, 가격 보기, 볼륨 보기, 인디케이터 보기 및 탐색 보기의 다섯 가지 주요 시각적 요소로 인해 데이터가 더 많이 인식됩니다.
 
-[`ChartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 속성을 다음 옵션 중 하나에 설정하여 차트 유형을 명시적으로 지정할 수 있습니다:
+[`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 속성을 다음 옵션 중 하나에 설정하여 차트 유형을 명시적으로 지정할 수 있습니다:
 
 | 속성                                                                                                                                       | 설명                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `Bar`                                                                                                                                    | 각 데이터 점에 마커로 바 시리즈를 지정합니다.                                                                                                |
 | `Candle`                                                                                                                                 | 캔들 시리즈를 지정합니다.                                                                                                            |
-| [`IgxColumnComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) | 기둥 시리즈를 지정합니다.                                                                                                            |
+| [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) | 기둥 시리즈를 지정합니다.                                                                                                            |
 | `Line`                                                                                                                                   | 선 시리즈를 지정합니다                                                                                                              |
 | `Auto`                                                                                                                                   | 데이터의 이름 및 수치 열 수를 기반으로 한 위의 값 중에서 제안하는 데이터 어댑터를 기반으로 차트 유형의 자동 선택을 지정합니다. 예를 들면, 열기, 높음, 낮음, 닫기 열이 있는 데이터 항목에 ‘바’를 제안합니다. |
 

@@ -34,7 +34,7 @@ Ignite UI for Angular 파이형 차트 컴포넌트는 원형 영역을 섹션�
 
 ## 필요한 모듈
 
-[`IgxPieChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html)에는 다음 모듈이 필요합니다:
+[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html)에는 다음 모듈이 필요합니다:
 
 ```ts
 // app.module.ts

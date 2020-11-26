@@ -7,7 +7,7 @@ _language: kr
 
 # Angular 분산 모양 시리즈
 
-이 항목에서는 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 모양 시리즈에 대해 설명합니다. 분산 모양 시리즈는 모양 배열(배열 또는 X/Y 좌표 배열)을 가져와서 데카르트(x, y) 좌표계에서 폴리곤([`IgxScatterPolygonSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html))  또는 폴리라인([`IgxScatterPolylineSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html))의 컬렉션으로 렌더링하는 차트 시리즈 그룹입니다.
+이 항목에서는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 다양한 유형의 모양 시리즈에 대해 설명합니다. 분산 모양 시리즈는 모양 배열(배열 또는 X/Y 좌표 배열)을 가져와서 데카르트(x, y) 좌표계에서 폴리곤([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html))  또는 폴리라인([`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html))의 컬렉션으로 렌더링하는 차트 시리즈 그룹입니다.
 
 분산 모양 시리즈는 과학 데이터의 강조 표시 영역으로 자주 사용되거나 다이어그램, 청사진 또는 건물의 평면도를 플롯하는 데 사용할 수 있습니다.
 
@@ -31,17 +31,17 @@ _language: kr
 
 | 시리즈 이름                                                                                                                                                                 | 설명                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [`IgxScatterPolygonSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리곤을 표시합니다. 국경과 같은 도형을 렌더링할 때 유용합니다.        |
-| [`IgxScatterPolylineSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리라인을 표시합니다. 네트워크 그래프와 같이 단선을 렌더링할 때 유용합니다. |
+| [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리곤을 표시합니다. 국경과 같은 도형을 렌더링할 때 유용합니다.        |
+| [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | `ShapeMemberPath` 속성에 매핑된 각 도형의 폴리라인을 표시합니다. 네트워크 그래프와 같이 단선을 렌더링할 때 유용합니다. |
 
 ## 필요한 축
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 분산 모양 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어는 다양한 유형의 축을 제공하지만 분산 모양 시리즈에는 다음의 축 유형만 사용할 수 있습니다.
 
 | 시리즈 유형                                                                                                                                                                 | YAxis 유형                                                                                                                                             | XAxis 유형                                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`IgxScatterPolygonSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | [`IgxNumericYAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
-| [`IgxScatterPolylineSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | [`IgxNumericYAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)   | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
+| [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) | [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) | [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html) |
 
 ## 필요한 데이터
 
@@ -49,7 +49,7 @@ _language: kr
 
 -   데이터 소스는 배열 또는 데이터 항목 목록이어야 함
 -   데이터 소스에는 하나 이상의 데이터 항목이 포함되어야 하며 그렇지 않을 경우에는 차트가 분산형 시리즈를 렌더링하지 않습니다.
--   모든 데이터 항목에는 분산 모양 시리즈의 `ShapeMemberPath` 속성(예: [`IgxScatterPolygonSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html))에 매핑되어야 하는 하나의 모양 데이터 열(배열 또는 X/Y 좌표 배열)이 있어야 합니다
+-   모든 데이터 항목에는 분산 모양 시리즈의 `ShapeMemberPath` 속성(예: [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html))에 매핑되어야 하는 하나의 모양 데이터 열(배열 또는 X/Y 좌표 배열)이 있어야 합니다
 
 [SampleShapeData](data-chart-data-sources-shape.md)는 위의 데이터 요구 사항을 충족하는 데이터 소스로 사용할 수 있습니다.
 
@@ -106,7 +106,7 @@ export class AppModule { /* ... */ }
  </igx-data-chart>
 ```
 
-위의 코드를 사용하면 [`IgxScatterPolylineSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)를 대체하여 [`IgxScatterPolygonSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)를 생성할 수도 있습니다.
+위의 코드를 사용하면 [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)를 대체하여 [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)를 생성할 수도 있습니다.
 
 ## 추가 리소스
 

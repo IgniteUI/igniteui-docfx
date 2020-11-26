@@ -7,7 +7,7 @@ _language: kr
 
 # Angular 강조 표시
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어를 사용하면 차트에 플롯된 시리즈를 강조 표시하여 마우스가 이동하는 항목이나 시리즈를 시각화하거나 강조 표시 레이어를 사용하여 시각화할 수 있습니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어를 사용하면 차트에 플롯된 시리즈를 강조 표시하여 마우스가 이동하는 항목이나 시리즈를 시각화하거나 강조 표시 레이어를 사용하여 시각화할 수 있습니다.
 
 ## 데모
 
@@ -23,7 +23,7 @@ _language: kr
 
 <div class="divider--half"></div>
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 강조 표시를 활성화하려면 대화형 모듈을 가져와 등록해야 합니다. 다음 코드를 사용하여 이 작업을 실행할 수 있습니다:
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 강조 표시를 활성화하려면 대화형 모듈을 가져와 등록해야 합니다. 다음 코드를 사용하여 이 작업을 실행할 수 있습니다:
 
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
@@ -39,7 +39,7 @@ import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 ## 시리즈 비주얼 강조 표시
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 시리즈 강조 표시 기능을 사용하면 단일 항목이나 전체 시리즈를 강조 표시할 수 있습니다. 예를 들면, 선 시리즈를 사용하는 경우, 강조 표시는 선의 전체 모양을 하나의 단일 모양으로 강조 표시합니다. 단, 열 시리즈와 같은 시리즈의 각 항목에 강조 표시를 적용할 수 있습니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 시리즈 강조 표시 기능을 사용하면 단일 항목이나 전체 시리즈를 강조 표시할 수 있습니다. 예를 들면, 선 시리즈를 사용하는 경우, 강조 표시는 선의 전체 모양을 하나의 단일 모양으로 강조 표시합니다. 단, 열 시리즈와 같은 시리즈의 각 항목에 강조 표시를 적용할 수 있습니다.
 
 다음 코드 조각은 차트 시리즈에서 강조 표시를 활성화하는 방법을 보여 줍니다:
 
@@ -70,7 +70,7 @@ import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 ## 시리즈 카테고리 강조 표시
 
-카테고리 강조 표시 레이어는 카테고리 축 또는 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 모든 카테고리 축을 대상으로 합니다. 축에 축의 주 격자선 사이에 정렬된 시리즈, 예를 들면 열 시리즈 등이 있으면 현재 카테고리를 채우는 모양이 렌더링됩니다.
+카테고리 강조 표시 레이어는 카테고리 축 또는 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 모든 카테고리 축을 대상으로 합니다. 축에 축의 주 격자선 사이에 정렬된 시리즈, 예를 들면 열 시리즈 등이 있으면 현재 카테고리를 채우는 모양이 렌더링됩니다.
 
 선 시리즈 등 다른 시리즈의 경우, 포인터 위치에 가장 가까운 격자선에서 조절 가능한 두께를 가진 줄무늬를 렌더링합니다. 이 경우, `UseInterpolation` 속성을 활성화하면 x 위치가 포인터의 x 위치에 고정됩니다.
 
@@ -112,7 +112,7 @@ import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 기본 강조 표시는 시리즈 유형에 따라 다릅니다. 예를 들면, 열 시리즈와 선 시리즈의 강조 표시가 다릅니다. 열 시리즈의 경우에는 줄무늬 모양이지만 줄 시리즈의 경우에는 마커입니다. `HighlightType` 속성을 설정하여 기본 강조 표시를 재정의할 수 있습니다.
 
-다음 코드 조각은 [`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에 카테고리 항목 강조 표시 레이어를 추가하는 방법을 보여 줍니다:
+다음 코드 조각은 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에 카테고리 항목 강조 표시 레이어를 추가하는 방법을 보여 줍니다:
 
 ```html
 <igx-data-chart #chart

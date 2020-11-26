@@ -7,7 +7,7 @@ _language: kr
 
 # Angular 마커
 
-[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 플롯 영역에서 마커는 데이터 점 위치에 표시되는 시각적 요소입니다. 마커는 주 그리드 선과 보조 그리드 선 사이에 값이 있더라도 데이터 점을 즉시 식별할 수 있도록 최종 사용자를 지원합니다.
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어의 플롯 영역에서 마커는 데이터 점 위치에 표시되는 시각적 요소입니다. 마커는 주 그리드 선과 보조 그리드 선 사이에 값이 있더라도 데이터 점을 즉시 식별할 수 있도록 최종 사용자를 지원합니다.
 
 ## 데모
 
@@ -38,7 +38,7 @@ _language: kr
 
 ## 마커 속성
 
-위 시리즈는 [`MarkerType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html) 속성을 사용하여 변경할 수 있는 12형태의 마커를 지원합니다.  또한, `MarkerBrush` 및 `MarkerOutline` 속성을 각각 사용하여 채우기 및 스트로크를 변경할 수 있습니다.
+위 시리즈는 [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/markertype.html) 속성을 사용하여 변경할 수 있는 12형태의 마커를 지원합니다.  또한, `MarkerBrush` 및 `MarkerOutline` 속성을 각각 사용하여 채우기 및 스트로크를 변경할 수 있습니다.
 
 아래의 코드 조각은 마커의 형태와 모양을 변경하는 방법을 보여 줍니다.
 

@@ -24,7 +24,7 @@ When installing the excel package, the core package must also be installed.
 -   **npm install --save igniteui-angular-core**
 -   **npm install --save igniteui-angular-excel**
 
-The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxexcelmodule.html) inside your `AppModule`:
+The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxexcelmodule.html) inside your `AppModule`:
 
 ```ts
 // app.module.ts
@@ -77,9 +77,9 @@ Now that the Excel Library module is imported, next step is to load a workbook.
 
 > [!NOTE]
 >
-> In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+> In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
 
-In order to load and save [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method.
+In order to load and save [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, and the static `Workbook.load` method.
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";

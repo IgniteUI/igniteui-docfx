@@ -87,7 +87,7 @@ _language: kr
  </igx-financial-chart>
 ```
 
-`ZoomSliderType` 옵션을 [`ChartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 옵션이 설정된 값과 동일하게 설정해야 합니다. 이렇게 하면 줌 슬라이더는 가격 창의 미리보기가 올바르게 표시됩니다. 다음의 코드는 이를 실행하는 방법을 보여줍니다:
+`ZoomSliderType` 옵션을 [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) 옵션이 설정된 값과 동일하게 설정해야 합니다. 이렇게 하면 줌 슬라이더는 가격 창의 미리보기가 올바르게 표시됩니다. 다음의 코드는 이를 실행하는 방법을 보여줍니다:
 
 ```html
  <igx-financial-chart

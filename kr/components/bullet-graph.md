@@ -43,7 +43,7 @@ When installing the gauge package, the core package must also be installed.
 
 ## Required Modules
 
-The [`IgxBulletGraphComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
+The [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
 -   BulletGraphModule
     <!-- end: Blazor -->
@@ -264,7 +264,7 @@ The backing element represents background and border of the bullet graph control
 
 ## Scale
 
-The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using [`isScaleInverted`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is visual element that highlights the full range of values in the gauge. You can customize appearance and shape of the scale. The scale can also be inverted (using [`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-bullet-graph
