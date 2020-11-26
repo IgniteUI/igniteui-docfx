@@ -10,10 +10,10 @@ _language: ja
 
 Angular マップ コンポーネントの [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) を使用して、非常に少ないロード時間で、数百から数百万のデータ ポイントを持つ散布図データをバインドして表示できます。
 
-## サンプル
+## Angular 散布高密度シリーズの使用の例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-type-scatter-density-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-density-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-scatter-density-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-density-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布高密度シリーズの使用の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-density-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

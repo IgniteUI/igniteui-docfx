@@ -10,10 +10,10 @@ _language: ja
 
 The Data Chart is ...TODO ...
 
-## サンプル
+## Angular Data Chart (TODO add feature name) の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-series-errorbars-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-errorbars' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-series-errorbars-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-errorbars' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Data Chart (TODO add feature name) の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-errorbars-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
