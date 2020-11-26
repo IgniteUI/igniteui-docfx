@@ -4,7 +4,7 @@ _description: Use the Treemap to show users relative weighting of data points at
 mentionedTypes: ['Treemap']
 ---
 
-## Treemap
+# Treemap
 
 Treemaps display hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 
