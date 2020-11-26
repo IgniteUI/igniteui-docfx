@@ -10,10 +10,10 @@ _language: ja
 
 Angular Financial Chart コンポーネントでは、軸は軸線、目盛、タイトル、や軸のラベルの外観を設定する基本プロパティを提供します。
 
-## サンプル
+## Angular チャート軸タイプの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-axis-types-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-axis-types-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular チャート軸タイプの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-axis-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
@@ -28,7 +28,7 @@ Angular Financial Chart コンポーネントでは、軸は軸線、目盛、�
 
 ## 軸間隔
 
-Financial Chart コントロールで、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval) プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、[`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminorinterval) プロパティは副グリッド線が軸に描画される頻度を指定します。
+Financial Chart コントロールで、[`yAxisInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval) プロパティは主グリッド線および軸ラベルが軸に描画される頻度を指定します。同様に、[`yAxisMinorInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminorinterval) プロパティは副グリッド線が軸に描画される頻度を指定します。
 
 以下のコード スニペットは、Y 軸の間隔を設定する方法を示します。
 
@@ -98,7 +98,7 @@ Y 軸で以下のモードを選択できます。
 
 ## 軸の範囲
 
-Angular Financial Chart コンポーネントで、数値軸の範囲は軸の始めと終わり、つまりデータの最小値と最大値の数値の差です。範囲の最小値は、軸の最小値です。範囲の最大値は、軸の最大値です。Financial Chart  コンポーネントは、チャート プロット領域を最大化するために、デフォルトで最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最小値と最大値を計算します。軸の最大値と最小値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminimumvalue) プロパティを使用して軸の最小値を 800 に設定してください。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができます。y 軸の [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismaximumvalue) プロパティを使用して軸の最大値とデータ ポイントの最大値にも同様に適用できます。
+Angular Financial Chart コンポーネントで、数値軸の範囲は軸の始めと終わり、つまりデータの最小値と最大値の数値の差です。範囲の最小値は、軸の最小値です。範囲の最大値は、軸の最大値です。Financial Chart  コンポーネントは、チャート プロット領域を最大化するために、デフォルトで最小データ ポイントおよび最大データ ポイントに基づいて軸の範囲の最小値と最大値を計算します。軸の最大値と最小値の自動計算は、データ ポイントのセットに適切でない場合があります。たとえば、データの最小値が 850 の場合、y 軸の [`yAxisMinimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminimumvalue) プロパティを使用して軸の最小値を 800 に設定してください。これにより、軸の最小値とデータ ポイントの最小値の間に 50 のスペース値ができます。y 軸の [`yAxisMaximumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismaximumvalue) プロパティを使用して軸の最大値とデータ ポイントの最大値にも同様に適用できます。
 
 以下のサンプル コードは、y 軸で軸の範囲を変更する方法を示します。
 
@@ -118,8 +118,8 @@ Angular Financial Chart コンポーネントで、数値軸の範囲は軸の�
 
 Angular Financial Chart コンポーネントで、チャートのデータが Y 軸に対数的にマップされるかどうかを制御できます。これは以下の設定で実行されます。
 
--   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
--   [`yAxisLogarithmBase`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。
+-   [`yAxisIsLogarithmic`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
+-   [`yAxisLogarithmBase`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。
     これは yAxisIsLogarithmic が True の場合のみ効果があります。
 
 以下のコード スニペットは、x 軸の目盛りの色、長さ、太さを設定します。

@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular Map コンポーネントを使用すると、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、カンマ区切り値 (CSV) ファイルから地理的な場所を読み込むことができます。
 
-## サンプル
+## Angular CSV ファイルを地理的な場所にバインドの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-binding-data-csv-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-binding-data-csv-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular CSV ファイルを地理的な場所にバインドの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-csv-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
@@ -35,7 +35,7 @@ Dundee,42.5236,-76.9775,New York,NY,Yates,579,1650
 
 ## コード スニペット
 
-以下のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) を、ロードされた CSV ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
+以下のコードは、マップコンポーネント内の [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) を、ロードされた CSV ファイルから作成された地理的位置を含むオブジェクトの配列にバインドします。
 
 ```html
 <div className="sampleRoot" >

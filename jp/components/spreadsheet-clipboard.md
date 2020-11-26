@@ -10,10 +10,10 @@ _language: ja
 
 このトピックでは、クリップボードの操作を実行する方法を説明します。
 
-## サンプル
+## Angular クリップボードでの作業の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-clipboard-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular クリップボードでの作業の例"></iframe>
 </div>
 
 
@@ -34,7 +34,7 @@ import { SpreadsheetAction } from 'igniteui-angular-spreadsheet';
 
 ## 使用方法
 
-次のコード スニペットは、Angular [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールでクリップボードに関連するコマンドを実行する方法を示しています。
+次のコード スニペットは、Angular [`IgxSpreadsheetComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールでクリップボードに関連するコマンドを実行する方法を示しています。
 
 ```ts
 public cut(): void {

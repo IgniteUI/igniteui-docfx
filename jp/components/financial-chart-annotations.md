@@ -10,10 +10,10 @@ _language: ja
 
 このトピックでは、Angular Financial Chart コンポーネントの注釈について説明します。
 
-## サンプル
+## Angular 注釈の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-annotations-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 注釈の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="financial-chart-annotations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">stackblitz で表示
@@ -25,7 +25,7 @@ _language: ja
 
 ## 十字線レイヤー
 
-Crosshair Layer は、各ターゲット シリーズの実際の値に一致する十字線を提供します。Crosshair タイプは、Horizontal、Vertical、Both があります。[`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。  注釈を有効にして軸に沿って十字線の値を表示できます。
+Crosshair Layer は、各ターゲット シリーズの実際の値に一致する十字線を提供します。Crosshair タイプは、Horizontal、Vertical、Both があります。[`crosshairsSnapToData`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。  注釈を有効にして軸に沿って十字線の値を表示できます。
 
 ```html
 <igx-financial-chart
@@ -55,7 +55,7 @@ Crosshair Layer は、各ターゲット シリーズの実際の値に一致す
 
 コールアウト レイヤーは、X/Y 位置にコールアウトを表示します。
 
-> 注: X 軸モードを使用する際に [`calloutsXMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) は数値インデックスをポイントする必要があります。あるいは、[`calloutsXMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) を時間値にポイントしてください。
+> 注: X 軸モードを使用する際に [`calloutsXMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) は数値インデックスをポイントする必要があります。あるいは、[`calloutsXMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) を時間値にポイントしてください。
 
 ```html
 <igx-financial-chart

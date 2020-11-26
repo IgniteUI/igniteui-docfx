@@ -10,10 +10,10 @@ _language: ja
 
 Angular データ チャートは、軸、マーカー、凡例、および注釈レイヤーのモジュール設計を提供するチャート コンポーネントです。データ チャート機能は、複合チャート ビューを作成するために同じチャート領域でのビジュアル要素の複数のインスタンスを利用できます。
 
-## サンプル
+## Angular データ チャートの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular データ チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
@@ -82,13 +82,13 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 | 軸タイプ               | サポートされるシリーズ タイプ                                                                                                                                                                                                                                                                          |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CategoryYAxis      | [Category シリーズ ](data-chart-type-category-series.md) グループの [`bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) のみ                                                                                                        |
-| CategoryXAxis      | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([`bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) を除く)   |
-| TimeXAxis          | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([`bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) を除く)   |
-| OrdinalTimeXAxis   | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([`bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) を除く)   |
+| CategoryYAxis      | [Category シリーズ ](data-chart-type-category-series.md) グループの [`bar`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) のみ                                                                                                        |
+| CategoryXAxis      | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([`bar`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) を除く)   |
+| TimeXAxis          | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([`bar`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) を除く)   |
+| OrdinalTimeXAxis   | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md) ([`bar`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) を除く)   |
 | PercentChangeYAxis | すべての [Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md)、[Scatter シリーズ](data-chart-type-scatter-bubble-series.md)、[Shape シリーズ](data-chart-type-shape-series.md)                      |
 | NumericYAxis       | すべての [Scatter シリーズ](data-chart-type-scatter-bubble-series.md)、[Shape シリーズ](data-chart-type-shape-series.md)、[Financial シリーズ](data-chart-type-financial-series.md)、[Range シリーズ](data-chart-type-range-series.md)、[Category シリーズ](data-chart-type-category-series.md)                      |
-| NumericXAxis       | [Category シリーズ](data-chart-type-category-series.md) グループのすべての [Scatter シリーズ](data-chart-type-scatter-bubble-series.md)、[Shape シリーズ](data-chart-type-shape-series.md)、[`bar`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) |
+| NumericXAxis       | [Category シリーズ](data-chart-type-category-series.md) グループのすべての [Scatter シリーズ](data-chart-type-scatter-bubble-series.md)、[Shape シリーズ](data-chart-type-shape-series.md)、[`bar`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bar) |
 | NumericAngleAxis   | すべての [極座標シリーズ](data-chart-type-polar-series.md)                                                                                                                                                                                                                                          |
 | NumericRadiusAxis  | すべての [極座標シリーズ](data-chart-type-polar-series.md) と [ラジアル シリーズ](data-chart-type-radial-series.md)                                                                                                                                                                                          |
 | CategoryAngleAxis  | すべての [ラジアル シリーズ](data-chart-type-radial-series.md)                                                                                                                                                                                                                                       |
@@ -97,7 +97,7 @@ Angular データ チャート コンポーネントは、特定の種類のシ�
 
 データチャートモジュールがインポートされたので、以下のステップはチャートをデータにバインドすることです。すべてのシリーズを正しく表示するには、特定の数と種類のデータ列が必要です。[Data Sources](data-chart-data-sources.md) のトピックで、系列の種類ごとにデータソースを見つけることができます。
 
-以下のコード スニペットは、散布 [`bubble`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) を作成し、それを [SampleScatterStats](data-chart-data-sources-stats.md) データにバインドする方法を示しています。
+以下のコード スニペットは、散布 [`bubble`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/seriestype.html#bubble) を作成し、それを [SampleScatterStats](data-chart-data-sources-stats.md) データにバインドする方法を示しています。
 
 > [!NOTE]
 >

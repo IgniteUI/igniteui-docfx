@@ -10,10 +10,10 @@ _language: ja
 
 Infragistics Angular Excel ライブラリは、Workbook、Worksheet、Cell、Formula などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Angular Excel ライブラリによって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
 
-## サンプル
+## Angular Excel ライブラリの例
 
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Excel ライブラリの例"></iframe>
 </div>
 
 
@@ -92,9 +92,9 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 
 > [!NOTE]
 >
-> 以下のコード スニペットは、外部の [ExcelUtility](excel-utility.md) クラスを使用し [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存してロードします。
+> 以下のコード スニペットは、外部の [ExcelUtility](excel-utility.md) クラスを使用し [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存してロードします。
 
-[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、実際の [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保存メソッドや static な `Load` メソッドを使用できます。
+[`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、実際の [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保存メソッドや static な `Load` メソッドを使用できます。
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";
