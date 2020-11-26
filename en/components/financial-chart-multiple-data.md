@@ -1,6 +1,6 @@
 ---
 title: Angular Financial Chart | Binding Multiple Data Sources | Infragistics
-_description: Learn how Infragistics' Angular financial chart control can bind easily to muliple data sources. Check out Ignite UI for Angular financial graph's tutorials!
+_description: Learn how Infragistics' Angular financial chart control can bind easily to multiple data sources. Check out Ignite UI for Angular financial graph's tutorials!
 _keywords: Angular charts, financial chart, stock chart, binding to data, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamFinancialChart']
 ---
@@ -9,10 +9,10 @@ mentionedTypes: ['XamFinancialChart']
 
 The Angular financial chart component can bind easily to multiple data sources, as shown in the following demo.
 
-## Demo
+## Angular Binding Multiple Sources Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Binding Multiple Sources Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
