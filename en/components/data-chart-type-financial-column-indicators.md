@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 
 Financial indicators are often used by traders to measure changes and to show trends in stock prices. These indicators are usually displayed in a separate chart above or below of a chart with the [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) because they do not share the same Y-Axis scale. However, the chart control supports plotting price series and indicators in the same plot area, if desired, using multiple axes and by sharing axes. For more information on this, please refer to the [Axis Sharing and Multiple Axes](data-chart-axis-sharing.md) topic.
 
-## Demo
+## Angular Financial Column Indicators Example
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-financial-column-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-financial-column-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Financial Column Indicators Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-column-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -85,10 +85,10 @@ public dataSource: any[] = SampleFinancialData.create();
 
 The financial series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartFinancialModule
 -   DataChartFinancialCoreModule
--   DataChartFinancialIndicatorsModule        
+-   DataChartFinancialIndicatorsModule
 -   DataChartInteractivityModule
     <!-- end: Blazor -->
 
