@@ -21,7 +21,7 @@ Infragistics Angular Excel Engine は、データを Microsoft® Excel® に保�
 
 ## 既定のフォントを変更
 
-[`IWorkbookFont`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html) の新しいインスタンスを作成します。[`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の [`styles`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
+[`IWorkbookFont`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html) の新しいインスタンスを作成します。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の [`styles`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#styles) コレクションに新しいフォントを追加します。このスタイルにはワークブックのすべてのセルのデフォルトのプロパティが含まれています。ただし、行、列またはセルで指定されている場合はその限りではありません。スタイルのプロパティを変更すると、ワークブックのデフォルトのセル書式プロパティが変更します。
 
 ```ts
 var workbook = new Workbook();
@@ -33,7 +33,7 @@ font.height = 16 * 20;
 
 ## ワークブック プロパティの設定
 
-Microsoft Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの [`documentProperties`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) プロパティを使用してこれらのプロパティを設定するために、Infragistics Angular Excel Engine を使用できます。使用可能なプロパティは以下のとおりです。
+Microsoft Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトの [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) プロパティを使用してこれらのプロパティを設定するために、Infragistics Angular Excel Engine を使用できます。使用可能なプロパティは以下のとおりです。
 
 -   `Author`
 
@@ -69,11 +69,11 @@ Infragistics Excel Engine のオブジェクト モデルから保護が強制�
 
 保護は、`protect` メソッドを呼び出すことによってブックに適用されます。
 
-[`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) がパスワードを使用せずに保護される場合、エンドユーザーは Excel で [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保護をパスワードを入力せずに解除できます。[`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保護をコードで解除するには、`unprotect` メソッドを使用できます。
+[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) がパスワードを使用せずに保護される場合、エンドユーザーは Excel で [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保護をパスワードを入力せずに解除できます。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保護をコードで解除するには、`unprotect` メソッドを使用できます。
 
-[`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) が保護される場合、この [`Workbook`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の `protection` プロパティの [`WorkbookProtection`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html) インスタンスのプロパティの値は無効な操作を示します。
+[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) が保護される場合、この [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の `protection` プロパティの [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html) インスタンスのプロパティの値は無効な操作を示します。
 
-[`isProtected`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#isprotected) が既に true の場合、`protect` メソッドは無視されます。
+[`isProtected`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#isprotected) が既に true の場合、`protect` メソッドは無視されます。
 
 ```ts
 var workbook = new Workbook();

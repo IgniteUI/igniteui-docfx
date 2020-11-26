@@ -36,7 +36,7 @@ Angular Financial Chart コンポネントには財務データを表示する�
 財務指標は、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのインジケーターは、同じ Y 軸を共有しないため価格ペインの下に表示されます。
 
 デフォルトでインジケーター ペインは表示されません。ユーザーは、ツールバーを使用してランタイムで表示するインジケーターを選択できます。
-初期でインジケーター ペインを表示するには、以下のコードのように [`indicatorTypes`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes) プロパティをインジケーターのタイプを 1 つ以上に設定する必要があります。
+初期でインジケーター ペインを表示するには、以下のコードのように [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes) プロパティをインジケーターのタイプを 1 つ以上に設定する必要があります。
 
 ```html
  <igx-financial-chart
@@ -77,7 +77,7 @@ Angular Financial Chart コンポネントには財務データを表示する�
 
 ## ズーム ペイン
 
-このペインはすべての表示されるペインのズームを制御します。このペインはデフォルトで表示されます。以下のコードのように [`zoomSliderType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) を `none` に設定すると機能を無効にできます。
+このペインはすべての表示されるペインのズームを制御します。このペインはデフォルトで表示されます。以下のコードのように [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) を `none` に設定すると機能を無効にできます。
 
 ```html
  <igx-financial-chart
@@ -88,7 +88,7 @@ Angular Financial Chart コンポネントには財務データを表示する�
  </igx-financial-chart>
 ```
 
-注: [`zoomSliderType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) オプションを [`chartType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
+注: [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype) オプションを [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) オプションと同じ値に設定してください。このように、ズーム スライダーは価格ペインの正しいプレビューを表示します。以下のコードはその方法を示しています。
 
 ```html
  <igx-financial-chart

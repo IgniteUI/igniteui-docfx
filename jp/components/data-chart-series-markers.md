@@ -39,7 +39,7 @@ Angular データ チャート コンポーネントのプロット領域では�
 
 ## マーカー プロパティ
 
-上記のシリーズは、[`markerType`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) プロパティを使用して変更可能な 12 種類のマーカーをサポートしています。また、[`markerBrush`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) と [`markerOutline`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) プロパティをそれぞれ使用して、塗りつぶしと線を変更することもできます。
+上記のシリーズは、[`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) プロパティを使用して変更可能な 12 種類のマーカーをサポートしています。また、[`markerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush) と [`markerOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline) プロパティをそれぞれ使用して、塗りつぶしと線を変更することもできます。
 
 以下のこのコード スニペットは、マーカーの形状と外観を変更する方法を示しています。
 

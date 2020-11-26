@@ -72,16 +72,16 @@ ig run
 
 ## Ignite UI CLI コマンド
 
-使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/igniteui/igniteui-cli/wiki)にあります。
+使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)にあります。
 
 | コマンド                                                                  | エイリアス | 説明                                                                                           |
 | --------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------------- |
-| [ig start](https://github.com/igniteui/igniteui-cli/wiki/start)       |       | アプリケーションをビルドしてウェブ サーバーを開始、次にアプリケーションをデフォルト ブラウザーで開きます。                                       |
-| [ig build](https://github.com/igniteui/igniteui-cli/wiki/build)       |       | アプリケーションをアプトプット ディレクトリへビルドします。                                                               |
-| [ig generate](https://github.com/igniteui/igniteui-cli/wiki/generate) | g     | サポートされるフレームワークおよびプロジェクト タイプのための新しいカスタム テンプレートを生成します。                                         |
-| [ig help](https://github.com/igniteui/igniteui-cli/wiki/help)         | -h    | 使用可能なコマンドをリストして手順の簡単な説明を示します。                                                                |
-| [ig config](https://github.com/igniteui/igniteui-cli/wiki/config)     |       | Ignite UI CLI 構成設定の読み取り / 書き込み操作を実行します。                                                      |
-| [ig doc](https://github.com/igniteui/igniteui-cli/wiki/doc)           |       | 検索した用語についてインフラジスティックスのサポート情報を検索します。                                                          |
-| [ig list](https://github.com/igniteui/igniteui-cli/wiki/list)         | l     | 指定したフレームワークとタイプのすべてのテンプレートをリストします。プロジェクト フォルダー内でコマンド実行時にプロジェクトのフレームワークとタイプのテンプレートをすべてリストします。 |
-| [ig test](https://github.com/igniteui/igniteui-cli/wiki/test)         |       | 現在のプロジェクトのテストを実行します。                                                                         |
+| [ig start](https://github.com/IgniteUI/igniteui-cli/wiki/start)       |       | アプリケーションをビルドしてウェブ サーバーを開始、次にアプリケーションをデフォルト ブラウザーで開きます。                                       |
+| [ig build](https://github.com/IgniteUI/igniteui-cli/wiki/build)       |       | アプリケーションをアプトプット ディレクトリへビルドします。                                                               |
+| [ig generate](https://github.com/IgniteUI/igniteui-cli/wiki/generate) | g     | サポートされるフレームワークおよびプロジェクト タイプのための新しいカスタム テンプレートを生成します。                                         |
+| [ig help](https://github.com/IgniteUI/igniteui-cli/wiki/help)         | -h    | 使用可能なコマンドをリストして手順の簡単な説明を示します。                                                                |
+| [ig config](https://github.com/IgniteUI/igniteui-cli/wiki/config)     |       | Ignite UI CLI 構成設定の読み取り / 書き込み操作を実行します。                                                      |
+| [ig doc](https://github.com/IgniteUI/igniteui-cli/wiki/doc)           |       | 検索した用語についてインフラジスティックスのサポート情報を検索します。                                                          |
+| [ig list](https://github.com/IgniteUI/igniteui-cli/wiki/list)         | l     | 指定したフレームワークとタイプのすべてのテンプレートをリストします。プロジェクト フォルダー内でコマンド実行時にプロジェクトのフレームワークとタイプのテンプレートをすべてリストします。 |
+| [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test)         |       | 現在のプロジェクトのテストを実行します。                                                                         |
 | ig version                                                            | -v    | ローカル (ローカルがない場合はグローバル) にインストールされた Ignite UI CLI バージョンを示します。                                  |

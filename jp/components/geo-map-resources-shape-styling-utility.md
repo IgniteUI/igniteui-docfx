@@ -8,7 +8,7 @@ _language: ja
 
 # Angular シェイプ スタイリング ユーティリティ
 
-リソース トピックは、Angular [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) コンポーネントで [`IgxGeographicShapeSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) の UI 要素のスタイリングに役立つユーティリティの実装を提供します。
+リソース トピックは、Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) コンポーネントで [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) の UI 要素のスタイリングに役立つユーティリティの実装を提供します。
 
 ## 必要なインポート
 

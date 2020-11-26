@@ -8,7 +8,7 @@ _language: ja
 
 # Angular 地理シェイプ シリーズのスタイル設定
 
-このトピックでは、Angular [`IgxGeographicMapComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で [`IgxGeographicShapeSeriesComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) にカスタム スタイリングを適用する方法を説明します。
+このトピックでは、Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) にカスタム スタイリングを適用する方法を説明します。
 
 ## Angular 地理シェイプ シリーズのスタイル設定の例
 

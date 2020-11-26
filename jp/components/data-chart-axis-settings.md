@@ -73,9 +73,9 @@ Ignite UI for Angular データ チャート コンポーネントは、チャ�
 
 ## 軸の範囲
 
-Angular データ チャート コンポーネントでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは対応する軸で [`minimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) と [`maximumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#maximumvalue) オプションを設定することによって設定されます。
+Angular データ チャート コンポーネントでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは対応する軸で [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) と [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#maximumvalue) オプションを設定することによって設定されます。
 
-デフォルトでは、データ チャート コンポーネントは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の [`minimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。[`minimumValue`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
+デフォルトでは、データ チャート コンポーネントは、データ内の対応する最小値と最大値に基づいて、数値と時間軸の範囲の最小値と最大値を計算しますが、この自動計算は、データセットには適していません。たとえば、データの最小値が 850 の場合、数値軸の [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) を 800 に設定して、軸の最小値とデータポイントの最小値の間に 50 のスペース値ができるようにします。[`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#minimumvalue) プロパティを使用して、同じ方法を軸の最小値と最大値に適用することができます。
 
 以下のコード スニペットは、データ チャート コンポーネントの軸範囲を変更する方法を示しています。
 
@@ -89,9 +89,9 @@ Angular データ チャート コンポーネントでは、数値軸または�
 
 ## 軸グリッド線
 
-Angular データ チャート コンポーネントでは、軸の [`interval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#interval) プロパティによって、主グリッド線と軸ラベルをその軸に描画する頻度が決まります。同様に、[`minorInterval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#minorinterval) プロパティは、それらの主グリッド線の間に副グリッド線が描画される頻度を指定します。
+Angular データ チャート コンポーネントでは、軸の [`interval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#interval) プロパティによって、主グリッド線と軸ラベルをその軸に描画する頻度が決まります。同様に、[`minorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#minorinterval) プロパティは、それらの主グリッド線の間に副グリッド線が描画される頻度を指定します。
 
-数値軸の場合、これらの間隔は数値になりますが、カテゴリ軸の場合、これらの値は線を引くのに必要なカテゴリ数の頻度を表します。たとえば、カテゴリ軸で [`interval`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#interval) を 2 に設定した場合、主グリッド線は 2 カテゴリごとに描画されます。
+数値軸の場合、これらの間隔は数値になりますが、カテゴリ軸の場合、これらの値は線を引くのに必要なカテゴリ数の頻度を表します。たとえば、カテゴリ軸で [`interval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html#interval) を 2 に設定した場合、主グリッド線は 2 カテゴリごとに描画されます。
 
 対応するストロークとストロークの太さのプロパティを設定して、チャート内の軸上の間隔の色と太さを設定することもできます。
 
@@ -111,7 +111,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 ## 軸間隔
 
-データ チャート コンポーネントのカテゴリ軸の [`gap`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#gap) プロパティは、一連のデータ チャート間のスペースの量を決定します。
+データ チャート コンポーネントのカテゴリ軸の [`gap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#gap) プロパティは、一連のデータ チャート間のスペースの量を決定します。
 
 このプロパティは、0 から 1 までの数値を受け入れます。値は、シリーズ間の利用可能なピクセル数からのギャップの相対幅を表します。このプロパティを 0 に設定すると、シリーズ間にギャップがレンダリングされず、1 に設定すると最大ギャップがレンダリングされます。
 
@@ -127,7 +127,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 ## 軸の重複
 
-データ チャート コンポーネントのカテゴリ軸の軸 [`overlap`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
+データ チャート コンポーネントのカテゴリ軸の軸 [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) 機能を使用すると、レンダリングされたカテゴリの重なりを設定できます。
 
 このプロパティは、-1 から 1 までの数値を受け入れます。値は、各シリーズ専用の使用可能なピクセル数からの相対的な重なりを表します。
 
@@ -135,7 +135,7 @@ Angular データ チャート コンポーネントでは、軸の [`interval`]
 
 このプロパティを正の値 （最大 1） に設定すると、カテゴリが互いに重なります。値が 1 の場合、チャートはカテゴリを互いの上に表示します。
 
-以下のコード スニペットは、x 軸の [`overlap`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
+以下のコード スニペットは、x 軸の [`overlap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryaxisbasecomponent.html#overlap) を 0 に設定します。
 
 ```html
 <igx-category-x-axis #xAxis

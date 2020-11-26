@@ -25,7 +25,7 @@ _language: ja
 
 ## 十字線レイヤー
 
-Crosshair Layer は、各ターゲット シリーズの実際の値に一致する十字線を提供します。Crosshair タイプは、Horizontal、Vertical、Both があります。[`crosshairsSnapToData`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。  注釈を有効にして軸に沿って十字線の値を表示できます。
+Crosshair Layer は、各ターゲット シリーズの実際の値に一致する十字線を提供します。Crosshair タイプは、Horizontal、Vertical、Both があります。[`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) プロパティを true に設定してデータに十字線のスナップできます。十字線がデータ ポイント間で補完されます。  注釈を有効にして軸に沿って十字線の値を表示できます。
 
 ```html
 <igx-financial-chart
@@ -55,7 +55,7 @@ Crosshair Layer は、各ターゲット シリーズの実際の値に一致す
 
 コールアウト レイヤーは、X/Y 位置にコールアウトを表示します。
 
-> 注: X 軸モードを使用する際に [`calloutsXMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) は数値インデックスをポイントする必要があります。あるいは、[`calloutsXMemberPath`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) を時間値にポイントしてください。
+> 注: X 軸モードを使用する際に [`calloutsXMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) は数値インデックスをポイントする必要があります。あるいは、[`calloutsXMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#calloutsxmemberpath) を時間値にポイントしてください。
 
 ```html
 <igx-financial-chart

@@ -28,7 +28,7 @@ _language: ja
 
 デフォルトでは、Angular データ チャート コンポネントはデータ チャート内のどのシリーズの凡例も表示しません。複数のシリーズに共通の凡例を表示したい場合は、凡例 オブジェクトをアプリケーションに追加してから、それをデータ チャートの Legend プロパティに設定する必要があります。
 
-さらに、各シリーズオブジェクトの [`chartTitle`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) プロパティを設定しない場合、凡例にデフォルトのシリーズ タイトルが使用されます。
+さらに、各シリーズオブジェクトの [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#charttitle) プロパティを設定しない場合、凡例にデフォルトのシリーズ タイトルが使用されます。
 
 次のコード スニペットは、Angular データ チャート コンポネントで凡例を使用する方法を示しています。
 
