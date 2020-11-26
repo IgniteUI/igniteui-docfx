@@ -7,7 +7,7 @@ _language: kr
 
 # Angular 데이터 소스
 
-[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 모든 시리즈를 올바르게 렌더링하려면 특정 수치와 데이터 열 유형이 필요합니다. 이 항목에서는 각 시리즈 그룹에 데이터 소스를 구현하는 방법에 대한 예제를 표시합니다.
+[`IgxDataChartComponent`]({environment:dvapibaseurl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) 제어에서 모든 시리즈를 올바르게 렌더링하려면 특정 수치와 데이터 열 유형이 필요합니다. 이 항목에서는 각 시리즈 그룹에 데이터 소스를 구현하는 방법에 대한 예제를 표시합니다.
 
 -   [카테고리 시리즈](data-chart-type-category-series.md)의 [SampleCategoryData](data-chart-data-sources-category.md)
 -   [금융 시리즈](data-chart-type-financial-series.md)의 [SampleFinancialData](data-chart-data-sources-financial.md)
