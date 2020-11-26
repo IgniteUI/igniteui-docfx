@@ -123,7 +123,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:630px">
     <iframe id="grid-toolbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -456,37 +456,82 @@ To get started with styling the toolbar, we need to import the index file, where
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color` and the `$title-text-color` parameters.
+First, let's create a new palette.
+
+```scss
+$my-dark-palette: igx-palette(
+    $primary: #2466ff,
+    $secondary: #FFCD0F,
+    $surface: #2a2b2f,
+    $grays: #fff,
+);
+
+$my-dark-color: igx-color($my-dark-palette, 'surface');
+```
+
+Now, create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-    $background-color: #292826,
-    $title-text-color: #FFCD0F
+    $palette: $my-dark-palette,
+    $background-color: $my-dark-color,
+    $title-text-color: igx-color($my-dark-palette, 'secondary'),
+    $dropdown-background: $my-dark-color,
 );
 ```
 
-In order to style the buttons inside the toolbar, we will also create another theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme).
+To theme the column actions menus of the toolbar, we have to change the theme of the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
+
+```scss
+$dark-column-actions-theme: igx-column-actions-theme(
+    $palette: $my-dark-palette,
+    $title-color: igx-color($my-dark-palette, 'secondary'),
+    $background-color: igx-color($my-dark-palette, 'surface')
+);
+```
+
+Since the column actions are using other components - igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
 
 ```scss
 $dark-button-theme: igx-button-theme(
-    $outlined-background: #FFCD0F,
-    $outlined-text-color: #292826,
-    $outlined-hover-background: #404040,
-    $outlined-hover-text-color: #FFCD0F
+    $palette: $my-dark-palette,
+    $outlined-background: igx-color($my-dark-palette, 'secondary'),
+    $outlined-hover-background: igx-color($my-dark-palette, 'grays', 100),
+    $outlined-hover-text-color: igx-color($my-dark-palette, 'secondary')
+);
+
+$dark-checkbox-theme: igx-checkbox-theme(
+    $palette: $my-dark-palette,
+    $tick-color: $my-dark-color,
+);
+
+$dark-input-group-theme: igx-input-group-theme(
+    $palette: $my-dark-palette
 );
 ```
 
-The last step is to **include** the newly created themes. The button theme will be scoped to the actions container of the toolbar, so the buttons outside the toolbar do not get affected by it.
+The last step is to **include** the newly created themes.
 
 ```scss
-@include igx-grid-toolbar($dark-grid-toolbar-theme);
-.igx-grid-toolbar__actions {
+:host {
+    @include igx-grid-toolbar($dark-grid-toolbar-theme);
+    @include igx-column-actions($dark-column-actions-theme);
+    @include igx-checkbox($dark-checkbox-theme);
+    @include igx-input-group($dark-input-group-theme);
     @include igx-button($dark-button-theme);
+}
+```
 
-    .igx-button--outlined {
-        margin-left: 0.5rem;
-        border: none;
-    }
+>[!NOTE]
+>If `$legacy-support` is set to `false(default)`, include the component css variables like that:
+
+```scss
+:host {
+    @include igx-css-vars($dark-grid-toolbar-theme);
+    @include igx-css-vars($dark-column-actions-theme);
+    @include igx-css-vars($dark-checkbox-theme);
+    @include igx-css-vars($dark-input-group-theme);
+    @include igx-css-vars($dark-button-theme);
 }
 ```
 
@@ -497,115 +542,18 @@ The last step is to **include** the newly created themes. The button theme will 
 :host {
     ::ng-deep {
         @include igx-grid-toolbar($dark-grid-toolbar-theme);
-
-        .igx-grid-toolbar__actions {
-            @include igx-button($dark-button-theme);
-
-            .igx-button--outlined {
-                margin-left: 0.5rem;
-                border: none;
-            }
-        }
+        @include igx-column-actions($dark-column-actions-theme);
+        @include igx-checkbox($dark-checkbox-theme);
+        @include igx-input-group($dark-input-group-theme);
+        @include igx-button($dark-button-theme);
     }
 }
 ```
 
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$dark-button-theme: igx-button-theme(
-    $outlined-background: igx-color($dark-palette, "secondary", 400),
-    $outlined-text-color: igx-color($dark-palette, "primary", 400),
-    $outlined-hover-background: igx-color($dark-palette, "primary", 400),
-    $outlined-hover-text-color: igx-color($dark-palette, "secondary", 400)
-);
-
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-    $background-color: igx-color($dark-palette, "primary", 200),
-    $title-text-color: igx-color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
-
-```scss
-$dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
-    (
-        background-color:(
-            igx-color: ("primary", 200)
-        ),
-        title-text-color:(
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-
-$dark-button-schema: extend($_dark-button,
-    (
-        outlined-background: (
-            igx-color: ("secondary", 400)
-        ),
-        outlined-text-color: (
-            igx-color: ("primary", 400)
-        ),
-        outlined-hover-background: (
-            igx-color: ("primary", 400)
-        ),
-        outlined-hover-text-color: (
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-grid-toolbar: $dark-grid-toolbar-schema,
-    igx-button: $dark-button-schema
-));
-
-// Defining button-theme with the global dark schema
-$dark-button-theme: igx-button-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-
-// Defining grid-toolbar-theme with the global dark schema
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
-
 ### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
