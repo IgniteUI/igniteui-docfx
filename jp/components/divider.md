@@ -15,7 +15,7 @@ _language: ja
 デフォルトでは、デバイダは水平の実線です。
 
 <div class="sample-container loading" style="height:207px">
-    <iframe id="divider-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-1' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" alt="Angular Divider の例"></iframe>
+    <iframe id="divider-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/divider-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Divider の例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
