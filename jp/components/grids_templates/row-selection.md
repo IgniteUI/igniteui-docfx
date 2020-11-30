@@ -44,7 +44,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="treegrid-selection-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);" alt="Angular 行選択の例"></iframe>
+    <iframe id="treegrid-selection-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 行選択の例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
@@ -55,7 +55,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:710px">
-    <iframe id="hierarchical-grid-selection-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);" alt="Angular 行選択の例"></iframe>
+    <iframe id="hierarchical-grid-selection-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 行選択の例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
