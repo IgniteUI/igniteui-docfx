@@ -1,5 +1,5 @@
 ---
-title: Angular  Data Chart | Data Visualization | Infragistics
+title: Angular Data Chart | Data Visualization | Infragistics
 _description: Effortlessly create an Angular data chart that displays multiple instances of visual elements to create composite chart views. Get started today!
 _keywords: data chart, Angular component, Angular chart, Ignite UI for Angular, charting component
 mentionedTypes: ['XamDataChart', 'SeriesType']
@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart', 'SeriesType']
 
 The Angular data chart is a charting component that provides modular design of axis, markers, series, legend, and annotation layers. With this data chart, you can create multiple instances of these visual elements in the same chart plot area in order to create composite chart views.
 
-## Demo
+## Angular Data Chart Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Data Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

@@ -9,14 +9,14 @@ mentionedTypes: ['XamBulletGraph']
 
 The Angular bullet graph component allows for a linear and concise view of measures compared against a scale.
 
-## Demo
+## Angular Bullet Graph Overview Example
 
 The Ignite UI for Angular bullet graph component provides you with the ability to create attractive data presentations, replacing meters and gauges that are used on dashboards with simple yet straightforward and clear bar charts. A bullet graph is one of the most effective and efficient ways to present progress towards goals, good/better/best ranges, or compare multiple measurements in as little horizontal or vertical space as possible.
 
 The following sample demonstrates how setting multiple properties on the same bullet graph can transform it to completely different bullet graph.
 
 <div class="sample-container loading" style="height: 155px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="bullet-graph-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Bullet Graph Overview Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
