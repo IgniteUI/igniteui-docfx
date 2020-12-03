@@ -1,5 +1,6 @@
 ﻿- name: 概要
   header: true
+  sortable: true
   _language: "ja"
 - name: Angular - 完全ガイド
   href: general/angular-grid-overview-guide.md
@@ -81,6 +82,7 @@
   href: grid/grid.md
   new: false
   updated: true
+  sortable: true
   items:
     - name: ライブデータ/リアルタイム更新
       href: grid/live-data.md
@@ -215,6 +217,7 @@
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: false
+  sortable: true
   items:
     - name: ライブデータ/リアルタイム更新
       href: treegrid/live-data.md
@@ -339,6 +342,7 @@
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: false
+  sortable: true
   items:
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
@@ -496,6 +500,7 @@
       new: false
 - name: チャート
   header: true
+  sortable: true
 - name: カテゴリ チャート
   href: category-chart.md
   new: false
@@ -890,6 +895,7 @@
 - name: Excel ライブラリ
   href: excel-library.md
   new: false
+  sortable: true
   items:
     - name: セルの使用
       href: excel-library-using-cells.md
@@ -915,6 +921,7 @@
 - name: ゲージ
   header: true
   new: false
+  sortable: true
 - name: Bullet Graph
   href: bullet-graph.md
   new: false
@@ -926,6 +933,7 @@
   new: false
 - name: スタイルとテーマ
   header: true
+  sortable: true
 - name: Themes
   href: themes/index.md
   new: false
@@ -972,6 +980,7 @@
   href: display-density.md
 - name: データ入力と表示
   header: true
+  sortable: true
 - name: Drop Down
   href: drop-down.md
   new: false
@@ -1032,6 +1041,7 @@
   new: false
 - name: インタラクション
   header: true
+  sortable: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
@@ -1071,6 +1081,7 @@
   href: action-strip.md
 - name: メニュー
   header: true
+  sortable: true
 - name: Navigation Drawer
   href: navdrawer.md
   updated: true
@@ -1078,6 +1089,7 @@
   href: navbar.md
 - name: レイアウト
   header: true
+  sortable: true
 - name: Layout Manager
   href: layout.md
 - name: Carousel
@@ -1104,6 +1116,7 @@
   updated: true
 - name: 通知
   header: true
+  sortable: true
 - name: Banner
   href: banner.md
   new: false
@@ -1113,6 +1126,7 @@
   href: toast.md
 - name: スケジュール
   header: true
+  sortable: true
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
@@ -1134,6 +1148,7 @@
   updated: true
 - name: サービス
   header: true
+  sortable: true
 - name: CSV エクスポーター
   href: exporter-csv.md
   new: false

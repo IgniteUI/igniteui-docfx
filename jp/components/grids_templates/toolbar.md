@@ -119,7 +119,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:630px">
     <iframe id="grid-toolbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -446,37 +446,82 @@ configureExport(args: IGridToolbarExportEventArgs) {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color` と `$title-text-color` パラメーターを受け取る方法です。
+まず、新しいパレットを作成します。
+
+```scss
+$my-dark-palette: igx-palette(
+    $primary: #2466ff,
+    $secondary: #FFCD0F,
+    $surface: #2a2b2f,
+    $grays: #fff,
+);
+
+$my-dark-color: igx-color($my-dark-palette, 'surface');
+```
+
+[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color` と `$title-text-color` パラメーターを変更します。
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-    $background-color: #292826,
-    $title-text-color: #FFCD0F
+    $palette: $my-dark-palette,
+    $background-color: $my-dark-color,
+    $title-text-color: igx-color($my-dark-palette, 'secondary'),
+    $dropdown-background: $my-dark-color,
 );
 ```
 
-ツールバー内のボタンをスタイル設定するために、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張する別のテーマを作成します。
+ツールバーの列操作メニューにテーマを設定するには、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) コンポーネントのテーマを変更する必要があります。
+
+```scss
+$dark-column-actions-theme: igx-column-actions-theme(
+    $palette: $my-dark-palette,
+    $title-color: igx-color($my-dark-palette, 'secondary'),
+    $background-color: igx-color($my-dark-palette, 'surface')
+);
+```
+
+列操作は他のコンポーネント (igx-button、igx-checkbox、および igx-input-group) を使用しているため、新しいツールバー テーマに一致するようにテーマを変更する必要があります。
 
 ```scss
 $dark-button-theme: igx-button-theme(
-    $outlined-background: #FFCD0F,
-    $outlined-text-color: #292826,
-    $outlined-hover-background: #404040,
-    $outlined-hover-text-color: #FFCD0F
+    $palette: $my-dark-palette,
+    $outlined-background: igx-color($my-dark-palette, 'secondary'),
+    $outlined-hover-background: igx-color($my-dark-palette, 'grays', 100),
+    $outlined-hover-text-color: igx-color($my-dark-palette, 'secondary')
+);
+
+$dark-checkbox-theme: igx-checkbox-theme(
+    $palette: $my-dark-palette,
+    $tick-color: $my-dark-color,
+);
+
+$dark-input-group-theme: igx-input-group-theme(
+    $palette: $my-dark-palette
 );
 ```
 
-最後にコンポーネントのテーマを**含めます**。Button テーマは、ツールバーのアクション コンテナにスコープされるため、外側のボタンはツールバーに影響を受けません。
+最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include igx-grid-toolbar($dark-grid-toolbar-theme);
-.igx-grid-toolbar__actions {
+:host {
+    @include igx-grid-toolbar($dark-grid-toolbar-theme);
+    @include igx-column-actions($dark-column-actions-theme);
+    @include igx-checkbox($dark-checkbox-theme);
+    @include igx-input-group($dark-input-group-theme);
     @include igx-button($dark-button-theme);
+}
+```
 
-    .igx-button--outlined {
-        margin-left: 0.5rem;
-        border: none;
-    }
+>[!NOTE]
+>`$legacy-support` が `false (デフォルト)` に設定されている場合、css 変数 を以下のように含めます。
+
+```scss
+:host {
+    @include igx-css-vars($dark-grid-toolbar-theme);
+    @include igx-css-vars($dark-column-actions-theme);
+    @include igx-css-vars($dark-checkbox-theme);
+    @include igx-css-vars($dark-input-group-theme);
+    @include igx-css-vars($dark-button-theme);
 }
 ```
 
@@ -487,115 +532,18 @@ $dark-button-theme: igx-button-theme(
 :host {
     ::ng-deep {
         @include igx-grid-toolbar($dark-grid-toolbar-theme);
-
-        .igx-grid-toolbar__actions {
-            @include igx-button($dark-button-theme);
-
-            .igx-button--outlined {
-                margin-left: 0.5rem;
-                border: none;
-            }
-        }
+        @include igx-column-actions($dark-column-actions-theme);
+        @include igx-checkbox($dark-checkbox-theme);
+        @include igx-input-group($dark-input-group-theme);
+        @include igx-button($dark-button-theme);
     }
 }
 ```
 
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
-
-```scss
-$dark-button-theme: igx-button-theme(
-    $outlined-background: igx-color($dark-palette, "secondary", 400),
-    $outlined-text-color: igx-color($dark-palette, "primary", 400),
-    $outlined-hover-background: igx-color($dark-palette, "primary", 400),
-    $outlined-hover-text-color: igx-color($dark-palette, "secondary", 400)
-);
-
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-    $background-color: igx-color($dark-palette, "primary", 200),
-    $title-text-color: igx-color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して [**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は ([`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ) の 1 つを拡張します。
-
-```scss
-$dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
-    (
-        background-color:(
-            igx-color: ("primary", 200)
-        ),
-        title-text-color:(
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-
-$dark-button-schema: extend($_dark-button,
-    (
-        outlined-background: (
-            igx-color: ("secondary", 400)
-        ),
-        outlined-text-color: (
-            igx-color: ("primary", 400)
-        ),
-        outlined-hover-background: (
-            igx-color: ("primary", 400)
-        ),
-        outlined-hover-text-color: (
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-grid-toolbar: $dark-grid-toolbar-schema,
-    igx-button: $dark-button-schema
-));
-
-// Defining button-theme with the global dark schema
-$dark-button-theme: igx-button-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-
-// Defining grid-toolbar-theme with the global dark schema
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
-
 ### デモ
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
