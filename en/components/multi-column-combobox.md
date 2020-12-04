@@ -15,6 +15,20 @@ The `TextField` property determines which value is shown when users make a selec
 
 The `ValueField` property determines the bound value of the underlying data item selected. This is necessary if your list of objects have several properties.
 
+The `Fields` string array property determines which fields will be included and displayed. All fields not listed in the array will not be displayed in the dropdown.
+
+The `PlaceHolder` property lets the edit portion of the control to display text when nothing is selected. 
+
+The `SortMode` property lets you configure the field's sorting with the following configurations:
+
+-   `None`
+-   `SortByOneColumnOnly`
+-   `SortByOneColumnOnlyTriState`
+-   `SortByMultipleColumns`
+-   `SortByMultipleColumnsTriState`
+
+The TriState options will allow sorted columns to be unsorted.
+
 ## Angular Multi-Column Combo Box Overview Example
 
 <div class="sample-container loading" style="height: 500px">
