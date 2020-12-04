@@ -150,11 +150,11 @@ You can now use [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatep
 The following demo illustrates a Date picker with enabled week numbers:
 
 <div class="sample-container loading" style="height: 550px;">
-    <iframe id="date-picker-sample-1" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
+    <iframe id="date-picker-sample-1-2" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1-2" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
