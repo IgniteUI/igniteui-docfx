@@ -113,7 +113,7 @@ export class MyDropDownComponent {
 
 ### Grouping items
 
-To provide a more useful visual information, use the [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) property to group items semantically or the [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) property to display an item as a non-interactive. You can also set the [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) property on a particular item to make it the selected item. The `igx-drop-down` items have out-of-the-box support for `igxPrefix`, `igxSuffix` and `igx-divider` directives which can contain or be attached to HTML elements, strings, icons or even other components.
+To provide a more useful visual information, use the [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) property to group items semantically or the [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) property to display an item as a non-interactive. You can also set the [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) property on a particular item to make it the selected item. The `igx-drop-down` items have out-of-the-box support for `igxPrefix`, `igxSuffix`, and `igx-divider` directives that can contain or be set on HTML elements or other web components.
 
 ```html
 <!-- dropdown.component.html -->
