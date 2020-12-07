@@ -51,12 +51,6 @@ public dataSource: any[] = SamplePolarData.create();
 
 [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DataChartCoreModule        
--   DataChartPolarModule
--   DataChartPolarCoreModule      
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ```ts
 // axis' modules:
 import { IgxNumericAngleAxis } from 'igniteui-angular-charts';

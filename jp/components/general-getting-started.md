@@ -68,9 +68,6 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 
 はじめに、使いたいコンポーネントの必要なモジュールをインポートします。[**GeographicMap**](geo-map.md) に対してこれを行います。
 
--   GeographicMapModule
--   DataChartInteractivityModule
-
 ## コンポーネントの使用
 
 マークアップに Ignite UI for Angular マップ コンポーネントを使用する準備が整いました。以下のように定義します。

@@ -45,9 +45,6 @@ npm install --save igniteui-angular-gauges
 
 [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   LinearGaugeModule 
-    <!-- end: Blazor -->
-
 ```ts
 // app.module.ts
 import { IgxLinearGaugeModule } from 'igniteui-angular-gauges';

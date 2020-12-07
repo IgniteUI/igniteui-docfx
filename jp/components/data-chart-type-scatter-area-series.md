@@ -46,13 +46,6 @@ public dataSource: any[] = SampleScatterData.create();
 
 散布エリア シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule       
--   DataChartInteractivityModule
--   ScatterAreaSeriesModule
-    <!-- end: Blazor -->
-
 ```ts
 // axis' modules:
 import { IgxNumericYAxis } from 'igniteui-angular-charts';

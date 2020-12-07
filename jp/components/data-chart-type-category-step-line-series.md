@@ -52,12 +52,6 @@ public dataSource: any[] = SampleCategoryData.create();
 
 [`IgxStepLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsteplineseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DataChartCoreModule;
--   DataChartCategoryModule;
--   DataChartCategoryCoreModule;
--   DataChartInteractivityModule;
-    <!-- end: Blazor -->
-
 ```ts
 // axis' modules:
 import { IgxCategoryXAxis } from 'igniteui-angular-charts';

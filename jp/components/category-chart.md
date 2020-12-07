@@ -58,6 +58,8 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
+[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) は以下のモジュールを要求します。
+
 <!-- Angular, React, WebComponents -->
 
 ```ts
