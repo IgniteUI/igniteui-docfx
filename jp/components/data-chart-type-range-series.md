@@ -93,7 +93,7 @@ import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
 ## コード例
 
-このコードは、[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart

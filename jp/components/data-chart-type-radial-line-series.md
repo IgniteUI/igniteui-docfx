@@ -26,7 +26,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、放射チャート�
 
 ## 軸の要件
 
-Angular データチャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
 -   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
 -   [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)

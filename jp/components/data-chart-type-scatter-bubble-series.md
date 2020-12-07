@@ -84,7 +84,7 @@ export class AppModule { /* ... */ }
 
 ## コード例
 
-このコードは、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
