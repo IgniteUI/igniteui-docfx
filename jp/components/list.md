@@ -288,7 +288,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](buttonGroup.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) にバインドされている独自の **density** プロパティを更新します。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) にバインドされている独自の **density** プロパティを更新します。
 
 ```typescript
 // app.module.ts

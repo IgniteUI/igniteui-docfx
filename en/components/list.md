@@ -287,7 +287,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](buttonGroup.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) of the list.
+Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](button-group.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) of the list.
 
 ```typescript
 // app.module.ts
