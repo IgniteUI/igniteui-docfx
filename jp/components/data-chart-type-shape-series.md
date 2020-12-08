@@ -62,13 +62,6 @@ public dataSource: any[] = SampleShapeData.create();
 
 散布多角形シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterPolygonSeriesModule
-    <!-- end: Blazor -->
-
 ```ts
 // axis' modules:
 import { IgxNumericYAxis } from 'igniteui-angular-charts';
@@ -95,7 +88,7 @@ export class AppModule { /* ... */ }
 
 ## コード例
 
-このコードは、`ShapeColumnSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、`ShapeColumnSeries` でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart

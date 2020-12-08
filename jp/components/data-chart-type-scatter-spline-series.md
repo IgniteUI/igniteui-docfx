@@ -51,13 +51,6 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattersplineseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterSplineSeriesModule
-    <!-- end: Blazor -->
-
 ```ts
 // axis' modules:
 import { IgxNumericYAxis } from 'igniteui-angular-charts';

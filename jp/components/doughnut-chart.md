@@ -41,10 +41,6 @@ npm install --save igniteui-angular-charts
 
 Angular ドーナツ チャートを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DoughnutChartModule
--   RingSeriesModule
-    <!-- end: Blazor -->
-
 ```ts
 // app.module.ts
 import { IgxDoughnutChartModule } from 'igniteui-angular-charts';

@@ -31,7 +31,7 @@ _language: ja
 
 ## 極座標シリーズのタイプ
 
-データチャートは、以下のタイプの極座標シリーズをサポートしています。
+データ チャートは、以下のタイプの極座標シリーズをサポートしています。
 
 | シリーズ名                                                                                                                                                                  | 説明                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -73,12 +73,6 @@ public dataSource: any[] = SamplePolarData.create();
 
 極座標シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   DataChartCoreModule        
--   DataChartPolarModule
--   DataChartPolarCoreModule      
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ```ts
 // axis' modules:
 import { IgxNumericAngleAxis } from 'igniteui-angular-charts';
@@ -109,7 +103,7 @@ import { IgxDataChartPolarModule } from 'igniteui-angular-charts';
 
 ## コード例
 
-このコードは、[`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart

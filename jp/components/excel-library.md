@@ -36,8 +36,10 @@ npm install --save igniteui-angular-excel
 
 Angular Excel ライブラリを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   ExcelModule
-    <!-- end: Blazor -->
+-   ExcelModule.Register(IgniteUIBlazor);
+    ```
+
+    ```
 
 ```ts
 // app.module.ts

@@ -63,9 +63,6 @@ npm install --save igniteui-angular-charts
 
 Angular ファイナンシャル チャートを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
 
--   FinancialChartModule
-    <!-- end: Blazor -->
-
 ```ts
 // app.module.ts
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
