@@ -39,11 +39,7 @@ To use the geographic map component, you need to first install these packages:
 
 ## Required Modules
 
-The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   GeographicMapModule
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts

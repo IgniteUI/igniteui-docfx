@@ -39,10 +39,7 @@ When installing the gauge package, the core package must also be installed.
 
 ## Required Modules
 
-The [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   LinearGaugeModule 
-    <!-- end: Blazor -->
+The [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts
