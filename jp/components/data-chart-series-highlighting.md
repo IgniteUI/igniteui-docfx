@@ -29,23 +29,19 @@ Angular データ チャート コンポネントを使用すると、データ 
 
 Angular データ チャート コンポネントでハイライトを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
 
-<!-- Blazor -->
+DataChartInteractivityModule.Register(IgniteUIBlazor);
+DataChartAnnotationModule.Register(IgniteUIBlazor);
 
--   DataChartInteractivityModule
--   DataChartAnnotationModule
-    <!-- end: Blazor -->
+    ```ts
+    import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
+    import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
-```ts
-import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
-import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
-
-@NgModule({
-    imports: [
-        IgxDataChartInteractivityModule,
-        IgxDataChartAnnotationModule,
-    ]
-})
-```
+    @NgModule({
+        imports: [
+            IgxDataChartInteractivityModule,
+            IgxDataChartAnnotationModule,
+        ]
+    })
 
 ## シリーズ ビジュアルをハイライト
 
