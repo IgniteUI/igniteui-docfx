@@ -114,7 +114,7 @@ export class MyDropDownComponent {
 
 ### 項目のグループ化
 
-より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。
+より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。`igx-drop-down` 項目は、HTML 要素/他の Web コンポーネントに含める、または設定できる `igxPrefix`、 `igxSuffix` および `igx-divider` ディレクティブをサポートしています。
 
 ```html
 <!-- dropdown.component.html -->
@@ -123,13 +123,16 @@ export class MyDropDownComponent {
         [igxDropDownItemNavigation]="dropdown">
         Countries
 </button>
-<igx-drop-down #dropdown [width]="'144px'">
+<igx-drop-down #dropdown [width]="'240px'">
     <div class="drop-down__scroll-container">
         <igx-drop-down-item *ngFor="let item of items" 
                             [disabled]="item.disabled"
                             [isHeader]="item.header"
                             [selected]="item.selected">
+            <igx-icon igxPrefix>place</igx-icon>
             {{ item.field }}
+            <span igxSuffix>{{ item.code }}</span>
+            <igx-divider></igx-divider>
         </igx-drop-down-item>
     </div>
 </igx-drop-down>
@@ -139,19 +142,19 @@ export class MyDropDownComponent {
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: any[] = [
-        { field: "EU", header: true },
-        { field: "Germany" },
-        { field: "Bulgaria", selected: true },
-        { field: "UK", disabled: true },
-        { field: "NA", header: true },
-        { field: "Canada" },
-        { field: "USA" },
-        { field: "Mexico" }
+        { field: "European Union", code: "EU", header: true },
+        { field: "Germany", code: "DE" },
+        { field: "Bulgaria", code: "BG", selected: true },
+        { field: "France", code: "FR", disabled: true },
+        { field: "North America", code: "NA", header: true },
+        { field: "Canada", code: "CA" },
+        { field: "United States", code: "US" },
+        { field: "Mexico", code: "MX" }
     ];
 }
 ```
 
-サンプルを正しく構成すると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
+サンプルを正しく構成すると European Union ヘッダーの下に国の一覧がグループ形式で表示され、France は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
 <div class="sample-container loading" style="height: 310px">
     <iframe id="dropdown-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -459,6 +462,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
 ## その他のリソース
 
