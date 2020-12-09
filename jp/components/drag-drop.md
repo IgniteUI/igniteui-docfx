@@ -145,6 +145,17 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 </div>
 <div class="divider--half"></div>
 
+### Ignoring draggable elements
+
+If the user wants to have interactable children of the main element which have igxDrag instanced, he can set the [`igxDragIgnore`]({environment:angularApiUrl}/classes/igxdragignoredirective.html) directive in order to make them be ignored by the igxDrag and not perform any dragging action. This will leave these elements be fully interactable and receive all mouse events.
+
+```html
+<div [igxDrag]="myData">
+    <span>Drag me!</span>
+    <igx-icon igxDragIgnore fontSet="material" (click)="remove()">bin</igx-icon>
+</div>
+```
+
 ## Drop ディレクティブ
 
 [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブを使用してドラッグされている要素を領域に配置する場合、[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) を使用します。要素が適用される要素の境界に入ったかどうか、その後要素内でリリースされているかを決定するために使用できるイベントを提供します。
