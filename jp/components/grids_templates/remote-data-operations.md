@@ -28,12 +28,12 @@ _language: ja
 Ignite UI for Angular @@igComponent は、リモート仮想化、リモート ソート、リモート フィルタリングなどのリモート データ操作をサポートします。これにより、開発者はこれらのタスクをサーバー上で実行し、生成されたデータを取得して @@igComponent に表示できます。
 
 @@if (igxName === 'IgxGrid') {
-### デモ
+## Angular @@igComponent リモート データ操作の例
 
 <div class="sample-container loading" style="height:500px">
-    <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent リモート データ操作の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-remote-scenarios-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-scenarios-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -43,9 +43,9 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 ### デモ
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent リモート データ操作の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -108,7 +108,7 @@ public processData(reset) {
 ### リモート仮想化のデモ
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent リモート データ操作の例"></iframe>
 </div>
 <br/>
 <div>
@@ -936,7 +936,7 @@ public paginate(page: number) {
 
 ```
 
-**paginate** メソッドで示されるように、 `_totalPagesOnServer` 値に基づいてカスタム ページネーション ロジックが実行されます。
+**paginate** メソッドで示されるように、`_totalPagesOnServer` 値に基づいてカスタム ページネーション ロジックが実行されます。
 
 
 #### 一括編集のリモート ページングのデモ

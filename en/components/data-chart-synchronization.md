@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart']
 
 The Ignite UI for Angular data chart component allows for synchronization with respect to the coordination of zooming, panning, and crosshair events between multiple charts. This can help you to visualize the same areas of multiple charts, assuming your data sources are similar or the same with respect to the axes.
 
-## Demo
+## Angular Chart Synchronization Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-chart-synchronization-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-chart-synchronization-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Chart Synchronization Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-chart-synchronization-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

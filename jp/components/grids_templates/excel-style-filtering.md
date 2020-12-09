@@ -1,17 +1,16 @@
 @@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid | Excel Style Filtering | Infragistics
-_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
-_keywords: excel like filter, igniteui for angular, infragistics
+title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
+_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+_keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Angular Grid | Excel Style Filtering | Infragistics
-_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
-_keywords: excel like filter, igniteui for angular, infragistics
-_canonicalLink: grid/excel-style-filtering
+title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
+_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+_keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
@@ -20,13 +19,13 @@ _language: ja
 
 グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 
-### デモ
+## Angular @@igComponent Excel スタイル フィルタリングの例
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:950px">
-    <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Excel スタイル フィルタリングの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -34,9 +33,9 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:950px">
-    <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Excel スタイル フィルタリングの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -44,9 +43,9 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:950px">
-    <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Excel スタイル フィルタリングの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -331,6 +330,16 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```
 
 }
+
+`igxExcelStyleHeaderIcon` ディレクティブを使用して、列ヘッダーの Excel スタイル フィルタリング アイコンを再テンプレート化することもできます。
+
+```html
+<@@igSelector ...>
+    <ng-template igxExcelStyleHeaderIcon>
+        <igx-icon>filter_alt</igx-icon>
+    </ng-template>
+</@@igSelector>
+```
 
 <div class="divider--half"></div>
 

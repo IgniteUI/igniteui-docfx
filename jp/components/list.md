@@ -1,7 +1,7 @@
 ---
-title: Angular List View | Angular List Example | Infragistics
-_description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
-_keywords: angular list, ignite ui for angular, angular list component
+title: Angular List ビュー | Angular List 例 | インフラジスティックス
+_description: Ignite UI for Angular List コンポーネントは、アイテムの行を表示し、1 つ以上のヘッダー アイテム、およびリスト アイテムの検索とフィルタリングをサポートします。無料でお試しください。
+_keywords: angular list, ignite ui for angular, angular list コンポーネント
 _language: ja
 ---
 
@@ -10,13 +10,13 @@ _language: ja
 List 要素は、項目のグループを番号の付いた形式または黒丸の付いた形式のいずれかで提示する時に非常に役に立ちます。さまざまなレイアウト要素の配列を含むテキスト アイテムの単純なリスト、またはより複雑なリストを作成できます。
 Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。
 
-## Angular List 例
+## Angular List の例
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[**IgxAvatar**](avatar.md) と [**IgxIcon**](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
 <div class="sample-container loading" style="height: 513px">
-<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular List の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>

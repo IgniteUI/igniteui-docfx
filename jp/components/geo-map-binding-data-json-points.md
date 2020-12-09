@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular Map マップは、さまざまな種類のファイルからロードされた地理データをプロットできます。たとえば、JavaScript Object Notation (JSON) ファイルから地理的位置をロードできます。
 
-## サンプル
+## Angular JSON ファイルを地理的な場所にバインドの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-binding-data-json-points-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular JSON ファイルを地理的な場所にバインドの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-json-points-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
@@ -27,11 +27,11 @@ Ignite UI for Angular Map マップは、さまざまな種類のファイルか
 
 JSON ファイルからのデータの例:
 
-```ts
+```json
 [
- { "n": "Sydney Island", "y": -16.68972, "x": 139.45917 },
- { "n": "Sydney Creek", "y": -16.3, "x": 128.95 },
- { "n": "Mount Sydney", "y": -21.39864, "x": 121.193 },
+   { "name": "Sydney Island", "lat": -16.68972, "lon": 139.45917 },
+   { "name": "Sydney Creek",  "lat": -16.3,     "lon": 128.95 },
+   { "name": "Mount Sydney",  "lat": -21.39864, "lon": 121.193 },
  // ...
 ]
 ```
@@ -51,9 +51,7 @@ JSON ファイルからのデータの例:
 
 <ng-template let-series="series" let-item="item" #template>
         <div>
-            <span >
-                {{item.city}}
-            </span>
+            <span>{{item.city}}</span>
         </div>
 </ng-template>
 ```

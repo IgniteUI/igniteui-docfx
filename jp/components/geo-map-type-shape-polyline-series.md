@@ -10,10 +10,10 @@ _language: ja
 
 地理的コンテキストでポリラインを使用して地理空間データを表示するには、Angular マップ コンポーネントの [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためにしばしば使用されます。
 
-## サンプル
+## Angular シェイプ ポリライン シリーズの使用の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-type-shape-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-shape-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular シェイプ ポリライン シリーズの使用の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-shape-polyline-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

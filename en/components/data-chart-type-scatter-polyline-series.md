@@ -12,10 +12,10 @@ The Ignite UI for Angular scatter polyline chart belongs to a group of shape cha
 
 Scatter shape series are often used highlight regions in scientific data or they can be used to plot diagrams, blueprints, or even floor plan of buildings.
 
-## Demo
+## Angular Scatter Polyline Chart Example
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-scatter-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-scatter-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Scatter Polyline Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-polyline-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -51,9 +51,9 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 Creation of the [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
 
--   DataChartCoreModule        
+-   DataChartCoreModule
 -   DataChartScatterCoreModule
--   DataChartScatterModule   
+-   DataChartScatterModule
 -   DataChartInteractivityModule
 -   ScatterPolylineSeriesModule
     <!-- end: Blazor -->

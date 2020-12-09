@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
 
-## Demo
+## Angular Mask Example
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-2" onload="onSampleIframeContentLoaded(this);" alt="Angular Mask Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 

@@ -11,10 +11,10 @@ _language: ja
 このトピックは、コード例を示して Angular データ チャート コンポーネントで [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) を使用する方法を説明します。このシリーズ
 各ポイントに数値が割り当てられた X および Y データの三角測量に基づいて色付きの等高線を描画します。このシリーズのタイプはヒート マップ、磁場の強さ、またはオフィスの Wi-Fi の強さを描画する場合などに便利です。[`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) は [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。
 
-## サンプル
+## Angular 散布図 - 等高線シリーズの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布図 - 等高線シリーズの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-contour-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

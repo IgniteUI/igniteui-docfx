@@ -10,10 +10,10 @@ _language: ja
 
 ファイナンシャル オーバーレイは、株価の動きの計測やトレンドを確認するためにトレーダーによって使用されます。これらのオーバーレイは、同じY軸スケールを共有するため、通常 [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) の前に表示されます。対照的に、財務指標は [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) と同じ Y 軸スケールを共有しないため、通常、財務指標は [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialpriceseriescomponent.html) またはオーバーレイの上または下にプロットされます。ただし、チャート コントロールは同じプロット領域でオーバーレイとインジケーターをサポートします。複数軸の使用や軸を共有することもできます。
 
-## サンプル
+## Angular ファイナンシャル オーバーレイの例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-financial-overlays-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-financial-overlays-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ファイナンシャル オーバーレイの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-overlays-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

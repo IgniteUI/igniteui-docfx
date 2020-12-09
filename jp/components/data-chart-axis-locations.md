@@ -10,10 +10,10 @@ _language: ja
 
  すべての軸に対して、チャートのプロット領域に関連して軸の位置を指定できます。これは、同じデータ チャートで 2 つ以上の軸を使用する場合、または複数のシリーズ間で[軸を共有する](data-chart-axis-sharing.md)場合に特に重要です。
 
-## サンプル
+## Angular 軸の位置の例
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 軸の位置の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

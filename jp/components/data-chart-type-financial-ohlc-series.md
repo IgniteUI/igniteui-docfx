@@ -10,10 +10,10 @@ _language: ja
 
 [`OHLC`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/pricedisplaytype.html#ohlc) 表示モードの Ignite UI for Angular 金融価格チャートは、株価をプロットし、各日の株価の高値、安値、始値、終値を表示するために使用されます。各データ ポイントは、左と右の両側に水平の垂直線を伴った縦の線としてプロットされます。垂直の線は投資の高値と安値の間の範囲を示します。垂直の線の上部は取引期間中の最大の高値を示し、垂直の線の下部は取引期間中の最安値を示します。水平の線は投資の始値と終値の間の範囲を示します。垂直線の左側の水平の線はセッションの開始値を示します。垂直の線の右側の水平の線はセッションの終値を示します。
 
-## サンプル
+## Angular ファイナンシャル OHLC チャートの例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-financial-ohlc-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-ohlc-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-financial-ohlc-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-ohlc-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ファイナンシャル OHLC チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-ohlc-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

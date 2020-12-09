@@ -9,10 +9,10 @@ mentionedTypes: ['Workbook', 'Worksheet', 'WorksheetCell', 'DisplayOptions', 'Wo
 
 The Infragistics Angular Excel Engine's [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) is where your data is kept. You can input data by working with the Worksheet's rows and cells and setting their corresponding values. The [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) allows you to filter, sort, and customize the formats of the cells, as shown below.
 
-## Demo
+## Angular Using Worksheets Example
 
 <div class="sample-container loading" style="height: 200px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Worksheets Example"></iframe>
 </div>
 
 

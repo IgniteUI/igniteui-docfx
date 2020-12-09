@@ -9,10 +9,10 @@ mentionedTypes: ['Workbook']
 
 TODO
 
-## Demo
+## Angular Working with Grids Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-grids' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-grids' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Working with Grids Example"></iframe>
 </div>
 
 

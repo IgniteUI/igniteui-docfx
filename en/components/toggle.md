@@ -8,10 +8,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <p class="highlight">The Ignite UI for Angular Toggle directive allows the users to wrap some content into a box which can be easily opened and closed.</p>
 
-## Demo
+## Angular Toggle Example
 
 <div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
+    <iframe id="toggle-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Toggle Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

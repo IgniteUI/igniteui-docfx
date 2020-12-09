@@ -19,11 +19,11 @@ _canonicalLink: grid/advanced-filtering
 
 The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent.
 
-### Demo
+## Angular @@igComponent Advanced Filtering Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:530px">
-    <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-advanced-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-advanced-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Advanced Filtering Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -33,7 +33,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:510px">
-    <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-grid-sample-1-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Advanced Filtering Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -43,7 +43,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:630px">
-    <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Advanced Filtering Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

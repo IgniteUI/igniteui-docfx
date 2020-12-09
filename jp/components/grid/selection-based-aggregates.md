@@ -11,7 +11,7 @@ _keywords: データ集計, 選択, ignite ui for angular, インフラジステ
 ## トピックの概要
 
 選択に基づいた集計機能を実現するには、[`グリッド選択`]({environment:angularApiUrl}/components/grid/selection.html)機能と[`グリッド集計`]({environment:angularApiUrl}/components/grid/summaries.html)を使用できます。    
-集計では、列のデータ タイプとニーズに応じて、[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、 [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、 [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかの基本クラスを拡張することにより、基本的な集計機能をカスタマイズできます。  
+集計では、列のデータ タイプとニーズに応じて、[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかの基本クラスを拡張することにより、基本的な集計機能をカスタマイズできます。  
 
 ## 選択
 選択したグリッド範囲のデータの操作を開始するには、グリッド選択の変更を通知するイベントにサブスクライブする必要があります。これは、[`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) と [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントにサブスクライブすることで実行できます。選択機能では、単一のセル選択とセル範囲の選択が区別されるため、両方にバインドする必要があります。     
@@ -20,7 +20,7 @@ _keywords: データ集計, 選択, ignite ui for angular, インフラジステ
 
 
 ## まとめ
-カスタム集計クラス内では、グリッドのデータ タイプを差別化する必要があります。たとえば、以下のシナリオでは、4 つの異なる列があり、それぞれのデータ タイプがカスタム集計に適しています。それらは、Unit Price、Units in Stock、 Discontinued status、Order Date です。   
+カスタム集計クラス内では、グリッドのデータ タイプを差別化する必要があります。たとえば、以下のシナリオでは、4 つの異なる列があり、それぞれのデータ タイプがカスタム集計に適しています。それらは、Unit Price、Units in Stock、Discontinued status、Order Date です。   
 `IgxSummaryOperand` の派生クラスの `operate` メソッドでデータを処理します。データ タイプに基づいて、さまざまなカテゴリにデータを入れていきます。
 
 ```typescript
@@ -43,7 +43,7 @@ const dates = data.filter(rec => isDate(rec));
 <div class="sample-container loading" style="height: 560px;">
     <iframe id="grid-selection-custom-summaries" data-src='{environment:demosBaseUrl}/grid/grid-selection-custom-summaries' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-selection-custom-summaries" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>

@@ -8,7 +8,7 @@ _keywords: export selected, igniteui for angular, infragistics
 
 The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
 
-## Paste from Excel Demo
+## Angular Paste from Excel Example
 
 This sample demonstrates how to implement pasting from Excel into the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) Material UI table.
 To work with the sample open up any Excel spreadsheet, copy some rows, and paste it into the grid using the keyboard (Ctrl + V, Shift + Insert, Command + V).
@@ -22,7 +22,7 @@ On the top there is a dropdown button with 2 options:
 The new data after the paste is decorated in Italic.
 
 <div class="sample-container loading" style="height: 570px;">
-    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid/grid-paste" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-paste-sample-iframe" src="{environment:demosBaseUrl}/grid/grid-paste" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Paste from Excel Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

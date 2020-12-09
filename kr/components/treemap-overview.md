@@ -4,7 +4,7 @@ _description: Use the Treemap to show users relative weighting of data points at
 mentionedTypes: ['Treemap']
 ---
 
-## Treemap
+# Treemap
 
 Treemaps display hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 
@@ -74,10 +74,7 @@ When installing the chart package, the core package must also be installed.
 
 ## Required Modules
 
-The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   TreemapModule
-    <!-- end: Blazor -->
+The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules:
 
 ```ts
 import { IgxTreemapModule } from "igniteui-angular-charts";

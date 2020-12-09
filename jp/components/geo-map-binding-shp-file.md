@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのコレクションに変換します。
 
-## サンプル
+## Angular シェープ ファイルを地理的データにバインディングの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular シェープ ファイルを地理的データにバインディングの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-polylines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

@@ -10,12 +10,12 @@ You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}
 
 When working with the Ignite UI for Angular grid components, you may use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and implement similar behavior.
 
-## Demo
+## Angular How to use the Transaction service Example
 
 In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to demonstrate how to enable transactions. We will demonstrate how to add transactions, how to transform the data through a [pipe](https://angular.io/guide/pipes) and how to visually update the view in order to let the user see the changes that are about to be committed.
 
 <div class="sample-container loading" style="height:550px">
-    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="transaction-base-sample-iframe" src='{environment:demosBaseUrl}/services/transaction-base' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular How to use the Transaction service Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
