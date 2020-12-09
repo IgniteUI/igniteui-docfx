@@ -239,11 +239,11 @@ You can now use [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxcalen
 The following demo illustrates a calendar with enabled week numbers:
 
 <div class="sample-container loading" style="height: 420px">
-    <iframe id="calendar-sample-1-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="calendar-sample-1-iframe-2" data-src='{environment:demosBaseUrl}/scheduling/calendar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="calendar-sample-1-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="calendar-sample-1-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ## Calendar Events
