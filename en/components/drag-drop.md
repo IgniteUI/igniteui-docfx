@@ -144,6 +144,17 @@ Reorder items in the list using the drag handle. While dragging a list item othe
 </div>
 <div class="divider--half"></div>
 
+### Ignoring draggable elements
+
+If the user wants to have interactable children of the main element which have igxDrag instanced, he can set the [`igxDragIgnore`]({environment:angularApiUrl}/classes/igxdragignoredirective.html) directive in order to make them be ignored by the igxDrag and not perform any dragging action. This will leave these elements be fully interactable and receive all mouse events.
+
+```html
+<div [igxDrag]="myData">
+    <span>Drag me!</span>
+    <igx-icon igxDragIgnore fontSet="material" (click)="remove()">bin</igx-icon>
+</div>
+```
+
 ## Drop Directive
 
 When an element that is being dragged using the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive needs to be placed in an area, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) can be used to achieve this behavior. It provides events that you can use to determine if an element is entering the boundaries of the element it is applied to and if it is being released inside it.
