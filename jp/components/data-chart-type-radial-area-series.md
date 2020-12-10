@@ -48,37 +48,33 @@ public dataSource: any[] = SampleRadialData.create();
 
 ## モジュールの要件
 
-[`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+[`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
-DataChartCoreModule  
-RadialAreaSeriesModule
-RadialAreaSeriesCoreModule  
-DataChartInteractivityModule.Register(IgniteUIBlazor);
+```ts
+// axis' modules:
+import { IgxCategoryAngleAxis } from 'igniteui-angular-charts';
+import { IgxNumericRadiusAxis } from 'igniteui-angular-charts';
+// series modules:
+import { IgxRadialAreaSeries } from 'igniteui-angular-charts';
+import { IgxRadialLineSeries } from 'igniteui-angular-charts';
+import { IgxRadialPieSeries } from 'igniteui-angular-charts';
+import { IgxRadialColumnSeries } from 'igniteui-angular-charts';
+// data chart's modules:
 
-    ```ts
-    // axis' modules:
-    import { IgxCategoryAngleAxis } from 'igniteui-angular-charts';
-    import { IgxNumericRadiusAxis } from 'igniteui-angular-charts';
-    // series modules:
-    import { IgxRadialAreaSeries } from 'igniteui-angular-charts';
-    import { IgxRadialLineSeries } from 'igniteui-angular-charts';
-    import { IgxRadialPieSeries } from 'igniteui-angular-charts';
-    import { IgxRadialColumnSeries } from 'igniteui-angular-charts';
-    // data chart's modules:
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 
-    import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
-    import { IgxDataChartRadialCoreModule } from 'igniteui-angular-charts';
-    import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
-
-    @NgModule({
-        imports: [
-            // ...
-            IgxDataChartCoreModule,
-            IgxDataChartRadialCoreModule,
-            IgxDataChartRadialModule,
-            // ...
-        ]
-    })
+@NgModule({
+    imports: [
+        // ...
+        IgxDataChartCoreModule,
+        IgxDataChartRadialCoreModule,
+        IgxDataChartRadialModule,
+        // ...
+    ]
+})
+```
 
 ## コード例
 

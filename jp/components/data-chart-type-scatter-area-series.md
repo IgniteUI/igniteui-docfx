@@ -44,7 +44,7 @@ public dataSource: any[] = SampleScatterData.create();
 
 ## モジュールの要件
 
-散布エリア シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+散布エリア シリーズを作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:

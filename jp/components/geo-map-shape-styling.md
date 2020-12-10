@@ -1,6 +1,6 @@
 ---
 title: Angular マップ | データ可視化ツール | シェイプ スタイリング | 条件付き書式 | インフラジスティックス
-_description: インフラジスティックスの Angular マップの図形シリーズにカスタム スタイルを適用する方法について説明します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
+_description: インフラジスティックスの Angular マップのシェイプ シリーズにカスタム スタイルを適用する方法について説明します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, custom styling, Ignite UI for Angular, Infragistics, conditional formatting, shape styling, Angular マップ, カスタム スタイル設定, インフラジスティックス, 条件付き書式, シェイプ スタイリング
 mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries']
 _language: ja

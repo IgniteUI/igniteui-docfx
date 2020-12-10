@@ -50,34 +50,28 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## モジュールの要件
 
-[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+[`IgxAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxareaseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
-  DataChartCoreModule.Register(IgniteUIBlazor);
-  DataChartCategoryModule.Register(IgniteUIBlazor);
-  DataChartCategoryCoreModule.Register(IgniteUIBlazor);
-  DataChartInteractivityModule.Register(IgniteUIBlazor);
+```ts
+// axis' modules:
+import { IgxCategoryXAxis } from 'igniteui-angular-charts';
+import { IgxNumericYAxis } from 'igniteui-angular-charts';
+// series' modules:
+import { IgxAreaSeries } from 'igniteui-angular-charts';
+// data chart's modules:
 
-    <!-- end: Blazor -->
+import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
 
-    ```ts
-    // axis' modules:
-    import { IgxCategoryXAxis } from 'igniteui-angular-charts';
-    import { IgxNumericYAxis } from 'igniteui-angular-charts';
-    // series' modules:
-    import { IgxAreaSeries } from 'igniteui-angular-charts';
-    // data chart's modules:
-
-    import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
-    import { IgxDataChartCategoryModule } from 'igniteui-angular-charts';
-
-    @NgModule({
-        imports: [
-            // ...
-            IgxDataChartCoreModule,
-            IgxDataChartCategoryModule,
-            // ...
-        ]
-    })
+@NgModule({
+    imports: [
+        // ...
+        IgxDataChartCoreModule,
+        IgxDataChartCategoryModule,
+        // ...
+    ]
+})
+```
 
 ## コード例
 

@@ -59,7 +59,7 @@ public dataSource: any[] = SampleRangeData.create();
 
 ## モジュールの要件
 
-範囲シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+範囲シリーズを作成するには、以下のモジュールが必要です。
 
 ```ts
 // in app.module.ts file
