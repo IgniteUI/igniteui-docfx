@@ -83,14 +83,7 @@ public dataSource: any[] = SampleFinancialData.create();
 
 ## Required Modules
 
-The financial series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule
--   DataChartFinancialModule
--   DataChartFinancialCoreModule
--   DataChartFinancialIndicatorsModule
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+The financial series requires the following modules:
 
 ```ts
 // axis' modules:

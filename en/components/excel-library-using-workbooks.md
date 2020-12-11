@@ -38,19 +38,19 @@ Microsoft Excel® document properties provide information to help organize and k
 
 -   `Title`
 
--   `subject`
+-   `Subject`
 
--   `keywords`
+-   `Keywords`
 
--   `category`
+-   `Category`
 
--   `status`
+-   `Status`
 
--   `comments`
+-   `Comments`
 
--   `company`
+-   `Company`
 
--   `manager`
+-   `Manager`
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
@@ -79,16 +79,12 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
--   isProtected
-
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
 
 ```ts
 var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
-
--   protection
 
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
 

@@ -49,13 +49,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## Required Modules
 
-Creation of the [`IgxStepAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule;
--   DataChartCategoryModule;
--   DataChartCategoryCoreModule;
--   DataChartInteractivityModule;
-    <!-- end: Blazor -->
+Creation of the [`IgxStepAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstepareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:

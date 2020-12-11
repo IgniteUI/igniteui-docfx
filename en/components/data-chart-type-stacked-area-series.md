@@ -46,14 +46,7 @@ The [`IgxStackedAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite
 
 ## Required Modules
 
-Creation of the [`IgxStackedAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule        
--   DataChartInteractivityModule
--   DataChartCategoryModule
--   DataChartStackedModule,
--   StackedFragmentSeriesModule,
-    <!-- end: Blazor -->
+Creation of the [`IgxStackedAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:

@@ -42,12 +42,6 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
-<!-- Blazor -->
-
--   GeographicMapModule 
--   IgcDataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ## Creating Series
 
 Next, we need to create a map with a few Geographic Series that will later load different type of shapefile.
