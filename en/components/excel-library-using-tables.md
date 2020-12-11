@@ -36,7 +36,7 @@ The following code snippet shows the usage of these methods:
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = this.workbook.worksheets().add("Sheet1");
+var worksheet = workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
 
 //Will add 5 columns at index 1.
@@ -77,7 +77,7 @@ The following code snippet demonstrates how to apply an "above average" filter t
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = this.workbook.worksheets().add("Sheet1");
+var worksheet = workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
 
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);

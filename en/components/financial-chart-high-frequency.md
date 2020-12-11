@@ -29,18 +29,17 @@ You can create the Angular financial chart component with high frequency data up
 
 The following example demonstrates how to notify Financial Chart control about high frequency data updates:
 
-```ts
-private tick(): void {
-    const newVal = this.getValue();
-    const oldVal = this.data[0];
+    ```ts
+    private tick(): void {
+        const newVal = this.getValue();
+        const oldVal = this.data[0];
 
-    this.data.push(newVal);
-    this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
+        this.data.push(newVal);
+        this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
 
-    this.data.splice(0, 1);
-    this.chart.notifyRemoveItem(this.data, 0, oldVal);
-}
-```
+        this.data.splice(0, 1);
+        this.chart.notifyRemoveItem(this.data, 0, oldVal);
+    }
 
 <div class="divider--half"></div>
 

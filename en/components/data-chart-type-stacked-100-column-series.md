@@ -46,12 +46,7 @@ The [`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/i
 
 ## Required Modules
 
-Creation of the [`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100columnseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule        
--   DataChartInteractivityModule
--   Stacked100ColumnSeriesModule
-    <!-- end: Blazor -->
+Creation of the [`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100columnseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:

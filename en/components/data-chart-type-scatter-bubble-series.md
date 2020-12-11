@@ -45,14 +45,7 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 ## Required Modules
 
-The scatter bubble series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule
--   DataChartScatterCoreModule
--   DataChartScatterModule
--   DataChartInteractivityModule
--   NumberAbbreviatorModule
-    <!-- end: Blazor -->
+The scatter bubble series requires the following modules:
 
 ```ts
 // axis' modules:

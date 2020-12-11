@@ -60,10 +60,7 @@ npm install --save igniteui-angular-charts
 
 ## Required Modules
 
-The Angular Financial Chart component requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   FinancialChartModule
-    <!-- end: Blazor -->
+The Angular Financial Chart component requires the following modules:
 
 ```ts
 // app.module.ts

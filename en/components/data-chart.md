@@ -38,13 +38,7 @@ npm install --save igniteui-angular-charts
 
 ## Required Modules
 
-The Angular data chart component requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule
--   DataChartScatterCoreModule,
--   DataChartScatterModule,
--   NumberAbbreviatorModule
-    <!-- end: Blazor -->
+The Angular data chart component requires the following modules:
 
 ```ts
 import { IgxDataChartCoreModule } from 'igniteui-angular-charts';
