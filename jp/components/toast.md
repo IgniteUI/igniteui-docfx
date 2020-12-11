@@ -9,12 +9,12 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Toast コンポーネントは、ユーザーが閉じられない非対話型の情報および報告メッセージを表示できます。通知はページの上側、中央、または下側に表示できます。</p>
 <div class="divider"></div>
 
-## Toast デモ
+## Angular Toast の例
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2" class="lazyload"></iframe>
+    <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);" alt="Angular Toast の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -26,7 +26,7 @@ _language: ja
 
 ### はじめに
 
-Toast コンポーネントを初期化する前に、 `IgxToastModule` を **app.module.ts** ファイルにインポートします。
+Toast コンポーネントを初期化する前に、`IgxToastModule` を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
@@ -63,6 +63,23 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 <igx-toast #toast ></igx-toast>
 ```
 
+[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
+
+```typescript
+// app.component.ts
+@ViewChild('toast', { read: IgxToastComponent }) public toast: IgxToastComponent;
+
+public message: any;
+
+public ngOnInit() {
+    this.message = 'Display message';
+}
+
+public showMessage() {
+    this.toast.show(this.message);
+}
+```
+
 ## 例
 
 ### 非表示/自動的に隠す
@@ -77,7 +94,7 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 ```
 
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
-他の 2 つのコンポーネントでは、 [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
+他の 2 つのコンポーネントでは、[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
 <div class="sample-container loading" style="height: 450px">
     <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
@@ -151,7 +168,7 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、 `$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
+最も簡単な方法は、[`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 
 ```scss
 $custom-toast-theme: igx-toast-theme(

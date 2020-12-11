@@ -43,7 +43,7 @@ Import ステートメントは、API クラスと列挙型へのフル パス�
 | 影響されるパッケージ                                                                                                                     | 影響されるコンポーネント                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel ライブラリ](excel-library.md)                                                                                                                                                            |
-| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [スプレッドシート](spreadsheet_overview.md)                                                                                                                                                        |
+| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [スプレッドシート](spreadsheet-overview.md)                                                                                                                                                        |
 | <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [地理マップ](geo-map.md)、 [ツリーマップ](treemap-overview.md)                                                                                                                                         |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [ブレット グラフ](bullet-graph.md)、 [リニア ゲージ](linear-gauge.md)、 [ラジアル ゲージ](radial-gauge.md)                                                                                                       |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | [カテゴリ チャート](category-chart.md)、 [データ チャート](data-chart.md)、 [ドーナツ チャート](doughnut-chart.md)、 [ファイナンシャル チャート](financial-chart.md)、 [円チャート](pie-chart.md)、 [ズーム スライダー](zoomslider-overview.md) |
@@ -80,7 +80,7 @@ import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
 ## 変更前のコード
 
-以前は、API クラスと列挙型への完全なパスを使用してインポートする必要がありました。.
+以前は、API クラスと列挙型への完全なパスを使用してインポートする必要がありました。
 
 ```ts
 // gauges:

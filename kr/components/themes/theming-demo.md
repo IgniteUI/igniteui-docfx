@@ -338,4 +338,4 @@ Now we can easily change our defined themes with only a `click` event:
 * [Input Group](../input-group.md)
 * [Snackbar](../snackbar.md)
 * [Button](../button.md)
-* [Button Group](../buttonGroup.md)
+* [Button Group](../button-group.md)

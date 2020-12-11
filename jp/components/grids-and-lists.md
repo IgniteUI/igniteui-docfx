@@ -1,7 +1,7 @@
 ---
-title: Angular Data Grids と Lists コンポーネント | DataTable | Ignite UI for Angular | インフラジスティックス
-_description: 数百のデータ ポイント可視化においてもタイムラグのないスクロールを提供できるパワフルなグリッド機能を備えています。Ignite UI for Angular の Data Grid は、最適化と高速化を実現します。
-_keywords: angular data grid, infragistics, infragistics.com
+title: Angular Grids & Tables | 最速の Angular UI グリッド | インフラジスティックス
+_description: 高速な Angular グリッドとテーブルをお探しですか? Ignite UI for Angular は、Angular ネイティブでマテリアル ベースの UI データ グリッドとテーブルの完全なライブラリを提供します。詳しい情報をご覧ください。
+_keywords: angular data grid, インフラジスティックス, jp.infragistics.com
 _language: ja
 ---
 <style>
@@ -202,13 +202,18 @@ h3#excel-library-for-the-angular-grid ~ h3{
 Ignite UI for Angular は、世界最速の仮想化された Angular データ グリッドを含む、Angular ネイティブのマテリアル ベースの UI コンポーネントの完全なライブラリを提供します。
 
 
-## Angular Grid 例
+## Angular Grid の例
+
+この Angular グリッドの例では、データの検索とフィルタリング、列のソート、サイズ変更、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、水平および垂直スクロールなど、グリッドに組み込まれているさまざまな機能を利用してユーザーがデータ ビューをカスタマイズする方法を確認できます。Linear Progress Bar Indicator やスパークラインなどのコンポーネントを含むセル テンプレートの例を提供しました。その他の機能については、[こちら](#list-features)をご覧ください。
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:lobDemosBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:crmDemoBaseUrl}/grid-crm" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid の例">
     </iframe>
 </div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+
+<div class="divider--half"></div>
 
 ## Angular Data Grid の概要 
 
@@ -345,7 +350,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Microsoft Excel のような機能のアイコン表示" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Angular Data Grid の Microsoft Excel のような機能のアイコン表示">
 </div>
-    <div class="feature__details">
+    <div class="feature__details" id="list-features">
         <span class="h3 features__heading">Angular Grid の Excel ライブラリ<a class="anchorjs-link" href="#angular-grid-の-excel-ライブラリ" aria-label="Anchor" data-anchorjs-icon="" style="padding-left: 0.375em;"></a></span>
         <p>データ グリッドの XLXS、XLS、TSV、または CSV のエクスポートを完全にサポートします。Ignite UI for Angular [Excel ライブラリ](excel-library.md)には、クライアント マシンで Microsoft Excel を必要としない 300 以上の数式、テーブルサポート、条件付き書式、チャートの作成などが含まれます。</p>
     </div>
@@ -432,7 +437,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
             <li><a class="no-external-icon" href="{environment:infragisticsBaseUrl}/support/ignite-ui-angular-help">Angular サポート ホーム ページをご覧ください。</a> </li>
             <li>Angular [ドキュメント](general/getting-started.md)を読み、Angular サンプルを試してください。</li>
             <li>最新の情報は、<a class="no-external-icon" href="https://www.infragistics.com/community/blogs/tags/Ignite%20UI%20for%20Angular">Angular ブログをご覧ください。</a> </li>
-            <li><a class="no-external-icon" href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/grid-table">サポート ケースの送信</a></li>
+            <li><a class="no-external-icon" href="https://www.infragistics.com/ignite-ui-angular/grid-table">サポート ケースの送信</a></li>
             <li>Angular <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/resources/sample-applications">参照アプリケーションを試してください。</a></li>
         </ul>
     </div>

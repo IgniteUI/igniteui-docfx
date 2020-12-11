@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid search | search data | Ignite UI for Angular | Infragistics 
+title: Angular Grid Search | Angular Search Examples | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid search | search data | Ignite UI for Angular | Infragistics
+title: Angular Tree Grid Search | Angular Search Examples | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
 _canonicalLink: grid/search
@@ -15,7 +15,7 @@ _canonicalLink: grid/search
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid search | search data | Ignite UI for Angular | Infragistics
+title: Angular Hierarchical Grid Search | Angular Search Examples | Infragistics
 _description: Learn how to perform grid search with the Ignite Angular Material table using rich API. It also allows instant content search in the virtualized data of the Grid
 _keywords: Content search, ignite ui for angular, infragistics
 _canonicalLink: grid/search
@@ -32,7 +32,7 @@ The following example represents @@igComponent with search input box that allows
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-search-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-search-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Search Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -43,7 +43,7 @@ The following example represents @@igComponent with search input box that allows
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-search-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-search' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-search-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-search' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Search Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
