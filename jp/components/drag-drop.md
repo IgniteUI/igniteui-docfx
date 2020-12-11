@@ -145,9 +145,9 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 </div>
 <div class="divider--half"></div>
 
-### Ignoring draggable elements
+### ドラッグ可能な要素を無視する
 
-If the user wants to have interactable children of the main element which have igxDrag instanced, he can set the [`igxDragIgnore`]({environment:angularApiUrl}/classes/igxdragignoredirective.html) directive in order to make them be ignored by the igxDrag and not perform any dragging action. This will leave these elements be fully interactable and receive all mouse events.
+ユーザーが igxDrag をインスタンス化したメイン要素の操作可能な子を使用したい場合は、[`igxDragIgnore`]({environment:angularApiUrl}/classes/igxdragignoredirective.html) ディレクティブを設定することにより、igxDrag からは無視され、ドラッグ アクションを実行しないようにすることができます。これにより、これらの要素は完全に操作可能になり、すべてのマウス イベントを受信します。
 
 ```html
 <div [igxDrag]="myData">
