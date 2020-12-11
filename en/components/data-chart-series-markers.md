@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools | Markers | Infragistics
-_description: Use the markers of the Infragistics' Angular charts to indentify a data point even if it values fall between major or minor gridlines. Check out the Ignite UI for Angular graph's markers feature!
+_description: Use the markers of the Infragistics' Angular charts to identify a data point even if it values fall between major or minor gridlines. Check out the Ignite UI for Angular graph's markers feature!
 _keywords: Angular charts, data chart, markers, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart', 'MarkerSeries']
 ---
@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart', 'MarkerSeries']
 
 In the Angular data chart component's plot area, markers are visual elements displayed at location of data points. Markers help your end users immediately identify a data point’s even if its values fall between major or minor grid lines.
 
-## Demo
+## Angular Markers Example
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Markers Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

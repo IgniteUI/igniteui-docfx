@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "gulp-sass": "^4.0.1",
-    "igniteui-docfx-template": "2.8.7",
+    "igniteui-docfx-template": "^2.9.2",
     "natives": "^1.1.6",
     "yargs": "^10.0.3"
   },
@@ -25,6 +25,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-file-include": "^2.1.1",
+    "gulp-replace": "^1.0.0",
     "gulp-shell": "^0.7.1",
     "slash": "^3.0.0"
   }

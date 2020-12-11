@@ -9,10 +9,10 @@ mentionedTypes: ['Spreadsheet']
 
 This topic explains how to configure and set the built-in data validation rules.
 
-## Demo
+## Angular Data Validation Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-data-validation-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Data Validation Example"></iframe>
 </div>
 
 
