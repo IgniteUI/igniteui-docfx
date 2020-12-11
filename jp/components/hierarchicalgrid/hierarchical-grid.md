@@ -195,6 +195,22 @@ export class RemoteLoDService {
     }
 }
 ```
+
+## 行展開インジケーターの非表示/表示
+
+行がその展開前に子を持っているかの確認は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) 入力プロパティで判断できます。このようにして、展開インジケータを表示するかどうかを示すデータ オブジェクトからブール値プロパティを提供できます。
+
+```html
+<igx-hierarchical-grid #grid [data]="data" primaryKey="ID" hasChildrenKey="hasChildren">
+        ...
+</igx-hierarchical-grid>
+```
+
+[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#haschildrenkey) プロパティを設定する必要がないことに注意してください。指定しなかった場合は、各行に展開インジケーターが表示されます。
+
+さらに、ヘッダーのすべて展開/縮小インジケーターを表示/非表示にする場合は、[showExpandAll]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#showExpandAll) プロパティを使用できます。
+この UI は、パフォーマンス上の理由からデフォルトで無効になっているため、データが大きいグリッドやロードオンデマンドのグリッドで有効にすることはお勧めしません。
+
 ## 機能
 
 グリッド機能を有効にして **igx-row-island** マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
