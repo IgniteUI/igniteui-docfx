@@ -26,7 +26,7 @@ _language: ja
 
 ## コード例
 
-このコードは、左右に配置される 2 つの [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) と、互いに積み重ねられる 2 つの [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) を使用してデータチャートを作成する方法を示します。
+このコードは、左右に配置される 2 つの [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html) と、互いに積み重ねられる 2 つの [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html) を使用してデータ チャートを作成する方法を示します。
 
 ```html
    <igx-data-chart
