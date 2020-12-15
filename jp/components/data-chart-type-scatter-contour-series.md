@@ -45,14 +45,7 @@ public dataSource: any[] = SampleScatterData.create();
 
 ## モジュールの要件
 
-散布等高線シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterContourSeriesModule
-    <!-- end: Blazor -->
+散布等高線シリーズを作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
@@ -81,7 +74,7 @@ export class AppModule { /* ... */ }
 
 ## コード例
 
-このコードは、[`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
@@ -110,6 +103,9 @@ export class AppModule { /* ... */ }
 -   [`brushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#brushes) は、輪郭を塗りつぶすためのブラシのコレクションを設定します。
 -   [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvaluebrushscalecomponent.html#maximumvalue) は、ブラシを割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
 -   [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvaluebrushscalecomponent.html#minimumvalue) は、ブラシを割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
+    ```
+
+    ```
 
 ## 等高線値リゾルバー
 
