@@ -14,8 +14,10 @@ The Multi-Column Combo Box automatically generates columns for properties on the
 The following properties are the most commonly used to configure the component:
 
 -   `DataSource` - allows binding data in form of an array of complex objects that will be displayed in drop down menu.
--   `TextField` - determines which value is shown when users make a selection. 
--   `ValueField` - property determines the bound value of the underlying data item selected. This is necessary if your list of objects have several properties.
+-   `TextField` - set this property to a field in the datasource to reflect what is shown as the display text in the items when users make a selection. 
+-   `ValueField` - set this property to a field in the datasource which represents a key or unique identify for the underlying data item to be selected. This is necessary if your list of objects have several properties because if no `ValueField` is specified, then the first field in the data source is used. 
+
+
 -   `Fields` - string array property that determines which fields will be included and displayed. All fields not listed in the array will not be displayed in the dropdown.
 -   `PlaceHolder` property lets the edit portion of the control to display text when nothing is selected. 
 -   `SortMode` property lets you configure the field's sorting with the following configurations:
@@ -49,7 +51,7 @@ When installing the charts component, the core package must also be installed.
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
-npm install --save igniteui-angular-charts
+npm install --save {PackageInputs}
 </pre>
 
 <!-- end: Angular, React, WebComponents -->
