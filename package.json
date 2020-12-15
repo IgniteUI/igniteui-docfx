@@ -16,7 +16,6 @@
   "dependencies": {
     "igniteui-docfx-template": "^2.9.2",
     "natives": "^1.1.6",
-    "sass": "^1.30.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
