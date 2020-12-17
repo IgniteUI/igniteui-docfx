@@ -16,6 +16,20 @@ _language: ja
 
 `ValueField` プロパティは選択された基本データ項目のバインド値を決定します。オブジェクトのリストに複数のプロパティがある場合に必要です。
 
+`Fields` 文字列配列プロパティは、どのフィールドが含まれ、表示されるかを決定します。配列にリストされていないすべてのフィールドは、ドロップダウンに表示されません。
+
+`PlaceHolder` プロパティを使用すると、コントロールの編集部分で、何も選択されていないときにテキストを表示できます。 
+
+`SortMode` プロパティを使用すると、次の構成でフィールドのソートを構成できます:
+
+-   `None`
+-   `SortByOneColumnOnly`
+-   `SortByOneColumnOnlyTriState`
+-   `SortByMultipleColumns`
+-   `SortByMultipleColumnsTriState`
+
+TriState オプションを使用すると、ソートされた列のソートを解除できます。
+
 ## Angular 複数列コンボ ボックスの例
 
 <div class="sample-container loading" style="height: 500px">
@@ -44,9 +58,8 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
-複数列コンボ ボックスを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
+複数列コンボ ボックスを作成するには、以下のモジュールが必要です。
 
--   MultiColumnComboBoxModule
-    <!-- end: Blazor -->
+<div class="divider--half"></div>
 
 ## コード スニペット
