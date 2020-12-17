@@ -113,7 +113,7 @@ import { IgxFinancialPriceSeriesModule } from 'igniteui-angular-charts';
 
 ## コード例
 
-[`IgxMedianPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmedianpriceindicatorcomponent.html) でデータ チャートのインスタンスを作成する方法を示します。これらのシリーズは同じ  X 軸と Y 軸を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[軸共有と複数軸](data-chart-axis-sharing.md) トピックを参照してください。
+[`IgxMedianPriceIndicatorComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmedianpriceindicatorcomponent.html) でデータ チャートのインスタンスを作成する方法を示します。これらのシリーズは同じ X 軸と Y 軸を使用しますが複数軸を使用して異なるシリーズに割り当てることができます。詳細については、[軸共有と複数軸](data-chart-axis-sharing.md)トピックを参照してください。
 
 ```html
  <igx-data-chart

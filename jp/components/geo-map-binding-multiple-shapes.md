@@ -43,6 +43,65 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
+## シリーズの作成
+
+次に、後で異なるタイプのシェープ ファイルをロードする地理的シリーズでマップを作成します。
+
+```html
+<div className="sampleRoot">
+    <div className="map" >
+        <igx-geographic-map
+            #map
+            width="700px"
+            height="500px"
+            zoomable="true" >
+            <igx-geographic-shape-series #shapeSeries
+                name="polygonSeries"
+                shapeMemberPath="points"
+                shapeFill="rgb(150, 150, 150)"
+                shapeStroke="Black"
+                shapeStrokeThickness={1.0} >
+            </igx-geographic-shape-series>
+            <igx-geographic-polyline-series  #polylineSeries
+            [tooltipTemplate]="polylineTooltipTemplate"
+                  name="polylineSeries"
+                 shapeMemberPath="points"
+                 shapeStroke="rgba(147, 15, 180, 0.5)"
+                 thickness={3.0} >
+            </igx-geographic-polyline-series>
+            <igx-geographic-symbol-series  #symbolSeries
+                name="symbolSeries"
+                longitudeMemberPath="longitude"
+                latitudeMemberPath="latitude"
+                markerType="Circle"
+                markerOutline="rgb(2, 102, 196)"
+                markerBrush="White" >
+            </igx-geographic-symbol-series>
+        </igx-geographic-map>
+    </div>
+</div>
+
+<ng-template let-series="series" let-item="item" #polylineTooltipTemplate>
+        <div>
+            <span>{{item.capacity}}</span><br />
+            <span>Distance: {{item.distance}}</span>
+        </div>
+    </ng-template>
+
+    <ng-template let-series="series" let-item="item" #shapeTooltipTemplate>
+        <div>
+            <span>{{item.name}}</span><br />
+            <span>Population: {{item.population}}</span>
+        </div>
+    </ng-template>
+
+    <ng-template let-series="series" let-item="item" #pointTooltipTemplate>
+        <div>
+            <span [style.color]="series.brush">City: {{item.city}}</span>
+        </div>
+    </ng-template>
+```
+
 ## シェープファイルの読み込み
 
 次に、ページのコンストラクターで、地理マップコンポーネントに表示する各シェープファイルの `ShapeDataSource` を追加します。

@@ -34,7 +34,7 @@ import { IgxShapeDataSource } from 'igniteui-angular-core';
 import { IgxShapefileRecord } from 'igniteui-angular-core';
 ```
 
-次のコード例は、シェイプ スタイリングを設定する 4 つの異なる方法を提供する [シェイプ スタイリング ユーティリティ](geo-map-resources-shape-styling-utility.md) ファイルを使用していることに注意してください。
+次のコード例は、シェイプ スタイリングを設定する 4 つの異なる方法を提供する[シェイプ スタイリング ユーティリティ](geo-map-resources-shape-styling-utility.md) ファイルを使用していることに注意してください。
 
 -   [シェイプ比較スタイリング](#シェイプ比較スタイリング)
 -   [シェイプ ランダム スタイリング](#シェイプ-ランダム-スタイリング)

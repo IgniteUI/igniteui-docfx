@@ -103,9 +103,6 @@ export class AppModule { /* ... */ }
 -   [`brushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#brushes) は、輪郭を塗りつぶすためのブラシのコレクションを設定します。
 -   [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvaluebrushscalecomponent.html#maximumvalue) は、ブラシを割り当てるための最大値を設定します。指定した値がこの値より大きい場合は透明になります。
 -   [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvaluebrushscalecomponent.html#minimumvalue) は、ブラシを割り当てるための最小値を設定します。指定した値がこの値より小さい場合は透明になります。
-    ```
-
-    ```
 
 ## 等高線値リゾルバー
 

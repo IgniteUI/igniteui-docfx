@@ -90,32 +90,31 @@ this.data = [
 
 ドーナツ チャート コンポーネントは、複数のリングを、異なるデータ項目にバインド可能な各リングと同時に表示できます。または共通のデータ ソースを共有できます。たとえば、以下の 2 つのデータ ソースは、複数のリングにバインドするために使用されます。
 
-```ts
-public Months: any[];
-public Seasons: any[];
-/// ...
+    ```ts
+    public Months: any[];
+    public Seasons: any[];
+    /// ...
 
-this.Months = [
-    { Value: 1, Label: "December" },
-    { Value: 1, Label: "January" },
-    { Value: 1, Label: "February" },
-    { Value: 1, Label: "March" },
-    { Value: 1, Label: "April" },
-    { Value: 1, Label: "May" },
-    { Value: 1, Label: "June" },
-    { Value: 1, Label: "July" },
-    { Value: 1, Label: "August" },
-    { Value: 1, Label: "September" },
-    { Value: 1, Label: "October" },
-    { Value: 1, Label: "November" },
-];
-this.Seasons = [
-    { Value: 4, Label: "Winter" },
-    { Value: 4, Label: "Spring" },
-    { Value: 4, Label: "Summer" },
-    { Value: 4, Label: "Fall" },
-];
-```
+    this.Months = [
+        { Value: 1, Label: "December" },
+        { Value: 1, Label: "January" },
+        { Value: 1, Label: "February" },
+        { Value: 1, Label: "March" },
+        { Value: 1, Label: "April" },
+        { Value: 1, Label: "May" },
+        { Value: 1, Label: "June" },
+        { Value: 1, Label: "July" },
+        { Value: 1, Label: "August" },
+        { Value: 1, Label: "September" },
+        { Value: 1, Label: "October" },
+        { Value: 1, Label: "November" },
+    ];
+    this.Seasons = [
+        { Value: 4, Label: "Winter" },
+        { Value: 4, Label: "Spring" },
+        { Value: 4, Label: "Summer" },
+        { Value: 4, Label: "Fall" },
+    ];
 
 ```html
  <igx-doughnut-chart width="100%" height="100%">

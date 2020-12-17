@@ -30,8 +30,6 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
 </pre>
 
-<!-- end: Angular, React, WebComponents -->
-
 ## モジュールの要件
 
 Angular Excel ライブラリを作成するには、以下のモジュールが必要です。
@@ -60,9 +58,11 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 -   **IgxExcelXlsxModule** – xlsx (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel2007 関連および StrictOpenXml ANDWorkbookFormats です。
 -   **IgxExcelModule** – 他の 4 つのモジュールの参照ですべての機能の読み込み/使用を可能にします。
 
+<!-- end: Angular, React, WebComponents -->
+
 ## サポートされるバージョンの Microsoft Excel
 
-以下は Excel のサポートされるバージョンのリストです。\*\*
+以下は Excel のサポートされるバージョンのリストです。
 
 -   Microsoft Excel 97
 
@@ -87,9 +87,11 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 
 注: Excel ライブラリ モジュールをインポートした後、ワークブックを読み込みます。
 
-> [!NOTE]
->
-> 以下のコード スニペットは、外部の [ExcelUtility](excel-utility.md) クラスを使用し [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存してロードします。
+<!-- Angular, React, WebComponents -->
+
+次のコードスニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存およびロードしています。
+
+<!-- end: Angular, React, WebComponents -->
 
 [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、実際の [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保存メソッドや static な `Load` メソッドを使用できます。
 
