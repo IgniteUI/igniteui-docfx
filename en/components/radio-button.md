@@ -224,10 +224,10 @@ public alignment = RadioGroupAlignment.vertical;
 ```html
 <!-- sample.component.html -->
 <igx-radio-group [alignment]="alignment">
-    <igx-radio [(ngModel)]="selected" value="option1">London</igx-radio>
-    <igx-radio [(ngModel)]="selected" value="option2">New York</igx-radio>
-    <igx-radio [(ngModel)]="selected" value="option1">Tokyo</igx-radio>
-    <igx-radio [(ngModel)]="selected" value="option2">Sofia</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
 </igx-radio-group>
 ```
 
