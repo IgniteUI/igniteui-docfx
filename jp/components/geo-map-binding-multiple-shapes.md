@@ -43,12 +43,6 @@ import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
 import { IgxShapeDataSource } from 'igniteui-angular-core';
 ```
 
-<!-- Blazor -->
-
--   GeographicMapModule 
--   IgcDataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ## シリーズの作成
 
 次に、後で異なるタイプのシェープ ファイルをロードする地理的シリーズでマップを作成します。
