@@ -8,19 +8,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <p class="highlight">Ignite UI for Angular includes over 100+ pre-built animations specially designed for a better user experience.</p>
 
-## Angular Animations Example
+## Angular Animations
 
 <div class="sample-container loading" style="height: 470px">
-    <iframe id="animations-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="animations-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <p style="margin: 0; padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
-## Usage
+### Usage
 
 The Ignite UI for Angular animations are grouped into 8 categories depending on their visual effects - `fade`, `flip`, `grow`, `miscellaneous`, `rotate`, `scale`, `slide`, and `swing`. Every group accepts a different set of parameters, allowing you to modify the behavior of any of the included animations. Each animation is an [`AnimationReferenceMetadata`](https://angular.io/api/animations/AnimationReferenceMetadata) object as produced by the [`animation`](https://angular.io/api/animations/animation) function provided by Angular.
 
@@ -52,7 +52,7 @@ animations: [
 ]
 ```
 
-## Timing Functions
+### Timing Functions
 
 Ignite UI for Angular includes a set of timing functions that can be used to ease in or out an animation. There are three main timing function groups - [EaseIn]({environment:angularApiUrl}/enums/easein.html), [EaseOut]({environment:angularApiUrl}/enums/easeout.html), and [EaseInOut]({environment:angularApiUrl}/enums/easeinout.html), each containing the following timings:
   - quad
@@ -78,10 +78,53 @@ useAnimation(fadeIn, {
     }
 });
 ```
+## SCSS Animations
+
+### Keyframes Mixin
+
+The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. Keyframes selectors for the animation steps along with CSS styles for the keyframes are defined inside the body of the mixin.  
+
+```scss
+@include keyframes(fade-in-bottom) {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+```
+
+
+### Animation Mixin
+
+The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc.
+
+```scss
+//include the 'fade-in-top' keyframes animation mixin
+@include fade-in-top();
+
+//include the animation mixin with parameters
+.my-class{
+    @include animation('fade-in-top' 3s $ease-out-quad infinite);
+}
+```
+
+<div class="sample-container loading" style="height: 270px">
+    <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
+</div>
 
 ## API References
 <div class="divider"></div>
 
+* [Animations]({environment:sassApiUrl}/index.html)
 * [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
 * [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 
