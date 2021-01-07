@@ -237,13 +237,17 @@ Here is The result from the above code snippets:
 </div>
 <div class="divider--half"></div>
 
-
+## API References
 <div class="divider--half"></div>
 
+* [Elevations]({environment:sassApiUrl}/index.html#function-igx-elevation)
 
-## API References
+## Additional Resources
+<div class="divider--half"></div>
 
-* [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
-* [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
 
 
