@@ -5,8 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Component Themes
-<div class="highlight">Component themes allow you to change the styles of specific component instances by overriding the globally defined theme.</div>
-<div class="divider"></div>
+<p class="highlight">Component themes allow you to change the styles of specific component instances by overriding the globally defined theme.</p>
 
 ## Overview
 <div class="divider--half"></div>
@@ -201,10 +200,10 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 <div class="divider"></div>
 
 ## API Overview
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar)
-
 <div class="divider--half"></div>
+
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
