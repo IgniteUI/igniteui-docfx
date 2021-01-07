@@ -82,7 +82,22 @@ useAnimation(fadeIn, {
 
 ### Keyframes Mixin
 
-The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. Keyframes selectors for the animation steps along with CSS styles for the keyframes are defined inside the body of the mixin.  
+The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
+
+For instance, doing this:
+
+```scss
+@include fade-in();
+@include fade-in();
+```
+
+Will result in only one `@keyframes` rule added to the produced CSS:
+
+```css
+@keyframes fade-in { ... }
+```
+
+Keyframes selectors for the animation steps along with CSS styles for the keyframes are defined inside the body of the mixin.  
 
 ```scss
 @include keyframes(fade-in-bottom) {
@@ -101,14 +116,14 @@ The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-
 
 ### Animation Mixin
 
-The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc.
+The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
 
 ```scss
 //include the 'fade-in-top' keyframes animation mixin
 @include fade-in-top();
 
 //include the animation mixin with parameters
-.my-class{
+.my-class {
     @include animation('fade-in-top' 3s $ease-out-quad infinite);
 }
 ```
