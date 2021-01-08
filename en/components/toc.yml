@@ -976,6 +976,8 @@
   new: false
 - name: Shadows
   href: shadows.md
+- name: Animations
+  href: animations.md
 - name: Display Density
   href: display-density.md
 - name: Data Entry & Display
