@@ -325,7 +325,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 > The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay-main.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
 
 > [!Note]
-> In the IgxCombo the default `type` is `box` unlike the IgxSelect where it is `line`.
+> In the IgxCombo the default `type` is `box` unlike the [IgxSelect](select.md) where it is `line`.
 
 ### Demo
 <div class="sample-container loading" style="height:410px">
