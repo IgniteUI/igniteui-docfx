@@ -9,6 +9,19 @@ mentionedTypes: []
 
 The Multi-Column Combo Box automatically generates columns for properties on the data object. This component is unique in that it's a combo box that visualizes large amounts of data similar to a data grid embedded in the dropdown. 
 
+## Angular Multi-Column Combo Box Overview Example
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/editors/multi-column-combobox-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Multi-Column Combo Box Overview Example"></iframe>
+</div>
+
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="multi-column-combobox-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
+    </button>
+
+
+</div>
+
 ## Usage
 
 The following properties are the most commonly used to configure the component:
@@ -29,19 +42,6 @@ The following properties are the most commonly used to configure the component:
     -   `SortByMultipleColumnsTriState`
 
 Note, the TriState sort options will allow sorted columns to be unsorted.
-
-## Angular Multi-Column Combo Box Overview Example
-
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/editors/multi-column-combobox-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Multi-Column Combo Box Overview Example"></iframe>
-</div>
-
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="multi-column-combobox-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
 
 <!-- Angular, React, WebComponents -->
 
