@@ -11,7 +11,7 @@ The Date Picker component allows users to use a drop-down calendar UI allowing t
 
 ## Angular Date Picker Overview Example
 
-<div class="sample-container loading" style="height: 250px">
+<div class="sample-container loading" style="height: 300px">
     <iframe id="category-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/editors/date-picker-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Date Picker Overview Example"></iframe>
 </div>
 
@@ -21,6 +21,12 @@ The Date Picker component allows users to use a drop-down calendar UI allowing t
 
 
 </div>
+
+## Required Modules
+
+The Date Picker component requires the following modules to be registered:
+
+<div class="divider--half"></div>
 
 ## Usage
 
@@ -34,12 +40,10 @@ The Angular Date Picker editor component consists of three default parts - the t
 
 Users can also customize the Date Picker's font by using the various text properties of the control. They are: `TextColor`, `TextFontFamily`, `TextFontSize`, `TextFontStyle`, and `TextFontWeight`.
 
-## Required Modules
+### Setting Initial Value
 
-The Date Picker component requires the following modules to be registered:
+The following code demonstrates how to add and set the value of the `DatePicker` component:
 
-<div class="divider--half"></div>
+### Customization
 
-## Code Snippet
-
-The following code demonstrates how add and set the value of the `DatePicker` component:
+The following code demonstrates how to customize the `DatePicker` component by setting the color of the icon and hiding the clear button:
