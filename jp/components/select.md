@@ -331,7 +331,7 @@ Select のスタイルを設定するには、それに含まれるコンポー�
 これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input-group.md#styling) および [`Drop Down`](drop-down.md#styling) のスタイル設定セクションを参照してください。
 
 > [!NOTE]
-> [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay-main.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。
+> [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。
 
 <div class="divider--half"></div>
 

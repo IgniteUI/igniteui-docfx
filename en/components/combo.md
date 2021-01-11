@@ -322,7 +322,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 ```
 
 > [!NOTE]
-> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay-main.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
+> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
 
 ### Demo
 <div class="sample-container loading" style="height:410px">
