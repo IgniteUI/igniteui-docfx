@@ -330,7 +330,7 @@ To get the Select styled, you have style its containing components. In our case,
 Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
 > [!NOTE]
-> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay-main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay-styling.md).
+> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay-styling.md).
 
 <div class="divider--half"></div>
 
