@@ -249,10 +249,10 @@ _language: kr
   <div class="feature">
     <div class="feature__image feature__image--left">
       <img class="b-lazy" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-lazy-load.png" data-src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg" data-srcset="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-480.jpg 480w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-768.jpg 768w, https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-overlays-1100.jpg 1100w" sizes="(min-width: 1800px) 575px,(max-width: 1799px) and (min-width: 1200px) 50vw,(max-width: 1199px) and (min-width: 992px) 33vw,(max-width: 991px) and (min-width: 768px) 50vw, 100vw" alt="Angular 데이터 그리드의 오버레이 토글">
-      <a href="overlay-main.md" class="feature__more-details">오버레이 컴포넌트로 시작하기</a>
+      <a href="overlay.md" class="feature__more-details">오버레이 컴포넌트로 시작하기</a>
     </div>
     <div class="feature__details">
-      <h3 id="overlay">[오버레이](overlay-main.md)</h3>
+      <h3 id="overlay">[오버레이](overlay.md)</h3>
       <p>다양한 오버레이 매개 변수로 콘텐츠 렌더링을 변경합니다.</p>
     </div>
   </div>

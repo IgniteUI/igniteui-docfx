@@ -219,7 +219,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
-Since the dialog window uses the [`IgxOverlayService`](overlay-main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
 ```html
 <div igxOverlayOutlet>
@@ -230,7 +230,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay-main.md), in orde
 ```
 
 > [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay-main.md), you can take a look at this [link](overlay-main.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
 
 ### Including Themes
 
