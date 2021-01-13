@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, 
 
 # Overlay Styling
 <p class="highlight">
-[`IgxOverlayService`](overlay-main.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop-down.md), [Combo](combo.md), [Date Picker](date-picker.md) and more - so it is important to understand how the overlay displays content.
+[`IgxOverlayService`](overlay.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop-down.md), [Combo](combo.md), [Date Picker](date-picker.md) and more - so it is important to understand how the overlay displays content.
 To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#scoped-component-styles).
 </p>
 <div class="divider--half"></div>
@@ -127,7 +127,7 @@ Now **all** modal overlays will have a purple tint to their background.
 ### Scoped Overlay Styles
 
 If we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#scoped-component-styles).
-When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay-main.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, z-index and viewport issues, we recommend using outlets for modal overlays only in higher level components:
+When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, z-index and viewport issues, we recommend using outlets for modal overlays only in higher level components:
 
 ```scss
 //  styles.scss
@@ -157,6 +157,6 @@ To make sure the theme **does not** affect other components in our app, use the 
 
 ## Additional Resources
 * [IgniteUI for Angular - Theme Library](themes/index.md)
-* [Overlay Main Topic](overlay-main.md)
+* [Overlay Main Topic](overlay.md)
 * [Position strategies](overlay-position.md)
 * [Scroll strategies](overlay-scroll.md)
