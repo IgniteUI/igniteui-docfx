@@ -325,6 +325,9 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 > [!NOTE]
 > [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay.md) サービスを使用して、コンボ項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
 
+> [!Note]
+> IgxCombo のデフォルト `type` は `box` です。[IgxSelect](select.md) は `line` です。
+
 ### デモ
 <div class="sample-container loading" style="height:410px">
     <iframe id="combo-styling" src='{environment:demosBaseUrl}/lists/combo-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -343,7 +346,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 - コンボの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf Known Issues](for-of.html#known-limitations) の既知の問題のセクションを参照してください。
+> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.html#既知の制限)セクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>
