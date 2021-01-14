@@ -113,6 +113,15 @@ providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
+
+### Input Group Theme
+
+The input group component supports several themes - `material`, `fluent`, `bootstrap`, and `indigo-design`; The theme is automatically set during component initialization and is inferred from the currently used stylesheet. If you plan to support several themes in your application with runtime switching, you can explicitly set the theme using the `theme` Input property.
+
+```html
+<igx-input-group theme="fluent">...</igx-input-group>
+```
+
 ## Styling
 
 The first thing we need to do, in order to get started with the input group styling, is to include the `index` file in our style file:
