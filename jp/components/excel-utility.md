@@ -8,7 +8,7 @@ _language: ja
 
 # Angular Excel ユーティリティ
 
-[Excel ライブラリ](excel-library.md) には、Microsoft Excel ファイルの読み込みや保存が可能なユーティリティ関数があります。
+[Excel ライブラリ](excel-library.md)には、Microsoft Excel ファイルの読み込みや保存が可能なユーティリティ関数があります。
 
 <!-- Angular -->
 

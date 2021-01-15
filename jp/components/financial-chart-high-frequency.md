@@ -30,18 +30,17 @@ Angular Financial Chart コンポーネントはリアルタイムでデータ�
 
 以下の例は、高頻度のデータ更新について Financial Chart を通知する方法を紹介します。
 
-```ts
-private tick(): void {
-    const newVal = this.getValue();
-    const oldVal = this.data[0];
+    ```ts
+    private tick(): void {
+        const newVal = this.getValue();
+        const oldVal = this.data[0];
 
-    this.data.push(newVal);
-    this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
+        this.data.push(newVal);
+        this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
 
-    this.data.splice(0, 1);
-    this.chart.notifyRemoveItem(this.data, 0, oldVal);
-}
-```
+        this.data.splice(0, 1);
+        this.chart.notifyRemoveItem(this.data, 0, oldVal);
+    }
 
 <div class="divider--half"></div>
 
