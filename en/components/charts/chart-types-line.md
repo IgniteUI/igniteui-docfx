@@ -7,60 +7,116 @@ mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 
 # Angular Line Chart
 
-<!-- TODO add introduction with info about using category-chart with the chartType property set to Line -->
+A Line Chart, or Line Graph, is a type of category line graph that shows the continuous data values represented by points connected by straight line segments of one or more quantities over a period of time. It’s often used to show trends and perform comparative analysis. The Y-Axis (labels on left side) show a numeric value, while the X-Axis (bottom labels) show a time-series or comparison category. You can include one or more data sets to compare, which would render as multiple lines in the chart.
 
-## Angular Line Chart Example
+<!-- <div class="sample-container loading" style="height: 500px">
+    <iframe></iframe>
+</div>
+<div class="divider--half"></div> -->
 
-<!-- TODO use this iframe which will point to a new sample:
-<iframe src='{environment:dvDemosBaseUrl}/charts/category-chart-type-Line' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart Example"></iframe> -->
+-   Different than a line chart, the area chart fills the area between the X-Axis (bottom axis) and the line representing the data value with color or texture to visually represent volume.
+-   The Angular line chart is identical to the Angular spline chart in all aspects except that the line connecting data points does not have spline interpolation and smoothing for improved presentation of data.
 
-## Angular Simple Line Chart
+A Line Chart includes several variants based on your data or how you want to tell the correct story with your data. These include:
 
-<!-- TODO show code for CategoryChart with
-- the dataSource set to multiple data sources
-- the chartType property set to Line
-- the brushes and markerOutlines properties set to same value, e.g. "red, green, blue"
-- the markerBrushes property set for "White"
-- the markerTypes property set for "Circle"
--->
+-   Layered Area Chart
+-   Stacked Area Chart
+-   Stepped Area Chart
+-   Stepped Line Chart
+-   Polar Area Chart
+-   Polar Line Chart
+-   Stacked 100 Area Chart
 
-## Angular Advanced Line Chart
+There are several use cases for a Line Chart. When you:
 
-If you need a line chart with more features such as composite other series, you can use DataChart component.
+-   Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming and Drill-down
+-   Need to compare the trends over time
+-   Want to show the difference between 2 or more data series
+-   Want to show cumulative part-to-whole comparisons of distinct categories
+-   Need to show data trends for one or more categories for comparative analysis
+-   Need to visualize detailed time-series data
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-category-line-series.md
--->
+Line Chart Best Practices:
 
-## Angular Stacked Line Chart
+-   Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate
+-   Order time-series data  from left to right
+-   Use visual attributes like solid lines to show a series of data
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-stacked-line-series.md
-    data-chart-type-stacked-100-line-series.md
--->
+Do not Use a Line Chart When:
 
-## Angular Scatter Line Chart
+-   You have many (more than 7 or 10) series of data. Your goal is to ensure the chart is readable.
+-   Time-series data has similar values (data over the same period), it makes overlapped lines impossible to differentiate.
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-scatter-line-series.md
--->
+Data Structure:
 
-## Angular Radial Line Chart
+-   The data source must be an array or a list of data items (for single series)
+-   The data source must be an array of arrays or a list of lists (for multiple series)
+-   The data source must contain at least one data item
+-   All data items must contain at least one data column (string or date time)
+-   All data items must contain at least one numeric data column
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-radial-line-series.md
--->
+## Angular Line Chart with Single Series
 
-## Angular Polar Line Chart
+The Angular Line Chart is often used to show the change of value over time such as the amount of renewable electricity produced since 2009 over a ten-year period, as we have shown in the example below.
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-polar-line-series.md
--->
+<!-- <div class="sample-container loading" style="height: 500px">
+    <iframe></iframe>
+</div>
+<div class="divider--half"></div> -->
+
+## Angular Line Chart with Multiple Series
+
+Since the Angular Line Chart allows you to combine multiple series and compare or see how they change over time, let’s see how easy it is to achieve this. All we need to do is bind to a data source containing the data for China and the USA, and the line chart will automatically update to fit the additional data.
+
+<!-- <div class="sample-container loading" style="height: 500px">
+    <iframe></iframe>
+</div>
+<div class="divider--half"></div> -->
+
+## Angular Line Chart Legend
+
+With multiple series, our Angular Line Chart requires more visual indicators for end-users to easily perceive what data is displayed. To improve the experience, we need to add a legend for the multiple series. First, we will add a legend object to our application and then we will set it to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) property of the Angular `XamCategoryChart`. This gives the benefit for our users to more easily comprehend what data set each line corresponds to.
+
+<!-- <div class="sample-container loading" style="height: 500px">
+    <iframe></iframe>
+</div>
+<div class="divider--half"></div> -->
+
+## Angular Line Chart with Live Data
+
+The Angular Line Chart component is capable of handling high volumes of data, ranging into millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
+
+In this example, we are streaming live data into the Angular Line Chart at an interval of your choosing. You can set the data points from 5,000 to 1 million and update the chart to optimize the scale based on the device you are rendering the chart on.
+
+<!-- TODO - take a sample from here: https://www.infragistics.com/products/ignite-ui-angular/angular/components/category-chart-high-frequency
+	<div class="sample-container loading" style="height: 500px">
+    <iframe></iframe>
+</div>
+<div class="divider--half"></div> -->
+
+## Styling the Angular Line Chart
+
+Once our chart is set up, we may want to make some further styling customizations such as change the line colors, change the legend font family, and/or increase the size of the [`ChartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/charttitle.html) to make it easier to read.
+
+<!-- <div class="sample-container loading" style="height: 500px">
+    <iframe></iframe>
+</div>
+<div class="divider--half"></div> -->
 
 ## Additional Resources
 
-<!-- TODO list topic links related to this topic -->
+-   [Area Chart](chart-types-area.md)
+-   [Column Chart](chart-types-column.md)
+-   [Financial Chart](chart-types-financial.md)
+-   [Scatter Chart](chart-types-scatter.md)
+-   [Shape Chart](chart-types-scatter.md#angular-scatter-polygon-chart)
+-   [Spline Chart](chart-types-spline.md)
+-   [Step Chart](chart-types-step.md)
+-   [Sparkline](../sparkline.md)
 
 ## API Members
 
-<!-- TODO list API links used in this topic -->
+-   `XamCategoryChart`
+-   [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html)
+-   `ItemsSource`
+-   [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html)
