@@ -7,10 +7,10 @@ _language: ja
 
 # テーマ
 
-<div class="highlight">最小限のコードで、コンポーネントのテーマを簡単に変更できます。SASS で開発されている API は簡単で、単一のコンポーネント、複数のコンポーネント、またはすべてのコンポーネントでテーマをカスタマイズできます。</div>
+<p class="highlight">最小限のコードで、コンポーネントのテーマを簡単に変更できます。SASS で開発されている API は簡単で、単一のコンポーネント、複数のコンポーネント、またはすべてのコンポーネントでテーマをカスタマイズできます。</p>
 
 ## 概要
-**Ignite UI for Angular** はコンポーネントのデザインを**<a href="https://material.io/guidelines/material-design/introduction.html" target="_blank">マテリアル デザイン ガイドライン</a>**に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。
+**Ignite UI for Angular** はコンポーネントのデザインを**<a href="https://material.io/design/introduction#principles" target="_blank">マテリアル デザイン ガイドライン</a>**に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。
 
 テーマのアプローチは、複数のシンプルな概念に基づきます。
 

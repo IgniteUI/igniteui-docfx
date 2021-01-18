@@ -7,7 +7,6 @@ _language: ja
 
 # コンポーネント テーマ
 <div class="highlight">コンポーネント テーマは、テーマをグローバルに定義して特定のコンポーネント インスタンスのスタイルを変更できます。</div>
-<div class="divider"></div>
 
 ## 概要
 <div class="divider--half"></div>
@@ -200,11 +199,12 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 ```
 <div class="divider"></div>
 
-## API
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+## API リファレンス
 
 <div class="divider--half"></div>
+
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
