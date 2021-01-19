@@ -116,7 +116,7 @@ providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 
 ### Input Group Theme
 
-The input group component supports several themes - `material`, `fluent`, `bootstrap`, and `indigo-design`; The theme is automatically set during component initialization and is inferred from the currently used stylesheet. If you plan to support several themes in your application with runtime switching, you can explicitly set the theme using the `theme` Input property.
+The input group component supports several themes - `material`, `fluent`, `bootstrap`, and `indigo-design`; The [`theme`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#theme) is automatically set during component initialization and is inferred from the currently used stylesheet. If you plan to support several themes in your application with runtime switching, you can explicitly set the theme using the `theme` Input property.
 
 ```html
 <igx-input-group theme="fluent">...</igx-input-group>
