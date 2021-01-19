@@ -1,6 +1,6 @@
 ---
 title: Angular データ チャート | データ可視化ツール | マーカー | インフラジスティックス
-_description: インフラジスティックスの $Platform Short$ チャートのマーカーを使用して、値が主グリッド線と副グリッド線の間にある場合でもデータ 　ポイントを識別します。Ignite UI for Angular グラフのマーク機能をお試しください!
+_description: インフラジスティックスの $Platform Short$ チャートのマーカーを使用して、値が主グリッド線と副グリッド線の間にある場合でもデータ ポイントを識別します。Ignite UI for Angular グラフのマーク機能をお試しください!
 _keywords: Angular charts, data chart, markers, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, マーカー, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'MarkerSeries']
 _language: ja
