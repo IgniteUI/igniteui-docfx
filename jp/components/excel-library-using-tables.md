@@ -10,10 +10,10 @@ _language: ja
 
 Infragistics Angular Excel Engine の [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) 機能は、行列のデータを書式設定できます。ワークシート テーブルのデータは [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#worksheet) の他の行や列のデータから個々に管理できます。
 
-<!--## Demo
+<!--## Angular Using Tables Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Tables Example"></iframe>
 </div>-->
 
 <div class="divider--half"></div>
@@ -37,7 +37,7 @@ worksheet.tables().add("A1:G10", true);
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = this.workbook.worksheets().add("Sheet1");
+var worksheet = workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
 
 //Will add 5 columns at index 1.
@@ -78,7 +78,7 @@ table.resize("A1:G15");
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = this.workbook.worksheets().add("Sheet1");
+var worksheet = workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
 
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
@@ -99,7 +99,7 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 -   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルをソートします。
 -   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - フォントが特定の色であるかどうかによってセルをソートします。
 
-また WorksheetTable の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) の [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#casesensitive) プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
+また [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) の [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#casesensitive) プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
 
 以下のコード スニペットは、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) に [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) を適用する方法です。
 

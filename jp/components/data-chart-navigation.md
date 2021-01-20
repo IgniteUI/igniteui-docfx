@@ -26,11 +26,6 @@ Angular データ チャート コンポーネントでは、チャート ナビ
 
 チャートでナビゲーションする場合、インポートしてからインタラクティブ モードを登録します。以下のコードを使用できます。
 
-<!-- Blazor -->
-
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 

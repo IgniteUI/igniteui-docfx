@@ -45,12 +45,7 @@ npm install --save igniteui-angular-gauges
 
 ## モジュールの要件
 
-<!-- Blazor -->
-
-[`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   BulletGraphModule
-    <!-- end: Blazor -->
+[`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) を作成するには、以下のモジュールが必要です。
 
 <!-- Angular, React, WebComponents -->
 
