@@ -163,12 +163,18 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります。
 
 ```html
-<igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
-    <ng-template igxCellEditor let-cell="cell">
-        <input type="number" [(ngModel)]="cell.editValue" />
+<igx-column field="class" header="Class" [editable]="true" width="20%">
+    <ng-template igxCellEditor let-cell="cell" let-value>
+        <igx-select [(ngModel)]="cell.editValue" width="100%">
+            <igx-select-item *ngFor="let class of classes" [value]="class">
+                {{ class }}
+            </igx-select-item>
+        </igx-select>
     </ng-template>
 </igx-column>
 ```
+This code is used in the sample below which implements an [`IgxSelectComponent`](../select.md) component in the cells of the `Race`, `Class` and `Alignment` columns.
+
 
 > [!NOTE]
 > 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
