@@ -185,9 +185,6 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 </div>
 <div class="divider--half"></div>
 
-> [!WARNING]
-> Due to limitations the property `type` of the [`IgxSelectComponent`](../select.md) component can only be set to `border` and `search`.
-
 > [!NOTE]
 > Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 
