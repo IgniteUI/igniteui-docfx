@@ -1,0 +1,41 @@
+{
+    "development": {
+        "demosBaseUrl": "http://localhost:4200",
+        "dvDemosBaseUrl": "http://localhost:4200",
+        "lobDemosBaseUrl":"http://localhost:4200",
+        "crmDemoBaseUrl": "http://localhost:4200",
+        "infragisticsBaseUrl": "https://jp.staging.infragistics.com",
+        "angularApiUrl": "https://jp.staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
+        "sassApiUrl": "https://jp.staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
+        "dvApiBaseUrl": "https://staging.infragistics.com",
+        "GTMContainerId": "GTM-NNHVMC7",
+        "themeApiUrl": "http://localhost:59296/api/taas",
+        "themingWidgetVersion": "latest"
+    },
+    "staging": {
+        "demosBaseUrl": "https://jp.staging.infragistics.com/angular-demos",
+        "dvDemosBaseUrl": "https://jp.staging.infragistics.com/angular-demos-dv",
+        "lobDemosBaseUrl":"https://jp.staging.infragistics.com/angular-demos-lob",
+        "crmDemoBaseUrl": "https://jp.staging.infragistics.com/angular-demos-grid-crm",
+        "infragisticsBaseUrl": "https://jp.staging.infragistics.com",
+        "angularApiUrl": "https://jp.staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
+        "sassApiUrl": "https://jp.staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
+        "dvApiBaseUrl": "https://staging.infragistics.com",
+        "GTMContainerId": "GTM-WLWSDK",
+        "themeApiUrl": "https://igniteuithemingwidget-staging.infragistics.com/api/taas",
+        "themingWidgetVersion": "latest"
+    },
+    "production": {
+        "demosBaseUrl": "https://jp.infragistics.com/angular-demos",
+        "dvDemosBaseUrl": "https://jp.infragistics.com/angular-demos-dv",
+        "lobDemosBaseUrl":"https://jp.infragistics.com/angular-demos-lob",
+        "crmDemoBaseUrl": "https://jp.infragistics.com/angular-demos-grid-crm",
+        "infragisticsBaseUrl": "https://jp.infragistics.com",
+        "angularApiUrl": "https://jp.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
+        "sassApiUrl": "https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
+        "dvApiBaseUrl": "https://www.infragistics.com",
+        "GTMContainerId": "GTM-KVNSWJ",
+        "themeApiUrl": "https://igniteuithemingwidget-prod.infragistics.com/api/taas",
+        "themingWidgetVersion": "latest-stable"
+    }
+}
