@@ -11,7 +11,7 @@ _language: ja
 
 ## 概要
 
-パレットは `primary`、` secondary`、`grays`、` surface`、`info`、` success`、`warn`、そして ` error` の色の引数を受け付けます。`primary` の色が通常あなたのブランド カラーです。ほとんどの場合、igx-navbar コンポーネントなどの静的要素のスタイルを設定するために使用されます。二次色は、ボタン、スイッチ、スライダーなどのように動作可能な要素に使用されるものです。唯一必要な引数は `primary` と `secondary` 色のものです。表面色は、カード、メニュー、日付/タイムピッカー、バナーシートなどのようないくつかのコンポーネントの '表面' に色を付けるために使われます。デフォルトでは、`surface`、`grays`、`info`、`success`、`warn`、`error` は、定義済みの色のセットです。
+パレットは `primary`、` secondary`、`grays`、`surface`、`info`、`success`、`warn`、そして ` error` の色の引数を受け付けます。`primary` の色が通常あなたのブランド カラーです。ほとんどの場合、igx-navbar コンポーネントなどの静的要素のスタイルを設定するために使用されます。二次色は、ボタン、スイッチ、スライダーなどのように動作可能な要素に使用されるものです。唯一必要な引数は `primary` と `secondary` 色のものです。表面色は、カード、メニュー、日付/タイムピッカー、バナーシートなどのようないくつかのコンポーネントの '表面' に色を付けるために使われます。デフォルトでは、`surface`、`grays`、`info`、`success`、`warn`、`error` は、定義済みの色のセットです。
 
 カラー パレットを作成するには、グローバル テーマの基本ファイルになる _scss_ ファイルを作成します。_"my-app-theme.scss"_ と名前付けます。
 
@@ -40,7 +40,7 @@ $my-color-palette: igx-palette(
 
 ## グレースケール パレット
 
-`primary` と ` secondary` パレットのように、灰色の色調を生成するために使用される `igx-palette` 関数の色を提供できます。`grays` パレットの生成に使用されるデフォルトの色は `#000` (`black`)。`grays` パレットは、コンポーネント全体のテキストの色を設定するために使用されます。値の変更は、アプリケーションの背景を変更する場合に役立ちます。たとえば、アプリケーションで暗い背景を使用する場合、`grays` の色を `white` に設定すると、すべてのテキストの色は `white` の色調に基づいて強制されます。
+`primary` と `secondary` パレットのように、灰色の色調を生成するために使用される `igx-palette` 関数の色を提供できます。`grays` パレットの生成に使用されるデフォルトの色は `#000` (`black`)。`grays` パレットは、コンポーネント全体のテキストの色を設定するために使用されます。値の変更は、アプリケーションの背景を変更する場合に役立ちます。たとえば、アプリケーションで暗い背景を使用する場合、`grays` の色を `white` に設定すると、すべてのテキストの色は `white` の色調に基づいて強制されます。
 
 `grays` パレットの色調を設定するために `white` を使用するパレットを生成する方法:
 
@@ -118,13 +118,13 @@ mixin は、CSS クラス名とパレットの色を渡す css プロパティ�
 ```
 上記のコードは、パレットの各色バリアントに CSS クラスを生成します。たとえば、`primary` パレットの `500` 色バリアントには、`.igx-primary-500-bg` クラスが与えられます。
 
-<div class="divider--half"></div>
 
 ## API リファレンス
+<div class="divider--half"></div>
+
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [パレット色の取得]({environment:sassApiUrl}/index.html#function-igx-color)
 * [コントラスト色の取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
 
 ## その他のリソース
 <div class="divider--half"></div>
