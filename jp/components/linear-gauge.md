@@ -48,13 +48,11 @@ npm install --save igniteui-angular-gauges
 ```ts
 // app.module.ts
 import { IgxLinearGaugeModule } from 'igniteui-angular-gauges';
-import { IgxLinearGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
-        IgxLinearGaugeModule,
-        IgxLinearGaugeComponent,
+        IgxLinearGaugeModule
         // ...
     ]
 })
