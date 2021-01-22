@@ -47,13 +47,11 @@ The [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
 ```ts
 // app.module.ts
 import { IgxRadialGaugeModule } from 'igniteui-angular-gauges';
-import { IgxRadialGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
-        IgxRadialGaugeModule,
-        IgxRadialGaugeComponent
+        IgxRadialGaugeModule
         // ...
     ]
 })
