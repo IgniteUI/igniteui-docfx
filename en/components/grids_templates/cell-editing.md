@@ -165,16 +165,17 @@ You can see and learn more for default cell editing templates in the [general ed
 If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
 
 ```html
-<igx-column field="class" header="Class" [editable]="true" [filterable]="false" width="20%">
+<igx-column field="class" header="Class" [editable]="true" width="20%">
     <ng-template igxCellEditor let-cell="cell" let-value>
-        <igx-select [(ngModel)]="cell.editValue" width="100%" [igxFocus]="true" [type]="'search'">
+        <igx-select [(ngModel)]="cell.editValue" width="100%">
             <igx-select-item *ngFor="let class of classes" [value]="class">
-                {{ class }}</igx-select-item>
+                {{ class }}
+            </igx-select-item>
         </igx-select>
     </ng-template>
 </igx-column>
 ```
-This code is used in the sample below which implements an [`IgxSelectComponent`](../select.md) component in the cells of the `Race`, `Class` and `Alignment` columns.
+This code is used in the sample below which implements an [`IgxSelectComponent`](../select.md) in the cells of the `Race`, `Class` and `Alignment` columns.
 
 <div class="sample-container loading" style="height:625px">
     <iframe id="grid-select-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-select' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
