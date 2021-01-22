@@ -67,6 +67,30 @@ The second approach is similar to the previous one, but instead of creating a ne
 
 However, this solution will throw warnings if we do not pass the `$icon-color` property for instance, as it can't use the CSS variable reference at build time.
 
+### Using external theming library 
+
+The following code snippet demonstrates how to use Bootstrap with Ignite UI for Angular components: 
+
+```scss
+@import "~bootstrap/scss/bootstrap";
+
+:host {
+    // Include the Bootstrap theme colors
+    @each $color, $value in $theme-colors {
+        --#{$color}: #{$value};
+    }
+
+    ::ng-deep {
+        @include igx-avatar(igx-avatar-theme(
+            $initials-background: var(--primary),
+            $initials-color: var(--dark),
+            $icon-background: var(--info),
+            $icon-color: var(--light)
+        ));
+    }
+}
+```
+
 ### Demo
 
 <div class="sample-container loading" style="height:100px">
