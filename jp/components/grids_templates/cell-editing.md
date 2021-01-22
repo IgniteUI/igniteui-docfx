@@ -173,7 +173,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
     </ng-template>
 </igx-column>
 ```
-This code is used in the sample below which implements an [`IgxSelectComponent`](../select.md) component in the cells of the `Race`, `Class` and `Alignment` columns.
+This code is used in the sample below which implements an [`IgxSelectComponent`](../select.md) in the cells of the `Race`, `Class` and `Alignment` columns.
 
 
 > [!NOTE]
