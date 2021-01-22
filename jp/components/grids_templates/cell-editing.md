@@ -174,6 +174,15 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 This code is used in the sample below which implements an [`IgxSelectComponent`](../select.md) component in the cells of the `Race`, `Class` and `Alignment` columns.
 
+<div class="sample-container loading" style="height:625px">
+    <iframe id="grid-select-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-select' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+
 > [!NOTE]
 > 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
 
