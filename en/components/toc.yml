@@ -971,8 +971,8 @@
     - name: Printing styles
       href: themes/printing-styles.md
       new: false
-    - name: Generating color palettes
-      href: themes/generating-color-palettes.md
+    - name: Theming with CSS Variables
+      href: themes/css-variables-theming.md
       new: false
 - name: Components Roundness
   href: roundness.md

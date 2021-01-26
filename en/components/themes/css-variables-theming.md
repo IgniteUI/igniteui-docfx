@@ -1,10 +1,10 @@
 ---
-title: Generating color palettes at runtime
+title: Theming with CSS Variables
 _description: The Ignite UI for Angular theming engine provides an algorithm that generates Material-like palettes from base colors and contrast text colors for each hue in the palette.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
 ---
 
-# Generating color palettes at runtime
+# Theming with CSS Variables
 <p class="highlight">The Ignite UI for Angular theming engine provides an algorithm that generates Material-like palettes from base colors and contrast text colors for each hue in the palette.</p>
 <div class="divider"></div>
 
@@ -67,9 +67,9 @@ The second approach is similar to the previous one, but instead of creating a ne
 
 However, this solution will throw warnings if we do not pass the `$icon-color` property for instance, as it can't use the CSS variable reference at build time.
 
-### Using external theming library 
+### Usage with external themes
 
-The following code snippet demonstrates how to use Bootstrap with Ignite UI for Angular components: 
+The following code snippet demonstrates how to use colors from Bootstrap 4 with Ignite UI for Angular components: 
 
 ```scss
 @import "~bootstrap/scss/bootstrap";
