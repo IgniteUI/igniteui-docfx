@@ -971,6 +971,9 @@
     - name: 印刷スタイル
       href: themes/printing-styles.md
       new: false
+    - name: Theming with CSS Variables
+      href: themes/css-variables-theming.md
+      new: false
 - name: 丸み付け
   href: roundness.md
   new: false
