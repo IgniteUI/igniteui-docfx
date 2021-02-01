@@ -14,6 +14,12 @@ Ignite UI for Angular マップ コントロールには、Shape ファイルを
 
 ## Angular ヒート画像の表示の例
 
+<!-- Angular, React -->
+
+```ts
+//WebComponents サンプルが CodeSandbox で機能しません。これが修正されたら、ビルドのフラグを削除します。
+```
+
 <div class="sample-container loading" style="height: 500px">
     <iframe id="geo-map-display-heat-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-heat-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ヒート画像の表示の例"></iframe>
 </div>
@@ -24,6 +30,8 @@ Ignite UI for Angular マップ コントロールには、Shape ファイルを
 
 
 <div class="divider--half"></div>
+
+<!-- end: Angular, React -->
 
 `ShapeDataSource` がそのシェイプ ファイルを読み込むと、そのデータを ShapeFileRecord オブジェクトに変換します。これらのオブジェクトは、`ShapeDataSource` の `GetPointData()` メソッドから取得でき、`TileGenerator` プロパティに割り当てられた [`HeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/heattilegenerator.html) で [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) オブジェクトを使用してヒートマップを作成するために使用できます。この [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) は、`TileImagery` ソースとして地理タイルシリーズで使用できます。
 
