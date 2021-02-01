@@ -114,6 +114,15 @@ providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="input-group-sample-5-frame" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
+
+### Input Group テーマ
+
+入力グループ コンポーネントは、 `material`、`fluent`、`bootstrap`、`indigo-design` などの複数のテーマをサポートします。[`theme`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#theme) は、コンポーネントの初期化中に自動的に設定され、現在使用されているスタイルシートから推測されます。
+
+```html
+<igx-input-group theme="fluent">...</igx-input-group>
+```
+
 ## スタイル設定
 
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。
