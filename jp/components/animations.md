@@ -2,6 +2,7 @@
 title: アニメーション
 _description: Ignite UI for Angular には、ユーザー エクスペリエンスを向上させるために特別に設計された 100 以上のビルド済みアニメーションが含まれています。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, アニメーション
+_language: ja
 ---
 
 # アニメーション
