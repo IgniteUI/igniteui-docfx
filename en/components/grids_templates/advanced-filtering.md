@@ -68,23 +68,26 @@ In order to filter the data once you are ready with creating the filtering condi
 
 ## Usage
 
-To enable the advanced filtering, the [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) and [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties should be set to `true`.
+To enable the advanced filtering, the [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input property should be set to `true`.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+<igx-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
+    <igx-grid-toolbar></igx-grid-toolbar>
 </igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+<igx-tree-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
+    <igx-grid-toolbar></igx-grid-toolbar>
 </igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+<igx-hierarchical-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
+    <igx-grid-toolbar></igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
 }
