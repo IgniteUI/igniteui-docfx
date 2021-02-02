@@ -31,11 +31,7 @@ npm install --save igniteui-angular-spreadsheet
 
 ## モジュールの要件
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   ExcelModule
--   SpreadsheetModule
-    <!-- end: Blazor -->
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 import { IgxExcelModule } from 'igniteui-angular-excel';
