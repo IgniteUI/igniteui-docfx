@@ -207,7 +207,7 @@ For this purpose all we have to do is set both the [`IgxGridToolbarActionsDirect
 
 
 The @@igComponent provides us with some useful properties when it comes to using the toolbar's column hiding UI.
-By using the [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) and the [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) properties, we will set the title and the text that is displayed inside the dropdown button in the toolbar. More specifically, the [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) is displayed right next to the columns count number, which is included by default in the button.
+By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) and the [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) properties, we will set the title and the text that is displayed inside the dropdown button in the toolbar. More specifically, the [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) is displayed right next to the columns count number, which is included by default in the button.
 The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) property is quite handy since it can be used for localization purposes as well.
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
