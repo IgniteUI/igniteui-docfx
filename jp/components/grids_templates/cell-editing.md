@@ -163,9 +163,9 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
 
 ```html
-<igx-column field="class" header="Class" [editable]="true" width="20%">
+<igx-column field="class" header="Class" [editable]="true">
     <ng-template igxCellEditor let-cell="cell" let-value>
-        <igx-select [(ngModel)]="cell.editValue" width="100%">
+        <igx-select class="cell-select" [(ngModel)]="cell.editValue">
             <igx-select-item *ngFor="let class of classes" [value]="class">
                 {{ class }}
             </igx-select-item>
