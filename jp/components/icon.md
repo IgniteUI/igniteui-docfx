@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Icon
-<p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント セットを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。</p>
+<p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント ファミリを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。</p>
 
 ## Angular Icon の例
 
@@ -54,12 +54,15 @@ export class AppModule {}
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
+>[!NOTE]
+> `color` プロパティは、Ignite UI for Angular の次のメジャー バージョンで非推奨になります。アイコンの色を変更するには、CSS プロパティを使用します。
+
 ### アイコンの無効化
 
 アイコンを無効にするには、[`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) を使用できます。
 
 ```html
-<igx-icon [isActive]="false">volume_off</igx-icon>
+<igx-icon [active]="false">volume_off</igx-icon>
 ```
 <div class="sample-container loading" style="height: 40px">
     <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
@@ -96,9 +99,9 @@ CSS を使用してアイコンをカスタマイズできます。アイコン 
 
 SVG 画像はアイコンとして使用できます。はじめに [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存を注入します。この例ではコンポーネントのコンストラクタに注入されますが、コード内の必要な場所に使用できます。
 
-[`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。フォントセットも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして、SVC テキスト コンテンツを使用できます。
+[`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。ファミリも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして、SVC テキスト コンテンツを使用できます。
 
-* 同じ名前のアイコンが 2 つある場合に同じフォント セット SVG アイコンが優先順位に従って表示されます。
+* 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
 * SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
 * 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
 
@@ -112,7 +115,7 @@ public ngOnInit() {
 ```
 
 ```html
-<igx-icon name="contains" fontSet="filter-icons"></igx-icon>
+<igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
 <div class="sample-container loading" style="height: 70px">
@@ -196,9 +199,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-## 6.2.0 の重大な変更
-
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` プロパティは非推奨です。「マテリアル」アイコンのアイコン名を設定するには、開始タグと終了タグの間にアイコンの名前を配置します。'Font Awesome' と SVG のアイコンには `name` プロパティを使用します。
 
 ## API リファレンス
 <div class="divider--half"></div>
