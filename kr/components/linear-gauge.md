@@ -44,23 +44,15 @@ The [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
 ```ts
 // app.module.ts
 import { IgxLinearGaugeModule } from 'igniteui-angular-gauges';
-import { IgxLinearGauge } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
-        IgxLinearGaugeModule,
+        IgxLinearGaugeModule
         // ...
     ]
 })
 export class AppModule {}
-```
-
-```ts
-import { IgrLinearGaugeModule } from 'igniteui-react-gauges';
-import { IgxLinearGauge } from "ignite-react-gauges";
-
-IgrLinearGaugeModule.register();
 ```
 
 <div class="divider--half"></div>
