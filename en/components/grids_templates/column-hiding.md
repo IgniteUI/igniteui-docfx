@@ -147,7 +147,7 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 ## Toolbar's Column Hiding UI
 
 The built-in Column Hiding UI is placed inside an [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) in the @@igComponent's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
-For this purpose all we have to do is set both the [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) and the [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) inside of the @@igComponent. If the toolbar is not enabled, enabling the column hiding will have no effect. We will also add a title to our toolbar by using the [`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) and a custom style for our @@igComponent's wrapper.
+For this purpose all we have to do is set both the [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) and the [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) inside of the @@igComponent. We will also add a title to our toolbar by using the [`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) and a custom style for our @@igComponent's wrapper.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
