@@ -325,7 +325,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 > [!NOTE]
 > [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay.md) サービスを使用して、コンボ項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
 
-> [!Note]
+> [!NOTE]
 > IgxCombo のデフォルト `type` は `box` です。[IgxSelect](select.md) は `line` です。
 
 ### デモ
