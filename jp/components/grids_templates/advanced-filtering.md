@@ -15,6 +15,7 @@ _language: ja
 ---
 }
 
+
 # @@igComponent 高度なフィルタリング
 
 高度なフィルタリングは、@@igComponent のような任意の Angular Material テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
