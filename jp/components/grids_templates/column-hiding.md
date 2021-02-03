@@ -148,8 +148,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ## ツールバーの列非表示 UI
 
 定義済みの列非表示 UI は、@@igComponent のツールバーの [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
-これには、@@igComponent の [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)。ツールバーが有効でない場合、[`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) プロパティが有効かどうかは影響しません。
-ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) プロパティを設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
+これには、@@igComponent の [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -183,8 +182,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 <!--columnHiding.component.html-->
 
 <div class="grid__wrapper">
-    <@@igSelector ... >
-    <igx-grid-toolbar>
+    <@@igSelector ...>
+        <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
                 <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
@@ -209,7 +208,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 
 @@igComponent にはツールバーの列非表示 UI に便利なプロパティがあります。
-[`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) および [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) プロパティを使用して、ツールバーのドロップダウン ボタンに表示されるタイトルおよびテキストを設定します。[`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) は列のカウント数の右に表示されます。カウントはデフォルトでボタンに含まれます。
+`igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) および [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) プロパティを使用して、ツールバーのドロップダウン ボタンに表示されるタイトルおよびテキストを設定します。[`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) は列のカウント数の右に表示されます。カウントはデフォルトでボタンに含まれます。
 [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) プロパティはローカライズにも使用できます。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
