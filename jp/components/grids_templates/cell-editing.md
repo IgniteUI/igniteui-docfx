@@ -165,7 +165,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```html
 <igx-column field="class" header="Class" [editable]="true">
     <ng-template igxCellEditor let-cell="cell" let-value>
-        <igx-select class="cell-select" [(ngModel)]="cell.editValue">
+        <igx-select class="cell-select" [(ngModel)]="cell.editValue" [igxFocus]="true">
             <igx-select-item *ngFor="let class of classes" [value]="class">
                 {{ class }}
             </igx-select-item>
