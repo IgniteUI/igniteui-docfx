@@ -148,15 +148,21 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 </igx-tree-grid>
 ```
 
-最後に [`showToolbar`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#showtoolbar), [`columnHiding`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnhiding), [`columnPinning`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#columnpinning), [`exportExcel`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportexcel) and [`exportCsv`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#exportcsv) を個別に使用して、列非表示、列ピン固定、エクスポートの機能を含むツリー グリッドのツールバーを有効にします。
+最後に [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)、[`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)、[`IgxGridToolbarPinningComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html) および [`IgxGridToolbarExporterComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) を個別に使用して、列非表示、列ピン固定、エクスポートの機能を含むツリー グリッドのツールバーを有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true"
-               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true"
-               [exportExcel]="true" [exportCsv]="true" exportExcelText="To Excel" exportCsvText="To CSV">
+               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+    <igx-grid-toolbar>
+            <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
+            <igx-grid-toolbar-actions>
+                <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+                <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+                <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+            </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>

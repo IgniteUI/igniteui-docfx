@@ -51,13 +51,11 @@ The [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
 ```ts
 // app.module.ts
 import { IgxBulletGraphModule } from 'igniteui-angular-gauges';
-import { IgxBulletGraphComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
-        IgxBulletGraphModule,
-        IgxBulletGraphComponent
+        IgxBulletGraphModule
         // ...
     ]
 })
