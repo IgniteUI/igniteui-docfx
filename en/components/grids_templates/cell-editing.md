@@ -193,6 +193,9 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 > The cell template [`igxCell`](../grid/grid.md#cell-template) controls how a column's cells are shown when outside of edit mode.
 > The cell editing template directive `igxCellEditor`, handles how a column's cells in edit mode are displayed and controls the edited cell's edit value.
 
+> [!NOTE]
+> Since the focus is on the cell in order to have keyboard navigation the focus has to be forced on the [`IgxSelectComponent`](../select.md) with [igxFocus]="true".
+
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
 
