@@ -60,6 +60,9 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 }
 <div class="divider--half"></div>
 
+> [!NOTE]
+> Keep in mind that by using `igxCellEditor` with a component the keyboard navigation flow will be disrupted. The same applies for a direct editing of the custom cell put in edit mode. This is because the focus will remain on the actual cell, not on the component that we've added. This is why we are taking leverage of our `igxFocus` directive, which will move the focus directly in the component and will help keeping a fluent editing flow of the cell/row.
+
 ## Cell Editing
 
 ### Editing through UI
@@ -180,7 +183,7 @@ If you want to provide a custom template which will be applied when a cell is in
 > The cell editing template directive `igxCellEditor`, handles how a column's cells in edit mode are displayed and controls the edited cell's edit value.
 
 > [!NOTE]
-> Since the focus is on the cell in order to have keyboard navigation the focus has to be forced on the editor with `[igxFocus]="true"`.
+> Keep in mind that by using `igxCellEditor` with a component the keyboard navigation flow will be disrupted. The same applies for a direct editing of the custom cell put in edit mode. This is because the focus will remain on the actual cell, not on the component that we've added. This is why we are taking leverage of our `igxFocus` directive, which will move the focus directly in the component and will help keeping a fluent editing flow of the cell/row.
 
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
