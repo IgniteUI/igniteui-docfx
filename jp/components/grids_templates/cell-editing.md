@@ -192,7 +192,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 > `igxCellEditor` セル編集テンプレート ディレクティブは、編集モードでの列のセルの表示方法を処理し、編集されたセルの編集値を制御します。
 
 > [!NOTE]
-> Since the focus is on the cell in order to have keyboard navigation the focus has to be forced on the editor with [igxFocus]="true".
+> Since the focus is on the cell in order to have keyboard navigation the focus has to be forced on the editor with `[igxFocus]="true"`.
 
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](../grid/grid.md#angular-grid-列の構成)のドキュメントを参照してください。
