@@ -61,7 +61,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Keep in mind that by using `igxCellEditor` with a component the keyboard navigation flow will be disrupted. The same applies for a direct editing of the custom cell put in edit mode. This is because the focus will remain on the actual cell, not on the component that we've added. This is why we are taking leverage of our `igxFocus` directive, which will move the focus directly in the component and will help keeping a fluent editing flow of the cell/row.
+>By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - [`igxSelect`](../select.md), [`igxCombo`](../combo.md), etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
 
 ## Cell Editing
 
@@ -197,7 +197,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 > The cell editing template directive `igxCellEditor`, handles how a column's cells in edit mode are displayed and controls the edited cell's edit value.
 
 > [!NOTE]
->By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - igxSelect, igxCombo, etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
+>By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - [`igxSelect`](../select.md), [`igxCombo`](../combo.md), etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
 
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
