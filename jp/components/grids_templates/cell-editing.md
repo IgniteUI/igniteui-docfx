@@ -195,7 +195,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 > `igxCellEditor` セル編集テンプレート ディレクティブは、編集モードでの列のセルの表示方法を処理し、編集されたセルの編集値を制御します。
 
 > [!NOTE]
-> Keep in mind that by using `igxCellEditor` with a component the keyboard navigation flow will be disrupted. The same applies for a direct editing of the custom cell put in edit mode. This is because the focus will remain on the actual cell, not on the component that we've added. This is why we are taking leverage of our `igxFocus` directive, which will move the focus directly in the component and will help keeping a fluent editing flow of the cell/row.
+>By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - igxSelect, igxCombo, etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
 
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](../grid/grid.md#angular-grid-列の構成)のドキュメントを参照してください。
