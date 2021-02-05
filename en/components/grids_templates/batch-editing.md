@@ -172,7 +172,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="employeeID" foreignKey="PID" width ="100%" height ="500px" rowEditable=true rowSelectable=true columnHiding=true>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="employeeID" foreignKey="PID" width ="100%" height ="500px" rowEditable=true rowSelectable=true>
     ...
 </igx-tree-grid>
 ...
@@ -192,7 +192,8 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
         <igx-column field="HasGrammyAward" header="Has Grammy Award?" [editable]="true" [dataType]="'boolean'">
         </igx-column>
         ...
-        <igx-row-island [key]="'Albums'" #layout1 [primaryKey]="'Album'" [rowEditable]="true" [showToolbar]="true">
+        <igx-row-island [key]="'Albums'" #layout1 [primaryKey]="'Album'" [rowEditable]="true">
+            <igx-grid-toolbar></igx-grid-toolbar>
             ...
             <ng-template igxToolbarCustomContent let-grid="grid">
                 <button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo(grid)">Undo</button>
