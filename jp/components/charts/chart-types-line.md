@@ -10,10 +10,11 @@ _language: ja
 
 折れ線チャート (または折れ線グラフ) は、カテゴリ折れ線グラフの一種で、一定期間にわたる 1 つ以上の数量の直線セグメントで接続されたポイントで表される連続データ値を示します。トレンドの表示や比較分析によく使用されます。Y 軸 (左側のラベル) は数値を示し、X 軸 (下側のラベル) は時系列または比較カテゴリを示します。比較する 1 つ以上のデータセットを含めることができます。これはチャートで複数の線として描画されます。
 
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
-</div>
-<div class="divider--half"></div> -->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 折れ線チャートの例"></iframe>
+</div>	
+
+<div class="divider--half"></div>
 
 -   折れ線チャートとは異なり、エリア チャートは X 軸 (下軸) とデータ値を表す線の間の領域を色またはテクスチャで塗りつぶして視覚的にボリュームを表します。
 -   Angular 折れ線チャートは、データ ポイントをつなぐ線にスプライン補間とデータの表示を改善するスムージングがないこと以外は、Angular スプライン チャートと同じです。
@@ -60,28 +61,49 @@ _language: ja
 
 以下の例に示すように、Angular 折れ線チャートは、2009 年以降の 10 年間の再生可能電力量など、値の経時変化を示すためによく使用されます。
 
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-single-source' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 折れ線チャートの例"></iframe>
 </div>
-<div class="divider--half"></div> -->
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+
+
+</div>
+
+<div class="divider--half"></div>
 
 ## 複数シリーズの Angular 折れ線チャート
 
 Angular 折れ線チャートを使用すると、複数のシリーズを組み合わせて時間の経過に伴う変化を比較または確認できます。中国と米国のデータを含むデータ ソースにバインドするだけで、折れ線チャートは追加データに合わせて自動的に更新されます。
 
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 折れ線チャートの例"></iframe>
 </div>
-<div class="divider--half"></div> -->
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+
+
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular 折れ線チャートの凡例
 
 複数シリーズの場合、Angular 折れ線チャートでは、表示されるデータをエンド ユーザーが簡単に認識できるよう、より視覚的なインジケーターが必要です。エクスペリエンスを向上させるには、複数シリーズの凡例を追加する必要があります。最初に凡例オブジェクトをアプリケーションに追加し、それを Angular `XamCategoryChart` の [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) プロパティに設定します。これにより、ユーザーは各行がどのデータセットに対応するかを分かりやすく表示します。
 
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 折れ線チャートの例"></iframe>
 </div>
-<div class="divider--half"></div> -->
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+
+
+</div>
+
+<div class="divider--half"></div>
 
 ## ライブ データの Angular 折れ線チャート
 
@@ -89,20 +111,27 @@ Angular 折れ線チャート コンポネントは、次のデモに示すよ�
 
 この例では、選択した間隔でライブ データを Angular 折れ線チャートにストリーミングしています。データ ポイントを 5,000 から 100 万に設定し、チャートを更新してチャートを描画するデバイスに基づいてスケールを最適化できます。
 
-<!-- TODO - take a sample from here: https://www.infragistics.com/products/ignite-ui-angular/angular/components/category-chart-high-frequency
-	<div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 折れ線チャートの例"></iframe>
 </div>
-<div class="divider--half"></div> -->
+<div>
+    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
+    </button>
+
+
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular 折れ線チャートのスタイル設定
 
 チャートを設定したら、線の色の変更、凡例のフォント ファミリの変更、[`ChartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/charttitle.html) のサイズの増加など読みやすくするためにスタイル設定をカスタマイズできます。
 
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
-</div>
-<div class="divider--half"></div> -->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 折れ線チャートのスタイル設定"></iframe>
+</div>	
+
+<div class="divider--half"></div> 
 
 ## その他のリソース
 
